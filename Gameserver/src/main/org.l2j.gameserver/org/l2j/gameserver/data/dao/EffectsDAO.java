@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.dao;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Playable;
@@ -64,7 +64,7 @@ public class EffectsDAO
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT `skill_id`,`skill_level`,`duration`,`left_time`,`is_self` FROM `character_effects_save` WHERE `object_id`=? AND `id`=?");
 			statement.setInt(1, objectId);
 			statement.setInt(2, id);
@@ -142,7 +142,7 @@ public class EffectsDAO
 		Statement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 
 			SqlBatch b = new SqlBatch("INSERT IGNORE INTO `character_effects_save` (`object_id`,`skill_id`,`skill_level`,`duration`,`left_time`,`id`,`is_self`) VALUES");

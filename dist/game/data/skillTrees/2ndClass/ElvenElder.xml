@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="30" parentClassId="29">
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="10" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="11" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="12" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="9" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="10" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="11" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="9" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="10" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="11" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="13" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="14" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="15" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="3" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Fast Spell Casting" skillId="228" skillLvl="2" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="10" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="11" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="12" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="5" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="6" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="1" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="2" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Might" skillId="1068" skillLvl="3" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="6" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Poison Resistance" skillId="1033" skillLvl="2" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Mental Shield" skillId="1035" skillLvl="2" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Resurrection" skillId="1016" skillLvl="3" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Blessed Shield" skillId="1243" skillLvl="1" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Stun Resistance" skillId="1259" skillLvl="1" getLevel="40" levelUpSp="83000" />
+		<skill skillName="Spell Master" skillId="1830" skillLvl="1" getLevel="40" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="13" getLevel="42" levelUpSp="120000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="12" getLevel="42" levelUpSp="120000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="12" getLevel="42" levelUpSp="120000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="16" getLevel="42" levelUpSp="120000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="7" getLevel="42" levelUpSp="120000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="3" getLevel="42" levelUpSp="120000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="13" getLevel="42" levelUpSp="120000" />
+		<skill skillName="Advanced Block" skillId="1304" skillLvl="1" getLevel="42" levelUpSp="120000">
+			<item id="5816" count="1"/>
+		</skill>
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="14" getLevel="43" levelUpSp="120000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="13" getLevel="43" levelUpSp="120000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="13" getLevel="43" levelUpSp="120000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="17" getLevel="43" levelUpSp="120000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="14" getLevel="43" levelUpSp="120000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="15" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="14" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="14" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="18" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="2" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="3" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="15" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="8" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="4" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="7" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Poison Resistance" skillId="1033" skillLvl="3" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Shield" skillId="1040" skillLvl="3" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Agility" skillId="1087" skillLvl="2" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Concentration" skillId="1078" skillLvl="3" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Return" skillId="1050" skillLvl="1" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Decrease Weight" skillId="1257" skillLvl="2" getLevel="44" levelUpSp="120000" />
+		<skill skillName="Eva's Serenade" skillId="1273" skillLvl="1" getLevel="44" levelUpSp="120000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="16" getLevel="46" levelUpSp="190000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="15" getLevel="46" levelUpSp="190000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="15" getLevel="46" levelUpSp="190000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="19" getLevel="46" levelUpSp="190000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="16" getLevel="46" levelUpSp="190000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="9" getLevel="46" levelUpSp="190000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="1" getLevel="46" levelUpSp="190000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="5" getLevel="46" levelUpSp="190000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="17" getLevel="47" levelUpSp="190000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="16" getLevel="47" levelUpSp="190000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="16" getLevel="47" levelUpSp="190000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="20" getLevel="47" levelUpSp="190000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="17" getLevel="47" levelUpSp="190000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="2" getLevel="47" levelUpSp="190000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="1" getLevel="47" levelUpSp="190000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="2" getLevel="47" levelUpSp="190000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="18" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="17" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="17" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="21" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="4" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Quick Recovery" skillId="164" skillLvl="3" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="18" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="10" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="6" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="3" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="8" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Eva's Serenade" skillId="1273" skillLvl="2" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Resurrection" skillId="1016" skillLvl="4" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Regeneration" skillId="1044" skillLvl="2" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Blessed Shield" skillId="1243" skillLvl="2" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Mental Shield" skillId="1035" skillLvl="3" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="3" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="4" getLevel="48" levelUpSp="190000" />
+		<skill skillName="Party Return" skillId="1255" skillLvl="1" getLevel="48" levelUpSp="190000">
+			<item id="3942" count="1" />
+		</skill>
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="19" getLevel="50" levelUpSp="300000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="18" getLevel="50" levelUpSp="300000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="18" getLevel="50" levelUpSp="300000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="22" getLevel="50" levelUpSp="300000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="19" getLevel="50" levelUpSp="300000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="11" getLevel="50" levelUpSp="300000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="4" getLevel="50" levelUpSp="300000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="7" getLevel="50" levelUpSp="300000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="5" getLevel="50" levelUpSp="300000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="6" getLevel="50" levelUpSp="300000" />
+		<skill skillName="Advanced Block" skillId="1304" skillLvl="2" getLevel="50" levelUpSp="300000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="20" getLevel="51" levelUpSp="300000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="19" getLevel="51" levelUpSp="300000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="19" getLevel="51" levelUpSp="300000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="23" getLevel="51" levelUpSp="300000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="20" getLevel="51" levelUpSp="300000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="5" getLevel="51" levelUpSp="300000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="21" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="20" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="20" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="24" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="3" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="4" getLevel="52" levelUpSp="300000" />		
+		<skill skillName="Sleep" skillId="1069" skillLvl="21" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="12" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="8" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="6" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="9" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Eva's Serenade" skillId="1273" skillLvl="3" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Agility" skillId="1087" skillLvl="3" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Concentration" skillId="1078" skillLvl="4" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Eva's Kiss" skillId="1073" skillLvl="2" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Decrease Weight" skillId="1257" skillLvl="3" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Stun Resistance" skillId="1259" skillLvl="2" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="7" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="8" getLevel="52" levelUpSp="300000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="300000" >
+			<item id="8618" count="1" /> <!-- Ancient Book: Divine Inspiration (Modern Language Version) -->
+		</skill>
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="22" getLevel="54" levelUpSp="470000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="21" getLevel="54" levelUpSp="470000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="21" getLevel="54" levelUpSp="470000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="25" getLevel="54" levelUpSp="470000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="22" getLevel="54" levelUpSp="470000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="13" getLevel="54" levelUpSp="470000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="9" getLevel="54" levelUpSp="470000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="7" getLevel="54" levelUpSp="470000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="9" getLevel="54" levelUpSp="470000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="23" getLevel="55" levelUpSp="470000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="22" getLevel="55" levelUpSp="470000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="22" getLevel="55" levelUpSp="470000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="26" getLevel="55" levelUpSp="470000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="23" getLevel="55" levelUpSp="470000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="8" getLevel="55" levelUpSp="470000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="10" getLevel="55" levelUpSp="470000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="24" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="23" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="23" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="27" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="5" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Fast Spell Casting" skillId="228" skillLvl="3" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="24" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="14" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="10" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="9" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="10" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Eva's Serenade" skillId="1273" skillLvl="4" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Resurrection" skillId="1016" skillLvl="5" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Regeneration" skillId="1044" skillLvl="3" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Blessed Shield" skillId="1243" skillLvl="3" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Mental Shield" skillId="1035" skillLvl="4" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Return" skillId="1050" skillLvl="2" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Party Return" skillId="1255" skillLvl="2" getLevel="56" levelUpSp="470000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="11" getLevel="56" levelUpSp="470000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="25" getLevel="57" levelUpSp="480000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="24" getLevel="57" levelUpSp="480000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="28" getLevel="57" levelUpSp="480000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="24" getLevel="57" levelUpSp="480000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="25" getLevel="57" levelUpSp="480000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="15" getLevel="57" levelUpSp="480000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="10" getLevel="57" levelUpSp="480000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="12" getLevel="57" levelUpSp="480000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="26" getLevel="58" levelUpSp="480000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="25" getLevel="58" levelUpSp="480000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="29" getLevel="58" levelUpSp="480000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="25" getLevel="58" levelUpSp="480000" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="4" getLevel="58" levelUpSp="480000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="26" getLevel="58" levelUpSp="480000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="16" getLevel="58" levelUpSp="480000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="11" getLevel="58" levelUpSp="480000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="11" getLevel="58" levelUpSp="480000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="11" getLevel="58" levelUpSp="480000" />
+		<skill skillName="Eva's Serenade" skillId="1273" skillLvl="5" getLevel="58" levelUpSp="480000" />
+		<skill skillName="Cure Poison" skillId="1012" skillLvl="3" getLevel="58" levelUpSp="480000" />
+		<skill skillName="Dark Attack Resistance" skillId="1393" skillLvl="1" getLevel="58" levelUpSp="480000" />
+		<skill skillName="Clarity" skillId="1397" skillLvl="1" getLevel="58" levelUpSp="480000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="13" getLevel="58" levelUpSp="480000" />
+		<skill skillName="Advanced Block" skillId="1304" skillLvl="3" getLevel="58" levelUpSp="480000" />
+				
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="27" getLevel="59" levelUpSp="580000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="26" getLevel="59" levelUpSp="580000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="30" getLevel="59" levelUpSp="580000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="26" getLevel="59" levelUpSp="580000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="27" getLevel="59" levelUpSp="580000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="17" getLevel="59" levelUpSp="580000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="12" getLevel="59" levelUpSp="580000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="14" getLevel="59" levelUpSp="580000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="28" getLevel="60" levelUpSp="580000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="27" getLevel="60" levelUpSp="580000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="31" getLevel="60" levelUpSp="580000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="27" getLevel="60" levelUpSp="580000" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="6" getLevel="60" levelUpSp="580000" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="5" getLevel="60" levelUpSp="580000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="28" getLevel="60" levelUpSp="580000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="18" getLevel="60" levelUpSp="580000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="12" getLevel="60" levelUpSp="580000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="13" getLevel="60" levelUpSp="580000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="12" getLevel="60" levelUpSp="580000" />
+		<skill skillName="Eva's Serenade" skillId="1273" skillLvl="6" getLevel="60" levelUpSp="580000" />
+		<skill skillName="Concentration" skillId="1078" skillLvl="5" getLevel="60" levelUpSp="580000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="15" getLevel="60" levelUpSp="580000" />
+				
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="29" getLevel="61" levelUpSp="700000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="28" getLevel="61" levelUpSp="700000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="32" getLevel="61" levelUpSp="700000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="28" getLevel="61" levelUpSp="700000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="29" getLevel="61" levelUpSp="700000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="19" getLevel="61" levelUpSp="700000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="14" getLevel="61" levelUpSp="700000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="16" getLevel="61" levelUpSp="700000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="700000" >
+			<item id="8619" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+		</skill>	
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="30" getLevel="62" levelUpSp="700000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="29" getLevel="62" levelUpSp="700000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="33" getLevel="62" levelUpSp="700000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="29" getLevel="62" levelUpSp="700000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="30" getLevel="62" levelUpSp="700000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="20" getLevel="62" levelUpSp="700000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="13" getLevel="62" levelUpSp="700000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="15" getLevel="62" levelUpSp="700000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="13" getLevel="62" levelUpSp="700000" />
+		<skill skillName="Eva's Serenade" skillId="1273" skillLvl="7" getLevel="62" levelUpSp="700000" />
+		<skill skillName="Blessed Shield" skillId="1243" skillLvl="4" getLevel="62" levelUpSp="700000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="17" getLevel="62" levelUpSp="700000" />
+		<skill skillName="Wild Magic" skillId="1303" skillLvl="1" getLevel="62" levelUpSp="700000">
+			<item id="5815" count="1" />
+		</skill>
+			
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="31" getLevel="63" levelUpSp="880000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="30" getLevel="63" levelUpSp="880000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="34" getLevel="63" levelUpSp="880000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="30" getLevel="63" levelUpSp="880000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="31" getLevel="63" levelUpSp="880000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="21" getLevel="63" levelUpSp="880000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="16" getLevel="63" levelUpSp="880000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="18" getLevel="63" levelUpSp="880000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="32" getLevel="64" levelUpSp="880000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="31" getLevel="64" levelUpSp="880000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="35" getLevel="64" levelUpSp="880000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="31" getLevel="64" levelUpSp="880000" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="5" getLevel="64" levelUpSp="880000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="32" getLevel="64" levelUpSp="880000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="22" getLevel="64" levelUpSp="880000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="14" getLevel="64" levelUpSp="880000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="17" getLevel="64" levelUpSp="880000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="14" getLevel="64" levelUpSp="880000" />
+		<skill skillName="Eva's Serenade" skillId="1273" skillLvl="8" getLevel="64" levelUpSp="880000" />
+		<skill skillName="Resurrection" skillId="1016" skillLvl="6" getLevel="64" levelUpSp="880000" />
+		<skill skillName="Stun Resistance" skillId="1259" skillLvl="3" getLevel="64" levelUpSp="880000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="19" getLevel="64" levelUpSp="880000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="33" getLevel="65" levelUpSp="1100000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="32" getLevel="65" levelUpSp="1100000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="36" getLevel="65" levelUpSp="1100000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="32" getLevel="65" levelUpSp="1100000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="33" getLevel="65" levelUpSp="1100000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="23" getLevel="65" levelUpSp="1100000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="18" getLevel="65" levelUpSp="1100000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="20" getLevel="65" levelUpSp="1100000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="34" getLevel="66" levelUpSp="1100000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="33" getLevel="66" levelUpSp="1100000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="37" getLevel="66" levelUpSp="1100000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="33" getLevel="66" levelUpSp="1100000" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="7" getLevel="66" levelUpSp="1100000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="34" getLevel="66" levelUpSp="1100000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="24" getLevel="66" levelUpSp="1100000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="15" getLevel="66" levelUpSp="1100000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="19" getLevel="66" levelUpSp="1100000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="15" getLevel="66" levelUpSp="1100000" />
+		<skill skillName="Eva's Serenade" skillId="1273" skillLvl="9" getLevel="66" levelUpSp="1100000" />
+		<skill skillName="Blessed Shield" skillId="1243" skillLvl="5" getLevel="66" levelUpSp="1100000" />
+		<skill skillName="Dark Attack Resistance" skillId="1393" skillLvl="2" getLevel="66" levelUpSp="1100000" />
+		<skill skillName="Clarity" skillId="1397" skillLvl="2" getLevel="66" levelUpSp="1100000" />
+		<skill skillName="Advanced Block" skillId="1304" skillLvl="4" getLevel="66" levelUpSp="1100000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="21" getLevel="66" levelUpSp="1100000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="35" getLevel="67" levelUpSp="1400000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="34" getLevel="67" levelUpSp="1400000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="38" getLevel="67" levelUpSp="1400000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="34" getLevel="67" levelUpSp="1400000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="35" getLevel="67" levelUpSp="1400000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="25" getLevel="67" levelUpSp="1400000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="20" getLevel="67" levelUpSp="1400000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="22" getLevel="67" levelUpSp="1400000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="36" getLevel="68" levelUpSp="1400000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="35" getLevel="68" levelUpSp="1400000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="39" getLevel="68" levelUpSp="1400000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="35" getLevel="68" levelUpSp="1400000" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="6" getLevel="68" levelUpSp="1400000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="36" getLevel="68" levelUpSp="1400000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="26" getLevel="68" levelUpSp="1400000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="16" getLevel="68" levelUpSp="1400000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="21" getLevel="68" levelUpSp="1400000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="16" getLevel="68" levelUpSp="1400000" />
+		<skill skillName="Eva's Serenade" skillId="1273" skillLvl="10" getLevel="68" levelUpSp="1400000" />
+		<skill skillName="Concentration" skillId="1078" skillLvl="6" getLevel="68" levelUpSp="1400000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="23" getLevel="68" levelUpSp="1400000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="37" getLevel="69" levelUpSp="1700000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="36" getLevel="69" levelUpSp="1700000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="40" getLevel="69" levelUpSp="1700000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="36" getLevel="69" levelUpSp="1700000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="37" getLevel="69" levelUpSp="1700000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="27" getLevel="69" levelUpSp="1700000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="22" getLevel="69" levelUpSp="1700000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="24" getLevel="69" levelUpSp="1700000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="38" getLevel="70" levelUpSp="1700000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="37" getLevel="70" levelUpSp="1700000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="41" getLevel="70" levelUpSp="1700000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="37" getLevel="70" levelUpSp="1700000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="38" getLevel="70" levelUpSp="1700000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="28" getLevel="70" levelUpSp="1700000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="17" getLevel="70" levelUpSp="1700000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="23" getLevel="70" levelUpSp="1700000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="17" getLevel="70" levelUpSp="1700000" />
+		<skill skillName="Eva's Serenade" skillId="1273" skillLvl="11" getLevel="70" levelUpSp="1700000" />
+		<skill skillName="Blessed Shield" skillId="1243" skillLvl="6" getLevel="70" levelUpSp="1700000" />
+		<skill skillName="Wild Magic" skillId="1303" skillLvl="2" getLevel="70" levelUpSp="1700000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="25" getLevel="70" levelUpSp="1700000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="39" getLevel="71" levelUpSp="2000000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="38" getLevel="71" levelUpSp="2000000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="42" getLevel="71" levelUpSp="2000000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="38" getLevel="71" levelUpSp="2000000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="39" getLevel="71" levelUpSp="2000000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="29" getLevel="71" levelUpSp="2000000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="24" getLevel="71" levelUpSp="2000000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="26" getLevel="71" levelUpSp="2000000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="40" getLevel="72" levelUpSp="2000000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="39" getLevel="72" levelUpSp="2000000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="43" getLevel="72" levelUpSp="2000000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="39" getLevel="72" levelUpSp="2000000" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="8" getLevel="72" levelUpSp="2000000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="40" getLevel="72" levelUpSp="2000000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="30" getLevel="72" levelUpSp="2000000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="18" getLevel="72" levelUpSp="2000000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="25" getLevel="72" levelUpSp="2000000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="18" getLevel="72" levelUpSp="2000000" />
+		<skill skillName="Eva's Serenade" skillId="1273" skillLvl="12" getLevel="72" levelUpSp="2000000" />
+		<skill skillName="Stun Resistance" skillId="1259" skillLvl="4" getLevel="72" levelUpSp="2000000" />
+		<skill skillName="Advanced Block" skillId="1304" skillLvl="5" getLevel="72" levelUpSp="2000000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="27" getLevel="72" levelUpSp="2000000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="41" getLevel="73" levelUpSp="2400000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="40" getLevel="73" levelUpSp="2400000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="44" getLevel="73" levelUpSp="2400000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="40" getLevel="73" levelUpSp="2400000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="41" getLevel="73" levelUpSp="2400000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="31" getLevel="73" levelUpSp="2400000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="26" getLevel="73" levelUpSp="2400000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="28" getLevel="73" levelUpSp="2400000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="42" getLevel="74" levelUpSp="2400000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="41" getLevel="74" levelUpSp="2400000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="45" getLevel="74" levelUpSp="2400000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="41" getLevel="74" levelUpSp="2400000" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="6" getLevel="74" levelUpSp="2400000" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="7" getLevel="74" levelUpSp="2400000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="42" getLevel="74" levelUpSp="2400000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="32" getLevel="74" levelUpSp="2400000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="19" getLevel="74" levelUpSp="2400000" />
+		<skill skillName="Vitalize" skillId="1020" skillLvl="27" getLevel="74" levelUpSp="2400000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="19" getLevel="74" levelUpSp="2400000" />
+		<skill skillName="Eva's Serenade" skillId="1273" skillLvl="13" getLevel="74" levelUpSp="2400000" />
+		<skill skillName="Resurrection" skillId="1016" skillLvl="7" getLevel="74" levelUpSp="2400000" />
+		<skill skillName="Dark Attack Resistance" skillId="1393" skillLvl="3" getLevel="74" levelUpSp="2400000" />
+		<skill skillName="Clarity" skillId="1397" skillLvl="3" getLevel="74" levelUpSp="2400000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLvl="29" getLevel="74" levelUpSp="2400000" />
+	</skillTree>
+</list>

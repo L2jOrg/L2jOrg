@@ -1,0 +1,51 @@
+Freya Skill Trees created by Zoey76 (28/03/2011).
+
+Structure example:
+<list>
+	<skillTree type="" classId="" parentClassId="">
+		<skill skillName="" skillId="" skillLvl="" getLevel="" levelUpSp="" autoGet="" socialClass="" residenceSkill="" learnedByNpc="" learnedByFS="" />
+		<skill skillName="" skillId="" skillLvl="" getLevel="" levelUpSp="" autoGet="" socialClass="" residenceSkill="" learnedByNpc="" learnedByFS="">
+			<item id="" count="" />
+			<preRequisiteSkill id="" lvl="" />
+			<race>Human</race>
+			<residenceId>1</residenceId>
+			<subClassConditions slot="" lvl="" />
+		</skill>
+	</skillTree>
+</list>
+
+classId = CLASS ID
+parentClassId = CLASS ID PARENT
+
+type = SKILL TREE types like:
+- classSkillTree
+- collectSkillTree
+- fishingSkillTree
+- gameMasterAuraSkillTree
+- gameMasterSkillTree
+- heroSkillTree
+- nobleSkillTree
+- pledgeSkillTree
+- subClassSkillTree
+- subPledgeSkillTree
+- transferSkillTree
+- transformSkillTree
+
+It's possible to create custom skill trees in different files and add those skills to the retail skill trees by using the proper type.
+It's possible to add a skill(s) common to all classes by omitting the classId attribute.
+
+Attribute description:
+autoGet = Boolean to define if skill is learned automatically.
+getLevel = Minimum player/clan level required to learn  the skill (depend of the skill tree type).
+learnedByFS = Boolean to identify if skill is learned by Forgotten Scroll.
+learnedByNpc = Boolean to identify if skill is learned by NPC.
+levelUpSp = SP or Reputation cost to learn skill (depend of the skill tree type).
+preRequisiteSkill = Skill Id and level of the required skill (this skill should be learned before).
+race = condition to learn skill for specific races.
+residenceId = Residence Id, condition to learn skill for specific residences.
+residenceSkill = Boolean to identify if a residential skill or not.
+skillId = Skill Id.
+skillLvl = Skill level.
+skillName = Skill name.
+socialClass = Rank Id (like VASSAL, BARON, ELDER, and others).
+subClassConditions = condition for SubClass level and slot.

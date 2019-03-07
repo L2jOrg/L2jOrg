@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/clanHall.xsd">
+	<clanHall id="66" name="Crystal Hall" grade="GRADE_B" type="AUCTIONABLE">
+	 	<auction minBid="5000000" lease="500000" deposit="500000" />
+	 	<npcs>
+	 	   	<npc id="36724" /> <!-- Varin -->
+   			<npc id="36723" /> <!-- Bubek -->
+	 	</npcs>
+	 	<doorlist>
+	 		<door id="19210111" />
+	 		<door id="19210112" />
+	 	</doorlist>
+	 	<ownerRestartPoint x="-28489" y="121765" z="-3706" />
+		<banishPoint x="-27983" y="122380" z="-3722" />	 
+	</clanHall>
+</list>

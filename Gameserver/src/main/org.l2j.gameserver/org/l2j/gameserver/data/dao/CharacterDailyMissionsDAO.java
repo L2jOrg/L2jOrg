@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.dao;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.data.xml.holder.DailyMissionsHolder;
 import org.l2j.gameserver.model.Player;
@@ -37,7 +37,7 @@ public class CharacterDailyMissionsDAO
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_QUERY);
 			statement.setInt(1, owner.getObjectId());
 			rset = statement.executeQuery();
@@ -73,7 +73,7 @@ public class CharacterDailyMissionsDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(REPLACE_QUERY);
 			statement.setInt(1, owner.getObjectId());
 			for(DailyMission mission : missions)
@@ -103,7 +103,7 @@ public class CharacterDailyMissionsDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(REPLACE_QUERY);
 			statement.setInt(1, owner.getObjectId());
 			statement.setInt(2, mission.getId());
@@ -129,7 +129,7 @@ public class CharacterDailyMissionsDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(DELETE_QUERY);
 			statement.setInt(1, owner.getObjectId());
 			statement.setInt(2, missionId);

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/SchemeBufferSkills.xsd">
+	<category type="Buffs">
+		<buff id="1035" price="0" desc="Increases resistance to mental attacks." /> <!-- Mental Shield -->
+		<buff id="1036" price="0" desc="Increases M. Def." /> <!-- Magic Barrier -->
+		<buff id="1040" price="0" desc="Increases P. Def." /> <!-- Shield -->
+		<buff id="1045" price="0" desc="Increases maximum HP." /> <!-- Blessed Body -->
+		<buff id="1048" price="0" desc="Increases maximum MP." /> <!-- Blessed Soul -->
+		<buff id="1059" price="0" desc="Increases M. Atk." /> <!-- Empower -->
+		<buff id="1062" price="0" desc="Reduces def. and increase atk. power." /> <!-- Berserker Spirit -->
+		<buff id="1068" price="0" desc="Increases P. Atk." /> <!-- Might -->
+		<buff id="1077" price="0" desc="Increases critical attack rate." /> <!-- Focus -->
+		<buff id="1078" price="0" desc="Increases magic concentration." /> <!-- Concentration -->
+		<buff id="1085" price="0" desc="Increases Casting Spd." /> <!-- Acumen -->
+		<buff id="1086" price="0" desc="Increases Atk. Spd." /> <!-- Haste -->
+		<buff id="1087" price="0" desc="Increases Evasion." /> <!-- Agility -->
+		<buff id="1204" price="0" desc="Increases Speed." /> <!-- Wind Walk -->
+		<buff id="1240" price="0" desc="Increases Accuracy." /> <!-- Guidance -->
+		<buff id="1242" price="0" desc="Increases critical attack." /> <!-- Death Whisper -->
+		<buff id="1243" price="0" desc="Increases shield defense rate." /> <!-- Bless Shield -->
+		<buff id="1259" price="0" desc="Increases resistance to stun attack." /> <!-- Resist Shock -->
+		<buff id="1268" price="0" desc="Restores HP using inflicted damage." /> <!-- Vampiric Rage -->
+		<buff id="1303" price="0" desc="Increases crit. rate of magic attacks." /> <!-- Wild Magic -->
+		<buff id="1304" price="0" desc="Increases shield defense power." /> <!-- Advanced Block -->
+		<buff id="1352" price="0" desc="Increases resistance to atures." /> <!-- Elemental Protection -->
+		<buff id="1353" price="0" desc="Increases resistance to dark attack." /> <!-- Divine Protection -->
+		<buff id="1354" price="0" desc="Increases resistance to de-buff attack." /> <!-- Arcane Protection -->
+		<buff id="1355" price="0" desc="Increases mage abilities." /> <!-- Prophecy of Water -->
+		<buff id="1356" price="0" desc="Increases fighter abilities." /> <!-- Prophecy of Fire -->
+		<buff id="1357" price="0" desc="Increases dagger abilities." /> <!-- Prophecy of Wind -->
+		<buff id="1363" price="0" desc="Increases combat abilities." /> <!-- Chant of Victory -->
+		<buff id="1388" price="0" desc="Increases P. Atk." /> <!-- Greater Might -->
+		<buff id="1389" price="0" desc="Increases P. Def." /> <!-- Greater Shield -->
+		<buff id="1390" price="0" desc="Increases P. Atk." /> <!-- War Chant -->
+		<buff id="1391" price="0" desc="Increases P. Def." /> <!-- Earth Chant -->
+		<buff id="1397" price="0" desc="Decreases MP consumption rate." /> <!-- Clarity -->
+		<buff id="1413" price="0" desc="Increases mage abilities." /> <!-- Magnus' Chant -->
+	</category>
+	<category type="Dances">
+		<buff id="271" price="0" desc="Increases P. Atk." /> <!-- Dance of the Warrior -->
+		<buff id="272" price="0" desc="Increases Accuracy." /> <!-- Dance of Inspiration -->
+		<buff id="273" price="0" desc="Increases M. Atk." /> <!-- Dance of the Mystic -->
+		<buff id="274" price="0" desc="Increases critical damage." /> <!-- Dance of Fire -->
+		<buff id="275" price="0" desc="Increases attack speed." /> <!-- Dance of Fury -->
+		<buff id="276" price="0" desc="Increases Casting Spd." /> <!-- Dance of Concentration -->
+		<buff id="277" price="0" desc="Sacred power to physical attack." /> <!-- Dance of Light -->
+		<buff id="307" price="0" desc="Increases water resistance." /> <!-- Dance of Aqua Guard -->
+		<buff id="309" price="0" desc="Increases earth resistance." /> <!-- Dance of Earth Guard -->
+		<buff id="310" price="0" desc="Restores HP by inflicted damage." /> <!-- Dance of the Vampire -->
+		<buff id="311" price="0" desc="Increases resistance to terrain damage." /> <!-- Dance of Protection -->
+		<buff id="365" price="0" desc="Increases rate of magic crit. damage." /> <!-- Siren's Dance -->
+	</category>
+	<category type="Songs">
+		<buff id="264" price="0" desc="Increases P. Def." /> <!-- Song of Earth -->
+		<buff id="265" price="0" desc="Increases HP regeneration." /> <!-- Song of Life -->
+		<buff id="266" price="0" desc="Increases Evasion." /> <!-- Song of Water -->
+		<buff id="267" price="0" desc="Increases M. Def." /> <!-- Song of Warding -->
+		<buff id="268" price="0" desc="Increases movement." /> <!-- Song of Wind -->
+		<buff id="269" price="0" desc="Increases critical rate." /> <!-- Song of Hunter -->
+		<buff id="270" price="0" desc="Increases resistance to dark magic." /> <!-- Song of Invocation -->
+		<buff id="304" price="0" desc="Increases maximum HP." /> <!-- Song of Vitality -->
+		<buff id="305" price="0" desc="Reflects damage received." /> <!-- Song of Vengeance -->
+		<buff id="306" price="0" desc="Increases resistance to fire." /> <!-- Song of Flame Guard -->
+		<buff id="308" price="0" desc="Increases resistance to wind." /> <!-- Song of Storm Guard -->
+		<buff id="349" price="0" desc="Decreases re-use time." /> <!-- Song of Renewal -->
+		<buff id="363" price="0" desc="Increases MP regeneration rate." /> <!-- Song of Meditation -->
+		<buff id="364" price="0" desc="Decreases re-use time of physical skills." /> <!-- Song of Champion -->
+	</category>
+</list>

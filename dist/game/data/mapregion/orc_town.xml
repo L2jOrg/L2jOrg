@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Orc Town -->
+	<region name="orc_town" town="Orc Town" castle="9" locId="920" bbs="9">
+		<respawnPoint X="-44316" Y="-113136" Z="-80" />
+		<respawnPoint X="-44296" Y="-114048" Z="-80" />
+		<respawnPoint X="-44704" Y="-112896" Z="-80" />
+		<respawnPoint X="-44720" Y="-114304" Z="-80" />
+		<respawnPoint X="-44206" Y="-113392" Z="-80" />
+		<respawnPoint X="-43970" Y="-114150" Z="-80" />
+		<respawnPoint X="-44328" Y="-114625" Z="-80" />
+		<respawnPoint X="-44884" Y="-115063" Z="-80" />
+		<respawnPoint X="-44923" Y="-114659" Z="-80" />
+		<respawnPoint X="-44232" Y="-113701" Z="-80" />
+		<respawnPoint X="-44596" Y="-112956" Z="-80" />
+		<respawnPoint X="-44987" Y="-112394" Z="-80" />
+		<respawnPoint X="-45498" Y="-111800" Z="-80" />
+		<respawnPoint X="-44637" Y="-112373" Z="-80" />
+		<respawnPoint X="-44189" Y="-113065" Z="-80" />
+		<respawnPoint X="-44048" Y="-113463" Z="-80" />
+		<respawnPoint X="-43552" Y="-121488" Z="-233" isChaotic="true" />
+		<respawnPoint X="-42560" Y="-121344" Z="-188" isChaotic="true" />
+		<respawnPoint X="-41536" Y="-122960" Z="-308" isChaotic="true" />
+		<respawnPoint X="-40464" Y="-122752" Z="-364" isChaotic="true" />
+		<respawnPoint X="-45568" Y="-107296" Z="-516" isChaotic="true" />
+		<respawnPoint X="-46512" Y="-106032" Z="-700" isChaotic="true" />
+		<respawnPoint X="-44304" Y="-105888" Z="-1156" isChaotic="true" />
+		<respawnPoint X="-43728" Y="-106688" Z="-1304" isChaotic="true" />
+		<respawnPoint X="-40000" Y="-109200" Z="-1736" isChaotic="true" />
+		<respawnPoint X="-39792" Y="-110832" Z="-1860" isChaotic="true" />
+		<respawnPoint X="-39136" Y="-112688" Z="-1844" isChaotic="true" />
+		<respawnPoint X="-37888" Y="-112608" Z="-1772" isChaotic="true" />
+		<map X="18" Y="14" />
+		<map X="19" Y="13" />
+		<map X="19" Y="14" />
+		<map X="19" Y="15" />
+		<map X="19" Y="16" />
+		<map X="20" Y="13" />
+		<map X="20" Y="14" />
+		<map X="20" Y="15" />
+	</region>
+	<!-- Temple Of Paagrio -->
+	<region name="Temple_of_Paagrio" town="Orc Town" castle="9" locId="920" bbs="9">
+		<respawnPoint X="-56733" Y="-113459" Z="-690" />
+		<respawnPoint X="-56686" Y="-113470" Z="-690" />
+		<respawnPoint X="-56728" Y="-113610" Z="-690" />
+		<respawnPoint X="-56693" Y="-113610" Z="-690" />
+		<respawnPoint X="-56743" Y="-113757" Z="-690" />
+		<respawnPoint X="-56682" Y="-113730" Z="-690" />
+		<respawnPoint X="-43552" Y="-121488" Z="-233" isChaotic="true" />
+		<respawnPoint X="-42560" Y="-121344" Z="-188" isChaotic="true" />
+		<respawnPoint X="-41536" Y="-122960" Z="-308" isChaotic="true" />
+		<respawnPoint X="-40464" Y="-122752" Z="-364" isChaotic="true" />
+		<respawnPoint X="-45568" Y="-107296" Z="-516" isChaotic="true" />
+		<respawnPoint X="-46512" Y="-106032" Z="-700" isChaotic="true" />
+		<respawnPoint X="-44304" Y="-105888" Z="-1156" isChaotic="true" />
+		<respawnPoint X="-43728" Y="-106688" Z="-1304" isChaotic="true" />
+		<respawnPoint X="-40000" Y="-109200" Z="-1736" isChaotic="true" />
+		<respawnPoint X="-39792" Y="-110832" Z="-1860" isChaotic="true" />
+		<respawnPoint X="-39136" Y="-112688" Z="-1844" isChaotic="true" />
+		<respawnPoint X="-37888" Y="-112608" Z="-1772" isChaotic="true" />
+	</region>
+</list>

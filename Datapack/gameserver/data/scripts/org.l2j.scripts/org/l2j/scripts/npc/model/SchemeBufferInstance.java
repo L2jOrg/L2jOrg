@@ -1,7 +1,7 @@
 package org.l2j.scripts.npc.model;
 
 import org.l2j.commons.collections.MultiValueSet;
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
@@ -288,7 +288,7 @@ public class SchemeBufferInstance extends NpcInstance
         
         try
         {
-        	con = L2DatabaseFactory.getInstance().getConnection();
+        	con = DatabaseFactory.getInstance().getConnection();
             if (action.equals("add"))
             {
                 HTML_MESSAGE += "You can add <font color=LEVEL>" + (MAX_SCHEME_BUFFS - BUFF_COUNT) + "</font> Buffs and <font color=LEVEL>" + (MAX_SCHEME_DANCES - DANCE_SONG) + "</font> Dances more!";
@@ -449,7 +449,7 @@ public class SchemeBufferInstance extends NpcInstance
         
         try
         {
-        	con = L2DatabaseFactory.getInstance().getConnection();
+        	con = DatabaseFactory.getInstance().getConnection();
             rss = con.prepareStatement("SELECT * FROM npcbuffer_scheme_list WHERE player_id=?");
             rss.setInt(1, player.getObjectId());
             action = rss.executeQuery();
@@ -496,7 +496,7 @@ public class SchemeBufferInstance extends NpcInstance
         
         try
         {
-        	con = L2DatabaseFactory.getInstance().getConnection();
+        	con = DatabaseFactory.getInstance().getConnection();
             getList = con.prepareStatement("SELECT buffId,buffLevel FROM npcbuffer_buff_list WHERE buffType=\"" + buffType + "\" AND canUse=1  ORDER BY Buff_Class ASC, id");
             rs = getList.executeQuery();
             while (rs.next()) {
@@ -580,7 +580,7 @@ public class SchemeBufferInstance extends NpcInstance
         
         try
         {
-        	con = L2DatabaseFactory.getInstance().getConnection();
+        	con = DatabaseFactory.getInstance().getConnection();
             rss = con.prepareStatement("SELECT * FROM npcbuffer_scheme_list WHERE player_id=?");
             rss.setInt(1, player.getObjectId());
             action = rss.executeQuery();
@@ -612,7 +612,7 @@ public class SchemeBufferInstance extends NpcInstance
         
         try
         {
-        	con = L2DatabaseFactory.getInstance().getConnection();
+        	con = DatabaseFactory.getInstance().getConnection();
             rss = con.prepareStatement("SELECT buff_class FROM npcbuffer_scheme_contents WHERE scheme_id=?");
             rss.setString(1, scheme);
             action = rss.executeQuery();
@@ -645,7 +645,7 @@ public class SchemeBufferInstance extends NpcInstance
         
         try
         {
-        	con = L2DatabaseFactory.getInstance().getConnection();
+        	con = DatabaseFactory.getInstance().getConnection();
             rss = con.prepareStatement("SELECT buff_class FROM npcbuffer_scheme_contents WHERE scheme_id=?");
             rss.setString(1, scheme);
             action = rss.executeQuery();
@@ -755,7 +755,7 @@ public class SchemeBufferInstance extends NpcInstance
         
         try
         {
-        	con = L2DatabaseFactory.getInstance().getConnection();
+        	con = DatabaseFactory.getInstance().getConnection();
             rss = con.prepareStatement("SELECT * FROM npcbuffer_scheme_list WHERE player_id=?");
             rss.setInt(1, st.getPlayer().getObjectId());
             action = rss.executeQuery();
@@ -808,7 +808,7 @@ public class SchemeBufferInstance extends NpcInstance
         
         try
         {
-        	con = L2DatabaseFactory.getInstance().getConnection();
+        	con = DatabaseFactory.getInstance().getConnection();
             upd = con.prepareStatement("UPDATE npcbuffer_buff_list SET forClass=? WHERE buffId=? AND bufflevel=?");
             upd.setString(1, newVal);
             upd.setString(2, bId);
@@ -837,7 +837,7 @@ public class SchemeBufferInstance extends NpcInstance
         
         try
         {
-        	con = L2DatabaseFactory.getInstance().getConnection();
+        	con = DatabaseFactory.getInstance().getConnection();
             upd = con.prepareStatement("UPDATE npcbuffer_buff_list SET canUse=? WHERE buffId=? AND buffLevel=? LIMIT 1");
             upd.setString(1, canUseBuff);
             upd.setString(2, bId);
@@ -864,7 +864,7 @@ public class SchemeBufferInstance extends NpcInstance
         
         try
         {
-        	con = L2DatabaseFactory.getInstance().getConnection();
+        	con = DatabaseFactory.getInstance().getConnection();
             act = con.prepareStatement("SELECT buffType FROM npcbuffer_buff_list WHERE buffId=? LIMIT 1");
             act.setInt(1, id);
             rs = act.executeQuery();
@@ -905,7 +905,7 @@ public class SchemeBufferInstance extends NpcInstance
         
         try
         {
-        	con = L2DatabaseFactory.getInstance().getConnection();
+        	con = DatabaseFactory.getInstance().getConnection();
             act = con.prepareStatement("SELECT canUse FROM npcbuffer_buff_list WHERE buffId=? AND buffLevel=? LIMIT 1");
             act.setInt(1, id);
             act.setInt(2, level);
@@ -933,7 +933,7 @@ public class SchemeBufferInstance extends NpcInstance
         
         try
         {
-        	con = L2DatabaseFactory.getInstance().getConnection();
+        	con = DatabaseFactory.getInstance().getConnection();
             rss = con.prepareStatement("SELECT id FROM npcbuffer_scheme_contents WHERE scheme_id=? AND skill_id=? AND skill_level=? LIMIT 1");
             rss.setString(1, scheme);
             rss.setInt(2, id);
@@ -962,7 +962,7 @@ public class SchemeBufferInstance extends NpcInstance
         
         try
         {
-        	con = L2DatabaseFactory.getInstance().getConnection();
+        	con = DatabaseFactory.getInstance().getConnection();
             getTipo = con.prepareStatement("SELECT buff_class FROM npcbuffer_buff_list WHERE buffId=?");
             getTipo.setString(1, id);
             gt = getTipo.executeQuery();
@@ -991,7 +991,7 @@ public class SchemeBufferInstance extends NpcInstance
         
         try
         {
-        	con = L2DatabaseFactory.getInstance().getConnection();
+        	con = DatabaseFactory.getInstance().getConnection();
             if (type.equals("set"))
             {
                 getBuffCount = con.prepareStatement("SELECT * FROM npcbuffer_buff_list WHERE buffType IN (" + generateQuery(0, 0) + ") AND canUse=1");
@@ -1329,7 +1329,7 @@ public class SchemeBufferInstance extends NpcInstance
                     
                     try
                     {
-                    	con5 = L2DatabaseFactory.getInstance().getConnection();
+                    	con5 = DatabaseFactory.getInstance().getConnection();
                         getSimilarNameCount = con5.prepareStatement("SELECT buffId,buffLevel FROM npcbuffer_buff_list WHERE forClass IN (?,?) ORDER BY id ASC");
                         getSimilarNameCount.setInt(1, player_class);
                         getSimilarNameCount.setString(2, "2");
@@ -1364,7 +1364,7 @@ public class SchemeBufferInstance extends NpcInstance
                         
 							try
 							{
-								con6 = L2DatabaseFactory.getInstance().getConnection();
+								con6 = DatabaseFactory.getInstance().getConnection();
 								getSimilarNameCount = con6.prepareStatement("SELECT buffId,buffLevel FROM npcbuffer_buff_list WHERE forClass IN (?,?) ORDER BY id ASC");
 								getSimilarNameCount.setString(1, "0");
 								getSimilarNameCount.setString(2, "2");
@@ -1488,7 +1488,7 @@ public class SchemeBufferInstance extends NpcInstance
 			    
 			    try
 			    {
-			    	con = L2DatabaseFactory.getInstance().getConnection();
+			    	con = DatabaseFactory.getInstance().getConnection();
 			        rss = con.prepareStatement("SELECT * FROM npcbuffer_scheme_contents WHERE scheme_id=? ORDER BY id");
 			        rss.setString(1, eventParam1);
 			        action = rss.executeQuery();
@@ -1625,7 +1625,7 @@ public class SchemeBufferInstance extends NpcInstance
             
             try
             {
-            	con2 = L2DatabaseFactory.getInstance().getConnection();
+            	con2 = DatabaseFactory.getInstance().getConnection();
             	rem2 = con2.prepareStatement("DELETE FROM npcbuffer_scheme_contents WHERE scheme_id=? AND skill_id=? AND skill_level=? LIMIT 1");
             	rem2.setString(1, scheme);
             	rem2.setString(2, skill);
@@ -1658,7 +1658,7 @@ public class SchemeBufferInstance extends NpcInstance
             
             try
             {
-            	con3 = L2DatabaseFactory.getInstance().getConnection();
+            	con3 = DatabaseFactory.getInstance().getConnection();
                 ins = con3.prepareStatement("INSERT INTO npcbuffer_scheme_contents (scheme_id,skill_id,skill_level,buff_class) VALUES (?,?,?,?)");
                 ins.setString(1, scheme);
                 ins.setString(2, skill);
@@ -1694,7 +1694,7 @@ public class SchemeBufferInstance extends NpcInstance
             
             try
             {
-            	con = L2DatabaseFactory.getInstance().getConnection();
+            	con = DatabaseFactory.getInstance().getConnection();
 			    ins = con.prepareStatement("INSERT INTO npcbuffer_scheme_list (player_id,scheme_name) VALUES (?,?)");
 			    ins.setInt(1, player.getObjectId());
 			    ins.setString(2, param);
@@ -1719,7 +1719,7 @@ public class SchemeBufferInstance extends NpcInstance
             
             try
             {
-            	con = L2DatabaseFactory.getInstance().getConnection();
+            	con = DatabaseFactory.getInstance().getConnection();
                 rem = con.prepareStatement("DELETE FROM npcbuffer_scheme_list WHERE id=? LIMIT 1");
                 rem.setString(1, eventParam1);
                 rem.executeUpdate();

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="13009" name="Inventory3" type="EtcItem">
+		<!-- Doesn't exist in client. -->
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="13015" name="My Teleport Book" type="EtcItem">
+		<!-- A dimensional item.  Increases the number of return points to save by 3. The maximum number is 18. -->
+		<set name="icon" val="icon.bookmark_book_i00" />
+		<set name="default_action" val="CALL_SKILL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<skills>
+			<skill id="2587" level="1" /> <!-- Increase number of teleport slots. -->
+		</skills>
+	</item>
+	<item id="13016" name="My Teleport Scroll" type="EtcItem">
+		<!-- Dimensional Object. The item disappears after use. -->
+		<set name="icon" val="icon.bookmark_scroll_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="TELEPORTBOOKMARK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="13021" name="Color Title" type="EtcItem">
+		<!-- A dimensional item. An item which can be used to change the color of a character�s title. Upon leaving a clan, the color title disappears, just as the regular one does (for everyone except Noblesse) -->
+		<set name="icon" val="icon.color_name_i00" />
+		<set name="default_action" val="NICK_COLOR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="NicknameColor" />
+	</item>
+	<item id="13025" name="Agathion - Joy" type="Armor">
+		<!-- Enables to summon Agathion of Joy when equipped. <Skill used>. 1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min). <Item Skill>. 1. Search for Evidence: Speed +66 for 15 sec. <Item Skill>. 2. Hidden Search: monsters don't attack first. -->
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="8256" level="1" /> <!-- Release Agathion's Seal - Joy -->
+			<skill id="5955" level="1" /> <!-- Agathion Cute Trick - Joy -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+</list>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="104" parentClassId="28">
+		<skill skillName="Anti Magic" skillId="146" skillLvl="46" getLevel="76" levelUpSp="8100000" />
+		<skill skillName="Warrior Bane" skillId="1350" skillLvl="1" getLevel="76" levelUpSp="8100000" />
+		<skill skillName="Mage Bane" skillId="1351" skillLvl="1" getLevel="76" levelUpSp="8100000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="8100000">
+			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="8100000">
+			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+		</skill>
+		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="34" getLevel="76" levelUpSp="8100000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="42" getLevel="76" levelUpSp="8100000" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="43" getLevel="76" levelUpSp="8100000" />
+		<skill skillName="Aqua Swirl" skillId="975" skillLvl="27" getLevel="76" levelUpSp="8100000" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="46" getLevel="76" levelUpSp="8100000" />
+		<skill skillName="Mount Pegasus" skillId="1834" skillLvl="1" getLevel="76">
+			<item id="90039" count="1" /> <!-- Spellbook: Mount Pegasus -->
+		</skill>
+		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="35" getLevel="76" levelUpSp="8100000" />
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="47" getLevel="77" levelUpSp="8100000" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="35" getLevel="77" levelUpSp="8100000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="43" getLevel="77" levelUpSp="8100000" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="44" getLevel="77" levelUpSp="8100000" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="47" getLevel="77" levelUpSp="8100000" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="36" getLevel="77" levelUpSp="8100000" />
+		<skill skillName="Summon Magnus the Unicorn" skillId="1407" skillLvl="1" getLevel="77" levelUpSp="8100000" />
+		<skill skillName="Summon Seraphim the Unicorn" skillId="1332" skillLvl="1" getLevel="77" levelUpSp="8100000">
+			<item id="91204" count="1" /> <!-- Scroll: Summon Seraphim the Unicorn -->
+		</skill>
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="48" getLevel="78" levelUpSp="17900000" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="36" getLevel="78" levelUpSp="17900000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="44" getLevel="78" levelUpSp="17900000" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="45" getLevel="78" levelUpSp="17900000" />
+		<skill skillName="Aqua Swirl" skillId="975" skillLvl="28" getLevel="78" levelUpSp="17900000" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="48" getLevel="78" levelUpSp="17900000" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="37" getLevel="78" levelUpSp="17900000" />
+		<skill skillName="Spirit Sharing" skillId="1547" skillLvl="4" getLevel="78" levelUpSp="17900000" />
+		<skill skillName="Wizard Servitor" skillId="1347" skillLvl="1" getLevel="78" levelUpSp="17900000">
+			<item id="90128" count="1" /> <!-- Scroll: Wizard Servitor -->
+		</skill>
+		
+		<skill skillName="Final Servitor" skillId="1349" skillLvl="1" getLevel="79" levelUpSp="17900000">
+			<item id="90130" count="1" />
+		</skill>
+		<skill skillName="Summon Seraphim the Unicorn" skillId="1332" skillLvl="2" getLevel="79" levelUpSp="17900000" />
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="49" getLevel="80" levelUpSp="17900000" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="37" getLevel="80" levelUpSp="17900000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="45" getLevel="80" levelUpSp="17900000" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="46" getLevel="80" levelUpSp="17900000" />
+		<skill skillName="Aqua Swirl" skillId="975" skillLvl="29" getLevel="80" levelUpSp="17900000" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="49" getLevel="80" levelUpSp="17900000" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="38" getLevel="80" levelUpSp="17900000" />
+		<skill skillName="Power Supremacy" skillId="1611" skillLvl="5" getLevel="80" levelUpSp="17900000" />
+		<skill skillName="Servitor Share" skillId="1557" skillLvl="1" getLevel="80" levelUpSp="17900000">
+			<item id="90131" count="1" /> <!-- Scroll: Servitor Share -->
+		</skill>
+
+		<skill skillName="Anti Magic" skillId="146" skillLvl="50" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="38" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="46" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="47" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Aqua Swirl" skillId="975" skillLvl="30" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="50" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="39" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Summon Magnus the Unicorn" skillId="1407" skillLvl="2" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Summon Seraphim the Unicorn" skillId="1332" skillLvl="3" getLevel="81" levelUpSp="160000000" />
+
+		<skill skillName="Anti Magic" skillId="146" skillLvl="51" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="39" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="47" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="48" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Aqua Swirl" skillId="975" skillLvl="31" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="51" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="40" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Spirit Sharing" skillId="1547" skillLvl="5" getLevel="82" levelUpSp="170000000" />
+
+		<skill skillName="Anti Magic" skillId="146" skillLvl="52" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="40" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="48" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="49" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Aqua Swirl" skillId="975" skillLvl="32" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="52" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="41" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Summon Seraphim the Unicorn" skillId="1332" skillLvl="4" getLevel="83" levelUpSp="240000000" />
+
+		<skill skillName="Anti Magic" skillId="146" skillLvl="53" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="41" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="49" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="50" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Aqua Swirl" skillId="975" skillLvl="33" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="53" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="42" getLevel="84" levelUpSp="240000000" />
+	</skillTree>
+</list>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="27598" toLevel="1" name="Excellent Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Swing the bat for a home run. P. Accuracy + 1 for 5 minutes. -->
+		<icon>BranchIcon.Icon.homerun</icon>
+		<operateType>A2</operateType>
+		<hitTime>5500</hitTime>
+		<coolTime>400</coolTime>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="27599" toLevel="1" name="Excellent Serve">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Throw the ball as best as you can for a strikeout. M. Accuracy + 1 for 5 minutes. -->
+		<icon>BranchIcon.Icon.strikeout</icon>
+		<operateType>A2</operateType>
+		<hitTime>5500</hitTime>
+		<coolTime>400</coolTime>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+</list>

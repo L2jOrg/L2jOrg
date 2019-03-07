@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="35445"> <!-- Albert -->
+		<teleport name="tel1" type="OTHER">
+			<location npcStringId="1010024" x="147450" y="28081" z="-2294" /> <!-- Village Square -->
+			<location npcStringId="1010026" x="151950" y="25094" z="-2172" /> <!-- East Gate Entrance -->
+			<location npcStringId="1010027" x="142593" y="26344" z="-2425" /> <!-- West Gate Entrance -->
+			<location npcStringId="1010028" x="147503" y="32299" z="-2501" /> <!-- South Gate Entrance -->
+			<location npcStringId="1010025" x="147465" y="20737" z="-2130" /> <!-- North Gate Entrance -->
+		</teleport>
+		<teleport name="tel2" type="OTHER">
+			<location npcStringId="1010024" x="147450" y="28081" z="-2294" /> <!-- Village Square -->
+			<location npcStringId="1010026" x="151950" y="25094" z="-2172" /> <!-- East Gate Entrance -->
+			<location npcStringId="1010027" x="142593" y="26344" z="-2425" /> <!-- West Gate Entrance -->
+			<location npcStringId="1010028" x="147503" y="32299" z="-2501" /> <!-- South Gate Entrance -->
+			<location npcStringId="1010025" x="147465" y="20737" z="-2130" /> <!-- North Gate Entrance -->
+			<location npcStringId="1010127" x="106517" y="-2871" z="-3454" feeCount="2000" /> <!-- Ancient Battleground -->
+			<location npcStringId="1010618" x="124904" y="61992" z="-3973" feeCount="2000" castleId="4" /> <!-- Enchanted Valley, Southern Region (Lv. 45) -->
+			<location npcStringId="1010619" x="104426" y="33746" z="-3825" feeCount="2000" castleId="4;5" /> <!-- Enchanted Valley, Northern Region (Lv. 45) -->
+			<location npcStringId="1010060" x="155310" y="-16339" z="-3320" feeCount="2000" /> <!-- Blazing Swamp -->
+			<location npcStringId="1010585" x="142065" y="81300" z="-3000" feeCount="2000" /> <!-- Forest of Mirrors (Lv. 40) -->
+			<location npcStringId="1010607" x="166182" y="91560" z="-3168" feeCount="2000" /> <!-- Anghel Waterfall -->
+			<location npcStringId="1010137" x="181726" y="-7524" z="-3464" feeCount="2000" /> <!-- South Entrance of Devastated Castle -->
+			<location npcStringId="1010192" x="168779" y="-18790" z="-3184" feeCount="2000" /> <!-- West Area of the Devastated Castle -->
+			<location npcStringId="1010604" x="184742" y="19745" z="-3168" feeCount="2000" /> <!-- Seal of Shilen -->
+			<location npcStringId="1010143" x="168217" y="37990" z="-4072" feeCount="2000" /> <!-- Forsaken Plains (Lv. 58) -->
+			<location npcStringId="1010144" x="114649" y="11115" z="-5120" feeCount="2000" /> <!-- Tower of Insolence (Lv. 70) -->
+			<location npcStringId="1010702" x="183985" y="61424" z="-3992" feeCount="2000" /> <!-- Giant's Cave Upper Layer -->
+			<location npcStringId="1010703" x="191754" y="56760" z="-7624" feeCount="2000" /> <!-- Giant's Cave Lower Layer -->
+		</teleport>
+	</npc>
+</list>

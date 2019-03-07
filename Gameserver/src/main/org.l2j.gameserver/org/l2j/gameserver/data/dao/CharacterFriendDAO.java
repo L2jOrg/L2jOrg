@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.dao;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.Friend;
@@ -36,7 +36,7 @@ public class CharacterFriendDAO
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT f.friend_id, f.memo, c.char_name, s.class_id, s.level, c.clanid, clan.ally_id, subpledge.name, ally.ally_name, c.createtime, c.lastAccess FROM character_friends f LEFT JOIN characters c ON f.friend_id = c.obj_Id LEFT JOIN clan_data clan ON c.clanid = clan.clan_id LEFT JOIN clan_subpledges subpledge ON (c.clanid = subpledge.clan_id AND subpledge.type = 0) LEFT JOIN ally_data ally ON clan.ally_id = ally.ally_id LEFT JOIN character_subclasses s ON (f.friend_id = s.char_obj_id AND s.active = 1) WHERE f.char_id = ?");
 			statement.setInt(1, owner.getObjectId());
 			rset = statement.executeQuery();
@@ -77,7 +77,7 @@ public class CharacterFriendDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("INSERT INTO character_friends (char_id,friend_id) VALUES(?,?)");
 			statement.setInt(1, owner.getObjectId());
 			statement.setInt(2, friend.getObjectId());
@@ -99,7 +99,7 @@ public class CharacterFriendDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE character_friends SET memo=? WHERE char_id=? AND friend_id=?");
 			statement.setString(1, memo);
 			statement.setInt(2, owner.getObjectId());
@@ -124,7 +124,7 @@ public class CharacterFriendDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM character_friends WHERE (char_id=? AND friend_id=?) OR (char_id=? AND friend_id=?)");
 			statement.setInt(1, ownerId);
 			statement.setInt(2, friendId);

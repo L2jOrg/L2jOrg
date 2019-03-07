@@ -1,0 +1,1395 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="70700" name="Gatekeeper Hat (DEX+1 WIT+1)" type="Armor">
+		<!-- Gatekeeper Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55618" level="1" /> <!-- Gatekeeper Hat (DEX +1 WIT +1) -->
+		</skills>
+	</item>
+	<item id="70701" name="Gatekeeper Hat (CON+1 MEN+1)" type="Armor">
+		<!-- Gatekeeper Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55619" level="1" /> <!-- Gatekeeper Hat (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70702" name="Wedding Veil (STR+1 INT+1)" type="Armor">
+		<!-- Pure white wedding veil. STR+1, INT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon.br_wedding_vail_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55620" level="1" /> <!-- Wedding Veil (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70703" name="Wedding Veil (DEX+1 WIT+1)" type="Armor">
+		<!-- Pure white wedding veil. DEX+1, WIT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon.br_wedding_vail_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55621" level="1" /> <!-- Wedding Veil (DEX +1 WIT +1) -->
+		</skills>
+	</item>
+	<item id="70704" name="Wedding Veil (CON+1 MEN+1)" type="Armor">
+		<!-- Pure white wedding veil. CON+1, MEN+1. May be used only by female characters. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon.br_wedding_vail_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55622" level="1" /> <!-- Wedding Veil (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70705" name="Maid Hair Accessory (STR+1 INT+1)" type="Armor">
+		<!-- Maid Hair Accessory. STR+1, INT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_cutie_maid_hair" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55623" level="1" /> <!-- Maid Hair Accessory (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70706" name="Maid Hair Accessory (DEX+1 WIT+1)" type="Armor">
+		<!-- Maid Hair Accessory. DEX+1, WIT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_cutie_maid_hair" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55624" level="1" /> <!-- Maid Hair Accessory (DEX +1 WIT +1) -->
+		</skills>
+	</item>
+	<item id="70707" name="Maid Hair Accessory (CON+1 MEN+1)" type="Armor">
+		<!-- Maid Hair Accessory. CON+1, MEN+1. May be used only by female characters. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_cutie_maid_hair" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55625" level="1" /> <!-- Maid Hair Accessory (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70708" name="Refined Romantic Chapeau: Red (STR+1 INT+1)" type="Armor">
+		<!-- Refined Romantic Chapeau: Red. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_red" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55626" level="1" /> <!-- Refined Romantic Chapeau: Red (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70709" name="Refined Romantic Chapeau: Red (DEX+1 WIT+1)" type="Armor">
+		<!-- Refined Romantic Chapeau: Red. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_red" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55627" level="1" /> <!-- Refined Romantic Chapeau: Red (DEX+1 WIT+1) -->
+		</skills>
+	</item>
+	<item id="70710" name="Refined Romantic Chapeau: Red (CON+1 MEN+1)" type="Armor">
+		<!-- Refined Romantic Chapeau: Red. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_red" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55628" level="1" /> <!-- Refined Romantic Chapeau: Red (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70711" name="Refined Angel Ring (STR+1 INT+1)" type="Armor">
+		<!-- Refined Angel Ring. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.accessory_angel_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55629" level="1" /> <!-- Refined Angel Ring (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70712" name="Refined Angel Ring (DEX+1 WIT+1)" type="Armor">
+		<!-- Refined Angel Ring. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.accessory_angel_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55630" level="1" /> <!-- Refined Angel Ring (DEX +1 WIT +1) -->
+		</skills>
+	</item>
+	<item id="70713" name="Refined Angel Ring (CON+1 MEN+1)" type="Armor">
+		<!-- Refined Angel Ring. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.accessory_angel_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55631" level="1" /> <!-- Refined Angel Ring (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70714" name="Refined Wizard Hat (STR+1 INT+1)" type="Armor">
+		<!-- Refined Wizard Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.accessory_magician_cap2_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55632" level="1" /> <!-- Refined Wizard Hat (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70715" name="Refined Wizard Hat (DEX+1 WIT+1)" type="Armor">
+		<!-- Refined Wizard Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.accessory_magician_cap2_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55633" level="1" /> <!-- Refined Wizard Hat (DEX +1 WIT +1) -->
+		</skills>
+	</item>
+	<item id="70716" name="Refined Wizard Hat (CON+1 MEN+1)" type="Armor">
+		<!-- Refined Wizard Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.accessory_magician_cap2_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55634" level="1" /> <!-- Refined Wizard Hat (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70717" name="Laborer Hat (STR+1 INT+1)" type="Armor">
+		<!-- Laborer Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys.icon.br_people_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55635" level="1" /> <!-- Laborer Hat (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70718" name="Laborer Hat (DEX+1 WIT+1)" type="Armor">
+		<!-- Laborer Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys.icon.br_people_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55636" level="1" /> <!-- Laborer Hat (DEX +1 WIT +1) -->
+		</skills>
+	</item>
+	<item id="70719" name="Laborer Hat (CON+1 MEN+1)" type="Armor">
+		<!-- Laborer Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys.icon.br_people_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55637" level="1" /> <!-- Laborer Hat (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70720" name="Top Hat (STR+1 INT+1)" type="Armor">
+		<!-- Magical-looking hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.accessory_magicial_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55638" level="1" /> <!-- Top Hat (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70721" name="Top Hat (DEX+1 WIT+1)" type="Armor">
+		<!-- Magical-looking hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.accessory_magicial_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55639" level="1" /> <!-- Top Hat (DEX +1 WIT +1) -->
+		</skills>
+	</item>
+	<item id="70722" name="Top Hat (CON+1 MEN+1)" type="Armor">
+		<!-- Magical-looking hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.accessory_magicial_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55640" level="1" /> <!-- Wizard Hat (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70723" name="Vigilante Hat (STR+1 INT+1)" type="Armor">
+		<!-- Vigilante Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.zorocap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55641" level="1" /> <!-- Vigilante Hat (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70724" name="Vigilante Hat (DEX+1 WIT+1)" type="Armor">
+		<!-- Vigilante Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.zorocap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55642" level="1" /> <!-- Vigilante Hat (DEX +1 WIT +1) -->
+		</skills>
+	</item>
+	<item id="70725" name="Vigilante Hat (CON+1 MEN+1)" type="Armor">
+		<!-- Vigilante Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.zorocap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55643" level="1" /> <!-- Vigilante Hat (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70726" name="White Uniform Hat (STR+1 INT+1)" type="Armor">
+		<!-- White uniform hat that makes you feel the energy of a man of the sea. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon2.pi_navy_cap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55644" level="1" /> <!-- White Uniform Hat (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70727" name="White Uniform Hat (DEX+1 WIT+1)" type="Armor">
+		<!-- White uniform hat that makes you feel the energy of a man of the sea. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon2.pi_navy_cap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55645" level="1" /> <!-- White Uniform Hat (DEX+1 WIT+1) -->
+		</skills>
+	</item>
+	<item id="70728" name="White Uniform Hat (CON+1 MEN+1)" type="Armor">
+		<!-- White uniform hat that makes you feel the energy of a man of the sea. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon2.pi_navy_cap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55646" level="1" /> <!-- White Uniform Hat (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70729" name="Warrior's Helmet (STR+1 INT+1)" type="Armor">
+		<!-- Helmet of a brave ancient warrior. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon.br_close_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55647" level="1" /> <!-- Warrior's Helmet (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70730" name="Warrior's Helmet (DEX+1 WIT+1)" type="Armor">
+		<!-- Helmet of a brave ancient warrior. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon.br_close_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55648" level="1" /> <!-- Warrior's Helmet (DEX+1 WIT+1) -->
+		</skills>
+	</item>
+	<item id="70731" name="Warrior's Helmet (CON+1 MEN+1)" type="Armor">
+		<!-- Helmet of a brave ancient warrior. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon.br_close_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55649" level="1" /> <!-- Warrior's Helmet (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70732" name="First Mate Hat (STR+1 INT+1)" type="Armor">
+		<!-- First Mate Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.Accessary_middle_ages_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55650" level="1" /> <!-- First Mate Hat (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70733" name="First Mate Hat (DEX+1 WIT+1)" type="Armor">
+		<!-- First Mate Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.Accessary_middle_ages_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55651" level="1" /> <!-- First Mate Hat (DEX+1 WIT+1) -->
+		</skills>
+	</item>
+	<item id="70734" name="First Mate Hat (CON+1 MEN+1)" type="Armor">
+		<!-- First Mate Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.Accessary_middle_ages_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55652" level="1" /> <!-- First Mate Hat (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70735" name="Refined Romantic Chapeau: Blue (STR+1 INT+1)" type="Armor">
+		<!-- Refined Romantic Chapeau: Blue. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_blue" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55653" level="1" /> <!-- Refined Romantic Chapeau: Blue (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70736" name="Refined Romantic Chapeau: Blue (DEX+1 WIT+1)" type="Armor">
+		<!-- Refined Romantic Chapeau: Blue. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_blue" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55654" level="1" /> <!-- Refined Romantic Chapeau: Blue (DEX+1 WIT+1) -->
+		</skills>
+	</item>
+	<item id="70737" name="Refined Romantic Chapeau: Blue (CON+1 MEN+1)" type="Armor">
+		<!-- Refined Romantic Chapeau: Blue. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_blue" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55655" level="1" /> <!-- Refined Romantic Chapeau: Blue (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70738" name="Gold-rimmed Glasses (STR+1 INT+1)" type="Armor">
+		<!-- Expensive-looking gold-rimmed glasses. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon.br_gold_eyeglass_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55656" level="1" /> <!-- Gold-rimmed Glasses (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70739" name="Gold-rimmed Glasses (DEX+1 WIT+1)" type="Armor">
+		<!-- Expensive-looking gold-rimmed glasses. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon.br_gold_eyeglass_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55657" level="1" /> <!-- Gold-rimmed Glasses (DEX+1 WIT+1) -->
+		</skills>
+	</item>
+	<item id="70740" name="Gold-rimmed Glasses (CON+1 MEN+1)" type="Armor">
+		<!-- Expensive-looking gold-rimmed glasses. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon.br_gold_eyeglass_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55658" level="1" /> <!-- Gold-rimmed Glasses (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70741" name="Horn-rimmed Glasses (STR+1 INT+1)" type="Armor">
+		<!-- Magic Horn-rimmed Glasses. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys.icon.br_Eye_Glasses_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55659" level="1" /> <!-- Horn-rimmed Glasses (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70742" name="Horn-rimmed Glasses (DEX+1 WIT+1)" type="Armor">
+		<!-- Magic Horn-rimmed Glasses. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys.icon.br_Eye_Glasses_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55660" level="1" /> <!-- Horn-rimmed Glasses (DEX+1 WIT+1) -->
+		</skills>
+	</item>
+	<item id="70743" name="Horn-rimmed Glasses (CON+1 MEN+1)" type="Armor">
+		<!-- Magic Horn-rimmed Glasses. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys.icon.br_Eye_Glasses_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55661" level="1" /> <!-- Horn-rimmed Glasses (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70744" name="Stylish Straw Hat (STR+1 INT+1)" type="Armor">
+		<!-- Straw Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys3.icon.g_straw_hat" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55662" level="1" /> <!-- Stylish Straw Hat (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70745" name="Stylish Straw Hat (DEX+1 WIT+1)" type="Armor">
+		<!-- Straw Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys3.icon.g_straw_hat" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55663" level="1" /> <!-- Stylish Straw Hat (DEX+1 WIT+1) -->
+		</skills>
+	</item>
+	<item id="70746" name="Stylish Straw Hat (CON+1 MEN+1)" type="Armor">
+		<!-- Straw Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys3.icon.g_straw_hat" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55664" level="1" /> <!-- Stylish Straw Hat (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70747" name="Chic Silver Chapeau (STR+1 INT+1)" type="Armor">
+		<!-- Chic Silver Chapeau. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon2.pi_silverchaperon" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55665" level="1" /> <!-- Chic Silver Chapeau (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70748" name="Chic Silver Chapeau (DEX+1 WIT+1)" type="Armor">
+		<!-- Chic Silver Chapeau. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon2.pi_silverchaperon" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55666" level="1" /> <!-- Chic Silver Chapeau (DEX+1 WIT+1) -->
+		</skills>
+	</item>
+	<item id="70749" name="Chic Silver Chapeau (CON+1 MEN+1)" type="Armor">
+		<!-- Chic Silver Chapeau. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon2.pi_silverchaperon" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55667" level="1" /> <!-- Chic Silver Chapeau (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70750" name="Afro Hair (STR+1 INT+1)" type="Armor">
+		<!-- Afro style hair. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55668" level="1" /> <!-- Afro Hair (STR+1 INT+1) -->
+		</skills>
+	</item>
+	<item id="70751" name="Afro Hair (DEX+1 WIT+1)" type="Armor">
+		<!-- Afro style hair. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55669" level="1" /> <!-- Afro Hair (DEX+1 WIT+1) -->
+		</skills>
+	</item>
+	<item id="70752" name="Afro Hair (CON+1 MEN+1)" type="Armor">
+		<!-- Afro style hair. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55670" level="1" /> <!-- Afro Hair (CON+1 MEN+1) -->
+		</skills>
+	</item>
+	<item id="70753" name="Eva's Scroll: Enchant Hair Accessory" type="EtcItem">
+		<!-- Hair Accessory M. / P. Def. +2. Starting from +5, additional special effects are activated and HP/MP/CP are increased. Can be safely enchanted up to +3. Cannot be dropped. Cannot be dropped. -->
+		<set name="icon" val="icon.scroll_of_unidentify_am_d" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70754" name="Stabilized Eva's Scroll: Enchant Hair Accessory" type="EtcItem">
+		<!-- Hair Accessory M. / P. Def. +2. Starting from +5, additional special effects are activated and HP/MP/CP are increased. Can be safely enchanted up to +3. Cannot be dropped. From +6, enchantment level stays the same in case of failed enchantment. Cannot be dropped. -->
+		<set name="icon" val="icon.scroll_of_unidentify_am_d" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70755" name="Eva's Life Stone - Hair Accessory" type="EtcItem">
+		<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran/Aden, to use it for augmentation. Augmentation requires C-grade Gemstones. Cannot be dropped. -->
+		<set name="icon" val="Branchsys2.icon.g_ancient_jewel_piece_mid" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70756" name="Shiny Eva's Life Stone - Hair Accessory" type="EtcItem">
+		<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran/Aden, to use it for augmentation. Augmentation requires B-grade Gemstones. Cannot be dropped. -->
+		<set name="icon" val="Branchsys2.icon.g_ancient_jewel_piece_high" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70757" name="Eva's Enhancement Pack - Hair Accessory" type="EtcItem">
+		<!-- Double-click to acquire one of the following items: 2 Eva's Scrolls, 1 Stabilized Eva's Scroll, 1 Eva's Life Stone, 1 Shiny Eva's Life Stone. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70758" name="Eva's Hair Accessory Pack" type="EtcItem">
+		<!-- Double-click to acquire one of the Hair Accessories. Cannot be dropped. -->
+		<set name="icon" val="BranchSys.icon.br_silver_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70759" name="Eva's Life Stone - Hair Accessory" type="EtcItem">
+		<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran/Aden, to use it for augmentation. Augmentation requires C-grade Gemstones. Cannot be dropped. -->
+		<set name="icon" val="Branchsys2.icon.g_ancient_jewel_piece_mid" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70760" name="Shiny Eva's Life Stone - Hair Accessory" type="EtcItem">
+		<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran/Aden, to use it for augmentation. Augmentation requires B-grade Gemstones. Cannot be dropped. -->
+		<set name="icon" val="Branchsys2.icon.g_ancient_jewel_piece_high" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70761" name="Eva's Enhancement Pack - Hair Accessory" type="EtcItem">
+		<!-- Double-click to acquire one of the following items: 2 Eva's Scrolls, 1 Stabilized Eva's Scroll, 1 Eva's Life Stone, 1 Shiny Eva's Life Stone. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70762" name="Package: Eva's Hair Accessory" type="EtcItem">
+		<!-- Double-click to acquire 8 Eva's Hair Accessories and 30 Eva's Scrolls: Enchant Hair Accessory. Cannot be dropped. -->
+		<set name="icon" val="BranchSys.icon.br_bright_gold_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70763" name="Hero Experience Rune Pack (30-day)" type="EtcItem">
+		<!-- Double click to receive 1 Hero Experience Rune(30-day). Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70764" name="Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70765" name="Shining Pendant Polish" additionalName="Event" type="EtcItem">
+		<!-- Shiny Polish, enhancing pendants characteristics. Can be used on a pendant enchanted up to +8. If an enchantment is failed, the pendent doesn't disappear and has the previous level of enchantment. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_pendant_varnish_premium" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70766" name="Improved Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70767" name="Special Dragon's Fruit" additionalName="3 hours" type="EtcItem">
+		<!-- For 20 minutes, P./M. Atk. +12%, P./M. Def. +15%, Max. HP/CP/MP +25%, HP/MP Recovery Bonus +30%. P./M. Critical Rate +10, P./M. Critical Damage +5%.Vampiric Rage Effect +5%. XP and SP gained through hunting +10%. Cooldown is 1 minute. Buff remains after death. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_dragon_fruit" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="180" />
+	</item>
+	<item id="70768" name="Vital Stone - Lv. 4" additionalName="7-day" type="Armor">
+		<!-- XP/SP +8%, and allows to use Lv. 2 Vital Wind skill, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="70769" name="Ruby - Lv. 4" additionalName="7-day" type="Armor">
+		<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot damage +8%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="70770" name="Sapphire - Lv. 4" additionalName="7-day" type="Armor">
+		<!-- When equipped, increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +8%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="70771" name="Fire Dragon Pendant - Lv. 4" additionalName="7-day" type="Armor">
+		<!-- A Pendant that carries sealed energy of a Fire Dragon. Its effect is the same as from the enchanted to +10 Fire Dragon Pendant - Lv. 5. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="pDef">28</stat>
+		</stats>
+	</item>
+	<item id="70772" name="Water Dragon Pendant - Lv. 4" additionalName="7-day" type="Armor">
+		<!-- A Pendant that carries sealed energy of a Water Dragon. Its effect is the same as from the enchanted to +10 Water Dragon Pendant - Lv. 5. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="pDef">28</stat>
+		</stats>
+	</item>
+	<item id="70773" name="Refined Zaken's Earring" additionalName="15-day" type="Armor">
+		<!-- MP +34, Bleed Resistance and Bleed Atk. Rate +20%, Stun Resistance and Stun Atk. Rate +15%, Mental Resistance and Atk. Rate +15% Healing Power +10%, HP Recovery Bonus +20%. Vampiric Rage Effect +8%. The effect doesn't stack if two identical earrings are worn. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="45017" level="3" />
+		</skills>
+		<stats>
+			<stat type="mDef">80</stat>
+			<stat type="maxMp">34</stat>
+		</stats>
+	</item>
+	<item id="70774" name="Refined Baium's Ring" additionalName="15-day" type="Armor">
+		<!-- MP +21, Stun Resistance and Stun Atk. Rate +20%, Bleed Resistance and Bleed Atk. Rate +15%, Atk. Spd./Casting Spd. +4%, Skill Power +6%, P. Critical Damage +15%, M. Critical Damage +10%. The effect does not stack if two identical rings are equipped. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_ring_of_baium_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="3561" level="3" /> <!-- Baium's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">48</stat>
+			<stat type="maxMp">21</stat>
+		</stats>
+	</item>
+	<item id="70775" name="Refined Queen Ant's Ring" additionalName="15-day" type="Armor">
+		<!-- A 7-day item. MP +21, Poison Resistance and Atk. Rate +20%, P./M. Accuracy +3, P./M. Atk. +7%, P. Critical Damage +10%, M. Critical Damage +5%. The effect doesn't stack if two identical rings are worn. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_ring_of_queen_ant_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="3562" level="3" /> <!-- Queen Ant's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">48</stat>
+			<stat type="maxMp">21</stat>
+		</stats>
+	</item>
+	<item id="70776" name="Refined Ring of Core" additionalName="15-day" type="Armor">
+		<!-- When equipped, grants MP + +21, Mental Atk. Resistance/Chance +20%, P. / M. Evasion +3, decreases received damage by -6%. The effect does not stack, if two identical rings are equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_ring_of_core_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="3563" level="3" /> <!-- Ring of Core -->
+			<skill id="35016" level="1" /> <!-- Ring of Core Ability Skill -->
+		</skills>
+		<stats>
+			<stat type="mDef">48</stat>
+			<stat type="maxMp">21</stat>
+		</stats>
+	</item>
+	<item id="70777" name="Refined Orfen's Earring" additionalName="15-day" type="Armor">
+		<!-- MP +31, Mental Attack Resistance/Chance +15%, Shackle Chance/Resistance +20%, Healing Effects +6%, MP cost for abilities -5%. Has a chance to transfer 3% of Damage dealt to the enemy into MP. The effect doesn't stack if two identical earrings are worn. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_earring_of_orfen_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="3560" level="3" /> <!-- Orfen's Earring -->
+		</skills>
+		<stats>
+			<stat type="mDef">71</stat>
+			<stat type="maxMp">31</stat>
+		</stats>
+	</item>
+	<item id="70778" name="Royal Tears" type="EtcItem">
+		<!-- The essence of Frintezza�s feelings. Gives a positive effect and modifies appearance of weapons for Valentine�s Day. -->
+		<set name="icon" val="BranchSys.icon.br_sevenlove_stone_i00" />
+	</item>
+	<item id="70779" name="Frintezza’s Amulet" type="EtcItem">
+		<!-- An amulet created by Frintezza to seal a part of his feelings. Carry it with you, and something good will definitely happen. Having the amulet in your inventory enables getting charming magic of confidence from Frintezza once a day. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. The item will be removed after the event is over. -->
+		<set name="icon" val="icon.love_potion_party" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70780" name="Red Candy of the Royal Family" type="EtcItem">
+		<!-- The candy created with secret methods of Frintezza�s dynasty specially for Valentine�s Day. Acquired XP / SP + 15%. Stacks with the Red Candy. Temporary event item. -->
+		<set name="icon" val="icon.etc_whiteday_candy_i05" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70781" name="Blue Candy of the Royal Family" type="EtcItem">
+		<!-- The candy created with secret methods of Frintezza�s dynasty specially for Valentine�s Day. Acquired XP / SP + 15%. Stacks with the Red Candy. Temporary event item. -->
+		<set name="icon" val="icon.etc_whiteday_candy_i06" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70782" name="The Royal Confectionary Box" type="EtcItem">
+		<!-- You can get one box per account. Double-click to receive two Red or two Blue Candies of the Royal Family. (The item will be removed after the event is over.) -->
+		<set name="icon" val="icon.etc_candy_basket_i04_1" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70783" name="Pirates Treasure Chest" type="EtcItem">
+		<!-- Double-click to get one of Pirates Treasures ????????? ????????? ???????. -->
+		<set name="icon" val="icon.bm_pirate_treasure_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70784" name="Refined Zaken's Earring Box (7-day)" type="EtcItem">
+		<!-- Double-click to receive a Refined Zaken's Earring (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70785" name="Gift of the Brave Chicken - Heavy Armor" additionalName="Event" type="EtcItem">
+		<!-- Double-click to acquire Warrior's Shining Heavy Armor Set (30-day) / Warrior's Shining Weapon Set (30-day) / Expertise Rune (C-grade) (30-day), Gift for the Brave Chicken - Lv. 10, Transformation Support Cube (7-day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys.icon.br_gold_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70786" name="Gift of the Brave Chicken - Light Armor" additionalName="Event" type="EtcItem">
+		<!-- Double-click to acquire Warrior's Shining Light Armor Set (30-day) / Warrior's Shining Weapon Set (30-day) / Expertise Rune (C-grade) (30-day), Gift for the Brave Chicken - Lv. 10, Transformation Support Cube (7-day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys.icon.br_gold_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70787" name="Gift of the Brave Chicken - Magic Armor" additionalName="Event" type="EtcItem">
+		<!-- Double-click to acquire Warrior's Shining Magic Armor Set (30-day) / Warrior's Shining Weapon Set (30-day) / Expertise Rune (C-grade) (30-day), Gift for the Brave Chicken - Lv. 10, Transformation Support Cube (7-day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys.icon.br_gold_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70788" name="Gift of the Brave Chicken - Lv. 10" additionalName="Event" type="EtcItem">
+		<!-- Double-click to acquire the following items: Chicken Amulet (5-day), Gift for the Brave Chicken - Lv. 20, Soulshot Support Cube (7-day), Spiritshot Support Cube (7-day). Can be used by characters of lvl 10 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_pi_box_belief_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70789" name="Gift of the Brave Chicken - Lv. 20" additionalName="Event" type="EtcItem">
+		<!-- Double-click to acquire the following items: Cadmus Transformation Bracelet - Prophet (30-day), Gift for the Brave Chicken - Lv. 30, Buff Support Cube (7-day). Can be used by characters of Lv. 20 and above. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.npoint_valakas_30day_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70790" name="Gift of the Brave Chicken - Lv. 30" additionalName="Event" type="EtcItem">
+		<!-- Double-click to acquire the following items: Rare Queen Ant's Ring / Orfen / Core (15-day), Gift for the Brave Chicken - Lv. 40, Potion Support Cube - Lv. 1 (7-day). Can be used by characters of lvl 30 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.npoint_earring_of_lind_30day_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70791" name="Gift of the Brave Chicken - Lv. 40" additionalName="Event" type="EtcItem">
+		<!-- Double-click to acquire the following items: Growth Amulet (3-day), Gift for the Brave Chicken - Lv. 50, Party Support Cube - Lv. 1 (7-day). Can be used by characters of lvl 40 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.npoint_antaras_30day_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70792" name="Gift of the Brave Chicken - Lv. 50" additionalName="Event" type="EtcItem">
+		<!-- Double-click to acquire the following items: 3 Golden Necklaces of Mermaid (7-day), 10 Rice Cake of Flaming Fighting Spirit (Event), Gift for the Brave Chicken - Lv. 54, Blessed Support Cube (7-day). Can be used by characters of lvl 50 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.npoint_tauti_30day_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70793" name="Gift of the Brave Chicken - Lv. 54" additionalName="Event" type="EtcItem">
+		<!-- Double-click to acquire the following items: Refined Rare Queen Ant's Ring / Orfen / Core (7-day), Gift for the Brave Chicken - Lv. 56, Party Support Cube - Lv. 2 (7-day). Can be used by characters of lvl 54 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.npoint_earthworm_30day_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70794" name="Gift of the Brave Chicken - Lv. 56" additionalName="Event" type="EtcItem">
+		<!-- Double-click to acquire the following items: Growth Amulet (3-day), Gift for the Brave Chicken - Lv. 56, Fishing Support Cube (7-day). Can be used by characters of lvl 56 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_pi_box_love_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70795" name="Gift of the Brave Chicken - Lv. 58" additionalName="Event" type="EtcItem">
+		<!-- Double-click to acquire the following items: Cadmus Transformation Bracelet - Prophet (30-day), Gift for the Brave Chicken - Lv. 60, Potion Support Cube - Lv. 2 (7-day). Can be used by characters of lvl 58 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_pi_box_wish_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70796" name="Gift of the Brave Chicken - Lv. 60" additionalName="Event" type="EtcItem">
+		<!-- Double-click to acquire the following items: Agathion - Cheerleader Meruril (30-day), Warrior's Bracelet (30-day), Talisman of the Brave Chicken (30-day), Progression Support Cube (7-day). Can be used by characters of lvl 60 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_pi_box_joy_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70797" name="Talisman of the Brave Chicken" additionalName="30 days" type="Armor">
+		<!-- P. Def. +18, M. Def. +9, P. / M. Evasion +1, Max HP/MP/CP +50, Atk. / Casting Speed +6, Speed +4. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.npoint_talisman_stat" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70798" name="Transformation Scroll: Pirate" additionalName="Event" type="EtcItem">
+		<!-- Makes you armor look like Pirate one. P. / M. Atk. +2%, P. / M. Def. +2%, Atk. Spd. +2%, Max. HP/MP +3%, Speed +3, P. / M. Accuracy +1, M. Critical Rate +1. Duration: 60 minutes. -->
+		<set name="icon" val="icon.etc_charm_of_courage_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70799" name="Transformation Scroll: Dark Assassin" additionalName="Event" type="EtcItem">
+		<!-- Makes you armor look like a Dark Assassin one. P. / M. Atk. +2%, P. / M. Def. +2%, Atk. Spd. +3%, Max. HP/MP +5%, Speed +4, P. / M. Accuracy +1, M. Critical Rate +10. Duration: 60 minutes. -->
+		<set name="icon" val="icon.etc_charm_of_courage_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

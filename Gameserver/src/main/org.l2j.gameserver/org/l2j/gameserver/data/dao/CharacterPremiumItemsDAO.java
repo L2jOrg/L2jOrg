@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.dao;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.PremiumItem;
@@ -36,7 +36,7 @@ public class CharacterPremiumItemsDAO
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT receive_time, item_id, item_count, sender FROM character_premium_items WHERE char_id = ?");
 			statement.setInt(1, owner.getObjectId());
 			rset = statement.executeQuery();
@@ -67,7 +67,7 @@ public class CharacterPremiumItemsDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("INSERT INTO character_premium_items (char_id,receive_time,item_id,item_count,sender) VALUES(?,?,?,?,?)");
 			statement.setInt(1, owner.getObjectId());
 			statement.setInt(2, item.getReceiveTime());
@@ -94,7 +94,7 @@ public class CharacterPremiumItemsDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM character_premium_items WHERE char_id = ? AND receive_time = ? AND item_id = ? AND item_count = ? AND sender = ?");
 			statement.setInt(1, owner.getObjectId());
 			statement.setInt(2, item.getReceiveTime());
@@ -121,7 +121,7 @@ public class CharacterPremiumItemsDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE character_premium_items SET item_count = ? WHERE char_id = ? AND receive_time = ? AND item_id = ? AND item_count = ? AND sender = ?");
 			statement.setLong(1, count);
 			statement.setInt(2, owner.getObjectId());

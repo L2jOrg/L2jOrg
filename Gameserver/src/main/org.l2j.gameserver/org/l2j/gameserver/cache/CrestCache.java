@@ -6,7 +6,7 @@ import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import io.github.joealisson.primitive.pair.IntIntPair;
 import io.github.joealisson.primitive.pair.IntObjectPair;
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -75,7 +75,7 @@ public class CrestCache {
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 
 			statement = con.prepareStatement("SELECT clan_id, crest FROM clan_data WHERE crest IS NOT NULL");
 			rset = statement.executeQuery();
@@ -315,7 +315,7 @@ public class CrestCache {
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE clan_data SET crest=? WHERE clan_id=?");
 			statement.setNull(1, Types.VARBINARY);
 			statement.setInt(2, pledgeId);
@@ -347,7 +347,7 @@ public class CrestCache {
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM clan_largecrests WHERE clan_id=?");
 			statement.setInt(1, pledgeId);
 			statement.execute();
@@ -378,7 +378,7 @@ public class CrestCache {
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE ally_data SET crest=? WHERE ally_id=?");
 			statement.setNull(1, Types.VARBINARY);
 			statement.setInt(2, pledgeId);
@@ -413,7 +413,7 @@ public class CrestCache {
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE clan_data SET crest=? WHERE clan_id=?");
 			statement.setBytes(1, crest);
 			statement.setInt(2, pledgeId);
@@ -469,7 +469,7 @@ public class CrestCache {
 					PreparedStatement statement = null;
 					try
 					{
-						con = L2DatabaseFactory.getInstance().getConnection();
+						con = DatabaseFactory.getInstance().getConnection();
 						statement = con.prepareStatement("DELETE FROM clan_largecrests WHERE clan_id=?");
 						statement.setInt(1, pledgeId);
 						statement.execute();
@@ -526,7 +526,7 @@ public class CrestCache {
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE ally_data SET crest=? WHERE ally_id=?");
 			statement.setBytes(1, crest);
 			statement.setInt(2, pledgeId);

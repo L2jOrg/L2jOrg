@@ -1,0 +1,149 @@
+
+	Documentation for items xmls
+	Just for storing differences and informations about items/format
+	
+	bodypart
+		Possible values  : rhand, lrhand, lhand, chest, legs, feet, head, gloves, onepiece, rear;lear, rfinger;lfinger, neck, back, underwear, hair, alldress, hair2, hairall, rbracelet, lbracelet, deco1, waist
+		Important values : (rear;lear, rfinger;lfinger) earring and rings have two slots  
+		Default value    : none - not present in xml
+		
+	default_action
+		Possible values  : equip, peel, skill_reduce, soulshot, recipe, skill_maintain, spiritshot, dice, calc, seed, harvest, capsule, xmas_open, show_html, show_ssq_status, fishingshot, summon_soulshot, summon_spiritshot, call_skill, show_adventurer_guide_book, keep_exp, create_mpcc, nick_color, hide_name, start_quest
+		Default value    : none - not present in xml
+		Unused for now, mark for SHOT type
+		
+	weapon_type          : renamed from (weaponType)
+		Possible values  : sword, blunt, dagger, bow, pole, dual, etc, fist, dualfist, fishingrod, rapier, ancientsword, crossbow, flag, ownthing, dualdagger
+		Default value    : none - not present in xml
+
+	armor_type
+		Possible values  : light, heavy, magic, sigil
+		Default value    : none - not present in xml
+		Important        : Type none is used for shields, shields are in ARMORs (!)
+	
+	etcitem_type
+		Possible values  : arrow, potion, scrl_enchant_wp, scrl_enchant_am, scroll, recipe, material, pet_collar, castle_guard, lotto, race_ticket, dye, seed, crop, maturecrop, harvest, seed2, ticket_of_lord, lure, bless_scrl_enchant_wp, bless_scrl_enchant_am, coupon, elixir, scrl_enchant_attr, bolt, scrl_inc_enchant_prop_wp, scrl_inc_enchant_prop_am, ancient_crystal_enchant_wp, ancient_crystal_enchant_am, rune_select, rune
+		Default value    : none - not present in xml
+	
+	mp_consume
+		Default value    : 0 - not present in xml
+	
+	weight
+		Default value    : 0 - not present in xml
+
+	price
+		Default value    : 0 - not present in xml
+		
+	crystal_count
+		Default value    : 0 - not present in xml
+	
+	delay_share_group
+		Default value    : -1 - not present in xml
+	
+	recipe_id
+		Default value    : 0 - not present in xml
+	
+	duration
+		Default value    : -1 - not present in xml
+		
+	time
+	    Default value    : -1 - not present in xml
+	
+	random_damage        : renamed from (rnd_dam)
+		Default value    : 0 - not present in xml
+	
+	attack_range
+		Default value    : 0 - not present in xml
+
+	is_premium
+		Possible values  : 1/0  (true/false)
+		Default value    : 0 - not present in xml
+		
+	crystal_type
+		Possible values  : d, s84, c, b, a, s, s80
+		Default value    : none - not present in xml
+		Important        : Some items have crystal type, but doesn't have crystal_count
+		
+	material
+		Possible values  : steel, fine_steel, wood, bone, bronze, leather, cloth, fish, gold, mithril, liquid, oriharukon, damascus, adamantaite, blood_steel, paper, silver, chrysolite, crystal, horn, scale_of_dragon, cotton, dyestuff, cobweb, rune_xp, rune_sp, rune_remove_penalty
+		Default value    : there is no default, material always present
+		
+	enchant_enabled
+		Possible values  : 0,1,2,3,4
+		Default value    : 0 - not present in xml
+		Note             : 1 - normal items
+		                   2 - PcCafe items
+		                   3 - Weaver's Multi-colored Clothes
+		                   4 - Vitality Belt's
+	element_enabled
+		Possible values  : 0, 1 (true/false)
+		
+	unequip_skill
+		Possible values  : skillid-skilllevel  eg. 3267-1
+		Informations     : skill triggered on unequip item (need core support)
+	
+	enchant4_skill
+		Possible values  : skillid-skilllevel  eg. 3267-1		
+		Default value    : none - not present in xml
+	
+	oncrit_skill
+	oncrit_chance
+		Possible values  : skillid-skilllevel  eg. 3267-1
+		Informations     : Chance in oncrit_chance
+                           Format changed from 3 mysql fields to 2
+	onmagic_skill
+	onmagic_chance
+	    Possible values  : skillid-skilllevel  eg. 3267-1
+	    Informations     : Chance in onmagic_chance
+                           Format changed from 3 mysql fields to 2
+	    
+	soulshots/spiritshots
+		Possible values  : ss count or 0
+		Default value    : 0 - not present in xml
+	
+	equip_reuse_delay
+	    Possible values  : 0, 10, 30, 80
+		Default value    : 0 - not present in xml
+        Informations     : We need core support. We have equip delay but for skill not item
+    
+    reuse_delay
+    	Possible values  :
+    	Default value    : 0 - not present in xml
+    	Information      : We probably doesn't have support for reuse in item
+    	
+    is_questitem
+	is_tradable
+	is_dropable
+	is_destroyable
+	is_sellable
+	is_magic_weapon
+	is_oly_restricted
+    	Possible values  : true/false
+    	Default value    : depends, search in files
+    	
+    	
+	item_skill
+		Possible values : skillid-skilllevel  eg. 3267-1
+		splitted by ;
+		
+	damage_range
+		Possible values : x1;x2;x3;x4
+		Not used 
+		
+	change_weaponId
+		Information      : ID of weapon for kamael's weapon change.
+		Default value    : 0 - not present in xml
+	
+	immediate_effect
+		Possible values  : 0 or 1
+		Not used
+		
+	ex_immediate_effect
+		Possible values  : 0,1,2
+		Used to define HERB
+	
+	equip_condition
+		Currently used for pet items
+
+### TODO list:
+1. remove empty <stats></stats>

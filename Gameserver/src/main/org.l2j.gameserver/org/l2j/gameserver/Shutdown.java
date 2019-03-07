@@ -1,6 +1,6 @@
 package org.l2j.gameserver;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.time.cron.SchedulingPattern;
 import org.l2j.commons.time.cron.SchedulingPattern.InvalidPatternException;
 import org.l2j.gameserver.instancemanager.BotReportManager;
@@ -212,7 +212,7 @@ public class Shutdown extends Thread
         try
         {
             System.out.println("Shutting down database communication...");
-            L2DatabaseFactory.getInstance().shutdown();
+            DatabaseFactory.getInstance().shutdown();
         }
         catch(Exception e)
         {

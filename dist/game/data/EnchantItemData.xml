@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/EnchantItemData.xsd">
+	<!-- Scrolls: Enchant Weapon -->
+	<enchant id="729" targetGrade="A" maxEnchant="16" />
+	<enchant id="947" targetGrade="B" maxEnchant="16" />
+	<enchant id="951" targetGrade="C" maxEnchant="16" />
+	<enchant id="955" targetGrade="D" maxEnchant="16" />
+
+	<!-- Scrolls: Enchant Armor -->
+	<enchant id="730" targetGrade="A" maxEnchant="16" />
+	<enchant id="948" targetGrade="B" maxEnchant="16" />
+	<enchant id="952" targetGrade="C" maxEnchant="16" />
+	<enchant id="956" targetGrade="D" maxEnchant="16" scrollGroupId="0" /> <!-- Default scroll groups binding. -->
+
+	<!-- Blessed Scrolls: Enchant Weapon -->
+	<enchant id="6569" targetGrade="A" maxEnchant="16" />
+	<enchant id="6571" targetGrade="B" maxEnchant="16" />
+	<enchant id="6573" targetGrade="C" maxEnchant="16" />
+	<enchant id="6575" targetGrade="D" maxEnchant="16" />
+
+	<!-- Blessed Scrolls: Enchant Armor -->
+	<enchant id="6570" targetGrade="A" maxEnchant="16" />
+	<enchant id="6572" targetGrade="B" maxEnchant="16" />
+	<enchant id="6574" targetGrade="C" maxEnchant="16" />
+	<enchant id="6576" targetGrade="D" maxEnchant="16" />
+</list>

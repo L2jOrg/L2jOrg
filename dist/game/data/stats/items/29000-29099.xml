@@ -1,0 +1,1258 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="29001" name="Daily Present - VIP 1" type="EtcItem">
+		<!-- Double-click the item to receive 1 Scroll of Escape, 3 Healing Potions, 5 VIP Coins. -->
+		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="736" min="1" max="1" chance="100" />
+			<item id="29651" min="3" max="3" chance="100" />
+			<item id="29520" min="5" max="5" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29002" name="Daily Present - VIP 2" type="EtcItem">
+		<!-- Double-click the item to receive 1 Scroll of Resurrection, 3 Healing Potions, 10 VIP Coins. -->
+		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="737" min="1" max="1" chance="100" />
+			<item id="29651" min="3" max="3" chance="100" />
+			<item id="29520" min="10" max="10" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29003" name="Daily Present - VIP 3" type="EtcItem">
+		<!-- Double-click the item to receive 1 Scroll of Escape, 1 Scroll of Resurrection, 5 Healing Potions, 15 VIP Coins. -->
+		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="736" min="1" max="1" chance="100" />
+			<item id="737" min="1" max="1" chance="100" />
+			<item id="29651" min="5" max="5" chance="100" />
+			<item id="29520" min="15" max="15" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29004" name="Daily Present - VIP 4" type="EtcItem">
+		<!-- Double-click the item to receive 1 Scroll of Escape, 1 Scroll of Resurrection, 3 Greater Healing Potions, 25 VIP Coins. -->
+		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="736" min="1" max="1" chance="100" />
+			<item id="737" min="1" max="1" chance="100" />
+			<item id="29652" min="3" max="3" chance="100" />
+			<item id="29520" min="25" max="25" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29005" name="Daily Present - VIP 5" type="EtcItem">
+		<!-- Double-click the item to receive 1 Blessed Scroll of Escape, 3 Greater Healing Potions, 40 VIP Coins. -->
+		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="1538" min="1" max="1" chance="100" />
+			<item id="29652" min="3" max="3" chance="100" />
+			<item id="29520" min="40" max="40" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29006" name="Daily Present - VIP 6" type="EtcItem">
+		<!-- Double-click on the item to receive 1 Blessed Scroll of Resurrection, 3 Greater Healing Potions, 100 VIP Coins. -->
+		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i05" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="3936" min="1" max="1" chance="100" />
+			<item id="29652" min="3" max="3" chance="100" />
+			<item id="29520" min="100" max="100" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29007" name="Daily Present - VIP 1" type="EtcItem">
+		<!-- Double-click the item to receive 1 Blessed Scroll of Escape, 1 Blessed Scroll of Resurrection, 3 Greater Healing Potions, 150 VIP Coins. -->
+		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i06" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="1538" min="1" max="1" chance="100" />
+			<item id="3936" min="1" max="1" chance="100" />
+			<item id="29652" min="3" max="3" chance="100" />
+			<item id="29520" min="150" max="150" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29008" name="XP/SP Scroll" type="EtcItem">
+		<!-- Increases XP/SP gain by 30% for 20 minutes. Buff remains after death. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_recall_exp_scroll" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55000" level="1" /> <!-- XP/SP Scroll lvl 1 (30%) -->
+		</skills>
+	</item>
+	<item id="29009" name="XP/SP Scroll - Normal" type="EtcItem">
+		<!-- Increases XP/SP gain by 50% for 20 minutes. The buff remains after death. -->
+		<set name="icon" val="icon.etc_recall_exp_scroll" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55000" level="3" /> <!-- XP/SP Scroll lvl 1 (30%) -->
+		</skills>
+	</item>
+	<item id="29010" name="XP/SP Scroll - High" type="EtcItem">
+		<!-- Increases XP/SP gain by 100% for 20 minutes. Buff remains after death. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_recall_exp_scroll" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55000" level="4" /> <!-- XP/SP Scroll lvl 1 (30%) -->
+		</skills>
+	</item>
+	<item id="29011" name="1st Class Buff Scroll" type="EtcItem">
+		<!-- For 20 minutes gives Shield Lv.2, Might Lv.2, Concentration Lv.2, Acumen Lv.1, Wind Walk Lv.1, Focus Lv.1, Agility Lv.1, Empower Lv.1 Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchIcon.Icon.etc_g_bm_buff_scroll_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55003" level="1" />
+		</skills>
+	</item>
+	<item id="29012" name="2nd Class Buff Scroll" type="EtcItem">
+		<!-- For 20 minutes gives Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchIcon.Icon.etc_g_bm_buff_scroll_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55004" level="2" />
+		</skills>
+	</item>
+	<item id="29013" name="Scroll: Hunter's Song" type="EtcItem">
+		<!-- Grants the effect of the Hunter's Song. Duration: 10 minutes. -->
+		<set name="icon" val="BranchIcon.Icon.etc_g_bm_song_scroll_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29014" name="Scroll: Dance of Fire" type="EtcItem">
+		<!-- Grants the effect of the Dance of Fire. Duration: 10 minutes. -->
+		<set name="icon" val="BranchIcon.Icon.etc_g_bm_dance_scroll_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29015" name="Scroll: Enchant Weapon (D-grade)" type="EtcItem">
+		<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. -->
+		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_wp_d_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29016" name="Scroll: Enchant Armor (D-grade)" type="EtcItem">
+		<!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_am_d_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29017" name="Scroll: Enchant Weapon (C-grade)" type="EtcItem">
+		<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. -->
+		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_wp_c_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29018" name="Scroll: Enchant Armor (C-grade)" type="EtcItem">
+		<!-- P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_am_c_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29019" name="Blessed Scroll: Enchant Weapon (D-grade)" type="EtcItem">
+		<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29020" name="Blessed Scroll: Enchant Armor (D-grade)" type="EtcItem">
+		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29021" name="Blessed Scroll: Enchant Weapon (C-grade)" type="EtcItem">
+		<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29022" name="Blessed Scroll: Enchant Armor (C-grade)" type="EtcItem">
+		<!-- P. Def. +1 for C-grade armor and accessories. Increases by 3 starting from +4. It can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29023" name="Mysterious No-grade Soulshot" type="EtcItem">
+		<!-- A Soulshot temporarily increases attack power. Used with a No-grade weapon. -->
+		<set name="icon" val="BranchIcon.Icon.g_etc_soulshot_i01" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
+		<skills>
+			<skill id="9293" level="1" /> <!-- Player Commendation - No-grade Soulshot -->
+		</skills>
+	</item>
+	<item id="29024" name="Mysterious Blessed No-grade Spiritshot" type="EtcItem">
+		<!-- A Spiritshot bestowed on a weapon increases its M. Atk. Used with a No-grade weapon. -->
+		<set name="icon" val="BranchIcon.Icon.g_etc_spiritshot_i01" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<skills>
+			<skill id="9300" level="1" /> <!-- Player Commendation - No-grade Blessed Spiritshot -->
+		</skills>
+	</item>
+	<item id="29025" name="Mysterious Soulshot (D-grade)" type="EtcItem">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a D-grade weapon. -->
+		<set name="icon" val="br_cashtex.item.br_cash_soulshot_d_i00" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
+		<skills>
+			<skill id="9294" level="1" /> <!-- Player Commendation - Soulshot (D-grade) -->
+		</skills>
+	</item>
+	<item id="29026" name="Mysterious Blessed Spiritshot (D-grade)" type="EtcItem">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a D-grade weapon. -->
+		<set name="icon" val="br_cashtex.item.br_cash_spiritshot_d_i00" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="9301" level="1" /> <!-- Player Commendation - Blessed Spiritshot (D-grade) -->
+		</skills>
+	</item>
+	<item id="29027" name="Mysterious Soulshot (C-grade)" type="EtcItem">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a C-grade weapon. -->
+		<set name="icon" val="br_cashtex.item.br_cash_soulshot_c_i00" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
+		<skills>
+			<skill id="9295" level="1" /> <!-- Player Commendation - Soulshot (C-grade) -->
+		</skills>
+	</item>
+	<item id="29028" name="Mysterious Blessed Spiritshot (C-grade)" type="EtcItem">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a C-grade weapon. -->
+		<set name="icon" val="br_cashtex.item.br_cash_spiritshot_c_i00" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="9302" level="1" /> <!-- Player Commendation - Blessed Spiritshot (C-grade) -->
+		</skills>
+	</item>
+	<item id="29029" name="Blessed Scroll of Escape" type="EtcItem">
+		<!-- Magical scroll that relocates you to the nearest village. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29030" name="Blessed Scroll of Resurrection" type="EtcItem">
+		<!-- Magic scroll that resurrects a dead character and restores his or her XP completely. -->
+		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29031" name="Quick Healing Potion" type="EtcItem">
+		<!-- Magic potion that instantly restores HP. Instant effect with no cooldown. Cannot be used when HP is full. -->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55015" level="1" />
+		</skills>
+	</item>
+	<item id="29032" name="Major Quick Healing Potion" type="EtcItem">
+		<!-- Magic potion that instantly restores great amount of HP. Instant effect with no cooldown. Cannot be used when HP is full. Cannot be exchanged, dropped, sold, or stored in private warehouse. -->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55016" level="1" />
+		</skills>
+	</item>
+	<item id="29033" name="Adventurer Hat - Event" type="Armor">
+		<!-- 1st month Hair Accessory. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29034" name="Adventurer Hat - Event" type="Armor">
+		<!-- 2nd month Hair Accessory. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29035" name="Adventurer Hat - Event" type="Armor">
+		<!-- 3rd month Hair Accessory. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29036" name="Refined Romantic Chapeau: Red" type="Armor">
+		<!-- Refined Romantic Chapeau: Red. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_red" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29037" name="Refined Angel Ring" type="Armor">
+		<!-- Refined Angel Ring. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_angel_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29038" name="Refined Wizard Hat" type="Armor">
+		<!-- Mystery Mage Hat. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_magician_cap2_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29039" name="Laborer Hat" type="Armor">
+		<!-- Laborer's Hat. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="BranchSys.icon.br_people_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29040" name="Top Hat" type="Armor">
+		<!-- A top hat which belonged to a mysterious magician. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_magicial_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29041" name="Vigilante Hat" type="Armor">
+		<!-- Vigilante Hat. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_archer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29042" name="Adventurer Hat - Event" type="Armor">
+		<!-- 10th month Hair Accessory. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29043" name="Adventurer Hat - Event" type="Armor">
+		<!-- 11th month Hair Accessory. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29044" name="Adventurer Hat - Event" type="Armor">
+		<!-- 12th month Hair Accessory. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29045" name="Adventurer Hat - Event" type="Armor">
+		<!-- 1st month Hair Accessory. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29046" name="Adventurer Hat - Event" type="Armor">
+		<!-- 2nd month Hair Accessory. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29047" name="Adventurer Hat - Event" type="Armor">
+		<!-- 3rd month Hair Accessory. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29048" name="Refined Romantic Chapeau: Red" type="Armor">
+		<!-- Refined Romantic Chapeau: Red. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_red" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29049" name="Refined Angel Ring" type="Armor">
+		<!-- Refined Angel Ring. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_angel_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29050" name="Adventurer Hat - Event" type="Armor">
+		<!-- 6th month Hair Accessory. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29051" name="Adventurer Hat - Event" type="Armor">
+		<!-- 7th month Hair Accessory. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29052" name="Adventurer Hat - Event" type="Armor">
+		<!-- 8th month Hair Accessory. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29053" name="Adventurer Hat - Event" type="Armor">
+		<!-- 9th month Hair Accessory. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29054" name="Adventurer Hat - Event" type="Armor">
+		<!-- 10th month Hair Accessory. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29055" name="Adventurer Hat - Event" type="Armor">
+		<!-- 11th month Hair Accessory. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29056" name="Adventurer Hat - Event" type="Armor">
+		<!-- 12th month Hair Accessory. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29057" name="Agathion - Virgo" type="Armor">
+		<!-- Summons Virgo. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29058" name="Agathion - Virgo" type="Armor">
+		<!-- Summons Virgo. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29059" name="Agathion - Capricorn" type="Armor">
+		<!-- Summons Capricorn. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_dec_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29060" name="Agathion - Capricorn" type="Armor">
+		<!-- Summons Capricorn. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_dec_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29061" name="Agathion - Libra" type="Armor">
+		<!-- Summons Libra. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_sep_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29062" name="Agathion - Libra" type="Armor">
+		<!-- Summons Libra. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_sep_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29063" name="Agathion - Aries" type="Armor">
+		<!-- Summons Aries. -->
+		<set name="icon" val="BranchIcon.Icon.accessory_lbracelet_march_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29064" name="Agathion - Aries" type="Armor">
+		<!-- Summons Aries. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="BranchIcon.Icon.accessory_lbracelet_march_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29065" name="Agathion - Taurus" type="Armor">
+		<!-- Summons Taurus. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_april_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29066" name="Agathion - Taurus" type="Armor">
+		<!-- Summons Taurus. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_april_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29067" name="Agathion - Leo" type="Armor">
+		<!-- Summons Leo. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_july_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29068" name="Agathion - Leo" type="Armor">
+		<!-- Summons Leo. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_july_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29069" name="Agathion - Gemini" type="Armor">
+		<!-- Summons Gemini. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_may_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29070" name="Agathion - Gemini" type="Armor">
+		<!-- Summons Gemini. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_may_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29071" name="Agathion - Scorpio" type="Armor">
+		<!-- Summons Scorpio. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_oct_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29072" name="Agathion - Scorpio" type="Armor">
+		<!-- Summons Scorpio. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_oct_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29073" name="Agathion - Aquarius" type="Armor">
+		<!-- Summons Aquarius. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_jan_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29074" name="Agathion - Aquarius" type="Armor">
+		<!-- Summons Aquarius. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_jan_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29075" name="Agathion - Pisces" type="Armor">
+		<!-- Summons Pisces. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_feb_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29076" name="Agathion - Pisces" type="Armor">
+		<!-- Summons Pisces. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_feb_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29077" name="Agathion - Sagittarius" type="Armor">
+		<!-- Summons Sagittarius. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_nov_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29078" name="Agathion - Sagittarius" type="Armor">
+		<!-- Summons Sagittarius. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_nov_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29079" name="Agathion - Cancer" type="Armor">
+		<!-- Summons Cancer. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_june_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29080" name="Agathion - Cancer" type="Armor">
+		<!-- Summons Cancer. 30-day item. Allows to use special skill. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_june_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29081" name="Premium Dye of STR (STR + 1 CON - 1)" type="EtcItem">
+		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_str_hena_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29082" name="Premium Dye of STR (STR + 1 DEX - 1)" type="EtcItem">
+		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_str_hena_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29083" name="Premium Dye of CON (CON + 1 STR - 1)" type="EtcItem">
+		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_con_hena_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29084" name="Premium Dye of CON (CON + 1 DEX - 1)" type="EtcItem">
+		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_con_hena_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29085" name="Premium Dye of DEX (DEX + 1 STR - 1)" type="EtcItem">
+		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29086" name="Premium Dye of DEX (DEX + 1 CON - 1)" type="EtcItem">
+		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29087" name="Premium Dye of INT (INT + 1 MEN - 1)" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_int_hena_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29088" name="Premium Dye of INT (INT + 1 WIT - 1)" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_int_hena_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29089" name="Premium Dye of MEN (MEN + 1 INT - 1)" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_men_hena_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29090" name="Premium Dye of MEN (MEN + 1 WIT - 1)" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_men_hena_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29091" name="Premium Dye of WIT (WIT + 1 INT - 1)" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29092" name="Premium Dye of WIT (WIT + 1 MEN - 1)" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29093" name="Premium Dye of STR (STR + 2 CON - 2)" type="EtcItem">
+		<!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_str_hena_i02" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29094" name="Premium Dye of STR (STR + 2 DEX - 2)" type="EtcItem">
+		<!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_str_hena_i02" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29095" name="Premium Dye of CON (CON + 2 STR - 2)" type="EtcItem">
+		<!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_con_hena_i02" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29096" name="Premium Dye of CON (CON + 2 DEX - 2)" type="EtcItem">
+		<!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_con_hena_i02" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29097" name="Premium Dye of DEX (DEX + 2 STR - 2)" type="EtcItem">
+		<!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_dex_hena_i02" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29098" name="Premium Dye of DEX (DEX + 2 CON - 2)" type="EtcItem">
+		<!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_dex_hena_i02" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29099" name="Premium Dye of INT (INT + 2 MEN - 2)" type="EtcItem">
+		<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
+		<set name="icon" val="icon.etc_int_hena_i02" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

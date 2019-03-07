@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="35100"> <!-- Chamberlain of Light -->
+		<npcs>
+			<npc id="36653" /> <!-- Chamberlain of Darkness -->
+		</npcs>
+		<teleport name="tel1" type="OTHER">
+			<location npcStringId="1010689" x="-15043" y="116596" z="-3208" /> <!-- Front of the Gludio Castle -->
+			<location npcStringId="1010663" x="-14393" y="123671" z="-3144" /> <!-- Gludio Town Square -->
+			<location npcStringId="1010680" x="-58761" y="154663" z="-2701" /> <!-- Front of the Camp Fortress -->
+			<location npcStringId="1010667" x="-29856" y="214275" z="-3680" /> <!-- Front of the Southern Fortress -->
+		</teleport>
+		<teleport name="tel2" type="OTHER">
+			<location npcStringId="1010689" x="-15043" y="116596" z="-3208" /> <!-- Front of the Gludio Castle -->
+			<location npcStringId="1010663" x="-14393" y="123671" z="-3144" /> <!-- Gludio Town Square -->
+			<location npcStringId="1010680" x="-58761" y="154663" z="-2701" /> <!-- Front of the Camp Fortress -->
+			<location npcStringId="1010667" x="-29856" y="214275" z="-3680" /> <!-- Front of the Southern Fortress -->
+			<location npcStringId="1010097" x="-41248" y="122848" z="-2912" feeCount="500" /> <!-- Ruins of Agony (Lv. 25) -->
+			<location npcStringId="1010101" x="-19359" y="136846" z="-3760" feeCount="500" /> <!-- Ruins of Despair (Lv. 30) -->
+			<location npcStringId="1010566" x="-9959" y="176184" z="-4160" feeCount="500" /> <!-- Ant Nest (Lv. 29) -->
+			<location npcStringId="1010102" x="-28327" y="155125" z="-3496" feeCount="500" /> <!-- Windawood Manor (Lv. 22) -->
+		</teleport>
+	</npc>
+</list>

@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="809" name="Bone Fragment" type="EtcItem">
+		<!-- Bone fragments obtained from the undead skeletons. Collect ten of these and take to Tetrarch Kaitar. -->
+		<set name="icon" val="icon.etc_piece_bone_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="844" name="Book of Aklantoth P1 ~ P10" type="EtcItem">
+		<set name="icon" val="icon.item_normal07" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="845" name="Cat's Eye" type="Armor">
+		<set name="icon" val="icon.accessary_catseye_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="price" val="8890" />
+		<stats>
+			<stat type="mDef">19</stat>
+		</stats>
+	</item>
+	<item id="846" name="Coral Earring" type="Armor">
+		<set name="icon" val="icon.accessary_coral_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="price" val="16000" />
+		<stats>
+			<stat type="mDef">21</stat>
+		</stats>
+	</item>
+	<item id="847" name="Red Crescent" type="Armor">
+		<set name="icon" val="icon.accessary_red_cresent_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="48" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="26900" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">24</stat>
+		</stats>
+	</item>
+	<item id="848" name="Earring of Magic" type="Armor">
+		<set name="icon" val="icon.accessary_enchanted_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="77" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="42600" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">27</stat>
+		</stats>
+	</item>
+	<item id="849" name="Tiger's Eye" type="Armor">
+		<set name="icon" val="icon.accessary_tigerseye_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="116" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="64300" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">30</stat>
+		</stats>
+	</item>
+	<item id="850" name="Elven Earring" type="Armor">
+		<set name="icon" val="icon.accessary_elven_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="169" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="93400" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">34</stat>
+		</stats>
+	</item>
+	<item id="851" name="Onyx Beast's Eye Earring" type="Armor">
+		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="220" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="121000" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">36</stat>
+		</stats>
+	</item>
+	<item id="852" name="Moonstone Earring" type="Armor">
+		<set name="icon" val="icon.accessary_moonstone_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="62" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="155000" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">39</stat>
+		</stats>
+	</item>
+	<item id="853" name="Earring of Protection" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_protection_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="78" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="196000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="EARRING" />
+		<stats>
+			<stat type="mDef">42</stat>
+		</stats>
+	</item>
+	<item id="854" name="Earring of Seal" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="118" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="295000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="EARRING" />
+		<stats>
+			<stat type="mDef">45</stat>
+		</stats>
+	</item>
+	<item id="855" name="Nassen's Earring" type="Armor">
+		<set name="icon" val="icon.accessary_nassens_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="169" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="424000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="EARRING" />
+		<stats>
+			<stat type="mDef">48</stat>
+		</stats>
+	</item>
+	<item id="856" name="Adamantite Earring" type="Armor">
+		<set name="icon" val="icon.accessary_adamantite_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="80" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="606000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="EARRING" />
+		<stats>
+			<stat type="mDef">51</stat>
+		</stats>
+	</item>
+	<item id="857" name="Holy Earring" type="Armor">
+		<set name="icon" val="icon.accessary_blessed_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="169" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="424000" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">48</stat>
+		</stats>
+	</item>
+	<item id="859" name="Earring of Mana" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_mana_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="169" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="606000" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">51</stat>
+		</stats>
+	</item>
+	<item id="860" name="Sage's Earring" type="Armor">
+		<set name="icon" val="icon.accessary_sages_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="169" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="924000" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">54</stat>
+		</stats>
+	</item>
+	<item id="862" name="Majestic Earring" type="Armor">
+		<!-- Majestic Earring. Provides additional MP +25. -->
+		<set name="icon" val="icon.accessary_inferno_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="120" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="1498000" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">63</stat>
+			<stat type="maxMp">25</stat>
+		</stats>
+	</item>
+	<item id="864" name="Black Ore Earring" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="123" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="924000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="EARRING" />
+		<stats>
+			<stat type="mDef">54</stat>
+		</stats>
+	</item>
+	<item id="869" name="Earring of Grace" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_grace_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="123" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="606000" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">51</stat>
+		</stats>
+	</item>
+	<item id="871" name="Phoenix Earring" type="Armor">
+		<!-- Phoenix Earring. MP +20. -->
+		<set name="icon" val="icon.accessary_phoenixs_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="80" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="1005000" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">60</stat>
+			<stat type="maxMp">20</stat>
+		</stats>
+	</item>
+	<item id="874" name="Earring of Blessing" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_blessing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="80" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="606000" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">51</stat>
+		</stats>
+	</item>
+	<item id="875" name="Ring of Knowledge" type="Armor">
+		<!-- Gold ring with delicately engraved rune characters of knowledge. -->
+		<set name="icon" val="icon.accessary_ring_of_knowledge_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="commissionItemType" val="RING" />
+		<set name="price" val="540" />
+		<stats>
+			<stat type="mDef">9</stat>
+		</stats>
+	</item>
+	<item id="876" name="Ring of Anguish" type="Armor">
+		<!-- Gold ring with engraved rune characters of anguish. -->
+		<set name="icon" val="icon.accessary_ring_of_anguish_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="commissionItemType" val="RING" />
+		<set name="price" val="2340" />
+		<stats>
+			<stat type="mDef">11</stat>
+		</stats>
+	</item>
+	<item id="877" name="Ring of Wisdom" type="Armor">
+		<set name="icon" val="icon.accessary_ring_of_wisdom_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="commissionItemType" val="RING" />
+		<set name="price" val="5920" />
+		<stats>
+			<stat type="mDef">12</stat>
+		</stats>
+	</item>
+	<item id="878" name="Blue Coral Ring" type="Armor">
+		<set name="icon" val="icon.accessary_blue_coral_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="commissionItemType" val="RING" />
+		<set name="price" val="10700" />
+		<stats>
+			<stat type="mDef">14</stat>
+		</stats>
+	</item>
+	<item id="879" name="Ring of Magic" type="Armor">
+		<set name="icon" val="icon.accessary_enchanted_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="51" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="28400" />
+		<set name="commissionItemType" val="RING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">18</stat>
+		</stats>
+	</item>
+	<item id="880" name="Black Pearl Ring" type="Armor">
+		<set name="icon" val="icon.accessary_black_pearl_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="77" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="42800" />
+		<set name="commissionItemType" val="RING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">20</stat>
+		</stats>
+	</item>
+	<item id="881" name="Elven Ring" type="Armor">
+		<set name="icon" val="icon.accessary_elven_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="113" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="62300" />
+		<set name="commissionItemType" val="RING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">22</stat>
+		</stats>
+	</item>
+	<item id="882" name="Mithril Ring" type="Armor">
+		<set name="icon" val="icon.accessary_mithril_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="146" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="80800" />
+		<set name="commissionItemType" val="RING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">24</stat>
+		</stats>
+	</item>
+	<item id="883" name="Aquastone Ring" type="Armor">
+		<set name="icon" val="icon.accessary_aquastone_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="41" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="103000" />
+		<set name="commissionItemType" val="RING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">26</stat>
+		</stats>
+	</item>
+	<item id="884" name="Ring of Protection" type="Armor">
+		<set name="icon" val="icon.accessary_ring_of_protection_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="52" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="130000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<stats>
+			<stat type="mDef">28</stat>
+		</stats>
+	</item>
+	<item id="885" name="Ring of Ages" type="Armor">
+		<set name="icon" val="icon.accessary_ring_of_ages_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="78" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="196000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<stats>
+			<stat type="mDef">30</stat>
+		</stats>
+	</item>
+	<item id="886" name="Ring of Seal" type="Armor">
+		<set name="icon" val="icon.accessary_ring_of_binding_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="282000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<stats>
+			<stat type="mDef">32</stat>
+		</stats>
+	</item>
+	<item id="887" name="Adamantite Ring" type="Armor">
+		<set name="icon" val="icon.accessary_adamantite_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="53" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="404000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<stats>
+			<stat type="mDef">34</stat>
+		</stats>
+	</item>
+	<item id="888" name="Blessed Ring" type="Armor">
+		<set name="icon" val="icon.accessary_blessed_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="282000" />
+		<set name="commissionItemType" val="RING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">32</stat>
+		</stats>
+	</item>
+	<item id="890" name="Ring of Devotion" type="Armor">
+		<set name="icon" val="icon.accessary_ring_of_devotion_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="32" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="18000" />
+		<set name="commissionItemType" val="RING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">16</stat>
+		</stats>
+	</item>
+	<item id="891" name="Sage's Ring" type="Armor">
+		<set name="icon" val="icon.accessary_sages_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="32" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="616000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<stats>
+			<stat type="mDef">36</stat>
+		</stats>
+	</item>
+	<item id="893" name="Majestic Ring" type="Armor">
+		<!-- Majestic Ring. Provides additional MP +17. -->
+		<set name="icon" val="icon.accessary_inferno_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="80" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="999000" />
+		<set name="commissionItemType" val="RING" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">42</stat>
+			<stat type="maxMp">17</stat>
+		</stats>
+	</item>
+	<item id="895" name="Black Ore Ring" type="Armor">
+		<set name="icon" val="icon.accessary_ring_of_black_ore_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="82" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="616000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<stats>
+			<stat type="mDef">36</stat>
+		</stats>
+	</item>
+</list>

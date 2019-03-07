@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30146"> <!-- Mint -->
+		<teleport type="NORMAL">
+			<!-- feeCount from Interlude, unconfirmed from retail classic -->
+			<location npcStringId="1010004" x="-80684" y="149834" z="-3040" feeCount="23000" /> <!-- The Village of Gludin -->
+			<location npcStringId="1010005" x="-14455" y="123986" z="-3120" feeCount="9200" /> <!-- Town of Gludio -->
+			<location npcStringId="1010167" x="21362" y="51122" z="-3688" feeCount="710" /> <!-- Elven Forest (Lv. 8) -->
+			<location npcStringId="1010612" x="-10612" y="75881" z="-3592" feeCount="1700" /> <!-- Neutral Zone (Lv. 15) -->
+			<location npcStringId="1010560" x="29294" y="74968" z="-3776" feeCount="820" /> <!-- Elven Fortress (Lv. 10) -->
+		</teleport>
+	</npc>
+</list>

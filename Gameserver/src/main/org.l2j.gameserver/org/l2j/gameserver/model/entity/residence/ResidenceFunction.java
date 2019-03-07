@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.entity.residence;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.base.ResidenceFunctionType;
 import org.l2j.gameserver.templates.residence.ResidenceFunctionTemplate;
@@ -80,7 +80,7 @@ public class ResidenceFunction
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("UPDATE residence_functions SET end_time=?, in_debt=? WHERE residence_id=? AND type=? AND level=?");
 			statement.setInt(1, (int) (getEndTimeInMillis() / 1000));
 			statement.setInt(2, inDebt ? 1 : 0);

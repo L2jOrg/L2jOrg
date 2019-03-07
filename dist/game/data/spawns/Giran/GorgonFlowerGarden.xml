@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn>
+		<territories>
+			<territory name="giran01_qm2322_01" minZ="-3531" maxZ="-3331">
+				<node x="106252" y="135416" />
+				<node x="106452" y="135416" />
+				<node x="106452" y="135616" />
+				<node x="106252" y="135616" />
+			</territory>
+		</territories>
+		<npc id="27107" count="1" respawnTime="180sec" respawnRandom="0sec" /> <!-- Silhouette Tilfo -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_101" minZ="-3616" maxZ="-2816">
+				<node x="98448" y="137656" />
+				<node x="100480" y="137220" />
+				<node x="102272" y="138700" />
+				<node x="101580" y="140324" />
+				<node x="98508" y="138960" />
+			</territory>
+		</territories>
+		<npc id="20248" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_102" minZ="-3616" maxZ="-2816">
+				<node x="98448" y="137656" />
+				<node x="100480" y="137220" />
+				<node x="102272" y="138700" />
+				<node x="101580" y="140324" />
+				<node x="98508" y="138960" />
+			</territory>
+		</territories>
+		<npc id="20145" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Harpy -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_103" minZ="-3616" maxZ="-2816">
+				<node x="98448" y="137656" />
+				<node x="100480" y="137220" />
+				<node x="102272" y="138700" />
+				<node x="101580" y="140324" />
+				<node x="98508" y="138960" />
+			</territory>
+		</territories>
+		<npc id="20145" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Harpy -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_104" minZ="-3616" maxZ="-2816">
+				<node x="98448" y="137656" />
+				<node x="100480" y="137220" />
+				<node x="102272" y="138700" />
+				<node x="101580" y="140324" />
+				<node x="98508" y="138960" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_126" minZ="-3668" maxZ="-3268">
+				<node x="100212" y="141260" />
+				<node x="101876" y="141168" />
+				<node x="103216" y="141744" />
+				<node x="103864" y="143884" />
+				<node x="100756" y="144032" />
+			</territory>
+		</territories>
+		<npc id="20248" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_125" minZ="-3668" maxZ="-3268">
+				<node x="100212" y="141260" />
+				<node x="101876" y="141168" />
+				<node x="103216" y="141744" />
+				<node x="103864" y="143884" />
+				<node x="100756" y="144032" />
+			</territory>
+		</territories>
+		<npc id="20248" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_124" minZ="-3668" maxZ="-3268">
+				<node x="100212" y="141260" />
+				<node x="101876" y="141168" />
+				<node x="103216" y="141744" />
+				<node x="103864" y="143884" />
+				<node x="100756" y="144032" />
+			</territory>
+		</territories>
+		<npc id="20145" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Harpy -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_123" minZ="-3668" maxZ="-3268">
+				<node x="100212" y="141260" />
+				<node x="101876" y="141168" />
+				<node x="103216" y="141744" />
+				<node x="103864" y="143884" />
+				<node x="100756" y="144032" />
+			</territory>
+		</territories>
+		<npc id="20145" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Harpy -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_122" minZ="-3668" maxZ="-3268">
+				<node x="100212" y="141260" />
+				<node x="101876" y="141168" />
+				<node x="103216" y="141744" />
+				<node x="103864" y="143884" />
+				<node x="100756" y="144032" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_121" minZ="-3668" maxZ="-3268">
+				<node x="100212" y="141260" />
+				<node x="101876" y="141168" />
+				<node x="103216" y="141744" />
+				<node x="103864" y="143884" />
+				<node x="100756" y="144032" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_041" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_042" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_043" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_044" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_045" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_046" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_047" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20158" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Medusa -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_048" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20158" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Medusa -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_049" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20158" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Medusa -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_0410" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20158" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Medusa -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_0411" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20158" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Medusa -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_0412" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20158" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Medusa -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_0413" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20176" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Wyrm -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_0414" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20176" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Wyrm -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_0415" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20176" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Wyrm -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_0416" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20176" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Wyrm -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_0417" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20176" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Wyrm -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_0418" minZ="-3628" maxZ="-3228">
+				<node x="105260" y="134848" />
+				<node x="108352" y="133880" />
+				<node x="111764" y="135268" />
+				<node x="110768" y="137216" />
+				<node x="107724" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20176" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Wyrm -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_051" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_052" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_053" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_054" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_055" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_056" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_057" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20158" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Medusa -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_058" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20158" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Medusa -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_059" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20158" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Medusa -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_060" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20158" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Medusa -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_061" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20158" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Medusa -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_062" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20176" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Wyrm -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_063" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20176" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Wyrm -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_064" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20176" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Wyrm -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_065" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20176" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Wyrm -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_066" minZ="-3712" maxZ="-2712">
+				<node x="111856" y="135344" />
+				<node x="118060" y="136228" />
+				<node x="114668" y="138212" />
+				<node x="111768" y="138656" />
+				<node x="110916" y="137272" />
+			</territory>
+		</territories>
+		<npc id="20176" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Wyrm -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_021" minZ="-3656" maxZ="-3056">
+				<node x="103196" y="131248" />
+				<node x="108356" y="131288" />
+				<node x="108292" y="132692" />
+				<node x="103956" y="134148" />
+				<node x="103116" y="133776" />
+			</territory>
+		</territories>
+		<npc id="20248" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_022" minZ="-3656" maxZ="-3056">
+				<node x="103196" y="131248" />
+				<node x="108356" y="131288" />
+				<node x="108292" y="132692" />
+				<node x="103956" y="134148" />
+				<node x="103116" y="133776" />
+			</territory>
+		</territories>
+		<npc id="20248" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_023" minZ="-3656" maxZ="-3056">
+				<node x="103196" y="131248" />
+				<node x="108356" y="131288" />
+				<node x="108292" y="132692" />
+				<node x="103956" y="134148" />
+				<node x="103116" y="133776" />
+			</territory>
+		</territories>
+		<npc id="20248" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_024" minZ="-3656" maxZ="-3056">
+				<node x="103196" y="131248" />
+				<node x="108356" y="131288" />
+				<node x="108292" y="132692" />
+				<node x="103956" y="134148" />
+				<node x="103116" y="133776" />
+			</territory>
+		</territories>
+		<npc id="20248" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_025" minZ="-3656" maxZ="-3056">
+				<node x="103196" y="131248" />
+				<node x="108356" y="131288" />
+				<node x="108292" y="132692" />
+				<node x="103956" y="134148" />
+				<node x="103116" y="133776" />
+			</territory>
+		</territories>
+		<npc id="20145" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Harpy -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_026" minZ="-3656" maxZ="-3056">
+				<node x="103196" y="131248" />
+				<node x="108356" y="131288" />
+				<node x="108292" y="132692" />
+				<node x="103956" y="134148" />
+				<node x="103116" y="133776" />
+			</territory>
+		</territories>
+		<npc id="20145" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Harpy -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_027" minZ="-3656" maxZ="-3056">
+				<node x="103196" y="131248" />
+				<node x="108356" y="131288" />
+				<node x="108292" y="132692" />
+				<node x="103956" y="134148" />
+				<node x="103116" y="133776" />
+			</territory>
+		</territories>
+		<npc id="20145" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Harpy -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_028" minZ="-3656" maxZ="-3056">
+				<node x="103196" y="131248" />
+				<node x="108356" y="131288" />
+				<node x="108292" y="132692" />
+				<node x="103956" y="134148" />
+				<node x="103116" y="133776" />
+			</territory>
+		</territories>
+		<npc id="20145" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Harpy -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_028" minZ="-3656" maxZ="-3056">
+				<node x="103196" y="131248" />
+				<node x="108356" y="131288" />
+				<node x="108292" y="132692" />
+				<node x="103956" y="134148" />
+				<node x="103116" y="133776" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_028" minZ="-3656" maxZ="-3056">
+				<node x="103196" y="131248" />
+				<node x="108356" y="131288" />
+				<node x="108292" y="132692" />
+				<node x="103956" y="134148" />
+				<node x="103116" y="133776" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_028" minZ="-3656" maxZ="-3056">
+				<node x="103196" y="131248" />
+				<node x="108356" y="131288" />
+				<node x="108292" y="132692" />
+				<node x="103956" y="134148" />
+				<node x="103116" y="133776" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_028" minZ="-3656" maxZ="-3056">
+				<node x="103196" y="131248" />
+				<node x="108356" y="131288" />
+				<node x="108292" y="132692" />
+				<node x="103956" y="134148" />
+				<node x="103116" y="133776" />
+			</territory>
+		</territories>
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_03" minZ="-3688" maxZ="-3228">
+				<node x="101904" y="136448" />
+				<node x="103108" y="135076" />
+				<node x="105008" y="134864" />
+				<node x="107884" y="138588" />
+				<node x="106032" y="139908" />
+				<node x="104556" y="139632" />
+			</territory>
+		</territories>
+		<npc id="20248" count="5" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear -->
+		<npc id="20145" count="5" respawnTime="27sec" respawnRandom="0sec" /> <!-- Harpy -->
+		<npc id="20249" count="5" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_01" minZ="-3684" maxZ="-3084">
+				<node x="98552" y="131280" />
+				<node x="103160" y="131268" />
+				<node x="103056" y="133876" />
+				<node x="100432" y="136044" />
+				<node x="98604" y="136436" />
+			</territory>
+		</territories>
+		<npc id="20248" count="6" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear -->
+		<npc id="20145" count="6" respawnTime="27sec" respawnRandom="0sec" /> <!-- Harpy -->
+		<npc id="20249" count="6" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_08" minZ="-3708" maxZ="-2708">
+				<node x="122928" y="133828" />
+				<node x="126056" y="132704" />
+				<node x="127224" y="134600" />
+				<node x="124816" y="138108" />
+				<node x="122572" y="137740" />
+				<node x="122084" y="136600" />
+			</territory>
+		</territories>
+		<npc id="20249" count="5" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+		<npc id="20158" count="5" respawnTime="27sec" respawnRandom="0sec" /> <!-- Medusa -->
+		<npc id="20176" count="5" respawnTime="27sec" respawnRandom="0sec" /> <!-- Wyrm -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_09" minZ="-3608" maxZ="-2608">
+				<node x="127360" y="134580" />
+				<node x="129868" y="134556" />
+				<node x="129976" y="136468" />
+				<node x="128196" y="138976" />
+				<node x="125852" y="138988" />
+				<node x="124916" y="138068" />
+			</territory>
+		</territories>
+		<npc id="20249" count="4" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+		<npc id="20158" count="4" respawnTime="27sec" respawnRandom="0sec" /> <!-- Medusa -->
+		<npc id="20176" count="4" respawnTime="27sec" respawnRandom="0sec" /> <!-- Wyrm -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_06" minZ="-3692" maxZ="-3092">
+				<node x="116428" y="135160" />
+				<node x="119916" y="133456" />
+				<node x="122688" y="134232" />
+				<node x="121532" y="137616" />
+			</territory>
+		</territories>
+		<npc id="20249" count="4" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+		<npc id="20158" count="4" respawnTime="27sec" respawnRandom="0sec" /> <!-- Medusa -->
+		<npc id="20176" count="5" respawnTime="27sec" respawnRandom="0sec" /> <!-- Wyrm -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_07" minZ="-3656" maxZ="-3056">
+				<node x="118568" y="131272" />
+				<node x="122612" y="131248" />
+				<node x="122700" y="134072" />
+				<node x="120068" y="133340" />
+			</territory>
+		</territories>
+		<npc id="20249" count="3" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+		<npc id="20158" count="3" respawnTime="27sec" respawnRandom="0sec" /> <!-- Medusa -->
+		<npc id="20176" count="3" respawnTime="27sec" respawnRandom="0sec" /> <!-- Wyrm -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_15" minZ="-3732" maxZ="-3132">
+				<node x="98540" y="147792" />
+				<node x="101476" y="148904" />
+				<node x="100820" y="150852" />
+				<node x="98688" y="151548" />
+			</territory>
+		</territories>
+		<npc id="20248" count="2" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear -->
+		<npc id="20145" count="2" respawnTime="27sec" respawnRandom="0sec" /> <!-- Harpy -->
+		<npc id="20249" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_13" minZ="-3688" maxZ="-3088">
+				<node x="100720" y="144180" />
+				<node x="103764" y="143940" />
+				<node x="106548" y="145576" />
+				<node x="105344" y="147584" />
+				<node x="102188" y="146140" />
+			</territory>
+		</territories>
+		<npc id="20248" count="3" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear -->
+		<npc id="20145" count="3" respawnTime="27sec" respawnRandom="0sec" /> <!-- Harpy -->
+		<npc id="20249" count="3" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_14" minZ="-3760" maxZ="-3160">
+				<node x="98484" y="145328" />
+				<node x="100636" y="144216" />
+				<node x="102076" y="146220" />
+				<node x="101520" y="148776" />
+				<node x="98468" y="147624" />
+			</territory>
+		</territories>
+		<npc id="20248" count="2" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear -->
+		<npc id="20145" count="2" respawnTime="27sec" respawnRandom="0sec" /> <!-- Harpy -->
+		<npc id="20249" count="2" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_2322_11" minZ="-3700" maxZ="-3100">
+				<node x="103800" y="139548" />
+				<node x="105820" y="139988" />
+				<node x="106624" y="141076" />
+				<node x="104860" y="143748" />
+			</territory>
+		</territories>
+		<npc id="20248" count="1" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear -->
+		<npc id="20145" count="2" respawnTime="27sec" respawnRandom="0sec" /> <!-- Harpy -->
+		<npc id="20249" count="2" respawnTime="27sec" respawnRandom="0sec" /> <!-- Turak Bugbear Warrior -->
+	</spawn>
+</list>

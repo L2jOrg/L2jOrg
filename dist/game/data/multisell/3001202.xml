@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30012</npc> <!-- Fishing Guildsman -->
+	</npcs>
+	<item>
+		<!-- Blue Mackerel -->
+		<ingredient count="5" id="45473" />
+		<!-- Fish Stew: Might -->
+		<production count="1" id="49460" />
+	</item>
+	<item>
+		<!-- Blue Mackerel -->
+		<ingredient count="5" id="45473" />
+		<!-- Fish Stew: Shield -->
+		<production count="1" id="49461" />
+	</item>
+	<item>
+		<!-- Blue Mackerel -->
+		<ingredient count="20" id="45473" />
+		<!-- Fish Stew: Magic Barrier -->
+		<production count="1" id="49462" />
+	</item>
+	<item>
+		<!-- Blue Mackerel -->
+		<ingredient count="10" id="45473" />
+		<!-- Fish Stew: Vampiric Rage -->
+		<production count="1" id="49463" />
+	</item>
+	<item>
+		<!-- Blue Mackerel -->
+		<ingredient count="10" id="45473" />
+		<!-- Fish Stew: Empower -->
+		<production count="1" id="49464" />
+	</item>
+	<item>
+		<!-- Fresh Blue Mackerel -->
+		<ingredient count="40" id="45481" />
+		<!-- Roast Blue Mackerel - STR -->
+		<production count="1" id="70040" />
+	</item>
+	<item>
+		<!-- Fresh Blue Mackerel -->
+		<ingredient count="40" id="45481" />
+		<!-- Roast Blue Mackerel - INT -->
+		<production count="1" id="70041" />
+	</item>
+	<item>
+		<!-- Fresh Blue Mackerel -->
+		<ingredient count="40" id="45481" />
+		<!-- Roast Blue Mackerel - CON -->
+		<production count="1" id="70042" />
+	</item>	
+	<item>
+		<!-- Fresh Blue Mackerel -->
+		<ingredient count="40" id="45481" />
+		<!-- Roast Blue Mackerel - DEX -->
+		<production count="1" id="70043" />
+	</item>		
+	<item>
+		<!-- Fresh Blue Mackerel -->
+		<ingredient count="40" id="45481" />
+		<!-- Roast Blue Mackerel - MEN -->
+		<production count="1" id="70044" />
+	</item>	
+	<item>
+		<!-- Fresh Blue Mackerel -->
+		<ingredient count="40" id="45481" />
+		<!-- Roast Blue Mackerel - WIT -->
+		<production count="1" id="70045" />
+	</item>		
+	<item>
+		<!-- Fresh Blue Mackerel -->
+		<ingredient count="35" id="45481" />
+		<!-- Fish Stew: The guild's gratitude -->
+		<production count="1" id="49501" />
+	</item>	
+</list>

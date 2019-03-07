@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Darkelf Town -->
+	<region name="darkelf_town" town="Darkelven Town" castle="4" locId="915" bbs="3">
+		<respawnPoint X="11632" Y="16812" Z="-4500" />
+		<respawnPoint X="11217" Y="16837" Z="-4500" />
+		<respawnPoint X="11498" Y="16979" Z="-4500" />
+		<respawnPoint X="11404" Y="16699" Z="-4500" />
+		<respawnPoint X="12501" Y="16768" Z="-4500" />
+		<respawnPoint X="12104" Y="17385" Z="-4500" />
+		<respawnPoint X="11603" Y="17770" Z="-4500" />
+		<respawnPoint X="12519" Y="16376" Z="-4500" />
+		<respawnPoint X="10355" Y="17270" Z="-4500" />
+		<respawnPoint X="10146" Y="16965" Z="-4500" />
+		<respawnPoint X="10691" Y="16343" Z="-4500" />
+		<respawnPoint X="11193" Y="15963" Z="-4500" />
+		<respawnPoint X="3040" Y="24240" Z="-3700" isChaotic="true" />
+		<respawnPoint X="1184" Y="21856" Z="-3240" isChaotic="true" />
+		<respawnPoint X="3760" Y="25136" Z="-3700" isChaotic="true" />
+		<respawnPoint X="672" Y="20096" Z="-3350" isChaotic="true" />
+		<respawnPoint X="1248" Y="14512" Z="-3180" isChaotic="true" />
+		<respawnPoint X="-8176" Y="23120" Z="-3450" isChaotic="true" />
+		<respawnPoint X="-10208" Y="25408" Z="-3560" isChaotic="true" />
+		<respawnPoint X="-11456" Y="23936" Z="-3700" isChaotic="true" />
+		<respawnPoint X="-9632" Y="22624" Z="-3650" isChaotic="true" />
+		<respawnPoint X="-5776" Y="22080" Z="-3510" isChaotic="true" />
+		<respawnPoint X="2224" Y="11936" Z="-3050" isChaotic="true" />
+		<respawnPoint X="1744" Y="8640" Z="-3250" isChaotic="true" />
+		<respawnPoint X="2784" Y="7872" Z="-3110" isChaotic="true" />
+		<respawnPoint X="3216" Y="10128" Z="-2980" isChaotic="true" />
+		<respawnPoint X="3584" Y="6976" Z="-3020" isChaotic="true" />
+		<respawnPoint X="-10768" Y="21952" Z="-3600" isChaotic="true" />
+		<respawnPoint X="-11360" Y="22688" Z="-3600" isChaotic="true" />
+		<respawnPoint X="-12784" Y="23232" Z="-3630" isChaotic="true" />
+		<respawnPoint X="-13632" Y="21872" Z="-3620" isChaotic="true" />
+		<respawnPoint X="-11984" Y="21232" Z="-3600" isChaotic="true" />
+		<map X="20" Y="18" />
+		<map X="19" Y="18" />
+		<map X="19" Y="19" />
+		<map X="18" Y="19" />
+		<map X="18" Y="18" />
+		<map X="18" Y="20" />
+		<map X="17" Y="19" />
+		<banned race="ELF" point="elf_town" />
+	</region>
+	<!-- Temple Of Shilen -->
+	<region name="Temple_of_Shilen" town="Darkelven Town" castle="4" locId="915" bbs="3">
+		<respawnPoint X="28295" Y="11063" Z="-4224" />
+		<respawnPoint X="28302" Y="11008" Z="-4224" />
+		<respawnPoint X="28377" Y="10916" Z="-4224" />
+		<respawnPoint X="28456" Y="10997" Z="-4224" />
+		<respawnPoint X="28461" Y="11044" Z="-4224" />
+		<respawnPoint X="28395" Y="11127" Z="-4224" />
+		<respawnPoint X="3040" Y="24240" Z="-3700" isChaotic="true" />
+		<respawnPoint X="1184" Y="21856" Z="-3240" isChaotic="true" />
+		<respawnPoint X="3760" Y="25136" Z="-3700" isChaotic="true" />
+		<respawnPoint X="672" Y="20096" Z="-3350" isChaotic="true" />
+		<respawnPoint X="1248" Y="14512" Z="-3180" isChaotic="true" />
+		<respawnPoint X="-8176" Y="23120" Z="-3450" isChaotic="true" />
+		<respawnPoint X="-10208" Y="25408" Z="-3560" isChaotic="true" />
+		<respawnPoint X="-11456" Y="23936" Z="-3700" isChaotic="true" />
+		<respawnPoint X="-9632" Y="22624" Z="-3650" isChaotic="true" />
+		<respawnPoint X="-5776" Y="22080" Z="-3510" isChaotic="true" />
+		<respawnPoint X="2224" Y="11936" Z="-3050" isChaotic="true" />
+		<respawnPoint X="1744" Y="8640" Z="-3250" isChaotic="true" />
+		<respawnPoint X="2784" Y="7872" Z="-3110" isChaotic="true" />
+		<respawnPoint X="3216" Y="10128" Z="-2980" isChaotic="true" />
+		<respawnPoint X="3584" Y="6976" Z="-3020" isChaotic="true" />
+		<respawnPoint X="-10768" Y="21952" Z="-3600" isChaotic="true" />
+		<respawnPoint X="-11360" Y="22688" Z="-3600" isChaotic="true" />
+		<respawnPoint X="-12784" Y="23232" Z="-3630" isChaotic="true" />
+		<respawnPoint X="-13632" Y="21872" Z="-3620" isChaotic="true" />
+		<respawnPoint X="-11984" Y="21232" Z="-3600" isChaotic="true" />
+		<banned race="ELF" point="elf_town" />
+	</region>
+</list>

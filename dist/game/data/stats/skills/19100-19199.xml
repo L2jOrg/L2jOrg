@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="19113" toLevel="1" name="No Clan Return">
+		<!-- For 30 sec., blocks target's Escape. Consumes 100 Spirit Ores and 3000 Individual Fame. Marquis or above only. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<icon>icon.skill_recall</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>1800000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>49758</itemConsumeId>
+		<itemConsumeCount>2</itemConsumeCount>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="BlockEscape" />
+		</effects>
+	</skill>
+	<skill id="19114" toLevel="1" name="No Clan Resurrection">
+		<!-- For 30 sec., blocks target's Resurrection. Consumes 150 Spirit Ores and 1000 Clan Reputation. Marquis or above only. -->
+		<icon>icon.skill_resurrection</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>1800000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<itemConsumeId>49758</itemConsumeId>
+		<itemConsumeCount>2</itemConsumeCount>
+		<effects>
+			<effect name="BlockResurrection" />
+		</effects>
+	</skill>
+	<skill id="19119" toLevel="1" name="Noblesse Grace">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Retains target's buffs/debuffs upon death, except for Noblesse Grace and Lucky Charm. Consumes 1000 Spirit Ore. -->
+		<icon>icon.skill1323</icon>
+		<operateType>A2</operateType>
+		<mpConsume>500</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+</list>

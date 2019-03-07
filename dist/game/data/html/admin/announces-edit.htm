@@ -1,0 +1,54 @@
+<html noscrollbar>
+	<body>
+		<center>
+			<br>
+			<table border="0" cellpadding="0" cellspacing="0" width="97%" height="480" background="L2UI_CH3.refinewnd_back_Pattern">
+				<tr>
+					<td valign="top" align="center">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td width="256" height="185" background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td>
+							</tr>
+						</table>
+						Edit announcements: %id%<br1>
+						<table width=600 height=210 cellspacing=5 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+							<tr>
+								<td width="200">Type</td>
+								<td width="200"><combobox width=200 height=17 var="typeBox" list="NORMAL;CRITICAL;AUTO_NORMAL;AUTO_CRITICAL" sel="%type%"></td>
+								<td width="200">%type%</td>
+							</tr>
+							<tr>
+								<td width="200">Initial Delay in sec</td>
+								<td width="200"><edit var="autoann_initdelay" width=200 height=12 type=number></td>
+								<td width="200">%initial%</td>
+							</tr>
+							<tr>
+								<td width="200">Delay in sec</td>
+								<td width="200"><edit var="autoann_delay" width=200 height=12 type=number></td>
+								<td width="200">%delay%</td>
+							</tr>
+							<tr>
+								<td width="200">Repeat (0 for infinite):</td>
+								<td width="200"><edit var="autoann_repeat" width=200 height=12 type=number></td>
+								<td width="200">%repeat%</td>
+							</tr>
+							<tr>
+								<td width="200">Text:</td>
+								<td width="200"><multiedit var="autoann_memo" width=200 height=100></td>
+								<td width="200">%content%</td>
+							</tr>
+						</table>
+						<center>
+							<table>
+								<tr>
+									<td><button value="Edit" action="bypass -h admin_announces edit %id% $typeBox $autoann_initdelay $autoann_delay $autoann_repeat $autoann_memo" width="70" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+									<td><button value="Back" action="bypass -h admin_announces list" width="70" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+								</tr>
+							</table>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</center>
+	</body>
+</html>

@@ -1,9 +1,9 @@
 package org.l2j.scripts.handler.bbs;
 
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
-import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.listener.actor.player.OnPlayerEnterListener;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.listener.CharListenerList;
@@ -75,7 +75,7 @@ public final class CommunityMail extends ScriptsCommunityHandler
 			ResultSet rset = null;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_mail` WHERE `box_type` = 0 and `to_object_id` = ?");
 				statement.setInt(1, player.getObjectId());
 				rset = statement.executeQuery();
@@ -224,7 +224,7 @@ public final class CommunityMail extends ScriptsCommunityHandler
 			ResultSet rset = null;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("SELECT * FROM `bbs_mail` WHERE `message_id` = ? and `box_type` = ? and `to_object_id` = ?");
 				statement.setInt(1, messageId);
 				statement.setInt(2, type);
@@ -291,7 +291,7 @@ public final class CommunityMail extends ScriptsCommunityHandler
 			PreparedStatement statement = null;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("DELETE FROM `bbs_mail` WHERE `box_type` = ? and `message_id` = ? and `to_object_id` = ?");
 				statement.setInt(1, type);
 				statement.setInt(2, messageId);
@@ -328,7 +328,7 @@ public final class CommunityMail extends ScriptsCommunityHandler
 			ResultSet rset = null;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 
 				statement = con.prepareStatement("SELECT * FROM `bbs_mail` WHERE `box_type` = 0 and `read` = 0 and `to_object_id` = ?");
 				statement.setInt(1, player.getObjectId());
@@ -359,7 +359,7 @@ public final class CommunityMail extends ScriptsCommunityHandler
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM `bbs_mail` WHERE `to_object_id` = ? and `post_date` < ?");
 			statement.setInt(1, player.getObjectId());
 			statement.setInt(2, (int) (System.currentTimeMillis() / 1000) - 90 * 24 * 60 * 60);

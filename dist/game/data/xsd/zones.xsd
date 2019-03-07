@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="zone" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="stat" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="name" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:token">
+												<xs:enumeration value="affectedLvlMin" />
+												<xs:enumeration value="affectedRace" />
+												<xs:enumeration value="allowStore" />
+												<xs:enumeration value="castleId" />
+												<xs:enumeration value="chance" />
+												<xs:enumeration value="clanHallId" />
+												<xs:enumeration value="dmgHPSec" />
+												<xs:enumeration value="default_enabled" />
+												<xs:enumeration value="domainId" />
+												<xs:enumeration value="enterMsgId" />
+												<xs:enumeration value="eventId" />
+												<xs:enumeration value="fortId" />
+												<xs:enumeration value="HpRegenBonus" />
+												<xs:enumeration value="initialDelay" />
+												<xs:enumeration value="instanceId" />
+												<xs:enumeration value="instanceTemplate" />
+												<xs:enumeration value="InvadeTime" />
+												<xs:enumeration value="leaveMsgId" />
+												<xs:enumeration value="maxDynamicSkillCount" />
+												<xs:enumeration value="move_bonus" />
+												<xs:enumeration value="MpRegenBonus" />
+												<xs:enumeration value="NoBookmark" />
+												<xs:enumeration value="NoItemDrop" />
+												<xs:enumeration value="oustX" />
+												<xs:enumeration value="oustY" />
+												<xs:enumeration value="oustZ" />
+												<xs:enumeration value="residenceId" />
+												<xs:enumeration value="residenceZoneId" />
+												<xs:enumeration value="restartAllowedTime" />
+												<xs:enumeration value="restartTime" />
+												<xs:enumeration value="reuse" />
+												<xs:enumeration value="showDangerIcon" />
+												<xs:enumeration value="skillIdLvl" />
+												<xs:enumeration value="spawnMaxX" />
+												<xs:enumeration value="spawnMaxY" />
+												<xs:enumeration value="spawnMaxZ" />
+												<xs:enumeration value="spawnMinX" />
+												<xs:enumeration value="spawnMinY" />
+												<xs:enumeration value="spawnMinZ" />
+												<xs:enumeration value="spawnZ" />
+												<xs:enumeration value="targetClass" />
+												<xs:enumeration value="taxById" />
+												<xs:enumeration value="territoryId" />
+												<xs:enumeration value="townId" />
+												<xs:enumeration value="mapId" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="val" type="xs:token" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="node" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="X" type="xs:integer" use="required" />
+									<xs:attribute name="Y" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="bannedAreas" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="area" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="node" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:attribute type="xs:int" name="X" use="required" />
+															<xs:attribute type="xs:int" name="Y" use="required" />
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute type="xs:int" name="minZ" use="required" />
+												<xs:attribute type="xs:int" name="maxZ" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="race" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="point" type="xs:token" use="required" />
+									<xs:attribute name="name" type="xs:token" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="spawn" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="type">
+										<xs:simpleType>
+											<xs:restriction base="xs:token">
+												<xs:enumeration value="banish" />
+												<xs:enumeration value="blueBanishPoint" />
+												<xs:enumeration value="blueStartPoint" />
+												<xs:enumeration value="challenger" />
+												<xs:enumeration value="chaotic" />
+												<xs:enumeration value="entrance" />
+												<xs:enumeration value="other" />
+												<xs:enumeration value="redBanishPoint" />
+												<xs:enumeration value="redStartPoint" />
+												<xs:enumeration value="spectatorSpawn" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="X" type="xs:integer" use="required" />
+									<xs:attribute name="Y" type="xs:integer" use="required" />
+									<xs:attribute name="Z" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" type="xs:positiveInteger" />
+						<xs:attribute name="maxZ" type="xs:integer" use="required" />
+						<xs:attribute name="minZ" type="xs:integer" use="required" />
+						<xs:attribute name="name" type="xs:normalizedString" use="optional" />
+						<xs:attribute name="rad" type="xs:positiveInteger" />
+						<xs:attribute name="shape" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="Cuboid" />
+									<xs:enumeration value="Cylinder" />
+									<xs:enumeration value="NPoly" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="type" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="ArenaZone" />
+									<xs:enumeration value="BossZone" />
+									<xs:enumeration value="CastleZone" />
+									<xs:enumeration value="ClanHallZone" />
+									<xs:enumeration value="CleftZone" />
+									<xs:enumeration value="ConditionZone" />
+									<xs:enumeration value="DamageZone" />
+									<xs:enumeration value="DerbyTrackZone" />
+									<xs:enumeration value="EffectZone" />
+									<xs:enumeration value="FishingZone" />
+									<xs:enumeration value="FortZone" />
+									<xs:enumeration value="HqZone" />
+									<xs:enumeration value="JailZone" />
+									<xs:enumeration value="LandingZone" />
+									<xs:enumeration value="MotherTreeZone" />
+									<xs:enumeration value="NoDropItemZone" />
+									<xs:enumeration value="NoLandingZone" />
+									<xs:enumeration value="NoRestartZone" />
+									<xs:enumeration value="NoStoreZone" />
+									<xs:enumeration value="NoSummonFriendZone" />
+									<xs:enumeration value="NpcSpawnTerritory" />
+									<xs:enumeration value="OlympiadStadiumZone" />
+									<xs:enumeration value="PeaceZone" />
+									<xs:enumeration value="ResidenceHallTeleportZone" />
+									<xs:enumeration value="ResidenceTeleportZone" />
+									<xs:enumeration value="RespawnZone" />
+									<xs:enumeration value="ScriptZone" />
+									<xs:enumeration value="SiegableHallZone" />
+									<xs:enumeration value="SiegeZone" />
+									<xs:enumeration value="SwampZone" />
+									<xs:enumeration value="TaxZone" />
+									<xs:enumeration value="TerritoryWarZone" />
+									<xs:enumeration value="TownZone" />
+									<xs:enumeration value="WaterZone" />
+									<xs:enumeration value="SayuneZone" />
+									<xs:enumeration value="UndyingZone" />
+									<xs:enumeration value="TeleportZone" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="enabled" type="xs:boolean" use="required" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

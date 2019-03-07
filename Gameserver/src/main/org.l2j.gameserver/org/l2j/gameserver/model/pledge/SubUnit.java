@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.pledge;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Player;
@@ -175,7 +175,7 @@ public class SubUnit
 			PreparedStatement statement = null;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("UPDATE clan_subpledges SET leader_id=? WHERE clan_id=? and type=?");
 				statement.setInt(1, getLeaderObjectId());
 				statement.setInt(2, _clan.getClanId());
@@ -202,7 +202,7 @@ public class SubUnit
 			PreparedStatement statement = null;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("UPDATE clan_subpledges SET name=? WHERE clan_id=? and type=?");
 				statement.setString(1, _name);
 				statement.setInt(2, _clan.getClanId());
@@ -240,7 +240,7 @@ public class SubUnit
 
 				try
 				{
-					con = L2DatabaseFactory.getInstance().getConnection();
+					con = DatabaseFactory.getInstance().getConnection();
 
 					if(oldSkillEntry != null)
 					{
@@ -341,7 +341,7 @@ public class SubUnit
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE characters SET clanid=0, clan_attendance=0, pledge_type=?, pledge_rank=0, lvl_joined_academy=0, apprentice=0, title='', leaveclan=? WHERE obj_Id=?");
 			statement.setInt(1, Clan.SUBUNIT_NONE);
 			statement.setLong(2, System.currentTimeMillis() / 1000);
@@ -365,7 +365,7 @@ public class SubUnit
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(//
 			"SELECT `c`.`char_name` AS `char_name`," + //
 			"`s`.`level` AS `level`," + //
@@ -418,7 +418,7 @@ public class SubUnit
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT skill_id,skill_level FROM clan_subpledges_skills WHERE clan_id=? AND type=?");
 			statement.setInt(1, _clan.getClanId());
 			statement.setInt(2, _type);
@@ -469,7 +469,7 @@ public class SubUnit
 			PreparedStatement statement = null;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("UPDATE clan_subpledges SET upgraded=? WHERE clan_id=? and type=?");
 				statement.setInt(1, isUpgraded() ? 1 : 0);
 				statement.setInt(2, _clan.getClanId());

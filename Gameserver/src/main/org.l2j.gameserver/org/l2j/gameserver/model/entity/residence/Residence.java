@@ -6,11 +6,10 @@ import io.github.joealisson.primitive.sets.IntSet;
 import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.commons.dao.JdbcEntity;
 import org.l2j.commons.dao.JdbcEntityState;
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Contants;
 import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
@@ -27,7 +26,6 @@ import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.templates.StatsSet;
-import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.residence.ResidenceFunctionTemplate;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.ReflectionUtils;
@@ -263,7 +261,7 @@ public abstract class Residence implements JdbcEntity
 		ResultSet rs = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM residence_functions WHERE residence_id=?");
 			statement.setInt(1, getId());
 			rs = statement.executeQuery();
@@ -371,7 +369,7 @@ public abstract class Residence implements JdbcEntity
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE residence_functions SET residence_id=?, type=?, level=?, end_time=?");
 			statement.setInt(1, getId());
 			statement.setInt(2, type.ordinal());
@@ -398,7 +396,7 @@ public abstract class Residence implements JdbcEntity
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM residence_functions WHERE residence_id=? AND type=?");
 			statement.setInt(1, getId());
 			statement.setInt(2, type.ordinal());
@@ -422,7 +420,7 @@ public abstract class Residence implements JdbcEntity
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM residence_functions WHERE residence_id=?");
 			statement.setInt(1, getId());
 			statement.execute();

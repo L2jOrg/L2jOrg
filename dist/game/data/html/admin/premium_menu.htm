@@ -1,0 +1,24 @@
+<html><title>Premium Service Manager</title><body>
+<center>
+<table width=270>
+<tr>
+<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Premium Service Manager</center></td>
+<td width=45><button value="Back" action="bypass -h admin_admin6" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+<font color="LEVEL">Enter Account Name</font><br>
+<edit var="acc_name" width=200>
+<br>
+<br><button value="Add 1 month Premium" action="bypass -h admin_premium_add1 $acc_name" width=200 height=30 back="L2UI_CT1.OlympiadWnd_DF_Reward_Down" fore="L2UI_CT1.OlympiadWnd_DF_Reward">
+<button value="Add 2 months Premium" action="bypass -h admin_premium_add2 $acc_name" width=200 height=30 back="L2UI_CT1.OlympiadWnd_DF_Reward_Down" fore="L2UI_CT1.OlympiadWnd_DF_Reward">
+<button value="Add 3 months Premium" action="bypass -h admin_premium_add3 $acc_name" width=200 height=30 back="L2UI_CT1.OlympiadWnd_DF_Reward_Down" fore="L2UI_CT1.OlympiadWnd_DF_Reward">
+<br>
+<button value="View Premium Info" action="bypass -h admin_premium_info $acc_name" width=200 height=30 back="L2UI_CT1.HtmlWnd_DF_Area_Down" fore="L2UI_CT1.HtmlWnd_DF_Area">
+<button value="Remove Premium" action="bypass -h admin_premium_remove $acc_name" width=200 height=30  back="L2UI_CT1.HtmlWnd_DF_Reset_Down" fore="L2UI_CT1.HtmlWnd_DF_Reset">
+<br>
+<font color="FF0000">Players can use the .premium command<br1>
+to view their account status.</font>
+</center>
+</body></html>

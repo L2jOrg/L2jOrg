@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/cubics.xsd">
+	<cubic id="14" level="1" slot="10" duration="900" delay="13" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<skills>
+			<skill id="4049" level="8" triggerRate="30" successRate="33" canUseOnStaticObjects="true" target="TARGET"> <!-- Cubic Strike -->
+				<conditions>
+					<hp type="GREATER" percent="30" />
+					<range value="1000" />
+				</conditions>
+			</skill>
+			<skill id="4052" level="6" triggerRate="20" successRate="45" target="TARGET"> <!-- Cubic Poison -->
+				<conditions>
+					<hp type="GREATER" percent="30" />
+					<range value="1000" />
+				</conditions>
+			</skill>
+			<skill id="5579" level="1" triggerRate="50" successRate="99" target="MASTER" targetDebuff="true" /> <!-- Cubic Cure -->
+		</skills>
+	</cubic>
+</list>

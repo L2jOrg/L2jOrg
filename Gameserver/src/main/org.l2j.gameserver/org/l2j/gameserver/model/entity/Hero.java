@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.entity;
 import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
 import io.github.joealisson.primitive.pair.IntObjectPair;
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.string.Messages;
@@ -97,7 +97,7 @@ public class Hero
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(GET_HEROES);
 			statement.setInt(1, SubClassType.BASE_CLASS.ordinal());
 			rset = statement.executeQuery();
@@ -226,7 +226,7 @@ public class Hero
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO heroes (char_id, count, played, active) VALUES (?,?,?,?)");
 
 			for(int heroId : _heroes.keySet().toArray())
@@ -307,7 +307,7 @@ public class Hero
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM  heroes_diary WHERE charId=? ORDER BY time ASC");
 			statement.setInt(1, charId);
 			rset = statement.executeQuery();
@@ -422,7 +422,7 @@ public class Hero
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("INSERT INTO heroes_diary (charId, time, action, param) values(?,?,?,?)");
 			statement.setInt(1, charId);
 			statement.setLong(2, System.currentTimeMillis());
@@ -450,7 +450,7 @@ public class Hero
 		try
 		{
 			String message = null;
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT message FROM heroes WHERE char_id=?");
 			statement.setInt(1, charId);
 			rset = statement.executeQuery();
@@ -483,7 +483,7 @@ public class Hero
 
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE heroes SET message=? WHERE char_id=?;");
 			statement.setString(1, _heroMessage.get(charId));
 			statement.setInt(2, charId);

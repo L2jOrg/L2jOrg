@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/events.xsd">
+	<event name="Elpies" class="com.l2jmobius.gameserver.instancemanager.events.ElpiesManager">
+		<scheduler>
+			<!-- Schedule every day at 16:50 -->
+			<schedule name="start" hour="16" minute="50">
+				<event name="#startEvent" />
+			</schedule>
+
+			<!-- Attach condition to reset if server boots up after start and hasn't reset yet -->
+			<conditionalSchedule>
+				<run name="start" if="HASNT_RUN" />
+			</conditionalSchedule>
+		</scheduler>
+	</event>
+</list>

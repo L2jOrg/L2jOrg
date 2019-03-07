@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+    <!-- Catacombs of the Witch -->
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq01" minZ="-5464" maxZ="-5264">
+				<node x="141569" y="79370" />
+				<node x="142182" y="79370" />
+				<node x="142182" y="80007" />
+				<node x="141569" y="80007" />
+			</territory>
+		</territories>
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq02" minZ="-5464" maxZ="-5264">
+				<node x="142874" y="79313" />
+				<node x="144345" y="79313" />
+				<node x="144345" y="79950" />
+				<node x="142874" y="79950" />
+			</territory>
+		</territories>
+		<npc id="21612" count="3" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="3" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="3" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="3" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq03" minZ="-5464" maxZ="-5264">
+				<node x="145102" y="79366" />
+				<node x="145715" y="79366" />
+				<node x="145715" y="80003" />
+				<node x="145102" y="80003" />
+			</territory>
+		</territories>
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq04" minZ="-5476" maxZ="-5276">
+				<node x="140464" y="80964" />
+				<node x="141103" y="80964" />
+				<node x="141103" y="82423" />
+				<node x="140464" y="82423" />
+			</territory>
+		</territories>
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21618" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq05" minZ="-5464" maxZ="-5264">
+				<node x="142524" y="81448" />
+				<node x="143203" y="81448" />
+				<node x="143203" y="83327" />
+				<node x="142524" y="83347" />	
+			</territory>
+		</territories>
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21619" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21618" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq06" minZ="-5476" maxZ="-5276">
+				<node x="145076" y="81200" />
+				<node x="145716" y="81200" />
+				<node x="145716" y="82659" />
+				<node x="145076" y="82659" />
+			</territory>
+		</territories>
+		<npc id="21619" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq07" minZ="-5464" maxZ="-5264">
+				<node x="140482" y="83959" />
+				<node x="141095" y="83959" />
+				<node x="141095" y="84596" />
+				<node x="140482" y="84596" />
+			</territory>
+		</territories>
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq08" minZ="-5464" maxZ="-5264">
+				<node x="142515" y="83977" />
+				<node x="143986" y="83977" />
+				<node x="143986" y="84614" />
+				<node x="142515" y="84614" />
+			</territory>
+		</territories>
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21618" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq09" minZ="-5464" maxZ="-5264">
+				<node x="145094" y="83939" />
+				<node x="145707" y="83939" />
+				<node x="145707" y="84576" />
+				<node x="145094" y="84576" />
+			</territory>
+		</territories>
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq11" minZ="-5476" maxZ="-5276">
+				<node x="148876" y="79360" />
+				<node x="149515" y="79360" />
+				<node x="149515" y="80819" />
+				<node x="148876" y="80819" />
+			</territory>
+		</territories>
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21618" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq12" minZ="-5464" maxZ="-5264">
+				<node x="150748" y="79393" />
+				<node x="151360" y="79393" />
+				<node x="151360" y="80030" />
+				<node x="150748" y="80030" />
+			</territory>
+		</territories>
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq13" minZ="-5464" maxZ="-5264">
+				<node x="146125" y="80319" />
+				<node x="147596" y="80319" />
+				<node x="147596" y="80956" />
+				<node x="146125" y="80956" />
+			</territory>
+		</territories>
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21618" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq14" minZ="-5476" maxZ="-5276">
+				<node x="146151" y="81356" />
+				<node x="146791" y="81356" />
+				<node x="146791" y="82815" />
+				<node x="146151" y="82815" />
+			</territory>
+		</territories>
+		<npc id="21619" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq15" minZ="-5468" maxZ="-5268">
+				<node x="148645" y="81447" />
+				<node x="150525" y="81447" />
+				<node x="150525" y="82142" />
+				<node x="148645" y="82142" />
+			</territory>
+		</territories>
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21619" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21618" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq16" minZ="-5464" maxZ="-5264">
+				<node x="146177" y="83964" />
+				<node x="146789" y="83964" />
+				<node x="146789" y="84601" />
+				<node x="146177" y="84601" />
+			</territory>
+		</territories>
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq17" minZ="-5476" maxZ="-5276">
+				<node x="147569" y="83155" />
+				<node x="148209" y="83155" />
+				<node x="148209" y="84615" />
+				<node x="147569" y="84615" />
+			</territory>
+		</territories>
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21618" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq18" minZ="-5464" maxZ="-5264">
+				<node x="150780" y="83948" />
+				<node x="151392" y="83948" />
+				<node x="151392" y="84585" />
+				<node x="150780" y="84585" />
+			</territory>
+		</territories>
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq19" minZ="-5464" maxZ="-5264">
+				<node x="140443" y="85047" />
+				<node x="141056" y="85047" />
+				<node x="141056" y="85684" />
+				<node x="140443" y="85684" />
+			</territory>
+		</territories>
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq20" minZ="-5464" maxZ="-5264">
+				<node x="142248" y="85056" />
+				<node x="143719" y="85056" />
+				<node x="143719" y="85693" />
+				<node x="142248" y="85693" />
+			</territory>
+		</territories>
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21619" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq21" minZ="-5476" maxZ="-5276">
+				<node x="144097" y="85003" />
+				<node x="144736" y="85003" />
+				<node x="144736" y="86463" />
+				<node x="144097" y="86463" />
+			</territory>
+		</territories>
+		<npc id="21618" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq22" minZ="-5464" maxZ="-5264">
+				<node x="145102" y="85063" />
+				<node x="145714" y="85063" />
+				<node x="145714" y="85700" />
+				<node x="145102" y="85700" />
+			</territory>
+		</territories>
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq23" minZ="-5464" maxZ="-5264">
+				<node x="140432" y="86478" />
+				<node x="141903" y="86478" />
+				<node x="141903" y="87115" />
+				<node x="140432" y="87115" />
+			</territory>
+		</territories>
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21618" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq24" minZ="-5464" maxZ="-5264">
+				<node x="142916" y="87537" />
+				<node x="143596" y="87537" />
+				<node x="143596" y="89416" />
+				<node x="142916" y="89436" />
+			</territory>
+		</territories>
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21618" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21619" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq25" minZ="-5464" maxZ="-5264">
+				<node x="144338" y="87774" />
+				<node x="145809" y="87774" />
+				<node x="145809" y="88411" />
+				<node x="144338" y="88411" />
+			</territory>
+		</territories>
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21619" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq26" minZ="-5464" maxZ="-5264">
+				<node x="140475" y="89672" />
+				<node x="141088" y="89672" />
+				<node x="141088" y="90309" />
+				<node x="140475" y="90309" />
+			</territory>
+		</territories>
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq27" minZ="-5464" maxZ="-5264">
+				<node x="145109" y="89637" />
+				<node x="145721" y="89637" />
+				<node x="145721" y="90275" />
+				<node x="145108" y="90275" />
+			</territory>
+		</territories>
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq10" minZ="-5464" maxZ="-5264">
+				<node x="146171" y="79359" />
+				<node x="146784" y="79359" />
+				<node x="146784" y="79996" />
+				<node x="146171" y="79996" />
+			</territory>
+		</territories>
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq28" minZ="-5464" maxZ="-5264">
+				<node x="146179" y="85061" />
+				<node x="146791" y="85061" />
+				<node x="146791" y="85698" />
+				<node x="146178" y="85698" />
+			</territory>
+		</territories>
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq29" minZ="-5464" maxZ="-5264">
+				<node x="149482" y="85069" />
+				<node x="150162" y="85069" />
+				<node x="150162" y="86948" />
+				<node x="149482" y="86968" />
+			</territory>
+		</territories>
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21619" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21618" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq30" minZ="-5464" maxZ="-5264">
+				<node x="150787" y="85027" />
+				<node x="151400" y="85027" />
+				<node x="151400" y="85664" />
+				<node x="150787" y="85664" />
+			</territory>
+		</territories>
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq31" minZ="-5464" maxZ="-5264">
+				<node x="147265" y="86936" />
+				<node x="148736" y="86936" />
+				<node x="148736" y="87573" />
+				<node x="147265" y="87573" />	
+			</territory>
+		</territories>
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21619" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq32" minZ="-5464" maxZ="-5264">
+				<node x="149498" y="87452" />
+				<node x="150111" y="87452" />
+				<node x="150111" y="88089" />
+				<node x="149498" y="88089" />	
+			</territory>
+		</territories>
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq34" minZ="-5468" maxZ="-5268">
+				<node x="146202" y="88214" />
+				<node x="148081" y="88214" />
+				<node x="148081" y="88909" />
+				<node x="146202" y="88909" />
+			</territory>
+		</territories>
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21618" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21619" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq35" minZ="-5464" maxZ="-5264">
+				<node x="149640" y="88547" />
+				<node x="150252" y="88547" />
+				<node x="150252" y="89184" />
+				<node x="149640" y="89184" />
+			</territory>
+		</territories>
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq36" minZ="-5464" maxZ="-5264">
+				<node x="146167" y="89642" />
+				<node x="146780" y="89642" />
+				<node x="146780" y="90279" />
+				<node x="146167" y="90279" />
+			</territory>
+		</territories>
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq37" minZ="-5464" maxZ="-5264">
+				<node x="148009" y="89336" />
+				<node x="149480" y="89336" />
+				<node x="149480" y="89974" />
+				<node x="148009" y="89974" />
+			</territory>
+		</territories>
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21619" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq38" minZ="-5464" maxZ="-5264">
+				<node x="150776" y="89633" />
+				<node x="151389" y="89633" />
+				<node x="151389" y="90270" />
+				<node x="150776" y="90270" />
+			</territory>
+		</territories>
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21613" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21617" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21615" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="ssq13_2420_ssq39" minZ="-5464" maxZ="-5264">
+				<node x="151400" y="88952" />
+				<node x="150776" y="88952" />
+				<node x="150776" y="87560" />
+				<node x="151400" y="87560" />
+			</territory>
+		</territories>
+		<npc id="21619" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21616" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21611" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21612" count="2" respawnTime="146sec" respawnRandom="40sec" />
+		<npc id="21614" count="2" respawnTime="146sec" respawnRandom="40sec" />
+	</spawn>
+</list>

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.dao;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
@@ -39,7 +39,7 @@ public class PetDAO
 		try
 		{
 			int itemObjId = item.getObjectId();
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			statement.setInt(1, itemObjId);
 			rset = statement.executeQuery();

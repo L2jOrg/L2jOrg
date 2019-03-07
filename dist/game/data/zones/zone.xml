@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<zone name="Seed of Annihilation 1" id="60006" type="EffectZone" shape="NPoly" minZ="-10700" maxZ="-10100">
+		<stat name="maxDynamicSkillCount" val="1" />
+		<stat name="showDangerIcon" val="false" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="3000" />
+		<node X="-180000" Y="183000" />
+		<node X="-178300" Y="184666" />
+		<node X="-173000" Y="184666" />
+		<node X="-173000" Y="174500" />
+		<node X="-187350" Y="174500" />
+		<node X="-187350" Y="184666" />
+		<node X="-182000" Y="184666" />
+		<node X="-180500" Y="183000" />
+	</zone>
+	<zone name="Seed of Annihilation 2" id="60007" type="EffectZone" shape="NPoly" minZ="-15900" maxZ="-14950">
+		<stat name="maxDynamicSkillCount" val="1" />
+		<stat name="showDangerIcon" val="false" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="3000" />
+		<node X="-180000" Y="182500" />
+		<node X="-178800" Y="183500" />
+		<node X="-176500" Y="183500" />
+		<node X="-176500" Y="187000" />
+		<node X="-173000" Y="187000" />
+		<node X="-173000" Y="175000" />
+		<node X="-187500" Y="175000" />
+		<node X="-187500" Y="187600" />
+		<node X="-183500" Y="187600" />
+		<node X="-183500" Y="183500" />
+		<node X="-181000" Y="183500" />
+		<node X="-180500" Y="182500" />
+	</zone>
+	<zone name="Seed of Annihilation 3" id="60008" type="EffectZone" shape="NPoly" minZ="-12850" maxZ="-10800">
+		<stat name="maxDynamicSkillCount" val="1" />
+		<stat name="showDangerIcon" val="false" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="3000" />
+		<node X="-212800" Y="182800" />
+		<node X="-211000" Y="185000" />
+		<node X="-205000" Y="185000" />
+		<node X="-205000" Y="172000" />
+		<node X="-221000" Y="172000" />
+		<node X="-221000" Y="187000" />
+		<node X="-216000" Y="187000" />
+		<node X="-213500" Y="182800" />
+	</zone>
+
+	<!-- (vertices, min Z and Max Z are estimated) -->
+	<zone name="Den of Evil 1" type="EffectZone" shape="Cylinder" minZ="-2300" maxZ="-2100" rad="750">
+		<stat name="reuse" val="9000" />
+		<stat name="targetClass" val="L2Character" />
+		<node X="74313" Y="-116888" />
+	</zone>
+	<zone name="Den of Evil 2" type="EffectZone" shape="Cylinder" minZ="-2400" maxZ="-2200" rad="850">
+		<stat name="reuse" val="9000" />
+		<stat name="targetClass" val="L2Character" />
+		<node X="63170" Y="-106621" />
+	</zone>
+	<zone name="Den of Evil 3" type="EffectZone" shape="Cylinder" minZ="-1200" maxZ="-1000" rad="1200">
+		<stat name="reuse" val="9000" />
+		<stat name="targetClass" val="L2Character" />
+		<node X="68030" Y="-107150" />
+	</zone>
+	<zone name="Den of Evil 4" type="EffectZone" shape="Cylinder" minZ="-3100" maxZ="-2900" rad="1200">
+		<stat name="reuse" val="9000" />
+		<stat name="targetClass" val="L2Character" />
+		<node X="62351" Y="-117376" />
+	</zone>
+	<zone name="Den of Evil 5" type="EffectZone" shape="Cylinder" minZ="-2200" maxZ="-2000" rad="1200">
+		<stat name="reuse" val="9000" />
+		<stat name="targetClass" val="L2Character" />
+		<node X="68100" Y="-116006" />
+	</zone>
+	<zone name="Den of Evil 6" type="EffectZone" shape="Cylinder" minZ="-2600" maxZ="-2400" rad="1200">
+		<stat name="reuse" val="9000" />
+		<stat name="targetClass" val="L2Character" />
+		<node X="69911" Y="-118790" />
+	</zone>
+	<zone name="Den of Evil 7" type="EffectZone" shape="Cylinder" minZ="-3000" maxZ="-2800" rad="1200">
+		<stat name="reuse" val="9000" />
+		<stat name="targetClass" val="L2Character" />
+		<node X="67520" Y="-122211" />
+	</zone>
+	<zone name="Den of Evil 8" type="EffectZone" shape="Cylinder" minZ="-3100" maxZ="-2900" rad="1500">
+		<stat name="reuse" val="9000" />
+		<stat name="targetClass" val="L2Character" />
+		<node X="74325" Y="-121296" />
+	</zone>
+	<zone name="Den of Evil 9" type="EffectZone" shape="Cylinder" minZ="-3100" maxZ="-2850" rad="1200">
+		<stat name="reuse" val="9000" />
+		<stat name="targetClass" val="L2Character" />
+		<node X="70788" Y="-125554" />
+	</zone>
+	<zone name="Den of Evil 10" type="EffectZone" shape="Cylinder" minZ="-3200" maxZ="-3000" rad="1200">
+		<stat name="reuse" val="9000" />
+		<stat name="targetClass" val="L2Character" />
+		<node X="76155" Y="-127355" />
+	</zone>
+	<zone name="Den of Evil 11" type="EffectZone" shape="Cylinder" minZ="-3400" maxZ="-3200" rad="750">
+		<stat name="reuse" val="9000" />
+		<stat name="targetClass" val="L2Character" />
+		<node X="71543" Y="-128820" />
+	</zone>
+</list>

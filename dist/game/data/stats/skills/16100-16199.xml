@@ -1,0 +1,1156 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="16100" toLevel="1" name="Presentation">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>85</magicLvl>
+		<hitTime>10000</hitTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="16101" toLevel="1" name="Tauti">
+		<!-- Glory Days confirmed -->
+		<!-- One of Bremnon's weapons, named by Shilen as the Lord of Hellfire. With its own ego and the ability to control living beings' emotions, Tauti is manipulating the class warfare among the races in the Seed in order to evolve itself and complete the sacrifices for Shilen. -->
+		<icon>icon.skillboss</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="BlockAbnormalSlot">
+				<slot>SPEED_DOWN</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="16102" toLevel="1" name="Dark Storm">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful magical attack on target and nearby enemies. -->
+		<icon>icon.skill1167</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-264</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16103" toLevel="6" name="Death Lift">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Deals damage and cancels target. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">65</value>
+			<value level="3">80</value>
+			<value level="4">95</value>
+			<value level="5">110</value>
+			<value level="6">125</value>
+		</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>1000</coolTime>
+		<effectPoint>-150</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="16104" toLevel="7" name="Fatal Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">65</value>
+			<value level="3">80</value>
+			<value level="4">95</value>
+			<value level="5">110</value>
+			<value level="6">125</value>
+			<value level="7">140</value>
+		</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="16106" toLevel="5" name="Orc Thunder">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Pulls target toward you. -->
+		<icon>icon.skill10015</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">65</value>
+			<value level="3">80</value>
+			<value level="4">95</value>
+			<value level="5">110</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-150</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16107" toLevel="3" name="Fatal Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful blow on a vital spot. Possible to achieve Critical. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>32</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>830</hitTime>
+		<coolTime>700</coolTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="16108" toLevel="7" name="Bloody Blades">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>79</mpConsume>
+		<hitTime>
+			<value level="1">1500</value>
+			<value level="2">1500</value>
+			<value level="3">1500</value>
+			<value level="4">1500</value>
+			<value level="5">1500</value>
+			<value level="6">1500</value>
+			<value level="7">3000</value>
+		</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-700</effectPoint>
+		<isMagic>
+			<value level="1">1</value>
+			<value level="2">1</value>
+			<value level="3">1</value>
+			<value level="4">1</value>
+			<value level="5">1</value>
+			<value level="6">1</value>
+			<value level="7">0</value>
+		</isMagic>
+	</skill>
+	<skill id="16109" toLevel="1" name="Heavy Armor Rise">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Critical Damage increased. -->
+		<icon>icon.m_class_heavy</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>650</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16110" toLevel="1" name="Light Armor Rise">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. increased. -->
+		<icon>icon.m_class_light</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>650</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16111" toLevel="1" name="Robe Rise">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Atk. increased. -->
+		<icon>icon.m_class_robe</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>650</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16112" toLevel="1" name="Speed Rise">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. and Casting Spd. increased. -->
+		<icon>icon.m_mystery_brain</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>650</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16113" toLevel="1" name="Tragic Bleed">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts Bleed. 12 Power. -->
+		<icon>icon.m_mystery_blood</icon>
+		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16114" toLevel="1" name="Curse of the Dead">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cuts target and party members' HP by 95%. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>59</mpConsume>
+		<castRange>1300</castRange>
+		<hitTime>300</hitTime>
+		<effectPoint>-10000</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16116" toLevel="2" name="Self-Destruct">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-1000</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16117" toLevel="1" name="Amplify Damage - Stage 1">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damage + 20% toward normal monsters. -->
+		<icon>icon.skill6367_1</icon>
+		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
+		<hitTime>1000</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>650</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16118" toLevel="1" name="Amplify Damage - Stage 2">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damage + 30% toward normal monsters. -->
+		<icon>icon.skill6367_2</icon>
+		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
+		<hitTime>1000</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>650</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16119" toLevel="1" name="Flare Chain">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Deals fire damage to target and nearby enemies. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>90</mpConsume>
+		<castRange>450</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-700</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16121" toLevel="5" name="Sleeping Cloud">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts Sleep on nearby enemies for 30 sec. -->
+		<icon>icon.skill1072</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">107</value>
+			<value level="2">122</value>
+			<value level="3">138</value>
+			<value level="4">154</value>
+			<value level="5">160</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>3000</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-700</effectPoint>
+		<abnormalTime>30</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16122" toLevel="1" name="Flare Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful flame attack, draining HP for 5 sec. -->
+		<icon>icon.skill4452</icon>
+		<operateType>A2</operateType>
+		<mpConsume>40</mpConsume>
+		<castRange>450</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-700</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16123" toLevel="1" name="Flare Outburst">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>90</mpConsume>
+		<castRange>450</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-700</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16124" toLevel="1" name="Flare Life">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores Deathmoz' HP. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>90</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>1300</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16125" toLevel="1" name="Volcano Sword Dance">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>20</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="16126" toLevel="1" name="Volcano Buster">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>25</mpConsume>
+		<castRange>100</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="16127" toLevel="1" name="Blind Flame">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>40</mpConsume>
+		<hitTime>2000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-700</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16128" toLevel="1" name="Flame Bog">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful flame attack on target and nearby enemies, draining HP for 5 sec. -->
+		<icon>icon.skill4279_new</icon>
+		<operateType>A2</operateType>
+		<mpConsume>81</mpConsume>
+		<castRange>450</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-700</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16129" toLevel="5" name="Desert Thirst">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Kefensis has an effect on your terrible thirst, heightening your senses. P. Atk. + 5%, M. Atk. + 10%. Atk. Spd./ Casting Spd. - 3%. -->
+		<icon>
+			<value level="1">icon.desert_thirst_Lv1</value>
+			<value level="2">icon.desert_thirst_Lv2</value>
+			<value level="3">icon.desert_thirst_Lv3</value>
+			<value level="4">icon.desert_thirst_Lv4</value>
+			<value level="5">icon.desert_thirst_Lv5</value>
+		</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>1300</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-500</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16130" toLevel="1" name="Oasis Energy">
+		<!-- The Oasis has quenched your thirst, suddenly wearing you out. Atk./ Casting Spd. - 25%, and Speed - 50. -->
+		<abnormalTime>15</abnormalTime>
+		<icon>icon.oasis_feel</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>10</mpConsume>
+		<castRange>1300</castRange>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>650</effectPoint>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="Speed">
+				<amount>-50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>-25</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="16131" toLevel="1" name="Thirst Quench">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Your thirst has been quenched. P./M. Atk., and Atk./Casting Spd. + 50%. -->
+		<icon>icon.release_thirst</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>1300</castRange>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>650</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16132" toLevel="1" name="Oasis Mirage">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>89</mpConsume>
+		<hitTime>5000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-1000</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16133" toLevel="1" name="Watery Grave">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>89</mpConsume>
+		<hitTime>5000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-1000</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16134" toLevel="1" name="Doom Shrieker">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>45</mpConsume>
+		<hitTime>3000</hitTime>
+		<coolTime>800</coolTime>
+		<effectPoint>-1000</effectPoint>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="16135" toLevel="1" name="Begin Research">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Researching the Heroes' Power. -->
+		<icon>icon.etc_deco_star_i00</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16136" toLevel="1" name="Reward x 2">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hero's powers give you x 2 the rewards. Disappears upon death or expiration. -->
+		<icon>icon.etc_deco_star_i00</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16137" toLevel="1" name="Reward x 4">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hero's powers give you x 4 the rewards. Disappears upon death or expiration. -->
+		<icon>icon.etc_deco_star_i00</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16138" toLevel="1" name="Reward x 8">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hero's powers give you x 8 the rewards. Disappears upon death or expiration. -->
+		<icon>icon.etc_deco_star_i00</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16139" toLevel="1" name="Reward x 16">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hero's powers give you x 16 the rewards. Disappears upon death or expiration. -->
+		<icon>icon.etc_deco_star_i00</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16140" toLevel="1" name="Reward x 32">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hero's powers give you x 32 the rewards. Disappears upon death or expiration. -->
+		<icon>icon.etc_deco_star_i00</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16141" toLevel="1" name="Research Success">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Researching the Heroes' Power. -->
+		<icon>icon.etc_deco_star_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="16142" toLevel="1" name="Research Success">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Researching the Heroes' Power. -->
+		<icon>icon.etc_deco_star_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="16143" toLevel="1" name="Research Success">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Researching the Heroes' Power. -->
+		<icon>icon.etc_deco_star_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="16144" toLevel="1" name="Research Success">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Researching the Heroes' Power. -->
+		<icon>icon.etc_deco_star_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="16145" toLevel="1" name="Research Success">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Researching the Heroes' Power. -->
+		<icon>icon.etc_deco_star_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="16146" toLevel="1" name="Research Fail">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Researching the Heroes' Power. -->
+		<icon>icon.etc_deco_star_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="16147" toLevel="7" name="Fatal Wave">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">86</value>
+			<value level="2">87</value>
+			<value level="3">88</value>
+			<value level="4">89</value>
+			<value level="5">90</value>
+			<value level="6">91</value>
+			<value level="7">92</value>
+		</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>
+			<value level="1">1200</value>
+			<value level="2">1200</value>
+			<value level="3">1200</value>
+			<value level="4">3000</value>
+			<value level="5">1200</value>
+			<value level="6">1200</value>
+			<value level="7">1200</value>
+		</hitTime>
+		<coolTime>570</coolTime>
+		<effectPoint>-1578</effectPoint>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="16148" toLevel="5" name="Fear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Compelled to move due to Fear. -->
+		<icon>icon.skill1092</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">81</value>
+			<value level="2">84</value>
+			<value level="3">87</value>
+			<value level="4">90</value>
+			<value level="5">94</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>4000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-150</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16149" toLevel="5" name="Fatal Poison">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- HP cut due to Poison. 11 power. -->
+		<icon>icon.skill4035</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">80</value>
+			<value level="2">88</value>
+			<value level="3">100</value>
+			<value level="4">108</value>
+			<value level="5">120</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-150</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16150" toLevel="5" name="Decrease Speed">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Speed momentarily decreased. 9 power. -->
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">137</value>
+			<value level="2">154</value>
+			<value level="3">160</value>
+			<value level="4">160</value>
+			<value level="5">160</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16151" toLevel="7" name="Aura Spike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Deals non-attribute magic damage to target. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">30</value>
+			<value level="2">36</value>
+			<value level="3">42</value>
+			<value level="4">48</value>
+			<value level="5">54</value>
+			<value level="6">54</value>
+			<value level="7">60</value>
+		</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>1200</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>
+			<value level="1">-100</value>
+			<value level="2">-105</value>
+			<value level="3">-110</value>
+			<value level="4">-115</value>
+			<value level="5">-115</value>
+			<value level="6">-120</value>
+			<value level="7">-125</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16152" toLevel="7" name="Fire Spike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Deals fire damage to target. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">30</value>
+			<value level="2">36</value>
+			<value level="3">42</value>
+			<value level="4">48</value>
+			<value level="5">54</value>
+			<value level="6">54</value>
+			<value level="7">60</value>
+		</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>1200</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>
+			<value level="1">-100</value>
+			<value level="2">-105</value>
+			<value level="3">-110</value>
+			<value level="4">-115</value>
+			<value level="5">-115</value>
+			<value level="6">-120</value>
+			<value level="7">-125</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16155" toLevel="1" name="Charmed Kefensis">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>89</mpConsume>
+		<hitTime>5000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-1000</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16156" toLevel="8" name="Mass Slow">
+		<!-- TODO: Auto level parse, Requires manual update -->
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases Atk. Spd. and Speed. -->
+		<icon>icon.skill1206</icon>
+		<operateType>A2</operateType>
+		<mpConsume>94</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1200</hitTime>
+		<coolTime>570</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-1578</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16157" toLevel="5" name="Grave Bleeding">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bleed instantly cuts HP. 1 power. -->
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">65</value>
+			<value level="2">70</value>
+			<value level="3">75</value>
+			<value level="4">80</value>
+			<value level="5">85</value>
+		</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16158" toLevel="1" name="Beleth's Volcano">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Deals fire damage to target. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>51</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>1200</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>-709</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16159" toLevel="1" name="Beleth's Blaze">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Deals powerful fire damage to nearby enemies. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>51</mpConsume>
+		<hitTime>2000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-1500</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16160" toLevel="1" name="Beleth's Flame">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful flames burn off HP. -->
+		<icon>icon.skill1101</icon>
+		<operateType>A2</operateType>
+		<mpConsume>96</mpConsume>
+		<hitTime>2000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16161" toLevel="1" name="Darion's Bleed">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bleed instantly cuts HP. -->
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<mpConsume>91</mpConsume>
+		<hitTime>2000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16162" toLevel="1" name="Beleth's Meteor">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>96</mpConsume>
+		<hitTime>2000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<effectPoint>-1500</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16163" toLevel="1" name="Darion's Sword Storm">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>96</mpConsume>
+		<hitTime>2000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<effectPoint>-1500</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16164" toLevel="1" name="Fire Flare">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>101</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1200</hitTime>
+		<coolTime>570</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<effectPoint>-1578</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16165" toLevel="1" name="Dark Blade">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>96</mpConsume>
+		<hitTime>1000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<effectPoint>-1500</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16166" toLevel="3" name="Escape Death">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For some time, P. Evasion + 10, M. Evasion + 10, Evasion Rate against P. Skills + 10%. -->
+		<icon>icon.skill0078</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>1500</hitTime>
+		<effectPoint>204</effectPoint>
+		<abnormalTime>180</abnormalTime>
+		<reuseDelay>
+			<value level="1">5000</value>
+			<value level="2">120000</value>
+			<value level="3">120000</value>
+		</reuseDelay>
+	</skill>
+	<skill id="16167" toLevel="2" name="Increase Evasion 1">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P./M. Evasion strengthened. -->
+		<icon>icon.skill0078</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="16168" toLevel="1" name="Half-kill">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cute target's HP in half. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>830</hitTime>
+		<coolTime>700</coolTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="16171" toLevel="1" name="Summon Poison Zone">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
+		<hitTime>300</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-707</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16172" toLevel="1" name="Poisoned">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- HP drops by 75 per second due to a poisonous fog. -->
+		<icon>icon.skill1167</icon>
+		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
+		<effectPoint>-707</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16173" toLevel="1" name="Invincibility">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Invincible. -->
+		<icon>icon.skill1418</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="16174" toLevel="1" name="Herb of Growth">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hellbound's mysterious powers give you 10min of SP/XP gain + 50% through hunting. Entire party. -->
+		<icon>BranchSys2.icon.g_giant_gem</icon>
+		<operateType>A1</operateType>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="16175" toLevel="1" name="Major Herb of Growth">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hellbound's mysterious powers give you 10min of SP/XP gain + 100% through hunting. Entire party. -->
+		<icon>BranchSys2.icon.g_dawn_gem</icon>
+		<operateType>P</operateType>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="16176" toLevel="1" name="Superior Herb of Growth">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hellbound's mysterious powers give you 2min of SP/XP gain + 300% through hunting. Entire party. -->
+		<icon>icon.etc_str_symbol_i01</icon>
+		<operateType>P</operateType>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="16177" toLevel="5" name="Stun Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Resistant to Knock Down. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="16178" toLevel="1" name="Leona's Thunder Spear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attack the enemy's surroundings to stun them. -->
+		<icon>icon.skll10321</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>500</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16179" toLevel="1" name="Beleth">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- The greatest wizard in history, and also the most demonic. Through contact with the forbidden, he gained possession of a mysterious power unknown even to the gods. His most recent tracks have been through Hellbound, which underwent an astonishing transformation after he began experimenting with Chaos, a Human attribute. No one knows what he is thinking, or what he is after. -->
+		<icon>icon.skillboss</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="16180" toLevel="1" name="Darion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Originally of the demon world, he was placed among the people by Beleth in order to rule Hellbound. He seeks to gain control over Hellbound whenever Beleth disappears for one of his experiments. -->
+		<icon>icon.skillboss</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="16181" toLevel="10" name="Special Armor">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Special armor reduces damage received from servitors. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="16183" toLevel="1" name="Skill Reflect Barrier">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cast Petrify on an enemy that has used a skill. -->
+		<icon>icon.skill1062</icon>
+		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
+		<hitTime>5000</hitTime>
+		<effectPoint>100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16184" toLevel="1" name="Vengeful Petrify">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Petrified for 5 sec. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>300</castRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16185" toLevel="1" name="Sword Storm">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- A powerful AoE attack with sword aura. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>300</castRange>
+		<effectPoint>-1500</effectPoint>
+		<hitTime>1500</hitTime>
+	</skill>
+	<skill id="16186" toLevel="1" name="Belly Cut">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- A powerful physical attack near the target. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>300</castRange>
+		<effectPoint>-1500</effectPoint>
+		<hitTime>1500</hitTime>
+	</skill>
+	<skill id="16187" toLevel="1" name="Head-on Crash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Physical damage on a single target. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>300</castRange>
+		<effectPoint>-500</effectPoint>
+		<hitTime>1500</hitTime>
+	</skill>
+	<skill id="16188" toLevel="1" name="Darkness">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Magical AoE attack to target and surrounding area. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>300</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-1500</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16189" toLevel="1" name="Disciple's Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Magical damage on a single target. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>300</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-500</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16190" toLevel="1" name="Recharge Fury">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5 sec., P. Atk. + 100%. -->
+		<icon>icon.skill0110</icon>
+		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>300</castRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>1500</hitTime>
+	</skill>
+	<skill id="16191" toLevel="1" name="Pandemonium">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Physical attck on target and surrounding area. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>300</castRange>
+		<effectPoint>-1500</effectPoint>
+		<hitTime>1500</hitTime>
+	</skill>
+	<skill id="16192" toLevel="1" name="Tyranny">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful magical AoE attack. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>300</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-1500</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16193" toLevel="1" name="Lurking Lunacy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Casts Fear on target and nearby enemies for 2 sec. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>300</castRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-1500</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16194" toLevel="1" name="Quiet Path to Death">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- A lethal magical AoE attack. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>1000</castRange>
+		<hitTime>10000</hitTime>
+		<effectPoint>-1500</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16195" toLevel="1" name="Guided Death">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- A powerful magical AoE attack. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>1000</castRange>
+		<hitTime>5000</hitTime>
+		<effectPoint>-1500</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16196" toLevel="1" name="Blood Shower">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- A magical AoE attack with Bleed. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>300</castRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-1500</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16197" toLevel="1" name="Haughty Slaughter">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Physical AoE attack. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>300</castRange>
+		<effectPoint>-1500</effectPoint>
+		<hitTime>1500</hitTime>
+	</skill>
+	<skill id="16198" toLevel="1" name="Continuing Pain">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Physical AoE attack. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>300</castRange>
+		<effectPoint>-1500</effectPoint>
+		<hitTime>1500</hitTime>
+	</skill>
+	<skill id="16199" toLevel="1" name="Howling Abyss">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Magical attack on a single target. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>300</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-500</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+</list>

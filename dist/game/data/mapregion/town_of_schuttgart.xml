@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Town Of Schuttgart -->
+	<region name="town_of_schuttgart" town="Town of Schuttgart" castle="9" locId="1714" bbs="9">
+		<respawnPoint X="88240" Y="-142736" Z="-1341" />
+		<respawnPoint X="88624" Y="-142480" Z="-1344" />
+		<respawnPoint X="87408" Y="-142304" Z="-1341" />
+		<respawnPoint X="87344" Y="-141696" Z="-1341" />
+		<respawnPoint X="86400" Y="-142672" Z="-1344" />
+		<respawnPoint X="85968" Y="-142384" Z="-1341" />
+		<respawnPoint X="84720" Y="-141936" Z="-1542" />
+		<respawnPoint X="85056" Y="-141328" Z="-1542" />
+		<respawnPoint X="85472" Y="-140752" Z="-1542" />
+		<respawnPoint X="86560" Y="-140320" Z="-1542" />
+		<respawnPoint X="87184" Y="-140256" Z="-1542" />
+		<respawnPoint X="87776" Y="-140384" Z="-1542" />
+		<respawnPoint X="88448" Y="-140512" Z="-1542" />
+		<respawnPoint X="89360" Y="-140944" Z="-1542" />
+		<respawnPoint X="89712" Y="-141472" Z="-1542" />
+		<respawnPoint X="82720" Y="-141584" Z="-2221" isChaotic="true" />
+		<respawnPoint X="83120" Y="-141088" Z="-2276" isChaotic="true" />
+		<respawnPoint X="83744" Y="-139392" Z="-2272" isChaotic="true" />
+		<respawnPoint X="84128" Y="-139440" Z="-2272" isChaotic="true" />
+		<respawnPoint X="84480" Y="-138800" Z="-2245" isChaotic="true" />
+		<respawnPoint X="85136" Y="-139072" Z="-2277" isChaotic="true" />
+		<respawnPoint X="85184" Y="-138560" Z="-2265" isChaotic="true" />
+		<respawnPoint X="85616" Y="-138912" Z="-2277" isChaotic="true" />
+		<respawnPoint X="86016" Y="-138736" Z="-2277" isChaotic="true" />
+		<respawnPoint X="86368" Y="-137984" Z="-2273" isChaotic="true" />
+		<respawnPoint X="89200" Y="-138336" Z="-2344" isChaotic="true" />
+		<map X="21" Y="14" />
+		<map X="22" Y="14" />
+		<map X="22" Y="13" />
+		<map X="23" Y="14" />
+		<map X="23" Y="13" />
+	</region>
+</list>

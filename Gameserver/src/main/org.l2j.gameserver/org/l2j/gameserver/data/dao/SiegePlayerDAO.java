@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.dao;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.entity.residence.Residence;
 import org.slf4j.Logger;
@@ -38,7 +38,7 @@ public class SiegePlayerDAO
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			statement.setInt(1, residence.getId());
 			statement.setInt(2, clanId);
@@ -63,7 +63,7 @@ public class SiegePlayerDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(INSERT_SQL_QUERY);
 			statement.setInt(1, residence.getId());
 			statement.setInt(2, playerId);
@@ -86,7 +86,7 @@ public class SiegePlayerDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(DELETE_SQL_QUERY);
 			statement.setInt(1, residence.getId());
 			statement.setInt(2, playerId);
@@ -109,7 +109,7 @@ public class SiegePlayerDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(DELETE_SQL_QUERY2);
 			statement.setInt(1, residence.getId());
 			statement.execute();

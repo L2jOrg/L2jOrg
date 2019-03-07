@@ -4,7 +4,7 @@ import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.dao.JdbcDAO;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.dao.JdbcEntityStats;
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.mail.Mail;
@@ -104,7 +104,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(STORE_MAIL, Statement.RETURN_GENERATED_KEYS);
 			statement.setInt(1, mail.getSenderId());
 			statement.setString(2, mail.getSenderName());
@@ -178,7 +178,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(RESTORE_MAIL);
 			statement.setInt(1, messageId);
 			rset = statement.executeQuery();
@@ -234,7 +234,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(UPDATE_MAIL);
 			statement.setInt(1, mail.getSenderId());
 			statement.setString(2, mail.getSenderName());
@@ -276,7 +276,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(REMOVE_MAIL);
 			statement.setInt(1, mail.getMessageId());
 			statement.execute();
@@ -312,7 +312,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(RESTORE_OWN_MAIL);
 			statement.setInt(1, ownerId);
 			statement.setBoolean(2, sent);
@@ -340,7 +340,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(REMOVE_OWN_MAIL);
 			statement.setInt(1, ownerId);
 			statement.setInt(2, messageId);
@@ -409,7 +409,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(RESTORE_EXPIRED_MAIL);
 			statement.setInt(1, expireTime);
 			rset = statement.executeQuery();

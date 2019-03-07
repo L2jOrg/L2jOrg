@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
+	<option id="20600" name="o_f_80_2g_84">
+		<!-- MP Regen increases by 0.07. Accuracy increases by 0.68. -->
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.067</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>0.677</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="20601" name="o_f_80_2g_85">
+		<!-- MP Regen increases by 0.07. Critical increases by 5.3. -->
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.067</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>5.28</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="20602" name="o_f_80_2g_86">
+		<!-- CP Regen increases by 0.16. Evasion increases by 0.68. -->
+		<effects>
+			<effect name="CpRegen">
+				<amount>0.158</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>0.677</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="20603" name="o_f_80_2g_87">
+		<!-- CP Regen increases by 0.16. Accuracy increases by 0.68. -->
+		<effects>
+			<effect name="CpRegen">
+				<amount>0.158</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>0.677</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="20604" name="o_f_80_2g_88">
+		<!-- CP Regen increases by 0.16. Critical increases by 5.28. -->
+		<effects>
+			<effect name="CpRegen">
+				<amount>0.158</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>5.28</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="20605" name="o_f_80_2g_89">
+		<!-- Evasion increases by 0.79. Accuracy increases by 0.68. -->
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>0.79</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>0.677</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="20606" name="o_f_80_2g_90">
+		<!-- Evasion increases by 0.79. Critical increases by 5.28. -->
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>0.79</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>5.28</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="20607" name="o_f_80_2g_91">
+		<!-- Accuracy increases by 0.79. Critical increases by 5.28. -->
+		<effects>
+			<effect name="Accuracy">
+				<amount>0.79</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>5.28</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+</list>

@@ -1,0 +1,29 @@
+<html><body>
+<table width=270><tr>
+<td width=45><button value="Main" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Autoannouncements Menu</center></td>
+<td width=45><button value="Back" action="bypass -h admin_admin7" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table><br><br>
+<center>New autoannouncement:</center><br>
+<table width=270><tr>
+<td>Initial delay in sec:</td>
+<td><edit var="autoann_initial" width=50></td>
+</tr><tr>
+<td>Announce delay in sec:</td>
+<td><edit var="autoann_delay" width=50></td>
+</tr><tr>
+<td>Repeat (-1 for infinite):</td>
+<td><edit var="autoann_repeat" width=50></td>
+</tr><tr>
+<td>Critical:</td>
+<td><combobox var="autoann_critical" list="false;true" width=50></td>
+</tr><tr>
+<td>Text:</td></tr></table>
+<multiedit var="autoann_memo" width=250 height=50><br>
+<center><table><tr>
+<td><button value="Add" action="bypass -h admin_add_autoann $autoann_initial $autoann_delay $autoann_repeat $autoann_critical $autoann_memo" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Reload" action="bypass -h admin_reload_autoann" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table></center>
+<br>
+%announces%
+</body></html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<!-- TODO: ONLY for test purposes -->
+	<!-- FIX ME -->
+	<npcs>
+		<npc>30936</npc> <!-- Pona -->
+	</npcs>
+	<item>
+		<ingredient count="1080000" id="57" /> <!-- Adena -->
+		<production count="1" id="9589" /> <!-- Iron Bracelet -->
+	</item>
+	<item>
+		<ingredient count="5400000" id="57" /> <!-- Adena -->
+		<production count="1" id="9590" /> <!-- Bronze Bracelet -->
+	</item>
+</list>

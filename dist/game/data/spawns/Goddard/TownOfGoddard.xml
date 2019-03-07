@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="TownOfGoddard">
+		<group>
+			<npc id="30767" x="149272" y="-55888" z="-2760" heading="48000" respawnTime="60sec" > <!-- Auctioneer -->
+				<parameters>
+					<param name="fnAgitMap" value="godard"/>
+				</parameters>
+			</npc>
+			<npc id="35461" x="146416" y="-55568" z="-2760" heading="32000" respawnTime="60sec" /> <!-- Aida -->
+			<npc id="35462" x="146488" y="-55432" z="-2776" heading="1000" respawnTime="60sec" /> <!-- Kalmer -->
+			<npc id="35463" x="147134" y="-56576" z="-2760" heading="44000" respawnTime="60sec" /> <!-- Helga -->
+			<npc id="35464" x="147072" y="-56416" z="-2776" heading="11500" respawnTime="60sec" /> <!-- Volfrem -->
+			<npc id="35465" x="148381" y="-56525" z="-2760" heading="54000" respawnTime="60sec" /> <!-- Millicent -->
+			<npc id="35466" x="148224" y="-56496" z="-2760" heading="21000" respawnTime="60sec" /> <!-- Gerard -->
+			<npc id="35467" x="149024" y="-55456" z="-2760" respawnTime="60sec" /> <!-- Branhillde -->
+			<npc id="35468" x="148912" y="-55568" z="-2760" heading="32000" respawnTime="60sec" /> <!-- Lambert -->
+			<npc id="30012" x="149352" y="-57452" z="-2968" heading="38184" respawnTime="60sec" />
+			<npc id="31257" x="148975" y="-58919" z="-2960" heading="22000" respawnTime="60sec" />
+			<npc id="31258" x="149012" y="-58894" z="-2960" heading="22000" respawnTime="60sec" />
+			<npc id="31260" x="149380" y="-57590" z="-2968" heading="32000" respawnTime="60sec" />
+			<npc id="31263" x="149312" y="-57360" z="-2966" heading="40000" respawnTime="60sec" />
+			<npc id="31264" x="149008" y="-57696" z="-2968" heading="5000" respawnTime="60sec" />
+			<npc id="31267" x="146440" y="-57500" z="-2960" heading="43000" respawnTime="60sec" />
+			<npc id="31268" x="146412" y="-57484" z="-2960" heading="43000" respawnTime="60sec" />
+			<npc id="31269" x="146528" y="-57936" z="-2960" heading="22000" respawnTime="60sec" />
+			<npc id="31270" x="146172" y="-57380" z="-2960" heading="54000" respawnTime="60sec" />
+			<npc id="31271" x="146396" y="-58696" z="-2968" heading="60000" respawnTime="60sec" />
+			<npc id="31272" x="146432" y="-58784" z="-2968" heading="0" respawnTime="60sec" />
+			<npc id="31275" x="147966" y="-55228" z="-2712" heading="48000" respawnTime="60sec" />
+			<npc id="31276" x="148880" y="-52608" z="-2728" heading="49500" respawnTime="60sec" />
+			<npc id="31277" x="149008" y="-52560" z="-2728" heading="49500" respawnTime="60sec" />
+			<npc id="31278" x="148736" y="-52560" z="-2728" heading="49500" respawnTime="60sec" />
+			<npc id="31279" x="147712" y="-52688" z="-2728" heading="49000" respawnTime="60sec" />
+			<npc id="31280" x="148048" y="-52416" z="-2728" heading="49000" respawnTime="60sec" />
+			<npc id="31281" x="147376" y="-52416" z="-2728" heading="49000" respawnTime="60sec" />
+			<npc id="31282" x="146688" y="-52576" z="-2728" heading="49500" respawnTime="60sec" />
+			<npc id="31283" x="146416" y="-52564" z="-2728" heading="49500" respawnTime="60sec" />
+			<npc id="31285" x="145080" y="-54592" z="-2960" heading="45000" respawnTime="60sec" />
+			<npc id="31286" x="144808" y="-54732" z="-2960" heading="62000" respawnTime="60sec" />
+			<npc id="31287" x="145168" y="-54880" z="-2960" heading="28000" respawnTime="60sec" />
+			<npc id="31288" x="144204" y="-55780" z="-2960" heading="2000" respawnTime="60sec" />
+			<npc id="31289" x="144228" y="-55720" z="-2960" heading="60000" respawnTime="60sec" />
+			<npc id="31290" x="144256" y="-55824" z="-2960" heading="8000" respawnTime="60sec" />
+			<npc id="31292" x="149216" y="-56544" z="-2776" heading="27000" respawnTime="60sec" />
+			<npc id="31293" x="149360" y="-56336" z="-2776" heading="27000" respawnTime="60sec" />
+			<npc id="31294" x="144584" y="-57904" z="-2976" heading="32000" respawnTime="60sec" />
+			<npc id="31295" x="144364" y="-57580" z="-2976" heading="44000" respawnTime="60sec" />
+			<npc id="31296" x="147920" y="-59424" z="-2976" heading="45000" respawnTime="60sec" />
+			<npc id="31297" x="147504" y="-59424" z="-2976" heading="53000" respawnTime="60sec" />
+			<npc id="31298" x="151060" y="-57576" z="-2976" heading="53000" respawnTime="60sec" />
+			<npc id="31299" x="150832" y="-57904" z="-2976" heading="0" respawnTime="60sec" />
+			<npc id="31583" x="146428" y="-58880" z="-2968" heading="28000" respawnTime="60sec" />
+			<npc id="31585" x="146688" y="-52592" z="-2728" heading="16000" respawnTime="60sec" />
+			<npc id="31587" x="146553" y="-52608" z="-2728" heading="49500" respawnTime="60sec" />
+			<npc id="31589" x="144340" y="-55752" z="-2960" heading="35000" respawnTime="60sec" />
+			<npc id="31688" x="147472" y="-55232" z="-2728" heading="49000" respawnTime="60sec" />
+			<npc id="31690" x="147408" y="-55232" z="-2728" heading="49000" respawnTime="60sec" />
+			<npc id="32478" x="146119" y="-57898" z="-2976" heading="44000" respawnTime="60sec" />
+			<npc id="34053" x="148118" y="-56556" z="-2776" heading="21641" respawnTime="60sec" />
+			<npc id="31673" x="152192" y="-58864" z="-3480" heading="57537" respawnTime="60sec" /> <!-- Patrol -->
+			<npc id="31673" x="152432" y="-58576" z="-3480" heading="58995" respawnTime="60sec" /> <!-- Patrol -->
+			<npc id="31673" x="147492" y="-61188" z="-3496" heading="48408" respawnTime="60sec" /> <!-- Patrol -->
+			<npc id="31673" x="147900" y="-61196" z="-3504" heading="48408" respawnTime="60sec" /> <!-- Patrol -->
+			<npc id="31673" x="143072" y="-58496" z="-3440" heading="38846" respawnTime="60sec" /> <!-- Patrol -->
+			<npc id="31673" x="143280" y="-58800" z="-3448" heading="38846" respawnTime="60sec" /> <!-- Patrol -->
+			<npc id="31674" x="145464" y="-56776" z="-2976" heading="39000" respawnTime="60sec" /> <!-- Patrol -->
+			<npc id="31674" x="145616" y="-56976" z="-2976" heading="39000" respawnTime="60sec" /> <!-- Patrol -->
+			<npc id="31674" x="150012" y="-56808" z="-2976" heading="59000" respawnTime="60sec" /> <!-- Patrol -->
+			<npc id="31674" x="149864" y="-57020" z="-2976" heading="59000" respawnTime="60sec" /> <!-- Patrol -->
+			<npc id="31674" x="147824" y="-58016" z="-2968" heading="49000" respawnTime="60sec" /> <!-- Patrol -->
+			<npc id="31674" x="147600" y="-58012" z="-2968" heading="49000" respawnTime="60sec" /> <!-- Patrol -->
+		</group>
+	</spawn>
+</list>

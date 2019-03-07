@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="6900" toLevel="1" name="Raid Boss (Lv. 84)">
+		<!-- High Five Skill -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="6901" toLevel="1" name="Raid Boss (Lv. 84)">
+		<!-- High Five Skill -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="6902" toLevel="1" name="Raid Boss (Lv. 84)">
+		<!-- High Five Skill -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="6903" toLevel="1" name="Raid Boss (Lv. 84)">
+		<!-- High Five Skill -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="6904" toLevel="1" name="Raid Boss (Lv. 84)">
+		<!-- High Five Skill -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="6905" toLevel="1" name="Raid Boss (Lv. 85)">
+		<!-- High Five Skill -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="6906" toLevel="1" name="Raid Boss (Lv. 85)">
+		<!-- High Five Skill -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="6907" toLevel="1" name="Raid Boss (Lv. 85)">
+		<!-- High Five Skill -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="6909" toLevel="1" name="Charming">
+		<!-- Shows the game master's charming actions. -->
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<icon>icon.skilltransform1</icon>
+		<hitTime>2700</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6910" toLevel="1" name="Dance">
+		<!-- Shows the game master's dancing skills. -->
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<icon>icon.skilltransform2</icon>
+		<hitTime>4800</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6911" toLevel="1" name="Cheer">
+		<!-- Shows the game master's greeting. -->
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<icon>icon.skilltransform3</icon>
+		<hitTime>3200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6912" toLevel="1" name="Stigma Aftermath">
+		<!-- "Antharas's Stigma Aftermath. For 10 seconds, decreases 500 HP and 300 MP per second." -->
+		<operateType>A2</operateType>
+		<effectPoint>-10000</effectPoint>
+		<abnormalType>TIME_BOMB</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1500</effectRange>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<affectRange>100</affectRange>
+		<icon>icon.skill5860</icon>
+		<isDebuff>true</isDebuff>
+		<castRange>1200</castRange>
+		<abnormalVisualEffect>TIME_BOMB</abnormalVisualEffect>
+		<isMagic>2</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="6913" toLevel="1" name="Challenge for Fate">
+		<!-- High Five Skill -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<icon>icon.skill0985</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>83</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<effectPoint>673</effectPoint>
+		<abnormalType>KNIGHT_SHIELD</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<affectRange>1000</affectRange>
+		<reuseDelay>60000</reuseDelay>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>270</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>360</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6914" toLevel="10" name="Haste">
+		<!-- none -->
+		<operateType>A2</operateType>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<icon>icon.skill1086</icon>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6915" toLevel="10" name="Acumen">
+		<!-- none -->
+		<operateType>A2</operateType>
+		<abnormalType>CASTING_TIME_DOWN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<icon>icon.skill1085</icon>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6916" toLevel="1" name="Antharas' Cute Tricks">
+		<!-- You can see the summoned spirit's cute tricks. -->
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+	</skill>
+	<skill id="6917" toLevel="1" name="Kanna's Splendor">
+		<!-- Able to see the summoned spirit's splendor. -->
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+	</skill>
+	<skill id="6918" toLevel="1" name="Kallesin's Splendor">
+		<!-- Able to see the summoned spirit's splendor. -->
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+	</skill>
+	<skill id="6919" toLevel="1" name="Challenge Acceptance">
+		<!-- none -->
+		<operateType>A2</operateType>
+		<abnormalType>MORALE_UP</abnormalType>
+		<basicProperty>MAGIC</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<lvlBonusRate>2</lvlBonusRate>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6920" toLevel="1" name="Collector's Fortune">
+		<!-- High Five Skill -->
+		<!-- Triggered Skill for Collector's Experience -->
+		<abnormalTime>10</abnormalTime>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<icon>BranchSys2.icon.skill0952</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>0</magicLvl>
+		<operateType>A2</operateType> <!-- FIXME: value unconfirmed -->
+		<reuseDelay>15000</reuseDelay> <!-- FIXME: value unconfirmed -->
+		<rideState>NONE</rideState>
+		<abnormalType>PATIENCE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<abnormalLvl>1</abnormalLvl>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6921" toLevel="1" name="Penetrating Attack">
+		<!-- Glory Days confirmed -->
+		<!-- P. Def. is decreased momentarily. -->
+		<abnormalTime>5</abnormalTime>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<effectPoint>-100</effectPoint>
+		<icon>icon.skill0122</icon>
+		<operateType>A2</operateType>
+		<abnormalType>PD_DOWN</abnormalType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1000</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>80</magicLvl>
+		<abnormalLvl>3</abnormalLvl>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<castRange>500</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>-23</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6922" toLevel="3" name="Adventurer's Might">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 8%. -->
+		<icon>icon.skill1068</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">121</value>
+			<value level="2">204</value>
+			<value level="3">379</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="6923" toLevel="3" name="Adventurer's Empower">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Atk. + 55%. -->
+		<icon>icon.skill1059</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">243</value>
+			<value level="2">418</value>
+			<value level="3">495</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="6924" toLevel="3" name="Adventurer's Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def. + 8%. -->
+		<icon>icon.skill1040</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">121</value>
+			<value level="2">243</value>
+			<value level="3">418</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="6925" toLevel="2" name="Adventurer's Magic Barrier">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. + 23%. -->
+		<icon>icon.skill1036</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">418</value>
+			<value level="2">495</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="6926" toLevel="6" name="Adventurer's Blessed Body">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 10%. -->
+		<icon>icon.skill1045</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">418</value>
+			<value level="2">457</value>
+			<value level="3">495</value>
+			<value level="4">532</value>
+			<value level="5">597</value>
+			<value level="6">646</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="6927" toLevel="6" name="Adventurer's Blessed Soul">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max MP + 10%. -->
+		<icon>icon.skill1048</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">418</value>
+			<value level="2">457</value>
+			<value level="3">495</value>
+			<value level="4">532</value>
+			<value level="5">582</value>
+			<value level="6">635</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="6928" toLevel="3" name="Adventurer's Focus">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Critical Rate + 20%. -->
+		<icon>icon.skill1077</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">243</value>
+			<value level="2">418</value>
+			<value level="3">495</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="6929" toLevel="2" name="Adventurer's Wild Magic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Critical Rate + 1. -->
+		<icon>icon.skill1303</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">582</value>
+			<value level="2">635</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="6930" toLevel="2" name="Adventurer's Haste">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. + 15%. -->
+		<icon>icon.skill1086</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">418</value>
+			<value level="2">495</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="6931" toLevel="3" name="Adventurer's Acumen">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Casting Spd. + 15%. -->
+		<icon>icon.skill1085</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">204</value>
+			<value level="2">331</value>
+			<value level="3">457</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="6932" toLevel="4" name="Adventurer's Vampiric Rage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Has a chance of absorbing 6% of damage inflicted on the enemy as HP. -->
+		<icon>icon.skill1268</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">285</value>
+			<value level="2">418</value>
+			<value level="3">549</value>
+			<value level="4">646</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="6933" toLevel="2" name="Adventurer's Berserker Spirit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 5%, M. Atk. + 10%, Atk. Spd. + 5%, Casting Spd. + 5%, and Speed + 5. P. Def. - 5%, M. Def. - 10%, and Evasion - 2. -->
+		<icon>icon.skill1062</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">331</value>
+			<value level="2">495</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="6934" toLevel="3" name="Adventurer's Death Whisper">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Critical Rate + 25%. -->
+		<icon>icon.skill1242</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">379</value>
+			<value level="2">457</value>
+			<value level="3">532</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="6935" toLevel="2" name="Adventurer's Wind Walk">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Speed + 20. -->
+		<icon>icon.skill1204</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">204</value>
+			<value level="2">285</value>
+		</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="6936" toLevel="2" name="Set Effect - Salamander Skin Light Armor, 3-piece">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6937" toLevel="2" name="Set Effect - Mithril Robe Armor, 2-piece">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6938" toLevel="2" name="Set Effect - Half Plate Heavy Armor, 2-piece">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6939" toLevel="1" name="Equip Shield">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6940" toLevel="1" name="Set Effect - Medium's Robe Armor">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6941" toLevel="1" name="Set Effect - Warrior's Heavy Armor">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6942" toLevel="1" name="Set Effect - Shining Heavy Armor">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6943" toLevel="1" name="Set Effect - Shining Light Armor">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6944" toLevel="1" name="Set Effect - Shining Robe Armor">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6945" toLevel="1" name="Master's Blessing - GM's Protection">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6946" toLevel="1" name="Raid Shield">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6950" toLevel="1" name="Lucky Enchant Stone: Save Armor (D-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6951" toLevel="1" name="Lucky Enchant Stone: Save Armor (C-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6952" toLevel="1" name="Lucky Enchant Stone: Save Armor (B-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6953" toLevel="1" name="Lucky Enchant Stone: Save Armor (A-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6954" toLevel="1" name="Lucky Enchant Stone: Protect Armor (D-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6955" toLevel="1" name="Lucky Enchant Stone: Protect Armor (C-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6956" toLevel="1" name="Lucky Enchant Stone: Protect Armor (B-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6957" toLevel="1" name="Lucky Enchant Stone: Protect Armor (A-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6958" toLevel="1" name="Lucky Enchant Stone: Armor (D-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6959" toLevel="1" name="Lucky Enchant Stone: Armor (C-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6960" toLevel="1" name="Lucky Enchant Stone: Armor (B-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6961" toLevel="1" name="Lucky Enchant Stone: Armor (A-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6962" toLevel="1" name="Giant's Lucky Enchant Stone (A-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6963" toLevel="1" name="Blessed Lucky Enchant Stone (A-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="6964" toLevel="1" name="Scroll: Enchant Hair Accessory">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+</list>

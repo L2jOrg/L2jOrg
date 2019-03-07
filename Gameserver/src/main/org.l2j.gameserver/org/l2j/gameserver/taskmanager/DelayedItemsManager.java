@@ -1,6 +1,6 @@
 package org.l2j.gameserver.taskmanager;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -41,7 +41,7 @@ public class DelayedItemsManager extends RunnableImpl
 		Connection con = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			last_payment_id = get_last_payment_id(con);
 		}
 		catch(Exception e)
@@ -89,7 +89,7 @@ public class DelayedItemsManager extends RunnableImpl
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			int last_payment_id_temp = get_last_payment_id(con);
 			if(last_payment_id_temp != last_payment_id)
 				synchronized (_lock)
@@ -121,7 +121,7 @@ public class DelayedItemsManager extends RunnableImpl
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("INSERT INTO items_delayed (owner_id, item_id, count, enchant_level, description) VALUES (?, ?, ?, ?, ?)");
 			statement.setInt(1, objectId);
 			statement.setInt(2, itemId);
@@ -158,7 +158,7 @@ public class DelayedItemsManager extends RunnableImpl
 		{
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				st = con.prepareStatement("SELECT * FROM items_delayed WHERE owner_id=? AND payment_status=0");
 				st.setInt(1, player_id);
 				rset = st.executeQuery();

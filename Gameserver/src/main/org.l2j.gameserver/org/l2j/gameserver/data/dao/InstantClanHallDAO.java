@@ -1,7 +1,7 @@
 package org.l2j.gameserver.data.dao;
 
 import org.l2j.commons.dao.JdbcEntityState;
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.entity.residence.clanhall.InstantClanHall;
 import org.l2j.gameserver.model.pledge.Clan;
@@ -36,7 +36,7 @@ public class InstantClanHallDAO
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_OWNER_SQL_QUERY);
 			statement.setInt(1, clanHall.getInstantId());
 			rset = statement.executeQuery();
@@ -76,7 +76,7 @@ public class InstantClanHallDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(REPLACE_INFO_SQL_QUERY);
 			statement.setInt(1, clanHall.getInstantId());
 			statement.setInt(2, (int) (clanHall.getSiegeDate().getTimeInMillis() / 1000L));
@@ -98,7 +98,7 @@ public class InstantClanHallDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(REPLACE_OWNER_SQL_QUERY);
 			statement.setInt(1, owner.getClanId());
 			statement.setInt(2, clanHall.getInstantId());
@@ -122,7 +122,7 @@ public class InstantClanHallDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(DELETE_OWNER_SQL_QUERY);
 			statement.setInt(1, owner.getClanId());
 			statement.setInt(2, clanHall.getInstantId());

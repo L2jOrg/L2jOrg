@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.dao;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.entity.olympiad.OlympiadHistory;
 import org.slf4j.Logger;
@@ -38,7 +38,7 @@ public class OlympiadHistoryDAO
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 			rset = statement.executeQuery(SELECT_SQL_QUERY);
 			map = new HashMap<Boolean, List<OlympiadHistory>>(2);
@@ -81,7 +81,7 @@ public class OlympiadHistoryDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(INSERT_SQL_QUERY);
 			statement.setInt(1, history.getObjectId1());
 			statement.setInt(2, history.getObjectId2());
@@ -112,7 +112,7 @@ public class OlympiadHistoryDAO
 		Statement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 			statement.execute(DELETE_SQL_QUERY);
 			DbUtils.close(statement);

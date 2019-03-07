@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.instances.player;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
@@ -71,7 +71,7 @@ public class ShortCutList
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO character_shortcuts SET object_id=?,slot=?,page=?,type=?,shortcut_id=?,level=?,character_type=?,class_index=?");
 			statement.setInt(1, player.getObjectId());
 			statement.setInt(2, shortcut.getSlot());
@@ -102,7 +102,7 @@ public class ShortCutList
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE object_id=? AND slot=? AND page=? AND class_index=?");
 			statement.setInt(1, player.getObjectId());
 			statement.setInt(2, shortcut.getSlot());
@@ -170,7 +170,7 @@ public class ShortCutList
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT character_type, slot, page, type, shortcut_id, level FROM character_shortcuts WHERE object_id=? AND class_index=?");
 			statement.setInt(1, player.getObjectId());
 			statement.setInt(2, player.getActiveClassId());

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- No Landing Zones -->
+	<zone name="boss_area_antaras" type="NoLandingZone" shape="NPoly" minZ="-4096" maxZ="-3896">
+		<node X="-58026" Y="-190958" />
+		<node X="-98030" Y="-190958" />
+		<node X="-97263" Y="-35335" />
+		<node X="-5341" Y="-34964" />
+		<node X="-5554" Y="-4207" />
+		<node X="-129444" Y="-4207" />
+	</zone>
+	<zone name="boss_area_valakas" type="NoLandingZone" shape="NPoly" minZ="-3753" maxZ="32767">
+		<node X="196710" Y="-130845" />
+		<node X="228895" Y="-130845" />
+		<node X="229126" Y="-96162" />
+		<node X="196478" Y="-98187" />
+	</zone>
+	<zone name="Tower_of_Insolence" type="NoLandingZone" shape="NPoly" minZ="-3349" maxZ="32767">
+		<node X="102382" Y="2297" />
+		<node X="100118" Y="30085" />
+		<node X="126188" Y="29775" />
+		<node X="127178" Y="3979" />
+	</zone>
+	<zone name="Hell_Bound_Island" type="NoLandingZone" shape="NPoly" minZ="-15000" maxZ="15000">
+		<node X="-47730" Y="228200" />
+		<node X="-33000" Y="287833" />
+		<node X="33000" Y="287833" />
+		<node X="33000" Y="228200" />
+		<node X="-10026" Y="228200" />
+	</zone>
+	<zone name="Rainbow_Spring" type="NoLandingZone" shape="NPoly" minZ="-2610" maxZ="15890">
+		<node X="147262" Y="-130925" />
+		<node X="159640" Y="-130952" />
+		<node X="159532" Y="-121970" />
+		<node X="147455" Y="-121883" />
+	</zone>
+	<zone name="24_21_nofly" type="NoLandingZone" shape="NPoly" minZ="-716" maxZ="15283">
+		<node X="131156" Y="98394" />
+		<node X="163755" Y="98405" />
+		<node X="163747" Y="130995" />
+		<node X="131168" Y="131006" />
+	</zone>
+	<zone name="25_21_nofly" type="NoLandingZone" shape="NPoly" minZ="-4044" maxZ="11956">
+		<node X="163907" Y="98398" />
+		<node X="196477" Y="98408" />
+		<node X="196495" Y="130990" />
+		<node X="164032" Y="130993" />
+	</zone>
+	<zone name="oren01_mb2220_ugoz01_flyno" type="NoLandingZone" shape="NPoly" minZ="-15000" maxZ="15000">
+		<node X="88417" Y="77085" />
+		<node X="105546" Y="77041" />
+		<node X="105421" Y="92728" />
+		<node X="88481" Y="92787" />
+	</zone>
+
+	<!-- High five zone -->
+	<zone name="olympiad_stadiums" type="NoLandingZone" shape="Cuboid" minZ="-8485" maxZ="1149">
+		<node X="-98296" Y="-262136" />
+		<node X="-65544" Y="-229384" />
+	</zone>
+</list>

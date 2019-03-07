@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../data/xsd/BotReportPunishments.xsd">
+	<!-- To add a range punishments (E.G., a debuff which apply if you have 150 reports or more, use negative neededReportCount -->
+	<punishment neededReportCount="25" skillId="6038" skillLevel="1" sysMessageId="2473" />
+	<punishment neededReportCount="75" skillId="6039" skillLevel="1" sysMessageId="2474" />
+	<punishment neededReportCount="100" skillId="6055" skillLevel="1" sysMessageId="2477" />
+	<punishment neededReportCount="125" skillId="6056" skillLevel="1" sysMessageId="2478" />
+	<punishment neededReportCount="150" skillId="6057" skillLevel="1" sysMessageId="2480" />
+	<punishment neededReportCount="175" skillId="6057" skillLevel="1" sysMessageId="2480" />
+	<!-- Range punisment -->
+	<punishment neededReportCount="-150" skillId="6040" skillLevel="1" />
+</list>

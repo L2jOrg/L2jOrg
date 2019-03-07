@@ -1,0 +1,78 @@
+<html><body>
+<table width=260><tr>
+<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Editing <font color="LEVEL">%name%</font></center></td>
+<td width=40><button value="Back" action="bypass -h admin_character_info %name%" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table>
+<br>
+<table width=270>
+<tr><td fixwidth=90>HP: %currenthp% / %maxhp%</td><td fixwidth=90>MP: %currentmp%/%maxmp%</td><td fixwidth=90>CP: %currentcp%/%maxcp%</td></tr>
+<tr><td width=90>Reputation: %reputation%</td><td width=90>PvP: %pvpkills%</td><td width=90>PK: %pkkills%</td></tr>
+<tr><td width=90>Load: </td><td width=90>%currentload% / %maxload%</td><td width=90>(%percent%%)</td></tr>
+<tr><td width=90>Class: </td><td>%class%</td><td width=90>AccLv: %access%</td></tr>
+<tr><td width=90>Noblesse:</td><td>%noblesse%</td></tr>
+</table>
+<br>
+<table width=270>
+<tr><td width=140>Name:</td><td><edit width=80 var="name"></td><td><button value="Save" action="bypass -h admin_changename $name" height=21 width=45 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+<tr><td width=140>Name color:</td><td><edit width=80 var="color"></td><td><button value="Set" action="bypass -h admin_setcolor $color" height=21 width=45 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+<tr><td width=140>Title:</td><td><edit width=80 var="title"></td><td><button value="Save" action="bypass -h admin_settitle $title" height=21 width=45 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+<tr><td width=140>Title color:</td><td><edit width=80 var="tcolor"></td><td><button value="Set" action="bypass -h admin_settcolor $tcolor" height=21 width=45 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+<tr><td width=140>Recommendations:</td><td><edit width=80 var="reco"></td><td><button value="Save" action="bypass -h admin_rec $reco" height=21 width=45 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+<tr><td width=140>Access Level:</td><td><edit width=80 var="acc"></td><td><button value="Save" action="bypass -h admin_changelvl $acc" height=21 width=45 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+<tr></tr>
+<tr><td width=140><button value="Nobless" action="bypass -h admin_setnoble" height=21 width=65 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td><td><button value="Class" action="bypass -h admin_setclass" height=21 width=45 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td><td><button value="Sex" action="bypass -h admin_setsex" height=21 width=45 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+</table>
+<br>
+	<table width="270">
+		<tr>
+			<td width="10">HP:</td>
+			<td>
+				<edit var="hp" width="50">
+			</td>
+			<td>
+				<button value=" " action="bypass admin_set_hp $hp" width="16" height="16" back="L2UI_CH3.shortcut_rotate_down" fore="L2UI_CH3.shortcut_rotate">
+			</td>
+			<td width="50">
+				PvP Flag:
+			</td>
+			<td>
+				<button value=" " action="bypass admin_set_pvp_flag" width="16" height="16" back="L2UI_CH3.shortcut_rotate_down" fore="L2UI_CH3.shortcut_rotate">
+			</td>
+		</tr>
+		<tr>
+			<td width="10">MP:</td>
+			<td>
+				<edit var="mp" width="50">
+			</td>
+			<td>
+				<button value=" " action="bypass admin_set_mp $mp" width="16" height="16" back="L2UI_CH3.shortcut_rotate_down" fore="L2UI_CH3.shortcut_rotate">
+			</td>
+			<td width="10">PvPs:</td>
+			<td>
+				<edit var="pvpkills" width="50">
+			</td>
+			<td>
+				<button value=" " action="bypass admin_setpvp $pvpkills" width="16" height="16" back="L2UI_CH3.shortcut_rotate_down" fore="L2UI_CH3.shortcut_rotate">
+			</td>
+		</tr>
+		<tr>
+			<td width="10">CP:</td>
+			<td>
+				<edit var="cp" width="50">
+			</td>
+			<td>
+				<button value=" " action="bypass admin_set_cp $cp" width="16" height="16" back="L2UI_CH3.shortcut_rotate_down" fore="L2UI_CH3.shortcut_rotate">
+			</td>
+			<td width="10">PKs:</td>
+			<td>
+				<edit var="pkkills" width="50">
+			</td>
+			<td>
+				<button value=" " action="bypass admin_setpk $pkkills" width="16" height="16" back="L2UI_CH3.shortcut_rotate_down" fore="L2UI_CH3.shortcut_rotate">
+			</td>
+		</tr>
+	</table>
+	<br>
+</body>
+</html>

@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/armorSets.xsd">
+	<set id="0" minimumPieces="3">
+		<requiredItems>
+			<item id="23" /> <!-- Wooden Breastplate -->
+			<item id="2386" /> <!-- Wooden Gaiters -->
+			<item id="43" /> <!-- Wooden Helmet -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="3" /> <!-- Equip Set Items -->
+			<skill id="3500" level="1" minimumPieces="3" /> <!-- Wooden Set -->
+		</skills>
+	</set>
+	<set id="1" minimumPieces="2">
+		<requiredItems>
+			<item id="58" /> <!-- Mithril Breastplate -->
+			<item id="59" /> <!-- Mithril Gaiters -->
+			<item id="47" /> <!-- Helmet -->
+		</requiredItems>
+		<optionalItems>
+			<item id="628" /> <!-- Hoplon -->
+		</optionalItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3502" level="1" minimumPieces="2" /> <!-- Mithril Heavy Armor Set -->
+			<skill id="3502" level="2" minimumPieces="3" /> <!-- Mithril Heavy Armor Set -->
+			<skill id="3543" level="1" optional="true" /> <!-- Equipped with Shield -->
+			<skill id="13339" level="1" minimumEnchant="6" minimumPieces="3" /> <!-- Heavy Armor Set +6 -->
+			<skill id="13339" level="2" minimumEnchant="7" minimumPieces="3" /> <!-- Heavy Armor Set +7 -->
+			<skill id="13339" level="3" minimumEnchant="8" minimumPieces="3" /> <!-- Heavy Armor Set +8 -->
+			<skill id="13339" level="4" minimumEnchant="9" minimumPieces="3" /> <!-- Heavy Armor Set +9 -->
+			<skill id="13339" level="5" minimumEnchant="10" minimumPieces="3" /> <!-- Heavy Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="2" minimumPieces="2">
+		<requiredItems>
+			<item id="60" /> <!-- Compound Armor -->
+			<item id="517" /> <!-- Compound Helmet -->
+		</requiredItems>
+		<optionalItems>
+			<item id="107" /> <!-- Compound Shield -->
+		</optionalItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3512" level="1" minimumPieces="2" /> <!-- Compound Heavy Armor Set -->
+			<skill id="3546" level="1" optional="true" /> <!-- Equipped with Shield -->
+			<skill id="13339" level="1" minimumEnchant="6" minimumPieces="2" /> <!-- Heavy Armor Set +6 -->
+			<skill id="13339" level="2" minimumEnchant="7" minimumPieces="2" /> <!-- Heavy Armor Set +7 -->
+			<skill id="13339" level="3" minimumEnchant="8" minimumPieces="2" /> <!-- Heavy Armor Set +8 -->
+			<skill id="13339" level="4" minimumEnchant="9" minimumPieces="2" /> <!-- Heavy Armor Set +9 -->
+			<skill id="13339" level="5" minimumEnchant="10" minimumPieces="2" /> <!-- Heavy Armor Set +10 -->
+
+		</skills>
+	</set>
+	<set id="3" minimumPieces="2">
+		<requiredItems>
+			<item id="352" /> <!-- Brigandine -->
+			<item id="2378" /> <!-- Brigandine Gaiters -->
+			<item id="2411" /> <!-- Brigandine Helmet -->
+		</requiredItems>
+		<optionalItems>
+			<item id="2493" /> <!-- Brigandine Shield -->
+		</optionalItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3506" level="1" minimumPieces="2" /> <!-- Brigandine Heavy Armor Set -->
+			<skill id="3506" level="2" minimumPieces="3" /> <!-- Brigandine Heavy Armor Set -->
+			<skill id="3544" level="1" optional="true" /> <!-- Equipped with Shield -->
+			<skill id="13339" level="1" minimumEnchant="6" minimumPieces="3" /> <!-- Heavy Armor Set +6 -->
+			<skill id="13339" level="2" minimumEnchant="7" minimumPieces="3" /> <!-- Heavy Armor Set +7 -->
+			<skill id="13339" level="3" minimumEnchant="8" minimumPieces="3" /> <!-- Heavy Armor Set +8 -->
+			<skill id="13339" level="4" minimumEnchant="9" minimumPieces="3" /> <!-- Heavy Armor Set +9 -->
+			<skill id="13339" level="5" minimumEnchant="10" minimumPieces="3" /> <!-- Heavy Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="4" minimumPieces="2">
+		<requiredItems>
+			<item id="354" /> <!-- Chain Mail Shirt -->
+			<item id="381" /> <!-- Chain Gaiters -->
+			<item id="2413" /> <!-- Chain Hood -->
+		</requiredItems>
+		<optionalItems>
+			<item id="2495" /> <!-- Chain Shield -->
+		</optionalItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3509" level="1" minimumPieces="2" /> <!-- Chain Mail Heavy Armor Set -->
+			<skill id="3509" level="2" minimumPieces="3" /> <!-- Chain Mail Heavy Armor Set -->
+			<skill id="3545" level="1" optional="true" /> <!-- Equipped with Shield -->
+			<skill id="13339" level="1" minimumEnchant="6" minimumPieces="3" /> <!-- Heavy Armor Set +6 -->
+			<skill id="13339" level="2" minimumEnchant="7" minimumPieces="3" /> <!-- Heavy Armor Set +7 -->
+			<skill id="13339" level="3" minimumEnchant="8" minimumPieces="3" /> <!-- Heavy Armor Set +8 -->
+			<skill id="13339" level="4" minimumEnchant="9" minimumPieces="3" /> <!-- Heavy Armor Set +9 -->
+			<skill id="13339" level="5" minimumEnchant="10" minimumPieces="3" /> <!-- Heavy Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="5" minimumPieces="2">
+		<requiredItems>
+			<item id="356" /> <!-- Full Plate Armor -->
+			<item id="2414" /> <!-- Full Plate Helmet -->
+		</requiredItems>
+		<optionalItems>
+			<item id="2497" /> <!-- Full Plate Shield -->
+		</optionalItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3516" level="1" minimumPieces="2" /> <!-- Full Plate Heavy Armor Set -->
+			<skill id="3547" level="1" optional="true" /> <!-- Equipped with Shield -->
+			<skill id="13339" level="1" minimumEnchant="6" minimumPieces="2" /> <!-- Heavy Armor Set +6 -->
+			<skill id="13339" level="2" minimumEnchant="7" minimumPieces="2" /> <!-- Heavy Armor Set +7 -->
+			<skill id="13339" level="3" minimumEnchant="8" minimumPieces="2" /> <!-- Heavy Armor Set +8 -->
+			<skill id="13339" level="4" minimumEnchant="9" minimumPieces="2" /> <!-- Heavy Armor Set +9 -->
+			<skill id="13339" level="5" minimumEnchant="10" minimumPieces="2" /> <!-- Heavy Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="6" minimumPieces="2">
+		<requiredItems>
+			<item id="357" /> <!-- Zubei's Breastplate -->
+			<item id="383" /> <!-- Zubei's Gaiters -->
+			<item id="90458" /> <!-- Zubei's Helmet (Heavy) -->
+			<item id="5710" /> <!-- Zubei's Gauntlets (Heavy) -->
+			<item id="5726" /> <!-- Zubei's Boots (Heavy) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3518" level="1" minimumPieces="2" /> <!-- Zubei's Heavy Armor Set -->
+			<skill id="3518" level="2" minimumPieces="3" /> <!-- Zubei's Heavy Armor Set -->
+			<skill id="3518" level="3" minimumPieces="4" /> <!-- Zubei's Heavy Armor Set -->
+			<skill id="3518" level="4" minimumPieces="5" /> <!-- Zubei's Heavy Armor Set -->
+			<skill id="13339" level="1" minimumEnchant="6" minimumPieces="5" /> <!-- Heavy Armor Set +6 -->
+			<skill id="13339" level="2" minimumEnchant="7" minimumPieces="5" /> <!-- Heavy Armor Set +7 -->
+			<skill id="13339" level="3" minimumEnchant="8" minimumPieces="5" /> <!-- Heavy Armor Set +8 -->
+			<skill id="13339" level="4" minimumEnchant="9" minimumPieces="5" /> <!-- Heavy Armor Set +9 -->
+			<skill id="13339" level="5" minimumEnchant="10" minimumPieces="5" /> <!-- Heavy Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="7" minimumPieces="2">
+		<requiredItems>
+			<item id="358" /> <!-- Blue Wolf Breastplate -->
+			<item id="2380" /> <!-- Blue Wolf Gaiters -->
+			<item id="90461" /> <!-- Blue Wolf Helmet (Heavy) -->
+			<item id="5718" /> <!-- Blue Wolf Gloves (Heavy) -->
+			<item id="5734" /> <!-- Blue Wolf Boots (Heavy) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3524" level="1" minimumPieces="2" /> <!-- Blue Wolf Heavy Armor Set -->
+			<skill id="3524" level="2" minimumPieces="3" /> <!-- Blue Wolf Heavy Armor Set -->
+			<skill id="3524" level="3" minimumPieces="4" /> <!-- Blue Wolf Heavy Armor Set -->
+			<skill id="3524" level="4" minimumPieces="5" /> <!-- Blue Wolf Heavy Armor Set -->
+			<skill id="13339" level="1" minimumEnchant="6" minimumPieces="5" /> <!-- Heavy Armor Set +6 -->
+			<skill id="13339" level="2" minimumEnchant="7" minimumPieces="5" /> <!-- Heavy Armor Set +7 -->
+			<skill id="13339" level="3" minimumEnchant="8" minimumPieces="5" /> <!-- Heavy Armor Set +8 -->
+			<skill id="13339" level="4" minimumEnchant="9" minimumPieces="5" /> <!-- Heavy Armor Set +9 -->
+			<skill id="13339" level="5" minimumEnchant="10" minimumPieces="5" /> <!-- Heavy Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="8" minimumPieces="2">
+		<requiredItems>
+			<item id="365" /> <!-- Dark Crystal Breastplate -->
+			<item id="388" /> <!-- Dark Crystal Gaiters -->
+			<item id="5765" /> <!-- Dark Crystal Gloves (Heavy) -->
+			<item id="5777" /> <!-- Dark Crystal Boots (Heavy) -->
+			<item id="90470" /> <!-- Dark Crystal Helmet (Heavy) -->
+		</requiredItems>
+		<optionalItems>
+			<item id="641" /> <!-- Dark Crystal Shield -->
+		</optionalItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3530" level="1" minimumPieces="2" /> <!-- Dark Crystal Breastplate Heavy Armor Set -->
+			<skill id="3530" level="2" minimumPieces="3" /> <!-- Dark Crystal Breastplate Heavy Armor Set -->
+			<skill id="3530" level="3" minimumPieces="4" /> <!-- Dark Crystal Breastplate Heavy Armor Set -->
+			<skill id="3530" level="4" minimumPieces="5" /> <!-- Dark Crystal Breastplate Heavy Armor Set -->
+			<skill id="3550" level="1" optional="true" /> <!-- Equipped with Shield -->
+			<skill id="13339" level="1" minimumEnchant="6" minimumPieces="5" /> <!-- Heavy Armor Set +6 -->
+			<skill id="13339" level="2" minimumEnchant="7" minimumPieces="5" /> <!-- Heavy Armor Set +7 -->
+			<skill id="13339" level="3" minimumEnchant="8" minimumPieces="5" /> <!-- Heavy Armor Set +8 -->
+			<skill id="13339" level="4" minimumEnchant="9" minimumPieces="5" /> <!-- Heavy Armor Set +9 -->
+			<skill id="13339" level="5" minimumEnchant="10" minimumPieces="5" /> <!-- Heavy Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="9" minimumPieces="2">
+		<requiredItems>
+			<item id="374" /> <!-- Armor of Nightmare -->
+			<item id="5771" /> <!-- Gauntlets of Nightmare (Heavy) -->
+			<item id="5783" /> <!-- Boots of Nightmare (Heavy) -->
+			<item id="90473" /> <!-- Helm of Nightmare (Heavy) -->
+		</requiredItems>
+		<optionalItems>
+			<item id="2498" /> <!-- Shield of Nightmare -->
+		</optionalItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3536" level="1" minimumPieces="2" /> <!-- Nightmare Heavy Armor Set -->
+			<skill id="3536" level="2" minimumPieces="3" /> <!-- Nightmare Heavy Armor Set -->
+			<skill id="3536" level="3" minimumPieces="4" /> <!-- Nightmare Heavy Armor Set -->
+			<skill id="3551" level="1" optional="true" /> <!-- Equipped with Shield -->
+			<skill id="13339" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Heavy Armor Set +6 -->
+			<skill id="13339" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Heavy Armor Set +7 -->
+			<skill id="13339" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Heavy Armor Set +8 -->
+			<skill id="13339" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Heavy Armor Set +9 -->
+			<skill id="13339" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Heavy Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="10" minimumPieces="2">
+		<requiredItems>
+			<item id="394" /> <!-- Reinforced Leather Shirt -->
+			<item id="416" /> <!-- Reinforced Leather Gaiters -->
+			<item id="2422" /> <!-- Reinforced Leather Boots -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3503" level="1" minimumPieces="2" /> <!-- Reinforced Leather Set -->
+			<skill id="3503" level="2" minimumPieces="3" /> <!-- Reinforced Leather Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="3" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="3" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="3" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="3" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="3" /> <!-- Light Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="11" minimumPieces="2">
+		<requiredItems>
+			<item id="395" /> <!-- Manticore Skin Shirt -->
+			<item id="417" /> <!-- Manticore Skin Gaiters -->
+			<item id="2424" /> <!-- Manticore Skin Boots -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3505" level="1" minimumPieces="2" /> <!-- Manticore Set -->
+			<skill id="3505" level="2" minimumPieces="3" /> <!-- Manticore Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="3" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="3" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="3" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="3" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="3" /> <!-- Light Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="12" minimumPieces="2">
+		<requiredItems>
+			<item id="397" /> <!-- Reinforced Mithril Shirt -->
+			<item id="2387" /> <!-- Reinforced Mithril Gaiters -->
+			<item id="62" /> <!-- Reinforced Mithril Boots -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3508" level="1" minimumPieces="2" /> <!-- Reinforced Mithril Light Armor Set -->
+			<skill id="3508" level="2" minimumPieces="3" /> <!-- Reinforced Mithril Light Armor Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="3" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="3" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="3" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="3" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="3" /> <!-- Light Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="13" minimumPieces="2">
+		<requiredItems>
+			<item id="398" /> <!-- Plated Leather Armor -->
+			<item id="418" /> <!-- Plated Leather Gaiters -->
+			<item id="2431" /> <!-- Plated Leather Boots -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3511" level="1" minimumPieces="2" /> <!-- Plated Leather Set -->
+			<skill id="3511" level="2" minimumPieces="3" /> <!-- Plated Leather Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="3" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="3" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="3" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="3" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="3" /> <!-- Light Armor Set +10 -->
+		</skills>
+		<stats>
+			<stat type="STR" val="4" />
+			<stat type="CON" val="-1" />
+		</stats>
+	</set>
+	<set id="14" minimumPieces="2">
+		<requiredItems>
+			<item id="400" /> <!-- Theca Leather Armor -->
+			<item id="420" /> <!-- Theca Leather Gaiters -->
+			<item id="2436" /> <!-- Theca Leather Boots -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3514" level="1" minimumPieces="2" /> <!-- Theca Leather Light Armor Set -->
+			<skill id="3514" level="2" minimumPieces="3" /> <!-- Theca Leather Light Armor Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="3" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="3" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="3" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="3" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="3" /> <!-- Light Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="15" minimumPieces="2">
+		<requiredItems>
+			<item id="401" /> <!-- Drake Leather Armor -->
+			<item id="2437" /> <!-- Drake Leather Boots -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3515" level="1" minimumPieces="2" /> <!-- Drake Leather Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="2" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="2" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="2" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="2" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="2" /> <!-- Light Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="16" minimumPieces="2">
+		<requiredItems>
+			<item id="436" /> <!-- Tunic of Knowledge -->
+			<item id="469" /> <!-- Stockings of Knowledge -->
+			<item id="2447" /> <!-- Gloves of Knowledge -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3504" level="1" minimumPieces="2" /> <!-- Knowledge Set -->
+			<skill id="3504" level="2" minimumPieces="3" /> <!-- Knowledge Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="3" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="3" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="3" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="3" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="3" /> <!-- Robe Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="17" minimumPieces="2">
+		<requiredItems>
+			<item id="437" /> <!-- Mithril Tunic -->
+			<item id="470" /> <!-- Mithril Stockings -->
+			<item id="2450" /> <!-- Elven Mithril Gloves -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3507" level="1" minimumPieces="2" /> <!-- Elven Mithril Robe Set -->
+			<skill id="3507" level="2" minimumPieces="3" /> <!-- Elven Mithril Robe Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="3" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="3" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="3" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="3" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="3" /> <!-- Robe Armor Set +10 -->
+		</skills>
+		<stats>
+			<stat type="INT" val="-1" />
+			<stat type="WIT" val="1" />
+		</stats>
+	</set>
+	<set id="18" minimumPieces="2">
+		<requiredItems>
+			<item id="439" /> <!-- Karmian Tunic -->
+			<item id="471" /> <!-- Karmian Stockings -->
+			<item id="2454" /> <!-- Karmian Gloves -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3510" level="1" minimumPieces="2" /> <!-- Karmian Set -->
+			<skill id="3510" level="2" minimumPieces="3" /> <!-- Karmian Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="3" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="3" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="3" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="3" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="3" /> <!-- Robe Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="19" minimumPieces="2">
+		<requiredItems>
+			<item id="441" /> <!-- Demon's Tunic -->
+			<item id="472" /> <!-- Demon's Stockings -->
+			<item id="2459" /> <!-- Demon's Gloves -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3513" level="1" minimumPieces="2" /> <!-- Demon's Set -->
+			<skill id="3513" level="2" minimumPieces="3" /> <!-- Demon's Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="3" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="3" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="3" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="3" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="3" /> <!-- Robe Armor Set +10 -->
+		</skills>
+		<stats>
+			<stat type="INT" val="4" />
+			<stat type="WIT" val="-1" />
+		</stats>
+	</set>
+	<set id="20" minimumPieces="2">
+		<requiredItems>
+			<item id="442" /> <!-- Divine Tunic -->
+			<item id="473" /> <!-- Divine Stockings -->
+			<item id="2463" /> <!-- Divine Gloves -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3517" level="1" minimumPieces="2" /> <!-- Divine Set -->
+			<skill id="3517" level="2" minimumPieces="3" /> <!-- Divine Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="3" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="3" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="3" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="3" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="3" /> <!-- Robe Armor Set +10 -->
+		</skills>
+		<stats>
+			<stat type="INT" val="-1" />
+			<stat type="WIT" val="1" />
+		</stats>
+	</set>
+	<set id="21" minimumPieces="3">
+		<requiredItems>
+			<item id="1101" /> <!-- Tunic of Devotion -->
+			<item id="1104" /> <!-- Stockings of Devotion -->
+			<item id="44" /> <!-- Leather Helmet -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="3" /> <!-- Equip Set Items -->
+			<skill id="3501" level="1" minimumPieces="3" /> <!-- Devotion Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="3" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="3" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="3" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="3" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="3" /> <!-- Robe Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="22" minimumPieces="2">
+		<requiredItems>
+			<item id="2376" /> <!-- Avadon Breastplate -->
+			<item id="2379" /> <!-- Avadon Gaiters -->
+			<item id="90455" /> <!-- Avadon Circlet (Heavy) -->
+			<item id="5714" /> <!-- Avadon Gloves (Heavy) -->
+			<item id="5730" /> <!-- Avadon Boots (Heavy) -->
+		</requiredItems>
+		<optionalItems>
+			<item id="673" /> <!-- Avadon Shield -->
+		</optionalItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3519" level="1" minimumPieces="2" /> <!-- Avadon Breastplate Heavy Armor Set -->
+			<skill id="3519" level="2" minimumPieces="3" /> <!-- Avadon Breastplate Heavy Armor Set -->
+			<skill id="3519" level="3" minimumPieces="4" /> <!-- Avadon Breastplate Heavy Armor Set -->
+			<skill id="3519" level="4" minimumPieces="5" /> <!-- Avadon Breastplate Heavy Armor Set -->
+			<skill id="3548" level="1" optional="true" /> <!-- Equipped with Shield -->
+			<skill id="13339" level="1" minimumEnchant="6" minimumPieces="5" /> <!-- Heavy Armor Set +6 -->
+			<skill id="13339" level="2" minimumEnchant="7" minimumPieces="5" /> <!-- Heavy Armor Set +7 -->
+			<skill id="13339" level="3" minimumEnchant="8" minimumPieces="5" /> <!-- Heavy Armor Set +8 -->
+			<skill id="13339" level="4" minimumEnchant="9" minimumPieces="5" /> <!-- Heavy Armor Set +9 -->
+			<skill id="13339" level="5" minimumEnchant="10" minimumPieces="5" /> <!-- Heavy Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="23" minimumPieces="2">
+		<requiredItems>
+			<item id="2381" /> <!-- Doom Plate Armor -->
+			<item id="90464" /> <!-- Doom Helmet (Heavy) -->
+			<item id="5722" /> <!-- Doom Gloves (Heavy) -->
+			<item id="5738" /> <!-- Doom Boots (Heavy) -->
+		</requiredItems>
+		<optionalItems>
+			<item id="110" /> <!-- Doom Shield -->
+		</optionalItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3525" level="1" minimumPieces="2" /> <!-- Doom Heavy Armor Set -->
+			<skill id="3525" level="2" minimumPieces="3" /> <!-- Doom Heavy Armor Set -->
+			<skill id="3525" level="3" minimumPieces="4" /> <!-- Doom Heavy Armor Set -->
+			<skill id="3549" level="1" optional="true" /> <!-- Equipped with Shield -->
+			<skill id="13339" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Heavy Armor Set +6 -->
+			<skill id="13339" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Heavy Armor Set +7 -->
+			<skill id="13339" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Heavy Armor Set +8 -->
+			<skill id="13339" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Heavy Armor Set +9 -->
+			<skill id="13339" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Heavy Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="24" minimumPieces="2">
+		<requiredItems>
+			<item id="2382" /> <!-- Tallum Plate Armor -->
+			<item id="5768" /> <!-- Tallum Gloves (Heavy) -->
+			<item id="5780" /> <!-- Tallum Boots (Heavy) -->
+			<item id="90467" /> <!-- Tallum Helmet (Heavy) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3531" level="1" minimumPieces="2" /> <!-- Tallum Heavy Armor Set -->
+			<skill id="3531" level="2" minimumPieces="3" /> <!-- Tallum Heavy Armor Set -->
+			<skill id="3531" level="3" minimumPieces="4" /> <!-- Tallum Heavy Armor Set -->
+			<skill id="13339" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Heavy Armor Set +6 -->
+			<skill id="13339" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Heavy Armor Set +7 -->
+			<skill id="13339" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Heavy Armor Set +8 -->
+			<skill id="13339" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Heavy Armor Set +9 -->
+			<skill id="13339" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Heavy Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="25" minimumPieces="2">
+		<requiredItems>
+			<item id="2383" /> <!-- Majestic Plate Armor -->
+			<item id="5774" /> <!-- Majestic Gauntlets (Heavy) -->
+			<item id="5786" /> <!-- Majestic Boots (Heavy) -->
+			<item id="90476" /> <!-- Majestic Circlet (Heavy) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3537" level="1" minimumPieces="2" /> <!-- Majestic Heavy Armor Set -->
+			<skill id="3537" level="2" minimumPieces="3" /> <!-- Majestic Heavy Armor Set -->
+			<skill id="3537" level="3" minimumPieces="4" /> <!-- Majestic Heavy Armor Set -->
+			<skill id="13339" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Heavy Armor Set +6 -->
+			<skill id="13339" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Heavy Armor Set +7 -->
+			<skill id="13339" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Heavy Armor Set +8 -->
+			<skill id="13339" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Heavy Armor Set +9 -->
+			<skill id="13339" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Heavy Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="26" minimumPieces="2">
+		<requiredItems>
+			<item id="2384" /> <!-- Zubei's Leather Shirt -->
+			<item id="2388" /> <!-- Zubei's Leather Gaiters -->
+			<item id="90459" /> <!-- Zubei's Helmet (Light) -->
+			<item id="5711" /> <!-- Zubei's Gauntlets (Light) -->
+			<item id="5727" /> <!-- Zubei's Boots (Light) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3520" level="1" minimumPieces="2" /> <!-- Zubei's Leather Shirt Light Armor Set -->
+			<skill id="3520" level="2" minimumPieces="3" /> <!-- Zubei's Leather Shirt Light Armor Set -->
+			<skill id="3520" level="3" minimumPieces="4" /> <!-- Zubei's Leather Shirt Light Armor Set -->
+			<skill id="3520" level="4" minimumPieces="5" /> <!-- Zubei's Leather Shirt Light Armor Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="5" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="5" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="5" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="5" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="5" /> <!-- Light Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="27" minimumPieces="2">
+		<requiredItems>
+			<item id="2385" /> <!-- Dark Crystal Leather Armor -->
+			<item id="2389" /> <!-- Dark Crystal Leggings -->
+			<item id="5766" /> <!-- Dark Crystal Gloves (Light) -->
+			<item id="5778" /> <!-- Dark Crystal Boots (Light) -->
+			<item id="90471" /> <!-- Dark Crystal Helmet (Light) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3532" level="1" minimumPieces="2" /> <!-- Dark Crystal Light Armor Set -->
+			<skill id="3532" level="2" minimumPieces="3" /> <!-- Dark Crystal Light Armor Set -->
+			<skill id="3532" level="3" minimumPieces="4" /> <!-- Dark Crystal Light Armor Set -->
+			<skill id="3532" level="4" minimumPieces="5" /> <!-- Dark Crystal Light Armor Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="5" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="5" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="5" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="5" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="5" /> <!-- Light Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="28" minimumPieces="2">
+		<requiredItems>
+			<item id="2390" /> <!-- Avadon Leather Armor -->
+			<item id="90456" /> <!-- Avadon Circlet (Light) -->
+			<item id="5715" /> <!-- Avadon Gloves (Light) -->
+			<item id="5731" /> <!-- Avadon Boots (Light) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3521" level="1" minimumPieces="2" /> <!-- Avadon Light Armor Set -->
+			<skill id="3521" level="2" minimumPieces="3" /> <!-- Avadon Light Armor Set -->
+			<skill id="3521" level="3" minimumPieces="4" /> <!-- Avadon Light Armor Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Light Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="29" minimumPieces="2">
+		<requiredItems>
+			<item id="2391" /> <!-- Blue Wolf Leather Armor -->
+			<item id="90462" /> <!-- Blue Wolf Helmet (Light) -->
+			<item id="5719" /> <!-- Blue Wolf Gloves (Light) -->
+			<item id="5735" /> <!-- Blue Wolf Boots (Light) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3526" level="1" minimumPieces="2" /> <!-- Blue Wolf Light Armor Set -->
+			<skill id="3526" level="2" minimumPieces="3" /> <!-- Blue Wolf Light Armor Set -->
+			<skill id="3526" level="3" minimumPieces="4" /> <!-- Blue Wolf Light Armor Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Light Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="30" minimumPieces="2">
+		<requiredItems>
+			<item id="2392" /> <!-- Leather Armor of Doom -->
+			<item id="90465" /> <!-- Doom Helmet (Light) -->
+			<item id="5723" /> <!-- Doom Gloves (Light) -->
+			<item id="5739" /> <!-- Doom Boots (Light) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3527" level="1" minimumPieces="2" /> <!-- Light Armor of Doom Set -->
+			<skill id="3527" level="2" minimumPieces="3" /> <!-- Light Armor of Doom Set -->
+			<skill id="3527" level="3" minimumPieces="4" /> <!-- Light Armor of Doom Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Light Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="31" minimumPieces="2">
+		<requiredItems>
+			<item id="2393" /> <!-- Tallum Leather Armor -->
+			<item id="5769" /> <!-- Tallum Gloves (Light) -->
+			<item id="5781" /> <!-- Tallum Boots (Light) -->
+			<item id="90468" /> <!-- Tallum Helmet (Light) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3533" level="1" minimumPieces="2" /> <!-- Tallum Light Armor Set -->
+			<skill id="3533" level="2" minimumPieces="3" /> <!-- Tallum Light Armor Set -->
+			<skill id="3533" level="3" minimumPieces="4" /> <!-- Tallum Light Armor Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Light Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="32" minimumPieces="2">
+		<requiredItems>
+			<item id="2394" /> <!-- Leather Armor of Nightmare -->
+			<item id="5772" /> <!-- Gauntlets of Nightmare (Light) -->
+			<item id="5784" /> <!-- Boots of Nightmare (Light) -->
+			<item id="90474" /> <!-- Helm of Nightmare (Light) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3538" level="1" minimumPieces="2" /> <!-- Light Leather Armor of Nightmare Set -->
+			<skill id="3538" level="2" minimumPieces="3" /> <!-- Light Leather Armor of Nightmare Set -->
+			<skill id="3538" level="3" minimumPieces="4" /> <!-- Light Leather Armor of Nightmare Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Light Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="33" minimumPieces="2">
+		<requiredItems>
+			<item id="2395" /> <!-- Majestic Leather Armor -->
+			<item id="5775" /> <!-- Majestic Gauntlets (Light) -->
+			<item id="5787" /> <!-- Majestic Boots (Light) -->
+			<item id="90477" /> <!-- Majestic Circlet (Light) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3539" level="1" minimumPieces="2" /> <!-- Majestic Light Armor Set -->
+			<skill id="3539" level="2" minimumPieces="3" /> <!-- Majestic Light Armor Set -->
+			<skill id="3539" level="3" minimumPieces="4" /> <!-- Majestic Light Armor Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Light Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="34" minimumPieces="2">
+		<requiredItems>
+			<item id="2397" /> <!-- Tunic of Zubei -->
+			<item id="2402" /> <!-- Stockings of Zubei -->
+			<item id="90459" /> <!-- Zubei's Helmet (Light) -->
+			<item id="5712" /> <!-- Zubei's Gauntlets (Light) -->
+			<item id="5728" /> <!-- Zubei's Boots (Light) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3522" level="1" minimumPieces="2" /> <!-- Tunic of Zubei Robe Set -->
+			<skill id="3522" level="2" minimumPieces="3" /> <!-- Tunic of Zubei Robe Set -->
+			<skill id="3522" level="3" minimumPieces="4" /> <!-- Tunic of Zubei Robe Set -->
+			<skill id="3522" level="4" minimumPieces="5" /> <!-- Tunic of Zubei Robe Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="5" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="5" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="5" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="5" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="5" /> <!-- Robe Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="35" minimumPieces="2">
+		<requiredItems>
+			<item id="2398" /> <!-- Blue Wolf Tunic -->
+			<item id="2403" /> <!-- Blue Wolf Stockings -->
+			<item id="90463" /> <!-- Blue Wolf Helmet (Robe) -->
+			<item id="5720" /> <!-- Blue Wolf Gloves (Robe) -->
+			<item id="5736" /> <!-- Blue Wolf Boots (Robe) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3528" level="1" minimumPieces="2" /> <!-- Blue Wolf Robe Set -->
+			<skill id="3528" level="2" minimumPieces="3" /> <!-- Blue Wolf Robe Set -->
+			<skill id="3528" level="3" minimumPieces="4" /> <!-- Blue Wolf Robe Set -->
+			<skill id="3528" level="4" minimumPieces="5" /> <!-- Blue Wolf Robe Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="5" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="5" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="5" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="5" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="5" /> <!-- Robe Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="36" minimumPieces="2">
+		<requiredItems>
+			<item id="2399" /> <!-- Tunic of Doom -->
+			<item id="2404" /> <!-- Stockings of Doom -->
+			<item id="90466" /> <!-- Doom Helmet (Robe) -->
+			<item id="5724" /> <!-- Doom Gloves (Robe) -->
+			<item id="5740" /> <!-- Doom Boots (Robe) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3529" level="1" minimumPieces="2" /> <!-- Doom Robe Set -->
+			<skill id="3529" level="2" minimumPieces="3" /> <!-- Doom Robe Set -->
+			<skill id="3529" level="3" minimumPieces="4" /> <!-- Doom Robe Set -->
+			<skill id="3529" level="4" minimumPieces="5" /> <!-- Doom Robe Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="5" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="5" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="5" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="5" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="5" /> <!-- Robe Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="37" minimumPieces="2">
+		<requiredItems>
+			<item id="2400" /> <!-- Tallum Tunic -->
+			<item id="2405" /> <!-- Tallum Stockings -->
+			<item id="5770" /> <!-- Tallum Gloves (Robe) -->
+			<item id="5782" /> <!-- Tallum Boots (Robe) -->
+			<item id="90469" /> <!-- Tallum Helmet (Robe) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3534" level="1" minimumPieces="2" /> <!-- Tallum Robe Set -->
+			<skill id="3534" level="2" minimumPieces="3" /> <!-- Tallum Robe Set -->
+			<skill id="3534" level="3" minimumPieces="4" /> <!-- Tallum Robe Set -->
+			<skill id="3534" level="4" minimumPieces="5" /> <!-- Tallum Robe Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="5" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="5" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="5" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="5" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="5" /> <!-- Robe Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="38" minimumPieces="2">
+		<requiredItems>
+			<item id="2406" /> <!-- Avadon Robe -->
+			<item id="90457" /> <!-- Avadon Circlet (Robe) -->
+			<item id="5716" /> <!-- Avadon Gloves (Robe) -->
+			<item id="5732" /> <!-- Avadon Boots (Robe) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3523" level="1" minimumPieces="2" /> <!-- Avadon Robe Set -->
+			<skill id="3523" level="2" minimumPieces="3" /> <!-- Avadon Robe Set -->
+			<skill id="3523" level="3" minimumPieces="4" /> <!-- Avadon Robe Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Robe Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="39" minimumPieces="2">
+		<requiredItems>
+			<item id="2407" /> <!-- Dark Crystal Robe -->
+			<item id="5767" /> <!-- Dark Crystal Gloves (Robe) -->
+			<item id="5779" /> <!-- Dark Crystal Boots (Robe) -->
+			<item id="90472" /> <!-- Dark Crystal Helmet (Robe) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3535" level="1" minimumPieces="2" /> <!-- Dark Crystal Robe Set -->
+			<skill id="3535" level="2" minimumPieces="3" /> <!-- Dark Crystal Robe Set -->
+			<skill id="3535" level="3" minimumPieces="4" /> <!-- Dark Crystal Robe Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Robe Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="40" minimumPieces="2">
+		<requiredItems>
+			<item id="2408" /> <!-- Robe of Nightmare -->
+			<item id="5773" /> <!-- Gauntlets of Nightmare (Robe) -->
+			<item id="5785" /> <!-- Boots of Nightmare (Robe) -->
+			<item id="90475" /> <!-- Helm of Nightmare (Robe) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3540" level="1" minimumPieces="2" /> <!-- Robe of Nightmare Set -->
+			<skill id="3540" level="2" minimumPieces="3" /> <!-- Robe of Nightmare Set -->
+			<skill id="3540" level="3" minimumPieces="4" /> <!-- Robe of Nightmare Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Robe Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="41" minimumPieces="2">
+		<requiredItems>
+			<item id="2409" /> <!-- Majestic Robe -->
+			<item id="5776" /> <!-- Majestic Gauntlets (Robe) -->
+			<item id="5788" /> <!-- Majestic Boots (Robe) -->
+			<item id="90478" /> <!-- Majestic Circlet (Robe) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
+			<skill id="3541" level="1" minimumPieces="2" /> <!-- Majestic Robe Set -->
+			<skill id="3541" level="2" minimumPieces="3" /> <!-- Majestic Robe Set -->
+			<skill id="3541" level="3" minimumPieces="4" /> <!-- Majestic Robe Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Robe Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="45" minimumPieces="4">
+		<requiredItems>
+			<item id="7851" /> <!-- Moon Armor -->
+			<item id="7850" /> <!-- Moon Helmet -->
+			<item id="7852" /> <!-- Moon Gauntlets (Heavy) -->
+			<item id="7853" /> <!-- Moon Boots (Heavy) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="4" /> <!-- Equip Set Items -->
+			<skill id="3605" level="1" minimumPieces="4" /> <!-- Moon Heavy Armor Set -->
+		</skills>
+	</set>
+	<set id="46" minimumPieces="4">
+		<requiredItems>
+			<item id="7854" /> <!-- Moon Shell -->
+			<item id="7850" /> <!-- Moon Helmet -->
+			<item id="7855" /> <!-- Moon Leather Gloves (Light) -->
+			<item id="7856" /> <!-- Moon Shoes (Light) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="4" /> <!-- Equip Set Items -->
+			<skill id="3606" level="1" minimumPieces="4" /> <!-- Moon Light Armor Set -->
+		</skills>
+	</set>
+	<set id="47" minimumPieces="4">
+		<requiredItems>
+			<item id="7857" /> <!-- Moon Cape -->
+			<item id="7850" /> <!-- Moon Helmet -->
+			<item id="7858" /> <!-- Moon Silk Gloves (Robe) -->
+			<item id="7859" /> <!-- Moon Sandals (Robe) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="4" /> <!-- Equip Set Items -->
+			<skill id="3607" level="1" minimumPieces="4" /> <!-- Moon Robe Set -->
+		</skills>
+	</set>
+	<set id="48" minimumPieces="1">
+		<requiredItems>
+			<item id="70184" /> <!-- Devil's Earring -->
+		</requiredItems>
+		<skills>
+			<skill id="55292" level="1" minimumPieces="1" /> <!-- Devil's Earring -->
+		</skills>
+	</set>
+	<set id="49" minimumPieces="3">
+		<requiredItems>
+			<item id="70099" /> <!-- Tunic of Devotion (7-day) -->
+			<item id="70100" /> <!-- Stockings of Devotion (7-day) -->
+			<item id="70098" /> <!-- Leather Helmet (7-day) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="3" /> <!-- Equip Set Items -->
+			<skill id="3501" level="1" minimumPieces="3" /> <!-- Devotion Set -->
+		</skills>
+	</set>
+	<set id="50" minimumPieces="3">
+		<requiredItems>
+			<item id="70096" /> <!-- Wooden Breastplate (7-day) -->
+			<item id="70097" /> <!-- Wooden Gaiters (7-day) -->
+			<item id="70095" /> <!-- Wooden Helmet (7-day) -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="3" /> <!-- Equip Set Items -->
+			<skill id="3500" level="1" minimumPieces="3" /> <!-- Wooden Set -->
+		</skills>
+	</set>
+</list>

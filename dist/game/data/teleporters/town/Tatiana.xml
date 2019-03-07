@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="31275"> <!-- Tatyana -->
+		<teleport type="NORMAL">
+			<location npcStringId="1010007" x="83396" y="147904" z="-3400" feeCount="25000" />
+			<location npcStringId="1010023" x="146783" y="25808" z="-2008" feeCount="9700" />
+			<location npcStringId="1010491" x="125740" y="-40864" z="-3736" feeCount="3100" />
+			<location npcStringId="1010492" x="146990" y="-67128" z="-3640" feeCount="1400" />
+			<location npcStringId="1010609" x="144880" y="-113468" z="-2560" feeCount="6900" />
+			<location npcStringId="1010568" x="165054" y="-47861" z="-3560" feeCount="2200" />
+			<location npcStringId="1010530" x="170731" y="-116201" z="-2064" feeCount="9000" />
+		</teleport>
+	</npc>
+</list>

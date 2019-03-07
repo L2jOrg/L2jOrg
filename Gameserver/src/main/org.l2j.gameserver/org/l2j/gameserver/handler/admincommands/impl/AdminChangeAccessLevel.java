@@ -1,6 +1,6 @@
 package org.l2j.gameserver.handler.admincommands.impl;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Announcements;
 import org.l2j.gameserver.Config;
@@ -291,7 +291,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT `char_name` FROM `characters` WHERE `obj_Id`=\"" + oid + "\" LIMIT 1");
 			rset = statement.executeQuery();
 			if(rset.next())

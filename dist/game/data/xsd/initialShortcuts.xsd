@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="shortcuts" minOccurs="1" maxOccurs="137">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="page" minOccurs="1" maxOccurs="4">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="slot" maxOccurs="12" minOccurs="1">
+											<xs:complexType>
+												<xs:attribute type="xs:byte" name="slotId" use="required" />
+												<xs:attribute name="shortcutType" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="ITEM" />
+															<xs:enumeration value="SKILL" />
+															<xs:enumeration value="ACTION" />
+															<xs:enumeration value="MACRO" />
+															<xs:enumeration value="RECIPE" />
+															<xs:enumeration value="BOOKMARK" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute type="xs:short" name="shortcutId" use="required" />
+												<xs:attribute type="xs:byte" name="shortcutLevel" use="optional" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="pageId" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:nonNegativeInteger">
+												<xs:minInclusive value="0" />
+												<xs:maxInclusive value="3" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="classId" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:nonNegativeInteger">
+									<xs:minInclusive value="0" />
+									<xs:maxInclusive value="189" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="macros" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="macro" maxOccurs="48">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="command" maxOccurs="12" minOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="type" use="required">
+															<xs:simpleType>
+																<xs:restriction base="xs:string">
+																	<xs:enumeration value="SKILL" />
+																	<xs:enumeration value="ACTION" />
+																	<xs:enumeration value="TEXT" />
+																	<xs:enumeration value="SHORTCUT" />
+																	<xs:enumeration value="ITEM" />
+																	<xs:enumeration value="DELAY" />
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:attribute>
+														<xs:attribute type="xs:positiveInteger" name="skillId" use="optional" />
+														<xs:attribute type="xs:positiveInteger" name="skillLvl" use="optional" />
+														<xs:attribute type="xs:nonNegativeInteger" name="page" use="optional" />
+														<xs:attribute type="xs:nonNegativeInteger" name="slot" use="optional" />
+														<xs:attribute type="xs:positiveInteger" name="actionId" use="optional" />
+														<xs:attribute type="xs:positiveInteger" name="actionType" use="optional" />
+														<xs:attribute type="xs:positiveInteger" name="itemId" use="optional" />
+														<xs:attribute type="xs:positiveInteger" name="delay" use="optional" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute type="xs:nonNegativeInteger" name="macroId" use="required" />
+									<xs:attribute name="icon" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:byte">
+												<xs:minInclusive value="0" />
+												<xs:maxInclusive value="6" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute type="xs:string" name="name" use="required" />
+									<xs:attribute type="xs:string" name="description" use="optional" />
+									<xs:attribute type="xs:token" name="acronym" use="required" />
+									<xs:attribute type="xs:boolean" name="enabled" use="optional" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

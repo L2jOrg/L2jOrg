@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="35669" name="Angel Cat's Blessing" additionalName="30-day" type="EtcItem">
+		<!-- Increases Max. HP / MP by 5%, XP and SP gain by 20%. This effect remains after character's death. Cannot be exchanged, dropped, or sold. Duration: 60 minutes. -->
+		<set name="icon" val="icon.skilltransform4" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="reuse_delay" val="60000" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<skills>
+			<skill id="9487" level="1" /> <!-- Angel Cat's Blessing -->
+		</skills>
+	</item>
+</list>

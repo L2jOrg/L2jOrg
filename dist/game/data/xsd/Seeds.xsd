@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence maxOccurs="1" minOccurs="1">
+				<xs:element name="castle" maxOccurs="9" minOccurs="1">
+					<xs:complexType>
+						<xs:sequence maxOccurs="1" minOccurs="1">
+							<xs:element name="crop" maxOccurs="unbounded" minOccurs="1">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="id" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:positiveInteger">
+														<xs:minInclusive value="1" />
+														<xs:maxInclusive value="65535" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="seedId" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:positiveInteger">
+														<xs:minInclusive value="1" />
+														<xs:maxInclusive value="65535" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="mature_Id" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:positiveInteger">
+														<xs:minInclusive value="1" />
+														<xs:maxInclusive value="65535" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="reward1" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:positiveInteger">
+														<xs:minInclusive value="1" />
+														<xs:maxInclusive value="65535" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="reward2" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:positiveInteger">
+														<xs:minInclusive value="1" />
+														<xs:maxInclusive value="65535" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute type="xs:boolean" name="alternative" use="required" />
+											<xs:attribute name="level" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:positiveInteger">
+														<xs:minInclusive value="1" />
+														<xs:maxInclusive value="85" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="limit_seed" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:positiveInteger">
+														<xs:minInclusive value="1" />
+														<xs:maxInclusive value="65535" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="limit_crops" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:positiveInteger">
+														<xs:minInclusive value="1" />
+														<xs:maxInclusive value="65535" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:positiveInteger">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="9" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

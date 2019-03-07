@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/cubics.xsd">
+	<cubic id="2" level="1" slot="2" duration="900" delay="15" maxCount="20" useUp="0" power="351.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4050" level="1" successRate="8" /> <!-- Cubic Drain -->
+		</skills>
+	</cubic>
+	<cubic id="2" level="2" slot="2" duration="900" delay="15" maxCount="20" useUp="0" power="531.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4050" level="2" successRate="8" /> <!-- Cubic Drain -->
+		</skills>
+	</cubic>
+	<cubic id="2" level="3" slot="2" duration="900" delay="15" maxCount="20" useUp="0" power="773.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4050" level="3" successRate="8" /> <!-- Cubic Drain -->
+		</skills>
+	</cubic>
+	<cubic id="2" level="4" slot="2" duration="900" delay="15" maxCount="20" useUp="0" power="1026.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4050" level="4" successRate="8" /> <!-- Cubic Drain -->
+		</skills>
+	</cubic>
+	<cubic id="2" level="5" slot="2" duration="900" delay="15" maxCount="20" useUp="0" power="1264.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4050" level="5" successRate="8" /> <!-- Cubic Drain -->
+		</skills>
+	</cubic>
+	<cubic id="2" level="6" slot="2" duration="900" delay="15" maxCount="20" useUp="0" power="1530.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4050" level="6" successRate="8" /> <!-- Cubic Drain -->
+		</skills>
+	</cubic>
+	<cubic id="2" level="7" slot="2" duration="900" delay="15" maxCount="20" useUp="0" power="1822.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4050" level="7" successRate="8" /> <!-- Cubic Drain -->
+		</skills>
+	</cubic>
+	<cubic id="2" level="101" slot="2" duration="900" delay="15" maxCount="20" useUp="0" power="1919.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4050" level="9" successRate="8" /> <!-- Cubic Drain -->
+		</skills>
+	</cubic>
+	<cubic id="2" level="102" slot="2" duration="900" delay="15" maxCount="20" useUp="0" power="1967.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4050" level="10" successRate="8" /> <!-- Cubic Drain -->
+		</skills>
+	</cubic>
+	<cubic id="2" level="103" slot="2" duration="900" delay="15" maxCount="20" useUp="0" power="2015.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4050" level="11" successRate="8" /> <!-- Cubic Drain -->
+		</skills>
+	</cubic>
+	<cubic id="2" level="104" slot="2" duration="900" delay="15" maxCount="20" useUp="0" power="2061.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4050" level="12" successRate="8" /> <!-- Cubic Drain -->
+		</skills>
+	</cubic>
+	<cubic id="2" level="105" slot="2" duration="900" delay="15" maxCount="20" useUp="0" power="2106.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4050" level="13" successRate="8" /> <!-- Cubic Drain -->
+		</skills>
+	</cubic>
+	<cubic id="2" level="106" slot="2" duration="900" delay="15" maxCount="20" useUp="0" power="2151.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4050" level="14" successRate="8" /> <!-- Cubic Drain -->
+		</skills>
+	</cubic>
+	<cubic id="2" level="107" slot="2" duration="900" delay="15" maxCount="20" useUp="0" power="2194.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4050" level="15" successRate="8" /> <!-- Cubic Drain -->
+		</skills>
+	</cubic>
+	<cubic id="2" level="108" slot="2" duration="900" delay="15" maxCount="20" useUp="0" power="2235.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4050" level="16" successRate="8" /> <!-- Cubic Drain -->
+		</skills>
+	</cubic>
+</list>

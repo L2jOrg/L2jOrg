@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Aden Town -->
+	<region name="aden_town" town="Aden Castle Town" castle="5" locId="924" bbs="13">
+		<respawnPoint X="146494" Y="30584" Z="-2420" />
+		<respawnPoint X="146038" Y="30519" Z="-2420" />
+		<respawnPoint X="148112" Y="30439" Z="-2420" />
+		<respawnPoint X="148565" Y="30463" Z="-2420" />
+		<respawnPoint X="150227" Y="29104" Z="-2420" />
+		<respawnPoint X="144626" Y="29145" Z="-2420" />
+		<respawnPoint X="144635" Y="26664" Z="-2220" />
+		<respawnPoint X="144526" Y="24661" Z="-2100" />
+		<respawnPoint X="144559" Y="22835" Z="-2100" />
+		<respawnPoint X="145686" Y="21114" Z="-2100" />
+		<respawnPoint X="148946" Y="21121" Z="-2070" />
+		<respawnPoint X="148010" Y="27996" Z="-2256" />
+		<respawnPoint X="147970" Y="27040" Z="-2191" />
+		<respawnPoint X="146814" Y="27108" Z="-2189" />
+		<respawnPoint X="146819" Y="28063" Z="-2252" />
+		<respawnPoint X="136398" Y="28901" Z="-3582" isChaotic="true" />
+		<respawnPoint X="137292" Y="28485" Z="-3290" isChaotic="true" />
+		<respawnPoint X="155925" Y="28554" Z="-3164" isChaotic="true" />
+		<respawnPoint X="157608" Y="23866" Z="-3760" isChaotic="true" />
+		<respawnPoint X="157463" Y="28770" Z="-3371" isChaotic="true" />
+		<respawnPoint X="159348" Y="28561" Z="-3400" isChaotic="true" />
+		<respawnPoint X="160236" Y="14119" Z="-3892" isChaotic="true" />
+		<respawnPoint X="156764" Y="13774" Z="-3960" isChaotic="true" />
+		<respawnPoint X="161426" Y="23055" Z="-3670" isChaotic="true" />
+		<respawnPoint X="136380" Y="21899" Z="-3647" isChaotic="true" />
+		<respawnPoint X="137708" Y="15640" Z="-3800" isChaotic="true" />
+		<respawnPoint X="136629" Y="28127" Z="-3258" isChaotic="true" />
+		<map X="23" Y="18" />
+		<map X="24" Y="17" />
+		<map X="24" Y="18" />
+		<map X="24" Y="19" />
+		<map X="25" Y="17" />
+		<map X="25" Y="18" />
+		<map X="25" Y="19" />
+		<map X="20" Y="17" />
+	</region>
+</list>

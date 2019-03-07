@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list maintainEnchantment="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30300</npc> <!-- Pushkin -->
+		<npc>30846</npc> <!-- Wilbert -->
+		<npc>30471</npc> <!-- Rupio -->
+	</npcs>
+	<item>
+		<!-- Sealed Dark Crystal breastplate -->
+		<ingredient count="1" id="5287" />
+		<!-- Adena -->
+		<ingredient count="356200 " id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="2" id="49756" />
+		<!-- Dark Crystal Breastplate -->
+		<production count="1" id="365" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Gaiters -->
+		<ingredient count="1" id="5288" />
+		<!-- Adena -->
+		<ingredient count="222600" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="2" id="49756" />
+		<!-- Dark Crystal Gaiters -->
+		<production count="1" id="388" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Helmet -->
+		<ingredient count="1" id="5289" />
+		<!-- Adena -->
+		<ingredient count="133600" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Dark Crystal Helmet -->
+		<production count="1" id="90472" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Helmet -->
+		<ingredient count="1" id="5289" />
+		<!-- Adena -->
+		<ingredient count="133600" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Dark Crystal Helmet -->
+		<production count="1" id="90471" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Helmet -->
+		<ingredient count="1" id="5289" />
+		<!-- Adena -->
+		<ingredient count="133600" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Dark Crystal Helmet -->
+		<production count="1" id="90470" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Shield -->
+		<ingredient count="1" id="5292" />
+		<!-- Adena -->
+		<ingredient count="93500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Dark Crystal Shield -->
+		<production count="1" id="641" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Robe -->
+		<ingredient count="1" id="5308" />
+		<!-- Adena -->
+		<ingredient count="381000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="4" id="49756" />
+		<!-- Dark Crystal Robe -->
+		<production count="1" id="2407" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Leather Armor -->
+		<ingredient count="1" id="5297" />
+		<!-- Adena -->
+		<ingredient count="267100" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="2" id="49756" />
+		<!-- Dark Crystal Leather Armor -->
+		<production count="1" id="2385" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Leggings -->
+		<ingredient count="1" id="5298" />
+		<!-- Adena -->
+		<ingredient count="167000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="2" id="49756" />
+		<!-- Dark Crystal Leggings -->
+		<production count="1" id="2389" />
+	</item>
+	<item>
+		<!-- Sealed Tallum Plate Armor -->
+		<ingredient count="1" id="5293" />
+		<!-- Adena -->
+		<ingredient count="578800" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="3" id="49756" />
+		<!-- Tallum Plate Armor -->
+		<production count="1" id="2382" />
+	</item>
+	<item>
+		<!-- Sealed Tallum Helmet -->
+		<ingredient count="1" id="5294" />
+		<!-- Adena -->
+		<ingredient count="133600" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Tallum Helm -->
+		<production count="1" id="90468" />
+	</item>
+	<item>
+		<!-- Sealed Tallum Helmet -->
+		<ingredient count="1" id="5294" />
+		<!-- Adena -->
+		<ingredient count="133600" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Tallum Helm -->
+		<production count="1" id="90467" />
+	</item>
+	<item>
+		<!-- Sealed Tallum Helmet -->
+		<ingredient count="1" id="5294" />
+		<!-- Adena -->
+		<ingredient count="133600" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Tallum Helm -->
+		<production count="1" id="90469" />
+	</item>
+	<item>
+		<!-- Sealed Tallum Leather Armor -->
+		<ingredient count="1" id="5301" />
+		<!-- Adena -->
+		<ingredient count="434100" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="3" id="49756" />
+		<!-- Tallum Leather Armor -->
+		<production count="1" id="2393" />
+	</item>
+	<item>
+		<!-- Sealed Tallum Tunic -->
+		<ingredient count="1" id="5304" />
+		<!-- Adena -->
+		<ingredient count="267100" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="2" id="49756" />
+		<!-- Tallum Tunic -->
+		<production count="1" id="2400" />
+	</item>
+	<item>
+		<!-- Sealed Tallum Stockings -->
+		<ingredient count="1" id="5305" />
+		<!-- Adena -->
+		<ingredient count="167000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Tallum Stockings -->
+		<production count="1" id="2405" />
+	</item>
+	<item>
+		<!-- Sealed Leather Armor of Nightmare -->
+		<ingredient count="1" id="5320" />
+		<!-- Adena -->
+		<ingredient count="660300" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="4" id="49756" />
+		<!-- Leather Armor of Nightmare -->
+		<production count="1" id="2394" />
+	</item>
+	<item>
+		<!-- Sealed Robe of Nightmare -->
+		<ingredient count="1" id="5326" />
+		<!-- Adena -->
+		<ingredient count="660300" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="4" id="49756" />
+		<!-- Robe of Nightmare -->
+		<production count="1" id="2408" />
+	</item>
+	<item>
+		<!-- Sealed Armor of Nightmare -->
+		<ingredient count="1" id="5311" />
+		<!-- Adena -->
+		<ingredient count="880400" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="4" id="49756" />
+		<!-- Armor of Nightmare -->
+		<production count="1" id="374" />
+	</item>
+	<item>
+		<!-- Sealed Helm of Nightmare -->
+		<ingredient count="1" id="5312" />
+		<!-- Adena -->
+		<ingredient count="203200" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Helm of Nightmare -->
+		<production count="1" id="90473" />
+	</item>
+	<item>
+		<!-- Sealed Helm of Nightmare -->
+		<ingredient count="1" id="5312" />
+		<!-- Adena -->
+		<ingredient count="203200" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Helm of Nightmare -->
+		<production count="1" id="90475" />
+	</item>
+	<item>
+		<!-- Sealed Helm of Nightmare -->
+		<ingredient count="1" id="5312" />
+		<!-- Adena -->
+		<ingredient count="203200" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Helm of Nightmare -->
+		<production count="1" id="90474" />
+	</item>
+	<item>
+		<!-- Sealed Shield of Nightmare -->
+		<ingredient count="1" id="5315" />
+		<!-- Adena -->
+		<ingredient count="142200" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Shield of Nightmare -->
+		<production count="1" id="2498" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Plate Armor -->
+		<ingredient count="1" id="5316" />
+		<!-- Adena -->
+		<ingredient count="880400" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="4" id="49756" />
+		<!-- Majestic Plate Armor -->
+		<production count="1" id="2383" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Circlet -->
+		<ingredient count="1" id="5317" />
+		<!-- Adena -->
+		<ingredient count="203200" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Majestic Circlet -->
+		<production count="1" id="90476" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Circlet -->
+		<ingredient count="1" id="5317" />
+		<!-- Adena -->
+		<ingredient count="203200" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Majestic Circlet -->
+		<production count="1" id="90478" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Circlet -->
+		<ingredient count="1" id="5317" />
+		<!-- Adena -->
+		<ingredient count="203200" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Majestic Circlet -->
+		<production count="1" id="90477" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Leather Armor -->
+		<ingredient count="1" id="5323" />
+		<!-- Adena -->
+		<ingredient count="660300" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="4" id="49756" />
+		<!-- Majestic Leather Armor -->
+		<production count="1" id="2395" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Robe -->
+		<ingredient count="1" id="5329" />
+		<!-- Adena -->
+		<ingredient count="660300" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="4" id="49756" />
+		<!-- Majestic Robe -->
+		<production count="1" id="2409" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Gloves -->
+		<ingredient count="1" id="5290" />
+		<!-- Adena -->
+		<ingredient count="89000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Dark Crystal Gloves - Heavy Armor -->
+		<production count="1" id="5765" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Gloves -->
+		<ingredient count="1" id="5290" />
+		<!-- Adena -->
+		<ingredient count="89000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Dark Crystal Gloves - Light Armor -->
+		<production count="1" id="5766" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Gloves -->
+		<ingredient count="1" id="5290" />
+		<!-- Adena -->
+		<ingredient count="89000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Dark Crystal Gloves - Robe -->
+		<production count="1" id="5767" />
+	</item>
+	<item>
+		<!-- Sealed Tallum Gloves -->
+		<ingredient count="1" id="5295" />
+		<!-- Adena -->
+		<ingredient count="89000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Tallum Gloves - Heavy Armor -->
+		<production count="1" id="5768" />
+	</item>
+	<item>
+		<!-- Sealed Tallum Gloves -->
+		<ingredient count="1" id="5295" />
+		<!-- Adena -->
+		<ingredient count="89000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Tallum Gloves - Light Armor -->
+		<production count="1" id="5769" />
+	</item>
+	<item>
+		<!-- Sealed Tallum Gloves -->
+		<ingredient count="1" id="5295" />
+		<!-- Adena -->
+		<ingredient count="89000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Tallum Gloves - Robe -->
+		<production count="1" id="5770" />
+	</item>
+	<item>
+		<!-- Sealed Gauntlets of Nightmare -->
+		<ingredient count="1" id="5313" />
+		<!-- Adena -->
+		<ingredient count="135000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Gauntlets of Nightmare - Heavy Armor -->
+		<production count="1" id="5771" />
+	</item>
+	<item>
+		<!-- Sealed Gauntlets of Nightmare -->
+		<ingredient count="1" id="5313" />
+		<!-- Adena -->
+		<ingredient count="135000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Gauntlets of Nightmare - Light Armor -->
+		<production count="1" id="5772" />
+	</item>
+	<item>
+		<!-- Sealed Gauntlets of Nightmare -->
+		<ingredient count="1" id="5313" />
+		<!-- Adena -->
+		<ingredient count="135000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Gauntlets of Nightmare - Robe -->
+		<production count="1" id="5773" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Gauntlets -->
+		<ingredient count="1" id="5318" />
+		<!-- Adena -->
+		<ingredient count="135500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Majestic Gauntlets - Heavy Armor -->
+		<production count="1" id="5774" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Gauntlets -->
+		<ingredient count="1" id="5318" />
+		<!-- Adena -->
+		<ingredient count="135500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Majestic Gauntlets - Light Armor -->
+		<production count="1" id="5775" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Gauntlets -->
+		<ingredient count="1" id="5318" />
+		<!-- Adena -->
+		<ingredient count="135500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Majestic Gauntlets - Robe -->
+		<production count="1" id="5776" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Boots -->
+		<ingredient count="1" id="5291" />
+		<!-- Adena -->
+		<ingredient count="89000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Dark Crystal Boots - Heavy Armor -->
+		<production count="1" id="5777" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Boots -->
+		<ingredient count="1" id="5291" />
+		<!-- Adena -->
+		<ingredient count="89000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Dark Crystal Boots - Light Armor -->
+		<production count="1" id="5778" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Boots -->
+		<ingredient count="1" id="5291" />
+		<!-- Adena -->
+		<ingredient count="89000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Dark Crystal Boots - Robe -->
+		<production count="1" id="5779" />
+	</item>
+	<item>
+		<!-- Sealed Tallum Boots -->
+		<ingredient count="1" id="5296" />
+		<!-- Adena -->
+		<ingredient count="89000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Tallum Boots - Heavy Armor -->
+		<production count="1" id="5780" />
+	</item>
+	<item>
+		<!-- Sealed Tallum Boots -->
+		<ingredient count="1" id="5296" />
+		<!-- Adena -->
+		<ingredient count="89000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Tallum Boots - Light Armor -->
+		<production count="1" id="5781" />
+	</item>
+	<item>
+		<!-- Sealed Tallum Boots -->
+		<ingredient count="1" id="5296" />
+		<!-- Adena -->
+		<ingredient count="89000" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Tallum Boots - Robe -->
+		<production count="1" id="5782" />
+	</item>
+	<item>
+		<!-- Sealed Boots of Nightmare -->
+		<ingredient count="1" id="5314" />
+		<!-- Adena -->
+		<ingredient count="135500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Boots of Nightmare - Heavy Armor -->
+		<production count="1" id="5783" />
+	</item>
+	<item>
+		<!-- Sealed Boots of Nightmare -->
+		<ingredient count="1" id="5314" />
+		<!-- Adena -->
+		<ingredient count="135500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Boots of Nightmare - Light Armor -->
+		<production count="1" id="5784" />
+	</item>
+	<item>
+		<!-- Sealed Boots of Nightmare -->
+		<ingredient count="1" id="5314" />
+		<!-- Adena -->
+		<ingredient count="135500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Boots of Nightmare - Robe -->
+		<production count="1" id="5785" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Boots -->
+		<ingredient count="1" id="5319" />
+		<!-- Adena -->
+		<ingredient count="135500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Majestic Boots - Heavy Armor -->
+		<production count="1" id="5786" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Boots -->
+		<ingredient count="1" id="5319" />
+		<!-- Adena -->
+		<ingredient count="135500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Majestic Boots - Light Armor -->
+		<production count="1" id="5787" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Boots -->
+		<ingredient count="1" id="5319" />
+		<!-- Adena -->
+		<ingredient count="135500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Majestic Boots - Robe -->
+		<production count="1" id="5788" />
+	</item>
+	<item>
+		<!-- Sealed Tallum Helmet -->
+		<ingredient count="1" id="5294" />
+		<!-- Adena -->
+		<ingredient count="235500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Tallum Helmet -->
+		<production count="1" id="547" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Helmet -->
+		<ingredient count="1" id="5289" />
+		<!-- Adena -->
+		<ingredient count="235500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Dark Crystal Helmet -->
+		<production count="1" id="512" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Circlet -->
+		<ingredient count="1" id="5317" />
+		<!-- Adena -->
+		<ingredient count="355500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Majestic Circlet -->
+		<production count="1" id="2419" />
+	</item>
+	<item>
+		<!-- Sealed Helm of Nightmare -->
+		<ingredient count="1" id="5312" />
+		<!-- Adena -->
+		<ingredient count="355500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Helm of Nightmare -->
+		<production count="1" id="2418" />
+	</item>
+</list>

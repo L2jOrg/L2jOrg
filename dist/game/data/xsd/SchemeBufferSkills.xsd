@@ -1,0 +1,32 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="category" maxOccurs="unbounded" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Magnus' Chant	Siren's Dance	Song of Champion</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="buff" maxOccurs="unbounded" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Mental Shield	Magic Barrier	Shield	Blessed Body	Blessed Soul	Empower	Berserker Spirit	Might	Focus	Concentration	Acumen	Haste	Agility	Wind Walk	Guidance	Death Whisper	Bless Shield	Resist Shock	Vampiric Rage	Wild Magic	Advanced Block	Elemental Protection	Divine Protection	Arcane Protection	Prophecy of Water	Prophecy of Fire	Prophecy of Wind	Chant of Victory	Greater Might	Greater Shield	War Chant	Earth Chant	Clarity	Dance of the Warrior	Dance of Inspiration	Dance of the Mystic	Dance of Fire	Dance of Fury	Dance of Concentration	Dance of Light	Dance of Aqua Guard	Dance of Earth Guard	Dance of the Vampire	Dance of Protection	Song of Earth	Song of Life	Song of Water	Song of Warding	Song of Wind	Song of Hunter	Song of Invocation	Song of Vitality	Song of Vengeance	Song of Flame Guard	Song of Storm Guard	Song of Renewal	Song of Meditation</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute type="xs:short" name="id" use="optional"/>
+											<xs:attribute type="xs:byte" name="price" use="optional"/>
+											<xs:attribute type="xs:string" name="desc" use="optional"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="type" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

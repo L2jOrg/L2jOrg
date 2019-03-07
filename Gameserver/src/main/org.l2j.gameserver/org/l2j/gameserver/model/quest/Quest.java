@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.quest;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.util.LogUtils;
@@ -219,7 +219,7 @@ public class Quest implements OnInitScriptListener
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("REPLACE INTO character_quests (char_id,id,var,value) VALUES (?,?,?,?)");
 			statement.setInt(1, qs.getPlayer().getObjectId());
             statement.setInt(2, qs.getQuest().getId());
@@ -247,7 +247,7 @@ public class Quest implements OnInitScriptListener
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("DELETE FROM character_quests WHERE char_id=? AND id=?");
 			statement.setInt(1, qs.getPlayer().getObjectId());
             statement.setInt(2, qs.getQuest().getId());
@@ -274,7 +274,7 @@ public class Quest implements OnInitScriptListener
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("DELETE FROM character_quests WHERE char_id=? AND id=? AND var=?");
 			statement.setInt(1, qs.getPlayer().getObjectId());
             statement.setInt(2, qs.getQuest().getId());
@@ -306,7 +306,7 @@ public class Quest implements OnInitScriptListener
 		try
 		{
             questsToDelete = new HashIntSet();
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("SELECT id,var,value FROM character_quests WHERE char_id=?");
 			statement.setInt(1, player.getObjectId());
 			rset = statement.executeQuery();

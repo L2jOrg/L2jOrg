@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event name="Merry Squashmas Event" active="10 03 2017-11 03 2017" enableShrines="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/eventConfig.xsd">
+	<droplist>
+		<add item="37543" min="1" max="1" chance="50%" /> <!-- Snowy Squash Nectar -->
+	</droplist>
+	<spawnlist>
+		<add npc="33888" x="-84008" y="243032" z="-3728" heading="49744" /> <!-- Talking Island -->
+		<add npc="33888" x="45688" y="49080" z="-3056" heading="49744" /> <!-- Elven Village -->
+		<add npc="33888" x="-44584" y="-113608" z="-192" heading="49744" /> <!-- Orc Village -->
+		<add npc="33888" x="10643" y="17034" z="-4592" heading="49744" /> <!-- Dark Elven Village -->
+		<add npc="33888" x="115656" y="-178056" z="-912" heading="49744" /> <!-- Dwarf Village -->
+		<add npc="33888" x="-80485" y="149537" z="-3016" heading="16383" /> <!-- Gluddin -->
+		<add npc="33888" x="-14143" y="123176" z="-3096" heading="30212" /> <!-- Gludio -->
+		<add npc="33888" x="16354" y="142848" z="-2680" heading="14450" /> <!-- Dion -->
+		<add npc="33888" x="82312" y="148616" z="-3440" heading="3355" /> <!-- Giran -->
+		<add npc="33888" x="82008" y="53874" z="-1472" heading="3355" /> <!-- Oren -->
+		<add npc="33888" x="147064" y="25928" z="-2008" heading="17863" /> <!-- Aden -->
+		<add npc="33888" x="117380" y="76684" z="-2672" heading="40961" /> <!-- Hunters Village -->
+		<add npc="33888" x="147464" y="-56984" z="-2784" heading="11547" /> <!-- Goddard -->
+	</spawnlist>
+	<messages>
+		<add type="onEnd" text="Merry Squashmas: Event end!" />
+		<add type="onEnter" text="Merry Squashmas: Event ongoing!" />
+	</messages>
+</event>

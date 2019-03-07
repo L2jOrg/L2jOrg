@@ -1,0 +1,45 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="fakePlayer" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute type="xs:int" name="npcId"/>
+								<xs:attribute type="xs:short" name="classId"/>
+								<xs:attribute type="xs:byte" name="hair"/>
+								<xs:attribute type="xs:byte" name="hairColor"/>
+								<xs:attribute type="xs:byte" name="face"/>
+								<xs:attribute type="xs:string" name="nameColor"/>
+								<xs:attribute type="xs:string" name="titleColor"/>
+								<xs:attribute type="xs:int" name="equipHead"/>
+								<xs:attribute type="xs:int" name="equipLHand"/>
+								<xs:attribute type="xs:int" name="equipRHand"/>
+								<xs:attribute type="xs:int" name="equipGloves"/>
+								<xs:attribute type="xs:int" name="equipChest"/>
+								<xs:attribute type="xs:int" name="equipLegs"/>
+								<xs:attribute type="xs:int" name="equipFeet"/>
+								<xs:attribute type="xs:int" name="equipCloak"/>
+								<xs:attribute type="xs:int" name="equipHair"/>
+								<xs:attribute type="xs:int" name="equipHair2"/>
+								<xs:attribute type="xs:int" name="agathionId"/>
+								<xs:attribute type="xs:byte" name="weaponEnchantLevel"/>
+								<xs:attribute type="xs:byte" name="armorEnchantLevel"/>
+								<xs:attribute type="xs:boolean" name="fishing"/>
+								<xs:attribute type="xs:int" name="baitLocationX"/>
+								<xs:attribute type="xs:int" name="baitLocationY"/>
+								<xs:attribute type="xs:int" name="baitLocationZ"/>
+								<xs:attribute type="xs:byte" name="recommends"/>
+								<xs:attribute type="xs:byte" name="nobleLevel"/>
+								<xs:attribute type="xs:boolean" name="hero"/>
+								<xs:attribute type="xs:long" name="clanId"/>
+								<xs:attribute type="xs:byte" name="pledgeStatus"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

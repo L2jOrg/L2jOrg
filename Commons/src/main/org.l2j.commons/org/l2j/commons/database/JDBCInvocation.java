@@ -31,7 +31,7 @@ class JDBCInvocation implements InvocationHandler {
 
         var query = buildQuery(method, args);
 
-        try(var con = L2DatabaseFactory.getInstance().getConnection();
+        try(var con = DatabaseFactory.getInstance().getConnection();
             var statement = con.prepareStatement(query.toSql())) {
             statement.execute();
             query.setStatement(statement);

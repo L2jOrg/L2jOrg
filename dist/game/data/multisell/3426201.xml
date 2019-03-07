@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>34262</npc> <!-- Sibi Manager -->
+	</npcs>
+	<item>
+		<!-- Sibi's Coin -->
+		<ingredient id="49783" count="20" />
+		<production id="32253" count="1" chance="1" /> <!-- Infinite Mithril Quiver -->
+		<production id="32249" count="1" chance="1" /> <!-- Infinite Wooden Quiver -->
+		<production id="32250" count="1" chance="1" /> <!-- Infinite Bone Quiver -->
+		<production id="32251" count="1" chance="1" /> <!-- Infinite Steel Quiver -->
+		<production id="32252" count="1" chance="1" /> <!-- Infinite Silver Quiver -->
+		<production id="17" count="100" chance="19" /> <!-- Wooden Arrow -->
+		<production id="1341" count="200" chance="19" /> <!-- Bone Arrow -->
+		<production id="1342" count="100" chance="19" /> <!-- Steel Arrow -->
+		<production id="1343" count="100" chance="19" /> <!-- Silver Arrow -->
+		<production id="1344" count="100" chance="19" /> <!-- Mithril Arrow -->
+	</item>
+</list>

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.handler.admincommands.impl;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.Config;
@@ -418,7 +418,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		PreparedStatement st = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			st = con.prepareStatement("UPDATE characters SET x=?,y=?,z=? WHERE obj_Id=? LIMIT 1");
 			st.setInt(1, loc.x);
 			st.setInt(2, loc.y);

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Require Support -->
+<list enabled="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Territory Teleport Zones -->
+	<zone name="gludio_dominion_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-1840" maxZ="-1540">
+		<stat name="territoryId" val="81" />
+		<!-- owner_restart_territory -->
+		<node X="-17242" Y="109135" />
+		<node X="-16215" Y="109135" />
+		<node X="-16217" Y="109588" />
+		<node X="-17246" Y="109587" />
+	</zone>
+	<zone name="dion_dominion_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-2034" maxZ="-1734">
+		<stat name="territoryId" val="82" />
+		<!-- owner_restart_territory -->
+		<node X="20177" Y="160155" />
+		<node X="21205" Y="160155" />
+		<node X="21203" Y="160608" />
+		<node X="20175" Y="160607" />
+	</zone>
+	<zone name="giran_dominion_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-1940" maxZ="-1640">
+		<stat name="territoryId" val="83" />
+		<!-- owner_restart_territory -->
+		<node X="116345" Y="145985" />
+		<node X="116777" Y="145982" />
+		<node X="116771" Y="146975" />
+		<node X="116353" Y="146975" />
+	</zone>
+	<zone name="oren_dominion_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-1630" maxZ="-1330">
+		<stat name="territoryId" val="84" />
+		<!-- owner_restart_territory -->
+		<node X="82421" Y="38078" />
+		<node X="82853" Y="38076" />
+		<node X="82847" Y="39069" />
+		<node X="82429" Y="39069" />
+	</zone>
+	<zone name="aden_dominion_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-2844" maxZ="-2444">
+		<stat name="territoryId" val="85" />
+		<!-- owner_restart_territory -->
+		<node X="146867" Y="4019" />
+		<node X="148033" Y="4018" />
+		<node X="148033" Y="5174" />
+		<node X="146869" Y="5174" />
+	</zone>
+	<zone name="innadrile_dominion_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-150" maxZ="150">
+		<stat name="territoryId" val="86" />
+		<!-- owner_restart_territory -->
+		<node X="114153" Y="248974" />
+		<node X="115131" Y="248973" />
+		<node X="115130" Y="249360" />
+		<node X="114152" Y="249362" />
+	</zone>
+	<zone name="godad_dominion_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-1050" maxZ="-850">
+		<stat name="territoryId" val="87" />
+		<!-- owner_restart_territory -->
+		<node X="147223" Y="-47258" />
+		<node X="147710" Y="-47258" />
+		<node X="147711" Y="-46224" />
+		<node X="147224" Y="-46224" />
+	</zone>
+	<zone name="rune_dominion_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="3750" maxZ="4250">
+		<stat name="territoryId" val="88" />
+		<!-- owner_restart_territory -->
+		<node X="9073" Y="-49855" />
+		<node X="11506" Y="-49386" />
+		<node X="11516" Y="-48965" />
+		<node X="9074" Y="-48437" />
+	</zone>
+	<zone name="schuttgart_dominion_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="668" maxZ="968">
+		<stat name="territoryId" val="89" />
+		<!-- owner_restart_territory -->
+		<node X="77313" Y="-151322" />
+		<node X="77800" Y="-151322" />
+		<node X="77801" Y="-150287" />
+		<node X="77314" Y="-150287" />
+	</zone>
+</list>

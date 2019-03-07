@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.authcomm.as2gs;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
@@ -43,7 +43,7 @@ public class GetAccountInfo extends ReceivablePacket
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT deletetime FROM characters WHERE account_name=?");
 			statement.setString(1, _account);
 			rset = statement.executeQuery();

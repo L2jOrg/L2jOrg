@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_001" minZ="-3792" maxZ="-2892">
+				<node x="98452" y="98468" />
+				<node x="102768" y="98364" />
+				<node x="106036" y="102044" />
+				<node x="102576" y="104760" />
+				<node x="98416" y="103876" />
+			</territory>
+		</territories>
+		<npc id="20551" count="7" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20552" count="9" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20553" count="9" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_003" minZ="-3752" maxZ="-2252">
+				<node x="106124" y="102020" />
+				<node x="107960" y="102040" />
+				<node x="109540" y="103428" />
+				<node x="107276" y="105240" />
+				<node x="104996" y="102864" />
+			</territory>
+		</territories>
+		<npc id="20551" count="2" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20552" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20553" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_002" minZ="-3468" maxZ="-2568">
+				<node x="98468" y="103936" />
+				<node x="102604" y="104820" />
+				<node x="103348" y="107740" />
+				<node x="100532" y="106436" />
+			</territory>
+		</territories>
+		<npc id="20551" count="2" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20552" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20553" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_019" minZ="-3616" maxZ="-2116">
+				<node x="120396" y="129172" />
+				<node x="123828" y="126904" />
+				<node x="125988" y="128024" />
+				<node x="126208" y="130620" />
+				<node x="120604" y="130612" />
+			</territory>
+		</territories>
+		<npc id="20176" count="4" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20158" count="5" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20145" count="5" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_016" minZ="-3300" maxZ="-2400">
+				<node x="127460" y="104872" />
+				<node x="130472" y="104952" />
+				<node x="129952" y="107700" />
+				<node x="128112" y="108212" />
+			</territory>
+		</territories>
+		<npc id="20554" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_015" minZ="-3288" maxZ="-1988">
+				<node x="110372" y="103680" />
+				<node x="113684" y="102688" />
+				<node x="114296" y="105436" />
+				<node x="110572" y="105180" />
+			</territory>
+		</territories>
+		<npc id="20554" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_018" minZ="-3640" maxZ="-1840">
+				<node x="115908" y="126036" />
+				<node x="118848" y="126412" />
+				<node x="120344" y="127988" />
+				<node x="120256" y="130788" />
+				<node x="110888" y="130776" />
+			</territory>
+		</territories>
+		<npc id="20176" count="4" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20158" count="9" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20145" count="9" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_017" minZ="-2208" maxZ="-708">
+				<node x="103692" y="127088" />
+				<node x="105244" y="126988" />
+				<node x="106612" y="128744" />
+				<node x="101684" y="129404" />
+				<node x="101180" y="128800" />
+			</territory>
+		</territories>
+		<npc id="20176" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20158" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20145" count="2" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_021" minZ="-3452" maxZ="-2452">
+				<node x="115864" y="128252" />
+				<node x="118060" y="127236" />
+				<node x="118624" y="128300" />
+				<node x="118240" y="129848" />
+				<node x="116976" y="129780" />
+			</territory>
+		</territories>
+		<npc id="20176" count="2" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_009" minZ="-3340" maxZ="-1640">
+				<node x="126752" y="104060" />
+				<node x="130868" y="104012" />
+				<node x="130732" y="110116" />
+				<node x="128676" y="110144" />
+				<node x="126828" y="108588" />
+			</territory>
+		</territories>
+		<npc id="20552" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20553" count="5" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20554" count="6" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_008" minZ="-3452" maxZ="-2652">
+				<node x="123960" y="100868" />
+				<node x="125824" y="100976" />
+				<node x="126536" y="104544" />
+				<node x="122464" y="103716" />
+			</territory>
+		</territories>
+		<npc id="20552" count="2" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20553" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20554" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_005" minZ="-3628" maxZ="-2328">
+				<node x="115888" y="101800" />
+				<node x="117172" y="100792" />
+				<node x="119656" y="102840" />
+				<node x="117252" y="106676" />
+				<node x="115696" y="106676" />
+				<node x="115136" y="103752" />
+			</territory>
+		</territories>
+		<npc id="20552" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20553" count="5" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20554" count="4" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_004" minZ="-3400" maxZ="-1900">
+				<node x="109656" y="103472" />
+				<node x="114572" y="101168" />
+				<node x="115620" y="106576" />
+				<node x="109368" y="106956" />
+				<node x="108940" y="105352" />
+			</territory>
+		</territories>
+		<npc id="20551" count="4" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20552" count="7" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20553" count="6" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_007" minZ="-2640" maxZ="-1840">
+				<node x="119476" y="105260" />
+				<node x="122928" y="104652" />
+				<node x="126056" y="105900" />
+				<node x="125928" y="106416" />
+				<node x="119132" y="106172" />
+			</territory>
+		</territories>
+		<npc id="20552" count="2" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20553" count="2" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20554" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_006" minZ="-2924" maxZ="-1924">
+				<node x="114416" y="107032" />
+				<node x="119208" y="106740" />
+				<node x="116796" y="108320" />
+				<node x="115636" y="108128" />
+			</territory>
+		</territories>
+		<npc id="20552" count="1" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20553" count="2" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20554" count="2" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_012" minZ="-3252" maxZ="-1752">
+				<node x="111976" y="98416" />
+				<node x="116864" y="98492" />
+				<node x="117116" y="100612" />
+				<node x="115676" y="101596" />
+			</territory>
+		</territories>
+		<npc id="20552" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20553" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20554" count="4" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_011" minZ="-2864" maxZ="-1864">
+				<node x="119880" y="98428" />
+				<node x="127152" y="98444" />
+				<node x="127960" y="100140" />
+				<node x="125712" y="100764" />
+				<node x="123672" y="100524" />
+			</territory>
+		</territories>
+		<npc id="20552" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20553" count="4" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20554" count="5" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_014" minZ="-3768" maxZ="-3368">
+				<node x="99208" y="98912" />
+				<node x="102288" y="98820" />
+				<node x="103248" y="100684" />
+				<node x="99632" y="101376" />
+			</territory>
+		</territories>
+		<npc id="20554" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_013" minZ="-2748" maxZ="-1348">
+				<node x="106684" y="98504" />
+				<node x="111720" y="98520" />
+				<node x="113804" y="100240" />
+				<node x="111332" y="102252" />
+			</territory>
+		</territories>
+		<npc id="20551" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20552" count="4" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20553" count="4" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran_t23_21_010" minZ="-2836" maxZ="-1836">
+				<node x="127264" y="98416" />
+				<node x="130792" y="98492" />
+				<node x="130752" y="103908" />
+				<node x="129712" y="103876" />
+			</territory>
+		</territories>
+		<npc id="20552" count="3" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20553" count="4" respawnTime="95sec" respawnRandom="0sec" /> 
+		<npc id="20554" count="4" respawnTime="95sec" respawnRandom="0sec" /> 
+	</spawn>
+	<spawn name="npc_031201">
+		<group>	
+		<npc id="30836" x="105888" y="109808" z="-3192" heading="45056" respawnTime="60sec" />
+		<npc id="30835" x="106581" y="113352" z="-3192" heading="28672" respawnTime="60sec" />
+		<npc id="30833" x="104870" y="113221" z="-3184" heading="4096" respawnTime="60sec" />
+		<npc id="30832" x="105745" y="114255" z="-3136" heading="49152" respawnTime="60sec" />
+		<npc id="30758" x="102069" y="103120" z="-3506" heading="6000" respawnTime="60sec" />
+		<npc id="31582" x="104840" y="113260" z="-3184" heading="0" respawnTime="60sec" />
+		<npc id="31581" x="106586" y="113402" z="-3192" heading="33871" respawnTime="60sec" />
+		<npc id="31580" x="106608" y="113296" z="-3192" heading="30000" respawnTime="60sec" />
+		<npc id="30981" x="106131" y="105979" z="-3480" heading="28672" respawnTime="60sec" />
+		</group>
+	</spawn>
+</list>

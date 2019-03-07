@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="22223" name="Solid Scroll: Enchant Weapon (A-grade)" type="EtcItem">
+		<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Safe Enchant: +3. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_wp_a" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22224" name="Solid Scroll: Enchant Armor (A-grade)" type="EtcItem">
+		<!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. If an armor is enchanted up to more than +4, HP is increased proportionally. Safe enchantment. If enchantment is failed, the item is not broken into crystals and preserves the enchantment level. Cannot be applied to armor enchanted by 7 and higher. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_am_a" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

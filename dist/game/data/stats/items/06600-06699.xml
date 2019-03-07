@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="6611" name="Infinity Sword" type="Weapon">
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Sword. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%, when equipped. Infinity Power - Reflect: for 5 min. damage received +8%. -->
+		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="is_private_storeable" val="false" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
+		<skills>
+			<skill id="3578" level="1" /> <!-- Special Ability: Infinity Blade -->
+			<skill id="3579" level="1" type="ON_CRITICAL_SKILL" /> <!-- Infinity Power - Reflect -->
+		</skills>
+		<stats>
+			<stat type="pAtk">301</stat>
+			<stat type="mAtk">166</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6612" name="Infinity Slasher" type="Weapon">
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Slasher. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%, when equipped. Infinity Power - Protection: for 2 min. makes you immune to debuffs 5 times. -->
+		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="is_private_storeable" val="false" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
+		<skills>
+			<skill id="3582" level="1" /> <!-- Special Ability: Infinity Cleaver -->
+			<skill id="3584" level="1" type="ON_CRITICAL_SKILL" /> <!-- Infinity Power - Protection -->
+		</skills>
+		<stats>
+			<stat type="pAtk">368</stat>
+			<stat type="mAtk">166</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6613" name="Infinity Axe" type="Weapon">
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Axe. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%, when equipped. Infinity Power - Tenacity: for 2 min. returns 10% of the received damage back to the enemy. Recovers ??. -->
+		<set name="icon" val="icon.weapon_the_axe_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="is_private_storeable" val="false" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
+		<skills>
+			<skill id="3580" level="1" /> <!-- Special Ability: Infinity Axe -->
+			<skill id="3581" level="1" type="ON_CRITICAL_SKILL" /> <!-- Infinity Power - Tenacity -->
+		</skills>
+		<stats>
+			<stat type="pAtk">301</stat>
+			<stat type="mAtk">166</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6614" name="Infinity Rod" type="Weapon">
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Rod. Max HP +10%, Max MP +25%, Max CP +30%, M. Critical Rate +20, Casting Spd. +5%, when equipped. Infinity Power - Mana Limit: for 30 sec. magic skills don't consume MP. -->
+		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="is_private_storeable" val="false" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
+		<skills>
+			<skill id="3597" level="1" /> <!-- Special Ability: Infinity Rod -->
+			<skill id="3598" level="1" type="ON_MAGIC_SKILL" /> <!-- Infinity Power - Mana Limit -->
+		</skills>
+		<stats>
+			<stat type="pAtk">255</stat>
+			<stat type="mAtk">204</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6616" name="Infinity Scepter" type="Weapon">
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Scepter. Max HP +10%, Max MP +25%, Max CP +30%, M. Atk. +10%, P. Critical Damage +10%, when equipped. Infinity Power - Vampiric Mana: for 5 min. recovers MP, equal to the certain percent of inflicted damage with a certain probability. -->
+		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="is_private_storeable" val="false" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
+		<skills>
+			<skill id="3595" level="1" /> <!-- Special Ability: Infinity Scepter -->
+			<skill id="3596" level="1" type="ON_MAGIC_SKILL" /> <!-- Infinity Power - Vampiric Mana -->
+		</skills>
+		<stats>
+			<stat type="pAtk">295</stat>
+			<stat type="mAtk">219</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6617" name="Infinity Dagger" type="Weapon">
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Dagger. Max HP +15%, Max MP +25%, Max CP +30%, M. Critical Rate +20, P. Critical Damage +20%, when equipped. Infinity Power - Immortal: for 5 min. increases the chance of deadly attack. -->
+		<set name="icon" val="icon.weapon_the_dagger_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="is_private_storeable" val="false" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
+		<skills>
+			<skill id="3589" level="1" /> <!-- Special Ability: Infinity Stinger -->
+			<skill id="3590" level="1" type="ON_CRITICAL_SKILL" /> <!-- Infinity Power - Immortal -->
+		</skills>
+		<stats>
+			<stat type="pAtk">272</stat>
+			<stat type="mAtk">166</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6618" name="Infinity Fighter" type="Weapon">
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Fighter. Max HP +20%, Max MP +15%, Max CP +30%, P. Critical Rate +20, Atk. Spd. +5%, when equipped. Infinity Power - Protection: for 2 min. makes you immune to debuffs 5 times. -->
+		<set name="icon" val="icon.weapon_the_fist_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="is_private_storeable" val="false" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
+		<skills>
+			<skill id="3587" level="1" /> <!-- Special Ability: Infinity Fang -->
+			<skill id="3584" level="1" /> <!-- Infinity Power - Protection -->
+		</skills>
+		<stats>
+			<stat type="pAtk">368</stat>
+			<stat type="mAtk">166</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6619" name="Infinity Bow" type="Weapon">
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Bow. Max HP +15%, Max MP +25%, Max CP +30%, MP Consumption -5%, Atk. Spd. +10%, when equipped. Infinity Power - Archery: for 5 min. increases Speed and the bow's range. -->
+		<set name="icon" val="icon.weapon_the_bow_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="6" />
+		<set name="reuse_delay" val="1398" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="is_private_storeable" val="false" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
+		<skills>
+			<skill id="3593" level="1" /> <!-- Special Ability: Infinity Bow -->
+			<skill id="3594" level="1" type="ON_CRITICAL_SKILL" /> <!-- Infinity Power - Archery -->
+		</skills>
+		<stats>
+			<stat type="pAtk">665</stat>
+			<stat type="mAtk">177</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="6620" name="Infinity Dualsword" type="Weapon">
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Dualsword. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +5%, P. Critical Damage +5%, Atk. Spd. +5%, when equipped. Infinity Power - Refresh: for 5 min. decreases cooldown by 10%. -->
+		<set name="icon" val="icon.weapon_the_dualsword_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="is_private_storeable" val="false" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
+		<skills>
+			<skill id="3585" level="1" /> <!-- Special Ability: Infinity Wing -->
+			<skill id="3586" level="1" type="ON_CRITICAL_SKILL" /> <!-- Infinity Power - Refresh -->
+		</skills>
+		<stats>
+			<stat type="pAtk">361</stat>
+			<stat type="mAtk">164</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6621" name="Infinity Spear" type="Weapon">
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Spear. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%, when equipped. Infinity Power - Tenacity: for 2 min. returns 10% of the received damage back to the enemy. Recovers ??. -->
+		<set name="icon" val="icon.weapon_the_pole_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="is_private_storeable" val="false" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
+		<skills>
+			<skill id="3591" level="1" /> <!-- Special Ability: Infinity Spear -->
+			<skill id="3581" level="1" type="ON_CRITICAL_SKILL" /> <!-- Infinity Power - Tenacity -->
+		</skills>
+		<stats>
+			<stat type="pAtk">301</stat>
+			<stat type="mAtk">166</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="6645" name="Beast Soulshot" type="EtcItem">
+		<!-- The power of a Soulshot is bestowed upon a servitor, increasing their physical attack. The number of Soulshots required is given in the servitor�s info window. (Used from the master�s inventory.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_beast_soul_shot_i00" />
+		<set name="default_action" val="SUMMON_SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BeastSoulShot" />
+		<set name="commissionItemType" val="PET_SUPPLIES" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2033" level="1" /> <!-- Item - Beast Soul Shot -->
+		</skills>
+	</item>
+	<item id="6646" name="Beast Spiritshot" type="EtcItem">
+		<!-- The power of a Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor�s info window. (Used from the master�s inventory.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_beast_spirit_shot_i00" />
+		<set name="default_action" val="SUMMON_SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BeastSpiritShot" />
+		<set name="commissionItemType" val="PET_SUPPLIES" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2008" level="1" /> <!-- Item - Beast Spirit Shot -->
+		</skills>
+	</item>
+	<item id="6647" name="Blessed Beast Spiritshot" type="EtcItem">
+		<!-- The power of a Blessed Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor�s info window. (Used from the master�s inventory.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_blessed_beast_spirit_shot_i00" />
+		<set name="default_action" val="SUMMON_SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BeastSpiritShot" />
+		<set name="commissionItemType" val="PET_SUPPLIES" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2009" level="1" /> <!-- Item - Beast Blessed Spirit Shot -->
+		</skills>
+	</item>
+	<item id="6660" name="Queen Ant's Ring" type="Armor">
+		<!-- MP +9, Poison Resistance and Atk. Rate +10%, P. /M. Accuracy +1, P. /M. Atk. +4%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
+		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="100" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3562" level="1" /> <!-- Queen Ant's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">48</stat>
+			<stat type="maxMp">21</stat>
+		</stats>
+	</item>
+	<item id="6661" name="Orfen's Earring" type="Armor">
+		<!-- MP +19, Mental Resistance and Atk. Rate +5%, Hold Resistance and Atk. Rate +10%, Healing Power +2%, Skill MP Consumption -2%. The effect doesn't stack if two identical earrings are worn. Cannot be enchanted. -->
+		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="100" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="3560" level="1" /> <!-- Orfen's Earring -->
+		</skills>
+		<stats>
+			<stat type="mDef">51</stat>
+			<stat type="maxMp">19</stat>
+		</stats>
+	</item>
+	<item id="6662" name="Ring of Core" type="Armor">
+		<!-- MP +9, Mental Resistance and Atk. Rate +10%, P. / M. Evasion +1, Received Damage -2%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
+		<set name="icon" val="icon.accessory_ring_of_core_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="100" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3563" level="1" /> <!-- Ring of Core -->
+		</skills>
+		<stats>
+			<stat type="mDef">32</stat>
+			<stat type="maxMp">9</stat>
+		</stats>
+	</item>
+</list>

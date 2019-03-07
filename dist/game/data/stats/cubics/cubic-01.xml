@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/cubics.xsd">
+	<cubic id="1" level="1" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="282.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="1" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+	<cubic id="1" level="2" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="434.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="2" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+	<cubic id="1" level="3" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="677.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="3" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+	<cubic id="1" level="4" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="919.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="4" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+	<cubic id="1" level="5" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="1141.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="5" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+	<cubic id="1" level="6" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="1394.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="6" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+	<cubic id="1" level="7" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="1673.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="7" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+	<cubic id="1" level="8" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="1975.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="8" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+	<cubic id="1" level="101" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="2081.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="9" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+	<cubic id="1" level="102" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="2133.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="10" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+	<cubic id="1" level="103" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="2184.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="11" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+	<cubic id="1" level="104" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="2234.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="12" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+	<cubic id="1" level="105" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="2283.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="13" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+	<cubic id="1" level="106" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="2331.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="14" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+	<cubic id="1" level="107" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="2378.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="15" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+	<cubic id="1" level="108" slot="1" duration="900" delay="10" maxCount="30" useUp="0" power="2423.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="4049" level="16" successRate="12" canUseOnStaticObjects="true" /> <!-- Cubic Strike -->
+		</skills>
+	</cubic>
+</list>

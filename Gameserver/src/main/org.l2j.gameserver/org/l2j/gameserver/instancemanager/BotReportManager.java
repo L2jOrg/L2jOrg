@@ -1,6 +1,6 @@
 package org.l2j.gameserver.instancemanager;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.commons.time.cron.SchedulingPattern;
@@ -176,7 +176,7 @@ public final class BotReportManager
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SQL_LOAD_REPORTED_CHAR_DATA);
 			rset = statement.executeQuery();
 
@@ -226,7 +226,7 @@ public final class BotReportManager
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SQL_CLEAR_REPORTED_CHAR_DATA);
 			statement.execute();
 

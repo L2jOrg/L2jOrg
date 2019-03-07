@@ -1,9 +1,9 @@
 package org.l2j.scripts.handler.bbs;
 
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
-import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.ShowBoardPacket;
 import org.slf4j.Logger;
@@ -53,7 +53,7 @@ public final class CommunityFavorites extends ScriptsCommunityHandler
 			StringBuilder fl = new StringBuilder("");
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("SELECT * FROM `bbs_favorites` WHERE `object_id` = ? ORDER BY `add_date` DESC");
 				statement.setInt(1, player.getObjectId());
 				rset = statement.executeQuery();
@@ -92,7 +92,7 @@ public final class CommunityFavorites extends ScriptsCommunityHandler
 					PreparedStatement statement = null;
 					try
 					{
-						con = L2DatabaseFactory.getInstance().getConnection();
+						con = DatabaseFactory.getInstance().getConnection();
 						statement = con.prepareStatement("REPLACE INTO `bbs_favorites`(`object_id`, `fav_bypass`, `fav_title`, `add_date`) VALUES(?, ?, ?, ?)");
 						statement.setInt(1, player.getObjectId());
 						statement.setString(2, favs[0]);
@@ -120,7 +120,7 @@ public final class CommunityFavorites extends ScriptsCommunityHandler
 			PreparedStatement statement = null;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("DELETE FROM `bbs_favorites` WHERE `fav_id` = ? and `object_id` = ?");
 				statement.setInt(1, fav_id);
 				statement.setInt(2, player.getObjectId());

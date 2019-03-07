@@ -1,6 +1,6 @@
 package org.l2j.gameserver.instancemanager;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -48,7 +48,7 @@ public class CoupleManager
 		ResultSet rs = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM couples ORDER BY id");
 			rs = statement.executeQuery();
 			while(rs.next())
@@ -151,7 +151,7 @@ public class CoupleManager
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 
 			if(_deletedCouples != null && !_deletedCouples.isEmpty())
 			{

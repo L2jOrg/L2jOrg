@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Giran Habor -->
+	<region name="giran_habor" town="Giran Habor" castle="3" locId="919" bbs="6">
+		<respawnPoint X="46763" Y="187041" Z="-3451" />
+		<respawnPoint X="46471" Y="186666" Z="-3451" />
+		<respawnPoint X="47290" Y="186842" Z="-3451" />
+		<respawnPoint X="47038" Y="186506" Z="-3451" />
+		<respawnPoint X="47684" Y="186682" Z="-3451" />
+		<respawnPoint X="47450" Y="186347" Z="-3451" />
+		<respawnPoint X="48715" Y="185873" Z="-3451" />
+		<respawnPoint X="48363" Y="185518" Z="-3451" />
+		<respawnPoint X="48757" Y="185124" Z="-3451" />
+		<respawnPoint X="49034" Y="185512" Z="-3451" />
+		<respawnPoint X="49033" Y="184647" Z="-3451" />
+		<respawnPoint X="49372" Y="185076" Z="-3451" />
+		<respawnPoint X="46763" Y="187041" Z="-3451" isChaotic="true" />
+		<respawnPoint X="46471" Y="186666" Z="-3451" isChaotic="true" />
+		<respawnPoint X="47290" Y="186842" Z="-3451" isChaotic="true" />
+		<respawnPoint X="47038" Y="186506" Z="-3451" isChaotic="true" />
+		<respawnPoint X="47684" Y="186682" Z="-3451" isChaotic="true" />
+		<respawnPoint X="47450" Y="186347" Z="-3451" isChaotic="true" />
+		<respawnPoint X="48715" Y="185873" Z="-3451" isChaotic="true" />
+		<respawnPoint X="48363" Y="185518" Z="-3451" isChaotic="true" />
+		<respawnPoint X="48757" Y="185124" Z="-3451" isChaotic="true" />
+		<respawnPoint X="49034" Y="185512" Z="-3451" isChaotic="true" />
+		<respawnPoint X="49033" Y="184647" Z="-3451" isChaotic="true" />
+		<respawnPoint X="49372" Y="185076" Z="-3451" isChaotic="true" />
+		<map X="20" Y="24" />
+		<map X="21" Y="24" />
+		<map X="21" Y="25" />
+	</region>
+</list>

@@ -1,0 +1,21 @@
+<html><title>Petition info</title><body>
+<center>
+<table width=270 bgcolor="444444">
+<tr>
+<td><button value="Accept" action="bypass -h admin_accept_petition %petition%" width="80" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Reject" action="bypass -h admin_reject_petition %petition%" width="80" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Back" action="bypass -h admin_view_petitions" width="80" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table><br>
+<font color="LEVEL">Petition #%petition%</font><br>
+<img src="L2UI.SquareWhite" width=260 height=1><br>
+<table width=270 border=0>
+<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">Time:</font></td><td align=right width=170>%time%</td></tr></table></td></tr>
+<tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">Petitioner:</font></td><td align=right width=170><font color="%online%">%petitioner%</font></td></tr></table></td></tr>
+<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">Type</font></td><td align=right width=170>%type%</td></tr></table></td></tr>
+</table>
+<br><img src="L2UI.SquareWhite" width=260 height=1><br>
+<table width=270><tr><td>%text%</td></tr></table>
+<br><img src="L2UI.SquareWhite" width=260 height=1><br>
+</center>
+</body></html>

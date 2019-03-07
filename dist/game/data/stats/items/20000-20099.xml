@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="20020" name="Uniform Hat" type="Armor">
+		<!-- A very fancy hat. Occupies 2 Hair Accessory slots. -->
+		<set name="icon" val="BranchSys.icon.br_Uniform_Hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="20021" name="Assassin's Bamboo Hat" type="Armor">
+		<!-- A hat made from bulrush. Occupies 2 Hair Accessory slots. -->
+		<set name="icon" val="BranchSys.icon.br_Bamboo_Hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="20022" name="Ruthless Tribe Mask" type="Armor">
+		<!-- A mask which formerly belonged to Looters. -->
+		<set name="icon" val="BranchSys.icon.br_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="20023" name="Ribbon Hairband" type="Armor">
+		<!-- A ribbon-like hair accessory, intended for female characters only. -->
+		<set name="icon" val="BranchSys.icon.br_Ribbon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="20033" name="Unoccupied Teleport Device Flag" type="EtcItem">
+		<!-- The item is used when the current location of an Unoccupied Teleport Device is saved. -->
+		<set name="icon" val="BranchSys.icon.br_flag_of_bookmark_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

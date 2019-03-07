@@ -1,6 +1,6 @@
 package org.l2j.scripts.services;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.util.Rnd;
@@ -177,7 +177,7 @@ public class VoteManager implements IVoicedCommandHandler, OnInitScriptListener
 		ResultSet rs = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			st = con.prepareStatement("SELECT * FROM vote");
 			rs = st.executeQuery();
 			while(rs.next())

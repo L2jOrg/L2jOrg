@@ -12,7 +12,7 @@ import io.github.joealisson.primitive.pair.IntLongPair;
 import io.github.joealisson.primitive.pair.IntObjectPair;
 import io.github.joealisson.primitive.pair.impl.IntObjectPairImpl;
 import org.l2j.commons.collections.CollectionUtils;
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.lang.reference.HardReferences;
@@ -4330,7 +4330,7 @@ public final class Player extends Playable implements PlayerGroup
         PreparedStatement statement = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("UPDATE characters SET online=?, lastAccess=? WHERE obj_id=?");
             statement.setInt(1, isOnline() ? 1 : 0);
             statement.setLong(2, System.currentTimeMillis() / 1000L);
@@ -4442,7 +4442,7 @@ public final class Player extends Playable implements PlayerGroup
         try
         {
             // Retrieve the L2Player from the characters table of the database
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.createStatement();
             statement2 = con.createStatement();
             rset = statement.executeQuery("SELECT * FROM `characters` WHERE `obj_Id`=" + objectId + " LIMIT 1");
@@ -4757,7 +4757,7 @@ public final class Player extends Playable implements PlayerGroup
             PreparedStatement statement = null;
             try
             {
-                con = L2DatabaseFactory.getInstance().getConnection();
+                con = DatabaseFactory.getInstance().getConnection();
                 statement = con.prepareStatement(//
                         "UPDATE characters SET face=?,beautyFace=?,hairStyle=?,beautyHairStyle=?,hairColor=?,beautyHairColor=?,sex=?,x=?,y=?,z=?" + //
                                 ",karma=?,pvpkills=?,pkkills=?,rec_have=?,rec_left=?,clanid=?,deletetime=?," + //
@@ -4892,7 +4892,7 @@ public final class Player extends Playable implements PlayerGroup
             try
             {
                 // Remove or update a L2Player skill from the character_skills table of the database
-                con = L2DatabaseFactory.getInstance().getConnection();
+                con = DatabaseFactory.getInstance().getConnection();
                 statement = con.prepareStatement("DELETE FROM character_skills WHERE skill_id=? AND char_obj_id=? AND (class_index=? OR class_index=-1 OR class_index=-2)");
                 statement.setInt(1, oldSkillEntry.getId());
                 statement.setInt(2, getObjectId());
@@ -4927,7 +4927,7 @@ public final class Player extends Playable implements PlayerGroup
         PreparedStatement statement = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
 
             statement = con.prepareStatement("REPLACE INTO character_skills (char_obj_id,skill_id,skill_level,class_index) values(?,?,?,?)");
             statement.setInt(1, getObjectId());
@@ -4955,7 +4955,7 @@ public final class Player extends Playable implements PlayerGroup
         ResultSet rset = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("SELECT skill_id,skill_level FROM character_skills WHERE char_obj_id=? AND (class_index=? OR class_index=-1 OR class_index=-2)");
             statement.setInt(1, getObjectId());
             statement.setInt(2, getActiveClassId());
@@ -5011,7 +5011,7 @@ public final class Player extends Playable implements PlayerGroup
         Statement statement = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.createStatement();
             statement.executeUpdate("DELETE FROM character_skills_save WHERE char_obj_id = " + getObjectId() + " AND class_index=" + getActiveClassId() + " AND `end_time` < " + System.currentTimeMillis());
 
@@ -5059,7 +5059,7 @@ public final class Player extends Playable implements PlayerGroup
         ResultSet rset = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.createStatement();
             rset = statement.executeQuery("SELECT skill_id,skill_level,end_time,reuse_delay_org FROM character_skills_save WHERE char_obj_id=" + getObjectId() + " AND class_index=" + getActiveClassId());
             while(rset.next())
@@ -6710,7 +6710,7 @@ public final class Player extends Playable implements PlayerGroup
         PreparedStatement statement = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
 
             final String stmt = "UPDATE characters SET nochannel = ? WHERE obj_Id=?";
             statement = con.prepareStatement(stmt);
@@ -6843,7 +6843,7 @@ public final class Player extends Playable implements PlayerGroup
         PreparedStatement statement = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("UPDATE character_subclasses SET class_id=? WHERE char_obj_id=? AND class_id=?");
             statement.setInt(1, newclass);
             statement.setInt(2, getObjectId());
@@ -7024,7 +7024,7 @@ public final class Player extends Playable implements PlayerGroup
         PreparedStatement statement = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             // Remove all basic info stored about this sub-class.
             statement = con.prepareStatement("DELETE FROM character_subclasses WHERE char_obj_id=? AND class_id=? AND type != " + SubClassType.BASE_CLASS.ordinal());
             statement.setInt(1, getObjectId());
@@ -8615,7 +8615,7 @@ public final class Player extends Playable implements PlayerGroup
         ResultSet rset = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("SELECT id FROM character_recipebook WHERE char_id=?");
             statement.setInt(1, getObjectId());
             rset = statement.executeQuery();
@@ -8910,7 +8910,7 @@ public final class Player extends Playable implements PlayerGroup
         PreparedStatement st = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             st = con.prepareStatement("UPDATE characters SET char_name = ? WHERE obj_Id = ?");
             st.setString(1, getName());
             st.setInt(2, getObjectId());
@@ -9608,7 +9608,7 @@ public final class Player extends Playable implements PlayerGroup
         ResultSet rs = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             offline = con.prepareStatement("SELECT * FROM character_instances WHERE obj_id = ?");
             offline.setInt(1, getObjectId());
             rs = offline.executeQuery();

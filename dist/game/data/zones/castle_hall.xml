@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Castle Zones -->
+	<zone name="gludio_castle" type="CastleZone" shape="NPoly" minZ="-4452" maxZ="3547">
+		<stat name="castleId" val="1" />
+		<!-- residence_territory -->
+		<node X="-20300" Y="106700" />
+		<node X="-15700" Y="106700" />
+		<node X="-15700" Y="113800" />
+		<node X="-20300" Y="113800" />
+		<!-- owner_restart_point_list -->
+		<spawn X="-16554" Y="109382" Z="-1799" />
+		<spawn X="-16869" Y="109375" Z="-1799" />
+		<spawn X="-16659" Y="109261" Z="-1799" />
+		<spawn X="-16618" Y="109485" Z="-1799" />
+		<!-- other_restart_village_list -->
+		<spawn X="-81447" Y="152760" Z="-3170" type="other" />
+		<spawn X="-81447" Y="152880" Z="-3170" type="other" />
+		<spawn X="-81447" Y="152640" Z="-3170" type="other" />
+		<spawn X="-82186" Y="152760" Z="-3170" type="other" />
+		<spawn X="-82186" Y="152880" Z="-3170" type="other" />
+		<spawn X="-82186" Y="152640" Z="-3170" type="other" />
+		<spawn X="-81780" Y="152760" Z="-3170" type="other" />
+		<spawn X="-81780" Y="152880" Z="-3170" type="other" />
+		<spawn X="-81780" Y="152640" Z="-3170" type="other" />
+		<!-- chao_restart_point_list -->
+		<spawn X="-81616" Y="157104" Z="-3150" type="chaotic" />
+		<spawn X="-80688" Y="157216" Z="-3150" type="chaotic" />
+		<spawn X="-79568" Y="156960" Z="-3150" type="chaotic" />
+		<spawn X="-78800" Y="157744" Z="-3150" type="chaotic" />
+		<spawn X="-80448" Y="157968" Z="-3130" type="chaotic" />
+		<spawn X="-81712" Y="159536" Z="-3230" type="chaotic" />
+		<spawn X="-79744" Y="160592" Z="-3330" type="chaotic" />
+		<spawn X="-79584" Y="159408" Z="-3180" type="chaotic" />
+		<spawn X="-74016" Y="150656" Z="-2800" type="chaotic" />
+		<spawn X="-72720" Y="149632" Z="-2780" type="chaotic" />
+		<spawn X="-75904" Y="162000" Z="-3300" type="chaotic" />
+		<spawn X="-75488" Y="161472" Z="-3250" type="chaotic" />
+		<spawn X="-74688" Y="160736" Z="-3200" type="chaotic" />
+		<spawn X="-74352" Y="161488" Z="-3250" type="chaotic" />
+		<spawn X="-76656" Y="160768" Z="-3280" type="chaotic" />
+		<spawn X="-77472" Y="160960" Z="-3470" type="chaotic" />
+		<spawn X="-77776" Y="158752" Z="-3270" type="chaotic" />
+		<spawn X="-80448" Y="161488" Z="-3420" type="chaotic" />
+		<spawn X="-75440" Y="162672" Z="-3350" type="chaotic" />
+		<spawn X="-81760" Y="161248" Z="-3200" type="chaotic" />
+		<!-- banish_point_list -->
+		<spawn X="-15881" Y="110651" Z="-2770" type="banish" />
+		<spawn X="-15679" Y="110168" Z="-2770" type="banish" />
+		<spawn X="-15553" Y="110780" Z="-2770" type="banish" />
+		<spawn X="-15281" Y="110142" Z="-2770" type="banish" />
+	</zone>
+	<zone name="dion_castle" type="CastleZone" shape="NPoly" minZ="-4646" maxZ="4000">
+		<stat name="castleId" val="2" />
+		<!-- residence_territory -->
+		<node X="24300" Y="163100" />
+		<node X="19700" Y="163100" />
+		<node X="19700" Y="156100" />
+		<node X="24300" Y="156100" />
+		<!-- owner_restart_point_list -->
+		<spawn X="20514" Y="160368" Z="-1993" />
+		<spawn X="20829" Y="160375" Z="-1993" />
+		<spawn X="20619" Y="160489" Z="-1993" />
+		<spawn X="20578" Y="160265" Z="-1993" />
+		<!-- other_restart_village_list -->
+		<spawn X="-81447" Y="152760" Z="-3170" type="other" />
+		<spawn X="-81447" Y="152880" Z="-3170" type="other" />
+		<spawn X="-81447" Y="152640" Z="-3170" type="other" />
+		<spawn X="-82186" Y="152760" Z="-3170" type="other" />
+		<spawn X="-82186" Y="152880" Z="-3170" type="other" />
+		<spawn X="-82186" Y="152640" Z="-3170" type="other" />
+		<spawn X="-81780" Y="152760" Z="-3170" type="other" />
+		<spawn X="-81780" Y="152880" Z="-3170" type="other" />
+		<spawn X="-81780" Y="152640" Z="-3170" type="other" />
+		<!-- chao_restart_point_list -->
+		<spawn X="-81616" Y="157104" Z="-3150" type="chaotic" />
+		<spawn X="-80688" Y="157216" Z="-3150" type="chaotic" />
+		<spawn X="-79568" Y="156960" Z="-3150" type="chaotic" />
+		<spawn X="-78800" Y="157744" Z="-3150" type="chaotic" />
+		<spawn X="-80448" Y="157968" Z="-3130" type="chaotic" />
+		<spawn X="-81712" Y="159536" Z="-3230" type="chaotic" />
+		<spawn X="-79744" Y="160592" Z="-3330" type="chaotic" />
+		<spawn X="-79584" Y="159408" Z="-3180" type="chaotic" />
+		<spawn X="-74016" Y="150656" Z="-2800" type="chaotic" />
+		<spawn X="-72720" Y="149632" Z="-2780" type="chaotic" />
+		<spawn X="-75904" Y="162000" Z="-3300" type="chaotic" />
+		<spawn X="-75488" Y="161472" Z="-3250" type="chaotic" />
+		<spawn X="-74688" Y="160736" Z="-3200" type="chaotic" />
+		<spawn X="-74352" Y="161488" Z="-3250" type="chaotic" />
+		<spawn X="-76656" Y="160768" Z="-3280" type="chaotic" />
+		<spawn X="-77472" Y="160960" Z="-3470" type="chaotic" />
+		<spawn X="-77776" Y="158752" Z="-3270" type="chaotic" />
+		<spawn X="-80448" Y="161488" Z="-3420" type="chaotic" />
+		<spawn X="-75440" Y="162672" Z="-3350" type="chaotic" />
+		<spawn X="-81760" Y="161248" Z="-3200" type="chaotic" />
+		<!-- banish_point_list -->
+		<spawn X="19852" Y="159170" Z="-2770" type="banish" />
+		<spawn X="19650" Y="159653" Z="-2770" type="banish" />
+		<spawn X="19524" Y="159041" Z="-2770" type="banish" />
+		<spawn X="19252" Y="159679" Z="-2770" type="banish" />
+	</zone>
+	<zone name="giran_castle" type="CastleZone" shape="NPoly" minZ="-4519" maxZ="19931">
+		<stat name="castleId" val="3" />
+		<!-- residence_territory -->
+		<node X="119200" Y="142800" />
+		<node X="119200" Y="147500" />
+		<node X="112300" Y="147500" />
+		<node X="112300" Y="142800" />
+		<!-- owner_restart_point_list -->
+		<spawn X="116540" Y="146655" Z="-1866" />
+		<spawn X="116547" Y="146340" Z="-1866" />
+		<spawn X="116661" Y="146550" Z="-1866" />
+		<spawn X="116437" Y="146591" Z="-1866" />
+		<!-- other_restart_village_list -->
+		<spawn X="116127" Y="76015" Z="-2729" type="other" />
+		<spawn X="115683" Y="77610" Z="-2650" type="other" />
+		<spawn X="117304" Y="76318" Z="-2670" type="other" />
+		<spawn X="119862" Y="76603" Z="-2220" type="other" />
+		<spawn X="117671" Y="78998" Z="-2210" type="other" />
+		<spawn X="117189" Y="78952" Z="-2210" type="other" />
+		<spawn X="115861" Y="75200" Z="-2550" type="other" />
+		<spawn X="118275" Y="74859" Z="-2557" type="other" />
+		<spawn X="118229" Y="74677" Z="-2450" type="other" />
+		<spawn X="115685" Y="75072" Z="-2550" type="other" />
+		<spawn X="116704" Y="75695" Z="-2680" type="other" />
+		<spawn X="116737" Y="76738" Z="-2650" type="other" />
+		<spawn X="115193" Y="77594" Z="-2670" type="other" />
+		<spawn X="116158" Y="77443" Z="-2660" type="other" />
+		<!-- chao_restart_point_list -->
+		<spawn X="122098" Y="70373" Z="-2864" type="chaotic" />
+		<spawn X="118674" Y="71218" Z="-2743" type="chaotic" />
+		<spawn X="118040" Y="67175" Z="-2905" type="chaotic" />
+		<spawn X="119300" Y="70660" Z="-2850" type="chaotic" />
+		<spawn X="118851" Y="70566" Z="-2800" type="chaotic" />
+		<spawn X="112655" Y="70976" Z="-3122" type="chaotic" />
+		<spawn X="119712" Y="66376" Z="-2960" type="chaotic" />
+		<spawn X="107511" Y="82890" Z="-2515" type="chaotic" />
+		<spawn X="105702" Y="82773" Z="-2803" type="chaotic" />
+		<spawn X="104257" Y="82194" Z="-2581" type="chaotic" />
+		<spawn X="104474" Y="81109" Z="-2651" type="chaotic" />
+		<!-- banish_point_list -->
+		<spawn X="115275" Y="147273" Z="-2770" type="banish" />
+		<spawn X="115758" Y="147475" Z="-2770" type="banish" />
+		<spawn X="115146" Y="147601" Z="-2770" type="banish" />
+		<spawn X="115784" Y="147873" Z="-2770" type="banish" />
+	</zone>
+	<zone name="oren_castle" type="CastleZone" shape="NPoly" minZ="-4246" maxZ="19931">
+		<stat name="castleId" val="4" />
+		<!-- residence_territory -->
+		<node X="85400" Y="34900" />
+		<node X="85400" Y="39700" />
+		<node X="78200" Y="39700" />
+		<node X="78200" Y="34900" />
+		<!-- owner_restart_point_list -->
+		<spawn X="82616" Y="38750" Z="-1593" />
+		<spawn X="82623" Y="38435" Z="-1593" />
+		<spawn X="82737" Y="38645" Z="-1593" />
+		<spawn X="82513" Y="38686" Z="-1593" />
+		<!-- other_restart_village_list -->
+		<spawn X="116127" Y="76015" Z="-2729" type="other" />
+		<spawn X="115683" Y="77610" Z="-2650" type="other" />
+		<spawn X="117304" Y="76318" Z="-2670" type="other" />
+		<spawn X="119862" Y="76603" Z="-2220" type="other" />
+		<spawn X="117671" Y="78998" Z="-2210" type="other" />
+		<spawn X="117189" Y="78952" Z="-2210" type="other" />
+		<spawn X="115861" Y="75200" Z="-2550" type="other" />
+		<spawn X="118275" Y="74859" Z="-2557" type="other" />
+		<spawn X="118229" Y="74677" Z="-2450" type="other" />
+		<spawn X="115685" Y="75072" Z="-2550" type="other" />
+		<spawn X="116704" Y="75695" Z="-2680" type="other" />
+		<spawn X="116737" Y="76738" Z="-2650" type="other" />
+		<spawn X="115193" Y="77594" Z="-2670" type="other" />
+		<spawn X="116158" Y="77443" Z="-2660" type="other" />
+		<!-- chao_restart_point_list -->
+		<spawn X="122098" Y="70373" Z="-2864" type="chaotic" />
+		<spawn X="118674" Y="71218" Z="-2743" type="chaotic" />
+		<spawn X="118040" Y="67175" Z="-2905" type="chaotic" />
+		<spawn X="119300" Y="70660" Z="-2850" type="chaotic" />
+		<spawn X="118851" Y="70566" Z="-2800" type="chaotic" />
+		<spawn X="112655" Y="70976" Z="-3122" type="chaotic" />
+		<spawn X="119712" Y="66376" Z="-2960" type="chaotic" />
+		<spawn X="107511" Y="82890" Z="-2515" type="chaotic" />
+		<spawn X="105702" Y="82773" Z="-2803" type="chaotic" />
+		<spawn X="104257" Y="82194" Z="-2581" type="chaotic" />
+		<spawn X="104474" Y="81109" Z="-2651" type="chaotic" />
+		<!-- banish_point_list -->
+		<spawn X="81353" Y="39421" Z="-2770" type="banish" />
+		<spawn X="81836" Y="39623" Z="-2770" type="banish" />
+		<spawn X="81224" Y="39749" Z="-2770" type="banish" />
+		<spawn X="81862" Y="40021" Z="-2770" type="banish" />
+	</zone>
+	<zone name="aden_castle" type="CastleZone" shape="NPoly" minZ="-4000" maxZ="8800">
+		<stat name="castleId" val="5" />
+		<!-- residence_territory -->
+		<node X="144300" Y="461" />
+		<node X="150500" Y="475" />
+		<node X="150500" Y="8700" />
+		<node X="144300" Y="8700" />
+		<!-- owner_restart_point_list -->
+		<spawn X="147700" Y="4608" Z="-2784" />
+		<spawn X="147705" Y="4865" Z="-2784" />
+		<spawn X="147200" Y="4865" Z="-2784" />
+		<spawn X="147200" Y="4350" Z="-2784" />
+		<spawn X="147705" Y="4350" Z="-2784" />
+		<!-- other_restart_village_list -->
+		<spawn X="116127" Y="76015" Z="-2729" type="other" />
+		<spawn X="115683" Y="77610" Z="-2650" type="other" />
+		<spawn X="117304" Y="76318" Z="-2670" type="other" />
+		<spawn X="119862" Y="76603" Z="-2220" type="other" />
+		<spawn X="117671" Y="78998" Z="-2210" type="other" />
+		<spawn X="117189" Y="78952" Z="-2210" type="other" />
+		<spawn X="115861" Y="75200" Z="-2550" type="other" />
+		<spawn X="118275" Y="74859" Z="-2557" type="other" />
+		<spawn X="118229" Y="74677" Z="-2450" type="other" />
+		<spawn X="115685" Y="75072" Z="-2550" type="other" />
+		<spawn X="116704" Y="75695" Z="-2680" type="other" />
+		<spawn X="116737" Y="76738" Z="-2650" type="other" />
+		<spawn X="115193" Y="77594" Z="-2670" type="other" />
+		<spawn X="116158" Y="77443" Z="-2660" type="other" />
+		<!-- chao_restart_point_list -->
+		<spawn X="122098" Y="70373" Z="-2864" type="chaotic" />
+		<spawn X="118674" Y="71218" Z="-2743" type="chaotic" />
+		<spawn X="118040" Y="67175" Z="-2905" type="chaotic" />
+		<spawn X="119300" Y="70660" Z="-2850" type="chaotic" />
+		<spawn X="118851" Y="70566" Z="-2800" type="chaotic" />
+		<spawn X="112655" Y="70976" Z="-3122" type="chaotic" />
+		<spawn X="119712" Y="66376" Z="-2960" type="chaotic" />
+		<spawn X="107511" Y="82890" Z="-2515" type="chaotic" />
+		<spawn X="105702" Y="82773" Z="-2803" type="chaotic" />
+		<spawn X="104257" Y="82194" Z="-2581" type="chaotic" />
+		<spawn X="104474" Y="81109" Z="-2651" type="chaotic" />
+		<!-- banish_point_list -->
+		<spawn X="151765" Y="4175" Z="-592" type="banish" />
+		<spawn X="151555" Y="2660" Z="-592" type="banish" />
+		<spawn X="151065" Y="1813" Z="-592" type="banish" />
+		<spawn X="150952" Y="2615" Z="-592" type="banish" />
+	</zone>
+	<zone name="innadrile_castle" type="CastleZone" shape="NPoly" minZ="-2742" maxZ="4000">
+		<stat name="castleId" val="6" />
+		<!-- residence_territory -->
+		<node X="118200" Y="251900" />
+		<node X="113500" Y="251900" />
+		<node X="113500" Y="244700" />
+		<node X="118200" Y="244700" />
+		<!-- owner_restart_point_list -->
+		<spawn X="114465" Y="249147" Z="-89" />
+		<spawn X="114780" Y="249154" Z="-89" />
+		<spawn X="114570" Y="249268" Z="-89" />
+		<spawn X="114529" Y="249044" Z="-89" />
+		<!-- other_restart_village_list -->
+		<spawn X="116127" Y="76015" Z="-2729" type="other" />
+		<spawn X="115683" Y="77610" Z="-2650" type="other" />
+		<spawn X="117304" Y="76318" Z="-2670" type="other" />
+		<spawn X="119862" Y="76603" Z="-2220" type="other" />
+		<spawn X="117671" Y="78998" Z="-2210" type="other" />
+		<spawn X="117189" Y="78952" Z="-2210" type="other" />
+		<spawn X="115861" Y="75200" Z="-2550" type="other" />
+		<spawn X="118275" Y="74859" Z="-2557" type="other" />
+		<spawn X="118229" Y="74677" Z="-2450" type="other" />
+		<spawn X="115685" Y="75072" Z="-2550" type="other" />
+		<spawn X="116704" Y="75695" Z="-2680" type="other" />
+		<spawn X="116737" Y="76738" Z="-2650" type="other" />
+		<spawn X="115193" Y="77594" Z="-2670" type="other" />
+		<spawn X="116158" Y="77443" Z="-2660" type="other" />
+		<!-- chao_restart_point_list -->
+		<spawn X="122098" Y="70373" Z="-2864" type="chaotic" />
+		<spawn X="118674" Y="71218" Z="-2743" type="chaotic" />
+		<spawn X="118040" Y="67175" Z="-2905" type="chaotic" />
+		<spawn X="119300" Y="70660" Z="-2850" type="chaotic" />
+		<spawn X="118851" Y="70566" Z="-2800" type="chaotic" />
+		<spawn X="112655" Y="70976" Z="-3122" type="chaotic" />
+		<spawn X="119712" Y="66376" Z="-2960" type="chaotic" />
+		<spawn X="107511" Y="82890" Z="-2515" type="chaotic" />
+		<spawn X="105702" Y="82773" Z="-2803" type="chaotic" />
+		<spawn X="104257" Y="82194" Z="-2581" type="chaotic" />
+		<spawn X="104474" Y="81109" Z="-2651" type="chaotic" />
+		<!-- banish_point_list -->
+		<spawn X="118730" Y="243416" Z="-1060" type="banish" />
+		<spawn X="118932" Y="242933" Z="-1060" type="banish" />
+		<spawn X="119058" Y="243545" Z="-1060" type="banish" />
+		<spawn X="119330" Y="242907" Z="-1060" type="banish" />
+	</zone>
+	<zone name="godad_castle" type="CastleZone" shape="NPoly" minZ="-3670" maxZ="4830">
+		<stat name="castleId" val="7" />
+		<!-- residence_territory -->
+		<node X="144000" Y="-52200" />
+		<node X="151000" Y="-52200" />
+		<node X="151100" Y="-48000" />
+		<node X="150000" Y="-45000" />
+		<node X="147500" Y="-44300" />
+		<node X="145000" Y="-45000" />
+		<node X="144000" Y="-48000" />
+		<node X="144000" Y="-52200" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be 0 -->
+		<node X="151000" Y="-52200" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be 0 -->
+		<node X="151000" Y="-53200" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be 0 -->
+		<node X="144000" Y="-53200" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be 0 -->
+		<!-- owner_restart_point_list -->
+		<spawn X="147408" Y="-46448" Z="-963" />
+		<spawn X="147520" Y="-46432" Z="-963" />
+		<spawn X="147408" Y="-46896" Z="-963" />
+		<spawn X="147536" Y="-46896" Z="-963" />
+		<!-- other_restart_village_list -->
+		<spawn X="38096" Y="-46976" Z="899" type="other" />
+		<spawn X="38608" Y="-47168" Z="899" type="other" />
+		<spawn X="38752" Y="-47792" Z="899" type="other" />
+		<spawn X="38848" Y="-48640" Z="899" type="other" />
+		<spawn X="38272" Y="-49008" Z="899" type="other" />
+		<spawn X="38112" Y="-49792" Z="899" type="other" />
+		<spawn X="43408" Y="-51120" Z="-800" type="other" />
+		<spawn X="43536" Y="-50416" Z="-800" type="other" />
+		<spawn X="44368" Y="-50592" Z="-800" type="other" />
+		<spawn X="44000" Y="-49952" Z="-800" type="other" />
+		<spawn X="45072" Y="-49936" Z="-800" type="other" />
+		<spawn X="45824" Y="-49056" Z="-800" type="other" />
+		<spawn X="45632" Y="-47968" Z="-800" type="other" />
+		<spawn X="44864" Y="-47824" Z="-800" type="other" />
+		<spawn X="43744" Y="-47920" Z="-800" type="other" />
+		<spawn X="43792" Y="-48928" Z="-800" type="other" />
+		<!-- chao_restart_point_list -->
+		<spawn X="42640" Y="-54496" Z="-2310" type="chaotic" />
+		<spawn X="38304" Y="-55440" Z="-1136" type="chaotic" />
+		<spawn X="40192" Y="-57600" Z="-2343" type="chaotic" />
+		<spawn X="38400" Y="-56832" Z="-992" type="chaotic" />
+		<spawn X="35632" Y="-54800" Z="-1744" type="chaotic" />
+		<spawn X="36407" Y="-54245" Z="-1224" type="chaotic" />
+		<spawn X="43936" Y="-56480" Z="-3627" type="chaotic" />
+		<spawn X="39440" Y="-60080" Z="-2870" type="chaotic" />
+		<spawn X="41376" Y="-55376" Z="-1488" type="chaotic" />
+		<spawn X="41920" Y="-57760" Z="-2392" type="chaotic" />
+		<spawn X="41409" Y="-58699" Z="-2848" type="chaotic" />
+		<spawn X="40784" Y="-59888" Z="-2600" type="chaotic" />
+		<!-- banish_point_list -->
+		<spawn X="154848" Y="-52608" Z="-2962" type="banish" />
+		<spawn X="156400" Y="-53808" Z="-2873" type="banish" />
+		<spawn X="138439" Y="-45153" Z="-2064" type="banish" />
+		<spawn X="140871" Y="-55380" Z="-3224" type="banish" />
+	</zone>
+	<zone name="rune_castle" type="CastleZone" shape="NPoly" minZ="-3200" maxZ="10020">
+		<stat name="castleId" val="8" />
+		<!-- residence_territory -->
+		<node X="6005" Y="-56306" />
+		<node X="15112" Y="-52711" />
+		<node X="16831" Y="-52270" />
+		<node X="17745" Y="-51547" />
+		<node X="18326" Y="-50543" />
+		<node X="18666" Y="-49413" />
+		<node X="18680" Y="-48882" />
+		<node X="18334" Y="-47737" />
+		<node X="17756" Y="-46741" />
+		<node X="16808" Y="-46019" />
+		<node X="15114" Y="-45624" />
+		<node X="6005" Y="-41610" />
+		<!-- owner_restart_point_list -->
+		<spawn X="10891" Y="-49058" Z="3890" />
+		<spawn X="11224" Y="-49116" Z="3890" />
+		<spawn X="10974" Y="-49244" Z="3890" />
+		<spawn X="10658" Y="-49211" Z="3890" />
+		<!-- other_restart_village_list -->
+		<spawn X="148560" Y="-55904" Z="-2779" type="other" />
+		<spawn X="150704" Y="-55744" Z="-2979" type="other" />
+		<spawn X="150400" Y="-56752" Z="-2979" type="other" />
+		<spawn X="149872" Y="-57424" Z="-2979" type="other" />
+		<spawn X="149088" Y="-56256" Z="-2779" type="other" />
+		<spawn X="147664" Y="-56464" Z="-2779" type="other" />
+		<spawn X="147680" Y="-56928" Z="-2779" type="other" />
+		<spawn X="146832" Y="-55904" Z="-2779" type="other" />
+		<spawn X="146368" Y="-56256" Z="-2779" type="other" />
+		<spawn X="149120" Y="-58064" Z="-2979" type="other" />
+		<spawn X="148288" Y="-58304" Z="-2979" type="other" />
+		<spawn X="147680" Y="-58208" Z="-2979" type="other" />
+		<spawn X="147232" Y="-58480" Z="-2979" type="other" />
+		<spawn X="146272" Y="-58176" Z="-2979" type="other" />
+		<spawn X="145696" Y="-57696" Z="-2979" type="other" />
+		<spawn X="145264" Y="-57680" Z="-2979" type="other" />
+		<spawn X="145392" Y="-56960" Z="-2979" type="other" />
+		<spawn X="144752" Y="-56752" Z="-2979" type="other" />
+		<spawn X="144960" Y="-56224" Z="-2979" type="other" />
+		<spawn X="144944" Y="-55392" Z="-2979" type="other" />
+		<spawn X="144496" Y="-55088" Z="-2979" type="other" />
+		<!-- chao_restart_point_list -->
+		<spawn X="142656" Y="-55008" Z="-3024" type="chaotic" />
+		<spawn X="142832" Y="-55680" Z="-3462" type="chaotic" />
+		<spawn X="143152" Y="-56368" Z="-3456" type="chaotic" />
+		<spawn X="145344" Y="-59472" Z="-3344" type="chaotic" />
+		<spawn X="145872" Y="-59744" Z="-3328" type="chaotic" />
+		<spawn X="150304" Y="-59800" Z="-3504" type="chaotic" />
+		<spawn X="145248" Y="-60064" Z="-3440" type="chaotic" />
+		<spawn X="144368" Y="-59616" Z="-3512" type="chaotic" />
+		<spawn X="149680" Y="-59600" Z="-3440" type="chaotic" />
+		<spawn X="149360" Y="-60576" Z="-3520" type="chaotic" />
+		<spawn X="152114" Y="-57296" Z="-3451" type="chaotic" />
+		<spawn X="150492" Y="-59719" Z="-3611" type="chaotic" />
+		<spawn X="148791" Y="-60361" Z="-3537" type="chaotic" />
+		<spawn X="146499" Y="-60242" Z="-3455" type="chaotic" />
+		<spawn X="143052" Y="-56418" Z="-3490" type="chaotic" />
+		<!-- banish_point_list -->
+		<spawn X="27384" Y="-50899" Z="-1344" type="banish" />
+		<spawn X="28024" Y="-52804" Z="-1840" type="banish" />
+		<spawn X="28331" Y="-48740" Z="-1344" type="banish" />
+		<spawn X="29203" Y="-50908" Z="-2056" type="banish" />
+	</zone>
+	<zone name="schuttgart_castle" type="CastleZone" shape="NPoly" minZ="-3670" maxZ="8830">
+		<stat name="castleId" val="9" />
+		<!-- residence_territory -->
+		<node X="71700" Y="-159600" />
+		<node X="83000" Y="-159600" />
+		<node X="83000" Y="-152500" />
+		<node X="81200" Y="-150900" />
+		<node X="80000" Y="-149200" />
+		<node X="77600" Y="-148500" />
+		<node X="75200" Y="-149200" />
+		<node X="74000" Y="-150900" />
+		<node X="71700" Y="-152500" />
+		<!-- owner_restart_point_list -->
+		<spawn X="77619" Y="-150591" Z="770" />
+		<spawn X="77487" Y="-150735" Z="770" />
+		<spawn X="77575" Y="-150992" Z="770" />
+		<spawn X="77646" Y="-150441" Z="770" />
+		<!-- other_restart_village_list -->
+		<spawn X="38096" Y="-46976" Z="899" type="other" />
+		<spawn X="38608" Y="-47168" Z="899" type="other" />
+		<spawn X="38752" Y="-47792" Z="899" type="other" />
+		<spawn X="38848" Y="-48640" Z="899" type="other" />
+		<spawn X="38272" Y="-49008" Z="899" type="other" />
+		<spawn X="38112" Y="-49792" Z="899" type="other" />
+		<spawn X="43408" Y="-51120" Z="-800" type="other" />
+		<spawn X="43536" Y="-50416" Z="-800" type="other" />
+		<spawn X="44368" Y="-50592" Z="-800" type="other" />
+		<spawn X="44000" Y="-49952" Z="-800" type="other" />
+		<spawn X="45072" Y="-49936" Z="-800" type="other" />
+		<spawn X="45824" Y="-49056" Z="-800" type="other" />
+		<spawn X="45632" Y="-47968" Z="-800" type="other" />
+		<spawn X="44864" Y="-47824" Z="-800" type="other" />
+		<spawn X="43744" Y="-47920" Z="-800" type="other" />
+		<spawn X="43792" Y="-48928" Z="-800" type="other" />
+		<!-- chao_restart_point_list -->
+		<spawn X="42640" Y="-54496" Z="-2310" type="chaotic" />
+		<spawn X="38304" Y="-55440" Z="-1136" type="chaotic" />
+		<spawn X="40192" Y="-57600" Z="-2343" type="chaotic" />
+		<spawn X="38400" Y="-56832" Z="-992" type="chaotic" />
+		<spawn X="35632" Y="-54800" Z="-1744" type="chaotic" />
+		<spawn X="36407" Y="-54245" Z="-1224" type="chaotic" />
+		<spawn X="43936" Y="-56480" Z="-3627" type="chaotic" />
+		<spawn X="39440" Y="-60080" Z="-2870" type="chaotic" />
+		<spawn X="41376" Y="-55376" Z="-1488" type="chaotic" />
+		<spawn X="41920" Y="-57760" Z="-2392" type="chaotic" />
+		<spawn X="41409" Y="-58699" Z="-2848" type="chaotic" />
+		<spawn X="40784" Y="-59888" Z="-2600" type="chaotic" />
+		<!-- banish_point_list -->
+		<spawn X="81614" Y="-150548" Z="-768" type="banish" />
+		<spawn X="76698" Y="-146662" Z="-920" type="banish" />
+		<spawn X="73717" Y="-151339" Z="-624" type="banish" />
+		<spawn X="75951" Y="-145789" Z="-1168" type="banish" />
+	</zone>
+</list>

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.dao;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.data.xml.holder.ProductDataHolder;
 import org.l2j.gameserver.model.Player;
@@ -38,7 +38,7 @@ public class CharacterProductHistoryDAO
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT product_id, last_purchase_time FROM character_product_history WHERE char_id = ?");
 			statement.setInt(1, owner.getObjectId());
 			rset = statement.executeQuery();
@@ -71,7 +71,7 @@ public class CharacterProductHistoryDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO character_product_history (char_id,product_id,last_purchase_time) VALUES(?,?,?)");
 			statement.setInt(1, owner.getObjectId());
 			statement.setInt(2, item.getProduct().getId());

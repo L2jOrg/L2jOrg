@@ -1,6 +1,6 @@
 package org.l2j.gameserver.instancemanager;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Announcements;
 import org.l2j.gameserver.Config;
@@ -75,7 +75,7 @@ public class RaidBossSpawnManager
 
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			rset = con.createStatement().executeQuery("SELECT * FROM `raidboss_status`");
 			while(rset.next())
 			{
@@ -138,7 +138,7 @@ public class RaidBossSpawnManager
 
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO `raidboss_status` (id, current_hp, current_mp, death_time, respawn_delay) VALUES (?,?,?,?,?)");
 			statement.setInt(1, id);
 			statement.setDouble(2, info.getDouble("current_hp"));

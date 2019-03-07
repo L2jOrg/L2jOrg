@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hitConditionBonus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/hitConditionBonus.xsd">
+	<back val="10" /> <!-- 10% attacking to enemy back -->
+	<dark val="-10" /> <!-- -10% attacking when night -->
+	<front val="0" /> <!-- 0% attacking to enemy front -->
+	<high val="3" /> <!-- 3% attacking from high place -->
+	<low val="-3" /> <!-- -3% attacking from low place -->
+	<rain val="-3" /> <!-- -3% attacking when rain -->
+	<side val="5" /> <!-- 5% attacking to enemy sides -->
+</hitConditionBonus>

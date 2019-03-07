@@ -1,0 +1,3416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="29001" level="40" type="L2GrandBoss" name="Queen Ant">
+		<parameters>
+			<minions name="Privates">
+				<npc id="29003" count="6" respawnTime="10" weightPoint="1" />
+				<npc id="29005" count="8" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
+		<race>BUG</race>
+		<sex>FEMALE</sex>
+		<acquire exp="2179535" sp="65386" raidPoints="300" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="687245.8498023715" hpRegen="208" mp="300" mpRegen="2.1" />
+			<attack physical="105" magical="8" random="30" critical="7" accuracy="40" attackSpeed="172" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1252" magical="229" />
+			<speed>
+				<walk ground="80" />
+				<run ground="230" />
+			</speed>
+			<hitTime>370</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status attackable="true" undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4019" level="1" /> <!-- Decrease Speed -->
+			<skill id="4021" level="1" /> <!-- Queen Ant -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4017" level="1" /> <!-- Queen Ant's Blow -->
+		</skillList>
+		<corpseTime>300</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="2000" aggroRange="2000">
+			<clanList>
+				<clan>QUEEN_ANT</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="45" />
+			<height normal="53" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="851" min="1" max="3" chance="34.67" /> <!-- Onyx Beast's Eye Earring -->
+				<item id="355" min="1" max="1" chance="34.47" /> <!-- Dwarven Chain Mail Shirt -->
+				<item id="2496" min="1" max="1" chance="34.07" /> <!-- Dwarven Chain Shield -->
+				<item id="914" min="1" max="1" chance="33.63" /> <!-- Dark Necklace -->
+				<item id="916" min="1" max="1" chance="33.55" /> <!-- Necklace of Protection -->
+				<item id="882" min="1" max="3" chance="33.34" /> <!-- Mithril Ring -->
+				<item id="852" min="1" max="3" chance="33.11" /> <!-- Moonstone Earring -->
+				<item id="883" min="1" max="3" chance="32.56" /> <!-- Aquastone Ring -->
+				<item id="853" min="1" max="3" chance="32.54" /> <!-- Earring of Protection -->
+				<item id="382" min="1" max="1" chance="32.12" /> <!-- Dwarven Chain Gaiters -->
+				<item id="884" min="1" max="3" chance="31.83" /> <!-- Ring of Protection -->
+				<item id="915" min="1" max="1" chance="31.77" /> <!-- Aquastone Necklace -->
+				<item id="399" min="1" max="1" chance="25.81" /> <!-- Rind Leather Armor -->
+				<item id="500" min="1" max="1" chance="25.63" /> <!-- Great Helmet -->
+				<item id="419" min="1" max="1" chance="24.75" /> <!-- Rind Leather Gaiters -->
+				<item id="440" min="1" max="1" chance="24.04" /> <!-- Robe of Seal -->
+				<item id="6660" min="1" max="1" chance="20.51" /> <!-- Queen Ant's Ring -->
+				<item id="498" min="1" max="3" chance="17.3" /> <!-- Steel Plate Helmet -->
+				<item id="2455" min="1" max="3" chance="17.21" /> <!-- Plated Leather Gloves -->
+				<item id="1126" min="1" max="3" chance="16.7" /> <!-- Crimson Boots -->
+				<item id="398" min="1" max="1" chance="16.59" /> <!-- Plated Leather Armor -->
+				<item id="418" min="1" max="1" chance="16.3" /> <!-- Plated Leather Gaiters -->
+				<item id="632" min="1" max="3" chance="16.2" /> <!-- Knight's Shield -->
+				<item id="1125" min="1" max="3" chance="7.218" /> <!-- Assault Boots -->
+				<item id="2412" min="1" max="3" chance="7.211" /> <!-- Plate Helmet -->
+				<item id="2451" min="1" max="3" chance="7.209" /> <!-- Sage's Worn Gloves -->
+				<item id="2427" min="1" max="3" chance="7.208" /> <!-- Salamander Skin Boots -->
+				<item id="297" min="1" max="1" chance="7.205" /> <!-- Glaive -->
+				<item id="187" min="1" max="1" chance="7.194" /> <!-- Atuba Hammer -->
+				<item id="188" min="1" max="1" chance="7.193" /> <!-- Ghost Staff -->
+				<item id="262" min="1" max="1" chance="7.189" /> <!-- Scallop Jamadhr -->
+				<item id="322" min="1" max="1" chance="7.184" /> <!-- Vajra Wand -->
+				<item id="396" min="1" max="1" chance="7.18" /> <!-- Salamander Skin Mail -->
+				<item id="321" min="1" max="1" chance="7.171" /> <!-- Demon's Fangs -->
+				<item id="225" min="1" max="1" chance="7.15" /> <!-- Mithril Dagger -->
+				<item id="380" min="1" max="1" chance="7.147" /> <!-- Plate Gaiters -->
+				<item id="438" min="1" max="3" chance="7.14" /> <!-- Sage's Rags -->
+				<item id="630" min="1" max="3" chance="7.133" /> <!-- Square Shield -->
+				<item id="61" min="1" max="3" chance="7.123" /> <!-- Mithril Gloves -->
+				<item id="189" min="1" max="1" chance="7.121" /> <!-- Staff of Life -->
+				<item id="2428" min="1" max="3" chance="7.116" /> <!-- Plate Boots -->
+				<item id="159" min="1" max="1" chance="7.114" /> <!-- Bonebreaker -->
+				<item id="320" min="1" max="1" chance="7.111" /> <!-- Blue Crystal Skull -->
+				<item id="190" min="1" max="1" chance="7.101" /> <!-- Atuba Mace -->
+				<item id="280" min="1" max="1" chance="7.1" /> <!-- Light Crossbow -->
+				<item id="2499" min="1" max="1" chance="7.086" /> <!-- Elven Long Sword -->
+				<item id="353" min="1" max="1" chance="7.091" /> <!-- Half Plate Armor -->
+				<item id="70" min="1" max="1" chance="7.088" /> <!-- Claymore -->
+				<item id="607" min="1" max="3" chance="7.086" /> <!-- Ogre Power Gauntlets -->
+				<item id="497" min="1" max="3" chance="7.083" /> <!-- Chain Helmet -->
+				<item id="2494" min="1" max="3" chance="6.983" /> <!-- Plate Shield -->
+				<item id="74" min="1" max="1" chance="6.432" /> <!-- Katana -->
+				<item id="282" min="1" max="1" chance="6.395" /> <!-- Elemental Bow -->
+				<item id="131" min="1" max="1" chance="6.388" /> <!-- Spirit Sword -->
+				<item id="94" min="1" max="1" chance="6.375" /> <!-- Bec de Corbin -->
+				<item id="242" min="1" max="1" chance="6.371" /> <!-- Soulfire Dirk -->
+				<item id="227" min="1" max="1" chance="6.356" /> <!-- Stiletto -->
+				<item id="195" min="1" max="1" chance="6.329" /> <!-- Cursed Staff -->
+				<item id="73" min="1" max="1" chance="6.312" /> <!-- Shamshir -->
+				<item id="325" min="1" max="1" chance="6.307" /> <!-- Horn of Glory -->
+				<item id="285" min="1" max="1" chance="6.301" /> <!-- Noble Elven Bow -->
+				<item id="133" min="1" max="1" chance="6.298" /> <!-- Raid Sword -->
+				<item id="631" min="1" max="3" chance="5.684" /> <!-- Eldarake -->
+				<item id="302" min="1" max="1" chance="5.67" /> <!-- Body Slasher -->
+				<item id="160" min="1" max="1" chance="5.62" /> <!-- Battle Axe -->
+				<item id="62" min="1" max="3" chance="5.618" /> <!-- Reinforced Mithril Boots -->
+				<item id="89" min="1" max="1" chance="5.615" /> <!-- Big Hammer -->
+				<item id="192" min="1" max="1" chance="5.614" /> <!-- Crystal Staff -->
+				<item id="2454" min="1" max="3" chance="5.613" /> <!-- Karmian Gloves -->
+				<item id="2429" min="1" max="3" chance="5.603" /> <!-- Chain Boots -->
+				<item id="2453" min="1" max="3" chance="5.597" /> <!-- Chain Gloves -->
+				<item id="72" min="1" max="1" chance="5.592" /> <!-- Stormbringer -->
+				<item id="263" min="1" max="1" chance="5.585" /> <!-- Chakram -->
+				<item id="2431" min="1" max="3" chance="5.584" /> <!-- Plated Leather Boots -->
+				<item id="2432" min="1" max="3" chance="5.583" /> <!-- Dwarven Chain Boots -->
+				<item id="2430" min="1" max="3" chance="5.58" /> <!-- Karmian Boots -->
+				<item id="226" min="1" max="1" chance="5.578" /> <!-- Cursed Dagger -->
+				<item id="354" min="1" max="1" chance="5.547" /> <!-- Chain Mail Shirt -->
+				<item id="2452" min="1" max="3" chance="5.546" /> <!-- Reinforced Mithril Gloves -->
+				<item id="439" min="1" max="1" chance="5.545" /> <!-- Karmian Tunic -->
+				<item id="2433" min="1" max="3" chance="5.543" /> <!-- Boots of Seal -->
+				<item id="397" min="1" max="1" chance="5.542" /> <!-- Reinforced Mithril Shirt -->
+				<item id="71" min="1" max="1" chance="5.539" /> <!-- Flamberge -->
+				<item id="298" min="1" max="1" chance="5.538" /> <!-- Orcish Glaive -->
+				<item id="230" min="1" max="1" chance="5.531" /> <!-- Needle Wolverine -->
+				<item id="281" min="1" max="1" chance="5.53" /> <!-- Crystallized Ice Bow -->
+				<item id="471" min="1" max="1" chance="5.528" /> <!-- Karmian Stockings -->
+				<item id="193" min="1" max="1" chance="5.523" /> <!-- Stick of Faith -->
+				<item id="232" min="1" max="1" chance="5.522" /> <!-- Dark Elven Dagger -->
+				<item id="96" min="1" max="1" chance="5.521" /> <!-- Scythe -->
+				<item id="161" min="1" max="1" chance="5.521" /> <!-- Silver Axe -->
+				<item id="2495" min="1" max="3" chance="5.497" /> <!-- Chain Shield -->
+				<item id="191" min="1" max="1" chance="5.495" /> <!-- Heavy Doom Hammer -->
+				<item id="2387" min="1" max="1" chance="5.491" /> <!-- Reinforced Mithril Gaiters -->
+				<item id="381" min="1" max="1" chance="5.488" /> <!-- Chain Gaiters -->
+				<item id="173" min="1" max="1" chance="5.483" /> <!-- Skull Graver -->
+				<item id="194" min="1" max="1" chance="5.482" /> <!-- Heavy Doom Axe -->
+				<item id="2413" min="1" max="3" chance="5.481" /> <!-- Chain Hood -->
+				<item id="70000" min="76" max="228" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="29002" level="29" type="L2Monster" name="Queen Ant Larva">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="591" hpRegen="3.5" mp="315" mpRegen="1.5" />
+			<attack physical="89.21" magical="59.01" random="30" critical="7" accuracy="40" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="118.72" magical="84.16" />
+			<speed>
+				<walk ground="40" />
+				<run ground="60" />
+			</speed>
+			<hitTime>350</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>QUEEN_ANT</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="8" />
+		</collision>
+	</npc>
+	<npc id="29003" level="35" type="L2Monster" name="Nurse Ant">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire sp="1" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4000" hpRegen="108" mp="402" mpRegen="1.8" />
+			<attack physical="637" magical="395" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="547" magical="200" />
+			<speed>
+				<walk ground="40" />
+				<run ground="130" />
+			</speed>
+			<hitTime>260</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4020" level="1" /> <!-- Recovery -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="700" aggroRange="450">
+			<clanList>
+				<clan>QUEEN_ANT</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="29004" level="37" type="L2Monster" name="Escort Ant">
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="MoveAroundSocial2" value="120" />
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire sp="1" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4343" hpRegen="115" mp="432" mpRegen="1.8" />
+			<attack physical="178" magical="27" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="578" magical="211" />
+			<speed>
+				<walk ground="40" />
+				<run ground="230" />
+			</speed>
+			<hitTime>260</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="700" isAggressive="true">
+			<clanList>
+				<clan>QUEEN_ANT</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="29005" level="39" type="L2Monster" name="Royal Guard Ant">
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="MoveAroundSocial2" value="120" />
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire sp="1" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7051" hpRegen="122" mp="463" mpRegen="1.8" />
+			<attack physical="1190" magical="1074" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="610" magical="223" />
+			<speed>
+				<walk ground="40" />
+				<run ground="230" />
+			</speed>
+			<hitTime>260</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="700" aggroRange="450">
+			<clanList>
+				<clan>QUEEN_ANT</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="29006" level="50" type="L2GrandBoss" name="Core">
+		<parameters>
+			<minions name="Privates">
+				<npc id="29008" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="29011" count="4" respawnTime="360" weightPoint="1" />
+				<npc id="29007" count="10" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="2041407" sp="61242" raidPoints="300" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="930422.1343873518" hpRegen="441.65" mp="1708" mpRegen="20.0" />
+			<attack physical="722.31" magical="1398.68" random="30" critical="7" accuracy="40" attackSpeed="172" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1602" magical="293" />
+			<speed>
+				<walk ground="50" />
+				<run ground="110" />
+			</speed>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status attackable="true" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<corpseTime>10</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="2000">
+			<clanList>
+				<clan>CURMA_CORE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="140" />
+			<height normal="75" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="608" min="1" max="3" chance="34.99" /> <!-- Mithril Gauntlets -->
+				<item id="854" min="1" max="3" chance="33.46" /> <!-- Earring of Seal -->
+				<item id="1127" min="1" max="3" chance="33.3" /> <!-- Forgotten Boots -->
+				<item id="885" min="1" max="3" chance="32.95" /> <!-- Ring of Ages -->
+				<item id="917" min="1" max="1" chance="32.52" /> <!-- Necklace of Mermaid -->
+				<item id="1149" min="1" max="3" chance="31.87" /> <!-- Shining Circlet -->
+				<item id="420" min="1" max="1" chance="26.08" /> <!-- Theca Leather Gaiters -->
+				<item id="472" min="1" max="1" chance="25.78" /> <!-- Demon's Stockings -->
+				<item id="400" min="1" max="1" chance="25.47" /> <!-- Theca Leather Armor -->
+				<item id="2460" min="1" max="1" chance="25.23" /> <!-- Theca Leather Gloves -->
+				<item id="2435" min="1" max="1" chance="25.04" /> <!-- Demon's Boots -->
+				<item id="2436" min="1" max="1" chance="24.9" /> <!-- Theca Leather Boots -->
+				<item id="441" min="1" max="1" chance="24.26" /> <!-- Demon's Tunic -->
+				<item id="2459" min="1" max="1" chance="24.03" /> <!-- Demon's Gloves -->
+				<item id="499" min="1" max="3" chance="20.88" /> <!-- Mithril Helmet -->
+				<item id="473" min="1" max="1" chance="20.74" /> <!-- Divine Stockings -->
+				<item id="401" min="1" max="1" chance="20.66" /> <!-- Drake Leather Armor -->
+				<item id="2437" min="1" max="1" chance="20.65" /> <!-- Drake Leather Boots -->
+				<item id="2462" min="1" max="1" chance="20.64" /> <!-- Full Plate Gauntlets -->
+				<item id="103" min="1" max="3" chance="20.48" /> <!-- Tower Shield -->
+				<item id="2468" min="1" max="3" chance="20.26" /> <!-- Blessed Gloves -->
+				<item id="356" min="1" max="1" chance="20.16" /> <!-- Full Plate Armor -->
+				<item id="2414" min="1" max="1" chance="20.08" /> <!-- Full Plate Helmet -->
+				<item id="6662" min="1" max="1" chance="20.05" /> <!-- Ring of Core -->
+				<item id="442" min="1" max="1" chance="19.81" /> <!-- Divine Tunic -->
+				<item id="2497" min="1" max="1" chance="19.76" /> <!-- Full Plate Shield -->
+				<item id="107" min="1" max="3" chance="19.74" /> <!-- Compound Shield -->
+				<item id="2438" min="1" max="1" chance="19.71" /> <!-- Full Plate Boots -->
+				<item id="60" min="1" max="1" chance="19.71" /> <!-- Compound Armor -->
+				<item id="2461" min="1" max="1" chance="19.52" /> <!-- Drake Leather Gloves -->
+				<item id="603" min="1" max="3" chance="19.51" /> <!-- Divine Boots -->
+				<item id="64" min="1" max="1" chance="19.47" /> <!-- Compound Boots -->
+				<item id="1128" min="1" max="3" chance="19.4" /> <!-- Adamantite Boots -->
+				<item id="517" min="1" max="3" chance="19.29" /> <!-- Compound Helmet -->
+				<item id="2463" min="1" max="1" chance="19.28" /> <!-- Divine Gloves -->
+				<item id="119" min="1" max="1" chance="17.35" /> <!-- Necklace of Seal -->
+				<item id="919" min="1" max="1" chance="17.23" /> <!-- Blessed Necklace -->
+				<item id="886" min="1" max="3" chance="17.2" /> <!-- Ring of Seal -->
+				<item id="857" min="1" max="3" chance="16.47" /> <!-- Holy Earring -->
+				<item id="855" min="1" max="3" chance="16.2" /> <!-- Nassen's Earring -->
+				<item id="888" min="1" max="3" chance="16.04" /> <!-- Blessed Ring -->
+				<item id="135" min="1" max="1" chance="11.58" /> <!-- Samurai Long Sword -->
+				<item id="299" min="1" max="1" chance="11.56" /> <!-- Orcish Poleaxe -->
+				<item id="206" min="1" max="1" chance="11.45" /> <!-- Demon's Staff -->
+				<item id="2503" min="1" max="1" chance="11.42" /> <!-- Yaksa Mace -->
+				<item id="205" min="1" max="1" chance="11.22" /> <!-- Ghoul's Staff -->
+				<item id="266" min="1" max="1" chance="11.2" /> <!-- Great Pata -->
+				<item id="204" min="1" max="1" chance="10.73" /> <!-- Deadman's Staff -->
+				<item id="228" min="1" max="1" chance="10.63" /> <!-- Crystal Dagger -->
+				<item id="286" min="1" max="1" chance="10.61" /> <!-- Eminence Bow -->
+				<item id="303" min="1" max="1" chance="4.364" /> <!-- Widow Maker -->
+				<item id="162" min="1" max="1" chance="4.23" /> <!-- War Axe -->
+				<item id="301" min="1" max="1" chance="4.227" /> <!-- Scorpion -->
+				<item id="203" min="1" max="1" chance="4.22" /> <!-- Pa'agrio Axe -->
+				<item id="95" min="1" max="1" chance="4.219" /> <!-- Poleaxe -->
+				<item id="283" min="1" max="1" chance="4.205" /> <!-- Akat Longbow -->
+				<item id="202" min="1" max="1" chance="4.201" /> <!-- Mace of Underworld -->
+				<item id="199" min="1" max="1" chance="4.188" /> <!-- Pa'agrio Hammer -->
+				<item id="231" min="1" max="1" chance="4.184" /> <!-- Grace Dagger -->
+				<item id="134" min="1" max="1" chance="4.175" /> <!-- Sword of Nightmare -->
+				<item id="233" min="1" max="1" chance="4.171" /> <!-- Dark Screamer -->
+				<item id="174" min="1" max="1" chance="4.153" /> <!-- Nirvana Axe -->
+				<item id="265" min="1" max="1" chance="4.136" /> <!-- Fisted Blade -->
+				<item id="201" min="1" max="1" chance="4.131" /> <!-- Club of Nature -->
+				<item id="196" min="1" max="1" chance="4.13" /> <!-- Stick of Eternity -->
+				<item id="75" min="1" max="1" chance="4.129" /> <!-- Caliburs -->
+				<item id="197" min="1" max="1" chance="4.114" /> <!-- Paradia Staff -->
+				<item id="76" min="1" max="1" chance="4.113" /> <!-- Sword of Delusion -->
+				<item id="84" min="1" max="1" chance="4.109" /> <!-- Homunkulus' Sword -->
+				<item id="200" min="1" max="1" chance="4.108" /> <!-- Sage's Staff -->
+				<item id="132" min="1" max="1" chance="4.105" /> <!-- Ultimate Sword -->
+				<item id="77" min="1" max="1" chance="4.097" /> <!-- Tsurugi -->
+				<item id="198" min="1" max="1" chance="4.095" /> <!-- Inferno Staff -->
+				<item id="145" min="1" max="1" chance="4.093" /> <!-- Sword of Whispering Death -->
+				<item id="70000" min="297" max="891" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="8620" min="1" max="3" chance="50.85" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="29007" level="50" type="L2Monster" name="Death Knight">
+		<parameters>
+			<param name="MoveAroundSocial" value="74" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="MoveAroundSocial2" value="74" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="75" /> <!-- Caliburs -->
+		<acquire exp="13947" sp="418" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13817" hpRegen="166" mp="747" mpRegen="2.1" />
+			<attack physical="410" magical="69" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="801" magical="293" />
+			<speed>
+				<walk ground="27" />
+				<run ground="110" />
+			</speed>
+			<hitTime>710</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="2300" isAggressive="true">
+			<clanList>
+				<clan>CURMA_CORE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="31" grown="36" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="162" min="1" max="1" chance="0.003" /> <!-- War Axe -->
+				<item id="174" min="1" max="1" chance="0.003" /> <!-- Nirvana Axe -->
+				<item id="196" min="1" max="1" chance="0.003" /> <!-- Stick of Eternity -->
+				<item id="197" min="1" max="1" chance="0.003" /> <!-- Paradia Staff -->
+				<item id="199" min="1" max="1" chance="0.003" /> <!-- Pa'agrio Hammer -->
+				<item id="200" min="1" max="1" chance="0.003" /> <!-- Sage's Staff -->
+				<item id="201" min="1" max="1" chance="0.003" /> <!-- Club of Nature -->
+				<item id="202" min="1" max="1" chance="0.003" /> <!-- Mace of Underworld -->
+				<item id="57" min="1160" max="2714" chance="70" /> <!-- Adena -->
+				<item id="1872" min="1" max="3" chance="16.14" /> <!-- Animal Bone -->
+				<item id="1865" min="1" max="3" chance="8.492" /> <!-- Varnish -->
+				<item id="1882" min="1" max="1" chance="5.7" /> <!-- Leather -->
+				<item id="2508" min="2" max="6" chance="5.317" /> <!-- Cursed Bone -->
+				<item id="1876" min="1" max="1" chance="5.163" /> <!-- Mithril Ore -->
+				<item id="2952" min="1" max="1" chance="2.172" /> <!-- Demon's Boot Fabric -->
+				<item id="3005" min="1" max="1" chance="0.97" /> <!-- Recipe: Demon's Boots -->
+				<item id="2100" min="1" max="1" chance="0.3" /> <!-- Paradia Staff Head -->
+				<item id="2097" min="1" max="1" chance="0.3" /> <!-- War Axe Blade -->
+				<item id="2098" min="1" max="1" chance="0.3" /> <!-- Nirvana Axe Blade -->
+				<item id="2231" min="1" max="1" chance="0.3" /> <!-- Recipe: Full Plate Armor -->
+				<item id="2105" min="1" max="1" chance="0.3" /> <!-- Mace of Underworld Head -->
+				<item id="2104" min="1" max="1" chance="0.3" /> <!-- Club of Nature Head -->
+				<item id="2103" min="1" max="1" chance="0.3" /> <!-- Sage's Staff Head -->
+				<item id="2099" min="1" max="1" chance="0.3" /> <!-- Stick of Eternity Shaft -->
+				<item id="2102" min="1" max="1" chance="0.3" /> <!-- Pa'agrio Hammer Head -->
+				<item id="2360" min="1" max="1" chance="0.03" /> <!-- Recipe: Orcish Poleaxe -->
+			</drop>
+			<spoil>
+				<item id="1914" min="1" max="1" chance="46.21" /> <!-- Earring of Seal Gemstone -->
+				<item id="3011" min="1" max="1" chance="22.96" /> <!-- Recipe: Divine Boots -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="29008" level="55" type="L2Monster" name="Doom Wraith">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<skill name="DDMagic" id="4001" level="5" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="1472" /> <!-- Dreadbane -->
+		<acquire exp="15169" sp="501"/>
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="16012" hpRegen="185" mp="889" mpRegen="2.4" />
+			<attack physical="470" magical="715" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="895" magical="327" />
+			<speed>
+				<walk ground="100" />
+				<run ground="230" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4001" level="5" /> <!-- NPC Windstrike -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="13" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="700" isAggressive="true">
+			<clanList>
+				<clan>CURMA_CORE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="45" />
+		</collision>
+	</npc>
+	<npc id="29009" level="47" type="L2Monster" name="Dicor">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DeBuff" id="4035" level="4" />
+		</parameters>
+		<race>PLANT</race>
+		<sex>FEMALE</sex>
+		<acquire exp="11480" sp="344" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="12544" hpRegen="154" mp="665" mpRegen="2.1" />
+			<attack physical="354" magical="60" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="747" magical="273" />
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hitTime>130</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4035" level="4" /> <!-- Poison -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="13" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="800" isAggressive="true">
+			<clanList>
+				<clan>CURMA_CORE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="25.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="1126" min="1" max="1" chance="0.075" /> <!-- Crimson Boots -->
+				<item id="2434" min="1" max="1" chance="0.075" /> <!-- Rind Leather Boots -->
+				<item id="2455" min="1" max="1" chance="0.075" /> <!-- Plated Leather Gloves -->
+				<item id="2457" min="1" max="1" chance="0.075" /> <!-- Gloves of Seal -->
+				<item id="2458" min="1" max="1" chance="0.075" /> <!-- Rind Leather Gloves -->
+				<item id="57" min="996" max="2323" chance="70" /> <!-- Adena -->
+				<item id="1866" min="1" max="1" chance="13.34" /> <!-- Suede -->
+				<item id="1342" min="30" max="90" chance="12.95" /> <!-- Steel Arrow -->
+				<item id="1867" min="2" max="6" chance="6.416" /> <!-- Animal Skin -->
+				<item id="2951" min="1" max="1" chance="4.388" /> <!-- Rind Leather Glove Design -->
+				<item id="2950" min="1" max="1" chance="4.348" /> <!-- Gloves of Seal Pattern -->
+				<item id="2948" min="1" max="1" chance="4.342" /> <!-- Rind Leather Boot Lining -->
+				<item id="1882" min="1" max="1" chance="4.245" /> <!-- Leather -->
+				<item id="1868" min="5" max="15" chance="3.845" /> <!-- Thread -->
+				<item id="2946" min="1" max="1" chance="2.929" /> <!-- Plated Leather Glove Design -->
+				<item id="2508" min="3" max="9" chance="2.632" /> <!-- Cursed Bone -->
+				<item id="1974" min="1" max="3" chance="2.22" /> <!-- Crimson Boot Fabric -->
+				<item id="1885" min="1" max="1" chance="1.585" /> <!-- High-grade Suede -->
+				<item id="2350" min="1" max="1" chance="0.03" /> <!-- Recipe: Pa'agrio Axe -->
+				<item id="2339" min="1" max="1" chance="0.03" /> <!-- Recipe: Inferno Staff -->
+			</drop>
+			<spoil>
+				<item id="1895" min="1" max="5" chance="66.24" /> <!-- Metallic Fiber -->
+				<item id="2944" min="1" max="1" chance="62.28" /> <!-- Karmian Glove Fabric -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="29010" level="46" type="L2Monster" name="Validus">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="11032" sp="330" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="12130" hpRegen="150" mp="637" mpRegen="2.1" />
+			<attack physical="337" magical="58" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="729" magical="267" />
+			<speed>
+				<walk ground="70" />
+				<run ground="110" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="13" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="1200" isAggressive="true">
+			<clanList>
+				<clan>CURMA_CORE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="29" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="354" min="1" max="1" chance="0.03" /> <!-- Chain Mail Shirt -->
+				<item id="232" min="1" max="1" chance="0.0075" /> <!-- Dark Elven Dagger -->
+				<item id="281" min="1" max="1" chance="0.0075" /> <!-- Crystallized Ice Bow -->
+				<item id="57" min="914" max="2141" chance="70" /> <!-- Adena -->
+				<item id="1866" min="1" max="1" chance="15.89" /> <!-- Suede -->
+				<item id="1878" min="1" max="1" chance="9.186" /> <!-- Durable Braid -->
+				<item id="1864" min="3" max="9" chance="7.663" /> <!-- Stem -->
+				<item id="1865" min="2" max="6" chance="5.755" /> <!-- Varnish -->
+				<item id="2508" min="2" max="6" chance="3.839" /> <!-- Cursed Bone -->
+				<item id="1959" min="1" max="1" chance="2.104" /> <!-- Chain Mail Shirt Material -->
+				<item id="2072" min="1" max="1" chance="0.75" /> <!-- Dark Elven Dagger Edge -->
+				<item id="2074" min="1" max="1" chance="0.75" /> <!-- Crystallized Ice Bow Shaft -->
+				<item id="2319" min="1" max="1" chance="0.075" /> <!-- Recipe: Raid Sword -->
+				<item id="951" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+			<spoil>
+				<item id="1873" min="1" max="3" chance="88.74" /> <!-- Silver Nugget -->
+				<item id="2060" min="1" max="1" chance="3.464" /> <!-- Stormbringer Blade -->
+				<item id="2067" min="1" max="1" chance="3.185" /> <!-- Crystal Staff Head -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="29011" level="49" type="L2Monster" name="Susceptor">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4001" level="4" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="2915" sp="215"/> <!-- Need confirm retail values -->
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13389" hpRegen="162" mp="720" mpRegen="2.1" />
+			<attack physical="391" magical="66" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="783" magical="286" />
+			<speed>
+				<walk ground="27" />
+				<run ground="150" />
+			</speed>
+			<hitTime>430</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4001" level="4" /> <!-- NPC Windstrike -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="1500" isAggressive="true">
+			<clanList>
+				<clan>CURMA_CORE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="29012" level="48" type="L2Monster" name="Perum">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4001" level="4" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="16035" sp="481" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="12964" hpRegen="158" mp="692" mpRegen="2.1" />
+			<attack physical="372" magical="63" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="765" magical="280" />
+			<speed>
+				<walk ground="20" />
+				<run ground="20" />
+			</speed>
+			<hitTime>410</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4001" level="4" /> <!-- NPC Windstrike -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="13" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="800" isAggressive="true">
+			<clanList>
+				<clan>CURMA_CORE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="18" />
+			<height normal="34" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="1126" min="1" max="1" chance="0.075" /> <!-- Crimson Boots -->
+				<item id="2434" min="1" max="1" chance="0.075" /> <!-- Rind Leather Boots -->
+				<item id="2455" min="1" max="1" chance="0.075" /> <!-- Plated Leather Gloves -->
+				<item id="2457" min="1" max="1" chance="0.075" /> <!-- Gloves of Seal -->
+				<item id="2458" min="1" max="1" chance="0.075" /> <!-- Rind Leather Gloves -->
+				<item id="57" min="1447" max="3374" chance="70" /> <!-- Adena -->
+				<item id="1873" min="1" max="1" chance="12.81" /> <!-- Silver Nugget -->
+				<item id="1865" min="1" max="3" chance="10.09" /> <!-- Varnish -->
+				<item id="2508" min="2" max="6" chance="6.579" /> <!-- Cursed Bone -->
+				<item id="1965" min="1" max="1" chance="4.208" /> <!-- Metal Plate Helmet Material -->
+				<item id="2946" min="1" max="1" chance="3.494" /> <!-- Plated Leather Glove Design -->
+				<item id="1880" min="1" max="1" chance="3.151" /> <!-- Steel -->
+				<item id="1869" min="5" max="15" chance="3.142" /> <!-- Iron Ore -->
+				<item id="1974" min="1" max="3" chance="2.735" /> <!-- Crimson Boot Fabric -->
+				<item id="1874" min="1" max="1" chance="2.061" /> <!-- Oriharukon Ore -->
+				<item id="2948" min="1" max="3" chance="1.772" /> <!-- Rind Leather Boot Lining -->
+				<item id="2950" min="2" max="6" chance="1.296" /> <!-- Gloves of Seal Pattern -->
+				<item id="2951" min="2" max="6" chance="1.067" /> <!-- Rind Leather Glove Design -->
+				<item id="1973" min="3" max="9" chance="0.75" /> <!-- Pa'agrio Hand Design -->
+				<item id="2344" min="1" max="1" chance="0.075" /> <!-- Recipe: Grace Dagger -->
+				<item id="951" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+			<spoil>
+				<item id="2073" min="1" max="1" chance="7.894" /> <!-- Chakram Edge -->
+				<item id="2352" min="1" max="1" chance="2.107" /> <!-- Recipe: Widow Maker -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="29013" level="45" type="L2Monster" name="Premo">
+		<parameters>
+			<param name="MoveAroundSocial" value="135" />
+			<param name="MoveAroundSocial1" value="135" />
+			<param name="MoveAroundSocial2" value="135" />
+		</parameters>
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<acquire exp="10351" sp="310" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="11721" hpRegen="146" mp="610" mpRegen="2.1" />
+			<attack physical="320" magical="55" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="711" magical="260" />
+			<speed>
+				<walk ground="55" />
+				<run ground="110" />
+			</speed>
+			<hitTime>610</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="1200" aggroRange="450">
+			<clanList>
+				<clan>CURMA_CORE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="25" />
+			<height normal="35" grown="43" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="631" min="1" max="1" chance="0.3" /> <!-- Eldarake -->
+				<item id="2495" min="1" max="1" chance="0.3" /> <!-- Chain Shield -->
+				<item id="2413" min="1" max="1" chance="0.075" /> <!-- Chain Hood -->
+				<item id="57" min="859" max="2006" chance="70" /> <!-- Adena -->
+				<item id="1868" min="1" max="3" chance="17.95" /> <!-- Thread -->
+				<item id="1866" min="1" max="1" chance="12.31" /> <!-- Suede -->
+				<item id="1867" min="1" max="3" chance="8.405" /> <!-- Animal Skin -->
+				<item id="1964" min="1" max="1" chance="6.108" /> <!-- Eldarake Temper -->
+				<item id="2945" min="1" max="1" chance="6.014" /> <!-- Chain Shield Fragment -->
+				<item id="2936" min="1" max="1" chance="5.526" /> <!-- Chain Hood Pattern -->
+				<item id="1882" min="1" max="1" chance="4.181" /> <!-- Leather -->
+				<item id="1885" min="1" max="1" chance="1.519" /> <!-- High-grade Suede -->
+				<item id="2207" min="1" max="1" chance="0.3" /> <!-- Recipe: Karmian Tunic -->
+				<item id="2323" min="1" max="1" chance="0.075" /> <!-- Recipe: Elemental Bow -->
+				<item id="2326" min="1" max="1" chance="0.075" /> <!-- Recipe: Horn of Glory -->
+			</drop>
+			<spoil>
+				<item id="1876" min="1" max="1" chance="80.65" /> <!-- Mithril Ore -->
+				<item id="1962" min="1" max="1" chance="13.24" /> <!-- Karmian Tunic Pattern -->
+				<item id="2073" min="1" max="1" chance="3.192" /> <!-- Chakram Edge -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="29014" level="50" type="L2GrandBoss" name="Orfen">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<minions name="Privates">
+				<npc id="29016" count="4" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<acquire exp="8872500" sp="266175" raidPoints="300" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="930422.1343873518" hpRegen="441.65" mp="36939" mpRegen="20.0" />
+			<attack physical="722.31" magical="1398.68" random="30" critical="7" accuracy="40" attackSpeed="172" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1602" magical="293" />
+			<speed>
+				<walk ground="60" />
+				<run ground="230" />
+			</speed>
+			<hitTime>710</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status attackable="true" undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4062" level="1" /> <!-- Orfen -->
+			<skill id="4063" level="1" /> <!-- Paralysis -->
+			<skill id="4064" level="1" /> <!-- Paralysis -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
+		<corpseTime>300</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="3500" isAggressive="true">
+			<clanList>
+				<clan>ORFEN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="35" />
+			<height normal="143" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="918" min="1" max="1" chance="33.35" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="3" chance="33.1" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="3" chance="32.11" /> <!-- Adamantite Ring -->
+				<item id="673" min="1" max="1" chance="25.95" /> <!-- Avadon Shield -->
+				<item id="2379" min="1" max="1" chance="25.86" /> <!-- Avadon Gaiters -->
+				<item id="2376" min="1" max="1" chance="25.13" /> <!-- Avadon Breastplate -->
+				<item id="2415" min="1" max="1" chance="24.74" /> <!-- Sealed Avadon Circlet -->
+				<item id="2414" min="1" max="1" chance="20.98" /> <!-- Full Plate Helmet -->
+				<item id="603" min="1" max="3" chance="20.87" /> <!-- Divine Boots -->
+				<item id="2463" min="1" max="1" chance="20.81" /> <!-- Divine Gloves -->
+				<item id="356" min="1" max="1" chance="20.6" /> <!-- Full Plate Armor -->
+				<item id="1128" min="1" max="3" chance="20.45" /> <!-- Adamantite Boots -->
+				<item id="2438" min="1" max="1" chance="20.42" /> <!-- Full Plate Boots -->
+				<item id="6661" min="1" max="1" chance="20.12" /> <!-- Orfen's Earring -->
+				<item id="2437" min="1" max="1" chance="20.12" /> <!-- Drake Leather Boots -->
+				<item id="442" min="1" max="1" chance="20.08" /> <!-- Divine Tunic -->
+				<item id="2462" min="1" max="1" chance="19.79" /> <!-- Full Plate Gauntlets -->
+				<item id="499" min="1" max="3" chance="19.79" /> <!-- Mithril Helmet -->
+				<item id="401" min="1" max="1" chance="19.78" /> <!-- Drake Leather Armor -->
+				<item id="2461" min="1" max="1" chance="19.7" /> <!-- Drake Leather Gloves -->
+				<item id="2468" min="1" max="3" chance="19.32" /> <!-- Blessed Gloves -->
+				<item id="473" min="1" max="1" chance="19.15" /> <!-- Divine Stockings -->
+				<item id="2497" min="1" max="3" chance="19.15" /> <!-- Full Plate Shield -->
+				<item id="119" min="1" max="1" chance="16.97" /> <!-- Necklace of Seal -->
+				<item id="855" min="1" max="3" chance="16.5" /> <!-- Nassen's Earring -->
+				<item id="888" min="1" max="3" chance="16.16" /> <!-- Blessed Ring -->
+				<item id="857" min="1" max="3" chance="16.02" /> <!-- Holy Earring -->
+				<item id="919" min="1" max="1" chance="16.01" /> <!-- Blessed Necklace -->
+				<item id="886" min="1" max="3" chance="15.9" /> <!-- Ring of Seal -->
+				<item id="228" min="1" max="1" chance="11.59" /> <!-- Crystal Dagger -->
+				<item id="266" min="1" max="1" chance="11.58" /> <!-- Great Pata -->
+				<item id="299" min="1" max="1" chance="11.37" /> <!-- Orcish Poleaxe -->
+				<item id="204" min="1" max="1" chance="10.99" /> <!-- Deadman's Staff -->
+				<item id="286" min="1" max="1" chance="10.89" /> <!-- Eminence Bow -->
+				<item id="206" min="1" max="1" chance="10.83" /> <!-- Demon's Staff -->
+				<item id="2503" min="1" max="1" chance="10.7" /> <!-- Yaksa Mace -->
+				<item id="205" min="1" max="1" chance="10.62" /> <!-- Ghoul's Staff -->
+				<item id="135" min="1" max="1" chance="10.6" /> <!-- Samurai Long Sword -->
+				<item id="947" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="70000" min="198" max="593" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="948" min="10" max="30" chance="100" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="8620" min="1" max="3" chance="50.1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+				<item id="4065" min="20" max="80" chance="13.09" /> <!-- Avadon Gaiter Material -->
+				<item id="4071" min="20" max="80" chance="12.62" /> <!-- Avadon Robe Fabric -->
+				<item id="4050" min="20" max="80" chance="12.62" /> <!-- Adamantite Ring Wire -->
+				<item id="4064" min="20" max="80" chance="12.61" /> <!-- Avadon Breastplate Part -->
+				<item id="4072" min="20" max="80" chance="12.6" /> <!-- Sealed Avadon Circlet Pattern -->
+				<item id="4049" min="20" max="80" chance="12.14" /> <!-- Adamantite Earring Gemstone -->
+				<item id="4051" min="20" max="80" chance="12.12" /> <!-- Adamantite Necklace Chain -->
+				<item id="4439" min="20" max="80" chance="11.89" /> <!-- Avadon Shield Fragment -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="29015" level="48" type="L2Monster" name="Laikel">
+		<parameters>
+			<param name="MoveAroundSocial" value="70" />
+			<param name="MoveAroundSocial1" value="70" />
+			<param name="MoveAroundSocial2" value="70" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="16035" sp="481"/> <!-- Need confirm retail values -->
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="10619" hpRegen="158" mp="36936" mpRegen="2.1" />
+			<attack physical="298" magical="40" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="765" magical="280" />
+			<speed>
+				<walk ground="60" />
+				<run ground="230" />
+			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="2500" aggroRange="450">
+			<clanList>
+				<clan>ORFEN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="37" />
+			<height normal="64" />
+		</collision>
+	</npc>
+	<npc id="29016" level="49" type="L2Monster" name="Laikel Leos">
+		<parameters>
+			<param name="MoveAroundSocial" value="70" />
+			<param name="MoveAroundSocial1" value="70" />
+			<param name="MoveAroundSocial2" value="70" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="2915" sp="215"/> <!-- Need confirm retail values -->
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="10619" hpRegen="162" mp="36936" mpRegen="2.1" />
+			<attack physical="1058" magical="1563" random="30" critical="15" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="783" magical="286" />
+			<speed>
+				<walk ground="60" />
+				<run ground="230" />
+			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="2700" aggroRange="450">
+			<clanList>
+				<clan>ORFEN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="37" />
+			<height normal="64" />
+		</collision>
+	</npc>
+	<npc id="29017" level="48" type="L2Monster" name="Riba">
+		<parameters>
+			<param name="MoveAroundSocial" value="40" />
+			<param name="MoveAroundSocial1" value="40" />
+			<param name="MoveAroundSocial2" value="40" />
+		</parameters>
+		<race>BUG</race>
+		<sex>FEMALE</sex>
+		<acquire exp="16035" sp="481"/> <!-- Need confirm retail values -->
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="10619" hpRegen="158" mp="36936" mpRegen="2.1" />
+			<attack physical="298" magical="40" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="765" magical="280" />
+			<speed>
+				<walk ground="60" />
+				<run ground="230" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="2700" aggroRange="450">
+			<clanList>
+				<clan>ORFEN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="25" />
+			<height normal="72" />
+		</collision>
+	</npc>
+	<npc id="29018" level="49" type="L2Monster" name="Riba Iren">
+		<race>BUG</race>
+		<sex>FEMALE</sex>
+		<acquire exp="2915" sp="215"/> <!-- Need confirm retail values -->
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="10619" hpRegen="162" mp="36936" mpRegen="2.1" />
+			<attack physical="1058" magical="1563" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="783" magical="286" />
+			<speed>
+				<walk ground="60" />
+				<run ground="230" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4516" level="1" /> <!-- Orfen Heal -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="2900" isAggressive="true">
+			<clanList>
+				<clan>ORFEN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="25" />
+			<height normal="72" />
+		</collision>
+	</npc>
+	<npc id="29019" level="79" type="L2GrandBoss" name="Antharas">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="262720917" sp="63053" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="7500000" hpRegen="1000" mp="18000" mpRegen="99" />
+			<attack physical="3260" magical="1700" random="30" critical="4" accuracy="40" attackSpeed="206" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="440" magical="440" />
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" noSleepMode="true" isDeathPenalty="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4071" level="2" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4106" level="1" /> <!-- Antharas Stun -->
+			<skill id="4108" level="1" /> <!-- Antharas Terror -->
+			<skill id="4109" level="1" /> <!-- Curse of Antharas -->
+			<skill id="4110" level="2" /> <!-- Breath Attack -->
+			<skill id="4111" level="1" /> <!-- Antharas Fossilization -->
+			<skill id="4112" level="1" /> <!-- Ordinary Attack -->
+			<skill id="4113" level="1" /> <!-- Animal doing ordinary attack -->
+			<skill id="4122" level="1" /> <!-- Antharas -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5092" level="1" /> <!-- Antharas Terror -->
+			<skill id="5093" level="1" /> <!-- Antharas Meteor -->
+		</skillList>
+		<corpseTime>14</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="300" />
+			<height normal="300" />
+		</collision>
+		<dropLists> <!-- CT2.5 -->
+			<drop>
+				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+				<item id="80" min="1" max="2" chance="25" /> <!-- Tallum Blade -->
+				<item id="98" min="1" max="2" chance="25" /> <!-- Halberd -->
+				<item id="269" min="1" max="2" chance="25" /> <!-- Blood Tornado -->
+				<item id="2504" min="1" max="2" chance="25" /> <!-- Meteor Shower -->
+				<item id="235" min="1" max="2" chance="25" /> <!-- Bloody Orchid -->
+				<item id="288" min="1" max="2" chance="25" /> <!-- Carnage Bow -->
+				<item id="150" min="1" max="2" chance="25" /> <!-- Elemental Sword -->
+				<item id="212" min="1" max="2" chance="25" /> <!-- Dasparion's Staff -->
+				<item id="81" min="1" max="2" chance="25" /> <!-- Dragon Slayer -->
+				<item id="151" min="1" max="2" chance="25" /> <!-- Sword of Miracles -->
+				<item id="2500" min="1" max="2" chance="25" /> <!-- Dark Legion's Edge -->
+				<item id="164" min="1" max="2" chance="25" /> <!-- Elysian -->
+				<item id="236" min="1" max="2" chance="20" /> <!-- Soul Separator -->
+				<item id="270" min="1" max="2" chance="20" /> <!-- Dragon Grinder -->
+				<item id="289" min="1" max="2" chance="20" /> <!-- Soul Bow -->
+				<item id="213" min="1" max="2" chance="20" /> <!-- Branch of the Mother Tree -->
+				<item id="305" min="1" max="2" chance="20" /> <!-- Tallum Glaive -->
+				<item id="6326" min="1" max="5" chance="30" /> <!-- Sealed Majestic Necklace -->
+				<item id="6327" min="1" max="5" chance="35" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="5" chance="35" /> <!-- Sealed Majestic Ring -->
+				<item id="6323" min="1" max="5" chance="30" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Earring -->
+				<item id="6325" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Ring -->
+				<item id="5287" min="1" max="3" chance="50" /> <!-- Sealed Dark Crystal breastplate -->
+				<item id="5297" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5304" min="1" max="3" chance="25" /> <!-- Sealed Tallum Tunic -->
+				<item id="5311" min="1" max="3" chance="35" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5320" min="1" max="3" chance="35" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5326" min="1" max="3" chance="30" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5293" min="1" max="3" chance="25" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5301" min="1" max="3" chance="25" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5308" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5316" min="1" max="3" chance="8" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5323" min="1" max="3" chance="8" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5329" min="1" max="3" chance="9" /> <!-- Sealed Majestic Robe -->
+				<item id="5288" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5298" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5305" min="1" max="3" chance="30" /> <!-- Sealed Tallum Stockings -->
+				<item id="5289" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5294" min="1" max="3" chance="25" /> <!-- Sealed Tallum Helmet -->
+				<item id="5312" min="1" max="3" chance="25" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5317" min="1" max="3" chance="25" /> <!-- Sealed Majestic Circlet -->
+				<item id="5291" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5296" min="1" max="3" chance="25" /> <!-- Sealed Tallum Boots -->
+				<item id="5314" min="1" max="3" chance="25" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5319" min="1" max="3" chance="25" /> <!-- Sealed Majestic Boots -->
+				<item id="5290" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5295" min="1" max="3" chance="25" /> <!-- Sealed Tallum Gloves -->
+				<item id="5313" min="1" max="3" chance="25" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5318" min="1" max="3" chance="25" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5292" min="1" max="3" chance="40" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="3" chance="40" /> <!-- Sealed Shield of Nightmare -->
+				<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="39" chance="100" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="9000000" max="13000000" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="29020" level="80" type="L2GrandBoss" name="Baium">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="1024738848" sp="30742165" raidPoints="450" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="53342293" hpRegen="750" mp="18000" mpRegen="99" />
+			<attack physical="3374.18" magical="2200" random="30" critical="4" accuracy="40" attackSpeed="206" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3300" magical="2200" />
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status attackable="true" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4127" level="1" /> <!-- Baium: General Attack -->
+			<skill id="4256" level="1" /> <!-- 100% stun resistance. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<corpseTime>13</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="true">
+			<skill primaryId="4127" />
+		</ai>
+		<collision>
+			<radius normal="65" />
+			<height normal="174" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="6328" min="1" max="3" chance="53.12" /> <!-- Sealed Majestic Ring -->
+				<item id="49580" min="1" max="1" chance="30.73" /> <!-- Baium's Ring -->
+				<item id="6327" min="1" max="1" chance="20.93" /> <!-- Sealed Majestic Earring -->
+				<item id="7900" min="1" max="1" chance="17.84" /> <!-- Ice Storm Hammer -->
+				<item id="7892" min="1" max="1" chance="17.25" /> <!-- Spell Breaker -->
+				<item id="7901" min="1" max="1" chance="16.71" /> <!-- Star Buster -->
+				<item id="7883" min="1" max="1" chance="16.74" /> <!-- Guardian's Sword -->
+				<item id="7893" min="1" max="1" chance="16.48" /> <!-- Kaim Vanul's Bones -->
+				<item id="7889" min="1" max="1" chance="15.31" /> <!-- Wizard's Tear -->
+				<item id="6325" min="1" max="3" chance="14.69" /> <!-- Sealed Phoenix Ring -->
+				<item id="6326" min="1" max="1" chance="8.013" /> <!-- Sealed Majestic Necklace -->
+				<item id="5292" min="1" max="3" chance="7.057" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="1" chance="5.999" /> <!-- Sealed Shield of Nightmare -->
+				<item id="289" min="1" max="1" chance="5.065" /> <!-- Soul Bow -->
+				<item id="151" min="1" max="1" chance="5.063" /> <!-- Sword of Miracles -->
+				<item id="5289" min="1" max="3" chance="5.056" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="80" min="1" max="1" chance="5.052" /> <!-- Tallum Blade -->
+				<item id="2504" min="1" max="1" chance="5.049" /> <!-- Meteor Shower -->
+				<item id="5294" min="1" max="3" chance="5.042" /> <!-- Sealed Tallum Helmet -->
+				<item id="235" min="1" max="1" chance="5.039" /> <!-- Bloody Orchid -->
+				<item id="5296" min="1" max="3" chance="5.037" /> <!-- Sealed Tallum Boots -->
+				<item id="269" min="1" max="1" chance="5.033" /> <!-- Blood Tornado -->
+				<item id="5290" min="1" max="3" chance="5.03" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="150" min="1" max="1" chance="5.024" /> <!-- Elemental Sword -->
+				<item id="288" min="1" max="1" chance="5.023" /> <!-- Carnage Bow -->
+				<item id="7899" min="1" max="1" chance="5.022" /> <!-- Destroyer Hammer -->
+				<item id="7884" min="1" max="1" chance="5.018" /> <!-- Infernal Master -->
+				<item id="5291" min="1" max="3" chance="5.009" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="7894" min="1" max="1" chance="5.008" /> <!-- Spiritual Eye -->
+				<item id="98" min="1" max="1" chance="4.987" /> <!-- Halberd -->
+				<item id="5295" min="1" max="3" chance="4.945" /> <!-- Sealed Tallum Gloves -->
+				<item id="81" min="1" max="1" chance="4.056" /> <!-- Dragon Slayer -->
+				<item id="305" min="1" max="1" chance="4.053" /> <!-- Tallum Glaive -->
+				<item id="270" min="1" max="1" chance="4.022" /> <!-- Dragon Grinder -->
+				<item id="212" min="1" max="1" chance="4.02" /> <!-- Dasparion's Staff -->
+				<item id="7902" min="1" max="1" chance="3.998" /> <!-- Doom Crusher -->
+				<item id="6324" min="1" max="1" chance="3.992" /> <!-- Sealed Phoenix Earring -->
+				<item id="236" min="1" max="1" chance="3.987" /> <!-- Soul Separator -->
+				<item id="164" min="1" max="1" chance="3.984" /> <!-- Elysian -->
+				<item id="213" min="1" max="1" chance="3.965" /> <!-- Branch of the Mother Tree -->
+				<item id="2500" min="1" max="1" chance="3.961" /> <!-- Dark Legion's Edge -->
+				<item id="7895" min="1" max="1" chance="3.948" /> <!-- Flaming Dragon Skull -->
+				<item id="5313" min="1" max="1" chance="3.06" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5298" min="1" max="1" chance="3.055" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5305" min="1" max="1" chance="3.046" /> <!-- Sealed Tallum Stockings -->
+				<item id="5304" min="1" max="1" chance="3.045" /> <!-- Sealed Tallum Tunic -->
+				<item id="5318" min="1" max="1" chance="3.034" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5308" min="1" max="1" chance="3.013" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="49683" min="1" max="1" chance="3.011" /> <!-- Talisman of Baium -->
+				<item id="5317" min="1" max="1" chance="3" /> <!-- Sealed Majestic Circlet -->
+				<item id="5297" min="1" max="1" chance="2.984" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5312" min="1" max="1" chance="2.978" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5319" min="1" max="1" chance="2.978" /> <!-- Sealed Majestic Boots -->
+				<item id="5301" min="1" max="1" chance="2.964" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5293" min="1" max="1" chance="2.963" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5288" min="1" max="1" chance="2.944" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5287" min="1" max="1" chance="2.942" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5314" min="1" max="1" chance="2.939" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5323" min="1" max="1" chance="2.056" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5320" min="1" max="1" chance="2.053" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5329" min="1" max="1" chance="2.023" /> <!-- Sealed Majestic Robe -->
+				<item id="5316" min="1" max="1" chance="1.959" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5326" min="1" max="1" chance="1.949" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5311" min="1" max="1" chance="1.949" /> <!-- Sealed Armor of Nightmare -->
+				<item id="6323" min="1" max="1" chance="0.75" /> <!-- Sealed Phoenix Necklace -->
+				<item id="8621" min="1" max="3" chance="100" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+				<item id="70000" min="1356" max="4068" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="33814" min="2" max="4" chance="50.42" /> <!-- Improved Scroll: Enchant Armor (B-grade) -->
+				<item id="729" min="1" max="1" chance="50.21" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="33808" min="1" max="1" chance="49.96" /> <!-- Improved Scroll: Enchant Weapon (B-grade) -->
+				<item id="730" min="1" max="1" chance="49.85" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="49756" min="2" max="4" chance="49.02" /> <!-- Cloth Piece -->
+				<item id="49682" min="1" max="1" chance="26.34" /> <!-- Baium’s Soul -->
+				<item id="90899" min="1" max="1" chance="2.986" /> <!-- Blessed Agathion's Soul -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="29021" level="80" type="L2Monster" name="Archangel">
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<equipment rhand="93" /> <!-- Winged Spear -->
+		<acquire exp="11520" sp="2" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="186915" hpRegen="158" mp="1475" mpRegen="3" />
+			<attack physical="395" magical="371" random="30" critical="4" accuracy="40" attackSpeed="206" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="5108" magical="1686" />
+			<speed>
+				<walk ground="50" />
+				<run ground="170" />
+			</speed>
+			<hitTime>760</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4132" level="1" /> <!-- Spear: Pound the Ground -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4133" level="1" /> <!-- Heal -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ARCHANGEL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="80" />
+		</collision>
+	</npc>
+	<npc id="29022" level="75" type="L2GrandBoss" name="Zaken">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="102487500" sp="3074625" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="12680640" hpRegen="2649" mp="12240" mpRegen="240" />
+			<attack physical="33864" magical="42273" random="30" critical="4" accuracy="40" attackSpeed="206" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3680" magical="4661" />
+			<speed>
+				<walk ground="42" />
+				<run ground="190" />
+			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4221" level="1" /> <!-- Range Dual Attack -->
+			<skill id="4220" level="1" /> <!-- Dual Attack -->
+			<skill id="4218" level="1" /> <!-- Drain -->
+			<skill id="4219" level="1" /> <!-- Hold -->
+		</skillList>
+		<corpseTime>300</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="19.2" />
+			<height normal="39" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="6328" min="1" max="1" chance="52.1" /> <!-- Sealed Majestic Ring -->
+				<item id="6327" min="1" max="1" chance="20.12" /> <!-- Sealed Majestic Earring -->
+				<item id="90763" min="1" max="1" chance="19.89" /> <!-- Zaken's Earring -->
+				<item id="6325" min="1" max="1" chance="15.75" /> <!-- Sealed Phoenix Ring -->
+				<item id="6326" min="1" max="1" chance="7.945" /> <!-- Sealed Majestic Necklace -->
+				<item id="7893" min="1" max="1" chance="6.864" /> <!-- Kaim Vanul's Bones -->
+				<item id="7883" min="1" max="1" chance="6.834" /> <!-- Guardian's Sword -->
+				<item id="7892" min="1" max="1" chance="6.82" /> <!-- Spell Breaker -->
+				<item id="7900" min="1" max="1" chance="6.795" /> <!-- Ice Storm Hammer -->
+				<item id="7889" min="1" max="1" chance="6.401" /> <!-- Wizard's Tear -->
+				<item id="7901" min="1" max="1" chance="6.35" /> <!-- Star Buster -->
+				<item id="6324" min="1" max="1" chance="4.019" /> <!-- Sealed Phoenix Earring -->
+				<item id="5292" min="1" max="1" chance="3.557" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="1" chance="3.046" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5294" min="1" max="1" chance="2.548" /> <!-- Sealed Tallum Helmet -->
+				<item id="5290" min="1" max="1" chance="2.525" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5289" min="1" max="1" chance="2.512" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5296" min="1" max="1" chance="2.5" /> <!-- Sealed Tallum Boots -->
+				<item id="5291" min="1" max="1" chance="2.489" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5295" min="1" max="1" chance="2.443" /> <!-- Sealed Tallum Gloves -->
+				<item id="5318" min="1" max="1" chance="1.561" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5305" min="1" max="1" chance="1.544" /> <!-- Sealed Tallum Stockings -->
+				<item id="5317" min="1" max="1" chance="1.531" /> <!-- Sealed Majestic Circlet -->
+				<item id="5314" min="1" max="1" chance="1.525" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5297" min="1" max="1" chance="1.523" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5312" min="1" max="1" chance="1.485" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5298" min="1" max="1" chance="1.483" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5304" min="1" max="1" chance="1.48" /> <!-- Sealed Tallum Tunic -->
+				<item id="5301" min="1" max="1" chance="1.476" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5288" min="1" max="1" chance="1.475" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5308" min="1" max="1" chance="1.457" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5293" min="1" max="1" chance="1.456" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5319" min="1" max="1" chance="1.447" /> <!-- Sealed Majestic Boots -->
+				<item id="5287" min="1" max="1" chance="1.445" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5313" min="1" max="1" chance="1.44" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="7899" min="1" max="1" chance="0.75" /> <!-- Destroyer Hammer -->
+				<item id="212" min="1" max="1" chance="0.75" /> <!-- Dasparion's Staff -->
+				<item id="164" min="1" max="1" chance="0.75" /> <!-- Elysian -->
+				<item id="7884" min="1" max="1" chance="0.75" /> <!-- Infernal Master -->
+				<item id="151" min="1" max="1" chance="0.75" /> <!-- Sword of Miracles -->
+				<item id="235" min="1" max="1" chance="0.75" /> <!-- Bloody Orchid -->
+				<item id="150" min="1" max="1" chance="0.75" /> <!-- Elemental Sword -->
+				<item id="80" min="1" max="1" chance="0.75" /> <!-- Tallum Blade -->
+				<item id="7902" min="1" max="1" chance="0.75" /> <!-- Doom Crusher -->
+				<item id="81" min="1" max="1" chance="0.75" /> <!-- Dragon Slayer -->
+				<item id="7894" min="1" max="1" chance="0.75" /> <!-- Spiritual Eye -->
+				<item id="7895" min="1" max="1" chance="0.75" /> <!-- Flaming Dragon Skull -->
+				<item id="98" min="1" max="1" chance="0.75" /> <!-- Halberd -->
+				<item id="213" min="1" max="1" chance="0.75" /> <!-- Branch of the Mother Tree -->
+				<item id="236" min="1" max="1" chance="0.75" /> <!-- Soul Separator -->
+				<item id="269" min="1" max="1" chance="0.75" /> <!-- Blood Tornado -->
+				<item id="2500" min="1" max="1" chance="0.75" /> <!-- Dark Legion's Edge -->
+				<item id="305" min="1" max="1" chance="0.75" /> <!-- Tallum Glaive -->
+				<item id="289" min="1" max="1" chance="0.75" /> <!-- Soul Bow -->
+				<item id="5311" min="1" max="1" chance="0.75" /> <!-- Sealed Armor of Nightmare -->
+				<item id="288" min="1" max="1" chance="0.75" /> <!-- Carnage Bow -->
+				<item id="5316" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5320" min="1" max="1" chance="0.75" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5326" min="1" max="1" chance="0.75" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Robe -->
+				<item id="6323" min="1" max="1" chance="0.75" /> <!-- Sealed Phoenix Necklace -->
+				<item id="270" min="1" max="1" chance="0.75" /> <!-- Dragon Grinder -->
+				<item id="2504" min="1" max="1" chance="0.75" /> <!-- Meteor Shower -->
+				<item id="70000" min="1356" max="4068" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="49756" min="1" max="3" chance="50.22" /> <!-- Cloth Piece -->
+				<item id="33814" min="1" max="1" chance="34.82" /> <!-- Improved Scroll: Enchant Armor (B-grade) -->
+				<item id="33808" min="1" max="1" chance="34.45" /> <!-- Improved Scroll: Enchant Weapon (B-grade) -->
+				<item id="729" min="1" max="1" chance="25.37" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="730" min="1" max="1" chance="25.13" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="90899" min="1" max="1" chance="2.939" /> <!-- Blessed Agathion's Soul -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="29023" level="74" type="L2Monster" name="Maiden Doll">
+		<parameters>
+			<param name="MoveAroundSocial" value="50" />
+			<param name="MoveAroundSocial1" value="50" />
+			<param name="MoveAroundSocial2" value="50" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="5129" /> <!-- Doll Knife -->
+		<acquire exp="129198" sp="3875" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1828" hpRegen="6.5" mp="832" mpRegen="2.4" />
+			<attack physical="442" magical="302" random="30" critical="4" accuracy="40" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
+			<defence physical="261" magical="191" />
+			<speed>
+				<walk ground="22" />
+				<run ground="150" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="9" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="19" /> <!-- Dual-Sword Weapons -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="6" />
+			<height normal="12" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="97" min="1" max="1" chance="0.0075" /> <!-- Lance -->
+				<item id="268" min="1" max="1" chance="0.0075" /> <!-- Bellion Cestus -->
+				<item id="57" min="2433" max="5685" chance="70" /> <!-- Adena -->
+				<item id="1887" min="1" max="1" chance="10.68" /> <!-- Varnish of Purity -->
+				<item id="4120" min="1" max="1" chance="1.603" /> <!-- Bellion Cestus Edge -->
+				<item id="4115" min="1" max="1" chance="1.574" /> <!-- Lance Blade -->
+			</drop>
+			<spoil>
+				<item id="948" min="1" max="1" chance="4.296" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="29024" level="74" type="L2Monster" name="Veil Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="114" />
+			<param name="MoveAroundSocial1" value="114" />
+			<param name="MoveAroundSocial2" value="114" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="90904" sp="2727" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1880" hpRegen="6.5" mp="861" mpRegen="2.4" />
+			<attack physical="461" magical="315" random="30" critical="4" accuracy="40" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="267" magical="195" />
+			<speed>
+				<walk ground="70" />
+				<run ground="155" />
+			</speed>
+			<hitTime>740</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
+				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
+				<item id="57" min="1372" max="3205" chance="70" /> <!-- Adena -->
+				<item id="1895" min="1" max="1" chance="11.11" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="8.019" /> <!-- Mithril Ore -->
+				<item id="1866" min="2" max="6" chance="6.628" /> <!-- Suede -->
+				<item id="1879" min="1" max="1" chance="6.623" /> <!-- Cokes -->
+				<item id="1870" min="5" max="15" chance="3.946" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="2.235" /> <!-- Charcoal -->
+				<item id="4114" min="1" max="1" chance="0.75" /> <!-- Damascus Sword Blade -->
+				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
+			</drop>
+			<spoil>
+				<item id="948" min="1" max="1" chance="2.453" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="29025" level="75" type="L2Npc" name="Baium">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1709400" hpRegen="8.5" mp="18000" mpRegen="3" />
+			<attack physical="874.18" magical="596.95" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="233.61" magical="233.61" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="4296" />
+		<collision>
+			<radius normal="65" />
+			<height normal="82" />
+		</collision>
+	</npc>
+	<npc id="29026" level="60" type="L2Monster" name="Pirate Zombie Captain">
+		<parameters>
+			<param name="MoveAroundSocial" value="70" />
+			<param name="MoveAroundSocial1" value="70" />
+			<param name="MoveAroundSocial2" value="70" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="232" /> <!-- Dark Elven Dagger -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1933" hpRegen="6.5" mp="804" mpRegen="2.4" />
+			<attack physical="420" magical="328" random="10" critical="8" accuracy="40" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="272" magical="199" />
+			<speed>
+				<walk ground="14" />
+				<run ground="140" />
+			</speed>
+			<hitTime>760</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="17" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="29027" level="57" type="L2Monster" name="Pirate Zombie">
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="225" /> <!-- Mithril Dagger -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1776" hpRegen="6.5" mp="584" mpRegen="2.1" />
+			<attack physical="371" magical="289" random="10" critical="8" accuracy="40" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="256" magical="187" />
+			<speed>
+				<walk ground="11" />
+				<run ground="140" />
+			</speed>
+			<hitTime>740</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="29066" level="1" type="L2GrandBoss" name="Antharas">
+		<parameters>
+			<param name="ultra_respawn_time" value="8" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<acquire exp="262720917" sp="63053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6100000" hpRegen="2" mp="1800000" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4071" level="2" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4122" level="1" /> <!-- Antharas -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5093" level="1" /> <!-- Antharas Meteor -->
+		</skillList>
+		<corpseTime>14</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="true">
+			<skill maxChance="25" />
+		</ai>
+		<collision>
+			<radius normal="300" />
+			<height normal="300" />
+		</collision>
+		<dropLists> <!-- CT2.5 -->
+			<drop>
+				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+				<item id="80" min="1" max="2" chance="25" /> <!-- Tallum Blade -->
+				<item id="98" min="1" max="2" chance="25" /> <!-- Halberd -->
+				<item id="269" min="1" max="2" chance="25" /> <!-- Blood Tornado -->
+				<item id="2504" min="1" max="2" chance="25" /> <!-- Meteor Shower -->
+				<item id="235" min="1" max="2" chance="25" /> <!-- Bloody Orchid -->
+				<item id="288" min="1" max="2" chance="25" /> <!-- Carnage Bow -->
+				<item id="150" min="1" max="2" chance="25" /> <!-- Elemental Sword -->
+				<item id="212" min="1" max="2" chance="25" /> <!-- Dasparion's Staff -->
+				<item id="81" min="1" max="2" chance="25" /> <!-- Dragon Slayer -->
+				<item id="151" min="1" max="2" chance="25" /> <!-- Sword of Miracles -->
+				<item id="2500" min="1" max="2" chance="25" /> <!-- Dark Legion's Edge -->
+				<item id="164" min="1" max="2" chance="25" /> <!-- Elysian -->
+				<item id="236" min="1" max="2" chance="20" /> <!-- Soul Separator -->
+				<item id="270" min="1" max="2" chance="20" /> <!-- Dragon Grinder -->
+				<item id="289" min="1" max="2" chance="20" /> <!-- Soul Bow -->
+				<item id="213" min="1" max="2" chance="20" /> <!-- Branch of the Mother Tree -->
+				<item id="305" min="1" max="2" chance="20" /> <!-- Tallum Glaive -->
+				<item id="6326" min="1" max="5" chance="30" /> <!-- Sealed Majestic Necklace -->
+				<item id="6327" min="1" max="5" chance="35" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="5" chance="35" /> <!-- Sealed Majestic Ring -->
+				<item id="6323" min="1" max="5" chance="30" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Earring -->
+				<item id="6325" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Ring -->
+				<item id="5287" min="1" max="3" chance="50" /> <!-- Sealed Dark Crystal breastplate -->
+				<item id="5297" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5304" min="1" max="3" chance="25" /> <!-- Sealed Tallum Tunic -->
+				<item id="5311" min="1" max="3" chance="35" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5320" min="1" max="3" chance="35" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5326" min="1" max="3" chance="30" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5293" min="1" max="3" chance="25" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5301" min="1" max="3" chance="25" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5308" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5316" min="1" max="3" chance="8" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5323" min="1" max="3" chance="8" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5329" min="1" max="3" chance="9" /> <!-- Sealed Majestic Robe -->
+				<item id="5288" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5298" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5305" min="1" max="3" chance="30" /> <!-- Sealed Tallum Stockings -->
+				<item id="5289" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5294" min="1" max="3" chance="25" /> <!-- Sealed Tallum Helmet -->
+				<item id="5312" min="1" max="3" chance="25" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5317" min="1" max="3" chance="25" /> <!-- Sealed Majestic Circlet -->
+				<item id="5291" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5296" min="1" max="3" chance="25" /> <!-- Sealed Tallum Boots -->
+				<item id="5314" min="1" max="3" chance="25" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5319" min="1" max="3" chance="25" /> <!-- Sealed Majestic Boots -->
+				<item id="5290" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5295" min="1" max="3" chance="25" /> <!-- Sealed Tallum Gloves -->
+				<item id="5313" min="1" max="3" chance="25" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5318" min="1" max="3" chance="25" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5292" min="1" max="3" chance="40" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="3" chance="40" /> <!-- Sealed Shield of Nightmare -->
+				<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="39" chance="100" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="9000000" max="13000000" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="29067" level="1" type="L2GrandBoss" name="Antharas">
+		<parameters>
+			<param name="ultra_respawn_time" value="5" />
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="262720918" sp="29116376" raidPoints="30780" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="6800000" hpRegen="1100" mp="1800000" mpRegen="1000" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3456" magical="862.5" />
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4071" level="2" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4122" level="1" /> <!-- Antharas -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5093" level="1" /> <!-- Antharas Meteor -->
+		</skillList>
+		<corpseTime>14</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="true">
+			<skill maxChance="25" />
+		</ai>
+		<collision>
+			<radius normal="300" />
+			<height normal="300" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="5292" min="1" max="1" chance="51.25" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="1" chance="50.84" /> <!-- Sealed Shield of Nightmare -->
+				<item id="90992" min="1" max="1" chance="29.03" /> <!-- Antharas' Earring -->
+				<item id="5329" min="1" max="1" chance="20.5" /> <!-- Sealed Majestic Robe -->
+				<item id="5311" min="1" max="1" chance="20.37" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="20.04" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5320" min="1" max="1" chance="19.68" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5326" min="1" max="1" chance="19.57" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5293" min="1" max="1" chance="19.15" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5316" min="1" max="1" chance="19.09" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="7900" min="1" max="1" chance="17.8" /> <!-- Ice Storm Hammer -->
+				<item id="5308" min="1" max="1" chance="17.77" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="7892" min="1" max="1" chance="17.72" /> <!-- Spell Breaker -->
+				<item id="5301" min="1" max="1" chance="17.33" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="7883" min="1" max="1" chance="16.92" /> <!-- Guardian's Sword -->
+				<item id="7893" min="1" max="1" chance="16.91" /> <!-- Kaim Vanul's Bones -->
+				<item id="7889" min="1" max="1" chance="16.68" /> <!-- Wizard's Tear -->
+				<item id="7901" min="1" max="1" chance="15.89" /> <!-- Star Buster -->
+				<item id="5319" min="1" max="1" chance="13.64" /> <!-- Sealed Majestic Boots -->
+				<item id="5313" min="1" max="1" chance="13.35" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5312" min="1" max="1" chance="13.17" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5288" min="1" max="1" chance="13.03" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5314" min="1" max="1" chance="12.9" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="12.85" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5305" min="1" max="1" chance="12.76" /> <!-- Sealed Tallum Stockings -->
+				<item id="5295" min="1" max="1" chance="12.67" /> <!-- Sealed Tallum Gloves -->
+				<item id="5289" min="1" max="1" chance="12.66" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5317" min="1" max="1" chance="12.7" /> <!-- Sealed Majestic Circlet -->
+				<item id="5298" min="1" max="1" chance="12.59" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5296" min="1" max="1" chance="12.45" /> <!-- Sealed Tallum Boots -->
+				<item id="5304" min="1" max="1" chance="12.44" /> <!-- Sealed Tallum Tunic -->
+				<item id="5294" min="1" max="1" chance="12.34" /> <!-- Sealed Tallum Helmet -->
+				<item id="5297" min="1" max="1" chance="12.19" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5287" min="1" max="1" chance="11.92" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5291" min="1" max="1" chance="10.018" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5290" min="1" max="1" chance="9.982" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="2500" min="1" max="1" chance="9.154" /> <!-- Dark Legion's Edge -->
+				<item id="7902" min="1" max="1" chance="9.146" /> <!-- Doom Crusher -->
+				<item id="81" min="1" max="1" chance="9.146" /> <!-- Dragon Slayer -->
+				<item id="80" min="1" max="1" chance="9.144" /> <!-- Tallum Blade -->
+				<item id="7895" min="1" max="1" chance="9.136" /> <!-- Flaming Dragon Skull -->
+				<item id="213" min="1" max="1" chance="9.134" /> <!-- Branch of the Mother Tree -->
+				<item id="236" min="1" max="1" chance="9.13" /> <!-- Soul Separator -->
+				<item id="7899" min="1" max="1" chance="9.129" /> <!-- Destroyer Hammer -->
+				<item id="2504" min="1" max="1" chance="9.126" /> <!-- Meteor Shower -->
+				<item id="305" min="1" max="1" chance="9.124" /> <!-- Tallum Glaive -->
+				<item id="164" min="1" max="1" chance="9.124" /> <!-- Elysian -->
+				<item id="270" min="1" max="1" chance="9.122" /> <!-- Dragon Grinder -->
+				<item id="150" min="1" max="1" chance="9.103" /> <!-- Elemental Sword -->
+				<item id="235" min="1" max="1" chance="9.095" /> <!-- Bloody Orchid -->
+				<item id="288" min="1" max="1" chance="9.08" /> <!-- Carnage Bow -->
+				<item id="269" min="1" max="1" chance="9.077" /> <!-- Blood Tornado -->
+				<item id="7884" min="1" max="1" chance="9.073" /> <!-- Infernal Master -->
+				<item id="98" min="1" max="1" chance="9.07" /> <!-- Halberd -->
+				<item id="7894" min="1" max="1" chance="9.067" /> <!-- Spiritual Eye -->
+				<item id="212" min="1" max="1" chance="9.029" /> <!-- Dasparion's Staff -->
+				<item id="289" min="1" max="1" chance="9.025" /> <!-- Soul Bow -->
+				<item id="151" min="1" max="1" chance="9.024" /> <!-- Sword of Miracles -->
+				<item id="8683" min="1" max="1" chance="8.378" /> <!-- Tiphon's Spear -->
+				<item id="8684" min="1" max="1" chance="8.378" /> <!-- Shyeed's Bow -->
+				<item id="8682" min="1" max="1" chance="8.368" /> <!-- Naga Storm -->
+				<item id="8688" min="1" max="1" chance="8.356" /> <!-- Daimon Crystal -->
+				<item id="8678" min="1" max="1" chance="8.356" /> <!-- Sirra's Blade -->
+				<item id="8680" min="1" max="1" chance="8.331" /> <!-- Barakiel's Axe -->
+				<item id="8681" min="1" max="1" chance="8.328" /> <!-- Behemoth' Tuning Fork -->
+				<item id="8686" min="1" max="1" chance="8.324" /> <!-- Themis' Tongue -->
+				<item id="8679" min="1" max="1" chance="8.317" /> <!-- Sword of Ipos -->
+				<item id="8687" min="1" max="1" chance="8.295" /> <!-- Cabrio's Hand -->
+				<item id="5706" min="1" max="1" chance="8.273" /> <!-- Damascus*Damascus -->
+				<item id="8685" min="1" max="1" chance="8.268" /> <!-- Sobekk's Hurricane -->
+				<item id="90998" min="1" max="3" chance="100" /> <!-- Balthus Knights Glittering Varnish -->
+				<item id="90997" min="3" max="7" chance="100" /> <!-- Balthus Knights Shining Varnish -->
+				<item id="70000" min="1356" max="4068" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="49756" min="3" max="7" chance="100" /> <!-- Cloth Piece -->
+				<item id="33815" min="2" max="4" chance="50.21" /> <!-- Improved Scroll: Enchant Armor (A-grade) -->
+				<item id="33814" min="2" max="4" chance="49.99" /> <!-- Improved Scroll: Enchant Armor (B-grade) -->
+				<item id="33809" min="2" max="4" chance="49.83" /> <!-- Improved Scroll: Enchant Weapon (A-grade) -->
+				<item id="33807" min="2" max="4" chance="49.36" /> <!-- Improved Scroll: Enchant Weapon (C-grade) -->
+				<item id="33813" min="2" max="4" chance="48.95" /> <!-- Improved Scroll: Enchant Armor (C-grade) -->
+				<item id="33808" min="2" max="4" chance="48.94" /> <!-- Improved Scroll: Enchant Weapon (B-grade) -->
+				<item id="90899" min="1" max="1" chance="2.932" /> <!-- Blessed Agathion's Soul -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="29068" level="84" type="L2GrandBoss" name="Antharas" title="Land Dragon">
+		<!-- Todo: CT2.5 -->	
+		<parameters>
+			<param name="ultra_respawn_time" value="3" />
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="538538584" sp="63323403" raidPoints="38248" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="689482245" hpRegen="1830" mp="2025740" mpRegen="1000" />
+			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3974.13793" magical="496.01325" />
+			<speed>
+				<walk ground="50" />
+				<run ground="279" />
+			</speed>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" noSleepMode="true" isDeathPenalty="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4071" level="2" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4112" level="1" /> <!-- Ordinary Attack -->
+			<skill id="4122" level="1" /> <!-- Antharas -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="5093" level="1" /> <!-- Antharas Meteor -->
+		</skillList>
+		<corpseTime>14</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="true">
+			<skill maxChance="25" primaryId="4112" />
+		</ai>
+		<collision>
+			<radius normal="300" />
+			<height normal="300" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="5292" min="1" max="1" chance="51.25" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="1" chance="50.84" /> <!-- Sealed Shield of Nightmare -->
+				<item id="90992" min="1" max="1" chance="29.03" /> <!-- Antharas' Earring -->
+				<item id="5329" min="1" max="1" chance="20.5" /> <!-- Sealed Majestic Robe -->
+				<item id="5311" min="1" max="1" chance="20.37" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="20.04" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5320" min="1" max="1" chance="19.68" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5326" min="1" max="1" chance="19.57" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5293" min="1" max="1" chance="19.15" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5316" min="1" max="1" chance="19.09" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="7900" min="1" max="1" chance="17.8" /> <!-- Ice Storm Hammer -->
+				<item id="5308" min="1" max="1" chance="17.77" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="7892" min="1" max="1" chance="17.72" /> <!-- Spell Breaker -->
+				<item id="5301" min="1" max="1" chance="17.33" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="7883" min="1" max="1" chance="16.92" /> <!-- Guardian's Sword -->
+				<item id="7893" min="1" max="1" chance="16.91" /> <!-- Kaim Vanul's Bones -->
+				<item id="7889" min="1" max="1" chance="16.68" /> <!-- Wizard's Tear -->
+				<item id="7901" min="1" max="1" chance="15.89" /> <!-- Star Buster -->
+				<item id="5319" min="1" max="1" chance="13.64" /> <!-- Sealed Majestic Boots -->
+				<item id="5313" min="1" max="1" chance="13.35" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5312" min="1" max="1" chance="13.17" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5288" min="1" max="1" chance="13.03" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5314" min="1" max="1" chance="12.9" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="12.85" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5305" min="1" max="1" chance="12.76" /> <!-- Sealed Tallum Stockings -->
+				<item id="5295" min="1" max="1" chance="12.67" /> <!-- Sealed Tallum Gloves -->
+				<item id="5289" min="1" max="1" chance="12.66" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5317" min="1" max="1" chance="12.7" /> <!-- Sealed Majestic Circlet -->
+				<item id="5298" min="1" max="1" chance="12.59" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5296" min="1" max="1" chance="12.45" /> <!-- Sealed Tallum Boots -->
+				<item id="5304" min="1" max="1" chance="12.44" /> <!-- Sealed Tallum Tunic -->
+				<item id="5294" min="1" max="1" chance="12.34" /> <!-- Sealed Tallum Helmet -->
+				<item id="5297" min="1" max="1" chance="12.19" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5287" min="1" max="1" chance="11.92" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5291" min="1" max="1" chance="10.018" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5290" min="1" max="1" chance="9.982" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="2500" min="1" max="1" chance="9.154" /> <!-- Dark Legion's Edge -->
+				<item id="7902" min="1" max="1" chance="9.146" /> <!-- Doom Crusher -->
+				<item id="81" min="1" max="1" chance="9.146" /> <!-- Dragon Slayer -->
+				<item id="80" min="1" max="1" chance="9.144" /> <!-- Tallum Blade -->
+				<item id="7895" min="1" max="1" chance="9.136" /> <!-- Flaming Dragon Skull -->
+				<item id="213" min="1" max="1" chance="9.134" /> <!-- Branch of the Mother Tree -->
+				<item id="236" min="1" max="1" chance="9.13" /> <!-- Soul Separator -->
+				<item id="7899" min="1" max="1" chance="9.129" /> <!-- Destroyer Hammer -->
+				<item id="2504" min="1" max="1" chance="9.126" /> <!-- Meteor Shower -->
+				<item id="305" min="1" max="1" chance="9.124" /> <!-- Tallum Glaive -->
+				<item id="164" min="1" max="1" chance="9.124" /> <!-- Elysian -->
+				<item id="270" min="1" max="1" chance="9.122" /> <!-- Dragon Grinder -->
+				<item id="150" min="1" max="1" chance="9.103" /> <!-- Elemental Sword -->
+				<item id="235" min="1" max="1" chance="9.095" /> <!-- Bloody Orchid -->
+				<item id="288" min="1" max="1" chance="9.08" /> <!-- Carnage Bow -->
+				<item id="269" min="1" max="1" chance="9.077" /> <!-- Blood Tornado -->
+				<item id="7884" min="1" max="1" chance="9.073" /> <!-- Infernal Master -->
+				<item id="98" min="1" max="1" chance="9.07" /> <!-- Halberd -->
+				<item id="7894" min="1" max="1" chance="9.067" /> <!-- Spiritual Eye -->
+				<item id="212" min="1" max="1" chance="9.029" /> <!-- Dasparion's Staff -->
+				<item id="289" min="1" max="1" chance="9.025" /> <!-- Soul Bow -->
+				<item id="151" min="1" max="1" chance="9.024" /> <!-- Sword of Miracles -->
+				<item id="8683" min="1" max="1" chance="8.378" /> <!-- Tiphon's Spear -->
+				<item id="8684" min="1" max="1" chance="8.378" /> <!-- Shyeed's Bow -->
+				<item id="8682" min="1" max="1" chance="8.368" /> <!-- Naga Storm -->
+				<item id="8688" min="1" max="1" chance="8.356" /> <!-- Daimon Crystal -->
+				<item id="8678" min="1" max="1" chance="8.356" /> <!-- Sirra's Blade -->
+				<item id="8680" min="1" max="1" chance="8.331" /> <!-- Barakiel's Axe -->
+				<item id="8681" min="1" max="1" chance="8.328" /> <!-- Behemoth' Tuning Fork -->
+				<item id="8686" min="1" max="1" chance="8.324" /> <!-- Themis' Tongue -->
+				<item id="8679" min="1" max="1" chance="8.317" /> <!-- Sword of Ipos -->
+				<item id="8687" min="1" max="1" chance="8.295" /> <!-- Cabrio's Hand -->
+				<item id="5706" min="1" max="1" chance="8.273" /> <!-- Damascus*Damascus -->
+				<item id="8685" min="1" max="1" chance="8.268" /> <!-- Sobekk's Hurricane -->
+				<item id="90998" min="1" max="3" chance="100" /> <!-- Balthus Knights Glittering Varnish -->
+				<item id="90997" min="3" max="7" chance="100" /> <!-- Balthus Knights Shining Varnish -->
+				<item id="70000" min="1356" max="4068" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="49756" min="3" max="7" chance="100" /> <!-- Cloth Piece -->
+				<item id="33815" min="2" max="4" chance="50.21" /> <!-- Improved Scroll: Enchant Armor (A-grade) -->
+				<item id="33814" min="2" max="4" chance="49.99" /> <!-- Improved Scroll: Enchant Armor (B-grade) -->
+				<item id="33809" min="2" max="4" chance="49.83" /> <!-- Improved Scroll: Enchant Weapon (A-grade) -->
+				<item id="33807" min="2" max="4" chance="49.36" /> <!-- Improved Scroll: Enchant Weapon (C-grade) -->
+				<item id="33813" min="2" max="4" chance="48.95" /> <!-- Improved Scroll: Enchant Armor (C-grade) -->
+				<item id="33808" min="2" max="4" chance="48.94" /> <!-- Improved Scroll: Enchant Weapon (B-grade) -->
+				<item id="90899" min="1" max="1" chance="2.932" /> <!-- Blessed Agathion's Soul -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="29069" level="84" type="L2Monster" name="Behemoth Dragon">
+		<!-- Todo: CT2.5 -->
+		<parameters>
+			<param name="RootingManage" value="0" />
+			<skill name="PhysicalSpecial" id="5095" level="1" />
+			<skill name="LongRangePhysicalSpecial" id="5096" level="1" />
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="949367" hpRegen="76.71" mp="22800" mpRegen="3" />
+			<attack physical="3584.56902102981" magical="1386.66000087809" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1071.29474264312" magical="522.626863116263" evasion="-18" />
+			<speed>
+				<walk ground="55" />
+				<run ground="180" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5095" level="1" /> <!-- Antharas Subordinate Melee Attack -->
+			<skill id="5096" level="1" /> <!-- Antharas Subordinate Remote Attack -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" isAggressive="true">
+			<skill maxChance="25" />
+		</ai>
+		<collision>
+			<radius normal="63" />
+			<height normal="54" />
+		</collision>
+	</npc>
+	<npc id="29070" level="79" type="L2Monster" name="Dragon Bomber">
+		<!-- Todo: CT2.5 -->
+		<parameters>
+			<skill name="SelfRangeDDMagic" id="5094" level="1" />
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1353" hpRegen="8.5" mp="1809" mpRegen="3" />
+			<attack physical="1094.11758465172" magical="4902.24" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.098247547707" magical="261.308998696584" />
+			<speed>
+				<walk ground="35" />
+				<run ground="250" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="5097" level="1" /> <!-- Antharas Self-destruction -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="37" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="29071" level="1" type="L2Monster" name="Dragon Bomber">
+		<parameters>
+			<skill name="SelfRangeDDMagic" id="5094" level="1" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1000" hpRegen="2" mp="1607" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="35" />
+				<run ground="245" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
+			<skill id="5097" level="1" /> <!-- Antharas Self-destruction -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="37" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="29072" level="1" type="L2Monster" name="Dragon Bomber">
+		<parameters>
+			<skill name="SelfRangeDDMagic" id="5094" level="1" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1000" hpRegen="2" mp="1607" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="35" />
+				<run ground="255" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
+			<skill id="5097" level="1" /> <!-- Antharas Self-destruction -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="37" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="29073" level="1" type="L2Monster" name="Dragon Bomber">
+		<parameters>
+			<skill name="SelfRangeDDMagic" id="5094" level="1" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1000" hpRegen="2" mp="1607" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="35" />
+				<run ground="247" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
+			<skill id="5097" level="1" /> <!-- Antharas Self-destruction -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="37" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="29074" level="1" type="L2Monster" name="Dragon Bomber">
+		<parameters>
+			<skill name="SelfRangeDDMagic" id="5094" level="1" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1000" hpRegen="2" mp="1607" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="35" />
+				<run ground="252" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
+			<skill id="5097" level="1" /> <!-- Antharas Self-destruction -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="37" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="29075" level="1" type="L2Monster" name="Dragon Bomber">
+		<parameters>
+			<skill name="SelfRangeDDMagic" id="5094" level="1" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1000" hpRegen="2" mp="1607" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="35" />
+				<run ground="243" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
+			<skill id="5097" level="1" /> <!-- Antharas Self-destruction -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="37" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="29076" level="1" type="L2Monster" name="Dragon Bomber">
+		<parameters>
+			<skill name="SelfRangeDDMagic" id="5094" level="1" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1353" hpRegen="2" mp="1809" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="35" />
+				<run ground="250" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="200" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="42" />
+			<height normal="34.5" />
+		</collision>
+	</npc>
+	<npc id="29077" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="177456" />
+			<param name="suicide2_x" value="177120" />
+			<param name="suicide3_x" value="176832" />
+			<param name="suicide4_x" value="176512" />
+			<param name="suicide5_x" value="176208" />
+			<param name="suicide6_x" value="175952" />
+			<param name="suicide1_y" value="111504" />
+			<param name="suicide2_y" value="111440" />
+			<param name="suicide3_y" value="111440" />
+			<param name="suicide4_y" value="111408" />
+			<param name="suicide5_y" value="111376" />
+			<param name="suicide6_y" value="111424" />
+			<param name="zerging_spawn_x" value="177229" />
+			<param name="zerging_spawn_y" value="113298" />
+			<param name="dice" value="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29078" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="175952" />
+			<param name="suicide2_x" value="175712" />
+			<param name="suicide3_x" value="175520" />
+			<param name="suicide4_x" value="175344" />
+			<param name="suicide5_x" value="175216" />
+			<param name="suicide6_x" value="175120" />
+			<param name="suicide1_y" value="111424" />
+			<param name="suicide2_y" value="111472" />
+			<param name="suicide3_y" value="111664" />
+			<param name="suicide4_y" value="111888" />
+			<param name="suicide5_y" value="112064" />
+			<param name="suicide6_y" value="112240" />
+			<param name="zerging_spawn_x" value="176707" />
+			<param name="zerging_spawn_y" value="113585" />
+			<param name="dice" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29079" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="175120" />
+			<param name="suicide2_x" value="175024" />
+			<param name="suicide3_x" value="174960" />
+			<param name="suicide4_x" value="174864" />
+			<param name="suicide5_x" value="174736" />
+			<param name="suicide6_x" value="174640" />
+			<param name="suicide1_y" value="112240" />
+			<param name="suicide2_y" value="112416" />
+			<param name="suicide3_y" value="112624" />
+			<param name="suicide4_y" value="112896" />
+			<param name="suicide5_y" value="113056" />
+			<param name="suicide6_y" value="113232" />
+			<param name="zerging_spawn_x" value="176385" />
+			<param name="zerging_spawn_y" value="113889" />
+			<param name="dice" value="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29080" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="174640" />
+			<param name="suicide2_x" value="174576" />
+			<param name="suicide3_x" value="174544" />
+			<param name="suicide4_x" value="174352" />
+			<param name="suicide5_x" value="174160" />
+			<param name="suicide6_x" value="173968" />
+			<param name="suicide1_y" value="113232" />
+			<param name="suicide2_y" value="113392" />
+			<param name="suicide3_y" value="113552" />
+			<param name="suicide4_y" value="113792" />
+			<param name="suicide5_y" value="113936" />
+			<param name="suicide6_y" value="114096" />
+			<param name="zerging_spawn_x" value="176082" />
+			<param name="zerging_spawn_y" value="114241" />
+			<param name="dice" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29081" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="173968" />
+			<param name="suicide2_x" value="173856" />
+			<param name="suicide3_x" value="173808" />
+			<param name="suicide4_x" value="173792" />
+			<param name="suicide5_x" value="173824" />
+			<param name="suicide6_x" value="173920" />
+			<param name="suicide1_y" value="114096" />
+			<param name="suicide2_y" value="114320" />
+			<param name="suicide3_y" value="114592" />
+			<param name="suicide4_y" value="114912" />
+			<param name="suicide5_y" value="115152" />
+			<param name="suicide6_y" value="115408" />
+			<param name="zerging_spawn_x" value="176066" />
+			<param name="zerging_spawn_y" value="114802" />
+			<param name="dice" value="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29082" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="173920" />
+			<param name="suicide2_x" value="174064" />
+			<param name="suicide3_x" value="174272" />
+			<param name="suicide4_x" value="174480" />
+			<param name="suicide5_x" value="174592" />
+			<param name="suicide6_x" value="174704" />
+			<param name="suicide1_y" value="115408" />
+			<param name="suicide2_y" value="115568" />
+			<param name="suicide3_y" value="115664" />
+			<param name="suicide4_y" value="115920" />
+			<param name="suicide5_y" value="116176" />
+			<param name="suicide6_y" value="116448" />
+			<param name="zerging_spawn_x" value="176095" />
+			<param name="zerging_spawn_y" value="115313" />
+			<param name="dice" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29083" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="174704" />
+			<param name="suicide2_x" value="174800" />
+			<param name="suicide3_x" value="174960" />
+			<param name="suicide4_x" value="175136" />
+			<param name="suicide5_x" value="175248" />
+			<param name="suicide6_x" value="175424" />
+			<param name="suicide1_y" value="116448" />
+			<param name="suicide2_y" value="116672" />
+			<param name="suicide3_y" value="116864" />
+			<param name="suicide4_y" value="117184" />
+			<param name="suicide5_y" value="117504" />
+			<param name="suicide6_y" value="117792" />
+			<param name="zerging_spawn_x" value="176425" />
+			<param name="zerging_spawn_y" value="115829" />
+			<param name="dice" value="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29084" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="175424" />
+			<param name="suicide2_x" value="175632" />
+			<param name="suicide3_x" value="175856" />
+			<param name="suicide4_x" value="176256" />
+			<param name="suicide5_x" value="176544" />
+			<param name="suicide6_x" value="176880" />
+			<param name="suicide1_y" value="117792" />
+			<param name="suicide2_y" value="118016" />
+			<param name="suicide3_y" value="118176" />
+			<param name="suicide4_y" value="118256" />
+			<param name="suicide5_y" value="118240" />
+			<param name="suicide6_y" value="118192" />
+			<param name="zerging_spawn_x" value="176949" />
+			<param name="zerging_spawn_y" value="116378" />
+			<param name="dice" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29085" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="176880" />
+			<param name="suicide2_x" value="177200" />
+			<param name="suicide3_x" value="177488" />
+			<param name="suicide4_x" value="177824" />
+			<param name="suicide5_x" value="178048" />
+			<param name="suicide6_x" value="178368" />
+			<param name="suicide1_y" value="118192" />
+			<param name="suicide2_y" value="118128" />
+			<param name="suicide3_y" value="118096" />
+			<param name="suicide4_y" value="118080" />
+			<param name="suicide5_y" value="118096" />
+			<param name="suicide6_y" value="118128" />
+			<param name="zerging_spawn_x" value="177655" />
+			<param name="zerging_spawn_y" value="116402" />
+			<param name="dice" value="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29086" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="178368" />
+			<param name="suicide2_x" value="178592" />
+			<param name="suicide3_x" value="178848" />
+			<param name="suicide4_x" value="179200" />
+			<param name="suicide5_x" value="179472" />
+			<param name="suicide6_x" value="179696" />
+			<param name="suicide1_y" value="118128" />
+			<param name="suicide2_y" value="118192" />
+			<param name="suicide3_y" value="118240" />
+			<param name="suicide4_y" value="118272" />
+			<param name="suicide5_y" value="118272" />
+			<param name="suicide6_y" value="118192" />
+			<param name="zerging_spawn_x" value="178248" />
+			<param name="zerging_spawn_y" value="116395" />
+			<param name="dice" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29087" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="179696" />
+			<param name="suicide2_x" value="179920" />
+			<param name="suicide3_x" value="180096" />
+			<param name="suicide4_x" value="180272" />
+			<param name="suicide5_x" value="180544" />
+			<param name="suicide6_x" value="180592" />
+			<param name="suicide1_y" value="118192" />
+			<param name="suicide2_y" value="118016" />
+			<param name="suicide3_y" value="117824" />
+			<param name="suicide4_y" value="117520" />
+			<param name="suicide5_y" value="117264" />
+			<param name="suicide6_y" value="116928" />
+			<param name="zerging_spawn_x" value="178706" />
+			<param name="zerging_spawn_y" value="115998" />
+			<param name="dice" value="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29088" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="180592" />
+			<param name="suicide2_x" value="180752" />
+			<param name="suicide3_x" value="181104" />
+			<param name="suicide4_x" value="181184" />
+			<param name="suicide5_x" value="180992" />
+			<param name="suicide6_x" value="180896" />
+			<param name="suicide1_y" value="116928" />
+			<param name="suicide2_y" value="116576" />
+			<param name="suicide3_y" value="116544" />
+			<param name="suicide4_y" value="116240" />
+			<param name="suicide5_y" value="116064" />
+			<param name="suicide6_y" value="115888" />
+			<param name="zerging_spawn_x" value="179208" />
+			<param name="zerging_spawn_y" value="115452" />
+			<param name="dice" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29089" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="180896" />
+			<param name="suicide2_x" value="180784" />
+			<param name="suicide3_x" value="180656" />
+			<param name="suicide4_x" value="180528" />
+			<param name="suicide5_x" value="180496" />
+			<param name="suicide6_x" value="180496" />
+			<param name="suicide1_y" value="115888" />
+			<param name="suicide2_y" value="115712" />
+			<param name="suicide3_y" value="115504" />
+			<param name="suicide4_y" value="115232" />
+			<param name="suicide5_y" value="115008" />
+			<param name="suicide6_y" value="114816" />
+			<param name="zerging_spawn_x" value="179191" />
+			<param name="zerging_spawn_y" value="115079" />
+			<param name="dice" value="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29090" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="180496" />
+			<param name="suicide2_x" value="180512" />
+			<param name="suicide3_x" value="180544" />
+			<param name="suicide4_x" value="180688" />
+			<param name="suicide5_x" value="180804" />
+			<param name="suicide6_x" value="180896" />
+			<param name="suicide1_y" value="114816" />
+			<param name="suicide2_y" value="114624" />
+			<param name="suicide3_y" value="114400" />
+			<param name="suicide4_y" value="114112" />
+			<param name="suicide5_y" value="113920" />
+			<param name="suicide6_y" value="113776" />
+			<param name="zerging_spawn_x" value="179221" />
+			<param name="zerging_spawn_y" value="114546" />
+			<param name="dice" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29091" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="180896" />
+			<param name="suicide2_x" value="181040" />
+			<param name="suicide3_x" value="181184" />
+			<param name="suicide4_x" value="181120" />
+			<param name="suicide5_x" value="180880" />
+			<param name="suicide6_x" value="180720" />
+			<param name="suicide1_y" value="113776" />
+			<param name="suicide2_y" value="113632" />
+			<param name="suicide3_y" value="113472" />
+			<param name="suicide4_y" value="113168" />
+			<param name="suicide5_y" value="113072" />
+			<param name="suicide6_y" value="112896" />
+			<param name="zerging_spawn_x" value="178916" />
+			<param name="zerging_spawn_y" value="113925" />
+			<param name="dice" value="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29092" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="180720" />
+			<param name="suicide2_x" value="180640" />
+			<param name="suicide3_x" value="180576" />
+			<param name="suicide4_x" value="180368" />
+			<param name="suicide5_x" value="180192" />
+			<param name="suicide6_x" value="180048" />
+			<param name="suicide1_y" value="112896" />
+			<param name="suicide2_y" value="112672" />
+			<param name="suicide3_y" value="112432" />
+			<param name="suicide4_y" value="112128" />
+			<param name="suicide5_y" value="111968" />
+			<param name="suicide6_y" value="111760" />
+			<param name="zerging_spawn_x" value="178782" />
+			<param name="zerging_spawn_y" value="113814" />
+			<param name="dice" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29093" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="180048" />
+			<param name="suicide2_x" value="179920" />
+			<param name="suicide3_x" value="179728" />
+			<param name="suicide4_x" value="179376" />
+			<param name="suicide5_x" value="179136" />
+			<param name="suicide6_x" value="178848" />
+			<param name="suicide1_y" value="111760" />
+			<param name="suicide2_y" value="111584" />
+			<param name="suicide3_y" value="111472" />
+			<param name="suicide4_y" value="111392" />
+			<param name="suicide5_y" value="111376" />
+			<param name="suicide6_y" value="111424" />
+			<param name="zerging_spawn_x" value="178419" />
+			<param name="zerging_spawn_y" value="113417" />
+			<param name="dice" value="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29094" level="78" type="L2Monster" name="">
+		<parameters>
+			<param name="suicide1_x" value="178848" />
+			<param name="suicide2_x" value="178560" />
+			<param name="suicide3_x" value="178320" />
+			<param name="suicide4_x" value="178000" />
+			<param name="suicide5_x" value="177728" />
+			<param name="suicide6_x" value="177456" />
+			<param name="suicide1_y" value="111424" />
+			<param name="suicide2_y" value="111456" />
+			<param name="suicide3_y" value="111488" />
+			<param name="suicide4_y" value="111536" />
+			<param name="suicide5_y" value="111536" />
+			<param name="suicide6_y" value="111504" />
+			<param name="zerging_spawn_x" value="177855" />
+			<param name="zerging_spawn_y" value="113282" />
+			<param name="dice" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="29099" level="80" type="L2Npc" name="Baium">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="53342293" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="65" />
+			<height normal="174" />
+		</collision>
+	</npc>
+</list>

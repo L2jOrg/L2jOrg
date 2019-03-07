@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>34292</npc> <!-- Chef Monkey -->
+	</npcs>
+	<item>
+		<ingredient id="70304" count="5" /> <!-- Tuna Fish -->
+		<production id="49744" count="100" /> <!-- Blessed Mysterious Soulshot (No-grade) -->
+	</item>
+	<item>
+		<ingredient id="70304" count="8" /> <!-- Tuna Fish -->
+		<production id="49745" count="100" /> <!-- Blessed Mysterious Soulshot (D-grade) -->
+	</item>
+	<item>
+		<ingredient id="70304" count="13" /> <!-- Tuna Fish -->
+		<production id="49746" count="100" /> <!-- Blessed Mysterious Soulshot (C-grade) -->
+	</item>
+	<item>
+		<ingredient id="70304" count="44" /> <!-- Tuna Fish -->
+		<production id="49747" count="100" /> <!-- Blessed Mysterious Soulshot (B-grade) -->
+	</item>
+	<item>
+		<ingredient id="70304" count="72" /> <!-- Tuna Fish -->
+		<production id="49748" count="100" /> <!-- Blessed Mysterious Soulshot (B-grade) -->
+	</item>
+	<item>
+		<ingredient id="70304" count="5" /> <!-- Tuna Fish -->
+		<production id="34610" count="100" /> <!-- Blessed Mysterious SpiritShot (No-grade) -->
+	</item>
+	<item>
+		<ingredient id="70304" count="8" /> <!-- Tuna Fish -->
+		<production id="34611" count="100" /> <!-- Blessed Mysterious SpiritShot (D-grade) -->
+	</item>
+	<item>
+		<ingredient id="70304" count="13" /> <!-- Tuna Fish -->
+		<production id="34612" count="100" /> <!-- Blessed Mysterious SpiritShot (C-grade) -->
+	</item>
+	<item>
+		<ingredient id="70304" count="44" /> <!-- Tuna Fish -->
+		<production id="34613" count="100" /> <!-- Blessed Mysterious SpiritShot (B-grade) -->
+	</item>
+	<item>
+		<ingredient id="70304" count="72" /> <!-- Tuna Fish -->
+		<production id="34614" count="100" /> <!-- Blessed Mysterious SpiritShot (B-grade) -->
+	</item>
+</list>

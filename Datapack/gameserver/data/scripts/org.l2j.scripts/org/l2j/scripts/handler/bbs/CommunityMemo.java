@@ -1,9 +1,9 @@
 package org.l2j.scripts.handler.bbs;
 
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
-import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.ShowBoardPacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessage;
@@ -151,7 +151,7 @@ public final class CommunityMemo extends ScriptsCommunityHandler
 
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("SELECT * FROM `bbs_memo` WHERE `account_name` = ? and memo_id = ?");
 				statement.setString(1, player.getAccountName());
 				statement.setInt(2, memoId);
@@ -187,7 +187,7 @@ public final class CommunityMemo extends ScriptsCommunityHandler
 
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("DELETE FROM `bbs_memo` WHERE `account_name` = ? and memo_id = ?");
 				statement.setString(1, player.getAccountName());
 				statement.setInt(2, memoId);
@@ -212,7 +212,7 @@ public final class CommunityMemo extends ScriptsCommunityHandler
 			ResultSet rset = null;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("SELECT * FROM `bbs_memo` WHERE `account_name` = ? and memo_id = ?");
 				statement.setString(1, player.getAccountName());
 				statement.setInt(2, memoId);
@@ -299,7 +299,7 @@ public final class CommunityMemo extends ScriptsCommunityHandler
 					PreparedStatement stmt = null;
 					try
 					{
-						con = L2DatabaseFactory.getInstance().getConnection();
+						con = DatabaseFactory.getInstance().getConnection();
 						if(memoId > 0)
 						{
 							stmt = con.prepareStatement("UPDATE bbs_memo SET title = ?, memo = ? WHERE memo_id = ? AND account_name = ?");
@@ -347,7 +347,7 @@ public final class CommunityMemo extends ScriptsCommunityHandler
 				int start = (page - 1) * MEMO_PER_PAGE;
 				int end = page * MEMO_PER_PAGE;
 
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("SELECT memo_id,title,post_date FROM `bbs_memo` WHERE `account_name` = ? ORDER BY post_date DESC LIMIT " + start + "," + end);
 				statement.setString(1, player.getAccountName());
 				rset = statement.executeQuery();
@@ -383,7 +383,7 @@ public final class CommunityMemo extends ScriptsCommunityHandler
 		int count = 0;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT count(*) as cnt FROM bbs_memo WHERE `account_name` = ?");
 			statement.setString(1, player.getAccountName());
 			rset = statement.executeQuery();

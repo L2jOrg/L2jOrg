@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30839</npc> <!-- Holly -->
+	</npcs>
+	<item>
+		<ingredient id="57" count="75"/> <!-- Adena --> 
+		<production id="6645" count="1" chance="100"/> <!-- Scroll: Vengeance --> 
+	</item>
+	<item>
+		<ingredient id="57" count="150"/> <!-- Adena --> 
+		<production id="6646" count="1" chance="100"/> <!-- Scroll: Touch of Life --> 
+	</item>
+</list>

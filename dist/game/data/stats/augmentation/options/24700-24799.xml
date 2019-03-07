@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
+	<option id="24700" name="o_f_84_1u_93">
+		<!-- CON +1 -->
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>CON</stat>
+			</effect>
+		</effects>
+	</option>
+	<option id="24701" name="o_f_84_1u_94">
+		<!-- INT +1 increase. -->
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</option>
+	<option id="24702" name="o_f_84_1u_95">
+		<!-- MEN +1 increase. -->
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</option>
+</list>

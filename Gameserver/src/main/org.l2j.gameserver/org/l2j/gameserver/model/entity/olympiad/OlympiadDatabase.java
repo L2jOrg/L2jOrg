@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.entity.olympiad;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Announcements;
 import org.l2j.gameserver.Config;
@@ -41,7 +41,7 @@ public class OlympiadDatabase
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(OlympiadParticipantsDAO.GET_ALL_CLASSIFIED_PARTICIPANTS);
 			rset = statement.executeQuery();
 			int place = 1;
@@ -99,7 +99,7 @@ public class OlympiadDatabase
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(OlympiadParticipantsDAO.OLYMPIAD_CALCULATE_LAST_PERIOD);
 			statement.setInt(1, Config.OLYMPIAD_BATTLES_FOR_REWARD);
 			statement.execute();
@@ -159,7 +159,7 @@ public class OlympiadDatabase
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			StatsSet hero;
 
 			for(ClassId id3 : ClassId.VALUES)

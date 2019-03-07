@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+	<npcs>
+		<npc>-1</npc> <!-- CB -->
+	</npcs>
+	<item>
+		<!-- Adena -->
+		<ingredient count="500" id="57" />
+		<!-- Scroll of Escape -->
+		<production count="1" id="736" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="2500" id="57" />
+		<!-- Scroll of Resurrection -->
+		<production count="1" id="737" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="10000000" id="57" />
+		<!-- Blessed Scroll of Resurrection -->
+		<production count="1" id="3936" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="10000000" id="57" />
+		<!-- Scroll: Enchant Weapon (A-grade) -->
+		<production count="1" id="729" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="10000000" id="57" />
+		<!-- Scroll: Enchant Armor (A-grade) -->
+		<production count="1" id="730" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="10000000" id="57" />
+		<!-- Scroll: Enchant Weapon (B-grade) -->
+		<production count="1" id="947" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="10000000" id="57" />
+		<!-- Scroll: Enchant Armor (B-grade) -->
+		<production count="1" id="948" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="10000000" id="57" />
+		<!-- Scroll: Enchant Weapon (C-grade) -->
+		<production count="1" id="951" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="10000000" id="57" />
+		<!-- Scroll: Enchant Armor (C-grade) -->
+		<production count="1" id="952" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="10000000" id="57" />
+		<!-- Scroll: Enchant Armor (D-grade) -->
+		<production count="1" id="956" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="10000000" id="57" />
+		<!-- Scroll: Enchant Weapon (D-grade) -->
+		<production count="1" id="955" />
+	</item>
+</list>

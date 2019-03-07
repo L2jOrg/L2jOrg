@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Talking Island Town -->
+	<region name="talking_island_town" town="Talking Island Town" castle="1" locId="910" bbs="1">
+		<respawnPoint X="-83990" Y="243336" Z="-3700" />
+		<respawnPoint X="-83964" Y="242680" Z="-3700" />
+		<respawnPoint X="-84512" Y="242679" Z="-3700" />
+		<respawnPoint X="-84623" Y="243193" Z="-3700" />
+		<respawnPoint X="-83742" Y="242214" Z="-3700" />
+		<respawnPoint X="-83537" Y="242537" Z="-3700" />
+		<respawnPoint X="-83700" Y="242896" Z="-3700" />
+		<respawnPoint X="-83646" Y="243397" Z="-3700" />
+		<respawnPoint X="-83808" Y="243637" Z="-3700" />
+		<respawnPoint X="-84903" Y="243489" Z="-3700" />
+		<respawnPoint X="-84852" Y="243174" Z="-3700" />
+		<respawnPoint X="-84892" Y="242479" Z="-3700" />
+		<respawnPoint X="-84756" Y="242155" Z="-3700" />
+		<respawnPoint X="-83761" Y="243620" Z="-3700" />
+		<respawnPoint X="-79411" Y="240677" Z="-3450" isChaotic="true" />
+		<respawnPoint X="-80480" Y="242640" Z="-3690" isChaotic="true" />
+		<respawnPoint X="-80336" Y="244656" Z="-3680" isChaotic="true" />
+		<respawnPoint X="-82464" Y="247248" Z="-3570" isChaotic="true" />
+		<respawnPoint X="-89522" Y="241696" Z="-3530" isChaotic="true" />
+		<respawnPoint X="-87056" Y="237952" Z="-3580" isChaotic="true" />
+		<respawnPoint X="-89536" Y="240336" Z="-3560" isChaotic="true" />
+		<respawnPoint X="-88208" Y="241360" Z="-3560" isChaotic="true" />
+		<respawnPoint X="-85328" Y="238080" Z="-3660" isChaotic="true" />
+		<respawnPoint X="-89760" Y="237408" Z="-3660" isChaotic="true" />
+		<respawnPoint X="-92976" Y="240560" Z="-3380" isChaotic="true" />
+		<respawnPoint X="-94448" Y="240944" Z="-3300" isChaotic="true" />
+		<respawnPoint X="-93552" Y="245296" Z="-3530" isChaotic="true" />
+		<respawnPoint X="-91584" Y="238480" Z="-3650" isChaotic="true" />
+		<respawnPoint X="-88720" Y="238976" Z="-3650" isChaotic="true" />
+		<respawnPoint X="-91760" Y="243664" Z="-3440" isChaotic="true" />
+		<respawnPoint X="-81680" Y="249696" Z="-3630" isChaotic="true" />
+		<respawnPoint X="-83808" Y="251264" Z="-3630" isChaotic="true" />
+		<respawnPoint X="-83328" Y="238304" Z="-3700" isChaotic="true" />
+		<respawnPoint X="-91296" Y="236272" Z="-3690" isChaotic="true" />
+		<map X="15" Y="23" />
+		<map X="15" Y="24" />
+		<map X="15" Y="25" />
+		<map X="16" Y="23" />
+		<map X="16" Y="24" />
+		<map X="16" Y="25" />
+		<map X="17" Y="24" />
+		<map X="17" Y="25" />
+		<map X="18" Y="25" />
+	</region>
+	<!-- Cedric's Training Hall -->
+	<region name="Cedric's_Training_Hall" town="Talking Island Town" castle="1" locId="910" bbs="1">
+		<respawnPoint X="-71338" Y="258271" Z="-3104" />
+		<respawnPoint X="-71417" Y="258270" Z="-3104" />
+		<respawnPoint X="-71453" Y="258305" Z="-3104" />
+		<respawnPoint X="-71467" Y="258378" Z="-3104" />
+		<respawnPoint X="-79411" Y="240677" Z="-3450" isChaotic="true" />
+		<respawnPoint X="-80480" Y="242640" Z="-3690" isChaotic="true" />
+		<respawnPoint X="-80336" Y="244656" Z="-3680" isChaotic="true" />
+		<respawnPoint X="-82464" Y="247248" Z="-3570" isChaotic="true" />
+		<respawnPoint X="-89522" Y="241696" Z="-3530" isChaotic="true" />
+		<respawnPoint X="-87056" Y="237952" Z="-3580" isChaotic="true" />
+		<respawnPoint X="-89536" Y="240336" Z="-3560" isChaotic="true" />
+		<respawnPoint X="-88208" Y="241360" Z="-3560" isChaotic="true" />
+		<respawnPoint X="-85328" Y="238080" Z="-3660" isChaotic="true" />
+		<respawnPoint X="-89760" Y="237408" Z="-3660" isChaotic="true" />
+		<respawnPoint X="-92976" Y="240560" Z="-3380" isChaotic="true" />
+		<respawnPoint X="-94448" Y="240944" Z="-3300" isChaotic="true" />
+		<respawnPoint X="-93552" Y="245296" Z="-3530" isChaotic="true" />
+		<respawnPoint X="-91584" Y="238480" Z="-3650" isChaotic="true" />
+		<respawnPoint X="-88720" Y="238976" Z="-3650" isChaotic="true" />
+		<respawnPoint X="-91760" Y="243664" Z="-3440" isChaotic="true" />
+		<respawnPoint X="-81680" Y="249696" Z="-3630" isChaotic="true" />
+		<respawnPoint X="-83808" Y="251264" Z="-3630" isChaotic="true" />
+		<respawnPoint X="-83328" Y="238304" Z="-3700" isChaotic="true" />
+		<respawnPoint X="-91296" Y="236272" Z="-3690" isChaotic="true" />
+	</region>
+	<!-- Einhovant's School Of Magic -->
+	<region name="Einhovant's_School_of_Magic" town="Talking Island Town" castle="1" locId="910" bbs="1">
+		<respawnPoint X="-90875" Y="248162" Z="-3570" />
+		<respawnPoint X="-90954" Y="248118" Z="-3570" />
+		<respawnPoint X="-90918" Y="248070" Z="-3570" />
+		<respawnPoint X="-90890" Y="248027" Z="-3570" />
+		<respawnPoint X="-79411" Y="240677" Z="-3450" isChaotic="true" />
+		<respawnPoint X="-80480" Y="242640" Z="-3690" isChaotic="true" />
+		<respawnPoint X="-80336" Y="244656" Z="-3680" isChaotic="true" />
+		<respawnPoint X="-82464" Y="247248" Z="-3570" isChaotic="true" />
+		<respawnPoint X="-89522" Y="241696" Z="-3530" isChaotic="true" />
+		<respawnPoint X="-87056" Y="237952" Z="-3580" isChaotic="true" />
+		<respawnPoint X="-89536" Y="240336" Z="-3560" isChaotic="true" />
+		<respawnPoint X="-88208" Y="241360" Z="-3560" isChaotic="true" />
+		<respawnPoint X="-85328" Y="238080" Z="-3660" isChaotic="true" />
+		<respawnPoint X="-89760" Y="237408" Z="-3660" isChaotic="true" />
+		<respawnPoint X="-92976" Y="240560" Z="-3380" isChaotic="true" />
+		<respawnPoint X="-94448" Y="240944" Z="-3300" isChaotic="true" />
+		<respawnPoint X="-93552" Y="245296" Z="-3530" isChaotic="true" />
+		<respawnPoint X="-91584" Y="238480" Z="-3650" isChaotic="true" />
+		<respawnPoint X="-88720" Y="238976" Z="-3650" isChaotic="true" />
+		<respawnPoint X="-91760" Y="243664" Z="-3440" isChaotic="true" />
+		<respawnPoint X="-81680" Y="249696" Z="-3630" isChaotic="true" />
+		<respawnPoint X="-83808" Y="251264" Z="-3630" isChaotic="true" />
+		<respawnPoint X="-83328" Y="238304" Z="-3700" isChaotic="true" />
+		<respawnPoint X="-91296" Y="236272" Z="-3690" isChaotic="true" />
+	</region>
+</list>

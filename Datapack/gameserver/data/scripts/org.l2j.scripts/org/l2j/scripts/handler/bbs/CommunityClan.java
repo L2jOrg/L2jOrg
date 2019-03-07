@@ -1,10 +1,10 @@
 package org.l2j.scripts.handler.bbs;
 
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
-import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.listener.actor.player.OnPlayerEnterListener;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.listener.CharListenerList;
@@ -190,7 +190,7 @@ public final class CommunityClan extends ScriptsCommunityHandler
 			String intro = "";
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type = 2");
 				statement.setInt(1, clanId);
 				rset = statement.executeQuery();
@@ -251,7 +251,7 @@ public final class CommunityClan extends ScriptsCommunityHandler
 			String intro = "";
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type = 2");
 				statement.setInt(1, clan.getClanId());
 				rset = statement.executeQuery();
@@ -327,7 +327,7 @@ public final class CommunityClan extends ScriptsCommunityHandler
 			int type = 0;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type != 2");
 				statement.setInt(1, clan.getClanId());
 				rset = statement.executeQuery();
@@ -388,7 +388,7 @@ public final class CommunityClan extends ScriptsCommunityHandler
 			PreparedStatement statement = null;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("UPDATE `bbs_clannotice` SET type = ? WHERE `clan_id` = ? and type = ?");
 				statement.setInt(1, type);
 				statement.setInt(2, clan.getClanId());
@@ -440,7 +440,7 @@ public final class CommunityClan extends ScriptsCommunityHandler
 			PreparedStatement statement = null;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("REPLACE INTO `bbs_clannotice`(clan_id, type, notice) VALUES(?, ?, ?)");
 				statement.setInt(1, clan.getClanId());
 				statement.setInt(2, 2);
@@ -499,7 +499,7 @@ public final class CommunityClan extends ScriptsCommunityHandler
 			PreparedStatement statement = null;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("INSERT INTO `bbs_mail`(to_name, to_object_id, from_name, from_object_id, title, message, post_date, box_type) VALUES(?, ?, ?, ?, ?, ?, ?, 0)");
 				for(UnitMember clm : clan)
 				{
@@ -580,7 +580,7 @@ public final class CommunityClan extends ScriptsCommunityHandler
 			PreparedStatement statement = null;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("REPLACE INTO `bbs_clannotice`(clan_id, type, notice) VALUES(?, ?, ?)");
 				statement.setInt(1, clan.getClanId());
 				statement.setInt(2, type);
@@ -626,7 +626,7 @@ public final class CommunityClan extends ScriptsCommunityHandler
 				int type = 0;
 				try
 				{
-					con = L2DatabaseFactory.getInstance().getConnection();
+					con = DatabaseFactory.getInstance().getConnection();
 					statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type != 2");
 					statement.setInt(1, clan.getClanId());
 					rset = statement.executeQuery();

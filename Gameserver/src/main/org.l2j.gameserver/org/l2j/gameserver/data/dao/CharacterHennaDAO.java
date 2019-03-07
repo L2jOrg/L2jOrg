@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.dao;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.data.xml.holder.HennaHolder;
 import org.l2j.gameserver.model.Player;
@@ -42,7 +42,7 @@ public class CharacterHennaDAO
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_QUERY);
 			statement.setInt(1, owner.getObjectId());
 			statement.setInt(2, owner.getActiveClassId());
@@ -88,7 +88,7 @@ public class CharacterHennaDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(INSERT_QUERY);
 			statement.setInt(1, owner.getObjectId());
 			statement.setInt(2, henna.getTemplate().getSymbolId());
@@ -120,7 +120,7 @@ public class CharacterHennaDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(DELETE_QUERY);
 			statement.setInt(1, owner.getObjectId());
 			statement.setInt(2, owner.getActiveClassId());

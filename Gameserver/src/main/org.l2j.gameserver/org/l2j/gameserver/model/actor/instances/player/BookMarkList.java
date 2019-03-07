@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.instances.player;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Player;
@@ -170,7 +170,7 @@ public class BookMarkList
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM `character_bookmarks` WHERE char_Id=?");
 			statement.setInt(1, owner.getObjectId());
 			statement.execute();
@@ -214,7 +214,7 @@ public class BookMarkList
 		ResultSet rs = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 			rs = statement.executeQuery("SELECT * FROM `character_bookmarks` WHERE `char_Id`=" + owner.getObjectId() + " ORDER BY `idx` LIMIT " + getCapacity());
 			elementData.clear();

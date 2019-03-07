@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30878"> <!-- Angelina -->
+		<teleport type="NORMAL">
+			<!-- feeCount from Interlude, unconfirmed from retail classic -->
+			<location npcStringId="1010007" x="83475" y="147966" z="-3400" feeCount="5200" /> <!-- The Town of Giran -->
+			<location npcStringId="1010006" x="15472" y="142880" z="-2688" feeCount="7100" /> <!-- Town of Dion -->
+		</teleport>
+	</npc>
+</list>

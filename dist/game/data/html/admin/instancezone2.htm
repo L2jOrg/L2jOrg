@@ -1,0 +1,35 @@
+<html><title>Instance Maintenance Menu</title><body>
+<center>
+<table width=260><tr>
+<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Instance Creation Menu</center></td>
+<td width=40><button value="Back" action="bypass -h admin_html instancezone.htm" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table><br>
+<table width=260>
+<tr>
+<td><button value="General" action="bypass -h admin_html instancezone.htm" width=83 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Individual" action="bypass -h admin_html instancezone2.htm" width=83 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Template IDs" action="bypass -h admin_html help/instancezone_list.htm" width=83 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table><br>
+<center>Character Related:<br>
+<table width=260>
+<tr>
+<td></td>
+<td>Player Name</td>
+<td>Template Id</td>
+</tr>
+<tr>
+<td><button value="Clear" action="bypass -h admin_instancezone_clear $playername $instanceid" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><edit var="playername" width=90></td>
+<td><edit var="instanceid" width=60></td>
+</tr>
+<tr><td><br></td></tr>
+<tr>
+<td><button value="List" action="bypass -h admin_instancezone $playername2" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><edit var="playername2" width=90></td>
+</tr>
+</table><br><br><br>
+<font color="LEVEL">Note: Template IDs also found in gameserver\data\InstanceNames.xml</font>
+</center>
+</body></html>

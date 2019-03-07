@@ -1,0 +1,360 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="appearance_stone" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType mixed="true">
+						<xs:sequence>
+							<xs:element name="grade" maxOccurs="unbounded" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:enumeration value="NONE" />
+										<xs:enumeration value="D" />
+										<xs:enumeration value="C" />
+										<xs:enumeration value="B" />
+										<xs:enumeration value="A" />
+										<xs:enumeration value="S" />
+										<xs:enumeration value="S80" />
+										<xs:enumeration value="R" />
+										<xs:enumeration value="R95" />
+										<xs:enumeration value="R99" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="targetType" maxOccurs="unbounded" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:enumeration value="NONE" />
+										<xs:enumeration value="WEAPON" />
+										<xs:enumeration value="ARMOR" />
+										<xs:enumeration value="ACCESSORY" />
+										<xs:enumeration value="ALL" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="bodyPart" maxOccurs="unbounded" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:enumeration value="none" />
+										<xs:enumeration value="shirt" />
+										<xs:enumeration value="lbracelet" />
+										<xs:enumeration value="rbracelet" />
+										<xs:enumeration value="talisman" />
+										<xs:enumeration value="chest" />
+										<xs:enumeration value="fullarmor" />
+										<xs:enumeration value="head" />
+										<xs:enumeration value="hair" />
+										<xs:enumeration value="hairall" />
+										<xs:enumeration value="underwear" />
+										<xs:enumeration value="back" />
+										<xs:enumeration value="neck" />
+										<xs:enumeration value="legs" />
+										<xs:enumeration value="feet" />
+										<xs:enumeration value="gloves" />
+										<xs:enumeration value="chest,legs" />
+										<xs:enumeration value="belt" />
+										<xs:enumeration value="rhand" />
+										<xs:enumeration value="lhand" />
+										<xs:enumeration value="lrhand" />
+										<xs:enumeration value="rear;lear" />
+										<xs:enumeration value="rfinger;lfinger" />
+										<xs:enumeration value="brooch" />
+										<xs:enumeration value="brooch_jewel" />
+										<xs:enumeration value="onepiece" />
+										<xs:enumeration value="hair2" />
+										<xs:enumeration value="dhair" />
+										<xs:enumeration value="alldress" />
+										<xs:enumeration value="deco1" />
+										<xs:enumeration value="waist" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="race" maxOccurs="unbounded" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:enumeration value="HUMAN" />
+										<xs:enumeration value="ELF" />
+										<xs:enumeration value="DARK_ELF" />
+										<xs:enumeration value="ORC" />
+										<xs:enumeration value="DWRAF" />
+										<xs:enumeration value="KAMAEL" />
+										<xs:enumeration value="ERTHEIA" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="raceNot" maxOccurs="unbounded" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:enumeration value="HUMAN" />
+										<xs:enumeration value="ELF" />
+										<xs:enumeration value="DARK_ELF" />
+										<xs:enumeration value="ORC" />
+										<xs:enumeration value="DWRAF" />
+										<xs:enumeration value="KAMAEL" />
+										<xs:enumeration value="ERTHEIA" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="visual" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute type="xs:int" name="id" use="optional" />
+											<xs:attribute name="weaponType" use="optional">
+												<xs:simpleType>
+													<xs:restriction base="xs:token">
+														<xs:enumeration value="NONE" />
+														<xs:enumeration value="SWORD" />
+														<xs:enumeration value="BLUNT" />
+														<xs:enumeration value="DAGGER" />
+														<xs:enumeration value="BOW" />
+														<xs:enumeration value="POLE" />
+														<xs:enumeration value="DUAL" />
+														<xs:enumeration value="ETC" />
+														<xs:enumeration value="FIST" />
+														<xs:enumeration value="DUALFIST" />
+														<xs:enumeration value="FISHINGROD" />
+														<xs:enumeration value="RAPIER" />
+														<xs:enumeration value="ANCIENTSWORD" />
+														<xs:enumeration value="CROSSBOW" />
+														<xs:enumeration value="FLAG" />
+														<xs:enumeration value="OWNTHING" />
+														<xs:enumeration value="DUALDAGGER" />
+														<xs:enumeration value="DUALBLUNT" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="handType" use="optional">
+												<xs:simpleType>
+													<xs:restriction base="xs:token">
+														<xs:enumeration value="NONE" />
+														<xs:enumeration value="ONE_HANDED" />
+														<xs:enumeration value="TWO_HANDED" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="bodyPart" use="optional">
+												<xs:simpleType>
+													<xs:restriction base="xs:token">
+														<xs:enumeration value="none" />
+														<xs:enumeration value="shirt" />
+														<xs:enumeration value="lbracelet" />
+														<xs:enumeration value="rbracelet" />
+														<xs:enumeration value="talisman" />
+														<xs:enumeration value="chest" />
+														<xs:enumeration value="fullarmor" />
+														<xs:enumeration value="head" />
+														<xs:enumeration value="hair" />
+														<xs:enumeration value="hairall" />
+														<xs:enumeration value="underwear" />
+														<xs:enumeration value="back" />
+														<xs:enumeration value="neck" />
+														<xs:enumeration value="legs" />
+														<xs:enumeration value="feet" />
+														<xs:enumeration value="gloves" />
+														<xs:enumeration value="chest,legs" />
+														<xs:enumeration value="belt" />
+														<xs:enumeration value="rhand" />
+														<xs:enumeration value="lhand" />
+														<xs:enumeration value="lrhand" />
+														<xs:enumeration value="rear;lear" />
+														<xs:enumeration value="rfinger;lfinger" />
+														<xs:enumeration value="brooch" />
+														<xs:enumeration value="brooch_jewel" />
+														<xs:enumeration value="onepiece" />
+														<xs:enumeration value="hair2" />
+														<xs:enumeration value="dhair" />
+														<xs:enumeration value="alldress" />
+														<xs:enumeration value="deco1" />
+														<xs:enumeration value="waist" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="magicType" use="optional">
+												<xs:simpleType>
+													<xs:restriction base="xs:token">
+														<xs:enumeration value="NONE" />
+														<xs:enumeration value="MAGICAL" />
+														<xs:enumeration value="PHYISICAL" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="armorType" use="optional">
+												<xs:simpleType>
+													<xs:restriction base="xs:token">
+														<xs:enumeration value="HEAVY" />
+														<xs:enumeration value="LIGHT" />
+														<xs:enumeration value="MAGIC" />
+														<xs:enumeration value="SIGIL" />
+														<xs:enumeration value="SHIELD" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:integer" name="id" use="required" />
+						<xs:attribute name="targetType" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="NONE" />
+									<xs:enumeration value="WEAPON" />
+									<xs:enumeration value="ARMOR" />
+									<xs:enumeration value="ACCESSORY" />
+									<xs:enumeration value="ALL" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="type" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="NORMAL" />
+									<xs:enumeration value="RESTORE" />
+									<xs:enumeration value="FIXED" />
+									<xs:enumeration value="BLESSED" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute type="xs:integer" name="cost" use="optional" />
+						<xs:attribute name="grade" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="NONE" />
+									<xs:enumeration value="D" />
+									<xs:enumeration value="C" />
+									<xs:enumeration value="B" />
+									<xs:enumeration value="A" />
+									<xs:enumeration value="S" />
+									<xs:enumeration value="S80" />
+									<xs:enumeration value="R" />
+									<xs:enumeration value="R95" />
+									<xs:enumeration value="R99" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute type="xs:integer" name="visualId" use="optional" />
+						<xs:attribute name="weaponType" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="NONE" />
+									<xs:enumeration value="SWORD" />
+									<xs:enumeration value="BLUNT" />
+									<xs:enumeration value="DAGGER" />
+									<xs:enumeration value="BOW" />
+									<xs:enumeration value="POLE" />
+									<xs:enumeration value="DUAL" />
+									<xs:enumeration value="ETC" />
+									<xs:enumeration value="FIST" />
+									<xs:enumeration value="DUALFIST" />
+									<xs:enumeration value="FISHINGROD" />
+									<xs:enumeration value="RAPIER" />
+									<xs:enumeration value="ANCIENTSWORD" />
+									<xs:enumeration value="CROSSBOW" />
+									<xs:enumeration value="FLAG" />
+									<xs:enumeration value="OWNTHING" />
+									<xs:enumeration value="DUALDAGGER" />
+									<xs:enumeration value="DUALBLUNT" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="magicType" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="NONE" />
+									<xs:enumeration value="MAGICAL" />
+									<xs:enumeration value="PHYISICAL" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="handType" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="NONE" />
+									<xs:enumeration value="ONE_HANDED" />
+									<xs:enumeration value="TWO_HANDED" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="armorType" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="HEAVY" />
+									<xs:enumeration value="LIGHT" />
+									<xs:enumeration value="MAGIC" />
+									<xs:enumeration value="SIGIL" />
+									<xs:enumeration value="SHIELD" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="bodyPart" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="none" />
+									<xs:enumeration value="shirt" />
+									<xs:enumeration value="lbracelet" />
+									<xs:enumeration value="rbracelet" />
+									<xs:enumeration value="talisman" />
+									<xs:enumeration value="chest" />
+									<xs:enumeration value="fullarmor" />
+									<xs:enumeration value="head" />
+									<xs:enumeration value="hair" />
+									<xs:enumeration value="hairall" />
+									<xs:enumeration value="underwear" />
+									<xs:enumeration value="back" />
+									<xs:enumeration value="neck" />
+									<xs:enumeration value="legs" />
+									<xs:enumeration value="feet" />
+									<xs:enumeration value="gloves" />
+									<xs:enumeration value="chest,legs" />
+									<xs:enumeration value="belt" />
+									<xs:enumeration value="rhand" />
+									<xs:enumeration value="lhand" />
+									<xs:enumeration value="lrhand" />
+									<xs:enumeration value="rear;lear" />
+									<xs:enumeration value="rfinger;lfinger" />
+									<xs:enumeration value="brooch" />
+									<xs:enumeration value="brooch_jewel" />
+									<xs:enumeration value="onepiece" />
+									<xs:enumeration value="hair2" />
+									<xs:enumeration value="dhair" />
+									<xs:enumeration value="alldress" />
+									<xs:enumeration value="deco1" />
+									<xs:enumeration value="waist" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="race" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="HUMAN" />
+									<xs:enumeration value="ELF" />
+									<xs:enumeration value="DARK_ELF" />
+									<xs:enumeration value="ORC" />
+									<xs:enumeration value="DWRAF" />
+									<xs:enumeration value="KAMAEL" />
+									<xs:enumeration value="ERTHEIA" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="raceNot" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="HUMAN" />
+									<xs:enumeration value="ELF" />
+									<xs:enumeration value="DARK_ELF" />
+									<xs:enumeration value="ORC" />
+									<xs:enumeration value="DWRAF" />
+									<xs:enumeration value="KAMAEL" />
+									<xs:enumeration value="ERTHEIA" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="lifeTime" type="xs:string" use="optional" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

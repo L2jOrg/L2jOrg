@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="routes">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="route" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="target" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="spawnX" type="xs:integer" use="required" />
+									<xs:attribute name="spawnY" type="xs:integer" use="required" />
+									<xs:attribute name="spawnZ" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="point" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="string" type="xs:normalizedString" />
+									<xs:attribute name="npcString" type="xs:token" />
+									<xs:attribute name="npcStringId" type="xs:integer" />
+									<xs:attribute name="X" type="xs:integer" use="required" />
+									<xs:attribute name="Y" type="xs:integer" use="required" />
+									<xs:attribute name="Z" type="xs:integer" use="required" />
+									<xs:attribute name="run" type="xs:boolean" use="required" />
+									<xs:attribute name="delay" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="name" type="xs:normalizedString" use="required" />
+						<xs:attribute name="repeat" type="xs:boolean" use="required" />
+						<xs:attribute name="repeatStyle" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="none" />
+									<xs:enumeration value="back" />
+									<xs:enumeration value="cycle" />
+									<xs:enumeration value="conveyor" />
+									<xs:enumeration value="random" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

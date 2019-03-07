@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Primeval Island -->
+	<region name="primeval_island" town="Primeval Island" castle="0" locId="1924" bbs="14">
+		<respawnPoint X="11088" Y="-24768" Z="-3644" />
+		<respawnPoint X="10560" Y="-24656" Z="-3648" />
+		<respawnPoint X="10352" Y="-24240" Z="-3658" />
+		<respawnPoint X="10896" Y="-24112" Z="-3644" />
+		<respawnPoint X="10256" Y="-23680" Z="-3667" isChaotic="true" />
+		<respawnPoint X="10816" Y="-23552" Z="-3653" isChaotic="true" />
+		<respawnPoint X="11424" Y="-24064" Z="-3644" isChaotic="true" />
+		<respawnPoint X="10512" Y="-23072" Z="-3664" isChaotic="true" />
+		<respawnPoint X="9904" Y="-24128" Z="-3728" isChaotic="true" />
+		<respawnPoint X="10560" Y="-23920" Z="-3654" isChaotic="true" />
+		<respawnPoint X="11136" Y="-24384" Z="-3644" isChaotic="true" />
+		<map X="20" Y="17" />
+	</region>
+</list>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>34037</npc> <!-- Chortie -->
+	</npcs>
+	<item>
+		<!-- Adena -->
+		<ingredient count="75" id="57" />
+		<!-- Beast Soulshot -->
+		<production count="1" id="6645" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="150" id="57" />
+		<!-- Beast Spiritshot -->
+		<production count="1" id="6646" />
+	</item>
+</list>

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.pledge;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.model.Player;
@@ -188,7 +188,7 @@ public class UnitMember
 			PreparedStatement statement = null;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("UPDATE characters SET title=? WHERE obj_Id=?");
 				statement.setString(1, title);
 				statement.setInt(2, getObjectId());
@@ -232,7 +232,7 @@ public class UnitMember
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE characters SET pledge_type=? WHERE obj_Id=?");
 			statement.setInt(1, _pledgeType);
 			statement.setInt(2, getObjectId());
@@ -286,7 +286,7 @@ public class UnitMember
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE characters SET pledge_rank=? WHERE obj_Id=?");
 			statement.setInt(1, _powerGrade);
 			statement.setInt(2, getObjectId());
@@ -324,7 +324,7 @@ public class UnitMember
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE characters SET apprentice=? WHERE obj_Id=?");
 			statement.setInt(1, _apprentice);
 			statement.setInt(2, getObjectId());
@@ -360,7 +360,7 @@ public class UnitMember
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE characters SET clan_attendance=? WHERE obj_Id=?");
 			statement.setInt(1, _attendanceType.ordinal());
 			statement.setInt(2, getObjectId());

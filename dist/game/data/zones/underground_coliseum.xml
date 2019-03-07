@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Underground Coliseum Zones -->
+	<zone name="17_16_kerthang_001" type="EffectZone" shape="NPoly" minZ="-11592" maxZ="-11192">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-6;" /> <!-- s_area_poison6 -->
+		<node X="-84483" Y="-51200" />
+		<node X="-84884" Y="-51508" />
+		<node X="-85064" Y="-51972" />
+		<node X="-84991" Y="-52456" />
+		<node X="-84683" Y="-52850" />
+		<node X="-84227" Y="-53023" />
+		<node X="-83731" Y="-52947" />
+		<node X="-83341" Y="-52645" />
+		<node X="-83157" Y="-52168" />
+		<node X="-83229" Y="-51689" />
+		<node X="-83531" Y="-51310" />
+		<node X="-84050" Y="-51128" />
+	</zone>
+	<zone name="17_16_kerthang_002" type="EffectZone" shape="NPoly" minZ="-11544" maxZ="-11144">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-6;" /> <!-- s_area_poison6 -->
+		<node X="-84073" Y="-52966" />
+		<node X="-84107" Y="-53251" />
+		<node X="-84463" Y="-53589" />
+		<node X="-84387" Y="-53989" />
+		<node X="-84186" Y="-54237" />
+		<node X="-83867" Y="-54292" />
+		<node X="-83692" Y="-54243" />
+		<node X="-83495" Y="-54075" />
+		<node X="-83388" Y="-53808" />
+		<node X="-83430" Y="-53557" />
+		<node X="-83625" Y="-53339" />
+		<node X="-83926" Y="-52943" />
+	</zone>
+	<zone name="17_16_kerthang_003" type="EffectZone" shape="NPoly" minZ="-11556" maxZ="-11156">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-6;" /> <!-- s_area_poison6 -->
+		<node X="-82843" Y="-50854" />
+		<node X="-83086" Y="-51047" />
+		<node X="-83469" Y="-51515" />
+		<node X="-83439" Y="-51637" />
+		<node X="-83239" Y="-51644" />
+		<node X="-82734" Y="-51936" />
+		<node X="-82432" Y="-51866" />
+		<node X="-82201" Y="-51683" />
+		<node X="-82104" Y="-51422" />
+		<node X="-82151" Y="-51139" />
+		<node X="-82324" Y="-50921" />
+		<node X="-82568" Y="-50814" />
+	</zone>
+	<zone name="17_16_kerthang_004" type="EffectZone" shape="NPoly" minZ="-11552" maxZ="-11152">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-6;" /> <!-- s_area_poison6 -->
+		<node X="-84036" Y="-50233" />
+		<node X="-84139" Y="-50483" />
+		<node X="-84129" Y="-50794" />
+		<node X="-84074" Y="-51204" />
+		<node X="-83953" Y="-51248" />
+		<node X="-83782" Y="-50991" />
+		<node X="-83502" Y="-50966" />
+		<node X="-83317" Y="-50807" />
+		<node X="-83230" Y="-50597" />
+		<node X="-83265" Y="-50330" />
+		<node X="-83504" Y="-50090" />
+		<node X="-83781" Y="-50087" />
+	</zone>
+	<zone name="17_16_kerthang_005" type="EffectZone" shape="NPoly" minZ="-11564" maxZ="-11164">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-6;" /> <!-- s_area_poison6 -->
+		<node X="-85997" Y="-51983" />
+		<node X="-86207" Y="-52165" />
+		<node X="-86298" Y="-52409" />
+		<node X="-86239" Y="-52671" />
+		<node X="-86062" Y="-52880" />
+		<node X="-85819" Y="-52969" />
+		<node X="-85542" Y="-52935" />
+		<node X="-85325" Y="-52747" />
+		<node X="-84949" Y="-52233" />
+		<node X="-84972" Y="-52104" />
+		<node X="-85447" Y="-52027" />
+		<node X="-85716" Y="-51927" />
+	</zone>
+	<zone name="17_16_kerthang_006" type="EffectZone" shape="NPoly" minZ="-11581" maxZ="-11181">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-7;" /> <!-- s_area_poison7 -->
+		<node X="-80410" Y="-51388" />
+		<node X="-80641" Y="-51679" />
+		<node X="-80782" Y="-52222" />
+		<node X="-80703" Y="-52582" />
+		<node X="-80322" Y="-53010" />
+		<node X="-79758" Y="-53098" />
+		<node X="-79437" Y="-53011" />
+		<node X="-78979" Y="-52731" />
+		<node X="-78898" Y="-52192" />
+		<node X="-78856" Y="-51814" />
+		<node X="-79311" Y="-51328" />
+		<node X="-79870" Y="-51180" />
+	</zone>
+	<zone name="17_16_kerthang_007" type="EffectZone" shape="NPoly" minZ="-11540" maxZ="-11140">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-7;" /> <!-- s_area_poison7 -->
+		<node X="-80276" Y="-53424" />
+		<node X="-80458" Y="-53708" />
+		<node X="-80431" Y="-54058" />
+		<node X="-80241" Y="-54292" />
+		<node X="-79923" Y="-54378" />
+		<node X="-79697" Y="-54308" />
+		<node X="-79477" Y="-54132" />
+		<node X="-79400" Y="-53820" />
+		<node X="-79491" Y="-53558" />
+		<node X="-79717" Y="-53359" />
+		<node X="-79910" Y="-53001" />
+		<node X="-80047" Y="-52981" />
+	</zone>
+	<zone name="17_16_kerthang_008" type="EffectZone" shape="NPoly" minZ="-11564" maxZ="-11164">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-7;" /> <!-- s_area_poison7 -->
+		<node X="-78494" Y="-52005" />
+		<node X="-78954" Y="-52219" />
+		<node X="-78968" Y="-52344" />
+		<node X="-78705" Y="-52433" />
+		<node X="-78572" Y="-52755" />
+		<node X="-78349" Y="-52923" />
+		<node X="-78101" Y="-52954" />
+		<node X="-77819" Y="-52831" />
+		<node X="-77638" Y="-52598" />
+		<node X="-77623" Y="-52359" />
+		<node X="-77694" Y="-52185" />
+		<node X="-78009" Y="-51850" />
+	</zone>
+	<zone name="17_16_kerthang_009" type="EffectZone" shape="NPoly" minZ="-11551" maxZ="-11151">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-7;" /> <!-- s_area_poison7 -->
+		<node X="-80231" Y="-50016" />
+		<node X="-80475" Y="-50131" />
+		<node X="-80674" Y="-50439" />
+		<node X="-80547" Y="-50993" />
+		<node X="-80190" Y="-51377" />
+		<node X="-80067" Y="-51379" />
+		<node X="-80020" Y="-51091" />
+		<node X="-79731" Y="-50976" />
+		<node X="-79566" Y="-50715" />
+		<node X="-79561" Y="-50427" />
+		<node X="-79707" Y="-50172" />
+		<node X="-79894" Y="-50034" />
+	</zone>
+	<zone name="17_16_kerthang_010" type="EffectZone" shape="NPoly" minZ="-11533" maxZ="-11133">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-7;" /> <!-- s_area_poison7 -->
+		<node X="-81266" Y="-50853" />
+		<node X="-81517" Y="-50943" />
+		<node X="-81667" Y="-51293" />
+		<node X="-81568" Y="-51630" />
+		<node X="-81172" Y="-51795" />
+		<node X="-80663" Y="-51863" />
+		<node X="-80577" Y="-51752" />
+		<node X="-80723" Y="-51656" />
+		<node X="-80912" Y="-51684" />
+		<node X="-80748" Y="-51445" />
+		<node X="-80745" Y="-51107" />
+		<node X="-81003" Y="-50893" />
+	</zone>
+	<zone name="17_16_kerthang_011" type="EffectZone" shape="NPoly" minZ="-11588" maxZ="-11188">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-8;" /> <!-- s_area_poison8 -->
+		<node X="-78718" Y="-47247" />
+		<node X="-79143" Y="-47541" />
+		<node X="-79374" Y="-48010" />
+		<node X="-79301" Y="-48493" />
+		<node X="-78992" Y="-48907" />
+		<node X="-78571" Y="-49090" />
+		<node X="-78080" Y="-49049" />
+		<node X="-77690" Y="-48777" />
+		<node X="-77462" Y="-48280" />
+		<node X="-77563" Y="-47636" />
+		<node X="-77886" Y="-47372" />
+		<node X="-78329" Y="-47195" />
+	</zone>
+	<zone name="17_16_kerthang_012" type="EffectZone" shape="NPoly" minZ="-11568" maxZ="-11168">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-8;" /> <!-- s_area_poison8 -->
+		<node X="-77009" Y="-48264" />
+		<node X="-77259" Y="-48440" />
+		<node X="-77633" Y="-48489" />
+		<node X="-77690" Y="-48615" />
+		<node X="-77377" Y="-48879" />
+		<node X="-77169" Y="-49188" />
+		<node X="-76786" Y="-49324" />
+		<node X="-76451" Y="-49108" />
+		<node X="-76319" Y="-48854" />
+		<node X="-76351" Y="-48600" />
+		<node X="-76494" Y="-48368" />
+		<node X="-76757" Y="-48254" />
+	</zone>
+	<zone name="17_16_kerthang_013" type="EffectZone" shape="NPoly" minZ="-11564" maxZ="-11164">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-8;" /> <!-- s_area_poison8 -->
+		<node X="-78000" Y="-46223" />
+		<node X="-78153" Y="-46567" />
+		<node X="-78113" Y="-46882" />
+		<node X="-78085" Y="-47336" />
+		<node X="-77962" Y="-47383" />
+		<node X="-77833" Y="-47166" />
+		<node X="-77456" Y="-47148" />
+		<node X="-77235" Y="-46983" />
+		<node X="-77109" Y="-46705" />
+		<node X="-77161" Y="-46421" />
+		<node X="-77319" Y="-46231" />
+		<node X="-77620" Y="-46120" />
+	</zone>
+	<zone name="17_16_kerthang_014" type="EffectZone" shape="NPoly" minZ="-11568" maxZ="-11168">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-8;" /> <!-- s_area_poison8 -->
+		<node X="-79678" Y="-47494" />
+		<node X="-80091" Y="-47328" />
+		<node X="-80492" Y="-47615" />
+		<node X="-80602" Y="-47897" />
+		<node X="-80512" Y="-48241" />
+		<node X="-80230" Y="-48460" />
+		<node X="-79808" Y="-48431" />
+		<node X="-79537" Y="-48355" />
+		<node X="-79268" Y="-48260" />
+		<node X="-79224" Y="-48133" />
+		<node X="-79472" Y="-47988" />
+		<node X="-79523" Y="-47709" />
+	</zone>
+	<zone name="17_16_kerthang_015" type="EffectZone" shape="NPoly" minZ="-11556" maxZ="-11156">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-8;" /> <!-- s_area_poison8 -->
+		<node X="-79808" Y="-48756" />
+		<node X="-79978" Y="-48868" />
+		<node X="-80106" Y="-49157" />
+		<node X="-80072" Y="-49370" />
+		<node X="-79866" Y="-49573" />
+		<node X="-79552" Y="-49644" />
+		<node X="-79377" Y="-49624" />
+		<node X="-79134" Y="-49245" />
+		<node X="-78940" Y="-48848" />
+		<node X="-79014" Y="-48756" />
+		<node X="-79335" Y="-48852" />
+		<node X="-79634" Y="-48702" />
+	</zone>
+	<zone name="17_16_kerthang_016" type="EffectZone" shape="NPoly" minZ="-11588" maxZ="-11188">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-9;" /> <!-- s_area_poison9 -->
+		<node X="-82239" Y="-44711" />
+		<node X="-82588" Y="-45030" />
+		<node X="-82757" Y="-45489" />
+		<node X="-82667" Y="-45972" />
+		<node X="-82358" Y="-46366" />
+		<node X="-81902" Y="-46539" />
+		<node X="-81406" Y="-46463" />
+		<node X="-81016" Y="-46161" />
+		<node X="-80833" Y="-45639" />
+		<node X="-80950" Y="-45107" />
+		<node X="-81327" Y="-44740" />
+		<node X="-81805" Y="-44621" />
+	</zone>
+	<zone name="17_16_kerthang_017" type="EffectZone" shape="NPoly" minZ="-11552" maxZ="-11152">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-9;" /> <!-- s_area_poison9 -->
+		<node X="-81210" Y="-44263" />
+		<node X="-81138" Y="-44561" />
+		<node X="-81212" Y="-44951" />
+		<node X="-81121" Y="-45040" />
+		<node X="-80805" Y="-44788" />
+		<node X="-80549" Y="-44832" />
+		<node X="-80196" Y="-44492" />
+		<node X="-80156" Y="-44278" />
+		<node X="-80216" Y="-44058" />
+		<node X="-80349" Y="-43880" />
+		<node X="-80664" Y="-43767" />
+		<node X="-81064" Y="-43830" />
+	</zone>
+	<zone name="17_16_kerthang_018" type="EffectZone" shape="NPoly" minZ="-11564" maxZ="-11164">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-9;" /> <!-- s_area_poison9 -->
+		<node X="-83192" Y="-43876" />
+		<node X="-83402" Y="-44074" />
+		<node X="-83494" Y="-44317" />
+		<node X="-83434" Y="-44579" />
+		<node X="-83257" Y="-44789" />
+		<node X="-83014" Y="-44877" />
+		<node X="-82836" Y="-44838" />
+		<node X="-82446" Y="-44990" />
+		<node X="-82356" Y="-44900" />
+		<node X="-82462" Y="-44126" />
+		<node X="-82632" Y="-43910" />
+		<node X="-82906" Y="-43810" />
+	</zone>
+	<zone name="17_16_kerthang_019" type="EffectZone" shape="NPoly" minZ="-11620" maxZ="-11220">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-9;" /> <!-- s_area_poison9 -->
+		<node X="-82317" Y="-46433" />
+		<node X="-82874" Y="-46567" />
+		<node X="-83088" Y="-46886" />
+		<node X="-83031" Y="-47286" />
+		<node X="-82811" Y="-47535" />
+		<node X="-82492" Y="-47589" />
+		<node X="-82317" Y="-47540" />
+		<node X="-82082" Y="-47358" />
+		<node X="-82014" Y="-47105" />
+		<node X="-81984" Y="-46865" />
+		<node X="-81972" Y="-46409" />
+		<node X="-82065" Y="-46334" />
+	</zone>
+	<zone name="17_16_kerthang_020" type="EffectZone" shape="NPoly" minZ="-11584" maxZ="-11184">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-9;" /> <!-- s_area_poison9 -->
+		<node X="-81426" Y="-46342" />
+		<node X="-81671" Y="-46988" />
+		<node X="-81631" Y="-47261" />
+		<node X="-81552" Y="-47398" />
+		<node X="-81387" Y="-47476" />
+		<node X="-81211" Y="-47523" />
+		<node X="-81011" Y="-47490" />
+		<node X="-80830" Y="-47320" />
+		<node X="-80762" Y="-47102" />
+		<node X="-80797" Y="-46835" />
+		<node X="-80910" Y="-46690" />
+		<node X="-81303" Y="-46300" />
+	</zone>
+	<zone name="17_16_kerthang_021" type="EffectZone" shape="NPoly" minZ="-11573" maxZ="-11173">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-5;" /> <!-- s_area_poison5 -->
+		<node X="-85653" Y="-47093" />
+		<node X="-86082" Y="-47396" />
+		<node X="-86269" Y="-47854" />
+		<node X="-86219" Y="-48367" />
+		<node X="-85940" Y="-48743" />
+		<node X="-85531" Y="-48940" />
+		<node X="-85000" Y="-48917" />
+		<node X="-84627" Y="-48679" />
+		<node X="-84385" Y="-48261" />
+		<node X="-84398" Y="-47723" />
+		<node X="-84700" Y="-47244" />
+		<node X="-85067" Y="-47074" />
+	</zone>
+	<zone name="17_16_kerthang_022" type="EffectZone" shape="NPoly" minZ="-11586" maxZ="-11186">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-5;" /> <!-- s_area_poison5 -->
+		<node X="-87045" Y="-48304" />
+		<node X="-87255" Y="-48487" />
+		<node X="-87347" Y="-48730" />
+		<node X="-87300" Y="-49010" />
+		<node X="-87110" Y="-49219" />
+		<node X="-86837" Y="-49329" />
+		<node X="-86460" Y="-49213" />
+		<node X="-86282" Y="-48847" />
+		<node X="-86052" Y="-48470" />
+		<node X="-86112" Y="-48361" />
+		<node X="-86496" Y="-48349" />
+		<node X="-86765" Y="-48249" />
+	</zone>
+	<zone name="17_16_kerthang_023" type="EffectZone" shape="NPoly" minZ="-11590" maxZ="-11190">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-5;" /> <!-- s_area_poison5 -->
+		<node X="-84541" Y="-48397" />
+		<node X="-84653" Y="-48474" />
+		<node X="-84674" Y="-48959" />
+		<node X="-84629" Y="-49359" />
+		<node X="-84397" Y="-49608" />
+		<node X="-84078" Y="-49662" />
+		<node X="-83903" Y="-49613" />
+		<node X="-83684" Y="-49471" />
+		<node X="-83582" Y="-49260" />
+		<node X="-83576" Y="-48928" />
+		<node X="-83737" Y="-48704" />
+		<node X="-83971" Y="-48580" />
+	</zone>
+	<zone name="17_16_kerthang_024" type="EffectZone" shape="NPoly" minZ="-11601" maxZ="-11201">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-5;" /> <!-- s_area_poison5 -->
+		<node X="-84063" Y="-47545" />
+		<node X="-84484" Y="-47735" />
+		<node X="-84486" Y="-47849" />
+		<node X="-84164" Y="-47930" />
+		<node X="-84066" Y="-48154" />
+		<node X="-83805" Y="-48310" />
+		<node X="-83525" Y="-48284" />
+		<node X="-83340" Y="-48126" />
+		<node X="-83253" Y="-47916" />
+		<node X="-83288" Y="-47649" />
+		<node X="-83527" Y="-47408" />
+		<node X="-83804" Y="-47405" />
+	</zone>
+	<zone name="17_16_kerthang_025" type="EffectZone" shape="NPoly" minZ="-11559" maxZ="-11159">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="skillIdLvl" val="4148-5;" /> <!-- s_area_poison5 -->
+		<node X="-86433" Y="-46106" />
+		<node X="-86693" Y="-46266" />
+		<node X="-86794" Y="-46709" />
+		<node X="-86613" Y="-46969" />
+		<node X="-86348" Y="-47100" />
+		<node X="-86051" Y="-47143" />
+		<node X="-85741" Y="-47270" />
+		<node X="-85633" Y="-47202" />
+		<node X="-85744" Y="-46803" />
+		<node X="-85746" Y="-46374" />
+		<node X="-85870" Y="-46233" />
+		<node X="-86090" Y="-46061" />
+	</zone>
+	<zone name="17_16_kerthang_area_01" type="ArenaZone" shape="NPoly" minZ="-11624" maxZ="-11224">
+		<node X="-85850" Y="-45960" />
+		<node X="-86761" Y="-45935" />
+		<node X="-87000" Y="-46986" />
+		<node X="-87535" Y="-48793" />
+		<node X="-87049" Y="-49419" />
+		<node X="-85458" Y="-49051" />
+		<node X="-84224" Y="-49803" />
+		<node X="-83446" Y="-49477" />
+		<node X="-83154" Y="-47528" />
+		<node X="-83863" Y="-47202" />
+		<node X="-84291" Y="-47449" />
+		<node X="-84711" Y="-47094" />
+	</zone>
+	<zone name="17_16_kerthang_area_02" type="ArenaZone" shape="NPoly" minZ="-11620" maxZ="-11220">
+		<node X="-84112" Y="-50103" />
+		<node X="-84830" Y="-51342" />
+		<node X="-86142" Y="-51844" />
+		<node X="-86553" Y="-52634" />
+		<node X="-85640" Y="-53190" />
+		<node X="-84380" Y="-54211" />
+		<node X="-83379" Y="-54413" />
+		<node X="-82972" Y="-52054" />
+		<node X="-81938" Y="-51822" />
+		<node X="-82193" Y="-50685" />
+		<node X="-82732" Y="-50575" />
+		<node X="-83454" Y="-49986" />
+	</zone>
+	<zone name="17_16_kerthang_area_03" type="ArenaZone" shape="NPoly" minZ="-11716" maxZ="-11316">
+		<node X="-79843" Y="-49874" />
+		<node X="-81401" Y="-50399" />
+		<node X="-81709" Y="-51148" />
+		<node X="-81639" Y="-51704" />
+		<node X="-80712" Y="-52824" />
+		<node X="-80414" Y="-54463" />
+		<node X="-79510" Y="-54322" />
+		<node X="-78717" Y="-52952" />
+		<node X="-77725" Y="-52968" />
+		<node X="-77416" Y="-51996" />
+		<node X="-78890" Y="-51583" />
+		<node X="-79378" Y="-50568" />
+	</zone>
+	<zone name="17_16_kerthang_area_04" type="ArenaZone" shape="NPoly" minZ="-11592" maxZ="-11192">
+		<node X="-79343" Y="-47478" />
+		<node X="-80117" Y="-47109" />
+		<node X="-80672" Y="-47858" />
+		<node X="-80382" Y="-49156" />
+		<node X="-79813" Y="-49685" />
+		<node X="-79130" Y="-49730" />
+		<node X="-77951" Y="-49052" />
+		<node X="-76485" Y="-49456" />
+		<node X="-76221" Y="-48619" />
+		<node X="-76710" Y="-48032" />
+		<node X="-76946" Y="-46451" />
+		<node X="-77668" Y="-45794" />
+	</zone>
+	<zone name="17_16_kerthang_area_05" type="ArenaZone" shape="NPoly" minZ="-11640" maxZ="-11240">
+		<node X="-82326" Y="-43857" />
+		<node X="-83361" Y="-43681" />
+		<node X="-83614" Y="-44430" />
+		<node X="-82884" Y="-46072" />
+		<node X="-83209" Y="-47165" />
+		<node X="-82621" Y="-47718" />
+		<node X="-81071" Y="-47576" />
+		<node X="-80636" Y="-47169" />
+		<node X="-80853" Y="-46291" />
+		<node X="-79968" Y="-44123" />
+		<node X="-80245" Y="-43614" />
+		<node X="-81544" Y="-43878" />
+	</zone>
+	<zone name="17_16_kerthang_restart_01" type="NoRestartZone" shape="NPoly" minZ="-11624" maxZ="-11224">
+		<stat name="restartTime" val="0" />
+		<stat name="restartAllowedTime" val="0" />
+		<node X="-85850" Y="-45960" />
+		<node X="-86761" Y="-45935" />
+		<node X="-87000" Y="-46986" />
+		<node X="-87535" Y="-48793" />
+		<node X="-87049" Y="-49419" />
+		<node X="-85458" Y="-49051" />
+		<node X="-84224" Y="-49803" />
+		<node X="-83446" Y="-49477" />
+		<node X="-83154" Y="-47528" />
+		<node X="-83863" Y="-47202" />
+		<node X="-84291" Y="-47449" />
+		<node X="-84711" Y="-47094" />
+	</zone>
+	<zone name="17_16_kerthang_restart_02" type="NoRestartZone" shape="NPoly" minZ="-11620" maxZ="-11220">
+		<stat name="restartTime" val="0" />
+		<stat name="restartAllowedTime" val="0" />
+		<node X="-84112" Y="-50103" />
+		<node X="-84830" Y="-51342" />
+		<node X="-86142" Y="-51844" />
+		<node X="-86553" Y="-52634" />
+		<node X="-85640" Y="-53190" />
+		<node X="-84380" Y="-54211" />
+		<node X="-83379" Y="-54413" />
+		<node X="-82972" Y="-52054" />
+		<node X="-81938" Y="-51822" />
+		<node X="-82193" Y="-50685" />
+		<node X="-82732" Y="-50575" />
+		<node X="-83454" Y="-49986" />
+	</zone>
+	<zone name="17_16_kerthang_restart_03" type="NoRestartZone" shape="NPoly" minZ="-11716" maxZ="-11316">
+		<stat name="restartTime" val="0" />
+		<stat name="restartAllowedTime" val="0" />
+		<node X="-79843" Y="-49874" />
+		<node X="-81401" Y="-50399" />
+		<node X="-81709" Y="-51148" />
+		<node X="-81639" Y="-51704" />
+		<node X="-80712" Y="-52824" />
+		<node X="-80414" Y="-54463" />
+		<node X="-79510" Y="-54322" />
+		<node X="-78717" Y="-52952" />
+		<node X="-77725" Y="-52968" />
+		<node X="-77416" Y="-51996" />
+		<node X="-78890" Y="-51583" />
+		<node X="-79378" Y="-50568" />
+	</zone>
+	<zone name="17_16_kerthang_restart_04" type="NoRestartZone" shape="NPoly" minZ="-11592" maxZ="-11192">
+		<stat name="restartTime" val="0" />
+		<stat name="restartAllowedTime" val="0" />
+		<node X="-79343" Y="-47478" />
+		<node X="-80117" Y="-47109" />
+		<node X="-80672" Y="-47858" />
+		<node X="-80382" Y="-49156" />
+		<node X="-79813" Y="-49685" />
+		<node X="-79130" Y="-49730" />
+		<node X="-77951" Y="-49052" />
+		<node X="-76485" Y="-49456" />
+		<node X="-76221" Y="-48619" />
+		<node X="-76710" Y="-48032" />
+		<node X="-76946" Y="-46451" />
+		<node X="-77668" Y="-45794" />
+	</zone>
+	<zone name="17_16_kerthang_restart_05" type="NoRestartZone" shape="NPoly" minZ="-11640" maxZ="-11240">
+		<stat name="restartTime" val="0" />
+		<stat name="restartAllowedTime" val="0" />
+		<node X="-82326" Y="-43857" />
+		<node X="-83361" Y="-43681" />
+		<node X="-83614" Y="-44430" />
+		<node X="-82884" Y="-46072" />
+		<node X="-83209" Y="-47165" />
+		<node X="-82621" Y="-47718" />
+		<node X="-81071" Y="-47576" />
+		<node X="-80636" Y="-47169" />
+		<node X="-80853" Y="-46291" />
+		<node X="-79968" Y="-44123" />
+		<node X="-80245" Y="-43614" />
+		<node X="-81544" Y="-43878" />
+	</zone>
+	<zone name="17_16_kerthang_peace_01" type="PeaceZone" shape="NPoly" minZ="-10839" maxZ="-10439">
+		<node X="-87059" Y="-51858" />
+		<node X="-85176" Y="-51100" />
+		<node X="-85652" Y="-49480" />
+		<node X="-87711" Y="-50204" />
+	</zone>
+	<zone name="17_16_kerthang_peace_02" type="PeaceZone" shape="NPoly" minZ="-10839" maxZ="-10439">
+		<node X="-82729" Y="-54797" />
+		<node X="-81105" Y="-54768" />
+		<node X="-81125" Y="-52888" />
+		<node X="-82702" Y="-52897" />
+	</zone>
+	<zone name="17_16_kerthang_peace_03" type="PeaceZone" shape="NPoly" minZ="-10791" maxZ="-10391">
+		<node X="-78609" Y="-51115" />
+		<node X="-76726" Y="-51679" />
+		<node X="-76226" Y="-49948" />
+		<node X="-78187" Y="-49524" />
+	</zone>
+	<zone name="17_16_kerthang_peace_04" type="PeaceZone" shape="NPoly" minZ="-10811" maxZ="-10411">
+		<node X="-80338" Y="-45742" />
+		<node X="-78973" Y="-46689" />
+		<node X="-77733" Y="-45069" />
+		<node X="-79261" Y="-44052" />
+	</zone>
+	<zone name="17_16_kerthang_peace_05" type="PeaceZone" shape="NPoly" minZ="-10823" maxZ="-10423">
+		<node X="-85950" Y="-45198" />
+		<node X="-84604" Y="-46609" />
+		<node X="-83376" Y="-45692" />
+		<node X="-84521" Y="-44082" />
+	</zone>
+</list>

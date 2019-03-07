@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/CursedWeapons.xsd">
+	<item id="8190" name="Demonic Sword Zariche" skillId="3603">
+		<disapearChance val="50" /> <!-- in % -->
+		<dropRate val="1" /> <!-- 100000 for 100% -->
+		<duration val="300" /> <!-- in minutes -->
+		<durationLost val="3" /> <!-- in minutes -->
+		<stageKills val="10" /> <!-- Integer -->
+	</item>
+	<item id="8689" name="Blood Sword Akamanah" skillId="3629">
+		<disapearChance val="50" /> <!-- in % -->
+		<dropRate val="1" /> <!-- 100000 for 100% -->
+		<duration val="300" /> <!-- in minutes -->
+		<durationLost val="3" /> <!-- in minutes -->
+		<stageKills val="10" /> <!-- Integer -->
+	</item>
+</list>

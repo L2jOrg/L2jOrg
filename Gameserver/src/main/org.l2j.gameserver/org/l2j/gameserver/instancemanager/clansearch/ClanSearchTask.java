@@ -6,7 +6,7 @@ import io.github.joealisson.primitive.maps.IntLongMap;
 import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntLongMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -76,7 +76,7 @@ public class ClanSearchTask extends RunnableImpl
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			for(ClanSearchClan csClan : _newClans.values())
 			{
 				statement = con.prepareStatement(ClanSearchQueries.ADD_CLAN);

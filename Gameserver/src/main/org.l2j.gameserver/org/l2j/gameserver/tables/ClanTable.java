@@ -1,6 +1,6 @@
 package org.l2j.gameserver.tables;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -135,7 +135,7 @@ public class ClanTable
 		ResultSet result = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT clan_id FROM clan_data");
 			result = statement.executeQuery();
 			while(result.next())
@@ -190,7 +190,7 @@ public class ClanTable
 		ResultSet result = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT ally_id FROM ally_data");
 			result = statement.executeQuery();
 			while(result.next())
@@ -312,7 +312,7 @@ public class ClanTable
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE characters SET clanid=0,title='',pledge_type=0,pledge_rank=0,lvl_joined_academy=0,apprentice=0,leaveclan=? WHERE clanid=?");
 			statement.setLong(1, curtime / 1000L);
 			statement.setInt(2, clanId);
@@ -413,7 +413,7 @@ public class ClanTable
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE clan_data SET ally_id=0 WHERE ally_id=?");
 			statement.setInt(1, allyId);
 			statement.execute();
@@ -450,7 +450,7 @@ public class ClanTable
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO clan_wars (attacker_clan, opposing_clan, period, period_start_time, last_kill_time, attackers_kill_counter, opposers_kill_counter) VALUES(?,?,?,?,?,?,?)");
 			statement.setInt(1, attackerClan.getClanId());
 			statement.setInt(2, opposingClan.getClanId());
@@ -491,7 +491,7 @@ public class ClanTable
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM clan_wars WHERE attacker_clan=? AND opposing_clan=?");
 			statement.setInt(1, attackerClan.getClanId());
 			statement.setInt(2, opposingClan.getClanId());
@@ -514,7 +514,7 @@ public class ClanTable
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT attacker_clan, opposing_clan, period, period_start_time, last_kill_time, attackers_kill_counter, opposers_kill_counter FROM clan_wars");
 			rset = statement.executeQuery();
 			while(rset.next())

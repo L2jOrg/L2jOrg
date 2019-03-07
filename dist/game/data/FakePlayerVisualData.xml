@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Values that can be set:
+int classId, int hair, int hairColor, int face, int nameColor, int titleColor, int equipRHand, int equipLHand, int equipHead,
+int equipGloves, int equipChest, int equipLegs, int equipFeet, int equipCloak, int equipHair, int equipHair2, int agathionId,
+int weaponEnchantLevel, int armorEnchantLevel, boolean fishing, int baitLocationX, int baitLocationY, int baitLocationZ,
+int recommends, int nobleLevel, boolean hero, int clanId, int pledgeStatus -->
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/FakePlayerVisualData.xsd">
+	<fakePlayer npcId="80000" classId="107" hair="1" hairColor="0" face="0" equipRHand="5706" equipHead="2419" equipGloves="5774" equipChest="2383" equipFeet="5786" />
+</list>

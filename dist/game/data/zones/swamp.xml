@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Swamp Zones -->
+	<!-- Sea of Spores (Swamp Zone) -->
+	<zone name="spore_boss_swamp_zone" type="SwampZone" shape="NPoly" minZ="-4468" maxZ="-4118"> <!-- [21_18] -->
+		<node X="43084" Y="15944" />
+		<node X="45140" Y="15816" />
+		<node X="45748" Y="17200" />
+		<node X="44504" Y="18780" />
+		<node X="43284" Y="18952" />
+		<node X="42476" Y="18164" />
+		<node X="42480" Y="16448" />
+	</zone>
+</list>

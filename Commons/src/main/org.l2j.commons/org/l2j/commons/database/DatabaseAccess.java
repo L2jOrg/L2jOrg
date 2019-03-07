@@ -22,7 +22,7 @@ public class DatabaseAccess {
         }
 
         try {
-            L2DatabaseFactory.getInstance();
+            DatabaseFactory.getInstance();
             return true;
         } catch (SQLException e) {
             LOGGER.error(e.getLocalizedMessage(), e);
@@ -42,7 +42,7 @@ public class DatabaseAccess {
 
     public static void shutdown() {
         try {
-            L2DatabaseFactory.getInstance().shutdown();
+            DatabaseFactory.getInstance().shutdown();
         } catch (SQLException e) {
             LOGGER.warn(e.getLocalizedMessage(), e);
         }

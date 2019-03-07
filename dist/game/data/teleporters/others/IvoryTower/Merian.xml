@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="30722"> <!-- Merian -->	
+		<teleport type="NORMAL">
+			<location npcStringId="1010016" x="84872" y="15882" z="-4288" feeCount="0" /> <!-- Underground Shopping Area-->		
+			<location npcStringId="1010015" x="85343" y="16267" z="-3672" feeCount="0" /> <!-- 1st Floor Lobby -->
+			<location npcStringId="1010017" x="85343" y="16267" z="-2800" feeCount="0" /> <!-- 2nd Floor Human Wizard Guild -->
+			<location npcStringId="1010018" x="85343" y="16267" z="-2288" feeCount="0" /> <!-- 3rd Floor Elven Wizard Guild -->
+		</teleport>
+	</npc>
+</list>

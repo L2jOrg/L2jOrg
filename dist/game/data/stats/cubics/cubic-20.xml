@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/cubics.xsd">
+	<cubic id="20" level="1" slot="16" duration="900" delay="8" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="10085" level="1" successRate="30" /> <!-- Cubic Falter -->
+		</skills>
+	</cubic>
+	<cubic id="20" level="2" slot="16" duration="900" delay="8" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="10085" level="2" successRate="30" /> <!-- Cubic Falter -->
+		</skills>
+	</cubic>
+	<cubic id="20" level="3" slot="16" duration="900" delay="8" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="10085" level="3" successRate="30" /> <!-- Cubic Falter -->
+		</skills>
+	</cubic>
+	<cubic id="20" level="4" slot="16" duration="900" delay="8" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="10085" level="4" successRate="30" /> <!-- Cubic Falter -->
+		</skills>
+	</cubic>
+	<cubic id="20" level="5" slot="16" duration="900" delay="8" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="10085" level="5" successRate="30" /> <!-- Cubic Falter -->
+		</skills>
+	</cubic>
+	<cubic id="20" level="6" slot="16" duration="900" delay="8" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="10085" level="6" successRate="30" /> <!-- Cubic Falter -->
+		</skills>
+	</cubic>
+	<cubic id="20" level="7" slot="16" duration="900" delay="8" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="10085" level="7" successRate="30" /> <!-- Cubic Falter -->
+		</skills>
+	</cubic>
+</list>

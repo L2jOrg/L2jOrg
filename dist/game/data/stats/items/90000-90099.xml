@@ -1,0 +1,849 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="90000" name="Best Dye of DEX (DEX + 4 CON - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv4_1_dye_dex" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90001" name="Best Dye of INT (INT + 4 MEN - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv4_1_dye_int" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90002" name="Best Dye of INT (INT + 4 WIT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv4_1_dye_int" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90003" name="Best Dye of MEN (MEN + 4 INT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv4_1_dye_men" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90004" name="Best Dye of MEN (MEN + 4 WIT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv4_1_dye_men" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90005" name="Best Dye of WIT (WIT + 4 INT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv4_1_dye_wit" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90006" name="Best Dye of WIT (WIT + 4 MEN - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv4_1_dye_wit" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90007" name="Plain Life Stone" additionalName="Event" type="EtcItem">
+		<!-- A mineral formed inside a monster under an immense impact. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires D-grade Gemstones (200 pcs.). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse and transferred between characters on one account. -->
+		<set name="icon" val="icon.etc_mineral_general_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90008" name="Remnant Ashes" type="EtcItem">
+		<!-- An item you got from a prisoner of the Dungeon of Abyss. -->
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90009" name="Image of Evil" type="EtcItem">
+		<!-- An item you got from an especially dangerous prisoner of the Dungeon of Abyss. -->
+		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90010" name="Key to the West Wing of the Dungeon of Abyss" type="EtcItem">
+		<!-- Key to the door in the West Wing of the Dungeon of Abyss. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dark_key_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90011" name="Key to the East Wing of the Dungeon of Abyss" type="EtcItem">
+		<!-- Key to the door in the East Wing of the Dungeon of Abyss. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dark_key_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90012" name="Low-grade Life Stone" type="EtcItem">
+		<!-- A mineral formed inside a monster under an immense impact. Serves as a material in weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires D-grade Gemstones (200 pcs.). Cannot be sold at an NPC's store. -->
+		<set name="icon" val="icon.etc_mineral_general_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90013" name="Mid-grade Life Stone" type="EtcItem">
+		<!-- A mineral formed inside a monster under an immense impact. Serves as a material in weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires C-grade Gemstones (300 pcs.). Cannot be sold at an NPC's store. -->
+		<set name="icon" val="icon.etc_mineral_special_i03" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90014" name="High-grade Life Stone" type="EtcItem">
+		<!-- A mineral formed inside a monster under an immense impact. Serves as a material in weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires B-grade Gemstones (400 pcs.). Cannot be sold at an NPC's store. -->
+		<set name="icon" val="icon.etc_mineral_rare_i03" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90015" name="Top-grade Life Stone" type="EtcItem">
+		<!-- A mineral formed inside a monster under an immense impact. Serves as a material in weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires A-grade Gemstones (500 pcs.). Cannot be sold at an NPC's store. -->
+		<set name="icon" val="icon.etc_mineral_unique_i03" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90016" name="Shining Life Stone" type="EtcItem">
+		<!-- A mineral formed inside a monster under an immense impact. Serves as a material in weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires B-grade Gemstones (400 pcs.). Cannot be sold at an NPC's store. Can be stored in a private warehouse and transferred between characters on one account. -->
+		<set name="icon" val="icon.renewal_mineral_r" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90017" name="Weapons Ingredient Box (A-grade)" type="EtcItem">
+		<!-- Double-click to receive one of A-grade Armor Ingredients. -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90018" name="Elite Symbol of Monster Arena" type="EtcItem">
+		<!-- Received as a reward for winning in the Elite Monster Arena. Can be traded for a special item with Arena Manager Lau. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_residence_token_royalguard" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90019" name="Symbol of Monster Arena" type="EtcItem">
+		<!-- Received as a reward for winning in the Monster Arena. Can be traded for a special item with Arena Manager Lau. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_residence_token_giantchaser" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90020" name="Box of Best Dye" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Double-click to receive one of the following Dyes for 3rd Class Transfer: Best Dye of STR, Best Dye of CON, Best Dye of DEX, Best Dye of INT, Best Dye of WIT, or Best Dye of MEN. -->
+		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90021" name="Warrior’s Talisman - Attack" additionalName="30-day" type="Armor">
+		<!-- Damage dealt in PvE +3%, P./M. Critical Damage +20, P./M. Skill Power +2%, P./M. Accuracy +1. Duration: 30 days. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.r90_sp_talisman_dr_mp_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="90022" name="Warrior’s Talisman - Defense" additionalName="30-day" type="Armor">
+		<!-- P. Def. in PvE +3%, M. Damage Resistance +2%, P./M. Skills Evasion +4%, Debuff Resistance +3%, Pull Resistance +10%. Duration: 30 days. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.r99_talisman_pd_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="90023" name="Belt" type="Armor">
+		<!-- Inventory Slots +2 / Weight Limit +1,000. Use a Magic Rune Clip to upgrade it to Rag Belt. -->
+		<set name="icon" val="icon.belt_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">10</stat>
+		</stats>
+	</item>
+	<item id="90024" name="Rag Belt" type="Armor">
+		<!-- Inventory Slots +2 / Weight Limit +2,000 / HP Recovery +1.24 / MP Recovery +0.83 / CP Recovery +1.66. Use a mid-grade Magic Rune Clip to upgrade it to Leather Belt. -->
+		<set name="icon" val="icon.belt_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">10</stat>
+		</stats>
+	</item>
+	<item id="90025" name="Leather Belt" type="Armor">
+		<!-- Inventory Slots +3 / Weight Limit +3,000 / HP Recovery +1.47 / MP Recovery +0.98 / CP Recovery +1.96 / Max. HP/MP/CP +100. Use a high-grade Magic Rune Clip to upgrade it to Iron Belt. -->
+		<set name="icon" val="icon.belt_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">10</stat>
+		</stats>
+	</item>
+	<item id="90026" name="Iron Belt" type="Armor">
+		<!-- Inventory Slots +4 / Weight Limit +4,000 / HP Recovery +1.70 / MP Recovery +1.13 / CP Recovery +2.26 / Max. HP/MP/CP +150. Use a top-grade Magic Rune Clip to upgrade it to Mithril Belt. -->
+		<set name="icon" val="icon.belt_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">10</stat>
+		</stats>
+	</item>
+	<item id="90027" name="Mithril Belt" type="Armor">
+		<!-- Inventory Slots +5 / Weight Limit +5,000 / HP Recovery +1.92 / MP Recovery +1.28 / CP Recovery +2.56 / Max. HP/MP/CP +200. -->
+		<set name="icon" val="icon.belt_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">10</stat>
+		</stats>
+	</item>
+	<item id="90028" name="Clasp" type="EtcItem">
+		<!-- A clasp which improves Belt�s properties. Coliseum Manager can enhance the Belt for you. -->
+		<set name="icon" val="icon.pin_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90029" name="Mid-grade Clasp" type="EtcItem">
+		<!-- A clasp which improves Belt�s properties. Coliseum Manager can enhance the Belt for you. -->
+		<set name="icon" val="icon.pin_i01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90030" name="High-grade Clasp" type="EtcItem">
+		<!-- A clasp which improves Belt�s properties. Coliseum Manager can enhance the Belt for you. -->
+		<set name="icon" val="icon.pin_i02" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90031" name="Top-grade Clasp" type="EtcItem">
+		<!-- A clasp which improves Belt�s properties. Coliseum Manager can enhance the Belt for you. -->
+		<set name="icon" val="icon.pin_i03" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90032" name="Elixir of Life" type="EtcItem">
+		<!-- Restores a large amount of HP. Reuse Time: 3 minutes. -->
+		<set name="icon" val="icon.etc_super_hp_potion_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90033" name="Elixir of Mind" type="EtcItem">
+		<!-- Restores a large amount of MP. Reuse Time: 3 minutes. -->
+		<set name="icon" val="icon.etc_super_mp_potion_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90034" name="Spellbook Box - 3rd Class Transfer" type="EtcItem">
+		<!-- Double-click to receive one of the Spellbooks for 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_readybox_silver" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90035" name="Life Stone Pack" type="EtcItem">
+		<!-- Double-click to receive one of the following items: High/Medium/Average Quality Life Stone. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90036" name="Hero’s Talisman - Attack" additionalName="30-day" type="Armor">
+		<!-- PvP Damage +3%, P./M. Critical Damage +20, Skill Power +2%, P./M. Accuracy +1. Duration: 30 days. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.r90_sp_talisman_dr_hp_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="talisman" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="35038" level="1" /> <!-- Hero’s Talisman - Attack -->
+		</skills>
+	</item>
+	<item id="90037" name="Hero’s Talisman - Defense" additionalName="30-day" type="Armor">
+		<!-- Received PvP damage +3%, Magic Attack Resistance +2%, P./M. Skill Evasion +4%, Debuff Resistance +3%. Duration: 30 days. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.r95_talisman_ca_down_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="talisman" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="35039" level="1" /> <!-- Hero’s Talisman - Defense -->
+		</skills>
+	</item>
+	<item id="90038" name="Spellbook: Mount Golden Lion" type="EtcItem">
+		<!-- Allows learning the Mount Golden Lion skill. Required for Lv. 76 after 3rd class transfer. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_spellbook_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90039" name="Spellbook: Mount Pegasus" type="EtcItem">
+		<!-- Allows learning the Mount Pegasus skill. Required for Lv. 76 after 3rd class transfer. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_spellbook_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90040" name="Spellbook: Mount Saber Tooth Cougar" type="EtcItem">
+		<!-- Allows learning the Mount Saber Tooth Cougar skill. Required for Lv. 76 after 3rd class transfer. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_spellbook_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90041" name="Spellbook: Mount Kukuru" type="EtcItem">
+		<!-- Allows learning the Mount Kukuru skill. Required for Lv. 76 after 3rd class transfer. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_spellbook_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90042" name="Spellbook: Mount Black Bear" type="EtcItem">
+		<!-- Allows learning the Mount Black Bear skill. Required for Lv. 76 after 3rd class transfer. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_spellbook_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90043" name="Dark Assassin Transformation Potion" type="EtcItem">
+		<!-- For 15 minutes transforms you into Dark Assassin. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.empty_bottle" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90044" name="Dimensional Blessing" type="EtcItem">
+		<!-- Provides 37 million XP and 1.11 million SP. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_blessed_kalie_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90045" name="Magical Tablet" type="EtcItem">
+		<!-- A tablet filled with magic power. Collect 31 tablets and give them to Harmony or Magic Books Trader Lorenzo to get Spellbook: 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_hidden_1st_page_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90046" name="Scroll: Vengeance" type="EtcItem">
+		<!-- This scroll is used to learn the Vengeance skill. Available to Phoenix Knight, Hell Knight, Eva's Templar, and Shillien Templar. Level required to obtain the scroll: 77 -->
+		<set name="icon" val="icon.etc_magic_book_black_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90047" name="Scroll: Touch of Life" type="EtcItem">
+		<!-- This scroll is used to learn the Touch of Life skill. Available to Phoenix Knight, and Eva's Templar. Level required to obtain the scroll: 78 -->
+		<set name="icon" val="icon.etc_magic_book_black_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90048" name="Scroll: Touch of Death" type="EtcItem">
+		<!-- This scroll is used to learn the Touch of Death skill. Available to Hell Knight and Shillien Templar. Level required to obtain the scroll: 78 -->
+		<set name="icon" val="icon.etc_magic_book_black_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90049" name="Scroll: Shield of Faith" type="EtcItem">
+		<!-- This scroll is used to learn the Shield of Faith skill. Available to Phoenix Knight, Hell Knight, Eva's Templar, and Shillien Templar. Level required to obtain the scroll: 79 -->
+		<set name="icon" val="icon.etc_magic_book_black_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90050" name="Scroll: Shield of Sacrifice" type="EtcItem">
+		<!-- This scroll is used to learn the Shield of Sacrifice skill. Available to Phoenix Knight. Level required to obtain the scroll: 80 -->
+		<set name="icon" val="icon.etc_magic_book_black_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90051" name="Scroll: Insane Crusher" type="EtcItem">
+		<!-- This scroll is used to learn the Insane Crusher skill. Available to Hell Knight. Level required to obtain the scroll: 80 -->
+		<set name="icon" val="icon.etc_magic_book_black_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90052" name="Scroll: Eva’s Protection" type="EtcItem">
+		<!-- This scroll is used to learn the Eva�s Protection skill. Available to Eva's Templar. Level required to obtain the scroll: 80 -->
+		<set name="icon" val="icon.etc_magic_book_black_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90053" name="Scroll: Mass Lightning Strike" type="EtcItem">
+		<!-- This scroll is used to learn the Mass Lightning Strike skill. Available to Shillien Templar. Level required to obtain the scroll: 80 -->
+		<set name="icon" val="icon.etc_magic_book_black_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90054" name="Scroll: Clear Movements" type="EtcItem">
+		<!-- This scroll is used to learn the Clear Movements skill. Available to Adventurer, Wind Rider, and Ghost Hunter. Level required to obtain the scroll: 77 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90055" name="Scroll: Critical Wound" type="EtcItem">
+		<!-- This scroll is used to learn the Critical Wound skill. Available to Adventurer, Wind Rider, and Ghost Hunter. Level required to obtain the scroll: 77 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90056" name="Scroll: Focus Power" type="EtcItem">
+		<!-- This scroll is used to learn the Focus Power skill. Available to Adventurer and Ghost Hunter. Level required to obtain the scroll: 78 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90057" name="Scroll: Focus Chance" type="EtcItem">
+		<!-- This scroll is used to learn the Focus Chance skill. Available to Adventurer and Wind Rider. Level required to obtain the scroll: 78 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90058" name="Scroll: Focus Death" type="EtcItem">
+		<!-- This scroll is used to learn the Focus Death skill. Available to Wind Rider and Ghost Hunter. Level required to obtain the scroll: 78 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90059" name="Scroll: Mirage" type="EtcItem">
+		<!-- This scroll is used to learn the Mirage skill. Available to Adventurer. Level required to obtain the scroll: 79 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90060" name="Scroll: Evasion" type="EtcItem">
+		<!-- This scroll is used to learn the Evasion skill. Available to Wind Rider. Level required to obtain the scroll: 79 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90061" name="Scroll: Counterattack" type="EtcItem">
+		<!-- This scroll is used to learn the Counterattack skill. Available to Ghost Hunter. Level required to obtain the scroll: 79 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90062" name="Scroll: Real Target" type="EtcItem">
+		<!-- This scroll is used to learn the Real Target skill. Available to Sagittarius, Moonlight Sentinel, and Ghost Sentinel. Level required to obtain the scroll: 78 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90063" name="Scroll: Death Sting" type="EtcItem">
+		<!-- This scroll is used to learn the Death Sting skill. Available to Sagittarius, Moonlight Sentinel, and Ghost Sentinel. Level required to obtain the scroll: 79 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90064" name="Scroll: Flame Hawk" type="EtcItem">
+		<!-- This scroll is used to learn the Flame Hawk skill. Available to Sagittarius. Level required to obtain the scroll: 80 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90065" name="Scroll: Arrow Rain" type="EtcItem">
+		<!-- This scroll is used to learn the Arrow Rain skill. Available to Moonlight Sentinel. Level required to obtain the scroll: 80 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90066" name="Scroll: Ghost Piercing" type="EtcItem">
+		<!-- This scroll is used to learn the Ghost Piercing skill. Available to Ghost Sentinel. Level required to obtain the scroll: 80 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90067" name="Scroll: Sonic Barrier" type="EtcItem">
+		<!-- This scroll is used to learn the Sonic Barrier skill. Available to Duelist. Level required to obtain the scroll: 77 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90068" name="Scroll: Indestructible Sound" type="EtcItem">
+		<!-- This scroll is used to learn the Indestructible Sound skill. Available to Duelist. Level required to obtain the scroll: 78 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90069" name="Scroll: Maximum Sonic Focus" type="EtcItem">
+		<!-- This scroll is used to learn the Maximum Sonic Focus skill. Available to Duelist. Level required to obtain the scroll: 80 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90070" name="Scroll: Force Barrier" type="EtcItem">
+		<!-- This scroll is used to learn the Force Barrier skill. Available to Grand Khavatari. Level required to obtain the scroll: 77 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90071" name="Scroll: Rush" type="EtcItem">
+		<!-- This scroll is used to learn the Rush skill. Available to Grand Khavatari. Level required to obtain the scroll: 78 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90072" name="Scroll: Maximum Force Focus" type="EtcItem">
+		<!-- This scroll is used to learn the Maximum Force Focus skill. Available to Grand Khavatari. Level required to obtain the scroll: 80 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90073" name="Scroll: Destroyer’s Roar" type="EtcItem">
+		<!-- This scroll is used to learn the Destroyer�s Roar skill. Available to Titan. Level required to obtain the scroll: 77 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90074" name="Scroll: Over the Body" type="EtcItem">
+		<!-- This scroll is used to learn the Over the Body skill. Available to Titan. Level required to obtain the scroll: 78 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90075" name="Scroll: Demolition Impact" type="EtcItem">
+		<!-- This scroll is used to learn the Demolition Impact skill. Available to Titan. Level required to obtain the scroll: 80 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90076" name="Scroll: Stun Blast" type="EtcItem">
+		<!-- This scroll is used to learn the Stun Blast skill. Available to Dreadnought. Level required to obtain the scroll: 77 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90077" name="Scroll: Spear Howl" type="EtcItem">
+		<!-- This scroll is used to learn the Spear Howl skill. Available to Dreadnought. Level required to obtain the scroll: 80 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90078" name="Scroll: Armor Crush" type="EtcItem">
+		<!-- This scroll is used to learn the Armor Crush skill. Available to Maestro and Fortune Seeker. Level required to obtain the scroll: 77 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90079" name="Scroll: Spoil Crush" type="EtcItem">
+		<!-- This scroll is used to learn the Spoil Crush skill. Available to Fortune Seeker. Level required to obtain the scroll: 77 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90080" name="Scroll: Final Secret" type="EtcItem">
+		<!-- This scroll is used to learn the Final Secret skill. Available to Duelist, Dreadnought, Titan, Grand Khavatari, Maestro, and Fortune Seeker. Level required to obtain the scroll: 79 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90081" name="Scroll: Arcane Power" type="EtcItem">
+		<!-- This scroll is used to learn the Arcane Power skill. Available to Archmage, Mystic Muse, and Storm Screamer. Level required to obtain the scroll: 77 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90082" name="Scroll: Fire Vortex Buster" type="EtcItem">
+		<!-- This scroll is used to learn the Fire Vortex Buster. Available to Archmage. Level required to obtain the scroll: 78 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90083" name="Scroll: Ice Vortex Crusher" type="EtcItem">
+		<!-- This scroll is used to learn the Ice Vortex Cruster. Available to Mystic Muse. Level required to obtain the scroll: 78 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90084" name="Scroll: Wind Vortex Slug" type="EtcItem">
+		<!-- This scroll is used to learn the Wind Vortex Slug skill. Available to Storm Screamer. Level required to obtain the scroll: 78 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90085" name="Scroll: Arcane Chaos" type="EtcItem">
+		<!-- This scroll is used to learn the Arcane Chaos skill. Available to Archmage, Mystic Muse, and Storm Screamer. Level required to obtain the scroll: 79 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90086" name="Scroll: Arcane Shield" type="EtcItem">
+		<!-- This scroll is used to learn the Arcane Shield skill. Available to Archmage, Mystic Muse, and Storm Screamer. Level required to obtain the scroll: 80 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90087" name="Scroll: Curse of Doom" type="EtcItem">
+		<!-- This scroll is used to learn the Curse of Doom skill. Available to Souleater. Level required to obtain the scroll: 77 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90088" name="Scroll: Curse of Abyss" type="EtcItem">
+		<!-- This scroll is used to learn the Curse of Abyss skill. Available to Souleater. Level required to obtain the scroll: 78 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90089" name="Scroll: Vampiric Mist" type="EtcItem">
+		<!-- This scroll is used to learn the Vampiric Mist skill. Available to Souleater. Level required to obtain the scroll: 80 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90090" name="Scroll: Song of Renewal" type="EtcItem">
+		<!-- This scroll is used to learn the Song of Renewal skill. Available to Sword Muse. Level required to obtain the scroll: 77 -->
+		<set name="icon" val="icon.etc_magic_book_blue_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90091" name="Scroll: Champion Song" type="EtcItem">
+		<!-- This scroll is used to learn the Champion Song skill. Available to Sword Muse. Level required to obtain the scroll: 78 -->
+		<set name="icon" val="icon.etc_magic_book_blue_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90092" name="Scroll: Song of Silence" type="EtcItem">
+		<!-- This scroll is used to learn the Song of Silence skill. Available to Sword Muse. Level required to obtain the scroll: 79 -->
+		<set name="icon" val="icon.etc_magic_book_blue_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90093" name="Scroll: Song of Purification" type="EtcItem">
+		<!-- This scroll is used to learn the Song of Purification skill. Available to Sword Muse. Level required to obtain the scroll: 80 -->
+		<set name="icon" val="icon.etc_magic_book_blue_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90094" name="Scroll: Dance of Shadows" type="EtcItem">
+		<!-- This scroll is used to learn the Dance of Shadows skill. Available to Spectral Dancer. Level required to obtain the scroll: 77 -->
+		<set name="icon" val="icon.etc_magic_book_blue_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90095" name="Scroll: Dance of Siren" type="EtcItem">
+		<!-- This scroll is used to learn the Dance of Siren skill. Available to Spectral Dancer. Level required to obtain the scroll: 78 -->
+		<set name="icon" val="icon.etc_magic_book_blue_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90096" name="Scroll: Dance of Medusa" type="EtcItem">
+		<!-- This scroll is used to learn the Dance of Medusa skill. Available to Spectral Dancer. Level required to obtain the scroll: 79 -->
+		<set name="icon" val="icon.etc_magic_book_blue_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90097" name="Scroll: Dance of Berserker" type="EtcItem">
+		<!-- This scroll is used to learn the Dance of Berserker skill. Available to Spectral Dancer. Level required to obtain the scroll: 80 -->
+		<set name="icon" val="icon.etc_magic_book_blue_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90098" name="Scroll: Prophecy of Fire" type="EtcItem">
+		<!-- This scroll is used to learn the Prophecy of Fire skill. Available to Hierophant. Level required to obtain the scroll: 76 -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90099" name="Scroll: Block Shield" type="EtcItem">
+		<!-- This scroll is used to learn the Block Shield skill. Available to Hierophant. Level required to obtain the scroll: 77 -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

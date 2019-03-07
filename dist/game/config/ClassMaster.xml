@@ -1,0 +1,33 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../data/xsd/classMaster.xsd">
+	<classMaster classChangeEnabled="false" spawnClassMasters="false" showPopupWindow="false">
+		<classChangeOption name="Free">
+			<appliesTo>
+				<category>FIRST_CLASS_GROUP</category>
+			</appliesTo>
+		</classChangeOption>
+		<classChangeOption name="Free">
+			<appliesTo>
+				<category>SECOND_CLASS_GROUP</category>
+			</appliesTo>
+		</classChangeOption>
+		<classChangeOption name="Pay Adena">
+			<appliesTo>
+				<category>THIRD_CLASS_GROUP</category>
+			</appliesTo>
+			<conditions>
+				<item id="57" count="1000000" /> <!-- 1,000,000 Adena for third class -->
+			</conditions>
+		</classChangeOption>
+		<!--
+		You can add alternative payment methods.
+		<classChangeOption name="Pay Coin of Luck">
+			<appliesTo>
+				<category>THIRD_CLASS_GROUP</category>
+			</appliesTo>
+			<conditions>
+				<item id="4037" count="100" />
+			</conditions>
+		</classChangeOption>
+		-->
+	</classMaster>
+</list>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
+	<option id="21500" name="o_f_82_1g_74">
+		<!-- M. Atk. increases by 10.1. Evasion increases by 0.92. -->
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>0.919</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>10.098</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21501" name="o_f_82_1g_75">
+		<!-- M. Atk. increases by 10.1. Accuracy increases by 0.92. -->
+		<effects>
+			<effect name="Accuracy">
+				<amount>0.919</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>10.098</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21502" name="o_f_82_1g_76">
+		<!-- M. Atk. increases by 10.1. Critical increases by 7.04. -->
+		<effects>
+			<effect name="CriticalRate">
+				<amount>7.039999999999999</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>10.098</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21503" name="o_f_82_1g_77">
+		<!-- HP Regen increases by 0.21. MP Regen increases by 0.08. -->
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.077</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.206</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21504" name="o_f_82_1g_78">
+		<!-- HP Regen increases by 0.21. CP Regen increases by 0.18. -->
+		<effects>
+			<effect name="CpRegen">
+				<amount>0.183</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.206</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21505" name="o_f_82_1g_79">
+		<!-- HP Regen increases by 0.21. Evasion increases by 0.92. -->
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>0.919</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.206</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21506" name="o_f_82_1g_80">
+		<!-- HP Regen increases by 0.21. Accuracy increases by 0.92. -->
+		<effects>
+			<effect name="Accuracy">
+				<amount>0.919</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.206</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21507" name="o_f_82_1g_81">
+		<!-- HP Regen increases by 0.21. Critical increases by 7.04. -->
+		<effects>
+			<effect name="CriticalRate">
+				<amount>7.039999999999999</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.206</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21508" name="o_f_82_1g_82">
+		<!-- MP Regen increases by 0.09. CP Regen increases by 0.18. -->
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.087</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CpRegen">
+				<amount>0.183</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21509" name="o_f_82_1g_83">
+		<!-- MP Regen increases by 0.09. Evasion increases by 0.92. -->
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.087</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>0.919</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21510" name="o_f_82_1g_84">
+		<!-- MP Regen increases by 0.09. Accuracy increases by 0.92. -->
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.087</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>0.919</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21511" name="o_f_82_1g_85">
+		<!-- MP Regen increases by 0.09. Critical increases by 7.04. -->
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.087</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>7.039999999999999</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21512" name="o_f_82_1g_86">
+		<!-- CP Regen increases by 0.21. Evasion increases by 0.92. -->
+		<effects>
+			<effect name="CpRegen">
+				<amount>0.206</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>0.919</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21513" name="o_f_82_1g_87">
+		<!-- CP Regen increases by 0.21. Accuracy increases by 0.92. -->
+		<effects>
+			<effect name="CpRegen">
+				<amount>0.206</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>0.919</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21514" name="o_f_82_1g_88">
+		<!-- CP Regen increases by 0.21. Critical increases by 7.04. -->
+		<effects>
+			<effect name="CpRegen">
+				<amount>0.206</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>7.039999999999999</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21515" name="o_f_82_1g_89">
+		<!-- Evasion increases by 1.03. Accuracy increases by 0.92. -->
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>1.034</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>0.919</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21516" name="o_f_82_1g_90">
+		<!-- Evasion increases by 1.03. Critical increases by 7.04. -->
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>1.034</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>7.039999999999999</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="21517" name="o_f_82_1g_91">
+		<!-- Accuracy increases by 1.03. Critical increases by 7.04. -->
+		<effects>
+			<effect name="Accuracy">
+				<amount>1.034</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>7.039999999999999</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+</list>

@@ -1,10 +1,10 @@
 package org.l2j.scripts.handler.bbs.custom;
 
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.scripts.handler.bbs.ScriptsCommunityHandler;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
-import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Zone.ZoneType;
 import org.l2j.gameserver.model.actor.instances.player.BookMarkList;
@@ -149,7 +149,7 @@ public class CommunityTeleport extends ScriptsCommunityHandler
             PreparedStatement statement = null;
             try
             {
-                con = L2DatabaseFactory.getInstance().getConnection();
+                con = DatabaseFactory.getInstance().getConnection();
                 statement = con.prepareStatement("DELETE FROM bbs_teleport_bm WHERE char_id=? AND name=?");
                 statement.setInt(1, player.getObjectId());
                 statement.setString(2, name);
@@ -209,7 +209,7 @@ public class CommunityTeleport extends ScriptsCommunityHandler
 
             try
             {
-                con = L2DatabaseFactory.getInstance().getConnection();
+                con = DatabaseFactory.getInstance().getConnection();
                 statement = con.prepareStatement("INSERT INTO bbs_teleport_bm (char_id,name,x,y,z) VALUES (?,?,?,?,?)");
                 statement.setInt(1, player.getObjectId());
                 statement.setString(2, bmName);
@@ -303,7 +303,7 @@ public class CommunityTeleport extends ScriptsCommunityHandler
 
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("SELECT name FROM bbs_teleport_bm WHERE char_id=?");
             statement.setInt(1, player.getObjectId());
             rset = statement.executeQuery();
@@ -331,7 +331,7 @@ public class CommunityTeleport extends ScriptsCommunityHandler
 
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("SELECT name FROM bbs_teleport_bm WHERE char_id=?");
             statement.setInt(1, player.getObjectId());
             rset = statement.executeQuery();
@@ -515,7 +515,7 @@ public class CommunityTeleport extends ScriptsCommunityHandler
         ResultSet rs = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("SELECT * FROM bbs_teleport_bm WHERE char_id=?;");
             statement.setLong(1, player.getObjectId());
             rs = statement.executeQuery();

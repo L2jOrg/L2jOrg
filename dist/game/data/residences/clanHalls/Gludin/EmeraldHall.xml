@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/clanHall.xsd">
+	<clanHall id="30" name="Emerald Hall" grade="GRADE_B" type="AUCTIONABLE">
+	 	<auction minBid="5000000" lease="500000" deposit="500000" />
+	 	<npcs>
+	 	   	<npc id="35401" /> <!-- Amiel -->
+   			<npc id="35400" /> <!-- Horner -->
+	 	</npcs>
+	 	<doorlist>
+	 		<door id="17220013" />
+	 		<door id="17220014" /> 		
+	 	</doorlist>
+	 	<ownerRestartPoint x="-79513" y="151506" z="-3041" />
+		<banishPoint x="-79854" y="151602" z="-3042" />	 
+	</clanHall>
+</list>

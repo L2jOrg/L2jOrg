@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
+	<option id="40200" name="o_s_cl_hg">
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>10.91</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>0.2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40201" name="o_s_cl_hg">
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>10.91</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>0.2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40202" name="o_s_cl_hg">
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>10.91</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>1.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40203" name="o_s_cl_hg">
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>10.91</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>1.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40204" name="o_s_cl_hg">
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>10.91</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>11.3</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40205" name="o_s_cl_hg">
+		<effects>
+			<effect name="HpRegen">
+				<amount>0.22</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>1.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40206" name="o_s_cl_hg">
+		<effects>
+			<effect name="HpRegen">
+				<amount>0.22</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>1.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40207" name="o_s_cl_hg">
+		<effects>
+			<effect name="HpRegen">
+				<amount>0.22</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>11.3</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40208" name="o_s_cl_hg">
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.09</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>1.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40209" name="o_s_cl_hg">
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.09</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>1.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40210" name="o_s_cl_hg">
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.09</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>11.3</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40211" name="o_s_cl_hg">
+		<effects>
+			<effect name="CpRegen">
+				<amount>0.22</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>1.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40212" name="o_s_cl_hg">
+		<effects>
+			<effect name="CpRegen">
+				<amount>0.22</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>1.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40213" name="o_s_cl_hg">
+		<effects>
+			<effect name="CpRegen">
+				<amount>0.22</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>11.3</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40214" name="o_s_cl_hg">
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>1.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>1.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40215" name="o_s_cl_hg">
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>1.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>1.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40216" name="o_s_cl_hg">
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>1.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>11.3</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40217" name="o_s_cl_hg">
+		<effects>
+			<effect name="Accuracy">
+				<amount>1.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>11.3</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="40218" name="o_s_cl_hg">
+		<effects>
+			<effect name="MagicAccuracy">
+				<amount>1.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>11.3</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+</list>

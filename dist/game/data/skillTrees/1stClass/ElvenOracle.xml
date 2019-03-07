@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="29" parentClassId="25">
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="3" getLevel="20" levelUpSp="600" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="2" getLevel="20" levelUpSp="600" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="2" getLevel="20" levelUpSp="600" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="5" getLevel="20" levelUpSp="600" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="6" getLevel="20" levelUpSp="600" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Quick Recovery" skillId="164" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Heal" skillId="1011" skillLvl="7" getLevel="20" levelUpSp="600" />
+		<skill skillName="Heal" skillId="1011" skillLvl="8" getLevel="20" levelUpSp="600" />
+		<skill skillName="Heal" skillId="1011" skillLvl="9" getLevel="20" levelUpSp="600" />
+		<skill skillName="Battle Heal" skillId="1015" skillLvl="4" getLevel="20" levelUpSp="600" />
+		<skill skillName="Battle Heal" skillId="1015" skillLvl="5" getLevel="20" levelUpSp="600" />
+		<skill skillName="Battle Heal" skillId="1015" skillLvl="6" getLevel="20" levelUpSp="600" />
+		<skill skillName="Group Heal" skillId="1027" skillLvl="4" getLevel="20" levelUpSp="600" />
+		<skill skillName="Group Heal" skillId="1027" skillLvl="5" getLevel="20" levelUpSp="600" />
+		<skill skillName="Group Heal" skillId="1027" skillLvl="6" getLevel="20" levelUpSp="600" />
+		<skill skillName="Disrupt Undead" skillId="1031" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Disrupt Undead" skillId="1031" skillLvl="2" getLevel="20" levelUpSp="600" />
+		<skill skillName="Might" skillId="1068" skillLvl="2" getLevel="20" levelUpSp="600" />
+		<skill skillName="Wind Walk" skillId="1204" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="2" getLevel="20" levelUpSp="600" />
+		<skill skillName="Concentration" skillId="1078" skillLvl="1" getLevel="20" levelUpSp="600">
+			<item id="1399" count="1" />
+		</skill>
+		<skill skillName="Resurrection" skillId="1016" skillLvl="1" getLevel="20" levelUpSp="600">
+			<item id="1514" count="1" />
+		</skill>
+		<skill skillName="Eva's Kiss" skillId="1073" skillLvl="1" getLevel="20" levelUpSp="600" />
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="7" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Battle Heal" skillId="1015" skillLvl="7" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="3" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="3" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="4" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Group Heal" skillId="1027" skillLvl="7" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Dryad Root" skillId="1201" skillLvl="1" getLevel="23" levelUpSp="2300">
+			<item id="1415" count="1" />
+		</skill>
+		<skill skillName="Heal" skillId="1011" skillLvl="10" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Disrupt Undead" skillId="1031" skillLvl="3" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="1" getLevel="23" levelUpSp="2300">
+			<item id="1394" count="1" />
+		</skill>
+		
+		<skill skillName="Battle Heal" skillId="1015" skillLvl="8" getLevel="24" levelUpSp="2300" />
+		<skill skillName="Group Heal" skillId="1027" skillLvl="8" getLevel="24" levelUpSp="2300" />
+		<skill skillName="Dryad Root" skillId="1201" skillLvl="2" getLevel="24" levelUpSp="2300" />
+		<skill skillName="Heal" skillId="1011" skillLvl="11" getLevel="24" levelUpSp="2300" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="2" getLevel="24" levelUpSp="2300" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="5" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="4" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="4" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="8" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Fast Spell Casting" skillId="228" skillLvl="1" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="1" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Heal" skillId="1011" skillLvl="12" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Battle Heal" skillId="1015" skillLvl="9" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Group Heal" skillId="1027" skillLvl="9" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Disrupt Undead" skillId="1031" skillLvl="4" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="3" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Dryad Root" skillId="1201" skillLvl="3" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="3" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Shield" skillId="1040" skillLvl="2" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Agility" skillId="1087" skillLvl="1" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Holy Weapon" skillId="1043" skillLvl="1" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Mental Shield" skillId="1035" skillLvl="1" getLevel="25" levelUpSp="2300">
+			<item id="1388" count="1" />
+		</skill>
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="9" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Battle Heal" skillId="1015" skillLvl="10" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="5" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="5" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="6" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Group Heal" skillId="1027" skillLvl="10" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Dryad Root" skillId="1201" skillLvl="4" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Heal" skillId="1011" skillLvl="13" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="1" getLevel="28" levelUpSp="5700">
+			<item id="1385" count="1" />
+		</skill>
+		<skill skillName="Disrupt Undead" skillId="1031" skillLvl="5" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="4" getLevel="28" levelUpSp="5700" />
+		
+		<skill skillName="Battle Heal" skillId="1015" skillLvl="11" getLevel="29" levelUpSp="5700" />
+		<skill skillName="Group Heal" skillId="1027" skillLvl="11" getLevel="29" levelUpSp="5700" />
+		<skill skillName="Dryad Root" skillId="1201" skillLvl="5" getLevel="29" levelUpSp="5700" />
+		<skill skillName="Heal" skillId="1011" skillLvl="14" getLevel="29" levelUpSp="5700" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="5" getLevel="29" levelUpSp="5700" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="7" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="6" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="6" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="10" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="2" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Quick Recovery" skillId="164" skillLvl="2" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Heal" skillId="1011" skillLvl="15" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Battle Heal" skillId="1015" skillLvl="12" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Group Heal" skillId="1027" skillLvl="12" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Disrupt Undead" skillId="1031" skillLvl="6" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="6" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Dryad Root" skillId="1201" skillLvl="6" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="2" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="4" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Wind Walk" skillId="1204" skillLvl="2" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Concentration" skillId="1078" skillLvl="2" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Resurrection" skillId="1016" skillLvl="2" getLevel="30" levelUpSp="5700" />
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="11" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Battle Heal" skillId="1015" skillLvl="13" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="7" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="7" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="8" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Group Heal" skillId="1027" skillLvl="13" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Dryad Root" skillId="1201" skillLvl="7" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Heal" skillId="1011" skillLvl="16" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="3" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Disrupt Undead" skillId="1031" skillLvl="7" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="7" getLevel="33" levelUpSp="13000" />
+		
+		<skill skillName="Battle Heal" skillId="1015" skillLvl="14" getLevel="34" levelUpSp="13000" />
+		<skill skillName="Group Heal" skillId="1027" skillLvl="14" getLevel="34" levelUpSp="13000" />
+		<skill skillName="Dryad Root" skillId="1201" skillLvl="8" getLevel="34" levelUpSp="13000" />
+		<skill skillName="Heal" skillId="1011" skillLvl="17" getLevel="34" levelUpSp="13000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="8" getLevel="34" levelUpSp="13000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="9" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="8" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="8" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="12" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="1" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="2" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Heal" skillId="1011" skillLvl="18" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Battle Heal" skillId="1015" skillLvl="15" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Group Heal" skillId="1027" skillLvl="15" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Disrupt Undead" skillId="1031" skillLvl="8" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="9" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Dryad Root" skillId="1201" skillLvl="9" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="4" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="5" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Cure Poison" skillId="1012" skillLvl="2" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Regeneration" skillId="1044" skillLvl="1" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Poison Resistance" skillId="1033" skillLvl="1" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Decrease Weight" skillId="1257" skillLvl="1" getLevel="35" levelUpSp="13000">
+			<item id="3944" count="1" />
+		</skill>
+	</skillTree>
+</list>

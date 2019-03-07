@@ -1,0 +1,1314 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="5200" name="Chest Key - Grade 5" type="EtcItem">
+		<!-- Opens a level 30 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
+		<set name="icon" val="icon.etc_key_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="1900" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2065" level="4" /> <!-- Box Key -->
+		</skills>
+	</item>
+	<item id="5201" name="Chest Key - Grade 4" type="EtcItem">
+		<!-- Opens a level 40 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
+		<set name="icon" val="icon.etc_key_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="3200" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2065" level="5" /> <!-- Box Key -->
+		</skills>
+	</item>
+	<item id="5202" name="Chest Key - Grade 3" type="EtcItem">
+		<!-- Opens a level 50 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
+		<set name="icon" val="icon.etc_key_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="5100" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2065" level="6" /> <!-- Box Key -->
+		</skills>
+	</item>
+	<item id="5203" name="Chest Key - Grade 2" type="EtcItem">
+		<!-- Opens a level 60 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
+		<set name="icon" val="icon.etc_key_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="7400" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2065" level="7" /> <!-- Box Key -->
+		</skills>
+	</item>
+	<item id="5204" name="Chest Key - Grade 1" type="EtcItem">
+		<!-- Opens a level 70 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
+		<set name="icon" val="icon.etc_key_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="10000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2065" level="8" /> <!-- Box Key -->
+		</skills>
+	</item>
+	<item id="5205" name="Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
+		<!-- Innadril/Sword/Stationary -->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="5206" name="Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
+		<!-- Innadril/Spear/Stationary -->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="60000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="5207" name="Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
+		<!-- Innadril/Bow/Stationary -->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="70000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="5208" name="Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
+		<!-- Innadril/Cleric/Stationary -->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="5209" name="Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
+		<!-- Innadril/Wizard/Stationary -->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="5210" name="Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
+		<!-- Innadril/Sword/Mobile -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="5211" name="Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
+		<!-- Innadril/Spear/Mobile -->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="60000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="5212" name="Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
+		<!-- Innadril/Bow/Mobile -->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="70000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="5213" name="Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
+		<!-- Innadril/Cleric/Mobile -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="5214" name="Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
+		<!-- Innadril/Wizard/Mobile -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="5215" name="Mercenary Posting Ticket (Teleporter1)" type="EtcItem">
+		<!-- Innadril/Teleporter/Inner Castle, Guard -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="5218" name="Mercenary Posting Ticket (Teleporter2)" type="EtcItem">
+		<!-- Innadril/Teleporter/Outer Castle, Guardian -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="5219" name="Mercenary Posting Ticket (Teleporter3)" type="EtcItem">
+		<!-- Innadril/Teleporter/Inner Castle, Outer Castle -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="5220" name="Metal Hardener" type="EtcItem">
+		<!-- Used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_plate_blue_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="5000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5230" name="Recipe: Mithril Arrow" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Mithril Arrows. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="150000" />
+		<set name="recipe_id" val="496" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5231" name="Recipe: Metal Hardener" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Metal Hardener. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="2800" />
+		<set name="recipe_id" val="497" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5232" name="White Cloth" type="EtcItem">
+		<!-- Large piece of white cloth given by Magister Hanellin. Kill Guardian Angels and Seal Angels and soak the cloth with their blood. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5233" name="Keshanberk*Keshanberk" type="Weapon">
+		<!-- When enchanted, P. Atk. of dualswords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. 1 ordinary Soul Crystal and 1 Special Soul Crystal can be applied. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1128" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2080" />
+		<set name="price" val="14098000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<skills>
+			<skill id="3045" level="17" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Haste -->
+		</skills>
+		<stats>
+			<stat type="pAtk">259</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5234" name="Mysterious Potion" type="EtcItem">
+		<!-- Legend says that if you drink this potion your head will grow larger! Believe it if you will! -->
+		<set name="icon" val="icon.etc_lesser_potion_clear_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="10000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2103" level="1" /> <!-- Mysterious Potion -->
+		</skills>
+	</item>
+	<item id="5235" name="Facelifting Potion - A" type="EtcItem">
+		<!-- Beauty potion that changes one's facial appearance to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="20000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2122" level="1" /> <!-- Facelifting Potion -->
+		</skills>
+	</item>
+	<item id="5236" name="Facelifting Potion - B" type="EtcItem">
+		<!-- Beauty potion that changes one's facial appearance to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="20000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2123" level="1" /> <!-- Facelifting Potion -->
+		</skills>
+	</item>
+	<item id="5237" name="Facelifting Potion - C" type="EtcItem">
+		<!-- Beauty potion that changes one's facial appearance to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="20000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2124" level="1" /> <!-- Facelifting Potion -->
+		</skills>
+	</item>
+	<item id="5238" name="Dye Potion - A" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="20000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2125" level="1" /> <!-- Dye Potion -->
+		</skills>
+	</item>
+	<item id="5239" name="Dye Potion - B" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="20000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2126" level="1" /> <!-- Dye Potion -->
+		</skills>
+	</item>
+	<item id="5240" name="Dye Potion - C" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="20000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2127" level="1" /> <!-- Dye Potion -->
+		</skills>
+	</item>
+	<item id="5241" name="Dye Potion - D" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="20000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2128" level="1" /> <!-- Dye Potion -->
+		</skills>
+	</item>
+	<item id="5242" name="Hair Style Change Potion - A" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="20000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2129" level="1" /> <!-- Hair Style Change Potion -->
+		</skills>
+	</item>
+	<item id="5243" name="Hair Style Change Potion - B" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="20000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2130" level="1" /> <!-- Hair Style Change Potion -->
+		</skills>
+	</item>
+	<item id="5244" name="Hair Style Change Potion - C" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="20000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2131" level="1" /> <!-- Hair Style Change Potion -->
+		</skills>
+	</item>
+	<item id="5245" name="Hair Style Change Potion - D" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="20000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2132" level="1" /> <!-- Hair Style Change Potion -->
+		</skills>
+	</item>
+	<item id="5246" name="Hair Style Change Potion - E" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type E. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="20000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2133" level="1" /> <!-- Hair Style Change Potion -->
+		</skills>
+	</item>
+	<item id="5247" name="Hair Style Change Potion - F" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type F. May be used only by female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="20000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2134" level="1" /> <!-- Hair Style Change Potion -->
+		</skills>
+	</item>
+	<item id="5248" name="Hair Style Change Potion - G" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type G. May be used only by female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="20000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2135" level="1" /> <!-- Hair Style Change Potion -->
+		</skills>
+	</item>
+	<item id="5250" name="Greater Soulshot Compressed Package (No-grade)" type="EtcItem">
+		<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 No-grade soulshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="600" />
+		<set name="price" val="7700" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<skills>
+			<skill id="2104" level="1" /> <!-- Greater Soulshot Compressed Package (No-grade) -->
+		</skills>
+	</item>
+	<item id="5251" name="Greater Soulshot Compressed Package (D-grade)" type="EtcItem">
+		<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 D-grade soulshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="450" />
+		<set name="price" val="11000" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<skills>
+			<skill id="2105" level="1" /> <!-- Greater Soulshot Compressed Package (D-grade) -->
+		</skills>
+	</item>
+	<item id="5252" name="Greater Soulshot Compressed Package (C-grade)" type="EtcItem">
+		<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 C-grade soulshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="450" />
+		<set name="price" val="16500" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<skills>
+			<skill id="2106" level="1" /> <!-- Greater Soulshot Compressed Package (C-grade) -->
+		</skills>
+	</item>
+	<item id="5253" name="Greater Soulshot Compressed Package (B-grade)" type="EtcItem">
+		<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 B-grade soulshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="300" />
+		<set name="price" val="55000" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<skills>
+			<skill id="2107" level="1" /> <!-- Greater Soulshot Compressed Package (B-grade) -->
+		</skills>
+	</item>
+	<item id="5254" name="Greater Soulshot Compressed Package (A-grade)" type="EtcItem">
+		<!-- Small package of compressed Soulshots. Upon use, changes into a 1,000 A-grade Soulshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="300" />
+		<set name="price" val="88000" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<skills>
+			<skill id="2108" level="1" /> <!-- Greater Soulshot Compressed Package (A-grade) -->
+		</skills>
+	</item>
+	<item id="5256" name="Greater Spiritshot Compressed Package (No-grade)" type="EtcItem">
+		<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 No-grade spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="750" />
+		<set name="price" val="16500" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2110" level="1" /> <!-- Greater Spiritshot Compressed Package (No-grade) -->
+		</skills>
+	</item>
+	<item id="5257" name="Greater Spiritshot Compressed Package (D-grade)" type="EtcItem">
+		<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 D-grade spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="750" />
+		<set name="price" val="19800" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2111" level="1" /> <!-- Greater Spiritshot Compressed Package (D-grade) -->
+		</skills>
+	</item>
+	<item id="5258" name="Greater Spiritshot Compressed Package (C-grade)" type="EtcItem">
+		<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 C-grade spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="450" />
+		<set name="price" val="38500" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2112" level="1" /> <!-- Greater Spiritshot Compressed Package (C-grade) -->
+		</skills>
+	</item>
+	<item id="5259" name="Greater Spiritshot Compressed Package (B-grade)" type="EtcItem">
+		<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 B-grade spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="450" />
+		<set name="price" val="110000" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2113" level="1" /> <!-- Greater Spiritshot Compressed Package (B-grade) -->
+		</skills>
+	</item>
+	<item id="5260" name="Greater Spiritshot Compressed Package (A-grade)" type="EtcItem">
+		<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 A-grade spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="300" />
+		<set name="price" val="132000" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2114" level="1" /> <!-- Greater Spiritshot Compressed Package (A-grade) -->
+		</skills>
+	</item>
+	<item id="5262" name="Greater Blessed Spiritshot Compressed Package (No-grade)" type="EtcItem">
+		<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 No-grade blessed spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="750" />
+		<set name="price" val="38500" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2116" level="1" /> <!-- Greater Blessed Spiritshot Compressed Package (No-grade) -->
+		</skills>
+	</item>
+	<item id="5263" name="Greater Blessed Spiritshot Compressed Package (D-grade)" type="EtcItem">
+		<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 D-grade blessed spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="750" />
+		<set name="price" val="49500" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2117" level="1" /> <!-- Greater Blessed Spiritshot Compressed Package (D-grade) -->
+		</skills>
+	</item>
+	<item id="5264" name="Greater Blessed Spiritshot Compressed Package (C-grade)" type="EtcItem">
+		<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 C-grade blessed spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="450" />
+		<set name="price" val="99000" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2118" level="1" /> <!-- Greater Blessed Spiritshot Compressed Package (C-grade) -->
+		</skills>
+	</item>
+	<item id="5265" name="Greater Blessed Spiritshot Compressed Package (B-grade)" type="EtcItem">
+		<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 B-grade blessed spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="450" />
+		<set name="price" val="269500" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2119" level="1" /> <!-- Greater Blessed Spiritshot Compressed Package (B-grade) -->
+		</skills>
+	</item>
+	<item id="5266" name="Greater Blessed Spiritshot Compressed Package (A-grade)" type="EtcItem">
+		<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 A-grade blessed spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="300" />
+		<set name="price" val="319000" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2120" level="1" /> <!-- Greater Blessed Spiritshot Compressed Package (A-grade) -->
+		</skills>
+	</item>
+	<item id="5268" name="Recipe: Greater Soulshot Compressed Package (D-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="5000" />
+		<set name="recipe_id" val="498" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5269" name="Recipe: Greater Soulshot Compressed Package (C-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="60000" />
+		<set name="recipe_id" val="499" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5270" name="Recipe: Greater Soulshot Compressed Package (B-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="100000" />
+		<set name="recipe_id" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5271" name="Recipe: Greater Soulshot Compressed Package (A-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Greater Soulshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="150000" />
+		<set name="recipe_id" val="501" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5273" name="Recipe: Greater Spiritshot Compressed Package (D-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="5000" />
+		<set name="recipe_id" val="503" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5274" name="Recipe: Greater Spiritshot Compressed Package (C-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="60000" />
+		<set name="recipe_id" val="504" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5275" name="Recipe: Greater Spiritshot Compressed Package (B-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="100000" />
+		<set name="recipe_id" val="505" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5276" name="Recipe: Greater Spiritshot Compressed Package (A-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Greater Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="150000" />
+		<set name="recipe_id" val="506" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5278" name="Recipe: Greater Blessed Spiritshot Compressed Package (D-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="5000" />
+		<set name="recipe_id" val="508" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5279" name="Recipe: Greater Blessed Spiritshot Compressed Package (C-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="60000" />
+		<set name="recipe_id" val="509" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5280" name="Recipe: Greater Blessed Spiritshot Compressed Package (B-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="100000" />
+		<set name="recipe_id" val="510" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5281" name="Recipe: Greater Blessed Spiritshot Compressed Package (A-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Blessed Spiritshot Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="150000" />
+		<set name="recipe_id" val="511" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5283" name="Rice Cake" type="EtcItem">
+		<!-- Rice cake that restores one's HP and MP. -->
+		<set name="icon" val="icon.etc_mochi_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2136" level="1" /> <!-- Rice Cake -->
+		</skills>
+	</item>
+	<item id="5284" name="Zweinhander" type="Weapon">
+		<set name="icon" val="icon.weapon_zweihander_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1530" />
+		<set name="price" val="244000" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">38</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5285" name="Heavy Sword" type="Weapon">
+		<set name="icon" val="icon.weapon_heavy_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="743" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="409000" />
+		<set name="change_weaponId" val="9210" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">49</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5286" name="Berserker Blade" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_berserker_blade_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2452" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1380" />
+		<set name="price" val="6130000" />
+		<set name="change_weaponId" val="9296" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<stats>
+			<stat type="pAtk">190</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5287" name="Sealed Dark Crystal breastplate" type="Armor">
+		<!-- Sealed Dark Crystal breastplate. The seal can be removed by a blacksmith in any village. -->
+		<set name="icon" val="icon.armor_t74_u_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2452" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="7700" />
+		<set name="price" val="3562000" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">171</stat>
+		</stats>
+	</item>
+	<item id="5288" name="Sealed Dark Crystal Gaiters" type="Armor">
+		<!-- Sealed Dark Crystal Gaiters. The seal can be removed by a blacksmith in any village. -->
+		<set name="icon" val="icon.armor_t74_l_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="178" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="3320" />
+		<set name="price" val="2226000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<stats>
+			<stat type="pDef">107</stat>
+		</stats>
+	</item>
+	<item id="5289" name="Sealed Dark Crystal Helmet" type="Armor">
+		<!-- Sealed Dark Crystal Helmet. The seal can be removed by a blacksmith in any village. -->
+		<set name="icon" val="icon.armor_helmet_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="107" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="570" />
+		<set name="price" val="1336000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="5290" name="Sealed Dark Crystal Gloves" type="Armor">
+		<!-- Sealed Dark Crystal Gloves. The seal can be removed by a blacksmith in any village. -->
+		<set name="icon" val="icon.armor_t74_g_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="890000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5291" name="Sealed Dark Crystal Boots" type="Armor">
+		<!-- Sealed Dark Crystal Boots. The seal can be removed by a blacksmith in any village. -->
+		<set name="icon" val="icon.armor_t74_b_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="1110" />
+		<set name="price" val="890000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5292" name="Sealed Dark Crystal Shield" type="Armor">
+		<!-- Sealed Dark Crystal Shield. The seal can be removed by a blacksmith in any village. -->
+		<set name="icon" val="icon.shield_dark_crystal_shield_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="75" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="1190" />
+		<set name="price" val="935000" />
+		<set name="commissionItemType" val="SHIELD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">243</stat>
+		</stats>
+	</item>
+	<item id="5293" name="Sealed Tallum Plate Armor" type="Armor">
+		<!-- Sealed Tallum Plate Armor. The seal can be removed by a blacksmith in any village. -->
+		<set name="icon" val="icon.armor_t77_ul_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="463" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="9780" />
+		<set name="price" val="5788000" />
+		<set name="commissionItemType" val="FULL_BODY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">278</stat>
+		</stats>
+	</item>
+	<item id="5294" name="Sealed Tallum Helmet" type="Armor">
+		<!-- Sealed Tallum Helmet. The seal can be removed by a blacksmith in any village. -->
+		<set name="icon" val="icon.armor_helmet_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="107" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="570" />
+		<set name="price" val="1336000" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="5295" name="Sealed Tallum Gloves" type="Armor">
+		<!-- Sealed Tallum Gloves. The seal can be removed by a blacksmith in any village. -->
+		<set name="icon" val="icon.armor_t77_g_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="890000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5296" name="Sealed Tallum Boots" type="Armor">
+		<!-- Sealed Tallum Boots. The seal can be removed by a blacksmith in any village. -->
+		<set name="icon" val="icon.armor_t77_b_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1130" />
+		<set name="price" val="890000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5297" name="Sealed Dark Crystal Leather Armor" type="Armor">
+		<!-- Sealed Dark Crystal Leather Armor. The seal can be removed by a blacksmith in any village. -->
+		<set name="icon" val="icon.armor_t75_u_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="214" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="4300" />
+		<set name="price" val="2671000" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">128</stat>
+		</stats>
+	</item>
+	<item id="5298" name="Sealed Dark Crystal Leggings" type="Armor">
+		<!-- Sealed Dark Crystal Leggings. The seal can be removed by a blacksmith in any village. -->
+		<set name="icon" val="icon.armor_t75_l_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="134" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1480" />
+		<set name="price" val="1670000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<stats>
+			<stat type="pDef">80</stat>
+		</stats>
+	</item>
+</list>

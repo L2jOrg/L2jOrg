@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/clanHall.xsd">
+	<clanHall id="67" name="Sapphire Hall" grade="GRADE_B" type="AUCTIONABLE">
+	 	<auction minBid="5000000" lease="500000" deposit="500000" />
+	 	<npcs>
+	 	   	<npc id="36726" /> <!-- Loneiren -->
+   			<npc id="36725" /> <!-- Sarina -->
+	 	</npcs>
+	 	<doorlist>
+	 		<door id="19210113" />
+	 		<door id="19210014" />
+	 	</doorlist>
+	 	<ownerRestartPoint x="-28048" y="120800" z="-3706" />
+		<banishPoint x="-27983" y="122380" z="-3722" />	 
+	</clanHall>
+</list>

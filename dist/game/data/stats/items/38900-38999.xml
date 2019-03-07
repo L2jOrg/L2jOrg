@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="38923" name="Squash Seed" type="EtcItem">
+		<!-- Double-click and a Young or Defective Squash (Solo) will appear. Will be removed after the event is over. -->
+		<set name="icon" val="icon.etc_gourd_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="17111" level="1" /> <!-- Squash Seed -->
+		</skills>
+	</item>
+	<item id="38924" name="Large Squash Seed" type="EtcItem">
+		<!-- Double-click and a High Quality Large or Defective Large Squash (Solo) will appear. Will be removed after the event is over. -->
+		<set name="icon" val="icon.etc_gourd_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="17112" level="1" /> <!-- Large Squash Seed -->
+		</skills>
+	</item>
+</list>

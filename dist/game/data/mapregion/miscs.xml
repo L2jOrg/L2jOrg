@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- The Royal Family's Catacomb -->
+	<region name="the_royal_family's_catacomb" town="The Royal Family's Catacomb" castle="0" locId="1659" bbs="15">
+		<respawnPoint X="181544" Y="-80897" Z="-2728" />
+		<respawnPoint X="181415" Y="-80791" Z="-2728" />
+		<respawnPoint X="181383" Y="-80984" Z="-2728" />
+		<respawnPoint X="181277" Y="-81017" Z="-2728" />
+		<respawnPoint X="181232" Y="-80937" Z="-2728" />
+		<respawnPoint X="181063" Y="-81000" Z="-2728" />
+		<respawnPoint X="181125" Y="-80920" Z="-2728" />
+		<respawnPoint X="181122" Y="-80869" Z="-2728" />
+		<respawnPoint X="181155" Y="-80825" Z="-2728" />
+		<respawnPoint X="181142" Y="-80754" Z="-2728" />
+		<respawnPoint X="181301" Y="-80776" Z="-2728" />
+		<respawnPoint X="181398" Y="-80782" Z="-2728" />
+		<respawnPoint X="181722" Y="-80785" Z="-2728" />
+		<respawnPoint X="181491" Y="-80868" Z="-2728" />
+		<respawnPoint X="181544" Y="-80897" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181415" Y="-80791" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181383" Y="-80984" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181277" Y="-81017" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181232" Y="-80937" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181063" Y="-81000" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181125" Y="-80920" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181122" Y="-80869" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181155" Y="-80825" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181142" Y="-80754" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181301" Y="-80776" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181398" Y="-80782" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181722" Y="-80785" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181491" Y="-80868" Z="-2728" isChaotic="true" />
+	</region>
+
+	<!-- Spirit Cave -->
+	<region name="spirit_cave" town="Soul Island" castle="0" locId="2189" bbs="13">
+		<respawnPoint X="-125607" Y="38452" Z="1152" />
+		<respawnPoint X="-125472" Y="38450" Z="1152" />
+		<respawnPoint X="-125615" Y="37771" Z="1152" />
+		<respawnPoint X="-125464" Y="37776" Z="1152" />
+		<respawnPoint X="-125517" Y="38267" Z="1155" />
+		<respawnPoint X="-125531" Y="37944" Z="1155" />
+		<respawnPoint X="-122237" Y="55073" Z="-1609" isChaotic="true" />
+		<respawnPoint X="-120736" Y="58526" Z="-2032" isChaotic="true" />
+		<respawnPoint X="-106674" Y="49527" Z="-1735" isChaotic="true" />
+		<respawnPoint X="-107156" Y="45055" Z="-1673" isChaotic="true" />
+		<respawnPoint X="-106104" Y="47189" Z="-1529" isChaotic="true" />
+	</region>
+
+	<!-- Southern Wasteland -->
+	<region name="southern_wasteland" town="Southern Wasteland" castle="0" locId="2190" bbs="2">
+		<respawnPoint X="-16434" Y="208803" Z="-3691" />
+		<respawnPoint X="-16929" Y="209712" Z="-3691" />
+		<respawnPoint X="-16219" Y="210056" Z="-3691" />
+		<respawnPoint X="-15686" Y="209285" Z="-3691" />
+		<respawnPoint X="-17067" Y="208965" Z="-3691" />
+		<respawnPoint X="-17463" Y="209659" Z="-3691" />
+		<respawnPoint X="-16434" Y="208803" Z="-3691" isChaotic="true" />
+		<respawnPoint X="-16929" Y="209712" Z="-3691" isChaotic="true" />
+		<respawnPoint X="-16219" Y="210056" Z="-3691" isChaotic="true" />
+		<respawnPoint X="-15686" Y="209285" Z="-3691" isChaotic="true" />
+		<respawnPoint X="-17067" Y="208965" Z="-3691" isChaotic="true" />
+		<respawnPoint X="-17463" Y="209659" Z="-3691" isChaotic="true" />
+		<map X="19" Y="25" />
+		<map X="20" Y="25" />
+	</region>
+
+	<!-- Ironcastle Inner Oasis -->
+	<region name="ironcastle_inner_oasis" town="Ironcastle Inner Oasis" castle="0" locId="2293" bbs="2">
+		<respawnPoint X="9155" Y="252241" Z="-1976" />
+		<respawnPoint X="9264" Y="252432" Z="-1936" />
+		<respawnPoint X="9360" Y="252256" Z="-2000" />
+		<respawnPoint X="9264" Y="252000" Z="-2032" />
+		<respawnPoint X="8976" Y="252416" Z="-1936" />
+		<respawnPoint X="9664" Y="252112" Z="-1952" />
+		<respawnPoint X="9155" Y="252241" Z="-1976" isChaotic="true" />
+		<respawnPoint X="9264" Y="252432" Z="-1936" isChaotic="true" />
+		<respawnPoint X="9360" Y="252256" Z="-2000" isChaotic="true" />
+		<respawnPoint X="9264" Y="252000" Z="-2032" isChaotic="true" />
+		<respawnPoint X="8976" Y="252416" Z="-1936" isChaotic="true" />
+		<respawnPoint X="9664" Y="252112" Z="-1952" isChaotic="true" />
+		<map X="16" Y="10" />
+	</region>
+
+	<!-- Kamaroka -->
+	<region name="kamaroka" town="Kamaloka" castle="0" locId="2321" bbs="7">
+		<respawnPoint X="19025" Y="145245" Z="-3107" />
+		<respawnPoint X="18576" Y="145136" Z="-3104" />
+		<respawnPoint X="18717" Y="145711" Z="-3097" />
+		<respawnPoint X="18512" Y="145536" Z="-3100" />
+		<respawnPoint X="18954" Y="144428" Z="-3000" />
+		<respawnPoint X="19150" Y="143941" Z="-3020" />
+		<respawnPoint X="19134" Y="144847" Z="-3020" />
+		<respawnPoint X="19613" Y="145607" Z="-3020" />
+		<respawnPoint X="18078" Y="145925" Z="-3020" />
+		<respawnPoint X="17398" Y="145456" Z="-3000" />
+		<respawnPoint X="17144" Y="145055" Z="-3000" />
+		<respawnPoint X="19012" Y="145140" Z="-3020" />
+		<respawnPoint X="17555" Y="170393" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17699" Y="170153" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17315" Y="170041" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17283" Y="170329" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17536" Y="170505" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17299" Y="170341" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17085" Y="170170" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17421" Y="169993" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17820" Y="170054" Z="-3400" isChaotic="true" />
+		<respawnPoint X="18054" Y="170263" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17931" Y="170381" Z="-3400" isChaotic="true" />
+		<map X="16" Y="10" />
+	</region>
+
+	<!-- Near Kamaroka -->
+	<region name="near_kamaroka" town="Nia Kamaloka" castle="0" locId="2322" bbs="7">
+		<respawnPoint X="19025" Y="145245" Z="-3107" />
+		<respawnPoint X="18576" Y="145136" Z="-3104" />
+		<respawnPoint X="18717" Y="145711" Z="-3097" />
+		<respawnPoint X="18512" Y="145536" Z="-3100" />
+		<respawnPoint X="18954" Y="144428" Z="-3000" />
+		<respawnPoint X="19150" Y="143941" Z="-3020" />
+		<respawnPoint X="19134" Y="144847" Z="-3020" />
+		<respawnPoint X="19613" Y="145607" Z="-3020" />
+		<respawnPoint X="18078" Y="145925" Z="-3020" />
+		<respawnPoint X="17398" Y="145456" Z="-3000" />
+		<respawnPoint X="17144" Y="145055" Z="-3000" />
+		<respawnPoint X="19012" Y="145140" Z="-3020" />
+		<respawnPoint X="17555" Y="170393" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17699" Y="170153" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17315" Y="170041" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17283" Y="170329" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17536" Y="170505" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17299" Y="170341" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17085" Y="170170" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17421" Y="169993" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17820" Y="170054" Z="-3400" isChaotic="true" />
+		<respawnPoint X="18054" Y="170263" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17931" Y="170381" Z="-3400" isChaotic="true" />
+		<map X="16" Y="10" />
+	</region>
+
+	<!-- Rim Kamaroka -->
+	<region name="rim_kamaroka" town="Rim Kamaroka" castle="0" locId="2323" bbs="7">
+		<respawnPoint X="19025" Y="145245" Z="-3107" />
+		<respawnPoint X="18576" Y="145136" Z="-3104" />
+		<respawnPoint X="18717" Y="145711" Z="-3097" />
+		<respawnPoint X="18512" Y="145536" Z="-3100" />
+		<respawnPoint X="18954" Y="144428" Z="-3000" />
+		<respawnPoint X="19150" Y="143941" Z="-3020" />
+		<respawnPoint X="19134" Y="144847" Z="-3020" />
+		<respawnPoint X="19613" Y="145607" Z="-3020" />
+		<respawnPoint X="18078" Y="145925" Z="-3020" />
+		<respawnPoint X="17398" Y="145456" Z="-3000" />
+		<respawnPoint X="17144" Y="145055" Z="-3000" />
+		<respawnPoint X="19012" Y="145140" Z="-3020" />
+		<respawnPoint X="17555" Y="170393" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17699" Y="170153" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17315" Y="170041" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17283" Y="170329" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17536" Y="170505" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17299" Y="170341" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17085" Y="170170" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17421" Y="169993" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17820" Y="170054" Z="-3400" isChaotic="true" />
+		<respawnPoint X="18054" Y="170263" Z="-3400" isChaotic="true" />
+		<respawnPoint X="17931" Y="170381" Z="-3400" isChaotic="true" />
+		<map X="16" Y="10" />
+	</region>
+
+	<!-- Union Base Of Kserth -->
+	<region name="union_base_of_kserth" town="Union Base Of Kserth" castle="0" locId="2710" bbs="2">
+		<respawnPoint X="-184072" Y="242773" Z="1576" />
+		<respawnPoint X="-184588" Y="242604" Z="1576" />
+		<respawnPoint X="-184793" Y="243268" Z="1576" />
+		<respawnPoint X="-184241" Y="243390" Z="1576" />
+		<respawnPoint X="-184319" Y="242837" Z="1576" />
+		<respawnPoint X="-184629" Y="242752" Z="1576" />
+		<respawnPoint X="-184719" Y="243083" Z="1576" />
+		<respawnPoint X="-184072" Y="242773" Z="1576" isChaotic="true" />
+		<respawnPoint X="-184588" Y="242604" Z="1576" isChaotic="true" />
+		<respawnPoint X="-184793" Y="243268" Z="1576" isChaotic="true" />
+		<respawnPoint X="-184241" Y="243390" Z="1576" isChaotic="true" />
+		<respawnPoint X="-184319" Y="242837" Z="1576" isChaotic="true" />
+		<respawnPoint X="-184629" Y="242752" Z="1576" isChaotic="true" />
+		<respawnPoint X="-184719" Y="243083" Z="1576" isChaotic="true" />
+		<map X="12" Y="24" />
+		<map X="13" Y="24" />
+		<map X="14" Y="24" />
+		<map X="12" Y="25" />
+		<map X="13" Y="25" />
+		<map X="14" Y="25" />
+		<map X="14" Y="23" />
+		<map X="14" Y="22" />
+	</region>
+
+	<!-- Inner Undying01 -->
+	<region name="inner_undying01" town="Seed of Infinity" castle="0" locId="2711" bbs="2">
+		<respawnPoint X="-183285" Y="205996" Z="-12896" />
+		<respawnPoint X="-183285" Y="205996" Z="-12896" isChaotic="true" />
+	</region>
+
+	<!-- Inner Destruction01 -->
+	<region name="inner_destruction01" town="Seed of Destruction" castle="0" locId="2712" bbs="2">
+		<respawnPoint X="-248373" Y="250442" Z="4318" />
+		<respawnPoint X="-248373" Y="250442" Z="4318" isChaotic="true" />
+	</region>
+
+	<!-- Cleft -->
+	<region name="cleft" town="Aerial Cleft" castle="0" locId="2716" bbs="2">
+		<respawnPoint X="-223701" Y="247795" Z="1744" />
+		<respawnPoint X="-223780" Y="247661" Z="1744" />
+		<respawnPoint X="-223776" Y="247914" Z="1744" />
+		<respawnPoint X="-204350" Y="242148" Z="1744" />
+		<respawnPoint X="-204284" Y="242288" Z="1744" />
+		<respawnPoint X="-204288" Y="242026" Z="1728" />
+		<respawnPoint X="-223701" Y="247795" Z="1744" isChaotic="true" />
+		<respawnPoint X="-223780" Y="247661" Z="1744" isChaotic="true" />
+		<respawnPoint X="-223776" Y="247914" Z="1744" isChaotic="true" />
+		<respawnPoint X="-204350" Y="242148" Z="1744" isChaotic="true" />
+		<respawnPoint X="-204284" Y="242288" Z="1744" isChaotic="true" />
+		<respawnPoint X="-204288" Y="242026" Z="1728" isChaotic="true" />
+	</region>
+
+	<!-- Border Of Nightmare -->
+	<region name="border_of_nightmare" town="Border of Nightmare" castle="0" locId="3065" bbs="7">
+		<respawnPoint X="-114633" Y="-154243" Z="-6720" />
+		<respawnPoint X="-114619" Y="-153720" Z="-6720" />
+		<respawnPoint X="-114595" Y="-153080" Z="-6720" />
+		<respawnPoint X="-114619" Y="-152528" Z="-6720" />
+		<respawnPoint X="-114633" Y="-154243" Z="-6720" isChaotic="true" />
+		<respawnPoint X="-114619" Y="-153720" Z="-6720" isChaotic="true" />
+		<respawnPoint X="-114595" Y="-153080" Z="-6720" isChaotic="true" />
+		<respawnPoint X="-114619" Y="-152528" Z="-6720" isChaotic="true" />
+	</region>
+</list>

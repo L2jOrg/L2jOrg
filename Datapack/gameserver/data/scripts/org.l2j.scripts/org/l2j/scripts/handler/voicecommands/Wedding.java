@@ -1,5 +1,6 @@
 package org.l2j.scripts.handler.voicecommands;
 
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.threading.RunnableImpl;
@@ -7,7 +8,6 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
-import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.instancemanager.CoupleManager;
 import org.l2j.gameserver.listener.actor.player.OnAnswerListener;
 import org.l2j.gameserver.model.GameObjectsStorage;
@@ -225,7 +225,7 @@ public class Wedding extends ScriptVoiceCommandHandler
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 
 			statement = con.prepareStatement("SELECT friend_id FROM character_friends WHERE char_id=?");
 			statement.setInt(1, ptarget.getObjectId());

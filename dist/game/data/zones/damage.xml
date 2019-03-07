@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Damage Zones -->
+	<!-- Cruma (Damage Zone) -->
+	<zone name="cruma_boss_damage_zone" type="DamageZone" shape="NPoly" minZ="-6519" maxZ="-6319"> <!-- [20_21] -->
+		<node X="17869" Y="108566" />
+		<node X="18071" Y="108774" />
+		<node X="18072" Y="109060" />
+		<node X="17865" Y="109265" />
+		<node X="17580" Y="109264" />
+		<node X="17379" Y="109062" />
+		<node X="17379" Y="108774" />
+		<node X="17584" Y="108569" />
+	</zone>
+	<!-- Tully Workshop 5th floor (Damage Zone) -->
+	<zone name="19_26_tolles_destruction1" id="200011" type="DamageZone" shape="NPoly" minZ="-9136" maxZ="-7936">
+		<stat name="dmgHPSec" val="2000" />
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" />
+		<node X="-15015" Y="271415" />
+		<node X="-10033" Y="271428" />
+		<node X="-10033" Y="276448" />
+		<node X="-15016" Y="276448" />
+	</zone>
+</list>

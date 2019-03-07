@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
+	<option id="50161" name="o_s_cl_hg_str">
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>STR</stat>
+			</effect>
+		</effects>
+	</option>
+	<option id="50162" name="o_s_cl_hg_dex">
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
+			</effect>
+		</effects>
+	</option>
+	<option id="50163" name="o_s_cl_hg_con">
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>CON</stat>
+			</effect>
+		</effects>
+	</option>
+	<option id="50164" name="o_s_cl_hg_int">
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</option>
+	<option id="50165" name="o_s_cl_hg_wit">
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</option>
+	<option id="50166" name="o_s_cl_hg_men">
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</option>
+</list>

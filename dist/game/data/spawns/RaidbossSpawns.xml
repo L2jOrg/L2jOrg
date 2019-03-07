@@ -1,0 +1,1148 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/spawns.xsd">
+	<spawn name="dion05_mb2021_01m1" ai="DEFAULT_USE_DB_MAKER">
+		<territories>
+			<territory name="dion05_mb2021_01" minZ="-12152" maxZ="-11802">
+				<node x="14751" y="118718" />
+				<node x="15141" y="118733" />
+				<node x="15124" y="119076" />
+				<node x="14782" y="119076" />
+			</territory>
+		</territories>
+		<npc id="25395" dbSave="true" dbName="archon_susceptor" respawnTime="24hour" respawnRandom="12hour" /> <!-- Archon Susceptor -->
+	</spawn>
+	<spawn name="aden06_mb2518_08m1" ai="DEFAULT_USE_DB_MAKER">
+		<territories>
+			<territory name="aden06_mb2518_08" minZ="-3205" maxZ="-3005">
+				<node x="183349" y="20070" />
+				<node x="184671" y="20068" />
+				<node x="184697" y="20563" />
+				<node x="183309" y="20566" />
+			</territory>
+		</territories>
+		<npc id="25252" x="184244" y="20318" z="-3168" heading="33382" dbSave="true" dbName="palibati_queen_themis" respawnTime="24hour" respawnRandom="12hour" /> <!-- Palibati Queen Themis -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="gludio15_mb1721_01" minZ="-3508" maxZ="-2908">
+				<node x="-91272" y="116168" />
+				<node x="-90752" y="116164" />
+				<node x="-90752" y="116508" />
+				<node x="-91260" y="116516" />
+			</territory>
+		</territories>
+		<npc id="25063" dbSave="true" dbName="grandeur_soul_chertuba" respawnTime="24hour" respawnRandom="12hour" /> <!-- Chertuba of Great Soul -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="gludio15_mb1721_02" minZ="-3612" maxZ="-3012">
+				<node x="-94752" y="100044" />
+				<node x="-94228" y="99620" />
+				<node x="-93304" y="100356" />
+				<node x="-94120" y="100932" />
+			</territory>
+		</territories>
+		<npc id="25004" dbSave="true" dbName="turek_mercenary_boss" respawnTime="24hour" respawnRandom="12hour" /> <!-- Turek Mercenary Captain -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="gludio17_mb1821_01" minZ="-3112" maxZ="-2512">
+				<node x="-61520" y="126320" />
+				<node x="-60148" y="126440" />
+				<node x="-60548" y="128388" />
+				<node x="-61948" y="128240" />
+			</territory>
+		</territories>
+		<npc id="25076" dbSave="true" dbName="princess_molrang" respawnTime="24hour" respawnRandom="12hour" /> <!-- Princess Molrang -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="gludio03_mb1821_02" minZ="-2799" maxZ="-2299">
+				<node x="-44640" y="122634" />
+				<node x="-44136" y="122634" />
+				<node x="-44144" y="123145" />
+				<node x="-44647" y="123138" />
+			</territory>
+		</territories>
+		<npc id="25369" dbSave="true" dbName="soul_scavenger" respawnTime="24hour" respawnRandom="12hour" /> <!-- Soul Scavenger -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="gludio04_mb1823_01" minZ="-3788" maxZ="-3088">
+				<node x="-55023" y="172477" />
+				<node x="-54417" y="171840" />
+				<node x="-53308" y="172132" />
+				<node x="-53269" y="172696" />
+				<node x="-53577" y="173504" />
+				<node x="-54440" y="173010" />
+			</territory>
+		</territories>
+		<npc id="25169" x="-54127" y="172510" z="-3632" dbSave="true" dbName="ragraman" respawnTime="24hour" respawnRandom="12hour" /> <!-- Ragraman -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="gludio01_mb1823_03" minZ="-3760" maxZ="-3160">
+				<node x="-62936" y="190480" />
+				<node x="-62544" y="189304" />
+				<node x="-60880" y="190788" />
+				<node x="-62324" y="191384" />
+			</territory>
+		</territories>
+		<npc id="25365" dbSave="true" dbName="patriarch_kuroboros" respawnTime="24hour" respawnRandom="12hour" /> <!-- Patriarch Kuroboros -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="gludio01_mb1823_04" minZ="-3688" maxZ="-3088">
+				<node x="-63184" y="179476" />
+				<node x="-62604" y="178760" />
+				<node x="-61540" y="179180" />
+				<node x="-61796" y="180076" />
+				<node x="-62584" y="180368" />
+			</territory>
+		</territories>
+		<npc id="25366" dbSave="true" dbName="priest_of_kuroboros" respawnTime="24hour" respawnRandom="12hour" /> <!-- Kuroboros' Priest -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="gludio16_mb1823_06" minZ="-4831" maxZ="-4800">
+				<node x="-57449" y="186555" />
+				<node x="-57443" y="186022" />
+				<node x="-57107" y="186213" />
+				<node x="-57099" y="186559" />
+			</territory>
+		</territories>
+		<npc id="25038" dbSave="true" dbName="tirak" respawnTime="24hour" respawnRandom="12hour" /> <!-- Tirak -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="gludio21_mb1824_01" minZ="-2800" maxZ="-2200">
+				<node x="-38088" y="197708" />
+				<node x="-37548" y="197936" />
+				<node x="-37436" y="198252" />
+				<node x="-37600" y="198512" />
+				<node x="-37924" y="198312" />
+				<node x="-38196" y="198000" />
+			</territory>
+		</territories>
+		<npc id="25095" dbSave="true" dbName="elf_renoa" respawnTime="24hour" respawnRandom="12hour" /> <!-- Elf Renoa -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="gludio22_mb1824_01" minZ="-2536" maxZ="-1936">
+				<node x="-48400" y="219344" />
+				<node x="-47528" y="218612" />
+				<node x="-46876" y="219392" />
+				<node x="-47732" y="219748" />
+			</territory>
+		</territories>
+		<npc id="25127" dbSave="true" dbName="langk_matriarch_rashkos" respawnTime="24hour" respawnRandom="12hour" /> <!-- Langk Matriarch Rashkos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="gludio38_mb1921_01" minZ="-3632" maxZ="-3032">
+				<node x="-4076" y="112252" />
+				<node x="-2836" y="112216" />
+				<node x="-2840" y="113392" />
+				<node x="-4052" y="113416" />
+			</territory>
+		</territories>
+		<npc id="25357" dbSave="true" dbName="sukar_wererat_chief" respawnTime="24hour" respawnRandom="12hour" /> <!-- Sukar Ratman Chief -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="gludio02_mb1922_02" minZ="-3749" maxZ="-3249">
+				<node x="-30506" y="131738" />
+				<node x="-29294" y="131735" />
+				<node x="-29284" y="133353" />
+				<node x="-30495" y="133356" />
+			</territory>
+		</territories>
+		<npc id="25166" x="-29797" y="132470" z="-3664" dbSave="true" dbName="ikuntai" respawnTime="24hour" respawnRandom="12hour" /> <!-- Ikuntai -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="gludio04_mb1923_01" minZ="-3305" maxZ="-2805">
+				<node x="-17304" y="174316" />
+				<node x="-16671" y="174203" />
+				<node x="-16329" y="174872" />
+				<node x="-16557" y="175322" />
+				<node x="-17215" y="175234" />
+			</territory>
+		</territories>
+		<npc id="25352" dbSave="true" dbName="giant_wasteland_basil" respawnTime="24hour" respawnRandom="12hour" /> <!-- Giant Wasteland Basilisk -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="gludio04_mb1923_02" minZ="-3961" maxZ="-3361">
+				<node x="-16700" y="183404" />
+				<node x="-16055" y="183047" />
+				<node x="-15421" y="183852" />
+				<node x="-15753" y="184318" />
+				<node x="-16423" y="184242" />
+			</territory>
+		</territories>
+		<npc id="25354" x="-15909" y="183768" z="-3872" dbSave="true" dbName="gargoyle_lord_sirocco" respawnTime="24hour" respawnRandom="12hour" /> <!-- Gargoyle Lord Sirocco -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren14_mb2118_01" minZ="-3660" maxZ="-3060">
+				<node x="63916" y="15568" />
+				<node x="64500" y="15720" />
+				<node x="64600" y="16308" />
+				<node x="64336" y="16756" />
+				<node x="63244" y="16104" />
+			</territory>
+		</territories>
+		<npc id="25099" dbSave="true" dbName="repiro_rot_tree" respawnTime="24hour" respawnRandom="12hour" /> <!-- Rotting Tree Repiro -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren14_mb2118_02" minZ="-3584" maxZ="-2984">
+				<node x="62504" y="7440" />
+				<node x="63176" y="7684" />
+				<node x="62992" y="8824" />
+				<node x="62172" y="8884" />
+				<node x="61560" y="7992" />
+			</territory>
+		</territories>
+		<npc id="25418" dbSave="true" dbName="dread_avenger_kraven" respawnTime="24hour" respawnRandom="12hour" /> <!-- Dread Avenger Kraven -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren14_mb2118_03" minZ="-5008" maxZ="-4408">
+				<node x="41120" y="24152" />
+				<node x="42192" y="22716" />
+				<node x="43380" y="24572" />
+				<node x="41300" y="25032" />
+			</territory>
+		</territories>
+		<npc id="25420" dbSave="true" dbName="handmaiden_of_orfen" respawnTime="24hour" respawnRandom="12hour" /> <!-- Orfen's Handmaiden -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren31_mb2217_01" minZ="-2904" maxZ="-2304">
+				<node x="74424" y="-9228" />
+				<node x="75212" y="-10092" />
+				<node x="76132" y="-9688" />
+				<node x="75932" y="-8232" />
+			</territory>
+		</territories>
+		<npc id="25131" dbSave="true" dbName="carnage_lord_gato" respawnTime="24hour" respawnRandom="12hour" /> <!-- Slaughter Lord Gato -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren31_mb2217_02" minZ="-3184" maxZ="-2684">
+				<node x="86220" y="-8372" />
+				<node x="86420" y="-8372" />
+				<node x="86420" y="-8172" />
+				<node x="86220" y="-8172" />
+			</territory>
+		</territories>
+		<npc id="25122" dbSave="true" dbName="refuge_hoper_leo" respawnTime="24hour" respawnRandom="12hour" /> <!-- Refugee Applicant Leo -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren01_mb2217_03" minZ="-2352" maxZ="-1752">
+				<node x="93628" y="-23452" />
+				<node x="95260" y="-24156" />
+				<node x="95932" y="-23160" />
+				<node x="95304" y="-21636" />
+			</territory>
+		</territories>
+		<npc id="25067" dbSave="true" dbName="master_of_ledflage_shaka" respawnTime="24hour" respawnRandom="12hour" /> <!-- Red Flag Captain Shaka -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren29_mb2218_01" minZ="-5400" maxZ="-4800">
+				<node x="90392" y="15708" />
+				<node x="91236" y="15764" />
+				<node x="91420" y="16676" />
+				<node x="90816" y="17216" />
+				<node x="90128" y="16772" />
+			</territory>
+		</territories>
+		<npc id="25088" dbSave="true" dbName="crazy_mechanic_golem" respawnTime="24hour" respawnRandom="12hour" /> <!-- Crazy Mechanic Golem -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren29_mb2218_02" minZ="-5524" maxZ="-4924">
+				<node x="79224" y="17696" />
+				<node x="80240" y="17764" />
+				<node x="80504" y="18972" />
+				<node x="79804" y="19384" />
+				<node x="78896" y="18604" />
+			</territory>
+		</territories>
+		<npc id="25431" dbSave="true" dbName="iron_giant_totem" respawnTime="24hour" respawnRandom="12hour" /> <!-- Flamestone Golem -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren29_mb2218_03" minZ="-3696" maxZ="-3096">
+				<node x="92548" y="18716" />
+				<node x="94332" y="19420" />
+				<node x="93336" y="20496" />
+				<node x="92192" y="19424" />
+			</territory>
+		</territories>
+		<npc id="25260" dbSave="true" dbName="iron_giant_totem" respawnTime="24hour" respawnRandom="12hour" /> <!-- Iron Giant Totem -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren30_mb2218_04" minZ="-4048" maxZ="-3448">
+				<node x="92612" y="7436" />
+				<node x="93264" y="7400" />
+				<node x="93356" y="8520" />
+				<node x="92312" y="8704" />
+			</territory>
+		</territories>
+		<npc id="25026" dbSave="true" dbName="katu_van_atui" respawnTime="24hour" respawnRandom="12hour" /> <!-- Ketra's Commander Atis -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren30_mb2218_05" minZ="-3192" maxZ="-2592">
+				<node x="76668" y="5056" />
+				<node x="77620" y="4960" />
+				<node x="77644" y="5892" />
+				<node x="76748" y="5952" />
+			</territory>
+		</territories>
+		<npc id="25158" dbSave="true" dbName="king_tarlk" respawnTime="24hour" respawnRandom="12hour" /> <!-- King Tarlk -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren28_mb2219_01" minZ="-3844" maxZ="-3244">
+				<node x="66384" y="64036" />
+				<node x="67800" y="63212" />
+				<node x="68244" y="64340" />
+				<node x="67464" y="64848" />
+				<node x="66500" y="64744" />
+			</territory>
+		</territories>
+		<npc id="25437" dbSave="true" dbName="timak_orc_gosmos" respawnTime="24hour" respawnRandom="12hour" /> <!-- Timak Orc Gosmos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren28_mb2219_02" minZ="-3948" maxZ="-3348">
+				<node x="66280" y="46420" />
+				<node x="66756" y="46216" />
+				<node x="67088" y="46772" />
+				<node x="66792" y="47256" />
+				<node x="66184" y="47032" />
+			</territory>
+		</territories>
+		<npc id="25230" dbSave="true" dbName="timak_seer_ragoth" respawnTime="24hour" respawnRandom="12hour" /> <!-- Timak Priest Ragoth -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren28_mb2220_01" minZ="-3808" maxZ="-3208">
+				<node x="66628" y="66688" />
+				<node x="67584" y="66832" />
+				<node x="67448" y="68072" />
+				<node x="66180" y="67864" />
+			</territory>
+		</territories>
+		<npc id="25085" dbSave="true" dbName="timak_orc_hunter_a" respawnTime="24hour" respawnRandom="12hour" /> <!-- Timak Orc Ranger Captain -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren28_mb2220_02" minZ="-3836" maxZ="-3236">
+				<node x="72756" y="66616" />
+				<node x="73440" y="66332" />
+				<node x="74076" y="66520" />
+				<node x="74200" y="67716" />
+				<node x="73060" y="67468" />
+			</territory>
+		</territories>
+		<npc id="25155" dbSave="true" dbName="shaman_king_selu" respawnTime="24hour" respawnRandom="12hour" /> <!-- Shaman King Selu -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren21_mb2220_03" minZ="-3763" maxZ="-3463">
+				<node x="96922" y="94786" />
+				<node x="96496" y="93501" />
+				<node x="97734" y="93495" />
+				<node x="97811" y="94729" />
+			</territory>
+		</territories>
+		<npc id="25064" dbSave="true" dbName="wizard_of_storm_teruk" respawnTime="24hour" respawnRandom="12hour" /> <!-- Wizard of Storm Teruk -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren21_mb2220_04" minZ="-3763" maxZ="-3463">
+				<node x="94675" y="82267" />
+				<node x="95068" y="81151" />
+				<node x="95594" y="81154" />
+				<node x="95446" y="82775" />
+			</territory>
+		</territories>
+		<npc id="25134" dbSave="true" dbName="leto_chief_talkin" respawnTime="24hour" respawnRandom="12hour" /> <!-- Leto Chief Talkin -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren01_mb2317_01" minZ="-3536" maxZ="-2936">
+				<node x="103236" y="-3448" />
+				<node x="103888" y="-4392" />
+				<node x="104936" y="-4316" />
+				<node x="104944" y="-3120" />
+				<node x="103744" y="-2792" />
+			</territory>
+		</territories>
+		<npc id="25226" dbSave="true" dbName="roaring_seer_kastor" respawnTime="24hour" respawnRandom="12hour" /> <!-- Roaring Lord Kastor -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="oren32_mb2317_02" minZ="-3320" maxZ="-2720">
+				<node x="116972" y="-9320" />
+				<node x="117828" y="-9476" />
+				<node x="118604" y="-9052" />
+				<node x="118240" y="-8740" />
+				<node x="117712" y="-8660" />
+				<node x="117072" y="-8876" />
+			</territory>
+		</territories>
+		<npc id="25051" dbSave="true" dbName="rahha" respawnTime="24hour" respawnRandom="12hour" /> <!-- Rahha -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="dion04_mb2021_01" minZ="-3732" maxZ="-3132">
+				<node x="9600" y="126452" />
+				<node x="11212" y="126132" />
+				<node x="11336" y="127624" />
+				<node x="9952" y="127352" />
+			</territory>
+		</territories>
+		<npc id="25041" dbSave="true" dbName="ikuntai" respawnTime="24hour" respawnRandom="12hour" /> <!-- Remmel -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="dion04_mb2021_02" minZ="-3788" maxZ="-3488">
+				<node x="25544" y="121216" />
+				<node x="27136" y="121432" />
+				<node x="26463" y="123951" />
+				<node x="25290" y="122425" />
+			</territory>
+		</territories>
+		<npc id="25170" dbSave="true" dbName="remmel" respawnTime="24hour" respawnRandom="12hour" /> <!-- Lizardmen Captain Hellion -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="dion04_mb2021_03" minZ="-3792" maxZ="-3192">
+				<node x="25800" y="101804" />
+				<node x="25904" y="100388" />
+				<node x="27972" y="100540" />
+				<node x="29112" y="103004" />
+				<node x="27116" y="103412" />
+			</territory>
+		</territories>
+		<npc id="25023" dbSave="true" dbName="jeruna_queen" respawnTime="24hour" respawnRandom="12hour" /> <!-- Marsh Stakato Queen Zyrnna -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="dion04_mb2021_04" minZ="-3772" maxZ="-3572">
+				<node x="29592" y="106484" />
+				<node x="30604" y="107032" />
+				<node x="30184" y="107824" />
+				<node x="29184" y="107464" />
+			</territory>
+		</territories>
+		<npc id="25392" dbSave="true" dbName="queens_nobel_leader" respawnTime="24hour" respawnRandom="12hour" /> <!-- Queen's Royal Guard Captain -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="dion14_mb2023_01" minZ="-3616" maxZ="-3016">
+				<node x="17320" y="178620" />
+				<node x="18228" y="178816" />
+				<node x="18404" y="179684" />
+				<node x="17392" y="179488" />
+				<node x="17012" y="179064" />
+			</territory>
+		</territories>
+		<npc id="25128" dbSave="true" dbName="vuku_witchdr_gharmash" respawnTime="24hour" respawnRandom="12hour" /> <!-- Vuku Grand Priest Gharmash -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="dion17_mb2023_03" minZ="-3772" maxZ="-3172">
+				<node x="6736" y="168972" />
+				<node x="7996" y="168876" />
+				<node x="8016" y="169912" />
+				<node x="6660" y="169972" />
+			</territory>
+		</territories>
+		<npc id="25019" dbSave="true" dbName="pan_draid" respawnTime="24hour" respawnRandom="12hour" /> <!-- Pan Dryad -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="dion17_mb2023_04" minZ="-3792" maxZ="-3192">
+				<node x="3776" y="188380" />
+				<node x="6428" y="188400" />
+				<node x="5804" y="189932" />
+				<node x="3600" y="189728" />
+			</territory>
+		</territories>
+		<npc id="25398" dbSave="true" dbName="eyes_of_bereth" respawnTime="24hour" respawnRandom="12hour" /> <!-- Beleth' Eye -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="dion03_mb2121_01" minZ="-1390" maxZ="-790">
+				<node x="39659" y="101745" />
+				<node x="40050" y="101470" />
+				<node x="40694" y="101594" />
+				<node x="40540" y="102563" />
+				<node x="39925" y="102586" />
+				<node x="39573" y="102158" />
+			</territory>
+		</territories>
+		<npc id="25388" x="40129" y="102048" z="-1232" heading="8192" dbSave="true" dbName="redeye_leader_trakia" respawnTime="24hour" respawnRandom="12hour" /> <!-- Red Eye Captain Trakia -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="dion03_mb2121_02" minZ="-2758" maxZ="-2158">
+				<node x="44694" y="120364" />
+				<node x="46120" y="119953" />
+				<node x="46184" y="121097" />
+				<node x="45482" y="121425" />
+			</territory>
+		</territories>
+		<npc id="25391" dbSave="true" dbName="nurkas_messenger" respawnTime="24hour" respawnRandom="12hour" /> <!-- Nurka's Messenger -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="dion03_mb2121_03" minZ="-3761" maxZ="-3161">
+				<node x="48485" y="127590" />
+				<node x="49668" y="127446" />
+				<node x="49883" y="128352" />
+				<node x="48738" y="128608" />
+			</territory>
+		</territories>
+		<npc id="25272" dbSave="true" dbName="partisan_leader_talakin" respawnTime="24hour" respawnRandom="12hour" /> <!-- Partisan Commander Talakin -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="dion03_mb2121_04" minZ="-1129" maxZ="-529">
+				<node x="53245" y="102524" />
+				<node x="53868" y="102087" />
+				<node x="54393" y="102832" />
+				<node x="53669" y="103198" />
+			</territory>
+		</territories>
+		<npc id="25079" dbSave="true" dbName="catseye" respawnTime="24hour" respawnRandom="12hour" /> <!-- Cat's Eye -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="dion03_mb2121_05" minZ="-3312" maxZ="-2512">
+				<node x="42772" y="123908" />
+				<node x="44524" y="123164" />
+				<node x="44488" y="124732" />
+				<node x="43364" y="124464" />
+			</territory>
+		</territories>
+		<npc id="25152" dbSave="true" dbName="flamelord_shadar" respawnTime="24hour" respawnRandom="12hour" /> <!-- Flame Lord Shadar -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran06_mb2221_04" minZ="-3720" maxZ="-3120">
+				<node x="72088" y="124692" />
+				<node x="72960" y="125448" />
+				<node x="71828" y="126420" />
+				<node x="71296" y="125344" />
+			</territory>
+		</territories>
+		<npc id="25410" dbSave="true" dbName="road_scavenger_leader" respawnTime="24hour" respawnRandom="12hour" /> <!-- Road Scavenger Leader -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran16_mb2221_05" minZ="-2232" maxZ="-1632">
+				<node x="89924" y="125024" />
+				<node x="91064" y="125548" />
+				<node x="90512" y="126312" />
+				<node x="89960" y="125980" />
+			</territory>
+		</territories>
+		<npc id="25020" dbSave="true" dbName="breka_warlock_pastu" respawnTime="24hour" respawnRandom="12hour" /> <!-- Breka Warlock Pastu -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran16_mb2221_06" minZ="-3712" maxZ="-3112">
+				<node x="80089" y="102255" />
+				<node x="81917" y="102831" />
+				<node x="80653" y="104395" />
+				<node x="79669" y="104743" />
+				<node x="78885" y="103435" />
+			</territory>
+		</territories>
+		<npc id="25173" dbSave="true" dbName="king_tiger_karuta" respawnTime="24hour" respawnRandom="12hour" /> <!-- Tiger King Karuta -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran01_mb2222_01" minZ="-3560" maxZ="-2960">
+				<node x="87716" y="140240" />
+				<node x="88636" y="139892" />
+				<node x="89640" y="140844" />
+				<node x="88840" y="141224" />
+				<node x="87936" y="141032" />
+			</territory>
+		</territories>
+		<npc id="25082" dbSave="true" dbName="lost_cat_the_cat_a" respawnTime="24hour" respawnRandom="12hour" /> <!-- Leader of Cat Gang -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_mb2322_01" minZ="-3724" maxZ="-3124">
+				<node x="115456" y="139440" />
+				<node x="116372" y="138980" />
+				<node x="117104" y="139444" />
+				<node x="115944" y="139968" />
+			</territory>
+		</territories>
+		<npc id="25112" dbSave="true" dbName="meana_agent_of_beres" respawnTime="24hour" respawnRandom="12hour" /> <!-- Beleth' Agent Meana -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_mb2322_03" minZ="-3756" maxZ="-3156">
+				<node x="122904" y="133668" />
+				<node x="123764" y="132856" />
+				<node x="124344" y="133232" />
+				<node x="123268" y="134268" />
+			</territory>
+		</territories>
+		<npc id="25098" dbSave="true" dbName="sejarr_s_summoner" respawnTime="24hour" respawnRandom="12hour" /> <!-- Sejarr's Servitor -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="giran17_mb2323_01" minZ="-3564" maxZ="-2964">
+				<node x="127908" y="138360" />
+				<node x="128532" y="137880" />
+				<node x="128824" y="138548" />
+				<node x="128312" y="139188" />
+			</territory>
+		</territories>
+		<npc id="25415" dbSave="true" dbName="nakondas" respawnTime="24hour" respawnRandom="12hour" /> <!-- Nakondas -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="innadril08_mb2323_01" minZ="-3188" maxZ="-2588">
+				<node x="126076" y="173788" />
+				<node x="126688" y="173368" />
+				<node x="127436" y="173972" />
+				<node x="127356" y="175192" />
+				<node x="126672" y="175488" />
+				<node x="125808" y="174960" />
+			</territory>
+		</territories>
+		<npc id="25498" dbSave="true" dbName="istary_papurrion" respawnTime="24hour" respawnRandom="12hour" /> <!-- Fafurion's Henchman Istary -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="innadril08_mb2323_02" minZ="-3508" maxZ="-2908">
+				<node x="106444" y="167828" />
+				<node x="107516" y="167576" />
+				<node x="107708" y="168688" />
+				<node x="106972" y="169012" />
+				<node x="106268" y="168516" />
+			</territory>
+		</territories>
+		<npc id="25057" dbSave="true" dbName="biconne_of_blue_sky" respawnTime="24hour" respawnRandom="12hour" /> <!-- Beacon of Blue Sky -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="innadril08_mb2323_03" minZ="-3344" maxZ="-2744">
+				<node x="125168" y="189556" />
+				<node x="126180" y="189112" />
+				<node x="127072" y="190596" />
+				<node x="126164" y="191364" />
+				<node x="124876" y="190832" />
+			</territory>
+		</territories>
+		<npc id="25192" dbSave="true" dbName="earth_protecter_panathen" respawnTime="24hour" respawnRandom="12hour" /> <!-- Earth Protector Panathen -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden42_mb2317_01" minZ="-2036" maxZ="-1436">
+				<node x="103168" y="-17004" />
+				<node x="104412" y="-17984" />
+				<node x="104900" y="-16224" />
+				<node x="103728" y="-15996" />
+			</territory>
+		</territories>
+		<npc id="25434" dbSave="true" dbName="bandit_leader_barda" respawnTime="24hour" respawnRandom="12hour" /> <!-- Bandit Leader Barda -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden02_mb2318_12" minZ="-1448" maxZ="-848">
+				<node x="112688" y="17480" />
+				<node x="113216" y="17052" />
+				<node x="113684" y="17528" />
+				<node x="113256" y="18072" />
+			</territory>
+		</territories>
+		<npc id="25447" dbSave="true" dbName="hope_immortality_mardil" respawnTime="24hour" respawnRandom="12hour" /> <!-- Immortal Savior Mardil -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden01_mb2318_07" minZ="-3572" maxZ="-2972">
+				<node x="106908" y="27048" />
+				<node x="108588" y="27060" />
+				<node x="108956" y="28076" />
+				<node x="106920" y="28600" />
+			</territory>
+		</territories>
+		<npc id="25044" dbSave="true" dbName="barion" respawnTime="24hour" respawnRandom="12hour" /> <!-- Barion -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden01_mb2318_08" minZ="-3376" maxZ="-2776">
+				<node x="115668" y="27272" />
+				<node x="116488" y="26964" />
+				<node x="117144" y="27608" />
+				<node x="116736" y="28316" />
+				<node x="115828" y="28072" />
+			</territory>
+		</territories>
+		<npc id="25047" dbSave="true" dbName="karte" respawnTime="24hour" respawnRandom="12hour" /> <!-- Karte -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden01_mb2318_09" minZ="-3740" maxZ="-3140">
+				<node x="124924" y="26480" />
+				<node x="125900" y="26388" />
+				<node x="126252" y="27560" />
+				<node x="125632" y="28080" />
+				<node x="124516" y="27556" />
+			</territory>
+		</territories>
+		<npc id="25050" dbSave="true" dbName="verfa" respawnTime="24hour" respawnRandom="12hour" /> <!-- Verfa -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden01_mb2319_05" minZ="3496" maxZ="4096">
+				<node x="130076" y="58960" />
+				<node x="130432" y="58772" />
+				<node x="130844" y="58888" />
+				<node x="130812" y="59528" />
+				<node x="130176" y="59476" />
+			</territory>
+		</territories>
+		<npc id="25163" dbSave="true" dbName="roar_skylancer" respawnTime="24hour" respawnRandom="12hour" /> <!-- Roaring Skylancer -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden14_mb2320_01" minZ="-2912" maxZ="-2312">
+				<node x="123576" y="74948" />
+				<node x="124692" y="74788" />
+				<node x="124672" y="76028" />
+				<node x="123936" y="76048" />
+			</territory>
+		</territories>
+		<npc id="25007" dbSave="true" dbName="retreat_spider_cletu" respawnTime="24hour" respawnRandom="12hour" /> <!-- Retreat Spider Cletu -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden14_mb2320_02" minZ="-2832" maxZ="-2232">
+				<node x="113676" y="83900" />
+				<node x="114192" y="84064" />
+				<node x="114324" y="84776" />
+				<node x="112768" y="84320" />
+			</territory>
+		</territories>
+		<npc id="25102" dbSave="true" dbName="shacram" respawnTime="24hour" respawnRandom="12hour" /> <!-- Shacram -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden24_mb2320_03" minZ="-2952" maxZ="-2352">
+				<node x="110940" y="82288" />
+				<node x="111784" y="82428" />
+				<node x="112020" y="83900" />
+				<node x="111088" y="83212" />
+			</territory>
+		</territories>
+		<npc id="25441" dbSave="true" dbName="monster_cyrion" respawnTime="24hour" respawnRandom="12hour" /> <!-- Evil Spirit Cyrion -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden24_mb2320_04" minZ="-2400" maxZ="-2000">
+				<node x="106472" y="91332" />
+				<node x="107643" y="92132" />
+				<node x="107497" y="92672" />
+				<node x="106519" y="92260" />
+			</territory>
+		</territories>
+		<npc id="25438" dbSave="true" dbName="kelbar" respawnTime="24hour" respawnRandom="12hour" /> <!-- Thief Kelbar -->
+	</spawn>
+
+	<spawn>
+		<territories>
+			<territory name="aden10_mb2420_01" minZ="-3844" maxZ="-3244">
+				<node x="135008" y="94460" />
+				<node x="136044" y="93892" />
+				<node x="136700" y="94548" />
+				<node x="135628" y="95296" />
+			</territory>
+		</territories>
+		<npc id="25103" dbSave="true" dbName="sorcery_isirr" respawnTime="24hour" respawnRandom="12hour" /> <!-- Wizard Isirr -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden10_mb2420_02" minZ="-3696" maxZ="-3096">
+				<node x="133280" y="86816" />
+				<node x="133928" y="86544" />
+				<node x="134068" y="87340" />
+				<node x="133236" y="87608" />
+			</territory>
+		</territories>
+		<npc id="25456" dbSave="true" dbName="oblivion_s_mirror" respawnTime="24hour" respawnRandom="12hour" /> <!-- Mirror of Oblivion -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden01_mb2420_03" minZ="-3804" maxZ="-3204">
+				<node x="149520" y="67564" />
+				<node x="150256" y="67156" />
+				<node x="151688" y="67364" />
+				<node x="150284" y="68580" />
+			</territory>
+		</territories>
+		<npc id="25460" dbSave="true" dbName="ereve_deathman" respawnTime="24hour" respawnRandom="12hour" /> <!-- Deadman Ereve -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden05_mb2517_01" minZ="-3824" maxZ="-3224">
+				<node x="169228" y="-25628" />
+				<node x="170036" y="-26236" />
+				<node x="171044" y="-24688" />
+				<node x="170040" y="-23788" />
+				<node x="169128" y="-24392" />
+			</territory>
+		</territories>
+		<npc id="25255" dbSave="true" dbName="gargoyle_lord_tiphon" respawnTime="24hour" respawnRandom="12hour" /> <!-- Gargoyle Lord Tiphon -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden26_mb2517_02" minZ="-2956" maxZ="-2556">
+				<node x="173880" y="-11412" />
+				<node x="174124" y="-11412" />
+				<node x="174096" y="-11184" />
+				<node x="173892" y="-11212" />
+			</territory>
+		</territories>
+		<npc id="25106" dbSave="true" dbName="manes_lidia" respawnTime="24hour" respawnRandom="12hour" /> <!-- Ghost of the Well Lidia -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden27_mb2518_01" minZ="-3756" maxZ="-3156">
+				<node x="167332" y="28008" />
+				<node x="168852" y="27868" />
+				<node x="169108" y="28896" />
+				<node x="167760" y="28840" />
+			</territory>
+		</territories>
+		<npc id="25478" dbSave="true" dbName="priest_hisilrome" respawnTime="24hour" respawnRandom="12hour" /> <!-- Shilen's Priest Hisilrome -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden22_mb2519_04" minZ="-4912" maxZ="-4312">
+				<node x="169848" y="42484" />
+				<node x="170128" y="42248" />
+				<node x="170476" y="42260" />
+				<node x="170728" y="42500" />
+				<node x="170740" y="42840" />
+				<node x="170460" y="43080" />
+				<node x="170104" y="43088" />
+				<node x="169864" y="42832" />
+			</territory>
+		</territories>
+		<npc id="25256" dbSave="true" dbName="taik_prefect_arak" respawnTime="24hour" respawnRandom="12hour" /> <!-- Taik High Prefect Arak -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden11_mb2520_01" minZ="-2440" maxZ="-2240">
+				<node x="164500" y="80044" />
+				<node x="164700" y="80044" />
+				<node x="164700" y="80244" />
+				<node x="164500" y="80244" />
+			</territory>
+		</territories>
+		<npc id="25125" dbSave="true" dbName="fiercetiger_king_angel" respawnTime="24hour" respawnRandom="12hour" /> <!-- Fierce Tiger King Angel -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden11_mb2520_02" minZ="-2108" maxZ="-1908">
+				<node x="165132" y="84172" />
+				<node x="165332" y="84172" />
+				<node x="165332" y="84372" />
+				<node x="165132" y="84372" />
+			</territory>
+		</territories>
+		<npc id="25089" dbSave="true" dbName="soulless_wild_boar" respawnTime="24hour" respawnRandom="12hour" /> <!-- Soulless Wild Boar -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden11_mb2520_03" minZ="-2464" maxZ="-1864">
+				<node x="165504" y="87576" />
+				<node x="166328" y="87704" />
+				<node x="166384" y="88744" />
+				<node x="165604" y="88784" />
+			</territory>
+		</territories>
+		<npc id="25241" dbSave="true" dbName="harit_hero_tamash" respawnTime="24hour" respawnRandom="12hour" /> <!-- Harit Hero Tamash -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="aden10_mb2520_04" minZ="-3348" maxZ="-2748">
+				<node x="165596" y="68480" />
+				<node x="166052" y="67440" />
+				<node x="166928" y="68124" />
+				<node x="166244" y="69028" />
+			</territory>
+		</territories>
+		<npc id="25463" dbSave="true" dbName="harit_tutelar_garangky" respawnTime="24hour" respawnRandom="12hour" /> <!-- Harit Guardian Garangky -->
+	</spawn>
+	<!-- Greyclaw Kutus -->
+	<spawn>
+		<npc id="25001" x="-53289" y="147314" z="-2776" heading="0" dbSave="true" dbName="Greyclaw Kutus" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Evil Spirit Bifrons -->
+	<spawn>
+		<npc id="25146" x="-13056" y="215680" z="-3760" heading="0" dbSave="true" dbName="Evil Spirit Bifrons" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Zombie Lord Crowl -->
+	<spawn>
+		<npc id="25149" x="-12624" y="138112" z="-3552" heading="0" dbSave="true" dbName="Zombie Lord Crowl" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Skyla -->
+	<spawn>
+		<npc id="25401" x="117808" y="102880" z="-3592" heading="0" dbSave="true" dbName="Skyla" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Execution Grounds Watchman Guillotine -->
+	<spawn>
+		<npc id="25118" x="50872" y="146616" z="-3632" heading="0" dbSave="true" dbName="Execution Grounds Watchman Guillotine" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Soul Collector Acheron -->
+	<spawn>
+		<npc id="25223" x="43152" y="152352" z="-2840" heading="0" dbSave="true" dbName="Soul Collector Acheron" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Evil Spirit Tempest -->
+	<spawn>
+		<npc id="25385" x="53600" y="143472" z="-3864" heading="0" dbSave="true" dbName="Evil Spirit Tempest" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Necrosentinel Royal Guard -->
+	<spawn>
+		<npc id="25412" x="81920" y="113136" z="-3056" heading="0" dbSave="true" dbName="Necrosentinel Royal Guard" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Cursed Clara -->
+	<spawn>
+		<npc id="25217" x="89904" y="105712" z="-3280" heading="0" dbSave="true" dbName="Cursed Clara" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Beleth Seer Sephia -->
+	<spawn>
+		<npc id="25137" x="120302" y="112898" z="-3792" heading="0" dbSave="true" dbName="Beleth Seer Sephia" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Black Lily -->
+	<spawn>
+		<npc id="25176" x="92544" y="115232" z="-3184" heading="0" dbSave="true" dbName="Black Lily" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Ancient Weird Drake -->
+	<spawn>
+		<npc id="25234" x="120080" y="111248" z="-3032" heading="0" dbSave="true" dbName="Ancient Weird Drake" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Lord Ishka -->
+	<spawn>
+		<npc id="25407" x="115072" y="112272" z="-3020" heading="0" dbSave="true" dbName="Lord Ishka" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Fairy Queen Timiniel -->
+	<spawn>
+		<npc id="25423" x="113600" y="47120" z="-4640" heading="0" dbSave="true" dbName="Fairy Queen Timiniel" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Furious Thieles -->
+	<spawn>
+		<npc id="25010" x="113920" y="52960" z="-3735" heading="0" dbSave="true" dbName="Furious Thieles" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Enchanted Valley Lookout Ruell -->
+	<spawn>
+		<npc id="25070" x="125600" y="50100" z="-3600" heading="0" dbSave="true" dbName="Enchanted Valley Lookout Ruell" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Ghost Knight Kabed -->
+	<spawn>
+		<npc id="25475" x="183568" y="24560" z="-3184" heading="0" dbSave="true" dbName="Ghost Knight Kabed" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Paniel the Unicorn -->
+	<spawn>
+		<npc id="25159" x="124984" y="43200" z="-3625" heading="0" dbSave="true" dbName="Paniel the Unicorn" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Grave Robber Kim -->
+	<spawn>
+		<npc id="25473" x="175712" y="29856" z="-3776" heading="0" dbSave="true" dbName="Grave Robber Kim" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Ghost of Peasant Captain -->
+	<spawn>
+		<npc id="25013" x="169744" y="11920" z="-2732" heading="0" dbSave="true" dbName="Ghost of Peasant Captain" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Fairy Queen's Messenger Berun -->
+	<spawn>
+		<npc id="25119" x="121872" y="64032" z="-3536" heading="0" dbSave="true" dbName="Fairy Queen Messenger Berun" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Shilen's Messenger Cabrio -->
+	<spawn>
+		<npc id="25035" x="180968" y="12035" z="-2720" heading="0" dbSave="true" dbName="Shilen Messenger Cabrio" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Kernon's Faithful Servant Kelone -->
+	<spawn>
+		<npc id="25263" x="145920" y="-27301" z="-2208" heading="0" dbSave="true" dbName="Kernon Faithful Servant Kelone" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Meanas Anor -->
+	<spawn>
+		<npc id="25453" x="156704" y="-6096" z="-4185" heading="0" dbSave="true" dbName="Kernon Faithful Servant Kelone" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Zombie Lord Dorkhon -->
+	<spawn>
+		<npc id="25744" x="181400" y="15410" z="-3168" heading="0" dbSave="true" dbName="Zombie Lord Dorkhon" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Orc Timak Darphen -->
+	<spawn>
+		<npc id="25745" x="63645" y="39175" z="-3704" heading="0" dbSave="true" dbName="Orc Timak Darphen" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Evil Magikus -->
+	<spawn>
+		<npc id="25746" x="183832" y="-12287" z="-3048" heading="0" dbSave="true" dbName="Evil Magikus" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Rael Mahum Radiumn -->
+	<spawn>
+		<npc id="25747" x="180485" y="-6848" z="-3056" heading="0" dbSave="true" dbName="Rael Mahum Radium" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Rael Mahum Supercium -->
+	<spawn>
+		<npc id="25748" x="174280" y="-5996" z="-3408" heading="0" dbSave="true" dbName="Rael Mahum Supercium" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Tayga Feron King -->
+	<spawn>
+		<npc id="25749" x="169562" y="-5290" z="-2696" heading="0" dbSave="true" dbName="Tayga Feron King" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Tayga Marga Shaman -->
+	<spawn>
+		<npc id="25750" x="164359" y="-7963" z="-2744" heading="0" dbSave="true" dbName="Tayga Marga Shaman" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Tayga Septon Champion -->
+	<spawn>
+		<npc id="25751" x="168982" y="-16631" z="-3128" heading="0" dbSave="true" dbName="Tayga Septon Champion" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Flamestone Giant -->
+	<spawn>
+		<npc id="25754" x="142240" y="-4570" z="-4776" heading="0" dbSave="true" dbName="Flamestone Giant" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Gross Salamander -->
+	<spawn>
+		<npc id="25755" x="138613" y="-15986" z="-4248" heading="0" dbSave="true" dbName="Gross Salamander" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Gross Dre Vanul -->
+	<spawn>
+		<npc id="25756" x="141702" y="-26321" z="-2016" heading="0" dbSave="true" dbName="Gross Dre Vanul" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Gross Ifrit -->
+	<spawn>
+		<npc id="25757" x="151511" y="-23058" z="-3416" heading="0" dbSave="true" dbName="Gross Ifrit" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Fiend Goblier -->
+	<spawn>
+		<npc id="25758" x="108463" y="-1012" z="-3008" heading="0" dbSave="true" dbName="Fiend Goblier" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Fiend Cherkia -->
+	<spawn>
+		<npc id="25759" x="114459" y="2022" z="-3720" heading="0" dbSave="true" dbName="Fiend Cherkia" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Fiend Harthemon -->
+	<spawn>
+		<npc id="25760" x="123537" y="496" z="-3464" heading="0" dbSave="true" dbName="Fiend Harthemon" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Fiend Sarboth -->
+	<spawn>
+		<npc id="25761" x="125446" y="-12996" z="-3960" heading="0" dbSave="true" dbName="Fiend Sarboth" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Demon Bedukel -->
+	<spawn>
+		<npc id="25762" x="131304" y="-16372" z="-3304" heading="0" dbSave="true" dbName="Demon Bedukel" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Bloody Witch Rumilla -->
+	<spawn>
+		<npc id="25763" x="128225" y="-1232" z="-2008" heading="0" dbSave="true" dbName="Bloody Witch Rumilla" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Monster Minotaur -->
+	<spawn>
+		<npc id="25766" x="135136" y="19005" z="-3392" heading="0" dbSave="true" dbName="Monster Minotaur" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Monster Bulleroth -->
+	<spawn>
+		<npc id="25767" x="130482" y="11466" z="-3768" heading="0" dbSave="true" dbName="Monster Bulleroth" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Dorcaus -->
+	<spawn>
+		<npc id="25768" x="133233" y="3839" z="-3664" heading="0" dbSave="true" dbName="Dorcaus" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Kerfaus -->
+	<spawn>
+		<npc id="25769" x="138159" y="3790" z="-4528" heading="0" dbSave="true" dbName="Kerfaus" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Milinaus -->
+	<spawn>
+		<npc id="25770" x="140224" y="17359" z="-3824" heading="0" dbSave="true" dbName="Milinaus" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Evil Orc Zetahl -->
+	<spawn>
+		<npc id="25772" x="185884" y="36812" z="-4184" heading="0" dbSave="true" dbName="Evil Orc Zetahl" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Evil Orc Tabris -->
+	<spawn>
+		<npc id="25773" x="173184" y="39039" z="-4640" heading="0" dbSave="true" dbName="Evil Orc Tabris" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Evil Orc Ravolas -->
+	<spawn>
+		<npc id="25774" x="166598" y="38444" z="-3584" heading="0" dbSave="true" dbName="Evil Orc Ravolas" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Evil Orc Dephracor -->
+	<spawn>
+		<npc id="25775" x="166221" y="51612" z="-4112" heading="0" dbSave="true" dbName="Evil Orc Dephracor" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Amden Orc Turahot -->
+	<spawn>
+		<npc id="25776" x="176000" y="44798" z="-4848" heading="0" dbSave="true" dbName="Amden Orc Turahot" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Amden Orc Turation -->
+	<spawn>
+		<npc id="25777" x="173115" y="45513" z="-4792" heading="0" dbSave="true" dbName="Amden Orc Turation" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Gariott -->
+	<spawn>
+		<npc id="25779" x="182801" y="47370" z="-5880" heading="0" dbSave="true" dbName="Gariott" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Varbasion -->
+	<spawn>
+		<npc id="25780" x="180241" y="50323" z="-5912" heading="0" dbSave="true" dbName="Varbasion" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Varmoni -->
+	<spawn>
+		<npc id="25781" x="174814" y="52661" z="-5872" heading="0" dbSave="true" dbName="Varmoni" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Overlord Muscel -->
+	<spawn>
+		<npc id="25782" x="171662" y="55407" z="-5920" heading="0" dbSave="true" dbName="Overlord Muscel" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Bathus Elbogen -->
+	<spawn>
+		<npc id="25783" x="175123" y="58947" z="-5824" heading="0" dbSave="true" dbName="Bathus Elbogen" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Daumen Kshana -->
+	<spawn>
+		<npc id="25784" x="183947" y="54618" z="-5560" heading="0" dbSave="true" dbName="Daumen Kshana" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Queen Ant Drone Priest -->
+	<spawn>
+		<npc id="25738" x="-11255" y="179636" z="-4064" heading="0" dbSave="true" dbName="Queen Ant Drone Priest" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Angel Priest of Baium -->
+	<spawn>
+		<npc id="25739" x="56392" y="179492" z="-2672" heading="0" dbSave="true" dbName="Angel Priest of Baium" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Priest of Core Decar -->
+	<spawn>
+		<npc id="25742" x="9310" y="120638" z="-3712" heading="0" dbSave="true" dbName="Priest of Core Decar" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Priest Orfen Lord Ipos -->
+	<spawn>
+		<npc id="25743" x="87195" y="79139" z="-3368" heading="0" dbSave="true" dbName="Priest Orfen Lord Ipos" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+</list>

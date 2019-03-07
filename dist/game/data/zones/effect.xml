@@ -1,0 +1,2264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Effect Zones -->
+	<!-- Sea of Spores -->
+	<zone name="spore_boss_poison_zone" type="EffectZone" shape="NPoly" minZ="-4468" maxZ="-4118"> <!-- [21_18] -->
+		<stat name="skillIdLvl" val="4070-1;" /> <!-- s_area_a_speed_down -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="43084" Y="15944" />
+		<node X="45140" Y="15816" />
+		<node X="45748" Y="17200" />
+		<node X="44504" Y="18780" />
+		<node X="43284" Y="18952" />
+		<node X="42476" Y="18164" />
+		<node X="42480" Y="16448" />
+	</zone>
+	<!-- Blazing Swamp -->
+	<zone name="fireswamp_1" type="EffectZone" shape="NPoly" minZ="-4752" maxZ="-4352"> <!-- [24_17] -->
+		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+		<!-- stat name="unitTick" val="30" / -->
+		<stat name="chance" val="50" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<!-- stat name="onTime" val="120" / -->
+		<!-- stat name="offTime" val="5" / -->
+		<!-- stat name="randomTime" val="15" / -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="141408" Y="-9676" />
+		<node X="142248" Y="-9284" />
+		<node X="142428" Y="-8732" />
+		<node X="142344" Y="-8256" />
+		<node X="142096" Y="-8136" />
+		<node X="141600" Y="-8444" />
+		<node X="141264" Y="-9352" />
+	</zone>
+	<zone name="fireswamp_2" type="EffectZone" shape="NPoly" minZ="-4908" maxZ="-4508"> <!-- [24_17] -->
+		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+		<!-- stat name="unitTick" val="30" / -->
+		<stat name="chance" val="50" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<!-- stat name="onTime" val="120" / -->
+		<!-- stat name="offTime" val="5" / -->
+		<!-- stat name="randomTime" val="15" / -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="143780" Y="-8144" />
+		<node X="144504" Y="-8484" />
+		<node X="145000" Y="-8064" />
+		<node X="144948" Y="-7372" />
+		<node X="144552" Y="-6872" />
+		<node X="144120" Y="-7076" />
+		<node X="143716" Y="-7672" />
+	</zone>
+	<zone name="fireswamp_3" type="EffectZone" shape="NPoly" minZ="-4776" maxZ="-4376"> <!-- [24_17] -->
+		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+		<!-- stat name="unitTick" val="30" / -->
+		<stat name="chance" val="50" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<!-- stat name="onTime" val="120" / -->
+		<!-- stat name="offTime" val="5" / -->
+		<!-- stat name="randomTime" val="15" / -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="144144" Y="-7020" />
+		<node X="144552" Y="-6836" />
+		<node X="144564" Y="-6324" />
+		<node X="144072" Y="-6280" />
+	</zone>
+	<zone name="fireswamp_4" type="EffectZone" shape="NPoly" minZ="-4888" maxZ="-4288"> <!-- [24_17] -->
+		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+		<!-- stat name="unitTick" val="30" / -->
+		<stat name="chance" val="50" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<!-- stat name="onTime" val="120" / -->
+		<!-- stat name="offTime" val="5" / -->
+		<!-- stat name="randomTime" val="15" / -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="144060" Y="-6240" />
+		<node X="144548" Y="-6276" />
+		<node X="145416" Y="-5772" />
+		<node X="145292" Y="-4940" />
+		<node X="144208" Y="-5076" />
+		<node X="143920" Y="-5540" />
+	</zone>
+	<zone name="fireswamp_5" type="EffectZone" shape="NPoly" minZ="-4672" maxZ="-4272"> <!-- [24_17] -->
+		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+		<!-- stat name="unitTick" val="30" / -->
+		<stat name="chance" val="50" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<!-- stat name="onTime" val="120" / -->
+		<!-- stat name="offTime" val="5" / -->
+		<!-- stat name="randomTime" val="15" / -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="148616" Y="-9208" />
+		<node X="149200" Y="-9492" />
+		<node X="149992" Y="-9472" />
+		<node X="149880" Y="-8348" />
+		<node X="148452" Y="-8308" />
+		<node X="148340" Y="-8600" />
+	</zone>
+	<zone name="fireswamp_6" type="EffectZone" shape="NPoly" minZ="-4676" maxZ="-4276"> <!-- [24_17] -->
+		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+		<!-- stat name="unitTick" val="30" / -->
+		<stat name="chance" val="50" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<!-- stat name="onTime" val="120" / -->
+		<!-- stat name="offTime" val="5" / -->
+		<!-- stat name="randomTime" val="15" / -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="151636" Y="-8512" />
+		<node X="151592" Y="-8196" />
+		<node X="150644" Y="-7904" />
+		<node X="149912" Y="-8420" />
+		<node X="150040" Y="-9404" />
+	</zone>
+	<zone name="fireswamp_7" type="EffectZone" shape="NPoly" minZ="-4728" maxZ="-4328"> <!-- [24_17] -->
+		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+		<!-- stat name="unitTick" val="30" / -->
+		<stat name="chance" val="50" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<!-- stat name="onTime" val="120" / -->
+		<!-- stat name="offTime" val="5" / -->
+		<!-- stat name="randomTime" val="15" / -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="150728" Y="-10176" />
+		<node X="151352" Y="-10536" />
+		<node X="150404" Y="-9264" />
+		<node X="150072" Y="-9444" />
+	</zone>
+	<zone name="fireswamp_8" type="EffectZone" shape="NPoly" minZ="-4636" maxZ="-4036"> <!-- [24_17] -->
+		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+		<!-- stat name="unitTick" val="30" / -->
+		<stat name="chance" val="50" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<!-- stat name="onTime" val="120" / -->
+		<!-- stat name="offTime" val="5" / -->
+		<!-- stat name="randomTime" val="15" / -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="151192" Y="-12588" />
+		<node X="151612" Y="-11884" />
+		<node X="151772" Y="-11248" />
+		<node X="151572" Y="-10860" />
+	</zone>
+	<zone name="fireswamp_9" type="EffectZone" shape="NPoly" minZ="-4700" maxZ="-4300"> <!-- [24_17] -->
+		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+		<!-- stat name="unitTick" val="30" / -->
+		<stat name="chance" val="50" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<!-- stat name="onTime" val="120" / -->
+		<!-- stat name="offTime" val="5" / -->
+		<!-- stat name="randomTime" val="15" / -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="150456" Y="-15148" />
+		<node X="151760" Y="-15072" />
+		<node X="151556" Y="-13400" />
+		<node X="151148" Y="-12856" />
+		<node X="150384" Y="-13904" />
+	</zone>
+	<zone name="fireswamp_10" type="EffectZone" shape="NPoly" minZ="-4572" maxZ="-3972"> <!-- [24_17] -->
+		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+		<!-- stat name="unitTick" val="30" / -->
+		<stat name="chance" val="50" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<!-- stat name="onTime" val="120" / -->
+		<!-- stat name="offTime" val="5" / -->
+		<!-- stat name="randomTime" val="15" / -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="145032" Y="-15132" />
+		<node X="146108" Y="-15008" />
+		<node X="148212" Y="-11784" />
+		<node X="147528" Y="-10992" />
+		<node X="146000" Y="-11072" />
+	</zone>
+	<zone name="fireswamp_11" type="EffectZone" shape="NPoly" minZ="-4572" maxZ="-4172"> <!-- [24_17] -->
+		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+		<!-- stat name="unitTick" val="30" / -->
+		<stat name="chance" val="50" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<!-- stat name="onTime" val="120" / -->
+		<!-- stat name="offTime" val="5" / -->
+		<!-- stat name="randomTime" val="15" / -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="148288" Y="-14420" />
+		<node X="148432" Y="-14428" />
+		<node X="147984" Y="-12448" />
+		<node X="147228" Y="-13572" />
+	</zone>
+	<zone name="fireswamp_12" type="EffectZone" shape="NPoly" minZ="-4476" maxZ="-2976"> <!-- [24_17] -->
+		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+		<!-- stat name="unitTick" val="30" / -->
+		<stat name="chance" val="50" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<!-- stat name="onTime" val="120" / -->
+		<!-- stat name="offTime" val="5" / -->
+		<!-- stat name="randomTime" val="15" / -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="146120" Y="-18720" />
+		<node X="146276" Y="-18884" />
+		<node X="145976" Y="-15072" />
+		<node X="145056" Y="-15200" />
+	</zone>
+	<zone name="fireswamp_13" type="EffectZone" shape="NPoly" minZ="-4604" maxZ="-4204"> <!-- [24_17] -->
+		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+		<!-- stat name="unitTick" val="30" / -->
+		<stat name="chance" val="50" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<!-- stat name="onTime" val="120" / -->
+		<!-- stat name="offTime" val="5" / -->
+		<!-- stat name="randomTime" val="15" / -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="140616" Y="-16808" />
+		<node X="143708" Y="-17160" />
+		<node X="143152" Y="-16000" />
+		<node X="141268" Y="-15872" />
+	</zone>
+	<zone name="fireswamp_14" type="EffectZone" shape="NPoly" minZ="-3476" maxZ="-3076"> <!-- [24_17] -->
+		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+		<!-- stat name="unitTick" val="30" / -->
+		<stat name="chance" val="50" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<!-- stat name="onTime" val="120" / -->
+		<!-- stat name="offTime" val="5" / -->
+		<!-- stat name="randomTime" val="15" / -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="148892" Y="-23044" />
+		<node X="149160" Y="-22280" />
+		<node X="148292" Y="-21148" />
+		<node X="148080" Y="-21508" />
+		<node X="147584" Y="-24204" />
+		<node X="147948" Y="-24056" />
+	</zone>
+	<zone name="fireswamp_15" type="EffectZone" shape="NPoly" minZ="-3208" maxZ="-1608"> <!-- [24_17] -->
+		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+		<!-- stat name="unitTick" val="30" / -->
+		<stat name="chance" val="50" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<!-- stat name="onTime" val="120" / -->
+		<!-- stat name="offTime" val="5" / -->
+		<!-- stat name="randomTime" val="15" / -->
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="143804" Y="-27456" />
+		<node X="147168" Y="-25768" />
+		<node X="147164" Y="-25372" />
+		<node X="143308" Y="-26812" />
+	</zone>
+	<!-- 4 Sepulchers -->
+	<zone name="conquerors_weakness" type="EffectZone" shape="NPoly" minZ="-7260" maxZ="-7010"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4146-3;" /> <!-- s_area_pd_down3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="186739" Y="-86322" />
+		<node X="190108" Y="-86335" />
+		<node X="190110" Y="-84794" />
+		<node X="186736" Y="-84786" />
+	</zone>
+	<zone name="conquerors_pddown" type="EffectZone" shape="NPoly" minZ="-7260" maxZ="-7010"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4145-3;" /> <!-- s_area_pa_down3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="186739" Y="-86322" />
+		<node X="190108" Y="-86335" />
+		<node X="190110" Y="-84794" />
+		<node X="186736" Y="-84786" />
+	</zone>
+	<zone name="conquerors_poison" type="EffectZone" shape="NPoly" minZ="-7260" maxZ="-7010"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4148-9;" /> <!-- s_area_poison9 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="186739" Y="-86322" />
+		<node X="190108" Y="-86335" />
+		<node X="190110" Y="-84794" />
+		<node X="186736" Y="-84786" />
+	</zone>
+	<zone name="conquerors_nonheal" type="EffectZone" shape="NPoly" minZ="-7260" maxZ="-7010"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4624-9;" /> <!-- s_area_disease9 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="186739" Y="-86322" />
+		<node X="190108" Y="-86335" />
+		<node X="190110" Y="-84794" />
+		<node X="186736" Y="-84786" />
+	</zone>
+	<zone name="lords_weakness" type="EffectZone" shape="NPoly" minZ="-7265" maxZ="-7015"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4146-3;" /> <!-- s_area_pd_down3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="185028" Y="-89729" />
+		<node X="188398" Y="-89741" />
+		<node X="188400" Y="-88200" />
+		<node X="185026" Y="-88192" />
+	</zone>
+	<zone name="lords_pddown" type="EffectZone" shape="NPoly" minZ="-7265" maxZ="-7015"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4145-3;" /> <!-- s_area_pa_down3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="185028" Y="-89729" />
+		<node X="188398" Y="-89741" />
+		<node X="188400" Y="-88200" />
+		<node X="185026" Y="-88192" />
+	</zone>
+	<zone name="lords_poison" type="EffectZone" shape="NPoly" minZ="-7265" maxZ="-7015"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4148-9;" /> <!-- s_area_poison9 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="185028" Y="-89729" />
+		<node X="188398" Y="-89741" />
+		<node X="188400" Y="-88200" />
+		<node X="185026" Y="-88192" />
+	</zone>
+	<zone name="lords_nonheal" type="EffectZone" shape="NPoly" minZ="-7265" maxZ="-7015"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4624-9;" /> <!-- s_area_disease9 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="185028" Y="-89729" />
+		<node X="188398" Y="-89741" />
+		<node X="188400" Y="-88200" />
+		<node X="185026" Y="-88192" />
+	</zone>
+	<zone name="savants_weakness" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4146-3;" /> <!-- s_area_pd_down3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="172411" Y="-81083" />
+		<node X="173942" Y="-81073" />
+		<node X="173931" Y="-77639" />
+		<node X="172418" Y="-77644" />
+	</zone>
+	<zone name="savants_pddown" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4145-3;" /> <!-- s_area_pa_down3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="172411" Y="-81083" />
+		<node X="173942" Y="-81073" />
+		<node X="173931" Y="-77639" />
+		<node X="172418" Y="-77644" />
+	</zone>
+	<zone name="savants_poison" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4148-9;" /> <!-- s_area_poison9 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="172411" Y="-81083" />
+		<node X="173942" Y="-81073" />
+		<node X="173931" Y="-77639" />
+		<node X="172418" Y="-77644" />
+	</zone>
+	<zone name="savants_nonheal" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4624-9;" /> <!-- s_area_disease9 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="172411" Y="-81083" />
+		<node X="173942" Y="-81073" />
+		<node X="173931" Y="-77639" />
+		<node X="172418" Y="-77644" />
+	</zone>
+	<zone name="magistrates_weakness" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4146-3;" /> <!-- s_area_pd_down3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="174822" Y="-77261" />
+		<node X="176354" Y="-77251" />
+		<node X="176342" Y="-73817" />
+		<node X="174829" Y="-73822" />
+	</zone>
+	<zone name="magistrates_pddown" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4145-3;" /> <!-- s_area_pa_down3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="174822" Y="-77261" />
+		<node X="176354" Y="-77251" />
+		<node X="176342" Y="-73817" />
+		<node X="174829" Y="-73822" />
+	</zone>
+	<zone name="magistrates_poison" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4148-9;" /> <!-- s_area_poison9 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="174822" Y="-77261" />
+		<node X="176354" Y="-77251" />
+		<node X="176342" Y="-73817" />
+		<node X="174829" Y="-73822" />
+	</zone>
+	<zone name="magistrates_nonheal" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<stat name="skillIdLvl" val="4624-9;" /> <!-- s_area_disease9 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="174822" Y="-77261" />
+		<node X="176354" Y="-77251" />
+		<node X="176342" Y="-73817" />
+		<node X="174829" Y="-73822" />
+	</zone>
+	<!-- Hot Springs -->
+	<!-- Hot Fantasy -->
+	<zone name="spa_11" type="EffectZone" shape="NPoly" minZ="-3634" maxZ="-3434"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="141249" Y="-109636" />
+		<node X="141473" Y="-109798" />
+		<node X="141739" Y="-109821" />
+		<node X="141924" Y="-109669" />
+		<node X="142038" Y="-109397" />
+		<node X="141852" Y="-109130" />
+		<node X="141604" Y="-109051" />
+		<node X="141321" Y="-109091" />
+		<node X="141213" Y="-109266" />
+	</zone>
+	<zone name="spa_21" type="EffectZone" shape="NPoly" minZ="-3668" maxZ="-3468"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="140174" Y="-105832" />
+		<node X="140490" Y="-105875" />
+		<node X="140962" Y="-105738" />
+		<node X="141039" Y="-105378" />
+		<node X="140872" Y="-105119" />
+		<node X="140081" Y="-105295" />
+	</zone>
+	<zone name="spa_31" type="EffectZone" shape="NPoly" minZ="-3724" maxZ="-3524"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="144927" Y="-105193" />
+		<node X="145226" Y="-105412" />
+		<node X="145576" Y="-105344" />
+		<node X="145819" Y="-104976" />
+		<node X="145575" Y="-104555" />
+		<node X="145217" Y="-104490" />
+		<node X="144935" Y="-104684" />
+		<node X="144832" Y="-104959" />
+
+	</zone>
+	<zone name="spa_41" type="EffectZone" shape="NPoly" minZ="-2871" maxZ="-2671"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="152081" Y="-108262" />
+		<node X="152455" Y="-108588" />
+		<node X="152835" Y="-108448" />
+		<node X="152992" Y="-108120" />
+		<node X="152817" Y="-107670" />
+		<node X="152310" Y="-107632" />
+		<node X="152069" Y="-107905" />
+	</zone>
+	<zone name="spa_51" type="EffectZone" shape="NPoly" minZ="-2787" maxZ="-2587"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="155279" Y="-105735" />
+		<node X="155448" Y="-105880" />
+		<node X="155992" Y="-105963" />
+		<node X="156201" Y="-105790" />
+		<node X="156133" Y="-105320" />
+		<node X="155896" Y="-105229" />
+		<node X="155459" Y="-105254" />
+		<node X="155283" Y="-105478" />
+	</zone>
+	<zone name="spa_61" type="EffectZone" shape="NPoly" minZ="-2717" maxZ="-2517"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="156838" Y="-109948" />
+		<node X="157133" Y="-110046" />
+		<node X="157436" Y="-109918" />
+		<node X="157491" Y="-109405" />
+		<node X="157197" Y="-109197" />
+		<node X="156843" Y="-109261" />
+		<node X="156683" Y="-109569" />
+	</zone>
+	<zone name="spa_71" type="EffectZone" shape="NPoly" minZ="-1609" maxZ="-1409"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="152063" Y="-116732" />
+		<node X="152505" Y="-116982" />
+		<node X="152904" Y="-116927" />
+		<node X="153020" Y="-116469" />
+		<node X="152881" Y="-116221" />
+		<node X="152555" Y="-116100" />
+		<node X="152285" Y="-116160" />
+		<node X="152099" Y="-116415" />
+	</zone>
+	<zone name="spa_81" type="EffectZone" shape="NPoly" minZ="-1694" maxZ="-1494"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="152683" Y="-112829" />
+		<node X="152796" Y="-113129" />
+		<node X="153125" Y="-113339" />
+		<node X="153557" Y="-113190" />
+		<node X="153649" Y="-112721" />
+		<node X="153344" Y="-112385" />
+		<node X="152937" Y="-112409" />
+	</zone>
+	<zone name="spa_91" type="EffectZone" shape="NPoly" minZ="-1979" maxZ="-1779"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="157444" Y="-115790" />
+		<node X="157774" Y="-115907" />
+		<node X="158174" Y="-115759" />
+		<node X="158017" Y="-114971" />
+		<node X="157625" Y="-114984" />
+		<node X="157439" Y="-115101" />
+	</zone>
+	<zone name="spa_101" type="EffectZone" shape="NPoly" minZ="-2152" maxZ="-1952"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="147182" Y="-113255" />
+		<node X="147194" Y="-113430" />
+		<node X="147312" Y="-113584" />
+		<node X="147467" Y="-113630" />
+		<node X="147748" Y="-113523" />
+		<node X="147816" Y="-113273" />
+		<node X="147723" Y="-113074" />
+		<node X="147512" Y="-112956" />
+		<node X="147258" Y="-113048" />
+	</zone>
+	<!-- Medical treatment -->
+	<zone name="spa_12" type="EffectZone" shape="NPoly" minZ="-3634" maxZ="-3434"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4557-1;" /> <!-- s_dispel_spa_disease_bd -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="141249" Y="-109636" />
+		<node X="141473" Y="-109798" />
+		<node X="141739" Y="-109821" />
+		<node X="141924" Y="-109669" />
+		<node X="142038" Y="-109397" />
+		<node X="141852" Y="-109130" />
+		<node X="141604" Y="-109051" />
+		<node X="141321" Y="-109091" />
+		<node X="141213" Y="-109266" />
+	</zone>
+	<zone name="spa_22" type="EffectZone" shape="NPoly" minZ="-3668" maxZ="-3468"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4556-1;" /> <!-- s_dispel_spa_disease_ad -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="140174" Y="-105832" />
+		<node X="140490" Y="-105875" />
+		<node X="140962" Y="-105738" />
+		<node X="141039" Y="-105378" />
+		<node X="140872" Y="-105119" />
+		<node X="140081" Y="-105295" />
+	</zone>
+	<zone name="spa_32" type="EffectZone" shape="NPoly" minZ="-3724" maxZ="-3524"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4558-1;" /> <!-- s_dispel_spa_disease_cd -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="144927" Y="-105193" />
+		<node X="145226" Y="-105412" />
+		<node X="145576" Y="-105344" />
+		<node X="145819" Y="-104976" />
+		<node X="145575" Y="-104555" />
+		<node X="145217" Y="-104490" />
+		<node X="144935" Y="-104684" />
+		<node X="144832" Y="-104959" />
+	</zone>
+	<zone name="spa_42" type="EffectZone" shape="NPoly" minZ="-2871" maxZ="-2671"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4556-1;" /> <!-- s_dispel_spa_disease_ad -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="152081" Y="-108262" />
+		<node X="152455" Y="-108588" />
+		<node X="152835" Y="-108448" />
+		<node X="152992" Y="-108120" />
+		<node X="152817" Y="-107670" />
+		<node X="152310" Y="-107632" />
+		<node X="152069" Y="-107905" />
+	</zone>
+	<zone name="spa_52" type="EffectZone" shape="NPoly" minZ="-2787" maxZ="-2587"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4558-1;" /> <!-- s_dispel_spa_disease_cd -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="155279" Y="-105735" />
+		<node X="155448" Y="-105880" />
+		<node X="155992" Y="-105963" />
+		<node X="156201" Y="-105790" />
+		<node X="156133" Y="-105320" />
+		<node X="155896" Y="-105229" />
+		<node X="155459" Y="-105254" />
+		<node X="155283" Y="-105478" />
+	</zone>
+	<zone name="spa_62" type="EffectZone" shape="NPoly" minZ="-2717" maxZ="-2517"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4557-1;" /> <!-- s_dispel_spa_disease_bd -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="156838" Y="-109948" />
+		<node X="157133" Y="-110046" />
+		<node X="157436" Y="-109918" />
+		<node X="157491" Y="-109405" />
+		<node X="157197" Y="-109197" />
+		<node X="156843" Y="-109261" />
+		<node X="156683" Y="-109569" />
+	</zone>
+	<zone name="spa_72" type="EffectZone" shape="NPoly" minZ="-1609" maxZ="-1409"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4556-1;" /> <!-- s_dispel_spa_disease_ad -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="152063" Y="-116732" />
+		<node X="152505" Y="-116982" />
+		<node X="152904" Y="-116927" />
+		<node X="153020" Y="-116469" />
+		<node X="152881" Y="-116221" />
+		<node X="152555" Y="-116100" />
+		<node X="152285" Y="-116160" />
+		<node X="152099" Y="-116415" />
+	</zone>
+	<zone name="spa_82" type="EffectZone" shape="NPoly" minZ="-1694" maxZ="-1494"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4558-1;" /> <!-- s_dispel_spa_disease_cd -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="152683" Y="-112829" />
+		<node X="152796" Y="-113129" />
+		<node X="153125" Y="-113339" />
+		<node X="153557" Y="-113190" />
+		<node X="153649" Y="-112721" />
+		<node X="153344" Y="-112385" />
+		<node X="152937" Y="-112409" />
+	</zone>
+	<zone name="spa_92" type="EffectZone" shape="NPoly" minZ="-1979" maxZ="-1779"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4557-1;" /> <!-- s_dispel_spa_disease_bd -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="157444" Y="-115790" />
+		<node X="157774" Y="-115907" />
+		<node X="158174" Y="-115759" />
+		<node X="158017" Y="-114971" />
+		<node X="157625" Y="-114984" />
+		<node X="157439" Y="-115101" />
+	</zone>
+	<zone name="spa_102" type="EffectZone" shape="NPoly" minZ="-2152" maxZ="-1952"> <!-- [24_14] -->
+		<stat name="skillIdLvl" val="4557-1;" /> <!-- s_dispel_spa_disease_bd -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<node X="147182" Y="-113255" />
+		<node X="147194" Y="-113430" />
+		<node X="147312" Y="-113584" />
+		<node X="147467" Y="-113630" />
+		<node X="147748" Y="-113523" />
+		<node X="147816" Y="-113273" />
+		<node X="147723" Y="-113074" />
+		<node X="147512" Y="-112956" />
+		<node X="147258" Y="-113048" />
+	</zone>
+	<!-- Hall of Flames -->
+	<zone name="godad_fire_zone1" type="EffectZone" shape="NPoly" minZ="-1896" maxZ="-1696"> <!-- [25_14] -->
+		<stat name="skillIdLvl" val="4150-5;" /> <!-- s_area_fire5 -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="192073" Y="-118243" />
+		<node X="192185" Y="-116883" />
+		<node X="191921" Y="-116651" />
+		<node X="191330" Y="-116793" />
+		<node X="190997" Y="-118195" />
+	</zone>
+	<zone name="godad_fire_zone2" type="EffectZone" shape="NPoly" minZ="-3384" maxZ="-3184"> <!-- [25_14] -->
+		<stat name="skillIdLvl" val="4150-5;" /> <!-- s_area_fire5 -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="183700" Y="-114976" />
+		<node X="183996" Y="-115008" />
+		<node X="183988" Y="-114940" />
+		<node X="183892" Y="-114896" />
+		<node X="183768" Y="-114912" />
+	</zone>
+	<zone name="godad_fire_zone3" type="EffectZone" shape="NPoly" minZ="-4728" maxZ="-4028"> <!-- [25_14] -->
+		<stat name="skillIdLvl" val="4150-5;" /> <!-- s_area_fire5 -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="170882" Y="-116919" />
+		<node X="173775" Y="-116885" />
+		<node X="173761" Y="-113989" />
+		<node X="170896" Y="-113924" />
+	</zone>
+	<zone name="godad_fire_zone4" type="EffectZone" shape="NPoly" minZ="-6160" maxZ="-5260"> <!-- [25_14] -->
+		<stat name="skillIdLvl" val="4150-5;" /> <!-- s_area_fire5 -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="170947" Y="-113900" />
+		<node X="173759" Y="-113954" />
+		<node X="173776" Y="-111044" />
+		<node X="170920" Y="-111048" />
+	</zone>
+	<!-- Swamp of Screams (Monsters Buffs) -->
+	<zone name="godad_swamp_monster1" type="EffectZone" shape="NPoly" minZ="-3375" maxZ="-2975"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="71030" Y="-60113" />
+		<node X="70966" Y="-59549" />
+		<node X="70250" Y="-59173" />
+		<node X="69622" Y="-59597" />
+		<node X="69634" Y="-60261" />
+		<node X="70026" Y="-60593" />
+		<node X="70566" Y="-60601" />
+	</zone>
+	<zone name="godad_swamp_monster2" type="EffectZone" shape="NPoly" minZ="-3191" maxZ="-2991"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="73522" Y="-59473" />
+		<node X="73454" Y="-58861" />
+		<node X="73194" Y="-58629" />
+		<node X="72642" Y="-58433" />
+		<node X="72110" Y="-58501" />
+		<node X="71782" Y="-59013" />
+		<node X="71922" Y="-59817" />
+		<node X="72482" Y="-60149" />
+		<node X="72986" Y="-60085" />
+	</zone>
+	<zone name="godad_swamp_monster3" type="EffectZone" shape="NPoly" minZ="-3335" maxZ="-2935"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="72376" Y="-55558" />
+		<node X="72036" Y="-54506" />
+		<node X="71188" Y="-54130" />
+		<node X="70264" Y="-54442" />
+		<node X="69748" Y="-55206" />
+		<node X="69860" Y="-56066" />
+		<node X="70708" Y="-56830" />
+		<node X="71632" Y="-56706" />
+		<node X="72132" Y="-56258" />
+	</zone>
+	<zone name="godad_swamp_monster4" type="EffectZone" shape="NPoly" minZ="-3179" maxZ="-2979"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="76091" Y="-53873" />
+		<node X="75447" Y="-53721" />
+		<node X="75135" Y="-54069" />
+		<node X="75047" Y="-54749" />
+		<node X="75491" Y="-55125" />
+		<node X="76171" Y="-54993" />
+		<node X="76323" Y="-54677" />
+		<node X="76339" Y="-54281" />
+	</zone>
+	<zone name="godad_swamp_monster5" type="EffectZone" shape="NPoly" minZ="-3255" maxZ="-2955"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="74415" Y="-51769" />
+		<node X="74351" Y="-51081" />
+		<node X="74075" Y="-50837" />
+		<node X="74007" Y="-50597" />
+		<node X="73335" Y="-50669" />
+		<node X="72983" Y="-51393" />
+		<node X="73167" Y="-51845" />
+		<node X="73995" Y="-52025" />
+	</zone>
+	<zone name="godad_swamp_monster6" type="EffectZone" shape="NPoly" minZ="-3458" maxZ="-3158"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="73198" Y="-44860" />
+		<node X="72682" Y="-44392" />
+		<node X="71766" Y="-44416" />
+		<node X="71314" Y="-44836" />
+		<node X="71378" Y="-45248" />
+		<node X="71430" Y="-45960" />
+		<node X="71850" Y="-46264" />
+		<node X="72594" Y="-46236" />
+		<node X="73034" Y="-45800" />
+	</zone>
+	<zone name="godad_swamp_monster7" type="EffectZone" shape="NPoly" minZ="-3418" maxZ="-3118"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="74049" Y="-42558" />
+		<node X="73997" Y="-41998" />
+		<node X="73513" Y="-41622" />
+		<node X="73093" Y="-41610" />
+		<node X="72537" Y="-42338" />
+		<node X="72661" Y="-42830" />
+		<node X="73325" Y="-43018" />
+		<node X="73641" Y="-42942" />
+	</zone>
+	<zone name="godad_swamp_monster8" type="EffectZone" shape="NPoly" minZ="-3410" maxZ="-3110"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="77309" Y="-42410" />
+		<node X="76629" Y="-41878" />
+		<node X="75557" Y="-41990" />
+		<node X="74781" Y="-42802" />
+		<node X="74745" Y="-43802" />
+		<node X="75581" Y="-44790" />
+		<node X="76761" Y="-44770" />
+		<node X="77597" Y="-44062" />
+		<node X="77641" Y="-43006" />
+	</zone>
+	<zone name="godad_swamp_monster9" type="EffectZone" shape="NPoly" minZ="-3422" maxZ="-3122"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="80214" Y="-42670" />
+		<node X="80438" Y="-42094" />
+		<node X="80314" Y="-41546" />
+		<node X="79614" Y="-41342" />
+		<node X="78754" Y="-41710" />
+		<node X="78662" Y="-42230" />
+		<node X="79062" Y="-42894" />
+		<node X="79758" Y="-43070" />
+		<node X="79930" Y="-42834" />
+	</zone>
+	<zone name="godad_swamp_monster10" type="EffectZone" shape="NPoly" minZ="-3370" maxZ="-3070"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="83118" Y="-41483" />
+		<node X="82686" Y="-40931" />
+		<node X="82046" Y="-40887" />
+		<node X="82050" Y="-41079" />
+		<node X="81734" Y="-41263" />
+		<node X="81610" Y="-41879" />
+		<node X="82366" Y="-42299" />
+		<node X="82758" Y="-42155" />
+		<node X="82910" Y="-41879" />
+		<node X="83086" Y="-41823" />
+	</zone>
+	<zone name="godad_swamp_monster11" type="EffectZone" shape="NPoly" minZ="-3366" maxZ="-3066"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="81654" Y="-45503" />
+		<node X="81886" Y="-45267" />
+		<node X="82222" Y="-44899" />
+		<node X="82266" Y="-44547" />
+		<node X="82098" Y="-44207" />
+		<node X="81506" Y="-44063" />
+		<node X="80846" Y="-44375" />
+		<node X="80786" Y="-44795" />
+		<node X="81094" Y="-45271" />
+	</zone>
+	<zone name="godad_swamp_monster12" type="EffectZone" shape="NPoly" minZ="-2522" maxZ="-2222"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="79526" Y="-51746" />
+		<node X="79638" Y="-51098" />
+		<node X="79190" Y="-50458" />
+		<node X="78398" Y="-50694" />
+		<node X="78158" Y="-51298" />
+		<node X="78570" Y="-51934" />
+		<node X="79214" Y="-51898" />
+	</zone>
+	<zone name="godad_swamp_monster13" type="EffectZone" shape="NPoly" minZ="-2470" maxZ="-2170"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="83615" Y="-50828" />
+		<node X="83507" Y="-50428" />
+		<node X="83115" Y="-50032" />
+		<node X="82447" Y="-50180" />
+		<node X="82231" Y="-50752" />
+		<node X="82535" Y="-51328" />
+		<node X="82855" Y="-51444" />
+		<node X="83535" Y="-51204" />
+	</zone>
+	<zone name="godad_swamp_monster14" type="EffectZone" shape="NPoly" minZ="-2458" maxZ="-2158"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="81946" Y="-53719" />
+		<node X="81398" Y="-53767" />
+		<node X="80642" Y="-53691" />
+		<node X="79554" Y="-54587" />
+		<node X="79782" Y="-55123" />
+		<node X="79886" Y="-56423" />
+		<node X="81054" Y="-57231" />
+		<node X="81802" Y="-57111" />
+		<node X="82970" Y="-56139" />
+		<node X="82738" Y="-54227" />
+	</zone>
+	<zone name="godad_swamp_monster15" type="EffectZone" shape="NPoly" minZ="-2542" maxZ="-2242"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="78226" Y="-58454" />
+		<node X="78206" Y="-58026" />
+		<node X="77858" Y="-57766" />
+		<node X="77370" Y="-57814" />
+		<node X="77058" Y="-58266" />
+		<node X="77374" Y="-58806" />
+		<node X="77966" Y="-58870" />
+	</zone>
+	<zone name="godad_swamp_monster16" type="EffectZone" shape="NPoly" minZ="-2558" maxZ="-2258"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="77796" Y="-61961" />
+		<node X="77836" Y="-61333" />
+		<node X="77524" Y="-60969" />
+		<node X="77100" Y="-61041" />
+		<node X="76796" Y="-61233" />
+		<node X="76728" Y="-61865" />
+		<node X="77368" Y="-62213" />
+	</zone>
+	<zone name="godad_swamp_monster17" type="EffectZone" shape="NPoly" minZ="-2414" maxZ="-2114"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="82052" Y="-59979" />
+		<node X="81588" Y="-59123" />
+		<node X="80692" Y="-59059" />
+		<node X="80152" Y="-59707" />
+		<node X="80172" Y="-60535" />
+		<node X="80824" Y="-61043" />
+		<node X="81552" Y="-60955" />
+	</zone>
+	<zone name="godad_swamp_monster18" type="EffectZone" shape="NPoly" minZ="-2522" maxZ="-2222"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="85533" Y="-63207" />
+		<node X="85685" Y="-62647" />
+		<node X="85249" Y="-62239" />
+		<node X="84589" Y="-62535" />
+		<node X="84549" Y="-63151" />
+		<node X="85101" Y="-63443" />
+	</zone>
+	<zone name="godad_swamp_monster19" type="EffectZone" shape="NPoly" minZ="-2462" maxZ="-2162"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="89512" Y="-60985" />
+		<node X="89712" Y="-60141" />
+		<node X="88888" Y="-59441" />
+		<node X="87948" Y="-59557" />
+		<node X="87620" Y="-60545" />
+		<node X="88136" Y="-61165" />
+		<node X="88544" Y="-61437" />
+	</zone>
+	<zone name="godad_swamp_monster20" type="EffectZone" shape="NPoly" minZ="-2574" maxZ="-2274"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="86034" Y="-54576" />
+		<node X="85642" Y="-54220" />
+		<node X="85238" Y="-54224" />
+		<node X="84862" Y="-54636" />
+		<node X="85082" Y="-55248" />
+		<node X="85526" Y="-55364" />
+		<node X="85950" Y="-55020" />
+	</zone>
+	<zone name="godad_swamp_monster21" type="EffectZone" shape="NPoly" minZ="-2727" maxZ="-2427"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="90080" Y="-52443" />
+		<node X="90212" Y="-51947" />
+		<node X="89700" Y="-51239" />
+		<node X="88928" Y="-51583" />
+		<node X="88764" Y="-51991" />
+		<node X="89008" Y="-52687" />
+		<node X="89688" Y="-52723" />
+	</zone>
+	<zone name="godad_swamp_monster22" type="EffectZone" shape="NPoly" minZ="-2767" maxZ="-2467"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="92777" Y="-52363" />
+		<node X="91981" Y="-51967" />
+		<node X="91281" Y="-52519" />
+		<node X="91229" Y="-53299" />
+		<node X="91385" Y="-53679" />
+		<node X="92405" Y="-53943" />
+		<node X="93025" Y="-53439" />
+	</zone>
+	<zone name="godad_swamp_monster23" type="EffectZone" shape="NPoly" minZ="-2763" maxZ="-2463"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="95179" Y="-52286" />
+		<node X="94747" Y="-51982" />
+		<node X="94303" Y="-52062" />
+		<node X="93927" Y="-52458" />
+		<node X="94187" Y="-53042" />
+		<node X="94707" Y="-53150" />
+		<node X="95043" Y="-53058" />
+		<node X="95211" Y="-52546" />
+	</zone>
+	<zone name="godad_swamp_monster24" type="EffectZone" shape="NPoly" minZ="-2550" maxZ="-2150"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="85757" Y="-59957" />
+		<node X="86073" Y="-59585" />
+		<node X="86085" Y="-59117" />
+		<node X="85761" Y="-58801" />
+		<node X="85177" Y="-58893" />
+		<node X="84905" Y="-59329" />
+		<node X="85229" Y="-59869" />
+	</zone>
+	<zone name="godad_swamp_monster25" type="EffectZone" shape="NPoly" minZ="-2486" maxZ="-2286"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="81382" Y="-63921" />
+		<node X="81826" Y="-63537" />
+		<node X="81834" Y="-62985" />
+		<node X="81298" Y="-62773" />
+		<node X="80870" Y="-62985" />
+		<node X="80798" Y="-63309" />
+		<node X="80946" Y="-63769" />
+	</zone>
+	<zone name="godad_swamp_monster26" type="EffectZone" shape="NPoly" minZ="-2819" maxZ="-2619"> <!-- [22_16] -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<stat name="chance" val="70" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="93421" Y="-55220" />
+		<node X="94109" Y="-55536" />
+		<node X="94601" Y="-55164" />
+		<node X="94581" Y="-54740" />
+		<node X="94185" Y="-54360" />
+		<node X="93565" Y="-54344" />
+		<node X="93365" Y="-54760" />
+	</zone>
+	<!-- Valakas Nest Lava -->
+	<zone name="balakas_lava_1" type="EffectZone" shape="NPoly" minZ="-1700" maxZ="-1500"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="212916" Y="-117204" />
+		<node X="213404" Y="-117248" />
+		<node X="213444" Y="-116584" />
+		<node X="213012" Y="-116444" />
+		<node X="212828" Y="-116928" />
+	</zone>
+	<zone name="balakas_lava_2" type="EffectZone" shape="NPoly" minZ="-1800" maxZ="-1600"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="212304" Y="-116608" />
+		<node X="212708" Y="-116660" />
+		<node X="212820" Y="-116300" />
+		<node X="212416" Y="-116144" />
+		<node X="212140" Y="-116336" />
+	</zone>
+	<zone name="balakas_lava_3" type="EffectZone" shape="NPoly" minZ="-1772" maxZ="-1572"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="214032" Y="-116748" />
+		<node X="214488" Y="-116652" />
+		<node X="214548" Y="-116352" />
+		<node X="214064" Y="-116232" />
+	</zone>
+	<zone name="balakas_lava_4" type="EffectZone" shape="NPoly" minZ="-1800" maxZ="-1600"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="214424" Y="-115452" />
+		<node X="214776" Y="-115520" />
+		<node X="214944" Y="-115248" />
+		<node X="214652" Y="-114784" />
+		<node X="214460" Y="-114824" />
+		<node X="214412" Y="-115080" />
+	</zone>
+	<zone name="balakas_lava_5" type="EffectZone" shape="NPoly" minZ="-1820" maxZ="-1620"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="214668" Y="-114276" />
+		<node X="214948" Y="-113876" />
+		<node X="214612" Y="-113588" />
+		<node X="214228" Y="-113884" />
+		<node X="214340" Y="-114148" />
+	</zone>
+	<zone name="balakas_lava_6" type="EffectZone" shape="NPoly" minZ="-1768" maxZ="-1568"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="213916" Y="-115660" />
+		<node X="214220" Y="-114648" />
+		<node X="213392" Y="-113112" />
+		<node X="212100" Y="-113460" />
+		<node X="211292" Y="-115164" />
+		<node X="211948" Y="-115196" />
+		<node X="211976" Y="-115628" />
+		<node X="212696" Y="-116036" />
+		<node X="213200" Y="-116136" />
+	</zone>
+	<zone name="balakas_lava_7" type="EffectZone" shape="NPoly" minZ="-1764" maxZ="-1564"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="210524" Y="-114376" />
+		<node X="211144" Y="-114604" />
+		<node X="211148" Y="-114340" />
+		<node X="210764" Y="-114116" />
+	</zone>
+	<zone name="balakas_lava_8" type="EffectZone" shape="NPoly" minZ="-1716" maxZ="-1516"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="212276" Y="-113016" />
+		<node X="212932" Y="-112836" />
+		<node X="212860" Y="-112600" />
+		<node X="212616" Y="-112488" />
+		<node X="212188" Y="-112604" />
+		<node X="212144" Y="-112820" />
+	</zone>
+	<zone name="balakas_lava_9" type="EffectZone" shape="NPoly" minZ="-1720" maxZ="-1520"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="211608" Y="-113560" />
+		<node X="211944" Y="-113408" />
+		<node X="211880" Y="-112888" />
+		<node X="211220" Y="-112780" />
+		<node X="211204" Y="-113400" />
+	</zone>
+	<zone name="balakas_lava_10" type="EffectZone" shape="NPoly" minZ="-1732" maxZ="-1532"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="210596" Y="-116292" />
+		<node X="210904" Y="-116088" />
+		<node X="210972" Y="-115760" />
+		<node X="210784" Y="-115612" />
+		<node X="210308" Y="-115904" />
+	</zone>
+	<zone name="balakas_lava_11" type="EffectZone" shape="NPoly" minZ="-1736" maxZ="-1536"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="211272" Y="-117352" />
+		<node X="211660" Y="-117220" />
+		<node X="211552" Y="-117000" />
+		<node X="211792" Y="-116936" />
+		<node X="212072" Y="-116412" />
+		<node X="211916" Y="-115952" />
+		<node X="211600" Y="-115956" />
+		<node X="211356" Y="-116588" />
+		<node X="210928" Y="-116296" />
+		<node X="210872" Y="-117028" />
+	</zone>
+	<zone name="balakas_lava_12" type="EffectZone" shape="NPoly" minZ="-1748" maxZ="-1548"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="211528" Y="-117312" />
+		<node X="212828" Y="-117884" />
+		<node X="212756" Y="-117068" />
+		<node X="212584" Y="-116828" />
+		<node X="212300" Y="-116812" />
+		<node X="211796" Y="-117168" />
+	</zone>
+	<zone name="balakas_lava_13" type="EffectZone" shape="NPoly" minZ="-1792" maxZ="-1592"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="213224" Y="-117956" />
+		<node X="213204" Y="-117548" />
+		<node X="213016" Y="-117412" />
+		<node X="212792" Y="-117456" />
+		<node X="212836" Y="-117916" />
+	</zone>
+	<zone name="balakas_lava_14" type="EffectZone" shape="NPoly" minZ="-1812" maxZ="-1612"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="213440" Y="-118004" />
+		<node X="213852" Y="-118004" />
+		<node X="213728" Y="-117728" />
+		<node X="213584" Y="-117748" />
+	</zone>
+	<zone name="balakas_lava_15" type="EffectZone" shape="NPoly" minZ="-1764" maxZ="-1564"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="213988" Y="-117184" />
+		<node X="213808" Y="-117232" />
+		<node X="213952" Y="-117772" />
+		<node X="213636" Y="-118036" />
+		<node X="214660" Y="-117924" />
+		<node X="214232" Y="-117560" />
+		<node X="214224" Y="-117412" />
+	</zone>
+	<zone name="balakas_lava_16" type="EffectZone" shape="NPoly" minZ="-1716" maxZ="-1516"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="214564" Y="-117840" />
+		<node X="214844" Y="-117352" />
+		<node X="214616" Y="-117172" />
+		<node X="214436" Y="-117300" />
+		<node X="214304" Y="-117592" />
+	</zone>
+	<zone name="balakas_lava_17" type="EffectZone" shape="NPoly" minZ="-1700" maxZ="-1500"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="215148" Y="-117144" />
+		<node X="215300" Y="-117208" />
+		<node X="215516" Y="-116568" />
+		<node X="215296" Y="-116592" />
+	</zone>
+	<zone name="balakas_lava_18" type="EffectZone" shape="NPoly" minZ="-1684" maxZ="-1484"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="215356" Y="-116304" />
+		<node X="215584" Y="-116508" />
+		<node X="216472" Y="-114732" />
+		<node X="215428" Y="-114700" />
+		<node X="215204" Y="-114556" />
+		<node X="214916" Y="-114664" />
+		<node X="214932" Y="-114920" />
+		<node X="215244" Y="-115184" />
+		<node X="215116" Y="-115408" />
+		<node X="215420" Y="-115756" />
+		<node X="215296" Y="-115852" />
+	</zone>
+	<zone name="balakas_lava_19" type="EffectZone" shape="NPoly" minZ="-1740" maxZ="-1540"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="214888" Y="-114200" />
+		<node X="216164" Y="-114560" />
+		<node X="216120" Y="-113212" />
+		<node X="215380" Y="-112272" />
+		<node X="214240" Y="-113388" />
+		<node X="215420" Y="-113568" />
+	</zone>
+	<zone name="balakas_lava_20" type="EffectZone" shape="NPoly" minZ="-1792" maxZ="-1592"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="213792" Y="-112592" />
+		<node X="214948" Y="-111748" />
+		<node X="213932" Y="-111516" />
+		<node X="213624" Y="-112404" />
+	</zone>
+	<zone name="balakas_lava_21" type="EffectZone" shape="NPoly" minZ="-1772" maxZ="-1572"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="212408" Y="-112372" />
+		<node X="212800" Y="-111924" />
+		<node X="212656" Y="-111156" />
+		<node X="211096" Y="-111788" />
+		<node X="211460" Y="-112196" />
+		<node X="211904" Y="-112736" />
+		<node X="212280" Y="-112092" />
+	</zone>
+	<zone name="balakas_lava_22" type="EffectZone" shape="NPoly" minZ="-1744" maxZ="-1544"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="211120" Y="-112784" />
+		<node X="211300" Y="-112484" />
+		<node X="211116" Y="-112048" />
+		<node X="209044" Y="-113592" />
+		<node X="209900" Y="-113652" />
+		<node X="210020" Y="-113412" />
+		<node X="210812" Y="-113544" />
+		<node X="211088" Y="-113220" />
+		<node X="210720" Y="-112888" />
+	</zone>
+	<zone name="balakas_lava_23" type="EffectZone" shape="NPoly" minZ="-1600" maxZ="-1400"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="209504" Y="-113076" />
+		<node X="209808" Y="-113412" />
+		<node X="210004" Y="-112864" />
+		<node X="209596" Y="-112916" />
+	</zone>
+	<zone name="balakas_lava_24" type="EffectZone" shape="NPoly" minZ="-1528" maxZ="-1328"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="210400" Y="-112656" />
+		<node X="210308" Y="-112356" />
+		<node X="210152" Y="-112260" />
+		<node X="209944" Y="-112384" />
+		<node X="209804" Y="-112308" />
+		<node X="209688" Y="-112448" />
+		<node X="209804" Y="-112564" />
+		<node X="209772" Y="-112672" />
+		<node X="209968" Y="-112884" />
+	</zone>
+	<zone name="balakas_lava_25" type="EffectZone" shape="NPoly" minZ="-1564" maxZ="-1364"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="210032" Y="-112148" />
+		<node X="210392" Y="-112060" />
+		<node X="210104" Y="-111444" />
+		<node X="209496" Y="-112008" />
+	</zone>
+	<zone name="balakas_lava_26" type="EffectZone" shape="NPoly" minZ="-1572" maxZ="-1372"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="211096" Y="-112400" />
+		<node X="211436" Y="-111804" />
+		<node X="210812" Y="-111712" />
+		<node X="210628" Y="-111792" />
+		<node X="210600" Y="-112004" />
+	</zone>
+	<zone name="balakas_lava_27" type="EffectZone" shape="NPoly" minZ="-1488" maxZ="-1288"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="210552" Y="-111368" />
+		<node X="210904" Y="-111412" />
+		<node X="210864" Y="-111236" />
+		<node X="210492" Y="-111100" />
+		<node X="210100" Y="-111432" />
+		<node X="210408" Y="-111488" />
+	</zone>
+	<zone name="balakas_lava_28" type="EffectZone" shape="NPoly" minZ="-1492" maxZ="-1292"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="212136" Y="-110836" />
+		<node X="212552" Y="-110896" />
+		<node X="212704" Y="-110776" />
+		<node X="212724" Y="-110460" />
+		<node X="212064" Y="-110576" />
+	</zone>
+	<zone name="balakas_lava_29" type="EffectZone" shape="NPoly" minZ="-1476" maxZ="-1276"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="212620" Y="-111604" />
+		<node X="213060" Y="-111604" />
+		<node X="212740" Y="-111304" />
+		<node X="212436" Y="-111620" />
+	</zone>
+	<zone name="balakas_lava_30" type="EffectZone" shape="NPoly" minZ="-1452" maxZ="-1252"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="213416" Y="-110968" />
+		<node X="213716" Y="-110772" />
+		<node X="213752" Y="-110376" />
+		<node X="213356" Y="-110388" />
+		<node X="213328" Y="-110760" />
+	</zone>
+	<zone name="balakas_lava_31" type="EffectZone" shape="NPoly" minZ="-1548" maxZ="-1348"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="214228" Y="-111556" />
+		<node X="214196" Y="-111120" />
+		<node X="213972" Y="-111020" />
+		<node X="213624" Y="-111248" />
+	</zone>
+	<zone name="balakas_lava_32" type="EffectZone" shape="NPoly" minZ="-1484" maxZ="-1284"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="215120" Y="-112132" />
+		<node X="215460" Y="-112124" />
+		<node X="215564" Y="-111836" />
+		<node X="215376" Y="-111736" />
+		<node X="214924" Y="-111792" />
+	</zone>
+	<zone name="balakas_lava_33" type="EffectZone" shape="NPoly" minZ="-1456" maxZ="-1256"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="215564" Y="-111380" />
+		<node X="215764" Y="-111380" />
+		<node X="215764" Y="-111180" />
+		<node X="215564" Y="-111180" />
+	</zone>
+	<zone name="balakas_lava_34" type="EffectZone" shape="NPoly" minZ="-1616" maxZ="-1416"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="215776" Y="-112812" />
+		<node X="216348" Y="-112536" />
+		<node X="216268" Y="-112392" />
+		<node X="215684" Y="-112660" />
+	</zone>
+	<zone name="balakas_lava_35" type="EffectZone" shape="NPoly" minZ="-1480" maxZ="-1280"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="216040" Y="-114340" />
+		<node X="216868" Y="-114436" />
+		<node X="216648" Y="-112948" />
+		<node X="216148" Y="-113132" />
+		<node X="215996" Y="-113324" />
+	</zone>
+	<zone name="balakas_lava_36" type="EffectZone" shape="NPoly" minZ="-1520" maxZ="-1320"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="216136" Y="-115280" />
+		<node X="216760" Y="-115372" />
+		<node X="216880" Y="-114792" />
+		<node X="216636" Y="-114964" />
+		<node X="216428" Y="-114976" />
+		<node X="216364" Y="-114832" />
+		<node X="216068" Y="-114768" />
+	</zone>
+	<zone name="balakas_lava_37" type="EffectZone" shape="NPoly" minZ="-1568" maxZ="-1368"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="215964" Y="-115796" />
+		<node X="216592" Y="-115892" />
+		<node X="216592" Y="-115580" />
+		<node X="216032" Y="-115452" />
+	</zone>
+	<zone name="balakas_lava_38" type="EffectZone" shape="NPoly" minZ="-1444" maxZ="-1244"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="216040" Y="-117792" />
+		<node X="216088" Y="-117536" />
+		<node X="215972" Y="-117352" />
+		<node X="215812" Y="-117256" />
+		<node X="215600" Y="-117324" />
+		<node X="215692" Y="-117736" />
+	</zone>
+	<zone name="balakas_lava_39" type="EffectZone" shape="NPoly" minZ="-1448" maxZ="-1248"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="214896" Y="-117908" />
+		<node X="215156" Y="-118020" />
+		<node X="215396" Y="-117668" />
+		<node X="215204" Y="-117084" />
+		<node X="214744" Y="-117508" />
+	</zone>
+	<zone name="balakas_lava_40" type="EffectZone" shape="NPoly" minZ="-1516" maxZ="-1316"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="214468" Y="-118700" />
+		<node X="214748" Y="-118780" />
+		<node X="214484" Y="-117908" />
+		<node X="214188" Y="-118000" />
+	</zone>
+	<zone name="balakas_lava_41" type="EffectZone" shape="NPoly" minZ="-1508" maxZ="-1308"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="213396" Y="-118452" />
+		<node X="213652" Y="-118588" />
+		<node X="213832" Y="-118492" />
+		<node X="213776" Y="-118092" />
+		<node X="213312" Y="-118056" />
+	</zone>
+	<zone name="balakas_lava_42" type="EffectZone" shape="NPoly" minZ="-1480" maxZ="-1280"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="212684" Y="-118456" />
+		<node X="213148" Y="-118436" />
+		<node X="213168" Y="-118308" />
+		<node X="213008" Y="-118204" />
+		<node X="212668" Y="-118300" />
+	</zone>
+	<zone name="balakas_lava_43" type="EffectZone" shape="NPoly" minZ="-1500" maxZ="-1300"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="212156" Y="-118020" />
+		<node X="212424" Y="-118208" />
+		<node X="213256" Y="-118080" />
+		<node X="211416" Y="-117244" />
+		<node X="211676" Y="-118104" />
+		<node X="211880" Y="-118132" />
+	</zone>
+	<zone name="balakas_lava_44" type="EffectZone" shape="NPoly" minZ="-1576" maxZ="-1376"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="210792" Y="-117952" />
+		<node X="211464" Y="-117376" />
+		<node X="210832" Y="-116852" />
+		<node X="210296" Y="-117456" />
+	</zone>
+	<zone name="balakas_lava_45" type="EffectZone" shape="NPoly" minZ="-1556" maxZ="-1356"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="209932" Y="-116124" />
+		<node X="210112" Y="-116340" />
+		<node X="210756" Y="-116432" />
+		<node X="210080" Y="-115704" />
+	</zone>
+	<zone name="balakas_lava_46" type="EffectZone" shape="NPoly" minZ="-1508" maxZ="-1308"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="209604" Y="-115832" />
+		<node X="209676" Y="-115672" />
+		<node X="209480" Y="-115472" />
+		<node X="209064" Y="-115396" />
+		<node X="209064" Y="-116060" />
+	</zone>
+	<zone name="balakas_lava_47" type="EffectZone" shape="NPoly" minZ="-1544" maxZ="-1344"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="209596" Y="-114804" />
+		<node X="209880" Y="-114812" />
+		<node X="209852" Y="-114156" />
+		<node X="209528" Y="-114576" />
+	</zone>
+	<zone name="balakas_lava_48" type="EffectZone" shape="NPoly" minZ="-1656" maxZ="-1456"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="209452" Y="-113908" />
+		<node X="209720" Y="-114032" />
+		<node X="209648" Y="-113588" />
+		<node X="209452" Y="-113708" />
+	</zone>
+	<zone name="balakas_lava_49" type="EffectZone" shape="NPoly" minZ="-1608" maxZ="-1408"> <!-- [26_14] -->
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="211652" Y="-111708" />
+		<node X="212000" Y="-111640" />
+		<node X="211652" Y="-110812" />
+		<node X="211420" Y="-110828" />
+	</zone>
+	<!-- Valakas Nest Critical Lava -->
+	<zone name="godard11_2614_area_01" type="EffectZone" shape="NPoly" minZ="-1426" maxZ="-1226">
+		<stat name="skillIdLvl" val="5596-1;" /> <!-- s_area_critical_fire1 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="209812" Y="-111845" />
+		<node X="210096" Y="-112047" />
+		<node X="210461" Y="-111499" />
+		<node X="210031" Y="-111287" />
+	</zone>
+	<zone name="godard11_2614_area_02" type="EffectZone" shape="NPoly" minZ="-1236" maxZ="-1036">
+		<stat name="skillIdLvl" val="5596-1;" /> <!-- s_area_critical_fire1 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="209392" Y="-111958" />
+		<node X="209726" Y="-112241" />
+		<node X="210070" Y="-111714" />
+		<node X="209779" Y="-111464" />
+	</zone>
+	<zone name="godard11_2614_area_03" type="EffectZone" shape="NPoly" minZ="-1519" maxZ="-1319">
+		<stat name="skillIdLvl" val="5596-1;" /> <!-- s_area_critical_fire1 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="209284" Y="-116186" />
+		<node X="209691" Y="-116033" />
+		<node X="209370" Y="-115300" />
+		<node X="208910" Y="-115598" />
+	</zone>
+	<zone name="godard11_2614_area_04" type="EffectZone" shape="NPoly" minZ="-1220" maxZ="-1020">
+		<stat name="skillIdLvl" val="5596-1;" /> <!-- s_area_critical_fire1 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="9" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="6000" /> <!-- Guess -->
+		<node X="209088" Y="-116419" />
+		<node X="209511" Y="-116247" />
+		<node X="209405" Y="-115798" />
+		<node X="209059" Y="-115803" />
+	</zone>
+	<!-- Effect zones for Tower of Naia -->
+	<!-- Poison Zone for Naia's door -->
+	<zone name="18_25_core_naia" id="200100" type="EffectZone" shape="NPoly" minZ="-14240" maxZ="-13340">
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="false" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="5000" />
+		<stat name="skillIdLvl" val="4148-12;" /> <!-- s_area_poison12 -->
+		<node X="-46980" Y="245979" />
+		<node X="-43925" Y="245982" />
+		<node X="-43925" Y="248990" />
+		<node X="-46986" Y="248990" />
+	</zone>
+	<zone name="18_25_naia_pillar_green" id="200101" type="EffectZone" shape="NPoly" minZ="-12440" maxZ="-12240">
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="false" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="10000" />
+		<stat name="skillIdLvl" val="4625-8;" /> <!-- s_area_slow8 -->
+		<node X="-45029" Y="247050" />
+		<node X="-45009" Y="247046" />
+		<node X="-45008" Y="247062" />
+		<node X="-45026" Y="247065" />
+	</zone>
+	<zone name="18_25_naia_pillar_red" id="200102" type="EffectZone" shape="NPoly" minZ="-12440" maxZ="-12240">
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="true" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="10000" />
+		<stat name="skillIdLvl" val="4625-8;" /> <!-- s_area_slow8 -->
+		<node X="-45029" Y="247050" />
+		<node X="-45009" Y="247046" />
+		<node X="-45008" Y="247062" />
+		<node X="-45026" Y="247065" />
+	</zone>
+	<!-- Hellbound Anomic Foundry Lava -->
+	<zone name="20_25_factory_lava01" type="EffectZone" shape="NPoly" minZ="-2916" maxZ="-2266">
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="25385" Y="248647" />
+		<node X="25560" Y="248478" />
+		<node X="26089" Y="248776" />
+		<node X="26626" Y="248852" />
+		<node X="26720" Y="249103" />
+		<node X="26634" Y="249333" />
+		<node X="25960" Y="249587" />
+		<node X="25637" Y="249450" />
+	</zone>
+	<zone name="20_25_factory_lava02" type="EffectZone" shape="NPoly" minZ="-2004" maxZ="-1704">
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="24695" Y="249093" />
+		<node X="26502" Y="252842" />
+		<node X="25614" Y="253321" />
+		<node X="23873" Y="252774" />
+		<node X="23275" Y="252071" />
+		<node X="23112" Y="251737" />
+		<node X="23227" Y="250934" />
+		<node X="23533" Y="249958" />
+	</zone>
+	<zone name="20_25_factory_lava03" type="EffectZone" shape="NPoly" minZ="-3220" maxZ="-3120">
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="27681" Y="248719" />
+		<node X="27733" Y="248777" />
+		<node X="27685" Y="248814" />
+		<node X="27638" Y="248758" />
+	</zone>
+	<zone name="20_25_factory_lava04" type="EffectZone" shape="NPoly" minZ="-3212" maxZ="-3112">
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="25946" Y="246597" />
+		<node X="25995" Y="246650" />
+		<node X="25953" Y="246689" />
+		<node X="25907" Y="246642" />
+	</zone>
+	<zone name="20_25_factory_lava05" type="EffectZone" shape="NPoly" minZ="-3704" maxZ="-3604">
+		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
+		<stat name="chance" val="50" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="27167" Y="246294" />
+		<node X="27201" Y="246351" />
+		<node X="27153" Y="246383" />
+		<node X="27116" Y="246329" />
+	</zone>
+	<zone name="area_dehydration_var" type="EffectZone" shape="NPoly" minZ="-5980" maxZ="1020"> <!-- [20_25] -->
+		<stat name="skillIdLvl" val="5399-1;" /> <!-- s_area_hot_ground1 -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="10" / -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="243" Y="231758" />
+		<node X="13742" Y="233542" />
+		<node X="13620" Y="242495" />
+		<node X="131" Y="242444" />
+	</zone>
+	<!-- Stakato Nest Buff -->
+	<zone name="22_16_stakato_mob_buff" id="200103" type="EffectZone" shape="NPoly" minZ="-6368" maxZ="-3296">
+		<stat name="skillIdLvl" val="6170-1;" /> <!-- s_area_stakato_nest_fury -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="90" / -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<stat name="showDangerIcon" val="false" /> <!-- Guess -->
+		<node X="73945" Y="-57263" />
+		<node X="90046" Y="-57259" />
+		<node X="89999" Y="-41698" />
+		<node X="73982" Y="-41655" />
+	</zone>
+	<zone name="22_16_stakato_mob_buff_display" id="200104" type="EffectZone" shape="NPoly" minZ="-6368" maxZ="-3296">
+		<stat name="skillIdLvl" val="6169-1;" /> <!-- s_area_stakato_nest_fury_for_pc -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="90" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<stat name="showDangerIcon" val="false" /> <!-- Guess -->
+		<node X="73945" Y="-57263" />
+		<node X="90046" Y="-57259" />
+		<node X="89999" Y="-41698" />
+		<node X="73982" Y="-41655" />
+	</zone>
+	<zone name="22_16_stakato_pc_buff" id="200105" type="EffectZone" shape="NPoly" minZ="-6368" maxZ="-3296">
+		<stat name="skillIdLvl" val="6171-1;" /> <!-- s_area_stakato_nest_replete_power -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="90" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<stat name="showDangerIcon" val="false" /> <!-- Guess -->
+		<node X="73945" Y="-57263" />
+		<node X="90046" Y="-57259" />
+		<node X="89999" Y="-41698" />
+		<node X="73982" Y="-41655" />
+	</zone>
+	<!-- Primeval Isle - Lost Nest (Recharge Buff) -->
+	<zone name="20_17_ancient_tree_1" type="EffectZone" shape="NPoly" minZ="-3160" maxZ="-2660">
+		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="20481" Y="-17577" />
+		<node X="21868" Y="-17768" />
+		<node X="22728" Y="-16287" />
+		<node X="21422" Y="-15075" />
+		<node X="20282" Y="-15490" />
+		<node X="19965" Y="-16508" />
+	</zone>
+	<zone name="20_17_ancient_tree_2" type="EffectZone" shape="NPoly" minZ="-3296" maxZ="-2596">
+		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="16927" Y="-20305" />
+		<node X="18216" Y="-19597" />
+		<node X="18131" Y="-18320" />
+		<node X="17290" Y="-17980" />
+		<node X="16457" Y="-18612" />
+		<node X="16310" Y="-19917" />
+	</zone>
+	<zone name="20_17_ancient_tree_3" type="EffectZone" shape="NPoly" minZ="-3320" maxZ="-2620">
+		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="14312" Y="-17248" />
+		<node X="15048" Y="-16780" />
+		<node X="15348" Y="-16056" />
+		<node X="15140" Y="-15352" />
+		<node X="14212" Y="-15048" />
+		<node X="13584" Y="-15512" />
+	</zone>
+	<zone name="20_17_ancient_tree_4" type="EffectZone" shape="NPoly" minZ="-2992" maxZ="-2292">
+		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="18804" Y="-10888" />
+		<node X="19520" Y="-10108" />
+		<node X="18924" Y="-9308" />
+		<node X="17628" Y="-9444" />
+		<node X="17480" Y="-10268" />
+		<node X="18000" Y="-10884" />
+	</zone>
+	<zone name="20_17_ancient_tree_5" type="EffectZone" shape="NPoly" minZ="-3084" maxZ="-2384">
+		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="20096" Y="-13772" />
+		<node X="20812" Y="-12992" />
+		<node X="20216" Y="-12192" />
+		<node X="18920" Y="-12328" />
+		<node X="18772" Y="-13152" />
+		<node X="19292" Y="-13768" />
+	</zone>
+	<zone name="20_17_ancient_tree_6" type="EffectZone" shape="NPoly" minZ="-2616" maxZ="-1916">
+		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="24012" Y="-13092" />
+		<node X="24476" Y="-12324" />
+		<node X="24132" Y="-11512" />
+		<node X="22836" Y="-11648" />
+		<node X="22688" Y="-12472" />
+		<node X="23208" Y="-13088" />
+	</zone>
+	<zone name="20_17_ancient_tree_7" type="EffectZone" shape="NPoly" minZ="-2888" maxZ="-2188">
+		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="23608" Y="-19512" />
+		<node X="23736" Y="-18792" />
+		<node X="23236" Y="-18164" />
+		<node X="22700" Y="-18300" />
+		<node X="22552" Y="-19124" />
+		<node X="23072" Y="-19740" />
+	</zone>
+	<zone name="20_17_ancient_tree_8" type="EffectZone" shape="NPoly" minZ="-2856" maxZ="-2156">
+		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="27128" Y="-15708" />
+		<node X="27592" Y="-14940" />
+		<node X="27248" Y="-14128" />
+		<node X="25952" Y="-14264" />
+		<node X="25804" Y="-15088" />
+		<node X="26324" Y="-15704" />
+	</zone>
+	<zone name="19_25_hellbound_oasis" type="EffectZone" shape="NPoly" minZ="-3658" maxZ="-3258">
+		<stat name="skillIdLvl" val="16130-1;" /> <!-- Oasis Energy -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="-15152" Y="254031" />
+		<node X="-15083" Y="253576" />
+		<node X="-14940" Y="253209" />
+		<node X="-14674" Y="252617" />
+		<node X="-14618" Y="252384" />
+		<node X="-14714" Y="252136" />
+		<node X="-14871" Y="251823" />
+		<node X="-15095" Y="251604" />
+		<node X="-15577" Y="251211" />
+		<node X="-16021" Y="250571" />
+		<node X="-15727" Y="250232" />
+		<node X="-15967" Y="249977" />
+		<node X="-15760" Y="249973" />
+		<node X="-15645" Y="250050" />
+		<node X="-15387" Y="250186" />
+		<node X="-15204" Y="250112" />
+		<node X="-15152" Y="250169" />
+		<node X="-15099" Y="250359" />
+		<node X="-14787" Y="250323" />
+		<node X="-14775" Y="250342" />
+		<node X="-14925" Y="250461" />
+		<node X="-14805" Y="250674" />
+		<node X="-14577" Y="251052" />
+		<node X="-14226" Y="251114" />
+		<node X="-14027" Y="251075" />
+		<node X="-13855" Y="251212" />
+		<node X="-13579" Y="251535" />
+		<node X="-13422" Y="251790" />
+		<node X="-13494" Y="252025" />
+		<node X="-13854" Y="252527" />
+		<node X="-13880" Y="252892" />
+		<node X="-13729" Y="253180" />
+		<node X="-13486" Y="253415" />
+		<node X="-13355" Y="253390" />
+		<node X="-13377" Y="253210" />
+		<node X="-13296" Y="253126" />
+		<node X="-13107" Y="253106" />
+		<node X="-12921" Y="252991" />
+		<node X="-12874" Y="252790" />
+		<node X="-12885" Y="252507" />
+		<node X="-12985" Y="252142" />
+		<node X="-12839" Y="251938" />
+		<node X="-12581" Y="251554" />
+		<node X="-12419" Y="251366" />
+		<node X="-12099" Y="251595" />
+		<node X="-12012" Y="251927" />
+		<node X="-12029" Y="252274" />
+		<node X="-12363" Y="252647" />
+		<node X="-12515" Y="252990" />
+		<node X="-12548" Y="253238" />
+		<node X="-12541" Y="253481" />
+		<node X="-12670" Y="253700" />
+		<node X="-12749" Y="253846" />
+		<node X="-13011" Y="254157" />
+		<node X="-13452" Y="254422" />
+		<node X="-14188" Y="254493" />
+		<node X="-14650" Y="254393" />
+	</zone>
+</list>

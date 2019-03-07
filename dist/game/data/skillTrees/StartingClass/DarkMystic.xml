@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="38">
+		<skill skillName="Spellcraft" skillId="163" skillLvl="1" getLevel="1" autoGet="true" />
+		<skill skillName="Magician's Movement" skillId="118" skillLvl="1" getLevel="1" autoGet="true" />
+		<skill skillName="Mana Recovery" skillId="214" skillLvl="1" getLevel="1" autoGet="true" />
+		<skill skillName="Wind Strike" skillId="1177" skillLvl="1" getLevel="1" autoGet="true" />
+		<skill skillName="Self Heal" skillId="1216" skillLvl="1" getLevel="1" autoGet="true" />
+
+		<skill skillName="Heal" skillId="1011" skillLvl="1" getLevel="5" levelUpSp="20" />
+		<skill skillName="Heal" skillId="1011" skillLvl="2" getLevel="5" levelUpSp="20" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="1" getLevel="7" levelUpSp="25" />
+		<skill skillName="Armor Mastery" skillId="244" skillLvl="1" getLevel="7" levelUpSp="25" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="1" getLevel="7" levelUpSp="25" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="2" getLevel="7" levelUpSp="25" />
+		<skill skillName="Wind Strike" skillId="1177" skillLvl="2" getLevel="7" levelUpSp="25" />
+		<skill skillName="Wind Strike" skillId="1177" skillLvl="3" getLevel="7" levelUpSp="25" />
+		<skill skillName="Ice Bolt" skillId="1184" skillLvl="1" getLevel="7" levelUpSp="25" />
+		<skill skillName="Ice Bolt" skillId="1184" skillLvl="2" getLevel="7" levelUpSp="25" />
+		<skill skillName="Heal" skillId="1011" skillLvl="3" getLevel="7" levelUpSp="25" />
+		<skill skillName="Might" skillId="1068" skillLvl="1" getLevel="7" levelUpSp="25" />
+		<skill skillName="Shield" skillId="1040" skillLvl="1" getLevel="7" levelUpSp="25" />
+		<skill skillName="Cure Poison" skillId="1012" skillLvl="1" getLevel="7" levelUpSp="25" />
+		<skill skillName="Curse Poison" skillId="1168" skillLvl="1" getLevel="7" levelUpSp="25" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="2" getLevel="14" levelUpSp="190" />
+		<skill skillName="Armor Mastery" skillId="244" skillLvl="2" getLevel="14" levelUpSp="190" />
+		<skill skillName="Armor Mastery" skillId="244" skillLvl="3" getLevel="14" levelUpSp="190" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="3" getLevel="14" levelUpSp="190" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="4" getLevel="14" levelUpSp="190" />
+		<skill skillName="Children of Shilen" skillId="964" skillLvl="1" getLevel="14" levelUpSp="190" />
+		<skill skillName="Wind Strike" skillId="1177" skillLvl="4" getLevel="14" levelUpSp="190" />
+		<skill skillName="Wind Strike" skillId="1177" skillLvl="5" getLevel="14" levelUpSp="190" />
+		<skill skillName="Ice Bolt" skillId="1184" skillLvl="3" getLevel="14" levelUpSp="190" />
+		<skill skillName="Ice Bolt" skillId="1184" skillLvl="4" getLevel="14" levelUpSp="190" />
+		<skill skillName="Heal" skillId="1011" skillLvl="4" getLevel="14" levelUpSp="190" />
+		<skill skillName="Heal" skillId="1011" skillLvl="5" getLevel="14" levelUpSp="190" />
+		<skill skillName="Heal" skillId="1011" skillLvl="6" getLevel="14" levelUpSp="190" />
+		<skill skillName="Vampiric Touch" skillId="1147" skillLvl="1" getLevel="14" levelUpSp="190" />
+		<skill skillName="Vampiric Touch" skillId="1147" skillLvl="2" getLevel="14" levelUpSp="190" />
+		<skill skillName="Battle Heal" skillId="1015" skillLvl="1" getLevel="14" levelUpSp="190" />
+		<skill skillName="Battle Heal" skillId="1015" skillLvl="2" getLevel="14" levelUpSp="190" />
+		<skill skillName="Battle Heal" skillId="1015" skillLvl="3" getLevel="14" levelUpSp="190" />
+		<skill skillName="Group Heal" skillId="1027" skillLvl="1" getLevel="14" levelUpSp="190" />
+		<skill skillName="Group Heal" skillId="1027" skillLvl="2" getLevel="14" levelUpSp="190" />
+		<skill skillName="Group Heal" skillId="1027" skillLvl="3" getLevel="14" levelUpSp="190" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="1" getLevel="14" levelUpSp="190" />
+	</skillTree>
+</list>

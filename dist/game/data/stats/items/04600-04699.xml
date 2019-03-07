@@ -1,0 +1,1695 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="4600" name="Greater Dye of WIT (Wit + 2 Men - 2)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_wit_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="60000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4601" name="Greater Dye of STR (STR + 3 CON - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_str_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="90000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4602" name="Greater Dye of STR (STR + 3 DEX - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_str_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="90000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4603" name="Greater Dye of CON (Con + 3 Str - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_con_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="90000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4604" name="Greater Dye of CON (Con + 3 DEX - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_con_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="90000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
+	</item>
+	<item id="4605" name="Greater Dye of DEX (Dex + 3 Str - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="90000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4606" name="Greater Dye of DEX (Dex + 3 CON - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="90000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4607" name="Greater Dye of INT (Int + 3 Men - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_int_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="90000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4608" name="Greater Dye of INT (Int + 3 Wit - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_int_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="90000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4609" name="Greater Dye of MEN (Men + 3 Int - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_men_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="90000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4610" name="Greater Dye of MEN (Men + 3 Wit - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_men_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="90000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4611" name="Greater Dye of WIT (Wit + 3 Int - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_wit_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="90000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4612" name="Greater Dye of WIT (Wit + 3 Men - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_wit_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="90000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
+	</item>
+	<item id="4613" name="Greater Dye of STR (STR + 4 CON - 4)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_str_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="145000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4614" name="Greater Dye of STR (STR + 4 DEX - 4)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_str_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="145000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4615" name="Greater Dye of CON (Con + 4 Str - 4)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_con_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="145000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4616" name="Greater Dye of CON (Con + 4 DEX - 4)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_con_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="145000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4617" name="Greater Dye of DEX (Dex + 4 Str - 4)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="145000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4618" name="Greater Dye of DEX (Dex + 4 CON - 4)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="145000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4619" name="Greater Dye of INT (Int + 4 Men - 4)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_int_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="145000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4620" name="Greater Dye of INT (Int + 4 Wit - 4)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_int_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="145000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4621" name="Greater Dye of MEN (Men + 4 Int - 4)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_men_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="145000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4622" name="Greater Dye of MEN (Men + 4 Wit - 4)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_men_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="145000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
+	</item>
+	<item id="4623" name="Greater Dye of WIT (Wit + 4 Int - 4)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_wit_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="145000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4624" name="Greater Dye of WIT (Wit + 4 Men - 4)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_wit_hena_i02" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="145000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4625" name="Dice (Heart)" type="EtcItem">
+		<!-- Simple game of chance! Roll 'em! Cannot be dropped. -->
+		<set name="icon" val="icon.etc_dice_a_i00" />
+		<set name="default_action" val="DICE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="500" />
+		<set name="reuse_delay" val="5000" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="RollingDice" />
+	</item>
+	<item id="4626" name="Dice (Spade)" type="EtcItem">
+		<!-- Simple game of chance! Roll 'em! Cannot be dropped. -->
+		<set name="icon" val="icon.etc_dice_b_i00" />
+		<set name="default_action" val="DICE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="500" />
+		<set name="reuse_delay" val="5000" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="RollingDice" />
+	</item>
+	<item id="4627" name="Dice (Clover)" type="EtcItem">
+		<!-- Simple game of chance! Roll 'em! Cannot be dropped. -->
+		<set name="icon" val="icon.etc_dice_c_i00" />
+		<set name="default_action" val="DICE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="500" />
+		<set name="reuse_delay" val="5000" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="RollingDice" />
+	</item>
+	<item id="4628" name="Dice (Diamond)" type="EtcItem">
+		<!-- Simple game of chance! Roll 'em! Cannot be dropped. -->
+		<set name="icon" val="icon.etc_dice_d_i00" />
+		<set name="default_action" val="DICE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="500" />
+		<set name="reuse_delay" val="5000" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="RollingDice" />
+	</item>
+	<item id="4630" name="Red Soul Crystal - Stage 1" type="EtcItem">
+		<!-- Red crystal containing the light of absorbed souls. stage 1. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4631" name="Red Soul Crystal - Stage 2" type="EtcItem">
+		<!-- Red crystal containing the light of absorbed souls. stage 2. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4632" name="Red Soul Crystal - Stage 3" type="EtcItem">
+		<!-- Red crystal containing the light of absorbed souls. stage 3. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4633" name="Red Soul Crystal - Stage 4" type="EtcItem">
+		<!-- Red crystal containing the light of absorbed souls. stage 4. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4634" name="Red Soul Crystal - Stage 5" type="EtcItem">
+		<!-- Red crystal containing the light of absorbed souls. stage 5. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4635" name="Red Soul Crystal - Stage 6" type="EtcItem">
+		<!-- Red crystal containing the light of absorbed souls. stage 6. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4636" name="Red Soul Crystal - Stage 7" type="EtcItem">
+		<!-- Red crystal containing the light of absorbed souls. stage 7. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4637" name="Red Soul Crystal - Stage 8" type="EtcItem">
+		<!-- Red crystal containing the light of absorbed souls. stage 8. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4638" name="Red Soul Crystal - Stage 9" type="EtcItem">
+		<!-- Red crystal containing the light of absorbed souls. stage 9. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4639" name="Red Soul Crystal - Stage 10" type="EtcItem">
+		<!-- Red crystal containing the light of absorbed souls. stage 10. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4641" name="Green Soul Crystal - Stage 1" type="EtcItem">
+		<!-- Green crystal containing the light of absorbed souls. stage 1. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4642" name="Green Soul Crystal - Stage 2" type="EtcItem">
+		<!-- Green crystal containing the light of absorbed souls. stage 2. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4643" name="Green Soul Crystal - Stage 3" type="EtcItem">
+		<!-- Green crystal containing the light of absorbed souls. stage 3. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4644" name="Green Soul Crystal - Stage 4" type="EtcItem">
+		<!-- Green crystal containing the light of absorbed souls. stage 4. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4645" name="Green Soul Crystal - Stage 5" type="EtcItem">
+		<!-- Green crystal containing the light of absorbed souls. stage 5. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4646" name="Green Soul Crystal - Stage 6" type="EtcItem">
+		<!-- Green crystal containing the light of absorbed souls. stage 6. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4647" name="Green Soul Crystal - Stage 7" type="EtcItem">
+		<!-- Green crystal containing the light of absorbed souls. stage 7. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4648" name="Green Soul Crystal - Stage 8" type="EtcItem">
+		<!-- Green crystal containing the light of absorbed souls. stage 8. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4649" name="Green Soul Crystal - Stage 9" type="EtcItem">
+		<!-- Green crystal containing the light of absorbed souls. stage 9. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4650" name="Green Soul Crystal - Stage 10" type="EtcItem">
+		<!-- Green crystal containing the light of absorbed souls. stage 10. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4652" name="Blue Soul Crystal - Stage 1" type="EtcItem">
+		<!-- Blue crystal containing the light of absorbed souls. stage 1. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4653" name="Blue Soul Crystal - Stage 2" type="EtcItem">
+		<!-- Blue crystal containing the light of absorbed souls. stage 2. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4654" name="Blue Soul Crystal - Stage 3" type="EtcItem">
+		<!-- Blue crystal containing the light of absorbed souls. stage 3. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4655" name="Blue Soul Crystal - Stage 4" type="EtcItem">
+		<!-- Blue crystal containing the light of absorbed souls. stage 4. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4656" name="Blue Soul Crystal - Stage 5" type="EtcItem">
+		<!-- Blue crystal containing the light of absorbed souls. stage 5. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4657" name="Blue Soul Crystal - Stage 6" type="EtcItem">
+		<!-- Blue crystal containing the light of absorbed souls. stage 6. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4658" name="Blue Soul Crystal - Stage 7" type="EtcItem">
+		<!-- Blue crystal containing the light of absorbed souls. stage 7. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4659" name="Blue Soul Crystal - Stage 8" type="EtcItem">
+		<!-- Blue crystal containing the light of absorbed souls. stage 8. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4660" name="Blue Soul Crystal - Stage 9" type="EtcItem">
+		<!-- Blue crystal containing the light of absorbed souls. stage 9. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4661" name="Blue Soul Crystal - Stage 10" type="EtcItem">
+		<!-- Blue crystal containing the light of absorbed souls. stage 10. Once saturated, it bestows special abilities to a weapon. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="4662" name="Broken Red Soul Crystal" type="EtcItem">
+		<!-- Red-colored crystal that absorbs souls. Internal imbalance between absorbed souls has rendered it useless. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="4663" name="Broken Green Soul Crystal" type="EtcItem">
+		<!-- Green-colored crystal that absorbs souls. Internal imbalance between absorbed souls has rendered it useless. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="4664" name="Broken Blue Soul Crystal" type="EtcItem">
+		<!-- Blue-colored crystal that absorbs souls. Internal imbalance between absorbed souls has rendered it useless. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="4665" name="Pipette Knife" type="Weapon">
+		<!-- Instrument used to collect the blood of living creatures. Use it to cut Baium and obtain a blood sample. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_depositable" val="false" />
+		<stats>
+			<stat type="pAtk">10</stat>
+			<stat type="mAtk">9</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4666" name="Reiria's Soul Orb" type="EtcItem">
+		<!-- Sphere containing Reiria's Soul. Take it to Maestro Reorin. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4667" name="Kernon's Infernium Scepter" type="EtcItem">
+		<!-- Scepter made of infernium that was recovered from the demon Kernon. Take it to Maestro Reorin. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4668" name="Golkonda's Infernium Scepter" type="EtcItem">
+		<!-- Scepter made of infernium that was recovered from Golkonda, the Longhorn General. Take it to Maestro Reorin. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4669" name="Hallate's Infernium Scepter" type="EtcItem">
+		<!-- Scepter made of infernium that was recovered from the Death Lord Hallate. Take it to Maestro Reorin. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4670" name="Maestro Reorin's Hammer" type="EtcItem">
+		<!-- Hammer used by a blacksmith. It is made by processing an adamantite nugget of high purity. Take it to Maestro Reorin. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4671" name="Maestro Reorin's Mold" type="EtcItem">
+		<!-- Mold used by Dwarven Artisans to manufacture top grade equipment. Take it to Maestro Reorin. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4672" name="Infernium Varnish" type="EtcItem">
+		<!-- Varnish used when manufacturing an infernium weapon. Take it to Maestro Reorin. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4673" name="Red Pipette Knife" type="EtcItem">
+		<!-- Pipette knife that holds Baium's blood. Bring it to Magister Casper at Hardin's Academy. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4674" name="Medal of Glory" type="EtcItem">
+		<set name="icon" val="icon.etc_magic_coin_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4675" name="Medal of Friendship" type="EtcItem">
+		<set name="icon" val="icon.etc_magic_coin_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4676" name="Medal of Victory" type="EtcItem">
+		<set name="icon" val="icon.etc_magic_coin_blood_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4677" name="Potion of Critical Escape" type="EtcItem">
+		<!-- Misdirects enemy attack, inhibits Speed of user. -->
+		<set name="icon" val="icon.etc_potion_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="120" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="for_npc" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2074" level="1" /> <!-- Potion of Critical Escape -->
+		</skills>
+	</item>
+	<item id="4678" name="Scroll: Decrease Hate" type="EtcItem">
+		<!-- Decreases one's level of Aggression. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="180" />
+		<set name="price" val="5000" />
+		<set name="reuse_delay" val="10000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="for_npc" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2075" level="1" /> <!-- Scroll: Decrease Hate -->
+		</skills>
+	</item>
+	<item id="4679" name="Eva's Blessing" type="EtcItem">
+		<!-- Allows one to breathe under water for extended periods. -->
+		<set name="icon" val="icon.etc_bless_of_eva_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="180" />
+		<set name="price" val="500" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="for_npc" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2076" level="1" /> <!-- Eva's Blessing -->
+		</skills>
+	</item>
+	<item id="4680" name="Potion of Critical Escape" type="EtcItem">
+		<!-- Reduces P. Def. and reflects damage back upon enemy. -->
+		<set name="icon" val="icon.etc_potion_blue_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="180" />
+		<set name="price" val="150" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="for_npc" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2077" level="1" /> <!-- Potion of Revenge -->
+		</skills>
+	</item>
+	<item id="4681" name="StormBringer" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
+		<set name="icon" val="icon.weapon_stormbringer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="916" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1430" />
+		<set name="price" val="2290000" />
+		<set name="change_weaponId" val="9229" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3026" level="1" /> <!-- Special Ability: Critical Anger -->
+			<skill id="3025" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Anger -->
+		</skills>
+		<stats>
+			<stat type="pAtk">107</stat>
+			<stat type="mAtk">61</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4682" name="StormBringer" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+		<set name="icon" val="icon.weapon_stormbringer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="916" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1430" />
+		<set name="price" val="2290000" />
+		<set name="change_weaponId" val="9230" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3010" level="1" /> <!-- Special Ability: Focus -->
+		</skills>
+		<stats>
+			<stat type="pAtk">107</stat>
+			<stat type="mAtk">61</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4683" name="StormBringer" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 157 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_stormbringer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="916" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1430" />
+		<set name="price" val="2290000" />
+		<set name="change_weaponId" val="9231" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3498" level="1" /> <!-- Special Ability: Light -->
+		</skills>
+		<stats>
+			<stat type="pAtk">107</stat>
+			<stat type="mAtk">61</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4684" name="Shamshir" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 68. -->
+		<set name="icon" val="icon.weapon_shamshir_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1420" />
+		<set name="price" val="2870000" />
+		<set name="change_weaponId" val="9241" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3007" level="2" /> <!-- Special Ability: Guidance -->
+		</skills>
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4685" name="Shamshir" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+		<set name="icon" val="icon.weapon_shamshir_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1420" />
+		<set name="price" val="2870000" />
+		<set name="change_weaponId" val="9242" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3018" level="2" /> <!-- Special Ability: Back Blow -->
+		</skills>
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4686" name="Shamshir" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 174 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_shamshir_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1420" />
+		<set name="price" val="2870000" />
+		<set name="change_weaponId" val="9243" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3028" level="2" /> <!-- Special Ability: Rsk. Evasion -->
+		</skills>
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4687" name="Katana" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 68. -->
+		<set name="icon" val="icon.weapon_katana_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1420" />
+		<set name="price" val="2870000" />
+		<set name="change_weaponId" val="9245" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3010" level="2" /> <!-- Special Ability: Focus -->
+		</skills>
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4688" name="Katana" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+		<set name="icon" val="icon.weapon_katana_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1420" />
+		<set name="price" val="2870000" />
+		<set name="change_weaponId" val="9246" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3023" level="2" /> <!-- Special Ability: Critical Damage -->
+		</skills>
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4689" name="Katana" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 174 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_katana_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1420" />
+		<set name="price" val="2870000" />
+		<set name="change_weaponId" val="9247" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3036" level="2" /> <!-- Special Ability: Haste -->
+		</skills>
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4690" name="Spirit Sword" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 68. -->
+		<set name="icon" val="icon.weapon_spirits_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1420" />
+		<set name="price" val="2870000" />
+		<set name="change_weaponId" val="9249" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3023" level="2" /> <!-- Special Ability: Critical Damage -->
+		</skills>
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4691" name="Spirit Sword" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+		<set name="icon" val="icon.weapon_spirits_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1420" />
+		<set name="price" val="2870000" />
+		<set name="change_weaponId" val="9250" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3024" level="2" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Poison -->
+		</skills>
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4692" name="Spirit Sword" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 174 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_spirits_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1420" />
+		<set name="price" val="2870000" />
+		<set name="change_weaponId" val="9251" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3036" level="2" /> <!-- Special Ability: Haste -->
+		</skills>
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4693" name="Raid Sword" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 68. -->
+		<set name="icon" val="icon.weapon_raid_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1420" />
+		<set name="price" val="2870000" />
+		<set name="change_weaponId" val="9253" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3010" level="2" /> <!-- Special Ability: Focus -->
+		</skills>
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4694" name="Raid Sword" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+		<set name="icon" val="icon.weapon_raid_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1420" />
+		<set name="price" val="2870000" />
+		<set name="change_weaponId" val="9254" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3022" level="2" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Drain -->
+		</skills>
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4695" name="Raid Sword" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 174 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_raid_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1420" />
+		<set name="price" val="2870000" />
+		<set name="change_weaponId" val="9255" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3024" level="2" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Poison -->
+		</skills>
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4696" name="Caliburs" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
+		<set name="icon" val="icon.weapon_caliburs_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1400" />
+		<set name="price" val="4300000" />
+		<set name="change_weaponId" val="9265" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3007" level="3" /> <!-- Special Ability: Guidance -->
+		</skills>
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4697" name="Caliburs" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+		<set name="icon" val="icon.weapon_caliburs_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1400" />
+		<set name="price" val="4300000" />
+		<set name="change_weaponId" val="9266" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3010" level="3" /> <!-- Special Ability: Focus -->
+		</skills>
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4698" name="Caliburs" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 191 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_caliburs_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1400" />
+		<set name="price" val="4300000" />
+		<set name="change_weaponId" val="9267" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3023" level="3" /> <!-- Special Ability: Critical Damage -->
+		</skills>
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4699" name="Sword of Delusion" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
+		<set name="icon" val="icon.weapon_sword_of_delusion_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1400" />
+		<set name="price" val="4300000" />
+		<set name="change_weaponId" val="9269" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3010" level="3" /> <!-- Special Ability: Focus -->
+		</skills>
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+</list>

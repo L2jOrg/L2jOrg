@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30678</npc> <!-- Helton -->
+		<npc>30688</npc> <!-- Duning -->
+		<npc>31271</npc> <!-- Hilda -->
+		<npc>31583</npc> <!-- Feynn -->
+		<npc>30846</npc> <!-- Wilbert -->
+	</npcs>
+	<item>
+		<ingredient count="1" id="142" /> <!-- Keshanberk -->
+		<ingredient count="1" id="142" /> <!-- Keshanberk -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="350" id="1875" /> <!-- Stone of Purity -->
+		<ingredient count="150" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="5233" /> <!-- Keshanberk*Keshanberk -->
+	</item>
+</list>

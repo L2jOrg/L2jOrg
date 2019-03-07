@@ -1,0 +1,49 @@
+<html><title>Punishment Information Panel</title><body>
+<center>
+<table width=270>
+<tr>
+<td width=45><button value="Main" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Player: %player_name%</center></td>
+<td width=45><button value="Back" action="bypass -h admin_punishment" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+<br>
+<a action="bypass -h admin_punishment info %acc% ACCOUNT">Punishments for account: %acc%</a><br1>
+<a action="bypass -h admin_punishment info %char% CHARACTER">Punishments for character: %char%</a><br1>
+<a action="bypass -h admin_punishment info %ip% IP">Punishments for IP: %ip%</a><br1>
+<br>
+<table width=280 bgcolor="666666" cellspacing="0" cellpadding="6">
+	<tr>
+		<td>Punishment Type:</td>
+		<td><combobox width=120 height=17 var="punishmentType" list="%punishments%"></td>
+	</tr>
+	<tr>
+		<td>Time:</td>
+		<td><edit var="expiration" width="130" height="12" type="number"></td>
+	</tr>
+	<tr>
+		<td>Reason:</td>
+		<td><multiedit var="reason" width=130 height=32></td>
+	</tr>
+	<tr>
+		<td>Account:</td>
+		<td>%acc%</td>
+		<td><a action="bypass -h admin_punishment_add %acc% ACCOUNT $punishmentType $expiration $reason">Ban</a></td>
+	</tr>
+	<tr>
+		<td>Character:</td>
+		<td>%char%</td>
+		<td><a action="bypass -h admin_punishment_add %char% CHARACTER $punishmentType $expiration $reason">Ban</a></td>
+	</tr>
+	<tr>
+		<td>IP:</td>
+		<td>%ip%</td>
+		<td><a action="bypass -h admin_punishment_add %ip% IP $punishmentType $expiration $reason">Ban</a></td>
+	</tr>
+</table>
+</center>
+<br>
+<font color="LEVEL">For permanent ban use 0 as time.<br1>
+Also the time is in minutes.</font>
+</html>

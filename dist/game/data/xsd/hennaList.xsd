@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="henna" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="stats" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="str" type="xs:integer" />
+									<xs:attribute name="con" type="xs:integer" />
+									<xs:attribute name="dex" type="xs:integer" />
+									<xs:attribute name="int" type="xs:integer" />
+									<xs:attribute name="men" type="xs:integer" />
+									<xs:attribute name="wit" type="xs:integer" />
+									<xs:attribute name="luc" type="xs:integer" />
+									<xs:attribute name="cha" type="xs:integer" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="wear" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="fee" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="cancel" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="count" type="xs:integer" use="required" />
+									<xs:attribute name="fee" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="duration" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="time" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="skill" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute type="xs:positiveInteger" name="id" use="required"/>
+									<xs:attribute type="xs:positiveInteger" name="level" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="classId" minOccurs="0" maxOccurs="unbounded">
+								<xs:simpleType>
+									<xs:restriction base="xs:nonNegativeInteger">
+										<xs:minInclusive value="0" />
+										<xs:maxInclusive value="189" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="dyeId" type="xs:positiveInteger" />
+						<xs:attribute name="dyeName" type="xs:token" />
+						<xs:attribute name="dyeItemId" type="xs:positiveInteger" />
+						<xs:attribute name="dyeLevel" type="xs:positiveInteger" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

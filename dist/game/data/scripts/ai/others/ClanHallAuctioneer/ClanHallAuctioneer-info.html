@@ -1,0 +1,37 @@
+<html><body>
+<center>Clan Hall Information</center> <img src="L2UI.SquareWhite" width=270 height=1> <img src="L2UI.SquareBlank" width=1 height=3>
+<table width=270 border=0>
+<tr><td width=90><font color="a2a0a2">Clan Hall Name:</font></td><td width=180><font color="b09979">&%%id%;</font></td></tr>
+<tr><td><font color="a2a0a2">Owner:</font></td><td><font color="b09979">%owner%</font></td></tr>
+<tr><td><font color="a2a0a2">Clan Leader:</font></td><td><font color="b09979">%clanLeader%</font></td></tr>
+<tr><td><font color="a2a0a2">Clan Hall Size: </font></td><td><font color="b09979">%grade% square feet</font> (Grade)</td></tr>
+<tr><td><font color="a2a0a2">Clan Hall Rent: </font></td><td><font color="b09979">%rent%</font> Adena<font color="LEVEL">/week</font></td></tr>
+<tr><td><font color="a2a0a2">Clan Hall Location:</font></td><td>&*%id%;</td></tr>
+</table>
+<img src="L2UI.SquareGray" width=270 height=1><img src="L2UI.SquareBlank" width=1 height=3>
+<table width=270 border=0>
+<tr>
+	<td width=90><font color="a2a0a2">Auction ends: </font></td>
+	<td width=180><font color="b09979">%auctionEnd%</font></td>
+</tr>
+<tr>
+	<td><font color="a2a0a2">Time Remaining: </font></td>
+	<td><font color="b09979">%hours% hour(s) %minutes% minutes</font></td>
+</tr>
+<tr>
+	<td><font color="a2a0a2">Minimum Bid: </font></td>
+	<td><font color="b09979">%minBid%</font> Adena</td>
+</tr>
+<tr>
+	<td><font color="a2a0a2">Number of Bids: </font></td>
+	<td><font color="b09979">%bidNumber%</font></td>
+</tr>
+</table>
+<table width=270 border=0 bgcolor=333333>
+	<tr><td width=270></td></tr>
+</table>
+<img src="L2UI.SquareBlank" width=270 height=10><img src="L2UI.SquareWhite" width=270 height=1><img src="L2UI.SquareBlank" width=270 height=5>
+<table width=270 border=0>
+<tr><td width=30></td> <td width=80 align=center><button action="bypass -h Quest ClanHallAuctioneer auctionList" value="Back" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td> <td width=80 align=center><button action="bypass -h Quest ClanHallAuctioneer listBidder id=%id%" value="Bidders" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td> <td width=80 align=center><button action="bypass -h Quest ClanHallAuctioneer bid id=%id%" value="Bid" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+</table>
+</body></html>

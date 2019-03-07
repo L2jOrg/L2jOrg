@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="6835" name="Circlet of Dion" type="Armor">
+		<!-- Torchlight Circlet. Can be worn by the lord of Dion Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_pledge_cap1_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="500000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{2}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="2" />
+				<player pledgeClass="2" />
+				<!-- Heir -->
+			</and>
+		</cond>
+		<skills>
+			<skill id="3633" level="1" /> <!-- Residential Stun Immunity -->
+		</skills>
+	</item>
+	<item id="6837" name="Circlet of Oren" type="Armor">
+		<!-- Tower Circlet. Can be worn by the lord of Oren Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_pledge_cap1_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="500000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{4}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="4" />
+				<player pledgeClass="2" />
+				<!-- Heir -->
+			</and>
+		</cond>
+		<skills>
+			<skill id="3633" level="1" /> <!-- Residential Stun Immunity -->
+		</skills>
+	</item>
+	<item id="6838" name="Circlet of Gludio" type="Armor">
+		<!-- Three-Swords Circlet. Can be worn by the lord of Gludio Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_pledge_cap1_i05" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="500000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{1}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="1" />
+				<player pledgeClass="2" />
+				<!-- Heir -->
+			</and>
+		</cond>
+		<skills>
+			<skill id="3633" level="1" /> <!-- Residential Stun Immunity -->
+		</skills>
+	</item>
+	<item id="6839" name="Circlet of Giran" type="Armor">
+		<!-- Cross Circlet. Can be worn by the lord of Giran Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_pledge_cap1_i06" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="500000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{3}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="3" />
+				<player pledgeClass="2" />
+				<!-- Heir -->
+			</and>
+		</cond>
+		<skills>
+			<skill id="3633" level="1" /> <!-- Residential Stun Immunity -->
+		</skills>
+	</item>
+	<item id="6840" name="Circlet of Adena" type="Armor">
+		<!-- Lion Circlet. Can be worn by the lord of Town of Aden Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_pledge_cap2_i07" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="500000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{5}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="5" />
+				<player pledgeClass="2" />
+				<!-- Heir -->
+			</and>
+		</cond>
+		<skills>
+			<skill id="3633" level="2" /> <!-- Residential Stun Immunity -->
+		</skills>
+	</item>
+	<item id="6841" name="Lord's Crown" type="Armor">
+		<!-- Hair Accessory, Lord's Crown. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_crown_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_clan_leader;1}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="-1" />
+				<player pledgeClass="-1" />
+				<!-- Clan Leader -->
+			</and>
+		</cond>
+		<skills>
+			<skill id="3632" level="1" /> <!-- Clan Gate -->
+		</skills>
+	</item>
+	<item id="6842" name="Wings of Destiny Circlet" type="Armor">
+		<!-- Hair Accessory, only for Heroes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_hero_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
+	</item>
+	<item id="6843" name="Cat Ears" type="Armor">
+		<!-- Cat-ear shaped hair accessory. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_cat_ear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="500000" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+	</item>
+	<item id="6845" name="Pirate's Eyepatch" type="Armor">
+		<!-- Eyepatch accessory. Can teleport to the Entrance to the Devil's Isle. Cooldown: 2 hours. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_eye_bandage_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="500000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>

@@ -1,7 +1,7 @@
 package org.l2j.scripts.handler.bbs;
 
 import org.l2j.scripts.handler.bbs.custom.BBSConfig;
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.util.Pair;
 import org.l2j.gameserver.Config;
@@ -72,7 +72,7 @@ public final class CommunityBoard extends ScriptsCommunityHandler
 				ResultSet rset = null;
 				try
 				{
-					con = L2DatabaseFactory.getInstance().getConnection();
+					con = DatabaseFactory.getInstance().getConnection();
 					statement = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_favorites` WHERE `object_id` = ?");
 					statement.setInt(1, player.getObjectId());
 					rset = statement.executeQuery();

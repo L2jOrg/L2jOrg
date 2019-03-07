@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="enabled" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+				<xs:element name="maxAttempts" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1" />
+				<xs:element name="banTime" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1" />
+				<xs:element name="recoveryLink" type="xs:string" minOccurs="1" maxOccurs="1" />
+				<xs:element name="forbiddenPasswords" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="password" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

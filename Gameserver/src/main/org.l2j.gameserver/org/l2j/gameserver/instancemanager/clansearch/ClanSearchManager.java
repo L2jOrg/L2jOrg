@@ -1,6 +1,6 @@
 package org.l2j.gameserver.instancemanager.clansearch;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.GameServer;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -93,7 +93,7 @@ public class ClanSearchManager
 		ResultSet result = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(ClanSearchQueries.LOAD_CLANS);
 			result = statement.executeQuery();
 

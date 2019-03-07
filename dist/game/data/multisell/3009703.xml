@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30097</npc> <!-- Galladucci -->
+	</npcs>
+	<item>
+		<ingredient id="49474" count="5"/> <!-- Scroll Part: Enchant Weapon --> 
+		<ingredient id="57" count="10000"/> <!-- Adena -->
+		<production id="947" count="1" chance="1"/> <!-- Scroll: Enchant Weapon (B-Grade) -->
+		<production id="955" count="1" chance="30"/> <!-- Scroll: Enchant Weapon (D-Grade) --> 
+		<production id="951" count="1" chance="2"/> <!-- Scroll: Enchant Weapon (C-Grade) --> 
+		<production id="947" count="1" chance="1"/> <!-- Scroll: Enchant Weapon (B-Grade) -->
+		<production id="49474" count="1" chance="64"/> <!-- Scroll Part: Enchant Weapon -->
+	</item>
+	<item>
+		<ingredient id="49475" count="3"/> <!-- Scroll Part: Enchant Armor --> 
+		<ingredient id="57" count="5000"/> <!-- Adena -->
+		<production id="29741" count="1" chance="1"/> <!-- Scroll: Enchant Armor (B-Grade) -->
+		<production id="29548" count="1" chance="30"/> <!-- Scroll: Enchant Armor (D-Grade) --> 
+		<production id="29550" count="1" chance="2"/> <!-- Scroll: Enchant Armor (C-Grade) --> 
+		<production id="29741" count="1" chance="1"/> <!-- Scroll: Enchant Armor (B-Grade) -->
+		<production id="49474" count="1" chance="64"/> <!-- Scroll Part: Enchant Armor -->
+	</item>
+	<item>
+		<ingredient id="49476" count="5"/> <!-- Refined Scroll Part: Enchant Weapon --> 
+		<ingredient id="955" count="3"/> <!-- Scroll: Enchant Weapon (D-Grade) -->
+		<production id="33808" count="1" chance="1"/> <!-- Improved Scroll: Enchant Weapon (B-Grade) -->
+		<production id="33806" count="1" chance="45"/> <!-- Improved Scroll: Enchant Weapon (D-Grade) --> 
+		<production id="33807" count="1" chance="8"/> <!-- Improved Scroll: Enchant Weapon (C-Grade) --> 
+		<production id="33808" count="1" chance="1"/> <!-- Improved Scroll: Enchant Weapon (B-Grade) -->
+		<production id="49476" count="1" chance="45"/> <!-- Improved Scroll Part: Enchant Weapon -->
+	</item>
+	<item>
+		<ingredient id="49478" count="3"/> <!-- Refined Scroll Part: Enchant Armor --> 
+		<ingredient id="29548" count="3"/> <!--  Scroll: Enchant Armor (D-Grade) -->
+		<production id="33814" count="1" chance="1"/> <!-- Improved Scroll: Enchant Armor (B-Grade) -->
+		<production id="33812" count="1" chance="45"/> <!-- Improved Scroll: Enchant Armor (D-Grade) --> 
+		<production id="33813" count="1" chance="8"/> <!-- Improved Scroll: Enchant Armor (C-Grade) --> 
+		<production id="33814" count="1" chance="1"/> <!-- Improved Scroll: Enchant Armor (B-Grade) -->
+		<production id="49478" count="1" chance="45"/> <!-- Improved Scroll Part: Enchant Armor -->
+	</item>
+	<item>
+		<ingredient id="49479" count="5"/> <!-- Solid Scroll Part: Enchant Weapon --> 
+		<ingredient id="955" count="3"/> <!-- Scroll: Enchant Weapon (D-Grade) -->
+		<production id="49486" count="1" chance="1"/> <!-- Solid Scroll: Enchant Weapon (B-Grade) -->
+		<production id="49482" count="1" chance="30"/> <!-- Solid Scroll: Enchant Weapon (D-Grade) --> 
+		<production id="49484" count="1" chance="2"/> <!-- Solid Scroll: Enchant Weapon (C-Grade) --> 
+		<production id="49486" count="1" chance="1"/> <!-- Solid Scroll: Enchant Weapon (B-Grade) -->
+		<production id="49479" count="1" chance="64"/> <!-- Solid Scroll Part: Enchant Weapon -->
+	</item>
+	<item>
+		<ingredient id="49480" count="3"/> <!-- Solid Scroll Part: Enchant Armor --> 
+		<ingredient id="29548" count="3"/> <!--  Scroll: Enchant Armor (D-Grade) -->
+		<production id="49485" count="1" chance="1"/> <!-- Solid Scroll: Enchant Armor (B-Grade) -->
+		<production id="49481" count="1" chance="30"/> <!-- Solid Scroll: Enchant Armor (D-Grade) --> 
+		<production id="49483" count="1" chance="2"/> <!-- Solid Scroll: Enchant Armor (C-Grade) --> 
+		<production id="49485" count="1" chance="1"/> <!-- Solid Scroll: Enchant Armor (B-Grade) -->
+		<production id="49480" count="1" chance="64"/> <!-- Solid Scroll Part: Enchant Armor -->
+	</item>
+</list>

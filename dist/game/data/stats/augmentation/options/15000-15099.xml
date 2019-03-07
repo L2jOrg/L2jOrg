@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
+	<option id="15095" name="o_s_55_2s_1">
+		<!-- Passive: Increases the recovery rate when MP is being recovered by recharge. -->
+		<active_skill id="3203" level="1" /> <!-- Item Skill: Mystery Skill -->
+	</option>
+	<option id="15096" name="o_s_55_2s_2">
+		<!-- Active: Temporarily increases lung capacity. -->
+		<active_skill id="3143" level="4" /> <!-- Item Skill: Kiss of Eva -->
+	</option>
+	<option id="15097" name="o_s_55_2s_3">
+		<!-- Active: Increases the height from which you can jump without sustaining damage for a fixed time. -->
+		<active_skill id="3144" level="4" /> <!-- Item Skill: Acrobatics -->
+	</option>
+	<option id="15098" name="o_s_55_2s_4">
+		<!-- Active: Increases Resistance to damage from falling. -->
+		<active_skill id="3145" level="4" /> <!-- Item Skill: Iron Body -->
+	</option>
+	<option id="15099" name="o_s_55_2s_5">
+		<!-- Active: Ignites a firecracker. -->
+		<active_skill id="3156" level="1" /> <!-- Item Skill: Firework -->
+	</option>
+</list>

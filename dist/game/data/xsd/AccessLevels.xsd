@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence maxOccurs="1" minOccurs="1">
+				<xs:element name="access" maxOccurs="100" minOccurs="1">
+					<xs:complexType>
+						<xs:attribute name="allowAltg" type="xs:boolean" use="required" />
+						<xs:attribute name="allowFixedRes" type="xs:boolean" use="required" />
+						<xs:attribute name="allowPeaceAttack" type="xs:boolean" use="required" />
+						<xs:attribute name="allowTransaction" type="xs:boolean" use="required" />
+						<xs:attribute name="childAccess">
+							<xs:simpleType>
+								<xs:restriction base="xs:nonNegativeInteger">
+									<xs:minInclusive value="0" />
+									<xs:maxInclusive value="99" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="gainExp" type="xs:boolean" use="required" />
+						<xs:attribute name="giveDamage" type="xs:boolean" use="required" />
+						<xs:attribute name="isGM" type="xs:boolean" use="required" />
+						<xs:attribute name="level" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:minInclusive value="-1" />
+									<xs:maxInclusive value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="name" type="xs:normalizedString" use="required" />
+						<xs:attribute name="nameColor" type="xs:hexBinary" use="required" />
+						<xs:attribute name="takeAggro" type="xs:boolean" use="required" />
+						<xs:attribute name="titleColor" type="xs:hexBinary" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

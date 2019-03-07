@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="33" parentClassId="32">
+		<!-- Confirmed CT2.5 -->
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="9" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="10" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="11" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="16" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="17" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="18" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="15" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="16" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="17" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="13" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="14" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="15" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="1" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="2" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="3" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="17" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="18" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="19" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Sting" skillId="223" skillLvl="13" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Sting" skillId="223" skillLvl="14" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Sting" skillId="223" skillLvl="15" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="3" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="4" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Life Leech" skillId="289" skillLvl="1" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Shield Mastery" skillId="153" skillLvl="3" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Confusion" skillId="2" skillLvl="5" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="1" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="3" getLevel="40" levelUpSp="56000" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLvl="1" getLevel="40" levelUpSp="56000">
+			<item id="3041" count="1" />
+		</skill>
+		<skill skillName="Hex" skillId="122" skillLvl="1" getLevel="40" levelUpSp="56000">
+			<item id="3050" count ="1" />
+		</skill>
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="12" getLevel="41" levelUpSp="66000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="19" getLevel="41" levelUpSp="66000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="18" getLevel="41" levelUpSp="66000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="16" getLevel="41" levelUpSp="66000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="4" getLevel="41" levelUpSp="66000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="20" getLevel="41" levelUpSp="66000" />
+		<skill skillName="Sting" skillId="223" skillLvl="16" getLevel="41" levelUpSp="66000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="13" getLevel="42" levelUpSp="66000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="20" getLevel="42" levelUpSp="66000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="19" getLevel="42" levelUpSp="66000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="17" getLevel="42" levelUpSp="66000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="5" getLevel="42" levelUpSp="66000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="21" getLevel="42" levelUpSp="66000" />
+		<skill skillName="Sting" skillId="223" skillLvl="17" getLevel="42" levelUpSp="66000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="5" getLevel="42" levelUpSp="66000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="14" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="21" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="20" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="18" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="6" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="22" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Sting" skillId="223" skillLvl="18" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="6" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Life Leech" skillId="289" skillLvl="2" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Deflect Arrow" skillId="112" skillLvl="3" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Focus Mind" skillId="191" skillLvl="2" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Cubic Mastery" skillId="143" skillLvl="1" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLvl="1" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Confusion" skillId="2" skillLvl="6" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="4" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Hex" skillId="122" skillLvl="2" getLevel="43" levelUpSp="66000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="2" getLevel="43" levelUpSp="66000" />
+
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="15" getLevel="44" levelUpSp="100000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="22" getLevel="44" levelUpSp="100000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="21" getLevel="44" levelUpSp="100000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="19" getLevel="44" levelUpSp="100000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="7" getLevel="44" levelUpSp="100000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="23" getLevel="44" levelUpSp="100000" />
+		<skill skillName="Sting" skillId="223" skillLvl="19" getLevel="44" levelUpSp="100000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="16" getLevel="45" levelUpSp="100000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="23" getLevel="45" levelUpSp="100000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="22" getLevel="45" levelUpSp="100000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="20" getLevel="45" levelUpSp="100000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="8" getLevel="45" levelUpSp="100000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="24" getLevel="45" levelUpSp="100000" />
+		<skill skillName="Sting" skillId="223" skillLvl="20" getLevel="45" levelUpSp="100000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="7" getLevel="45" levelUpSp="100000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="17" getLevel="46" levelUpSp="100000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="24" getLevel="46" levelUpSp="100000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="23" getLevel="46" levelUpSp="100000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="21" getLevel="46" levelUpSp="100000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="9" getLevel="46" levelUpSp="100000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="25" getLevel="46" levelUpSp="100000" />
+		<skill skillName="Sting" skillId="223" skillLvl="21" getLevel="46" levelUpSp="100000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="8" getLevel="46" levelUpSp="100000" />
+		<skill skillName="Life Leech" skillId="289" skillLvl="3" getLevel="46" levelUpSp="100000" />
+		<skill skillName="Confusion" skillId="2" skillLvl="7" getLevel="46" levelUpSp="100000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="5" getLevel="46" levelUpSp="100000" />
+		<skill skillName="Hex" skillId="122" skillLvl="3" getLevel="46" levelUpSp="100000" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLvl="2" getLevel="46" levelUpSp="100000" />
+		<skill skillName="Ultimate Defense" skillId="110" skillLvl="2" getLevel="46" levelUpSp="100000" />
+		<skill skillName="Corpse Plague" skillId="103" skillLvl="1" getLevel="46" levelUpSp="100000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="3" getLevel="46" levelUpSp="100000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="18" getLevel="47" levelUpSp="130000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="25" getLevel="47" levelUpSp="130000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="24" getLevel="47" levelUpSp="130000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="22" getLevel="47" levelUpSp="130000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="10" getLevel="47" levelUpSp="130000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="26" getLevel="47" levelUpSp="130000" />
+		<skill skillName="Sting" skillId="223" skillLvl="22" getLevel="47" levelUpSp="130000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="19" getLevel="48" levelUpSp="130000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="26" getLevel="48" levelUpSp="130000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="25" getLevel="48" levelUpSp="130000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="23" getLevel="48" levelUpSp="130000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="11" getLevel="48" levelUpSp="130000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="27" getLevel="48" levelUpSp="130000" />
+		<skill skillName="Sting" skillId="223" skillLvl="23" getLevel="48" levelUpSp="130000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="9" getLevel="48" levelUpSp="130000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="20" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="27" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="26" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="24" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="12" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="28" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Sting" skillId="223" skillLvl="24" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="10" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Life Leech" skillId="289" skillLvl="4" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Deflect Arrow" skillId="112" skillLvl="4" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Focus Mind" skillId="191" skillLvl="3" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLvl="2" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Confusion" skillId="2" skillLvl="8" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="6" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Hex" skillId="122" skillLvl="4" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Poison" skillId="129" skillLvl="2" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLvl="1" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="4" getLevel="49" levelUpSp="130000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="21" getLevel="50" levelUpSp="200000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="28" getLevel="50" levelUpSp="200000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="27" getLevel="50" levelUpSp="200000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="25" getLevel="50" levelUpSp="200000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="13" getLevel="50" levelUpSp="200000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="29" getLevel="50" levelUpSp="200000" />
+		<skill skillName="Sting" skillId="223" skillLvl="25" getLevel="50" levelUpSp="200000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="22" getLevel="51" levelUpSp="200000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="29" getLevel="51" levelUpSp="200000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="28" getLevel="51" levelUpSp="200000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="26" getLevel="51" levelUpSp="200000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="14" getLevel="51" levelUpSp="200000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="30" getLevel="51" levelUpSp="200000" />
+		<skill skillName="Sting" skillId="223" skillLvl="26" getLevel="51" levelUpSp="200000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="11" getLevel="51" levelUpSp="200000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="23" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="30" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="29" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="27" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="15" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="31" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Sting" skillId="223" skillLvl="27" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="12" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Life Leech" skillId="289" skillLvl="5" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="1" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Shield Mastery" skillId="153" skillLvl="4" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLvl="3" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Confusion" skillId="2" skillLvl="9" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="7" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Hex" skillId="122" skillLvl="5" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="5" getLevel="52" levelUpSp="200000" />
+		<skill skillName="Aegis" skillId="316" skillLvl="1" getLevel="52" levelUpSp="200000">
+			<item id="49428" count="1" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="200000" >
+			<item id="8618" count="1" /> <!-- Ancient Book: Divine Inspiration (Modern Language Version) -->
+		</skill>
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="24" getLevel="53" levelUpSp="270000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="31" getLevel="53" levelUpSp="270000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="30" getLevel="53" levelUpSp="270000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="28" getLevel="53" levelUpSp="270000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="16" getLevel="53" levelUpSp="270000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="32" getLevel="53" levelUpSp="270000" />
+		<skill skillName="Sting" skillId="223" skillLvl="28" getLevel="53" levelUpSp="270000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="25" getLevel="54" levelUpSp="270000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="32" getLevel="54" levelUpSp="270000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="31" getLevel="54" levelUpSp="270000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="29" getLevel="54" levelUpSp="270000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="17" getLevel="54" levelUpSp="270000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="33" getLevel="54" levelUpSp="270000" />
+		<skill skillName="Sting" skillId="223" skillLvl="29" getLevel="54" levelUpSp="270000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="13" getLevel="54" levelUpSp="270000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="26" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="33" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="32" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="30" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="18" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="34" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Sting" skillId="223" skillLvl="30" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="14" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Life Leech" skillId="289" skillLvl="6" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="2" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Focus Mind" skillId="191" skillLvl="4" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLvl="3" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Cubic Mastery" skillId="143" skillLvl="2" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLvl="2" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Confusion" skillId="2" skillLvl="10" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="8" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Hex" skillId="122" skillLvl="6" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="6" getLevel="55" levelUpSp="270000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="27" getLevel="56" levelUpSp="380000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="34" getLevel="56" levelUpSp="380000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="33" getLevel="56" levelUpSp="380000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="31" getLevel="56" levelUpSp="380000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="19" getLevel="56" levelUpSp="380000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="35" getLevel="56" levelUpSp="380000" />
+		<skill skillName="Sting" skillId="223" skillLvl="31" getLevel="56" levelUpSp="380000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="28" getLevel="57" levelUpSp="380000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="35" getLevel="57" levelUpSp="380000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="34" getLevel="57" levelUpSp="380000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="32" getLevel="57" levelUpSp="380000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="20" getLevel="57" levelUpSp="380000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="36" getLevel="57" levelUpSp="380000" />
+		<skill skillName="Sting" skillId="223" skillLvl="32" getLevel="57" levelUpSp="380000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="15" getLevel="57" levelUpSp="380000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="29" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="36" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="35" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="33" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="21" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="37" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Sting" skillId="223" skillLvl="33" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="16" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Life Leech" skillId="289" skillLvl="7" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="3" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLvl="4" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Confusion" skillId="2" skillLvl="11" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="9" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Hex" skillId="122" skillLvl="7" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Poison" skillId="129" skillLvl="3" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Corpse Plague" skillId="103" skillLvl="2" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="7" getLevel="58" levelUpSp="380000" />
+		<skill skillName="Lightning Strike" skillId="279" skillLvl="1" getLevel="58" levelUpSp="380000">
+			<item id="3055" count="1" />
+		</skill>
+
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="30" getLevel="59" levelUpSp="550000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="37" getLevel="59" levelUpSp="550000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="36" getLevel="59" levelUpSp="550000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="34" getLevel="59" levelUpSp="550000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="22" getLevel="59" levelUpSp="550000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="38" getLevel="59" levelUpSp="550000" />
+		<skill skillName="Sting" skillId="223" skillLvl="34" getLevel="59" levelUpSp="550000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="31" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="38" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="37" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="35" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="23" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="39" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Sting" skillId="223" skillLvl="35" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="17" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Life Leech" skillId="289" skillLvl="8" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="4" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLvl="4" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLvl="3" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Confusion" skillId="2" skillLvl="12" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="10" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Hex" skillId="122" skillLvl="8" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="8" getLevel="60" levelUpSp="550000" />
+		<skill skillName="Shield Deflect Magic" skillId="916" skillLvl="1" getLevel="60" levelUpSp="550000">
+			<item id="49427" count="1" />
+		</skill>
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="32" getLevel="61" levelUpSp="550000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="39" getLevel="61" levelUpSp="550000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="38" getLevel="61" levelUpSp="550000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="36" getLevel="61" levelUpSp="550000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="24" getLevel="61" levelUpSp="550000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="40" getLevel="61" levelUpSp="550000" />
+		<skill skillName="Sting" skillId="223" skillLvl="36" getLevel="61" levelUpSp="550000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="550000" >
+			<item id="8619" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+		</skill>
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="33" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="40" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="39" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="37" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="25" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="41" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Sting" skillId="223" skillLvl="37" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="18" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Life Leech" skillId="289" skillLvl="9" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="5" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLvl="5" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Corpse Plague" skillId="103" skillLvl="3" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Lightning Strike" skillId="279" skillLvl="2" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Confusion" skillId="2" skillLvl="13" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="11" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Hex" skillId="122" skillLvl="9" getLevel="62" levelUpSp="680000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="9" getLevel="62" levelUpSp="680000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="34" getLevel="63" levelUpSp="680000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="41" getLevel="63" levelUpSp="680000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="40" getLevel="63" levelUpSp="680000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="38" getLevel="63" levelUpSp="680000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="26" getLevel="63" levelUpSp="680000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="42" getLevel="63" levelUpSp="680000" />
+		<skill skillName="Sting" skillId="223" skillLvl="38" getLevel="63" levelUpSp="680000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="35" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="42" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="41" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="39" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="27" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="43" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Sting" skillId="223" skillLvl="39" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="19" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Life Leech" skillId="289" skillLvl="10" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="6" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLvl="5" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLvl="4" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Focus Mind" skillId="191" skillLvl="5" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Confusion" skillId="2" skillLvl="14" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="12" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Hex" skillId="122" skillLvl="10" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Shield Fortress" skillId="322" skillLvl="1" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="10" getLevel="64" levelUpSp="850000" />
+		<skill skillName="Shield Deflect Magic" skillId="916" skillLvl="2" getLevel="64" levelUpSp="850000" />
+
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="36" getLevel="65" levelUpSp="850000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="43" getLevel="65" levelUpSp="850000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="42" getLevel="65" levelUpSp="850000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="40" getLevel="65" levelUpSp="850000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="28" getLevel="65" levelUpSp="850000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="44" getLevel="65" levelUpSp="850000" />
+		<skill skillName="Sting" skillId="223" skillLvl="40" getLevel="65" levelUpSp="850000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="37" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="44" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="43" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="41" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="29" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="45" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Sting" skillId="223" skillLvl="41" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="20" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Life Leech" skillId="289" skillLvl="11" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="7" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLvl="6" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Lightning Strike" skillId="279" skillLvl="3" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Confusion" skillId="2" skillLvl="15" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="13" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Hex" skillId="122" skillLvl="11" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Poison" skillId="129" skillLvl="4" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Shield Fortress" skillId="322" skillLvl="2" getLevel="66" levelUpSp="1000000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="11" getLevel="66" levelUpSp="1000000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="38" getLevel="67" levelUpSp="1000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="45" getLevel="67" levelUpSp="1000000" />		
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="44" getLevel="67" levelUpSp="1000000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="42" getLevel="67" levelUpSp="1000000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="30" getLevel="67" levelUpSp="1000000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="46" getLevel="67" levelUpSp="1000000" />
+		<skill skillName="Sting" skillId="223" skillLvl="42" getLevel="67" levelUpSp="1000000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="39" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="46" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="45" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="43" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="31" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="47" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Sting" skillId="223" skillLvl="43" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="21" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Life Leech" skillId="289" skillLvl="12" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="8" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLvl="6" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLvl="5" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Confusion" skillId="2" skillLvl="16" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="14" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Hex" skillId="122" skillLvl="12" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Shield Fortress" skillId="322" skillLvl="3" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="12" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Shield Deflect Magic" skillId="916" skillLvl="3" getLevel="68" levelUpSp="1300000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="40" getLevel="69" levelUpSp="1300000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="47" getLevel="69" levelUpSp="1300000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="46" getLevel="69" levelUpSp="1300000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="44" getLevel="69" levelUpSp="1300000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="32" getLevel="69" levelUpSp="1300000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="48" getLevel="69" levelUpSp="1300000" />
+		<skill skillName="Sting" skillId="223" skillLvl="44" getLevel="69" levelUpSp="1300000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="41" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="48" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="47" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="45" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="33" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="49" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Sting" skillId="223" skillLvl="45" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="22" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Life Leech" skillId="289" skillLvl="13" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="9" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLvl="7" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Corpse Plague" skillId="103" skillLvl="4" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Lightning Strike" skillId="279" skillLvl="4" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Confusion" skillId="2" skillLvl="17" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="15" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Hex" skillId="122" skillLvl="13" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Shield Fortress" skillId="322" skillLvl="4" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="13" getLevel="70" levelUpSp="1600000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="42" getLevel="71" levelUpSp="1600000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="49" getLevel="71" levelUpSp="1600000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="48" getLevel="71" levelUpSp="1600000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="46" getLevel="71" levelUpSp="1600000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="34" getLevel="71" levelUpSp="1600000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="50" getLevel="71" levelUpSp="1600000" />
+		<skill skillName="Sting" skillId="223" skillLvl="46" getLevel="71" levelUpSp="1600000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="43" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="50" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="49" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="47" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="35" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="51" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Sting" skillId="223" skillLvl="47" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="23" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Life Leech" skillId="289" skillLvl="14" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="10" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLvl="7" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLvl="6" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Focus Mind" skillId="191" skillLvl="6" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Confusion" skillId="2" skillLvl="18" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="16" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Hex" skillId="122" skillLvl="14" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Shield Fortress" skillId="322" skillLvl="5" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="14" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Shield Deflect Magic" skillId="916" skillLvl="4" getLevel="72" levelUpSp="1800000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="44" getLevel="73" levelUpSp="1800000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="51" getLevel="73" levelUpSp="1800000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="50" getLevel="73" levelUpSp="1800000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="48" getLevel="73" levelUpSp="1800000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="36" getLevel="73" levelUpSp="1800000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="52" getLevel="73" levelUpSp="1800000" />
+		<skill skillName="Sting" skillId="223" skillLvl="48" getLevel="73" levelUpSp="1800000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="45" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="52" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="51" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Aggression" skillId="28" skillLvl="49" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Aggression Aura" skillId="18" skillLvl="37" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Drain Health" skillId="70" skillLvl="53" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Sting" skillId="223" skillLvl="49" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Freezing Strike" skillId="105" skillLvl="24" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Life Leech" skillId="289" skillLvl="15" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="11" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLvl="8" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Lightning Strike" skillId="279" skillLvl="5" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Confusion" skillId="2" skillLvl="19" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="17" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Hex" skillId="122" skillLvl="15" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Poison" skillId="129" skillLvl="5" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Shield Fortress" skillId="322" skillLvl="6" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="15" getLevel="74" levelUpSp="1800000" />
+	</skillTree>
+</list>

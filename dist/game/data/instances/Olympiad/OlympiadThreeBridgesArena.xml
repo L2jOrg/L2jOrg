@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Three Bridges Arena -->
+<instance id="148" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
+	<doorlist>
+		<door id="17100101" />
+		<door id="17100102" />
+	</doorlist>
+	<spawnlist>
+		<group>
+			<npc id="36402" x="-76760" y="-252461" z="-7741" heading="0" />
+			<npc id="36402" x="-74170" y="-252459" z="-7741" heading="0" />
+		</group>
+	</spawnlist>
+</instance>

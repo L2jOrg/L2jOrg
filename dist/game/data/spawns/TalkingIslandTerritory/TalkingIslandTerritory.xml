@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="TalkingIslandTerritory">
+		<group>
+			<npc id="20113" x="-107372" y="242825" z="-3486" heading="8486" respawnTime="60sec" /> <!-- Undine Elder -->
+			<npc id="20113" x="-106962" y="243033" z="-3465" heading="4896" respawnTime="60sec" /> <!-- Undine Elder -->
+			<npc id="20113" x="-106348" y="242526" z="-3582" heading="8571" respawnTime="60sec" /> <!-- Undine Elder -->
+			<npc id="20113" x="-106109" y="242141" z="-3624" heading="54946" respawnTime="60sec" /> <!-- Undine Elder -->
+			<npc id="20110" x="-106326" y="242012" z="-3595" heading="46281" respawnTime="60sec" /> <!-- Undine -->
+			<npc id="20110" x="-105644" y="242304" z="-3641" heading="4640" respawnTime="60sec" /> <!-- Undine -->
+			<npc id="20110" x="-107291" y="242918" z="-3477" heading="18242" respawnTime="60sec" /> <!-- Undine -->
+			<npc id="20115" x="-106743" y="242127" z="-3568" heading="45168" respawnTime="60sec" /> <!-- Undine Noble -->
+			<npc id="20115" x="-106374" y="242706" z="-3572" heading="11686" respawnTime="60sec" /> <!-- Undine Noble -->
+			<npc id="20115" x="-105835" y="242294" z="-3635" heading="5822" respawnTime="60sec" /> <!-- Undine Noble -->
+		</group>
+	</spawn>
+</list>

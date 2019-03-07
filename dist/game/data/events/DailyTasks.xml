@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/events.xsd">
+	<event name="Daily Reset" class="com.l2jmobius.gameserver.instancemanager.DailyTaskManager">
+		<variables>
+			<list name="reset_skills" type="SkillHolder">
+				<skill id="2510" /> <!-- Wondrous Cubic -->
+				<skill id="22180" /> <!-- Wondrous Cubic - 1 time use -->
+			</list>
+		</variables>
+		<scheduler>
+			<!-- Schedule of the reset every day at 06:30 -->
+			<schedule name="reset" hour="06" minute="30">
+				<event name="#onReset" />
+			</schedule>
+			
+			<!-- Schedule the save task 30th or 0 minute -->
+			<schedule name="save" minute="30,0">
+				<event name="#onSave" />
+			</schedule>
+
+			<!-- Schedule the clan leader apply task every WEDNESDAY at 6:30 -->
+			<schedule name="clanLeaderApply" hour="06" minute="30" dayOfWeek="3">
+				<event name="#onClanLeaderApply" />
+			</schedule>
+
+			<!-- Schedule the vitality reset task every WEDNESDAY at 6:30 -->
+			<!-- <schedule name="vitalityReset" hour="06" minute="30" dayOfWeek="3">
+				<event name="#onVitalityReset" />
+			</schedule> -->
+
+
+			<!-- Attach condition to reset if server boots up in after 6:30 and hasn't reset yet -->
+			<conditionalSchedule>
+				<run name="reset" if="HASNT_RUN" />
+				<run name="clanLeaderApply" if="HASNT_RUN" />
+				<run name="vitalityReset" if="HASNT_RUN" />
+			</conditionalSchedule>
+		</scheduler>
+	</event>
+</list>

@@ -1,0 +1,789 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="91200" name="Scroll of Escape: Wall of Argos" type="EtcItem">
+		<!-- A magical scroll that relocates you to the Wall of Argos. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Warning: Speak with Gatekeeper Tatiana to teleport to the Wall of Argos. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91201" name="Scroll: Full Knockdown" type="EtcItem">
+		<!-- Scroll needed to learn Full Knockdown. Used by Titan. Required level: 81 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91202" name="Scroll: Sublime Self-Sacrifice" type="EtcItem">
+		<!-- Scroll needed to learn Sublime Self-Sacrifice. Used by Cardinal. Required level: 81 -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91203" name="Scroll: Summon Feline Queen" type="EtcItem">
+		<!-- Scroll needed to learn Summon Feline Queen. Used by Arcana Lord. Required level: 77 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91204" name="Scroll: Summon Seraphim the Unicorn" type="EtcItem">
+		<!-- Scroll needed to learn Summon Seraphim the Unicorn. Used by Elemental Master. Required level: 77 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91205" name="Scroll: Summon Nightshade" type="EtcItem">
+		<!-- Scroll needed to learn Summon Nightshade. Used by Spectral Master. Required level: 77 -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91206" name="Chronicle Token" type="EtcItem">
+		<!-- When in inventory, CON, MEN, DEX, WIT, STR, INT +1, Atk. Spd./ Casting Spd. +5%. Cannot be exchanged, dropped, destroyed, or sold. Can be transferred between characters on one account and stored in a private warehouse. Will be deleted after the event. -->
+		<set name="icon" val="icon.etc_scroll_of_memory_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91207" name="Wind's Blessing Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Sayha's Silver Light Blessing/ Sayha's Golden Light Blessing. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.sayha2017_box_i02" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91208" name="Wind Golden Chest" type="EtcItem">
+		<!-- Double-click to obtain at random one of the following items: +15 weapon (A-grade), +16 weapon (B/ C-grade), Talisman of Authority, Jewel, Enchant Scroll. Cannot be dropped or sold in the grocery store. Will be deleted after the event. -->
+		<set name="icon" val="icon.sayha2017_box_i03" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91209" name="Wind Big Fish Chest" type="EtcItem">
+		<!-- Double-click to obtain at random one of the following items: +10 Land/ Fire Dragon Pendant, +10 rare accessory. Cannot be dropped or sold in the grocery store. Will be deleted after the event. -->
+		<set name="icon" val="icon.sayha2017_box_i04" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91210" name="Black Sayha's Cloak" type="Armor">
+		<!-- Cloak filled with Sayha's power. With the help of Sayha's Cloak Enchantment Scroll can be enchanted. Depending on the enchantment value, activates various abilities. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.sayha2017_back_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91211" name="White Sayha's Cloak" type="Armor">
+		<!-- Cloak filled with Sayha's power. With the help of Sayha's Cloak Enchantment Scroll can be enchanted. Depending on the enchantment value, activates various abilities. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.sayha2017_back_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91212" name="Red Sayha's Cloak" type="Armor">
+		<!-- Cloak filled with Sayha's power. With the help of Sayha's Cloak Enchantment Scroll can be enchanted. Depending on the enchantment value, activates various abilities. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.sayha2017_back_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91213" name="Sayha's Cloak Enchantment Scroll" type="EtcItem">
+		<!-- Enhances Sayha's Cloak. The maximum level of enchantment is +10. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.sayha2017_scrl" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91214" name="Radiant Sayha's Cloak Enchantment Scroll" type="EtcItem">
+		<!-- Enhances Sayha's Cloak. Can be used on a cloak enchanted up to +9. If an enchantment is failed, the cloak doesn't disappear and has the previous level of enchantment. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.sayha2017_scrl" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91215" name="Shining Sayha's Cloak Enchantment Scroll" type="EtcItem">
+		<!-- Enhances Sayha's Cloak. Can be used on a cloak enchanted up to +7. If an enchantment is failed, the cloak doesn't disappear and has the previous level of enchantment. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.sayha2017_scrl" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91216" name="+16 Weapon Supply Box (B-grade)" type="EtcItem">
+		<!-- Double-click to obtain a +16 B-grade Weapon. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.etc_treasure_box_i04" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91217" name="+10 Hair Accessory Pack" type="EtcItem">
+		<!-- Double-click to obtain a +10 hair accessory. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.etc_pi_box_love_pack" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91218" name="Transformation Scroll: Panda" type="EtcItem">
+		<!-- Changes the appearance to that of a panda for 15 min. Effect remains after death. Cannot be dropped. Panda's Energy: Max HP/ MP +20%, Acquired XP/ SP +20%. Effect remains after death. <Attention>. When used in Teddy Bear/ Blue Dynasty/ Kat the Cat/ Cat transformation, the effects are lost. Cooldown: 1 min. -->
+		<set name="icon" val="icon.sayha2017_panda" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91219" name="Transformation Scroll: Cat" type="EtcItem">
+		<!-- Changes the appearance to that of a cat for 15 min. Effect remains after death. Cannot be dropped. Cat's Energy: Max HP/ MP +20%, Acquired XP/ SP +20%. Effect remains after death. <Attention>. When used in Teddy Bear/ Blue Dynasty/ Kat the Cat/ Panda transformation, the effects are lost. Cooldown: 1 min. -->
+		<set name="icon" val="icon.sayha2017_cat" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91220" name="Shining Fishing Kit Lv.2" type="EtcItem">
+		<!-- Double-click to obtain 2 Mermaid Golden Fishing Rod Chests (30-day), 25920 Silver Baits, 20 of Einhasad's Protection, Enhanced Antharas' Earring Pack (30-day), Sayha's Jewel Box (30-day). Cannot be dropped or sold. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91221" name="Enhanced Antharas' Earring" additionalName="30-day" type="Armor">
+		<!-- A 30-day item. MP +34, CON +1, MEN +1, Bleed Resistance and Bleed Atk. Rate +30%, Stun Resistance and Stun Atk. Rate +20%, Mental Resistance and Atk. Rate +20%, Reflect Damage Resistance +15%, Healing Effects +15%, Skill MP Consumption -6%, Vampiric Rage effect +6%. The effect doesn't stack if two identical earrings are worn. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_earring_of_antaras_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="mDef">94</stat>
+			<stat type="maxMp">40</stat>
+		</stats>
+	</item>
+	<item id="91222" name="Enhanced Antharas' Earring Pack" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Enhanced Antharas' Earring (30-day). Cannot be dropped or sold. -->
+		<set name="icon" val="icon.npoint_antaras_30day_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="91223" name="Aquamarine Lv. 5" additionalName="30-day" type="Armor">
+		<!-- A 30-day item. When using a skill after equipping, there is a chance of recovering 50 MP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="91224" name="Sayha's Jewel Box" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain the following items: Cat's Eye Lv. 5 (30-day), Aquamarine Lv. 5 (30-day). Cannot be dropped or sold. -->
+		<set name="icon" val="icon.bm_sayhas_talisman_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="91225" name="Gift from Wealthy Merchant Red" type="EtcItem">
+		<!-- Double-click to obtain Anakim's/ Lilith's Rine, Inventory Expansion Ticket, Dragon Miracle Potion. Cannot be dropped. Will be deleted after event. -->
+		<set name="icon" val="icon.etc_treasure_box_i10" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91226" name="Red's Weapon Coupon" type="EtcItem">
+		<!-- Take it to Artisan Black to enchant weapon D-A grade. Cannot be dropped. Will be deleted after event. <Required number>. D-grade: 1. C-grade: 2. B-grade: 5. A-grade: 15 -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91227" name="Sayha's Cloak Coupon" type="EtcItem">
+		<!-- Can be exchanged for a Black/ White/ Red Sayha's Cloak through the Dimensional Merchant. -->
+		<set name="icon" val="icon.etc_exchange_ticket_i01" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91228" name="Chronicle Cube" additionalName="30-day" type="EtcItem">
+		<!-- A 30-day item. Double-click to obtain 3 Shining Scrolls of Mood Melody. Additionally at random chance you can get Dandy's Home Run Ball, Rice Cake of Flaming Fighting Spirit (event), Savior Scroll: Enchant Weapon. Available only once a day. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Will be deleted after event. -->
+		<set name="icon" val="icon.ev_libra_cube" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="91229" name="Chronicle Cube" additionalName="90-day" type="EtcItem">
+		<!-- A 90-day item. Double-click to obtain 3 Shining Scrolls of Mood Melody. Additionally at random chance you can get Dandy's Home Run Ball, Rice Cake of Flaming Fighting Spirit (event), Savior Scroll: Enchant Weapon. Available only once a day. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Will be deleted after event. -->
+		<set name="icon" val="icon.ev_libra_cube" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+	</item>
+	<item id="91230" name="Chronicle Mark" additionalName="30-day" type="EtcItem">
+		<!-- A 30-day item. When in inventory, CON, MEN, DEX, WIT, STR, INT +1, Atk. Spd./ Casting Spd. +5%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Will be deleted after the event. -->
+		<set name="icon" val="icon.etc_scroll_of_memory_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="91231" name="Chronicle Mark" additionalName="90-day" type="EtcItem">
+		<!-- A 90-day item. When in inventory, CON, MEN, DEX, WIT, STR, INT +1, Atk. Spd./ Casting Spd. +5%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Will be deleted after the event. -->
+		<set name="icon" val="icon.etc_scroll_of_memory_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+	</item>
+	<item id="91232" name="Enchant Scroll Ticket (A-grade)" type="EtcItem">
+		<!-- Take this item and Scroll: Enchant Armor/ Weapon (A-grade) with some adena to Santa Girl to exchange for Blessed/ Improved/ Solid Scroll. Cannot be dropped. Will be deleted after the event. -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91233" name="Enchant Scroll Ticket (B-grade)" type="EtcItem">
+		<!-- Take this item and Scroll: Enchant Armor/ Weapon (B-grade) with some adena to Santa Girl to exchange for Blessed/ Improved/ Solid Scroll. Cannot be dropped. Will be deleted after the event. -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91234" name="Enchant Scroll Ticket (C-grade)" type="EtcItem">
+		<!-- Take this item and Scroll: Enchant Armor/ Weapon (C-grade) with some adena to Santa Girl to exchange for Blessed/ Improved/ Solid Scroll. Cannot be dropped. Will be deleted after the event. -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91235" name="Enchant Scroll Ticket (D-grade)" type="EtcItem">
+		<!-- Take this item and Scroll: Enchant Armor/ Weapon (D-grade) with some adena to Santa Girl to exchange for Blessed/ Improved/ Solid Scroll. Cannot be dropped. Will be deleted after the event. -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91236" name="Santa Girl's Gift Pouch" type="EtcItem">
+		<!-- Double-click to obtain Blessed Talisman of Border, Venir's Talisman Lv. 18, Enchant Scroll Ticket (A/ B/ C/ D-grade). Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse/ shared within the account. Will be deleted after event. -->
+		<set name="icon" val="BranchSys.Icon.Br_santa_gift_click_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91237" name="Santa Girl's Magic Box" type="EtcItem">
+		<!-- Allows to receive Santa Girl's Gift Blessing. (Can be used only once per day.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Will be deleted after event. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91238" name="Rudolph's Growth Cube - 15 charges" type="EtcItem">
+		<!-- Item with 15 charges. Allows to receive Rudolph's Growth Box. (Can be used only once per day.) Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Will be deleted after event. -->
+		<set name="icon" val="Branchsys2.icon.cube_event_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91239" name="Rudolph's Growth Cube Box" type="EtcItem">
+		<!-- Allows to receive Rudolph's Growth Cube (15 charges). Cannot be dropped. Will be deleted after event. -->
+		<set name="icon" val="icon.bm_freya_dark_rune_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91240" name="Christmas Amulet" additionalName="15-day" type="EtcItem">
+		<!-- 15-day item. Acquired XP/ SP through hunting/ fishing +20%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_present_luck_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+	</item>
+	<item id="91241" name="Christmas Amulet Box" additionalName="15-day" type="EtcItem">
+		<!-- Double-click to obtain Christmas Amulet (15 charges). Cannot be dropped. Will be deleted after event. -->
+		<set name="icon" val="BranchSys.icon.br_fortuna_cube_s_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="21600" />
+	</item>
+	<item id="91242" name="Rudolph's Growth Box" type="EtcItem">
+		<!-- Double-click to obtain 720 Shining Golden Baits, Improved Master Fisherman's Blessing (4 h.), 2 Agathion Box: Rudolph (2 h.). Cannot be dropped. Will be deleted after event. -->
+		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91243" name="Shining Savior's Earring" additionalName="Event" type="Armor">
+		<!-- Acquired XP/ SP +2%, Max MP +30, Max HP +50, Stun/ Mental Attacks Resistance +4%, when equipped. Vampiric Rage effect. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, or sold in a private store. Will be deleted after event. -->
+		<set name="icon" val="icon.r2_earring_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">78</stat>
+		</stats>
+	</item>
+	<item id="91244" name="Dragon Pendant Lv. 1" type="Armor">
+		<!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment increases the number of effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 2. Cannot be dropped. Required materials: 200 Crystal (C-grade) , 2,000,000 adena. -->
+		<set name="icon" val="icon.bm_pendant_dragon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">39</stat>
+		</stats>
+	</item>
+	<item id="91245" name="Dragon Pendant Lv. 2" type="Armor">
+		<!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment increases the number of effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 3. Cannot be dropped. Required materials: 1500 Crystal (B-grade), 10,000,000 adena. -->
+		<set name="icon" val="icon.bm_pendant_dragon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">48</stat>
+		</stats>
+	</item>
+	<item id="91246" name="Dragon Pendant Lv. 3" type="Armor">
+		<!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment increases the number of effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 4. Cannot be dropped. Required materials: 5000 Crystal (B-grade), 50,000,000 adena. -->
+		<set name="icon" val="icon.bm_pendant_dragon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">57</stat>
+		</stats>
+	</item>
+	<item id="91247" name="Dragon Pendant Lv. 4" type="Armor">
+		<!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment increases the number of effects. Head Blacksmith Ferris can upgrade +5 pendant to Blessed Dragon Pendant. Cannot be dropped. Required materials: Blessed Land Dragon Pendant or Blessed Fire Dragon Pendant. -->
+		<set name="icon" val="icon.bm_pendant_dragon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">66</stat>
+		</stats>
+	</item>
+	<item id="91248" name="Blessed Dragon Pendant" type="Armor">
+		<!-- A pendant that contains the energy of dragon. P. Def. +50, Acquired XP/ SP +30%, Atk. Spd./ Casting Spd.+10%, P./ M. Critical Damage +15%, P./ M. Atk. +20%, Damage Reflect Resistance +20%, Received P./ M. Damage -30%. Activates Dragon Invocation, Dragon Barrier, Dragon Evasion. Cannot be enchanted or dropped. -->
+		<set name="icon" val="icon.bm_pendant_dragon_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">75</stat>
+		</stats>
+	</item>
+	<item id="91249" name="Dragon Varnish" type="EtcItem">
+		<!-- Enhances Dragon Pendant. The maximum level of enchantment is +5. If enchantment fails, pendant's enchant level will be reset. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_pendant_dragon_scrl" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91250" name="Radiant Dragon Varnish" type="EtcItem">
+		<!-- Enhances Dragon Pendant. The maximum level of enchantment is +5. If enchantment fails, pendant's enchant level will be preserved. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_pendant_dragon_scrl" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91251" name="Quality Quick Healing Potion" type="EtcItem">
+		<!-- Magic potion that instantly restores HP. Instant effect with no cooldown. Cannot be used when HP is full. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="180" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91252" name="Quality Quick MP Recovery Potion" type="EtcItem">
+		<!-- Magic potion that instantly restores MP. Instant effect with no cooldown. Cannot be used when MP is full. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.etc_potion_blue_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91253" name="Lucky Herb Pouch" type="EtcItem">
+		<!-- For 5 min., P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +15%, HP/ MP Recovery Bonus +30%, Speed +10. Effect disappears when restarted. -->
+		<set name="icon" val="icon.christmas_card_box2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91254" name="Valentine Party Herb" type="EtcItem">
+		<!-- For 5 min., P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +15%, HP/ MP Recovery Bonus +30%, Speed +10. Effect disappears when restarted. -->
+		<set name="icon" val="icon.etc_red_rose_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91255" name="Relics of the Dragons" type="EtcItem">
+		<!-- Open the chest to get one of the following items: Enchant Weapon Box (A/ B/ C-grade), Radiant Talisman of Authority Lv. 5, Blessed Dragon Pendant, Attribute Necklace, Doll of Border, ?Spirit Transformation Scroll - Singer/ Dancer. Cannot be dropped or sold in the grocery store. Will be deleted after event. -->
+		<set name="icon" val="icon.card_event_blue_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91256" name="Baium Doll" type="EtcItem">
+		<!-- Boosts abilities if stored in the inventory. Cannot be dropped. <Baium Doll's Spell>. Mental Resistance +40%, Paralysis/ Knockdown/ Pulling Resistance +20%, P./ M. Def. +12%, Skill Cooldown -3%. -->
+		<set name="icon" val="icon.bm_baium_doll_30d" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91257" name="Queen Ant Doll" type="EtcItem">
+		<!-- Boosts abilities if stored in the inventory. Cannot be dropped. <Queen Ant Doll's Spell>. P. Atk. and Critical Damage +8%, Max HP +12%. -->
+		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91258" name="Orfen Doll" type="EtcItem">
+		<!-- Boosts abilities if stored in the inventory. Cannot be dropped. <Orfen Doll's Spell>. M. Atk./ M. Critical Damage +8%, Max MP +12%. -->
+		<set name="icon" val="icon.bm_orfen_doll_30d" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91259" name="Spirit Transformation Scroll - Singer" type="EtcItem">
+		<!-- For 30 min. transforms you into Singer Cadmus. Will not be deleted upon death. Cannot be used in Cadmus form. Cooldown: 10 min. Spirit - Singer: you can use Song of Earth, Song of Wind, Hunter's Song, Song of Vitality. -->
+		<set name="icon" val="icon.ev_13th_paper_inzone" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91260" name="Spirit Transformation Scroll - Dancer" type="EtcItem">
+		<!-- For 30 min. transforms you into Dancer Cadmus. Will not be deleted upon death. Cannot be used in Cadmus form. Cooldown: 10 min. Spirit - Dancer: you can use Dance of the Warrior, Dance of Fire, Dance of Fury, Dance of Concentration. -->
+		<set name="icon" val="icon.ev_13th_paper_field" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91261" name="Dragon Berserker Outfit" type="Armor">
+		<!-- Dragon berserker outfit. -->
+		<set name="icon" val="icon.bm2018_dragon_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91262" name="Transformation Scroll: Ninja Assassin" type="EtcItem">
+		<!-- Allows you to transform into a Ninja Assassin for 15 min. Remains after death. Cannot be dropped or sold. <Ninja Assassin Energy>P. Atk. +7%, M. Atk. +7%, Acquired XP +10%. In case of successful attack or skill use random enemy's target is cancelled. Cooldown: 15 min. -->
+		<set name="icon" val="icon.bm2018_ninja_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91263" name="Transformation Scroll: Blood Noblesse" type="EtcItem">
+		<!-- Allows you to transform into a Blood Noblesse for 15 min. Remains after death. Cannot be dropped or sold. <Blood Noblesse Energy>P. Atk. +7%, M. Atk. +7%, Acquired XP +10%. In case of successful attack or skill use deals significant M. Damage. Cooldown: 15 min. -->
+		<set name="icon" val="icon.bm2018_rednoblesse_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91264" name="Transformation Scroll: White Noblesse" type="EtcItem">
+		<!-- Allows you to transform into a White Noblesse for 15 min. Remains after death. Cannot be dropped or sold. <White Noblesse Energy>P. Atk. +7%, M. Atk. +7%, Acquired XP +10%. In case of successful attack or skill use with a certain chance decreases enemy's M. Def. Cooldown: 15 min. -->
+		<set name="icon" val="icon.bm2018_whitenoblesse_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91265" name="Transformation Scroll: Blue Musketeer" type="EtcItem">
+		<!-- Allows you to transform into a Blue Musketeer for 15 min. Remains after death. Cannot be dropped or sold. <Blue Musketeer Energy>P. Atk. +7%, M. Atk. +7%, Acquired XP +10%. In case of successful attack or skill use with a certain chance stuns enemy. Cooldown: 15 min. -->
+		<set name="icon" val="icon.bm2018_bluemusketeer_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91266" name="Transformation Scroll: Purple Cowboy" type="EtcItem">
+		<!-- Allows you to transform into a Purple Cowboy for 15 min. Remains after death. Cannot be dropped or sold. <Purple Cowboy Energy>P. Atk. +7%, M. Atk. +7%, Acquired XP +10%. In case of successful attack or skill use deals significant P. Damage. Cooldown: 15 min. -->
+		<set name="icon" val="icon.bm2018_cowboy_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91267" name="Transformation Scroll: High Priest" type="EtcItem">
+		<!-- Allows you to transform into a High Priest for 15 min. Remains after death. Cannot be dropped or sold. <High Priest Energy>P. Atk. +7%, M. Atk. +7%, Acquired XP +10%. In case of successful attack or skill use with a certain chance restores HP and MP of party members. Cooldown: 15 min. -->
+		<set name="icon" val="icon.bm2018_healer_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91268" name="Transformation Scroll: Wild Wolf" type="EtcItem">
+		<!-- Allows you to transform into a Wild Wolf for 15 min. Remains after death. Cannot be dropped or sold. <Wild Wolf Energy>P. Atk. +7%, M. Atk. +7%, Acquired XP +10%. In case of successful attack or skill use with a certain chance decreases enemy's P. Def. Cooldown: 15 min. -->
+		<set name="icon" val="icon.bm2018_barbarian_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91269" name="Transformation Scroll: Valkyrie" type="EtcItem">
+		<!-- Allows you to transform into a Valkyrie for 15 min. Remains after death. Cannot be dropped or sold. <Valkyrie Energy>P. Atk. +7%, M. Atk. +7%, Acquired XP +10%. In case of successful attack or skill use with a certain chance paralyses enemy. Cooldown: 15 min. -->
+		<set name="icon" val="icon.bm2018_valkyrie_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91270" name="Transformation Scroll: Pirate" type="EtcItem">
+		<!-- Allows you to transform into a Pirate for 15 min. Remains after death. Cannot be dropped or sold. <Pirate Energy>P. Atk. +7%, M. Atk. +7%, Acquired XP +10%. In case of successful attack or skill use with a certain chance increaded P./ M. Atk. of party members. Cooldown: 15 min. -->
+		<set name="icon" val="icon.bm2018_pirate_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91271" name="Transformation Scroll: Dragon Berserker" type="EtcItem">
+		<!-- Allows you to transform into a Dragon Berserker for 15 min. Remains after death. Cannot be dropped or sold. <Dragon Berserker Energy>P. Atk. +10%, M. Atk. +10%, Acquired XP +20%. In case of successful attack or skill use P. Atk. +50%, M. Atk. +50%, Atk. Spd. +50%, Casting Spd. +50%, Reflect Damage +15%. Cooldown: 15 min. -->
+		<set name="icon" val="icon.bm2018_dragon_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91272" name="Transformation Sealbook: Ninja Assassin" type="EtcItem">
+		<!-- Allows you to learn a skill to magically transform yourself into a Ninja Assassin. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm2018_ninja_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91273" name="Transformation Sealbook: Blood Noblesse" type="EtcItem">
+		<!-- Allows you to learn a skill to magically transform yourself into a Blood Noblesse. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm2018_rednoblesse_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91274" name="Transformation Sealbook: White Noblesse" type="EtcItem">
+		<!-- Allows you to learn a skill to magically transform yourself into a White Noblesse. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm2018_whitenoblesse_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91275" name="Transformation Sealbook: Blue Musketeer" type="EtcItem">
+		<!-- Allows you to learn a skill to magically transform yourself into a Blue Musketeer. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm2018_bluemusketeer_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91276" name="Transformation Sealbook: Purple Cowboy" type="EtcItem">
+		<!-- Allows you to learn a skill to magically transform yourself into a Purple Cowboy. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm2018_cowboy_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91277" name="Transformation Sealbook: High Priest" type="EtcItem">
+		<!-- Allows you to learn a skill to magically transform yourself into a High Priest. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm2018_healer_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91278" name="Transformation Sealbook: Wild Wolf" type="EtcItem">
+		<!-- Allows you to learn a skill to magically transform yourself into a Wild Wolf. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm2018_barbarian_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91279" name="Transformation Sealbook: Valkyrie" type="EtcItem">
+		<!-- Allows you to learn a skill to magically transform yourself into a Valkyrie. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm2018_valkyrie_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91280" name="Transformation Sealbook: Pirate" type="EtcItem">
+		<!-- Allows you to learn a skill to magically transform yourself into a Pirate. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm2018_pirate_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91281" name="Transformation Sealbook: Dragon Berserker" type="EtcItem">
+		<!-- Allows you to learn a skill to magically transform yourself into a Dragon Berserker. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm2018_dragon_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91282" name="Mysterious Transformation Box" type="EtcItem">
+		<!-- Double-click to obtain a Transformation Scroll and a Transformation Sealbook, including trasformation to Dragon Berserker. Cannot be dropped or sold in the grocery store. Will be deleted after the event. -->
+		<set name="icon" val="icon.bm2018_transform_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91283" name="Spirit Transformation Scroll - Singer and Dancer" type="EtcItem">
+		<!-- For 30 min. transforms you into Singer and Dancer Cadmus. Will not be deleted upon death. Cannot be used in Cadmus form. Cooldown: 10 min. Spirit - Singer and Dancer: you can use Song of Earth, Song of Wind, Hunter's Song, Song of Vitality, Dance of the Warrior, Dance of Fire, Dance of Fury, Dance of Concentration. -->
+		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91284" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91285" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91286" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91287" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91288" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91289" name="Mysterious Transformation Sealbook Box" type="EtcItem">
+		<!-- Double-click to obtain a Transformation Sealbook, including trasformation to Dragon Berserker. Cannot be dropped or sold in the grocery store. Will be deleted after the event. -->
+		<set name="icon" val="icon.bm2018_transform_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

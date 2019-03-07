@@ -1,0 +1,1179 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="70200" name="Earring of Chronicle Heir" additionalName="Lv. 9" type="Armor">
+		<!-- When equipped, increases MP recovery rate by 9%, Max. MP +9%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. -->
+		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="mDef">18</stat>
+		</stats>
+	</item>
+	<item id="70201" name="Earring of Chronicle Heir" additionalName="Lv. 10" type="Armor">
+		<!-- When equipped, increases MP recovery rate by 10%, Max. MP +10%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. -->
+		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="mDef">20</stat>
+		</stats>
+	</item>
+	<item id="70202" name="Refined Romantic Chapeau: Gold" additionalName="100-day" type="Armor">
+		<!-- Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Holiday Hat: resurrects dead characters using Spirit Ore. Bonus XP +100%. Reuse Time: 600 minutes. 2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 60 minutes. Reuse Time: 60 minutes. 3. Side Effect: makes character's head bigger for 10 minutes. Reuse Time: 30 minutes. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_gold" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="144000" />
+	</item>
+	<item id="70203" name="Refined Romantic Chapeau: Yellow" additionalName="33-day" type="Armor">
+		<!-- Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Holiday Hat: resurrects dead characters using Spirit Ore. Bonus XP +100%. Reuse Time: 30 minutes. 2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 60 minutes. Reuse Time: 60 minutes. 3. Side Effect: makes character's head bigger for 10 minutes. Reuse Time: 30 minutes. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_yellow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="47520" />
+	</item>
+	<item id="70204" name="Feather of Blessing" type="EtcItem">
+		<!-- A dimensional item. Allows resurrecting immediately after death. -->
+		<set name="icon" val="icon.blessed_feather_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70205" name="Sniper's Mysterious Package (No-grade)" type="EtcItem">
+		<!-- Double-click the package to receive Mysterious Soulshots (No-grade, 2,500 pcs.), XP/SP Scrolls (30%, 6 pcs.), and 1st Class Transfer Effect Scrolls (6 pcs.). Cannot be exchanged, dropped, or sold in a private store. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70206" name="Mystic's Mysterious Package (No-grade)" type="EtcItem">
+		<!-- Double-click the package to receive Mysterious Blessed Spiritshots (No-grade, 500 pcs.), XP/SP Scrolls (30%, 6 pcs.), and 1st Class Transfer Effect Scrolls (6 pcs.). Cannot be exchanged, dropped, or sold in a private store. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70207" name="Sniper's Mysterious Package (D-grade)" type="EtcItem">
+		<!-- Double-click the package to receive Mysterious Soulshots (D-grade, 2,500 pcs.), XP/SP Scrolls (30%, 6 pcs.), and 1st Class Transfer Effect Scrolls (6 pcs.). Cannot be exchanged, dropped, or sold in a private store. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70208" name="Mystic's Mysterious Package (D-grade)" type="EtcItem">
+		<!-- Double-click the package to receive Mysterious Blessed Spiritshots (D-grade, 500 pcs.), XP/SP Scrolls (30%, 6 pcs.), and 1st Class Transfer Effect Scrolls (6 pcs.). Cannot be exchanged, dropped, or sold in a private store. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70209" name="Sniper's Mysterious Package (C-grade)" type="EtcItem">
+		<!-- Double-click the package to receive Mysterious Soulshots (C-grade, 2,500 pcs.), XP/SP Scrolls (30%, 6 pcs.), and 1st Class Transfer Effect Scrolls (6 pcs.). Cannot be exchanged, dropped, or sold in a private store. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70210" name="Mystic's Mysterious Package (C-grade)" type="EtcItem">
+		<!-- Double-click the package to receive Mysterious Blessed Spiritshots (C-grade, 500 pcs.), XP/SP Scrolls (30%, 6 pcs.), and 1st Class Transfer Effect Scrolls (6 pcs.). Cannot be exchanged, dropped, or sold in a private store. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70211" name="Wondrous Cubic" additionalName="General" type="EtcItem">
+		<!-- A cubic which you can use for 30 days, once a day. Open it to obtain various items. -->
+		<set name="icon" val="icon.etc_ore_cube_event_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70212" name="Wondrous Cubic" additionalName="Enhanced" type="EtcItem">
+		<!-- A cubic which you can use for 30 days, once a day. Open it to obtain various items. -->
+		<set name="icon" val="icon.etc_ore_cube_event_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70213" name="Refined Romantic Gold Chapeau Box" type="EtcItem">
+		<!-- Double-click the package to get Refined Romantic Chapeau: Gold (100-day). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70214" name="Refined Romantic Yellow Chapeau Box" type="EtcItem">
+		<!-- Double-click the package to get Refined Romantic Chapeau: Yellow (33-day). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70215" name="XP Rune Chest - 100%" type="EtcItem">
+		<!-- Double-click to receive XP Rune - 100%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse and transferred between characters on one account. -->
+		<set name="icon" val="icon.etc_pi_box_joy_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70216" name="Chronicle Cube" additionalName="21-day" type="EtcItem">
+		<!-- A 21-item. Can be used once a day. Allows obtaining a vast variety of items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_ore_cube_event_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="30240" />
+	</item>
+	<item id="70217" name="Rare Accessory Enhanced Coupon" type="EtcItem">
+		<!-- If you collect 4 of them, you will obtain Chronicle Cube -->
+		<set name="icon" val="icon.etc_lottery_card_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70218" name="Chronicle Chest" type="EtcItem">
+		<!-- Allows obtaining a vast variety of items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.ev_10th_present2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55317" level="1"/>
+		</skills>
+	</item>
+	<item id="70219" name="Refined Rare Accessory Pack" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to receive one of the following items: Refined Queen Ant's Ring (7-day), Refined Orfen's Earring (7-day), or Refined Ring of Core (7-day). -->
+		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="70220" name="Refined Queen Ant's Ring" additionalName="7-day" type="Armor">
+		<!-- A 7-day item. MP +21, Poison Chance and Resistance +20%, P./M. Accuracy +3, P./M. Attack +7%, Crit. Attack Power +10%, M. Crit. Attack Power +5%. Effects do not stack if two identical rings are equipped. Cannot be enchanted. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_ring_of_queen_ant_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3562" level="3" /> <!-- Queen Ant's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">48</stat>
+			<stat type="maxMp">21</stat>
+		</stats>
+	</item>
+	<item id="70221" name="Refined Orfen's Earring" additionalName="7-day" type="Armor">
+		<!-- A 7-day item. MP +31, Mental Resistance and Atk. Rate +15%, Hold Resistance and Atk. Rate +20%, Healing Power +6%, Skill MP Consumption -5%. Allows using the Steal MP skill. Effects do not stack if two identical earrings are equipped. Cannot be enchanted. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_earring_of_orfen_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="3560" level="3" /> <!-- Orfen's Earring -->
+		</skills>
+		<stats>
+			<stat type="mDef">71</stat>
+			<stat type="maxMp">31</stat>
+		</stats>
+	</item>
+	<item id="70222" name="Refined Ring of Core" additionalName="7-day" type="Armor">
+		<!-- A 7-day item. MP +21, Mental Resistance and Atk. Rate +20%, P./M. Evasion +3, Received P./M. Damage -6%. Allows using a special skill to remove debuffs. Effects do not stack if two identical rings are equipped. Cannot be enchanted. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_ring_of_core_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3563" level="3" /> <!-- Ring of Core -->
+			<skill id="35016" level="1" /> <!-- Ring of Core Ability Skill -->
+		</skills>
+		<stats>
+			<stat type="mDef">48</stat>
+			<stat type="maxMp">21</stat>
+		</stats>
+	</item>
+	<item id="70223" name="Refined Queen Ant's Ring Box" type="EtcItem">
+		<!-- Double-click to receive Refined Queen Ant's Ring (7-day). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70224" name="Refined Orfen's Earring Box" type="EtcItem">
+		<!-- Double-click to receive Refined Orfen's Earring (7-day). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70225" name="Refined Ring of Core Box" type="EtcItem">
+		<!-- Double-click to receive Refined Ring of Core (7-day). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70226" name="Chronicle Cube Box (21-day)" type="EtcItem">
+		<!-- Double-click to receive Chronicle Cube (21-day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70227" name="Refined Queen Ant's Ring Box" type="EtcItem">
+		<!-- Double-click to receive Refined Queen Ant's Ring (30-day). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70228" name="Refined Orfen's Earring Box" type="EtcItem">
+		<!-- Double-click to receive Refined Orfen's Earring (30-day). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70229" name="Refined Ring of Core Box" type="EtcItem">
+		<!-- Double-click to receive Refined Ring of Core (30-day). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70230" name="Exchange Coupon: Refined Rare Accessory Pack" type="EtcItem">
+		<!-- Using Dimensional Merchant, you can trade it for a Refined Rare Accessory (30-day). The item will be removed after the event is over. -->
+		<set name="icon" val="icon.etc_lottery_card_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70231" name="King Pirate's Treasure Chest" type="EtcItem">
+		<!-- Double-click on the chest to get one of Pirates' treasures. -->
+		<set name="icon" val="icon.bm_pirate_treasure_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70232" name="Coco Brownie's Amulet of Love" type="EtcItem">
+		<!-- An amulet created by Coco Brownie to endow the Heroes of Aden with love. Carry it with you, and something good will definitely happen. Having the amulet in your inventory enables getting chocolate from Coco Brownie once a day. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. The item will be removed after the event is over. -->
+		<set name="icon" val="icon.love_potion_party" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70233" name="Strawberry Juice" type="EtcItem">
+		<!-- When used, activates Prophecy of Fire - Lv. 1 for 5 minutes. <Note> The effect does not stack with Mango Juice, Cherry Juice, or any of the Prophecies. -->
+		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_commissionable" val="false" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="55329" level="1" />
+		</skills>
+	</item>
+	<item id="70234" name="Mango Juice" type="EtcItem">
+		<!-- When used, activates Prophecy of Water - Lv. 1 for 5 minutes. <Note> The effect does not stack with Strawberry Juice, Cherry Juice, or any of the Prophecies. -->
+		<set name="icon" val="icon.etc_fruit_cocktail_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_commissionable" val="false" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="55330" level="1" />
+		</skills>
+	</item>
+	<item id="70235" name="Cherry Juice" type="EtcItem">
+		<!-- When used, activates Prophecy of Wind - Lv. 1 for 5 minutes. <Note> The effect does not stack with Mango Juice, Strawberry Juice, or any of the Prophecies. -->
+		<set name="icon" val="icon.etc_fruit_cocktail_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_commissionable" val="false" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="55331" level="1" />
+		</skills>
+	</item>
+	<item id="70236" name="Scroll: 50 SP" additionalName="Event" type="EtcItem">
+		<!-- When used, adds 50 SP -->
+		<set name="icon" val="icon.etc_sp_scroll1_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70237" name="Scroll: 100 SP" additionalName="Event" type="EtcItem">
+		<!-- When used, adds 100 SP -->
+		<set name="icon" val="icon.etc_sp_scroll2_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70238" name="Scroll: 1,000 SP" additionalName="Event" type="EtcItem">
+		<!-- When used, adds 1,000 SP -->
+		<set name="icon" val="icon.etc_sp_scroll3_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70239" name="Irene' Hourglass - 1 Hour" additionalName="1~19" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~19. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70240" name="Irene' Hourglass - 2 Hours" additionalName="1~19" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~19. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70241" name="Irene' Hourglass - 3 Hours" additionalName="1~19" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~19. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70242" name="Irene' Hourglass - 1 Hour" additionalName="20~39" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 20~39. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70243" name="Irene' Hourglass - 2 Hours" additionalName="20~39" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 20~39. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70244" name="Irene' Hourglass - 3 Hours" additionalName="20~39" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 20~39. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70245" name="Irene' Hourglass - 1 Hour" additionalName="40~51" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 40~51. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70246" name="Irene' Hourglass - 2 Hours" additionalName="40~51" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 40~51. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70247" name="Irene' Hourglass - 3 Hours" additionalName="40~51" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 40~51. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70248" name="Irene' Hourglass - 1 Hour" additionalName="52~60" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 52~60. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70249" name="Irene' Hourglass - 2 Hours" additionalName="52~60" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 52~60. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70250" name="Irene' Hourglass - 3 Hours" additionalName="52~60" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 52~60. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70251" name="Irene' Hourglass - 1 Hour" additionalName="61~75" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 61~75. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70252" name="Irene' Hourglass - 2 Hours" additionalName="61~75" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 61~75. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70253" name="Irene' Hourglass - 3 Hours" additionalName="61~75" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 61~75. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70254" name="Irene' Hourglass - 1 Hour" additionalName="76~79" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 76~79. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70255" name="Irene' Hourglass - 2 Hours" additionalName="76~79" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 76~79. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70256" name="Irene' Hourglass - 3 Hours" additionalName="76~79" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 76~79. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70257" name="Irene' Hourglass - 1 Hour" additionalName="80~85" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 80~85. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70258" name="Irene' Hourglass - 2 Hours" additionalName="80~85" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 80~85. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70259" name="Irene' Hourglass - 3 Hours" additionalName="80~85" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 80~85. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70260" name="Irene' Hourglass - 1 Hour" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~99. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70261" name="Irene' Hourglass - 2 Hours" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~99. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70262" name="Irene' Hourglass - 3 Hours" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~99. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70263" name="Irene' Hourglass - 4 Hours" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~99. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70264" name="Irene's Song 100%" additionalName="1 hour" type="EtcItem">
+		<!-- When in inventory, your XP and SP gain is increased by 100%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="60" />
+	</item>
+	<item id="70265" name="Irene's Song 100%" additionalName="3 hours" type="EtcItem">
+		<!-- When in inventory, your XP and SP gain is increased by 100%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="180" />
+	</item>
+	<item id="70266" name="Irene's Song 100%" additionalName="5 hours" type="EtcItem">
+		<!-- When in inventory, your XP and SP gain is increased by 100%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="300" />
+	</item>
+	<item id="70267" name="Irene's Song 100%" additionalName="7-day" type="EtcItem">
+		<!-- When in inventory, your XP and SP gain is increased by 100%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="70268" name="Irene's Song 100% - 1 Hour" type="EtcItem">
+		<!-- By double-clicking the item, you will receive Irene's Song 100% - 1 Hour. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70269" name="Irene's Song 100% - 3 Hours" type="EtcItem">
+		<!-- By double-clicking the item, you will receive Irene's Song 100% - 3 Hours. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70270" name="Irene's Song 100% - 5 Hours" type="EtcItem">
+		<!-- By double-clicking the item, you will receive Irene's Song 100% - 5 Hours. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70271" name="Irene's Song 100% - 7 Days" type="EtcItem">
+		<!-- By double-clicking the item, you will receive Irene's Song 100% - 7 Days. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70272" name="Irene's Song 200%" additionalName="1 hour" type="EtcItem">
+		<!-- When in inventory, your XP and SP gain is increased by 200%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="60" />
+	</item>
+	<item id="70273" name="Irene's Song 200%" additionalName="3 hours" type="EtcItem">
+		<!-- When in inventory, your XP and SP gain is increased by 200%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="180" />
+	</item>
+	<item id="70274" name="Irene's Song 200%" additionalName="5 hours" type="EtcItem">
+		<!-- When in inventory, your XP and SP gain is increased by 200%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="300" />
+	</item>
+	<item id="70275" name="Irene's Song 200%" additionalName="7-day" type="EtcItem">
+		<!-- When in inventory, your XP and SP gain is increased by 200%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="70276" name="Irene's Song 200% - 1 Hour" type="EtcItem">
+		<!-- By double-clicking the item, you will receive Irene's Song 200% - 1 Hour. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70277" name="Irene's Song 200% - 3 Hours" type="EtcItem">
+		<!-- By double-clicking the item, you will receive Irene's Song 200% - 3 Hours. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70278" name="Irene's Song 200% - 5 hours" type="EtcItem">
+		<!-- By double-clicking the item, you will receive Irene's Song 200% - 5 Hours. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70279" name="Irene's Song 200% - 7 Days" type="EtcItem">
+		<!-- By double-clicking the item, you will receive Irene's Song 200% - 7 Days. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70280" name="Clan Reputation Score - 10" additionalName="1-day" type="EtcItem">
+		<!-- Double-click to add 10 bonus points to your Clan Reputation. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bloodpledge_point_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55362" level="1" /> <!-- Clan Reputation Score - 10 -->
+		</skills>
+	</item>
+	<item id="70281" name="Clan Reputation Score - 50" additionalName="1-day" type="EtcItem">
+		<!-- Double-click to add 50 bonus points to your Clan Reputation. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bloodpledge_point_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55363" level="1" /> <!-- Clan Reputation Score - 50 -->
+		</skills>
+	</item>
+	<item id="70282" name="Clan Reputation Score - 150" additionalName="1-day" type="EtcItem">
+		<!-- Double-click to add 150 bonus points to your Clan Reputation. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bloodpledge_point_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55364" level="1" /> <!-- Clan Reputation Score - 150 -->
+		</skills>
+	</item>
+	<item id="70283" name="Superspeed Potion" type="EtcItem">
+		<!-- Increases Speed to its maximum for 15 seconds. -->
+		<set name="icon" val="icon.etc_potion_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="20" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55361" level="1" /> <!-- Superspeed Potion -->
+		</skills>
+	</item>
+	<item id="70284" name="Weapon Supply Box (B-grade)" type="EtcItem">
+		<!-- Double-click to receive a B-grade weapon. -->
+		<set name="icon" val="icon.bm_pirate_treasure_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70285" name="Weapon Supply Box (C-grade)" type="EtcItem">
+		<!-- Double-click to receive a C-grade weapon. -->
+		<set name="icon" val="icon.bm_pirate_treasure_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70286" name="B-grade Armor Supply Box" type="EtcItem">
+		<!-- Double-click to receive a B-grade armor. -->
+		<set name="icon" val="icon.bm_pirate_treasure_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70287" name="C-grade Armor Supply Box" type="EtcItem">
+		<!-- Double-click to receive a C-grade armor. -->
+		<set name="icon" val="icon.bm_pirate_treasure_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70288" name="B-grade Weapons Ingredient Box" type="EtcItem">
+		<!-- Double-click to receive a B-grade weapons ingredient box. -->
+		<set name="icon" val="icon.bm_pirate_treasure_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70289" name="C-grade Weapons Ingredient Box" type="EtcItem">
+		<!-- Double-click to receive a C-grade weapons ingredient box. -->
+		<set name="icon" val="icon.bm_pirate_treasure_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70290" name="B-grade Armor Ingredient Box" type="EtcItem">
+		<!-- Double-click to receive a B-grade armor ingredient box. -->
+		<set name="icon" val="icon.bm_pirate_treasure_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70291" name="C-grade Armor Ingredient Box" type="EtcItem">
+		<!-- Double-click to receive a C-grade armor ingredient box. -->
+		<set name="icon" val="icon.bm_pirate_treasure_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70292" name="Baium Treasure Chest" type="EtcItem">
+		<!-- Double-click to get one of Baium�s treasures. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70293" name="Kusto's Support Box: Enhance Weapon" type="EtcItem">
+		<!-- Double-click to receive one Average, Improved, Solid, or Blessed Scroll: Enchant Weapon (C~A). -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70294" name="Talisman of Border +1" type="Armor">
+		<!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. <Note>. When combining with other Talismans, their enchantment is reset -->
+		<set name="icon" val="icon.bm_magic_square_talisman" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+	</item>
+	<item id="70295" name="Talisman of Border +2" type="Armor">
+		<!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. <Note>. When combining with other Talismans, their enchantment is reset -->
+		<set name="icon" val="icon.bm_magic_square_talisman" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+	</item>
+	<item id="70296" name="Talisman of Border +3" type="Armor">
+		<!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. <Note>. When combining with other Talismans, their enchantment is reset -->
+		<set name="icon" val="icon.bm_magic_square_talisman" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+	</item>
+	<item id="70297" name="Talisman of Border +4" type="Armor">
+		<!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. Cannot be exchanged, dropped, or sold in a private store. <Note>. When combining with other Talismans, their enchantment is reset -->
+		<set name="icon" val="icon.bm_magic_square_talisman" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+	</item>
+	<item id="70298" name="Talisman of Border +5" type="Armor">
+		<!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. Cannot be exchanged, dropped, or sold in a private store. <Note>. When combining with other Talismans, their enchantment is reset -->
+		<set name="icon" val="icon.bm_magic_square_talisman" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+	</item>
+	<item id="70299" name="Enchant Scroll of Border" type="EtcItem">
+		<!-- An Enchant Scroll enhancing the properties of Talisman of Border. The maximum level of enchantment is +10 -->
+		<set name="icon" val="icon.etc_doom_capture" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

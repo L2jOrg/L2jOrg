@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/cubics.xsd">
+	<cubic id="9" level="1" slot="9" duration="900" delay="8" maxCount="300" useUp="0" power="1026.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="30" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="5115" level="1" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5115" level="1" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5116" level="1" triggerRate="33" successRate="50" /> <!-- Hold -->
+		</skills>
+	</cubic>
+	<cubic id="9" level="2" slot="9" duration="900" delay="8" maxCount="300" useUp="0" power="1264.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="30" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="5115" level="2" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5115" level="2" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5116" level="2" triggerRate="33" successRate="50" /> <!-- Hold -->
+		</skills>
+	</cubic>
+	<cubic id="9" level="3" slot="9" duration="900" delay="8" maxCount="300" useUp="0" power="1530.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="30" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="5115" level="3" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5115" level="3" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5116" level="3" triggerRate="33" successRate="50" /> <!-- Hold -->
+		</skills>
+	</cubic>
+	<cubic id="9" level="4" slot="9" duration="900" delay="8" maxCount="300" useUp="0" power="1822.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="30" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="5115" level="4" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5115" level="4" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5116" level="4" triggerRate="33" successRate="50" /> <!-- Hold -->
+		</skills>
+	</cubic>
+	<cubic id="9" level="101" slot="9" duration="900" delay="8" maxCount="300" useUp="0" power="1919.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="30" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="5115" level="5" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5115" level="5" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5116" level="5" triggerRate="33" successRate="50" /> <!-- Hold -->
+		</skills>
+	</cubic>
+	<cubic id="9" level="102" slot="9" duration="900" delay="8" maxCount="300" useUp="0" power="1967.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="30" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="5115" level="6" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5115" level="6" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5116" level="6" triggerRate="33" successRate="50" /> <!-- Hold -->
+		</skills>
+	</cubic>
+	<cubic id="9" level="103" slot="9" duration="900" delay="8" maxCount="300" useUp="0" power="2015.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="30" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="5115" level="7" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5115" level="7" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5116" level="7" triggerRate="33" successRate="50" /> <!-- Hold -->
+		</skills>
+	</cubic>
+	<cubic id="9" level="104" slot="9" duration="900" delay="8" maxCount="300" useUp="0" power="2061.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="30" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="5115" level="8" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5115" level="8" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5116" level="8" triggerRate="33" successRate="50" /> <!-- Hold -->
+		</skills>
+	</cubic>
+	<cubic id="9" level="105" slot="9" duration="900" delay="8" maxCount="300" useUp="0" power="2106.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="30" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="5115" level="9" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5115" level="9" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5116" level="9" triggerRate="33" successRate="50" /> <!-- Hold -->
+		</skills>
+	</cubic>
+	<cubic id="9" level="106" slot="9" duration="900" delay="8" maxCount="300" useUp="0" power="2151.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="30" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="5115" level="10" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5115" level="10" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5116" level="10" triggerRate="33" successRate="50" /> <!-- Hold -->
+		</skills>
+	</cubic>
+	<cubic id="9" level="107" slot="9" duration="900" delay="8" maxCount="300" useUp="0" power="2194.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="30" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="5115" level="11" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5115" level="11" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5116" level="11" triggerRate="33" successRate="50" /> <!-- Hold -->
+		</skills>
+	</cubic>
+	<cubic id="9" level="108" slot="9" duration="900" delay="8" maxCount="300" useUp="0" power="2235.0" targetType="TARGET">
+		<conditions>
+			<hp type="GREATER" percent="30" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="5115" level="12" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5115" level="12" triggerRate="33" successRate="50" /> <!-- Cubic Hate -->
+			<skill id="5116" level="12" triggerRate="33" successRate="50" /> <!-- Hold -->
+		</skills>
+	</cubic>
+</list>

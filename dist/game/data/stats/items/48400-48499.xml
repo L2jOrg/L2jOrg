@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="48400" name="Items Seal Scroll" type="EtcItem">
+		<!-- Scroll used for sealing an item. The sealed item cannot be used for any enchantment related systems and is restricted from functions such as exchange/drop/destroy/clan warehouse. The item can be unsealed by using a �Item Unseal Scroll'. -->
+		<set name="icon" val="icon.scrl_item_lock" />
+		<set name="price" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48401" name="Item Unseal Scroll" additionalName="15-minute" type="EtcItem">
+		<!-- Use to unseal a sealed item. -->
+		<set name="icon" val="icon.scrl_item_unlock" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48411" name="Item Unseal Scroll (15-min) Box" additionalName="15-minute" type="EtcItem">
+		<!-- Double-click to obtain 10 Item Unseal Scrolls (15-min). -->
+		<set name="icon" val="BranchSys3.g_ev_invite_fantasy_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>

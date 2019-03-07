@@ -1,0 +1,1603 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="55100" toLevel="1" name="Water Dragon Pendant Basic Effect Lv. 1">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55101" toLevel="10" name="Water Dragon Pendant Enchant Effect Lvl 1">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55102" toLevel="1" name="Water Dragon Pendant Basic Effect Lv. 2">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55103" toLevel="10" name="Water Dragon Pendant Enchant Effect Lvl 2">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill55103</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="55104" toLevel="3" name="Water Dragon Pendant Basic Effect Lv. 3">
+		<icon>icon.skill55104</icon>
+		<abnormalLvl>3</abnormalLvl>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>9</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>62</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55105" toLevel="10" name="Water Dragon Pendant Enchant Effect Lvl 3">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55106" toLevel="1" name="Water Dragon Pendant Basic Effect Lv. 4">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55107" toLevel="10" name="Water Dragon Pendant Enchant Effect Lvl 4">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55108" toLevel="1" name="Water Dragon Pendant Basic Effect Lv. 5">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55109" toLevel="10" name="Water Dragon Pendant Enchant Effect Lvl 5">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55110" toLevel="1" name="Wind Dragon Pendant Basic Effect Lv. 1">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55111" toLevel="10" name="Wind Dragon Pendant Enchant Effect Lvl 1">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55112" toLevel="1" name="Wind Dragon Pendant Basic Effect Lv. 2">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55113" toLevel="10" name="Wind Dragon Pendant Enchant Effect Lvl 2">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55114" toLevel="1" name="Wind Dragon Pendant Basic Effect Lv. 3">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55115" toLevel="10" name="Wind Dragon Pendant Enchant Effect Lvl 3">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55116" toLevel="1" name="Wind Dragon Pendant Basic Effect Lv. 4">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55117" toLevel="10" name="Wind Dragon Pendant Enchant Effect Lvl 4">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55118" toLevel="1" name="Wind Dragon Pendant Basic Effect Lv. 5">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55119" toLevel="10" name="Wind Dragon Pendant Enchant Effect Lvl 5">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55120" toLevel="1" name="none">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55121" toLevel="1" name="Earth Dragon Pendant Basic Effect Lv. 1">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55122" toLevel="10" name="Land Dragon Pendant Enchant Effect Lvl 1">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55123" toLevel="1" name="Earth Dragon Pendant Basic Effect Lv. 2">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55124" toLevel="10" name="Land Dragon Pendant Enchant Effect Lvl 2">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55125" toLevel="1" name="Earth Dragon Pendant Basic Effect Lv. 3">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55126" toLevel="10" name="Land Dragon Pendant Enchant Effect Lvl 3">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55127" toLevel="1" name="Earth Dragon Pendant Basic Effect Lv. 4">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55128" toLevel="10" name="Land Dragon Pendant Enchant Effect Lvl 4">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55129" toLevel="1" name="Earth Dragon Pendant Basic Effect Lv. 5">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55130" toLevel="10" name="Land Dragon Pendant Enchant Effect Lvl 5">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55131" toLevel="1" name="Earth Dragon Pendant Defensive Effect Lv. 5">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55132" toLevel="10" name="Earth Dragon Pendant Defensive Effect Lv. 5">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55133" toLevel="6" name="Pendant Enchant Effect">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55134" toLevel="1" name="Scroll: Enchant Weapon (B-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55135" toLevel="1" name="Scroll: Enchant Armor (B-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55136" toLevel="1" name="Blessed Scroll: Enchant Weapon (B-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55137" toLevel="1" name="Blessed Scroll: Enchant Armor (B-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55138" toLevel="1" name="Shaft with Antharas treasures">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55141" toLevel="1" name="Report Status">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55142" toLevel="1" name="MP Potion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55143" toLevel="1" name="Elite Fishing Rod of Golden Mermaid">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55144" toLevel="20" name="P. Atk.">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55145" toLevel="20" name="M. Atk.">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55146" toLevel="20" name="P. Def.">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55147" toLevel="20" name="M. Def.">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55148" toLevel="20" name="Accuracy">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55149" toLevel="20" name="Evasion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55150" toLevel="20" name="HP">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55151" toLevel="20" name="MP">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55152" toLevel="20" name="Recover HP">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55153" toLevel="20" name="Recover MP">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55154" toLevel="20" name="Atk. Spd.">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55155" toLevel="20" name="Casting Spd.">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55156" toLevel="20" name="P. Critical Rate">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55157" toLevel="20" name="P. Critical Damage">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55158" toLevel="20" name="M. Critical Rate">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55159" toLevel="20" name="M. Critical Damage">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55160" toLevel="1" name="Special Pirate Fruit">
+		<icon>icon.skill55160</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49697</itemConsumeId>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpDrain">
+				<power>49</power>
+				<percentage>3</percentage>
+			</effect>
+			<effect name="ExpModify">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55161" toLevel="1" name="VIP Level 1">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55162" toLevel="1" name="VIP Level 2">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55163" toLevel="1" name="VIP Level 3">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55164" toLevel="1" name="VIP Level 4">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55165" toLevel="1" name="VIP Level 5">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55166" toLevel="1" name="VIP Level 6">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55167" toLevel="1" name="VIP Level 7">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55168" toLevel="1" name="Clan Unity - Lv. 1">
+		<icon>icon.skill155168</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<abnormalType>CLAN_TEAMWORK</abnormalType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55169" toLevel="1" name="Clan Unity - Lv. 2">
+		<icon>icon.skill55169</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<abnormalType>CLAN_TEAMWORK</abnormalType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55170" toLevel="1" name="Clan Unity - Lv. 3">
+		<icon>icon.skill55170</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<abnormalType>CLAN_TEAMWORK</abnormalType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55171" toLevel="1" name="Clan Unity - Lv. 4">
+		<icon>icon.skill55171</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<abnormalType>CLAN_TEAMWORK</abnormalType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55172" toLevel="1" name="Clan's Special Supplies">
+		<icon>icon.skill55172</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>70025</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2.1">
+						<item id="1877" count="1" />
+					</item>
+					<item chance="26.4">
+						<item id="1884" count="1" />
+					</item>
+					<item chance="5.4">
+						<item id="1881" count="1" />
+					</item>
+					<item chance="2.4">
+						<item id="1875" count="1" />
+					</item>
+					<item chance="3.3">
+						<item id="1885" count="1" />
+					</item>
+					<item chance="9.6">
+						<item id="1882" count="1" />
+					</item>
+					<item chance="6.9">
+						<item id="1879" count="1" />
+					</item>
+					<item chance="10.6">
+						<item id="1895" count="1" />
+					</item>
+					<item chance="7.7">
+						<item id="1876" count="1" />
+					</item>
+					<item chance="2.6">
+						<item id="1874" count="1" />
+					</item>
+					<item chance="19.0">
+						<item id="1878" count="1" />
+					</item>
+					<item chance="2.7">
+						<item id="1880" count="1" />
+					</item>
+					<item chance="1.3">
+						<item id="1883" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55173" toLevel="1" name="Clan's Special Supplies">
+		<icon>icon.skill55173</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>70026</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2.1">
+						<item id="1877" count="1" />
+					</item>
+					<item chance="14.8">
+						<item id="1884" count="1" />
+					</item>
+					<item chance="0.7">
+						<item id="1894" count="1" />
+					</item>
+					<item chance="6.2">
+						<item id="1881" count="1" />
+					</item>
+					<item chance="0.57">
+						<item id="70035" count="1" />
+					</item>
+					<item chance="0.57">
+						<item id="70038" count="1" />
+					</item>
+					<item chance="0.57">
+						<item id="70031" count="1" />
+					</item>
+					<item chance="0.57">
+						<item id="70032" count="1" />
+					</item>
+					<item chance="0.57">
+						<item id="70033" count="1" />
+					</item>
+					<item chance="0.57">
+						<item id="70030" count="1" />
+					</item>
+					<item chance="0.57">
+						<item id="70029" count="1" />
+					</item>
+					<item chance="0.57">
+						<item id="70036" count="1" />
+					</item>
+					<item chance="0.57">
+						<item id="70034" count="1" />
+					</item>
+					<item chance="0.57">
+						<item id="70037" count="1" />
+					</item>
+					<item chance="3.3">
+						<item id="1875" count="1" />
+					</item>
+					<item chance="5.0">
+						<item id="1885" count="1" />
+					</item>
+					<item chance="11.5">
+						<item id="1882" count="1" />
+					</item>
+					<item chance="8.9">
+						<item id="1879" count="1" />
+					</item>
+					<item chance="7.6">
+						<item id="1895" count="1" />
+					</item>
+					<item chance="9.8">
+						<item id="1876" count="1" />
+					</item>
+					<item chance="4.6">
+						<item id="1874" count="1" />
+					</item>
+					<item chance="9.0">
+						<item id="1878" count="1" />
+					</item>
+					<item chance="2.9">
+						<item id="1889" count="1" />
+					</item>
+					<item chance="0.4">
+						<item id="70039" count="1" />
+					</item>
+					<item chance="5.9">
+						<item id="1880" count="1" />
+					</item>
+					<item chance="1.6">
+						<item id="1883" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55174" toLevel="1" name="Clan's Special Supplies">
+		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>70027</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2.3">
+						<item id="1877" count="1" />
+					</item>
+					<item chance="1.4">
+						<item id="4043" count="1" />
+					</item>
+					<item chance="14.25">
+						<item id="1884" count="1" />
+					</item>
+					<item chance="1.5">
+						<item id="1894" count="1" />
+					</item>
+					<item chance="6.2">
+						<item id="1881" count="1" />
+					</item>
+					<item chance="0.51">
+						<item id="70035" count="1" />
+					</item>
+					<item chance="0.51">
+						<item id="70038" count="1" />
+					</item>
+					<item chance="0.51">
+						<item id="70031" count="1" />
+					</item>
+					<item chance="0.51">
+						<item id="70032" count="1" />
+					</item>
+					<item chance="0.51">
+						<item id="70033" count="1" />
+					</item>
+					<item chance="0.51">
+						<item id="70030" count="1" />
+					</item>
+					<item chance="0.51">
+						<item id="70029" count="1" />
+					</item>
+					<item chance="0.51">
+						<item id="70036" count="1" />
+					</item>
+					<item chance="0.51">
+						<item id="70034" count="1" />
+					</item>
+					<item chance="0.51">
+						<item id="70037" count="1" />
+					</item>
+					<item chance="3.5">
+						<item id="1875" count="1" />
+					</item>
+					<item chance="3.4">
+						<item id="1885" count="1" />
+					</item>
+					<item chance="1.3">
+						<item id="4039" count="1" />
+					</item>
+					<item chance="9.9">
+						<item id="1882" count="1" />
+					</item>
+					<item chance="7.3">
+						<item id="1879" count="1" />
+					</item>
+					<item chance="7.3">
+						<item id="1895" count="1" />
+					</item>
+					<item chance="8.6">
+						<item id="1876" count="1" />
+					</item>
+					<item chance="0.8">
+						<item id="1890" count="1" />
+					</item>
+					<item chance="0.3">
+						<item id="1893" count="1" />
+					</item>
+					<item chance="3.2">
+						<item id="1874" count="1" />
+					</item>
+					<item chance="0.6">
+						<item id="4041" count="1" />
+					</item>
+					<item chance="0.8">
+						<item id="1887" count="1" />
+					</item>
+					<item chance="9.2">
+						<item id="1878" count="1" />
+					</item>
+					<item chance="2.6">
+						<item id="1889" count="1" />
+					</item>
+					<item chance="0.1">
+						<item id="956" count="1" />
+					</item>
+					<item chance="0.05">
+						<item id="952" count="1" />
+					</item>
+					<item chance="0.4">
+						<item id="1886" count="1" />
+					</item>
+					<item chance="0.5">
+						<item id="70039" count="1" />
+					</item>
+					<item chance="1.1">
+						<item id="1888" count="1" />
+					</item>
+					<item chance="0.5">
+						<item id="4040" count="1" />
+					</item>
+					<item chance="3.8">
+						<item id="1880" count="1" />
+					</item>
+					<item chance="2.0">
+						<item id="1883" count="1" />
+					</item>
+					<item chance="1.5">
+						<item id="4044" count="1" />
+					</item>
+					<item chance="0.5">
+						<item id="4042" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55175" toLevel="1" name="Clan's Special Supplies">
+		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>70028</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2.2">
+						<item id="1877" count="1" />
+					</item>
+					<item chance="1.8">
+						<item id="4043" count="1" />
+					</item>
+					<item chance="5.7">
+						<item id="1884" count="1" />
+					</item>
+					<item chance="1.6">
+						<item id="1894" count="1" />
+					</item>
+					<item chance="6.9">
+						<item id="1881" count="1" />
+					</item>
+					<item chance="0.72">
+						<item id="70035" count="1" />
+					</item>
+					<item chance="0.72">
+						<item id="70038" count="1" />
+					</item>
+					<item chance="0.72">
+						<item id="70031" count="1" />
+					</item>
+					<item chance="0.72">
+						<item id="70032" count="1" />
+					</item>
+					<item chance="0.72">
+						<item id="70033" count="1" />
+					</item>
+					<item chance="0.72">
+						<item id="70030" count="1" />
+					</item>
+					<item chance="0.72">
+						<item id="70029" count="1" />
+					</item>
+					<item chance="0.72">
+						<item id="70036" count="1" />
+					</item>
+					<item chance="0.72">
+						<item id="70034" count="1" />
+					</item>
+					<item chance="0.72">
+						<item id="70037" count="1" />
+					</item>
+					<item chance="0.1">
+						<item id="1892" count="1" />
+					</item>
+					<item chance="0.2">
+						<item id="4048" count="1" />
+					</item>
+					<item chance="0.1">
+						<item id="4047" count="1" />
+					</item>
+					<item chance="0.1">
+						<item id="1891" count="1" />
+					</item>
+					<item chance="0.2">
+						<item id="4046" count="1" />
+					</item>
+					<item chance="4.2">
+						<item id="1875" count="1" />
+					</item>
+					<item chance="5.3">
+						<item id="1885" count="1" />
+					</item>
+					<item chance="1.9">
+						<item id="4039" count="1" />
+					</item>
+					<item chance="11.0">
+						<item id="1882" count="1" />
+					</item>
+					<item chance="6.6">
+						<item id="1879" count="1" />
+					</item>
+					<item chance="5.2">
+						<item id="1895" count="1" />
+					</item>
+					<item chance="10.24">
+						<item id="1876" count="1" />
+					</item>
+					<item chance="0.6">
+						<item id="1890" count="1" />
+					</item>
+					<item chance="0.5">
+						<item id="1893" count="1" />
+					</item>
+					<item chance="2.6">
+						<item id="1874" count="1" />
+					</item>
+					<item chance="0.3">
+						<item id="4041" count="1" />
+					</item>
+					<item chance="1.3">
+						<item id="1887" count="1" />
+					</item>
+					<item chance="6.2">
+						<item id="1878" count="1" />
+					</item>
+					<item chance="3.0">
+						<item id="1889" count="1" />
+					</item>
+					<item chance="0.1">
+						<item id="4045" count="1" />
+					</item>
+					<item chance="0.2">
+						<item id="956" count="1" />
+					</item>
+					<item chance="0.1">
+						<item id="952" count="1" />
+					</item>
+					<item chance="0.5">
+						<item id="955" count="1" />
+					</item>
+					<item chance="0.1">
+						<item id="951" count="1" />
+					</item>
+					<item chance="1.2">
+						<item id="1886" count="1" />
+					</item>
+					<item chance="0.4">
+						<item id="70039" count="1" />
+					</item>
+					<item chance="1.7">
+						<item id="1888" count="1" />
+					</item>
+					<item chance="0.8">
+						<item id="4040" count="1" />
+					</item>
+					<item chance="4.7">
+						<item id="1880" count="1" />
+					</item>
+					<item chance="2.6">
+						<item id="1883" count="1" />
+					</item>
+					<item chance="2.1">
+						<item id="4044" count="1" />
+					</item>
+					<item chance="1.0">
+						<item id="4042" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55176" toLevel="1" name="Yellow Talisman - P. Atk.">
+		<icon>icon.skill55176</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55177" toLevel="1" name="Yellow Talisman - Atk. Spd.">
+		<icon>icon.skill55177</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55178" toLevel="1" name="Yellow Talisman - M. Def.">
+		<icon>icon.skill55178</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55179" toLevel="1" name="Yellow Talisman - M. Atk.">
+		<icon>icon.skill55179</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MAtk">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55180" toLevel="1" name="Yellow Talisman - Casting Spd.">
+		<icon>icon.skill55180</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55181" toLevel="1" name="Yellow Talisman - Accuracy">
+		<icon>icon.skill55181</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Accuracy">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55182" toLevel="1" name="Yellow Talisman - P. Def.">
+		<icon>icon.skill55182</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55183" toLevel="1" name="Yellow Talisman - Speed">
+		<icon>icon.skill55183</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Speed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55184" toLevel="1" name="Yellow Talisman - Evasion">
+		<icon>icon.skill55184</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55185" toLevel="1" name="Yellow Talisman - Healing">
+		<icon>icon.skill55185</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Heal">
+				<amount>15</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55186" toLevel="1" name="Blue Talisman - Invisibility">
+		<icon>icon.skill55186</icon>
+		<reuseDelay>240000</reuseDelay>
+		<hitTime>4000</hitTime>
+		<mpConsume>7</mpConsume>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
+		<magicLvl>40</magicLvl>
+		<operateType>T</operateType>
+		<effects>
+			<effect name="ManaDamOverTime">
+				<power>9</power>
+				<ticks>5</ticks>
+			</effect>
+			<effect name="SilentMove">
+				<chance>100</chance>
+			</effect>
+			<effect name="Speed">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55187" toLevel="1" name="Roast Blue Mackerel - STR">
+		<icon>icon.skill55187</icon>
+		<abnormalTime>1200</abnormalTime>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<hitTime>4000</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<irreplacableBuff>true</irreplacableBuff>
+		<magicLvl>1</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55188" toLevel="1" name="Roast Blue Mackerel - INT">
+		<icon>icon.skill55188</icon>
+		<abnormalTime>1200</abnormalTime>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<hitTime>4000</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<irreplacableBuff>true</irreplacableBuff>
+		<magicLvl>1</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55189" toLevel="1" name="Roast Blue Mackerel - CON">
+		<icon>icon.skill55189</icon>
+		<abnormalTime>1200</abnormalTime>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<hitTime>4000</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<irreplacableBuff>true</irreplacableBuff>
+		<magicLvl>1</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55190" toLevel="1" name="Roast Blue Mackerel - DEX">
+		<icon>icon.skill55190</icon>
+		<abnormalTime>1200</abnormalTime>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<hitTime>4000</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<irreplacableBuff>true</irreplacableBuff>
+		<magicLvl>1</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55191" toLevel="1" name="Roast Blue Mackerel - MEN">
+		<icon>icon.skill55191</icon>
+		<abnormalTime>1200</abnormalTime>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<hitTime>4000</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<irreplacableBuff>true</irreplacableBuff>
+		<magicLvl>1</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55192" toLevel="1" name="Roast Blue Mackerel - WIT">
+		<icon>icon.skill55192</icon>
+		<abnormalTime>1200</abnormalTime>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<hitTime>4000</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<irreplacableBuff>true</irreplacableBuff>
+		<magicLvl>1</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55193" toLevel="1" name="Sealed Rune Lvl 1">
+		<icon>icon.skill55193</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>70000</itemConsumeId> <!-- Sealed Rune - Lv. 1 -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="12.5">
+						<item id="29818" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29838" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29858" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29878" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29898" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29918" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29938" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29958" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55194" toLevel="1" name="Sealed Rune Lvl 2">
+		<icon>icon.skill55194</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>70001</itemConsumeId> <!-- Sealed Rune - Lv. 2 -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="12.5">
+						<item id="29819" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29839" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29859" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29879" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29899" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29919" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29939" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29959" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55195" toLevel="1" name="Sealed Rune Lvl 3">
+		<icon>icon.skill55195</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>70002</itemConsumeId> <!-- Sealed Rune - Lv. 3 -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="12.5">
+						<item id="29820" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29840" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29860" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29880" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29900" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29920" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29940" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29960" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55196" toLevel="1" name="Sealed Rune Lvl 4">
+		<icon>icon.skill55196</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>70003</itemConsumeId> <!-- Sealed Rune - Lv. 4 -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="12.5">
+						<item id="29821" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29841" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29861" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29881" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29901" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29921" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29941" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29961" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55197" toLevel="1" name="Sealed Rune Lvl 5">
+		<icon>icon.skill55197</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>70004</itemConsumeId> <!-- Sealed Rune - Lv. 5 -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="12.5">
+						<item id="29822" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29842" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29862" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29882" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29902" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29922" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29942" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29962" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55198" toLevel="1" name="Sealed Rune Lvl 6">
+		<icon>icon.skill55198</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>70005</itemConsumeId> <!-- Sealed Rune - Lv. 6 -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="12.5">
+						<item id="29823" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29843" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29863" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29883" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29903" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29923" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29943" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29963" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55199" toLevel="1" name="Sealed Rune Lvl 7">
+		<icon>icon.skill55199</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>70006</itemConsumeId> <!-- Sealed Rune - Lv. 7 -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="12.5">
+						<item id="29824" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29844" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29864" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29884" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29904" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29924" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29944" count="1" />
+					</item>
+					<item chance="12.5">
+						<item id="29964" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+</list>

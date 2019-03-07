@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Peace Zones -->
+	<zone name="talking_island_town_peace_zone1" type="PeaceZone" shape="NPoly" minZ="-3966" maxZ="-3466"> <!-- [17_25] -->
+		<node X="-84028" Y="239722" />
+		<node X="-81007" Y="243210" />
+		<node X="-81021" Y="243484" />
+		<node X="-84308" Y="246247" />
+		<node X="-84552" Y="246239" />
+		<node X="-87638" Y="242837" />
+		<node X="-87611" Y="242574" />
+		<node X="-84305" Y="239649" />
+	</zone>
+	<zone name="talking_island_town_peace_zone2" type="PeaceZone" shape="NPoly" minZ="-3820" maxZ="-3320"> <!-- [17_25] -->
+		<node X="-83428" Y="240398" />
+		<node X="-82605" Y="241262" />
+		<node X="-81512" Y="242568" />
+		<node X="-82035" Y="242583" />
+		<node X="-83396" Y="241129" />
+	</zone>
+	<zone name="talking_island_town_peace_zone3" type="PeaceZone" shape="NPoly" minZ="-3789" maxZ="-3289"> <!-- [17_25] -->
+		<node X="-86138" Y="243444" />
+		<node X="-85039" Y="244801" />
+		<node X="-84811" Y="245977" />
+		<node X="-86323" Y="244370" />
+		<node X="-87229" Y="243237" />
+	</zone>
+	<zone name="talking_island_town_peace_zone4" type="PeaceZone" shape="NPoly" minZ="-3846" maxZ="-3346"> <!-- [17_25] -->
+		<node X="-85539" Y="241748" />
+		<node X="-87612" Y="242572" />
+		<node X="-87470" Y="242383" />
+		<node X="-86310" Y="241337" />
+		<node X="-85622" Y="240814" />
+	</zone>
+	<zone name="mage_start_peace_1" type="PeaceZone" shape="NPoly" minZ="-3699" maxZ="-2699"> <!-- [17_25] -->
+		<node X="-90034" Y="248143" />
+		<node X="-89960" Y="248698" />
+		<node X="-90520" Y="248847" />
+		<node X="-91136" Y="248445" />
+		<node X="-91270" Y="248296" />
+		<node X="-91328" Y="248092" />
+		<node X="-91250" Y="247867" />
+		<node X="-91063" Y="247704" />
+		<node X="-90863" Y="247676" />
+		<node X="-90638" Y="247748" />
+	</zone>
+	<zone name="mage_start_peace_2" type="PeaceZone" shape="NPoly" minZ="-4043" maxZ="-3043"> <!-- [17_25] -->
+		<node X="-90165" Y="247096" />
+		<node X="-88576" Y="248162" />
+		<node X="-89962" Y="250239" />
+		<node X="-91512" Y="249150" />
+	</zone>
+	<zone name="mage_start_peace_3" type="PeaceZone" shape="NPoly" minZ="-3659" maxZ="-2659"> <!-- [17_25] -->
+		<node X="-88457" Y="248867" />
+		<node X="-88611" Y="249099" />
+		<node X="-89054" Y="249756" />
+		<node X="-89279" Y="250048" />
+		<node X="-89684" Y="250143" />
+		<node X="-90008" Y="249970" />
+		<node X="-88864" Y="248209" />
+		<node X="-88542" Y="248446" />
+	</zone>
+	<zone name="mage_start_peace_4" type="PeaceZone" shape="NPoly" minZ="-3659" maxZ="-2659"> <!-- [17_25] -->
+		<node X="-88732" Y="248912" />
+		<node X="-88418" Y="249116" />
+		<node X="-89005" Y="249980" />
+		<node X="-89311" Y="249787" />
+	</zone>
+	<zone name="mage_start_peace_5" type="PeaceZone" shape="NPoly" minZ="-3659" maxZ="-2659"> <!-- [17_25] -->
+		<node X="-88612" Y="249461" />
+		<node X="-88559" Y="249539" />
+		<node X="-88581" Y="249649" />
+		<node X="-88680" Y="249708" />
+		<node X="-88761" Y="249704" />
+		<node X="-89050" Y="249513" />
+		<node X="-89073" Y="249332" />
+		<node X="-88895" Y="249273" />
+	</zone>
+	<zone name="fighter_start_peace_1" type="PeaceZone" shape="NPoly" minZ="-3284" maxZ="-2284"> <!-- [17_25] -->
+		<node X="-73436" Y="257725" />
+		<node X="-71668" Y="256229" />
+		<node X="-69952" Y="258077" />
+		<node X="-71896" Y="259701" />
+	</zone>
+	<zone name="fighter_start_peace_2" type="PeaceZone" shape="NPoly" minZ="-3272" maxZ="-2272"> <!-- [17_25] -->
+		<node X="-73180" Y="257663" />
+		<node X="-72460" Y="258619" />
+		<node X="-72720" Y="258831" />
+		<node X="-73284" Y="258115" />
+		<node X="-73260" Y="257855" />
+	</zone>
+	<zone name="fighter_start_peace_3" type="PeaceZone" shape="NPoly" minZ="-3272" maxZ="-2272"> <!-- [17_25] -->
+		<node X="-71279" Y="256408" />
+		<node X="-70679" Y="257116" />
+		<node X="-70939" Y="257328" />
+		<node X="-71575" Y="256612" />
+		<node X="-71634" Y="256392" />
+	</zone>
+	<zone name="fighter_start_peace_4" type="PeaceZone" shape="NPoly" minZ="-3306" maxZ="-2306"> <!-- [17_25] -->
+		<node X="-72596" Y="259181" />
+		<node X="-70363" Y="257272" />
+		<node X="-70041" Y="257631" />
+		<node X="-72303" Y="259545" />
+	</zone>
+	<zone name="darkelf_town_peace_zone" type="PeaceZone" shape="NPoly" minZ="-8507" maxZ="-1507"> <!-- [20_18] -->
+		<node X="15719" Y="16735" />
+		<node X="14885" Y="19139" />
+		<node X="12223" Y="21049" />
+		<node X="8962" Y="20203" />
+		<node X="7340" Y="18060" />
+		<node X="7372" Y="15649" />
+		<node X="8018" Y="14013" />
+		<node X="9389" Y="12836" />
+		<node X="10669" Y="12131" />
+		<node X="12499" Y="12455" />
+		<node X="14684" Y="13625" />
+		<node X="15441" Y="15060" />
+	</zone>
+	<zone name="darkelf_start_peace_1" type="PeaceZone" shape="NPoly" minZ="-4571" maxZ="-2071"> <!-- [20_18] -->
+		<node X="28422" Y="8936" />
+		<node X="30282" Y="10670" />
+		<node X="29952" Y="11744" />
+		<node X="28457" Y="13117" />
+		<node X="27730" Y="13126" />
+		<node X="26435" Y="11893" />
+		<node X="26450" Y="10146" />
+		<node X="27792" Y="8929" />
+	</zone>
+	<zone name="darkelf_start_peace_2" type="PeaceZone" shape="NPoly" minZ="-4588" maxZ="-2088"> <!-- [20_18] -->
+		<node X="29434" Y="10233" />
+		<node X="31273" Y="10233" />
+		<node X="31273" Y="11827" />
+		<node X="29431" Y="11830" />
+	</zone>
+	<zone name="elf_town_peace1" type="PeaceZone" shape="NPoly" minZ="-3511" maxZ="-2011"> <!-- [21_19] -->
+		<node X="47758" Y="51443" />
+		<node X="46735" Y="52457" />
+		<node X="45358" Y="52947" />
+		<node X="44182" Y="52419" />
+		<node X="43398" Y="51830" />
+		<node X="43006" Y="51401" />
+		<node X="42508" Y="50515" />
+		<node X="42343" Y="49479" />
+		<node X="42547" Y="48421" />
+		<node X="43138" Y="47363" />
+		<node X="44342" Y="46639" />
+		<node X="45621" Y="46486" />
+		<node X="45974" Y="46554" />
+		<node X="47114" Y="46996" />
+		<node X="47777" Y="47710" />
+		<node X="48202" Y="48441" />
+		<node X="48400" Y="49391" />
+		<node X="48365" Y="50345" />
+	</zone>
+	<zone name="elf_start_peace1" type="PeaceZone" shape="NPoly" minZ="-4071" maxZ="-2571"> <!-- [21_19] -->
+		<node X="47987" Y="40688" />
+		<node X="47644" Y="41254" />
+		<node X="47139" Y="41756" />
+		<node X="46576" Y="42051" />
+		<node X="45590" Y="42006" />
+		<node X="44823" Y="41489" />
+		<node X="44355" Y="40860" />
+		<node X="44168" Y="40397" />
+		<node X="44319" Y="39900" />
+		<node X="44723" Y="39030" />
+		<node X="45366" Y="38626" />
+		<node X="46511" Y="38446" />
+		<node X="47292" Y="38808" />
+		<node X="47736" Y="39330" />
+		<node X="48079" Y="39911" />
+	</zone>
+	<zone name="elf_start_peace2" type="PeaceZone" shape="NPoly" minZ="-4082" maxZ="-2582"> <!-- [21_19] -->
+		<node X="44215" Y="39803" />
+		<node X="44497" Y="40504" />
+		<node X="43643" Y="41416" />
+		<node X="43398" Y="41419" />
+		<node X="42884" Y="41191" />
+		<node X="42475" Y="40529" />
+		<node X="42466" Y="40285" />
+		<node X="42762" Y="39658" />
+		<node X="43311" Y="39336" />
+		<node X="43546" Y="39327" />
+	</zone>
+	<zone name="elf_start_peace3" type="PeaceZone" shape="NPoly" minZ="-4082" maxZ="-2582"> <!-- [21_19] -->
+		<node X="49799" Y="39991" />
+		<node X="49812" Y="40226" />
+		<node X="48958" Y="41201" />
+		<node X="48724" Y="41204" />
+		<node X="48096" Y="40759" />
+		<node X="47883" Y="40159" />
+		<node X="48123" Y="39481" />
+		<node X="48636" Y="39123" />
+		<node X="48885" Y="39121" />
+		<node X="49368" Y="39360" />
+	</zone>
+	<zone name="guldiocastle_town_peace1" type="PeaceZone" shape="NPoly" minZ="-3245" maxZ="-2745"> <!-- [19_21] -->
+		<node X="-11998" Y="123905" />
+		<node X="-12880" Y="126192" />
+		<node X="-13928" Y="126485" />
+		<node X="-14408" Y="126484" />
+		<node X="-15239" Y="126174" />
+		<node X="-16120" Y="125367" />
+		<node X="-16551" Y="124468" />
+		<node X="-16550" Y="123911" />
+		<node X="-16509" Y="123323" />
+		<node X="-14638" Y="122381" />
+		<node X="-12022" Y="122270" />
+	</zone>
+	<zone name="guldiocastle_town_peace2" type="PeaceZone" shape="NPoly" minZ="-3156" maxZ="-2656"> <!-- [19_21] -->
+		<node X="-14956" Y="121115" />
+		<node X="-12670" Y="121093" />
+		<node X="-12021" Y="121755" />
+		<node X="-12019" Y="123005" />
+		<node X="-15400" Y="123009" />
+	</zone>
+	<zone name="gludin_town_peace1" type="PeaceZone" shape="NPoly" minZ="-3244" maxZ="-2744"> <!-- [17_22] -->
+		<node X="-79283" Y="149148" />
+		<node X="-78525" Y="149851" />
+		<node X="-78549" Y="152429" />
+		<node X="-82513" Y="152442" />
+		<node X="-82502" Y="149146" />
+	</zone>
+	<zone name="gludin_town_peace2" type="PeaceZone" shape="NPoly" minZ="-3244" maxZ="-2744"> <!-- [17_22] -->
+		<node X="-84874" Y="149370" />
+		<node X="-81337" Y="149370" />
+		<node X="-81337" Y="152419" />
+		<node X="-84874" Y="152419" />
+	</zone>
+	<zone name="gludin_town_peace3" type="PeaceZone" shape="NPoly" minZ="-3276" maxZ="-2776"> <!-- [17_22] -->
+		<node X="-84884" Y="152261" />
+		<node X="-78803" Y="152218" />
+		<node X="-78803" Y="156106" />
+		<node X="-84884" Y="156113" />
+	</zone>
+	<zone name="gludin_town_peace4" type="PeaceZone" shape="NPoly" minZ="-3340" maxZ="-2840"> <!-- [17_22] -->
+		<node X="-80698" Y="155950" />
+		<node X="-79097" Y="154122" />
+		<node X="-77125" Y="155447" />
+		<node X="-77948" Y="156503" />
+	</zone>
+	<zone name="gludin_town_peace5" type="PeaceZone" shape="NPoly" minZ="-3456" maxZ="-2956"> <!-- [17_22] -->
+		<node X="-78474" Y="156088" />
+		<node X="-77131" Y="155440" />
+		<node X="-77831" Y="156543" />
+		<node X="-78543" Y="156393" />
+	</zone>
+	<zone name="dion_town_peace1" type="PeaceZone" shape="NPoly" minZ="-3157" maxZ="-2157"> <!-- [20_22] -->
+		<node X="14290" Y="141403" />
+		<node X="15261" Y="141328" />
+		<node X="17478" Y="142633" />
+		<node X="17461" Y="143349" />
+		<node X="16751" Y="144384" />
+		<node X="15769" Y="144681" />
+		<node X="14470" Y="143863" />
+		<node X="14010" Y="143120" />
+		<node X="13978" Y="141885" />
+	</zone>
+	<zone name="dion_town_peace2" type="PeaceZone" shape="NPoly" minZ="-2802" maxZ="-2302"> <!-- [20_22] -->
+		<node X="15653" Y="141687" />
+		<node X="17220" Y="141541" />
+		<node X="17361" Y="142876" />
+		<node X="15789" Y="143037" />
+	</zone>
+	<zone name="dion_town_peace3" type="PeaceZone" shape="NPoly" minZ="-2858" maxZ="-2358"> <!-- [20_22] -->
+		<node X="17006" Y="141806" />
+		<node X="17410" Y="141768" />
+		<node X="17503" Y="142644" />
+		<node X="17107" Y="142709" />
+	</zone>
+	<zone name="dion_town_peace4" type="PeaceZone" shape="NPoly" minZ="-3267" maxZ="-2567"> <!-- [20_22] -->
+		<node X="15469" Y="143498" />
+		<node X="17126" Y="142976" />
+		<node X="19489" Y="144901" />
+		<node X="17833" Y="147643" />
+		<node X="16125" Y="146869" />
+	</zone>
+	<zone name="dion_town_peace5" type="PeaceZone" shape="NPoly" minZ="-3230" maxZ="-2530"> <!-- [20_22] -->
+		<node X="20387" Y="142469" />
+		<node X="21407" Y="143663" />
+		<node X="21402" Y="146315" />
+		<node X="16663" Y="146406" />
+		<node X="16461" Y="143892" />
+		<node X="18915" Y="142444" />
+	</zone>
+	<zone name="floran_town_peace1" type="PeaceZone" shape="NPoly" minZ="-3957" maxZ="-3357"> <!-- [20_23] -->
+		<node X="18134" Y="169527" />
+		<node X="18602" Y="169760" />
+		<node X="18641" Y="169827" />
+		<node X="18429" Y="170529" />
+		<node X="17386" Y="170916" />
+		<node X="16777" Y="170706" />
+		<node X="16555" Y="170564" />
+		<node X="16530" Y="170497" />
+		<node X="16732" Y="169864" />
+		<node X="17253" Y="169433" />
+		<node X="17396" Y="169394" />
+		<node X="17768" Y="169440" />
+	</zone>
+	<zone name="floran_town_peace2" type="PeaceZone" shape="NPoly" minZ="-3967" maxZ="-3367"> <!-- [20_23] -->
+		<node X="17082" Y="169410" />
+		<node X="17464" Y="169397" />
+		<node X="17285" Y="169889" />
+		<node X="16773" Y="170007" />
+		<node X="16717" Y="169945" />
+		<node X="16823" Y="169466" />
+		<node X="16882" Y="169431" />
+	</zone>
+	<zone name="floran_town_peace3" type="PeaceZone" shape="NPoly" minZ="-3956" maxZ="-3356"> <!-- [20_23] -->
+		<node X="18487" Y="170499" />
+		<node X="18390" Y="170915" />
+		<node X="18343" Y="170933" />
+		<node X="17768" Y="170965" />
+		<node X="17223" Y="170891" />
+		<node X="16878" Y="170752" />
+		<node X="18430" Y="170079" />
+		<node X="18543" Y="170093" />
+	</zone>
+	<zone name="giran_town_peace12" type="PeaceZone" shape="NPoly" minZ="-3464" maxZ="-3264"> <!-- [22_22] -->
+		<node X="85048" Y="145756" />
+		<node X="86104" Y="145752" />
+		<node X="86100" Y="145888" />
+		<node X="85060" Y="145856" />
+	</zone>
+	<zone name="giran_town_peace1" type="PeaceZone" shape="NPoly" minZ="-3654" maxZ="-2654"> <!-- [22_22] -->
+		<node X="77164" Y="147420" />
+		<node X="79291" Y="147417" />
+		<node X="79278" Y="149808" />
+		<node X="77155" Y="149824" />
+	</zone>
+	<zone name="giran_town_peace2" type="PeaceZone" shape="NPoly" minZ="-3598" maxZ="-1598"> <!-- [22_22] -->
+		<node X="79193" Y="144776" />
+		<node X="85019" Y="144748" />
+		<node X="85148" Y="149864" />
+		<node X="79198" Y="149858" />
+	</zone>
+	<zone name="giran_town_peace3" type="PeaceZone" shape="NPoly" minZ="-3602" maxZ="-2402"> <!-- [22_22] -->
+		<node X="79180" Y="149311" />
+		<node X="83508" Y="149374" />
+		<node X="83510" Y="151272" />
+		<node X="79197" Y="151297" />
+	</zone>
+	<zone name="giran_town_peace4" type="PeaceZone" shape="NPoly" minZ="-3636" maxZ="-3036"> <!-- [22_22] -->
+		<node X="85619" Y="150120" />
+		<node X="86004" Y="150125" />
+		<node X="86005" Y="152300" />
+		<node X="85617" Y="152305" />
+	</zone>
+	<zone name="giran_town_peace5" type="PeaceZone" shape="NPoly" minZ="-3799" maxZ="-2399"> <!-- [22_22] -->
+		<node X="84848" Y="152234" />
+		<node X="86779" Y="152240" />
+		<node X="86781" Y="153610" />
+		<node X="84844" Y="153610" />
+	</zone>
+	<zone name="giran_town_peace6" type="PeaceZone" shape="NPoly" minZ="-3872" maxZ="-1872"> <!-- [22_22] -->
+		<node X="84922" Y="146919" />
+		<node X="88437" Y="146909" />
+		<node X="88445" Y="150047" />
+		<node X="85090" Y="150032" />
+	</zone>
+	<zone name="giran_town_peace7" type="PeaceZone" shape="NPoly" minZ="-3810" maxZ="-2110"> <!-- [22_22] -->
+		<node X="80304" Y="143626" />
+		<node X="85033" Y="143631" />
+		<node X="85029" Y="144930" />
+		<node X="80298" Y="144914" />
+	</zone>
+	<zone name="giran_town_peace8" type="PeaceZone" shape="NPoly" minZ="-3538" maxZ="-3338"> <!-- [22_22] -->
+		<node X="79190" Y="150958" />
+		<node X="82705" Y="150962" />
+		<node X="82717" Y="152824" />
+		<node X="79202" Y="152821" />
+	</zone>
+	<zone name="giran_town_peace9" type="PeaceZone" shape="NPoly" minZ="-3496" maxZ="-2996"> <!-- [22_22] -->
+		<node X="84838" Y="145789" />
+		<node X="86101" Y="145774" />
+		<node X="86105" Y="146911" />
+		<node X="84842" Y="146925" />
+	</zone>
+	<zone name="giran_town_peace10" type="PeaceZone" shape="NPoly" minZ="-3599" maxZ="-2999"> <!-- [22_22] -->
+		<node X="85088" Y="149126" />
+		<node X="86468" Y="149142" />
+		<node X="86488" Y="150240" />
+		<node X="85089" Y="150240" />
+	</zone>
+	<zone name="giran_town_peace11" type="PeaceZone" shape="NPoly" minZ="-3410" maxZ="-3210"> <!-- [22_22] -->
+		<node X="83111" Y="143502" />
+		<node X="85038" Y="143499" />
+		<node X="85038" Y="143856" />
+		<node X="83111" Y="143859" />
+	</zone>
+	<zone name="orc_start_peace" type="PeaceZone" shape="NPoly" minZ="-1483" maxZ="516"> <!-- [18_14] -->
+		<node X="-58952" Y="-115543" />
+		<node X="-52769" Y="-115553" />
+		<node X="-52758" Y="-111736" />
+		<node X="-58952" Y="-111749" />
+	</zone>
+	<zone name="orc_town_peace1" type="PeaceZone" shape="NPoly" minZ="-397" maxZ="603"> <!-- [18_14] -->
+		<node X="-42044" Y="-113585" />
+		<node X="-42533" Y="-111862" />
+		<node X="-43811" Y="-110599" />
+		<node X="-45614" Y="-110071" />
+		<node X="-47375" Y="-110007" />
+		<node X="-47397" Y="-117215" />
+		<node X="-46661" Y="-117220" />
+		<node X="-45633" Y="-117094" />
+		<node X="-43791" Y="-116569" />
+		<node X="-42530" Y="-115322" />
+	</zone>
+	<zone name="orc_town_peace2" type="PeaceZone" shape="NPoly" minZ="-460" maxZ="540"> <!-- [18_14] -->
+		<node X="-50211" Y="-116941" />
+		<node X="-47413" Y="-117301" />
+		<node X="-47358" Y="-109913" />
+		<node X="-49161" Y="-109305" />
+		<node X="-51245" Y="-109819" />
+		<node X="-53401" Y="-112501" />
+		<node X="-53788" Y="-113966" />
+		<node X="-52931" Y="-115293" />
+	</zone>
+	<zone name="dwarf_start" type="PeaceZone" shape="NPoly" minZ="-652" maxZ="348"> <!-- [23_12] -->
+		<node X="110063" Y="-175794" />
+		<node X="110565" Y="-173944" />
+		<node X="110518" Y="-173426" />
+		<node X="109153" Y="-171575" />
+		<node X="106345" Y="-171905" />
+		<node X="104853" Y="-174391" />
+		<node X="105481" Y="-176144" />
+		<node X="106031" Y="-177035" />
+		<node X="107660" Y="-177623" />
+		<node X="109208" Y="-177140" />
+	</zone>
+	<zone name="dwarf_town_peace1" type="PeaceZone" shape="NPoly" minZ="-1600" maxZ="-400"> <!-- [23_12] -->
+		<node X="117520" Y="-181718" />
+		<node X="117423" Y="-180017" />
+		<node X="115371" Y="-176774" />
+		<node X="114885" Y="-176815" />
+		<node X="114070" Y="-177180" />
+		<node X="113883" Y="-179469" />
+		<node X="114580" Y="-181875" />
+	</zone>
+	<zone name="dwarf_town_peace2" type="PeaceZone" shape="NPoly" minZ="-1685" maxZ="-685"> <!-- [23_12] -->
+		<node X="117630" Y="-182925" />
+		<node X="115159" Y="-182811" />
+		<node X="115477" Y="-183673" />
+		<node X="115600" Y="-183891" />
+		<node X="115740" Y="-184086" />
+		<node X="115948" Y="-184206" />
+		<node X="116257" Y="-184251" />
+		<node X="116710" Y="-184253" />
+		<node X="117023" Y="-184164" />
+		<node X="117204" Y="-184034" />
+		<node X="117335" Y="-183812" />
+		<node X="117503" Y="-183386" />
+	</zone>
+	<zone name="dwarf_town_peace3" type="PeaceZone" shape="NPoly" minZ="-1724" maxZ="-724"> <!-- [23_12] -->
+		<node X="114641" Y="-183866" />
+		<node X="117517" Y="-183140" />
+		<node X="117778" Y="-182649" />
+		<node X="117775" Y="-182246" />
+		<node X="117733" Y="-182086" />
+		<node X="117432" Y="-181576" />
+		<node X="114638" Y="-181551" />
+	</zone>
+	<zone name="dwarf_town_peace4" type="PeaceZone" shape="NPoly" minZ="-1000" maxZ="-400"> <!-- [23_12] -->
+		<node X="116406" Y="-176891" />
+		<node X="115964" Y="-176809" />
+		<node X="115535" Y="-176773" />
+		<node X="115142" Y="-176788" />
+		<node X="115867" Y="-178003" />
+		<node X="117355" Y="-179595" />
+		<node X="117300" Y="-178525" />
+		<node X="117172" Y="-177847" />
+		<node X="116798" Y="-177111" />
+		<node X="116643" Y="-176968" />
+	</zone>
+	<zone name="dwarf_town_peace5" type="PeaceZone" shape="NPoly" minZ="-1257" maxZ="-657"> <!-- [23_12] -->
+		<node X="116649" Y="-179760" />
+		<node X="117429" Y="-180911" />
+		<node X="117493" Y="-180052" />
+		<node X="117467" Y="-179575" />
+		<node X="116977" Y="-178211" />
+		<node X="116142" Y="-178429" />
+	</zone>
+	<zone name="oren_town_peace1" type="PeaceZone" shape="NPoly" minZ="-1822" maxZ="-1022"> <!-- [22_19] -->
+		<node X="78900" Y="52076" />
+		<node X="84126" Y="52049" />
+		<node X="84099" Y="57117" />
+		<node X="78872" Y="57144" />
+	</zone>
+	<zone name="ivory_tower_peace1" type="PeaceZone" shape="NPoly" minZ="-4652" maxZ="347"> <!-- [22_18] -->
+		<node X="86094" Y="16382" />
+		<node X="85888" Y="16744" />
+		<node X="85510" Y="16968" />
+		<node X="85139" Y="16966" />
+		<node X="84767" Y="16736" />
+		<node X="84576" Y="16394" />
+		<node X="84580" Y="15977" />
+		<node X="84783" Y="15631" />
+		<node X="85143" Y="15417" />
+		<node X="85499" Y="15403" />
+		<node X="85886" Y="15642" />
+		<node X="86049" Y="15990" />
+	</zone>
+	<zone name="hunter_town_peace1" type="PeaceZone" shape="NPoly" minZ="-2749" maxZ="-1249"> <!-- [23_20] -->
+		<node X="120837" Y="78996" />
+		<node X="118917" Y="80603" />
+		<node X="116981" Y="80412" />
+		<node X="115383" Y="79832" />
+		<node X="114029" Y="76721" />
+		<node X="114670" Y="74772" />
+		<node X="115464" Y="74131" />
+		<node X="118488" Y="74094" />
+		<node X="120717" Y="74271" />
+		<node X="121548" Y="76702" />
+	</zone>
+	<zone name="hunter_town_peace2" type="PeaceZone" shape="NPoly" minZ="-2512" maxZ="-1012"> <!-- [23_20] -->
+		<node X="117932" Y="74072" />
+		<node X="118560" Y="74104" />
+		<node X="118308" Y="74324" />
+		<node X="118108" Y="74324" />
+	</zone>
+	<zone name="hadin_peace1" type="PeaceZone" shape="NPoly" minZ="-3434" maxZ="-2934"> <!-- [23_21] -->
+		<node X="106216" Y="112467" />
+		<node X="106779" Y="113174" />
+		<node X="106759" Y="114084" />
+		<node X="106174" Y="115069" />
+		<node X="105181" Y="115072" />
+		<node X="104608" Y="113714" />
+		<node X="104782" Y="112755" />
+		<node X="105248" Y="112466" />
+	</zone>
+	<zone name="aden_town_peace1" type="PeaceZone" shape="NPoly" minZ="-2532" maxZ="-1032"> <!-- [24_18] -->
+		<node X="150222" Y="20224" />
+		<node X="151214" Y="21124" />
+		<node X="151291" Y="29988" />
+		<node X="150278" Y="30956" />
+		<node X="144297" Y="30912" />
+		<node X="143434" Y="30078" />
+		<node X="143415" Y="21117" />
+		<node X="144415" Y="20200" />
+	</zone>
+	<zone name="aden_town_peace2" type="PeaceZone" shape="NPoly" minZ="-2517" maxZ="-1017"> <!-- [24_18] -->
+		<node X="145783" Y="30543" />
+		<node X="149035" Y="30552" />
+		<node X="147953" Y="31586" />
+		<node X="147032" Y="31586" />
+	</zone>
+	<zone name="aden_town_peace3" type="PeaceZone" shape="NPoly" minZ="-2215" maxZ="-715"> <!-- [24_18] -->
+		<node X="151101" Y="24718" />
+		<node X="151485" Y="24715" />
+		<node X="151489" Y="25546" />
+		<node X="151098" Y="25549" />
+	</zone>
+	<zone name="aden_town_peace4" type="PeaceZone" shape="NPoly" minZ="-2101" maxZ="-601"> <!-- [24_18] -->
+		<node X="147162" Y="19914" />
+		<node X="147775" Y="19914" />
+		<node X="147834" Y="20395" />
+		<node X="147099" Y="20394" />
+	</zone>
+	<zone name="aden_town_peace5" type="PeaceZone" shape="NPoly" minZ="-2456" maxZ="-956"> <!-- [24_18] -->
+		<node X="143117" Y="25953" />
+		<node X="143728" Y="25712" />
+		<node X="143728" Y="26882" />
+		<node X="143118" Y="26712" />
+	</zone>
+	<zone name="speaking_port_peace1" type="PeaceZone" shape="NPoly" minZ="-3684" maxZ="-3484"> <!-- [17_25] -->
+		<node X="-96610" Y="258814" />
+		<node X="-96389" Y="258748" />
+		<node X="-96369" Y="258787" />
+		<node X="-96374" Y="259051" />
+		<node X="-96640" Y="259059" />
+	</zone>
+	<zone name="speaking_port_peace2" type="PeaceZone" shape="NPoly" minZ="-3676" maxZ="-3476"> <!-- [17_25] -->
+		<node X="-96561" Y="258759" />
+		<node X="-96411" Y="258764" />
+		<node X="-96553" Y="259066" />
+		<node X="-97256" Y="259068" />
+		<node X="-97245" Y="258787" />
+	</zone>
+	<zone name="speaking_port_peace3" type="PeaceZone" shape="NPoly" minZ="-3672" maxZ="-3472"> <!-- [17_25] -->
+		<node X="-96969" Y="259036" />
+		<node X="-96649" Y="259036" />
+		<node X="-96648" Y="261414" />
+		<node X="-96968" Y="261414" />
+	</zone>
+	<zone name="speaking_port_peace4" type="PeaceZone" shape="NPoly" minZ="-3672" maxZ="-3472"> <!-- [17_25] -->
+		<node X="-97161" Y="259866" />
+		<node X="-96961" Y="259866" />
+		<node X="-96961" Y="260203" />
+		<node X="-97161" Y="260203" />
+	</zone>
+	<zone name="speaking_port_peace5" type="PeaceZone" shape="NPoly" minZ="-3679" maxZ="-3479"> <!-- [17_25] -->
+		<node X="-96750" Y="259679" />
+		<node X="-96326" Y="259679" />
+		<node X="-96326" Y="260400" />
+		<node X="-96750" Y="260400" />
+	</zone>
+	<zone name="speaking_port_peace6" type="PeaceZone" shape="NPoly" minZ="-3685" maxZ="-3485"> <!-- [17_25] -->
+		<node X="-97290" Y="261068" />
+		<node X="-95888" Y="261068" />
+		<node X="-95888" Y="261419" />
+		<node X="-97290" Y="261418" />
+	</zone>
+	<zone name="speaking_port_peace7" type="PeaceZone" shape="NPoly" minZ="-3681" maxZ="-3481"> <!-- [17_25] -->
+		<node X="-97476" Y="260763" />
+		<node X="-97167" Y="260763" />
+		<node X="-97167" Y="261419" />
+		<node X="-97476" Y="261419" />
+	</zone>
+	<zone name="speaking_port_peace8" type="PeaceZone" shape="NPoly" minZ="-3670" maxZ="-3470"> <!-- [17_25] -->
+		<node X="-97237" Y="259333" />
+		<node X="-96923" Y="259333" />
+		<node X="-96923" Y="259637" />
+		<node X="-97237" Y="259637" />
+	</zone>
+	<zone name="gludin_port1" type="PeaceZone" shape="NPoly" minZ="-3708" maxZ="-3508"> <!-- [17_22] -->
+		<node X="-92600" Y="148457" />
+		<node X="-90416" Y="148372" />
+		<node X="-90412" Y="151666" />
+		<node X="-92508" Y="151678" />
+		<node X="-93497" Y="149244" />
+	</zone>
+	<zone name="gludin_port2" type="PeaceZone" shape="NPoly" minZ="-3694" maxZ="-3494"> <!-- [17_22] -->
+		<node X="-94294" Y="148251" />
+		<node X="-92763" Y="148869" />
+		<node X="-92437" Y="152317" />
+		<node X="-93461" Y="153244" />
+		<node X="-95444" Y="151462" />
+		<node X="-95446" Y="149881" />
+		<node X="-94588" Y="148248" />
+	</zone>
+	<zone name="giran_port1" type="PeaceZone" shape="NPoly" minZ="-3625" maxZ="-3411"> <!-- [21_23] -->
+		<node X="47189" Y="185982" />
+		<node X="49284" Y="183651" />
+		<node X="52767" Y="186787" />
+		<node X="49719" Y="190044" />
+	</zone>
+	<zone name="giran_port2" type="PeaceZone" shape="NPoly" minZ="-3625" maxZ="-3311"> <!-- [21_23] -->
+		<node X="45288" Y="186705" />
+		<node X="47947" Y="185316" />
+		<node X="50535" Y="189487" />
+		<node X="47639" Y="191052" />
+	</zone>
+	<zone name="giran_port3" type="PeaceZone" shape="NPoly" minZ="-3606" maxZ="-3106"> <!-- [21_23] -->
+		<node X="43935" Y="187891" />
+		<node X="45949" Y="186815" />
+		<node X="46215" Y="187346" />
+		<node X="44226" Y="188420" />
+	</zone>
+	<zone name="giran_port4" type="PeaceZone" shape="NPoly" minZ="-3625" maxZ="-3314"> <!-- [21_23] -->
+		<node X="41861" Y="188551" />
+		<node X="44221" Y="187269" />
+		<node X="46275" Y="191156" />
+		<node X="44031" Y="192413" />
+	</zone>
+	<zone name="heiness_peace1" type="PeaceZone" shape="NPoly" minZ="-4287" maxZ="-3287"> <!-- [23_24] -->
+		<node X="106085" Y="216119" />
+		<node X="116559" Y="216118" />
+		<node X="116533" Y="229030" />
+		<node X="106085" Y="229015" />
+	</zone>
+	<zone name="heiness_peace2" type="PeaceZone" shape="NPoly" minZ="-4128" maxZ="-3128"> <!-- [23_24] -->
+		<node X="103796" Y="217964" />
+		<node X="106602" Y="217963" />
+		<node X="106602" Y="218361" />
+		<node X="103796" Y="218363" />
+	</zone>
+	<zone name="heiness_peace3" type="PeaceZone" shape="NPoly" minZ="-4096" maxZ="-3096"> <!-- [23_24] -->
+		<node X="115950" Y="219084" />
+		<node X="118877" Y="219084" />
+		<node X="118879" Y="219496" />
+		<node X="115952" Y="219498" />
+	</zone>
+	<zone name="godad_peace1" type="PeaceZone" shape="NPoly" minZ="-3000" maxZ="-771"> <!-- [24_16] -->
+		<node X="146517" Y="-59854" />
+		<node X="148916" Y="-59847" />
+		<node X="151301" Y="-58338" />
+		<node X="152005" Y="-56872" />
+		<node X="152043" Y="-55010" />
+		<node X="150847" Y="-51615" />
+		<node X="145228" Y="-51601" />
+		<node X="143824" Y="-54220" />
+		<node X="143444" Y="-56732" />
+		<node X="144680" Y="-58725" />
+	</zone>
+	<zone name="rune_peace1" type="PeaceZone" shape="NPoly" minZ="-1516" maxZ="484"> <!-- [21_16] -->
+		<node X="40071" Y="-52192" />
+		<node X="42159" Y="-46969" />
+		<node X="44445" Y="-45865" />
+		<node X="46202" Y="-46919" />
+		<node X="47212" Y="-48809" />
+		<node X="47224" Y="-51046" />
+		<node X="45845" Y="-51986" />
+		<node X="43334" Y="-52810" />
+		<node X="41192" Y="-53281" />
+	</zone>
+	<zone name="rune_peace2" type="PeaceZone" shape="NPoly" minZ="-7660" maxZ="7340"> <!-- [21_16] -->
+		<node X="43099" Y="-38911" />
+		<node X="40028" Y="-35494" />
+		<node X="37429" Y="-35357" />
+		<node X="32846" Y="-38149" />
+		<node X="32804" Y="-50466" />
+		<node X="36348" Y="-52427" />
+		<node X="39429" Y="-52058" />
+		<node X="46334" Y="-46534" />
+	</zone>
+	<zone name="gludin_pvp_peace_1" type="PeaceZone" shape="NPoly" minZ="-3723" maxZ="-3223"> <!-- [17_22] -->
+		<node X="-88445" Y="141473" />
+		<node X="-87166" Y="141474" />
+		<node X="-87166" Y="141726" />
+		<node X="-88441" Y="141726" />
+	</zone>
+	<zone name="gludin_pvp_peace_2" type="PeaceZone" shape="NPoly" minZ="-3745" maxZ="-3245"> <!-- [17_22] -->
+		<node X="-88666" Y="141473" />
+		<node X="-88417" Y="141474" />
+		<node X="-88414" Y="142740" />
+		<node X="-88666" Y="142746" />
+	</zone>
+	<zone name="gludin_pvp_peace_3" type="PeaceZone" shape="NPoly" minZ="-3723" maxZ="-3223"> <!-- [17_22] -->
+		<node X="-88665" Y="142716" />
+		<node X="-87165" Y="142716" />
+		<node X="-87165" Y="142973" />
+		<node X="-88667" Y="142973" />
+	</zone>
+	<zone name="gludin_pvp_peace_4" type="PeaceZone" shape="NPoly" minZ="-3732" maxZ="-3232"> <!-- [17_22] -->
+		<node X="-87418" Y="141681" />
+		<node X="-87165" Y="141680" />
+		<node X="-87166" Y="142779" />
+		<node X="-87416" Y="142779" />
+	</zone>
+	<zone name="giran_pvp_peace1" type="PeaceZone" shape="NPoly" minZ="-3851" maxZ="-3351"> <!-- [22_22] -->
+		<node X="73490" Y="142231" />
+		<node X="73743" Y="142232" />
+		<node X="73741" Y="143316" />
+		<node X="73494" Y="143312" />
+	</zone>
+	<zone name="giran_pvp_peace2" type="PeaceZone" shape="NPoly" minZ="-3855" maxZ="-3355"> <!-- [22_22] -->
+		<node X="72462" Y="142013" />
+		<node X="73744" Y="142013" />
+		<node X="73743" Y="142268" />
+		<node X="72461" Y="142268" />
+	</zone>
+	<zone name="giran_pvp_peace3" type="PeaceZone" shape="NPoly" minZ="-3853" maxZ="-3353"> <!-- [22_22] -->
+		<node X="72244" Y="142015" />
+		<node X="72497" Y="142012" />
+		<node X="72497" Y="143285" />
+		<node X="72242" Y="143280" />
+	</zone>
+	<zone name="giran_pvp_peace4" type="PeaceZone" shape="NPoly" minZ="-3856" maxZ="-3356"> <!-- [22_22] -->
+		<node X="72242" Y="143255" />
+		<node X="73743" Y="143257" />
+		<node X="73743" Y="143513" />
+		<node X="72243" Y="143514" />
+	</zone>
+	<zone name="colosseum_peace1" type="PeaceZone" shape="NPoly" minZ="-3468" maxZ="-3268"> <!-- [24_19] -->
+		<node X="147779" Y="46196" />
+		<node X="148045" Y="46481" />
+		<node X="148047" Y="46958" />
+		<node X="147772" Y="47256" />
+		<node X="147078" Y="47258" />
+		<node X="147095" Y="46203" />
+	</zone>
+	<zone name="colosseum_peace2" type="PeaceZone" shape="NPoly" minZ="-3472" maxZ="-3272"> <!-- [24_19] -->
+		<node X="151221" Y="46184" />
+		<node X="151928" Y="46183" />
+		<node X="151925" Y="47248" />
+		<node X="151222" Y="47262" />
+		<node X="150952" Y="46956" />
+		<node X="150954" Y="46486" />
+	</zone>
+	<zone name="gm_prison" type="PeaceZone" shape="NPoly" minZ="-2992" maxZ="-2792"> <!-- [16_10] -->
+		<node X="-116390" Y="-251581" />
+		<node X="-112756" Y="-251617" />
+		<node X="-112720" Y="-248199" />
+		<node X="-116354" Y="-248217" />
+	</zone>
+	<zone name="primeval_peace1" type="PeaceZone" shape="NPoly" minZ="-4290" maxZ="-1290"> <!-- [20_17] -->
+		<node X="10408" Y="-27395" />
+		<node X="12065" Y="-25334" />
+		<node X="12223" Y="-23159" />
+		<node X="10424" Y="-22340" />
+		<node X="9566" Y="-23131" />
+		<node X="9290" Y="-24261" />
+	</zone>
+	<zone name=" primeval_peace2" type="PeaceZone" shape="NPoly" minZ="-4792" maxZ="208"> <!-- [20_17] -->
+		<node X="4850" Y="-4736" />
+		<node X="7294" Y="-4712" />
+		<node X="8529" Y="-820" />
+		<node X="3615" Y="-737" />
+	</zone>
+	<zone name="space_of_dimension_peace1" type="PeaceZone" shape="NPoly" minZ="-6964" maxZ="-6064"> <!-- [16_12] -->
+		<node X="-115441" Y="-182134" />
+		<node X="-114106" Y="-182134" />
+		<node X="-114106" Y="-178021" />
+		<node X="-115476" Y="-178021" />
+	</zone>
+	<zone name="schuttgart_peace1" type="PeaceZone" shape="NPoly" minZ="-2444" maxZ="3556"> <!-- [22_23] -->
+		<node X="91064" Y="-143193" />
+		<node X="90200" Y="-146685" />
+		<node X="84580" Y="-146745" />
+		<node X="83600" Y="-143273" />
+		<node X="84048" Y="-141429" />
+		<node X="84922" Y="-140225" />
+		<node X="86528" Y="-139365" />
+		<node X="88292" Y="-139397" />
+		<node X="89712" Y="-140205" />
+		<node X="90660" Y="-141409" />
+	</zone>
+	<zone name="rainbow_spring_peace1" type="PeaceZone" shape="NPoly" minZ="-2472" maxZ="2528"> <!-- [24_14] -->
+		<node X="148724" Y="-128356" />
+		<node X="154172" Y="-130160" />
+		<node X="158636" Y="-126416" />
+		<node X="155456" Y="-123772" />
+		<node X="152140" Y="-124528" />
+	</zone>
+	<zone name="themepark_peace1" type="PeaceZone" shape="NPoly" minZ="-4696" maxZ="3304"> <!-- [17_15] -->
+		<node X="-76662" Y="-77593" />
+		<node X="-65536" Y="-77344" />
+		<node X="-65536" Y="-65536" />
+		<node X="-81410" Y="-65536" />
+	</zone>
+	<zone name="themepark_peace2" type="PeaceZone" shape="NPoly" minZ="-4696" maxZ="3304"> <!-- [18_15] -->
+		<node X="-51267" Y="-78666" />
+		<node X="-44978" Y="-75445" />
+		<node X="-44281" Y="-65536" />
+		<node X="-65536" Y="-65536" />
+		<node X="-65536" Y="-72713" />
+	</zone>
+	<zone name="themepark_peace3" type="PeaceZone" shape="NPoly" minZ="-4696" maxZ="3304"> <!-- [17_16] -->
+		<node X="-83544" Y="-65536" />
+		<node X="-65536" Y="-65536" />
+		<node X="-65536" Y="-41699" />
+		<node X="-80543" Y="-39424" />
+		<node X="-91856" Y="-41776" />
+		<node X="-92099" Y="-53834" />
+	</zone>
+	<zone name="themepark_peace4" type="PeaceZone" shape="NPoly" minZ="-4696" maxZ="3304"> <!-- [18_16] -->
+		<node X="-65536" Y="-65536" />
+		<node X="-43060" Y="-65536" />
+		<node X="-44899" Y="-44178" />
+		<node X="-65536" Y="-43068" />
+	</zone>
+	<zone name="gludio_platform_peace1" type="PeaceZone" shape="NPoly" minZ="-424" maxZ="376"> <!-- [15_25] -->
+		<node X="-151634" Y="252804" />
+		<node X="-147155" Y="252804" />
+		<node X="-147155" Y="257492" />
+		<node X="-151634" Y="257492" />
+	</zone>
+	<zone name="base_kserth_peace1" type="PeaceZone" shape="NPoly" minZ="1103" maxZ="3103"> <!-- [14_25] -->
+		<node X="-183709" Y="237556" />
+		<node X="-181798" Y="241875" />
+		<node X="-182894" Y="245386" />
+		<node X="-186902" Y="247724" />
+		<node X="-188573" Y="247186" />
+		<node X="-185574" Y="237097" />
+	</zone>
+	<zone name="undying_platform_peace1" type="PeaceZone" shape="NPoly" minZ="4252" maxZ="4452"> <!-- [13_24] -->
+		<node X="-212443" Y="210098" />
+		<node X="-211813" Y="210748" />
+		<node X="-211916" Y="210855" />
+		<node X="-212592" Y="210210" />
+		<node X="-213117" Y="210211" />
+		<node X="-213759" Y="210832" />
+		<node X="-213845" Y="210747" />
+		<node X="-213227" Y="210101" />
+		<node X="-213229" Y="209540" />
+		<node X="-213818" Y="208901" />
+		<node X="-213737" Y="208809" />
+		<node X="-213123" Y="209426" />
+		<node X="-212529" Y="209427" />
+		<node X="-211894" Y="208808" />
+		<node X="-211801" Y="208901" />
+		<node X="-212442" Y="209522" />
+	</zone>
+	<zone name="deathsdoor_peace1" type="PeaceZone" shape="NPoly" minZ="-12989" maxZ="-12389"> <!-- [14_24] -->
+		<node X="-184105" Y="205453" />
+		<node X="-182469" Y="205453" />
+		<node X="-182469" Y="207028" />
+		<node X="-184105" Y="207028" />
+	</zone>
+	<zone name="border_of_nightmare_peace1" type="PeaceZone" shape="NPoly" minZ="-6762" maxZ="-6562"> <!-- [16_13] -->
+		<node X="-115424" Y="-155539" />
+		<node X="-113764" Y="-155547" />
+		<node X="-113768" Y="-150965" />
+		<node X="-115424" Y="-150965" />
+	</zone>
+	<zone name="The West Dungeon of Abyss" id="600000" type="PeaceZone" shape="Cuboid" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+		<node X="-120448" Y="-182800" />
+		<node X="-117264" Y="-180288" />
+	</zone>
+	<zone name="The West Dungeon of Abyss Boss Room" id="600004" type="PeaceZone" shape="Cuboid" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+		<node X="-117096" Y="-181856" />
+		<node X="-115562" Y="-181080" />
+	</zone>
+	<zone name="The West Dungeon of Abyss 2nd" id="600001" type="PeaceZone" shape="Cuboid" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+		<node X="-120448" Y="-180093" />
+		<node X="-117264" Y="-177472" />
+	</zone>
+	<zone name="The West Dungeon of Abyss 2nd Boss Room" id="600005" type="PeaceZone" shape="Cuboid" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+		<node X="-117097" Y="-179108" />
+		<node X="-115565" Y="-178261" />
+	</zone>
+	<zone name="The East Dungeon of Abyss" id="600002" type="PeaceZone" shape="Cuboid" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+		<node X="-109037" Y="-180186" />
+		<node X="-112257" Y="-182758" />
+	</zone>
+	<zone name="The East Dungeon of Abyss Boss Room" id="600006" type="PeaceZone" shape="Cuboid" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+		<node X="-112508" Y="-181094" />
+		<node X="-114023" Y="-181929" />
+	</zone>
+	<zone name="The East Dungeon of Abyss 2nd" id="600003" type="PeaceZone" shape="Cuboid" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+		<node X="-109152" Y="-177408" />
+		<node X="-112336" Y="-179920" />
+	</zone>
+	<zone name="The East Dungeon of Abyss 2nd Boss Room" id="600007" type="PeaceZone" shape="Cuboid" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+		<node X="-112495" Y="-178268" />
+		<node X="-114025" Y="-179108" />
+	</zone>
+	
+	<!-- Classic Monster Race Track -->
+	<zone name="Monster_Race_Arena_Peace" type="PeaceZone" shape="NPoly" minZ="-3565" maxZ="-3200"> <!-- [20_23] -->
+		<node X="14398" Y="181581" />
+		<node X="14056" Y="181560" />
+		<node X="14060" Y="181325" />
+		<node X="13306" Y="181325" />
+		<node X="13306" Y="181575" />
+		<node X="11710" Y="181562" />
+		<node X="11715" Y="182745" />
+		<node X="11541" Y="182743" />
+		<node X="11541" Y="184629" />
+		<node X="11842" Y="184630" />
+		<node X="11839" Y="184821" />
+		<node X="13250" Y="184819" />
+		<node X="13252" Y="184619" />
+		<node X="13545" Y="184628" />
+		<node X="13549" Y="182916" />
+		<node X="14073" Y="182918" />
+		<node X="14072" Y="182673" />
+		<node X="14404" Y="182674" />
+	</zone>
+</list>

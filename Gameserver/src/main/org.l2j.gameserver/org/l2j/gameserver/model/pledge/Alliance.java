@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.pledge;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.cache.CrestCache;
 import org.l2j.gameserver.model.Player;
@@ -176,7 +176,7 @@ public class Alliance
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE ally_data SET leader_id=?,expelled_member=? WHERE ally_id=?");
 			statement.setInt(1, getLeaderId());
 			statement.setLong(2, getExpelledMemberTime() / 1000);
@@ -199,7 +199,7 @@ public class Alliance
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("INSERT INTO ally_data (ally_id,ally_name,leader_id) values (?,?,?)");
 			statement.setInt(1, getAllyId());
 			statement.setString(2, getAllyName());
@@ -228,7 +228,7 @@ public class Alliance
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE clan_data SET ally_id=? WHERE clan_id=?");
 			statement.setInt(1, getAllyId());
 			statement.setInt(2, member.getClanId());
@@ -250,7 +250,7 @@ public class Alliance
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE clan_data SET ally_id=0 WHERE clan_id=?");
 			statement.setInt(1, member.getClanId());
 			statement.execute();
@@ -277,7 +277,7 @@ public class Alliance
 		{
 			Clan member;
 
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT ally_name,leader_id FROM ally_data where ally_id=?");
 			statement.setInt(1, getAllyId());
 			rset = statement.executeQuery();

@@ -1,0 +1,725 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_01" minZ="-4104" maxZ="-3604">		
+				<node x="119096" y="-40316" />
+				<node x="123696" y="-39256" />
+				<node x="123536" y="-36576" />
+				<node x="119224" y="-38608" />
+			</territory>
+		</territories>
+		<npc id="21869" count="8" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_grunt]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21870" count="6" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_footman]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21871" count="8" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_antelope]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21888" count="2" respawnTime="103sec" respawnRandom="30sec" />	<!-- [varka_silenos_general]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_elite_guard:varka_elite_guard:1:0sec;varka_elite_guard:varka_elite_guard:1:0sec] -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_02" minZ="-3744" maxZ="-2744">		
+				<node x="118936" y="-38012" />
+				<node x="121688" y="-37072" />
+				<node x="121188" y="-35024" />
+				<node x="117708" y="-35732" />
+			</territory>
+		</territories>
+		<npc id="21869" count="6" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_grunt]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21871" count="6" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_antelope]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_03" minZ="-3992" maxZ="-3492">		
+				<node x="124916" y="-38824" />
+				<node x="126036" y="-39976" />
+				<node x="126892" y="-37640" />
+				<node x="126444" y="-36920" />
+				<node x="125380" y="-36516" />
+				<node x="124660" y="-37804" />
+			</territory>
+		</territories>
+		<npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_grunt]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21871" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_04" minZ="-3756" maxZ="-3256">		
+				<node x="126128" y="-39936" />
+				<node x="127260" y="-42892" />
+				<node x="129452" y="-40184" />
+				<node x="128560" y="-37904" />
+				<node x="126932" y="-37804" />
+			</territory>
+		</territories>
+		<npc id="21869" count="8" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_grunt]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21870" count="6" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_footman]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21871" count="8" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_antelope]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21888" count="2" respawnTime="103sec" respawnRandom="30sec" />	<!-- [varka_silenos_general]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_elite_guard:varka_elite_guard:1:0sec;varka_elite_guard:varka_elite_guard:1:0sec] -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_05" minZ="-3548" maxZ="-3048">		
+				<node x="129676" y="-47220" />
+				<node x="130668" y="-45272" />
+				<node x="130564" y="-43624" />
+				<node x="128764" y="-43748" />
+				<node x="127848" y="-45932" />
+			</territory>
+		</territories>
+		<npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_grunt]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21871" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_06" minZ="-3548" maxZ="-3048">		
+				<node x="128304" y="-41748" />
+				<node x="130748" y="-43528" />
+				<node x="130656" y="-39664" />
+				<node x="129500" y="-40288" />
+			</territory>
+		</territories>
+		<npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_grunt]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21871" count="6" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_antelope]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_07" minZ="-3800" maxZ="-3300">		
+				<node x="127724" y="-59140" />
+				<node x="129360" y="-59080" />
+				<node x="128600" y="-54288" />
+				<node x="126556" y="-56112" />
+				<node x="125508" y="-57568" />
+				<node x="125800" y="-58456" />
+			</territory>
+		</territories>
+		<npc id="21872" count="6" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_scout]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21873" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_hunter]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21874" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_shaman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21875" count="6" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_nephentes]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21888" count="2" respawnTime="103sec" respawnRandom="30sec" />	<!-- [varka_silenos_general]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_elite_guard:varka_elite_guard:1:0sec;varka_elite_guard:varka_elite_guard:1:0sec] -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_08" minZ="-3664" maxZ="-3164">		
+				<node x="122004" y="-62016" />
+				<node x="123988" y="-62268" />
+				<node x="125264" y="-61420" />
+				<node x="126384" y="-60096" />
+				<node x="125320" y="-59544" />
+				<node x="123640" y="-60244" />
+			</territory>
+		</territories>
+		<npc id="21872" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_scout]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21873" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_hunter]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21875" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_nephentes]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21888" count="2" respawnTime="103sec" respawnRandom="30sec" />	<!-- [varka_silenos_general]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_elite_guard:varka_elite_guard:1:0sec;varka_elite_guard:varka_elite_guard:1:0sec] -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_09" minZ="-3288" maxZ="-2788">		
+				<node x="117804" y="-43304" />
+				<node x="118784" y="-43980" />
+				<node x="119572" y="-43060" />
+				<node x="119308" y="-42008" />
+				<node x="117912" y="-42408" />
+			</territory>
+		</territories>
+		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_10" minZ="-3304" maxZ="-2804">		
+				<node x="119524" y="-42868" />
+				<node x="121108" y="-43564" />
+				<node x="121632" y="-42596" />
+				<node x="121100" y="-41548" />
+				<node x="119316" y="-41708" />
+			</territory>
+		</territories>
+		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_11" minZ="-3376" maxZ="-2876">		
+				<node x="121020" y="-43672" />
+				<node x="122928" y="-43988" />
+				<node x="123704" y="-42876" />
+				<node x="122144" y="-42664" />
+				<node x="121568" y="-42676" />
+			</territory>
+		</territories>
+		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_12" minZ="-3568" maxZ="-3068">		
+				<node x="122168" y="-42628" />
+				<node x="123736" y="-42864" />
+				<node x="124948" y="-42028" />
+				<node x="124084" y="-41380" />
+				<node x="122636" y="-41140" />
+				<node x="121100" y="-41564" />
+			</territory>
+		</territories>
+		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21873" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_hunter]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21888" count="2" respawnTime="103sec" respawnRandom="30sec" />	<!-- [varka_silenos_general]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_elite_guard:varka_elite_guard:1:0sec;varka_elite_guard:varka_elite_guard:1:0sec] -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_13" minZ="-3496" maxZ="-2996">		
+				<node x="122884" y="-44060" />
+				<node x="124656" y="-44584" />
+				<node x="125040" y="-43924" />
+				<node x="124752" y="-43580" />
+				<node x="124780" y="-42768" />
+				<node x="124132" y="-42400" />
+			</territory>
+		</territories>
+		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_14" minZ="-3328" maxZ="-2828">		
+				<node x="122560" y="-45296" />
+				<node x="123236" y="-45048" />
+				<node x="123552" y="-44272" />
+				<node x="122892" y="-44056" />
+				<node x="122492" y="-44936" />
+				<node x="122492" y="-44936" />
+			</territory>
+		</territories>
+		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_15" minZ="-3220" maxZ="-2720">		
+				<node x="122108" y="-46064" />
+				<node x="123012" y="-46848" />
+				<node x="123472" y="-45692" />
+				<node x="123252" y="-45088" />
+				<node x="122168" y="-45524" />
+			</territory>
+		</territories>
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_16" minZ="-2944" maxZ="-2444">		
+				<node x="120748" y="-47848" />
+				<node x="121876" y="-47012" />
+				<node x="121728" y="-46388" />
+				<node x="122100" y="-46088" />
+				<node x="121788" y="-44864" />
+				<node x="120156" y="-45104" />
+			</territory>
+		</territories>
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21877" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_warrior]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21879" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_medium]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21890" count="2" respawnTime="103sec" respawnRandom="30sec" />	<!-- [varka_high_magus]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_high_guard:varka_high_guard:1:0sec;varka_high_guard:varka_high_guard:1:0sec] -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_17" minZ="-2924" maxZ="-2424">		
+				<node x="118564" y="-46792" />
+				<node x="120352" y="-46104" />
+				<node x="120184" y="-45376" />
+				<node x="119708" y="-45716" />
+				<node x="118980" y="-45524" />
+				<node x="118488" y="-46192" />
+			</territory>
+		</territories>
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_18" minZ="-2928" maxZ="-2428">		
+				<node x="119120" y="-47492" />
+				<node x="120720" y="-47840" />
+				<node x="120508" y="-46604" />
+				<node x="119892" y="-46924" />
+				<node x="119408" y="-46460" />
+				<node x="118776" y="-46712" />
+			</territory>
+		</territories>
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_19" minZ="-3800" maxZ="-3500">		
+				<node x="116957" y="-41279" />
+				<node x="117041" y="-41945" />
+				<node x="118317" y="-40974" />
+				<node x="117890" y="-40538" />
+			</territory>
+		</territories>
+		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_20" minZ="-3752" maxZ="-3452">		
+				<node x="115776" y="-43896" />
+				<node x="116996" y="-44364" />
+				<node x="116604" y="-42840" />
+				<node x="116260" y="-42856" />
+			</territory>
+		</territories>
+		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_21" minZ="-3808" maxZ="-3508">		
+				<node x="117076" y="-46868" />
+				<node x="117508" y="-46788" />
+				<node x="117544" y="-45224" />
+				<node x="116892" y="-44452" />
+			</territory>
+		</territories>
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_22" minZ="-3812" maxZ="-3512">		
+				<node x="117172" y="-48520" />
+				<node x="118148" y="-48260" />
+				<node x="117540" y="-46968" />
+				<node x="117212" y="-46896" />
+			</territory>
+		</territories>
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_23" minZ="-3796" maxZ="-3296">		
+				<node x="117256" y="-50060" />
+				<node x="118332" y="-50652" />
+				<node x="119112" y="-49484" />
+				<node x="118784" y="-48884" />
+				<node x="118124" y="-48328" />
+				<node x="117180" y="-48568" />
+			</territory>
+		</territories>
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21877" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_warrior]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21879" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_medium]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_24" minZ="-3768" maxZ="-3268">		
+				<node x="118352" y="-50656" />
+				<node x="120704" y="-50660" />
+				<node x="121204" y="-49084" />
+				<node x="120116" y="-49132" />
+				<node x="119660" y="-49564" />
+				<node x="119084" y="-49572" />
+			</territory>
+		</territories>
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21877" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_warrior]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21878" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_bandersnatch]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_25" minZ="-3520" maxZ="-3220">		
+				<node x="120704" y="-50700" />
+				<node x="121316" y="-51004" />
+				<node x="122004" y="-49892" />
+				<node x="121776" y="-49548" />
+				<node x="122560" y="-48788" />
+				<node x="122048" y="-48668" />
+				<node x="121252" y="-48992" />
+			</territory>
+		</territories>
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21877" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_warrior]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_26" minZ="-3028" maxZ="-2728">		
+				<node x="124104" y="-47884" />
+				<node x="124712" y="-47920" />
+				<node x="124532" y="-46772" />
+				<node x="123460" y="-46004" />
+				<node x="123136" y="-46676" />
+			</territory>
+		</territories>
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_27" minZ="-2652" maxZ="-2352">		
+				<node x="122972" y="-50708" />
+				<node x="125716" y="-51940" />
+				<node x="126492" y="-50964" />
+				<node x="125936" y="-50216" />
+				<node x="124528" y="-49168" />
+			</territory>
+		</territories>
+		<npc id="21876" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_priest]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21879" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_medium]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21890" count="2" respawnTime="103sec" respawnRandom="30sec" />	<!-- [varka_high_magus]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_high_guard:varka_high_guard:1:0sec;varka_high_guard:varka_high_guard:1:0sec] -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_28" minZ="-2552" maxZ="-2252">		
+				<node x="123552" y="-53628" />
+				<node x="124492" y="-53504" />
+				<node x="125296" y="-52960" />
+				<node x="125616" y="-51960" />
+				<node x="123216" y="-50932" />
+				<node x="122408" y="-51396" />
+				<node x="121880" y="-52816" />
+			</territory>
+		</territories>
+		<npc id="21876" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_priest]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21878" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_bandersnatch]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21890" count="2" respawnTime="103sec" respawnRandom="30sec" />	<!-- [varka_high_magus]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_high_guard:varka_high_guard:1:0sec;varka_high_guard:varka_high_guard:1:0sec] -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_29" minZ="-2544" maxZ="-2244">		
+				<node x="120516" y="-53316" />
+				<node x="121928" y="-55124" />
+				<node x="123536" y="-53636" />
+				<node x="121912" y="-52904" />
+			</territory>
+		</territories>
+		<npc id="21880" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_mage]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21881" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_sergeant]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21882" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_flava]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21883" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_seer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_30" minZ="-2372" maxZ="-1872">		
+				<node x="120772" y="-59060" />
+				<node x="122100" y="-58444" />
+				<node x="122256" y="-56892" />
+				<node x="121844" y="-55200" />
+				<node x="119080" y="-57752" />
+				<node x="119548" y="-58736" />
+			</territory>
+		</territories>
+		<npc id="21880" count="6" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_mage]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21881" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_sergeant]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21882" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_flava]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21883" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_seer]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21890" count="2" respawnTime="103sec" respawnRandom="30sec" />	<!-- [varka_high_magus]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_high_guard:varka_high_guard:1:0sec;varka_high_guard:varka_high_guard:1:0sec] -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_31" minZ="-2568" maxZ="-2068">		
+				<node x="117996" y="-57524" />
+				<node x="119056" y="-57688" />
+				<node x="121848" y="-55132" />
+				<node x="120392" y="-53292" />
+				<node x="119164" y="-52536" />
+				<node x="118088" y="-53480" />
+				<node x="117560" y="-55232" />
+			</territory>
+		</territories>
+		<npc id="21880" count="6" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_mage]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21881" count="6" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_sergeant]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21882" count="8" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_flava]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21883" count="6" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_seer]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21890" count="2" respawnTime="103sec" respawnRandom="30sec" />	<!-- [varka_high_magus]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_high_guard:varka_high_guard:1:0sec;varka_high_guard:varka_high_guard:1:0sec] -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_32" minZ="-2656" maxZ="-2156">		
+				<node x="116124" y="-51164" />
+				<node x="118248" y="-53360" />
+				<node x="119052" y="-52624" />
+				<node x="117012" y="-51372" />
+			</territory>
+		</territories>
+		<npc id="21880" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_mage]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21881" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_sergeant]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21882" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_flava]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21883" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_seer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_33" minZ="-2684" maxZ="-2384">		
+				<node x="114060" y="-50088" />
+				<node x="115856" y="-49972" />
+				<node x="115568" y="-46660" />
+				<node x="113788" y="-46812" />
+				<node x="112640" y="-48192" />
+				<node x="112824" y="-49300" />
+			</territory>
+		</territories>
+		<npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_archmage]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_elder_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21887" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_overseer]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21892" count="2" respawnTime="103sec" respawnRandom="30sec" />	<!-- [varka_soothsayer]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[soothsayers_escort:soothsayers_escort:1:0sec;soothsayers_apostle:soothsayers_apostle:1:0sec] -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_34" minZ="-2856" maxZ="-2556">		
+				<node x="114136" y="-46652" />
+				<node x="115524" y="-46552" />
+				<node x="114984" y="-44768" />
+				<node x="114356" y="-43620" />
+				<node x="113332" y="-43404" />
+				<node x="112972" y="-44508" />
+			</territory>
+		</territories>
+		<npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_archmage]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_elder_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_overseer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21892" count="2" respawnTime="103sec" respawnRandom="30sec" />	<!-- [varka_soothsayer]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[soothsayers_escort:soothsayers_escort:1:0sec;soothsayers_apostle:soothsayers_apostle:1:0sec] -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_35" minZ="-2832" maxZ="-2532">		
+				<node x="113344" y="-43440" />
+				<node x="114316" y="-43544" />
+				<node x="115416" y="-41764" />
+				<node x="113772" y="-40800" />
+			</territory>
+		</territories>
+		<npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_archmage]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_elder_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_overseer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_36" minZ="-2636" maxZ="-2136">		
+				<node x="113832" y="-40736" />
+				<node x="115280" y="-41604" />
+				<node x="116476" y="-39672" />
+				<node x="116604" y="-38472" />
+				<node x="115064" y="-37860" />
+				<node x="113816" y="-38616" />
+			</territory>
+		</territories>
+		<npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_archmage]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_elder_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21887" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_overseer]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_37" minZ="-2844" maxZ="-2444">		
+				<node x="111408" y="-44200" />
+				<node x="113000" y="-44384" />
+				<node x="113252" y="-43612" />
+				<node x="111312" y="-43596" />
+			</territory>
+		</territories>
+		<npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_archmage]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21886" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_elder_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_overseer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_38" minZ="-2696" maxZ="-2296">		
+				<node x="110468" y="-44320" />
+				<node x="110932" y="-44776" />
+				<node x="111388" y="-44196" />
+				<node x="111244" y="-43508" />
+				<node x="110584" y="-43320" />
+			</territory>
+		</territories>
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21886" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_elder_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_overseer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_39" minZ="-2616" maxZ="-2316">		
+				<node x="110464" y="-43380" />
+				<node x="110736" y="-43268" />
+				<node x="110184" y="-41564" />
+				<node x="110004" y="-42096" />
+			</territory>
+		</territories>
+		<npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_archmage]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_overseer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_44" minZ="-2744" maxZ="-2244">		
+				<node x="114616" y="-56004" />
+				<node x="117044" y="-56132" />
+				<node x="117016" y="-55648" />
+				<node x="114732" y="-55580" />
+			</territory>
+		</territories>
+		<npc id="21880" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_mage]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21881" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_sergeant]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21882" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_flava]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21883" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_seer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_45" minZ="-2896" maxZ="-2396">		
+				<node x="112288" y="-57184" />
+				<node x="114172" y="-55928" />
+				<node x="113928" y="-54600" />
+				<node x="112492" y="-53628" />
+			</territory>
+		</territories>
+		<npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_archmage]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_elder_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_overseer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21892" count="2" respawnTime="103sec" respawnRandom="30sec" />	<!-- [varka_soothsayer]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[soothsayers_escort:soothsayers_escort:1:0sec;soothsayers_apostle:soothsayers_apostle:1:0sec] -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_46" minZ="-2884" maxZ="-2584">		
+				<node x="109892" y="-56348" />
+				<node x="111880" y="-58016" />
+				<node x="112276" y="-57280" />
+				<node x="112380" y="-54016" />
+				<node x="110816" y="-52704" />
+				<node x="109856" y="-53576" />
+			</territory>
+		</territories>
+		<npc id="21884" count="6" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_archmage]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21885" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_officer]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21886" count="6" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_elder_antelope]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21887" count="6" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_overseer]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21892" count="2" respawnTime="103sec" respawnRandom="30sec" />	<!-- [varka_soothsayer]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[soothsayers_escort:soothsayers_escort:1:0sec;soothsayers_apostle:soothsayers_apostle:1:0sec] -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_47" minZ="-2300" maxZ="-1800">		
+				<node x="107008" y="-49228" />
+				<node x="107888" y="-49692" />
+				<node x="108652" y="-49516" />
+				<node x="109368" y="-47032" />
+				<node x="108052" y="-45708" />
+				<node x="106732" y="-46076" />
+				<node x="106596" y="-48252" />
+			</territory>
+		</territories>
+		<npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_archmage]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21885" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_officer]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_elder_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21887" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_overseer]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21892" count="2" respawnTime="103sec" respawnRandom="30sec" />	<!-- [varka_soothsayer]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[soothsayers_escort:soothsayers_escort:1:0sec;soothsayers_apostle:soothsayers_apostle:1:0sec] -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_48" minZ="-2576" maxZ="-2076">		
+				<node x="108932" y="-45768" />
+				<node x="109284" y="-46396" />
+				<node x="110560" y="-44864" />
+				<node x="110460" y="-44776" />
+			</territory>
+		</territories>
+		<npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_archmage]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21886" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_elder_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_overseer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_55" minZ="-3348" maxZ="-2948">		
+				<node x="114284" y="-36128" />
+				<node x="116924" y="-35608" />
+				<node x="116664" y="-35160" />
+				<node x="114484" y="-35584" />
+			</territory>
+		</territories>
+		<npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_56" minZ="-3408" maxZ="-3008">		
+				<node x="113184" y="-37460" />
+				<node x="113400" y="-37316" />
+				<node x="113520" y="-36912" />
+				<node x="112408" y="-36592" />
+			</territory>
+		</territories>
+		<npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21870" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_footman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_57" minZ="-3464" maxZ="-3164">		
+				<node x="111528" y="-39584" />
+				<node x="111948" y="-40192" />
+				<node x="112340" y="-38348" />
+				<node x="111612" y="-39068" />
+			</territory>
+		</territories>
+		<npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard28_2316_58" minZ="-3492" maxZ="-3192">		
+				<node x="111544" y="-42400" />
+				<node x="112324" y="-42568" />
+				<node x="112260" y="-40700" />
+				<node x="111792" y="-40592" />
+			</territory>
+		</territories>
+		<npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" />	<!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec" />	<!-- [grazing_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+	</spawn>
+</list>

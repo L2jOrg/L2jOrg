@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence maxOccurs="1" minOccurs="1">
+				<xs:element name="transform" maxOccurs="1" minOccurs="1">
+					<xs:complexType>
+						<xs:sequence maxOccurs="1" minOccurs="1">
+							<xs:element name="Male" maxOccurs="1" minOccurs="1">
+								<xs:complexType>
+									<xs:sequence maxOccurs="1" minOccurs="1">
+										<xs:element name="common" maxOccurs="1" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence maxOccurs="1" minOccurs="1">
+													<xs:element name="base" maxOccurs="1" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="range" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="attackSpeed" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="attackType" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:token">
+																		<xs:enumeration value="BOW" />
+																		<xs:enumeration value="DUAL" />
+																		<xs:enumeration value="SWORD" />
+																		<xs:enumeration value="FIST" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="critRate" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="mAtk" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="pAtk" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="randomDamage" type="xs:positiveInteger" use="required" />
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="stats" maxOccurs="1" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="str" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="int" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="con" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="dex" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="wit" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="men" type="xs:positiveInteger" use="required" />
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="defense" maxOccurs="1" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="chest" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="legs" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="head" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="feet" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="gloves" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="underwear" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="cloak" type="xs:positiveInteger" use="required" />
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="magicDefense" maxOccurs="1" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="rear" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="lear" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="rfinger" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="lfinger" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="neck" type="xs:positiveInteger" use="required" />
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="collision" maxOccurs="1" minOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="radius" type="xs:decimal" use="required" />
+															<xs:attribute name="height" type="xs:decimal" use="required" />
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="moving" maxOccurs="1" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="walk" type="xs:decimal" use="required" />
+															<xs:attribute name="run" type="xs:nonNegativeInteger" use="required" />
+															<xs:attribute name="waterWalk" type="xs:nonNegativeInteger" use="required" />
+															<xs:attribute name="waterRun" type="xs:nonNegativeInteger" use="required" />
+															<xs:attribute name="flyWalk" type="xs:nonNegativeInteger" use="required" />
+															<xs:attribute name="flyRun" type="xs:nonNegativeInteger" use="required" />
+															<xs:attribute name="unknownWalk" type="xs:nonNegativeInteger" use="required" />
+															<xs:attribute name="unknownRun" type="xs:nonNegativeInteger" use="required" />
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="actions" maxOccurs="1" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:normalizedString" />
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="items" maxOccurs="1" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence maxOccurs="1" minOccurs="1">
+													<xs:element name="item" maxOccurs="unbounded" minOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="id" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:positiveInteger">
+																		<xs:minInclusive value="1" />
+																		<xs:maxInclusive value="65535" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="allowed" use="required" type="xs:boolean" />
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="additionalSkills" maxOccurs="1" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence maxOccurs="1" minOccurs="1">
+													<xs:element name="skill" maxOccurs="unbounded" minOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="id" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:positiveInteger">
+																		<xs:minInclusive value="1" />
+																		<xs:maxInclusive value="65535" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="level" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:positiveInteger">
+																		<xs:minInclusive value="1" />
+																		<xs:maxInclusive value="99" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="minLevel">
+																<xs:simpleType>
+																	<xs:restriction base="xs:positiveInteger">
+																		<xs:minInclusive value="1" />
+																		<xs:maxInclusive value="99" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="skills" maxOccurs="1" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence maxOccurs="1" minOccurs="1">
+													<xs:element name="skill" maxOccurs="unbounded" minOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="id" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:positiveInteger">
+																		<xs:minInclusive value="1" />
+																		<xs:maxInclusive value="65535" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="level" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:positiveInteger">
+																		<xs:minInclusive value="1" />
+																		<xs:maxInclusive value="99" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="levels" maxOccurs="1" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence maxOccurs="1" minOccurs="1">
+													<xs:element name="level" maxOccurs="99" minOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="levelMod" type="xs:decimal" use="required" />
+															<xs:attribute name="cpRegen" type="xs:decimal" use="required" />
+															<xs:attribute name="cp" type="xs:decimal" use="required" />
+															<xs:attribute name="hpRegen" type="xs:decimal" use="required" />
+															<xs:attribute name="hp" type="xs:decimal" use="required" />
+															<xs:attribute name="mpRegen" type="xs:decimal" use="required" />
+															<xs:attribute name="mp" type="xs:decimal" use="required" />
+															<xs:attribute name="val" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:positiveInteger">
+																		<xs:minInclusive value="1" />
+																		<xs:maxInclusive value="99" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Female" maxOccurs="1" minOccurs="1">
+								<xs:complexType>
+									<xs:sequence maxOccurs="1" minOccurs="1">
+										<xs:element name="common" maxOccurs="1" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence maxOccurs="1" minOccurs="1">
+													<xs:element name="base" maxOccurs="1" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="range" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="attackSpeed" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="attackType" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:token">
+																		<xs:enumeration value="BOW" />
+																		<xs:enumeration value="DUAL" />
+																		<xs:enumeration value="SWORD" />
+																		<xs:enumeration value="FIST" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="critRate" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="mAtk" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="pAtk" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="randomDamage" type="xs:positiveInteger" use="required" />
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="stats" maxOccurs="1" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="str" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="int" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="con" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="dex" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="wit" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="men" type="xs:positiveInteger" use="required" />
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="defense" maxOccurs="1" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="chest" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="legs" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="head" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="feet" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="gloves" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="underwear" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="cloak" type="xs:positiveInteger" use="required" />
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="magicDefense" maxOccurs="1" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="rear" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="lear" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="rfinger" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="lfinger" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="neck" type="xs:positiveInteger" use="required" />
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="collision" maxOccurs="1" minOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="radius" type="xs:decimal" use="required" />
+															<xs:attribute name="height" type="xs:decimal" use="required" />
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="moving" maxOccurs="1" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="walk" type="xs:decimal" use="required" />
+															<xs:attribute name="run" type="xs:nonNegativeInteger" use="required" />
+															<xs:attribute name="waterWalk" type="xs:nonNegativeInteger" use="required" />
+															<xs:attribute name="waterRun" type="xs:nonNegativeInteger" use="required" />
+															<xs:attribute name="flyWalk" type="xs:nonNegativeInteger" use="required" />
+															<xs:attribute name="flyRun" type="xs:nonNegativeInteger" use="required" />
+															<xs:attribute name="unknownWalk" type="xs:nonNegativeInteger" use="required" />
+															<xs:attribute name="unknownRun" type="xs:nonNegativeInteger" use="required" />
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="actions" maxOccurs="1" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:normalizedString" />
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="items" maxOccurs="1" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence maxOccurs="1" minOccurs="1">
+													<xs:element name="item" maxOccurs="unbounded" minOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="id" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:positiveInteger">
+																		<xs:minInclusive value="1" />
+																		<xs:maxInclusive value="65535" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="allowed" use="required" type="xs:boolean" />
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="additionalSkills" maxOccurs="1" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence maxOccurs="1" minOccurs="1">
+													<xs:element name="skill" maxOccurs="unbounded" minOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="id" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:positiveInteger">
+																		<xs:minInclusive value="1" />
+																		<xs:maxInclusive value="65535" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="level" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:positiveInteger">
+																		<xs:minInclusive value="1" />
+																		<xs:maxInclusive value="99" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="minLevel">
+																<xs:simpleType>
+																	<xs:restriction base="xs:positiveInteger">
+																		<xs:minInclusive value="1" />
+																		<xs:maxInclusive value="99" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="skills" maxOccurs="1" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence maxOccurs="1" minOccurs="1">
+													<xs:element name="skill" maxOccurs="unbounded" minOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="id" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:positiveInteger">
+																		<xs:minInclusive value="1" />
+																		<xs:maxInclusive value="65535" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="level" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:positiveInteger">
+																		<xs:minInclusive value="1" />
+																		<xs:maxInclusive value="99" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="levels" maxOccurs="1" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence maxOccurs="1" minOccurs="1">
+													<xs:element name="level" maxOccurs="99" minOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="levelMod" type="xs:decimal" use="required" />
+															<xs:attribute name="cpRegen" type="xs:decimal" use="required" />
+															<xs:attribute name="cp" type="xs:decimal" use="required" />
+															<xs:attribute name="hpRegen" type="xs:decimal" use="required" />
+															<xs:attribute name="hp" type="xs:decimal" use="required" />
+															<xs:attribute name="mpRegen" type="xs:decimal" use="required" />
+															<xs:attribute name="mp" type="xs:decimal" use="required" />
+															<xs:attribute name="val" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:positiveInteger">
+																		<xs:minInclusive value="1" />
+																		<xs:maxInclusive value="99" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="can_swim" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:nonNegativeInteger">
+									<xs:minInclusive value="0" />
+									<xs:maxInclusive value="1" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="id" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:positiveInteger">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="20019" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="displayId" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:positiveInteger">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="20007" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="normal_attackable" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:nonNegativeInteger">
+									<xs:minInclusive value="0" />
+									<xs:maxInclusive value="1" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="spawn_height" type="xs:positiveInteger" />
+						<xs:attribute name="type" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="COMBAT" />
+									<xs:enumeration value="CURSED" />
+									<xs:enumeration value="FLYING" />
+									<xs:enumeration value="MODE_CHANGE" />
+									<xs:enumeration value="NON_COMBAT" />
+									<xs:enumeration value="PURE_STAT" />
+									<xs:enumeration value="RIDING_MODE" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="setName" type="xs:string" use="optional" />
+						<xs:attribute name="setTitle" type="xs:string" use="optional" />
+						<xs:attribute name="allow_all_skills" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:nonNegativeInteger">
+									<xs:minInclusive value="0" />
+									<xs:maxInclusive value="1" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

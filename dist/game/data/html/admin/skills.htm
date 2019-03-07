@@ -1,0 +1,34 @@
+<html><title>Skills</title><body>
+<table width=260>
+<tr>
+<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Skills Menu</center></td>
+<td width=40><button value="Back" action="bypass -h admin_show_skills" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table><br>
+<table width=200>
+<tr><td><Button ALIGN=LEFT ICON="NORMAL" action="bypass -h admin_html skills/Human/human.htm"><font color="deba73">Human Skills</font></Button></td></tr>
+<tr><td><Button ALIGN=LEFT ICON="NORMAL" action="bypass -h admin_html skills/Elf/elf.htm"><font color="bddf94">Elf Skills</font></Button></td></tr>
+<tr><td><Button ALIGN=LEFT ICON="NORMAL" action="bypass -h admin_html skills/DarkElf/delf.htm"><font color="b5a6c6">Dark Elf Skills</font></Button></td></tr>
+<tr><td><Button ALIGN=LEFT ICON="NORMAL" action="bypass -h admin_html skills/Orc/orc.htm"><font color="b5dfad">Orc Skills</font></Button></td></tr>
+<tr><td><Button ALIGN=LEFT ICON="NORMAL" action="bypass -h admin_html skills/Dwarf/dwarf.htm"><font color="d6aa63">Dwarf Skills</font></Button></td></tr>
+<tr><td><Button ALIGN=LEFT ICON="NORMAL" action="bypass -h admin_html skills/Kamael/kamael.htm"><font color="ffffff">Kamael Skills</font></Button></td></tr>
+<tr><td><br><Button ALIGN=LEFT ICON="NORMAL" action="bypass -h admin_html skills/Special/Common_Skills.htm"><font color="676767">Common Skills</font></Button></td></tr>
+<tr><td><Button ALIGN=LEFT ICON="NORMAL" action="bypass -h admin_html skills/Special/Clan_Skills.htm"><font color="9a9a9a">Clan Skills</font></Button></td></tr>
+<tr><td><Button ALIGN=LEFT ICON="NORMAL" action="bypass -h admin_html skills/Special/Hero_Skills.htm"><font color="88aaaa">Hero Skills</font></Button></td></tr>
+<tr><td><Button ALIGN=LEFT ICON="NORMAL" action="bypass -h admin_html skills/Special/Nobless_Skills.htm"><font color="77bbbb">Nobless Skills</font></Button></td></tr>
+<tr><td><Button ALIGN=LEFT ICON="NORMAL" action="bypass -h admin_html skills/Special/GM_Skills.htm"><font color="66cccc">Gm Skills</font></Button></td></tr>
+</table>
+<br><br>Add Skill through ID:<br>
+<table width=270>
+<tr>
+<td>Skill Id:</td>
+<td>Level:</td>
+<td></td>
+</tr>
+<tr>
+<td><edit var="id" width=60></td>
+<td><edit var="level" width=60></td>
+<td><button value="Add Skill" action="bypass -h admin_add_skill $id $level" width=100 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+</table>
+</body></html>

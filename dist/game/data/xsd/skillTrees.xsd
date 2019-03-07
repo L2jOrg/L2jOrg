@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="skillTree" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="skill" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence minOccurs="1" maxOccurs="1">
+										<xs:element name="subClassConditions" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="slot" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:positiveInteger">
+															<xs:minInclusive value="1" />
+															<xs:maxInclusive value="3" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="lvl" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:positiveInteger">
+															<xs:minInclusive value="1" />
+															<xs:maxInclusive value="105" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="removeSkill" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="socialClass" minOccurs="0" maxOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:token">
+													<xs:enumeration value="VAGABOND" />
+													<xs:enumeration value="VASSAL" />
+													<xs:enumeration value="APPRENTICE" />
+													<xs:enumeration value="HEIR" />
+													<xs:enumeration value="KNIGHT" />
+													<xs:enumeration value="ELDER" />
+													<xs:enumeration value="BARON" />
+													<xs:enumeration value="VISCOUNT" />
+													<xs:enumeration value="COUNT" />
+													<xs:enumeration value="MARQUIS" />
+													<xs:enumeration value="DUKE" />
+													<xs:enumeration value="GRAND_DUKE" />
+													<xs:enumeration value="DISTINGUISHED_KING" />
+													<xs:enumeration value="EMPEROR" />
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="residenceId" minOccurs="0" maxOccurs="unbounded">
+											<xs:simpleType>
+												<xs:restriction base="xs:positiveInteger">
+													<xs:minInclusive value="1" />
+													<xs:maxInclusive value="200" />
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="race" minOccurs="0" maxOccurs="unbounded">
+											<xs:simpleType>
+												<xs:restriction base="xs:token">
+													<xs:enumeration value="HUMAN" />
+													<xs:enumeration value="ELF" />
+													<xs:enumeration value="DARK_ELF" />
+													<xs:enumeration value="ORC" />
+													<xs:enumeration value="DWARF" />
+													<xs:enumeration value="KAMAEL" />
+													<xs:enumeration value="ERTHEIA" />
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="preRequisiteSkill" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+												<xs:attribute name="lvl" type="xs:positiveInteger" use="required" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="item" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+												<xs:attribute name="count" type="xs:positiveInteger" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="autoGet" type="xs:boolean" />
+									<xs:attribute name="getLevel">
+										<xs:simpleType>
+											<xs:restriction base="xs:positiveInteger">
+												<xs:minInclusive value="1" />
+												<xs:maxInclusive value="105" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="getDualClassLevel">
+										<xs:simpleType>
+											<xs:restriction base="xs:positiveInteger">
+												<xs:minInclusive value="1" />
+												<xs:maxInclusive value="105" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="learnedByFS" type="xs:boolean" />
+									<xs:attribute name="learnedByNpc" type="xs:boolean" />
+									<xs:attribute name="levelUpSp" type="xs:positiveInteger" />
+									<xs:attribute name="residenceSkill" type="xs:boolean" />
+									<xs:attribute name="skillId" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="skillLvl" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="skillName" type="xs:normalizedString" use="required" />
+									<xs:attribute name="treeId" type="xs:positiveInteger" />
+									<xs:attribute name="row" type="xs:positiveInteger" />
+									<xs:attribute name="column" type="xs:positiveInteger" />
+									<xs:attribute name="pointsRequired" type="xs:positiveInteger" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="classId">
+							<xs:simpleType>
+								<xs:restriction base="xs:nonNegativeInteger">
+									<xs:minInclusive value="0" />
+									<xs:maxInclusive value="189" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="parentClassId">
+							<xs:simpleType>
+								<xs:restriction base="xs:nonNegativeInteger">
+									<xs:minInclusive value="0" />
+									<xs:maxInclusive value="189" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="type" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="abilitySkillTree" />
+									<xs:enumeration value="alchemySkillTree" />
+									<xs:enumeration value="awakeningSaveSkillTree" />
+									<xs:enumeration value="classSkillTree" />
+									<xs:enumeration value="collectSkillTree" />
+									<xs:enumeration value="dualClassSkillTree" />
+									<xs:enumeration value="fishingSkillTree" />
+									<xs:enumeration value="gameMasterAuraSkillTree" />
+									<xs:enumeration value="gameMasterSkillTree" />
+									<xs:enumeration value="heroSkillTree" />
+									<xs:enumeration value="nobleSkillTree" />
+									<xs:enumeration value="pledgeSkillTree" />
+									<xs:enumeration value="raceSkillTree" />
+									<xs:enumeration value="revelationSkillTree" />
+									<xs:enumeration value="subClassSkillTree" />
+									<xs:enumeration value="subClassChangeSkillTree" />
+									<xs:enumeration value="subPledgeSkillTree" />
+									<xs:enumeration value="transferSkillTree" />
+									<xs:enumeration value="transformSkillTree" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="race" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="HUMAN" />
+									<xs:enumeration value="ELF" />
+									<xs:enumeration value="DARK_ELF" />
+									<xs:enumeration value="ORC" />
+									<xs:enumeration value="DWARF" />
+									<xs:enumeration value="KAMAEL" />
+									<xs:enumeration value="ERTHEIA" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="subType" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="BASECLASS" />
+									<xs:enumeration value="DUALCLASS" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

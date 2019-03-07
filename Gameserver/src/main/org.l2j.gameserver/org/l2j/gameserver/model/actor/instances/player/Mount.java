@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.instances.player;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.threading.RunnableImpl;
@@ -309,7 +309,7 @@ public class Mount
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			String req = "UPDATE pets SET fed=? WHERE item_obj_id = ?";
 			statement = con.prepareStatement(req);
 			statement.setInt(1, _currentFeed);

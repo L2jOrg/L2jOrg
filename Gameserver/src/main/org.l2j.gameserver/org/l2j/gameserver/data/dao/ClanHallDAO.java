@@ -1,7 +1,7 @@
 package org.l2j.gameserver.data.dao;
 
 import org.l2j.commons.dao.JdbcEntityState;
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.entity.residence.ClanHall;
 import org.l2j.gameserver.tables.ClanTable;
@@ -36,7 +36,7 @@ public class ClanHallDAO
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			statement.setInt(1, clanHall.getId());
 			rset = statement.executeQuery();
@@ -80,7 +80,7 @@ public class ClanHallDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(REPLACE_SQL_QUERY);
 
 			int i = 0;

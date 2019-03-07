@@ -1,10 +1,10 @@
 package org.l2j.scripts.handler.voicecommands;
 
 import org.l2j.commons.dao.JdbcEntityState;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.data.dao.CharacterVariablesDAO;
 import org.l2j.gameserver.data.dao.ItemsDAO;
-import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.items.ItemInstance;
@@ -63,7 +63,7 @@ public class Repair extends ScriptVoiceCommandHandler
 			ResultSet rs = null;
 			try
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
+				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("SELECT karma FROM characters WHERE obj_Id=?");
 				statement.setInt(1, objId);
 				statement.execute();

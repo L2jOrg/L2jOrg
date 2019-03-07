@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Hunter Town -->
+	<region name="hunter_town" town="Hunters Village" castle="5" locId="923" bbs="11">
+		<respawnPoint X="116127" Y="76015" Z="-2729" />
+		<respawnPoint X="115683" Y="77610" Z="-2650" />
+		<respawnPoint X="117304" Y="76318" Z="-2670" />
+		<respawnPoint X="119862" Y="76603" Z="-2220" />
+		<respawnPoint X="117671" Y="78998" Z="-2210" />
+		<respawnPoint X="117189" Y="78952" Z="-2210" />
+		<respawnPoint X="115861" Y="75200" Z="-2550" />
+		<respawnPoint X="118275" Y="74859" Z="-2557" />
+		<respawnPoint X="118229" Y="74677" Z="-2450" />
+		<respawnPoint X="115685" Y="75072" Z="-2550" />
+		<respawnPoint X="116704" Y="75695" Z="-2680" />
+		<respawnPoint X="116737" Y="76738" Z="-2650" />
+		<respawnPoint X="115193" Y="77594" Z="-2670" />
+		<respawnPoint X="116158" Y="77443" Z="-2660" />
+		<respawnPoint X="122098" Y="70373" Z="-2864" isChaotic="true" />
+		<respawnPoint X="118674" Y="71218" Z="-2743" isChaotic="true" />
+		<respawnPoint X="118040" Y="67175" Z="-2905" isChaotic="true" />
+		<respawnPoint X="119300" Y="70660" Z="-2850" isChaotic="true" />
+		<respawnPoint X="118851" Y="70566" Z="-2800" isChaotic="true" />
+		<respawnPoint X="112655" Y="70976" Z="-3122" isChaotic="true" />
+		<respawnPoint X="119712" Y="66376" Z="-2960" isChaotic="true" />
+		<respawnPoint X="107511" Y="82890" Z="-2515" isChaotic="true" />
+		<respawnPoint X="105702" Y="82773" Z="-2803" isChaotic="true" />
+		<respawnPoint X="104257" Y="82194" Z="-2581" isChaotic="true" />
+		<respawnPoint X="104474" Y="81109" Z="-2651" isChaotic="true" />
+		<map X="20" Y="10" />
+		<map X="23" Y="20" />
+		<map X="23" Y="19" />
+		<map X="24" Y="20" />
+		<map X="25" Y="20" />
+		<!-- NOTE: When teleporting out of Anthara's Lair or Dragon Valley, the teleport drop-off location is Hunter's Village in H5 -->
+		<map X="22" Y="21" />
+		<map X="23" Y="21" />
+		<map X="24" Y="21" />
+		<map X="25" Y="21" />
+	</region>
+</list>

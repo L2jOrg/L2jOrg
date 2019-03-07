@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
+	<option id="23000" name="o_s_82_2r_101">
+		<!-- Passive: Increases HP recovery magic effect. -->
+		<passive_skill id="3238" level="10" /> <!-- Item Skill: Prayer -->
+	</option>
+	<option id="23001" name="o_s_82_2r_102">
+		<!-- Passive: Increases one's own M. Atk. -->
+		<passive_skill id="3241" level="10" /> <!-- Item Skill: Empower -->
+	</option>
+	<option id="23002" name="o_s_82_2r_103">
+		<!-- Passive: Increases one's own M. Def. -->
+		<passive_skill id="3245" level="10" /> <!-- Item Skill: Magic Barrier -->
+	</option>
+	<option id="23003" name="o_s_82_2r_104">
+		<!-- Passive: Increases one's own P. Atk. -->
+		<passive_skill id="3240" level="10" /> <!-- Item Skill: Might -->
+	</option>
+	<option id="23004" name="o_s_82_2r_105">
+		<!-- Passive: Increases one's own P. Def. -->
+		<passive_skill id="3244" level="10" /> <!-- Item Skill: Shield -->
+	</option>
+	<option id="23005" name="o_s_82_2r_106">
+		<!-- Passive: Increases PvP P. Atk. -->
+		<passive_skill id="3243" level="10" /> <!-- Item Skill: Duel Might -->
+	</option>
+	<option id="23006" name="o_s_82_2r_107">
+		<!-- Passive: Increases the weight limit 2 times. -->
+		<passive_skill id="3251" level="10" /> <!-- Item Skill: Weight Limit -->
+	</option>
+	<option id="23007" name="o_s_82_2u_1">
+		<!-- Active: Temporarily decreases skill reuse time. -->
+		<active_skill id="3202" level="3" /> <!-- Item Skill: Refresh -->
+	</option>
+	<option id="23008" name="o_s_82_2u_2">
+		<!-- Active: Reduces MP consumption of all skills for a fixed time. -->
+		<active_skill id="3164" level="3" /> <!-- Item Skill: Clarity -->
+	</option>
+	<option id="23009" name="o_s_82_2u_3">
+		<!-- Active: Temporarily increases the probability of critical attack. -->
+		<active_skill id="3141" level="10" /> <!-- Item Skill: Focus -->
+	</option>
+	<option id="23010" name="o_s_82_2u_4">
+		<!-- Active: An ability to reflect a portion of damage received to an enemy is endowed to oneself for a fixed time. -->
+		<active_skill id="3204" level="3" /> <!-- Item Skill: Reflect Damage -->
+	</option>
+	<option id="23011" name="o_s_82_2u_5">
+		<!-- Active: Instantly blocks all of the target's physical/magic skills. Increase. -->
+		<active_skill id="3198" level="10" /> <!-- Item Skill: Doom -->
+	</option>
+	<option id="23012" name="o_s_82_2u_6">
+		<!-- Active: Teleports to a town. Cannot be used in special areas such as the GM info center. -->
+		<active_skill id="3147" level="1" /> <!-- Item Skill: Recall -->
+	</option>
+	<option id="23013" name="o_s_82_2u_7">
+		<!-- Active: Becomes invincible momentarily. -->
+		<active_skill id="3158" level="1" /> <!-- Item Skill: Lesser Celestial Shield -->
+	</option>
+	<option id="23014" name="o_s_82_2u_8">
+		<!-- Active: Increases the Critical Rate of damage attack magic for a fixed time. -->
+		<active_skill id="3142" level="10" /> <!-- Item Skill: Wild Magic -->
+	</option>
+	<option id="23015" name="o_s_82_2u_9">
+		<!-- Active: Teleports party members to a town. Cannot be used in special areas such as the GM info center. -->
+		<active_skill id="3205" level="2" /> <!-- Item Skill: Party Recall -->
+	</option>
+	<option id="23016" name="o_s_82_2u_10">
+		<!-- Active: Temporarily blocks the target's magic skills. -->
+		<active_skill id="3197" level="10" /> <!-- Item Skill: Silence -->
+	</option>
+	<option id="23017" name="o_s_82_2u_11">
+		<!-- Active: Temporarily decreases skill reuse time. -->
+		<active_skill id="3199" level="3" /> <!-- Item Skill: Skill Refresh -->
+	</option>
+	<option id="23018" name="o_s_82_2u_12">
+		<!-- Active: Reduces MP consumption of a skill for a fixed time. -->
+		<active_skill id="3161" level="3" /> <!-- Item Skill: Skill Clarity -->
+	</option>
+	<option id="23019" name="o_s_82_2u_13">
+		<!-- Active: Temporarily decreases skill reuse time. -->
+		<active_skill id="3201" level="3" /> <!-- Item Skill: Music Refresh -->
+	</option>
+	<option id="23020" name="o_s_82_2u_14">
+		<!-- Active: Reduces MP consumption of song/dance skills for a fixed time. -->
+		<active_skill id="3163" level="3" /> <!-- Item Skill: Music Clarity -->
+	</option>
+	<option id="23021" name="o_s_82_2u_15">
+		<!-- Active: Temporarily decreases skill reuse time. -->
+		<active_skill id="3200" level="3" /> <!-- Item Skill: Spell Refresh -->
+	</option>
+	<option id="23022" name="o_s_82_2u_16">
+		<!-- Active: Temporarily decreases spell MP consumption. -->
+		<active_skill id="3162" level="3" /> <!-- Item Skill: Spell Clarity -->
+	</option>
+	<option id="23023" name="o_s_82_2u_17">
+		<!-- Active: You can momentarily avoid a monster's preemptive attack. Your attack abilities are greatly decreased while the effect lasts. Increase. -->
+		<active_skill id="3159" level="3" /> <!-- Item Skill: Stealth -->
+	</option>
+	<option id="23024" name="o_s_82_2u_18">
+		<!-- Active: Increases the ability to restore HP as part of the damage inflicted on the enemy for a fixed time. Excludes damage by skill or long-range attacks. -->
+		<active_skill id="3148" level="10" /> <!-- Item Skill: Vampiric Rage -->
+	</option>
+	<option id="23025" name="o_s_82_2u_19">
+		<!-- Chance: During a physical attack, instantly blocks all of the target's physical/magic skills. Increase. -->
+		<attack_skill id="3094" level="10" chance="1.0" /> <!-- Item Skill: Doom -->
+	</option>
+	<option id="23026" name="o_s_82_2u_20">
+		<!-- Chance: During a physical attack, temporarily burns up the target's MP. -->
+		<attack_skill id="3082" level="10" chance="1.0" /> <!-- Item Skill: Mana Burn -->
+	</option>
+	<option id="23027" name="o_s_82_2u_21">
+		<!-- Chance: During a physical attack, instantly inflicts paralysis on the target. -->
+		<attack_skill id="3088" level="10" chance="1.0" /> <!-- Item Skill: Paralyze -->
+	</option>
+	<option id="23028" name="o_s_82_2u_22">
+		<!-- Chance: During a physical attack, temporarily blocks the target's magic skills. -->
+		<attack_skill id="3093" level="10" chance="1.0" /> <!-- Item Skill: Silence -->
+	</option>
+	<option id="23029" name="o_s_82_2u_23">
+		<!-- Chance: Instantly puts a target into sleep during a physical attack. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
+		<attack_skill id="3087" level="10" chance="1.0" /> <!-- Item Skill: Sleep -->
+	</option>
+	<option id="23030" name="o_s_82_2u_24">
+		<!-- Chance: During a physical attack, instantly inflicts shock on the target. -->
+		<attack_skill id="3085" level="10" chance="1.0" /> <!-- Item Skill: Stun -->
+	</option>
+	<option id="23031" name="o_s_82_2u_25">
+		<!-- Chance: During a critical attack, instantly blocks all of the target's physical/magic skills. Increase. -->
+		<critical_skill id="3122" level="10" chance="5.0" /> <!-- Item Skill: Doom -->
+	</option>
+	<option id="23032" name="o_s_82_2u_26">
+		<!-- Chance: During a critical attack, temporarily burns up the target's MP. -->
+		<critical_skill id="3110" level="10" chance="5.0" /> <!-- Item Skill: Mana Burn -->
+	</option>
+	<option id="23033" name="o_s_82_2u_27">
+		<!-- Chance: During a critical attack, instantly inflicts paralysis on the target. -->
+		<critical_skill id="3116" level="10" chance="5.0" /> <!-- Item Skill: Paralyze -->
+	</option>
+	<option id="23034" name="o_s_82_2u_28">
+		<!-- Chance: During a critical attack, temporarily blocks the target's magic skills. -->
+		<critical_skill id="3121" level="10" chance="5.0" /> <!-- Item Skill: Silence -->
+	</option>
+	<option id="23035" name="o_s_82_2u_29">
+		<!-- Chance: Instantly puts a target into sleep during a critical attack. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
+		<critical_skill id="3115" level="10" chance="5.0" /> <!-- Item Skill: Sleep -->
+	</option>
+	<option id="23036" name="o_s_82_2u_30">
+		<!-- Chance: During a critical attack, instantly inflicts shock on the target. -->
+		<critical_skill id="3113" level="10" chance="5.0" /> <!-- Item Skill: Stun -->
+	</option>
+	<option id="23037" name="o_s_82_2u_31">
+		<!-- Chance: Instantly blocks a target's ability to use all physical or magic skills at a fixed rate. -->
+		<passive_skill id="3237" level="10" /> <!-- Item Skill: Doom -->
+	</option>
+	<option id="23038" name="o_s_82_2u_32">
+		<!-- Chance: At a fixed rate, throws the target inflicted damage on you into a sate of fear and causes him to flee. -->
+		<passive_skill id="3233" level="10" /> <!-- Item Skill: Fear -->
+	</option>
+	<option id="23039" name="o_s_82_2u_33">
+		<!-- Chance: In case of receiving damage, the restoring amount increases at a constant rate when receiving MP regeneration magic. -->
+		<passive_skill id="3212" level="10" /> <!-- Item Skill: Mana Gain -->
+	</option>
+	<option id="23040" name="o_s_82_2u_34">
+		<!-- Chance: Restores one's own MP at a constant rate when receiving damage. -->
+		<passive_skill id="3210" level="10" /> <!-- Item Skill: Recharge -->
+	</option>
+	<option id="23041" name="o_s_82_2u_35">
+		<!-- Chance: The target inflicted damage on you is thrown into a state of paralysis at a constant rate. -->
+		<passive_skill id="3231" level="10" /> <!-- Item Skill: Paralyze -->
+	</option>
+	<option id="23042" name="o_s_82_2u_36">
+		<!-- Chance: Magic skills of the target inflicted damage on you is blocked at a constant rate. -->
+		<passive_skill id="3236" level="10" /> <!-- Item Skill: Silence -->
+	</option>
+	<option id="23043" name="o_s_82_2u_37">
+		<!-- Chance: The target inflicted damage on you is thrown into a state of shock at a constant rate. -->
+		<passive_skill id="3228" level="10" /> <!-- Item Skill: Stun -->
+	</option>
+	<option id="23044" name="o_s_82_2u_38">
+		<!-- Chance: The target inflicted damage on you is thrown into a petrified state at a constant rate. -->
+		<passive_skill id="3232" level="10" /> <!-- Item Skill: Medusa -->
+	</option>
+	<option id="23045" name="o_s_82_2u_39">
+		<!-- Chance: During a magic attack, instantly blocks all of the target's physical/magic skills. Increase. -->
+		<magic_skill id="3107" level="10" chance="2.0" /> <!-- Item Skill: Doom -->
+	</option>
+	<option id="23046" name="o_s_82_2u_40">
+		<!-- Chance: During a magic attack, temporarily burns up the target's MP. -->
+		<magic_skill id="3095" level="10" chance="2.0" /> <!-- Item Skill: Mana Burn -->
+	</option>
+	<option id="23047" name="o_s_82_2u_41">
+		<!-- Chance: During a magic attack, instantly inflicts paralysis on the target. -->
+		<magic_skill id="3101" level="10" chance="2.0" /> <!-- Item Skill: Paralyze -->
+	</option>
+	<option id="23048" name="o_s_82_2u_42">
+		<!-- Chance: During a magic attack, temporarily blocks the target's magic skills. -->
+		<magic_skill id="3106" level="10" chance="2.0" /> <!-- Item Skill: Silence -->
+	</option>
+	<option id="23049" name="o_s_82_2u_43">
+		<!-- Chance: Instantly throws a target into sleep during a magic attack. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
+		<magic_skill id="3100" level="10" chance="2.0" /> <!-- Item Skill: Sleep -->
+	</option>
+	<option id="23050" name="o_s_82_2u_44">
+		<!-- Chance: During a magic attack, instantly inflicts shock on the target. -->
+		<magic_skill id="3098" level="10" chance="2.0" /> <!-- Item Skill: Stun -->
+	</option>
+	<option id="23051" name="o_s_82_2u_45">
+		<!-- Passive: Reduces MP consumption of all skills. -->
+		<passive_skill id="3258" level="3" /> <!-- Item Skill: Clarity -->
+	</option>
+	<option id="23052" name="o_s_82_2u_46">
+		<!-- Passive: Increases evasion. -->
+		<passive_skill id="3247" level="10" /> <!-- Item Skill: Agility -->
+	</option>
+	<option id="23053" name="o_s_82_2u_47">
+		<!-- Passive: Increases the rate of critical attacks. -->
+		<passive_skill id="3249" level="10" /> <!-- Item Skill: Focus -->
+	</option>
+	<option id="23054" name="o_s_82_2u_48">
+		<!-- Passive : Reflects part of the damage back to the opponent. -->
+		<passive_skill id="3259" level="3" /> <!-- Item Skill: Reflect Damage -->
+	</option>
+	<option id="23055" name="o_s_82_2u_49">
+		<!-- Passive: Increases one's own accuracy. -->
+		<passive_skill id="3248" level="10" /> <!-- Item Skill: Guidance -->
+	</option>
+	<option id="23056" name="o_s_82_2u_50">
+		<!-- Passive: Increases the Critical Rate of attack magic. -->
+		<passive_skill id="3250" level="10" /> <!-- Item Skill: Wild Magic -->
+	</option>
+	<option id="23057" name="o_s_82_2u_51">
+		<!-- Passive: Increases the recovery rate when MP is being recovered by recharge. -->
+		<passive_skill id="3239" level="10" /> <!-- Item Skill: Mana Gain -->
+	</option>
+	<option id="23058" name="o_s_82_2u_52">
+		<!-- Passive: Decreases skill MP consumption. -->
+		<passive_skill id="3255" level="3" /> <!-- Item Skill: Skill Clarity -->
+	</option>
+	<option id="23059" name="o_s_82_2u_53">
+		<!-- Passive: Decreases song skill MP consumption. -->
+		<passive_skill id="3257" level="3" /> <!-- Item Skill: Music Clarity -->
+	</option>
+	<option id="23060" name="o_s_82_2u_54">
+		<!-- Passive: Reduces MP consumption of magic. -->
+		<passive_skill id="3256" level="3" /> <!-- Item Skill: Spell Clarity -->
+	</option>
+	<option id="23061" name="o_f_82_1u_92">
+		<!-- STR +1 increase. -->
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>STR</stat>
+			</effect>
+		</effects>
+	</option>
+	<option id="23062" name="o_f_82_1u_93">
+		<!-- CON +1 -->
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>CON</stat>
+			</effect>
+		</effects>
+	</option>
+	<option id="23063" name="o_f_82_1u_94">
+		<!-- INT +1 increase. -->
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</option>
+	<option id="23064" name="o_f_82_1u_95">
+		<!-- MEN +1 increase. -->
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</option>
+</list>

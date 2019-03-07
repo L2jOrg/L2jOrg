@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Tax Zones -->
+	<zone name="gludio_1621_001" type="TaxZone" shape="NPoly" minZ="-5036" maxZ="964">
+		<stat name="domainId" val="1" />
+		<node X="-121528" Y="98344" />
+		<node X="-98372" Y="98344" />
+		<node X="-98340" Y="131032" />
+		<node X="-122216" Y="131420" />
+	</zone>
+	<zone name="gludio_1624_001" type="TaxZone" shape="NPoly" minZ="-5212" maxZ="788">
+		<stat name="domainId" val="1" />
+		<node X="-131056" Y="196736" />
+		<node X="-98380" Y="196648" />
+		<node X="-98428" Y="229188" />
+		<node X="-130988" Y="229224" />
+	</zone>
+	<zone name="gludio_1625_001" type="TaxZone" shape="NPoly" minZ="-4820" maxZ="1180">
+		<stat name="domainId" val="1" />
+		<node X="-131020" Y="229516" />
+		<node X="-98484" Y="229588" />
+		<node X="-98396" Y="262080" />
+		<node X="-131064" Y="261872" />
+	</zone>
+	<zone name="gludio_1720_001" type="TaxZone" shape="NPoly" minZ="-4904" maxZ="1096">
+		<stat name="domainId" val="1" />
+		<node X="-97868" Y="65836" />
+		<node X="-76324" Y="65972" />
+		<node X="-77528" Y="77712" />
+		<node X="-98100" Y="87216" />
+	</zone>
+	<zone name="gludio_1720_002" type="TaxZone" shape="NPoly" minZ="-4832" maxZ="1168">
+		<stat name="domainId" val="1" />
+		<node X="-98172" Y="87344" />
+		<node X="-80156" Y="79000" />
+		<node X="-78324" Y="86876" />
+		<node X="-80152" Y="98052" />
+		<node X="-98256" Y="98092" />
+	</zone>
+	<zone name="gludio_1720_003" type="TaxZone" shape="NPoly" minZ="-3848" maxZ="2152">
+		<stat name="domainId" val="1" />
+		<node X="-78308" Y="87376" />
+		<node X="-70516" Y="89252" />
+		<node X="-65788" Y="93912" />
+		<node X="-65736" Y="98076" />
+		<node X="-80084" Y="98040" />
+	</zone>
+	<zone name="gludio_1720_004" type="TaxZone" shape="NPoly" minZ="-3468" maxZ="-2468">
+		<stat name="domainId" val="1" />
+		<node X="-86388" Y="79308" />
+		<node X="-82064" Y="78388" />
+		<node X="-80872" Y="84576" />
+		<node X="-88852" Y="84796" />
+		<node X="-88992" Y="82552" />
+	</zone>
+	<zone name="gludio_1721_001" type="TaxZone" shape="NPoly" minZ="-3808" maxZ="2192">
+		<stat name="domainId" val="1" />
+		<node X="-98388" Y="98168" />
+		<node X="-65688" Y="98296" />
+		<node X="-65600" Y="131076" />
+		<node X="-98300" Y="131356" />
+	</zone>
+	<zone name="gludio_1722_001" type="TaxZone" shape="NPoly" minZ="-5024" maxZ="2976">
+		<stat name="domainId" val="1" />
+		<node X="-98272" Y="131164" />
+		<node X="-65828" Y="131248" />
+		<node X="-65764" Y="163676" />
+		<node X="-98732" Y="165048" />
+	</zone>
+	<zone name="gludio_1723_001" type="TaxZone" shape="NPoly" minZ="-5004" maxZ="996">
+		<stat name="domainId" val="1" />
+		<node X="-98236" Y="163948" />
+		<node X="-65724" Y="163856" />
+		<node X="-65880" Y="195756" />
+		<node X="-98388" Y="196880" />
+	</zone>
+	<zone name="gludio_1725_001" type="TaxZone" shape="NPoly" minZ="-5036" maxZ="964">
+		<stat name="domainId" val="1" />
+		<node X="-98320" Y="229472" />
+		<node X="-65752" Y="229436" />
+		<node X="-65468" Y="261984" />
+		<node X="-98200" Y="261776" />
+	</zone>
+	<zone name="gludio_1820_001" type="TaxZone" shape="NPoly" minZ="-4148" maxZ="1852">
+		<stat name="domainId" val="1" />
+		<node X="-65488" Y="93628" />
+		<node X="-33092" Y="89240" />
+		<node X="-32964" Y="98112" />
+		<node X="-65476" Y="98100" />
+	</zone>
+	<zone name="gludio_1821_001" type="TaxZone" shape="NPoly" minZ="-3780" maxZ="2220">
+		<stat name="domainId" val="1" />
+		<node X="-65484" Y="98340" />
+		<node X="-33068" Y="98676" />
+		<node X="-33020" Y="130852" />
+		<node X="-65528" Y="131016" />
+	</zone>
+	<zone name="gludio_1822_001" type="TaxZone" shape="NPoly" minZ="-4172" maxZ="1828">
+		<stat name="domainId" val="1" />
+		<node X="-65484" Y="131176" />
+		<node X="-32972" Y="131168" />
+		<node X="-33024" Y="163632" />
+		<node X="-65388" Y="163568" />
+	</zone>
+	<zone name="gludio_1823_001" type="TaxZone" shape="NPoly" minZ="-5616" maxZ="384">
+		<stat name="domainId" val="1" />
+		<node X="-65440" Y="163896" />
+		<node X="-32844" Y="163852" />
+		<node X="-32996" Y="196452" />
+		<node X="-65532" Y="196488" />
+	</zone>
+	<zone name="gludio_1824_001" type="TaxZone" shape="NPoly" minZ="-4880" maxZ="1120">
+		<stat name="domainId" val="1" />
+		<node X="-65368" Y="196732" />
+		<node X="-33032" Y="196776" />
+		<node X="-33076" Y="229244" />
+		<node X="-65012" Y="229212" />
+	</zone>
+	<zone name="gludio_1920_001" type="TaxZone" shape="NPoly" minZ="-4088" maxZ="-2088">
+		<stat name="domainId" val="1" />
+		<node X="-5032" Y="72868" />
+		<node X="-24" Y="79252" />
+		<node X="108" Y="98528" />
+		<node X="-21568" Y="98404" />
+		<node X="-22548" Y="90904" />
+		<node X="-20236" Y="76952" />
+		<node X="-12260" Y="70068" />
+	</zone>
+	<zone name="gludio_1920_002" type="TaxZone" shape="NPoly" minZ="-5408" maxZ="-4408">
+		<stat name="domainId" val="1" />
+		<node X="-22232" Y="77188" />
+		<node X="-10864" Y="77036" />
+		<node X="-11192" Y="88548" />
+		<node X="-21852" Y="88044" />
+	</zone>
+	<zone name="gludio_1921_001" type="TaxZone" shape="NPoly" minZ="-4044" maxZ="1956">
+		<stat name="domainId" val="1" />
+		<node X="-32480" Y="98448" />
+		<node X="-192" Y="98440" />
+		<node X="388" Y="131392" />
+		<node X="-32692" Y="130880" />
+	</zone>
+	<zone name="gludio_1922_001" type="TaxZone" shape="NPoly" minZ="-3904" maxZ="2096">
+		<stat name="domainId" val="1" />
+		<node X="-32744" Y="131188" />
+		<node X="-252" Y="131164" />
+		<node X="-124" Y="163732" />
+		<node X="-32696" Y="163648" />
+	</zone>
+	<zone name="gludio_1923_001" type="TaxZone" shape="NPoly" minZ="-4464" maxZ="1536">
+		<stat name="domainId" val="1" />
+		<node X="-32644" Y="163916" />
+		<node X="-148" Y="163948" />
+		<node X="132" Y="196496" />
+		<node X="-32716" Y="196364" />
+	</zone>
+	<zone name="gludio_1924_001" type="TaxZone" shape="NPoly" minZ="-6988" maxZ="-988">
+		<stat name="domainId" val="1" />
+		<node X="-32720" Y="196704" />
+		<node X="-64" Y="196664" />
+		<node X="-216" Y="229148" />
+		<node X="-33140" Y="229576" />
+	</zone>
+	<zone name="gludio_2125_001" type="TaxZone" shape="NPoly" minZ="-5196" maxZ="804">
+		<stat name="domainId" val="1" />
+		<node X="33600" Y="229712" />
+		<node X="65364" Y="230072" />
+		<node X="65324" Y="262096" />
+		<node X="31612" Y="262128" />
+	</zone>
+	<zone name="dion_1810_001" type="TaxZone" shape="NPoly" minZ="-10208" maxZ="-3208">
+		<stat name="domainId" val="2" />
+		<node X="-57777" Y="-253194" />
+		<node X="-40997" Y="-252692" />
+		<node X="-41305" Y="-237750" />
+		<node X="-58125" Y="-237445" />
+	</zone>
+	<zone name="dion_2021_001" type="TaxZone" shape="NPoly" minZ="-4268" maxZ="1732">
+		<stat name="domainId" val="2" />
+		<node X="3236" Y="98380" />
+		<node X="31976" Y="98800" />
+		<node X="31880" Y="117524" />
+		<node X="2496" Y="112880" />
+	</zone>
+	<zone name="dion_2021_002" type="TaxZone" shape="NPoly" minZ="-3796" maxZ="2204">
+		<stat name="domainId" val="2" />
+		<node X="32082" Y="117581" />
+		<node X="32546" Y="130836" />
+		<node X="9062" Y="131116" />
+		<node X="862" Y="127172" />
+		<node X="2410" Y="113013" />
+	</zone>
+	<zone name="dion_2022_001" type="TaxZone" shape="NPoly" minZ="-4228" maxZ="1772">
+		<stat name="domainId" val="2" />
+		<node X="2876" Y="155112" />
+		<node X="5860" Y="131136" />
+		<node X="32588" Y="131428" />
+		<node X="32496" Y="163624" />
+		<node X="5600" Y="163816" />
+	</zone>
+	<zone name="dion_2023_001" type="TaxZone" shape="NPoly" minZ="-4700" maxZ="1300">
+		<stat name="domainId" val="2" />
+		<node X="92" Y="164016" />
+		<node X="32620" Y="163960" />
+		<node X="32596" Y="196456" />
+		<node X="-8" Y="196608" />
+	</zone>
+	<zone name="dion_2121_001" type="TaxZone" shape="NPoly" minZ="-3988" maxZ="2012">
+		<stat name="domainId" val="2" />
+		<node X="56516" Y="99872" />
+		<node X="62188" Y="111928" />
+		<node X="61972" Y="130772" />
+		<node X="32864" Y="130916" />
+		<node X="32824" Y="98272" />
+	</zone>
+	<zone name="dion_2122_001" type="TaxZone" shape="NPoly" minZ="-3876" maxZ="2124">
+		<stat name="domainId" val="2" />
+		<node X="32872" Y="131188" />
+		<node X="65324" Y="131368" />
+		<node X="65280" Y="163608" />
+		<node X="33000" Y="163656" />
+	</zone>
+	<zone name="giran_2123_001" type="TaxZone" shape="NPoly" minZ="-4912" maxZ="1088">
+		<stat name="domainId" val="3" />
+		<node X="32884" Y="163952" />
+		<node X="33084" Y="196400" />
+		<node X="65244" Y="194620" />
+		<node X="65324" Y="163764" />
+	</zone>
+	<zone name="giran_2221_001" type="TaxZone" shape="NPoly" minZ="-4496" maxZ="1504">
+		<stat name="domainId" val="3" />
+		<node X="65740" Y="98480" />
+		<node X="97976" Y="98536" />
+		<node X="97900" Y="130712" />
+		<node X="65604" Y="130920" />
+	</zone>
+	<zone name="giran_2222_001" type="TaxZone" shape="NPoly" minZ="-4468" maxZ="1532">
+		<stat name="domainId" val="3" />
+		<node X="65668" Y="131208" />
+		<node X="98012" Y="131164" />
+		<node X="80700" Y="163712" />
+		<node X="65716" Y="163616" />
+	</zone>
+	<zone name="giran_2222_002" type="TaxZone" shape="NPoly" minZ="-4632" maxZ="1368">
+		<stat name="domainId" val="3" />
+		<node X="83796" Y="157680" />
+		<node X="98044" Y="131208" />
+		<node X="98212" Y="154536" />
+	</zone>
+	<zone name="giran_2223_001" type="TaxZone" shape="NPoly" minZ="-4500" maxZ="-1500">
+		<stat name="domainId" val="3" />
+		<node X="65896" Y="163996" />
+		<node X="80060" Y="164232" />
+		<node X="70212" Y="180176" />
+		<node X="65880" Y="184172" />
+	</zone>
+	<zone name="giran_2321_001" type="TaxZone" shape="NPoly" minZ="-4236" maxZ="1764">
+		<stat name="domainId" val="3" />
+		<node X="98544" Y="98724" />
+		<node X="130904" Y="98396" />
+		<node X="130624" Y="130740" />
+		<node X="98384" Y="130748" />
+	</zone>
+	<zone name="giran_2322_001" type="TaxZone" shape="NPoly" minZ="-4952" maxZ="1048">
+		<stat name="domainId" val="3" />
+		<node X="130912" Y="131104" />
+		<node X="130976" Y="138376" />
+		<node X="118944" Y="150588" />
+		<node X="98332" Y="153328" />
+		<node X="98412" Y="131148" />
+	</zone>
+	<zone name="giran_2124_001" type="TaxZone" shape="NPoly" minZ="-4768" maxZ="-568">
+		<stat name="domainId" val="3" />
+		<node X="33479" Y="197223" />
+		<node X="65148" Y="197187" />
+		<node X="64952" Y="228627" />
+		<node X="33478" Y="228629" />
+	</zone>
+	<zone name="giran_2421_001" type="TaxZone" shape="NPoly" minZ="-9187" maxZ="-687">
+		<stat name="domainId" val="3" />
+		<node X="131379" Y="98612" />
+		<node X="163514" Y="98612" />
+		<node X="163514" Y="130860" />
+		<node X="128820" Y="130972" />
+	</zone>
+	<zone name="oren_1720_001" type="TaxZone" shape="NPoly" minZ="-4507" maxZ="493">
+		<stat name="domainId" val="4" />
+		<node X="-74709" Y="66788" />
+		<node X="-64139" Y="68684" />
+		<node X="-63819" Y="78993" />
+		<node X="-77276" Y="77514" />
+	</zone>
+	<zone name="oren_1720_002" type="TaxZone" shape="NPoly" minZ="-3611" maxZ="389">
+		<stat name="domainId" val="4" />
+		<node X="-77466" Y="77648" />
+		<node X="-64154" Y="79077" />
+		<node X="-64722" Y="93562" />
+		<node X="-77571" Y="86723" />
+		<node X="-79893" Y="79185" />
+	</zone>
+	<zone name="oren_1819_001" type="TaxZone" shape="NPoly" minZ="-4708" maxZ="-708">
+		<stat name="domainId" val="4" />
+		<node X="-64361" Y="32992" />
+		<node X="-32575" Y="33002" />
+		<node X="-32889" Y="65436" />
+		<node X="-64348" Y="65380" />
+	</zone>
+	<zone name="oren_1820_001" type="TaxZone" shape="NPoly" minZ="-4822" maxZ="178">
+		<stat name="domainId" val="4" />
+		<node X="-65494" Y="65591" />
+		<node X="-32918" Y="65544" />
+		<node X="-32918" Y="86639" />
+		<node X="-65420" Y="93116" />
+	</zone>
+	<zone name="oren_1820_002" type="TaxZone" shape="NPoly" minZ="1388" maxZ="3612">
+		<stat name="domainId" val="4" />
+		<node X="-50272" Y="84060" />
+		<node X="-39573" Y="83914" />
+		<node X="-40871" Y="90354" />
+		<node X="-46801" Y="90150" />
+	</zone>
+	<zone name="oren_1910_001" type="TaxZone" shape="NPoly" minZ="-12116" maxZ="-3116">
+		<stat name="domainId" val="4" />
+		<node X="-25242" Y="-252548" />
+		<node X="-8974" Y="-253262" />
+		<node X="-8741" Y="-239057" />
+		<node X="-24943" Y="-239075" />
+	</zone>
+	<zone name="oren_1918_001" type="TaxZone" shape="NPoly" minZ="-4861" maxZ="139">
+		<stat name="domainId" val="4" />
+		<node X="-32872" Y="786" />
+		<node X="-179" Y="806" />
+		<node X="-113" Y="32576" />
+		<node X="-32681" Y="32592" />
+	</zone>
+	<zone name="oren_1919_001" type="TaxZone" shape="NPoly" minZ="-4687" maxZ="313">
+		<stat name="domainId" val="4" />
+		<node X="-32712" Y="32869" />
+		<node X="-130" Y="32869" />
+		<node X="-227" Y="65280" />
+		<node X="-32663" Y="65329" />
+	</zone>
+	<zone name="oren_1920_001" type="TaxZone" shape="NPoly" minZ="-4056" maxZ="-2056">
+		<stat name="domainId" val="4" />
+		<node X="-7240" Y="65392" />
+		<node X="12" Y="65520" />
+		<node X="172" Y="78196" />
+		<node X="-4140" Y="72496" />
+		<node X="-10404" Y="69532" />
+		<node X="-10208" Y="67056" />
+	</zone>
+	<zone name="oren_1920_002" type="TaxZone" shape="NPoly" minZ="-4164" maxZ="-2164">
+		<stat name="domainId" val="4" />
+		<node X="-32884" Y="65624" />
+		<node X="-11460" Y="65548" />
+		<node X="-11340" Y="68448" />
+		<node X="-21064" Y="77080" />
+		<node X="-23036" Y="98260" />
+		<node X="-32716" Y="98248" />
+	</zone>
+	<zone name="oren_2918_001" type="TaxZone" shape="NPoly" minZ="-4797" maxZ="1203">
+		<stat name="domainId" val="4" />
+		<node X="79" Y="751" />
+		<node X="32586" Y="2079" />
+		<node X="32566" Y="32564" />
+		<node X="99" Y="32605" />
+	</zone>
+	<zone name="oren_2019_001" type="TaxZone" shape="NPoly" minZ="-4583" maxZ="417">
+		<stat name="domainId" val="4" />
+		<node X="20" Y="32842" />
+		<node X="32689" Y="32979" />
+		<node X="32611" Y="65413" />
+		<node X="99" Y="65276" />
+	</zone>
+	<zone name="oren_2020_001" type="TaxZone" shape="NPoly" minZ="-4234" maxZ="-234">
+		<stat name="domainId" val="4" />
+		<node X="49" Y="65664" />
+		<node X="32525" Y="65566" />
+		<node X="32446" Y="95418" />
+		<node X="147" Y="96601" />
+	</zone>
+	<zone name="oren_2118_001" type="TaxZone" shape="NPoly" minZ="-5196" maxZ="804">
+		<stat name="domainId" val="4" />
+		<node X="32830" Y="77" />
+		<node X="65375" Y="40" />
+		<node X="65375" Y="32548" />
+		<node X="32867" Y="32548" />
+	</zone>
+	<zone name="oren_2119_001" type="TaxZone" shape="NPoly" minZ="-5003" maxZ="997">
+		<stat name="domainId" val="4" />
+		<node X="32834" Y="32786" />
+		<node X="65336" Y="32832" />
+		<node X="65284" Y="65301" />
+		<node X="32834" Y="65308" />
+	</zone>
+	<zone name="oren_2120_001" type="TaxZone" shape="NPoly" minZ="-4318" maxZ="682">
+		<stat name="domainId" val="4" />
+		<node X="32858" Y="65602" />
+		<node X="62709" Y="65636" />
+		<node X="62590" Y="95846" />
+		<node X="32875" Y="95744" />
+	</zone>
+	<zone name="oren_2217_001" type="TaxZone" shape="NPoly" minZ="-4121" maxZ="879">
+		<stat name="domainId" val="4" />
+		<node X="91399" Y="-28759" />
+		<node X="97984" Y="-25491" />
+		<node X="97984" Y="-403" />
+		<node X="66008" Y="-252" />
+		<node X="75435" Y="-17296" />
+	</zone>
+	<zone name="oren_2218_001" type="TaxZone" shape="NPoly" minZ="-4854" maxZ="1146">
+		<stat name="domainId" val="4" />
+		<node X="65639" Y="120" />
+		<node X="98015" Y="194" />
+		<node X="98039" Y="32470" />
+		<node X="65713" Y="32520" />
+	</zone>
+	<zone name="oren_2219_001" type="TaxZone" shape="NPoly" minZ="-4561" maxZ="439">
+		<stat name="domainId" val="4" />
+		<node X="65649" Y="32791" />
+		<node X="98049" Y="32844" />
+		<node X="98085" Y="65280" />
+		<node X="65738" Y="65209" />
+	</zone>
+	<zone name="oren_2220_001" type="TaxZone" shape="NPoly" minZ="-4425" maxZ="-425">
+		<stat name="domainId" val="4" />
+		<node X="65637" Y="65628" />
+		<node X="98094" Y="65666" />
+		<node X="98131" Y="98048" />
+		<node X="65656" Y="97993" />
+	</zone>
+	<zone name="oren_2317_001" type="TaxZone" shape="NPoly" minZ="-4188" maxZ="3812">
+		<stat name="domainId" val="4" />
+		<node X="117258" Y="-17696" />
+		<node X="111573" Y="-6727" />
+		<node X="104357" Y="-204" />
+		<node X="98363" Y="-186" />
+		<node X="98372" Y="-24720" />
+	</zone>
+	<zone name="oren_2318_001" type="TaxZone" shape="NPoly" minZ="-4434" maxZ="-434">
+		<stat name="domainId" val="4" />
+		<node X="104257" Y="187" />
+		<node X="105033" Y="14228" />
+		<node X="102443" Y="19127" />
+		<node X="98426" Y="18974" />
+		<node X="98392" Y="134" />
+	</zone>
+	<zone name="oren_2318_002" type="TaxZone" shape="NPoly" minZ="-4434" maxZ="-434">
+		<stat name="domainId" val="4" />
+		<node X="102566" Y="19193" />
+		<node X="105394" Y="24621" />
+		<node X="103476" Y="30460" />
+		<node X="98404" Y="30671" />
+		<node X="98446" Y="19158" />
+	</zone>
+	<zone name="aden_2010_001" type="TaxZone" shape="NPoly" minZ="-13296" maxZ="-3296">
+		<stat name="domainId" val="5" />
+		<node X="8251" Y="-249650" />
+		<node X="24608" Y="-249430" />
+		<node X="24109" Y="-242790" />
+		<node X="8316" Y="-242767" />
+	</zone>
+	<zone name="aden_2317_001" type="TaxZone" shape="NPoly" minZ="-4188" maxZ="3812">
+		<stat name="domainId" val="5" />
+		<node X="130704" Y="-21362" />
+		<node X="130886" Y="-209" />
+		<node X="112747" Y="-173" />
+		<node X="108637" Y="-3399" />
+		<node X="115372" Y="-13695" />
+	</zone>
+	<zone name="aden_2317_002" type="TaxZone" shape="NPoly" minZ="-4188" maxZ="3812">
+		<stat name="domainId" val="5" />
+		<node X="112124" Y="-2649" />
+		<node X="112704" Y="-240" />
+		<node X="104663" Y="-310" />
+		<node X="109835" Y="-5034" />
+	</zone>
+	<zone name="aden_2318_001" type="TaxZone" shape="NPoly" minZ="-5659" maxZ="341">
+		<stat name="domainId" val="5" />
+		<node X="130874" Y="104" />
+		<node X="130895" Y="32580" />
+		<node X="118078" Y="32572" />
+		<node X="105114" Y="14306" />
+		<node X="104370" Y="262" />
+	</zone>
+	<zone name="aden_2318_002" type="TaxZone" shape="NPoly" minZ="-5659" maxZ="341">
+		<stat name="domainId" val="5" />
+		<node X="105074" Y="14348" />
+		<node X="112125" Y="24353" />
+		<node X="105677" Y="24686" />
+		<node X="102702" Y="19097" />
+	</zone>
+	<zone name="aden_2318_003" type="TaxZone" shape="NPoly" minZ="-5659" maxZ="341">
+		<stat name="domainId" val="5" />
+		<node X="112187" Y="24432" />
+		<node X="116529" Y="30516" />
+		<node X="103552" Y="30665" />
+		<node X="105525" Y="24829" />
+	</zone>
+	<zone name="aden_2318_004" type="TaxZone" shape="NPoly" minZ="-5659" maxZ="341">
+		<stat name="domainId" val="5" />
+		<node X="116613" Y="30668" />
+		<node X="117915" Y="32552" />
+		<node X="98368" Y="32578" />
+		<node X="98390" Y="30871" />
+	</zone>
+	<zone name="aden_2319_001" type="TaxZone" shape="NPoly" minZ="-4342" maxZ="2658">
+		<stat name="domainId" val="5" />
+		<node X="98397" Y="32855" />
+		<node X="130761" Y="32911" />
+		<node X="130836" Y="65313" />
+		<node X="98434" Y="65275" />
+	</zone>
+	<zone name="aden_2320_001" type="TaxZone" shape="NPoly" minZ="-5608" maxZ="2392">
+		<stat name="domainId" val="5" />
+		<node X="98414" Y="65631" />
+		<node X="130803" Y="65693" />
+		<node X="130741" Y="95120" />
+		<node X="106991" Y="95326" />
+		<node X="98493" Y="85703" />
+	</zone>
+	<zone name="aden_2417_001" type="TaxZone" shape="NPoly" minZ="-5418" maxZ="1582">
+		<stat name="domainId" val="5" />
+		<node X="145791" Y="-31156" />
+		<node X="163475" Y="-24637" />
+		<node X="163695" Y="-232" />
+		<node X="131228" Y="-287" />
+		<node X="131292" Y="-22737" />
+	</zone>
+	<zone name="aden_2418_001" type="TaxZone" shape="NPoly" minZ="-4556" maxZ="1444">
+		<stat name="domainId" val="5" />
+		<node X="131177" Y="105" />
+		<node X="163636" Y="105" />
+		<node X="163614" Y="32477" />
+		<node X="131263" Y="32564" />
+	</zone>
+	<zone name="aden_2419_001" type="TaxZone" shape="NPoly" minZ="-3424" maxZ="1576">
+		<stat name="domainId" val="5" />
+		<node X="131166" Y="32940" />
+		<node X="163536" Y="32963" />
+		<node X="163582" Y="65242" />
+		<node X="131280" Y="65310" />
+	</zone>
+	<zone name="aden_2420_001" type="TaxZone" shape="NPoly" minZ="-4624" maxZ="2376">
+		<stat name="domainId" val="5" />
+		<node X="131191" Y="65584" />
+		<node X="163732" Y="65563" />
+		<node X="163523" Y="96577" />
+		<node X="131212" Y="95385" />
+	</zone>
+	<zone name="aden_2517_001" type="TaxZone" shape="NPoly" minZ="-4527" maxZ="1473">
+		<stat name="domainId" val="5" />
+		<node X="187258" Y="-29967" />
+		<node X="192441" Y="-23330" />
+		<node X="191839" Y="-267" />
+		<node X="163944" Y="-286" />
+		<node X="163913" Y="-26539" />
+	</zone>
+	<zone name="aden_2518_001" type="TaxZone" shape="NPoly" minZ="-4138" maxZ="862">
+		<stat name="domainId" val="5" />
+		<node X="163936" Y="95" />
+		<node X="196353" Y="176" />
+		<node X="196374" Y="32533" />
+		<node X="164037" Y="32492" />
+	</zone>
+	<zone name="aden_2519_001" type="TaxZone" shape="NPoly" minZ="-5587" maxZ="413">
+		<stat name="domainId" val="5" />
+		<node X="163940" Y="32880" />
+		<node X="195847" Y="32880" />
+		<node X="196311" Y="65211" />
+		<node X="163900" Y="65393" />
+	</zone>
+	<zone name="aden_2520_001" type="TaxZone" shape="NPoly" minZ="-4209" maxZ="2791">
+		<stat name="domainId" val="5" />
+		<node X="163899" Y="65633" />
+		<node X="179801" Y="65681" />
+		<node X="180399" Y="98025" />
+		<node X="164067" Y="97953" />
+	</zone>
+	<zone name="aden_1619_001" type="TaxZone" shape="NPoly" minZ="-30000" maxZ="30000">
+		<stat name="domainId" val="5" />
+		<node X="-131203" Y="32850" />
+		<node X="-65502" Y="32696" />
+		<node X="-65513" Y="65526" />
+		<node X="-98290" Y="65555" />
+		<node X="-98301" Y="98318" />
+		<node X="-131108" Y="98373" />
+	</zone>
+	<zone name="innadrile_2223_001" type="TaxZone" shape="NPoly" minZ="-4687" maxZ="-687">
+		<stat name="domainId" val="6" />
+		<node X="81820" Y="164026" />
+		<node X="98102" Y="163884" />
+		<node X="98119" Y="196406" />
+		<node X="65650" Y="196335" />
+		<node X="65626" Y="185662" />
+	</zone>
+	<zone name="innadrile_2224_001" type="TaxZone" shape="NPoly" minZ="-5099" maxZ="-99">
+		<stat name="domainId" val="6" />
+		<node X="65632" Y="196740" />
+		<node X="98138" Y="196802" />
+		<node X="98014" Y="229061" />
+		<node X="65787" Y="228999" />
+	</zone>
+	<zone name="innadrile_2323_001" type="TaxZone" shape="NPoly" minZ="-4424" maxZ="576">
+		<stat name="domainId" val="6" />
+		<node X="98423" Y="163931" />
+		<node X="130913" Y="163949" />
+		<node X="130895" Y="196457" />
+		<node X="98476" Y="196280" />
+	</zone>
+	<zone name="innadrile_2324_001" type="TaxZone" shape="NPoly" minZ="-4923" maxZ="-923">
+		<stat name="domainId" val="6" />
+		<node X="98489" Y="196660" />
+		<node X="130904" Y="196721" />
+		<node X="130863" Y="229074" />
+		<node X="98387" Y="229135" />
+	</zone>
+	<zone name="innadrile_2325_001" type="TaxZone" shape="NPoly" minZ="-4910" maxZ="90">
+		<stat name="domainId" val="6" />
+		<node X="98837" Y="229539" />
+		<node X="130899" Y="229455" />
+		<node X="130543" Y="261161" />
+		<node X="98565" Y="261329" />
+	</zone>
+	<zone name="innadrile_2225_001" type="TaxZone" shape="NPoly" minZ="-12112" maxZ="-3112">
+		<stat name="domainId" val="6" />
+		<node X="66747" Y="229569" />
+		<node X="97926" Y="229569" />
+		<node X="97926" Y="261775" />
+		<node X="65879" Y="261776" />
+	</zone>
+	<zone name="godard_2315_001" type="TaxZone" shape="NPoly" minZ="-3600" maxZ="900">
+		<stat name="domainId" val="7" />
+		<node X="124536" Y="-76584" />
+		<node X="131060" Y="-73112" />
+		<node X="131096" Y="-65444" />
+		<node X="117620" Y="-65588" />
+		<node X="120316" Y="-69304" />
+		<node X="120156" Y="-77072" />
+	</zone>
+	<zone name="godard_2316_001" type="TaxZone" shape="NPoly" minZ="-2892" maxZ="2108">
+		<stat name="domainId" val="7" />
+		<node X="98715" Y="-65295" />
+		<node X="130562" Y="-64884" />
+		<node X="130973" Y="-32833" />
+		<node X="98184" Y="-32828" />
+	</zone>
+	<zone name="godard_2317_001" type="TaxZone" shape="NPoly" minZ="-4008" maxZ="1992">
+		<stat name="domainId" val="7" />
+		<node X="97820" Y="-33007" />
+		<node X="130600" Y="-33101" />
+		<node X="131029" Y="-19205" />
+		<node X="114478" Y="-17118" />
+		<node X="113183" Y="-18971" />
+		<node X="97723" Y="-24594" />
+	</zone>
+	<zone name="godard_2417_001" type="TaxZone" shape="NPoly" minZ="-1560" maxZ="2440">
+		<stat name="domainId" val="7" />
+		<node X="152216" Y="-33320" />
+		<node X="164125" Y="-33132" />
+		<node X="164256" Y="-26895" />
+		<node X="154928" Y="-24300" />
+	</zone>
+	<zone name="godard_2416_001" type="TaxZone" shape="NPoly" minZ="-3732" maxZ="1268">
+		<stat name="domainId" val="7" />
+		<node X="130947" Y="-65660" />
+		<node X="164514" Y="-65899" />
+		<node X="164312" Y="-32038" />
+		<node X="131005" Y="-33178" />
+	</zone>
+	<zone name="godard_2415_001" type="TaxZone" shape="NPoly" minZ="-3728" maxZ="1272">
+		<stat name="domainId" val="7" />
+		<node X="130485" Y="-99472" />
+		<node X="164233" Y="-98903" />
+		<node X="164375" Y="-65581" />
+		<node X="130980" Y="-65588" />
+	</zone>
+	<zone name="godard_2414_001" type="TaxZone" shape="NPoly" minZ="-3120" maxZ="1880">
+		<stat name="domainId" val="7" />
+		<node X="130996" Y="-131394" />
+		<node X="164233" Y="-131294" />
+		<node X="164153" Y="-98357" />
+		<node X="130996" Y="-98392" />
+	</zone>
+	<zone name="godard_2514_001" type="TaxZone" shape="NPoly" minZ="-9252" maxZ="748">
+		<stat name="domainId" val="7" />
+		<node X="163523" Y="-131490" />
+		<node X="196824" Y="-131490" />
+		<node X="196824" Y="-98295" />
+		<node X="163551" Y="-98320" />
+	</zone>
+	<zone name="godard_2515_001" type="TaxZone" shape="NPoly" minZ="-8136" maxZ="3864">
+		<stat name="domainId" val="7" />
+		<node X="197022" Y="-64539" />
+		<node X="196540" Y="-98372" />
+		<node X="163683" Y="-98327" />
+		<node X="163633" Y="-64788" />
+	</zone>
+	<zone name="godard_2516_001" type="TaxZone" shape="NPoly" minZ="-4676" maxZ="1324">
+		<stat name="domainId" val="7" />
+		<node X="163779" Y="-65828" />
+		<node X="196772" Y="-65651" />
+		<node X="196772" Y="-32747" />
+		<node X="163732" Y="-32768" />
+	</zone>
+	<zone name="rune_1916_001" type="TaxZone" shape="NPoly" minZ="-14360" maxZ="-7360">
+		<stat name="domainId" val="8" />
+		<node X="-33117" Y="-65301" />
+		<node X="238" Y="-65577" />
+		<node X="123" Y="-32757" />
+		<node X="-33117" Y="-32724" />
+	</zone>
+	<zone name="rune_2016_001" type="TaxZone" shape="NPoly" minZ="-6584" maxZ="1416">
+		<stat name="domainId" val="8" />
+		<node X="-99" Y="-65791" />
+		<node X="32848" Y="-65540" />
+		<node X="32887" Y="-32804" />
+		<node X="-204" Y="-32700" />
+	</zone>
+	<zone name="rune_2115_001" type="TaxZone" shape="NPoly" minZ="-6884" maxZ="1116">
+		<stat name="domainId" val="8" />
+		<node X="32672" Y="-98312" />
+		<node X="65566" Y="-98283" />
+		<node X="65664" Y="-65455" />
+		<node X="32737" Y="-65455" />
+	</zone>
+	<zone name="rune_2116_001" type="TaxZone" shape="NPoly" minZ="-6392" maxZ="1608">
+		<stat name="domainId" val="8" />
+		<node X="32784" Y="-65592" />
+		<node X="65470" Y="-65487" />
+		<node X="65483" Y="-32751" />
+		<node X="32784" Y="-32696" />
+	</zone>
+	<zone name="rune_2117_001" type="TaxZone" shape="NPoly" minZ="-4460" maxZ="3540">
+		<stat name="domainId" val="8" />
+		<node X="65514" Y="-189" />
+		<node X="65548" Y="-32784" />
+		<node X="32682" Y="-32835" />
+		<node X="32890" Y="-128" />
+	</zone>
+	<zone name="rune_2215_001" type="TaxZone" shape="NPoly" minZ="-6044" maxZ="1956">
+		<stat name="domainId" val="8" />
+		<node X="98265" Y="-65434" />
+		<node X="98216" Y="-98202" />
+		<node X="65496" Y="-98309" />
+		<node X="65506" Y="-65445" />
+	</zone>
+	<zone name="rune_2216_001" type="TaxZone" shape="NPoly" minZ="-6772" maxZ="228">
+		<stat name="domainId" val="8" />
+		<node X="65268" Y="-65603" />
+		<node X="98231" Y="-65611" />
+		<node X="98487" Y="-32852" />
+		<node X="65268" Y="-32735" />
+	</zone>
+	<zone name="rune_2315_001" type="TaxZone" shape="NPoly" minZ="-4860" maxZ="5140">
+		<stat name="domainId" val="8" />
+		<node X="98394" Y="-72893" />
+		<node X="98277" Y="-98511" />
+		<node X="131243" Y="-98624" />
+		<node X="131021" Y="-75702" />
+		<node X="116196" Y="-69438" />
+	</zone>
+	<zone name="schuttgart_1814_001" type="TaxZone" shape="NPoly" minZ="-4720" maxZ="3280">
+		<stat name="domainId" val="9" />
+		<node X="-65564" Y="-131112" />
+		<node X="-32670" Y="-131240" />
+		<node X="-32361" Y="-98152" />
+		<node X="-65999" Y="-97945" />
+	</zone>
+	<zone name="schuttgart_1913_001" type="TaxZone" shape="NPoly" minZ="-4592" maxZ="3408">
+		<stat name="domainId" val="9" />
+		<node X="-32893" Y="-164337" />
+		<node X="-32850" Y="-131216" />
+		<node X="101" Y="-130978" />
+		<node X="125" Y="-164233" />
+	</zone>
+	<zone name="schuttgart_1914_001" type="TaxZone" shape="NPoly" minZ="-5044" maxZ="2956">
+		<stat name="domainId" val="9" />
+		<node X="-33218" Y="-131357" />
+		<node X="-33370" Y="-97951" />
+		<node X="122" Y="-97809" />
+		<node X="70" Y="-131388" />
+	</zone>
+	<zone name="schuttgart_1915_001" type="TaxZone" shape="NPoly" minZ="-5464" maxZ="2536">
+		<stat name="domainId" val="9" />
+		<node X="-32987" Y="-98820" />
+		<node X="730" Y="-99021" />
+		<node X="525" Y="-65412" />
+		<node X="-33196" Y="-65308" />
+	</zone>
+	<zone name="schuttgart_2013_001" type="TaxZone" shape="NPoly" minZ="-5052" maxZ="2948">
+		<stat name="domainId" val="9" />
+		<node X="32678" Y="-130763" />
+		<node X="32684" Y="-163872" />
+		<node X="-197" Y="-163909" />
+		<node X="-262" Y="-130698" />
+	</zone>
+	<zone name="schuttgart_2014_001" type="TaxZone" shape="NPoly" minZ="-5792" maxZ="2208">
+		<stat name="domainId" val="9" />
+		<node X="-416" Y="-131216" />
+		<node X="-433" Y="-98319" />
+		<node X="32729" Y="-98279" />
+		<node X="32806" Y="-131124" />
+	</zone>
+	<zone name="schuttgart_2015_001" type="TaxZone" shape="NPoly" minZ="-6256" maxZ="1744">
+		<stat name="domainId" val="9" />
+		<node X="96" Y="-98466" />
+		<node X="32948" Y="-98171" />
+		<node X="32952" Y="-65391" />
+		<node X="-24" Y="-65496" />
+	</zone>
+	<zone name="schuttgart_2114_001" type="TaxZone" shape="NPoly" minZ="-4560" maxZ="2940">
+		<stat name="domainId" val="9" />
+		<node X="32698" Y="-131311" />
+		<node X="65641" Y="-131311" />
+		<node X="65361" Y="-98088" />
+		<node X="32558" Y="-98088" />
+	</zone>
+	<zone name="schuttgart_2213_001" type="TaxZone" shape="NPoly" minZ="-4652" maxZ="348">
+		<stat name="domainId" val="9" />
+		<node X="65088" Y="-164063" />
+		<node X="98600" Y="-164186" />
+		<node X="98651" Y="-130884" />
+		<node X="65082" Y="-130918" />
+	</zone>
+	<zone name="schuttgart_2214_001" type="TaxZone" shape="NPoly" minZ="-4812" maxZ="1188">
+		<stat name="domainId" val="9" />
+		<node X="65403" Y="-131193" />
+		<node X="98553" Y="-131190" />
+		<node X="98674" Y="-98156" />
+		<node X="65760" Y="-98156" />
+	</zone>
+	<zone name="schuttgart_2311_001" type="TaxZone" shape="NPoly" minZ="-5652" maxZ="2348">
+		<stat name="domainId" val="9" />
+		<node X="96598" Y="-229453" />
+		<node X="130768" Y="-229322" />
+		<node X="131096" Y="-196656" />
+		<node X="96466" Y="-196336" />
+	</zone>
+	<zone name="schuttgart_2312_001" type="TaxZone" shape="NPoly" minZ="-5008" maxZ="7992">
+		<stat name="domainId" val="9" />
+		<node X="97017" Y="-196828" />
+		<node X="131481" Y="-197001" />
+		<node X="131506" Y="-163900" />
+		<node X="96901" Y="-163540" />
+	</zone>
+	<zone name="schuttgart_2313_001" type="TaxZone" shape="NPoly" minZ="-4192" maxZ="1808">
+		<stat name="domainId" val="9" />
+		<node X="97971" Y="-130638" />
+		<node X="98055" Y="-163865" />
+		<node X="131048" Y="-163925" />
+		<node X="131239" Y="-130762" />
+	</zone>
+	<zone name="schuttgart_2314_001" type="TaxZone" shape="NPoly" minZ="-4540" maxZ="1460">
+		<stat name="domainId" val="9" />
+		<node X="98191" Y="-131348" />
+		<node X="131368" Y="-131440" />
+		<node X="131368" Y="-97802" />
+		<node X="98191" Y="-98078" />
+	</zone>
+	<zone name="schuttgart_2411_001" type="TaxZone" shape="NPoly" minZ="-5504" maxZ="2496">
+		<stat name="domainId" val="9" />
+		<node X="130923" Y="-229607" />
+		<node X="163792" Y="-229607" />
+		<node X="163686" Y="-196844" />
+		<node X="131052" Y="-196712" />
+	</zone>
+	<zone name="schuttgart_2412_001" type="TaxZone" shape="NPoly" minZ="-4972" maxZ="3028">
+		<stat name="domainId" val="9" />
+		<node X="131104" Y="-196675" />
+		<node X="163713" Y="-196681" />
+		<node X="163713" Y="-163915" />
+		<node X="130947" Y="-163915" />
+	</zone>
+	<zone name="schuttgart_2511_001" type="TaxZone" shape="NPoly" minZ="-4860" maxZ="3140">
+		<stat name="domainId" val="9" />
+		<node X="163883" Y="-229498" />
+		<node X="196513" Y="-229498" />
+		<node X="197118" Y="-196506" />
+		<node X="163795" Y="-196583" />
+	</zone>
+	<zone name="schuttgart_2512_001" type="TaxZone" shape="NPoly" minZ="-5936" maxZ="4064">
+		<stat name="domainId" val="9" />
+		<node X="163896" Y="-196927" />
+		<node X="196879" Y="-196737" />
+		<node X="196804" Y="-163821" />
+		<node X="163881" Y="-163870" />
+	</zone>
+</list>

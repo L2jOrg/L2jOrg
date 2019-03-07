@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Castle Trap Zones -->
+	<zone name="aden_slow_2" id="70001" type="SwampZone" shape="NPoly" minZ="-560" maxZ="-360"> <!-- [24_18] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="5" />
+		<stat name="eventId" val="2418002" />
+		<node X="149349" Y="7203" />
+		<node X="149084" Y="7204" />
+		<node X="149084" Y="6686" />
+		<node X="149349" Y="6685" />
+	</zone>
+	<zone name="aden_slow_1" id="70005" type="SwampZone" shape="NPoly" minZ="-528" maxZ="-328"> <!-- [24_18] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="5" />
+		<stat name="eventId" val="2418001" />
+		<node X="145813" Y="7187" />
+		<node X="145548" Y="7188" />
+		<node X="145548" Y="6670" />
+		<node X="145813" Y="6669" />
+	</zone>
+	<zone name="aden_damage_8" id="70009" type="DamageZone" shape="NPoly" minZ="-560" maxZ="-360"> <!-- [24_18] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="5" />
+		<node X="149084" Y="7070" />
+		<node X="149349" Y="7069" />
+		<node X="149349" Y="7203" />
+		<node X="149084" Y="7204" />
+	</zone>
+	<zone name="aden_damage_7" id="70010" type="DamageZone" shape="NPoly" minZ="-528" maxZ="-328"> <!-- [24_18] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="5" />
+		<node X="149084" Y="6942" />
+		<node X="149349" Y="6941" />
+		<node X="149349" Y="7075" />
+		<node X="149084" Y="7076" />
+	</zone>
+	<zone name="aden_damage_6" id="70011" type="DamageZone" shape="NPoly" minZ="-528" maxZ="-328"> <!-- [24_18] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="5" />
+		<node X="149084" Y="6814" />
+		<node X="149349" Y="6813" />
+		<node X="149349" Y="6947" />
+		<node X="149084" Y="6948" />
+	</zone>
+	<zone name="aden_damage_5" id="70012" type="DamageZone" shape="NPoly" minZ="-528" maxZ="-328"> <!-- [24_18] -->
+		<stat name="castleId" val="5" />
+		<node X="149084" Y="6686" />
+		<node X="149349" Y="6685" />
+		<node X="149349" Y="6819" />
+		<node X="149084" Y="6820" />
+	</zone>
+	<zone name="aden_damage_4" id="70013" type="DamageZone" shape="NPoly" minZ="-528" maxZ="-328"> <!-- [24_18] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="5" />
+		<node X="145548" Y="7054" />
+		<node X="145813" Y="7053" />
+		<node X="145813" Y="7187" />
+		<node X="145548" Y="7188" />
+	</zone>
+	<zone name="aden_damage_3" id="70014" type="DamageZone" shape="NPoly" minZ="-496" maxZ="-296"> <!-- [24_18] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="5" />
+		<node X="145548" Y="6926" />
+		<node X="145813" Y="6925" />
+		<node X="145813" Y="7059" />
+		<node X="145548" Y="7060" />
+	</zone>
+	<zone name="aden_damage_2" id="70015" type="DamageZone" shape="NPoly" minZ="-496" maxZ="-296"> <!-- [24_18] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="5" />
+		<node X="145548" Y="6798" />
+		<node X="145813" Y="6797" />
+		<node X="145813" Y="6931" />
+		<node X="145548" Y="6932" />
+	</zone>
+	<zone name="aden_damage_1" id="70016" type="DamageZone" shape="NPoly" minZ="-496" maxZ="-296"> <!-- [24_18] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="5" />
+		<node X="145548" Y="6670" />
+		<node X="145813" Y="6669" />
+		<node X="145813" Y="6803" />
+		<node X="145548" Y="6804" />
+	</zone>
+	<zone name="gludio_slow_1" id="70017" type="SwampZone" shape="NPoly" minZ="-2627" maxZ="-2427"> <!-- [19_21] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="1" />
+		<stat name="eventId" val="1921001" />
+		<node X="-18255" Y="110790" />
+		<node X="-17971" Y="110790" />
+		<node X="-17972" Y="111174" />
+		<node X="-18256" Y="111174" />
+	</zone>
+	<zone name="gludio_slow_2" id="70018" type="SwampZone" shape="NPoly" minZ="-2595" maxZ="-2395"> <!-- [19_21] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="1" />
+		<stat name="eventId" val="1921002" />
+		<node X="-19213" Y="107137" />
+		<node X="-18827" Y="107137" />
+		<node X="-18827" Y="107404" />
+		<node X="-19213" Y="107404" />
+	</zone>
+	<zone name="gludio_damage_1" id="70019" type="DamageZone" shape="NPoly" minZ="-2627" maxZ="-2427"> <!-- [19_21] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="1" />
+		<node X="-18255" Y="110790" />
+		<node X="-17971" Y="110790" />
+		<node X="-17972" Y="111174" />
+		<node X="-18256" Y="111174" />
+	</zone>
+	<zone name="gludio_damage_2" id="70020" type="DamageZone" shape="NPoly" minZ="-2595" maxZ="-2395"> <!-- [19_21] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="1" />
+		<node X="-19213" Y="107137" />
+		<node X="-18827" Y="107137" />
+		<node X="-18827" Y="107404" />
+		<node X="-19213" Y="107404" />
+	</zone>
+	<zone name="dion_slow_1" id="70021" type="SwampZone" shape="NPoly" minZ="-2821" maxZ="30341"> <!-- [20_22] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="2" />
+		<stat name="eventId" val="2022001" />
+		<node X="22215" Y="158960" />
+		<node X="21931" Y="158960" />
+		<node X="21932" Y="158576" />
+		<node X="22216" Y="158576" />
+	</zone>
+	<zone name="dion_slow_2" id="70022" type="SwampZone" shape="NPoly" minZ="-2789" maxZ="30373"> <!-- [20_22] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="2" />
+		<stat name="eventId" val="2022002" />
+		<node X="23173" Y="162613" />
+		<node X="22787" Y="162613" />
+		<node X="22787" Y="162346" />
+		<node X="23173" Y="162346" />
+	</zone>
+	<zone name="dion_damage_1" id="70023" type="DamageZone" shape="NPoly" minZ="-2821" maxZ="30341"> <!-- [20_22] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="2" />
+		<node X="22215" Y="158960" />
+		<node X="21931" Y="158960" />
+		<node X="21932" Y="158576" />
+		<node X="22216" Y="158576" />
+	</zone>
+	<zone name="dion_damage_2" id="70024" type="DamageZone" shape="NPoly" minZ="-2789" maxZ="30373"> <!-- [20_22] -->
+		<stat name="castleId" val="2" />
+		<node X="23173" Y="162613" />
+		<node X="22787" Y="162613" />
+		<node X="22787" Y="162346" />
+		<node X="23173" Y="162346" />
+	</zone>
+	<zone name="giran_slow_1" id="70025" type="SwampZone" shape="NPoly" minZ="-2694" maxZ="13957"> <!-- [23_22] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="3" />
+		<stat name="eventId" val="2322001" />
+		<node X="115132" Y="144954" />
+		<node X="115132" Y="145238" />
+		<node X="114748" Y="145237" />
+		<node X="114748" Y="144953" />
+	</zone>
+	<zone name="giran_slow_2" id="70026" type="SwampZone" shape="NPoly" minZ="-2662" maxZ="13989"> <!-- [23_22] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="3" />
+		<stat name="eventId" val="2322002" />
+		<node X="118785" Y="143996" />
+		<node X="118785" Y="144382" />
+		<node X="118518" Y="144382" />
+		<node X="118518" Y="143996" />
+	</zone>
+	<zone name="giran_damage_1" id="70027" type="DamageZone" shape="NPoly" minZ="-2694" maxZ="13957"> <!-- [23_22] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="3" />
+		<node X="115132" Y="144954" />
+		<node X="115132" Y="145238" />
+		<node X="114748" Y="145237" />
+		<node X="114748" Y="144953" />
+	</zone>
+	<zone name="giran_damage_2" id="70028" type="DamageZone" shape="NPoly" minZ="-2662" maxZ="13989"> <!-- [23_22] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="3" />
+		<node X="118785" Y="143996" />
+		<node X="118785" Y="144382" />
+		<node X="118518" Y="144382" />
+		<node X="118518" Y="143996" />
+	</zone>
+	<zone name="oren_slow_1" id="70029" type="SwampZone" shape="NPoly" minZ="-2421" maxZ="13957"> <!-- [22_19] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="4" />
+		<stat name="eventId" val="2219001" />
+		<node X="81208" Y="37049" />
+		<node X="81208" Y="37333" />
+		<node X="80824" Y="37332" />
+		<node X="80824" Y="37048" />
+	</zone>
+	<zone name="oren_slow_2" id="70030" type="SwampZone" shape="NPoly" minZ="-2389" maxZ="13989"> <!-- [22_19] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="4" />
+		<stat name="eventId" val="2219002" />
+		<node X="84861" Y="36091" />
+		<node X="84861" Y="36477" />
+		<node X="84594" Y="36477" />
+		<node X="84594" Y="36091" />
+	</zone>
+	<zone name="oren_damage_1" id="70031" type="DamageZone" shape="NPoly" minZ="-2421" maxZ="13957"> <!-- [22_19] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="4" />
+		<node X="81208" Y="37049" />
+		<node X="81208" Y="37333" />
+		<node X="80824" Y="37332" />
+		<node X="80824" Y="37048" />
+	</zone>
+	<zone name="oren_damage_2" id="70032" type="DamageZone" shape="NPoly" minZ="-2389" maxZ="13989"> <!-- [22_19] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="4" />
+		<node X="84861" Y="36091" />
+		<node X="84861" Y="36477" />
+		<node X="84594" Y="36477" />
+		<node X="84594" Y="36091" />
+	</zone>
+	<zone name="innadrile_slow_1" id="70033" type="SwampZone" shape="NPoly" minZ="-917" maxZ="30341"> <!-- [23_25] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="6" />
+		<stat name="eventId" val="2325001" />
+		<node X="116166" Y="247739" />
+		<node X="115882" Y="247739" />
+		<node X="115883" Y="247355" />
+		<node X="116167" Y="247355" />
+	</zone>
+	<zone name="innadrile_slow_2" id="70034" type="SwampZone" shape="NPoly" minZ="-885" maxZ="30373"> <!-- [23_25] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="6" />
+		<stat name="eventId" val="2325002" />
+		<node X="117124" Y="251392" />
+		<node X="116738" Y="251392" />
+		<node X="116738" Y="251125" />
+		<node X="117124" Y="251125" />
+	</zone>
+	<zone name="innadrile_damage_1" id="70035" type="DamageZone" shape="NPoly" minZ="-917" maxZ="30341"> <!-- [23_25] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="6" />
+		<node X="116166" Y="247739" />
+		<node X="115882" Y="247739" />
+		<node X="115883" Y="247355" />
+		<node X="116167" Y="247355" />
+	</zone>
+	<zone name="innadrile_damage_2" id="70036" type="DamageZone" shape="NPoly" minZ="-885" maxZ="30373"> <!-- [23_25] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="6" />
+		<node X="117124" Y="251392" />
+		<node X="116738" Y="251392" />
+		<node X="116738" Y="251125" />
+		<node X="117124" Y="251125" />
+	</zone>
+	<zone name="godad_slow_1" id="70037" type="SwampZone" shape="NPoly" minZ="-1789" maxZ="-1489"> <!-- [24_16] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="7" />
+		<stat name="eventId" val="2416001" />
+		<node X="149235" Y="-47768" />
+		<node X="149579" Y="-47608" />
+		<node X="149515" Y="-47472" />
+		<node X="149169" Y="-47634" />
+	</zone>
+	<zone name="godad_slow_2" id="70038" type="SwampZone" shape="NPoly" minZ="-1789" maxZ="-1439"> <!-- [24_16] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="7" />
+		<stat name="eventId" val="2416002" />
+		<node X="145352" Y="-47607" />
+		<node X="145696" Y="-47768" />
+		<node X="145760" Y="-47633" />
+		<node X="145415" Y="-47471" />
+	</zone>
+	<zone name="godad_damage_1" id="70039" type="DamageZone" shape="NPoly" minZ="-1789" maxZ="-1489"> <!-- [24_16] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="7" />
+		<node X="149235" Y="-47768" />
+		<node X="149579" Y="-47608" />
+		<node X="149515" Y="-47472" />
+		<node X="149169" Y="-47634" />
+	</zone>
+	<zone name="godad_damage_2" id="70040" type="DamageZone" shape="NPoly" minZ="-1789" maxZ="-1439"> <!-- [24_16] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="7" />
+		<node X="145352" Y="-47607" />
+		<node X="145696" Y="-47768" />
+		<node X="145760" Y="-47633" />
+		<node X="145415" Y="-47471" />
+	</zone>
+	<zone name="rune_slow_1" id="70041" type="SwampZone" shape="NPoly" minZ="509" maxZ="809"> <!-- [20_16] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="8" />
+		<stat name="eventId" val="2016002" />
+		<node X="13785" Y="-47663" />
+		<node X="14046" Y="-47854" />
+		<node X="14203" Y="-47668" />
+		<node X="13916" Y="-47450" />
+	</zone>
+	<zone name="rune_slow_2" id="70042" type="SwampZone" shape="NPoly" minZ="518" maxZ="818"> <!-- [20_16] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="8" />
+		<stat name="eventId" val="2016001" />
+		<node X="13917" Y="-50851" />
+		<node X="14209" Y="-50630" />
+		<node X="14052" Y="-50447" />
+		<node X="13788" Y="-50647" />
+	</zone>
+	<zone name="rune_damage_1" id="70043" type="DamageZone" shape="NPoly" minZ="509" maxZ="809"> <!-- [20_16] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="8" />
+		<node X="13785" Y="-47663" />
+		<node X="14046" Y="-47854" />
+		<node X="14203" Y="-47668" />
+		<node X="13916" Y="-47450" />
+	</zone>
+	<zone name="rune_damage_2" id="70044" type="DamageZone" shape="NPoly" minZ="518" maxZ="818"> <!-- [20_16] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="8" />
+		<node X="13917" Y="-50851" />
+		<node X="14209" Y="-50630" />
+		<node X="14052" Y="-50447" />
+		<node X="13788" Y="-50647" />
+	</zone>
+	<zone name="schutt_slow_1" id="70045" type="SwampZone" shape="NPoly" minZ="-93" maxZ="207"> <!-- [22_13] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="9" />
+		<stat name="eventId" val="2213002" />
+		<node X="75440" Y="-151667" />
+		<node X="75787" Y="-151830" />
+		<node X="75849" Y="-151697" />
+		<node X="75503" Y="-151535" />
+	</zone>
+	<zone name="schutt_slow_2" id="70046" type="SwampZone" shape="NPoly" minZ="-77" maxZ="223"> <!-- [22_13] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<stat name="castleId" val="9" />
+		<stat name="eventId" val="2213001" />
+		<node X="79322" Y="-151831" />
+		<node X="79668" Y="-151670" />
+		<node X="79606" Y="-151535" />
+		<node X="79261" Y="-151699" />
+	</zone>
+	<zone name="schutt_damage_1" id="70047" type="DamageZone" shape="NPoly" minZ="-93" maxZ="207"> <!-- [22_13] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="9" />
+		<node X="75440" Y="-151667" />
+		<node X="75787" Y="-151830" />
+		<node X="75849" Y="-151697" />
+		<node X="75503" Y="-151535" />
+	</zone>
+	<zone name="schutt_damage_2" id="70048" type="DamageZone" shape="NPoly" minZ="-77" maxZ="223"> <!-- [22_13] -->
+		<stat name="default_enabled" val="false" />
+		<stat name="castleId" val="9" />
+		<node X="79322" Y="-151831" />
+		<node X="79668" Y="-151670" />
+		<node X="79606" Y="-151535" />
+		<node X="79261" Y="-151699" />
+	</zone>
+</list>

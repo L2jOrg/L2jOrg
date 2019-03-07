@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/initialShortcuts.xsd">
+	<!-- Global shortcuts -->
+	<shortcuts>
+		<page pageId="0">
+			<slot slotId="0" shortcutType="ACTION" shortcutId="2" /> <!-- Attack -->
+			<slot slotId="3" shortcutType="ACTION" shortcutId="5" /> <!-- Pick Up -->
+			<slot slotId="4" shortcutType="ACTION" shortcutId="4" /> <!-- Next Target -->
+			<slot slotId="10" shortcutType="ACTION" shortcutId="0" /> <!-- Sit/Stand -->
+		</page>
+		<!-- Custom example. -->
+		<page pageId="1">
+			<slot slotId="0" shortcutType="MACRO" shortcutId="10000" /> <!-- Macro Test -->
+		</page>
+	</shortcuts>
+	<!-- Human Mystic -->
+	<shortcuts classId="10">
+		<page pageId="0">
+			<slot slotId="1" shortcutType="SKILL" shortcutId="1177" shortcutLevel="1" /> <!-- Wind Strike -->
+			<slot slotId="10" shortcutType="SKILL" shortcutId="1216" shortcutLevel="1" /> <!-- Self Heal -->
+		</page>
+	</shortcuts>
+	<!-- Elven Mystic -->
+	<shortcuts classId="25">
+		<page pageId="0">
+			<slot slotId="1" shortcutType="SKILL" shortcutId="1177" shortcutLevel="1" /> <!-- Wind Strike -->
+			<slot slotId="10" shortcutType="SKILL" shortcutId="1216" shortcutLevel="1" /> <!-- Self Heal -->
+		</page>
+	</shortcuts>
+	<!-- Dark Mystic -->
+	<shortcuts classId="38">
+		<page pageId="0">
+			<slot slotId="1" shortcutType="SKILL" shortcutId="1177" shortcutLevel="1" /> <!-- Wind Strike -->
+			<slot slotId="10" shortcutType="SKILL" shortcutId="1216" shortcutLevel="1" /> <!-- Self Heal -->
+		</page>
+	</shortcuts>
+	<!-- Orc Mystic -->
+	<shortcuts classId="49">
+		<page pageId="0">
+			<slot slotId="1" shortcutType="SKILL" shortcutId="1001" shortcutLevel="1" /> <!-- Soul Cry -->
+		</page>
+	</shortcuts>
+	<!-- Macro presets -->
+	<macros>
+		<!-- Macro example with multiple commands. -->
+		<macro macroId="10000" icon="1" name="Macro name" description="This is a test." acronym="HI!" enabled="false"> <!-- Macro ID must be over 1000, use higher values to avoid conflicts with already existing macros. -->
+			<command type="SKILL" skillId="1177" skillLvl="1" /> <!-- To define a skill always include skill ID and level. -->
+			<command type="DELAY" delay="5" /> <!-- To define a delay always define the time in seconds. -->
+			<command type="TEXT">/loc</command> <!-- To define a command, just include the string as if it was typed in-game. -->
+			<command type="TEXT">!Hellooooo world!</command> <!-- To define a text, just include the string as if it was typed in-game. -->
+			<command type="SHORTCUT" page="0" slot="11" /> <!-- To define a shortcut (to an equipped item in example), include page and slot number. -->
+		</macro>
+	</macros>
+</list>

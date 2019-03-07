@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.dao;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.pledge.ClanChangeLeaderRequest;
 import io.github.joealisson.primitive.maps.IntObjectMap;
@@ -40,7 +40,7 @@ public class ClanLeaderRequestDAO
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 			rset = statement.executeQuery(SELECT_SQL);
 			while(rset.next())
@@ -68,7 +68,7 @@ public class ClanLeaderRequestDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(DELETE_SQL);
 			statement.setInt(1, changeLeaderRequest.getClanId());
 			statement.execute();
@@ -89,7 +89,7 @@ public class ClanLeaderRequestDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(INSERT_SQL);
 			statement.setInt(1, request.getClanId());
 			statement.setInt(2, request.getNewLeaderId());

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
+	<option id="22883" name="o_s_82_2s_1">
+		<!-- Active: Head size increases temporarily. Increase. -->
+		<active_skill id="3203" level="1" /> <!-- Item Skill: Mystery Skill -->
+	</option>
+	<option id="22884" name="o_s_82_2s_2">
+		<!-- Active: Temporarily increases lung capacity. -->
+		<active_skill id="3143" level="10" /> <!-- Item Skill: Kiss of Eva -->
+	</option>
+	<option id="22885" name="o_s_82_2s_3">
+		<!-- Active: Increases the height from which you can jump without sustaining damage for a fixed time. -->
+		<active_skill id="3144" level="10" /> <!-- Item Skill: Acrobatics -->
+	</option>
+	<option id="22886" name="o_s_82_2s_4">
+		<!-- Active: Increases Resistance to damage from falling. -->
+		<active_skill id="3145" level="10" /> <!-- Item Skill: Iron Body -->
+	</option>
+	<option id="22887" name="o_s_82_2s_5">
+		<!-- Active: Ignites a firecracker. -->
+		<active_skill id="3156" level="1" /> <!-- Item Skill: Firework -->
+	</option>
+	<option id="22888" name="o_s_82_2s_6">
+		<!-- Active: Temporarily plays music. -->
+		<active_skill id="3206" level="1" /> <!-- Item Skill: Music -->
+	</option>
+	<option id="22889" name="o_s_82_2s_7">
+		<!-- Active: Ignites a large firecracker. -->
+		<active_skill id="3157" level="1" /> <!-- Item Skill: Large Firework -->
+	</option>
+	<option id="22890" name="o_s_82_2s_8">
+		<!-- Chance: During a physical attack, temporarily decreases the target's attacking desire for oneself. -->
+		<attack_skill id="3081" level="10" chance="1.0" /> <!-- Item Skill: Charm -->
+	</option>
+	<option id="22891" name="o_s_82_2s_9">
+		<!-- Chance: During a physical attack, temporarily stimulates the target's attacking desire. -->
+		<attack_skill id="3080" level="10" chance="1.0" /> <!-- Item Skill: Aggression -->
+	</option>
+	<option id="22892" name="o_s_82_2s_10">
+		<!-- Chance: During a physical attack, temporarily decreases the target's moving speed. -->
+		<attack_skill id="3083" level="10" chance="1.0" /> <!-- Item Skill: Slow -->
+	</option>
+	<option id="22893" name="o_s_82_2s_11">
+		<!-- Chance: During a critical attack, temporarily decreases the target's attacking desire for oneself. -->
+		<critical_skill id="3109" level="10" chance="5.0" /> <!-- Item Skill: Aggression Down -->
+	</option>
+	<option id="22894" name="o_s_82_2s_12">
+		<!-- Chance: During a critical attack, temporarily stimulates the target's attacking desire. -->
+		<critical_skill id="3108" level="10" chance="5.0" /> <!-- Item Skill: Aggression Up -->
+	</option>
+	<option id="22895" name="o_s_82_2s_13">
+		<!-- Chance: During a critical attack, temporarily decreases the target's moving speed. -->
+		<critical_skill id="3111" level="10" chance="5.0" /> <!-- Item Skill: Slow -->
+	</option>
+	<option id="22896" name="o_s_82_2s_14">
+		<!-- Chance: Instantly decreases a target's moving speed during a magic attack. Effect 3. -->
+		<magic_skill id="3096" level="10" chance="2.0" /> <!-- Item Skill: Slow -->
+	</option>
+	<option id="22897" name="o_s_82_2s_15">
+		<!-- Passive: Increases lung capacity. -->
+		<passive_skill id="3252" level="10" /> <!-- Item Skill: Kiss of Eva -->
+	</option>
+	<option id="22898" name="o_s_82_2s_16">
+		<!-- Passive: Increases the height from which you can jump without sustaining damage. -->
+		<passive_skill id="3253" level="10" /> <!-- Item Skill: Acrobatics -->
+	</option>
+	<option id="22899" name="o_s_82_2s_17">
+		<!-- Passive: Increases Resistance to damage from falling. -->
+		<passive_skill id="3254" level="10" /> <!-- Item Skill: Iron Body -->
+	</option>
+</list>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="20_23">
+		<group>
+			<npc id="30012" x="17232" y="170528" z="-3496" heading="53187" respawnTime="60sec" /> <!-- Fishing Guild Member -->
+			<npc id="36738" x="17262" y="169863" z="-3496" heading="15748" respawnTime="60sec" /> <!-- Ludina -->
+			<npc id="36737" x="17278" y="169747" z="-3480" heading="49153" respawnTime="60sec" /> <!-- Gairin -->
+			<npc id="32478" x="17740" y="169800" z="-3496" heading="20126" respawnTime="60sec" /> <!-- Dimensional Merchant -->
+			<npc id="30767" x="18084" y="169964" z="-3488" heading="19790" respawnTime="60sec" > <!-- Auctioneer -->
+				<parameters>
+					<param name="fnAgitMap" value="floran"/>
+				</parameters>
+			</npc>
+			<npc id="36740" x="17883" y="170537" z="-3504" heading="48775" respawnTime="60sec" /> <!-- Danif -->
+			<npc id="36739" x="17870" y="170644" z="-3488" heading="15086" respawnTime="60sec" /> <!-- Flon -->
+			<npc id="30616" x="19512" y="192120" z="-3720" heading="15479" respawnTime="60sec" /> <!-- Kepra -->
+			<npc id="30202" x="12549" y="182587" z="-3472" heading="13828" respawnTime="60sec" /> <!-- Leo -->
+		</group>
+	</spawn>
+</list>

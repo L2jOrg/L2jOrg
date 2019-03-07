@@ -1,0 +1,849 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="29800" name="Grey Talisman Box - Bond" additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get Grey Talisman - Bond (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i05" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29768" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29801" name="White Talisman Box - P. Crit." additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get White Talisman - P. Crit. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29769" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29802" name="White Talisman Box - P. Atk." additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get White Talisman - P. Atk. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29770" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29803" name="White Talisman Box - P. Def." additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get White Talisman - P. Def. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29771" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29804" name="White Talisman Box - P. Skills Evasion" additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get White Talisman - P. Skills Evasion (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29772" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29805" name="White Talisman Box - M. Crit." additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get White Talisman - M. Crit. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29773" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29806" name="White Talisman Box - M. Atk." additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get White Talisman - M. Atk. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29774" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29807" name="White Talisman Box - M. Def." additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get White Talisman - M. Def. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29775" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29808" name="White Talisman Box - M. Skills Evasion" additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get White Talisman - M. Skills Evasion (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29776" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29809" name="White Talisman Box - Max. HP" additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get White Talisman - Max. HP (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29777" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29810" name="White Talisman Box - Max. MP" additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get White Talisman - Max. HP (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29778" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29811" name="Yellow Talisman Box - Guard" additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get Yellow Talisman - Guard (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29779" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29812" name="Yellow Talisman Box - Denial" additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get Yellow Talisman - Denial (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29780" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29813" name="Yellow Talisman Box - Benefaction" additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get Yellow Talisman - Benefaction (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29781" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29814" name="Yellow Talisman Box - Blocking" additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get Yellow Talisman - Blocking (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29782" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29815" name="Yellow Talisman Box - Gravity" additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get Yellow Talisman - Gravity (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29783" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29816" name="Yellow Talisman Box - Bond" additionalName="1 hour" type="EtcItem">
+		<!-- By double-clicking it, you will get Yellow Talisman - Bond (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29784" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="29817" name="Special Pirate Fruit" additionalName="Event" type="EtcItem">
+		<!-- For 20 minutes, P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Increases XP/SP gain by 5%. Cooldown is 1 minute. Buff remains after death. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_codran_i09" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="60000" />
+		<skills>
+			<skill id="39085" level="1"/> <!-- Special Pirate Fruit -->
+		</skills>
+	</item>
+	<item id="29818" name="Sigel’s Rune - Lv. 1" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29819" name="Sigel’s Rune - Lv. 2" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29820" name="Sigel’s Rune - Lv. 3" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29821" name="Sigel’s Rune - Lv. 4" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29822" name="Sigel’s Rune - Lv. 5" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29823" name="Sigel’s Rune - Lv. 6" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29824" name="Sigel’s Rune - Lv. 7" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29825" name="Sigel’s Rune - Lv. 8" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29826" name="Sigel’s Rune - Lv. 9" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29827" name="Sigel’s Rune - Lv. 10" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29828" name="Sigel’s Rune - Lv. 11" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29829" name="Sigel’s Rune - Lv. 12" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29830" name="Sigel’s Rune - Lv. 13" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29831" name="Sigel’s Rune - Lv. 14" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29832" name="Sigel’s Rune - Lv. 15" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29833" name="Sigel’s Rune - Lv. 16" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29834" name="Sigel’s Rune - Lv. 17" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29835" name="Sigel’s Rune - Lv. 18" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29836" name="Sigel’s Rune - Lv. 19" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29837" name="Sigel’s Rune - Lv. 20" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29838" name="Tyrr’s Rune - Lv. 1" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29839" name="Tyrr’s Rune - Lv. 2" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29840" name="Tyrr’s Rune - Lv. 3" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29841" name="Tyrr’s Rune - Lv. 4" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29842" name="Tyrr’s Rune - Lv. 5" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29843" name="Tyrr’s Rune - Lv. 6" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29844" name="Tyrr’s Rune - Lv. 7" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29845" name="Tyrr’s Rune - Lv. 8" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29846" name="Tyrr’s Rune - Lv. 9" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29847" name="Tyrr’s Rune - Lv. 10" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29848" name="Tyrr’s Rune - Lv. 11" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29849" name="Tyrr’s Rune - Lv. 12" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29850" name="Tyrr’s Rune - Lv. 13" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29851" name="Tyrr’s Rune - Lv. 14" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29852" name="Tyrr’s Rune - Lv. 15" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29853" name="Tyrr’s Rune - Lv. 16" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29854" name="Tyrr’s Rune - Lv. 17" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29855" name="Tyrr’s Rune - Lv. 18" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29856" name="Tyrr’s Rune - Lv. 19" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29857" name="Tyrr’s Rune - Lv. 20" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29858" name="Othell’s Rune - Lv. 1" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29859" name="Othell’s Rune - Lv. 2" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29860" name="Othell’s Rune - Lv. 3" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29861" name="Othell’s Rune - Lv. 4" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29862" name="Othell’s Rune - Lv. 5" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29863" name="Othell’s Rune - Lv. 6" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29864" name="Othell’s Rune - Lv. 7" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29865" name="Othell’s Rune - Lv. 8" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29866" name="Othell’s Rune - Lv. 9" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29867" name="Othell’s Rune - Lv. 10" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29868" name="Othell’s Rune - Lv. 11" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29869" name="Othell’s Rune - Lv. 12" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29870" name="Othell’s Rune - Lv. 13" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29871" name="Othell’s Rune - Lv. 14" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29872" name="Othell’s Rune - Lv. 15" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29873" name="Othell’s Rune - Lv. 16" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29874" name="Othell’s Rune - Lv. 17" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29875" name="Othell’s Rune - Lv. 18" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29876" name="Othell’s Rune - Lv. 19" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29877" name="Othell’s Rune - Lv. 20" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29878" name="Yul’s Rune - Lv. 1" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29879" name="Yul’s Rune - Lv. 2" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29880" name="Yul’s Rune - Lv. 3" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29881" name="Yul’s Rune - Lv. 4" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29882" name="Yul’s Rune - Lv. 5" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29883" name="Yul’s Rune - Lv. 6" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29884" name="Yul’s Rune - Lv. 7" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29885" name="Yul’s Rune - Lv. 8" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29886" name="Yul’s Rune - Lv. 9" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29887" name="Yul’s Rune - Lv. 10" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29888" name="Yul’s Rune - Lv. 11" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29889" name="Yul’s Rune - Lv. 12" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29890" name="Yul’s Rune - Lv. 13" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29891" name="Yul’s Rune - Lv. 14" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29892" name="Yul’s Rune - Lv. 15" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29893" name="Yul’s Rune - Lv. 16" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29894" name="Yul’s Rune - Lv. 17" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29895" name="Yul’s Rune - Lv. 18" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29896" name="Yul’s Rune - Lv. 19" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29897" name="Yul’s Rune - Lv. 20" additionalName="Not in Use" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29898" name="Feoh’s Rune - Lv. 1" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_feoh_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="29899" name="Feoh’s Rune - Lv. 2" type="EtcItem">
+		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->
+		<set name="icon" val="BranchIcon.Icon.g_rune_feoh_lv01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+</list>

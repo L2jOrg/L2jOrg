@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/clanHall.xsd">
+	<clanHall id="71" name="Yellow Barracks" grade="GRADE_B" type="AUCTIONABLE">
+	 	<auction minBid="5000000" lease="500000" deposit="500000" />
+	 	<npcs>
+	 	   	<npc id="36734" /> <!-- Muren -->
+   			<npc id="36733" /> <!-- Winsnun -->
+	 	</npcs>
+	 	<doorlist>
+	 		<door id="20220124" />
+	 		<door id="20220123" />
+	 	</doorlist>
+		<ownerRestartPoint x="14501" y="155408" z="-3503" />
+		<banishPoint x="16208" y="155285" z="-3640" />
+	</clanHall>
+</list>

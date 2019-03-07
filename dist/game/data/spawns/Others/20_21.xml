@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="20_21">
+		<group>
+			<npc id="30483" x="17289" y="114112" z="-3440" heading="32768" respawnTime="60sec" /> <!-- Carsus -->
+			<npc id="30484" x="17636" y="114744" z="-11680" heading="6843" respawnTime="60sec" /> <!-- Janssen -->
+			<npc id="30487" x="17811" y="114750" z="-11680" heading="25785" respawnTime="60sec" /> <!-- Rombel -->
+		</group>
+	</spawn>
+</list>

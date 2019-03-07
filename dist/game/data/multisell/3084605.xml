@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list maintainEnchantment="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30300</npc> <!-- Pushkin -->
+		<npc>30846</npc> <!-- Wilbert -->
+		<npc>30471</npc> <!-- Rupio -->
+	</npcs>
+	<item>
+		<!-- Sealed Phoenix Necklace -->
+		<ingredient count="1" id="6323" />
+		<!-- Adena -->
+		<ingredient count="855525" id="57" />
+		<!-- Phoenix Necklace -->
+		<production count="1" id="933" />
+	</item>
+	<item>
+		<!-- Sealed Phoenix Earring -->
+		<ingredient count="1" id="6324" />
+		<!-- Adena -->
+		<ingredient count="641644" id="57" />
+		<!-- Phoenix Earring -->
+		<production count="1" id="871" />
+	</item>
+	<item>
+		<!-- Sealed Phoenix Ring -->
+		<ingredient count="1" id="6325" />
+		<!-- Adena -->
+		<ingredient count="427763" id="57" />
+		<!-- Phoenix Ring -->
+		<production count="1" id="902" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Necklace -->
+		<ingredient count="1" id="6326" />
+		<!-- Adena -->
+		<ingredient count="853669" id="57" />
+		<!-- Majestic Necklace -->
+		<production count="1" id="924" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Earring -->
+		<ingredient count="1" id="6327" />
+		<!-- Adena -->
+		<ingredient count="640251" id="57" />
+		<!-- Majestic Earring -->
+		<production count="1" id="862" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Ring -->
+		<ingredient count="1" id="6328" />
+		<!-- Adena -->
+		<ingredient count="426834" id="57" />
+		<!-- Majestic Ring -->
+		<production count="1" id="893" />
+	</item>
+</list>

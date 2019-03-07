@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.dao;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.templates.StatsSet;
@@ -45,7 +45,7 @@ public class SpawnsDAO
 		ResultSet rset = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			rset = statement.executeQuery();
 			while(rset.next())
@@ -82,7 +82,7 @@ public class SpawnsDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(INSERT_SQL_QUERY);
 			statement.setInt(1, npcId);
 			statement.setInt(2, x);
@@ -111,7 +111,7 @@ public class SpawnsDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(REDUCE_COUNT_SQL_QUERY);
 			statement.setInt(1, npc.getNpcId());
 			statement.setInt(2, npc.getSpawnedLoc().x);

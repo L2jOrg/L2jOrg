@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30177"> <!-- Valentina -->
+		<teleport type="NORMAL">
+			<!-- feeCount from Interlude, unconfirmed from retail classic -->
+			<location npcStringId="1010007" x="83314" y="148012" z="-3400" feeCount="9400" /> <!-- Town of Giran -->
+			<location npcStringId="1010020" x="117110" y="76883" z="-2688" feeCount="4100" /> <!-- Hunter's Village -->
+			<location npcStringId="1010023" x="146813" y="25807" z="-2008" feeCount="6900" /> <!-- Town of Aden -->
+			<location npcStringId="1010014" x="85391" y="16228" z="-3672" feeCount="3700" /> <!-- Ivory Tower -->
+			<location npcStringId="1010022" x="105884" y="109744" z="-3192" feeCount="6100" /> <!-- Hardin's Academy -->
+			<location npcStringId="1010179" x="87252" y="85514" z="-3056" feeCount="1900" /> <!-- Plains of the Lizardmen (Lv. 35) -->
+			<location npcStringId="1010121" x="64328" y="26803" z="-3768" feeCount="2500" /> <!-- Sea of Spores (Lv. 40) -->
+		</teleport>
+	</npc>
+</list>

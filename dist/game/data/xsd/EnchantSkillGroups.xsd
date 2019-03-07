@@ -1,0 +1,87 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="enchant" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="sps">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="sp" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute type="xs:int" name="amount" use="required" />
+												<xs:attribute name="type" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:token">
+															<xs:enumeration value="NORMAL" />
+															<xs:enumeration value="BLESSED" />
+															<xs:enumeration value="UNTRAIN" />
+															<xs:enumeration value="CHANGE" />
+															<xs:enumeration value="IMMORTAL" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="chances">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="chance" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute type="xs:byte" name="value" use="required" />
+												<xs:attribute name="type" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:token">
+															<xs:enumeration value="NORMAL" />
+															<xs:enumeration value="BLESSED" />
+															<xs:enumeration value="UNTRAIN" />
+															<xs:enumeration value="CHANGE" />
+															<xs:enumeration value="IMMORTAL" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="items">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:int" name="id" use="required" />
+														<xs:attribute type="xs:int" name="count" use="required" />
+														<xs:attribute name="type" use="required">
+															<xs:simpleType>
+																<xs:restriction base="xs:token">
+																	<xs:enumeration value="NORMAL" />
+																	<xs:enumeration value="BLESSED" />
+																	<xs:enumeration value="UNTRAIN" />
+																	<xs:enumeration value="CHANGE" />
+																	<xs:enumeration value="IMMORTAL" />
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:byte" name="level" use="required" />
+						<xs:attribute type="xs:byte" name="enchantFailLevel" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

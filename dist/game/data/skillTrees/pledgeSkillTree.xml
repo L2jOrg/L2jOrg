@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
+	<skillTree type="pledgeSkillTree">
+		<!-- Confirmed CT2.5 -->
+		<!-- Clan Skills -->
+		<skill skillName="Clan Fortune" skillId="392" skillLvl="1" getLevel="1">
+			<socialClass>HEIR</socialClass>
+		</skill>
+		<skill skillName="Clan Fortune" skillId="392" skillLvl="2" getLevel="2">
+			<socialClass>HEIR</socialClass>
+		</skill>
+		<skill skillName="Clan Fortune" skillId="392" skillLvl="3" getLevel="3" levelUpSp="5000">
+			<socialClass>HEIR</socialClass>
+		</skill>
+		<skill skillName="Clan Body" skillId="370" skillLvl="1" getLevel="3" levelUpSp="1500">
+			<socialClass>HEIR</socialClass>
+		</skill>
+		<skill skillName="Clan Body" skillId="370" skillLvl="2" getLevel="3" levelUpSp="3000">
+			<socialClass>HEIR</socialClass>
+		</skill>
+		<skill skillName="Clan Body" skillId="370" skillLvl="3" getLevel="3" levelUpSp="7500">
+			<socialClass>HEIR</socialClass>
+		</skill>
+		<skill skillName="Clan Spirituality" skillId="371" skillLvl="1" getLevel="3" levelUpSp="10000">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Spirituality" skillId="371" skillLvl="2" getLevel="3" levelUpSp="20000">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Spirituality" skillId="371" skillLvl="3" getLevel="3" levelUpSp="50000">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Soul" skillId="372" skillLvl="1" getLevel="4" levelUpSp="1500">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Soul" skillId="372" skillLvl="2" getLevel="4" levelUpSp="3000">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Soul" skillId="372" skillLvl="3" getLevel="4" levelUpSp="7500">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Regeneration" skillId="373" skillLvl="1" getLevel="4" levelUpSp="1500">
+			<socialClass>HEIR</socialClass>
+		</skill>
+		<skill skillName="Clan Regeneration" skillId="373" skillLvl="2" getLevel="4" levelUpSp="3000">
+			<socialClass>HEIR</socialClass>
+		</skill>
+		<skill skillName="Clan Regeneration" skillId="373" skillLvl="3" getLevel="4" levelUpSp="7500">
+			<socialClass>HEIR</socialClass>
+		</skill>
+		<skill skillName="Clan Morale" skillId="374" skillLvl="1" getLevel="3" levelUpSp="1500">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Morale" skillId="374" skillLvl="2" getLevel="3" levelUpSp="3000">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Morale" skillId="374" skillLvl="3" getLevel="3" levelUpSp="7500">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Clarity" skillId="375" skillLvl="1" getLevel="3" levelUpSp="1500">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Clarity" skillId="375" skillLvl="2" getLevel="3" levelUpSp="3000">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Clarity" skillId="375" skillLvl="3" getLevel="3" levelUpSp="7500">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Might" skillId="376" skillLvl="1" getLevel="4" levelUpSp="1500">
+			<socialClass>KNIGHT</socialClass>
+		</skill>
+		<skill skillName="Clan Might" skillId="376" skillLvl="2" getLevel="4" levelUpSp="3000">
+			<socialClass>KNIGHT</socialClass>
+		</skill>
+		<skill skillName="Clan Might" skillId="376" skillLvl="3" getLevel="4" levelUpSp="7500">
+			<socialClass>KNIGHT</socialClass>
+		</skill>
+		<skill skillName="Clan Shield" skillId="377" skillLvl="1" getLevel="4" levelUpSp="1000">
+			<socialClass>KNIGHT</socialClass>
+		</skill>
+		<skill skillName="Clan Shield" skillId="377" skillLvl="2" getLevel="4" levelUpSp="3000">
+			<socialClass>KNIGHT</socialClass>
+		</skill>
+		<skill skillName="Clan Shield" skillId="377" skillLvl="3" getLevel="4" levelUpSp="7500">
+			<socialClass>KNIGHT</socialClass>
+		</skill>
+		<skill skillName="Clan Empower" skillId="378" skillLvl="1" getLevel="4" levelUpSp="1500">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Empower" skillId="378" skillLvl="2" getLevel="4" levelUpSp="3000">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Empower" skillId="378" skillLvl="3" getLevel="4" levelUpSp="7500">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan M. Def." skillId="379" skillLvl="1" getLevel="3" levelUpSp="1500">
+			<socialClass>HEIR</socialClass>
+		</skill>
+		<skill skillName="Clan M. Def." skillId="379" skillLvl="2" getLevel="3" levelUpSp="3000">
+			<socialClass>HEIR</socialClass>
+		</skill>
+		<skill skillName="Clan M. Def." skillId="379" skillLvl="3" getLevel="3" levelUpSp="7500">
+			<socialClass>HEIR</socialClass>
+		</skill>
+		<skill skillName="Clan Guidance" skillId="380" skillLvl="1" getLevel="3" levelUpSp="1500">
+			<socialClass>KNIGHT</socialClass>
+		</skill>
+		<skill skillName="Clan Guidance" skillId="380" skillLvl="2" getLevel="3" levelUpSp="3000">
+			<socialClass>KNIGHT</socialClass>
+		</skill>
+		<skill skillName="Clan Guidance" skillId="380" skillLvl="3" getLevel="3" levelUpSp="7500">
+			<socialClass>KNIGHT</socialClass>
+		</skill>
+		<skill skillName="Clan Agility" skillId="381" skillLvl="1" getLevel="3" levelUpSp="1500">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Agility" skillId="381" skillLvl="2" getLevel="3" levelUpSp="3000">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Agility" skillId="381" skillLvl="3" getLevel="3" levelUpSp="7500">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Wind Walk" skillId="389" skillLvl="1" getLevel="4" levelUpSp="1500">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Wind Walk" skillId="389" skillLvl="2" getLevel="4" levelUpSp="3000">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Wind Walk" skillId="389" skillLvl="3" getLevel="4" levelUpSp="7500">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="Clan Imperium" skillId="391" skillLvl="1" getLevel="4">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="No Clan Return" skillId="19113" skillLvl="1" getLevel="3">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		<skill skillName="No Clan Resurrection" skillId="19114" skillLvl="1" getLevel="3">
+			<socialClass>ELDER</socialClass>
+		</skill>
+		
+		<!-- Castle/Fort Skills -->
+		<skill skillName="Residence Body" skillId="590" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>4</residenceId>
+			<residenceId>7</residenceId>
+			<residenceId>101</residenceId>
+			<residenceId>111</residenceId>
+			<residenceId>121</residenceId>
+		</skill>
+		<skill skillName="Residence Spirit" skillId="591" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>2</residenceId>
+			<residenceId>109</residenceId>
+			<residenceId>120</residenceId>
+		</skill>
+		<skill skillName="Residence Soul" skillId="592" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>3</residenceId>
+			<residenceId>9</residenceId>
+			<residenceId>108</residenceId>
+			<residenceId>119</residenceId>
+		</skill>
+		<skill skillName="Residence Health" skillId="593" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>1</residenceId>
+			<residenceId>8</residenceId>
+			<residenceId>106</residenceId>
+			<residenceId>121</residenceId>
+		</skill>
+		<skill skillName="Residence Moral" skillId="594" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>7</residenceId>
+			<residenceId>105</residenceId>
+			<residenceId>120</residenceId>
+		</skill>
+		<skill skillName="Residence Clarity" skillId="595" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>6</residenceId>
+			<residenceId>104</residenceId>
+			<residenceId>119</residenceId>
+		</skill>
+		<skill skillName="Residence Might" skillId="596" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>5</residenceId>
+			<residenceId>107</residenceId>
+			<residenceId>118</residenceId>
+		</skill>
+		<skill skillName="Residence Shield" skillId="597" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>2</residenceId>
+			<residenceId>110</residenceId>
+			<residenceId>117</residenceId>
+		</skill>
+		<skill skillName="Residence Empower" skillId="598" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>4</residenceId>
+			<residenceId>107</residenceId>
+			<residenceId>116</residenceId>
+		</skill>
+		<skill skillName="Residence Magic Barrier" skillId="599" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>6</residenceId>
+			<residenceId>8</residenceId>
+			<residenceId>108</residenceId>
+			<residenceId>115</residenceId>
+		</skill>
+		<skill skillName="Residence Guidance" skillId="600" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>1</residenceId>
+			<residenceId>9</residenceId>
+			<residenceId>110</residenceId>
+			<residenceId>112</residenceId>
+		</skill>
+		<skill skillName="Residence Agility" skillId="601" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>3</residenceId>
+			<residenceId>103</residenceId>
+			<residenceId>118</residenceId>
+		</skill>
+		<skill skillName="Residence Shield Block" skillId="602" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>5</residenceId>
+			<residenceId>102</residenceId>
+			<residenceId>117</residenceId>
+		</skill>
+		<skill skillName="Residence Shield Defense" skillId="603" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>7</residenceId>
+			<residenceId>101</residenceId>
+			<residenceId>116</residenceId>
+		</skill>
+		<skill skillName="Residence Resist Typhoon" skillId="604" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>8</residenceId>
+			<residenceId>102</residenceId>
+			<residenceId>115</residenceId>
+		</skill>
+		<skill skillName="Residence Resist Lava" skillId="605" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>4</residenceId>
+			<residenceId>103</residenceId>
+			<residenceId>114</residenceId>
+		</skill>
+		<skill skillName="Residence Fortitude" skillId="606" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>1</residenceId>
+			<residenceId>104</residenceId>
+			<residenceId>113</residenceId>
+		</skill>
+		<skill skillName="Residence Freedom" skillId="607" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>6</residenceId>
+			<residenceId>105</residenceId>
+			<residenceId>112</residenceId>
+		</skill>
+		<skill skillName="Residence Vigilance" skillId="608" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>5</residenceId>
+			<residenceId>106</residenceId>
+			<residenceId>111</residenceId>
+		</skill>
+		<skill skillName="Residence Movement" skillId="609" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>2</residenceId>
+			<residenceId>114</residenceId>
+		</skill>
+		<skill skillName="Residence Death Fortune" skillId="610" skillLvl="1" getLevel="4" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>3</residenceId>
+			<residenceId>9</residenceId>
+			<residenceId>109</residenceId>
+			<residenceId>113</residenceId>
+			<residenceId>117</residenceId>
+		</skill>
+		<!-- Territory Skills -->
+		<skill skillName="Gludio Territory Benefaction" skillId="848" skillLvl="1" getLevel="5" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>81</residenceId>
+		</skill>
+		<skill skillName="Dion Territory Benefaction" skillId="849" skillLvl="1" getLevel="5" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>82</residenceId>
+		</skill>
+		<skill skillName="Giran Territory Benefaction" skillId="850" skillLvl="1" getLevel="5" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>83</residenceId>
+		</skill>
+		<skill skillName="Oren Territory Benefaction" skillId="851" skillLvl="1" getLevel="5" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>84</residenceId>
+		</skill>
+		<skill skillName="Aden Territory Benefaction" skillId="852" skillLvl="1" getLevel="5" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>85</residenceId>
+		</skill>
+		<skill skillName="Innadril Territory Benefaction" skillId="853" skillLvl="1" getLevel="5" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>86</residenceId>
+		</skill>
+		<skill skillName="Goddard Territory Benefaction" skillId="854" skillLvl="1" getLevel="5" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>87</residenceId>
+		</skill>
+		<skill skillName="Rune Territory Benefaction" skillId="855" skillLvl="1" getLevel="5" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>88</residenceId>
+		</skill>
+		<skill skillName="Schuttgart Territory Benefaction" skillId="856" skillLvl="1" getLevel="5" residenceSkill="true">
+			<socialClass>APPRENTICE</socialClass>
+			<residenceId>89</residenceId>
+		</skill>
+	</skillTree>
+</list>

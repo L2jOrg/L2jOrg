@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="9589" name="Iron Bracelet" type="Armor">
+		<!-- When equipped, opens up 1 Talisman slot. -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="1080000" />
+		<set name="commissionItemType" val="BRACELET" />
+		<skills>
+			<skill id="3322" level="1" /> <!-- Iron Bracelet -->
+		</skills>
+	</item>
+	<item id="9590" name="Bronze Bracelet" type="Armor">
+		<!-- When equipped, opens up 2 Talisman slots. -->
+		<set name="icon" val="icon.etc_rbracelet_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="53" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="5400000" />
+		<set name="commissionItemType" val="BRACELET" />
+		<skills>
+			<skill id="3323" level="1" /> <!-- Bronze Bracelet -->
+		</skills>
+	</item>
+	<item id="9591" name="Steel Bracelet" type="Armor">
+		<!-- When equipped, opens up 3 Talisman slots. -->
+		<set name="icon" val="icon.etc_rbracelet_a_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="61" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="27000000" />
+		<set name="commissionItemType" val="BRACELET" />
+		<skills>
+			<skill id="3324" level="1" /> <!-- Steel Bracelet -->
+		</skills>
+	</item>
+</list>

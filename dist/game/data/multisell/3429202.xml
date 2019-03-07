@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>34292</npc> <!-- Chef Monkey -->
+	</npcs>
+	<item>
+		<ingredient id="57" count="250" /> <!-- Adena -->
+		<production id="90171" count="1" /> <!-- Monkey Bait -->
+	</item>
+</list>

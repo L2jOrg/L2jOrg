@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/clanHall.xsd">
+	<clanHall id="74" name="Green Barracks" grade="GRADE_B" type="AUCTIONABLE">
+	 	<auction minBid="5000000" lease="500000" deposit="500000" />
+	 	<npcs>
+	 	   	<npc id="36740" /> <!-- Danif -->
+   			<npc id="36739" /> <!-- Flon -->
+	 	</npcs>
+	 	<doorlist>
+	 		<door id="20230103" />
+	 		<door id="20230104" />
+	 	</doorlist>
+	 	<ownerRestartPoint x="17965" y="170734" z="-3491" />
+		<banishPoint x="18318" y="170344" z="-3501" />
+	</clanHall>
+</list>

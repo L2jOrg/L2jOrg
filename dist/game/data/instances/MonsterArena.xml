@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Monster Arena -->
+<instance id="192" maxWorlds="20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<time duration="21" empty="0" />
+	<locations>
+		<enter type="FIXED">
+			<location x="12556" y="183701" z="-3717" />
+		</enter>
+		<exit type="ORIGIN" />
+	</locations>
+	<conditions>
+		<condition type="Party" />
+		<condition type="CommandChannel" />
+		<condition type="CommandChannelLeader" />
+		<condition type="GroupMin">
+			<param name="limit" value="4" />
+		</condition>
+		<condition type="GroupMax">
+			<param name="limit" value="40" />
+		</condition>
+		<condition type="Distance" />
+		<condition type="Reenter" />
+	</conditions>
+	<reenter apply="ON_ENTER">
+		<reset day="WEDNESDAY" hour="6" minute="30" />
+	</reenter>
+	<spawnlist>
+		<group>
+			<npc id="30203" x="12546" y="183428" z="-3717" heading="49378" /> <!-- Arena Machine -->
+		</group>
+		<group name="boss_1" spawnByDefault="false">
+			<npc id="25794" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Kutis -->
+		</group>
+		<group name="boss_2" spawnByDefault="false">
+			<npc id="25795" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Garan -->
+		</group>
+		<group name="boss_3" spawnByDefault="false">
+			<npc id="25796" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Batur -->
+		</group>
+		<group name="boss_4" spawnByDefault="false">
+			<npc id="25797" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Venir -->
+		</group>
+		<group name="boss_5" spawnByDefault="false">
+			<npc id="25798" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Oel -->
+		</group>
+		<group name="boss_6" spawnByDefault="false">
+			<npc id="25799" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Taranka -->
+		</group>
+		<group name="boss_7" spawnByDefault="false">
+			<npc id="25800" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Kasha -->
+		</group>
+		<group name="boss_8" spawnByDefault="false">
+			<npc id="25801" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Dorak -->
+		</group>
+		<group name="boss_9" spawnByDefault="false">
+			<npc id="25802" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Turan -->
+		</group>
+		<group name="boss_10" spawnByDefault="false">
+			<npc id="25803" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Varkan -->
+		</group>
+		<group name="boss_11" spawnByDefault="false">
+			<npc id="25804" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Ketran -->
+		</group>
+		<group name="boss_12" spawnByDefault="false">
+			<npc id="25805" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Death Lord Likan -->
+		</group>
+		<group name="boss_13" spawnByDefault="false">
+			<npc id="25806" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Anbarad -->
+		</group>
+		<group name="boss_14" spawnByDefault="false">
+			<npc id="25807" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Baranos -->
+		</group>
+		<group name="boss_15" spawnByDefault="false">
+			<npc id="25808" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Takuran -->
+		</group>
+		<group name="boss_16" spawnByDefault="false">
+			<npc id="25809" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Nast -->
+		</group>
+		<group name="boss_17" spawnByDefault="false">
+			<npc id="25810" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Keltar -->
+		</group>
+		<group name="boss_18" spawnByDefault="false">
+			<npc id="25811" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Satur -->
+		</group>
+		<group name="boss_19" spawnByDefault="false">
+			<npc id="25812" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Kosnak -->
+		</group>
+		<group name="boss_20" spawnByDefault="false">
+			<npc id="25813" x="12842" y="183674" z="-3717" heading="32767" /> <!-- Garaki -->
+		</group>
+		<group name="supplies" spawnByDefault="false">
+			<npc id="30204" x="13135" y="184015" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12975" y="184015" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12815" y="184015" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12655" y="184015" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12495" y="184015" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12335" y="184015" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12175" y="184015" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12015" y="184015" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="13135" y="183855" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12975" y="183855" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12815" y="183855" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12655" y="183855" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12495" y="183855" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12335" y="183855" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12175" y="183855" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12015" y="183855" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="13135" y="183695" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12975" y="183695" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12815" y="183695" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12655" y="183695" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12495" y="183695" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12335" y="183695" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12175" y="183695" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12015" y="183695" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="13135" y="183535" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12975" y="183535" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12815" y="183535" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12655" y="183535" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12495" y="183535" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12335" y="183535" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12175" y="183535" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12015" y="183535" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="13135" y="183375" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12975" y="183375" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12815" y="183375" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12655" y="183375" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12495" y="183375" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12335" y="183375" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12175" y="183375" z="-3717" heading="32767" /> <!-- Supplies -->
+			<npc id="30204" x="12015" y="183375" z="-3717" heading="32767" /> <!-- Supplies -->
+		</group>
+	</spawnlist>
+</instance>

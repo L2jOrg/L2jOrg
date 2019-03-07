@@ -4,7 +4,7 @@ import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.dao.JdbcDAO;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.dao.JdbcEntityStats;
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.items.ItemInstance.ItemLocation;
@@ -98,7 +98,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
         ResultSet rset = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(RESTORE_ITEM);
             statement.setInt(1, objectId);
             rset = statement.executeQuery();
@@ -165,7 +165,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
         PreparedStatement statement = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(STORE_ITEM);
             save0(item, statement);
             statement.execute();
@@ -189,7 +189,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
         PreparedStatement statement = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(REMOVE_ITEM);
             delete0(item, statement);
             statement.execute();
@@ -226,7 +226,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
         PreparedStatement statement = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(UPDATE_ITEM);
             update0(item, statement);
             statement.execute();
@@ -399,7 +399,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
         ResultSet rset = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(RESTORE_OWNER_ITEMS);
             statement.setInt(1, ownerId);
             statement.setString(2, loc.name());
@@ -427,7 +427,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
         PreparedStatement statement = null;
         try
         {
-            con = L2DatabaseFactory.getInstance().getConnection();
+            con = DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(INSERT_GLOBAL_REMOVE_ITEM);
             statement.setInt(1, itemId);
             statement.setString(2, description);

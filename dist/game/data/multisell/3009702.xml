@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30097</npc> <!-- Galladucci -->
+	</npcs>
+	<item>
+		<!-- Crystal (D-Grade) -->
+		<ingredient count="320" id="1458" />
+		<!-- Adena -->
+		<ingredient count="50000" id="57" />
+		<!-- Scroll: Enchant Weapon (D-Grade) -->
+		<production count="1" id="955" />
+	</item>
+	<item>
+		<!-- Crystal (C-Grade) -->
+		<ingredient count="368" id="1459" />
+		<!-- Adena -->
+		<ingredient count="330000" id="57" />
+		<!-- Scroll: Enchant Weapon (C-Grade) -->
+		<production count="1" id="951" />
+	</item>
+</list>

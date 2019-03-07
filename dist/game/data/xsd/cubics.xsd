@@ -1,0 +1,113 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="baseConditions">
+		<xs:sequence>
+			<xs:element name="hp" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute name="type" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="GREATER" />
+								<xs:enumeration value="LESSER" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute type="xs:byte" name="percent" use="required" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="range" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute type="xs:short" name="value" use="required" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="skillConditions">
+		<xs:sequence>
+			<xs:element name="hp" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute name="type" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="GREATER" />
+								<xs:enumeration value="LESSER" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute type="xs:byte" name="percent" use="required" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="range" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute type="xs:short" name="value" use="required" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="healthPercent" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute type="xs:byte" name="min" use="required" />
+					<xs:attribute type="xs:byte" name="max" use="required" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="cubic" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="conditions" minOccurs="0" type="baseConditions" />
+							<xs:element name="skills">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="skill" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="conditions" minOccurs="0" type="skillConditions" />
+												</xs:sequence>
+												<xs:attribute type="xs:short" name="id" use="required" />
+												<xs:attribute type="xs:byte" name="level" use="required" />
+												<xs:attribute type="xs:positiveInteger" name="triggerRate" />
+												<xs:attribute type="xs:positiveInteger" name="successRate" />
+												<xs:attribute type="xs:boolean" name="canUseOnStaticObjects" />
+												<xs:attribute name="target" use="optional">
+													<xs:simpleType>
+														<xs:restriction base="xs:token">
+															<xs:enumeration value="HEAL" />
+															<xs:enumeration value="MASTER" />
+															<xs:enumeration value="TARGET" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute type="xs:boolean" name="targetDebuff" use="optional" />
+												<xs:attribute type="xs:positiveInteger" name="range" use="optional" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:byte" name="id" use="required" />
+						<xs:attribute type="xs:byte" name="level" use="required" />
+						<xs:attribute type="xs:byte" name="slot" use="required" />
+						<xs:attribute type="xs:short" name="duration" use="required" />
+						<xs:attribute type="xs:nonNegativeInteger" name="delay" use="required" />
+						<xs:attribute type="xs:nonNegativeInteger" name="maxCount" use="required" />
+						<xs:attribute type="xs:byte" name="useUp" use="required" />
+						<xs:attribute type="xs:double" name="power" use="required" />
+						<xs:attribute name="targetType" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="BY_SKILL" />
+									<xs:enumeration value="TARGET" />
+									<xs:enumeration value="HEAL" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

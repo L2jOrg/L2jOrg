@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>33888</npc> <!-- Santa -->
+	</npcs>
+	<item>
+		<ingredient id="37543" count="10" /> <!-- Snowy Squash Nectar -->
+		<production id="38923" count="1" /> <!-- Squash Seed -->
+	</item>
+	<item>
+		<ingredient id="37543" count="20" /> <!-- Snowy Squash Nectar -->
+		<production id="38924" count="1" /> <!-- Large Squash Seed -->
+	</item>
+</list>

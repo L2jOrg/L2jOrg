@@ -1,6 +1,6 @@
 package org.l2j.gameserver.instancemanager;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
@@ -213,7 +213,7 @@ public class PvPRewardManager
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("INSERT INTO pvp_system_log (killer,victim) values (?,?)");
 			statement.setString(1, kill_name);
 			statement.setString(2, victim_name);

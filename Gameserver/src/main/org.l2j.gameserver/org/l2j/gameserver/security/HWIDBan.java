@@ -1,6 +1,6 @@
 package org.l2j.gameserver.security;
 
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +33,7 @@ public class HWIDBan
 		try
 		{
 			String hwid = "";
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM ban_hwid");
 			rset = statement.executeQuery();
 			while(rset.next())
@@ -60,7 +60,7 @@ public class HWIDBan
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("INSERT INTO ban_hwid (hwid) VALUES(?)");
 			statement.setString(1, hwid);		
 			statement.execute();
@@ -83,7 +83,7 @@ public class HWIDBan
 		PreparedStatement statement = null;
 		try
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
+			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE from ban_hwid WHERE hwid like ?");
 			statement.setString(1, hwid);		
 			statement.execute();

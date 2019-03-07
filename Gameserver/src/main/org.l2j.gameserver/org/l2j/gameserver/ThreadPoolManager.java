@@ -1,16 +1,10 @@
 package org.l2j.gameserver;
 
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
-
 import org.l2j.commons.threading.PriorityThreadFactory;
+import org.l2j.commons.threading.RejectedExecutionHandlerImpl;
 import org.l2j.commons.threading.RunnableStatsWrapper;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.concurrent.*;
 
 public class ThreadPoolManager
 {
@@ -27,17 +21,16 @@ public class ThreadPoolManager
 
 	private boolean _shutdown;
 
-	private ThreadPoolManager()
-	{
-		_scheduledExecutor = new ScheduledThreadPoolExecutor(Config.SCHEDULED_THREAD_POOL_SIZE, new PriorityThreadFactory("ScheduledThreadPool", Thread.NORM_PRIORITY), new ThreadPoolExecutor.CallerRunsPolicy());
-		_executor = new ThreadPoolExecutor(Config.EXECUTOR_THREAD_POOL_SIZE, Integer.MAX_VALUE, 5L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(), new PriorityThreadFactory("ThreadPoolExecutor", Thread.NORM_PRIORITY), new ThreadPoolExecutor.CallerRunsPolicy());
+	private ThreadPoolManager() {
+		RejectedExecutionHandler rejectedHandler = new RejectedExecutionHandlerImpl();
 
-		//Очистка каждые 5 минут
-		scheduleAtFixedRate(() ->
-		{
-			_scheduledExecutor.purge();
-			_executor.purge();
-		}, 300000L, 300000L);
+		_scheduledExecutor = new ScheduledThreadPoolExecutor(Config.SCHEDULED_THREAD_POOL_SIZE, new PriorityThreadFactory("ScheduledThreadPool", Thread.NORM_PRIORITY), new ThreadPoolExecutor.CallerRunsPolicy());
+		_scheduledExecutor.setRejectedExecutionHandler(rejectedHandler);
+
+		_executor = new ThreadPoolExecutor(Config.EXECUTOR_THREAD_POOL_SIZE, Integer.MAX_VALUE, 5L, TimeUnit.SECONDS, new LinkedBlockingQueue<>(), new PriorityThreadFactory("ThreadPoolExecutor", Thread.NORM_PRIORITY), new ThreadPoolExecutor.CallerRunsPolicy());
+		_executor.setRejectedExecutionHandler(rejectedHandler);
+
+		scheduleAtFixedRate(() -> { _scheduledExecutor.purge(); _executor.purge();  }, 300000L, 300000L);
 	}
 
 	private long validate(long delay)

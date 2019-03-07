@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>34053</npc> <!-- Attribute Master Svein -->
+	</npcs>
+	<item>
+		<ingredient id="91039" count="200" /> <!-- Water Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91043" count="1" /> <!-- Nebula’ Old Necklace Lv1 -->
+	</item>
+	<item>
+		<ingredient id="91043" count="1" /> <!-- Nebula’ Old Necklace Lv1 -->
+		<ingredient id="91039" count="200" /> <!-- Water Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91044" count="1" /> <!-- Nebula’ Old Necklace Lv2 -->
+	</item>
+	<item>
+		<ingredient id="91044" count="1" /> <!-- Nebula’ Old Necklace Lv2 -->
+		<ingredient id="91039" count="200" /> <!-- Water Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91045" count="1" /> <!-- Nebula’ Old Necklace Lv3 -->
+	</item>
+	<item>
+		<ingredient id="91045" count="1" /> <!-- Nebula’ Old Necklace Lv3 -->
+		<ingredient id="91039" count="300" /> <!-- Water Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91116" count="1" /> <!-- Nebula’ Old Necklace Lv4 -->
+	</item>
+	<item>
+		<ingredient id="91116" count="1" /> <!-- Nebula’ Old Necklace Lv4 -->
+		<ingredient id="91039" count="400" /> <!-- Water Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91117" count="1" /> <!-- Nebula’ Necklace -->
+	</item>
+	<item>
+		<ingredient id="91040" count="200" /> <!-- Fire Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91046" count="1" /> <!-- Ignis’ Old Necklace Lv1 -->
+	</item>
+	<item>
+		<ingredient id="91046" count="1" /> <!-- Ignis’ Old Necklace Lv1 -->
+		<ingredient id="91040" count="200" /> <!-- Fire Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91047" count="1" /> <!-- Ignis’ Old Necklace Lv2 -->
+	</item>
+	<item>
+		<ingredient id="91047" count="1" /> <!-- Ignis’ Old Necklace Lv2 -->
+		<ingredient id="91040" count="200" /> <!-- Fire Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91048" count="1" /> <!-- Ignis’ Old Necklace Lv3 -->
+	</item>
+	<item>
+		<ingredient id="91048" count="1" /> <!-- Ignis’ Old Necklace Lv3 -->
+		<ingredient id="91040" count="300" /> <!-- Fire Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91118" count="1" /> <!-- Ignis’ Old Necklace Lv4 -->
+	</item>
+	<item>
+		<ingredient id="91118" count="1" /> <!-- Ignis’ Old Necklace Lv4 -->
+		<ingredient id="91040" count="400" /> <!-- Fire Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91119" count="1" /> <!-- Ignis’ Necklace -->
+	</item>
+	<item>
+		<ingredient id="91041" count="200" /> <!-- Wind Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91049" count="1" /> <!-- Procella’s Old Necklace Lv1 -->
+	</item>
+	<item>
+		<ingredient id="91049" count="1" /> <!-- Procella’s Old Necklace Lv1 -->
+		<ingredient id="91041" count="200" /> <!-- Wind Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91050" count="1" /> <!-- Procella’s Old Necklace Lv2 -->
+	</item>
+	<item>
+		<ingredient id="91050" count="1" /> <!-- Procella’s Old Necklace Lv2 -->
+		<ingredient id="91041" count="200" /> <!-- Wind Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91051" count="1" /> <!-- Procella’s Old Necklace Lv3 -->
+	</item>
+	<item>
+		<ingredient id="91051" count="1" /> <!-- Procella’s Old Necklace Lv3 -->
+		<ingredient id="91041" count="300" /> <!-- Wind Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91120" count="1" /> <!-- Procella’s Old Necklace Lv4 -->
+	</item>
+	<item>
+		<ingredient id="91120" count="1" /> <!-- Procella’s Old Necklace Lv4 -->
+		<ingredient id="91041" count="400" /> <!-- Wind Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91121" count="1" /> <!-- Procella’s Necklace -->
+	</item>	
+	<item>
+		<ingredient id="91042" count="200" /> <!-- Earth Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91052" count="1" /> <!-- Petram’s Old Necklace Lv1 -->
+	</item>
+	<item>
+		<ingredient id="91052" count="1" /> <!-- Petram’s Old Necklace Lv1 -->
+		<ingredient id="91042" count="200" /> <!-- Earth Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91053" count="1" /> <!-- Petram’s Old Necklace Lv2 -->
+	</item>
+	<item>
+		<ingredient id="91053" count="1" /> <!-- Petram’s Old Necklace Lv2 -->
+		<ingredient id="91042" count="200" /> <!-- Earth Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91054" count="1" /> <!-- Petram’s Old Necklace Lv3 -->
+	</item>
+	<item>
+		<ingredient id="91054" count="1" /> <!-- Petram’s Old Necklace Lv3 -->
+		<ingredient id="91042" count="300" /> <!-- Earth Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91122" count="1" /> <!-- Petram’s Old Necklace Lv4 -->
+	</item>
+	<item>
+		<ingredient id="91122" count="1" /> <!-- Petram’s Old Necklace Lv4 -->
+		<ingredient id="91042" count="400" /> <!-- Earth Attribute Fragment -->
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="91123" count="1" /> <!-- Petram’s Necklace -->
+	</item>	
+</list>

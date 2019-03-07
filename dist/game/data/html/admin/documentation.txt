@@ -1,0 +1,41 @@
+All of the HTM files within this folder will be a part of the admin/GM control
+panel. These are some guidelines about the way they're meant to work and get 
+named. Following them should help both users and maintainers :
+
+1- There are 5 major categories in which the admin panel gets divided. For each 
+major category, there is one file whose name ends with "_menu":
+
+main_menu.htm (classic_menu.htm serves the same purpose in classic mode)
+game_menu.htm
+effects_menu.htm
+server_menu.htm
+mods_menu.htm
+
+2- Any other .htm file within the admin folder or any subfolder but "help", should
+be accessible in some way by means of clicking a link or button.
+
+3- Unless the file is outdated or there are strong reasons on the contrary, every 
+.htm file should have a design coherent with the following style guides:
+
+	a-Buttons linking to the 5 major sections in the upper side of the page.
+	b-A predominant edit-type widget (I named it QuickBox) with Send and Help buttons.
+		GMs should be able to pass any value or parameter needed by the admin command
+		buttons by means of using this QuickBox.
+	c-Under the QuickBox, there should be buttons associated with the relevant admin
+		actions. Those buttons should be organized from top to bottom in the way that
+		best aids to keep useability and readability:
+			- More frequently used, first.
+			- Commands that require quickbox values, first.
+			- Commands that could behave as toggles, first.
+			- Commands that have a counterpart (such as Ban/Unban), kept in pairs.
+			- Buttons may form groups of no more than 4 rows and 3 columns.
+	d-Any "Help" button available should take the reader to another file with the same
+		name, but within the help folder. Said in other words, every xyz.htm file of the
+		admin panel should have a counterpart in the form help/xyz.htm that helps people
+		understand what can be done with it. "Back" links should be provided, also.
+	e-If a given file needs additional navigation facilities, all of them should be 
+		kept in the upper side of the page, right after the buttons described in "a" if
+		they appeared.
+4- L2J Mods introduced to the main distribution stream, should provide a set of 
+commands that could be added in the mods admin panel. Additionally, a help file should
+be desirable. Such a file should reside in help/l2jmod/.

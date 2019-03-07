@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="36172"> <!-- Foreman -->
+		<teleport name="tel1" type="OTHER">
+			<location npcStringId="1010656" x="77834" y="89176" z="-2880" /> <!-- Fortress West Gate -->
+			<location npcStringId="1010657" x="80441" y="92831" z="-2880" /> <!-- Fortress East Gate -->
+			<location npcStringId="1010681" x="82323" y="55466" z="-1480" /> <!-- Oren Town Square -->
+		</teleport>
+		<teleport name="tel2" type="OTHER">
+			<location npcStringId="1010656" x="77834" y="89176" z="-2880" /> <!-- Fortress West Gate -->
+			<location npcStringId="1010657" x="80441" y="92831" z="-2880" /> <!-- Fortress East Gate -->
+			<location npcStringId="1010681" x="82323" y="55466" z="-1480" /> <!-- Oren Town Square -->
+			<location npcStringId="1010665" x="81749" y="149171" z="-3464" /> <!-- Giran Town Square -->
+			<location npcStringId="1010121" x="64328" y="26803" z="-3768" feeCount="500" /> <!-- Sea of Spores (Lv. 52) -->
+			<location npcStringId="1010127" x="118509" y="-4779" z="-4000" feeCount="500" /> <!-- Ancient Battleground -->
+			<location npcStringId="1010067" x="73024" y="118485" z="-3720" feeCount="500" /> <!-- Dragon Valley (Lv. 76) -->
+			<location npcStringId="1010115" x="60374" y="164301" z="-2856" feeCount="500" /> <!-- Tanor Canyon (Lv. 46) -->
+		</teleport>
+	</npc>
+</list>

@@ -1,0 +1,28 @@
+<html><title>Character Selection Panel</title><body>
+<table width=270>
+<tr>
+<td width=45><button value="Main" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Character Selection Menu</center></td>
+<td width=45><button value="Back" action="bypass -h admin_admin6" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+You can find a character by writing his or her name or a part of it in the box below.<br1>
+<table width=250>
+<tr>
+<td><edit var="character_name" width=150 height=15></td>
+<td><button value="Find Character" action="bypass -h admin_find_character $character_name" width=100 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+<img src="L2UI.SquareWhite" width=270 height=1>
+<img src="L2UI.SquareBlank" width=1 height=3>
+<table width=270>		
+<tr><td width=80>Name:</td><td width=110>Class:</td><td width=40>Level:</td></tr>
+%players%
+</table>
+<img src="L2UI.SquareBlank" width=1 height=3>
+<img src="L2UI.SquareWhite" width=270 height=1>
+<br>%pages%<br>
+</center>
+</body></html>

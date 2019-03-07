@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="38154" name="Fishing Shot" type="EtcItem">
+		<!-- Soulshot for a fishing rod. Doubles the fishing success rate. Cannot be sold. -->
+		<set name="icon" val="icon.etc_spirit_bullet_fish_i05" />
+		<set name="default_action" val="FISHINGSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="28" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="FishShots" />
+		<skills>
+			<skill id="17386" level="1" /> <!-- Fishing Shot -->
+		</skills>
+	</item>
+</list>

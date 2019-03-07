@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../data/xsd/Scripts.xsd">
+	<!-- Skip these filenames from script loading, because they are already loaded using a different way. -->
+	<exclude file="package-info.java" />
+	<exclude file="MasterHandler.java" />
+	<exclude file="EffectMasterHandler.java" />
+	<exclude file="SkillConditionMasterHandler.java" />
+	<exclude file="ConditionMasterHandler.java" />
+	<exclude file="DailyMissionMasterHandler.java" />
+	
+	<!--
+	With this file you can exclude/include specific folders/files from within the scripts directory.
+	
+	In order to exclude a folder/file simply add the following line:
+	<exclude file="{FOLDER/FILE NAME HERE}" />
+	For example to exclude the quests directory, use:
+	<exclude file="quests" />
+	
+	If you want to exclude all files within a directory except certain file(s), you can do it like so:
+	<exclude file="{FOLDER NAME HERE}">
+		<include file="{FOLDER/FILE NAME HERE}" />
+		<include file="{FOLDER/FILE NAME HERE}" />
+		...
+	</exclude>
+	For example to exclude ForgeOfTheGods folder except Valakas script, use:
+	<exclude file="ForgeOfTheGods">
+		<include file="Valakas.java" />
+	</exclude>
+	-->
+</list>

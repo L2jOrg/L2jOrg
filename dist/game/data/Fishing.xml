@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./xsd/Fishing.xsd">
+	<baitDistance min="90" max="250" />
+	<experienceRate min="1" max="1" />
+	<skillPointsRate min="0.033" max="0.033" />
+	<baits>
+		<bait itemId="45495" level="1" minPlayerLevel="20" chance="64" timeMin="45000" timeMax="45000" waitMin="15000" waitMax="15000"> <!-- Normal Bait -->
+			<catch itemId="45473" /> <!-- Blue Mackerel -->
+			<catch itemId="45481" /> <!-- Fresh Blue Mackerel -->
+		</bait>
+	</baits>
+</list>
