@@ -1,22 +1,8 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.model.actor;
 
+import org.l2j.commons.util.EmptyQueue;
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.mobius.gameserver.Config;
 import org.l2j.gameserver.mobius.gameserver.GameTimeController;
 import org.l2j.gameserver.mobius.gameserver.ai.CtrlEvent;
@@ -28,6 +14,7 @@ import org.l2j.gameserver.mobius.gameserver.data.xml.impl.TransformData;
 import org.l2j.gameserver.mobius.gameserver.enums.*;
 import org.l2j.gameserver.mobius.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.mobius.gameserver.idfactory.IdFactory;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.mobius.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.mobius.gameserver.instancemanager.TimersManager;
 import org.l2j.gameserver.mobius.gameserver.instancemanager.ZoneManager;
@@ -38,6 +25,7 @@ import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2TrapInstance;
 import org.l2j.gameserver.mobius.gameserver.model.actor.stat.CharStat;
 import org.l2j.gameserver.mobius.gameserver.model.actor.status.CharStatus;
+import org.l2j.gameserver.mobius.gameserver.model.actor.tasks.character.NotifyAITask;
 import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2CharTemplate;
 import org.l2j.gameserver.mobius.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.mobius.gameserver.model.effects.EffectFlag;
@@ -58,6 +46,7 @@ import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
 import org.l2j.gameserver.mobius.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.mobius.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.mobius.gameserver.model.options.OptionsSkillHolder;
 import org.l2j.gameserver.mobius.gameserver.model.options.OptionsSkillType;
@@ -81,6 +70,8 @@ import java.util.concurrent.locks.StampedLock;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
+
+import static org.l2j.gameserver.mobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
 /**
  * Mother class of all character objects of the world (PC, NPC...)<br>
@@ -931,7 +922,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                     {
                         if (isPlayer())
                         {
-                            ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
+                            ThreadPoolManager.getInstance().schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
                             sendPacket(ActionFailed.STATIC_PACKET);
                         }
                         return;
@@ -970,7 +961,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                         if (_status.getCurrentMp() < mpConsume)
                         {
                             // If L2PcInstance doesn't have enough MP, stop the attack
-                            ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
+                            ThreadPoolManager.getInstance().schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
                             sendPacket(SystemMessageId.NOT_ENOUGH_MP);
                             sendPacket(ActionFailed.STATIC_PACKET);
                             return;

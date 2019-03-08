@@ -1,42 +1,23 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.model.itemcontainer;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.enums.ItemLocation;
-import com.l2jmobius.gameserver.enums.ItemSkillType;
-import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.L2ArmorSet;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.VariationInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.items.type.EtcItemType;
-import com.l2jmobius.gameserver.model.items.type.WeaponType;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoEquipSlot;
-import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.util.CommonUtil;
+import org.l2j.gameserver.mobius.gameserver.Config;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.enums.ItemSkillType;
+import org.l2j.gameserver.mobius.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.mobius.gameserver.model.L2ArmorSet;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.PcCondOverride;
+import org.l2j.gameserver.mobius.gameserver.model.VariationInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ArmorsetSkillHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SkillCoolTime;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -1912,7 +1893,7 @@ public abstract class Inventory extends ItemContainer
 	public void restore()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT * FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY loc_data"))
+			 PreparedStatement ps = con.prepareStatement("SELECT * FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY loc_data"))
 		{
 			ps.setInt(1, getOwnerId());
 			ps.setString(2, getBaseLocation().name());

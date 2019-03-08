@@ -1,37 +1,19 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
-import com.l2jmobius.gameserver.instancemanager.SiegeManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.status.SiegeFlagStatus;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.entity.Siegable;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.FortSiegeManager;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.SiegeManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.L2SiegeClan;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.status.SiegeFlagStatus;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Siegable;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 public class L2SiegeFlagInstance extends L2Npc
 {

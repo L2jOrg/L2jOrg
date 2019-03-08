@@ -1,49 +1,33 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.model.instancezone;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.data.xml.impl.DoorData;
-import com.l2jmobius.gameserver.enums.InstanceReenterType;
-import com.l2jmobius.gameserver.enums.InstanceTeleportType;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.TeleportWhereType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2DoorTemplate;
-import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.instance.*;
-import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
-import com.l2jmobius.gameserver.model.interfaces.ILocational;
-import com.l2jmobius.gameserver.model.interfaces.INamable;
-import com.l2jmobius.gameserver.model.spawns.SpawnGroup;
-import com.l2jmobius.gameserver.model.spawns.SpawnTemplate;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.util.CommonUtil;
+import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.gameserver.mobius.gameserver.Config;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.DoorData;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceReenterType;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceTeleportType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.InstanceManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.TeleportWhereType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2DoorTemplate;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.instance.*;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.IIdentifiable;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.ILocational;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.INamable;
+import org.l2j.gameserver.mobius.gameserver.model.spawns.SpawnGroup;
+import org.l2j.gameserver.mobius.gameserver.model.spawns.SpawnTemplate;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -274,7 +258,7 @@ public final class Instance implements IIdentifiable, INamable
 			}
 			else if ((emptyTime >= 0) && (_emptyDestroyTask == null) && (getRemainingTime() < emptyTime))
 			{
-				_emptyDestroyTask = ThreadPool.schedule(this::destroy, emptyTime);
+				_emptyDestroyTask = ThreadPoolManager.getInstance().schedule(this::destroy, emptyTime);
 			}
 		}
 	}
@@ -804,7 +788,7 @@ public final class Instance implements IIdentifiable, INamable
 		}
 		
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("INSERT IGNORE INTO character_instance_time (charId,instanceId,time) VALUES (?,?,?)"))
+			 PreparedStatement ps = con.prepareStatement("INSERT IGNORE INTO character_instance_time (charId,instanceId,time) VALUES (?,?,?)"))
 		{
 			// Save to database
 			for (L2PcInstance player : _allowed)

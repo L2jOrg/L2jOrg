@@ -1,66 +1,45 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
-package org.l2j.gameserver.mobius.gameserver.model.actor;
+ackage org.l2j.gameserver.mobius.gameserver.model.actor;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ai.CtrlEvent;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.ai.L2AttackableAI;
-import com.l2jmobius.gameserver.ai.L2CharacterAI;
-import com.l2jmobius.gameserver.data.xml.impl.ExtendDropData;
-import com.l2jmobius.gameserver.datatables.EventDroplist;
-import com.l2jmobius.gameserver.datatables.EventDroplist.DateDrop;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.enums.DropType;
-import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.enums.Team;
-import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import com.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
-import com.l2jmobius.gameserver.instancemanager.WalkingManager;
-import com.l2jmobius.gameserver.model.*;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ServitorInstance;
-import com.l2jmobius.gameserver.model.actor.status.AttackableStatus;
-import com.l2jmobius.gameserver.model.actor.tasks.attackable.CommandChannelTimer;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.entity.Hero;
-import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableAggroRangeEnter;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableAttack;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableKill;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.CommonSkill;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.SkillCaster;
-import com.l2jmobius.gameserver.model.stats.Stats;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
-import com.l2jmobius.gameserver.network.serverpackets.ExMagicAttackInfo;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.Config;
+import org.l2j.gameserver.mobius.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.mobius.gameserver.ai.L2AttackableAI;
+import org.l2j.gameserver.mobius.gameserver.ai.L2CharacterAI;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.ExtendDropData;
+import org.l2j.gameserver.mobius.gameserver.datatables.EventDroplist;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
+import org.l2j.gameserver.mobius.gameserver.enums.DropType;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceType;
+import org.l2j.gameserver.mobius.gameserver.enums.Team;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.CursedWeaponsManager;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.PcCafePointsManager;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.WalkingManager;
+import org.l2j.gameserver.mobius.gameserver.model.*;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2GrandBossInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2MonsterInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2ServitorInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.status.AttackableStatus;
+import org.l2j.gameserver.mobius.gameserver.model.actor.tasks.attackable.CommandChannelTimer;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.npc.OnAttackableAggroRangeEnter;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.npc.OnAttackableAttack;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.npc.OnAttackableKill;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.CommonSkill;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.model.skills.SkillCaster;
+import org.l2j.gameserver.mobius.gameserver.model.stats.Stats;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.CreatureSay;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 import java.lang.ref.WeakReference;
 import java.util.*;

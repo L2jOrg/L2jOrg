@@ -1,34 +1,18 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.data.xml.impl.CastleData;
-import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.enums.ItemLocation;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2DefenderInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.model.holders.SiegeGuardHolder;
-import com.l2jmobius.gameserver.model.interfaces.IPositionable;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.CastleData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.mobius.gameserver.enums.ItemLocation;
+import org.l2j.gameserver.mobius.gameserver.model.L2Spawn;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2DefenderInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Castle;
+import org.l2j.gameserver.mobius.gameserver.model.holders.SiegeGuardHolder;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.IPositionable;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -57,8 +41,8 @@ public final class SiegeGuardManager
 	
 	private void load()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
-			ResultSet rs = con.createStatement().executeQuery("SELECT * FROM castle_siege_guards Where isHired = 1"))
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			 ResultSet rs = con.createStatement().executeQuery("SELECT * FROM castle_siege_guards Where isHired = 1"))
 		{
 			while (rs.next())
 			{
@@ -158,7 +142,7 @@ public final class SiegeGuardManager
 		final SiegeGuardHolder holder = getSiegeGuardByItem(castle.getResidenceId(), itemId);
 		if (holder != null)
 		{
-			try (Connection con = DatabaseFactory.getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement statement = con.prepareStatement("Insert Into castle_siege_guards (castleId, npcId, x, y, z, heading, respawnDelay, isHired) Values (?, ?, ?, ?, ?, ?, ?, ?)"))
 			{
 				statement.setInt(1, castle.getResidenceId());

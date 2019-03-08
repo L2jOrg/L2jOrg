@@ -1,27 +1,11 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ItemsAutoDestroy;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.gameserver.mobius.gameserver.Config;
+import org.l2j.gameserver.mobius.gameserver.ItemsAutoDestroy;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
 
 import java.sql.*;
 import java.util.Set;
@@ -43,7 +27,7 @@ public final class ItemsOnGroundManager implements Runnable
 	{
 		if (Config.SAVE_DROPPED_ITEM_INTERVAL > 0)
 		{
-			ThreadPool.scheduleAtFixedRate(this, Config.SAVE_DROPPED_ITEM_INTERVAL, Config.SAVE_DROPPED_ITEM_INTERVAL);
+			ThreadPoolManager.getInstance().scheduleAtFixedRate(this, Config.SAVE_DROPPED_ITEM_INTERVAL, Config.SAVE_DROPPED_ITEM_INTERVAL);
 		}
 		load();
 	}
@@ -76,8 +60,8 @@ public final class ItemsOnGroundManager implements Runnable
 				str = "UPDATE itemsonground SET drop_time = ? WHERE drop_time = -1";
 			}
 			
-			try (Connection con = DatabaseFactory.getConnection();
-				PreparedStatement ps = con.prepareStatement(str))
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
+				 PreparedStatement ps = con.prepareStatement(str))
 			{
 				ps.setLong(1, System.currentTimeMillis());
 				ps.execute();
@@ -89,7 +73,7 @@ public final class ItemsOnGroundManager implements Runnable
 		}
 		
 		// Add items to world
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable FROM itemsonground"))
 		{
 			int count = 0;

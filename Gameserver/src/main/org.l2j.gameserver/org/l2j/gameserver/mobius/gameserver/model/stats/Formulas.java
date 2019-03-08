@@ -1,48 +1,35 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.model.stats;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.data.xml.impl.HitConditionBonusData;
-import com.l2jmobius.gameserver.data.xml.impl.KarmaData;
-import com.l2jmobius.gameserver.enums.*;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
-import com.l2jmobius.gameserver.model.cubic.CubicInstance;
-import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.interfaces.ILocational;
-import com.l2jmobius.gameserver.model.items.L2Armor;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.type.ArmorType;
-import com.l2jmobius.gameserver.model.items.type.WeaponType;
-import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.SkillCaster;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.util.CommonUtil;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.Config;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.HitConditionBonusData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.KarmaData;
+import org.l2j.gameserver.mobius.gameserver.enums.AttributeType;
+import org.l2j.gameserver.mobius.gameserver.enums.DispelSlotType;
+import org.l2j.gameserver.mobius.gameserver.enums.Position;
+import org.l2j.gameserver.mobius.gameserver.enums.ShotType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2StaticObjectInstance;
+import org.l2j.gameserver.mobius.gameserver.model.cubic.CubicInstance;
+import org.l2j.gameserver.mobius.gameserver.model.effects.EffectFlag;
+import org.l2j.gameserver.mobius.gameserver.model.effects.L2EffectType;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.ILocational;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Armor;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.ArmorType;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.mobius.gameserver.model.skills.AbnormalType;
+import org.l2j.gameserver.mobius.gameserver.model.skills.BuffInfo;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.model.skills.SkillCaster;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -513,7 +500,7 @@ public final class Formulas
 	public static byte calcShldUse(L2Character attacker, L2Character target, boolean sendSysMsg)
 	{
 		final L2Item item = target.getSecondaryWeaponItem();
-		if ((item == null) || !(item instanceof L2Armor) || (((L2Armor) item).getItemType() == ArmorType.SIGIL))
+		if (!(item instanceof L2Armor) || (((L2Armor) item).getItemType() == ArmorType.SIGIL))
 		{
 			return 0;
 		}
