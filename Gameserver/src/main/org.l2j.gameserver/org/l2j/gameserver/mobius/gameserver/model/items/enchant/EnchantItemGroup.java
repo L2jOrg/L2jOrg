@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.items.enchant;
 
-import com.l2jmobius.gameserver.model.holders.RangeChanceHolder;
+import org.l2j.gameserver.mobius.gameserver.model.holders.RangeChanceHolder;
 
 import java.util.ArrayList;
 import java.util.List;

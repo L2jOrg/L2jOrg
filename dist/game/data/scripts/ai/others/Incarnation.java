@@ -16,19 +16,19 @@
  */
 package ai.others;
 
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import com.l2jmobius.gameserver.model.events.annotations.Id;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureAttack;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSkillFinishCast;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSpawn;
-import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2j.gameserver.mobius.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.ListenerRegisterType;
+import org.l2j.gameserver.mobius.gameserver.model.events.annotations.Id;
+import org.l2j.gameserver.mobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2j.gameserver.mobius.gameserver.model.events.annotations.RegisterType;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.OnCreatureAttack;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.OnCreatureSkillFinishCast;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.npc.OnNpcSpawn;
+import org.l2j.gameserver.mobius.gameserver.model.events.listeners.ConsumerEventListener;
 
 import ai.AbstractNpcAI;
 

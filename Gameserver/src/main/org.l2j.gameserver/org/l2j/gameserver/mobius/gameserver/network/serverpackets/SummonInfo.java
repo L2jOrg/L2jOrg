@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.enums.NpcInfoType;
-import com.l2jmobius.gameserver.enums.Team;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.enums.NpcInfoType;
+import org.l2j.gameserver.mobius.gameserver.enums.Team;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.AbnormalVisualEffect;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 import java.util.Set;
 

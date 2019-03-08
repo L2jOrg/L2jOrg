@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.itemcontainer;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.enums.ItemLocation;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.enums.ItemLocation;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -112,7 +112,7 @@ public class Mail extends ItemContainer
 	@Override
 	public void restore()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM items WHERE owner_id=? AND loc=? AND loc_data=?"))
 		{
 			statement.setInt(1, _ownerId);

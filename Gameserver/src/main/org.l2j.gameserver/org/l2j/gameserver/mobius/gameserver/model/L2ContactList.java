@@ -124,7 +124,7 @@ public class L2ContactList
 			}
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(QUERY_ADD))
 		{
 			statement.setInt(1, activeChar.getObjectId());
@@ -161,7 +161,7 @@ public class L2ContactList
 		
 		_contacts.remove(name);
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(QUERY_REMOVE))
 		{
 			statement.setInt(1, activeChar.getObjectId());

@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.events.listeners;
 
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.ListenersContainer;
-import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import com.l2jmobius.gameserver.model.events.returns.AbstractEventReturn;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.ListenersContainer;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.IBaseEvent;
+import org.l2j.gameserver.mobius.gameserver.model.events.returns.AbstractEventReturn;
 
 import java.util.function.Consumer;
 

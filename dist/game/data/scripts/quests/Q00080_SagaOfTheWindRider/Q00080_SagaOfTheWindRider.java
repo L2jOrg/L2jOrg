@@ -19,15 +19,15 @@ package quests.Q00080_SagaOfTheWindRider;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.base.ClassId;
+import org.l2j.gameserver.mobius.gameserver.model.holders.NpcLogListHolder;
+import org.l2j.gameserver.mobius.gameserver.model.quest.Quest;
+import org.l2j.gameserver.mobius.gameserver.model.quest.QuestState;
+import org.l2j.gameserver.mobius.gameserver.model.quest.State;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.MagicSkillUse;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 /**
  * @author QuangNguyen

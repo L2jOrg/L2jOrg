@@ -16,14 +16,14 @@
  */
 package handlers.admincommandhandlers;
 
-import com.l2jmobius.gameserver.datatables.SpawnTable;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.instancemanager.DBSpawnManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.mobius.gameserver.datatables.SpawnTable;
+import org.l2j.gameserver.mobius.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.DBSpawnManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.L2Spawn;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - delete = deletes target

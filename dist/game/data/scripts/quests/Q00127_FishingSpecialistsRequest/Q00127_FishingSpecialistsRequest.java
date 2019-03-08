@@ -16,11 +16,11 @@
  */
 package quests.Q00127_FishingSpecialistsRequest;
 
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.quest.Quest;
+import org.l2j.gameserver.mobius.gameserver.model.quest.QuestState;
 
 /**
  * Fishing Specialist's Request (127)

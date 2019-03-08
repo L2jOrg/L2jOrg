@@ -16,15 +16,15 @@
  */
 package org.l2j.gameserver.mobius.gameserver.ai;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2DefenderInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.Skill;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2DefenderInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
 
 /**
  * @author mkizub
@@ -89,7 +89,7 @@ public class L2DoorAI extends L2CharacterAI
 	@Override
 	protected void onEvtAttacked(L2Character attacker)
 	{
-		ThreadPool.execute(new onEventAttackedDoorTask((L2DoorInstance) _actor, attacker));
+		ThreadPoolManager.getInstance().execute(new onEventAttackedDoorTask((L2DoorInstance) _actor, attacker));
 	}
 	
 	@Override

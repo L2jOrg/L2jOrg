@@ -17,21 +17,21 @@
 package handlers.actionhandlers;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.handler.IActionHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.L2Event;
-import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.MoveToPawn;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceType;
+import org.l2j.gameserver.mobius.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.mobius.gameserver.handler.IActionHandler;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.entity.L2Event;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.MoveToPawn;
 
 public class L2NpcAction implements IActionHandler
 {

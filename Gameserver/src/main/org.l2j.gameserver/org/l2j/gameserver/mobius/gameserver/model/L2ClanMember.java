@@ -228,7 +228,7 @@ public class L2ClanMember
 	 */
 	public void updatePledgeType()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			 PreparedStatement ps = con.prepareStatement("UPDATE characters SET subpledge=? WHERE charId=?"))
 		{
 			ps.setLong(1, _pledgeType);
@@ -273,7 +273,7 @@ public class L2ClanMember
 	 */
 	public void updatePowerGrade()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE characters SET power_grade=? WHERE charId=?"))
 		{
 			ps.setLong(1, _powerGrade);
@@ -784,7 +784,7 @@ public class L2ClanMember
 	 */
 	public void saveApprenticeAndSponsor(int apprentice, int sponsor)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE characters SET apprentice=?,sponsor=? WHERE charId=?"))
 		{
 			ps.setInt(1, apprentice);

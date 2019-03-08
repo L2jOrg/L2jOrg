@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.ai;
 
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.VehicleDeparture;
-import com.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
-import com.l2jmobius.gameserver.network.serverpackets.VehicleStarted;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2BoatInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.VehicleDeparture;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.VehicleInfo;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.VehicleStarted;
 
 /**
  * @author DS

@@ -5,6 +5,7 @@ import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.mobius.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.mobius.gameserver.model.stats.Stats;
 

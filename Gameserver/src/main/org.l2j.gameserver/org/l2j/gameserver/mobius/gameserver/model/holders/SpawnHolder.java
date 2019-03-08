@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.holders;
 
-import com.l2jmobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
 
 /**
  * @author St3eT

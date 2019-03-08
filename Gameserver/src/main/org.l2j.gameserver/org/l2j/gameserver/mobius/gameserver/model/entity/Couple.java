@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.entity;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.idfactory.IdFactory;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -45,7 +45,7 @@ public class Couple
 	{
 		_Id = coupleId;
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM mods_wedding WHERE id = ?"))
 		{
 			ps.setInt(1, _Id);
@@ -85,7 +85,7 @@ public class Couple
 		_weddingDate = Calendar.getInstance();
 		_weddingDate.setTimeInMillis(Calendar.getInstance().getTimeInMillis());
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO mods_wedding (id, player1Id, player2Id, married, affianceDate, weddingDate) VALUES (?, ?, ?, ?, ?, ?)"))
 		{
 			_Id = IdFactory.getInstance().getNextId();
@@ -105,7 +105,7 @@ public class Couple
 	
 	public void marry()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE mods_wedding set married = ?, weddingDate = ? where id = ?"))
 		{
 			ps.setBoolean(1, true);
@@ -123,7 +123,7 @@ public class Couple
 	
 	public void divorce()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM mods_wedding WHERE id=?"))
 		{
 			ps.setInt(1, _Id);

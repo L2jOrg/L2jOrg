@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.base;
 
-import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
+import org.l2j.gameserver.mobius.gameserver.enums.Race;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.IIdentifiable;
 
 import java.util.HashSet;
 import java.util.Set;

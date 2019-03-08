@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.OnDayNightChange;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.OnDayNightChange;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.Calendar;
 import java.util.Set;

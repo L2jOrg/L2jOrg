@@ -19,11 +19,11 @@ package village_master.FirstClassTransferTalk;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2VillageMasterFighterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2VillageMasterPriestInstance;
+import org.l2j.gameserver.mobius.gameserver.enums.Race;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2VillageMasterFighterInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2VillageMasterPriestInstance;
 
 import ai.AbstractNpcAI;
 

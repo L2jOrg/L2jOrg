@@ -21,25 +21,25 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.skills.CommonSkill;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.SkillCaster;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.GrandBossManager;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2GrandBossInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2MonsterInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.holders.SkillHolder;
+import org.l2j.gameserver.mobius.gameserver.model.skills.CommonSkill;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.model.skills.SkillCaster;
+import org.l2j.gameserver.mobius.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.MagicSkillUse;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.PlaySound;
 
 import ai.AbstractNpcAI;
 
@@ -258,7 +258,7 @@ public final class QueenAnt extends AbstractNpcAI
 				{
 					((L2MonsterInstance) npc).getMinionList().spawnMinions(npc.getParameters().getMinionList("Privates"));
 				}
-				_task = ThreadPool.scheduleAtFixedRate(new QueenAntTask(), 5 * 1000, 5 * 1000);
+				_task = ThreadPoolManager.getInstance().scheduleAtFixedRate(new QueenAntTask(), 5 * 1000, 5 * 1000);
 				break;
 			}
 		}

@@ -17,30 +17,30 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.StartRotation;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.StartRotation;
 
 /**
  * This class ...
  * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class StartRotating implements IClientIncomingPacket
+public final class StartRotating extends IClientIncomingPacket
 {
 	private int _degree;
 	private int _side;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_degree = packet.readD();
-		_side = packet.readD();
+		_degree = packet.getInt();
+		_side = packet.getInt();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		if (!Config.ENABLE_KEYBOARD_MOVEMENT)
 		{

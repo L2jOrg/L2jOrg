@@ -23,21 +23,21 @@ import java.util.List;
 import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 
-import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.ClanHall;
-import com.l2jmobius.gameserver.model.html.PageBuilder;
-import com.l2jmobius.gameserver.model.html.PageResult;
-import com.l2jmobius.gameserver.model.html.formatters.BypassParserFormatter;
-import com.l2jmobius.gameserver.model.html.pagehandlers.NextPrevPageHandler;
-import com.l2jmobius.gameserver.model.html.styles.ButtonsStyle;
-import com.l2jmobius.gameserver.model.residences.ResidenceFunction;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.gameserver.util.BypassParser;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.mobius.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.entity.ClanHall;
+import org.l2j.gameserver.mobius.gameserver.model.html.PageBuilder;
+import org.l2j.gameserver.mobius.gameserver.model.html.PageResult;
+import org.l2j.gameserver.mobius.gameserver.model.html.formatters.BypassParserFormatter;
+import org.l2j.gameserver.mobius.gameserver.model.html.pagehandlers.NextPrevPageHandler;
+import org.l2j.gameserver.mobius.gameserver.model.html.styles.ButtonsStyle;
+import org.l2j.gameserver.mobius.gameserver.model.residences.ResidenceFunction;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.mobius.gameserver.util.BypassParser;
 
 /**
  * Clan Hall admin commands.

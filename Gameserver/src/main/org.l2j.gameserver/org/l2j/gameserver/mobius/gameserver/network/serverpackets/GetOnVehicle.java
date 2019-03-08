@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Maktakien

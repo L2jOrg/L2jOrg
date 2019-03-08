@@ -1,52 +1,36 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.enums.CharacterDeleteFailType;
-import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
-import com.l2jmobius.gameserver.model.events.Containers;
-import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerDelete;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.CharDeleteFail;
-import com.l2jmobius.gameserver.network.serverpackets.CharDeleteSuccess;
-import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
+import org.l2j.gameserver.mobius.gameserver.enums.CharacterDeleteFailType;
+import org.l2j.gameserver.mobius.gameserver.model.CharSelectInfoPackage;
+import org.l2j.gameserver.mobius.gameserver.model.events.Containers;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerDelete;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.CharDeleteFail;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.CharDeleteSuccess;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.CharSelectionInfo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Level;
+import java.nio.ByteBuffer;
 
 /**
  * This class ...
  * @version $Revision: 1.8.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class CharacterDelete implements IClientIncomingPacket
-{
+public final class CharacterDelete extends IClientIncomingPacket {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(CharacterDelete.class);
 	// cd
 	private int _charSlot;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_charSlot = packet.readD();
-		return true;
+		_charSlot = packet.getInt();
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		// if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterDelete"))
 		// {
@@ -75,7 +59,7 @@ public final class CharacterDelete implements IClientIncomingPacket
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, "Error:", e);
+			LOGGER.error(e.getLocalizedMessage(), e);
 		}
 		
 		final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1, 0);

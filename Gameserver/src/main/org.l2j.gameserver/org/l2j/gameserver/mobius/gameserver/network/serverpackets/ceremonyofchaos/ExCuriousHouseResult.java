@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets.ceremonyofchaos;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.enums.CeremonyOfChaosResult;
-import com.l2jmobius.gameserver.instancemanager.CeremonyOfChaosManager;
-import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
-import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.enums.CeremonyOfChaosResult;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.CeremonyOfChaosManager;
+import org.l2j.gameserver.mobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author Sdw

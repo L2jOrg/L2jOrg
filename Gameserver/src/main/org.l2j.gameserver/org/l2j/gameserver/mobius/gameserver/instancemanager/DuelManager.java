@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.Duel;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Duel;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

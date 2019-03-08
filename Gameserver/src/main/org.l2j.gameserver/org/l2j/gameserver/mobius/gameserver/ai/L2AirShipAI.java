@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.ai;
 
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2AirShipInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.ExMoveToLocationAirShip;
-import com.l2jmobius.gameserver.network.serverpackets.ExStopMoveAirShip;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2AirShipInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExMoveToLocationAirShip;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExStopMoveAirShip;
 
 /**
  * @author DS

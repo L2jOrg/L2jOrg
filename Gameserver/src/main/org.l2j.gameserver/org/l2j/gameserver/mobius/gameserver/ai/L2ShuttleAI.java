@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.ai;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ShuttleInstance;
-import com.l2jmobius.gameserver.network.serverpackets.shuttle.ExShuttleMove;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2ShuttleInstance;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.shuttle.ExShuttleMove;
 
 /**
  * @author UnAfraid

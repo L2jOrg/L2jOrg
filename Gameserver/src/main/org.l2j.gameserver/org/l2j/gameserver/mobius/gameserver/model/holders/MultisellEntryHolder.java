@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.holders;
 
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
 
 import java.util.Collections;
 import java.util.List;

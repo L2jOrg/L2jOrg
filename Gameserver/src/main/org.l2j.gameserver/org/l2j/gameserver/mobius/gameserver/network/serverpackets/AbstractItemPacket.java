@@ -16,16 +16,16 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.enums.AttributeType;
-import com.l2jmobius.gameserver.enums.ItemListType;
-import com.l2jmobius.gameserver.model.ItemInfo;
-import com.l2jmobius.gameserver.model.TradeItem;
-import com.l2jmobius.gameserver.model.buylist.Product;
-import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
-import com.l2jmobius.gameserver.model.items.L2WarehouseItem;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.enums.AttributeType;
+import org.l2j.gameserver.mobius.gameserver.enums.ItemListType;
+import org.l2j.gameserver.mobius.gameserver.model.ItemInfo;
+import org.l2j.gameserver.mobius.gameserver.model.TradeItem;
+import org.l2j.gameserver.mobius.gameserver.model.buylist.Product;
+import org.l2j.gameserver.mobius.gameserver.model.ensoul.EnsoulOption;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2WarehouseItem;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
 
 /**
  * @author UnAfraid

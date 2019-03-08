@@ -17,30 +17,30 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Party.MessageType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.request.PartyRequest;
-import com.l2jmobius.gameserver.model.matching.MatchingRoom;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.JoinParty;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.model.L2Party;
+import org.l2j.gameserver.mobius.gameserver.model.L2Party.MessageType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.request.PartyRequest;
+import org.l2j.gameserver.mobius.gameserver.model.matching.MatchingRoom;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.JoinParty;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestAnswerJoinParty implements IClientIncomingPacket
+public final class RequestAnswerJoinParty extends IClientIncomingPacket
 {
 	private int _response;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_response = packet.readD();
+		_response = packet.getInt();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)

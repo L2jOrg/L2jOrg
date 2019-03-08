@@ -16,10 +16,10 @@
  */
 package handlers.admincommandhandlers;
 
-import com.l2jmobius.gameserver.handler.AdminCommandHandler;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.mobius.gameserver.handler.AdminCommandHandler;
+import org.l2j.gameserver.mobius.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.util.BuilderUtil;
 
 /**
  * @author poltomb

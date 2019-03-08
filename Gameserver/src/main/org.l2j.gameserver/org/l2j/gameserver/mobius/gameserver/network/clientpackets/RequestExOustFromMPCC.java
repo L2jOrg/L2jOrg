@@ -16,30 +16,30 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * D0 0F 00 5A 00 77 00 65 00 72 00 67 00 00 00
  * @author -Wooden-
  */
-public final class RequestExOustFromMPCC implements IClientIncomingPacket
+public final class RequestExOustFromMPCC extends IClientIncomingPacket
 {
 	private String _name;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_name = packet.readS();
+		_name = readString(packet);
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance target = L2World.getInstance().getPlayer(_name);
 		final L2PcInstance activeChar = client.getActiveChar();

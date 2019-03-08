@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.sql.impl;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Crest;
-import com.l2jmobius.gameserver.model.L2Crest.CrestType;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.L2Crest;
+import org.l2j.gameserver.mobius.gameserver.model.L2Crest.CrestType;
 
 import java.sql.*;
 import java.util.HashSet;
@@ -68,7 +68,7 @@ public final class CrestTable
 			}
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement statement = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
 			ResultSet rs = statement.executeQuery("SELECT `crest_id`, `data`, `type` FROM `crests` ORDER BY `crest_id` DESC"))
 		{
@@ -150,7 +150,7 @@ public final class CrestTable
 	 */
 	public L2Crest createCrest(byte[] data, CrestType crestType)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO `crests`(`crest_id`, `data`, `type`) VALUES(?, ?, ?)"))
 		{
 			final L2Crest crest = new L2Crest(_nextId.getAndIncrement(), data, crestType);
@@ -183,7 +183,7 @@ public final class CrestTable
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM `crests` WHERE `crest_id` = ?"))
 		{
 			statement.setInt(1, crestId);

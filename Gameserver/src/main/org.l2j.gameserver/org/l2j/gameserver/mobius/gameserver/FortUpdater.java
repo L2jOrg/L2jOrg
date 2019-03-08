@@ -17,9 +17,9 @@
 package org.l2j.gameserver.mobius.gameserver;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.entity.Fort;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Fort;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

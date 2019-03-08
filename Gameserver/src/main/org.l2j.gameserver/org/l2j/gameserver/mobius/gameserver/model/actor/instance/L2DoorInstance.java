@@ -2,6 +2,7 @@ package org.l2j.gameserver.mobius.gameserver.model.actor.instance;
 
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.mobius.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.mobius.gameserver.ai.L2DoorAI;
 import org.l2j.gameserver.mobius.gameserver.data.xml.impl.DoorData;
@@ -17,6 +18,7 @@ import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.mobius.gameserver.model.actor.stat.DoorStat;
 import org.l2j.gameserver.mobius.gameserver.model.actor.status.DoorStatus;
 import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2DoorTemplate;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Castle;
 import org.l2j.gameserver.mobius.gameserver.model.entity.Fort;
 import org.l2j.gameserver.mobius.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.mobius.gameserver.model.items.L2Weapon;
@@ -90,7 +92,7 @@ public final class L2DoorInstance extends L2Character
         {
             delay += Rnd.get(getTemplate().getRandomTime());
         }
-        ThreadPool.schedule(new TimerOpen(), delay * 1000);
+        ThreadPoolManager.getInstance().schedule(new TimerOpen(), delay * 1000);
     }
 
     @Override
@@ -629,7 +631,7 @@ public final class L2DoorInstance extends L2Character
             _autoCloseTask = null;
             oldTask.cancel(false);
         }
-        _autoCloseTask = ThreadPool.schedule(new AutoClose(), getTemplate().getCloseTime() * 1000);
+        _autoCloseTask = ThreadPoolManager.getInstance().schedule(new AutoClose(), getTemplate().getCloseTime() * 1000);
     }
 
     class AutoClose implements Runnable
@@ -663,7 +665,7 @@ public final class L2DoorInstance extends L2Character
             {
                 delay += Rnd.get(getTemplate().getRandomTime());
             }
-            ThreadPool.schedule(this, delay * 1000);
+            ThreadPoolManager.getInstance().schedule(this, delay * 1000);
         }
     }
 

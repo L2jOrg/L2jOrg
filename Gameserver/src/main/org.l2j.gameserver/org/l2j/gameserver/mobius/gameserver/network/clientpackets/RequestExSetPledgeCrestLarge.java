@@ -16,40 +16,40 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Crest;
-import com.l2jmobius.gameserver.model.L2Crest.CrestType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.CrestTable;
+import org.l2j.gameserver.mobius.gameserver.model.ClanPrivilege;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.L2Crest;
+import org.l2j.gameserver.mobius.gameserver.model.L2Crest.CrestType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 
 /**
  * Format : chdb c (id) 0xD0 h (subid) 0x11 d data size b raw data (picture i think ;) )
  * @author -Wooden-
  */
-public final class RequestExSetPledgeCrestLarge implements IClientIncomingPacket
+public final class RequestExSetPledgeCrestLarge extends IClientIncomingPacket
 {
 	private int _length;
 	private byte[] _data = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_length = packet.readD();
+		_length = packet.getInt();
 		if (_length > 2176)
 		{
 			return false;
 		}
 		
-		_data = packet.readB(_length);
+		_data = packet.get(new byte[_length]);
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)

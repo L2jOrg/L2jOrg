@@ -16,11 +16,11 @@
  */
 package handlers.actionshifthandlers;
 
-import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.handler.AdminCommandHandler;
-import com.l2jmobius.gameserver.handler.IActionShiftHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceType;
+import org.l2j.gameserver.mobius.gameserver.handler.AdminCommandHandler;
+import org.l2j.gameserver.mobius.gameserver.handler.IActionShiftHandler;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 public class L2SummonActionShift implements IActionShiftHandler
 {

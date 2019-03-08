@@ -17,16 +17,16 @@
 package org.l2j.gameserver.mobius.gameserver.data.sql.impl;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.instancemanager.PlayerCountManager;
-import com.l2jmobius.gameserver.model.L2ManufactureItem;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.TradeItem;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.SellBuffHolder;
-import com.l2jmobius.gameserver.network.Disconnection;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.PlayerCountManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2ManufactureItem;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.TradeItem;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.holders.SellBuffHolder;
+import org.l2j.gameserver.mobius.gameserver.network.Disconnection;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -56,7 +56,7 @@ public class OfflineTradersTable
 	
 	public void storeOffliners()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE);
 			PreparedStatement stm2 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS);
 			PreparedStatement stm3 = con.prepareStatement(SAVE_OFFLINE_STATUS);
@@ -173,7 +173,7 @@ public class OfflineTradersTable
 	{
 		LOGGER.info(getClass().getSimpleName() + ": Loading offline traders...");
 		int nTraders = 0;
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement stm = con.createStatement();
 			ResultSet rs = stm.executeQuery(LOAD_OFFLINE_STATUS))
 		{
@@ -329,7 +329,7 @@ public class OfflineTradersTable
 	
 	public static synchronized void onTransaction(L2PcInstance trader, boolean finished, boolean firstCall)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS_PLAYER);
 			PreparedStatement stm2 = con.prepareStatement(CLEAR_OFFLINE_TABLE_PLAYER);
 			PreparedStatement stm3 = con.prepareStatement(SAVE_ITEMS);
@@ -453,7 +453,7 @@ public class OfflineTradersTable
 	{
 		PlayerCountManager.getInstance().decOfflineTradeCount();
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS_PLAYER);
 			PreparedStatement stm2 = con.prepareStatement(CLEAR_OFFLINE_TABLE_PLAYER))
 		{

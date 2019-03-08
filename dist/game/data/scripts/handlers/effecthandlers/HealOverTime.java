@@ -16,12 +16,12 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.serverpackets.ExRegenMax;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.effects.AbstractEffect;
+import org.l2j.gameserver.mobius.gameserver.model.skills.AbnormalType;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExRegenMax;
 
 /**
  * Heal Over Time effect implementation.

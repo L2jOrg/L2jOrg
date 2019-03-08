@@ -16,31 +16,31 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.AskJoinPledge;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.FakePlayerData;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.AskJoinPledge;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * This class ...
  * @version $Revision: 1.3.4.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestJoinPledge implements IClientIncomingPacket
+public final class RequestJoinPledge extends IClientIncomingPacket
 {
 	private int _target;
 	private int _pledgeType;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_target = packet.readD();
-		_pledgeType = packet.readD();
+		_target = packet.getInt();
+		_pledgeType = packet.getInt();
 		return true;
 	}
 	
@@ -56,7 +56,7 @@ public final class RequestJoinPledge implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
@@ -80,7 +80,7 @@ public final class RequestJoinPledge implements IClientIncomingPacket
 			{
 				if (!activeChar.isProcessingRequest())
 				{
-					ThreadPool.schedule(() -> scheduleDeny(activeChar, activeChar.getTarget().getName()), 10000);
+					ThreadPoolManager.getInstance().schedule(() -> scheduleDeny(activeChar, activeChar.getTarget().getName()), 10000);
 					activeChar.blockRequest();
 				}
 				else

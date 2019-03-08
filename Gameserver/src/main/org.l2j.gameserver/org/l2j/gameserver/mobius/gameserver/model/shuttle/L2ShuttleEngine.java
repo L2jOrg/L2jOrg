@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.shuttle;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.data.xml.impl.DoorData;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ShuttleInstance;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.DoorData;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2ShuttleInstance;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -64,7 +64,7 @@ public class L2ShuttleEngine implements Runnable
 					_shuttle.openDoor(0);
 					_shuttle.closeDoor(1);
 					_shuttle.broadcastShuttleInfo();
-					ThreadPool.schedule(this, DELAY);
+					ThreadPoolManager.getInstance().schedule(this, DELAY);
 					break;
 				}
 				case 1:
@@ -74,7 +74,7 @@ public class L2ShuttleEngine implements Runnable
 					_shuttle.closeDoor(0);
 					_shuttle.closeDoor(1);
 					_shuttle.broadcastShuttleInfo();
-					ThreadPool.schedule(this, 1000);
+					ThreadPoolManager.getInstance().schedule(this, 1000);
 					break;
 				}
 				case 2:
@@ -89,7 +89,7 @@ public class L2ShuttleEngine implements Runnable
 					_shuttle.openDoor(1);
 					_shuttle.closeDoor(0);
 					_shuttle.broadcastShuttleInfo();
-					ThreadPool.schedule(this, DELAY);
+					ThreadPoolManager.getInstance().schedule(this, DELAY);
 					break;
 				}
 				case 4:
@@ -99,7 +99,7 @@ public class L2ShuttleEngine implements Runnable
 					_shuttle.closeDoor(0);
 					_shuttle.closeDoor(1);
 					_shuttle.broadcastShuttleInfo();
-					ThreadPool.schedule(this, 1000);
+					ThreadPoolManager.getInstance().schedule(this, 1000);
 					break;
 				}
 				case 5:

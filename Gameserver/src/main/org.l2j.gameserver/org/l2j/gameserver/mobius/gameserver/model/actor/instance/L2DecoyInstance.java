@@ -16,21 +16,21 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
-import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
-import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.PcCondOverride;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.CharInfo;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.DecayTaskManager;
 
 import java.util.concurrent.Future;
 import java.util.logging.Level;
@@ -53,8 +53,8 @@ public class L2DecoyInstance extends L2Character
 		_totalLifeTime = totalLifeTime;
 		_timeRemaining = _totalLifeTime;
 		final int skilllevel = getTemplate().getDisplayId() - 13070;
-		_DecoyLifeTask = ThreadPool.scheduleAtFixedRate(new DecoyLifetime(_owner, this), 1000, 1000);
-		_HateSpam = ThreadPool.scheduleAtFixedRate(new HateSpam(this, SkillData.getInstance().getSkill(5272, skilllevel)), 2000, 5000);
+		_DecoyLifeTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new DecoyLifetime(_owner, this), 1000, 1000);
+		_HateSpam = ThreadPoolManager.getInstance().scheduleAtFixedRate(new HateSpam(this, SkillData.getInstance().getSkill(5272, skilllevel)), 2000, 5000);
 	}
 	
 	@Override

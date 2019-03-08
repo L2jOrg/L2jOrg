@@ -19,10 +19,10 @@ package handlers.voicedcommandhandlers;
 import java.text.SimpleDateFormat;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import com.l2jmobius.gameserver.instancemanager.PremiumManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.mobius.gameserver.handler.IVoicedCommandHandler;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.PremiumManager;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class Premium implements IVoicedCommandHandler
 {

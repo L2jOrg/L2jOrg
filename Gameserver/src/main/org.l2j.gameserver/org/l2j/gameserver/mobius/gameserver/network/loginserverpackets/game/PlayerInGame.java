@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.loginserverpackets.game;
 
-import com.l2jmobius.commons.network.BaseSendablePacket;
+import org.l2j.commons.network.BaseSendablePacket;
 
 import java.util.List;
 

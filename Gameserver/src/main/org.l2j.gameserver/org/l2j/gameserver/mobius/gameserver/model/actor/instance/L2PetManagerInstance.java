@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.gameserver.util.Evolve;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.mobius.gameserver.util.Evolve;
 
 public class L2PetManagerInstance extends L2MerchantInstance
 {

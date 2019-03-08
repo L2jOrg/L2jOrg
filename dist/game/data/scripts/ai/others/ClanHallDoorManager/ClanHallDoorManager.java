@@ -18,10 +18,10 @@ package ai.others.ClanHallDoorManager;
 
 import java.util.StringTokenizer;
 
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.ClanHall;
+import org.l2j.gameserver.mobius.gameserver.model.ClanPrivilege;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.entity.ClanHall;
 
 import ai.AbstractNpcAI;
 

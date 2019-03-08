@@ -16,36 +16,36 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.model.ClanPrivilege;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.L2ClanMember;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Format: (ch) dSS
  * @author -Wooden-
  */
-public final class RequestPledgeSetAcademyMaster implements IClientIncomingPacket
+public final class RequestPledgeSetAcademyMaster extends IClientIncomingPacket
 {
 	private String _currPlayerName;
 	private int _set; // 1 set, 0 delete
 	private String _targetPlayerName;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_set = packet.readD();
-		_currPlayerName = packet.readS();
-		_targetPlayerName = packet.readS();
+		_set = packet.getInt();
+		_currPlayerName = readString(packet);
+		_targetPlayerName = readString(packet);
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		final L2Clan clan = activeChar.getClan();

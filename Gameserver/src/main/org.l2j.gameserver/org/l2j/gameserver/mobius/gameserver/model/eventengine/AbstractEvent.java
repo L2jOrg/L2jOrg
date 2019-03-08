@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.eventengine;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.AbstractScript;
-import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.events.AbstractScript;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 import java.nio.file.Path;
 import java.util.Map;

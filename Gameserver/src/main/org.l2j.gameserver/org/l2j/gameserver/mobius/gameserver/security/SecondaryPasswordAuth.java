@@ -16,15 +16,15 @@
  */
 package org.l2j.gameserver.mobius.gameserver.security;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.LoginServerThread;
-import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
-import com.l2jmobius.gameserver.network.Disconnection;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordAck;
-import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordCheck;
-import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordVerify;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.LoginServerThread;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SecondaryAuthData;
+import org.l2j.gameserver.mobius.gameserver.network.Disconnection;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.Ex2ndPasswordAck;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.Ex2ndPasswordCheck;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.Ex2ndPasswordVerify;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
@@ -73,7 +73,7 @@ public class SecondaryPasswordAuth
 	{
 		String var = null;
 		String value = null;
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SELECT_PASSWORD))
 		{
 			statement.setString(1, _activeClient.getAccountName());
@@ -118,7 +118,7 @@ public class SecondaryPasswordAuth
 		
 		password = cryptPassword(password);
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(INSERT_PASSWORD))
 		{
 			statement.setString(1, _activeClient.getAccountName());
@@ -137,7 +137,7 @@ public class SecondaryPasswordAuth
 	
 	public boolean insertWrongAttempt(int attempts)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(INSERT_ATTEMPT))
 		{
 			statement.setString(1, _activeClient.getAccountName());
@@ -176,7 +176,7 @@ public class SecondaryPasswordAuth
 		
 		newPassword = cryptPassword(newPassword);
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(UPDATE_PASSWORD))
 		{
 			statement.setString(1, newPassword);

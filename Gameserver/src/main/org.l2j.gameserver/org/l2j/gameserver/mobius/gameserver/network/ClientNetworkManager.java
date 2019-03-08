@@ -17,7 +17,7 @@
 package org.l2j.gameserver.mobius.gameserver.network;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.NetworkManager;
+import org.l2j.commons.network.NetworkManager;
 
 /**
  * @author Nos

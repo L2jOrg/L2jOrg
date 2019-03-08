@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.items.enchant;
 
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.items.type.EtcItemType;
-import com.l2jmobius.gameserver.model.items.type.ItemType;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.EtcItemType;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.ItemType;
 
 /**
  * @author UnAfraid

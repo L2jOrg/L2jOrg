@@ -17,17 +17,17 @@
 package org.l2j.gameserver.mobius.gameserver.model.entity;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.cache.HtmCache;
-import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.datatables.SpawnTable;
-import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.PlayerEventHolder;
-import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.mobius.gameserver.cache.HtmCache;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.mobius.gameserver.datatables.SpawnTable;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.AntiFeedManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2Spawn;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.holders.PlayerEventHolder;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.MagicSkillUse;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

@@ -19,19 +19,19 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.cache.HtmCache;
-import com.l2jmobius.gameserver.data.sql.impl.AnnouncementsTable;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.announce.Announcement;
-import com.l2jmobius.gameserver.model.announce.AnnouncementType;
-import com.l2jmobius.gameserver.model.announce.AutoAnnouncement;
-import com.l2jmobius.gameserver.model.announce.IAnnouncement;
-import com.l2jmobius.gameserver.model.html.PageBuilder;
-import com.l2jmobius.gameserver.model.html.PageResult;
-import com.l2jmobius.gameserver.util.Broadcast;
-import com.l2jmobius.gameserver.util.BuilderUtil;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.gameserver.mobius.gameserver.cache.HtmCache;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.AnnouncementsTable;
+import org.l2j.gameserver.mobius.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.announce.Announcement;
+import org.l2j.gameserver.mobius.gameserver.model.announce.AnnouncementType;
+import org.l2j.gameserver.mobius.gameserver.model.announce.AutoAnnouncement;
+import org.l2j.gameserver.mobius.gameserver.model.announce.IAnnouncement;
+import org.l2j.gameserver.mobius.gameserver.model.html.PageBuilder;
+import org.l2j.gameserver.mobius.gameserver.model.html.PageResult;
+import org.l2j.gameserver.mobius.gameserver.util.Broadcast;
+import org.l2j.gameserver.mobius.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 /**
  * @author UnAfraid

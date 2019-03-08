@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.scripting.java;
 
-import com.l2jmobius.gameserver.scripting.AbstractScriptingEngine;
-import com.l2jmobius.gameserver.scripting.IExecutionContext;
+import org.l2j.gameserver.mobius.gameserver.scripting.AbstractScriptingEngine;
+import org.l2j.gameserver.mobius.gameserver.scripting.IExecutionContext;
 import org.openjavac.tools.JavaCompiler;
 import org.openjavac.tools.javac.api.JavacTool;
 

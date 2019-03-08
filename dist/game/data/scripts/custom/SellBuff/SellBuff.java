@@ -19,21 +19,21 @@ package custom.SellBuff;
 import java.util.StringTokenizer;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.handler.BypassHandler;
-import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import com.l2jmobius.gameserver.handler.VoicedCommandHandler;
-import com.l2jmobius.gameserver.instancemanager.SellBuffsManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.AbstractScript;
-import com.l2jmobius.gameserver.model.holders.SellBuffHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.handler.BypassHandler;
+import org.l2j.gameserver.mobius.gameserver.handler.IBypassHandler;
+import org.l2j.gameserver.mobius.gameserver.handler.IVoicedCommandHandler;
+import org.l2j.gameserver.mobius.gameserver.handler.VoicedCommandHandler;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.SellBuffsManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.events.AbstractScript;
+import org.l2j.gameserver.mobius.gameserver.model.holders.SellBuffHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 /**
  * Sell Buffs voice command

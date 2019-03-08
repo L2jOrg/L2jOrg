@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.holders;
 
-import com.l2jmobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
 
 /**
  * Effect duration holder.

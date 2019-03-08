@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.instancezone.conditions;
 
-import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.QuestManager;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.instancezone.InstanceTemplate;
+import org.l2j.gameserver.mobius.gameserver.model.quest.Quest;
+import org.l2j.gameserver.mobius.gameserver.model.quest.QuestState;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 
 /**
  * Instance quest condition

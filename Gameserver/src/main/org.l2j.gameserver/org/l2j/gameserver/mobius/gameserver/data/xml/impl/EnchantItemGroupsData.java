@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.holders.RangeChanceHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.enchant.EnchantItemGroup;
-import com.l2jmobius.gameserver.model.items.enchant.EnchantRateItem;
-import com.l2jmobius.gameserver.model.items.enchant.EnchantScrollGroup;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.model.holders.RangeChanceHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.items.enchant.EnchantItemGroup;
+import org.l2j.gameserver.mobius.gameserver.model.items.enchant.EnchantRateItem;
+import org.l2j.gameserver.mobius.gameserver.model.items.enchant.EnchantScrollGroup;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;

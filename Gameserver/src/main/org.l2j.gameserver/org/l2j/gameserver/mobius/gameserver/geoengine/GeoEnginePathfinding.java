@@ -17,11 +17,11 @@
 package org.l2j.gameserver.mobius.gameserver.geoengine;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.geoengine.geodata.GeoLocation;
-import com.l2jmobius.gameserver.geoengine.pathfinding.Node;
-import com.l2jmobius.gameserver.geoengine.pathfinding.NodeBuffer;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.mobius.gameserver.geoengine.geodata.GeoLocation;
+import org.l2j.gameserver.mobius.gameserver.geoengine.pathfinding.Node;
+import org.l2j.gameserver.mobius.gameserver.geoengine.pathfinding.NodeBuffer;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.instancezone.Instance;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

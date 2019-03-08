@@ -16,21 +16,21 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.ActionData;
-import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
-import com.l2jmobius.gameserver.handler.PlayerActionHandler;
-import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
-import com.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.ActionData;
+import org.l2j.gameserver.mobius.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.mobius.gameserver.handler.IPlayerActionHandler;
+import org.l2j.gameserver.mobius.gameserver.handler.PlayerActionHandler;
+import org.l2j.gameserver.mobius.gameserver.model.ActionDataHolder;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.effects.AbstractEffect;
+import org.l2j.gameserver.mobius.gameserver.model.skills.AbnormalType;
+import org.l2j.gameserver.mobius.gameserver.model.skills.BuffInfo;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExBasicActionList;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.RecipeShopManageList;
 
 import java.util.Arrays;
 import java.util.logging.Logger;
@@ -39,7 +39,7 @@ import java.util.logging.Logger;
  * This class manages the action use request packet.
  * @author Zoey76
  */
-public final class RequestActionUse implements IClientIncomingPacket
+public final class RequestActionUse extends IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestActionUse.class.getName());
 	
@@ -48,16 +48,16 @@ public final class RequestActionUse implements IClientIncomingPacket
 	private boolean _shiftPressed;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_actionId = packet.readD();
-		_ctrlPressed = (packet.readD() == 1);
-		_shiftPressed = (packet.readC() == 1);
+		_actionId = packet.getInt();
+		_ctrlPressed = (packet.getInt() == 1);
+		_shiftPressed = (packet.get() == 1);
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)

@@ -17,10 +17,10 @@
 package handlers.playeractions;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.datatables.BotReportTable;
-import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
-import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.datatables.BotReportTable;
+import org.l2j.gameserver.mobius.gameserver.handler.IPlayerActionHandler;
+import org.l2j.gameserver.mobius.gameserver.model.ActionDataHolder;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * Bot Report button player action handler.

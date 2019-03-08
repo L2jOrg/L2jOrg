@@ -16,20 +16,20 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.ai.FriendlyNpcAI;
-import com.l2jmobius.gameserver.ai.L2CharacterAI;
-import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableAttack;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableKill;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.mobius.gameserver.ai.FriendlyNpcAI;
+import org.l2j.gameserver.mobius.gameserver.ai.L2CharacterAI;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.npc.OnAttackableAttack;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.npc.OnAttackableKill;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
  * @author GKR, Sdw

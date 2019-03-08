@@ -17,16 +17,16 @@
 package org.l2j.gameserver.mobius.gameserver.model.itemauction;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
-import com.l2jmobius.gameserver.model.ItemInfo;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.ItemAuctionManager;
+import org.l2j.gameserver.mobius.gameserver.model.ItemInfo;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -191,7 +191,7 @@ public final class ItemAuction
 	
 	public final void storeMe()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO item_auction (auctionId,instanceId,auctionItemId,startingTime,endingTime,auctionStateId) VALUES (?,?,?,?,?,?) ON DUPLICATE KEY UPDATE auctionStateId=?"))
 		{
 			statement.setInt(1, _auctionId);
@@ -225,7 +225,7 @@ public final class ItemAuction
 	final void updatePlayerBidInternal(ItemAuctionBid bid, boolean delete)
 	{
 		final String query = delete ? DELETE_ITEM_AUCTION_BID : INSERT_ITEM_AUCTION_BID;
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(query))
 		{
 			ps.setInt(1, _auctionId);
@@ -402,7 +402,7 @@ public final class ItemAuction
 	
 	public final void broadcastToAllBidders(IClientOutgoingPacket packet)
 	{
-		ThreadPool.execute(() -> broadcastToAllBiddersInternal(packet));
+		ThreadPoolManager.getInstance().execute(() -> broadcastToAllBiddersInternal(packet));
 	}
 	
 	public final void broadcastToAllBiddersInternal(IClientOutgoingPacket packet)

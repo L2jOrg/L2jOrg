@@ -16,15 +16,15 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.VehiclePathPoint;
-import com.l2jmobius.gameserver.model.actor.instance.L2ShuttleInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
-import com.l2jmobius.gameserver.model.shuttle.L2ShuttleData;
-import com.l2jmobius.gameserver.model.shuttle.L2ShuttleEngine;
-import com.l2jmobius.gameserver.model.shuttle.L2ShuttleStop;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.VehiclePathPoint;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2ShuttleInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.mobius.gameserver.model.shuttle.L2ShuttleData;
+import org.l2j.gameserver.mobius.gameserver.model.shuttle.L2ShuttleEngine;
+import org.l2j.gameserver.mobius.gameserver.model.shuttle.L2ShuttleStop;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;

@@ -1,48 +1,33 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.ai;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.enums.AISkillScope;
-import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
-import com.l2jmobius.gameserver.model.AggroInfo;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.*;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableFactionCall;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableHate;
-import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.SkillCaster;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.util.Util;
+
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.gameserver.mobius.gameserver.Config;
+import org.l2j.gameserver.mobius.gameserver.GameTimeController;
+import org.l2j.gameserver.mobius.gameserver.enums.AISkillScope;
+import org.l2j.gameserver.mobius.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.ItemsOnGroundManager;
+import org.l2j.gameserver.mobius.gameserver.model.AggroInfo;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.*;
+import org.l2j.gameserver.mobius.gameserver.model.effects.L2EffectType;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.npc.OnAttackableFactionCall;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.npc.OnAttackableHate;
+import org.l2j.gameserver.mobius.gameserver.model.events.returns.TerminateReturn;
+import org.l2j.gameserver.mobius.gameserver.model.holders.SkillHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.model.skills.SkillCaster;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 import java.util.Comparator;
 import java.util.List;
@@ -51,7 +36,7 @@ import java.util.concurrent.Future;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
 
-import static com.l2jmobius.gameserver.ai.CtrlIntention.*;
+import static org.l2j.gameserver.mobius.gameserver.ai.CtrlIntention.*;
 
 /**
  * This class manages AI of L2Attackable.
@@ -191,7 +176,7 @@ public class L2AttackableAI extends L2CharacterAI
 		// If not idle - create an AI task (schedule onEvtThink repeatedly)
 		if (_aiTask == null)
 		{
-			_aiTask = ThreadPool.scheduleAtFixedRate(this::onEvtThink, 1000, 1000);
+			_aiTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(this::onEvtThink, 1000, 1000);
 		}
 	}
 	
@@ -691,7 +676,7 @@ public class L2AttackableAI extends L2CharacterAI
 					// Check if the L2Object is inside the Faction Range of the actor
 					if (called.hasAI())
 					{
-						if ((Math.abs(finalTarget.getZ() - called.getZ()) < 600) && npc.getAttackByList().stream().anyMatch(o -> o.get() == finalTarget) && ((called.getAI()._intention == CtrlIntention.AI_INTENTION_IDLE) || (called.getAI()._intention == CtrlIntention.AI_INTENTION_ACTIVE)))
+						if ((Math.abs(finalTarget.getZ() - called.getZ()) < 600) && npc.getAttackByList().stream().anyMatch(o -> o.get() == finalTarget) && ((called.getAI()._intention == AI_INTENTION_IDLE) || (called.getAI()._intention == AI_INTENTION_ACTIVE)))
 						{
 							if (finalTarget.isPlayable())
 							{
@@ -700,10 +685,10 @@ public class L2AttackableAI extends L2CharacterAI
 								called.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, finalTarget, 1);
 								EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), finalTarget.getActingPlayer(), finalTarget.isSummon()), called);
 							}
-							else if (called.isAttackable() && (called.getAI()._intention != CtrlIntention.AI_INTENTION_ATTACK))
+							else if (called.isAttackable() && (called.getAI()._intention != AI_INTENTION_ATTACK))
 							{
 								((L2Attackable) called).addDamageHate(finalTarget, 0, npc.getHating(finalTarget));
-								called.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, finalTarget);
+								called.getAI().setIntention(AI_INTENTION_ATTACK, finalTarget);
 							}
 						}
 					}

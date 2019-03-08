@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
-import com.l2jmobius.gameserver.enums.MatchingRoomType;
-import com.l2jmobius.gameserver.enums.PartyMatchingRoomLevelType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.matching.MatchingRoom;
+import org.l2j.gameserver.mobius.gameserver.enums.MatchingRoomType;
+import org.l2j.gameserver.mobius.gameserver.enums.PartyMatchingRoomLevelType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.base.ClassId;
+import org.l2j.gameserver.mobius.gameserver.model.matching.MatchingRoom;
 
 import java.util.Collections;
 import java.util.List;

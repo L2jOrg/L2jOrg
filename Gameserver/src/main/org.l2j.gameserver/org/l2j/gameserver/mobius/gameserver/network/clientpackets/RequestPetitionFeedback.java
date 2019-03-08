@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -28,7 +28,7 @@ import java.sql.SQLException;
 /**
  * @author Plim
  */
-public class RequestPetitionFeedback implements IClientIncomingPacket
+public class RequestPetitionFeedback extends IClientIncomingPacket
 {
 	private static final String INSERT_FEEDBACK = "INSERT INTO petition_feedback VALUES (?,?,?,?,?)";
 	
@@ -38,17 +38,17 @@ public class RequestPetitionFeedback implements IClientIncomingPacket
 	private String _message;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
 		// _unknown =
-		packet.readD(); // unknown
-		_rate = packet.readD();
-		_message = packet.readS();
+		packet.getInt(); // unknown
+		_rate = packet.getInt();
+		_message = readString(packet);
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		
@@ -62,7 +62,7 @@ public class RequestPetitionFeedback implements IClientIncomingPacket
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(INSERT_FEEDBACK))
 		{
 			statement.setString(1, player.getName());

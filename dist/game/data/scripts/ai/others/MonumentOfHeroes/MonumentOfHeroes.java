@@ -18,16 +18,16 @@ package ai.others.MonumentOfHeroes;
 
 import java.util.List;
 
-import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.Hero;
-import com.l2jmobius.gameserver.model.olympiad.Olympiad;
-import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExHeroList;
-import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.mobius.gameserver.enums.CategoryType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Hero;
+import org.l2j.gameserver.mobius.gameserver.model.olympiad.Olympiad;
+import org.l2j.gameserver.mobius.gameserver.network.NpcStringId;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExHeroList;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.PlaySound;
 
 import ai.AbstractNpcAI;
 

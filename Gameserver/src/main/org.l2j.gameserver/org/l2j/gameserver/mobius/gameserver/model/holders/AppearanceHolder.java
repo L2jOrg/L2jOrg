@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.holders;
 
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.items.appearance.AppearanceHandType;
-import com.l2jmobius.gameserver.model.items.appearance.AppearanceMagicType;
-import com.l2jmobius.gameserver.model.items.appearance.AppearanceTargetType;
-import com.l2jmobius.gameserver.model.items.type.ArmorType;
-import com.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.items.appearance.AppearanceHandType;
+import org.l2j.gameserver.mobius.gameserver.model.items.appearance.AppearanceMagicType;
+import org.l2j.gameserver.mobius.gameserver.model.items.appearance.AppearanceTargetType;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.ArmorType;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.WeaponType;
 
 /**
  * @author Sdw

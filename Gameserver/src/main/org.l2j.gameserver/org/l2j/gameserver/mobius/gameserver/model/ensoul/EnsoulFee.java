@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.ensoul;
 
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.CrystalType;
 
 import java.util.ArrayList;
 import java.util.List;

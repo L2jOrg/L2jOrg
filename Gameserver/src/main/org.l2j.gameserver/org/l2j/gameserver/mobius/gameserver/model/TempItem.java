@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
 
 /**
  * Class explanation:<br>

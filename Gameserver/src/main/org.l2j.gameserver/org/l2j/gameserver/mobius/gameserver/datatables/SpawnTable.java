@@ -17,9 +17,9 @@
 package org.l2j.gameserver.mobius.gameserver.datatables;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.mobius.gameserver.model.L2Spawn;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
 
 import java.io.*;
 import java.util.Collections;

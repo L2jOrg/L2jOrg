@@ -17,28 +17,28 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
-import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.buylist.Product;
-import com.l2jmobius.gameserver.model.buylist.ProductList;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.L2Armor;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.type.ArmorType;
-import com.l2jmobius.gameserver.model.items.type.WeaponType;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoEquipSlot;
-import com.l2jmobius.gameserver.network.serverpackets.ShopPreviewInfo;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.BuyListData;
+import org.l2j.gameserver.mobius.gameserver.enums.Race;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2MerchantInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.buylist.Product;
+import org.l2j.gameserver.mobius.gameserver.model.buylist.ProductList;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Armor;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.ArmorType;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExUserInfoEquipSlot;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ShopPreviewInfo;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -47,7 +47,7 @@ import java.util.logging.Level;
 /**
  ** @author Gnacik
  */
-public final class RequestPreviewItem implements IClientIncomingPacket
+public final class RequestPreviewItem extends IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _unk;
@@ -80,11 +80,11 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 	}
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_unk = packet.readD();
-		_listId = packet.readD();
-		_count = packet.readD();
+		_unk = packet.getInt();
+		_listId = packet.getInt();
+		_count = packet.getInt();
 		
 		if (_count < 0)
 		{
@@ -101,13 +101,13 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 		// Fill _items table with all ItemID to Wear
 		for (int i = 0; i < _count; i++)
 		{
-			_items[i] = packet.readD();
+			_items[i] = packet.getInt();
 		}
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		if (_items == null)
 		{
@@ -241,7 +241,7 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 		{
 			activeChar.sendPacket(new ShopPreviewInfo(itemList));
 			// Schedule task
-			ThreadPool.schedule(new RemoveWearItemsTask(activeChar), Config.WEAR_DELAY * 1000);
+			ThreadPoolManager.getInstance().schedule(new RemoveWearItemsTask(activeChar), Config.WEAR_DELAY * 1000);
 		}
 	}
 	

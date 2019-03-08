@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.scripting.java;
 
-import com.l2jmobius.gameserver.scripting.AbstractExecutionContext;
-import com.l2jmobius.gameserver.scripting.annotations.Disabled;
+import org.l2j.gameserver.mobius.gameserver.scripting.AbstractExecutionContext;
+import org.l2j.gameserver.mobius.gameserver.scripting.annotations.Disabled;
 import org.openjavac.tools.Diagnostic;
 import org.openjavac.tools.DiagnosticCollector;
 import org.openjavac.tools.JavaFileObject;

@@ -17,34 +17,34 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
-import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import com.l2jmobius.gameserver.model.itemcontainer.PcWarehouse;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.model.ClanPrivilege;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.ClanWarehouse;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.ItemContainer;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.PcWarehouse;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 /**
  * This class ... 32 SendWareHouseWithDrawList cd (dd) WootenGil rox :P
  * @version $Revision: 1.2.2.1.2.4 $ $Date: 2005/03/29 23:15:16 $
  */
-public final class SendWareHouseWithDrawList implements IClientIncomingPacket
+public final class SendWareHouseWithDrawList extends IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 12; // length of the one item
 	
 	private ItemHolder _items[] = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		final int count = packet.readD();
+		final int count = packet.getInt();
 		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
 			return false;
@@ -53,8 +53,8 @@ public final class SendWareHouseWithDrawList implements IClientIncomingPacket
 		_items = new ItemHolder[count];
 		for (int i = 0; i < count; i++)
 		{
-			final int objId = packet.readD();
-			final long cnt = packet.readQ();
+			final int objId = packet.getInt();
+			final long cnt = packet.getLong();
 			if ((objId < 1) || (cnt < 0))
 			{
 				_items = null;
@@ -66,7 +66,7 @@ public final class SendWareHouseWithDrawList implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		if (_items == null)
 		{

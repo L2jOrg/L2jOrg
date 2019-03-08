@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.items.type;
 
-import com.l2jmobius.gameserver.model.stats.TraitType;
+import org.l2j.gameserver.mobius.gameserver.model.stats.TraitType;
 
 /**
  * Weapon Type enumerated.

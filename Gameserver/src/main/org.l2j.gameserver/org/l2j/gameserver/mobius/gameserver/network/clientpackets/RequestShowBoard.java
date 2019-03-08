@@ -17,28 +17,28 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.handler.CommunityBoardHandler;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 
 /**
  * RequestShowBoard client packet implementation.
  * @author Zoey76
  */
-public final class RequestShowBoard implements IClientIncomingPacket
+public final class RequestShowBoard extends IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _unknown;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_unknown = packet.readD();
+		_unknown = packet.getInt();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		CommunityBoardHandler.getInstance().handleParseCommand(Config.BBS_DEFAULT, client.getActiveChar());
 	}

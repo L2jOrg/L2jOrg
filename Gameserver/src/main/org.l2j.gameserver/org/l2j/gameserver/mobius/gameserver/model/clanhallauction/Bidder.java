@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.clanhallauction;
 
-import com.l2jmobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
 
 import java.time.Instant;
 import java.time.ZoneId;

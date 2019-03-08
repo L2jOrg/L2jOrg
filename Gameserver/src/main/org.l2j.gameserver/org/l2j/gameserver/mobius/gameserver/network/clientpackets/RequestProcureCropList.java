@@ -17,20 +17,20 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import com.l2jmobius.gameserver.model.CropProcure;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.UniqueItemHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.CastleManorManager;
+import org.l2j.gameserver.mobius.gameserver.model.CropProcure;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2MerchantInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.holders.UniqueItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,16 +38,16 @@ import java.util.List;
 /**
  * @author l3x
  */
-public class RequestProcureCropList implements IClientIncomingPacket
+public class RequestProcureCropList extends IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 20; // length of the one item
 	
 	private List<CropHolder> _items = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		final int count = packet.readD();
+		final int count = packet.getInt();
 		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
 			return false;
@@ -56,10 +56,10 @@ public class RequestProcureCropList implements IClientIncomingPacket
 		_items = new ArrayList<>(count);
 		for (int i = 0; i < count; i++)
 		{
-			final int objId = packet.readD();
-			final int itemId = packet.readD();
-			final int manorId = packet.readD();
-			final long cnt = packet.readQ();
+			final int objId = packet.getInt();
+			final int itemId = packet.getInt();
+			final int manorId = packet.getInt();
+			final long cnt = packet.getLong();
 			if ((objId < 1) || (itemId < 1) || (manorId < 0) || (cnt < 0))
 			{
 				_items = null;
@@ -71,7 +71,7 @@ public class RequestProcureCropList implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		if (_items == null)
 		{

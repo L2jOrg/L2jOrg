@@ -16,16 +16,16 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
-import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
-import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
+import org.l2j.gameserver.mobius.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.effects.AbstractEffect;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.FlyToLocation;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ValidateLocation;
 
 /**
  * Throw Up effect implementation.

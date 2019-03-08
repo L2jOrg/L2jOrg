@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.stats.finalizers;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.stats.IStatsFunction;
-import com.l2jmobius.gameserver.model.stats.Stats;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.stats.IStatsFunction;
+import org.l2j.gameserver.mobius.gameserver.model.stats.Stats;
 
 import java.util.Optional;
 

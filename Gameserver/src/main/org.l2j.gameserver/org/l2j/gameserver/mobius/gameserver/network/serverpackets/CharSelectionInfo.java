@@ -17,21 +17,21 @@
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
-import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.VariationInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.Hero;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.network.Disconnection;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.mobius.gameserver.idfactory.IdFactory;
+import org.l2j.gameserver.mobius.gameserver.model.CharSelectInfoPackage;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.VariationInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Hero;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.mobius.gameserver.network.Disconnection;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -289,7 +289,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		CharSelectInfoPackage charInfopackage;
 		final List<CharSelectInfoPackage> characterList = new LinkedList<>();
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM characters WHERE account_name=? ORDER BY createDate"))
 		{
 			statement.setString(1, loginName);
@@ -322,7 +322,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 	
 	private static void loadCharacterSubclassInfo(CharSelectInfoPackage charInfopackage, int ObjectId, int activeClassId)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT exp, sp, level, vitality_points FROM character_subclasses WHERE charId=? AND class_id=? ORDER BY charId"))
 		{
 			statement.setInt(1, ObjectId);
@@ -432,7 +432,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		
 		if (weaponObjId > 0)
 		{
-			try (Connection con = DatabaseFactory.getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement statement = con.prepareStatement("SELECT mineralId,option1,option2 FROM item_variations WHERE itemId=?"))
 			{
 				statement.setInt(1, weaponObjId);

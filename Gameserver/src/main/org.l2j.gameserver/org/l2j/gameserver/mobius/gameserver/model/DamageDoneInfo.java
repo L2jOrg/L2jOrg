@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * @author xban1x

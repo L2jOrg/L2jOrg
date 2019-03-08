@@ -16,31 +16,31 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.data.xml.impl.EnsoulData;
-import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.enums.AttributeType;
-import com.l2jmobius.gameserver.enums.SpecialItemType;
-import com.l2jmobius.gameserver.model.ItemInfo;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
-import com.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
-import com.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.commons.util.CommonUtil;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.EnsoulData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.MultisellData;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.enums.AttributeType;
+import org.l2j.gameserver.mobius.gameserver.enums.SpecialItemType;
+import org.l2j.gameserver.mobius.gameserver.model.ItemInfo;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.ensoul.EnsoulOption;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemChanceHolder;
+import org.l2j.gameserver.mobius.gameserver.model.holders.MultisellEntryHolder;
+import org.l2j.gameserver.mobius.gameserver.model.holders.PreparedMultisellListHolder;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.items.enchant.attribute.AttributeHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.UserInfo;
 
 import java.util.Collections;
 import java.util.List;
@@ -52,7 +52,7 @@ import java.util.stream.Collectors;
 /**
  * The Class MultiSellChoose.
  */
-public class MultiSellChoose implements IClientIncomingPacket
+public class MultiSellChoose extends IClientIncomingPacket
 {
 	private int _listId;
 	private int _entryId;
@@ -72,39 +72,39 @@ public class MultiSellChoose implements IClientIncomingPacket
 	private EnsoulOption[] _soulCrystalSpecialOptions;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_listId = packet.readD();
-		_entryId = packet.readD();
-		_amount = packet.readQ();
-		_enchantLevel = packet.readH();
-		_augmentOption1 = packet.readD();
-		_augmentOption2 = packet.readD();
-		_attackAttribute = (short) packet.readH();
-		_attributePower = (short) packet.readH();
-		_fireDefence = (short) packet.readH();
-		_waterDefence = (short) packet.readH();
-		_windDefence = (short) packet.readH();
-		_earthDefence = (short) packet.readH();
-		_holyDefence = (short) packet.readH();
-		_darkDefence = (short) packet.readH();
-		_soulCrystalOptions = new EnsoulOption[packet.readC()]; // Ensoul size
+		_listId = packet.getInt();
+		_entryId = packet.getInt();
+		_amount = packet.getLong();
+		_enchantLevel = packet.getShort();
+		_augmentOption1 = packet.getInt();
+		_augmentOption2 = packet.getInt();
+		_attackAttribute = (short) packet.getShort();
+		_attributePower = (short) packet.getShort();
+		_fireDefence = (short) packet.getShort();
+		_waterDefence = (short) packet.getShort();
+		_windDefence = (short) packet.getShort();
+		_earthDefence = (short) packet.getShort();
+		_holyDefence = (short) packet.getShort();
+		_darkDefence = (short) packet.getShort();
+		_soulCrystalOptions = new EnsoulOption[packet.get()]; // Ensoul size
 		for (int i = 0; i < _soulCrystalOptions.length; i++)
 		{
-			final int ensoulId = packet.readD(); // Ensoul option id
+			final int ensoulId = packet.getInt(); // Ensoul option id
 			_soulCrystalOptions[i] = EnsoulData.getInstance().getOption(ensoulId);
 		}
-		_soulCrystalSpecialOptions = new EnsoulOption[packet.readC()]; // Special ensoul size
+		_soulCrystalSpecialOptions = new EnsoulOption[packet.get()]; // Special ensoul size
 		for (int i = 0; i < _soulCrystalSpecialOptions.length; i++)
 		{
-			final int ensoulId = packet.readD(); // Special ensoul option id.
+			final int ensoulId = packet.getInt(); // Special ensoul option id.
 			_soulCrystalSpecialOptions[i] = EnsoulData.getInstance().getOption(ensoulId);
 		}
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)

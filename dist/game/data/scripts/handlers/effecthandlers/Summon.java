@@ -16,20 +16,20 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
-import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ServitorInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.mobius.gameserver.enums.Race;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2ServitorInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.mobius.gameserver.model.effects.AbstractEffect;
+import org.l2j.gameserver.mobius.gameserver.model.effects.L2EffectType;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.BuffInfo;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
 
 /**
  * Summon effect implementation.

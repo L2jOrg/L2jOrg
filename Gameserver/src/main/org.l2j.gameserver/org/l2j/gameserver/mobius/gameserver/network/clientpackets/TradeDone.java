@@ -16,29 +16,28 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.TradeList;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+
+import java.nio.ByteBuffer;
 
 /**
  * This packet manages the trade response.
  */
-public final class TradeDone implements IClientIncomingPacket
+public final class TradeDone extends IClientIncomingPacket
 {
 	private int _response;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_response = packet.readD();
-		return true;
+		_response = packet.getInt();
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)

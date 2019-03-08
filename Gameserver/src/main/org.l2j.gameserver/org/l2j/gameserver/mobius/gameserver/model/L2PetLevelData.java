@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.gameserver.model.stats.Stats;
+import org.l2j.gameserver.mobius.gameserver.model.stats.Stats;
 
 /**
  * Stats definition for each pet level.

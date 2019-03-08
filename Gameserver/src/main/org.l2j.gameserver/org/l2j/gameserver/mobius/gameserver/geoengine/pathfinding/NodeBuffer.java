@@ -17,7 +17,7 @@
 package org.l2j.gameserver.mobius.gameserver.geoengine.pathfinding;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.geoengine.geodata.GeoStructure;
+import org.l2j.gameserver.mobius.gameserver.geoengine.geodata.GeoStructure;
 
 import java.util.concurrent.locks.ReentrantLock;
 

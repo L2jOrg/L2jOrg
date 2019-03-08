@@ -16,14 +16,14 @@
  */
 package handlers.usercommandhandlers;
 
-import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.instancemanager.SiegeManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.Siege;
-import com.l2jmobius.gameserver.model.zone.type.L2SiegeZone;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.mobius.gameserver.handler.IUserCommandHandler;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.SiegeManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Siege;
+import org.l2j.gameserver.mobius.gameserver.model.zone.type.L2SiegeZone;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * @author Tryskell

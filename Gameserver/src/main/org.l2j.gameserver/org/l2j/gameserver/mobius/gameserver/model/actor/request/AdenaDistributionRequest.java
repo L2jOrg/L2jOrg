@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.request;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.adenadistribution.ExDivideAdenaCancel;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.adenadistribution.ExDivideAdenaCancel;
 
 import java.util.List;
 

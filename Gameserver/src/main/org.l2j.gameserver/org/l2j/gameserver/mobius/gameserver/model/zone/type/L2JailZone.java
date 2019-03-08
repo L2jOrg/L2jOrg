@@ -17,14 +17,14 @@
 package org.l2j.gameserver.mobius.gameserver.model.zone.type;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.tasks.player.TeleportTask;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.tasks.player.TeleportTask;
+import org.l2j.gameserver.mobius.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 
 /**
  * A jail zone
@@ -77,7 +77,7 @@ public class L2JailZone extends L2ZoneType
 			if (player.isJailed())
 			{
 				// when a player wants to exit jail even if he is still jailed, teleport him back to jail
-				ThreadPool.schedule(new TeleportTask(player, JAIL_IN_LOC), 2000);
+				ThreadPoolManager.getInstance().schedule(new TeleportTask(player, JAIL_IN_LOC), 2000);
 				character.sendMessage("You cannot cheat your way out of here. You must wait until your jail time is over.");
 			}
 			if (Config.JAIL_DISABLE_TRANSACTION)

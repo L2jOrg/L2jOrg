@@ -22,12 +22,12 @@ import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.handler.IUserCommandHandler;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Clan War Start, Under Attack List, War List user commands.
@@ -62,7 +62,7 @@ public class ClanWarsList implements IUserCommandHandler
 			return false;
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			String query;
 			// Attack List

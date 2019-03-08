@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.holders;
 
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.network.NpcStringId;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.network.NpcStringId;
 
 /**
  * @author St3eT

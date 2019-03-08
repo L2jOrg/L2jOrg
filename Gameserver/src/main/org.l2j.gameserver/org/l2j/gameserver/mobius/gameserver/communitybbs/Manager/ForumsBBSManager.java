@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.communitybbs.Manager;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.communitybbs.BB.Forum;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.communitybbs.BB.Forum;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -40,7 +40,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	protected ForumsBBSManager()
 	{
 		_table = new CopyOnWriteArrayList<>();
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT forum_id FROM forums WHERE forum_type = 0"))
 		{

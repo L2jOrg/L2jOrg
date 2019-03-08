@@ -16,18 +16,18 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.instancemanager.DuelManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.DuelManager;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Format:(ch) ddd
  * @author -Wooden-
  */
-public final class RequestDuelAnswerStart implements IClientIncomingPacket
+public final class RequestDuelAnswerStart extends IClientIncomingPacket
 {
 	private int _partyDuel;
 	@SuppressWarnings("unused")
@@ -35,16 +35,16 @@ public final class RequestDuelAnswerStart implements IClientIncomingPacket
 	private int _response;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_partyDuel = packet.readD();
-		_unk1 = packet.readD();
-		_response = packet.readD();
+		_partyDuel = packet.getInt();
+		_unk1 = packet.getInt();
+		_response = packet.getInt();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)

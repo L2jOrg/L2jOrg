@@ -17,9 +17,9 @@
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.itemauction.ItemAuctionInstance;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.gameserver.mobius.gameserver.model.itemauction.ItemAuctionInstance;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -50,7 +50,7 @@ public final class ItemAuctionManager implements IGameXmlReader
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement statement = con.createStatement();
 			ResultSet rset = statement.executeQuery("SELECT auctionId FROM item_auction ORDER BY auctionId DESC LIMIT 0, 1"))
 		{
@@ -129,7 +129,7 @@ public final class ItemAuctionManager implements IGameXmlReader
 	
 	public static void deleteAuction(int auctionId)
 	{
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			try (PreparedStatement statement = con.prepareStatement("DELETE FROM item_auction WHERE auctionId=?"))
 			{

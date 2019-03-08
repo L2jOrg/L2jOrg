@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.gameserver.ai.L2AirShipAI;
-import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.instancemanager.AirShipManager;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Vehicle;
-import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
-import com.l2jmobius.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.mobius.gameserver.ai.L2AirShipAI;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.AirShipManager;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Vehicle;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.*;
 
 /**
  * Flying airships. Very similar to Maktakien boats (see L2BoatInstance) but these do fly :P

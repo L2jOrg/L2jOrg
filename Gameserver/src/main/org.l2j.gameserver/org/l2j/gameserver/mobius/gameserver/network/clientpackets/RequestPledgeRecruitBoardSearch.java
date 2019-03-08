@@ -16,16 +16,16 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.ExPledgeRecruitBoardSearch;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.ClanEntryManager;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExPledgeRecruitBoardSearch;
 
 /**
  * @author Sdw
  */
-public class RequestPledgeRecruitBoardSearch implements IClientIncomingPacket
+public class RequestPledgeRecruitBoardSearch extends IClientIncomingPacket
 {
 	private int _clanLevel;
 	private int _karma;
@@ -38,21 +38,21 @@ public class RequestPledgeRecruitBoardSearch implements IClientIncomingPacket
 	private int _applicationType;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_clanLevel = packet.readD();
-		_karma = packet.readD();
-		_type = packet.readD();
-		_query = packet.readS();
-		_sort = packet.readD();
-		_descending = packet.readD() == 2;
-		_page = packet.readD();
-		_applicationType = packet.readD(); // Helios
+		_clanLevel = packet.getInt();
+		_karma = packet.getInt();
+		_type = packet.getInt();
+		_query = readString(packet);
+		_sort = packet.getInt();
+		_descending = packet.getInt() == 2;
+		_page = packet.getInt();
+		_applicationType = packet.getInt(); // Helios
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		

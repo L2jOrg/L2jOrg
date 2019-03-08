@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.holders.AppearanceHolder;
-import com.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
-import com.l2jmobius.gameserver.model.items.appearance.AppearanceTargetType;
-import com.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.enums.Race;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.holders.AppearanceHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.appearance.AppearanceStone;
+import org.l2j.gameserver.mobius.gameserver.model.items.appearance.AppearanceTargetType;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.CrystalType;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 

@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.interfaces;
 
-import com.l2jmobius.gameserver.enums.Position;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.gameserver.mobius.gameserver.enums.Position;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 /**
  * Object world location storage interface.

@@ -19,11 +19,11 @@ package ai.others.TeleportToRaceTrack;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.NpcStringId;
+import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
 

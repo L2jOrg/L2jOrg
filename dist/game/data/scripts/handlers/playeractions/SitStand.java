@@ -16,17 +16,17 @@
  */
 package handlers.playeractions;
 
-import com.l2jmobius.gameserver.ai.CtrlEvent;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.ai.NextAction;
-import com.l2jmobius.gameserver.enums.MountType;
-import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
-import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
-import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.network.serverpackets.ChairSit;
+import org.l2j.gameserver.mobius.gameserver.ai.CtrlEvent;
+import org.l2j.gameserver.mobius.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.mobius.gameserver.ai.NextAction;
+import org.l2j.gameserver.mobius.gameserver.enums.MountType;
+import org.l2j.gameserver.mobius.gameserver.handler.IPlayerActionHandler;
+import org.l2j.gameserver.mobius.gameserver.model.ActionDataHolder;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2StaticObjectInstance;
+import org.l2j.gameserver.mobius.gameserver.model.effects.EffectFlag;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ChairSit;
 
 /**
  * Sit/Stand player action handler.

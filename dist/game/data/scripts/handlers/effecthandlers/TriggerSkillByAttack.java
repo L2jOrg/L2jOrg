@@ -18,22 +18,22 @@ package handlers.effecthandlers;
 
 import java.util.logging.Level;
 
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.handler.TargetHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDamageDealt;
-import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.type.WeaponType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.SkillCaster;
-import com.l2jmobius.gameserver.model.skills.targets.TargetType;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceType;
+import org.l2j.gameserver.mobius.gameserver.handler.TargetHandler;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.effects.AbstractEffect;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.OnCreatureDamageDealt;
+import org.l2j.gameserver.mobius.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2j.gameserver.mobius.gameserver.model.holders.SkillHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.mobius.gameserver.model.skills.BuffInfo;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.model.skills.SkillCaster;
+import org.l2j.gameserver.mobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * Trigger Skill By Attack effect implementation.

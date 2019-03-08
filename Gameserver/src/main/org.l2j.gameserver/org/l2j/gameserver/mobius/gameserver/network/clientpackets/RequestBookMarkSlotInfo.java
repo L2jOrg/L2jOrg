@@ -16,24 +16,23 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author ShanSoft Packets Structure: chddd
  */
-public final class RequestBookMarkSlotInfo implements IClientIncomingPacket
+public final class RequestBookMarkSlotInfo extends IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player != null)

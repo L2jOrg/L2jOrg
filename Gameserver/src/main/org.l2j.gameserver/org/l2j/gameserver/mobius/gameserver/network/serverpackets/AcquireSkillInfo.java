@@ -17,12 +17,12 @@
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.base.AcquireSkillType;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.skills.CommonSkill;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.model.L2SkillLearn;
+import org.l2j.gameserver.mobius.gameserver.model.base.AcquireSkillType;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.skills.CommonSkill;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import com.l2jmobius.gameserver.model.CropProcure;
-import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.CastleManorManager;
+import org.l2j.gameserver.mobius.gameserver.model.CropProcure;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Castle;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 import java.util.HashMap;
 import java.util.Map;

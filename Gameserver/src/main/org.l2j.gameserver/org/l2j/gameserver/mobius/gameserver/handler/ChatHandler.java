@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.handler;
 
-import com.l2jmobius.gameserver.enums.ChatType;
+import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
 
 import java.util.EnumMap;
 import java.util.Map;

@@ -17,14 +17,14 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.CropProcure;
-import com.l2jmobius.gameserver.model.L2Seed;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.CastleManorManager;
+import org.l2j.gameserver.mobius.gameserver.model.ClanPrivilege;
+import org.l2j.gameserver.mobius.gameserver.model.CropProcure;
+import org.l2j.gameserver.mobius.gameserver.model.L2Seed;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * @author l3x
  */
-public final class RequestSetCrop implements IClientIncomingPacket
+public final class RequestSetCrop extends IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 21; // length of the one item
 	
@@ -40,10 +40,10 @@ public final class RequestSetCrop implements IClientIncomingPacket
 	private List<CropProcure> _items;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_manorId = packet.readD();
-		final int count = packet.readD();
+		_manorId = packet.getInt();
+		final int count = packet.getInt();
 		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
 			return false;
@@ -52,10 +52,10 @@ public final class RequestSetCrop implements IClientIncomingPacket
 		_items = new ArrayList<>(count);
 		for (int i = 0; i < count; i++)
 		{
-			final int itemId = packet.readD();
-			final long sales = packet.readQ();
-			final long price = packet.readQ();
-			final int type = packet.readC();
+			final int itemId = packet.getInt();
+			final long sales = packet.getLong();
+			final long price = packet.getLong();
+			final int type = packet.get();
 			if ((itemId < 1) || (sales < 0) || (price < 0))
 			{
 				_items.clear();
@@ -71,7 +71,7 @@ public final class RequestSetCrop implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		if (_items.isEmpty())
 		{

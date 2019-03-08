@@ -16,7 +16,7 @@
  */
 package handlers;
 
-import com.l2jmobius.gameserver.handler.SkillConditionHandler;
+import org.l2j.gameserver.mobius.gameserver.handler.SkillConditionHandler;
 
 import handlers.skillconditionhandlers.*;
 

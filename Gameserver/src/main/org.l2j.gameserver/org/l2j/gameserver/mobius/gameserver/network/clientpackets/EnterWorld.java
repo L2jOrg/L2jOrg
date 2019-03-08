@@ -1,55 +1,41 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.LoginServerThread;
-import com.l2jmobius.gameserver.cache.HtmCache;
-import com.l2jmobius.gameserver.data.sql.impl.AnnouncementsTable;
-import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
-import com.l2jmobius.gameserver.data.xml.impl.AdminData;
-import com.l2jmobius.gameserver.data.xml.impl.BeautyShopData;
-import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
-import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.enums.SubclassInfoType;
-import com.l2jmobius.gameserver.instancemanager.*;
-import com.l2jmobius.gameserver.model.*;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.*;
-import com.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
-import com.l2jmobius.gameserver.model.instancezone.Instance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
-import com.l2jmobius.gameserver.model.variables.PlayerVariables;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.Disconnection;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.*;
-import com.l2jmobius.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
-import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
-import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
-import com.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
-import com.l2jmobius.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.gameserver.mobius.gameserver.Config;
+import org.l2j.gameserver.mobius.gameserver.LoginServerThread;
+import org.l2j.gameserver.mobius.gameserver.cache.HtmCache;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.AnnouncementsTable;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.OfflineTradersTable;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.AdminData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.BeautyShopData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
+import org.l2j.gameserver.mobius.gameserver.enums.Race;
+import org.l2j.gameserver.mobius.gameserver.enums.SubclassInfoType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.*;
+import org.l2j.gameserver.mobius.gameserver.model.*;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.entity.*;
+import org.l2j.gameserver.mobius.gameserver.model.holders.AttendanceInfoHolder;
+import org.l2j.gameserver.mobius.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.quest.Quest;
+import org.l2j.gameserver.mobius.gameserver.model.skills.AbnormalVisualEffect;
+import org.l2j.gameserver.mobius.gameserver.model.variables.PlayerVariables;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.network.Disconnection;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.friend.L2FriendList;
+import org.l2j.gameserver.mobius.gameserver.util.BuilderUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.nio.ByteBuffer;
 
 /**
  * Enter World Packet Handler
@@ -60,36 +46,36 @@ import com.l2jmobius.gameserver.util.BuilderUtil;
  * packet format rev87 bddddbdcccccccccccccccccccc
  * <p>
  */
-public class EnterWorld implements IClientIncomingPacket
+public class EnterWorld extends IClientIncomingPacket
 {
+	private static final Logger LOGGER = LoggerFactory.getLogger(EnterWorld.class);
 	private final int[][] tracert = new int[5][4];
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
 		for (int i = 0; i < 5; i++)
 		{
 			for (int o = 0; o < 4; o++)
 			{
-				tracert[i][o] = packet.readC();
+				tracert[i][o] = packet.get();
 			}
 		}
-		packet.readD(); // Unknown Value
-		packet.readD(); // Unknown Value
-		packet.readD(); // Unknown Value
-		packet.readD(); // Unknown Value
-		packet.readB(64); // Unknown Byte Array
-		packet.readD(); // Unknown Value
-		return true;
+		packet.getInt(); // Unknown Value
+		packet.getInt(); // Unknown Value
+		packet.getInt(); // Unknown Value
+		packet.getInt(); // Unknown Value
+		packet.get(new byte[64]); // Unknown Byte Array
+		packet.getInt(); // Unknown Value
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
-			LOGGER.warning("EnterWorld failed! activeChar returned 'null'.");
+			LOGGER.warn("EnterWorld failed! activeChar returned 'null'.");
 			Disconnection.of(client).defaultSequence(false);
 			return;
 		}
@@ -598,7 +584,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		if (Config.ENABLE_ATTENDANCE_REWARDS)
 		{
-			ThreadPool.schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				// Check if player can receive reward today.
 				final AttendanceInfoHolder attendanceInfo = activeChar.getAttendanceInfo();
@@ -618,7 +604,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		if (Config.HARDWARE_INFO_ENABLED)
 		{
-			ThreadPool.schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				if (client.getHardwareInfo() == null)
 				{

@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
-import com.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.mobius.gameserver.model.variables.PlayerVariables;
 
 /**
  * Used to Store data sent to Client for Character.<br>

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.enums;
 
-import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.PlaySound;
 
 import java.util.HashMap;
 import java.util.Map;

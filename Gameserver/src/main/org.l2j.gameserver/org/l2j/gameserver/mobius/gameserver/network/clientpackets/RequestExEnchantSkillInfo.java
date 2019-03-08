@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.mobius.gameserver.enums.CategoryType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
 
 import java.util.Set;
 
@@ -31,23 +31,23 @@ import java.util.Set;
  * Format (ch) dd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill lvl
  * @author -Wooden-
  */
-public final class RequestExEnchantSkillInfo implements IClientIncomingPacket
+public final class RequestExEnchantSkillInfo extends IClientIncomingPacket
 {
 	private int _skillId;
 	private int _skillLvl;
 	private int _skillSubLvl;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_skillId = packet.readD();
-		_skillLvl = packet.readH();
-		_skillSubLvl = packet.readH();
+		_skillId = packet.getInt();
+		_skillLvl = packet.getShort();
+		_skillSubLvl = packet.getShort();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		if ((_skillId <= 0) || (_skillLvl <= 0) || (_skillSubLvl < 0))
 		{

@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.entity.Hero;
-import com.l2jmobius.gameserver.model.olympiad.Olympiad;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Hero;
+import org.l2j.gameserver.mobius.gameserver.model.olympiad.Olympiad;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 import java.util.Map;
 

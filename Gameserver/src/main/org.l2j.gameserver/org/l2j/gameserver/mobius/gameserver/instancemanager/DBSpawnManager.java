@@ -2,6 +2,7 @@ package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.mobius.gameserver.Config;
 import org.l2j.gameserver.mobius.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SpawnsData;
@@ -191,7 +192,7 @@ public class DBSpawnManager
             {
                 LOGGER.info(getClass().getSimpleName() + ": Updated " + npc.getName() + " respawn time to " + Util.formatDate(new Date(respawnTime), "dd.MM.yyyy HH:mm"));
 
-                _schedules.put(npc.getId(), ThreadPool.schedule(() -> scheduleSpawn(npc.getId()), respawnDelay));
+                _schedules.put(npc.getId(), ThreadPoolManager.getInstance().schedule(() -> scheduleSpawn(npc.getId()), respawnDelay));
                 updateDb();
             }
         }
@@ -252,14 +253,14 @@ public class DBSpawnManager
         else
         {
             final long spawnTime = respawnTime - System.currentTimeMillis();
-            _schedules.put(npcId, ThreadPool.schedule(() -> scheduleSpawn(npcId), spawnTime));
+            _schedules.put(npcId, ThreadPoolManager.getInstance().schedule(() -> scheduleSpawn(npcId), spawnTime));
         }
 
         _spawns.put(npcId, spawn);
 
         if (storeInDb)
         {
-            try (Connection con = DatabaseFactory.getConnection();
+            try (Connection con = DatabaseFactory.getInstance().getConnection();
                  PreparedStatement statement = con.prepareStatement("INSERT INTO npc_respawns (id, x, y, z, heading, respawnTime, currentHp, currentMp) VALUES(?, ?, ?, ?, ?, ?, ?, ?)"))
             {
                 statement.setInt(1, spawn.getId());
@@ -315,7 +316,7 @@ public class DBSpawnManager
 
         if (storeInDb)
         {
-            try (Connection con = DatabaseFactory.getConnection();
+            try (Connection con = DatabaseFactory.getInstance().getConnection();
                  PreparedStatement statement = con.prepareStatement("INSERT INTO npc_respawns (id, x, y, z, heading, respawnTime, currentHp, currentMp) VALUES(?, ?, ?, ?, ?, ?, ?, ?)"))
             {
                 statement.setInt(1, spawn.getId());
@@ -364,7 +365,7 @@ public class DBSpawnManager
 
         if (updateDb)
         {
-            try (Connection con = DatabaseFactory.getConnection();
+            try (Connection con = DatabaseFactory.getInstance().getConnection();
                  PreparedStatement ps = con.prepareStatement("DELETE FROM npc_respawns WHERE id = ?"))
             {
                 ps.setInt(1, npcId);
@@ -385,7 +386,7 @@ public class DBSpawnManager
      */
     private void updateDb()
     {
-        try (Connection con = DatabaseFactory.getConnection();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement("UPDATE npc_respawns SET respawnTime = ?, currentHP = ?, currentMP = ? WHERE id = ?"))
         {
             for (Integer npcId : _storedInfo.keySet())

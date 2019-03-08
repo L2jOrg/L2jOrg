@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.taskmanager;
 
-import com.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.TaskManager.ExecutedTask;
 
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;

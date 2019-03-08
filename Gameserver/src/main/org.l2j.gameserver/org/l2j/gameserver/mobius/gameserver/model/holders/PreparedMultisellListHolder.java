@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.holders;
 
-import com.l2jmobius.gameserver.enums.TaxType;
-import com.l2jmobius.gameserver.model.ItemInfo;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
+import org.l2j.gameserver.mobius.gameserver.enums.TaxType;
+import org.l2j.gameserver.mobius.gameserver.model.ItemInfo;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.ItemContainer;
 
 import java.util.ArrayList;
 import java.util.List;

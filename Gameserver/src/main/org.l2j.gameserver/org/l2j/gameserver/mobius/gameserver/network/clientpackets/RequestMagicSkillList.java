@@ -16,31 +16,31 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 
 /**
  * @author UnAfraid
  */
 @SuppressWarnings("unused")
-public class RequestMagicSkillList implements IClientIncomingPacket
+public class RequestMagicSkillList extends IClientIncomingPacket
 {
 	private int _objectId;
 	private int _charId;
 	private int _unk;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_objectId = packet.readD();
-		_charId = packet.readD();
-		_unk = packet.readD();
+		_objectId = packet.getInt();
+		_charId = packet.getInt();
+		_unk = packet.getInt();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)

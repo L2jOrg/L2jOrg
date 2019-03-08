@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.instancemanager.SellBuffsManager;
-import com.l2jmobius.gameserver.model.TradeItem;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.SellBuffsManager;
+import org.l2j.gameserver.mobius.gameserver.model.TradeItem;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 public class PrivateStoreListSell extends AbstractItemPacket
 {

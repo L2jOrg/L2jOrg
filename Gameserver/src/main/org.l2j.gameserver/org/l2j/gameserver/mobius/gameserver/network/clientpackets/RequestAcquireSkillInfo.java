@@ -16,42 +16,42 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.base.AcquireSkillType;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillInfo;
-import com.l2jmobius.gameserver.network.serverpackets.ExAcquireSkillInfo;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.mobius.gameserver.enums.CategoryType;
+import org.l2j.gameserver.mobius.gameserver.enums.Race;
+import org.l2j.gameserver.mobius.gameserver.model.ClanPrivilege;
+import org.l2j.gameserver.mobius.gameserver.model.L2SkillLearn;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.base.AcquireSkillType;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.AcquireSkillInfo;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExAcquireSkillInfo;
 
 /**
  * Request Acquire Skill Info client packet implementation.
  * @author Zoey76
  */
-public final class RequestAcquireSkillInfo implements IClientIncomingPacket
+public final class RequestAcquireSkillInfo extends IClientIncomingPacket
 {
 	private int _id;
 	private int _level;
 	private AcquireSkillType _skillType;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_id = packet.readD();
-		_level = packet.readD();
-		_skillType = AcquireSkillType.getAcquireSkillType(packet.readD());
+		_id = packet.getInt();
+		_level = packet.getInt();
+		_skillType = AcquireSkillType.getAcquireSkillType(packet.getInt());
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		if ((_id <= 0) || (_level <= 0))
 		{

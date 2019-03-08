@@ -16,15 +16,15 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 
 /**
  * @author KenM, Gnacik
  */
-public class RequestChangeNicknameColor implements IClientIncomingPacket
+public class RequestChangeNicknameColor extends IClientIncomingPacket
 {
 	private static final int COLORS[] =
 	{
@@ -45,16 +45,16 @@ public class RequestChangeNicknameColor implements IClientIncomingPacket
 	private String _title;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_colorNum = packet.readD();
-		_title = packet.readS();
-		_itemObjectId = packet.readD();
+		_colorNum = packet.getInt();
+		_title = readString(packet);
+		_itemObjectId = packet.getInt();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)

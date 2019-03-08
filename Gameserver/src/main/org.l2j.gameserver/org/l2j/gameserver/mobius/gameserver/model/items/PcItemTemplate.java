@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.items;
 
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
 
 /**
  * @author Zoey76

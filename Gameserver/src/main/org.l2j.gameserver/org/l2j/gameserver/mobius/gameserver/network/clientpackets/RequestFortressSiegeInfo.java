@@ -16,25 +16,25 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.entity.Fort;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.ExShowFortressSiegeInfo;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Fort;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExShowFortressSiegeInfo;
 
 /**
  * @author KenM
  */
-public class RequestFortressSiegeInfo implements IClientIncomingPacket
+public class RequestFortressSiegeInfo extends IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		for (Fort fort : FortManager.getInstance().getForts())
 		{

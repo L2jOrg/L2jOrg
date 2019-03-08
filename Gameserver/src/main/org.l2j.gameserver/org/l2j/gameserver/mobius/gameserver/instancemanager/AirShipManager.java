@@ -16,15 +16,15 @@
  */
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.AirShipTeleportList;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.VehiclePathPoint;
-import com.l2jmobius.gameserver.model.actor.instance.L2AirShipInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ControllableAirShipInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
-import com.l2jmobius.gameserver.network.serverpackets.ExAirShipTeleportList;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.model.AirShipTeleportList;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.VehiclePathPoint;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2AirShipInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2ControllableAirShipInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExAirShipTeleportList;
 
 import java.sql.*;
 import java.util.HashMap;
@@ -165,7 +165,7 @@ public class AirShipManager
 			
 			_airShipsInfo.put(ownerId, info);
 			
-			try (Connection con = DatabaseFactory.getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(ADD_DB))
 			{
 				ps.setInt(1, ownerId);
@@ -261,7 +261,7 @@ public class AirShipManager
 	
 	private void load()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery(LOAD_DB))
 		{
@@ -292,7 +292,7 @@ public class AirShipManager
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_DB))
 		{
 			ps.setInt(1, info.getInt("fuel"));

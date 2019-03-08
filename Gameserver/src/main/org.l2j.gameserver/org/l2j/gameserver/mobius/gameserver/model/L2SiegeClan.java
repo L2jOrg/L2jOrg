@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.gameserver.enums.SiegeClanType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.enums.SiegeClanType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;

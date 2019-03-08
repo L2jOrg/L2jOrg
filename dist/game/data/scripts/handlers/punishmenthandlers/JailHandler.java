@@ -16,24 +16,24 @@
  */
 package handlers.punishmenthandlers;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.LoginServerThread;
-import com.l2jmobius.gameserver.cache.HtmCache;
-import com.l2jmobius.gameserver.handler.IPunishmentHandler;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.tasks.player.TeleportTask;
-import com.l2jmobius.gameserver.model.events.Containers;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
-import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
-import com.l2jmobius.gameserver.model.punishment.PunishmentType;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.L2JailZone;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.LoginServerThread;
+import org.l2j.gameserver.mobius.gameserver.cache.HtmCache;
+import org.l2j.gameserver.mobius.gameserver.handler.IPunishmentHandler;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.tasks.player.TeleportTask;
+import org.l2j.gameserver.mobius.gameserver.model.events.Containers;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import org.l2j.gameserver.mobius.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2j.gameserver.mobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2j.gameserver.mobius.gameserver.model.punishment.PunishmentTask;
+import org.l2j.gameserver.mobius.gameserver.model.punishment.PunishmentType;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.model.zone.type.L2JailZone;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * This class handles jail punishment.
@@ -162,7 +162,7 @@ public class JailHandler implements IPunishmentHandler
 			OlympiadManager.getInstance().removeDisconnectedCompetitor(player);
 		}
 		
-		ThreadPool.schedule(new TeleportTask(player, L2JailZone.getLocationIn()), 2000);
+		ThreadPoolManager.getInstance().schedule(new TeleportTask(player, L2JailZone.getLocationIn()), 2000);
 		
 		// Open a Html message to inform the player
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
@@ -198,7 +198,7 @@ public class JailHandler implements IPunishmentHandler
 	 */
 	private static void removeFromPlayer(L2PcInstance player)
 	{
-		ThreadPool.schedule(new TeleportTask(player, L2JailZone.getLocationOut()), 2000);
+		ThreadPoolManager.getInstance().schedule(new TeleportTask(player, L2JailZone.getLocationOut()), 2000);
 		
 		// Open a Html message to inform the player
 		final NpcHtmlMessage msg = new NpcHtmlMessage();

@@ -16,16 +16,16 @@
  */
 package quests.Q00211_TrialOfTheChallenger;
 
-import com.l2jmobius.gameserver.datatables.SpawnTable;
-import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
-import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.gameserver.mobius.gameserver.datatables.SpawnTable;
+import org.l2j.gameserver.mobius.gameserver.enums.CategoryType;
+import org.l2j.gameserver.mobius.gameserver.enums.QuestSound;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.quest.Quest;
+import org.l2j.gameserver.mobius.gameserver.model.quest.QuestState;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.RadarControl;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SocialAction;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 /**
  * Trial of the Challenger (211)

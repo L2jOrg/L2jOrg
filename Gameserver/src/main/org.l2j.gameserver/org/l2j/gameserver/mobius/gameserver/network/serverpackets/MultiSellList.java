@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.ItemInfo;
-import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
-import com.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
-import com.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.model.ItemInfo;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemChanceHolder;
+import org.l2j.gameserver.mobius.gameserver.model.holders.MultisellEntryHolder;
+import org.l2j.gameserver.mobius.gameserver.model.holders.PreparedMultisellListHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 import static com.l2jmobius.gameserver.data.xml.impl.MultisellData.PAGE_SIZE;
 

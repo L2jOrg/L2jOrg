@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.clanhallauction;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
-import com.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.entity.ClanHall;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.ClanHallAuctionManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.entity.ClanHall;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -58,7 +58,7 @@ public class ClanHallAuction
 	
 	private final void loadBidder()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(LOAD_CLANHALL_BIDDERS))
 		{
 			ps.setInt(1, _clanHallId);
@@ -102,7 +102,7 @@ public class ClanHallAuction
 			}
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(INSERT_CLANHALL_BIDDER))
 		{
 			ps.setInt(1, _clanHallId);
@@ -121,7 +121,7 @@ public class ClanHallAuction
 	public void removeBid(L2Clan clan)
 	{
 		getBids().remove(clan.getId());
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(DELETE_CLANHALL_BIDDER))
 		{
 			ps.setInt(1, clan.getId());
@@ -170,7 +170,7 @@ public class ClanHallAuction
 			clanHall.setOwner(highestBidder.getClan());
 			getBids().clear();
 			
-			try (Connection con = DatabaseFactory.getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(DELETE_CLANHALL_BIDDERS))
 			{
 				ps.setInt(1, _clanHallId);

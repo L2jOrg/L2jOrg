@@ -170,7 +170,7 @@ public final class Disconnection
 	{
 		if (_activeChar != null)
 		{
-			ThreadPool.schedule(() -> defaultSequence(), _activeChar.canLogout() ? 0 : AttackStanceTaskManager.COMBAT_TIME);
+			ThreadPoolManager.getInstance().schedule(() -> defaultSequence(), _activeChar.canLogout() ? 0 : AttackStanceTaskManager.COMBAT_TIME);
 		}
 	}
 }

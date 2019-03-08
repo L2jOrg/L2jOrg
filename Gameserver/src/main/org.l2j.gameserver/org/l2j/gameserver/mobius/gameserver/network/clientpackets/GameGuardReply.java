@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -28,7 +28,7 @@ import java.util.logging.Level;
  * Format: c dddd
  * @author KenM
  */
-public class GameGuardReply implements IClientIncomingPacket
+public class GameGuardReply extends IClientIncomingPacket
 {
 	private static final byte[] VALID =
 	{
@@ -57,16 +57,16 @@ public class GameGuardReply implements IClientIncomingPacket
 	private final byte[] _reply = new byte[8];
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		packet.readB(_reply, 0, 4);
-		packet.readD();
-		packet.readB(_reply, 4, 4);
+		packet.get(new byte[_reply, 0, 4]);
+		packet.getInt();
+		packet.get(new byte[_reply, 4, 4]);
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		try
 		{

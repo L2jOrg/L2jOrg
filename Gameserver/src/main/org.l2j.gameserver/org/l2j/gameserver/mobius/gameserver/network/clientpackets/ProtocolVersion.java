@@ -17,9 +17,9 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.KeyPacket;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.KeyPacket;
 
 import java.util.logging.Logger;
 
@@ -27,21 +27,21 @@ import java.util.logging.Logger;
  * This class ...
  * @version $Revision: 1.5.2.8.2.8 $ $Date: 2005/04/02 10:43:04 $
  */
-public final class ProtocolVersion implements IClientIncomingPacket
+public final class ProtocolVersion extends IClientIncomingPacket
 {
 	private static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	
 	private int _version;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_version = packet.readD();
+		_version = packet.getInt();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		// this packet is never encrypted
 		if (_version == -2)

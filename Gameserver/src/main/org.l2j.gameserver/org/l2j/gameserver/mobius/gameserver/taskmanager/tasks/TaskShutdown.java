@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.taskmanager.tasks;
 
-import com.l2jmobius.gameserver.taskmanager.Task;
-import com.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.Task;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.TaskManager.ExecutedTask;
 
 /**
  * @author Layane

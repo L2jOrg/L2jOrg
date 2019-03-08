@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
-import com.l2jmobius.gameserver.model.interfaces.INamable;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.IIdentifiable;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.INamable;
 
 import java.util.List;
 

@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.items.enchant;
 
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.items.type.EtcItemType;
-import com.l2jmobius.gameserver.model.items.type.ItemType;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.EnchantItemGroupsData;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.EtcItemType;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.ItemType;
 
 import java.util.HashSet;
 import java.util.Set;

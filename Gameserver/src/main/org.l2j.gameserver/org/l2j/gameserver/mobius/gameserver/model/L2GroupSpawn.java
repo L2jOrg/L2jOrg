@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2ControllableMobInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2ControllableMobInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2NpcTemplate;
 
 import java.util.logging.Level;
 

@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.gameserver.mobius.gameserver.model.DailyMissionDataHolder;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.base.ClassId;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
 import org.w3c.dom.Document;
 
 import java.io.File;

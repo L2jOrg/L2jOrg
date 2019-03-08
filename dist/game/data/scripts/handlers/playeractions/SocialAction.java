@@ -16,21 +16,21 @@
  */
 package handlers.playeractions;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.ai.CtrlEvent;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.ai.NextAction;
-import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
-import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
-import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSocialAction;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExAskCoupleAction;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.ai.CtrlEvent;
+import org.l2j.gameserver.mobius.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.mobius.gameserver.ai.NextAction;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.FakePlayerData;
+import org.l2j.gameserver.mobius.gameserver.handler.IPlayerActionHandler;
+import org.l2j.gameserver.mobius.gameserver.model.ActionDataHolder;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerSocialAction;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExAskCoupleAction;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.AttackStanceTaskManager;
 
 /**
  * Social Action player action handler.
@@ -129,7 +129,7 @@ public final class SocialAction implements IPlayerActionHandler
 			player.sendPacket(sm);
 			if (!player.isProcessingRequest())
 			{
-				ThreadPool.schedule(() -> scheduleDeny(player), 10000);
+				ThreadPoolManager.getInstance().schedule(() -> scheduleDeny(player), 10000);
 				player.blockRequest();
 			}
 			return;

@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.engines;
 
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.conditions.Condition;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 

@@ -16,11 +16,11 @@
  */
 package handlers.targethandlers.affectobject;
 
-import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
-import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.skills.targets.AffectObject;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.CategoryData;
+import org.l2j.gameserver.mobius.gameserver.enums.CategoryType;
+import org.l2j.gameserver.mobius.gameserver.handler.IAffectObjectHandler;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.skills.targets.AffectObject;
 
 /**
  * @author Nik

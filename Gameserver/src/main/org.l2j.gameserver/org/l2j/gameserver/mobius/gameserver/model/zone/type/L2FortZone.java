@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.zone.type;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
 
 /**
  * A castle zone

@@ -18,19 +18,19 @@ package instances;
 
 import java.util.List;
 
-import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.enums.InstanceReenterType;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.instancezone.Instance;
-import com.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
-import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.util.CommonUtil;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceReenterType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.InstanceManager;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.PcCondOverride;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.mobius.gameserver.model.instancezone.InstanceTemplate;
+import org.l2j.gameserver.mobius.gameserver.network.NpcStringId;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 import ai.AbstractNpcAI;
 

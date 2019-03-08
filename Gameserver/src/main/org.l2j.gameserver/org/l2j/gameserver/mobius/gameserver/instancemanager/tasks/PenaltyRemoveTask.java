@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.instancemanager.tasks;
 
-import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.HandysBlockCheckerManager;
 
 /**
  * Handys Block Checker penalty remove.

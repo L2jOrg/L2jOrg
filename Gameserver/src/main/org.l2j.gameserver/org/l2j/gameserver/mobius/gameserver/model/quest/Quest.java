@@ -4,9 +4,11 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.mobius.gameserver.Config;
+import org.l2j.gameserver.mobius.gameserver.cache.HtmCache;
 import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.mobius.gameserver.enums.CategoryType;
 import org.l2j.gameserver.mobius.gameserver.enums.QuestType;
+import org.l2j.gameserver.mobius.gameserver.enums.Race;
 import org.l2j.gameserver.mobius.gameserver.enums.TrapAction;
 import org.l2j.gameserver.mobius.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.mobius.gameserver.model.KeyValuePair;
@@ -19,6 +21,7 @@ import org.l2j.gameserver.mobius.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2TrapInstance;
 import org.l2j.gameserver.mobius.gameserver.model.base.AcquireSkillType;
+import org.l2j.gameserver.mobius.gameserver.model.base.ClassId;
 import org.l2j.gameserver.mobius.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
 import org.l2j.gameserver.mobius.gameserver.model.events.listeners.AbstractEventListener;
@@ -31,9 +34,11 @@ import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
 import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.mobius.gameserver.model.olympiad.CompetitionType;
 import org.l2j.gameserver.mobius.gameserver.model.olympiad.Participant;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
 import org.l2j.gameserver.mobius.gameserver.model.zone.L2ZoneType;
 import org.l2j.gameserver.mobius.gameserver.network.NpcStringId;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExQuestNpcLogList;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcQuestHtmlMessage;
 import org.l2j.gameserver.mobius.gameserver.scripting.ScriptEngineManager;
@@ -1542,7 +1547,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static void playerEnter(L2PcInstance player)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			 PreparedStatement invalidQuestData = con.prepareStatement("DELETE FROM character_quests WHERE charId = ? AND name = ?");
 			 PreparedStatement invalidQuestDataVar = con.prepareStatement("DELETE FROM character_quests WHERE charId = ? AND name = ? AND var = ?");
 			 PreparedStatement ps1 = con.prepareStatement("SELECT name, value FROM character_quests WHERE charId = ? AND var = ?"))
@@ -1624,7 +1629,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static void createQuestVarInDb(QuestState qs, String var, String value)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO character_quests (charId,name,var,value) VALUES (?,?,?,?) ON DUPLICATE KEY UPDATE value=?"))
 		{
 			statement.setInt(1, qs.getPlayer().getObjectId());
@@ -1648,7 +1653,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static void updateQuestVarInDb(QuestState qs, String var, String value)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("UPDATE character_quests SET value=? WHERE charId=? AND name=? AND var = ?"))
 		{
 			statement.setString(1, value);
@@ -1670,7 +1675,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static void deleteQuestVarInDb(QuestState qs, String var)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM character_quests WHERE charId=? AND name=? AND var=?"))
 		{
 			statement.setInt(1, qs.getPlayer().getObjectId());
@@ -1691,7 +1696,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static void deleteQuestInDb(QuestState qs, boolean repeatable)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(repeatable ? QUEST_DELETE_FROM_CHAR_QUERY : QUEST_DELETE_FROM_CHAR_QUERY_NON_REPEATABLE_QUERY))
 		{
 			ps.setInt(1, qs.getPlayer().getObjectId());

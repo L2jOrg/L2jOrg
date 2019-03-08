@@ -17,16 +17,16 @@
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.enums.ManorMode;
-import com.l2jmobius.gameserver.model.*;
-import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.model.interfaces.IStorable;
-import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import com.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.enums.ManorMode;
+import org.l2j.gameserver.mobius.gameserver.model.*;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Castle;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.IStorable;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.ItemContainer;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -93,7 +93,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 			// Schedule autosave
 			if (!Config.ALT_MANOR_SAVE_ALL_ACTIONS)
 			{
-				ThreadPool.scheduleAtFixedRate(this::storeMe, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000);
+				ThreadPoolManager.getInstance().scheduleAtFixedRate(this::storeMe, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000);
 			}
 		}
 		else
@@ -149,7 +149,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 	
 	private void loadDb()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement stProduction = con.prepareStatement("SELECT * FROM castle_manor_production WHERE castle_id=?");
 			PreparedStatement stProcure = con.prepareStatement("SELECT * FROM castle_manor_procure WHERE castle_id=?"))
 		{
@@ -264,7 +264,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 			}
 		}
 		// Schedule mode change
-		ThreadPool.schedule(this::changeMode, (_nextModeChange.getTimeInMillis() - System.currentTimeMillis()));
+		ThreadPoolManager.getInstance().schedule(this::changeMode, (_nextModeChange.getTimeInMillis() - System.currentTimeMillis()));
 	}
 	
 	public final void changeMode()
@@ -423,7 +423,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 		_productionNext.put(castleId, list);
 		if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
 		{
-			try (Connection con = DatabaseFactory.getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement dps = con.prepareStatement("DELETE FROM castle_manor_production WHERE castle_id = ? AND next_period = 1");
 				PreparedStatement ips = con.prepareStatement(INSERT_PRODUCT))
 			{
@@ -459,7 +459,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 		_procureNext.put(castleId, list);
 		if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
 		{
-			try (Connection con = DatabaseFactory.getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement dps = con.prepareStatement("DELETE FROM castle_manor_procure WHERE castle_id = ? AND next_period = 1");
 				PreparedStatement ips = con.prepareStatement(INSERT_CROP))
 			{
@@ -493,7 +493,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 	
 	public final void updateCurrentProduction(int castleId, Collection<SeedProduction> items)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE castle_manor_production SET amount = ? WHERE castle_id = ? AND seed_id = ? AND next_period = 0"))
 		{
 			for (SeedProduction sp : items)
@@ -513,7 +513,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 	
 	public final void updateCurrentProcure(int castleId, Collection<CropProcure> items)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE castle_manor_procure SET amount = ? WHERE castle_id = ? AND crop_id = ? AND next_period = 0"))
 		{
 			for (CropProcure sp : items)
@@ -586,7 +586,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 	@Override
 	public final boolean storeMe()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ds = con.prepareStatement("DELETE FROM castle_manor_production");
 			PreparedStatement is = con.prepareStatement(INSERT_PRODUCT);
 			PreparedStatement dp = con.prepareStatement("DELETE FROM castle_manor_procure");
@@ -684,7 +684,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 		
 		if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
 		{
-			try (Connection con = DatabaseFactory.getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ds = con.prepareStatement("DELETE FROM castle_manor_production WHERE castle_id = ?");
 				PreparedStatement dc = con.prepareStatement("DELETE FROM castle_manor_procure WHERE castle_id = ?"))
 			{

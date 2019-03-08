@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.mobius.gameserver.model.holders.SkillHolder;
 
 import java.util.ArrayList;
 import java.util.HashMap;

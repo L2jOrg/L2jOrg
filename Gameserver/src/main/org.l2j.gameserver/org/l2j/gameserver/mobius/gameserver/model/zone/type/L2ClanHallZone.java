@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.zone.type;
 
-import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.entity.ClanHall;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.entity.ClanHall;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
 
 /**
  * A clan hall zone

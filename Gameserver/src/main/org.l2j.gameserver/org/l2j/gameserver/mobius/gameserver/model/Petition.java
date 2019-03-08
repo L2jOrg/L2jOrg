@@ -16,16 +16,16 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.gameserver.enums.PetitionState;
-import com.l2jmobius.gameserver.enums.PetitionType;
-import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.instancemanager.PetitionManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
-import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
-import com.l2jmobius.gameserver.network.serverpackets.PetitionVotePacket;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.mobius.gameserver.enums.PetitionState;
+import org.l2j.gameserver.mobius.gameserver.enums.PetitionType;
+import org.l2j.gameserver.mobius.gameserver.idfactory.IdFactory;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.PetitionManager;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.CreatureSay;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.PetitionVotePacket;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;

@@ -17,22 +17,22 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import com.l2jmobius.gameserver.model.SeedProduction;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.CastleManorManager;
+import org.l2j.gameserver.mobius.gameserver.model.SeedProduction;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2MerchantInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Castle;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,17 +44,17 @@ import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 /**
  * @author l3x
  */
-public class RequestBuySeed implements IClientIncomingPacket
+public class RequestBuySeed extends IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 12; // length of the one item
 	private int _manorId;
 	private List<ItemHolder> _items = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_manorId = packet.readD();
-		final int count = packet.readD();
+		_manorId = packet.getInt();
+		final int count = packet.getInt();
 		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
 			return false;
@@ -63,8 +63,8 @@ public class RequestBuySeed implements IClientIncomingPacket
 		_items = new ArrayList<>(count);
 		for (int i = 0; i < count; i++)
 		{
-			final int itemId = packet.readD();
-			final long cnt = packet.readQ();
+			final int itemId = packet.getInt();
+			final long cnt = packet.getLong();
 			if ((cnt < 1) || (itemId < 1))
 			{
 				_items = null;
@@ -76,7 +76,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)

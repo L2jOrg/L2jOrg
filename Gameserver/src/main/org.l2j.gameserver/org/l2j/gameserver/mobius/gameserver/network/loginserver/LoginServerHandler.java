@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.loginserver;
 
-import com.l2jmobius.commons.network.ChannelInboundHandler;
-import com.l2jmobius.commons.network.IIncomingPacket;
+import org.l2j.commons.network.ChannelInboundHandler;
+import org.l2j.commons.network.IIncomingPacket;
 import io.netty.channel.ChannelHandlerContext;
 
 /**

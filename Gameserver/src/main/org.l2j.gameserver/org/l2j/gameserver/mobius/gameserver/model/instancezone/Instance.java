@@ -652,11 +652,11 @@ public final class Instance implements IIdentifiable, INamable
 			sendWorldDestroyMessage(minutes);
 			if (minutes <= 5) // Message 1 minute before destroy
 			{
-				_cleanUpTask = ThreadPool.schedule(this::cleanUp, millis - 60000);
+				_cleanUpTask = ThreadPoolManager.getInstance().schedule(this::cleanUp, millis - 60000);
 			}
 			else // Message 5 minutes before destroy
 			{
-				_cleanUpTask = ThreadPool.schedule(this::cleanUp, millis - (5 * 60000));
+				_cleanUpTask = ThreadPoolManager.getInstance().schedule(this::cleanUp, millis - (5 * 60000));
 			}
 		}
 	}
@@ -787,7 +787,7 @@ public final class Instance implements IIdentifiable, INamable
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			 PreparedStatement ps = con.prepareStatement("INSERT IGNORE INTO character_instance_time (charId,instanceId,time) VALUES (?,?,?)"))
 		{
 			// Save to database
@@ -875,7 +875,7 @@ public final class Instance implements IIdentifiable, INamable
 			player.sendPacket(sm);
 			
 			// Start eject task
-			_ejectDeadTasks.put(player.getObjectId(), ThreadPool.schedule(() ->
+			_ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.getInstance().schedule(() ->
 			{
 				if (player.isDead())
 				{
@@ -1104,12 +1104,12 @@ public final class Instance implements IIdentifiable, INamable
 		if (getRemainingTime() <= TimeUnit.MINUTES.toMillis(1))
 		{
 			sendWorldDestroyMessage(1);
-			_cleanUpTask = ThreadPool.schedule(this::destroy, 60 * 1000); // 1 minute
+			_cleanUpTask = ThreadPoolManager.getInstance().schedule(this::destroy, 60 * 1000); // 1 minute
 		}
 		else
 		{
 			sendWorldDestroyMessage(5);
-			_cleanUpTask = ThreadPool.schedule(this::cleanUp, 5 * 60 * 1000); // 5 minutes
+			_cleanUpTask = ThreadPoolManager.getInstance().schedule(this::cleanUp, 5 * 60 * 1000); // 5 minutes
 		}
 	}
 	

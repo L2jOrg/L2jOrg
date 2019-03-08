@@ -16,16 +16,16 @@
  */
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.enums.MailType;
-import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.instancemanager.tasks.MessageDeletionTask;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.Message;
-import com.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
-import com.l2jmobius.gameserver.network.serverpackets.ExUnReadMailCount;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.enums.MailType;
+import org.l2j.gameserver.mobius.gameserver.idfactory.IdFactory;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.tasks.MessageDeletionTask;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Message;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExNoticePostArrived;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExUnReadMailCount;
 
 import java.sql.*;
 import java.util.Collection;
@@ -53,7 +53,7 @@ public final class MailManager
 	private void load()
 	{
 		int count = 0;
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement ps = con.createStatement();
 			ResultSet rs = ps.executeQuery("SELECT * FROM messages ORDER BY expiration"))
 		{
@@ -70,11 +70,11 @@ public final class MailManager
 				
 				if (expiration < System.currentTimeMillis())
 				{
-					ThreadPool.schedule(new MessageDeletionTask(msgId), 10000);
+					ThreadPoolManager.getInstance().schedule(new MessageDeletionTask(msgId), 10000);
 				}
 				else
 				{
-					ThreadPool.schedule(new MessageDeletionTask(msgId), expiration - System.currentTimeMillis());
+					ThreadPoolManager.getInstance().schedule(new MessageDeletionTask(msgId), expiration - System.currentTimeMillis());
 				}
 			}
 		}
@@ -188,7 +188,7 @@ public final class MailManager
 	public void sendMessage(Message msg)
 	{
 		_messages.put(msg.getId(), msg);
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = Message.getStatement(msg, con))
 		{
 			ps.execute();
@@ -205,12 +205,12 @@ public final class MailManager
 			receiver.sendPacket(new ExUnReadMailCount(receiver));
 		}
 		
-		ThreadPool.schedule(new MessageDeletionTask(msg.getId()), msg.getExpiration() - System.currentTimeMillis());
+		ThreadPoolManager.getInstance().schedule(new MessageDeletionTask(msg.getId()), msg.getExpiration() - System.currentTimeMillis());
 	}
 	
 	public final void markAsReadInDb(int msgId)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE messages SET isUnread = 'false' WHERE messageId = ?"))
 		{
 			ps.setInt(1, msgId);
@@ -224,7 +224,7 @@ public final class MailManager
 	
 	public final void markAsDeletedBySenderInDb(int msgId)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE messages SET isDeletedBySender = 'true' WHERE messageId = ?"))
 		{
 			ps.setInt(1, msgId);
@@ -238,7 +238,7 @@ public final class MailManager
 	
 	public final void markAsDeletedByReceiverInDb(int msgId)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE messages SET isDeletedByReceiver = 'true' WHERE messageId = ?"))
 		{
 			ps.setInt(1, msgId);
@@ -252,7 +252,7 @@ public final class MailManager
 	
 	public final void removeAttachmentsInDb(int msgId)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE messages SET hasAttachments = 'false' WHERE messageId = ?"))
 		{
 			ps.setInt(1, msgId);
@@ -266,7 +266,7 @@ public final class MailManager
 	
 	public final void deleteMessageInDb(int msgId)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM messages WHERE messageId = ?"))
 		{
 			ps.setInt(1, msgId);

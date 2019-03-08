@@ -16,18 +16,18 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.enums.MacroType;
-import com.l2jmobius.gameserver.model.Macro;
-import com.l2jmobius.gameserver.model.MacroCmd;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.enums.MacroType;
+import org.l2j.gameserver.mobius.gameserver.model.Macro;
+import org.l2j.gameserver.mobius.gameserver.model.MacroCmd;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public final class RequestMakeMacro implements IClientIncomingPacket
+public final class RequestMakeMacro extends IClientIncomingPacket
 {
 	private Macro _macro;
 	private int _commandsLenght = 0;
@@ -35,14 +35,14 @@ public final class RequestMakeMacro implements IClientIncomingPacket
 	private static final int MAX_MACRO_LENGTH = 12;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		final int _id = packet.readD();
-		final String _name = packet.readS();
-		final String _desc = packet.readS();
-		final String _acronym = packet.readS();
-		final int icon = packet.readD();
-		int count = packet.readC();
+		final int _id = packet.getInt();
+		final String _name = readString(packet);
+		final String _desc = readString(packet);
+		final String _acronym = readString(packet);
+		final int icon = packet.getInt();
+		int count = packet.get();
 		if (count > MAX_MACRO_LENGTH)
 		{
 			count = MAX_MACRO_LENGTH;
@@ -51,11 +51,11 @@ public final class RequestMakeMacro implements IClientIncomingPacket
 		final List<MacroCmd> commands = new ArrayList<>(count);
 		for (int i = 0; i < count; i++)
 		{
-			final int entry = packet.readC();
-			final int type = packet.readC(); // 1 = skill, 3 = action, 4 = shortcut
-			final int d1 = packet.readD(); // skill or page number for shortcuts
-			final int d2 = packet.readC();
-			final String command = packet.readS();
+			final int entry = packet.get();
+			final int type = packet.get(); // 1 = skill, 3 = action, 4 = shortcut
+			final int d1 = packet.getInt(); // skill or page number for shortcuts
+			final int d2 = packet.get();
+			final String command = readString(packet);
 			_commandsLenght += command.length();
 			commands.add(new MacroCmd(entry, MacroType.values()[(type < 1) || (type > 6) ? 0 : type], d1, d2, command));
 		}
@@ -64,7 +64,7 @@ public final class RequestMakeMacro implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)

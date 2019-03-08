@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.events.impl.instance;
 
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import com.l2jmobius.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.IBaseEvent;
+import org.l2j.gameserver.mobius.gameserver.model.instancezone.Instance;
 
 /**
  * @author malyelfik

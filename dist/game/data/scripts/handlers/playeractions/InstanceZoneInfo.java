@@ -16,10 +16,10 @@
  */
 package handlers.playeractions;
 
-import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
-import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.ExInzoneWaiting;
+import org.l2j.gameserver.mobius.gameserver.handler.IPlayerActionHandler;
+import org.l2j.gameserver.mobius.gameserver.model.ActionDataHolder;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExInzoneWaiting;
 
 /**
  * Instance Zone Info player action handler.

@@ -17,8 +17,8 @@
 package org.l2j.gameserver.mobius.gameserver.model;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.enums.Race;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.enums.Race;
 
 import java.util.ArrayList;
 import java.util.HashMap;

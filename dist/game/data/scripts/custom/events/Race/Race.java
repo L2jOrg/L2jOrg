@@ -22,18 +22,18 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.Event;
-import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.gameserver.util.Broadcast;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.quest.Event;
+import org.l2j.gameserver.mobius.gameserver.model.quest.QuestState;
+import org.l2j.gameserver.mobius.gameserver.model.skills.AbnormalType;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.CreatureSay;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.mobius.gameserver.util.Broadcast;
 
 /**
  * @author Gnacik
@@ -138,7 +138,7 @@ public final class Race extends Event
 		Broadcast.toAllOnlinePlayers("Visit Event Manager in Dion village and signup, you have " + _time_register + " min before Race Start...");
 		
 		// Schedule Event end
-		_eventTask = ThreadPool.schedule(() -> StartRace(), _time_register * 60 * 1000);
+		_eventTask = ThreadPoolManager.getInstance().schedule(() -> StartRace(), _time_register * 60 * 1000);
 		
 		return true;
 		
@@ -181,7 +181,7 @@ public final class Race extends Event
 			}
 		}
 		// Schedule timeup for Race
-		_eventTask = ThreadPool.schedule(() -> timeUp(), _time_race * 60 * 1000);
+		_eventTask = ThreadPoolManager.getInstance().schedule(() -> timeUp(), _time_race * 60 * 1000);
 	}
 	
 	@Override

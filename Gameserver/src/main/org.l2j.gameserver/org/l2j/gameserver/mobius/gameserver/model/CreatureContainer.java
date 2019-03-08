@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.OnCreatureSee;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -63,7 +63,7 @@ public class CreatureContainer
 	{
 		if ((_task == null) || _task.isDone())
 		{
-			_task = ThreadPool.scheduleAtFixedRate(this::update, 1000, 1000);
+			_task = ThreadPoolManager.getInstance().scheduleAtFixedRate(this::update, 1000, 1000);
 		}
 	}
 	

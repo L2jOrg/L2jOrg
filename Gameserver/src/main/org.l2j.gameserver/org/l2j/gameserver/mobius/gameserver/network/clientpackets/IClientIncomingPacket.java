@@ -1,31 +1,45 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.IIncomingPacket;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import io.github.joealisson.mmocore.ReadablePacket;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Logger;
+import java.nio.ByteBuffer;
 
 /**
  * Packets received by the game server from clients
  * @author KenM
  */
-public interface IClientIncomingPacket extends IIncomingPacket<L2GameClient>
-{
-	Logger LOGGER = Logger.getLogger(IClientIncomingPacket.class.getName());
+public abstract class IClientIncomingPacket extends ReadablePacket<L2GameClient> {
+
+	private static Logger LOGGER = LoggerFactory.getLogger(IClientIncomingPacket.class.getName());
+
+	@Override
+	protected boolean read(ByteBuffer packet) {
+		try {
+			readImpl(packet);
+		} catch (Exception e) {
+			LOGGER.error("Error while reading packet {} from client {}", this, client);
+			LOGGER.error(e.getLocalizedMessage(), e);
+			return false;
+		}
+		return true;
+	}
+
+
+	@Override
+	public void run() {
+		try {
+			runImpl();
+		} catch (Exception e) {
+			LOGGER.error("Error while running packet {} from client {}", this, client);
+			LOGGER.error(e.getLocalizedMessage(), e);
+		}
+
+	}
+
+	protected abstract void runImpl();
+
+	protected abstract void readImpl(ByteBuffer packet);
 }

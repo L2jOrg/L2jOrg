@@ -16,17 +16,17 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.entity.BlockCheckerEngine;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameChangePoints;
-import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameExtendedChangePoints;
-import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.model.ArenaParticipantsHolder;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.mobius.gameserver.model.entity.BlockCheckerEngine;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExCubeGameChangePoints;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExCubeGameExtendedChangePoints;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcInfo;
 
 /**
  * @author BiggBoss

@@ -16,35 +16,35 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
-import com.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
-import com.l2jmobius.gameserver.model.items.enchant.EnchantSupportItem;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExPutEnchantSupportItemResult;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.EnchantItemData;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.request.EnchantItemRequest;
+import org.l2j.gameserver.mobius.gameserver.model.items.enchant.EnchantScroll;
+import org.l2j.gameserver.mobius.gameserver.model.items.enchant.EnchantSupportItem;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExPutEnchantSupportItemResult;
 
 /**
  * @author KenM
  */
-public class RequestExTryToPutEnchantSupportItem implements IClientIncomingPacket
+public class RequestExTryToPutEnchantSupportItem extends IClientIncomingPacket
 {
 	private int _supportObjectId;
 	private int _enchantObjectId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_supportObjectId = packet.readD();
-		_enchantObjectId = packet.readD();
+		_supportObjectId = packet.getInt();
+		_enchantObjectId = packet.getInt();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)

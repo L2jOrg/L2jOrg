@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.enums.ShortcutType;
-import com.l2jmobius.gameserver.model.Shortcut;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.enums.ShortcutType;
+import org.l2j.gameserver.mobius.gameserver.model.Shortcut;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ShortCutRegister;
 
-public final class RequestShortCutReg implements IClientIncomingPacket
+public final class RequestShortCutReg extends IClientIncomingPacket
 {
 	private ShortcutType _type;
 	private int _id;
@@ -33,22 +33,22 @@ public final class RequestShortCutReg implements IClientIncomingPacket
 	private int _characterType; // 1 - player, 2 - pet
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		final int typeId = packet.readD();
+		final int typeId = packet.getInt();
 		_type = ShortcutType.values()[(typeId < 1) || (typeId > 6) ? 0 : typeId];
-		final int slot = packet.readD();
+		final int slot = packet.getInt();
 		_slot = slot % 12;
 		_page = slot / 12;
-		_id = packet.readD();
-		_lvl = packet.readH();
-		_subLvl = packet.readH(); // Sublevel
-		_characterType = packet.readD();
+		_id = packet.getInt();
+		_lvl = packet.getShort();
+		_subLvl = packet.getShort(); // Sublevel
+		_characterType = packet.getInt();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		if ((client.getActiveChar() == null) || (_page > 10) || (_page < 0))
 		{

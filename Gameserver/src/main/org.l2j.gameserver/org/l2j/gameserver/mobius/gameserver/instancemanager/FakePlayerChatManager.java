@@ -17,19 +17,19 @@
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
-import com.l2jmobius.gameserver.datatables.SpawnTable;
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.FakePlayerChatHolder;
-import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.FakePlayerData;
+import org.l2j.gameserver.mobius.gameserver.datatables.SpawnTable;
+import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
+import org.l2j.gameserver.mobius.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.mobius.gameserver.model.L2Spawn;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.holders.FakePlayerChatHolder;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.CreatureSay;
 import org.w3c.dom.Document;
 
 import java.io.File;
@@ -79,12 +79,12 @@ public final class FakePlayerChatManager implements IGameXmlReader
 	
 	public void manageChat(L2PcInstance player, String fpcName, String message)
 	{
-		ThreadPool.schedule(() -> manageResponce(player, fpcName, message), Rnd.get(MIN_DELAY, MAX_DELAY));
+		ThreadPoolManager.getInstance().schedule(() -> manageResponce(player, fpcName, message), Rnd.get(MIN_DELAY, MAX_DELAY));
 	}
 	
 	public void manageChat(L2PcInstance player, String fpcName, String message, int minDelay, int maxDelay)
 	{
-		ThreadPool.schedule(() -> manageResponce(player, fpcName, message), Rnd.get(minDelay, maxDelay));
+		ThreadPoolManager.getInstance().schedule(() -> manageResponce(player, fpcName, message), Rnd.get(minDelay, maxDelay));
 	}
 	
 	private void manageResponce(L2PcInstance player, String fpcName, String message)

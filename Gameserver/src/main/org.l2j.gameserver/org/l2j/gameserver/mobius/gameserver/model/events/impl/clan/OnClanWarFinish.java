@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.events.impl.clan;
 
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.IBaseEvent;
 
 /**
  * @author UnAfraid

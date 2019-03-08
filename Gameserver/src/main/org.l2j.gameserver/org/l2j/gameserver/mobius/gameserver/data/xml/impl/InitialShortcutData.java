@@ -16,16 +16,16 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.enums.MacroType;
-import com.l2jmobius.gameserver.enums.ShortcutType;
-import com.l2jmobius.gameserver.model.Macro;
-import com.l2jmobius.gameserver.model.MacroCmd;
-import com.l2jmobius.gameserver.model.Shortcut;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.gameserver.mobius.gameserver.enums.MacroType;
+import org.l2j.gameserver.mobius.gameserver.enums.ShortcutType;
+import org.l2j.gameserver.mobius.gameserver.model.Macro;
+import org.l2j.gameserver.mobius.gameserver.model.MacroCmd;
+import org.l2j.gameserver.mobius.gameserver.model.Shortcut;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.base.ClassId;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ShortCutRegister;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;

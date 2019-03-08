@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.holders;
 
-import com.l2jmobius.gameserver.enums.Movie;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.enums.Movie;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;

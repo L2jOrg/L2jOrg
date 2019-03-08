@@ -16,21 +16,21 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.quest;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.data.sql.impl.AnnouncementsTable;
-import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.datatables.EventDroplist;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.instancemanager.EventShrineManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.announce.EventAnnouncement;
-import com.l2jmobius.gameserver.model.holders.DropHolder;
-import com.l2jmobius.gameserver.script.DateRange;
-import com.l2jmobius.gameserver.util.Broadcast;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.AnnouncementsTable;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.mobius.gameserver.datatables.EventDroplist;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.EventShrineManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.announce.EventAnnouncement;
+import org.l2j.gameserver.mobius.gameserver.model.holders.DropHolder;
+import org.l2j.gameserver.mobius.gameserver.script.DateRange;
+import org.l2j.gameserver.mobius.gameserver.util.Broadcast;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
@@ -99,7 +99,7 @@ public class LongTimeEvent extends Quest
 			else if (_eventPeriod.getStartDate().after(new Date()))
 			{
 				final long delay = _eventPeriod.getStartDate().getTime() - System.currentTimeMillis();
-				ThreadPool.schedule(new ScheduleStart(), delay);
+				ThreadPoolManager.getInstance().schedule(new ScheduleStart(), delay);
 				LOGGER.info("Event " + _eventName + " will be started at " + _eventPeriod.getStartDate());
 			}
 			else
@@ -340,7 +340,7 @@ public class LongTimeEvent extends Quest
 		AnnouncementsTable.getInstance().addAnnouncement(new EventAnnouncement(_eventPeriod, _onEnterMsg));
 		
 		// Schedule event end (now only for message sending)
-		ThreadPool.schedule(new ScheduleEnd(), millisToEventEnd);
+		ThreadPoolManager.getInstance().schedule(new ScheduleEnd(), millisToEventEnd);
 	}
 	
 	/**
@@ -408,7 +408,7 @@ public class LongTimeEvent extends Quest
 					}
 				}
 				// Update database
-				try (Connection con = DatabaseFactory.getConnection();
+				try (Connection con = DatabaseFactory.getInstance().getConnection();
 					PreparedStatement statement = con.prepareStatement("DELETE FROM items WHERE item_id=?"))
 				{
 					statement.setInt(1, itemId);

@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2StaticObjectInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2CharTemplate;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;

@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * This class manages requests (transactions) between two L2PcInstance.
@@ -123,7 +123,7 @@ public class L2Request
 	{
 		_isRequestor = isRequestor;
 		_isAnswerer = !isRequestor;
-		ThreadPool.schedule(() -> clear(), REQUEST_TIMEOUT * 1000);
+		ThreadPoolManager.getInstance().schedule(() -> clear(), REQUEST_TIMEOUT * 1000);
 	}
 	
 	/**

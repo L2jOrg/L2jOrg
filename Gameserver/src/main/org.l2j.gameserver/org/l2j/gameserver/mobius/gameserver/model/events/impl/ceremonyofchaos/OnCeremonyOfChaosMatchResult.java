@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.events.impl.ceremonyofchaos;
 
-import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
+import org.l2j.gameserver.mobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.IBaseEvent;
 
 import java.util.List;
 

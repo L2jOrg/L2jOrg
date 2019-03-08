@@ -4,7 +4,9 @@ import io.github.joealisson.mmocore.Client;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.mobius.gameserver.Config;
 import org.l2j.gameserver.mobius.gameserver.LoginServerThread;
+import org.l2j.gameserver.mobius.gameserver.LoginServerThread.SessionKey;
 import org.l2j.gameserver.mobius.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SecondaryAuthData;
 import org.l2j.gameserver.mobius.gameserver.enums.CharacterDeleteFailType;
 import org.l2j.gameserver.mobius.gameserver.idfactory.IdFactory;
@@ -19,16 +21,16 @@ import org.l2j.gameserver.mobius.gameserver.model.holders.ClientHardwareInfoHold
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.mobius.gameserver.security.SecondaryPasswordAuth;
 import org.l2j.gameserver.mobius.gameserver.util.FloodProtectors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.InetAddress;
-import java.net.InetSocketAddress;
 import java.nio.channels.Channel;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Represents a client connected on Game Server.
@@ -36,16 +38,13 @@ import java.util.logging.Logger;
  */
 public final class L2GameClient extends Client<io.github.joealisson.mmocore.Connection<L2GameClient>>
 {
-	protected static final Logger LOGGER = Logger.getLogger(L2GameClient.class.getName());
-	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
+	protected static final Logger LOGGER = LoggerFactory.getLogger(L2GameClient.class);
+	protected static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 	
 	private final int _objectId;
-	
-	// Info
-	private InetAddress _addr;
-	private Channel _channel;
+
 	private String _accountName;
-	private LoginServerThread.SessionKey _sessionId;
+	private SessionKey _sessionId;
 	private L2PcInstance _activeChar;
 	private final ReentrantLock _activeCharLock = new ReentrantLock();
 	private SecondaryPasswordAuth _secondaryAuth;
@@ -72,78 +71,56 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 		_objectId = IdFactory.getInstance().getNextId();
 		_crypt = new Crypt(this);
 	}
-	
-	public int getObjectId()
+
+    @Override
+    public int encrypt(byte[] data, int offset, int size) {
+        return 0;
+    }
+
+    @Override
+    public boolean decrypt(byte[] data, int offset, int size) {
+        return false;
+    }
+
+    @Override
+    protected void onDisconnection() {
+        LOGGER_ACCOUNTING.debug("Client Disconnected: {}", this);
+
+        LoginServerThread.getInstance().sendLogout(getAccountName());
+
+        if ((_activeChar == null) || !_activeChar.isInOfflineMode()) {
+            IdFactory.getInstance().releaseId(getObjectId());
+            Disconnection.of(this).onDisconnection();
+        }
+    }
+
+    @Override
+    public void onConnected() {
+        setConnectionState(ConnectionState.CONNECTED);
+        LOGGER_ACCOUNTING.debug("Client Connected: {}", this);
+    }
+
+    public void setConnectionState(ConnectionState state) {
+        this.state = state;
+    }
+
+    public int getObjectId()
 	{
 		return _objectId;
 	}
 
-	@Override
-	public void channelActive(ChannelHandlerContext ctx)
-	{
-		super.channelActive(ctx);
-		
-		setConnectionState(ConnectionState.CONNECTED);
-		final InetSocketAddress address = (InetSocketAddress) ctx.channel().remoteAddress();
-		_addr = address.getAddress();
-		_channel = ctx.channel();
-		LOGGER_ACCOUNTING.finer("Client Connected: " + ctx.channel());
+	
+	public void closeNow() {
+	    super.close(null);
 	}
 	
-	@Override
-	public void channelInactive(ChannelHandlerContext ctx)
-	{
-		LOGGER_ACCOUNTING.finer("Client Disconnected: " + ctx.channel());
-		
-		LoginServerThread.getInstance().sendLogout(getAccountName());
-		
-		if ((_activeChar == null) || !_activeChar.isInOfflineMode())
-		{
-			IdFactory.getInstance().releaseId(getObjectId());
-			Disconnection.of(this).onDisconnection();
-		}
-	}
-	
-	@Override
-	protected void channelRead0(ChannelHandlerContext ctx, IIncomingPacket<L2GameClient> packet)
-	{
-		try
-		{
-			packet.run(this);
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Exception for: " + toString() + " on packet.run: " + packet.getClass().getSimpleName(), e);
-		}
-	}
-	
-	@Override
-	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
-	{
-	}
-	
-	public void closeNow()
-	{
-		if (_channel != null)
-		{
-			_channel.close();
-		}
-	}
-	
-	public void close(IClientOutgoingPacket packet)
-	{
-		sendPacket(packet);
-		closeNow();
+	public void close(IClientOutgoingPacket packet) {
+	    super.close(packet);
 	}
 	
 	public void close(boolean toLoginScreen)
 	{
 		close(toLoginScreen ? ServerClose.STATIC_PACKET : LeaveWorld.STATIC_PACKET);
-	}
-	
-	public Channel getChannel()
-	{
-		return _channel;
 	}
 	
 	public byte[] enableCrypt()
@@ -159,7 +136,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 	 */
 	public InetAddress getConnectionAddress()
 	{
-		return _addr;
+		return address;
 	}
 	
 	public L2PcInstance getActiveChar()
@@ -223,11 +200,8 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 		{
 			return;
 		}
-		
-		// Write into the channel.
-		_channel.writeAndFlush(packet);
-		
-		// Run packet implementation.
+
+		writePacket(packet);
 		packet.runImpl(_activeChar);
 	}
 	
@@ -305,7 +279,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 		}
 		else
 		{
-			try (Connection con = DatabaseFactory.getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				 PreparedStatement ps2 = con.prepareStatement("UPDATE characters SET deletetime=? WHERE charId=?"))
 			{
 				ps2.setLong(1, System.currentTimeMillis() + (Config.DELETE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
@@ -314,7 +288,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 			}
 			catch (SQLException e)
 			{
-				LOGGER.log(Level.WARNING, "Failed to update char delete time: ", e);
+				LOGGER.warn("Failed to update char delete time: ", e);
 			}
 		}
 		
@@ -330,7 +304,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("UPDATE characters SET deletetime=0 WHERE charId=?"))
 		{
 			statement.setInt(1, objectId);
@@ -338,7 +312,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, "Error restoring character.", e);
+			LOGGER.error("Error restoring character.", e);
 		}
 		
 		LOGGER_ACCOUNTING.info("Restore, " + objectId + ", " + this);
@@ -353,7 +327,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 		
 		CharNameTable.getInstance().removeName(objid);
 		
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_contacts WHERE charId=? OR contactId=?"))
 			{
@@ -491,7 +465,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, "Error deleting character.", e);
+			LOGGER.error("Error deleting character.", e);
 		}
 	}
 	
@@ -509,7 +483,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 			// exploit prevention, should not happens in normal way
 			if (player.isOnlineInt() == 1)
 			{
-				LOGGER.severe("Attempt of double login: " + player.getName() + "(" + objectId + ") " + _accountName);
+				LOGGER.error("Attempt of double login: {} ({}) {}", player.getName(), objectId, _accountName);
 			}
 			Disconnection.of(player).defaultSequence(false);
 			return null;
@@ -518,7 +492,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 		player = L2PcInstance.load(objectId);
 		if (player == null)
 		{
-			LOGGER.severe("Could not restore in slot: " + characterSlot);
+			LOGGER.error("Could not restore in slot: {}", characterSlot);
 		}
 		
 		return player;
@@ -555,7 +529,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 		final CharSelectInfoPackage info = getCharSelection(characterSlot);
 		if (info == null)
 		{
-			LOGGER.warning(toString() + " tried to delete Character in slot " + characterSlot + " but no characters exits at that slot.");
+			LOGGER.warn("{} tried to delete Character in slot {} but no characters exits at that slot.", this, characterSlot);
 			return -1;
 		}
 		return info.getObjectId();
@@ -565,25 +539,21 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 	 * Produces the best possible string representation of this client.
 	 */
 	@Override
-	public String toString()
-	{
-		try
-		{
-			final InetAddress address = _addr;
-			final ConnectionState state = (ConnectionState) getConnectionState();
-			switch (state)
-			{
-				case CONNECTED:
-				{
-					return "[IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
+	public String toString() {
+		try {
+			final String address = getHostAddress();
+			final ConnectionState state = getConnectionState();
+			switch (state) {
+				case CONNECTED: {
+					return "[IP: " + (address == null ? "disconnected" : address) + "]";
 				}
 				case AUTHENTICATED:
 				{
-					return "[Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
+					return "[Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
 				}
 				case IN_GAME:
 				{
-					return "[Character: " + (_activeChar == null ? "disconnected" : _activeChar.getName() + "[" + _activeChar.getObjectId() + "]") + " - Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
+					return "[Character: " + (_activeChar == null ? "disconnected" : _activeChar.getName() + "[" + _activeChar.getObjectId() + "]") + " - Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
 				}
 				default:
 				{

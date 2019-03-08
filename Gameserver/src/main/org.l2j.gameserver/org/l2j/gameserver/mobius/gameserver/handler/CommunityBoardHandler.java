@@ -17,9 +17,9 @@
 package org.l2j.gameserver.mobius.gameserver.handler;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 import java.util.HashMap;
 import java.util.Map;

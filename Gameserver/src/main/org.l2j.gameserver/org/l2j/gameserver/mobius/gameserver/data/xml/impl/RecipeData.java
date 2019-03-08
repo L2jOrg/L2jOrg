@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.L2RecipeInstance;
-import com.l2jmobius.gameserver.model.L2RecipeList;
-import com.l2jmobius.gameserver.model.L2RecipeStatInstance;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.gameserver.mobius.gameserver.model.L2RecipeInstance;
+import org.l2j.gameserver.mobius.gameserver.model.L2RecipeList;
+import org.l2j.gameserver.mobius.gameserver.model.L2RecipeStatInstance;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;

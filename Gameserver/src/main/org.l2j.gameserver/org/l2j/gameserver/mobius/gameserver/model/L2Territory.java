@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.commons.util.Rnd;
+import org.l2j.commons.util.Rnd;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;

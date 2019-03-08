@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.zone.type;
 
-import com.l2jmobius.gameserver.enums.MountType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.enums.MountType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 
 /**
  * A no landing zone

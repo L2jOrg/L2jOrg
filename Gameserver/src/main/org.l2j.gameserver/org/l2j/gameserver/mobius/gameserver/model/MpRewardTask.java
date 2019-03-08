@@ -17,10 +17,10 @@
 package org.l2j.gameserver.mobius.gameserver.model;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2NpcTemplate;
 
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -41,7 +41,7 @@ public class MpRewardTask
 		_creature = creature;
 		_count = new AtomicInteger(template.getMpRewardTicks());
 		_value = calculateBaseValue(npc, creature);
-		_task = ThreadPool.scheduleAtFixedRate(this::run, Config.EFFECT_TICK_RATIO, Config.EFFECT_TICK_RATIO);
+		_task = ThreadPoolManager.getInstance().scheduleAtFixedRate(this::run, Config.EFFECT_TICK_RATIO, Config.EFFECT_TICK_RATIO);
 	}
 	
 	/**

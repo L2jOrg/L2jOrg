@@ -17,38 +17,38 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.enums.AttributeType;
-import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.Elementals;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.request.EnchantItemAttributeRequest;
-import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExAttributeEnchantResult;
-import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.enums.AttributeType;
+import org.l2j.gameserver.mobius.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.mobius.gameserver.model.Elementals;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.request.EnchantItemAttributeRequest;
+import org.l2j.gameserver.mobius.gameserver.model.items.enchant.attribute.AttributeHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExAttributeEnchantResult;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.UserInfo;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
-public class RequestExEnchantItemAttribute implements IClientIncomingPacket
+public class RequestExEnchantItemAttribute extends IClientIncomingPacket
 {
 	private int _objectId;
 	private long _count;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_objectId = packet.readD();
-		_count = packet.readQ();
+		_objectId = packet.getInt();
+		_count = packet.getLong();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)

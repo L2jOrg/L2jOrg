@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.handler;
 
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * Interface for chat handlers

@@ -17,8 +17,8 @@
 package org.l2j.gameserver.mobius.gameserver.model.base;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.enums.Race;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 import java.util.EnumMap;
 import java.util.EnumSet;

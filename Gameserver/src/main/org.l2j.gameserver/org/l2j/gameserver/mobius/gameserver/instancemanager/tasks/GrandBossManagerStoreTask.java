@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.instancemanager.tasks;
 
-import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.GrandBossManager;
 
 /**
  * @author xban1x

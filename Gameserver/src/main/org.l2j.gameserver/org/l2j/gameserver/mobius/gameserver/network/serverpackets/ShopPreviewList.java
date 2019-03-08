@@ -17,11 +17,11 @@
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.buylist.Product;
-import com.l2jmobius.gameserver.model.buylist.ProductList;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.model.buylist.Product;
+import org.l2j.gameserver.mobius.gameserver.model.buylist.ProductList;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 import java.util.Collection;
 

@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.cubic.conditions;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.cubic.CubicInstance;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.cubic.CubicInstance;
 
 /**
  * @author Sdw

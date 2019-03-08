@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.stat;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ControllableAirShipInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2ControllableAirShipInstance;
 
 public class ControllableAirShipStat extends VehicleStat
 {

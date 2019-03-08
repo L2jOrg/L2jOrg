@@ -16,23 +16,23 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.entity;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.enums.DuelResult;
-import com.l2jmobius.gameserver.enums.Team;
-import com.l2jmobius.gameserver.instancemanager.DuelManager;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.instancezone.Instance;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.L2OlympiadStadiumZone;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.*;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.mobius.gameserver.enums.DuelResult;
+import org.l2j.gameserver.mobius.gameserver.enums.Team;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.DuelManager;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.InstanceManager;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.model.zone.type.L2OlympiadStadiumZone;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.*;
 
 import java.util.Calendar;
 import java.util.List;
@@ -106,7 +106,7 @@ public class Duel
 			broadcastToTeam2(sm);
 		}
 		// Schedule duel start
-		ThreadPool.schedule(new ScheduleStartDuelTask(this), 3000);
+		ThreadPoolManager.getInstance().schedule(new ScheduleStartDuelTask(this), 3000);
 	}
 	
 	public static class PlayerCondition
@@ -216,14 +216,14 @@ public class Duel
 					}
 					case CONTINUE:
 					{
-						ThreadPool.schedule(this, 1000);
+						ThreadPoolManager.getInstance().schedule(this, 1000);
 						break;
 					}
 					default:
 					{
 						setFinished(true);
 						playKneelAnimation();
-						ThreadPool.schedule(new ScheduleEndDuelTask(_duel, _duel.checkEndDuelCondition()), 5000);
+						ThreadPoolManager.getInstance().schedule(new ScheduleEndDuelTask(_duel, _duel.checkEndDuelCondition()), 5000);
 						if (_duelInstance != null)
 						{
 							_duelInstance.destroy();
@@ -264,11 +264,11 @@ public class Duel
 					_duel.teleportPlayers();
 					
 					// give players 20 seconds to complete teleport and get ready (its ought to be 30 on offical..)
-					ThreadPool.schedule(this, 20000);
+					ThreadPoolManager.getInstance().schedule(this, 20000);
 				}
 				else if (count > 0) // duel not started yet - continue countdown
 				{
-					ThreadPool.schedule(this, 1000);
+					ThreadPoolManager.getInstance().schedule(this, 1000);
 				}
 				else
 				{
@@ -473,7 +473,7 @@ public class Duel
 		broadcastToTeam2(B04_S01);
 		
 		// start duelling task
-		ThreadPool.schedule(new ScheduleDuelTask(this), 1000);
+		ThreadPoolManager.getInstance().schedule(new ScheduleDuelTask(this), 1000);
 	}
 	
 	/**

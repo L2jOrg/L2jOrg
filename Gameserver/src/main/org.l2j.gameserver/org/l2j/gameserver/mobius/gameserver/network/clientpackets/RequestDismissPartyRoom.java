@@ -16,29 +16,29 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.enums.MatchingRoomType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.matching.MatchingRoom;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.enums.MatchingRoomType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.matching.MatchingRoom;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 
 /**
  * @author Gnacik
  */
-public class RequestDismissPartyRoom implements IClientIncomingPacket
+public class RequestDismissPartyRoom extends IClientIncomingPacket
 {
 	private int _roomid;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_roomid = packet.readD();
-		packet.readD();
+		_roomid = packet.getInt();
+		packet.getInt();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)

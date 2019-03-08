@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
-import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.model.holders.NpcLogListHolder;
+import org.l2j.gameserver.mobius.gameserver.network.NpcStringId;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 import java.util.ArrayList;
 import java.util.List;

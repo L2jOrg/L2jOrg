@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.holders;
 
-import com.l2jmobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
 
 import java.util.ArrayList;
 import java.util.List;

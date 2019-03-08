@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.taskmanager;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.taskmanager.tasks.TaskBirthday;
-import com.l2jmobius.gameserver.taskmanager.tasks.TaskCleanUp;
-import com.l2jmobius.gameserver.taskmanager.tasks.TaskRestart;
-import com.l2jmobius.gameserver.taskmanager.tasks.TaskShutdown;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.tasks.TaskBirthday;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.tasks.TaskCleanUp;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.tasks.TaskRestart;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.tasks.TaskShutdown;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -93,7 +93,7 @@ public final class TaskManager
 		{
 			task.onTimeElapsed(this);
 			lastActivation = System.currentTimeMillis();
-			try (Connection con = DatabaseFactory.getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[1]))
 			{
 				statement.setLong(1, lastActivation);
@@ -180,7 +180,7 @@ public final class TaskManager
 	
 	private void startAllTasks()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[0]);
 			ResultSet rset = statement.executeQuery())
 		{
@@ -224,14 +224,14 @@ public final class TaskManager
 			case TYPE_SHEDULED:
 			{
 				delay = Long.valueOf(task.getParams()[0]);
-				task.scheduled = ThreadPool.schedule(task, delay);
+				task.scheduled = ThreadPoolManager.getInstance().schedule(task, delay);
 				return true;
 			}
 			case TYPE_FIXED_SHEDULED:
 			{
 				delay = Long.valueOf(task.getParams()[0]);
 				interval = Long.valueOf(task.getParams()[1]);
-				task.scheduled = ThreadPool.scheduleAtFixedRate(task, delay, interval);
+				task.scheduled = ThreadPoolManager.getInstance().scheduleAtFixedRate(task, delay, interval);
 				return true;
 			}
 			case TYPE_TIME:
@@ -242,7 +242,7 @@ public final class TaskManager
 					final long diff = desired.getTime() - System.currentTimeMillis();
 					if (diff >= 0)
 					{
-						task.scheduled = ThreadPool.schedule(task, diff);
+						task.scheduled = ThreadPoolManager.getInstance().schedule(task, diff);
 						return true;
 					}
 					LOGGER.info(getClass().getSimpleName() + ": Task " + task.getId() + " is obsoleted.");
@@ -295,7 +295,7 @@ public final class TaskManager
 				{
 					delay += interval;
 				}
-				task.scheduled = ThreadPool.scheduleAtFixedRate(task, delay, interval);
+				task.scheduled = ThreadPoolManager.getInstance().scheduleAtFixedRate(task, delay, interval);
 				return true;
 			}
 			default:
@@ -313,7 +313,7 @@ public final class TaskManager
 	
 	private static boolean addUniqueTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps1 = con.prepareStatement(SQL_STATEMENTS[2]))
 		{
 			ps1.setString(1, task);
@@ -349,7 +349,7 @@ public final class TaskManager
 	
 	private static boolean addTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[3]))
 		{
 			statement.setString(1, task);

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.html.styles;
 
-import com.l2jmobius.gameserver.model.html.IHtmlStyle;
+import org.l2j.gameserver.mobius.gameserver.model.html.IHtmlStyle;
 
 /**
  * @author UnAfraid

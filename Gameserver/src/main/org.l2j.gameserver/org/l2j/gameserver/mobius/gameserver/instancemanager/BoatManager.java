@@ -17,13 +17,13 @@
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.VehiclePathPoint;
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
-import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.VehiclePathPoint;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2BoatInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -4,6 +4,7 @@ import org.l2j.gameserver.mobius.gameserver.Config;
 import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.CreatureSay;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;
 
 /**
  * @author lord_rex

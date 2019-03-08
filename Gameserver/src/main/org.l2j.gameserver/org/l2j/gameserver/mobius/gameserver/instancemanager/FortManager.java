@@ -1,26 +1,10 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.InstanceListManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.entity.Fort;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.InstanceListManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Fort;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -121,9 +105,9 @@ public final class FortManager implements InstanceListManager
 	@Override
 	public void loadInstances()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
-			Statement s = con.createStatement();
-			ResultSet rs = s.executeQuery("SELECT id FROM fort ORDER BY id"))
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			 Statement s = con.createStatement();
+			 ResultSet rs = s.executeQuery("SELECT id FROM fort ORDER BY id"))
 		{
 			while (rs.next())
 			{

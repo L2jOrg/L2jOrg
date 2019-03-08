@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.instancemanager.tasks;
 
-import com.l2jmobius.gameserver.instancemanager.GraciaSeedsManager;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.GraciaSeedsManager;
 
 /**
  * Task which updates Seed of Destruction state.

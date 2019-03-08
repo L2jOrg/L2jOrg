@@ -16,22 +16,22 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
-import com.l2jmobius.gameserver.util.Broadcast;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ValidateLocation;
+import org.l2j.gameserver.mobius.gameserver.util.Broadcast;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 /**
  * Fromat:(ch) dddddc
  * @author -Wooden-
  */
-public final class RequestExMagicSkillUseGround implements IClientIncomingPacket
+public final class RequestExMagicSkillUseGround extends IClientIncomingPacket
 {
 	private int _x;
 	private int _y;
@@ -41,19 +41,19 @@ public final class RequestExMagicSkillUseGround implements IClientIncomingPacket
 	private boolean _shiftPressed;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_x = packet.readD();
-		_y = packet.readD();
-		_z = packet.readD();
-		_skillId = packet.readD();
-		_ctrlPressed = packet.readD() != 0;
-		_shiftPressed = packet.readC() != 0;
+		_x = packet.getInt();
+		_y = packet.getInt();
+		_z = packet.getInt();
+		_skillId = packet.getInt();
+		_ctrlPressed = packet.getInt() != 0;
+		_shiftPressed = packet.get() != 0;
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		// Get the current L2PcInstance of the player
 		final L2PcInstance activeChar = client.getActiveChar();

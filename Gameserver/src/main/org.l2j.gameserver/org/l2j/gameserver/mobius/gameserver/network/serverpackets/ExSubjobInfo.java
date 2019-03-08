@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.enums.SubclassInfoType;
-import com.l2jmobius.gameserver.enums.SubclassType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.base.SubClass;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.enums.SubclassInfoType;
+import org.l2j.gameserver.mobius.gameserver.enums.SubclassType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.base.SubClass;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 import java.util.ArrayList;
 import java.util.List;

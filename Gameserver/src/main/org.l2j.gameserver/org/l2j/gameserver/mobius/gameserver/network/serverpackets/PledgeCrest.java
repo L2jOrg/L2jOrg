@@ -17,10 +17,10 @@
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
-import com.l2jmobius.gameserver.model.L2Crest;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.CrestTable;
+import org.l2j.gameserver.mobius.gameserver.model.L2Crest;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 public final class PledgeCrest implements IClientOutgoingPacket
 {

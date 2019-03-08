@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.stats.functions;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.stats.Stats;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.conditions.Condition;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.model.stats.Stats;
 
 /**
  * Returns the initial value divided the function value, if the condition are met.

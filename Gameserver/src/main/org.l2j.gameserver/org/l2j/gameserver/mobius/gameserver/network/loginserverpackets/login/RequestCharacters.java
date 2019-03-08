@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.loginserverpackets.login;
 
-import com.l2jmobius.commons.network.BaseRecievePacket;
+import org.l2j.commons.network.BaseRecievePacket;
 
 /**
  * @author mrTJO Thanks to mochitto

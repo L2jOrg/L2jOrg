@@ -7,6 +7,7 @@ import org.l2j.gameserver.mobius.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.mobius.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.mobius.gameserver.model.ChanceLocation;
 import org.l2j.gameserver.mobius.gameserver.model.L2Spawn;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
 import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
 import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;

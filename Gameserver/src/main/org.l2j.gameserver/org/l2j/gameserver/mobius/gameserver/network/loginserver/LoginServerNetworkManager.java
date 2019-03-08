@@ -17,7 +17,7 @@
 package org.l2j.gameserver.mobius.gameserver.network.loginserver;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.network.EventLoopGroupManager;
+import org.l2j.gameserver.mobius.gameserver.network.EventLoopGroupManager;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelOption;

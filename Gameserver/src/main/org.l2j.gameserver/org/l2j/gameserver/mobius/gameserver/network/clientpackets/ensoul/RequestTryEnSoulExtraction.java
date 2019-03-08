@@ -16,40 +16,38 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets.ensoul;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.EnsoulData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.ensoul.ExEnSoulExtractionResult;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.EnsoulData;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.ensoul.EnsoulOption;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ensoul.ExEnSoulExtractionResult;
 
+import java.nio.ByteBuffer;
 import java.util.Collection;
 
 /**
  * @author Mobius
  */
-public class RequestTryEnSoulExtraction implements IClientIncomingPacket
+public class RequestTryEnSoulExtraction extends IClientIncomingPacket
 {
 	private int _itemObjectId;
 	private int _type;
 	private int _position;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_itemObjectId = packet.readD();
-		_type = packet.readC();
-		_position = packet.readC() - 1;
-		return true;
+		_itemObjectId = packet.getInt();
+		_type = packet.get();
+		_position = packet.get() - 1;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		L2PcInstance player = client.getActiveChar();
 		if (player == null)

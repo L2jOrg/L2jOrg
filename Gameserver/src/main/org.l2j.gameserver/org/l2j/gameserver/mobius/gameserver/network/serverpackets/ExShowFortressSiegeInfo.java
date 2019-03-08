@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
-import com.l2jmobius.gameserver.model.FortSiegeSpawn;
-import com.l2jmobius.gameserver.model.entity.Fort;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.FortSiegeManager;
+import org.l2j.gameserver.mobius.gameserver.model.FortSiegeSpawn;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Fort;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 import java.util.List;
 

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.enums;
 
-import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.CategoryData;
 
 /**
  * @author UnAfraid

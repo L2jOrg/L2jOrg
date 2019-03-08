@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.html.formatters;
 
-import com.l2jmobius.gameserver.model.html.IBypassFormatter;
+import org.l2j.gameserver.mobius.gameserver.model.html.IBypassFormatter;
 
 /**
  * @author UnAfraid

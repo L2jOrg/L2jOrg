@@ -16,23 +16,22 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets.commission;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.instancemanager.CommissionManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.commission.CommissionItemType;
-import com.l2jmobius.gameserver.model.commission.CommissionTreeType;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.type.CrystalType;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import com.l2jmobius.gameserver.network.serverpackets.commission.ExCloseCommission;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.CommissionManager;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.commission.CommissionItemType;
+import org.l2j.gameserver.mobius.gameserver.model.commission.CommissionTreeType;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.CrystalType;
+import org.l2j.gameserver.mobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.commission.ExCloseCommission;
 
+import java.nio.ByteBuffer;
 import java.util.function.Predicate;
 
 /**
  * @author NosBit
  */
-public class RequestCommissionList implements IClientIncomingPacket
+public class RequestCommissionList extends IClientIncomingPacket
 {
 	private int _treeViewDepth;
 	private int _itemType;
@@ -41,18 +40,17 @@ public class RequestCommissionList implements IClientIncomingPacket
 	private String _query;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_treeViewDepth = packet.readD();
-		_itemType = packet.readD();
-		_type = packet.readD();
-		_grade = packet.readD();
-		_query = packet.readS();
-		return true;
+		_treeViewDepth = packet.getInt();
+		_itemType = packet.getInt();
+		_type = packet.getInt();
+		_grade = packet.getInt();
+		_query = readString(packet);
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)

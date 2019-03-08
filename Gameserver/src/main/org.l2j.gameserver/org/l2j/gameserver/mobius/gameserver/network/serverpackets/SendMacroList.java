@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.enums.MacroUpdateType;
-import com.l2jmobius.gameserver.model.Macro;
-import com.l2jmobius.gameserver.model.MacroCmd;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.enums.MacroUpdateType;
+import org.l2j.gameserver.mobius.gameserver.model.Macro;
+import org.l2j.gameserver.mobius.gameserver.model.MacroCmd;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 public class SendMacroList implements IClientOutgoingPacket
 {

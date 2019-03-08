@@ -16,10 +16,10 @@
  */
 package ai.others.SymbolMaker;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.HennaEquipList;
-import com.l2jmobius.gameserver.network.serverpackets.HennaRemoveList;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.HennaEquipList;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.HennaRemoveList;
 
 import ai.AbstractNpcAI;
 

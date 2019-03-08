@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.announce;
 
-import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.script.DateRange;
+import org.l2j.gameserver.mobius.gameserver.idfactory.IdFactory;
+import org.l2j.gameserver.mobius.gameserver.script.DateRange;
 
 import java.util.Date;
 

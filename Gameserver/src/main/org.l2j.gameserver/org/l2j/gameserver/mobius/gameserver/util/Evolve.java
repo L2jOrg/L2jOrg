@@ -17,22 +17,22 @@
 package org.l2j.gameserver.mobius.gameserver.util;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
-import com.l2jmobius.gameserver.model.L2PetData;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
-import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.PetDataTable;
+import org.l2j.gameserver.mobius.gameserver.model.L2PetData;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PetInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.MagicSkillLaunched;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.MagicSkillUse;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -142,11 +142,11 @@ public final class Evolve
 		petSummon.startFeed();
 		item.setEnchantLevel(petSummon.getLevel());
 		
-		ThreadPool.schedule(new EvolveFinalizer(player, petSummon), 900);
+		ThreadPoolManager.getInstance().schedule(new EvolveFinalizer(player, petSummon), 900);
 		
 		if (petSummon.getCurrentFed() <= 0)
 		{
-			ThreadPool.schedule(new EvolveFeedWait(player, petSummon), 60000);
+			ThreadPoolManager.getInstance().schedule(new EvolveFeedWait(player, petSummon), 60000);
 		}
 		else
 		{
@@ -236,11 +236,11 @@ public final class Evolve
 		
 		player.broadcastUserInfo();
 		
-		ThreadPool.schedule(new EvolveFinalizer(player, petSummon), 900);
+		ThreadPoolManager.getInstance().schedule(new EvolveFinalizer(player, petSummon), 900);
 		
 		if (petSummon.getCurrentFed() <= 0)
 		{
-			ThreadPool.schedule(new EvolveFeedWait(player, petSummon), 60000);
+			ThreadPoolManager.getInstance().schedule(new EvolveFeedWait(player, petSummon), 60000);
 		}
 		else
 		{
@@ -248,7 +248,7 @@ public final class Evolve
 		}
 		
 		// pet control item no longer exists, delete the pet from the db
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?"))
 		{
 			ps.setInt(1, removedItem.getObjectId());

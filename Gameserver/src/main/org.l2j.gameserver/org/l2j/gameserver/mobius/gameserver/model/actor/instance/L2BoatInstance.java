@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.gameserver.ai.L2BoatAI;
-import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Vehicle;
-import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
-import com.l2jmobius.gameserver.network.serverpackets.VehicleDeparture;
-import com.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
-import com.l2jmobius.gameserver.network.serverpackets.VehicleStarted;
+import org.l2j.gameserver.mobius.gameserver.ai.L2BoatAI;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceType;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Vehicle;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.VehicleDeparture;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.VehicleInfo;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.VehicleStarted;
 
 import java.util.logging.Logger;
 

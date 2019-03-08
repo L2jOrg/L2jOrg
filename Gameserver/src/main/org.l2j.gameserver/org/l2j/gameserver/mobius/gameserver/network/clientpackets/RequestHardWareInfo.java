@@ -17,17 +17,17 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
-import com.l2jmobius.gameserver.network.Disconnection;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ClientHardwareInfoHolder;
+import org.l2j.gameserver.mobius.gameserver.network.Disconnection;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 
 /**
  * @author Mobius
  */
-public final class RequestHardWareInfo implements IClientIncomingPacket
+public final class RequestHardWareInfo extends IClientIncomingPacket
 {
 	private String _macAddress;
 	private int _windowsPlatformId;
@@ -50,36 +50,36 @@ public final class RequestHardWareInfo implements IClientIncomingPacket
 	private String _vgaDriverVersion;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_macAddress = packet.readS();
-		_windowsPlatformId = packet.readD();
-		_windowsMajorVersion = packet.readD();
-		_windowsMinorVersion = packet.readD();
-		_windowsBuildNumber = packet.readD();
-		_directxVersion = packet.readD();
-		_directxRevision = packet.readD();
-		packet.readB(16);
-		_cpuName = packet.readS();
-		_cpuSpeed = packet.readD();
-		_cpuCoreCount = packet.readC();
-		packet.readD();
-		_vgaCount = packet.readD();
-		_vgaPcxSpeed = packet.readD();
-		_physMemorySlot1 = packet.readD();
-		_physMemorySlot2 = packet.readD();
-		_physMemorySlot3 = packet.readD();
-		packet.readC();
-		_videoMemory = packet.readD();
-		packet.readD();
-		_vgaVersion = packet.readH();
-		_vgaName = packet.readS();
-		_vgaDriverVersion = packet.readS();
+		_macAddress = readString(packet);
+		_windowsPlatformId = packet.getInt();
+		_windowsMajorVersion = packet.getInt();
+		_windowsMinorVersion = packet.getInt();
+		_windowsBuildNumber = packet.getInt();
+		_directxVersion = packet.getInt();
+		_directxRevision = packet.getInt();
+		packet.get(new byte[16]);
+		_cpuName = readString(packet);
+		_cpuSpeed = packet.getInt();
+		_cpuCoreCount = packet.get();
+		packet.getInt();
+		_vgaCount = packet.getInt();
+		_vgaPcxSpeed = packet.getInt();
+		_physMemorySlot1 = packet.getInt();
+		_physMemorySlot2 = packet.getInt();
+		_physMemorySlot3 = packet.getInt();
+		packet.get();
+		_videoMemory = packet.getInt();
+		packet.getInt();
+		_vgaVersion = packet.getShort();
+		_vgaName = readString(packet);
+		_vgaDriverVersion = readString(packet);
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		client.setHardwareInfo(new ClientHardwareInfoHolder(_macAddress, _windowsPlatformId, _windowsMajorVersion, _windowsMinorVersion, _windowsBuildNumber, _directxVersion, _directxRevision, _cpuName, _cpuSpeed, _cpuCoreCount, _vgaCount, _vgaPcxSpeed, _physMemorySlot1, _physMemorySlot2, _physMemorySlot3, _videoMemory, _vgaVersion, _vgaName, _vgaDriverVersion));
 		if (Config.HARDWARE_INFO_ENABLED && (Config.MAX_PLAYERS_PER_HWID > 0))

@@ -17,28 +17,28 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.data.xml.impl.DoorData;
-import com.l2jmobius.gameserver.enums.AdminTeleportType;
-import com.l2jmobius.gameserver.enums.SayuneType;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.SayuneEntry;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerMoveRequest;
-import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.*;
-import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
-import com.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMove;
-import com.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMoveBroadcast;
-import com.l2jmobius.gameserver.util.Broadcast;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.DoorData;
+import org.l2j.gameserver.mobius.gameserver.enums.AdminTeleportType;
+import org.l2j.gameserver.mobius.gameserver.enums.SayuneType;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.SayuneEntry;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerMoveRequest;
+import org.l2j.gameserver.mobius.gameserver.model.events.returns.TerminateReturn;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.sayune.ExFlyMove;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.sayune.ExFlyMoveBroadcast;
+import org.l2j.gameserver.mobius.gameserver.util.Broadcast;
 
 import java.util.Arrays;
 
-public class MoveBackwardToLocation implements IClientIncomingPacket
+public class MoveBackwardToLocation extends IClientIncomingPacket
 {
 	private int _targetX;
 	private int _targetY;
@@ -49,20 +49,20 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 	private int _movementMode;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_targetX = packet.readD();
-		_targetY = packet.readD();
-		_targetZ = packet.readD();
-		_originX = packet.readD();
-		_originY = packet.readD();
-		_originZ = packet.readD();
-		_movementMode = packet.readD(); // is 0 if cursor keys are used 1 if mouse is used
+		_targetX = packet.getInt();
+		_targetY = packet.getInt();
+		_targetZ = packet.getInt();
+		_originX = packet.getInt();
+		_originY = packet.getInt();
+		_originZ = packet.getInt();
+		_movementMode = packet.getInt(); // is 0 if cursor keys are used 1 if mouse is used
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)

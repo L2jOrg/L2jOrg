@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.announce;
 
-import com.l2jmobius.gameserver.model.interfaces.IDeletable;
-import com.l2jmobius.gameserver.model.interfaces.IStorable;
-import com.l2jmobius.gameserver.model.interfaces.IUpdatable;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.IDeletable;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.IStorable;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.IUpdatable;
 
 /**
  * @author UnAfraid

@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.sql.impl;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
 
 import java.util.HashMap;
 import java.util.List;

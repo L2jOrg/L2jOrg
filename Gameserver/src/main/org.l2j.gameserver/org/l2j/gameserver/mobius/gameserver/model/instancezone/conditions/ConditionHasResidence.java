@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.instancezone.conditions;
 
-import com.l2jmobius.gameserver.enums.ResidenceType;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
+import org.l2j.gameserver.mobius.gameserver.enums.ResidenceType;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.instancezone.InstanceTemplate;
 
 /**
  * Instance residence condition

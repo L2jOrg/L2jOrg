@@ -17,12 +17,12 @@
 package org.l2j.gameserver.mobius.gameserver.model.votereward;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
-import com.l2jmobius.gameserver.util.Broadcast;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.CreatureSay;
+import org.l2j.gameserver.mobius.gameserver.util.Broadcast;
 
 import java.util.*;
 import java.util.logging.Logger;
@@ -89,7 +89,7 @@ public abstract class VoteSystem implements Runnable
 		this.boxes = boxes;
 		this.rewards = rewards;
 		
-		ThreadPool.scheduleAtFixedRate(this, checkMins * 1000 * 60, checkMins * 1000 * 60);
+		ThreadPoolManager.getInstance().scheduleAtFixedRate(this, checkMins * 1000 * 60, checkMins * 1000 * 60);
 	}
 	
 	protected void reward()

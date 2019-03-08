@@ -17,15 +17,15 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SiegeInfo;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.util.Broadcast;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Castle;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SiegeInfo;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.mobius.gameserver.util.Broadcast;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -33,22 +33,22 @@ import java.util.Date;
 /**
  * @author UnAfraid
  */
-public class RequestSetCastleSiegeTime implements IClientIncomingPacket
+public class RequestSetCastleSiegeTime extends IClientIncomingPacket
 {
 	private int _castleId;
 	private long _time;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_castleId = packet.readD();
-		_time = packet.readD();
+		_castleId = packet.getInt();
+		_time = packet.getInt();
 		_time *= 1000;
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		final Castle castle = CastleManager.getInstance().getCastleById(_castleId);

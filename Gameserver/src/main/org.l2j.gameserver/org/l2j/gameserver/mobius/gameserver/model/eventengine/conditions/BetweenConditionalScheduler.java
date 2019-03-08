@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.eventengine.conditions;
 
-import com.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
-import com.l2jmobius.gameserver.model.eventengine.EventScheduler;
-import com.l2jmobius.gameserver.model.eventengine.IConditionalEventScheduler;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.AbstractEventManager;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.EventScheduler;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.IConditionalEventScheduler;
 
 import java.util.Objects;
 import java.util.logging.Logger;

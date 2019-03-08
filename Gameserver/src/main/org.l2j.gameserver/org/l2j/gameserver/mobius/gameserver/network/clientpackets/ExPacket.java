@@ -16,15 +16,15 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.IIncomingPacket;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.network.ExIncomingPackets;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import org.l2j.commons.network.IIncomingPacket;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.network.ExIncomingPackets;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 
 /**
  * @author Nos
  */
-public class ExPacket implements IClientIncomingPacket
+public class ExPacket extends IClientIncomingPacket
 {
 	// private static final Logger LOGGER = Logger.getLogger(ExPacket.class.getName());
 	
@@ -33,9 +33,9 @@ public class ExPacket implements IClientIncomingPacket
 	private IIncomingPacket<L2GameClient> _exPacket;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		final int exPacketId = packet.readH() & 0xFFFF;
+		final int exPacketId = packet.getShort() & 0xFFFF;
 		if ((exPacketId < 0) || (exPacketId >= ExIncomingPackets.PACKET_ARRAY.length))
 		{
 			return false;
@@ -53,7 +53,7 @@ public class ExPacket implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client) throws Exception
+	public void runImpl() throws Exception
 	{
 		if (!_exIncomingPacket.getConnectionStates().contains(client.getConnectionState()))
 		{

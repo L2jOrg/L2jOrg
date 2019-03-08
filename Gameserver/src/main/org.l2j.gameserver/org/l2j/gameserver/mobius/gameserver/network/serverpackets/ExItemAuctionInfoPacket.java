@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.itemauction.ItemAuction;
-import com.l2jmobius.gameserver.model.itemauction.ItemAuctionBid;
-import com.l2jmobius.gameserver.model.itemauction.ItemAuctionState;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.model.itemauction.ItemAuction;
+import org.l2j.gameserver.mobius.gameserver.model.itemauction.ItemAuctionBid;
+import org.l2j.gameserver.mobius.gameserver.model.itemauction.ItemAuctionState;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Forsaiken

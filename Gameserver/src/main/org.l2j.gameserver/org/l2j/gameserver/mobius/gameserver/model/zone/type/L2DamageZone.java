@@ -16,17 +16,17 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.zone.type;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.model.stats.Stats;
-import com.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.TaskZoneSettings;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Castle;
+import org.l2j.gameserver.mobius.gameserver.model.stats.Stats;
+import org.l2j.gameserver.mobius.gameserver.model.zone.AbstractZoneSettings;
+import org.l2j.gameserver.mobius.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.mobius.gameserver.model.zone.TaskZoneSettings;
 
 /**
  * A damage zone
@@ -121,7 +121,7 @@ public class L2DamageZone extends L2ZoneType
 			{
 				if (getSettings().getTask() == null)
 				{
-					getSettings().setTask(ThreadPool.scheduleAtFixedRate(new ApplyDamage(this), _startTask, _reuseTask));
+					getSettings().setTask(ThreadPoolManager.getInstance().scheduleAtFixedRate(new ApplyDamage(this), _startTask, _reuseTask));
 				}
 			}
 		}

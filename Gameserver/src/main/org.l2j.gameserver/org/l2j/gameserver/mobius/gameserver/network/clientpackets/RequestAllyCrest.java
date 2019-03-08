@@ -16,29 +16,29 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.AllyCrest;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.AllyCrest;
 
 /**
  * This class ...
  * @version $Revision: 1.3.4.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestAllyCrest implements IClientIncomingPacket
+public final class RequestAllyCrest extends IClientIncomingPacket
 {
 	private int _crestId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_crestId = packet.readD();
-		packet.readD(); // Ally ID
-		packet.readD(); // Server ID
+		_crestId = packet.getInt();
+		packet.getInt(); // Ally ID
+		packet.getInt(); // Server ID
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		client.sendPacket(new AllyCrest(_crestId));
 	}

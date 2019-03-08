@@ -1,36 +1,18 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.IIncomingPacket;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import java.nio.ByteBuffer;
 
 /**
  * @author Sdw
  */
-public class ExBookmarkPacket implements IClientIncomingPacket
+public class ExBookmarkPacket extends IClientIncomingPacket
 {
-	private IIncomingPacket<L2GameClient> _exBookmarkPacket;
+	private IClientIncomingPacket _exBookmarkPacket;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		final int subId = packet.readD();
+		final int subId = packet.getInt();
 		
 		switch (subId)
 		{
@@ -65,12 +47,12 @@ public class ExBookmarkPacket implements IClientIncomingPacket
 				break;
 			}
 		}
-		return (_exBookmarkPacket != null) && _exBookmarkPacket.read(client, packet);
+		return (_exBookmarkPacket != null) && _exBookmarkPacket.read(packet);
 	}
 	
 	@Override
-	public void run(L2GameClient client) throws Exception
+	public void runImpl() throws Exception
 	{
-		_exBookmarkPacket.run(client);
+		_exBookmarkPacket.run();
 	}
 }

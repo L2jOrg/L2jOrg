@@ -16,29 +16,29 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.entity.Fort;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.ExShowFortressMapInfo;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Fort;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExShowFortressMapInfo;
 
 /**
  * @author KenM
  */
-public class RequestFortressMapInfo implements IClientIncomingPacket
+public class RequestFortressMapInfo extends IClientIncomingPacket
 {
 	private int _fortressId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_fortressId = packet.readD();
+		_fortressId = packet.getInt();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final Fort fort = FortManager.getInstance().getFortById(_fortressId);
 		if (fort == null)

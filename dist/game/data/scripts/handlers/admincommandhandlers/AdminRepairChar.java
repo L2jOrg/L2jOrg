@@ -22,9 +22,9 @@ import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * This class handles following admin commands: - delete = deletes target
@@ -62,7 +62,7 @@ public class AdminRepairChar implements IAdminCommandHandler
 		}
 		
 		final String cmd = "UPDATE characters SET x=-84318, y=244579, z=-3730 WHERE char_name=?";
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(cmd);
 			statement.setString(1, parts[1]);
@@ -87,13 +87,13 @@ public class AdminRepairChar implements IAdminCommandHandler
 				return;
 			}
 			
-			// connection = L2DatabaseFactory.getConnection();
+			// connection = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=?");
 			statement.setInt(1, objId);
 			statement.execute();
 			statement.close();
 			
-			// connection = L2DatabaseFactory.getConnection();
+			// connection = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE items SET loc=\"INVENTORY\" WHERE owner_id=?");
 			statement.setInt(1, objId);
 			statement.execute();

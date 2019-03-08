@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.zone.type;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.L2ZoneRespawn;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.zone.L2ZoneRespawn;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
 
 /**
  * based on Kerberos work for custom L2CastleTeleportZone

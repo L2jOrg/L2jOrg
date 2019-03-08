@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.events.impl.item;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.IBaseEvent;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
 
 /**
  * @author UnAfraid

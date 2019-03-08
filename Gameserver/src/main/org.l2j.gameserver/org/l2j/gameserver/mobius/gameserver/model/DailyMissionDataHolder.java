@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.gameserver.enums.DailyMissionStatus;
-import com.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
-import com.l2jmobius.gameserver.handler.DailyMissionHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.enums.DailyMissionStatus;
+import org.l2j.gameserver.mobius.gameserver.handler.AbstractDailyMissionHandler;
+import org.l2j.gameserver.mobius.gameserver.handler.DailyMissionHandler;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.base.ClassId;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
 
 import java.util.List;
 import java.util.function.Function;

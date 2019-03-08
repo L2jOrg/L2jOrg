@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ServitorInstance;
-import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
-import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PetInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2ServitorInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.AbnormalVisualEffect;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.AttackStanceTaskManager;
 
 import java.util.Set;
 

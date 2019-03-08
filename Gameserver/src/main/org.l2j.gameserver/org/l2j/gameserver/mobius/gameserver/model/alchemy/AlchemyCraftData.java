@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.alchemy;
 
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
 
 import java.util.Collections;
 import java.util.HashSet;

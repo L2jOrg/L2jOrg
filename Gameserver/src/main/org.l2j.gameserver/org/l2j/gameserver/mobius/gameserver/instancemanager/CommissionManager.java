@@ -16,22 +16,22 @@
  */
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.enums.ItemLocation;
-import com.l2jmobius.gameserver.enums.MailType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.CommissionManagerInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.commission.CommissionItem;
-import com.l2jmobius.gameserver.model.entity.Message;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.itemcontainer.Mail;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.commission.*;
-import com.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionList.CommissionListReplyType;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.enums.ItemLocation;
+import org.l2j.gameserver.mobius.gameserver.enums.MailType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.CommissionManagerInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.commission.CommissionItem;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Message;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Mail;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.commission.*;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.commission.ExResponseCommissionList.CommissionListReplyType;
 
 import java.sql.*;
 import java.time.Duration;
@@ -70,7 +70,7 @@ public final class CommissionManager
 	protected CommissionManager()
 	{
 		final Map<Integer, L2ItemInstance> itemInstances = new HashMap<>();
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			try (PreparedStatement ps = con.prepareStatement(SELECT_ALL_ITEMS))
 			{
@@ -105,7 +105,7 @@ public final class CommissionManager
 					}
 					else
 					{
-						commissionItem.setSaleEndTask(ThreadPool.schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis()));
+						commissionItem.setSaleEndTask(ThreadPoolManager.getInstance().schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis()));
 					}
 				}
 			}
@@ -236,7 +236,7 @@ public final class CommissionManager
 				return;
 			}
 			
-			try (Connection con = DatabaseFactory.getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(INSERT_COMMISSION_ITEM, Statement.RETURN_GENERATED_KEYS))
 			{
 				final Instant startTime = Instant.now();
@@ -250,7 +250,7 @@ public final class CommissionManager
 					if (rs.next())
 					{
 						final CommissionItem commissionItem = new CommissionItem(rs.getLong(1), itemInstance, pricePerUnit, startTime, durationInDays);
-						final ScheduledFuture<?> saleEndTask = ThreadPool.schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis());
+						final ScheduledFuture<?> saleEndTask = ThreadPoolManager.getInstance().schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis());
 						commissionItem.setSaleEndTask(saleEndTask);
 						_commissionItems.put(commissionItem.getCommissionId(), commissionItem);
 						player.getLastCommissionInfos().put(itemInstance.getId(), new ExResponseCommissionInfo(itemInstance.getId(), pricePerUnit, itemCount, (byte) ((durationInDays - 1) / 2)));
@@ -389,7 +389,7 @@ public final class CommissionManager
 	 */
 	private boolean deleteItemFromDB(long commissionId)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(DELETE_COMMISSION_ITEM))
 		{
 			ps.setLong(1, commissionId);

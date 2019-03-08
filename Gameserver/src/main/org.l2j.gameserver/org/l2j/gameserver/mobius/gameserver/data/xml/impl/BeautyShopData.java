@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.enums.Sex;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.beautyshop.BeautyData;
-import com.l2jmobius.gameserver.model.beautyshop.BeautyItem;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.gameserver.mobius.gameserver.enums.Race;
+import org.l2j.gameserver.mobius.gameserver.enums.Sex;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.beautyshop.BeautyData;
+import org.l2j.gameserver.mobius.gameserver.model.beautyshop.BeautyItem;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;

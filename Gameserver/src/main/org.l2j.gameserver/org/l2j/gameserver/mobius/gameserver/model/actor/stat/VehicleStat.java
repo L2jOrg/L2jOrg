@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.stat;
 
-import com.l2jmobius.gameserver.model.actor.L2Vehicle;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Vehicle;
 
 public class VehicleStat extends CharStat
 {

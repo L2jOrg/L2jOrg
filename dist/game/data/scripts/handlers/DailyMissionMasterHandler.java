@@ -18,7 +18,7 @@ package handlers;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.handler.DailyMissionHandler;
+import org.l2j.gameserver.mobius.gameserver.handler.DailyMissionHandler;
 
 import handlers.dailymissionhandlers.BossDailyMissionHandler;
 import handlers.dailymissionhandlers.CeremonyOfChaosDailyMissionHandler;

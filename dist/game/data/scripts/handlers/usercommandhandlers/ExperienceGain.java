@@ -16,13 +16,13 @@
  */
 package handlers.usercommandhandlers;
 
-import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayableExpChanged;
-import com.l2jmobius.gameserver.model.events.listeners.FunctionEventListener;
-import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
+import org.l2j.gameserver.mobius.gameserver.handler.IVoicedCommandHandler;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayableExpChanged;
+import org.l2j.gameserver.mobius.gameserver.model.events.listeners.FunctionEventListener;
+import org.l2j.gameserver.mobius.gameserver.model.events.returns.TerminateReturn;
 
 /**
  * @author xban1x

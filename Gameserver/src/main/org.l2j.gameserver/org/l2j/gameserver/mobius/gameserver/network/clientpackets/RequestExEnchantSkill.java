@@ -17,23 +17,23 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.enums.SkillEnchantType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.EnchantSkillHolder;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
-import com.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfoDetail;
-import com.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillResult;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.mobius.gameserver.enums.CategoryType;
+import org.l2j.gameserver.mobius.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.mobius.gameserver.enums.SkillEnchantType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.holders.EnchantSkillHolder;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExEnchantSkillInfoDetail;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExEnchantSkillResult;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -41,7 +41,7 @@ import java.util.logging.Logger;
 /**
  * @author -Wooden-
  */
-public final class RequestExEnchantSkill implements IClientIncomingPacket
+public final class RequestExEnchantSkill extends IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestExEnchantSkill.class.getName());
 	private static final Logger LOGGER_ENCHANT = Logger.getLogger("enchant.skills");
@@ -52,9 +52,9 @@ public final class RequestExEnchantSkill implements IClientIncomingPacket
 	private int _skillSubLvl;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		final int type = packet.readD();
+		final int type = packet.getInt();
 		if ((type < 0) || (type >= SkillEnchantType.values().length))
 		{
 			LOGGER.log(Level.WARNING, "Client: " + client + " send incorrect type " + type + " on packet: " + getClass().getSimpleName());
@@ -62,14 +62,14 @@ public final class RequestExEnchantSkill implements IClientIncomingPacket
 		}
 		
 		_type = SkillEnchantType.values()[type];
-		_skillId = packet.readD();
-		_skillLvl = packet.readH();
-		_skillSubLvl = packet.readH();
+		_skillId = packet.getInt();
+		_skillLvl = packet.getShort();
+		_skillSubLvl = packet.getShort();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		if ((_skillId <= 0) || (_skillLvl <= 0) || (_skillSubLvl < 0))
 		{

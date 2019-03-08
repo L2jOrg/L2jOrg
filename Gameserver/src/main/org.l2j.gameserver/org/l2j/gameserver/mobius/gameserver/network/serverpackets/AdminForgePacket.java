@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
+import org.l2j.commons.network.PacketWriter;
 
 import java.math.BigInteger;
 import java.util.ArrayList;

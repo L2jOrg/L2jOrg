@@ -16,18 +16,18 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.instancemanager.AirShipManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.VehiclePathPoint;
-import com.l2jmobius.gameserver.model.actor.instance.L2AirShipInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.AirShipManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.VehiclePathPoint;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2AirShipInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 
-public class MoveToLocationAirShip implements IClientIncomingPacket
+public class MoveToLocationAirShip extends IClientIncomingPacket
 {
 	public static final int MIN_Z = -895;
 	public static final int MAX_Z = 6105;
@@ -38,19 +38,19 @@ public class MoveToLocationAirShip implements IClientIncomingPacket
 	private int _param2 = 0;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_command = packet.readD();
-		_param1 = packet.readD();
+		_command = packet.getInt();
+		_param1 = packet.getInt();
 		if (packet.getReadableBytes() > 0)
 		{
-			_param2 = packet.readD();
+			_param2 = packet.getInt();
 		}
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)

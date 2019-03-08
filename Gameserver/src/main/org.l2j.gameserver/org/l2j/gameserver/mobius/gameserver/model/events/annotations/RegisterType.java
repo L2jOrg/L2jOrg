@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.events.annotations;
 
-import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import org.l2j.gameserver.mobius.gameserver.model.events.ListenerRegisterType;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,5 +1,6 @@
 package org.l2j.gameserver.mobius.gameserver.model.itemcontainer;
 
+import org.l2j.gameserver.mobius.gameserver.Config;
 import org.l2j.gameserver.mobius.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;

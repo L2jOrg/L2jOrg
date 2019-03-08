@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.eventengine.drop;
 
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
 
 import java.util.Collection;
 

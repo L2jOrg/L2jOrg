@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.enums.HtmlActionScope;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.enums.HtmlActionScope;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 /**
  * TutorialShowHtml server packet implementation.

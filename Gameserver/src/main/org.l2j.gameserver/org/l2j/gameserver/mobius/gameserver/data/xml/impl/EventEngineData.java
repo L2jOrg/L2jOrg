@@ -16,19 +16,19 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.commons.util.IXmlReader;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
-import com.l2jmobius.gameserver.model.eventengine.EventMethodNotification;
-import com.l2jmobius.gameserver.model.eventengine.EventScheduler;
-import com.l2jmobius.gameserver.model.eventengine.IConditionalEventScheduler;
-import com.l2jmobius.gameserver.model.eventengine.conditions.BetweenConditionalScheduler;
-import com.l2jmobius.gameserver.model.eventengine.conditions.HaventRunConditionalScheduler;
-import com.l2jmobius.gameserver.model.eventengine.drop.*;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.commons.util.IXmlReader;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.AbstractEventManager;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.EventMethodNotification;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.EventScheduler;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.IConditionalEventScheduler;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.conditions.BetweenConditionalScheduler;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.conditions.HaventRunConditionalScheduler;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.drop.*;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.holders.SkillHolder;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;

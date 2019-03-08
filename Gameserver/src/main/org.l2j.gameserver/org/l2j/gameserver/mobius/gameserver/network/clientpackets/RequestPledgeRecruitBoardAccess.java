@@ -16,20 +16,20 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.ClanEntryManager;
+import org.l2j.gameserver.mobius.gameserver.model.ClanPrivilege;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.clan.entry.PledgeRecruitInfo;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Sdw
  */
-public class RequestPledgeRecruitBoardAccess implements IClientIncomingPacket
+public class RequestPledgeRecruitBoardAccess extends IClientIncomingPacket
 {
 	private int _applyType;
 	private int _karma;
@@ -39,19 +39,19 @@ public class RequestPledgeRecruitBoardAccess implements IClientIncomingPacket
 	private int _recruitingType;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_applyType = packet.readD();
-		_karma = packet.readD();
-		_information = packet.readS();
-		_datailedInformation = packet.readS();
-		_applicationType = packet.readD(); // 0 - Allow, 1 - Public
-		_recruitingType = packet.readD(); // 0 - Main clan
+		_applyType = packet.getInt();
+		_karma = packet.getInt();
+		_information = readString(packet);
+		_datailedInformation = readString(packet);
+		_applicationType = packet.getInt(); // 0 - Allow, 1 - Public
+		_recruitingType = packet.getInt(); // 0 - Main clan
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		

@@ -17,7 +17,7 @@
 package org.l2j.gameserver.mobius.gameserver.model.olympiad;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
 
 import java.util.List;
 import java.util.Set;

@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.commission;
 
-import com.l2jmobius.gameserver.model.ItemInfo;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.ItemInfo;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

@@ -17,30 +17,30 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
-import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.ItemRequest;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.OfflineTradersTable;
+import org.l2j.gameserver.mobius.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.mobius.gameserver.model.ItemRequest;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.TradeList;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
 
 import static com.l2jmobius.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
 
-public final class RequestPrivateStoreSell implements IClientIncomingPacket
+public final class RequestPrivateStoreSell extends IClientIncomingPacket
 {
 	private int _storePlayerId;
 	private ItemRequest[] _items = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_storePlayerId = packet.readD();
-		int itemsCount = packet.readD();
+		_storePlayerId = packet.getInt();
+		int itemsCount = packet.getInt();
 		if ((itemsCount <= 0) || (itemsCount > Config.MAX_ITEM_IN_PACKET))
 		{
 			return false;
@@ -49,24 +49,24 @@ public final class RequestPrivateStoreSell implements IClientIncomingPacket
 		
 		for (int i = 0; i < itemsCount; i++)
 		{
-			final int slot = packet.readD();
-			final int itemId = packet.readD();
-			packet.readH(); // TODO analyse this
-			packet.readH(); // TODO analyse this
-			final long count = packet.readQ();
-			final long price = packet.readQ();
-			packet.readD(); // visual id
-			packet.readD(); // option 1
-			packet.readD(); // option 2
-			int soulCrystals = packet.readC();
+			final int slot = packet.getInt();
+			final int itemId = packet.getInt();
+			packet.getShort(); // TODO analyse this
+			packet.getShort(); // TODO analyse this
+			final long count = packet.getLong();
+			final long price = packet.getLong();
+			packet.getInt(); // visual id
+			packet.getInt(); // option 1
+			packet.getInt(); // option 2
+			int soulCrystals = packet.get();
 			for (int s = 0; s < soulCrystals; s++)
 			{
-				packet.readD(); // soul crystal option
+				packet.getInt(); // soul crystal option
 			}
-			int soulCrystals2 = packet.readC();
+			int soulCrystals2 = packet.get();
 			for (int s = 0; s < soulCrystals2; s++)
 			{
-				packet.readD(); // sa effect
+				packet.getInt(); // sa effect
 			}
 			if (/* (slot < 1) || */ (itemId < 1) || (count < 1) || (price < 0))
 			{
@@ -79,7 +79,7 @@ public final class RequestPrivateStoreSell implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)

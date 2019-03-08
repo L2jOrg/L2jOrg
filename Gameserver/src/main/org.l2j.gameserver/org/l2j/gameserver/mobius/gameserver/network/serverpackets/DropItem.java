@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 public class DropItem implements IClientOutgoingPacket
 {
@@ -53,7 +53,7 @@ public class DropItem implements IClientOutgoingPacket
 		packet.writeQ(_item.getCount());
 		
 		packet.writeC(0x00);
-		// packet.writeD(0x01); if above C == true (1) then packet.readD()
+		// packet.writeD(0x01); if above C == true (1) then packet.getInt()
 		
 		packet.writeC(_item.getEnchantLevel()); // Grand Crusade
 		packet.writeC(_item.getAugmentation() != null ? 1 : 0); // Grand Crusade

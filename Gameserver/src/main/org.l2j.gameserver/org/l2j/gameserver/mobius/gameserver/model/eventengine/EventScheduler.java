@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.eventengine;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.util.cron4j.PastPredictor;
-import com.l2jmobius.gameserver.util.cron4j.Predictor;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.util.cron4j.PastPredictor;
+import org.l2j.gameserver.mobius.gameserver.util.cron4j.Predictor;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -115,7 +115,7 @@ public class EventScheduler
 		if (timeSchedule <= (30 * 1000))
 		{
 			LOGGER.warning("Wrong reschedule for " + _eventManager.getClass().getSimpleName() + " end up run in " + (timeSchedule / 1000) + " seconds!");
-			ThreadPool.schedule(this::startScheduler, timeSchedule + 1000);
+			ThreadPoolManager.getInstance().schedule(this::startScheduler, timeSchedule + 1000);
 			return;
 		}
 		
@@ -124,21 +124,21 @@ public class EventScheduler
 			_task.cancel(false);
 		}
 		
-		_task = ThreadPool.schedule(() ->
+		_task = ThreadPoolManager.getInstance().schedule(() ->
 		{
 			run();
 			updateLastRun();
 			
 			if (_repeat)
 			{
-				ThreadPool.schedule(this::startScheduler, 1000);
+				ThreadPoolManager.getInstance().schedule(this::startScheduler, 1000);
 			}
 		}, timeSchedule);
 	}
 	
 	public boolean updateLastRun()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO event_schedulers (eventName, schedulerName, lastRun) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE eventName = ?, schedulerName = ?, lastRun = ?"))
 		{
 			ps.setString(1, _eventManager.getName());

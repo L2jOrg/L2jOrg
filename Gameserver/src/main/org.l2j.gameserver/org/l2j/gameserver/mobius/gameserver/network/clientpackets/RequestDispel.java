@@ -17,18 +17,18 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.AbnormalType;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 
 /**
  * @author KenM
  */
-public class RequestDispel implements IClientIncomingPacket
+public class RequestDispel extends IClientIncomingPacket
 {
 	private int _objectId;
 	private int _skillId;
@@ -36,17 +36,17 @@ public class RequestDispel implements IClientIncomingPacket
 	private int _skillSubLevel;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_objectId = packet.readD();
-		_skillId = packet.readD();
-		_skillLevel = packet.readH();
-		_skillSubLevel = packet.readH();
+		_objectId = packet.getInt();
+		_skillId = packet.getInt();
+		_skillLevel = packet.getShort();
+		_skillSubLevel = packet.getShort();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		if ((_skillId <= 0) || (_skillLevel <= 0))
 		{

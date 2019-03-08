@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.gameserver.enums.ShortcutType;
+import org.l2j.gameserver.mobius.gameserver.enums.ShortcutType;
 
 /**
  * Shortcut DTO.

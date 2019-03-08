@@ -1,13 +1,17 @@
 package org.l2j.gameserver.mobius.gameserver.model.actor;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.mobius.gameserver.Config;
+import org.l2j.gameserver.mobius.gameserver.ItemsAutoDestroy;
+import org.l2j.gameserver.mobius.gameserver.cache.HtmCache;
 import org.l2j.gameserver.mobius.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.mobius.gameserver.enums.*;
 import org.l2j.gameserver.mobius.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.mobius.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.mobius.gameserver.instancemanager.*;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.DBSpawnManager.DBStatusType;
 import org.l2j.gameserver.mobius.gameserver.model.*;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.*;
 import org.l2j.gameserver.mobius.gameserver.model.actor.stat.NpcStat;
@@ -21,9 +25,11 @@ import org.l2j.gameserver.mobius.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
 import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.npc.*;
 import org.l2j.gameserver.mobius.gameserver.model.events.returns.TerminateReturn;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.mobius.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.mobius.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
 import org.l2j.gameserver.mobius.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.mobius.gameserver.model.stats.Formulas;
@@ -33,6 +39,7 @@ import org.l2j.gameserver.mobius.gameserver.model.zone.type.L2TaxZone;
 import org.l2j.gameserver.mobius.gameserver.network.NpcStringId;
 import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.mobius.gameserver.util.Broadcast;
 
 import java.util.List;
@@ -88,7 +95,7 @@ public class L2Npc extends L2Character
     private NpcStringId _nameString;
 
     private StatsSet _params;
-    private DBSpawnManager.DBStatusType _raidStatus;
+    private DBStatusType _raidStatus;
 
     /** Contains information about local tax payments. */
     private L2TaxZone _taxZone = null;
@@ -1247,7 +1254,7 @@ public class L2Npc extends L2Character
 
     public void scheduleDespawn(long delay)
     {
-        ThreadPool.schedule(() ->
+        ThreadPoolManager.getInstance().schedule(() ->
         {
             if (!_isDecayed)
             {

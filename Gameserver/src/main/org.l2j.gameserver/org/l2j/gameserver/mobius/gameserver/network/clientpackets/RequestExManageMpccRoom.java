@@ -16,19 +16,19 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.enums.MatchingRoomType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.matching.CommandChannelMatchingRoom;
-import com.l2jmobius.gameserver.model.matching.MatchingRoom;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExMPCCRoomInfo;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.enums.MatchingRoomType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.matching.CommandChannelMatchingRoom;
+import org.l2j.gameserver.mobius.gameserver.model.matching.MatchingRoom;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExMPCCRoomInfo;
 
 /**
  * @author Sdw
  */
-public class RequestExManageMpccRoom implements IClientIncomingPacket
+public class RequestExManageMpccRoom extends IClientIncomingPacket
 {
 	private int _roomId;
 	private int _maxMembers;
@@ -37,19 +37,19 @@ public class RequestExManageMpccRoom implements IClientIncomingPacket
 	private String _title;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_roomId = packet.readD();
-		_maxMembers = packet.readD();
-		_minLevel = packet.readD();
-		_maxLevel = packet.readD();
-		packet.readD(); // Party Distrubtion Type
-		_title = packet.readS();
+		_roomId = packet.getInt();
+		_maxMembers = packet.getInt();
+		_minLevel = packet.getInt();
+		_maxLevel = packet.getInt();
+		packet.getInt(); // Party Distrubtion Type
+		_title = readString(packet);
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)

@@ -1,16 +1,14 @@
 package org.l2j.gameserver.mobius.gameserver.model.items.instance;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.mobius.gameserver.Config;
 import org.l2j.gameserver.mobius.gameserver.data.xml.impl.AppearanceItemData;
 import org.l2j.gameserver.mobius.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2j.gameserver.mobius.gameserver.data.xml.impl.EnsoulData;
 import org.l2j.gameserver.mobius.gameserver.data.xml.impl.OptionData;
 import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
-import org.l2j.gameserver.mobius.gameserver.enums.AttributeType;
-import org.l2j.gameserver.mobius.gameserver.enums.InstanceType;
-import org.l2j.gameserver.mobius.gameserver.enums.ItemLocation;
-import org.l2j.gameserver.mobius.gameserver.enums.ItemSkillType;
+import org.l2j.gameserver.mobius.gameserver.enums.*;
 import org.l2j.gameserver.mobius.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.mobius.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.mobius.gameserver.instancemanager.CastleManager;
@@ -20,6 +18,7 @@ import org.l2j.gameserver.mobius.gameserver.model.*;
 import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.mobius.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.mobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.mobius.gameserver.model.entity.Castle;
 import org.l2j.gameserver.mobius.gameserver.model.events.EventDispatcher;
@@ -950,7 +949,7 @@ public final class L2ItemInstance extends L2Object
         final VariationInstance augment = _augmentation;
         _augmentation = null;
 
-        try (Connection con = DatabaseFactory.getConnection();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("DELETE FROM item_variations WHERE itemId = ?"))
         {
             ps.setInt(1, getObjectId());
@@ -967,7 +966,7 @@ public final class L2ItemInstance extends L2Object
 
     public void restoreAttributes()
     {
-        try (Connection con = DatabaseFactory.getConnection();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps1 = con.prepareStatement("SELECT mineralId,option1,option2 FROM item_variations WHERE itemId=?");
              PreparedStatement ps2 = con.prepareStatement("SELECT elemType,elemValue FROM item_elementals WHERE itemId=?"))
         {
@@ -1008,7 +1007,7 @@ public final class L2ItemInstance extends L2Object
 
     public void updateItemOptions()
     {
-        try (Connection con = DatabaseFactory.getConnection())
+        try (Connection con = DatabaseFactory.getInstance().getConnection())
         {
             updateItemOptions(con);
         }
@@ -1036,7 +1035,7 @@ public final class L2ItemInstance extends L2Object
 
     public void updateItemElementals()
     {
-        try (Connection con = DatabaseFactory.getConnection())
+        try (Connection con = DatabaseFactory.getInstance().getConnection())
         {
             updateItemElements(con);
         }
@@ -1198,7 +1197,7 @@ public final class L2ItemInstance extends L2Object
             _elementals.remove(type);
         }
 
-        try (Connection con = DatabaseFactory.getConnection();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("DELETE FROM item_elementals WHERE itemId = ? AND elemType = ?"))
         {
             ps.setInt(1, getObjectId());
@@ -1223,7 +1222,7 @@ public final class L2ItemInstance extends L2Object
             _elementals.clear();
         }
 
-        try (Connection con = DatabaseFactory.getConnection();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("DELETE FROM item_elementals WHERE itemId = ?"))
         {
             ps.setInt(1, getObjectId());
@@ -1410,7 +1409,7 @@ public final class L2ItemInstance extends L2Object
             return;
         }
         _consumingMana = true;
-        ThreadPool.schedule(new ScheduleConsumeManaTask(this), MANA_CONSUMPTION_RATE);
+        ThreadPoolManager.getInstance().schedule(new ScheduleConsumeManaTask(this), MANA_CONSUMPTION_RATE);
     }
 
     /**
@@ -1537,7 +1536,7 @@ public final class L2ItemInstance extends L2Object
 
     public final void dropMe(L2Character dropper, int x, int y, int z)
     {
-        ThreadPool.execute(new ItemDropTask(this, dropper, x, y, z));
+        ThreadPoolManager.getInstance().execute(new ItemDropTask(this, dropper, x, y, z));
         if ((dropper != null) && dropper.isPlayer())
         {
             // Notify to scripts
@@ -1555,7 +1554,7 @@ public final class L2ItemInstance extends L2Object
             return;
         }
 
-        try (Connection con = DatabaseFactory.getConnection();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,custom_type1=?,custom_type2=?,mana_left=?,time=? WHERE object_id = ?"))
         {
             ps.setInt(1, _ownerId);
@@ -1601,7 +1600,7 @@ public final class L2ItemInstance extends L2Object
             return;
         }
 
-        try (Connection con = DatabaseFactory.getConnection();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,object_id,custom_type1,custom_type2,mana_left,time) VALUES (?,?,?,?,?,?,?,?,?,?,?)"))
         {
             ps.setInt(1, _ownerId);
@@ -1649,7 +1648,7 @@ public final class L2ItemInstance extends L2Object
             return;
         }
 
-        try (Connection con = DatabaseFactory.getConnection())
+        try (Connection con = DatabaseFactory.getInstance().getConnection())
         {
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM items WHERE object_id = ?"))
             {
@@ -1855,7 +1854,7 @@ public final class L2ItemInstance extends L2Object
             {
                 _lifeTimeTask.cancel(true);
             }
-            _lifeTimeTask = ThreadPool.schedule(new ScheduleLifeTimeTask(this), getRemainingTime());
+            _lifeTimeTask = ThreadPoolManager.getInstance().schedule(new ScheduleLifeTimeTask(this), getRemainingTime());
         }
     }
 
@@ -2163,7 +2162,7 @@ public final class L2ItemInstance extends L2Object
 
     private void removeSpecialAbility(EnsoulOption option)
     {
-        try (Connection con = DatabaseFactory.getConnection();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("DELETE FROM item_special_abilities WHERE objectId = ? AND optionId = ?"))
         {
             ps.setInt(1, getObjectId());
@@ -2217,7 +2216,7 @@ public final class L2ItemInstance extends L2Object
 
     private void restoreSpecialAbilities()
     {
-        try (Connection con = DatabaseFactory.getConnection();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("SELECT * FROM item_special_abilities WHERE objectId = ? ORDER BY position"))
         {
             ps.setInt(1, getObjectId());
@@ -2244,7 +2243,7 @@ public final class L2ItemInstance extends L2Object
 
     public void updateSpecialAbilities()
     {
-        try (Connection con = DatabaseFactory.getConnection())
+        try (Connection con = DatabaseFactory.getInstance().getConnection())
         {
             updateSpecialAbilities(con);
         }
@@ -2410,11 +2409,11 @@ public final class L2ItemInstance extends L2Object
             final long time = getVisualLifeTime() - System.currentTimeMillis();
             if (time > 0)
             {
-                _appearanceLifeTimeTask = ThreadPool.schedule(this::onVisualLifeTimeEnd, time);
+                _appearanceLifeTimeTask = ThreadPoolManager.getInstance().schedule(this::onVisualLifeTimeEnd, time);
             }
             else
             {
-                ThreadPool.execute(this::onVisualLifeTimeEnd);
+                ThreadPoolManager.getInstance().execute(this::onVisualLifeTimeEnd);
             }
         }
     }

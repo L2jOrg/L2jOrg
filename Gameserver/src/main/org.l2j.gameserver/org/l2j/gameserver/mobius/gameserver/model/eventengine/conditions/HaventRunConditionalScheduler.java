@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.eventengine.conditions;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
-import com.l2jmobius.gameserver.model.eventengine.EventScheduler;
-import com.l2jmobius.gameserver.model.eventengine.IConditionalEventScheduler;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.AbstractEventManager;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.EventScheduler;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.IConditionalEventScheduler;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -52,7 +52,7 @@ public class HaventRunConditionalScheduler implements IConditionalEventScheduler
 			throw new NullPointerException("Scheduler not found: " + _name);
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT lastRun FROM event_schedulers WHERE eventName = ? AND schedulerName = ?"))
 		{
 			ps.setString(1, _eventManager.getName());

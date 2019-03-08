@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.stat;
 
-import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
-import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.PetDataTable;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PetInstance;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SocialAction;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 public class PetStat extends SummonStat
 {

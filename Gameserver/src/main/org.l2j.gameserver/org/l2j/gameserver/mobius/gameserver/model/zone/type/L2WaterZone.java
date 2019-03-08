@@ -16,15 +16,15 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.zone.type;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.serverpackets.FakePlayerInfo;
-import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
-import com.l2jmobius.gameserver.network.serverpackets.ServerObjectInfo;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.FakePlayerInfo;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcInfo;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ServerObjectInfo;
 
 public class L2WaterZone extends L2ZoneType
 {

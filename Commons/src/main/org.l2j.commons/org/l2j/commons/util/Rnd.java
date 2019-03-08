@@ -43,6 +43,18 @@ public class Rnd
 		return min + get(max - min + 1);
 	}
 
+	/**
+	 * @param origin (double)
+	 * @param bound (double)
+	 * @return a random double value between the specified origin (inclusive) and the specified bound (inclusive).
+	 */
+	public static double get(double origin, double bound) {
+		if (origin == bound) {
+			return origin;
+		}
+		return origin + (((bound - origin) + 1) * rnd().nextDouble());
+	}
+
 	public static int nextInt()
 	{
 		return rnd().nextInt();

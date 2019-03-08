@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.holders;
 
-import com.l2jmobius.gameserver.enums.TryMixCubeResultType;
+import org.l2j.gameserver.mobius.gameserver.enums.TryMixCubeResultType;
 
 /**
  * @author UnAfraid

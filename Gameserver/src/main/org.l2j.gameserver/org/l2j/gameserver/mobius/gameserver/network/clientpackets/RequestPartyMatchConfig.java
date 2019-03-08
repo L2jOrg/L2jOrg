@@ -16,34 +16,34 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.enums.PartyMatchingRoomLevelType;
-import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
-import com.l2jmobius.gameserver.model.L2CommandChannel;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.matching.CommandChannelMatchingRoom;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ListPartyWaiting;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.enums.PartyMatchingRoomLevelType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.MatchingRoomManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2CommandChannel;
+import org.l2j.gameserver.mobius.gameserver.model.L2Party;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.matching.CommandChannelMatchingRoom;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ListPartyWaiting;
 
-public final class RequestPartyMatchConfig implements IClientIncomingPacket
+public final class RequestPartyMatchConfig extends IClientIncomingPacket
 {
 	private int _page;
 	private int _location;
 	private PartyMatchingRoomLevelType _type;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_page = packet.readD();
-		_location = packet.readD();
-		_type = packet.readD() == 0 ? PartyMatchingRoomLevelType.MY_LEVEL_RANGE : PartyMatchingRoomLevelType.ALL;
+		_page = packet.getInt();
+		_location = packet.getInt();
+		_type = packet.getInt() == 0 ? PartyMatchingRoomLevelType.MY_LEVEL_RANGE : PartyMatchingRoomLevelType.ALL;
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		

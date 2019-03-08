@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets.appearance;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
-import com.l2jmobius.gameserver.model.items.appearance.AppearanceTargetType;
-import com.l2jmobius.gameserver.model.items.appearance.AppearanceType;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
-import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.model.items.appearance.AppearanceStone;
+import org.l2j.gameserver.mobius.gameserver.model.items.appearance.AppearanceTargetType;
+import org.l2j.gameserver.mobius.gameserver.model.items.appearance.AppearanceType;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author UnAfraid

@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
-import com.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
-import com.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRProductInfo;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.primeshop.PrimeShopGroup;
+import org.l2j.gameserver.mobius.gameserver.model.primeshop.PrimeShopItem;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.primeshop.ExBRProductInfo;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;

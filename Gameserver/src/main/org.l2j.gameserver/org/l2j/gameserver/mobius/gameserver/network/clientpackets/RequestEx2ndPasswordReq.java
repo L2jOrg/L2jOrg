@@ -16,36 +16,36 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordAck;
-import com.l2jmobius.gameserver.security.SecondaryPasswordAuth;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SecondaryAuthData;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.Ex2ndPasswordAck;
+import org.l2j.gameserver.mobius.gameserver.security.SecondaryPasswordAuth;
 
 /**
  * (ch)cS{S} c: change pass? S: current password S: new password
  * @author mrTJO
  */
-public class RequestEx2ndPasswordReq implements IClientIncomingPacket
+public class RequestEx2ndPasswordReq extends IClientIncomingPacket
 {
 	private int _changePass;
 	private String _password;
 	private String _newPassword;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_changePass = packet.readC();
-		_password = packet.readS();
+		_changePass = packet.get();
+		_password = readString(packet);
 		if (_changePass == 2)
 		{
-			_newPassword = packet.readS();
+			_newPassword = readString(packet);
 		}
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		if (!SecondaryAuthData.getInstance().isEnabled())
 		{

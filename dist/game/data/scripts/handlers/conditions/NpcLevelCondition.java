@@ -16,10 +16,10 @@
  */
 package handlers.conditions;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.ICondition;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.conditions.ICondition;
 
 /**
  * @author Sdw

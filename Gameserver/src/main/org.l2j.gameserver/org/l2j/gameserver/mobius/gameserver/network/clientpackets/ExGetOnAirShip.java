@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 
 /**
  * Format: (c) dddd d: dx d: dy d: dz d: AirShip id ??
  * @author -Wooden-
  */
-public class ExGetOnAirShip implements IClientIncomingPacket
+public class ExGetOnAirShip extends IClientIncomingPacket
 {
 	private int _x;
 	private int _y;
@@ -31,17 +31,17 @@ public class ExGetOnAirShip implements IClientIncomingPacket
 	private int _shipId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_x = packet.readD();
-		_y = packet.readD();
-		_z = packet.readD();
-		_shipId = packet.readD();
+		_x = packet.getInt();
+		_y = packet.getInt();
+		_z = packet.getInt();
+		_shipId = packet.getInt();
 		return false;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		LOGGER.info("[T1:ExGetOnAirShip] x: " + _x);
 		LOGGER.info("[T1:ExGetOnAirShip] y: " + _y);

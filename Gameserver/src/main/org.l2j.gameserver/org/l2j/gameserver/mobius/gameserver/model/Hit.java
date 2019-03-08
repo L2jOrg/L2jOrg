@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.gameserver.enums.AttackType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.enums.AttackType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
 
 import java.lang.ref.WeakReference;
 

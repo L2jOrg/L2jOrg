@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.gameserver.ai.L2CharacterAI;
-import com.l2jmobius.gameserver.ai.L2ControllableMobAI;
-import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.mobius.gameserver.ai.L2CharacterAI;
+import org.l2j.gameserver.mobius.gameserver.ai.L2ControllableMobAI;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2NpcTemplate;
 
 /**
  * @author littlecrow

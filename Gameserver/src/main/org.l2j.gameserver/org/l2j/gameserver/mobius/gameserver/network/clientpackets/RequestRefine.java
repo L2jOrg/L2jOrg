@@ -16,17 +16,17 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.VariationData;
-import com.l2jmobius.gameserver.model.VariationInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.options.Variation;
-import com.l2jmobius.gameserver.model.options.VariationFee;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExVariationResult;
-import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.VariationData;
+import org.l2j.gameserver.mobius.gameserver.model.VariationInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.options.Variation;
+import org.l2j.gameserver.mobius.gameserver.model.options.VariationFee;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExVariationResult;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.InventoryUpdate;
 
 /**
  * Format:(ch) dddd
@@ -40,17 +40,17 @@ public final class RequestRefine extends AbstractRefinePacket
 	private long _feeCount;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_targetItemObjId = packet.readD();
-		_mineralItemObjId = packet.readD();
-		_feeItemObjId = packet.readD();
-		_feeCount = packet.readQ();
+		_targetItemObjId = packet.getInt();
+		_mineralItemObjId = packet.getInt();
+		_feeItemObjId = packet.getInt();
+		_feeCount = packet.getLong();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)

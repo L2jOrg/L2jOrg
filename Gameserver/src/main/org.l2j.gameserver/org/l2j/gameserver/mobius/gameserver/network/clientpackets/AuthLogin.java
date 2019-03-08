@@ -1,31 +1,15 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.LoginServerThread;
-import com.l2jmobius.gameserver.LoginServerThread.SessionKey;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.LoginServerThread;
+import org.l2j.gameserver.mobius.gameserver.LoginServerThread.SessionKey;
+
+import java.nio.ByteBuffer;
 
 /**
  * This class ...
  * @version $Revision: 1.9.2.3.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class AuthLogin implements IClientIncomingPacket
+public final class AuthLogin extends IClientIncomingPacket
 {
 	
 	// loginName + keys must match what the loginserver used.
@@ -39,18 +23,17 @@ public final class AuthLogin implements IClientIncomingPacket
 	private int _loginKey2;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_loginName = packet.readS().toLowerCase();
-		_playKey2 = packet.readD();
-		_playKey1 = packet.readD();
-		_loginKey1 = packet.readD();
-		_loginKey2 = packet.readD();
-		return true;
+		_loginName = readString(packet).toLowerCase();
+		_playKey2 = packet.getInt();
+		_playKey1 = packet.getInt();
+		_loginKey1 = packet.getInt();
+		_loginKey2 = packet.getInt();
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		if (_loginName.isEmpty() || !client.isProtocolOk())
 		{

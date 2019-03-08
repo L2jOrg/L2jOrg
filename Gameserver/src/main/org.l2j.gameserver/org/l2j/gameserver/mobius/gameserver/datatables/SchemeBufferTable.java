@@ -17,8 +17,8 @@
 package org.l2j.gameserver.mobius.gameserver.datatables;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.holders.BuffSkillHolder;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.model.holders.BuffSkillHolder;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -51,7 +51,7 @@ public class SchemeBufferTable
 	{
 		int count = 0;
 		
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement st = con.prepareStatement(LOAD_SCHEMES);
 			ResultSet rs = st.executeQuery();
@@ -128,7 +128,7 @@ public class SchemeBufferTable
 	
 	public void saveSchemes()
 	{
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			// Delete all entries from database.
 			PreparedStatement st = con.prepareStatement(DELETE_SCHEMES);

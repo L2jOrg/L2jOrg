@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.enums.MailType;
-import com.l2jmobius.gameserver.instancemanager.MailManager;
-import com.l2jmobius.gameserver.model.entity.Message;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
-import com.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.enums.MailType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.MailManager;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Message;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 
 import java.util.List;
 

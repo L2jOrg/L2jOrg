@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.status;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
 
 public class SiegeFlagStatus extends NpcStatus
 {

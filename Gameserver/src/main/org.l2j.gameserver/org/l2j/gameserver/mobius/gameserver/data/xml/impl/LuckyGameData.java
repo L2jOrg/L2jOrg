@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
-import com.l2jmobius.gameserver.model.holders.ItemPointHolder;
-import com.l2jmobius.gameserver.model.holders.LuckyGameDataHolder;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemChanceHolder;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemPointHolder;
+import org.l2j.gameserver.mobius.gameserver.model.holders.LuckyGameDataHolder;
 import org.w3c.dom.Document;
 
 import java.io.File;

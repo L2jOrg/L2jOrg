@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.options.EnchantOptions;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.options.EnchantOptions;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 

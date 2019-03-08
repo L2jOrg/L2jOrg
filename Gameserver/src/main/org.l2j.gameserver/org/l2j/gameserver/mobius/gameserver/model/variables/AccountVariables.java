@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.variables;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
+import org.l2j.commons.database.DatabaseFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -50,7 +50,7 @@ public class AccountVariables extends AbstractVariables
 	public boolean restoreMe()
 	{
 		// Restore previous variables.
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement st = con.prepareStatement(SELECT_QUERY))
 		{
 			st.setString(1, _accountName);
@@ -83,7 +83,7 @@ public class AccountVariables extends AbstractVariables
 			return false;
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			// Clear previous entries.
 			try (PreparedStatement st = con.prepareStatement(DELETE_QUERY))
@@ -120,7 +120,7 @@ public class AccountVariables extends AbstractVariables
 	@Override
 	public boolean deleteMe()
 	{
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			// Clear previous entries.
 			try (PreparedStatement st = con.prepareStatement(DELETE_QUERY))

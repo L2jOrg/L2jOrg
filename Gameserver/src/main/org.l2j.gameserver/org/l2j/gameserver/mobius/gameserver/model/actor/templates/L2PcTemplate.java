@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.templates;
 
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.base.ClassId;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory;
 
 import java.util.HashMap;
 import java.util.List;

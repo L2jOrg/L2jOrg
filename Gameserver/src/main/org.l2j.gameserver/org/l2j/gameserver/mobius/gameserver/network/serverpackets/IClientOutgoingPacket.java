@@ -1,36 +1,21 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.IOutgoingPacket;
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.interfaces.IUpdateTypeComponent;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import io.github.joealisson.mmocore.WritablePacket;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.IUpdateTypeComponent;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 
+import java.nio.ByteBuffer;
 import java.util.logging.Logger;
 
 /**
  * @author KenM
  */
-public interface IClientOutgoingPacket extends IOutgoingPacket
+public abstract class IClientOutgoingPacket extends WritablePacket<L2GameClient>
 {
 	Logger LOGGER = Logger.getLogger(IClientOutgoingPacket.class.getName());
-	
+
 	int[] PAPERDOLL_ORDER = new int[]
 	{
 		Inventory.PAPERDOLL_UNDER,
@@ -94,14 +79,14 @@ public interface IClientOutgoingPacket extends IOutgoingPacket
 		Inventory.PAPERDOLL_ARTIFACT20,
 		Inventory.PAPERDOLL_ARTIFACT21,
 	};
-	
+
 	int[] PAPERDOLL_ORDER_AUGMENT = new int[]
 	{
 		Inventory.PAPERDOLL_RHAND,
 		Inventory.PAPERDOLL_LHAND,
 		Inventory.PAPERDOLL_RHAND
 	};
-	
+
 	int[] PAPERDOLL_ORDER_VISUAL_ID = new int[]
 	{
 		Inventory.PAPERDOLL_RHAND,
@@ -114,22 +99,19 @@ public interface IClientOutgoingPacket extends IOutgoingPacket
 		Inventory.PAPERDOLL_HAIR,
 		Inventory.PAPERDOLL_HAIR2
 	};
-	
-	default int[] getPaperdollOrder()
-	{
+
+	public int[] getPaperdollOrder() {
 		return PAPERDOLL_ORDER;
 	}
-	
-	default int[] getPaperdollOrderAugument()
-	{
+
+	public int[] getPaperdollOrderAugument() {
 		return PAPERDOLL_ORDER_AUGMENT;
 	}
-	
-	default int[] getPaperdollOrderVisualId()
-	{
+
+	public int[] getPaperdollOrderVisualId() {
 		return PAPERDOLL_ORDER_VISUAL_ID;
 	}
-	
+
 	/**
 	 * @param masks
 	 * @param type
@@ -139,32 +121,26 @@ public interface IClientOutgoingPacket extends IOutgoingPacket
 	{
 		return (masks & type.getMask()) == type.getMask();
 	}
-	
+
 	/**
 	 * Sends this packet to the target player, useful for lambda operations like <br>
 	 * {@code L2World.getInstance().getPlayers().forEach(packet::sendTo)}
 	 * @param player
 	 */
-	default void sendTo(L2PcInstance player)
-	{
+	public void sendTo(L2PcInstance player) {
 		player.sendPacket(this);
 	}
-	
-	default void runImpl(L2PcInstance player)
-	{
-		
+
+	public void runImpl(L2PcInstance player) {
+
 	}
-	
-	default void writeOptionalD(PacketWriter packet, int value)
-	{
-		if (value >= Short.MAX_VALUE)
-		{
-			packet.writeH(Short.MAX_VALUE);
-			packet.writeD(value);
-		}
-		else
-		{
-			packet.writeH(value);
+
+	public void writeOptionalD(ByteBuffer packet, int value) {
+		if (value >= Short.MAX_VALUE) {
+			packet.putShort(Short.MAX_VALUE);
+			packet.putInt(value);
+		} else {
+			packet.putShort((short) value);
 		}
 	}
 }

@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.enums;
 
-import com.l2jmobius.gameserver.model.items.L2Armor;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Armor;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Weapon;
 
 /**
  * @author Nik

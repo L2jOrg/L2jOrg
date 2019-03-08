@@ -3,6 +3,7 @@ package org.l2j.gameserver.mobius.gameserver.model.variables;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.mobius.gameserver.model.L2World;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

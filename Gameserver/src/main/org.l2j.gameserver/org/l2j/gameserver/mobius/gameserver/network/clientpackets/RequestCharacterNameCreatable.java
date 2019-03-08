@@ -17,17 +17,17 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
-import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.ExIsCharNameCreatable;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.FakePlayerData;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExIsCharNameCreatable;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 /**
  * @author UnAfraid
  */
-public class RequestCharacterNameCreatable implements IClientIncomingPacket
+public class RequestCharacterNameCreatable extends IClientIncomingPacket
 {
 	private String _name;
 	private int result;
@@ -39,14 +39,14 @@ public class RequestCharacterNameCreatable implements IClientIncomingPacket
 	public static int CANNOT_CREATE_SERVER = 5;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_name = packet.readS();
+		_name = readString(packet);
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final int charId = CharNameTable.getInstance().getIdByName(_name);
 		

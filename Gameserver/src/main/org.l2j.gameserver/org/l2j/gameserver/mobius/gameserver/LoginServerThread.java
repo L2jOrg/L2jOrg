@@ -1,36 +1,18 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.network.BaseSendablePacket;
-import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.commons.util.crypt.NewCrypt;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.ConnectionState;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.loginserverpackets.game.*;
-import com.l2jmobius.gameserver.network.loginserverpackets.login.*;
-import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
-import com.l2jmobius.gameserver.network.serverpackets.LoginFail;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.crypt.NewCrypt;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.util.CommonUtil;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.ConnectionState;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.loginserverpackets.game.*;
+import org.l2j.gameserver.mobius.gameserver.network.loginserverpackets.login.*;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.CharSelectionInfo;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.LoginFail;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 import java.io.BufferedOutputStream;
 import java.io.IOException;
@@ -62,10 +44,7 @@ public class LoginServerThread extends Thread
 {
 	protected static final Logger LOGGER = Logger.getLogger(LoginServerThread.class.getName());
 	protected static final Logger ACCOUNTING_LOGGER = Logger.getLogger("accounting");
-	
-	/**
-	 * @see com.l2jmobius.loginserver.LoginServer#PROTOCOL_REV
-	 */
+
 	private static final int REVISION = 0x0106;
 	private final String _hostname;
 	private final int _port;
@@ -570,7 +549,7 @@ public class LoginServerThread extends Thread
 		
 		int chars = 0;
 		final List<Long> charToDel = new ArrayList<>();
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT deletetime FROM characters WHERE account_name=?"))
 		{
 			ps.setString(1, account);

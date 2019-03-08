@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.gameserver.enums.DailyMissionStatus;
+import org.l2j.gameserver.mobius.gameserver.enums.DailyMissionStatus;
 
 /**
  * @author UnAfraid

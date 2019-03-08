@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.items.enchant;
 
-import com.l2jmobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
 
 /**
  * @author UnAfraid

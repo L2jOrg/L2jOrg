@@ -16,26 +16,26 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 
 /**
  * Format: (ch) S
  * @author -Wooden- TODO: GodKratos: This packet is wrong in Gracia Final!!
  */
-public final class RequestPCCafeCouponUse implements IClientIncomingPacket
+public final class RequestPCCafeCouponUse extends IClientIncomingPacket
 {
 	private String _str;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_str = packet.readS();
+		_str = readString(packet);
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		LOGGER.info("C5: RequestPCCafeCouponUse: S: " + _str);
 	}

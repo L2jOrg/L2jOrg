@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.html;
 
-import com.l2jmobius.gameserver.model.html.formatters.DefaultFormatter;
-import com.l2jmobius.gameserver.model.html.pagehandlers.DefaultPageHandler;
-import com.l2jmobius.gameserver.model.html.styles.DefaultStyle;
+import org.l2j.gameserver.mobius.gameserver.model.html.formatters.DefaultFormatter;
+import org.l2j.gameserver.mobius.gameserver.model.html.pagehandlers.DefaultPageHandler;
+import org.l2j.gameserver.mobius.gameserver.model.html.styles.DefaultStyle;
 
 import java.util.Arrays;
 import java.util.Collection;

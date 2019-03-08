@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import com.l2jmobius.gameserver.model.CursedWeapon;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation;
-import com.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation.CursedWeaponInfo;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.CursedWeaponsManager;
+import org.l2j.gameserver.mobius.gameserver.model.CursedWeapon;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExCursedWeaponLocation;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExCursedWeaponLocation.CursedWeaponInfo;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -32,16 +32,16 @@ import java.util.List;
  * Format: (ch)
  * @author -Wooden-
  */
-public final class RequestCursedWeaponLocation implements IClientIncomingPacket
+public final class RequestCursedWeaponLocation extends IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)

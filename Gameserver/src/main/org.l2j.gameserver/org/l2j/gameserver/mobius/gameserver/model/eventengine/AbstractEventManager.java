@@ -16,15 +16,15 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.eventengine;
 
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.eventengine.drop.IEventDrop;
-import com.l2jmobius.gameserver.model.events.AbstractScript;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.drop.IEventDrop;
+import org.l2j.gameserver.mobius.gameserver.model.events.AbstractScript;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.ListenerRegisterType;
+import org.l2j.gameserver.mobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2j.gameserver.mobius.gameserver.model.events.annotations.RegisterType;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
 
 import java.nio.file.Path;
 import java.util.Collections;

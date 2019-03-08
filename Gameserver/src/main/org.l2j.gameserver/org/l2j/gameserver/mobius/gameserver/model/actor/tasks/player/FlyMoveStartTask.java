@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.tasks.player;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.request.SayuneRequest;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.network.serverpackets.sayune.ExNotifyFlyMoveStart;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.request.SayuneRequest;
+import org.l2j.gameserver.mobius.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.sayune.ExNotifyFlyMoveStart;
 
 import java.util.Objects;
 
@@ -51,7 +51,7 @@ public class FlyMoveStartTask implements Runnable
 		if (!_player.hasRequest(SayuneRequest.class))
 		{
 			_player.sendPacket(ExNotifyFlyMoveStart.STATIC_PACKET);
-			ThreadPool.schedule(this, 1000);
+			ThreadPoolManager.getInstance().schedule(this, 1000);
 		}
 	}
 }

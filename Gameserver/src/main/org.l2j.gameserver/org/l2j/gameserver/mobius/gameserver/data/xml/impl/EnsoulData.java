@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.commons.util.IXmlReader;
-import com.l2jmobius.gameserver.model.ensoul.EnsoulFee;
-import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import com.l2jmobius.gameserver.model.ensoul.EnsoulStone;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.commons.util.IXmlReader;
+import org.l2j.gameserver.mobius.gameserver.model.ensoul.EnsoulFee;
+import org.l2j.gameserver.mobius.gameserver.model.ensoul.EnsoulOption;
+import org.l2j.gameserver.mobius.gameserver.model.ensoul.EnsoulStone;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.CrystalType;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;

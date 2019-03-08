@@ -29,26 +29,26 @@ import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.cache.HtmCache;
-import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
-import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
-import com.l2jmobius.gameserver.handler.IParseBoardHandler;
-import com.l2jmobius.gameserver.instancemanager.PremiumManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.serverpackets.BuyList;
-import com.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
-import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jmobius.gameserver.network.serverpackets.ShowBoard;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.cache.HtmCache;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.BuyListData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.MultisellData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.mobius.gameserver.handler.CommunityBoardHandler;
+import org.l2j.gameserver.mobius.gameserver.handler.IParseBoardHandler;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.PremiumManager;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PetInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.BuyList;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExBuySellList;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.MagicSkillUse;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ShowBoard;
 
 /**
  * Home board.
@@ -182,7 +182,7 @@ public final class HomeBoard implements IParseBoardHandler
 				activeChar.destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, true);
 				activeChar.setInstanceById(0);
 				activeChar.teleToLocation(Config.COMMUNITY_AVAILABLE_TELEPORTS.get(teleBuypass), 0);
-				ThreadPool.schedule(() ->
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
 					activeChar.enableAllSkills();
 				}, 3000);
@@ -300,7 +300,7 @@ public final class HomeBoard implements IParseBoardHandler
 	private static int getFavoriteCount(L2PcInstance player)
 	{
 		int count = 0;
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(COUNT_FAVORITES))
 		{
 			ps.setInt(1, player.getObjectId());

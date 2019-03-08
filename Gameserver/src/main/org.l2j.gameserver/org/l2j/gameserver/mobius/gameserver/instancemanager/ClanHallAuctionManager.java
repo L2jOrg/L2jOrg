@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
-import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.clanhallauction.ClanHallAuction;
-import com.l2jmobius.gameserver.model.eventengine.AbstractEvent;
-import com.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
-import com.l2jmobius.gameserver.model.eventengine.ScheduleTarget;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.clanhallauction.ClanHallAuction;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.AbstractEvent;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.AbstractEventManager;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.ScheduleTarget;
 
 import java.util.HashMap;
 import java.util.Map;

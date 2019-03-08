@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.events.impl;
 
-import com.l2jmobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
 
 /**
  * @author UnAfraid

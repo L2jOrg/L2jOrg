@@ -16,36 +16,36 @@
  */
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.enums.CeremonyOfChaosState;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
-import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
-import com.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
-import com.l2jmobius.gameserver.model.eventengine.ScheduleTarget;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerBypass;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
-import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
-import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
-import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
-import com.l2jmobius.gameserver.model.punishment.PunishmentType;
-import com.l2jmobius.gameserver.model.variables.PlayerVariables;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.network.serverpackets.ceremonyofchaos.ExCuriousHouseState;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.enums.CategoryType;
+import org.l2j.gameserver.mobius.gameserver.enums.CeremonyOfChaosState;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
+import org.l2j.gameserver.mobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.AbstractEventManager;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.ScheduleTarget;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.ListenerRegisterType;
+import org.l2j.gameserver.mobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2j.gameserver.mobius.gameserver.model.events.annotations.RegisterType;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerBypass;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import org.l2j.gameserver.mobius.gameserver.model.events.returns.TerminateReturn;
+import org.l2j.gameserver.mobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2j.gameserver.mobius.gameserver.model.punishment.PunishmentAffect;
+import org.l2j.gameserver.mobius.gameserver.model.punishment.PunishmentType;
+import org.l2j.gameserver.mobius.gameserver.model.variables.PlayerVariables;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ceremonyofchaos.ExCuriousHouseState;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -91,7 +91,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MARKS, 0);
 		GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MEMBER, 0);
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var = ?"))
 		{
 			ps.setString(1, PlayerVariables.CEREMONY_OF_CHAOS_MARKS);
@@ -102,7 +102,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 			LOGGER.severe(getClass().getSimpleName() + ": Could not reset Ceremony Of Chaos victories: " + e);
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var = ?"))
 		{
 			ps.setString(1, PlayerVariables.CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES);

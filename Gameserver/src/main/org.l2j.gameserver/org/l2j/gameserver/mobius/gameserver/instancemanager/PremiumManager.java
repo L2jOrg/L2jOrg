@@ -16,16 +16,16 @@
  */
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.Containers;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.ListenersContainer;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
-import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.events.Containers;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.ListenersContainer;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import org.l2j.gameserver.mobius.gameserver.model.events.listeners.ConsumerEventListener;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -109,7 +109,7 @@ public class PremiumManager
 	 */
 	private void startExpireTask(L2PcInstance player, long delay)
 	{
-		ScheduledFuture<?> task = ThreadPool.schedule(new PremiumExpireTask(player), delay);
+		ScheduledFuture<?> task = ThreadPoolManager.getInstance().schedule(new PremiumExpireTask(player), delay);
 		expiretasks.put(player.getAccountName(), task);
 	}
 	
@@ -128,7 +128,7 @@ public class PremiumManager
 	
 	private void loadPremiumData(String accountName)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement stmt = con.prepareStatement(LOAD_SQL))
 		{
 			stmt.setString(1, accountName);
@@ -160,7 +160,7 @@ public class PremiumManager
 		long newPremiumExpiration = oldPremiumExpiration + addTime;
 		
 		// UPDATE DATABASE
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement stmt = con.prepareStatement(UPDATE_SQL))
 		{
 			stmt.setLong(1, newPremiumExpiration);
@@ -205,7 +205,7 @@ public class PremiumManager
 		premiumData.remove(accountName);
 		
 		// UPDATE DATABASE
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement stmt = con.prepareStatement(DELETE_SQL))
 		{
 			stmt.setString(1, accountName);

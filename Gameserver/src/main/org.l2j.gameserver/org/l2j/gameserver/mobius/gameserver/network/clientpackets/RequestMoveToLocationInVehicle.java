@@ -17,19 +17,19 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.instancemanager.BoatManager;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.type.WeaponType;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.MoveToLocationInVehicle;
-import com.l2jmobius.gameserver.network.serverpackets.StopMoveInVehicle;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.BoatManager;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2BoatInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.MoveToLocationInVehicle;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.StopMoveInVehicle;
 
-public final class RequestMoveToLocationInVehicle implements IClientIncomingPacket
+public final class RequestMoveToLocationInVehicle extends IClientIncomingPacket
 {
 	private int _boatId;
 	private int _targetX;
@@ -40,20 +40,20 @@ public final class RequestMoveToLocationInVehicle implements IClientIncomingPack
 	private int _originZ;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_boatId = packet.readD(); // objectId of boat
-		_targetX = packet.readD();
-		_targetY = packet.readD();
-		_targetZ = packet.readD();
-		_originX = packet.readD();
-		_originY = packet.readD();
-		_originZ = packet.readD();
+		_boatId = packet.getInt(); // objectId of boat
+		_targetX = packet.getInt();
+		_targetY = packet.getInt();
+		_targetZ = packet.getInt();
+		_originX = packet.getInt();
+		_originY = packet.getInt();
+		_originZ = packet.getInt();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)

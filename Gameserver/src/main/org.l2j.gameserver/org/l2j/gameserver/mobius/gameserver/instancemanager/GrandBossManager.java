@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.instancemanager.tasks.GrandBossManagerStoreTask;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.interfaces.IStorable;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.tasks.GrandBossManagerStoreTask;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2GrandBossInstance;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.IStorable;
 
 import java.sql.*;
 import java.util.Date;
@@ -58,7 +58,7 @@ public final class GrandBossManager implements IStorable
 	
 	private void init()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT * from grandboss_data ORDER BY boss_id"))
 		{
@@ -100,7 +100,7 @@ public final class GrandBossManager implements IStorable
 		{
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while initializing GrandBossManager: " + e.getMessage(), e);
 		}
-		ThreadPool.scheduleAtFixedRate(new GrandBossManagerStoreTask(), 5 * 60 * 1000, 5 * 60 * 1000);
+		ThreadPoolManager.getInstance().scheduleAtFixedRate(new GrandBossManagerStoreTask(), 5 * 60 * 1000, 5 * 60 * 1000);
 	}
 	
 	public int getBossStatus(int bossId)
@@ -150,7 +150,7 @@ public final class GrandBossManager implements IStorable
 	@Override
 	public boolean storeMe()
 	{
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			for (Entry<Integer, StatsSet> e : _storedInfo.entrySet())
 			{
@@ -202,7 +202,7 @@ public final class GrandBossManager implements IStorable
 	
 	private void updateDb(int bossId, boolean statusOnly)
 	{
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			final L2GrandBossInstance boss = _bosses.get(bossId);
 			final StatsSet info = _storedInfo.get(bossId);

@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
-import com.l2jmobius.gameserver.model.clan.entry.PledgeApplicantInfo;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.ClanEntryManager;
+import org.l2j.gameserver.mobius.gameserver.model.clan.entry.PledgeApplicantInfo;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 import java.util.Map;
 

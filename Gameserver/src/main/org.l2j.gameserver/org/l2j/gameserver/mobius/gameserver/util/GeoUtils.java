@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.util;
 
-import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.geoengine.geodata.GeoStructure;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.ExServerPrimitive;
+import org.l2j.gameserver.mobius.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.mobius.gameserver.geoengine.geodata.GeoStructure;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExServerPrimitive;
 
 import java.awt.*;
 

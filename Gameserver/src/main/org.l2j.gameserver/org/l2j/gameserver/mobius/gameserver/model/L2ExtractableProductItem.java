@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.gameserver.model.holders.RestorationItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.holders.RestorationItemHolder;
 
 import java.util.List;
 

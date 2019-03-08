@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.effects;
 
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import org.l2j.gameserver.mobius.gameserver.model.skills.BuffInfo;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

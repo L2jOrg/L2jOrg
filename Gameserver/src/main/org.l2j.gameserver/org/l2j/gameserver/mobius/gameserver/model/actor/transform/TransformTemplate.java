@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.transform;
 
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.holders.AdditionalItemHolder;
-import com.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.type.WeaponType;
-import com.l2jmobius.gameserver.model.stats.Stats;
-import com.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.holders.AdditionalItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.holders.AdditionalSkillHolder;
+import org.l2j.gameserver.mobius.gameserver.model.holders.SkillHolder;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.mobius.gameserver.model.stats.Stats;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExBasicActionList;
 
 import java.util.*;
 

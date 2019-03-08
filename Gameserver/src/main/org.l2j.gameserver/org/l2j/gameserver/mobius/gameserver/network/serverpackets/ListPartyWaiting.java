@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.enums.PartyMatchingRoomLevelType;
-import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.matching.MatchingRoom;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.enums.PartyMatchingRoomLevelType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.MatchingRoomManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.matching.MatchingRoom;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
 import java.util.LinkedList;
 import java.util.List;

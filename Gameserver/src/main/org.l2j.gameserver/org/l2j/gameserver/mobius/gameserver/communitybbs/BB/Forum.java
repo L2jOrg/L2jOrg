@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.communitybbs.BB;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
-import com.l2jmobius.gameserver.communitybbs.Manager.TopicBBSManager;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.communitybbs.Manager.ForumsBBSManager;
+import org.l2j.gameserver.mobius.gameserver.communitybbs.Manager.TopicBBSManager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -93,7 +93,7 @@ public class Forum
 	
 	private void load()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM forums WHERE forum_id=?"))
 		{
 			ps.setInt(1, _forumId);
@@ -114,7 +114,7 @@ public class Forum
 			LOGGER.log(Level.WARNING, "Data error on Forum " + _forumId + " : " + e.getMessage(), e);
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM topic WHERE topic_forum_id=? ORDER BY topic_id DESC"))
 		{
 			ps.setInt(1, _forumId);
@@ -139,7 +139,7 @@ public class Forum
 	
 	private void getChildren()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT forum_id FROM forums WHERE forum_parent=?"))
 		{
 			ps.setInt(1, _forumId);
@@ -217,7 +217,7 @@ public class Forum
 	
 	public void insertIntoDb()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO forums (forum_id,forum_name,forum_parent,forum_post,forum_type,forum_perm,forum_owner_id) VALUES (?,?,?,?,?,?,?)"))
 		{
 			ps.setInt(1, _forumId);

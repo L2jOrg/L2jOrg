@@ -1,22 +1,6 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.ai;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
 
 /**
  * Interface of AI and client state.<br>
@@ -42,49 +26,49 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
  */
 public interface Ctrl
 {
-	/**
-	 * Gets the actor.
-	 * @return the actor
-	 */
-	L2Character getActor();
-	
-	/**
-	 * Gets the intention.
-	 * @return the intention
-	 */
-	CtrlIntention getIntention();
-	
-	/**
-	 * Set general state/intention for AI, with optional data.
-	 * @param intention the new intention
-	 */
-	void setIntention(CtrlIntention intention);
-	
-	/**
-	 * Sets the intention.
-	 * @param intention the intention
-	 * @param args
-	 */
-	void setIntention(CtrlIntention intention, Object... args);
-	
-	/**
-	 * Event, that notifies about previous step result, or user command, that does not change current general intention.
-	 * @param evt the event
-	 */
-	void notifyEvent(CtrlEvent evt);
-	
-	/**
-	 * Notify an event.
-	 * @param evt the event
-	 * @param arg0 the arg0
-	 */
-	void notifyEvent(CtrlEvent evt, Object arg0);
-	
-	/**
-	 * Notify an event.
-	 * @param evt the event
-	 * @param arg0 the arg0
-	 * @param arg1 the arg1
-	 */
-	void notifyEvent(CtrlEvent evt, Object arg0, Object arg1);
+    /**
+     * Gets the actor.
+     * @return the actor
+     */
+    L2Character getActor();
+
+    /**
+     * Gets the intention.
+     * @return the intention
+     */
+    CtrlIntention getIntention();
+
+    /**
+     * Set general state/intention for AI, with optional data.
+     * @param intention the new intention
+     */
+    void setIntention(CtrlIntention intention);
+
+    /**
+     * Sets the intention.
+     * @param intention the intention
+     * @param args
+     */
+    void setIntention(CtrlIntention intention, Object... args);
+
+    /**
+     * Event, that notifies about previous step result, or user command, that does not change current general intention.
+     * @param evt the event
+     */
+    void notifyEvent(CtrlEvent evt);
+
+    /**
+     * Notify an event.
+     * @param evt the event
+     * @param arg0 the arg0
+     */
+    void notifyEvent(CtrlEvent evt, Object arg0);
+
+    /**
+     * Notify an event.
+     * @param evt the event
+     * @param arg0 the arg0
+     * @param arg1 the arg1
+     */
+    void notifyEvent(CtrlEvent evt, Object arg0, Object arg1);
 }

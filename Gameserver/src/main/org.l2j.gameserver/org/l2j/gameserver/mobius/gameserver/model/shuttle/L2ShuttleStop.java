@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.shuttle;
 
-import com.l2jmobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
 
 import java.util.ArrayList;
 import java.util.List;

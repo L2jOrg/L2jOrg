@@ -17,13 +17,13 @@
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.commons.util.file.filter.NumericNameFilter;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.buylist.Product;
-import com.l2jmobius.gameserver.model.buylist.ProductList;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.commons.util.file.filter.NumericNameFilter;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.model.buylist.Product;
+import org.l2j.gameserver.mobius.gameserver.model.buylist.ProductList;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 
@@ -65,7 +65,7 @@ public final class BuyListData implements IGameXmlReader
 		
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _buyLists.size() + " BuyLists.");
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement statement = con.createStatement();
 			ResultSet rs = statement.executeQuery("SELECT * FROM `buylists`"))
 		{

@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.shuttle;
 
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.VehiclePathPoint;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.VehiclePathPoint;
 
 import java.util.ArrayList;
 import java.util.List;

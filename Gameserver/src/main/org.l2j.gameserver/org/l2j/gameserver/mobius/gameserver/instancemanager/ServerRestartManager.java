@@ -17,7 +17,7 @@
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2j.commons.concurrent.ThreadPool;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -70,7 +70,7 @@ public class ServerRestartManager
 			if (lastRestart != null)
 			{
 				nextRestartTime = new SimpleDateFormat("HH:mm").format(lastRestart.getTime());
-				ThreadPool.schedule(new ServerRestartTask(), lastDelay - (Config.SERVER_RESTART_SCHEDULE_COUNTDOWN * 1000));
+				ThreadPoolManager.getInstance().schedule(new ServerRestartTask(), lastDelay - (Config.SERVER_RESTART_SCHEDULE_COUNTDOWN * 1000));
 				LOGGER.info("Scheduled server restart at " + lastRestart.getTime() + ".");
 			}
 		}

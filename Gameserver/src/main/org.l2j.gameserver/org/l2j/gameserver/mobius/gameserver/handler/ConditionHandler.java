@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.handler;
 
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.ICondition;
-import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.conditions.ICondition;
+import org.l2j.gameserver.mobius.gameserver.scripting.ScriptEngineManager;
 
 import java.util.HashMap;
 import java.util.Map;

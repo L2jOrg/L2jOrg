@@ -16,11 +16,11 @@
  */
 package handlers.bypasshandlers;
 
-import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import com.l2jmobius.gameserver.handler.VoicedCommandHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.handler.IBypassHandler;
+import org.l2j.gameserver.mobius.gameserver.handler.IVoicedCommandHandler;
+import org.l2j.gameserver.mobius.gameserver.handler.VoicedCommandHandler;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * @author DS

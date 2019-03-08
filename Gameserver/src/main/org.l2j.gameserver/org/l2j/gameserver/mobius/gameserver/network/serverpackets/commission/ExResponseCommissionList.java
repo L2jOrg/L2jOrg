@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets.commission;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.commission.CommissionItem;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
-import com.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.model.commission.CommissionItem;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.AbstractItemPacket;
 
 import java.time.Instant;
 import java.util.Collections;

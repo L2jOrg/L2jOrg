@@ -17,23 +17,23 @@
 package org.l2j.gameserver.mobius.gameserver.model;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import com.l2jmobius.gameserver.model.L2Party.MessageType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.interfaces.INamable;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.CommonSkill;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.*;
-import com.l2jmobius.gameserver.util.Broadcast;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.CursedWeaponsManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2Party.MessageType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.INamable;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.CommonSkill;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.mobius.gameserver.util.Broadcast;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -131,7 +131,7 @@ public class CursedWeapon implements INamable
 				// Remove from Db
 				LOGGER.info(_name + " being removed offline.");
 				
-				try (Connection con = DatabaseFactory.getConnection();
+				try (Connection con = DatabaseFactory.getInstance().getConnection();
 					PreparedStatement del = con.prepareStatement("DELETE FROM items WHERE owner_id=? AND item_id=?");
 					PreparedStatement ps = con.prepareStatement("UPDATE characters SET reputation=?, pkkills=? WHERE charId=?"))
 				{
@@ -345,7 +345,7 @@ public class CursedWeapon implements INamable
 		{
 			_player.stopTransformation(true);
 			
-			ThreadPool.schedule(() -> _player.transform(transformationId, true), 500);
+			ThreadPoolManager.getInstance().schedule(() -> _player.transform(transformationId, true), 500);
 		}
 		else
 		{
@@ -369,7 +369,7 @@ public class CursedWeapon implements INamable
 		}
 		else
 		{
-			_removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000, _durationLost * 12000);
+			_removeTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000, _durationLost * 12000);
 		}
 		
 	}
@@ -383,7 +383,7 @@ public class CursedWeapon implements INamable
 			
 			// Start the Life Task
 			_endTime = System.currentTimeMillis() + (_duration * 60000);
-			_removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000, _durationLost * 12000);
+			_removeTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000, _durationLost * 12000);
 			
 			return true;
 		}
@@ -466,7 +466,7 @@ public class CursedWeapon implements INamable
 	
 	public void saveData()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement del = con.prepareStatement("DELETE FROM cursed_weapons WHERE itemId = ?");
 			PreparedStatement ps = con.prepareStatement("INSERT INTO cursed_weapons (itemId, charId, playerReputation, playerPkKills, nbKills, endTime) VALUES (?, ?, ?, ?, ?, ?)"))
 		{

@@ -19,14 +19,14 @@ package instances.MonsterArena;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.instancezone.Instance;
-import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.GlobalVariablesManager;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.mobius.gameserver.network.NpcStringId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExSendUIEvent;
 
 import instances.AbstractInstance;
 
@@ -205,7 +205,7 @@ public class MonsterArena extends AbstractInstance
 						npc.setScriptValue(1);
 						npc.doDie(npc);
 						REWARDED_PLAYERS.add(player);
-						ThreadPool.schedule(() ->
+						ThreadPoolManager.getInstance().schedule(() ->
 						{
 							REWARDED_PLAYERS.remove(player);
 						}, 60000);

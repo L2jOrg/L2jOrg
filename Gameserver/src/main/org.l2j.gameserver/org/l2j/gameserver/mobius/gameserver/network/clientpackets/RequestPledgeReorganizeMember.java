@@ -16,18 +16,18 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.model.ClanPrivilege;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.L2ClanMember;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 
 /**
  * Format: (ch) dSdS
  * @author -Wooden-
  */
-public final class RequestPledgeReorganizeMember implements IClientIncomingPacket
+public final class RequestPledgeReorganizeMember extends IClientIncomingPacket
 {
 	private int _isMemberSelected;
 	private String _memberName;
@@ -35,17 +35,17 @@ public final class RequestPledgeReorganizeMember implements IClientIncomingPacke
 	private String _selectedMember;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_isMemberSelected = packet.readD();
-		_memberName = packet.readS();
-		_newPledgeType = packet.readD();
-		_selectedMember = packet.readS();
+		_isMemberSelected = packet.getInt();
+		_memberName = readString(packet);
+		_newPledgeType = packet.getInt();
+		_selectedMember = readString(packet);
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		if (_isMemberSelected == 0)
 		{

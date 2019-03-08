@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.datatables;
 
-import com.l2jmobius.gameserver.script.DateRange;
-import com.l2jmobius.gameserver.script.EventDrop;
+import org.l2j.gameserver.mobius.gameserver.script.DateRange;
+import org.l2j.gameserver.mobius.gameserver.script.EventDrop;
 
 import java.util.Date;
 import java.util.LinkedList;

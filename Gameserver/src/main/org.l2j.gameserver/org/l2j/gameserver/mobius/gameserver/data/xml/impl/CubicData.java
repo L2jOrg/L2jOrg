@@ -16,16 +16,16 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.commons.util.IXmlReader;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.templates.L2CubicTemplate;
-import com.l2jmobius.gameserver.model.cubic.CubicSkill;
-import com.l2jmobius.gameserver.model.cubic.ICubicConditionHolder;
-import com.l2jmobius.gameserver.model.cubic.conditions.HealthCondition;
-import com.l2jmobius.gameserver.model.cubic.conditions.HpCondition;
-import com.l2jmobius.gameserver.model.cubic.conditions.HpCondition.HpConditionType;
-import com.l2jmobius.gameserver.model.cubic.conditions.RangeCondition;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.commons.util.IXmlReader;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2CubicTemplate;
+import org.l2j.gameserver.mobius.gameserver.model.cubic.CubicSkill;
+import org.l2j.gameserver.mobius.gameserver.model.cubic.ICubicConditionHolder;
+import org.l2j.gameserver.mobius.gameserver.model.cubic.conditions.HealthCondition;
+import org.l2j.gameserver.mobius.gameserver.model.cubic.conditions.HpCondition;
+import org.l2j.gameserver.mobius.gameserver.model.cubic.conditions.HpCondition.HpConditionType;
+import org.l2j.gameserver.mobius.gameserver.model.cubic.conditions.RangeCondition;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 

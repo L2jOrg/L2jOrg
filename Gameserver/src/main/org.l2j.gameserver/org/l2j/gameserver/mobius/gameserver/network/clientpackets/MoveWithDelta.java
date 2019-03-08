@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 
 /**
  * Format: (c) ddd d: dx d: dy d: dz
  * @author -Wooden-
  */
-public class MoveWithDelta implements IClientIncomingPacket
+public class MoveWithDelta extends IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _dx;
@@ -33,16 +33,16 @@ public class MoveWithDelta implements IClientIncomingPacket
 	private int _dz;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_dx = packet.readD();
-		_dy = packet.readD();
-		_dz = packet.readD();
+		_dx = packet.getInt();
+		_dy = packet.getInt();
+		_dz = packet.getInt();
 		return false;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		// TODO this
 	}

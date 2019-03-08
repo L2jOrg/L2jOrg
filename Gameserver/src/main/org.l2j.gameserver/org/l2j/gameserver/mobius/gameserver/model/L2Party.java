@@ -1,6 +1,7 @@
 package org.l2j.gameserver.mobius.gameserver.model;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.mobius.gameserver.Config;
 import org.l2j.gameserver.mobius.gameserver.GameTimeController;
 import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
@@ -12,6 +13,7 @@ import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.mobius.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2ServitorInstance;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.mobius.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
@@ -344,7 +346,7 @@ public class L2Party extends AbstractPlayerGroup
 
         if (_positionBroadcastTask == null)
         {
-            _positionBroadcastTask = ThreadPool.scheduleAtFixedRate(() ->
+            _positionBroadcastTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(() ->
             {
                 if (_positionPacket == null)
                 {
@@ -1053,7 +1055,7 @@ public class L2Party extends AbstractPlayerGroup
         }
         _changeRequestDistributionType = partyDistributionType;
         _changeDistributionTypeAnswers = new HashSet<>();
-        _changeDistributionTypeRequestTask = ThreadPool.schedule(() -> finishLootRequest(false), PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT.toMillis());
+        _changeDistributionTypeRequestTask = ThreadPoolManager.getInstance().schedule(() -> finishLootRequest(false), PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT.toMillis());
 
         broadcastToPartyMembers(getLeader(), new ExAskModifyPartyLooting(getLeader().getName(), partyDistributionType));
 

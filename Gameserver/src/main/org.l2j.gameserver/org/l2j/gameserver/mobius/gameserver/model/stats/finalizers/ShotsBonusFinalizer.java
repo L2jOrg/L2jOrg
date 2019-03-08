@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.stats.finalizers;
 
-import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.stats.IStatsFunction;
-import com.l2jmobius.gameserver.model.stats.Stats;
+import org.l2j.commons.util.CommonUtil;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.stats.IStatsFunction;
+import org.l2j.gameserver.mobius.gameserver.model.stats.Stats;
 
 import java.util.Optional;
 

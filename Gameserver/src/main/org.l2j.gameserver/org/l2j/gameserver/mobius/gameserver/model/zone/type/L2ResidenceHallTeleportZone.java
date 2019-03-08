@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.zone.type;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 import java.util.concurrent.ScheduledFuture;
 
@@ -62,7 +62,7 @@ public class L2ResidenceHallTeleportZone extends L2ResidenceTeleportZone
 	{
 		if ((_teleTask == null) || _teleTask.isDone())
 		{
-			_teleTask = ThreadPool.schedule(new TeleportTask(), 30000);
+			_teleTask = ThreadPoolManager.getInstance().schedule(new TeleportTask(), 30000);
 		}
 	}
 	

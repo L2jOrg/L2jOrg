@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.appearance;
 
-import com.l2jmobius.gameserver.enums.Sex;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.enums.Sex;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 public class PcAppearance
 {

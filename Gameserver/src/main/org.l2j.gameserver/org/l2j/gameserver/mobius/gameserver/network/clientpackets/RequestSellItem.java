@@ -17,20 +17,20 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
-import com.l2jmobius.gameserver.enums.TaxType;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.buylist.ProductList;
-import com.l2jmobius.gameserver.model.holders.UniqueItemHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
-import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.BuyListData;
+import org.l2j.gameserver.mobius.gameserver.enums.TaxType;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2MerchantInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.buylist.ProductList;
+import org.l2j.gameserver.mobius.gameserver.model.holders.UniqueItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExBuySellList;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +41,7 @@ import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 /**
  * RequestSellItem client packet class.
  */
-public final class RequestSellItem implements IClientIncomingPacket
+public final class RequestSellItem extends IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 16;
 	private static final int CUSTOM_CB_SELL_LIST = 423;
@@ -50,10 +50,10 @@ public final class RequestSellItem implements IClientIncomingPacket
 	private List<UniqueItemHolder> _items = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_listId = packet.readD();
-		final int size = packet.readD();
+		_listId = packet.getInt();
+		final int size = packet.getInt();
 		if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
 			return false;
@@ -62,9 +62,9 @@ public final class RequestSellItem implements IClientIncomingPacket
 		_items = new ArrayList<>(size);
 		for (int i = 0; i < size; i++)
 		{
-			final int objectId = packet.readD();
-			final int itemId = packet.readD();
-			final long count = packet.readQ();
+			final int objectId = packet.getInt();
+			final int itemId = packet.getInt();
+			final long count = packet.getLong();
 			if ((objectId < 1) || (itemId < 1) || (count < 1))
 			{
 				_items = null;
@@ -76,7 +76,7 @@ public final class RequestSellItem implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)

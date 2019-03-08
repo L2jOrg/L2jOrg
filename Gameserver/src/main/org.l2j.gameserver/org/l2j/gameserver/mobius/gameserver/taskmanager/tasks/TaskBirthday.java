@@ -17,17 +17,17 @@
 package org.l2j.gameserver.mobius.gameserver.taskmanager.tasks;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
-import com.l2jmobius.gameserver.enums.MailType;
-import com.l2jmobius.gameserver.instancemanager.MailManager;
-import com.l2jmobius.gameserver.model.entity.Message;
-import com.l2jmobius.gameserver.model.itemcontainer.Mail;
-import com.l2jmobius.gameserver.taskmanager.Task;
-import com.l2jmobius.gameserver.taskmanager.TaskManager;
-import com.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;
-import com.l2jmobius.gameserver.taskmanager.TaskTypes;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.mobius.gameserver.enums.MailType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.MailManager;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Message;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Mail;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.Task;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.TaskManager;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.TaskManager.ExecutedTask;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.TaskTypes;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -76,7 +76,7 @@ public class TaskBirthday extends Task
 	
 	private void checkBirthday(int year, int month, int day)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(QUERY))
 		{
 			statement.setString(1, "%-" + getNum(month + 1) + "-" + getNum(day));

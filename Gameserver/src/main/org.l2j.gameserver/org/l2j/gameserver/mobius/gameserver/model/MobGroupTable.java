@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ControllableMobInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2ControllableMobInstance;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

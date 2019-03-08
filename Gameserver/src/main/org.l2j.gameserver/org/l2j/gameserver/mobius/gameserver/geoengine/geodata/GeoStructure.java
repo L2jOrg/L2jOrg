@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.geoengine.geodata;
 
-import com.l2jmobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
 
 /**
  * @author Hasha

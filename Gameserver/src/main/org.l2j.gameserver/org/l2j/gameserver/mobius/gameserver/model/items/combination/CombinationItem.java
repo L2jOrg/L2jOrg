@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.items.combination;
 
-import com.l2jmobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
 
 import java.util.EnumMap;
 import java.util.Map;

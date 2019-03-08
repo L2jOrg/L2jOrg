@@ -19,19 +19,19 @@ package village_master.Clan;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerClanJoin;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerClanLeft;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
-import com.l2jmobius.gameserver.model.skills.CommonSkill;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.ListenerRegisterType;
+import org.l2j.gameserver.mobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2j.gameserver.mobius.gameserver.model.events.annotations.RegisterType;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerClanJoin;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerClanLeft;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
+import org.l2j.gameserver.mobius.gameserver.model.skills.CommonSkill;
 
 import ai.AbstractNpcAI;
 

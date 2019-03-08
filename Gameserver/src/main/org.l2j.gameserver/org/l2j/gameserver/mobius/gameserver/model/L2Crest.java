@@ -17,11 +17,11 @@
 package org.l2j.gameserver.mobius.gameserver.model;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
-import com.l2jmobius.gameserver.network.serverpackets.AllyCrest;
-import com.l2jmobius.gameserver.network.serverpackets.ExPledgeEmblem;
-import com.l2jmobius.gameserver.network.serverpackets.PledgeCrest;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.IIdentifiable;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.AllyCrest;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExPledgeEmblem;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.PledgeCrest;
 
 /**
  * @author NosBit

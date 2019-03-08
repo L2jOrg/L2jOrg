@@ -17,20 +17,20 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.DoorData;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
-import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.DoorData;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.GetOnVehicle;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ValidateLocation;
 
 /**
  * This class ...
  * @version $Revision: 1.13.4.7 $ $Date: 2005/03/27 15:29:30 $
  */
-public class ValidatePosition implements IClientIncomingPacket
+public class ValidatePosition extends IClientIncomingPacket
 {
 	private int _x;
 	private int _y;
@@ -39,18 +39,18 @@ public class ValidatePosition implements IClientIncomingPacket
 	private int _data; // vehicle id
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_x = packet.readD();
-		_y = packet.readD();
-		_z = packet.readD();
-		_heading = packet.readD();
-		_data = packet.readD();
+		_x = packet.getInt();
+		_y = packet.getInt();
+		_z = packet.getInt();
+		_heading = packet.getInt();
+		_data = packet.getInt();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || activeChar.isTeleporting() || activeChar.inObserverMode())

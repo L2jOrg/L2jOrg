@@ -17,9 +17,9 @@
 package org.l2j.gameserver.mobius.gameserver.model.olympiad;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -170,7 +170,7 @@ public final class OlympiadGameTask implements Runnable
 		_game = game;
 		_state = GameState.BEGIN;
 		_needAnnounce = false;
-		ThreadPool.execute(this);
+		ThreadPoolManager.getInstance().execute(this);
 	}
 	
 	@Override
@@ -341,7 +341,7 @@ public final class OlympiadGameTask implements Runnable
 					return;
 				}
 			}
-			ThreadPool.schedule(this, delay * 1000);
+			ThreadPoolManager.getInstance().schedule(this, delay * 1000);
 		}
 		catch (Exception e)
 		{
@@ -361,7 +361,7 @@ public final class OlympiadGameTask implements Runnable
 			
 			LOGGER.log(Level.WARNING, "Exception in " + _state + ", trying to port players back: " + e.getMessage(), e);
 			_state = GameState.GAME_STOPPED;
-			ThreadPool.schedule(this, 1000);
+			ThreadPoolManager.getInstance().schedule(this, 1000);
 		}
 	}
 	

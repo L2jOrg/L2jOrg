@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.entity;
 
-import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
-import com.l2jmobius.gameserver.enums.AttributeType;
-import com.l2jmobius.gameserver.enums.MailType;
-import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.instancemanager.MailManager;
-import com.l2jmobius.gameserver.model.itemcontainer.Mail;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.mobius.gameserver.enums.AttributeType;
+import org.l2j.gameserver.mobius.gameserver.enums.MailType;
+import org.l2j.gameserver.mobius.gameserver.idfactory.IdFactory;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.MailManager;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Mail;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

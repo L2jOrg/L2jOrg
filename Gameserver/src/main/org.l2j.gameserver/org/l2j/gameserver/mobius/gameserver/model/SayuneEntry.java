@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.gameserver.model.interfaces.ILocational;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.ILocational;
 
 import java.util.LinkedList;
 import java.util.List;

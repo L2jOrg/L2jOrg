@@ -16,26 +16,26 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.ManagePledgePower;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.model.ClanPrivilege;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ManagePledgePower;
 
-public final class RequestPledgePower implements IClientIncomingPacket
+public final class RequestPledgePower extends IClientIncomingPacket
 {
 	private int _rank;
 	private int _action;
 	private int _privs;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_rank = packet.readD();
-		_action = packet.readD();
+		_rank = packet.getInt();
+		_action = packet.getInt();
 		if (_action == 2)
 		{
-			_privs = packet.readD();
+			_privs = packet.getInt();
 		}
 		else
 		{
@@ -45,7 +45,7 @@ public final class RequestPledgePower implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)

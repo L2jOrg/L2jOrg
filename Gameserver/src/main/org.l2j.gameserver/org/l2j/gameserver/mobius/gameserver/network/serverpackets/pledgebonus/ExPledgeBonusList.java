@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets.pledgebonus;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.data.xml.impl.ClanRewardData;
-import com.l2jmobius.gameserver.enums.ClanRewardType;
-import com.l2jmobius.gameserver.model.pledge.ClanRewardBonus;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
-import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.ClanRewardData;
+import org.l2j.gameserver.mobius.gameserver.enums.ClanRewardType;
+import org.l2j.gameserver.mobius.gameserver.model.pledge.ClanRewardBonus;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 import java.util.Comparator;
 

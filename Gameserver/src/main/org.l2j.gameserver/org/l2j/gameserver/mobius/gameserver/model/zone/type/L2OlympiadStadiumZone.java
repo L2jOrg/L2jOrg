@@ -113,7 +113,7 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
                 // only participants, observers and GMs allowed
                 if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && !player.isInOlympiadMode() && !player.inObserverMode())
                 {
-                    ThreadPool.execute(new KickPlayer(player));
+                    ThreadPoolManager.getInstance().execute(new KickPlayer(player));
                 }
                 else
                 {

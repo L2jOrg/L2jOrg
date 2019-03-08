@@ -17,19 +17,19 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
-import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.ItemRequest;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.OfflineTradersTable;
+import org.l2j.gameserver.mobius.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.mobius.gameserver.model.ItemRequest;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.TradeList;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -40,7 +40,7 @@ import static com.l2jmobius.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
  * This class ...
  * @version $Revision: 1.2.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestPrivateStoreBuy implements IClientIncomingPacket
+public final class RequestPrivateStoreBuy extends IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 20; // length of the one item
 	
@@ -48,10 +48,10 @@ public final class RequestPrivateStoreBuy implements IClientIncomingPacket
 	private Set<ItemRequest> _items = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_storePlayerId = packet.readD();
-		final int count = packet.readD();
+		_storePlayerId = packet.getInt();
+		final int count = packet.getInt();
 		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
 			return false;
@@ -60,9 +60,9 @@ public final class RequestPrivateStoreBuy implements IClientIncomingPacket
 		
 		for (int i = 0; i < count; i++)
 		{
-			final int objectId = packet.readD();
-			final long cnt = packet.readQ();
-			final long price = packet.readQ();
+			final int objectId = packet.getInt();
+			final long cnt = packet.getLong();
+			final long price = packet.getLong();
 			
 			if ((objectId < 1) || (cnt < 1) || (price < 0))
 			{
@@ -76,7 +76,7 @@ public final class RequestPrivateStoreBuy implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)

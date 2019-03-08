@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.items.combination;
 
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
 
 /**
  * @author UnAfraid

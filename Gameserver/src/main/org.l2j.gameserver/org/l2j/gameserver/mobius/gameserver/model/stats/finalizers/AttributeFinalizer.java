@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.stats.finalizers;
 
-import com.l2jmobius.gameserver.enums.AttributeType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.stats.IStatsFunction;
-import com.l2jmobius.gameserver.model.stats.Stats;
+import org.l2j.gameserver.mobius.gameserver.enums.AttributeType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.mobius.gameserver.model.items.enchant.attribute.AttributeHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.stats.IStatsFunction;
+import org.l2j.gameserver.mobius.gameserver.model.stats.Stats;
 
 import java.util.Optional;
 

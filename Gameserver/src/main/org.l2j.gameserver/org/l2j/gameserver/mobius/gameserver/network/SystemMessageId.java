@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network;
 
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;

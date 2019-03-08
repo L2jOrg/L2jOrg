@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.idfactory;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.util.PrimeFinder;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.util.PrimeFinder;
 
 import java.util.BitSet;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -53,7 +53,7 @@ public class BitSetIDFactory extends IdFactory
 		
 		synchronized (BitSetIDFactory.class)
 		{
-			ThreadPool.scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
+			ThreadPoolManager.getInstance().scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
 			initialize();
 		}
 		LOGGER.info(getClass().getSimpleName() + ": " + _freeIds.size() + " id's available.");

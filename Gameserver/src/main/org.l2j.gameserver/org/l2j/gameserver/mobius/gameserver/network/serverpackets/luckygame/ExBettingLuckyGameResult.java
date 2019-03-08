@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets.luckygame;
 
-import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.enums.LuckyGameItemType;
-import com.l2jmobius.gameserver.enums.LuckyGameResultType;
-import com.l2jmobius.gameserver.enums.LuckyGameType;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.network.OutgoingPackets;
-import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.enums.LuckyGameItemType;
+import org.l2j.gameserver.mobius.gameserver.enums.LuckyGameResultType;
+import org.l2j.gameserver.mobius.gameserver.enums.LuckyGameType;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 import java.util.EnumMap;
 import java.util.List;

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.skills;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
 
 import java.util.Collections;
 import java.util.Map;

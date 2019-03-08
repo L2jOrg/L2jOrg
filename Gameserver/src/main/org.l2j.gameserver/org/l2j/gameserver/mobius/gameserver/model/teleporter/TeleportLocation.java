@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.teleporter;
 
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.network.NpcStringId;
+import org.l2j.gameserver.mobius.gameserver.model.Location;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.mobius.gameserver.network.NpcStringId;
 
 import java.util.ArrayList;
 import java.util.Collections;

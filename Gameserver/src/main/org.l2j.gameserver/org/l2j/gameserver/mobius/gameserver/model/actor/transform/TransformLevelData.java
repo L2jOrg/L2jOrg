@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.transform;
 
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.stats.Stats;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.stats.Stats;
 
 import java.util.HashMap;
 import java.util.Map;

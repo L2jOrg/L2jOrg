@@ -17,19 +17,19 @@
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.enums.Team;
-import com.l2jmobius.gameserver.instancemanager.tasks.PenaltyRemoveTask;
-import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
-import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameAddPlayer;
-import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameChangeTeam;
-import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameRemovePlayer;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.enums.Team;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.tasks.PenaltyRemoveTask;
+import org.l2j.gameserver.mobius.gameserver.model.ArenaParticipantsHolder;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.mobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExCubeGameAddPlayer;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExCubeGameChangeTeam;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExCubeGameRemovePlayer;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.*;
 
@@ -82,7 +82,7 @@ public final class HandysBlockCheckerManager
 			{
 				holder.checkAndShuffle();
 			}
-			ThreadPool.execute(holder.getEvent().new StartEvent());
+			ThreadPoolManager.getInstance().execute(holder.getEvent().new StartEvent());
 		}
 		else
 		{
@@ -360,7 +360,7 @@ public final class HandysBlockCheckerManager
 	
 	private void schedulePenaltyRemoval(int objId)
 	{
-		ThreadPool.schedule(new PenaltyRemoveTask(objId), 10000);
+		ThreadPoolManager.getInstance().schedule(new PenaltyRemoveTask(objId), 10000);
 	}
 	
 	/**

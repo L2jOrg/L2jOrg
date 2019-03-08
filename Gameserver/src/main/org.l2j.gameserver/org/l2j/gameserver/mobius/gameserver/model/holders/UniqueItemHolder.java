@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.holders;
 
-import com.l2jmobius.gameserver.model.interfaces.IUniqueId;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.IUniqueId;
 
 /**
  * A DTO for items; contains item ID, object ID and count.

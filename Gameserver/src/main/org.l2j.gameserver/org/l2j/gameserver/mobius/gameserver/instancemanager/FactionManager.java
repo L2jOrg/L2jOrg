@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 import java.sql.*;
 import java.util.Map;
@@ -42,7 +42,7 @@ public class FactionManager
 	private void loadAll()
 	{
 		_playerFactions.clear();
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT charId, faction FROM characters"))
 		{
@@ -71,7 +71,7 @@ public class FactionManager
 			return factionId;
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT faction FROM characters WHERE charId=?"))
 		{
 			ps.setInt(1, id);

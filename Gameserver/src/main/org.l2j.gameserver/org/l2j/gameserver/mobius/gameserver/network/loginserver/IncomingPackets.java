@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.loginserver;
 
-import com.l2jmobius.commons.network.IConnectionState;
-import com.l2jmobius.commons.network.IIncomingPacket;
-import com.l2jmobius.commons.network.IIncomingPackets;
+import org.l2j.commons.network.IConnectionState;
+import org.l2j.commons.network.IIncomingPacket;
+import org.l2j.commons.network.IIncomingPackets;
 
 import java.util.Arrays;
 import java.util.HashSet;

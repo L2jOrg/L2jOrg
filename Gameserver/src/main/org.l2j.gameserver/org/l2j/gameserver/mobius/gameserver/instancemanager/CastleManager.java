@@ -182,7 +182,7 @@ public final class CastleManager implements InstanceListManager
 				}
 			}
 			// else offline-player circlet removal
-			try (Connection con = DatabaseFactory.getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				 PreparedStatement ps = con.prepareStatement("DELETE FROM items WHERE owner_id = ? and item_id = ?"))
 			{
 				ps.setInt(1, member.getObjectId());
@@ -199,7 +199,7 @@ public final class CastleManager implements InstanceListManager
 	@Override
 	public void loadInstances()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT id FROM castle ORDER BY id"))
 		{

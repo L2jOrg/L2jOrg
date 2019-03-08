@@ -16,13 +16,13 @@
  */
 package handlers.targethandlers.affectobject;
 
-import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.skills.targets.AffectObject;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.handler.IAffectObjectHandler;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.L2Party;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.targets.AffectObject;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
 
 /**
  * Not Friend affect object implementation. Based on Gracia Final retail tests.<br>

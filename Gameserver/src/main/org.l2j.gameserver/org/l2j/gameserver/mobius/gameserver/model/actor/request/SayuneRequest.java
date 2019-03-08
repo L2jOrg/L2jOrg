@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.request;
 
-import com.l2jmobius.gameserver.data.xml.impl.SayuneData;
-import com.l2jmobius.gameserver.enums.SayuneType;
-import com.l2jmobius.gameserver.model.SayuneEntry;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMove;
-import com.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMoveBroadcast;
-import com.l2jmobius.gameserver.util.Broadcast;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SayuneData;
+import org.l2j.gameserver.mobius.gameserver.enums.SayuneType;
+import org.l2j.gameserver.mobius.gameserver.model.SayuneEntry;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.sayune.ExFlyMove;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.sayune.ExFlyMoveBroadcast;
+import org.l2j.gameserver.mobius.gameserver.util.Broadcast;
 
 import java.util.*;
 

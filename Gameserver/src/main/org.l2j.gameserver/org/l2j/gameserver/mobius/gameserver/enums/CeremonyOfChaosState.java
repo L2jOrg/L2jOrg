@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.enums;
 
-import com.l2jmobius.gameserver.model.eventengine.IEventState;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.IEventState;
 
 /**
  * @author Sdw

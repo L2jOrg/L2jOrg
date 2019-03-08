@@ -1,75 +1,60 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets.ensoul;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.EnsoulData;
-import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import com.l2jmobius.gameserver.model.ensoul.EnsoulStone;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.ensoul.ExEnsoulResult;
-import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.EnsoulData;
+import org.l2j.gameserver.mobius.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.ensoul.EnsoulOption;
+import org.l2j.gameserver.mobius.gameserver.model.ensoul.EnsoulStone;
+import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.skills.AbnormalType;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ensoul.ExEnsoulResult;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.AttackStanceTaskManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Logger;
+import java.nio.ByteBuffer;
 
 /**
  * @author UnAfraid
  */
-public class RequestItemEnsoul implements IClientIncomingPacket
+public class RequestItemEnsoul extends IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(IClientIncomingPacket.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(RequestItemEnsoul.class);
 	private int _itemObjectId;
 	private EnsoulItemOption[] _options;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_itemObjectId = packet.readD();
-		final int options = packet.readC();
+		_itemObjectId = packet.getInt();
+		final int options = packet.get();
 		if ((options > 0) && (options <= 3))
 		{
 			_options = new EnsoulItemOption[options];
 			for (int i = 0; i < options; i++)
 			{
-				final int type = packet.readC(); // 1 = normal ; 2 = mystic
-				final int position = packet.readC();
-				final int soulCrystalObjectId = packet.readD();
-				final int soulCrystalOption = packet.readD();
+				final int type = packet.get(); // 1 = normal ; 2 = mystic
+				final int position = packet.get();
+				final int soulCrystalObjectId = packet.getInt();
+				final int soulCrystalOption = packet.getInt();
 				if ((position > 0) && (position < 3) && ((type == 1) || (type == 2)))
 				{
 					_options[i] = new EnsoulItemOption(type, position, soulCrystalObjectId, soulCrystalOption);
 				}
 			}
-			return true;
 		}
-		return false;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
-	{
+	public void runImpl() {
+		if(_options == null) {
+			return;
+		}
+
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
@@ -119,38 +104,38 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 		final L2ItemInstance item = player.getInventory().getItemByObjectId(_itemObjectId);
 		if (item == null)
 		{
-			LOGGER.warning("Player: " + player + " attempting to ensoul item without having it!");
+			LOGGER.warn("Player: {} attempting to ensoul item without having it!", player);
 			return;
 		}
 		else if (!item.isEquipable())
 		{
-			LOGGER.warning("Player: " + player + " attempting to ensoul non equippable item: " + item + "!");
+			LOGGER.warn("Player: {} attempting to ensoul non equippable item: {}!", player, item);
 			return;
 		}
 		else if (!item.isWeapon())
 		{
-			LOGGER.warning("Player: " + player + " attempting to ensoul item that's not a weapon: " + item + "!");
+			LOGGER.warn("Player: " + player + " attempting to ensoul item that's not a weapon: " + item + "!");
 			return;
 		}
 		else if (item.isCommonItem())
 		{
-			LOGGER.warning("Player: " + player + " attempting to ensoul common item: " + item + "!");
+			LOGGER.warn("Player: " + player + " attempting to ensoul common item: " + item + "!");
 			return;
 		}
 		else if (item.isShadowItem())
 		{
-			LOGGER.warning("Player: " + player + " attempting to ensoul shadow item: " + item + "!");
+			LOGGER.warn("Player: " + player + " attempting to ensoul shadow item: " + item + "!");
 			return;
 		}
 		else if (item.isHeroItem())
 		{
-			LOGGER.warning("Player: " + player + " attempting to ensoul hero item: " + item + "!");
+			LOGGER.warn("Player: " + player + " attempting to ensoul hero item: " + item + "!");
 			return;
 		}
 		
 		if ((_options == null) || (_options.length == 0))
 		{
-			LOGGER.warning("Player: " + player + " attempting to ensoul item without any special ability declared!");
+			LOGGER.warn("Player: " + player + " attempting to ensoul item without any special ability declared!");
 			return;
 		}
 		
@@ -174,14 +159,14 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 			
 			if (!stone.getOptions().contains(itemOption.getSoulCrystalOption()))
 			{
-				LOGGER.warning("Player: " + player + " attempting to ensoul item option that stone doesn't contains!");
+				LOGGER.warn("Player: " + player + " attempting to ensoul item option that stone doesn't contains!");
 				continue;
 			}
 			
 			final EnsoulOption option = EnsoulData.getInstance().getOption(itemOption.getSoulCrystalOption());
 			if (option == null)
 			{
-				LOGGER.warning("Player: " + player + " attempting to ensoul item option that doesn't exists!");
+				LOGGER.warn("Player: " + player + " attempting to ensoul item option that doesn't exists!");
 				continue;
 			}
 			
@@ -212,13 +197,13 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 			}
 			else
 			{
-				LOGGER.warning("Player: " + player + " attempting to ensoul item option with unhandled type: " + itemOption.getType() + "!");
+				LOGGER.warn("Player: " + player + " attempting to ensoul item option with unhandled type: " + itemOption.getType() + "!");
 				continue;
 			}
 			
 			if (fee == null)
 			{
-				LOGGER.warning("Player: " + player + " attempting to ensoul item option that doesn't exists! (unknown fee)");
+				LOGGER.warn("Player: " + player + " attempting to ensoul item option that doesn't exists! (unknown fee)");
 				continue;
 			}
 			

@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.request;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
 
 /**
  * @author UnAfraid

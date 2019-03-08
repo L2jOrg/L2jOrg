@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets.dailymission;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.mobius.gameserver.network.clientpackets.IClientIncomingPacket;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Mobius
  */
-public class RequestTodoListHTML implements IClientIncomingPacket
+public class RequestTodoListHTML extends IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _tab;
@@ -31,15 +31,14 @@ public class RequestTodoListHTML implements IClientIncomingPacket
 	private String _linkName;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_tab = packet.readC();
-		_linkName = packet.readS();
-		return true;
+		_tab = packet.get();
+		_linkName = readString(packet);
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 	}
 }

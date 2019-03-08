@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.handler;
 
-import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
-import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
+import org.l2j.gameserver.mobius.gameserver.model.DailyMissionDataHolder;
+import org.l2j.gameserver.mobius.gameserver.scripting.ScriptEngineManager;
 
 import java.util.HashMap;
 import java.util.Map;

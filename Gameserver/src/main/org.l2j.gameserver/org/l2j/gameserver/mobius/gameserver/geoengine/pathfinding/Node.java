@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.geoengine.pathfinding;
 
-import com.l2jmobius.gameserver.geoengine.geodata.GeoLocation;
+import org.l2j.gameserver.mobius.gameserver.geoengine.geodata.GeoLocation;
 
 /**
  * @author Hasha

@@ -17,24 +17,24 @@
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.data.xml.impl.DailyMissionData;
-import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.stat.PcStat;
-import com.l2jmobius.gameserver.model.base.SubClass;
-import com.l2jmobius.gameserver.model.eventengine.AbstractEvent;
-import com.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
-import com.l2jmobius.gameserver.model.eventengine.ScheduleTarget;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.olympiad.Olympiad;
-import com.l2jmobius.gameserver.model.variables.PlayerVariables;
-import com.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
-import com.l2jmobius.gameserver.network.serverpackets.ExWorldChatCnt;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.DailyMissionData;
+import org.l2j.gameserver.mobius.gameserver.model.DailyMissionDataHolder;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.L2ClanMember;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.stat.PcStat;
+import org.l2j.gameserver.mobius.gameserver.model.base.SubClass;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.AbstractEvent;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.AbstractEventManager;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.ScheduleTarget;
+import org.l2j.gameserver.mobius.gameserver.model.holders.SkillHolder;
+import org.l2j.gameserver.mobius.gameserver.model.olympiad.Olympiad;
+import org.l2j.gameserver.mobius.gameserver.model.variables.PlayerVariables;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExVoteSystemInfo;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExWorldChatCnt;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -120,7 +120,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 			}
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			try (PreparedStatement st = con.prepareStatement("UPDATE character_subclasses SET vitality_points = ?"))
 			{
@@ -150,7 +150,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	private void resetExtendDrop()
 	{
 		// Update data for offline players.
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var = ?"))
 		{
 			ps.setString(1, PlayerVariables.EXTEND_DROP);
@@ -173,7 +173,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	
 	private void resetDailySkills()
 	{
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			final List<SkillHolder> dailySkills = getVariables().getList("reset_skills", SkillHolder.class, Collections.emptyList());
 			for (SkillHolder skill : dailySkills)
@@ -200,7 +200,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		}
 		
 		// Update data for offline players.
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE character_variables SET val = ? WHERE var = ?"))
 		{
 			ps.setInt(1, 0);
@@ -225,7 +225,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	
 	private void resetRecommends()
 	{
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			try (PreparedStatement ps = con.prepareStatement("UPDATE character_reco_bonus SET rec_left = ?, rec_have = 0 WHERE rec_have <= 20"))
 			{
@@ -258,7 +258,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		if (Config.TRAINING_CAMP_ENABLE)
 		{
 			// Update data for offline players.
-			try (Connection con = DatabaseFactory.getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement("DELETE FROM account_gsdata WHERE var = ?"))
 			{
 				ps.setString(1, "TRAINING_CAMP_DURATION");

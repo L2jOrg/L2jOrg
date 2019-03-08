@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.quest;
 
-import com.l2jmobius.gameserver.model.KeyValuePair;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.KeyValuePair;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 import java.util.HashMap;
 import java.util.Map;

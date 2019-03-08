@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.loginserver;
 
-import com.l2jmobius.commons.network.codecs.LengthFieldBasedFrameEncoder;
-import com.l2jmobius.commons.network.codecs.PacketDecoder;
-import com.l2jmobius.commons.network.codecs.PacketEncoder;
+import org.l2j.commons.network.codecs.LengthFieldBasedFrameEncoder;
+import org.l2j.commons.network.codecs.PacketDecoder;
+import org.l2j.commons.network.codecs.PacketEncoder;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;

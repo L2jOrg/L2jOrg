@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.items.enchant;
 
-import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.items.type.CrystalType;
-import com.l2jmobius.gameserver.model.items.type.EtcItemType;
-import com.l2jmobius.gameserver.model.items.type.ItemType;
+import org.l2j.commons.util.CommonUtil;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.CrystalType;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.EtcItemType;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.ItemType;
 
 import java.util.logging.Logger;
 

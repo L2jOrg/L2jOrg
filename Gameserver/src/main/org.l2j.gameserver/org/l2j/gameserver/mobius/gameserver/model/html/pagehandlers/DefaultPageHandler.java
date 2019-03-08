@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.html.pagehandlers;
 
-import com.l2jmobius.gameserver.model.html.IBypassFormatter;
-import com.l2jmobius.gameserver.model.html.IHtmlStyle;
-import com.l2jmobius.gameserver.model.html.IPageHandler;
+import org.l2j.gameserver.mobius.gameserver.model.html.IBypassFormatter;
+import org.l2j.gameserver.mobius.gameserver.model.html.IHtmlStyle;
+import org.l2j.gameserver.mobius.gameserver.model.html.IPageHandler;
 
 /**
  * Creates pager with links 1 2 3 | 9 10 | 998 | 999

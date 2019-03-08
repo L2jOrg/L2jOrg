@@ -16,18 +16,18 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.zone.type;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.TaskZoneSettings;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.mobius.gameserver.enums.InstanceType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
+import org.l2j.gameserver.mobius.gameserver.model.zone.AbstractZoneSettings;
+import org.l2j.gameserver.mobius.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.mobius.gameserver.model.zone.TaskZoneSettings;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.EtcStatusUpdate;
 
 import java.util.Map;
 import java.util.Map.Entry;
@@ -150,7 +150,7 @@ public final class L2EffectZone extends L2ZoneType
 				{
 					if (getSettings().getTask() == null)
 					{
-						getSettings().setTask(ThreadPool.scheduleAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
+						getSettings().setTask(ThreadPoolManager.getInstance().scheduleAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
 					}
 				}
 			}

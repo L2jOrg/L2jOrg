@@ -16,18 +16,18 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.RecipeController;
-import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.RecipeController;
+import org.l2j.gameserver.mobius.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 /**
  * @author Administrator
  */
-public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
+public final class RequestRecipeShopMakeItem extends IClientIncomingPacket
 {
 	private int _id;
 	private int _recipeId;
@@ -35,16 +35,16 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 	private long _unknown;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_id = packet.readD();
-		_recipeId = packet.readD();
-		_unknown = packet.readQ();
+		_id = packet.getInt();
+		_recipeId = packet.getInt();
+		_unknown = packet.getLong();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)

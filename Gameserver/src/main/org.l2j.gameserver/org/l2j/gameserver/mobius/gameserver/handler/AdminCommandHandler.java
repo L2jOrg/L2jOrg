@@ -17,15 +17,15 @@
 package org.l2j.gameserver.mobius.gameserver.handler;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.data.xml.impl.AdminData;
-import com.l2jmobius.gameserver.enums.PlayerAction;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
-import com.l2jmobius.gameserver.util.GMAudit;
-import com.l2jmobius.gameserver.util.TimeAmountInterpreter;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.AdminData;
+import org.l2j.gameserver.mobius.gameserver.enums.PlayerAction;
+import org.l2j.gameserver.mobius.gameserver.model.L2Object;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ConfirmDlg;
+import org.l2j.gameserver.mobius.gameserver.util.GMAudit;
+import org.l2j.gameserver.mobius.gameserver.util.TimeAmountInterpreter;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -111,7 +111,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 		else
 		{
 			// Admin Commands must run through a long running task, otherwise a command that takes too much time will freeze the server, this way you'll feel only a minor spike.
-			ThreadPool.execute(() ->
+			ThreadPoolManager.getInstance().execute(() ->
 			{
 				final long begin = System.currentTimeMillis();
 				try

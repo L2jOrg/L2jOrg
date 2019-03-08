@@ -17,9 +17,9 @@
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.instancemanager.tasks.UpdateSoDStateTask;
-import com.l2jmobius.gameserver.model.quest.Quest;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.tasks.UpdateSoDStateTask;
+import org.l2j.gameserver.mobius.gameserver.model.quest.Quest;
 
 import java.util.Calendar;
 import java.util.logging.Logger;
@@ -112,7 +112,7 @@ public final class GraciaSeedsManager
 				}
 				else
 				{
-					ThreadPool.schedule(new UpdateSoDStateTask(), Config.SOD_STAGE_2_LENGTH - timePast);
+					ThreadPoolManager.getInstance().schedule(new UpdateSoDStateTask(), Config.SOD_STAGE_2_LENGTH - timePast);
 				}
 				break;
 			}

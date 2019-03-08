@@ -17,8 +17,8 @@
 package org.l2j.gameserver.mobius.gameserver.scripting;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.scripting.java.JavaScriptingEngine;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.gameserver.mobius.gameserver.scripting.java.JavaScriptingEngine;
 import org.w3c.dom.Document;
 
 import java.io.File;

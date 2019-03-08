@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.actor.status;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2NpcInstance;
 
 public class FolkStatus extends NpcStatus
 {

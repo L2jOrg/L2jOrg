@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.handler;
 
-import com.l2jmobius.gameserver.model.skills.targets.AffectObject;
+import org.l2j.gameserver.mobius.gameserver.model.skills.targets.AffectObject;
 
 import java.util.HashMap;
 import java.util.Map;

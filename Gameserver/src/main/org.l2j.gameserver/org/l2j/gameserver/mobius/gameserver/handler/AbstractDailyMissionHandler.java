@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.handler;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.enums.DailyMissionStatus;
-import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
-import com.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.ListenersContainer;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.enums.DailyMissionStatus;
+import org.l2j.gameserver.mobius.gameserver.model.DailyMissionDataHolder;
+import org.l2j.gameserver.mobius.gameserver.model.DailyMissionPlayerEntry;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.events.ListenersContainer;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -77,7 +77,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 	
 	public synchronized void reset()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM character_daily_rewards WHERE rewardId = ? AND status = ?"))
 		{
 			ps.setInt(1, _holder.getId());
@@ -118,7 +118,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 	
 	protected void storePlayerEntry(DailyMissionPlayerEntry entry)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("REPLACE INTO character_daily_rewards (charId, rewardId, status, progress, lastCompleted) VALUES (?, ?, ?, ?, ?)"))
 		{
 			ps.setInt(1, entry.getObjectId());
@@ -145,7 +145,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 			return existingEntry;
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM character_daily_rewards WHERE charId = ? AND rewardId = ?"))
 		{
 			ps.setInt(1, objectId);

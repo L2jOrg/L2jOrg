@@ -16,30 +16,30 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
-import com.l2jmobius.gameserver.model.L2Crest;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.ExPledgeEmblem;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.CrestTable;
+import org.l2j.gameserver.mobius.gameserver.model.L2Crest;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExPledgeEmblem;
 
 /**
  * @author -Wooden-, Sdw
  */
-public final class RequestExPledgeCrestLarge implements IClientIncomingPacket
+public final class RequestExPledgeCrestLarge extends IClientIncomingPacket
 {
 	private int _crestId;
 	private int _clanId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_crestId = packet.readD();
-		_clanId = packet.readD();
+		_crestId = packet.getInt();
+		_clanId = packet.getInt();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2Crest crest = CrestTable.getInstance().getCrest(_crestId);
 		final byte[] data = crest != null ? crest.getData() : null;

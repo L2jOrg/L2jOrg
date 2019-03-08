@@ -17,17 +17,17 @@
 package org.l2j.gameserver.mobius.gameserver.model.stats.finalizers;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
-import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2PetLevelData;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.stats.BaseStats;
-import com.l2jmobius.gameserver.model.stats.IStatsFunction;
-import com.l2jmobius.gameserver.model.stats.Stats;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.L2SwampZone;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.PetDataTable;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2PetLevelData;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.stats.BaseStats;
+import org.l2j.gameserver.mobius.gameserver.model.stats.IStatsFunction;
+import org.l2j.gameserver.mobius.gameserver.model.stats.Stats;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.model.zone.type.L2SwampZone;
 
 import java.util.Optional;
 

@@ -17,36 +17,36 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
-import com.l2jmobius.gameserver.enums.PartyDistributionType;
-import com.l2jmobius.gameserver.model.BlockList;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.request.PartyRequest;
-import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.AskJoinParty;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.FakePlayerData;
+import org.l2j.gameserver.mobius.gameserver.enums.PartyDistributionType;
+import org.l2j.gameserver.mobius.gameserver.model.BlockList;
+import org.l2j.gameserver.mobius.gameserver.model.L2Party;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.request.PartyRequest;
+import org.l2j.gameserver.mobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.AskJoinParty;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * sample 29 42 00 00 10 01 00 00 00 format cdd
  * @version $Revision: 1.7.4.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestJoinParty implements IClientIncomingPacket
+public final class RequestJoinParty extends IClientIncomingPacket
 {
 	private String _name;
 	private int _partyDistributionTypeId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_name = packet.readS();
-		_partyDistributionTypeId = packet.readD();
+		_name = readString(packet);
+		_partyDistributionTypeId = packet.getInt();
 		return true;
 	}
 	
@@ -67,7 +67,7 @@ public final class RequestJoinParty implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance requestor = client.getActiveChar();
 		if (requestor == null)
@@ -82,7 +82,7 @@ public final class RequestJoinParty implements IClientIncomingPacket
 			requestor.sendPacket(sm);
 			if (!requestor.isProcessingRequest())
 			{
-				ThreadPool.schedule(() -> scheduleDeny(requestor), 10000);
+				ThreadPoolManager.getInstance().schedule(() -> scheduleDeny(requestor), 10000);
 				requestor.blockRequest();
 			}
 			else

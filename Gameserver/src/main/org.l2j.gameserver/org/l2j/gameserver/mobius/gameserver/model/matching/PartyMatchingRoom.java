@@ -16,15 +16,15 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.matching;
 
-import com.l2jmobius.gameserver.enums.MatchingMemberType;
-import com.l2jmobius.gameserver.enums.MatchingRoomType;
-import com.l2jmobius.gameserver.enums.PartyMatchingRoomLevelType;
-import com.l2jmobius.gameserver.enums.UserInfoType;
-import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.mobius.gameserver.enums.MatchingMemberType;
+import org.l2j.gameserver.mobius.gameserver.enums.MatchingRoomType;
+import org.l2j.gameserver.mobius.gameserver.enums.PartyMatchingRoomLevelType;
+import org.l2j.gameserver.mobius.gameserver.enums.UserInfoType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.MatchingRoomManager;
+import org.l2j.gameserver.mobius.gameserver.model.L2Party;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.*;
 
 /**
  * @author Sdw

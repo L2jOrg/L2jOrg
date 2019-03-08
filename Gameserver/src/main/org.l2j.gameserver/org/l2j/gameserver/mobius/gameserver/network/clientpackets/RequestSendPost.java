@@ -17,24 +17,24 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
-import com.l2jmobius.gameserver.data.xml.impl.AdminData;
-import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
-import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.instancemanager.MailManager;
-import com.l2jmobius.gameserver.model.BlockList;
-import com.l2jmobius.gameserver.model.L2AccessLevel;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.Message;
-import com.l2jmobius.gameserver.model.itemcontainer.Mail;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExNoticePostSent;
-import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.AdminData;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.FakePlayerData;
+import org.l2j.gameserver.mobius.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.MailManager;
+import org.l2j.gameserver.mobius.gameserver.model.BlockList;
+import org.l2j.gameserver.mobius.gameserver.model.L2AccessLevel;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.entity.Message;
+import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Mail;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExNoticePostSent;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.ADENA_ID;
 import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
@@ -42,7 +42,7 @@ import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 /**
  * @author Migi, DS
  */
-public final class RequestSendPost implements IClientIncomingPacket
+public final class RequestSendPost extends IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 12; // length of the one item
 	
@@ -68,14 +68,14 @@ public final class RequestSendPost implements IClientIncomingPacket
 	}
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_receiver = packet.readS();
-		_isCod = packet.readD() != 0;
-		_subject = packet.readS();
-		_text = packet.readS();
+		_receiver = readString(packet);
+		_isCod = packet.getInt() != 0;
+		_subject = readString(packet);
+		_text = readString(packet);
 		
-		final int attachCount = packet.readD();
+		final int attachCount = packet.getInt();
 		if ((attachCount < 0) || (attachCount > Config.MAX_ITEM_IN_PACKET) || (((attachCount * BATCH_LENGTH) + 8) != packet.getReadableBytes()))
 		{
 			return false;
@@ -86,8 +86,8 @@ public final class RequestSendPost implements IClientIncomingPacket
 			_items = new AttachmentItem[attachCount];
 			for (int i = 0; i < attachCount; i++)
 			{
-				final int objectId = packet.readD();
-				final long count = packet.readQ();
+				final int objectId = packet.getInt();
+				final long count = packet.getLong();
 				if ((objectId < 1) || (count < 0))
 				{
 					_items = null;
@@ -97,12 +97,12 @@ public final class RequestSendPost implements IClientIncomingPacket
 			}
 		}
 		
-		_reqAdena = packet.readQ();
+		_reqAdena = packet.getLong();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		if (!Config.ALLOW_MAIL)
 		{

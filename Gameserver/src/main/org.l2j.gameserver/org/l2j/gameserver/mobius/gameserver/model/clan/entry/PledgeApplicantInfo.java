@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.clan.entry;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.L2World;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * @author Sdw

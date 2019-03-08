@@ -17,12 +17,12 @@
 package org.l2j.gameserver.mobius.gameserver.model.zone.type;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.tasks.player.FlyMoveStartTask;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.enums.CategoryType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.model.actor.tasks.player.FlyMoveStartTask;
+import org.l2j.gameserver.mobius.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
 
 /**
  * @author UnAfraid
@@ -59,7 +59,7 @@ public class L2SayuneZone extends L2ZoneType
 		if (character.isPlayer() && (character.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || Config.FREE_JUMPS_FOR_ALL) && !character.getActingPlayer().isMounted() && !character.isTransformed())
 		{
 			character.setInsideZone(ZoneId.SAYUNE, true);
-			ThreadPool.execute(new FlyMoveStartTask(this, character.getActingPlayer()));
+			ThreadPoolManager.getInstance().execute(new FlyMoveStartTask(this, character.getActingPlayer()));
 		}
 	}
 	

@@ -19,14 +19,14 @@ package custom.events.Elpies;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.datatables.SpawnTable;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2EventMonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.Event;
-import com.l2jmobius.gameserver.util.Broadcast;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.gameserver.mobius.gameserver.datatables.SpawnTable;
+import org.l2j.gameserver.mobius.gameserver.model.L2Spawn;
+import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2EventMonsterInstance;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.quest.Event;
+import org.l2j.gameserver.mobius.gameserver.util.Broadcast;
 
 public final class Elpies extends Event
 {
@@ -112,7 +112,7 @@ public final class Elpies extends Event
 		Broadcast.toAllOnlinePlayers("Help us exterminate them!");
 		Broadcast.toAllOnlinePlayers("You have " + EVENT_DURATION_MINUTES + " minutes!");
 		
-		_eventTask = ThreadPool.schedule(() ->
+		_eventTask = ThreadPoolManager.getInstance().schedule(() ->
 		{
 			Broadcast.toAllOnlinePlayers("Time is up!");
 			eventStop();

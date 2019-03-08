@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.mobius.gameserver.util;
 
-import com.l2jmobius.commons.util.CommonUtil;
+import org.l2j.commons.util.CommonUtil;
 
 /**
  * A class containing useful methods for constructing HTML

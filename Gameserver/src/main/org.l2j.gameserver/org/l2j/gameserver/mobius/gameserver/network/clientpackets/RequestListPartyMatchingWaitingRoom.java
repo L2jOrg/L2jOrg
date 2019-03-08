@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.ExListPartyMatchingWaitingRoom;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.base.ClassId;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExListPartyMatchingWaitingRoom;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * @author Gnacik
  */
-public class RequestListPartyMatchingWaitingRoom implements IClientIncomingPacket
+public class RequestListPartyMatchingWaitingRoom extends IClientIncomingPacket
 {
 	private int _page;
 	private int _minLevel;
@@ -37,30 +37,30 @@ public class RequestListPartyMatchingWaitingRoom implements IClientIncomingPacke
 	private String _query;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_page = packet.readD();
-		_minLevel = packet.readD();
-		_maxLevel = packet.readD();
-		final int size = packet.readD();
+		_page = packet.getInt();
+		_minLevel = packet.getInt();
+		_maxLevel = packet.getInt();
+		final int size = packet.getInt();
 		
 		if ((size > 0) && (size < 128))
 		{
 			_classId = new LinkedList<>();
 			for (int i = 0; i < size; i++)
 			{
-				_classId.add(ClassId.getClassId(packet.readD()));
+				_classId.add(ClassId.getClassId(packet.getInt()));
 			}
 		}
 		if (packet.getReadableBytes() > 0)
 		{
-			_query = packet.readS();
+			_query = readString(packet);
 		}
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)

@@ -16,15 +16,15 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.enums.ShortcutType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.interfaces.IRestorable;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.items.type.EtcItemType;
-import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
-import com.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
-import com.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.enums.ShortcutType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.IRestorable;
+import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.model.items.type.EtcItemType;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExAutoSoulShot;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ShortCutInit;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ShortCutRegister;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -85,7 +85,7 @@ public class ShortCuts implements IRestorable
 			deleteShortCutFromDb(oldShortCut);
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("REPLACE INTO character_shortcuts (charId,slot,page,type,shortcut_id,level,sub_level,class_index) values(?,?,?,?,?,?,?,?)"))
 		{
 			statement.setInt(1, _owner.getObjectId());
@@ -154,7 +154,7 @@ public class ShortCuts implements IRestorable
 	 */
 	private void deleteShortCutFromDb(Shortcut shortcut)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=? AND slot=? AND page=? AND class_index=?"))
 		{
 			statement.setInt(1, _owner.getObjectId());
@@ -173,7 +173,7 @@ public class ShortCuts implements IRestorable
 	public boolean restoreMe()
 	{
 		_shortCuts.clear();
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT charId, slot, page, type, shortcut_id, level, sub_level FROM character_shortcuts WHERE charId=? AND class_index=?"))
 		{
 			statement.setInt(1, _owner.getObjectId());

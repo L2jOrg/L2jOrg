@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.mobius.gameserver.instancemanager.events;
 
-import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.eventengine.AbstractEvent;
-import com.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
-import com.l2jmobius.gameserver.model.eventengine.ScheduleTarget;
-import com.l2jmobius.gameserver.model.quest.Event;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.QuestManager;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.AbstractEvent;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.AbstractEventManager;
+import org.l2j.gameserver.mobius.gameserver.model.eventengine.ScheduleTarget;
+import org.l2j.gameserver.mobius.gameserver.model.quest.Event;
 
 /**
  * @author Mobius

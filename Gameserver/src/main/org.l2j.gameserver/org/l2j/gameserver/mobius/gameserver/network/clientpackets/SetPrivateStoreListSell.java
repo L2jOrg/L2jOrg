@@ -17,19 +17,19 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
-import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreManageListSell;
-import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgSell;
-import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.mobius.gameserver.model.TradeList;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.PrivateStoreManageListSell;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.PrivateStoreMsgSell;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
@@ -37,7 +37,7 @@ import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
  * This class ...
  * @version $Revision: 1.2.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $
  */
-public class SetPrivateStoreListSell implements IClientIncomingPacket
+public class SetPrivateStoreListSell extends IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 20; // length of the one item
 	
@@ -45,10 +45,10 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 	private Item[] _items = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_packageSale = (packet.readD() == 1);
-		final int count = packet.readD();
+		_packageSale = (packet.getInt() == 1);
+		final int count = packet.getInt();
 		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
 			return false;
@@ -57,9 +57,9 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 		_items = new Item[count];
 		for (int i = 0; i < count; i++)
 		{
-			final int itemId = packet.readD();
-			final long cnt = packet.readQ();
-			final long price = packet.readQ();
+			final int itemId = packet.getInt();
+			final long cnt = packet.getLong();
+			final long price = packet.getLong();
 			
 			if ((itemId < 1) || (cnt < 1) || (price < 0))
 			{
@@ -72,7 +72,7 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)

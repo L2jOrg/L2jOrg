@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.instancemanager;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.variables.AbstractVariables;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.model.variables.AbstractVariables;
 
 import java.sql.*;
 import java.util.Map.Entry;
@@ -52,7 +52,7 @@ public final class GlobalVariablesManager extends AbstractVariables
 	public boolean restoreMe()
 	{
 		// Restore previous variables.
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement st = con.createStatement();
 			ResultSet rset = st.executeQuery(SELECT_QUERY))
 		{
@@ -83,7 +83,7 @@ public final class GlobalVariablesManager extends AbstractVariables
 			return false;
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement del = con.createStatement();
 			PreparedStatement st = con.prepareStatement(INSERT_QUERY))
 		{
@@ -115,7 +115,7 @@ public final class GlobalVariablesManager extends AbstractVariables
 	@Override
 	public boolean deleteMe()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement del = con.createStatement())
 		{
 			del.execute(DELETE_QUERY);

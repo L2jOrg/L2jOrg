@@ -17,37 +17,37 @@
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.EnsoulData;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.enums.AttributeType;
-import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.TradeItem;
-import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreManageListBuy;
-import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgBuy;
-import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.data.xml.impl.EnsoulData;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.enums.AttributeType;
+import org.l2j.gameserver.mobius.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.mobius.gameserver.model.TradeItem;
+import org.l2j.gameserver.mobius.gameserver.model.TradeList;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.ensoul.EnsoulOption;
+import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.PrivateStoreManageListBuy;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.PrivateStoreMsgBuy;
+import org.l2j.gameserver.mobius.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2j.gameserver.mobius.gameserver.util.Util;
 
 import java.util.Arrays;
 
 import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
-public final class SetPrivateStoreListBuy implements IClientIncomingPacket
+public final class SetPrivateStoreListBuy extends IClientIncomingPacket
 {
 	private TradeItem[] _items = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		final int count = packet.readD();
+		final int count = packet.getInt();
 		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET))
 		{
 			return false;
@@ -56,7 +56,7 @@ public final class SetPrivateStoreListBuy implements IClientIncomingPacket
 		_items = new TradeItem[count];
 		for (int i = 0; i < count; i++)
 		{
-			int itemId = packet.readD();
+			int itemId = packet.getInt();
 			
 			final L2Item template = ItemTable.getInstance().getTemplate(itemId);
 			if (template == null)
@@ -65,11 +65,11 @@ public final class SetPrivateStoreListBuy implements IClientIncomingPacket
 				return false;
 			}
 			
-			final int enchantLevel = packet.readH();
-			packet.readH(); // TODO analyse this
+			final int enchantLevel = packet.getShort();
+			packet.getShort(); // TODO analyse this
 			
-			long cnt = packet.readQ();
-			long price = packet.readQ();
+			long cnt = packet.getLong();
+			long price = packet.getLong();
 			
 			if ((itemId < 1) || (cnt < 1) || (price < 0))
 			{
@@ -77,27 +77,27 @@ public final class SetPrivateStoreListBuy implements IClientIncomingPacket
 				return false;
 			}
 			
-			final int option1 = packet.readD();
-			final int option2 = packet.readD();
-			final short attackAttributeId = (short) packet.readH();
-			final int attackAttributeValue = packet.readH();
-			final int defenceFire = packet.readH();
-			final int defenceWater = packet.readH();
-			final int defenceWind = packet.readH();
-			final int defenceEarth = packet.readH();
-			final int defenceHoly = packet.readH();
-			final int defenceDark = packet.readH();
-			final int visualId = packet.readD();
+			final int option1 = packet.getInt();
+			final int option2 = packet.getInt();
+			final short attackAttributeId = (short) packet.getShort();
+			final int attackAttributeValue = packet.getShort();
+			final int defenceFire = packet.getShort();
+			final int defenceWater = packet.getShort();
+			final int defenceWind = packet.getShort();
+			final int defenceEarth = packet.getShort();
+			final int defenceHoly = packet.getShort();
+			final int defenceDark = packet.getShort();
+			final int visualId = packet.getInt();
 			
-			final EnsoulOption[] soulCrystalOptions = new EnsoulOption[packet.readC()];
+			final EnsoulOption[] soulCrystalOptions = new EnsoulOption[packet.get()];
 			for (int k = 0; k < soulCrystalOptions.length; k++)
 			{
-				soulCrystalOptions[k] = EnsoulData.getInstance().getOption(packet.readD());
+				soulCrystalOptions[k] = EnsoulData.getInstance().getOption(packet.getInt());
 			}
-			final EnsoulOption[] soulCrystalSpecialOptions = new EnsoulOption[packet.readC()];
+			final EnsoulOption[] soulCrystalSpecialOptions = new EnsoulOption[packet.get()];
 			for (int k = 0; k < soulCrystalSpecialOptions.length; k++)
 			{
-				soulCrystalSpecialOptions[k] = EnsoulData.getInstance().getOption(packet.readD());
+				soulCrystalSpecialOptions[k] = EnsoulData.getInstance().getOption(packet.getInt());
 			}
 			
 			final TradeItem item = new TradeItem(template, cnt, price);
@@ -120,7 +120,7 @@ public final class SetPrivateStoreListBuy implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)

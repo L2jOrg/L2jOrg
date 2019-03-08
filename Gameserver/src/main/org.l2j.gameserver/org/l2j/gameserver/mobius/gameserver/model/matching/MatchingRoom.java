@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model.matching;
 
-import com.l2jmobius.gameserver.enums.MatchingMemberType;
-import com.l2jmobius.gameserver.enums.MatchingRoomType;
-import com.l2jmobius.gameserver.enums.UserInfoType;
-import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
-import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
+import org.l2j.gameserver.mobius.gameserver.enums.MatchingMemberType;
+import org.l2j.gameserver.mobius.gameserver.enums.MatchingRoomType;
+import org.l2j.gameserver.mobius.gameserver.enums.UserInfoType;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.MapRegionManager;
+import org.l2j.gameserver.mobius.gameserver.instancemanager.MatchingRoomManager;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.IIdentifiable;
 
 import java.util.Iterator;
 import java.util.Set;

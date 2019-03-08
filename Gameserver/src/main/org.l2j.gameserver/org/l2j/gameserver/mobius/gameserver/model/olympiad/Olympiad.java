@@ -403,7 +403,7 @@ public class Olympiad extends ListenersContainer
             _validationEnd = validationEnd.getTimeInMillis() + VALIDATION_PERIOD;
 
             loadNoblesRank();
-            _scheduledValdationTask = ThreadPool.schedule(new ValidationEndTask(), getMillisToValidationEnd());
+            _scheduledValdationTask = ThreadPoolManager.getInstance().schedule(new ValidationEndTask(), getMillisToValidationEnd());
         }
     }
 
@@ -451,7 +451,7 @@ public class Olympiad extends ListenersContainer
             LOGGER.info(getClass().getSimpleName() + ": Event starts/started: " + _compStart.getTime());
         }
 
-        _scheduledCompStart = ThreadPool.schedule(() ->
+        _scheduledCompStart = ThreadPoolManager.getInstance().schedule(() ->
         {
             if (isOlympiadEnd())
             {
@@ -464,19 +464,19 @@ public class Olympiad extends ListenersContainer
             LOGGER.info(getClass().getSimpleName() + ": Olympiad Games have started.");
             LOGGER_OLYMPIAD.info("Result,Player1,Player2,Player1 HP,Player2 HP,Player1 Damage,Player2 Damage,Points,Classed");
 
-            _gameManager = ThreadPool.scheduleAtFixedRate(OlympiadGameManager.getInstance(), 30000, 30000);
+            _gameManager = ThreadPoolManager.getInstance().scheduleAtFixedRate(OlympiadGameManager.getInstance(), 30000, 30000);
             if (Config.ALT_OLY_ANNOUNCE_GAMES)
             {
-                _gameAnnouncer = ThreadPool.scheduleAtFixedRate(new OlympiadAnnouncer(), 30000, 500);
+                _gameAnnouncer = ThreadPoolManager.getInstance().scheduleAtFixedRate(new OlympiadAnnouncer(), 30000, 500);
             }
 
             final long regEnd = getMillisToCompEnd() - 600000;
             if (regEnd > 0)
             {
-                ThreadPool.schedule(() -> Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_REGISTRATION_PERIOD_HAS_ENDED)), regEnd);
+                ThreadPoolManager.getInstance().schedule(() -> Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_REGISTRATION_PERIOD_HAS_ENDED)), regEnd);
             }
 
-            _scheduledCompEnd = ThreadPool.schedule(() ->
+            _scheduledCompEnd = ThreadPoolManager.getInstance().schedule(() ->
             {
                 if (isOlympiadEnd())
                 {
@@ -531,7 +531,7 @@ public class Olympiad extends ListenersContainer
             _scheduledOlympiadEnd.cancel(true);
         }
 
-        _scheduledOlympiadEnd = ThreadPool.schedule(new OlympiadEndTask(), 0);
+        _scheduledOlympiadEnd = ThreadPoolManager.getInstance().schedule(new OlympiadEndTask(), 0);
     }
 
     protected long getMillisToValidationEnd()
@@ -710,7 +710,7 @@ public class Olympiad extends ListenersContainer
 
     private void scheduleWeeklyChange()
     {
-        _scheduledWeeklyTask = ThreadPool.scheduleAtFixedRate(() ->
+        _scheduledWeeklyTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(() ->
         {
             addWeeklyPoints();
             LOGGER.info(getClass().getSimpleName() + ": Added weekly points to nobles");
@@ -782,7 +782,7 @@ public class Olympiad extends ListenersContainer
             return;
         }
 
-        try (Connection con = DatabaseFactory.getConnection())
+        try (Connection con = DatabaseFactory.getInstance().getConnection())
         {
             for (Entry<Integer, StatsSet> entry : _nobles.entrySet())
             {
@@ -854,7 +854,7 @@ public class Olympiad extends ListenersContainer
     {
         saveNobleData();
 
-        try (Connection con = DatabaseFactory.getConnection();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement(OLYMPIAD_SAVE_DATA))
         {
             statement.setInt(1, _currentCycle);
@@ -895,7 +895,7 @@ public class Olympiad extends ListenersContainer
 
     protected void updateMonthlyData()
     {
-        try (Connection con = DatabaseFactory.getConnection();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps1 = con.prepareStatement(OLYMPIAD_MONTH_CLEAR);
              PreparedStatement ps2 = con.prepareStatement(OLYMPIAD_MONTH_CREATE))
         {
@@ -939,7 +939,7 @@ public class Olympiad extends ListenersContainer
 
         final List<StatsSet> heroesToBe = new LinkedList<>();
 
-        try (Connection con = DatabaseFactory.getConnection();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement(OLYMPIAD_GET_HEROS))
         {
             StatsSet hero;
@@ -977,7 +977,7 @@ public class Olympiad extends ListenersContainer
     {
         final List<String> names = new ArrayList<>();
         final String query = Config.ALT_OLY_SHOW_MONTHLY_WINNERS ? ((classId == 132) ? GET_EACH_CLASS_LEADER_SOULHOUND : GET_EACH_CLASS_LEADER) : ((classId == 132) ? GET_EACH_CLASS_LEADER_CURRENT_SOULHOUND : GET_EACH_CLASS_LEADER_CURRENT);
-        try (Connection con = DatabaseFactory.getConnection();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement(query))
         {
             ps.setInt(1, classId);
@@ -1087,7 +1087,7 @@ public class Olympiad extends ListenersContainer
     public int getLastNobleOlympiadPoints(int objId)
     {
         int result = 0;
-        try (Connection con = DatabaseFactory.getConnection();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("SELECT olympiad_points FROM olympiad_nobles_eom WHERE charId = ?"))
         {
             ps.setInt(1, objId);
@@ -1231,7 +1231,7 @@ public class Olympiad extends ListenersContainer
 
     protected void deleteNobles()
     {
-        try (Connection con = DatabaseFactory.getConnection();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement(OLYMPIAD_DELETE_ALL))
         {
             statement.execute();

@@ -16,18 +16,18 @@
  */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.GetOffVehicle;
-import com.l2jmobius.gameserver.network.serverpackets.StopMoveInVehicle;
+import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.GetOffVehicle;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.StopMoveInVehicle;
 
 /**
  * @author Maktakien
  */
-public final class RequestGetOffVehicle implements IClientIncomingPacket
+public final class RequestGetOffVehicle extends IClientIncomingPacket
 {
 	private int _boatId;
 	private int _x;
@@ -35,17 +35,17 @@ public final class RequestGetOffVehicle implements IClientIncomingPacket
 	private int _z;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public void readImpl(ByteBuffer packet)
 	{
-		_boatId = packet.readD();
-		_x = packet.readD();
-		_y = packet.readD();
-		_z = packet.readD();
+		_boatId = packet.getInt();
+		_x = packet.getInt();
+		_y = packet.getInt();
+		_z = packet.getInt();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void runImpl()
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)

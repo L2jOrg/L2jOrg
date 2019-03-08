@@ -16,18 +16,18 @@
  */
 package handlers.dailymissionhandlers;
 
-import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.enums.DailyMissionStatus;
-import com.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
-import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
-import com.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.Containers;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
-import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.mobius.gameserver.enums.DailyMissionStatus;
+import org.l2j.gameserver.mobius.gameserver.handler.AbstractDailyMissionHandler;
+import org.l2j.gameserver.mobius.gameserver.model.DailyMissionDataHolder;
+import org.l2j.gameserver.mobius.gameserver.model.DailyMissionPlayerEntry;
+import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
+import org.l2j.gameserver.mobius.gameserver.model.L2SiegeClan;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.events.Containers;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
+import org.l2j.gameserver.mobius.gameserver.model.events.listeners.ConsumerEventListener;
 
 /**
  * @author UnAfraid

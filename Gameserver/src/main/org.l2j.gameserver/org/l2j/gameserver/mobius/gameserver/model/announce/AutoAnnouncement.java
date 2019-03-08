@@ -17,9 +17,9 @@
 package org.l2j.gameserver.mobius.gameserver.model.announce;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.util.Broadcast;
+import org.l2j.commons.concurrent.ThreadPool;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.util.Broadcast;
 
 import java.sql.*;
 import java.util.concurrent.ScheduledFuture;
@@ -90,7 +90,7 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 	@Override
 	public boolean storeMe()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement st = con.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS))
 		{
 			st.setInt(1, getType().ordinal());
@@ -119,7 +119,7 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 	@Override
 	public boolean updateMe()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement st = con.prepareStatement(UPDATE_QUERY))
 		{
 			st.setInt(1, getType().ordinal());
@@ -156,7 +156,7 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 			_task.cancel(false);
 		}
 		_currentState = _repeat;
-		_task = ThreadPool.schedule(this, _initial);
+		_task = ThreadPoolManager.getInstance().schedule(this, _initial);
 	}
 	
 	@Override
@@ -174,7 +174,7 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 				_currentState--;
 			}
 			
-			_task = ThreadPool.schedule(this, _delay);
+			_task = ThreadPoolManager.getInstance().schedule(this, _delay);
 		}
 	}
 }

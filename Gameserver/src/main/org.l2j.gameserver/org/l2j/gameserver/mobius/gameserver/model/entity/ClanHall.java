@@ -244,7 +244,7 @@ public final class ClanHall extends AbstractResidence
 
             final int failDays = getCostFailDay();
             final long time = failDays > 0 ? (failDays > 8 ? Instant.now().toEpochMilli() : Instant.ofEpochMilli(_paidUntil).plus(Duration.ofDays(failDays + 1)).toEpochMilli()) : _paidUntil;
-            _checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), time - System.currentTimeMillis());
+            _checkPaymentTask = ThreadPoolManager.getInstance().schedule(new CheckPaymentTask(), time - System.currentTimeMillis());
         }
         else
         {
@@ -343,7 +343,7 @@ public final class ClanHall extends AbstractResidence
                     }
                     else
                     {
-                        _checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), 24 * 60 * 60 * 1000); // 1 day
+                        _checkPaymentTask = ThreadPoolManager.getInstance().schedule(new CheckPaymentTask(), 24 * 60 * 60 * 1000); // 1 day
                         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
                         sm.addInt(_lease);
                         _owner.broadcastToOnlineMembers(sm);
@@ -353,7 +353,7 @@ public final class ClanHall extends AbstractResidence
                 {
                     _owner.getWarehouse().destroyItem("Clan Hall Lease", Inventory.ADENA_ID, _lease, null, null);
                     setPaidUntil(Instant.ofEpochMilli(_paidUntil).plus(Duration.ofDays(7)).toEpochMilli());
-                    _checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), _paidUntil - System.currentTimeMillis());
+                    _checkPaymentTask = ThreadPoolManager.getInstance().schedule(new CheckPaymentTask(), _paidUntil - System.currentTimeMillis());
                     updateDB();
                 }
             }

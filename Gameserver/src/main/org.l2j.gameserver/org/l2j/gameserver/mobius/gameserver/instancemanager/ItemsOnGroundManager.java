@@ -158,7 +158,7 @@ public final class ItemsOnGroundManager implements Runnable
 	
 	public void emptyTable()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement())
 		{
 			s.executeUpdate("DELETE FROM itemsonground");
@@ -184,7 +184,7 @@ public final class ItemsOnGroundManager implements Runnable
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO itemsonground(object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable) VALUES(?,?,?,?,?,?,?,?,?)"))
 		{
 			for (L2ItemInstance item : _items)

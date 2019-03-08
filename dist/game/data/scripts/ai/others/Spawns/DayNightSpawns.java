@@ -19,13 +19,13 @@ package ai.others.Spawns;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.OnDayNightChange;
-import com.l2jmobius.gameserver.model.spawns.SpawnTemplate;
+import org.l2j.gameserver.mobius.gameserver.GameTimeController;
+import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
+import org.l2j.gameserver.mobius.gameserver.model.events.ListenerRegisterType;
+import org.l2j.gameserver.mobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2j.gameserver.mobius.gameserver.model.events.annotations.RegisterType;
+import org.l2j.gameserver.mobius.gameserver.model.events.impl.OnDayNightChange;
+import org.l2j.gameserver.mobius.gameserver.model.spawns.SpawnTemplate;
 
 import ai.AbstractNpcAI;
 

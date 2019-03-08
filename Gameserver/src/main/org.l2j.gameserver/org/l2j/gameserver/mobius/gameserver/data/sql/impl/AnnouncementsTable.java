@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.sql.impl;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.announce.Announcement;
-import com.l2jmobius.gameserver.model.announce.AnnouncementType;
-import com.l2jmobius.gameserver.model.announce.AutoAnnouncement;
-import com.l2jmobius.gameserver.model.announce.IAnnouncement;
-import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.announce.Announcement;
+import org.l2j.gameserver.mobius.gameserver.model.announce.AnnouncementType;
+import org.l2j.gameserver.mobius.gameserver.model.announce.AutoAnnouncement;
+import org.l2j.gameserver.mobius.gameserver.model.announce.IAnnouncement;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.CreatureSay;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -52,7 +52,7 @@ public final class AnnouncementsTable
 	private void load()
 	{
 		_announcements.clear();
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement st = con.createStatement();
 			ResultSet rset = st.executeQuery("SELECT * FROM announcements"))
 		{

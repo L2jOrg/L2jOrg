@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.items.combination.CombinationItem;
-import com.l2jmobius.gameserver.model.items.combination.CombinationItemReward;
-import com.l2jmobius.gameserver.model.items.combination.CombinationItemType;
+import org.l2j.commons.util.IGameXmlReader;
+import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
+import org.l2j.gameserver.mobius.gameserver.model.items.combination.CombinationItem;
+import org.l2j.gameserver.mobius.gameserver.model.items.combination.CombinationItemReward;
+import org.l2j.gameserver.mobius.gameserver.model.items.combination.CombinationItemType;
 import org.w3c.dom.Document;
 
 import java.io.File;

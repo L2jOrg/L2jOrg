@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.mobius.gameserver.model;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.enums.MacroType;
-import com.l2jmobius.gameserver.enums.MacroUpdateType;
-import com.l2jmobius.gameserver.enums.ShortcutType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.interfaces.IRestorable;
-import com.l2jmobius.gameserver.network.serverpackets.SendMacroList;
+import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.mobius.gameserver.enums.MacroType;
+import org.l2j.gameserver.mobius.gameserver.enums.MacroUpdateType;
+import org.l2j.gameserver.mobius.gameserver.enums.ShortcutType;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.model.interfaces.IRestorable;
+import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SendMacroList;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -118,7 +118,7 @@ public class MacroList implements IRestorable
 	
 	private void registerMacroInDb(Macro macro)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO character_macroses (charId,id,icon,name,descr,acronym,commands) values(?,?,?,?,?,?,?)"))
 		{
 			ps.setInt(1, _owner.getObjectId());
@@ -154,7 +154,7 @@ public class MacroList implements IRestorable
 	
 	private void deleteMacroFromDb(Macro macro)
 	{
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM character_macroses WHERE charId=? AND id=?"))
 		{
 			ps.setInt(1, _owner.getObjectId());
@@ -171,7 +171,7 @@ public class MacroList implements IRestorable
 	public boolean restoreMe()
 	{
 		_macroses.clear();
-		try (Connection con = DatabaseFactory.getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT charId, id, icon, name, descr, acronym, commands FROM character_macroses WHERE charId=?"))
 		{
 			ps.setInt(1, _owner.getObjectId());

@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.mobius.gameserver.communitybbs.Manager;
 
-import com.l2jmobius.gameserver.communitybbs.BB.Forum;
-import com.l2jmobius.gameserver.communitybbs.BB.Post;
-import com.l2jmobius.gameserver.communitybbs.BB.Topic;
-import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.communitybbs.BB.Forum;
+import org.l2j.gameserver.mobius.gameserver.communitybbs.BB.Post;
+import org.l2j.gameserver.mobius.gameserver.communitybbs.BB.Topic;
+import org.l2j.gameserver.mobius.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.mobius.gameserver.handler.CommunityBoardHandler;
+import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 import java.text.DateFormat;
 import java.util.*;
