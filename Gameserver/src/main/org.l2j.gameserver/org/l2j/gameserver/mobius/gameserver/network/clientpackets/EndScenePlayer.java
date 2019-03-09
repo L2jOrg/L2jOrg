@@ -12,30 +12,30 @@ import java.nio.ByteBuffer;
  */
 public final class EndScenePlayer extends IClientIncomingPacket
 {
-	private static final Logger LOGGER = LoggerFactory.getLogger(EndScenePlayer.class);
-	private int _movieId;
-	
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
-		_movieId = packet.getInt();
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar == null) || (_movieId == 0))
-		{
-			return;
-		}
-		
-		final MovieHolder holder = activeChar.getMovieHolder();
-		if ((holder == null) || (holder.getMovie().getClientId() != _movieId))
-		{
-			LOGGER.warn("Player " + client + " sent EndScenePlayer with wrong movie id: " + _movieId);
-			return;
-		}
-		activeChar.stopMovie();
-	}
+    private static final Logger LOGGER = LoggerFactory.getLogger(EndScenePlayer.class);
+    private int _movieId;
+
+    @Override
+    public void readImpl(ByteBuffer packet)
+    {
+        _movieId = packet.getInt();
+    }
+
+    @Override
+    public void runImpl()
+    {
+        final L2PcInstance activeChar = client.getActiveChar();
+        if ((activeChar == null) || (_movieId == 0))
+        {
+            return;
+        }
+
+        final MovieHolder holder = activeChar.getMovieHolder();
+        if ((holder == null) || (holder.getMovie().getClientId() != _movieId))
+        {
+            LOGGER.warn("Player " + client + " sent EndScenePlayer with wrong movie id: " + _movieId);
+            return;
+        }
+        activeChar.stopMovie();
+    }
 }

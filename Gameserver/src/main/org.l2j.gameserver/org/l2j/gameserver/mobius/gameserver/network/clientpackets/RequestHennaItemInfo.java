@@ -1,41 +1,27 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import org.l2j.commons.network.PacketReader;
 import org.l2j.gameserver.mobius.gameserver.data.xml.impl.HennaData;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.mobius.gameserver.model.items.L2Henna;
-import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.HennaItemDrawInfo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Zoey76
  */
 public final class RequestHennaItemInfo extends IClientIncomingPacket
 {
+	private static final Logger LOGGER = LoggerFactory.getLogger(RequestHennaItemInfo.class);
 	private int _symbolId;
 	
 	@Override
 	public void readImpl(ByteBuffer packet)
 	{
 		_symbolId = packet.getInt();
-		return true;
 	}
 	
 	@Override
@@ -52,7 +38,7 @@ public final class RequestHennaItemInfo extends IClientIncomingPacket
 		{
 			if (_symbolId != 0)
 			{
-				LOGGER.warning(getClass().getSimpleName() + ": Invalid Henna Id: " + _symbolId + " from player " + activeChar);
+				LOGGER.warn(getClass().getSimpleName() + ": Invalid Henna Id: " + _symbolId + " from player " + activeChar);
 			}
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

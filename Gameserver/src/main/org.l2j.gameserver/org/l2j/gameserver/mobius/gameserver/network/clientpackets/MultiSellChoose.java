@@ -1,22 +1,5 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import org.l2j.commons.network.PacketReader;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.mobius.gameserver.data.xml.impl.EnsoulData;
 import org.l2j.gameserver.mobius.gameserver.data.xml.impl.MultisellData;
@@ -36,12 +19,14 @@ import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
 import org.l2j.gameserver.mobius.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
-import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.UserInfo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -54,6 +39,8 @@ import java.util.stream.Collectors;
  */
 public class MultiSellChoose extends IClientIncomingPacket
 {
+	private static final Logger LOGGER = LoggerFactory.getLogger(MultiSellChoose.class);
+
 	private int _listId;
 	private int _entryId;
 	private long _amount;
@@ -80,14 +67,14 @@ public class MultiSellChoose extends IClientIncomingPacket
 		_enchantLevel = packet.getShort();
 		_augmentOption1 = packet.getInt();
 		_augmentOption2 = packet.getInt();
-		_attackAttribute = (short) packet.getShort();
-		_attributePower = (short) packet.getShort();
-		_fireDefence = (short) packet.getShort();
-		_waterDefence = (short) packet.getShort();
-		_windDefence = (short) packet.getShort();
-		_earthDefence = (short) packet.getShort();
-		_holyDefence = (short) packet.getShort();
-		_darkDefence = (short) packet.getShort();
+		_attackAttribute = packet.getShort();
+		_attributePower = packet.getShort();
+		_fireDefence = packet.getShort();
+		_waterDefence = packet.getShort();
+		_windDefence = packet.getShort();
+		_earthDefence = packet.getShort();
+		_holyDefence = packet.getShort();
+		_darkDefence = packet.getShort();
 		_soulCrystalOptions = new EnsoulOption[packet.get()]; // Ensoul size
 		for (int i = 0; i < _soulCrystalOptions.length; i++)
 		{
@@ -100,7 +87,6 @@ public class MultiSellChoose extends IClientIncomingPacket
 			final int ensoulId = packet.getInt(); // Special ensoul option id.
 			_soulCrystalSpecialOptions[i] = EnsoulData.getInstance().getOption(ensoulId);
 		}
-		return true;
 	}
 	
 	@Override
@@ -147,7 +133,7 @@ public class MultiSellChoose extends IClientIncomingPacket
 		
 		if (((_soulCrystalOptions != null) && CommonUtil.contains(_soulCrystalOptions, null)) || ((_soulCrystalSpecialOptions != null) && CommonUtil.contains(_soulCrystalSpecialOptions, null)))
 		{
-			LOGGER.severe("Character: " + player.getName() + " requested multisell entry with invalid soul crystal options. Multisell: " + _listId + " entry: " + _entryId);
+			LOGGER.error("Character: " + player.getName() + " requested multisell entry with invalid soul crystal options. Multisell: " + _listId + " entry: " + _entryId);
 			player.setMultiSell(null);
 			return;
 		}
@@ -155,14 +141,14 @@ public class MultiSellChoose extends IClientIncomingPacket
 		final MultisellEntryHolder entry = list.getEntries().get(_entryId - 1); // Entry Id begins from 1. We currently use entry IDs as index pointer.
 		if (entry == null)
 		{
-			LOGGER.severe("Character: " + player.getName() + " requested inexistant prepared multisell entry. Multisell: " + _listId + " entry: " + _entryId);
+			LOGGER.error("Character: " + player.getName() + " requested inexistant prepared multisell entry. Multisell: " + _listId + " entry: " + _entryId);
 			player.setMultiSell(null);
 			return;
 		}
 		
 		if (!entry.isStackable() && (_amount > 1))
 		{
-			LOGGER.severe("Character: " + player.getName() + " is trying to set amount > 1 on non-stackable multisell. Id: " + _listId + " entry: " + _entryId);
+			LOGGER.error("Character: " + player.getName() + " is trying to set amount > 1 on non-stackable multisell. Id: " + _listId + " entry: " + _entryId);
 			player.setMultiSell(null);
 			return;
 		}
@@ -190,7 +176,7 @@ public class MultiSellChoose extends IClientIncomingPacket
 			))
 		//@formatter:on
 		{
-			LOGGER.severe("Character: " + player.getName() + " is trying to upgrade equippable item, but the stats doesn't match. Id: " + _listId + " entry: " + _entryId);
+			LOGGER.error("Character: " + player.getName() + " is trying to upgrade equippable item, but the stats doesn't match. Id: " + _listId + " entry: " + _entryId);
 			player.setMultiSell(null);
 			return;
 		}
@@ -360,7 +346,7 @@ public class MultiSellChoose extends IClientIncomingPacket
 						}
 						default:
 						{
-							LOGGER.severe("Character: " + player.getName() + " has suffered possible item loss by using multisell " + _listId + " which has non-implemented special ingredient with id: " + ingredient.getId() + ".");
+							LOGGER.error("Character: " + player.getName() + " has suffered possible item loss by using multisell " + _listId + " which has non-implemented special ingredient with id: " + ingredient.getId() + ".");
 							return;
 						}
 					}
@@ -458,7 +444,7 @@ public class MultiSellChoose extends IClientIncomingPacket
 						}
 						default:
 						{
-							LOGGER.severe("Character: " + player.getName() + " has suffered possible item loss by using multisell " + _listId + " which has non-implemented special product with id: " + product.getId() + ".");
+							LOGGER.error("Character: " + player.getName() + " has suffered possible item loss by using multisell " + _listId + " which has non-implemented special product with id: " + product.getId() + ".");
 							return;
 						}
 					}
@@ -621,7 +607,7 @@ public class MultiSellChoose extends IClientIncomingPacket
 				}
 				default:
 				{
-					LOGGER.severe("Multisell: " + _listId + " is using a non-implemented special ingredient with id: " + ingredientId + ".");
+					LOGGER.error("Multisell: " + _listId + " is using a non-implemented special ingredient with id: " + ingredientId + ".");
 					return false;
 				}
 			}

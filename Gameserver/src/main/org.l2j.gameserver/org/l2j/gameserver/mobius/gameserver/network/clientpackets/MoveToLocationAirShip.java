@@ -1,22 +1,5 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import org.l2j.commons.network.PacketReader;
 import org.l2j.gameserver.mobius.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.mobius.gameserver.instancemanager.AirShipManager;
 import org.l2j.gameserver.mobius.gameserver.model.L2World;
@@ -24,8 +7,9 @@ import org.l2j.gameserver.mobius.gameserver.model.Location;
 import org.l2j.gameserver.mobius.gameserver.model.VehiclePathPoint;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2AirShipInstance;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
+
+import java.nio.ByteBuffer;
 
 public class MoveToLocationAirShip extends IClientIncomingPacket
 {
@@ -42,11 +26,10 @@ public class MoveToLocationAirShip extends IClientIncomingPacket
 	{
 		_command = packet.getInt();
 		_param1 = packet.getInt();
-		if (packet.getReadableBytes() > 0)
+		if (packet.remaining() > 0)
 		{
 			_param2 = packet.getInt();
 		}
-		return true;
 	}
 	
 	@Override

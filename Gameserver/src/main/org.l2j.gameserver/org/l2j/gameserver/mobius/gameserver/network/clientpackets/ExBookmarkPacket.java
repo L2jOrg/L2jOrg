@@ -10,49 +10,52 @@ public class ExBookmarkPacket extends IClientIncomingPacket
 	private IClientIncomingPacket _exBookmarkPacket;
 	
 	@Override
-	public void readImpl(ByteBuffer packet)
-	{
+	public void readImpl(ByteBuffer packet) {
 		final int subId = packet.getInt();
 		
 		switch (subId)
 		{
 			case 0:
 			{
-				_exBookmarkPacket = new RequestBookMarkSlotInfo();
+				_exBookmarkPacket = new RequestBookMarkSlotInfo(client);
 				break;
 			}
 			case 1:
 			{
-				_exBookmarkPacket = new RequestSaveBookMarkSlot();
+				_exBookmarkPacket = new RequestSaveBookMarkSlot(client);
 				break;
 			}
 			case 2:
 			{
-				_exBookmarkPacket = new RequestModifyBookMarkSlot();
+				_exBookmarkPacket = new RequestModifyBookMarkSlot(client);
 				break;
 			}
 			case 3:
 			{
-				_exBookmarkPacket = new RequestDeleteBookMarkSlot();
+				_exBookmarkPacket = new RequestDeleteBookMarkSlot(client);
 				break;
 			}
 			case 4:
 			{
-				_exBookmarkPacket = new RequestTeleportBookMark();
+				_exBookmarkPacket = new RequestTeleportBookMark(client);
 				break;
 			}
 			case 5:
 			{
-				_exBookmarkPacket = new RequestChangeBookMarkSlot();
+				_exBookmarkPacket = new RequestChangeBookMarkSlot(client);
 				break;
 			}
 		}
-		return (_exBookmarkPacket != null) && _exBookmarkPacket.read(packet);
+		if(_exBookmarkPacket != null) {
+			_exBookmarkPacket.read(packet);
+		}
+
 	}
 	
 	@Override
-	public void runImpl() throws Exception
-	{
-		_exBookmarkPacket.run();
+	public void runImpl() throws Exception {
+		if(_exBookmarkPacket != null) {
+			_exBookmarkPacket.run();
+		}
 	}
 }

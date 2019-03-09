@@ -1,23 +1,6 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
-import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.Config;
 import org.l2j.gameserver.mobius.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.mobius.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.mobius.gameserver.enums.AdminTeleportType;
@@ -28,7 +11,6 @@ import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.mobius.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerMoveRequest;
 import org.l2j.gameserver.mobius.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
@@ -36,6 +18,7 @@ import org.l2j.gameserver.mobius.gameserver.network.serverpackets.sayune.ExFlyMo
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.sayune.ExFlyMoveBroadcast;
 import org.l2j.gameserver.mobius.gameserver.util.Broadcast;
 
+import java.nio.ByteBuffer;
 import java.util.Arrays;
 
 public class MoveBackwardToLocation extends IClientIncomingPacket
@@ -58,7 +41,6 @@ public class MoveBackwardToLocation extends IClientIncomingPacket
 		_originY = packet.getInt();
 		_originZ = packet.getInt();
 		_movementMode = packet.getInt(); // is 0 if cursor keys are used 1 if mouse is used
-		return true;
 	}
 	
 	@Override

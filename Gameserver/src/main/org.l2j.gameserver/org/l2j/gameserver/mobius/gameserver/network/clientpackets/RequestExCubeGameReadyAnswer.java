@@ -1,25 +1,11 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import org.l2j.commons.network.PacketReader;
 import org.l2j.gameserver.mobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.nio.ByteBuffer;
 
 /**
  * Format: chddd d: Arena d: Answer
@@ -27,46 +13,46 @@ import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
  */
 public final class RequestExCubeGameReadyAnswer extends IClientIncomingPacket
 {
-	private int _arena;
-	private int _answer;
-	
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
-		// client sends -1,0,1,2 for arena parameter
-		_arena = packet.getInt() + 1;
-		// client sends 1 if clicked confirm on not clicked, 0 if clicked cancel
-		_answer = packet.getInt();
-		return true;
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance player = client.getActiveChar();
-		if (player == null)
-		{
-			return;
-		}
-		
-		switch (_answer)
-		{
-			case 0:
-			{
-				// Cancel - Answer No
-				break;
-			}
-			case 1:
-			{
-				// OK or Time Over
-				HandysBlockCheckerManager.getInstance().increaseArenaVotes(_arena);
-				break;
-			}
-			default:
-			{
-				LOGGER.warning("Unknown Cube Game Answer ID: " + _answer);
-				break;
-			}
-		}
-	}
+    private static final Logger LOGGER = LoggerFactory.getLogger(RequestExCubeGameReadyAnswer.class);
+    private int _arena;
+    private int _answer;
+
+    @Override
+    public void readImpl(ByteBuffer packet)
+    {
+        // client sends -1,0,1,2 for arena parameter
+        _arena = packet.getInt() + 1;
+        // client sends 1 if clicked confirm on not clicked, 0 if clicked cancel
+        _answer = packet.getInt();
+    }
+
+    @Override
+    public void runImpl()
+    {
+        final L2PcInstance player = client.getActiveChar();
+        if (player == null)
+        {
+            return;
+        }
+
+        switch (_answer)
+        {
+            case 0:
+            {
+                // Cancel - Answer No
+                break;
+            }
+            case 1:
+            {
+                // OK or Time Over
+                HandysBlockCheckerManager.getInstance().increaseArenaVotes(_arena);
+                break;
+            }
+            default:
+            {
+                LOGGER.warn("Unknown Cube Game Answer ID: " + _answer);
+                break;
+            }
+        }
+    }
 }

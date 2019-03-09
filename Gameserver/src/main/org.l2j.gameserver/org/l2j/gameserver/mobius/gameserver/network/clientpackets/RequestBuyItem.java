@@ -1,23 +1,6 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
-import org.l2j.commons.network.PacketReader;
+import org.l2j.gameserver.mobius.gameserver.Config;
 import org.l2j.gameserver.mobius.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.mobius.gameserver.enums.TaxType;
 import org.l2j.gameserver.mobius.gameserver.model.L2Object;
@@ -26,22 +9,26 @@ import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.mobius.gameserver.model.buylist.Product;
 import org.l2j.gameserver.mobius.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
+import org.l2j.gameserver.mobius.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExBuySellList;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.mobius.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.l2jmobius.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
-import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
+import static org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
+import static org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
 public final class RequestBuyItem extends IClientIncomingPacket
 {
+	private static final Logger LOGGER = LoggerFactory.getLogger(RequestBuyItem.class);
 	private static final int BATCH_LENGTH = 12;
 	private static final int CUSTOM_CB_SELL_LIST = 423;
 	
@@ -49,13 +36,12 @@ public final class RequestBuyItem extends IClientIncomingPacket
 	private List<ItemHolder> _items = null;
 	
 	@Override
-	public void readImpl(ByteBuffer packet)
-	{
+	public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
 		_listId = packet.getInt();
 		final int size = packet.getInt();
-		if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != packet.getReadableBytes()))
+		if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != packet.remaining()))
 		{
-			return false;
+			throw new InvalidDataPacketException();
 		}
 		
 		_items = new ArrayList<>(size);
@@ -63,14 +49,12 @@ public final class RequestBuyItem extends IClientIncomingPacket
 		{
 			final int itemId = packet.getInt();
 			final long count = packet.getLong();
-			if ((itemId < 1) || (count < 1))
-			{
+			if ((itemId < 1) || (count < 1)) {
 				_items = null;
-				return false;
+				throw  new InvalidDataPacketException();
 			}
 			_items.add(new ItemHolder(itemId, count));
 		}
-		return true;
 	}
 	
 	@Override
@@ -161,7 +145,7 @@ public final class RequestBuyItem extends IClientIncomingPacket
 			long price = product.getPrice();
 			if (price < 0)
 			{
-				LOGGER.warning("ERROR, no price found .. wrong buylist ??");
+				LOGGER.warn("ERROR, no price found .. wrong buylist ??");
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}

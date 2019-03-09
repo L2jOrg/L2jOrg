@@ -1,24 +1,5 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network;
 
-import org.l2j.commons.network.IConnectionState;
-import org.l2j.commons.network.IIncomingPacket;
-import org.l2j.commons.network.IIncomingPackets;
 import org.l2j.gameserver.mobius.gameserver.network.clientpackets.*;
 import org.l2j.gameserver.mobius.gameserver.network.clientpackets.adenadistribution.RequestDivideAdena;
 import org.l2j.gameserver.mobius.gameserver.network.clientpackets.adenadistribution.RequestDivideAdenaCancel;
@@ -69,8 +50,7 @@ import java.util.function.Supplier;
 /**
  * @author Sdw
  */
-public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
-{
+public enum ExIncomingPackets {
 	REQUEST_GOTO_LOBBY(0x33, RequestGotoLobby::new, ConnectionState.AUTHENTICATED),
 	REQUEST_EX_2ND_PASSWORD_CHECK(0xA6, RequestEx2ndPasswordCheck::new, ConnectionState.AUTHENTICATED),
 	REQUEST_EX_2ND_PASSWORD_VERIFY(0xA7, RequestEx2ndPasswordVerify::new, ConnectionState.AUTHENTICATED),
@@ -422,19 +402,18 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	
 	static
 	{
-		final short maxPacketId = (short) Arrays.stream(values()).mapToInt(IIncomingPackets::getPacketId).max().orElse(0);
+		final short maxPacketId = (short) Arrays.stream(values()).mapToInt(ExIncomingPackets::getPacketId).max().orElse(0);
 		PACKET_ARRAY = new ExIncomingPackets[maxPacketId + 1];
-		for (ExIncomingPackets incomingPacket : values())
-		{
+		for (ExIncomingPackets incomingPacket : values()) {
 			PACKET_ARRAY[incomingPacket.getPacketId()] = incomingPacket;
 		}
 	}
 	
 	private int _packetId;
-	private Supplier<IIncomingPacket<L2GameClient>> _incomingPacketFactory;
-	private Set<IConnectionState> _connectionStates;
+	private Supplier<IClientIncomingPacket> _incomingPacketFactory;
+	private Set<ConnectionState> _connectionStates;
 	
-	ExIncomingPackets(int packetId, Supplier<IIncomingPacket<L2GameClient>> incomingPacketFactory, IConnectionState... connectionStates)
+	ExIncomingPackets(int packetId, Supplier<IClientIncomingPacket> incomingPacketFactory, ConnectionState... connectionStates)
 	{
 		// packetId is an unsigned short
 		if (packetId > 0xFFFF)
@@ -445,21 +424,16 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 		_incomingPacketFactory = incomingPacketFactory != null ? incomingPacketFactory : () -> null;
 		_connectionStates = new HashSet<>(Arrays.asList(connectionStates));
 	}
-	
-	@Override
-	public int getPacketId()
-	{
+
+	public int getPacketId() {
 		return _packetId;
 	}
-	
-	@Override
-	public IIncomingPacket<L2GameClient> newIncomingPacket()
-	{
+
+	public IClientIncomingPacket newIncomingPacket() {
 		return _incomingPacketFactory.get();
 	}
-	
-	@Override
-	public Set<IConnectionState> getConnectionStates()
+
+	public Set<ConnectionState> getConnectionStates()
 	{
 		return _connectionStates;
 	}
