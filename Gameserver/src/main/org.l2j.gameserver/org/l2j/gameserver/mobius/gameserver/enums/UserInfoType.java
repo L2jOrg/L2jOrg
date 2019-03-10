@@ -5,8 +5,7 @@ import org.l2j.gameserver.mobius.gameserver.model.interfaces.IUpdateTypeComponen
 /**
  * @author Sdw
  */
-public enum UserInfoType implements IUpdateTypeComponent
-{
+public enum UserInfoType implements IUpdateTypeComponent {
     RELATION(0x00, 4),
     BASIC_INFO(0x01, 16),
     BASE_STATS(0x02, 18),
@@ -35,28 +34,28 @@ public enum UserInfoType implements IUpdateTypeComponent
 
     ATT_SPIRITS(0x17, 26);
 
-    /** Int mask. */
+    /**
+     * Int mask.
+     */
     private final int _mask;
     private final int _blockLength;
 
-    private UserInfoType(int mask, int blockLength)
-    {
+    UserInfoType(int mask, int blockLength) {
         _mask = mask;
         _blockLength = blockLength;
     }
 
     /**
      * Gets the int mask.
+     *
      * @return the int mask
      */
     @Override
-    public final int getMask()
-    {
+    public final int getMask() {
         return _mask;
     }
 
-    public int getBlockLength()
-    {
+    public int getBlockLength() {
         return _blockLength;
     }
 }

@@ -1,8 +1,8 @@
 /*
  * cron4j - A pure Java cron-like scheduler
- * 
+ *
  * Copyright (C) 2007-2010 Carlo Pelliccia (www.sauronsoftware.it)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License version
  * 2.1, as published by the Free Software Foundation.
@@ -22,23 +22,22 @@ package org.l2j.gameserver.mobius.gameserver.util.cron4j;
  * <p>
  * This kind of exception is thrown if an invalid scheduling pattern is encountered by the scheduler.
  * </p>
+ *
  * @author Carlo Pelliccia
  */
-public class InvalidPatternException extends RuntimeException
-{
-	/**
-	 * Package-reserved construction.
-	 */
-	InvalidPatternException()
-	{
-	}
-	
-	/**
-	 * Package-reserved construction.
-	 * @param message String
-	 */
-	InvalidPatternException(String message)
-	{
-		super(message);
-	}
+public class InvalidPatternException extends RuntimeException {
+    /**
+     * Package-reserved construction.
+     */
+    InvalidPatternException() {
+    }
+
+    /**
+     * Package-reserved construction.
+     *
+     * @param message String
+     */
+    InvalidPatternException(String message) {
+        super(message);
+    }
 }

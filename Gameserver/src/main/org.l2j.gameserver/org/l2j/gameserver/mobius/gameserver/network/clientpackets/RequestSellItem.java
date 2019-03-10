@@ -26,8 +26,7 @@ import static org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory
 /**
  * RequestSellItem client packet class.
  */
-public final class RequestSellItem extends IClientIncomingPacket
-{
+public final class RequestSellItem extends IClientIncomingPacket {
     private static final int BATCH_LENGTH = 16;
     private static final int CUSTOM_CB_SELL_LIST = 423;
 
@@ -38,124 +37,101 @@ public final class RequestSellItem extends IClientIncomingPacket
     public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
         _listId = packet.getInt();
         final int size = packet.getInt();
-        if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != packet.remaining()))
-        {
+        if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != packet.remaining())) {
             throw new InvalidDataPacketException();
         }
 
         _items = new ArrayList<>(size);
-        for (int i = 0; i < size; i++)
-        {
+        for (int i = 0; i < size; i++) {
             final int objectId = packet.getInt();
             final int itemId = packet.getInt();
             final long count = packet.getLong();
-            if ((objectId < 1) || (itemId < 1) || (count < 1))
-            {
+            if ((objectId < 1) || (itemId < 1) || (count < 1)) {
                 _items = null;
-                throw  new InvalidDataPacketException();
+                throw new InvalidDataPacketException();
             }
             _items.add(new UniqueItemHolder(itemId, objectId, count));
         }
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
-        if (!client.getFloodProtectors().getTransaction().tryPerformAction("buy"))
-        {
+        if (!client.getFloodProtectors().getTransaction().tryPerformAction("buy")) {
             player.sendMessage("You are buying too fast.");
             return;
         }
 
-        if (_items == null)
-        {
+        if (_items == null) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         // Alt game - Karma punishment
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (player.getReputation() < 0))
-        {
+        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (player.getReputation() < 0)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         final L2Object target = player.getTarget();
         L2MerchantInstance merchant = null;
-        if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
-        {
-            if ((target == null) || !player.isInsideRadius3D(target, INTERACTION_DISTANCE) || (player.getInstanceId() != target.getInstanceId()))
-            {
+        if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST)) {
+            if ((target == null) || !player.isInsideRadius3D(target, INTERACTION_DISTANCE) || (player.getInstanceId() != target.getInstanceId())) {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }
-            if (target instanceof L2MerchantInstance)
-            {
+            if (target instanceof L2MerchantInstance) {
                 merchant = (L2MerchantInstance) target;
-            }
-            else
-            {
+            } else {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }
         }
 
-        if ((merchant == null) && !player.isGM())
-        {
+        if ((merchant == null) && !player.isGM()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         final ProductList buyList = BuyListData.getInstance().getBuyList(_listId);
-        if (buyList == null)
-        {
+        if (buyList == null) {
             Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId, Config.DEFAULT_PUNISH);
             return;
         }
 
-        if ((merchant != null) && !buyList.isNpcAllowed(merchant.getId()))
-        {
+        if ((merchant != null) && !buyList.isNpcAllowed(merchant.getId())) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         long totalPrice = 0;
         // Proceed the sell
-        for (UniqueItemHolder i : _items)
-        {
+        for (UniqueItemHolder i : _items) {
             L2ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "sell");
-            if ((item == null) || (!item.isSellable()))
-            {
+            if ((item == null) || (!item.isSellable())) {
                 continue;
             }
 
             long price = item.getReferencePrice() / 2;
             totalPrice += price * i.getCount();
-            if (((MAX_ADENA / i.getCount()) < price) || (totalPrice > MAX_ADENA))
-            {
+            if (((MAX_ADENA / i.getCount()) < price) || (totalPrice > MAX_ADENA)) {
                 Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + MAX_ADENA + " adena worth of goods.", Config.DEFAULT_PUNISH);
                 return;
             }
 
-            if (Config.ALLOW_REFUND)
-            {
+            if (Config.ALLOW_REFUND) {
                 player.getInventory().transferItem("Sell", i.getObjectId(), i.getCount(), player.getRefund(), player, merchant);
-            }
-            else
-            {
+            } else {
                 player.getInventory().destroyItem("Sell", i.getObjectId(), i.getCount(), player, merchant);
             }
         }
 
         // add to castle treasury
-        if (merchant != null)
-        {
+        if (merchant != null) {
             // Keep here same formula as in {@link ExBuySellList} to produce same result.
             final long profit = (long) (totalPrice * (1.0 - merchant.getCastleTaxRate(TaxType.SELL)));
             merchant.handleTaxPayment(totalPrice - profit);

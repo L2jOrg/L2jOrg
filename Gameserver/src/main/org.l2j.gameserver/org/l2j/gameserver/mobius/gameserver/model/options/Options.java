@@ -13,8 +13,7 @@ import java.util.List;
 /**
  * @author UnAfraid
  */
-public class Options
-{
+public class Options {
     private final int _id;
     private List<AbstractEffect> _effects = null;
     private List<SkillHolder> _activeSkill = null;
@@ -24,86 +23,67 @@ public class Options
     /**
      * @param id
      */
-    public Options(int id)
-    {
+    public Options(int id) {
         _id = id;
     }
 
-    public final int getId()
-    {
+    public final int getId() {
         return _id;
     }
 
-    public void addEffect(AbstractEffect effect)
-    {
-        if (_effects == null)
-        {
+    public void addEffect(AbstractEffect effect) {
+        if (_effects == null) {
             _effects = new ArrayList<>();
         }
         _effects.add(effect);
     }
 
-    public List<AbstractEffect> getEffects()
-    {
+    public List<AbstractEffect> getEffects() {
         return _effects;
     }
 
-    public boolean hasEffects()
-    {
+    public boolean hasEffects() {
         return _effects != null;
     }
 
-    public boolean hasActiveSkills()
-    {
+    public boolean hasActiveSkills() {
         return _activeSkill != null;
     }
 
-    public List<SkillHolder> getActiveSkills()
-    {
+    public List<SkillHolder> getActiveSkills() {
         return _activeSkill;
     }
 
-    public void addActiveSkill(SkillHolder holder)
-    {
-        if (_activeSkill == null)
-        {
+    public void addActiveSkill(SkillHolder holder) {
+        if (_activeSkill == null) {
             _activeSkill = new ArrayList<>();
         }
         _activeSkill.add(holder);
     }
 
-    public boolean hasPassiveSkills()
-    {
+    public boolean hasPassiveSkills() {
         return _passiveSkill != null;
     }
 
-    public List<SkillHolder> getPassiveSkills()
-    {
+    public List<SkillHolder> getPassiveSkills() {
         return _passiveSkill;
     }
 
-    public void addPassiveSkill(SkillHolder holder)
-    {
-        if (_passiveSkill == null)
-        {
+    public void addPassiveSkill(SkillHolder holder) {
+        if (_passiveSkill == null) {
             _passiveSkill = new ArrayList<>();
         }
         _passiveSkill.add(holder);
     }
 
-    public boolean hasActivationSkills()
-    {
+    public boolean hasActivationSkills() {
         return _activationSkills != null;
     }
 
-    public boolean hasActivationSkills(OptionsSkillType type)
-    {
-        if (_activationSkills != null)
-        {
-            for (OptionsSkillHolder holder : _activationSkills)
-            {
-                if (holder.getSkillType() == type)
-                {
+    public boolean hasActivationSkills(OptionsSkillType type) {
+        if (_activationSkills != null) {
+            for (OptionsSkillHolder holder : _activationSkills) {
+                if (holder.getSkillType() == type) {
                     return true;
                 }
             }
@@ -111,20 +91,15 @@ public class Options
         return false;
     }
 
-    public List<OptionsSkillHolder> getActivationsSkills()
-    {
+    public List<OptionsSkillHolder> getActivationsSkills() {
         return _activationSkills;
     }
 
-    public List<OptionsSkillHolder> getActivationsSkills(OptionsSkillType type)
-    {
+    public List<OptionsSkillHolder> getActivationsSkills(OptionsSkillType type) {
         List<OptionsSkillHolder> temp = new ArrayList<>();
-        if (_activationSkills != null)
-        {
-            for (OptionsSkillHolder holder : _activationSkills)
-            {
-                if (holder.getSkillType() == type)
-                {
+        if (_activationSkills != null) {
+            for (OptionsSkillHolder holder : _activationSkills) {
+                if (holder.getSkillType() == type) {
                     temp.add(holder);
                 }
             }
@@ -132,63 +107,46 @@ public class Options
         return temp;
     }
 
-    public void addActivationSkill(OptionsSkillHolder holder)
-    {
-        if (_activationSkills == null)
-        {
+    public void addActivationSkill(OptionsSkillHolder holder) {
+        if (_activationSkills == null) {
             _activationSkills = new ArrayList<>();
         }
         _activationSkills.add(holder);
     }
 
-    public void apply(L2PcInstance player)
-    {
-        if (hasEffects())
-        {
+    public void apply(L2PcInstance player) {
+        if (hasEffects()) {
             final BuffInfo info = new BuffInfo(player, player, null, true, null, this);
-            for (AbstractEffect effect : _effects)
-            {
-                if (effect.isInstant())
-                {
-                    if (effect.calcSuccess(info.getEffector(), info.getEffected(), info.getSkill()))
-                    {
+            for (AbstractEffect effect : _effects) {
+                if (effect.isInstant()) {
+                    if (effect.calcSuccess(info.getEffector(), info.getEffected(), info.getSkill())) {
                         effect.instant(info.getEffector(), info.getEffected(), info.getSkill(), info.getItem());
                     }
-                }
-                else
-                {
+                } else {
                     effect.continuousInstant(info.getEffector(), info.getEffected(), info.getSkill(), info.getItem());
                     effect.pump(player, info.getSkill());
 
-                    if (effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()))
-                    {
+                    if (effect.canStart(info.getEffector(), info.getEffected(), info.getSkill())) {
                         info.addEffect(effect);
                     }
                 }
             }
-            if (!info.getEffects().isEmpty())
-            {
+            if (!info.getEffects().isEmpty()) {
                 player.getEffectList().add(info);
             }
         }
-        if (hasActiveSkills())
-        {
-            for (SkillHolder holder : _activeSkill)
-            {
+        if (hasActiveSkills()) {
+            for (SkillHolder holder : _activeSkill) {
                 addSkill(player, holder.getSkill());
             }
         }
-        if (hasPassiveSkills())
-        {
-            for (SkillHolder holder : _passiveSkill)
-            {
+        if (hasPassiveSkills()) {
+            for (SkillHolder holder : _passiveSkill) {
                 addSkill(player, holder.getSkill());
             }
         }
-        if (hasActivationSkills())
-        {
-            for (OptionsSkillHolder holder : _activationSkills)
-            {
+        if (hasActivationSkills()) {
+            for (OptionsSkillHolder holder : _activationSkills) {
                 player.addTriggerSkill(holder);
             }
         }
@@ -197,36 +155,26 @@ public class Options
         player.sendSkillList();
     }
 
-    public void remove(L2PcInstance player)
-    {
-        if (hasEffects())
-        {
-            for (BuffInfo info : player.getEffectList().getOptions())
-            {
-                if (info.getOption() == this)
-                {
+    public void remove(L2PcInstance player) {
+        if (hasEffects()) {
+            for (BuffInfo info : player.getEffectList().getOptions()) {
+                if (info.getOption() == this) {
                     player.getEffectList().remove(info, false, true, true);
                 }
             }
         }
-        if (hasActiveSkills())
-        {
-            for (SkillHolder holder : _activeSkill)
-            {
+        if (hasActiveSkills()) {
+            for (SkillHolder holder : _activeSkill) {
                 player.removeSkill(holder.getSkill(), false, false);
             }
         }
-        if (hasPassiveSkills())
-        {
-            for (SkillHolder holder : _passiveSkill)
-            {
+        if (hasPassiveSkills()) {
+            for (SkillHolder holder : _passiveSkill) {
                 player.removeSkill(holder.getSkill(), false, true);
             }
         }
-        if (hasActivationSkills())
-        {
-            for (OptionsSkillHolder holder : _activationSkills)
-            {
+        if (hasActivationSkills()) {
+            for (OptionsSkillHolder holder : _activationSkills) {
                 player.removeTriggerSkill(holder);
             }
         }
@@ -235,24 +183,20 @@ public class Options
         player.sendSkillList();
     }
 
-    private void addSkill(L2PcInstance player, Skill skill)
-    {
+    private void addSkill(L2PcInstance player, Skill skill) {
         boolean updateTimeStamp = false;
 
         player.addSkill(skill, false);
 
-        if (skill.isActive())
-        {
+        if (skill.isActive()) {
             final long remainingTime = player.getSkillRemainingReuseTime(skill.getReuseHashCode());
-            if (remainingTime > 0)
-            {
+            if (remainingTime > 0) {
                 player.addTimeStamp(skill, remainingTime);
                 player.disableSkill(skill, remainingTime);
             }
             updateTimeStamp = true;
         }
-        if (updateTimeStamp)
-        {
+        if (updateTimeStamp) {
             player.sendPacket(new SkillCoolTime(player));
         }
     }

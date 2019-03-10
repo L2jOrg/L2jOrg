@@ -18,61 +18,47 @@ import java.nio.ByteBuffer;
  * <li>d: Unknown</li>
  * </ul>
  * </p>
+ *
  * @author -Wooden-, TempyIncursion
  */
-public final class RequestPetitionCancel extends IClientIncomingPacket
-{
-	
-	// private int _unknown;
-	
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
-		// _unknown = packet.getInt(); This is pretty much a trigger packet.
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		if (PetitionManager.getInstance().isPlayerInConsultation(activeChar))
-		{
-			if (activeChar.isGM())
-			{
-				PetitionManager.getInstance().endActivePetition(activeChar);
-			}
-			else
-			{
-				activeChar.sendPacket(SystemMessageId.YOUR_PETITION_IS_BEING_PROCESSED);
-			}
-		}
-		else if (PetitionManager.getInstance().isPlayerPetitionPending(activeChar))
-		{
-			if (PetitionManager.getInstance().cancelActivePetition(activeChar))
-			{
-				final int numRemaining = Config.MAX_PETITIONS_PER_PLAYER - PetitionManager.getInstance().getPlayerTotalPetitionCount(activeChar);
-				
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PETITION_WAS_CANCELED_YOU_MAY_SUBMIT_S1_MORE_PETITION_S_TODAY);
-				sm.addString(String.valueOf(numRemaining));
-				activeChar.sendPacket(sm);
-				
-				// Notify all GMs that the player's pending petition has been cancelled.
-				final String msgContent = activeChar.getName() + " has canceled a pending petition.";
-				AdminData.getInstance().broadcastToGMs(new CreatureSay(activeChar.getObjectId(), ChatType.HERO_VOICE, "Petition System", msgContent));
-			}
-			else
-			{
-				activeChar.sendPacket(SystemMessageId.FAILED_TO_CANCEL_PETITION_PLEASE_TRY_AGAIN_LATER);
-			}
-		}
-		else
-		{
-			activeChar.sendPacket(SystemMessageId.YOU_HAVE_NOT_SUBMITTED_A_PETITION);
-		}
-	}
+public final class RequestPetitionCancel extends IClientIncomingPacket {
+
+    // private int _unknown;
+
+    @Override
+    public void readImpl(ByteBuffer packet) {
+        // _unknown = packet.getInt(); This is pretty much a trigger packet.
+    }
+
+    @Override
+    public void runImpl() {
+        final L2PcInstance activeChar = client.getActiveChar();
+        if (activeChar == null) {
+            return;
+        }
+
+        if (PetitionManager.getInstance().isPlayerInConsultation(activeChar)) {
+            if (activeChar.isGM()) {
+                PetitionManager.getInstance().endActivePetition(activeChar);
+            } else {
+                activeChar.sendPacket(SystemMessageId.YOUR_PETITION_IS_BEING_PROCESSED);
+            }
+        } else if (PetitionManager.getInstance().isPlayerPetitionPending(activeChar)) {
+            if (PetitionManager.getInstance().cancelActivePetition(activeChar)) {
+                final int numRemaining = Config.MAX_PETITIONS_PER_PLAYER - PetitionManager.getInstance().getPlayerTotalPetitionCount(activeChar);
+
+                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PETITION_WAS_CANCELED_YOU_MAY_SUBMIT_S1_MORE_PETITION_S_TODAY);
+                sm.addString(String.valueOf(numRemaining));
+                activeChar.sendPacket(sm);
+
+                // Notify all GMs that the player's pending petition has been cancelled.
+                final String msgContent = activeChar.getName() + " has canceled a pending petition.";
+                AdminData.getInstance().broadcastToGMs(new CreatureSay(activeChar.getObjectId(), ChatType.HERO_VOICE, "Petition System", msgContent));
+            } else {
+                activeChar.sendPacket(SystemMessageId.FAILED_TO_CANCEL_PETITION_PLEASE_TRY_AGAIN_LATER);
+            }
+        } else {
+            activeChar.sendPacket(SystemMessageId.YOU_HAVE_NOT_SUBMITTED_A_PETITION);
+        }
+    }
 }

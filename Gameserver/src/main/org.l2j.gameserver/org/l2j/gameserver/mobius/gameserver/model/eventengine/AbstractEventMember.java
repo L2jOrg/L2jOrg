@@ -7,80 +7,65 @@ import org.l2j.gameserver.mobius.gameserver.network.serverpackets.IClientOutgoin
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author UnAfraid
  * @param <T>
+ * @author UnAfraid
  */
-public abstract class AbstractEventMember<T extends AbstractEvent<?>>
-{
+public abstract class AbstractEventMember<T extends AbstractEvent<?>> {
     private final int _objectId;
     private final T _event;
     private final AtomicInteger _score = new AtomicInteger();
 
-    public AbstractEventMember(L2PcInstance player, T event)
-    {
+    public AbstractEventMember(L2PcInstance player, T event) {
         _objectId = player.getObjectId();
         _event = event;
     }
 
-    public final int getObjectId()
-    {
+    public final int getObjectId() {
         return _objectId;
     }
 
-    public L2PcInstance getPlayer()
-    {
+    public L2PcInstance getPlayer() {
         return L2World.getInstance().getPlayer(_objectId);
     }
 
-    public void sendPacket(IClientOutgoingPacket... packets)
-    {
+    public void sendPacket(IClientOutgoingPacket... packets) {
         final L2PcInstance player = getPlayer();
-        if (player != null)
-        {
-            for (IClientOutgoingPacket packet : packets)
-            {
+        if (player != null) {
+            for (IClientOutgoingPacket packet : packets) {
                 player.sendPacket(packet);
             }
         }
     }
 
-    public int getClassId()
-    {
+    public int getClassId() {
         final L2PcInstance player = getPlayer();
-        if (player != null)
-        {
+        if (player != null) {
             return player.getClassId().getId();
         }
         return 0;
     }
 
-    public void setScore(int score)
-    {
-        _score.set(score);
-    }
-
-    public int getScore()
-    {
+    public int getScore() {
         return _score.get();
     }
 
-    public int incrementScore()
-    {
+    public void setScore(int score) {
+        _score.set(score);
+    }
+
+    public int incrementScore() {
         return _score.incrementAndGet();
     }
 
-    public int decrementScore()
-    {
+    public int decrementScore() {
         return _score.decrementAndGet();
     }
 
-    public int addScore(int score)
-    {
+    public int addScore(int score) {
         return _score.addAndGet(score);
     }
 
-    public final T getEvent()
-    {
+    public final T getEvent() {
         return _event;
     }
 }

@@ -2,10 +2,12 @@ package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.mobius.gameserver.model.L2Object;
 import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
-public class MoveToPawn implements IClientOutgoingPacket
-{
+import java.nio.ByteBuffer;
+
+public class MoveToPawn extends IClientOutgoingPacket {
     private final int _charObjId;
     private final int _targetId;
     private final int _distance;
@@ -16,8 +18,7 @@ public class MoveToPawn implements IClientOutgoingPacket
     private final int _ty;
     private final int _tz;
 
-    public MoveToPawn(L2Character cha, L2Object target, int distance)
-    {
+    public MoveToPawn(L2Character cha, L2Object target, int distance) {
         _charObjId = cha.getObjectId();
         _targetId = target.getObjectId();
         _distance = distance;
@@ -30,20 +31,18 @@ public class MoveToPawn implements IClientOutgoingPacket
     }
 
     @Override
-    public boolean write(PacketWriter packet)
-    {
+    public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.MOVE_TO_PAWN.writeId(packet);
 
-        packet.writeD(_charObjId);
-        packet.writeD(_targetId);
-        packet.writeD(_distance);
+        packet.putInt(_charObjId);
+        packet.putInt(_targetId);
+        packet.putInt(_distance);
 
-        packet.writeD(_x);
-        packet.writeD(_y);
-        packet.writeD(_z);
-        packet.writeD(_tx);
-        packet.writeD(_ty);
-        packet.writeD(_tz);
-        return true;
+        packet.putInt(_x);
+        packet.putInt(_y);
+        packet.putInt(_z);
+        packet.putInt(_tx);
+        packet.putInt(_ty);
+        packet.putInt(_tz);
     }
 }

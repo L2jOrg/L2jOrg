@@ -13,47 +13,37 @@ import static org.l2j.gameserver.mobius.gameserver.ai.CtrlIntention.AI_INTENTION
 /**
  * @author Nik
  */
-public class RandomAnimationTask implements Runnable
-{
+public class RandomAnimationTask implements Runnable {
     private static final Logger LOGGER = Logger.getLogger(RandomAnimationTask.class.getName());
     private final L2Npc _npc;
     private boolean _stopTask;
 
-    public RandomAnimationTask(L2Npc npc)
-    {
+    public RandomAnimationTask(L2Npc npc) {
         _npc = npc;
     }
 
     @Override
-    public void run()
-    {
-        if (_stopTask)
-        {
+    public void run() {
+        if (_stopTask) {
             return;
         }
 
-        try
-        {
-            if (!_npc.isInActiveRegion())
-            {
+        try {
+            if (!_npc.isInActiveRegion()) {
                 return;
             }
 
             // Cancel further animation timers until intention is changed to ACTIVE again.
-            if (_npc.isAttackable() && (_npc.getAI().getIntention() != AI_INTENTION_ACTIVE))
-            {
+            if (_npc.isAttackable() && (_npc.getAI().getIntention() != AI_INTENTION_ACTIVE)) {
                 return;
             }
 
-            if (!_npc.isDead() && !_npc.hasBlockActions())
-            {
+            if (!_npc.isDead() && !_npc.hasBlockActions()) {
                 _npc.onRandomAnimation(Rnd.get(2, 3));
             }
 
             startRandomAnimationTimer();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             LOGGER.log(Level.SEVERE, "Execution of RandomAnimationTask has failed.", e);
         }
     }
@@ -61,10 +51,8 @@ public class RandomAnimationTask implements Runnable
     /**
      * Create a RandomAnimation Task that will be launched after the calculated delay.
      */
-    public void startRandomAnimationTimer()
-    {
-        if (!_npc.hasRandomAnimation() || _stopTask)
-        {
+    public void startRandomAnimationTimer() {
+        if (!_npc.hasRandomAnimation() || _stopTask) {
             return;
         }
 
@@ -81,8 +69,7 @@ public class RandomAnimationTask implements Runnable
     /**
      * Stops the task from continuing and blocks it from continuing ever again. You need to create new task if you want to start it again.
      */
-    public void stopRandomAnimationTimer()
-    {
+    public void stopRandomAnimationTimer() {
         _stopTask = true;
     }
 }

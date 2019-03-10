@@ -13,30 +13,25 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestExAddEnchantScrollItem extends IClientIncomingPacket
-{
+public class RequestExAddEnchantScrollItem extends IClientIncomingPacket {
     private int _scrollObjectId;
     private int _enchantObjectId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _scrollObjectId = packet.getInt();
         _enchantObjectId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final EnchantItemRequest request = activeChar.getRequest(EnchantItemRequest.class);
-        if ((request == null) || request.isProcessing())
-        {
+        if ((request == null) || request.isProcessing()) {
             return;
         }
 
@@ -45,8 +40,7 @@ public class RequestExAddEnchantScrollItem extends IClientIncomingPacket
 
         final L2ItemInstance item = request.getEnchantingItem();
         final L2ItemInstance scroll = request.getEnchantingScroll();
-        if ((item == null) || (scroll == null))
-        {
+        if ((item == null) || (scroll == null)) {
             // message may be custom
             activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
             activeChar.sendPacket(new ExPutEnchantScrollItemResult(0));
@@ -56,8 +50,7 @@ public class RequestExAddEnchantScrollItem extends IClientIncomingPacket
         }
 
         final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
-        if ((scrollTemplate == null))
-        {
+        if ((scrollTemplate == null)) {
             // message may be custom
             activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
             activeChar.sendPacket(new ExPutEnchantScrollItemResult(0));

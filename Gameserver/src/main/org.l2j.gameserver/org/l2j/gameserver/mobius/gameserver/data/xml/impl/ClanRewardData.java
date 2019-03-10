@@ -21,40 +21,41 @@ import java.util.logging.Logger;
 /**
  * @author UnAfraid
  */
-public class ClanRewardData implements IGameXmlReader
-{
+public class ClanRewardData implements IGameXmlReader {
     private static final Logger LOGGER = Logger.getLogger(ClanRewardData.class.getName());
     private final Map<ClanRewardType, List<ClanRewardBonus>> _clanRewards = new ConcurrentHashMap<>();
 
-    protected ClanRewardData()
-    {
+    protected ClanRewardData() {
         load();
     }
 
+    /**
+     * Gets the single instance of ClanRewardData.
+     *
+     * @return single instance of ClanRewardData
+     */
+    public static ClanRewardData getInstance() {
+        return SingletonHolder.INSTANCE;
+    }
+
     @Override
-    public void load()
-    {
+    public void load() {
         parseDatapackFile("config/ClanReward.xml");
-        for (ClanRewardType type : ClanRewardType.values())
-        {
+        for (ClanRewardType type : ClanRewardType.values()) {
             LOGGER.info(getClass().getSimpleName() + ": Loaded: " + (_clanRewards.containsKey(type) ? _clanRewards.get(type).size() : 0) + " rewards for " + type);
         }
     }
 
     @Override
-    public void parseDocument(Document doc, File f)
-    {
+    public void parseDocument(Document doc, File f) {
         forEach(doc.getFirstChild(), IXmlReader::isNode, listNode ->
         {
-            switch (listNode.getNodeName())
-            {
-                case "membersOnline":
-                {
+            switch (listNode.getNodeName()) {
+                case "membersOnline": {
                     parseMembersOnline(listNode);
                     break;
                 }
-                case "huntingBonus":
-                {
+                case "huntingBonus": {
                     parseHuntingBonus(listNode);
                     break;
                 }
@@ -62,20 +63,17 @@ public class ClanRewardData implements IGameXmlReader
         });
     }
 
-    private void parseMembersOnline(Node node)
-    {
+    private void parseMembersOnline(Node node) {
         forEach(node, IXmlReader::isNode, memberNode ->
         {
-            if ("players".equalsIgnoreCase(memberNode.getNodeName()))
-            {
+            if ("players".equalsIgnoreCase(memberNode.getNodeName())) {
                 final NamedNodeMap attrs = memberNode.getAttributes();
                 final int requiredAmount = parseInteger(attrs, "size");
                 final int level = parseInteger(attrs, "level");
                 final ClanRewardBonus bonus = new ClanRewardBonus(ClanRewardType.MEMBERS_ONLINE, level, requiredAmount);
                 forEach(memberNode, IXmlReader::isNode, skillNode ->
                 {
-                    if ("skill".equalsIgnoreCase(skillNode.getNodeName()))
-                    {
+                    if ("skill".equalsIgnoreCase(skillNode.getNodeName())) {
                         final NamedNodeMap skillAttr = skillNode.getAttributes();
                         final int skillId = parseInteger(skillAttr, "id");
                         final int skillLevel = parseInteger(skillAttr, "level");
@@ -87,20 +85,17 @@ public class ClanRewardData implements IGameXmlReader
         });
     }
 
-    private void parseHuntingBonus(Node node)
-    {
+    private void parseHuntingBonus(Node node) {
         forEach(node, IXmlReader::isNode, memberNode ->
         {
-            if ("hunting".equalsIgnoreCase(memberNode.getNodeName()))
-            {
+            if ("hunting".equalsIgnoreCase(memberNode.getNodeName())) {
                 final NamedNodeMap attrs = memberNode.getAttributes();
                 final int requiredAmount = parseInteger(attrs, "points");
                 final int level = parseInteger(attrs, "level");
                 final ClanRewardBonus bonus = new ClanRewardBonus(ClanRewardType.HUNTING_MONSTERS, level, requiredAmount);
                 forEach(memberNode, IXmlReader::isNode, itemsNode ->
                 {
-                    if ("item".equalsIgnoreCase(itemsNode.getNodeName()))
-                    {
+                    if ("item".equalsIgnoreCase(itemsNode.getNodeName())) {
                         final NamedNodeMap itemsAttr = itemsNode.getAttributes();
                         final int id = parseInteger(itemsAttr, "id");
                         final int count = parseInteger(itemsAttr, "count");
@@ -112,40 +107,25 @@ public class ClanRewardData implements IGameXmlReader
         });
     }
 
-    public List<ClanRewardBonus> getClanRewardBonuses(ClanRewardType type)
-    {
+    public List<ClanRewardBonus> getClanRewardBonuses(ClanRewardType type) {
         return _clanRewards.get(type);
     }
 
-    public ClanRewardBonus getHighestReward(ClanRewardType type)
-    {
+    public ClanRewardBonus getHighestReward(ClanRewardType type) {
         ClanRewardBonus selectedBonus = null;
-        for (ClanRewardBonus currentBonus : _clanRewards.get(type))
-        {
-            if ((selectedBonus == null) || (selectedBonus.getLevel() < currentBonus.getLevel()))
-            {
+        for (ClanRewardBonus currentBonus : _clanRewards.get(type)) {
+            if ((selectedBonus == null) || (selectedBonus.getLevel() < currentBonus.getLevel())) {
                 selectedBonus = currentBonus;
             }
         }
         return selectedBonus;
     }
 
-    public Collection<List<ClanRewardBonus>> getClanRewardBonuses()
-    {
+    public Collection<List<ClanRewardBonus>> getClanRewardBonuses() {
         return _clanRewards.values();
     }
 
-    /**
-     * Gets the single instance of ClanRewardData.
-     * @return single instance of ClanRewardData
-     */
-    public static ClanRewardData getInstance()
-    {
-        return SingletonHolder.INSTANCE;
-    }
-
-    private static class SingletonHolder
-    {
+    private static class SingletonHolder {
         protected static final ClanRewardData INSTANCE = new ClanRewardData();
     }
 }

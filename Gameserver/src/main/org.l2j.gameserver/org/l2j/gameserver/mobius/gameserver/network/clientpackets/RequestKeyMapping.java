@@ -9,25 +9,20 @@ import java.nio.ByteBuffer;
 /**
  * @author KenM / mrTJO
  */
-public class RequestKeyMapping extends IClientIncomingPacket
-{
+public class RequestKeyMapping extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
-        if (Config.STORE_UI_SETTINGS)
-        {
+        if (Config.STORE_UI_SETTINGS) {
             client.sendPacket(new ExUISetting(activeChar));
         }
     }

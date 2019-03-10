@@ -24,18 +24,17 @@ import java.nio.ByteBuffer;
 
 /**
  * This class ...
+ *
  * @version $Revision: 1.1.2.1.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class CannotMoveAnymore extends IClientIncomingPacket
-{
+public final class CannotMoveAnymore extends IClientIncomingPacket {
     private int _x;
     private int _y;
     private int _z;
     private int _heading;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _x = packet.getInt();
         _y = packet.getInt();
         _z = packet.getInt();
@@ -43,16 +42,13 @@ public final class CannotMoveAnymore extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
-        if (player.getAI() != null)
-        {
+        if (player.getAI() != null) {
             player.getAI().notifyEvent(CtrlEvent.EVT_ARRIVED_BLOCKED, new Location(_x, _y, _z, _heading));
         }
     }

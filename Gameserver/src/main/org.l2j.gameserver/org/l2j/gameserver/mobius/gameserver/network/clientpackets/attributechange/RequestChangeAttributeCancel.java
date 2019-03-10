@@ -9,20 +9,17 @@ import java.nio.ByteBuffer;
 /**
  * @author Mobius
  */
-public class RequestChangeAttributeCancel extends IClientIncomingPacket
-{
-	@Override
-	public void readImpl(ByteBuffer packet) {
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		activeChar.sendPacket(ExChangeAttributeFail.STATIC);
-	}
+public class RequestChangeAttributeCancel extends IClientIncomingPacket {
+    @Override
+    public void readImpl(ByteBuffer packet) {
+    }
+
+    @Override
+    public void runImpl() {
+        final L2PcInstance activeChar = client.getActiveChar();
+        if (activeChar == null) {
+            return;
+        }
+        activeChar.sendPacket(ExChangeAttributeFail.STATIC);
+    }
 }

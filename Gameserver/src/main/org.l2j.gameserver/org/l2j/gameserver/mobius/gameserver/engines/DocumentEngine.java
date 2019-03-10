@@ -13,59 +13,50 @@ import java.util.logging.Logger;
 /**
  * @author mkizub
  */
-public class DocumentEngine
-{
-	private static final Logger LOGGER = Logger.getLogger(DocumentEngine.class.getName());
-	
-	private final List<File> _itemFiles = new LinkedList<>();
-	
-	public static DocumentEngine getInstance()
-	{
-		return SingletonHolder._instance;
-	}
-	
-	protected DocumentEngine()
-	{
-		hashFiles("data/stats/items", _itemFiles);
-		if (Config.CUSTOM_ITEMS_LOAD)
-		{
-			hashFiles("data/stats/items/custom", _itemFiles);
-		}
-	}
-	
-	private void hashFiles(String dirname, List<File> hash)
-	{
-		final File dir = new File(Config.DATAPACK_ROOT, dirname);
-		if (!dir.exists())
-		{
-			LOGGER.warning("Dir " + dir.getAbsolutePath() + " not exists");
-			return;
-		}
-		final File[] files = dir.listFiles(new XMLFilter());
-		for (File f : files)
-		{
-			hash.add(f);
-		}
-	}
-	
-	/**
-	 * Return created items
-	 * @return List of {@link L2Item}
-	 */
-	public List<L2Item> loadItems()
-	{
-		final List<L2Item> list = new LinkedList<>();
-		for (File f : _itemFiles)
-		{
-			final DocumentItem document = new DocumentItem(f);
-			document.parse();
-			list.addAll(document.getItemList());
-		}
-		return list;
-	}
-	
-	private static class SingletonHolder
-	{
-		protected static final DocumentEngine _instance = new DocumentEngine();
-	}
+public class DocumentEngine {
+    private static final Logger LOGGER = Logger.getLogger(DocumentEngine.class.getName());
+
+    private final List<File> _itemFiles = new LinkedList<>();
+
+    protected DocumentEngine() {
+        hashFiles("data/stats/items", _itemFiles);
+        if (Config.CUSTOM_ITEMS_LOAD) {
+            hashFiles("data/stats/items/custom", _itemFiles);
+        }
+    }
+
+    public static DocumentEngine getInstance() {
+        return SingletonHolder._instance;
+    }
+
+    private void hashFiles(String dirname, List<File> hash) {
+        final File dir = new File(Config.DATAPACK_ROOT, dirname);
+        if (!dir.exists()) {
+            LOGGER.warning("Dir " + dir.getAbsolutePath() + " not exists");
+            return;
+        }
+        final File[] files = dir.listFiles(new XMLFilter());
+        for (File f : files) {
+            hash.add(f);
+        }
+    }
+
+    /**
+     * Return created items
+     *
+     * @return List of {@link L2Item}
+     */
+    public List<L2Item> loadItems() {
+        final List<L2Item> list = new LinkedList<>();
+        for (File f : _itemFiles) {
+            final DocumentItem document = new DocumentItem(f);
+            document.parse();
+            list.addAll(document.getItemList());
+        }
+        return list;
+    }
+
+    private static class SingletonHolder {
+        protected static final DocumentEngine _instance = new DocumentEngine();
+    }
 }

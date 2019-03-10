@@ -24,28 +24,31 @@ import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
  * and required network messages are sent to client's, i.e. if we have incoming event that character's movement was disabled, it causes changing if its behavior,<br>
  * and if client's state for the character is "moving" we send messages to clients to stop the avatar/mob.
  */
-public interface Ctrl
-{
+public interface Ctrl {
     /**
      * Gets the actor.
+     *
      * @return the actor
      */
     L2Character getActor();
 
     /**
      * Gets the intention.
+     *
      * @return the intention
      */
     CtrlIntention getIntention();
 
     /**
      * Set general state/intention for AI, with optional data.
+     *
      * @param intention the new intention
      */
     void setIntention(CtrlIntention intention);
 
     /**
      * Sets the intention.
+     *
      * @param intention the intention
      * @param args
      */
@@ -53,20 +56,23 @@ public interface Ctrl
 
     /**
      * Event, that notifies about previous step result, or user command, that does not change current general intention.
+     *
      * @param evt the event
      */
     void notifyEvent(CtrlEvent evt);
 
     /**
      * Notify an event.
-     * @param evt the event
+     *
+     * @param evt  the event
      * @param arg0 the arg0
      */
     void notifyEvent(CtrlEvent evt, Object arg0);
 
     /**
      * Notify an event.
-     * @param evt the event
+     *
+     * @param evt  the event
      * @param arg0 the arg0
      * @param arg1 the arg1
      */

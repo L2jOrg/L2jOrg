@@ -9,23 +9,19 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestFriendDetailInfo extends IClientIncomingPacket
-{
-	private String _name;
-	
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
-		_name = readString(packet);
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance player = client.getActiveChar();
-		if (player != null)
-		{
-			client.sendPacket(new ExFriendDetailInfo(player, _name));
-		}
-	}
+public class RequestFriendDetailInfo extends IClientIncomingPacket {
+    private String _name;
+
+    @Override
+    public void readImpl(ByteBuffer packet) {
+        _name = readString(packet);
+    }
+
+    @Override
+    public void runImpl() {
+        final L2PcInstance player = client.getActiveChar();
+        if (player != null) {
+            client.sendPacket(new ExFriendDetailInfo(player, _name));
+        }
+    }
 }

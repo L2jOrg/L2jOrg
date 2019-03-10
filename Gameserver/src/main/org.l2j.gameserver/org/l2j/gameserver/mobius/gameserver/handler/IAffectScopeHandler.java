@@ -10,8 +10,7 @@ import java.util.function.Consumer;
 /**
  * @author Nik
  */
-public interface IAffectScopeHandler
-{
+public interface IAffectScopeHandler {
     void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action);
 
     Enum<AffectScope> getAffectScopeType();

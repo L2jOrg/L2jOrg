@@ -8,20 +8,16 @@ import java.nio.ByteBuffer;
 /**
  * @author Gnacik
  */
-public final class RequestExitPartyMatchingWaitingRoom extends IClientIncomingPacket
-{
+public final class RequestExitPartyMatchingWaitingRoom extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 

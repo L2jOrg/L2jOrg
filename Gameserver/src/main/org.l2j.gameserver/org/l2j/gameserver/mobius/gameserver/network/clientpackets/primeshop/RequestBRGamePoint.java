@@ -9,19 +9,15 @@ import java.nio.ByteBuffer;
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRGamePoint extends IClientIncomingPacket
-{
+public final class RequestBRGamePoint extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player != null)
-        {
+        if (player != null) {
             client.sendPacket(new ExBRGamePoint(player));
         }
     }

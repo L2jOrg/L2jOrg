@@ -11,8 +11,7 @@ import java.util.List;
 /**
  * @author Gnacik
  */
-public class RequestListPartyMatchingWaitingRoom extends IClientIncomingPacket
-{
+public class RequestListPartyMatchingWaitingRoom extends IClientIncomingPacket {
     private int _page;
     private int _minLevel;
     private int _maxLevel;
@@ -20,33 +19,27 @@ public class RequestListPartyMatchingWaitingRoom extends IClientIncomingPacket
     private String _query;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _page = packet.getInt();
         _minLevel = packet.getInt();
         _maxLevel = packet.getInt();
         final int size = packet.getInt();
 
-        if ((size > 0) && (size < 128))
-        {
+        if ((size > 0) && (size < 128)) {
             _classId = new LinkedList<>();
-            for (int i = 0; i < size; i++)
-            {
+            for (int i = 0; i < size; i++) {
                 _classId.add(ClassId.getClassId(packet.getInt()));
             }
         }
-        if (packet.hasRemaining())
-        {
+        if (packet.hasRemaining()) {
             _query = readString(packet);
         }
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 

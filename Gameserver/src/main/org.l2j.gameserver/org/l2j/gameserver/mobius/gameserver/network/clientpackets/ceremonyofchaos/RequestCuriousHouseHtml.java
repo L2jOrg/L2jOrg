@@ -12,38 +12,30 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestCuriousHouseHtml extends IClientIncomingPacket
-{
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
-		// Nothing to read
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance player = client.getActiveChar();
-		if (player == null)
-		{
-			return;
-		}
-		
-		if (CeremonyOfChaosManager.getInstance().getState() != CeremonyOfChaosState.REGISTRATION)
-		{
-			return;
-		}
-		else if (CeremonyOfChaosManager.getInstance().isRegistered(player))
-		{
-			player.sendPacket(SystemMessageId.YOU_ARE_ON_THE_WAITING_LIST_FOR_THE_CEREMONY_OF_CHAOS);
-			return;
-		}
-		
-		if (CeremonyOfChaosManager.getInstance().canRegister(player, true))
-		{
-			final NpcHtmlMessage message = new NpcHtmlMessage(0);
-			message.setFile(player, "data/html/CeremonyOfChaos/invite.htm");
-			player.sendPacket(message);
-		}
-	}
+public class RequestCuriousHouseHtml extends IClientIncomingPacket {
+    @Override
+    public void readImpl(ByteBuffer packet) {
+        // Nothing to read
+    }
+
+    @Override
+    public void runImpl() {
+        final L2PcInstance player = client.getActiveChar();
+        if (player == null) {
+            return;
+        }
+
+        if (CeremonyOfChaosManager.getInstance().getState() != CeremonyOfChaosState.REGISTRATION) {
+            return;
+        } else if (CeremonyOfChaosManager.getInstance().isRegistered(player)) {
+            player.sendPacket(SystemMessageId.YOU_ARE_ON_THE_WAITING_LIST_FOR_THE_CEREMONY_OF_CHAOS);
+            return;
+        }
+
+        if (CeremonyOfChaosManager.getInstance().canRegister(player, true)) {
+            final NpcHtmlMessage message = new NpcHtmlMessage(0);
+            message.setFile(player, "data/html/CeremonyOfChaos/invite.htm");
+            player.sendPacket(message);
+        }
+    }
 }

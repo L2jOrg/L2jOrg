@@ -8,22 +8,18 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestShowBeautyList extends IClientIncomingPacket
-{
+public class RequestShowBeautyList extends IClientIncomingPacket {
     private int _type;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _type = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 

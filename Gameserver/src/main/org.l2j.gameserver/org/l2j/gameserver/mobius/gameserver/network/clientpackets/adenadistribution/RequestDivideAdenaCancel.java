@@ -12,27 +12,22 @@ import java.util.Objects;
 /**
  * @author Sdw
  */
-public class RequestDivideAdenaCancel extends IClientIncomingPacket
-{
+public class RequestDivideAdenaCancel extends IClientIncomingPacket {
     private boolean _cancel;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _cancel = packet.get() == 0;
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
-        if (_cancel)
-        {
+        if (_cancel) {
             final AdenaDistributionRequest request = player.getRequest(AdenaDistributionRequest.class);
             request.getPlayers().stream().filter(Objects::nonNull).forEach(p ->
             {

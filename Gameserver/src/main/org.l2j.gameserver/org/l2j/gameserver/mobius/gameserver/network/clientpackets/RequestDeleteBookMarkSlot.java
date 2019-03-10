@@ -9,8 +9,7 @@ import java.nio.ByteBuffer;
  * @author ShanSoft
  * @structure: chdd
  */
-public final class RequestDeleteBookMarkSlot extends IClientIncomingPacket
-{
+public final class RequestDeleteBookMarkSlot extends IClientIncomingPacket {
     private int _id;
 
     public RequestDeleteBookMarkSlot(L2GameClient client) {
@@ -18,17 +17,14 @@ public final class RequestDeleteBookMarkSlot extends IClientIncomingPacket
     }
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _id = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 

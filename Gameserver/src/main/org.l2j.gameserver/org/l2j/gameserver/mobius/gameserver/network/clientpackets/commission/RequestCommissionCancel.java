@@ -6,16 +6,15 @@ import java.nio.ByteBuffer;
 
 /**
  * This Packet doesn't seem to be doing anything.
+ *
  * @author NosBit
  */
-public class RequestCommissionCancel extends IClientIncomingPacket
-{
+public class RequestCommissionCancel extends IClientIncomingPacket {
     @Override
     public void readImpl(ByteBuffer packet) {
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
     }
 }

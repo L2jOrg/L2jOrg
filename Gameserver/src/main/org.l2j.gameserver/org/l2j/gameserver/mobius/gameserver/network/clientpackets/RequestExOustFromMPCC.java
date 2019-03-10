@@ -9,28 +9,24 @@ import java.nio.ByteBuffer;
 
 /**
  * D0 0F 00 5A 00 77 00 65 00 72 00 67 00 00 00
+ *
  * @author -Wooden-
  */
-public final class RequestExOustFromMPCC extends IClientIncomingPacket
-{
+public final class RequestExOustFromMPCC extends IClientIncomingPacket {
     private String _name;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _name = readString(packet);
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance target = L2World.getInstance().getPlayer(_name);
         final L2PcInstance activeChar = client.getActiveChar();
 
-        if ((target != null) && target.isInParty() && activeChar.isInParty() && activeChar.getParty().isInCommandChannel() && target.getParty().isInCommandChannel() && activeChar.getParty().getCommandChannel().getLeader().equals(activeChar) && activeChar.getParty().getCommandChannel().equals(target.getParty().getCommandChannel()))
-        {
-            if (activeChar.equals(target))
-            {
+        if ((target != null) && target.isInParty() && activeChar.isInParty() && activeChar.getParty().isInCommandChannel() && target.getParty().isInCommandChannel() && activeChar.getParty().getCommandChannel().getLeader().equals(activeChar) && activeChar.getParty().getCommandChannel().equals(target.getParty().getCommandChannel())) {
+            if (activeChar.equals(target)) {
                 return;
             }
 
@@ -40,15 +36,12 @@ public final class RequestExOustFromMPCC extends IClientIncomingPacket
             target.getParty().broadcastPacket(sm);
 
             // check if CC has not been canceled
-            if (activeChar.getParty().isInCommandChannel())
-            {
+            if (activeChar.getParty().isInCommandChannel()) {
                 sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_HAS_BEEN_DISMISSED_FROM_THE_COMMAND_CHANNEL);
                 sm.addString(target.getParty().getLeader().getName());
                 activeChar.getParty().getCommandChannel().broadcastPacket(sm);
             }
-        }
-        else
-        {
+        } else {
             activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
         }
     }

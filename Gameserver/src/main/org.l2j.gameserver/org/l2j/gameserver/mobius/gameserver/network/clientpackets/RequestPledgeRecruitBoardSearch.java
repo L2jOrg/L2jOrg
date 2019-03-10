@@ -9,8 +9,7 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestPledgeRecruitBoardSearch extends IClientIncomingPacket
-{
+public class RequestPledgeRecruitBoardSearch extends IClientIncomingPacket {
     private int _clanLevel;
     private int _karma;
     private int _type;
@@ -22,8 +21,7 @@ public class RequestPledgeRecruitBoardSearch extends IClientIncomingPacket
     private int _applicationType;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _clanLevel = packet.getInt();
         _karma = packet.getInt();
         _type = packet.getInt();
@@ -35,28 +33,20 @@ public class RequestPledgeRecruitBoardSearch extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
 
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
-        if (_query.isEmpty())
-        {
-            if ((_karma < 0) && (_clanLevel < 0))
-            {
+        if (_query.isEmpty()) {
+            if ((_karma < 0) && (_clanLevel < 0)) {
                 activeChar.sendPacket(new ExPledgeRecruitBoardSearch(ClanEntryManager.getInstance().getUnSortedClanList(), _page));
-            }
-            else
-            {
+            } else {
                 activeChar.sendPacket(new ExPledgeRecruitBoardSearch(ClanEntryManager.getInstance().getSortedClanList(_clanLevel, _karma, _sort, _descending), _page));
             }
-        }
-        else
-        {
+        } else {
             activeChar.sendPacket(new ExPledgeRecruitBoardSearch(ClanEntryManager.getInstance().getSortedClanListByName(_query.toLowerCase(), _type), _page));
         }
     }

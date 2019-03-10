@@ -7,16 +7,13 @@ import java.nio.ByteBuffer;
 /**
  * @author KenM
  */
-public class RequestAllFortressInfo extends IClientIncomingPacket
-{
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		client.sendPacket(ExShowFortressInfo.STATIC_PACKET);
-	}
+public class RequestAllFortressInfo extends IClientIncomingPacket {
+    @Override
+    public void readImpl(ByteBuffer packet) {
+    }
+
+    @Override
+    public void runImpl() {
+        client.sendPacket(ExShowFortressInfo.STATIC_PACKET);
+    }
 }

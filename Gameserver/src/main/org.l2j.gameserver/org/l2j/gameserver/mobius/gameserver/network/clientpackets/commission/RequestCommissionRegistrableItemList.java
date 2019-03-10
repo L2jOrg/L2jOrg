@@ -11,23 +11,19 @@ import java.nio.ByteBuffer;
 /**
  * @author NosBit
  */
-public class RequestCommissionRegistrableItemList extends IClientIncomingPacket
-{
+public class RequestCommissionRegistrableItemList extends IClientIncomingPacket {
     @Override
     public void readImpl(ByteBuffer packet) {
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
-        if (!CommissionManager.isPlayerAllowedToInteract(player))
-        {
+        if (!CommissionManager.isPlayerAllowedToInteract(player)) {
             client.sendPacket(ExCloseCommission.STATIC_PACKET);
             return;
         }

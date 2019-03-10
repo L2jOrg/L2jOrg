@@ -7,34 +7,29 @@ import java.nio.ByteBuffer;
 
 /**
  * Format: (ch)S S: Character Name
+ *
  * @author UnAfraid & mrTJO
  */
-public class RequestExDeleteContactFromContactList extends IClientIncomingPacket
-{
+public class RequestExDeleteContactFromContactList extends IClientIncomingPacket {
     private String _name;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _name = readString(packet);
     }
 
     @Override
-    public void runImpl()
-    {
-        if (!Config.ALLOW_MAIL)
-        {
+    public void runImpl() {
+        if (!Config.ALLOW_MAIL) {
             return;
         }
 
-        if (_name == null)
-        {
+        if (_name == null) {
             return;
         }
 
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 

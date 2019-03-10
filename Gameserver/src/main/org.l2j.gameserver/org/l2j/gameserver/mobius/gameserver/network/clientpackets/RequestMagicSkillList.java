@@ -10,32 +10,27 @@ import java.nio.ByteBuffer;
  * @author UnAfraid
  */
 @SuppressWarnings("unused")
-public class RequestMagicSkillList extends IClientIncomingPacket
-{
+public class RequestMagicSkillList extends IClientIncomingPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestMagicSkillList.class);
     private int _objectId;
     private int _charId;
     private int _unk;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _objectId = packet.getInt();
         _charId = packet.getInt();
         _unk = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
-        if (activeChar.getObjectId() != _objectId)
-        {
+        if (activeChar.getObjectId() != _objectId) {
             LOGGER.warn("Player: " + activeChar + " requested " + getClass().getSimpleName() + " with different object id: " + _objectId);
             return;
         }

@@ -7,17 +7,14 @@ import java.nio.ByteBuffer;
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRRecentProductList extends IClientIncomingPacket
-{
+public final class RequestBRRecentProductList extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         // L2PcInstance player = client.getActiveChar();
         // TODO: Implement it.
     }

@@ -9,33 +9,26 @@ import java.nio.ByteBuffer;
 /**
  * @author Mobius
  */
-public class RequestTargetActionMenu extends IClientIncomingPacket
-{
+public class RequestTargetActionMenu extends IClientIncomingPacket {
     private int _objectId;
     private int _type;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _objectId = packet.getInt();
         _type = packet.getShort(); // action?
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
-        if (_type == 1)
-        {
-            for (L2Object object : L2World.getInstance().getVisibleObjects(player, L2Object.class))
-            {
-                if (_objectId == object.getObjectId())
-                {
+        if (_type == 1) {
+            for (L2Object object : L2World.getInstance().getVisibleObjects(player, L2Object.class)) {
+                if (_objectId == object.getObjectId()) {
                     player.setTarget(object);
                     break;
                 }

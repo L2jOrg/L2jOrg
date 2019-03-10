@@ -28,35 +28,37 @@ import java.util.stream.Collectors;
 /**
  * @author UnAfraid
  */
-public class SpawnsData implements IGameXmlReader
-{
+public class SpawnsData implements IGameXmlReader {
     protected static final Logger LOGGER = Logger.getLogger(SpawnsData.class.getName());
 
     private final List<SpawnTemplate> _spawns = new LinkedList<>();
 
-    protected SpawnsData()
-    {
+    protected SpawnsData() {
         load();
     }
 
+    /**
+     * Gets the single instance of SpawnsData.
+     *
+     * @return single instance of SpawnsData
+     */
+    public static SpawnsData getInstance() {
+        return SingletonHolder._instance;
+    }
+
     @Override
-    public void load()
-    {
+    public void load() {
         parseDatapackDirectory("data/spawns", true);
         LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _spawns.stream().flatMap(c -> c.getGroups().stream()).flatMap(c -> c.getSpawns().stream()).count() + " spawns");
     }
 
     @Override
-    public void parseDocument(Document doc, File f)
-    {
+    public void parseDocument(Document doc, File f) {
         forEach(doc, "list", listNode -> forEach(listNode, "spawn", spawnNode ->
         {
-            try
-            {
+            try {
                 parseSpawn(spawnNode, f, _spawns);
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
                 LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while processing spawn in file: " + f.getAbsolutePath(), e);
             }
         }));
@@ -65,10 +67,8 @@ public class SpawnsData implements IGameXmlReader
     /**
      * Initializing all spawns
      */
-    public void init()
-    {
-        if (Config.ALT_DEV_NO_SPAWNS)
-        {
+    public void init() {
+        if (Config.ALT_DEV_NO_SPAWNS) {
             return;
         }
 
@@ -84,64 +84,48 @@ public class SpawnsData implements IGameXmlReader
     /**
      * Removing all spawns
      */
-    public void despawnAll()
-    {
+    public void despawnAll() {
         LOGGER.info(getClass().getSimpleName() + ": Removing all spawns...");
         _spawns.forEach(SpawnTemplate::despawnAll);
         LOGGER.info(getClass().getSimpleName() + ": All spawns has been removed!");
     }
 
-    public List<SpawnTemplate> getSpawns()
-    {
+    public List<SpawnTemplate> getSpawns() {
         return _spawns;
     }
 
-    public List<SpawnTemplate> getSpawns(Predicate<SpawnTemplate> condition)
-    {
+    public List<SpawnTemplate> getSpawns(Predicate<SpawnTemplate> condition) {
         return _spawns.stream().filter(condition).collect(Collectors.toList());
     }
 
-    public List<SpawnGroup> getGroupsByName(String groupName)
-    {
+    public List<SpawnGroup> getGroupsByName(String groupName) {
         return _spawns.stream().filter(template -> (template.getName() != null) && groupName.equalsIgnoreCase(template.getName())).flatMap(template -> template.getGroups().stream()).collect(Collectors.toList());
     }
 
-    public List<NpcSpawnTemplate> getNpcSpawns(Predicate<NpcSpawnTemplate> condition)
-    {
+    public List<NpcSpawnTemplate> getNpcSpawns(Predicate<NpcSpawnTemplate> condition) {
         return _spawns.stream().flatMap(template -> template.getGroups().stream()).flatMap(group -> group.getSpawns().stream()).filter(condition).collect(Collectors.toList());
     }
 
-    public void parseSpawn(Node spawnsNode, File file, List<SpawnTemplate> spawns)
-    {
+    public void parseSpawn(Node spawnsNode, File file, List<SpawnTemplate> spawns) {
         final SpawnTemplate spawnTemplate = new SpawnTemplate(new StatsSet(parseAttributes(spawnsNode)), file);
         SpawnGroup defaultGroup = null;
-        for (Node innerNode = spawnsNode.getFirstChild(); innerNode != null; innerNode = innerNode.getNextSibling())
-        {
-            if ("territories".equalsIgnoreCase(innerNode.getNodeName()))
-            {
+        for (Node innerNode = spawnsNode.getFirstChild(); innerNode != null; innerNode = innerNode.getNextSibling()) {
+            if ("territories".equalsIgnoreCase(innerNode.getNodeName())) {
                 parseTerritories(innerNode, spawnTemplate.getFile(), spawnTemplate);
-            }
-            else if ("group".equalsIgnoreCase(innerNode.getNodeName()))
-            {
+            } else if ("group".equalsIgnoreCase(innerNode.getNodeName())) {
                 parseGroup(innerNode, spawnTemplate);
-            }
-            else if ("npc".equalsIgnoreCase(innerNode.getNodeName()))
-            {
-                if (defaultGroup == null)
-                {
+            } else if ("npc".equalsIgnoreCase(innerNode.getNodeName())) {
+                if (defaultGroup == null) {
                     defaultGroup = new SpawnGroup(StatsSet.EMPTY_STATSET);
                 }
                 parseNpc(innerNode, spawnTemplate, defaultGroup);
-            }
-            else if ("parameters".equalsIgnoreCase(innerNode.getNodeName()))
-            {
+            } else if ("parameters".equalsIgnoreCase(innerNode.getNodeName())) {
                 parseParameters(spawnsNode, spawnTemplate);
             }
         }
 
         // One static group for all npcs outside group scope
-        if (defaultGroup != null)
-        {
+        if (defaultGroup != null) {
             spawnTemplate.addGroup(defaultGroup);
         }
         spawns.add(spawnTemplate);
@@ -152,8 +136,7 @@ public class SpawnsData implements IGameXmlReader
      * @param file
      * @param spawnTemplate
      */
-    private void parseTerritories(Node innerNode, File file, ITerritorized spawnTemplate)
-    {
+    private void parseTerritories(Node innerNode, File file, ITerritorized spawnTemplate) {
         forEach(innerNode, IXmlReader::isNode, territoryNode ->
         {
             final String name = parseString(territoryNode.getAttributes(), "name", file.getName() + "_" + (spawnTemplate.getTerritories().size() + 1));
@@ -170,15 +153,12 @@ public class SpawnsData implements IGameXmlReader
             final int[] x = xNodes.stream().mapToInt(Integer::valueOf).toArray();
             final int[] y = yNodes.stream().mapToInt(Integer::valueOf).toArray();
 
-            switch (territoryNode.getNodeName())
-            {
-                case "territory":
-                {
+            switch (territoryNode.getNodeName()) {
+                case "territory": {
                     spawnTemplate.addTerritory(new L2SpawnTerritory(name, new ZoneNPoly(x, y, minZ, maxZ)));
                     break;
                 }
-                case "banned_territory":
-                {
+                case "banned_territory": {
                     spawnTemplate.addBannedTerritory(new L2BannedSpawnTerritory(name, new ZoneNPoly(x, y, minZ, maxZ)));
                     break;
                 }
@@ -186,20 +166,16 @@ public class SpawnsData implements IGameXmlReader
         });
     }
 
-    private void parseGroup(Node n, SpawnTemplate spawnTemplate)
-    {
+    private void parseGroup(Node n, SpawnTemplate spawnTemplate) {
         final SpawnGroup group = new SpawnGroup(new StatsSet(parseAttributes(n)));
         forEach(n, IXmlReader::isNode, npcNode ->
         {
-            switch (npcNode.getNodeName())
-            {
-                case "territories":
-                {
+            switch (npcNode.getNodeName()) {
+                case "territories": {
                     parseTerritories(npcNode, spawnTemplate.getFile(), group);
                     break;
                 }
-                case "npc":
-                {
+                case "npc": {
                     parseNpc(npcNode, spawnTemplate, group);
                     break;
                 }
@@ -213,39 +189,29 @@ public class SpawnsData implements IGameXmlReader
      * @param spawnTemplate
      * @param group
      */
-    private void parseNpc(Node n, SpawnTemplate spawnTemplate, SpawnGroup group)
-    {
+    private void parseNpc(Node n, SpawnTemplate spawnTemplate, SpawnGroup group) {
         final NpcSpawnTemplate npcTemplate = new NpcSpawnTemplate(spawnTemplate, group, new StatsSet(parseAttributes(n)));
         final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcTemplate.getId());
-        if (template == null)
-        {
+        if (template == null) {
             LOGGER.warning(getClass().getSimpleName() + ": Requested spawn for non existing npc: " + npcTemplate.getId() + " in file: " + spawnTemplate.getFile().getName());
             return;
         }
 
-        if (template.isType("L2Servitor") || template.isType("L2Pet"))
-        {
+        if (template.isType("L2Servitor") || template.isType("L2Pet")) {
             LOGGER.warning(getClass().getSimpleName() + ": Requested spawn for " + template.getType() + " " + template.getName() + "(" + template.getId() + ") file: " + spawnTemplate.getFile().getName());
             return;
         }
 
-        if (!Config.FAKE_PLAYERS_ENABLED && template.isFakePlayer())
-        {
+        if (!Config.FAKE_PLAYERS_ENABLED && template.isFakePlayer()) {
             return;
         }
 
-        for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-        {
-            if ("parameters".equalsIgnoreCase(d.getNodeName()))
-            {
+        for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
+            if ("parameters".equalsIgnoreCase(d.getNodeName())) {
                 parseParameters(d, npcTemplate);
-            }
-            else if ("minions".equalsIgnoreCase(d.getNodeName()))
-            {
+            } else if ("minions".equalsIgnoreCase(d.getNodeName())) {
                 parseMinions(d, npcTemplate);
-            }
-            else if ("locations".equalsIgnoreCase(d.getNodeName()))
-            {
+            } else if ("locations".equalsIgnoreCase(d.getNodeName())) {
                 parseLocations(d, npcTemplate);
             }
         }
@@ -256,12 +222,9 @@ public class SpawnsData implements IGameXmlReader
      * @param n
      * @param npcTemplate
      */
-    private void parseLocations(Node n, NpcSpawnTemplate npcTemplate)
-    {
-        for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-        {
-            if ("location".equalsIgnoreCase(d.getNodeName()))
-            {
+    private void parseLocations(Node n, NpcSpawnTemplate npcTemplate) {
+        for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
+            if ("location".equalsIgnoreCase(d.getNodeName())) {
                 final int x = parseInteger(d.getAttributes(), "x");
                 final int y = parseInteger(d.getAttributes(), "y");
                 final int z = parseInteger(d.getAttributes(), "z");
@@ -276,8 +239,7 @@ public class SpawnsData implements IGameXmlReader
      * @param n
      * @param npcTemplate
      */
-    private void parseParameters(Node n, IParameterized<StatsSet> npcTemplate)
-    {
+    private void parseParameters(Node n, IParameterized<StatsSet> npcTemplate) {
         final Map<String, Object> params = parseParameters(n);
         npcTemplate.setParameters(!params.isEmpty() ? new StatsSet(Collections.unmodifiableMap(params)) : StatsSet.EMPTY_STATSET);
     }
@@ -286,25 +248,14 @@ public class SpawnsData implements IGameXmlReader
      * @param n
      * @param npcTemplate
      */
-    private void parseMinions(Node n, NpcSpawnTemplate npcTemplate)
-    {
+    private void parseMinions(Node n, NpcSpawnTemplate npcTemplate) {
         forEach(n, "minion", minionNode ->
         {
             npcTemplate.addMinion(new MinionHolder(new StatsSet(parseAttributes(minionNode))));
         });
     }
 
-    /**
-     * Gets the single instance of SpawnsData.
-     * @return single instance of SpawnsData
-     */
-    public static SpawnsData getInstance()
-    {
-        return SingletonHolder._instance;
-    }
-
-    private static class SingletonHolder
-    {
+    private static class SingletonHolder {
         protected static final SpawnsData _instance = new SpawnsData();
     }
 }

@@ -1,24 +1,9 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import org.l2j.commons.network.PacketWriter;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
+import java.nio.ByteBuffer;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -26,26 +11,21 @@ import java.util.Map.Entry;
  * @author -Wooden-
  * @author UnAfraid, mrTJO
  */
-public class PackageToList implements IClientOutgoingPacket
-{
-	private final Map<Integer, String> _players;
-	
-	public PackageToList(Map<Integer, String> chars)
-	{
-		_players = chars;
-	}
-	
-	@Override
-	public boolean write(PacketWriter packet)
-	{
-		OutgoingPackets.PACKAGE_TO_LIST.writeId(packet);
-		
-		packet.writeD(_players.size());
-		for (Entry<Integer, String> entry : _players.entrySet())
-		{
-			packet.writeD(entry.getKey());
-			packet.writeS(entry.getValue());
-		}
-		return true;
-	}
+public class PackageToList extends IClientOutgoingPacket {
+    private final Map<Integer, String> _players;
+
+    public PackageToList(Map<Integer, String> chars) {
+        _players = chars;
+    }
+
+    @Override
+    public void writeImpl(L2GameClient client, ByteBuffer packet) {
+        OutgoingPackets.PACKAGE_TO_LIST.writeId(packet);
+
+        packet.putInt(_players.size());
+        for (Entry<Integer, String> entry : _players.entrySet()) {
+            packet.putInt(entry.getKey());
+            writeString(entry.getValue(), packet);
+        }
+    }
 }

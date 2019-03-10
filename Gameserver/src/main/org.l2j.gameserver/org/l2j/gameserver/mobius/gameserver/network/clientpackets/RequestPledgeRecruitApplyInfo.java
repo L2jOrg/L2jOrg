@@ -10,35 +10,26 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestPledgeRecruitApplyInfo extends IClientIncomingPacket
-{
+public class RequestPledgeRecruitApplyInfo extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final ClanEntryStatus status;
 
-        if ((activeChar.getClan() != null) && activeChar.isClanLeader() && ClanEntryManager.getInstance().isClanRegistred(activeChar.getClanId()))
-        {
+        if ((activeChar.getClan() != null) && activeChar.isClanLeader() && ClanEntryManager.getInstance().isClanRegistred(activeChar.getClanId())) {
             status = ClanEntryStatus.ORDERED;
-        }
-        else if ((activeChar.getClan() == null) && (ClanEntryManager.getInstance().isPlayerRegistred(activeChar.getObjectId())))
-        {
+        } else if ((activeChar.getClan() == null) && (ClanEntryManager.getInstance().isPlayerRegistred(activeChar.getObjectId()))) {
             status = ClanEntryStatus.WAITING;
-        }
-        else
-        {
+        } else {
             status = ClanEntryStatus.DEFAULT;
         }
 

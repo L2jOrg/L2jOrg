@@ -8,28 +8,23 @@ import java.nio.ByteBuffer;
 /**
  * @author -Wooden-
  */
-public final class SnoopQuit extends IClientIncomingPacket
-{
+public final class SnoopQuit extends IClientIncomingPacket {
     private int _snoopID;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _snoopID = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = L2World.getInstance().getPlayer(_snoopID);
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 

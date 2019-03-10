@@ -7,21 +7,20 @@ import java.nio.ByteBuffer;
 
 /**
  * Format: (ch) just a trigger
+ *
  * @author -Wooden-
  */
 public final class RequestExFishRanking extends IClientIncomingPacket {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(RequestExFishRanking.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(RequestExFishRanking.class);
 
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
+    @Override
+    public void readImpl(ByteBuffer packet) {
 
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		LOGGER.info("C5: RequestExFishRanking");
-	}
+    }
+
+    @Override
+    public void runImpl() {
+        LOGGER.info("C5: RequestExFishRanking");
+    }
 }

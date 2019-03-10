@@ -7,32 +7,25 @@ import java.nio.ByteBuffer;
 /**
  * @author St3eT
  */
-public final class ExRequestAutoFish extends IClientIncomingPacket
-{
-	private boolean _start;
-	
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
-		_start = packet.get() != 0;
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		if (_start)
-		{
-			activeChar.getFishing().startFishing();
-		}
-		else
-		{
-			activeChar.getFishing().stopFishing();
-		}
-	}
+public final class ExRequestAutoFish extends IClientIncomingPacket {
+    private boolean _start;
+
+    @Override
+    public void readImpl(ByteBuffer packet) {
+        _start = packet.get() != 0;
+    }
+
+    @Override
+    public void runImpl() {
+        final L2PcInstance activeChar = client.getActiveChar();
+        if (activeChar == null) {
+            return;
+        }
+
+        if (_start) {
+            activeChar.getFishing().startFishing();
+        } else {
+            activeChar.getFishing().stopFishing();
+        }
+    }
 }

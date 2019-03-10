@@ -16,20 +16,16 @@ import java.util.logging.Logger;
 /**
  * @author GodKratos, DS
  */
-public class OlympiadGameManager implements Runnable
-{
+public class OlympiadGameManager implements Runnable {
     private static final Logger LOGGER = Logger.getLogger(OlympiadGameManager.class.getName());
     private static final int STADIUM_COUNT = 80; // TODO dynamic
-
-    private volatile boolean _battleStarted = false;
     private final List<OlympiadStadium> _tasks;
+    private volatile boolean _battleStarted = false;
     private int _delay = 0;
 
-    protected OlympiadGameManager()
-    {
+    protected OlympiadGameManager() {
         final Collection<L2OlympiadStadiumZone> zones = ZoneManager.getInstance().getAllZones(L2OlympiadStadiumZone.class);
-        if ((zones == null) || zones.isEmpty())
-        {
+        if ((zones == null) || zones.isEmpty()) {
             throw new Error("No olympiad stadium zones defined !");
         }
 
@@ -37,8 +33,7 @@ public class OlympiadGameManager implements Runnable
         _tasks = new ArrayList<>(STADIUM_COUNT);
 
         final int zonesCount = array.length;
-        for (int i = 0; i < STADIUM_COUNT; i++)
-        {
+        for (int i = 0; i < STADIUM_COUNT; i++) {
             final OlympiadStadium stadium = new OlympiadStadium(array[i % zonesCount], i);
             stadium.registerTask(new OlympiadGameTask(stadium));
             _tasks.add(stadium);
@@ -47,56 +42,44 @@ public class OlympiadGameManager implements Runnable
         LOGGER.info("Olympiad System: Loaded " + _tasks.size() + " stadiums.");
     }
 
-    public static OlympiadGameManager getInstance()
-    {
+    public static OlympiadGameManager getInstance() {
         return SingletonHolder._instance;
     }
 
-    protected final boolean isBattleStarted()
-    {
+    protected final boolean isBattleStarted() {
         return _battleStarted;
     }
 
-    protected final void startBattle()
-    {
+    protected final void startBattle() {
         _battleStarted = true;
     }
 
     @Override
-    public final void run()
-    {
-        if (Olympiad.getInstance().isOlympiadEnd())
-        {
+    public final void run() {
+        if (Olympiad.getInstance().isOlympiadEnd()) {
             return;
         }
 
-        if (Olympiad.getInstance().inCompPeriod())
-        {
+        if (Olympiad.getInstance().inCompPeriod()) {
             AbstractOlympiadGame newGame;
 
             List<Set<Integer>> readyClassed = OlympiadManager.getInstance().hasEnoughRegisteredClassed();
             boolean readyNonClassed = OlympiadManager.getInstance().hasEnoughRegisteredNonClassed();
 
-            if ((readyClassed != null) || readyNonClassed)
-            {
+            if ((readyClassed != null) || readyNonClassed) {
                 // reset delay broadcast
                 _delay = 0;
 
                 // set up the games queue
-                for (int i = 0; i < _tasks.size(); i++)
-                {
+                for (int i = 0; i < _tasks.size(); i++) {
                     final OlympiadGameTask task = _tasks.get(i).getTask();
-                    synchronized (task)
-                    {
-                        if (!task.isRunning())
-                        {
+                    synchronized (task) {
+                        if (!task.isRunning()) {
                             // Fair arena distribution
                             // 0,2,4,6,8.. arenas checked for classed or teams first
-                            if (readyClassed != null)
-                            {
+                            if (readyClassed != null) {
                                 newGame = OlympiadGameClassed.createGame(i, readyClassed);
-                                if (newGame != null)
-                                {
+                                if (newGame != null) {
                                     task.attachGame(newGame);
                                     continue;
                                 }
@@ -104,11 +87,9 @@ public class OlympiadGameManager implements Runnable
                             }
                             // 1,3,5,7,9.. arenas used for non-classed
                             // also other arenas will be used for non-classed if no classed or teams available
-                            if (readyNonClassed)
-                            {
+                            if (readyNonClassed) {
                                 newGame = OlympiadGameNonClassed.createGame(i, OlympiadManager.getInstance().getRegisteredNonClassBased());
-                                if (newGame != null)
-                                {
+                                if (newGame != null) {
                                     task.attachGame(newGame);
                                     continue;
                                 }
@@ -118,44 +99,35 @@ public class OlympiadGameManager implements Runnable
                     }
 
                     // stop generating games if no more participants
-                    if ((readyClassed == null) && !readyNonClassed)
-                    {
+                    if ((readyClassed == null) && !readyNonClassed) {
                         break;
                     }
                 }
             }
             // olympiad is delayed
-            else
-            {
+            else {
                 _delay++;
                 if (_delay >= 10) // 5min
                 {
-                    for (Integer id : OlympiadManager.getInstance().getRegisteredNonClassBased())
-                    {
-                        if (id == null)
-                        {
+                    for (Integer id : OlympiadManager.getInstance().getRegisteredNonClassBased()) {
+                        if (id == null) {
                             continue;
                         }
 
                         final L2PcInstance noble = L2World.getInstance().getPlayer(id);
-                        if (noble != null)
-                        {
+                        if (noble != null) {
                             noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_GAMES_MAY_BE_DELAYED_DUE_TO_AN_INSUFFICIENT_NUMBER_OF_PLAYERS_WAITING));
                         }
                     }
 
-                    for (Set<Integer> list : OlympiadManager.getInstance().getRegisteredClassBased().values())
-                    {
-                        for (Integer id : list)
-                        {
-                            if (id == null)
-                            {
+                    for (Set<Integer> list : OlympiadManager.getInstance().getRegisteredClassBased().values()) {
+                        for (Integer id : list) {
+                            if (id == null) {
                                 continue;
                             }
 
                             final L2PcInstance noble = L2World.getInstance().getPlayer(id);
-                            if (noble != null)
-                            {
+                            if (noble != null) {
                                 noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_GAMES_MAY_BE_DELAYED_DUE_TO_AN_INSUFFICIENT_NUMBER_OF_PLAYERS_WAITING));
                             }
                         }
@@ -164,12 +136,9 @@ public class OlympiadGameManager implements Runnable
                     _delay = 0;
                 }
             }
-        }
-        else
-        {
+        } else {
             // not in competition period
-            if (isAllTasksFinished())
-            {
+            if (isAllTasksFinished()) {
                 OlympiadManager.getInstance().clearRegistered();
                 _battleStarted = false;
                 LOGGER.info("Olympiad System: All current games finished.");
@@ -177,64 +146,52 @@ public class OlympiadGameManager implements Runnable
         }
     }
 
-    public final boolean isAllTasksFinished()
-    {
-        for (OlympiadStadium stadium : _tasks)
-        {
+    public final boolean isAllTasksFinished() {
+        for (OlympiadStadium stadium : _tasks) {
             final OlympiadGameTask task = stadium.getTask();
-            if (task.isRunning())
-            {
+            if (task.isRunning()) {
                 return false;
             }
         }
         return true;
     }
 
-    public final OlympiadGameTask getOlympiadTask(int id)
-    {
-        if ((id < 0) || (id >= _tasks.size()))
-        {
+    public final OlympiadGameTask getOlympiadTask(int id) {
+        if ((id < 0) || (id >= _tasks.size())) {
             return null;
         }
 
         return _tasks.get(id).getTask();
     }
 
-    public final int getNumberOfStadiums()
-    {
+    public final int getNumberOfStadiums() {
         return _tasks.size();
     }
 
-    public final void notifyCompetitorDamage(L2PcInstance attacker, int damage)
-    {
-        if (attacker == null)
-        {
+    public final void notifyCompetitorDamage(L2PcInstance attacker, int damage) {
+        if (attacker == null) {
             return;
         }
 
         final int id = attacker.getOlympiadGameId();
-        if ((id < 0) || (id >= _tasks.size()))
-        {
+        if ((id < 0) || (id >= _tasks.size())) {
             return;
         }
 
         final AbstractOlympiadGame game = _tasks.get(id).getTask().getGame();
-        if (game != null)
-        {
+        if (game != null) {
             game.addDamage(attacker, damage);
         }
-    }
-
-    private static class SingletonHolder
-    {
-        protected static final OlympiadGameManager _instance = new OlympiadGameManager();
     }
 
     /**
      * @return the _tasks
      */
-    public List<OlympiadStadium> getTasks()
-    {
+    public List<OlympiadStadium> getTasks() {
         return _tasks;
+    }
+
+    private static class SingletonHolder {
+        protected static final OlympiadGameManager _instance = new OlympiadGameManager();
     }
 }

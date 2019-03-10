@@ -10,37 +10,33 @@ import java.util.logging.Logger;
 
 /**
  * This class ...
+ *
  * @version $Revision: 1.9.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class Logout extends IClientIncomingPacket
-{
-	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
-	
-	@Override
-	public void readImpl(ByteBuffer packet) {
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance player = client.getActiveChar();
-		if (player == null)
-		{
-			client.closeNow();
-			return;
-		}
-		
-		if (!player.canLogout())
-		{
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		LOGGER_ACCOUNTING.info("Logged out, " + client);
-		
-		if (!OfflineTradeUtil.enteredOfflineMode(player))
-		{
-			Disconnection.of(client, player).defaultSequence(false);
-		}
-	}
+public final class Logout extends IClientIncomingPacket {
+    protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
+
+    @Override
+    public void readImpl(ByteBuffer packet) {
+    }
+
+    @Override
+    public void runImpl() {
+        final L2PcInstance player = client.getActiveChar();
+        if (player == null) {
+            client.closeNow();
+            return;
+        }
+
+        if (!player.canLogout()) {
+            player.sendPacket(ActionFailed.STATIC_PACKET);
+            return;
+        }
+
+        LOGGER_ACCOUNTING.info("Logged out, " + client);
+
+        if (!OfflineTradeUtil.enteredOfflineMode(player)) {
+            Disconnection.of(client, player).defaultSequence(false);
+        }
+    }
 }

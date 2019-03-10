@@ -9,28 +9,24 @@ import java.nio.ByteBuffer;
 
 /**
  * Format: (ch)
+ *
  * @author -Wooden-
  */
-public final class RequestPledgePowerGradeList extends IClientIncomingPacket
-{
+public final class RequestPledgePowerGradeList extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
         final L2Clan clan = player.getClan();
-        if (clan != null)
-        {
+        if (clan != null) {
             final RankPrivs[] privs = clan.getAllRankPrivs();
             player.sendPacket(new PledgePowerGradeList(privs));
         }

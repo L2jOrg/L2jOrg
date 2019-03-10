@@ -9,23 +9,19 @@ import java.nio.ByteBuffer;
 /**
  * @author ShanSoft Packets Structure: chddd
  */
-public final class RequestBookMarkSlotInfo extends IClientIncomingPacket
-{
+public final class RequestBookMarkSlotInfo extends IClientIncomingPacket {
     public RequestBookMarkSlotInfo(L2GameClient client) {
         this.client = client;
     }
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player != null)
-        {
+        if (player != null) {
             player.sendPacket(new ExGetBookMarkInfoPacket(player));
         }
     }

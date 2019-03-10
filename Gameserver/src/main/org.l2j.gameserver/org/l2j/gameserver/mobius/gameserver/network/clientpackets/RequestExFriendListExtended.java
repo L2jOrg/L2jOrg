@@ -9,25 +9,20 @@ import java.nio.ByteBuffer;
 /**
  * @author mrTJO & UnAfraid
  */
-public final class RequestExFriendListExtended extends IClientIncomingPacket
-{
+public final class RequestExFriendListExtended extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
-        if (!Config.ALLOW_MAIL)
-        {
+    public void runImpl() {
+        if (!Config.ALLOW_MAIL) {
             return;
         }
 
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 

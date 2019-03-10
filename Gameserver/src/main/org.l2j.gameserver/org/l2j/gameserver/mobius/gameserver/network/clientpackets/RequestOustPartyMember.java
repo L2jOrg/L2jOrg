@@ -7,29 +7,25 @@ import java.nio.ByteBuffer;
 
 /**
  * This class ...
+ *
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestOustPartyMember extends IClientIncomingPacket
-{
+public final class RequestOustPartyMember extends IClientIncomingPacket {
     private String _name;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _name = readString(packet);
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
-        if (activeChar.isInParty() && activeChar.getParty().isLeader(activeChar))
-        {
+        if (activeChar.isInParty() && activeChar.getParty().isLeader(activeChar)) {
             activeChar.getParty().removePartyMember(_name, MessageType.EXPELLED);
         }
     }

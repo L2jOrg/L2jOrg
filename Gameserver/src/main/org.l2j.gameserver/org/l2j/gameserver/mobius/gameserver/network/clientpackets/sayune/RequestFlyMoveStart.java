@@ -19,63 +19,53 @@ import java.nio.ByteBuffer;
 /**
  * @author UnAfraid
  */
-public class RequestFlyMoveStart extends IClientIncomingPacket
-{
+public class RequestFlyMoveStart extends IClientIncomingPacket {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(RequestFlyMoveStart.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(RequestFlyMoveStart.class);
 
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar == null) || !activeChar.isInsideZone(ZoneId.SAYUNE) || activeChar.hasRequest(SayuneRequest.class) || (!activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && !Config.FREE_JUMPS_FOR_ALL))
-		{
-			return;
-		}
-		
-		if (activeChar.hasSummon())
-		{
-			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_USE_SAYUNE_WHILE_A_SERVITOR_IS_AROUND);
-			return;
-		}
-		
-		if (activeChar.getReputation() < 0)
-		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_SAYUNE_WHILE_IN_A_CHAOTIC_STATE);
-			return;
-		}
-		
-		if (activeChar.hasRequests())
-		{
-			activeChar.sendPacket(SystemMessageId.SAYUNE_CANNOT_BE_USED_WHILE_TAKING_OTHER_ACTIONS);
-			return;
-		}
-		
-		final L2SayuneZone zone = ZoneManager.getInstance().getZone(activeChar, L2SayuneZone.class);
-		if (zone.getMapId() == -1)
-		{
-			activeChar.sendMessage("That zone is not supported yet!");
-			LOGGER.warn(getClass().getSimpleName() + ": " + activeChar + " Requested sayune on zone with no map id set");
-			return;
-		}
-		
-		final SayuneEntry map = SayuneData.getInstance().getMap(zone.getMapId());
-		if (map == null)
-		{
-			activeChar.sendMessage("This zone is not handled yet!!");
-			LOGGER.warn(getClass().getSimpleName() + ": " + activeChar + " Requested sayune on unhandled map zone " + zone.getName());
-			return;
-		}
-		
-		final SayuneRequest request = new SayuneRequest(activeChar, map.getId());
-		if (activeChar.addRequest(request))
-		{
-			request.move(activeChar, 0);
-		}
-	}
+    @Override
+    public void readImpl(ByteBuffer packet) {
+    }
+
+    @Override
+    public void runImpl() {
+        final L2PcInstance activeChar = client.getActiveChar();
+        if ((activeChar == null) || !activeChar.isInsideZone(ZoneId.SAYUNE) || activeChar.hasRequest(SayuneRequest.class) || (!activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && !Config.FREE_JUMPS_FOR_ALL)) {
+            return;
+        }
+
+        if (activeChar.hasSummon()) {
+            activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_USE_SAYUNE_WHILE_A_SERVITOR_IS_AROUND);
+            return;
+        }
+
+        if (activeChar.getReputation() < 0) {
+            activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_SAYUNE_WHILE_IN_A_CHAOTIC_STATE);
+            return;
+        }
+
+        if (activeChar.hasRequests()) {
+            activeChar.sendPacket(SystemMessageId.SAYUNE_CANNOT_BE_USED_WHILE_TAKING_OTHER_ACTIONS);
+            return;
+        }
+
+        final L2SayuneZone zone = ZoneManager.getInstance().getZone(activeChar, L2SayuneZone.class);
+        if (zone.getMapId() == -1) {
+            activeChar.sendMessage("That zone is not supported yet!");
+            LOGGER.warn(getClass().getSimpleName() + ": " + activeChar + " Requested sayune on zone with no map id set");
+            return;
+        }
+
+        final SayuneEntry map = SayuneData.getInstance().getMap(zone.getMapId());
+        if (map == null) {
+            activeChar.sendMessage("This zone is not handled yet!!");
+            LOGGER.warn(getClass().getSimpleName() + ": " + activeChar + " Requested sayune on unhandled map zone " + zone.getName());
+            return;
+        }
+
+        final SayuneRequest request = new SayuneRequest(activeChar, map.getId());
+        if (activeChar.addRequest(request)) {
+            request.move(activeChar, 0);
+        }
+    }
 }

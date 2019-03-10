@@ -8,9 +8,8 @@ import org.l2j.gameserver.mobius.gameserver.model.skills.targets.TargetType;
 /**
  * @author Nik
  */
-public interface ITargetTypeHandler
-{
-	L2Object getTarget(L2Character activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage);
-	
-	Enum<TargetType> getTargetType();
+public interface ITargetTypeHandler {
+    L2Object getTarget(L2Character activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage);
+
+    Enum<TargetType> getTargetType();
 }

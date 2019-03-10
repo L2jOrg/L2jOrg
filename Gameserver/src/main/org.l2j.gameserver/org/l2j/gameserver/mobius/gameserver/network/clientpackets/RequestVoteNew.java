@@ -10,36 +10,27 @@ import org.l2j.gameserver.mobius.gameserver.network.serverpackets.UserInfo;
 
 import java.nio.ByteBuffer;
 
-public final class RequestVoteNew extends IClientIncomingPacket
-{
+public final class RequestVoteNew extends IClientIncomingPacket {
     private int _targetId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _targetId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final L2Object object = activeChar.getTarget();
-        if (!(object instanceof L2PcInstance))
-        {
-            if (object == null)
-            {
+        if (!(object instanceof L2PcInstance)) {
+            if (object == null) {
                 client.sendPacket(SystemMessageId.SELECT_TARGET);
-            }
-            else if (object.isFakePlayer() && FakePlayerData.getInstance().isTalkable(object.getName()))
-            {
-                if (activeChar.getRecomLeft() <= 0)
-                {
+            } else if (object.isFakePlayer() && FakePlayerData.getInstance().isTalkable(object.getName())) {
+                if (activeChar.getRecomLeft() <= 0) {
                     client.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_RECOMMENDATIONS_TRY_AGAIN_LATER);
                     return;
                 }
@@ -52,9 +43,7 @@ public final class RequestVoteNew extends IClientIncomingPacket
                 activeChar.setRecomLeft(activeChar.getRecomLeft() - 1);
                 client.sendPacket(new UserInfo(activeChar));
                 client.sendPacket(new ExVoteSystemInfo(activeChar));
-            }
-            else
-            {
+            } else {
                 client.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
             }
             return;
@@ -62,25 +51,21 @@ public final class RequestVoteNew extends IClientIncomingPacket
 
         final L2PcInstance target = (L2PcInstance) object;
 
-        if (target.getObjectId() != _targetId)
-        {
+        if (target.getObjectId() != _targetId) {
             return;
         }
 
-        if (target == activeChar)
-        {
+        if (target == activeChar) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_RECOMMEND_YOURSELF);
             return;
         }
 
-        if (activeChar.getRecomLeft() <= 0)
-        {
+        if (activeChar.getRecomLeft() <= 0) {
             client.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_RECOMMENDATIONS_TRY_AGAIN_LATER);
             return;
         }
 
-        if (target.getRecomHave() >= 255)
-        {
+        if (target.getRecomHave() >= 255) {
             client.sendPacket(SystemMessageId.YOUR_SELECTED_TARGET_CAN_NO_LONGER_RECEIVE_A_RECOMMENDATION);
             return;
         }

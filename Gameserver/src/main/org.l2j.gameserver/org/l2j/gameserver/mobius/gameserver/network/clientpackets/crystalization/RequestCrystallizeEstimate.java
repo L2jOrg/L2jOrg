@@ -30,18 +30,15 @@ public class RequestCrystallizeEstimate extends IClientIncomingPacket {
     private long _count;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _objectId = packet.getInt();
         _count = packet.getLong();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if ((activeChar == null) || activeChar.isInCrystallize())
-        {
+        if ((activeChar == null) || activeChar.isInCrystallize()) {
             return;
         }
 
@@ -51,53 +48,45 @@ public class RequestCrystallizeEstimate extends IClientIncomingPacket {
         // return;
         // }
 
-        if (_count <= 0)
-        {
+        if (_count <= 0) {
             Util.handleIllegalPlayerAction(activeChar, "[RequestCrystallizeItem] count <= 0! ban! oid: " + _objectId + " owner: " + activeChar.getName(), Config.DEFAULT_PUNISH);
             return;
         }
 
-        if ((activeChar.getPrivateStoreType() != PrivateStoreType.NONE) || activeChar.isInCrystallize())
-        {
+        if ((activeChar.getPrivateStoreType() != PrivateStoreType.NONE) || activeChar.isInCrystallize()) {
             client.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
             return;
         }
 
         final int skillLevel = activeChar.getSkillLevel(CommonSkill.CRYSTALLIZE.getId());
-        if (skillLevel <= 0)
-        {
+        if (skillLevel <= 0) {
             client.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
-        if ((item == null) || item.isShadowItem() || item.isTimeLimitedItem())
-        {
+        if ((item == null) || item.isShadowItem() || item.isTimeLimitedItem()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
-        if (item.isHeroItem())
-        {
+        if (item.isHeroItem()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
-        if (!item.getItem().isCrystallizable() || (item.getItem().getCrystalCount() <= 0) || (item.getItem().getCrystalType() == CrystalType.NONE))
-        {
+        if (!item.getItem().isCrystallizable() || (item.getItem().getCrystalCount() <= 0) || (item.getItem().getCrystalType() == CrystalType.NONE)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             LOGGER.warn("{} tried to crystallize {}", activeChar, item.getItem());
             return;
         }
 
-        if (_count > item.getCount())
-        {
+        if (_count > item.getCount()) {
             _count = activeChar.getInventory().getItemByObjectId(_objectId).getCount();
         }
 
-        if (!activeChar.getInventory().canManipulateWithItemId(item.getId()))
-        {
+        if (!activeChar.getInventory().canManipulateWithItemId(item.getId())) {
             activeChar.sendMessage("You cannot use this item.");
             return;
         }
@@ -105,60 +94,46 @@ public class RequestCrystallizeEstimate extends IClientIncomingPacket {
         // Check if the char can crystallize items and return if false;
         boolean canCrystallize = true;
 
-        switch (item.getItem().getCrystalTypePlus())
-        {
-            case D:
-            {
-                if (skillLevel < 1)
-                {
+        switch (item.getItem().getCrystalTypePlus()) {
+            case D: {
+                if (skillLevel < 1) {
                     canCrystallize = false;
                 }
                 break;
             }
-            case C:
-            {
-                if (skillLevel < 2)
-                {
+            case C: {
+                if (skillLevel < 2) {
                     canCrystallize = false;
                 }
                 break;
             }
-            case B:
-            {
-                if (skillLevel < 3)
-                {
+            case B: {
+                if (skillLevel < 3) {
                     canCrystallize = false;
                 }
                 break;
             }
-            case A:
-            {
-                if (skillLevel < 4)
-                {
+            case A: {
+                if (skillLevel < 4) {
                     canCrystallize = false;
                 }
                 break;
             }
-            case S:
-            {
-                if (skillLevel < 5)
-                {
+            case S: {
+                if (skillLevel < 5) {
                     canCrystallize = false;
                 }
                 break;
             }
-            case R:
-            {
-                if (skillLevel < 6)
-                {
+            case R: {
+                if (skillLevel < 6) {
                     canCrystallize = false;
                 }
                 break;
             }
         }
 
-        if (!canCrystallize)
-        {
+        if (!canCrystallize) {
             client.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
@@ -166,13 +141,10 @@ public class RequestCrystallizeEstimate extends IClientIncomingPacket {
 
         // Show crystallization rewards window.
         final List<ItemChanceHolder> crystallizationRewards = ItemCrystallizationData.getInstance().getCrystallizationRewards(item);
-        if ((crystallizationRewards != null) && !crystallizationRewards.isEmpty())
-        {
+        if ((crystallizationRewards != null) && !crystallizationRewards.isEmpty()) {
             activeChar.setInCrystallize(true);
             client.sendPacket(new ExGetCrystalizingEstimation(crystallizationRewards));
-        }
-        else
-        {
+        } else {
             client.sendPacket(SystemMessageId.CRYSTALLIZATION_CANNOT_BE_PROCEEDED_BECAUSE_THERE_ARE_NO_ITEMS_REGISTERED);
         }
 

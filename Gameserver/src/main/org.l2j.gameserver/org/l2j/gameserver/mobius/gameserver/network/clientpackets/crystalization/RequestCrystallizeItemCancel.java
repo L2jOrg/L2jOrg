@@ -8,19 +8,16 @@ import java.nio.ByteBuffer;
 /**
  * @author UnAfraid
  */
-public class RequestCrystallizeItemCancel extends IClientIncomingPacket
-{
+public class RequestCrystallizeItemCancel extends IClientIncomingPacket {
     @Override
     public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
@@ -30,8 +27,7 @@ public class RequestCrystallizeItemCancel extends IClientIncomingPacket
         // return;
         // }
 
-        if (activeChar.isInCrystallize())
-        {
+        if (activeChar.isInCrystallize()) {
             activeChar.setInCrystallize(false);
         }
     }

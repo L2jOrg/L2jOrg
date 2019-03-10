@@ -28,11 +28,10 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author UnAfraid
  * @param <T>
+ * @author UnAfraid
  */
-public class TimerHolder<T> implements Runnable
-{
+public class TimerHolder<T> implements Runnable {
     private final T _event;
     private final StatsSet _params;
     private final long _time;
@@ -44,8 +43,7 @@ public class TimerHolder<T> implements Runnable
     private final TimerExecutor<T> _postExecutor;
     private final ScheduledFuture<?> _task;
 
-    public TimerHolder(T event, StatsSet params, long time, L2Npc npc, L2PcInstance player, boolean isRepeating, IEventTimerEvent<T> eventScript, IEventTimerCancel<T> cancelScript, TimerExecutor<T> postExecutor)
-    {
+    public TimerHolder(T event, StatsSet params, long time, L2Npc npc, L2PcInstance player, boolean isRepeating, IEventTimerEvent<T> eventScript, IEventTimerCancel<T> cancelScript, TimerExecutor<T> postExecutor) {
         Objects.requireNonNull(event, getClass().getSimpleName() + ": \"event\" cannot be null!");
         Objects.requireNonNull(eventScript, getClass().getSimpleName() + ": \"script\" cannot be null!");
         Objects.requireNonNull(postExecutor, getClass().getSimpleName() + ": \"postExecutor\" cannot be null!");
@@ -65,60 +63,51 @@ public class TimerHolder<T> implements Runnable
     /**
      * @return the event/key of this timer
      */
-    public T getEvent()
-    {
+    public T getEvent() {
         return _event;
     }
 
     /**
      * @return the parameters of this timer
      */
-    public StatsSet getParams()
-    {
+    public StatsSet getParams() {
         return _params;
     }
 
     /**
      * @return the npc of this timer
      */
-    public L2Npc getNpc()
-    {
+    public L2Npc getNpc() {
         return _npc;
     }
 
     /**
      * @return the player of this timer
      */
-    public L2PcInstance getPlayer()
-    {
+    public L2PcInstance getPlayer() {
         return _player;
     }
 
     /**
      * @return {@code true} if the timer will repeat itself, {@code false} otherwise
      */
-    public boolean isRepeating()
-    {
+    public boolean isRepeating() {
         return _isRepeating;
     }
 
     /**
      * @return {@code true} if timer for the given event, npc, player were stopped, {@code false} otheriwse
      */
-    public boolean cancelTimer()
-    {
+    public boolean cancelTimer() {
         // Make sure to unregister this timer even if the task is already completed (TimerExecutor#onTimerPostExecute calls this method).
-        if (_npc != null)
-        {
+        if (_npc != null) {
             TimersManager.getInstance().unregisterTimer(_npc.getObjectId(), this);
         }
-        if (_player != null)
-        {
+        if (_player != null) {
             TimersManager.getInstance().unregisterTimer(_player.getObjectId(), this);
         }
 
-        if (_task.isCancelled() || _task.isDone())
-        {
+        if (_task.isCancelled() || _task.isDone()) {
             return false;
         }
 
@@ -130,15 +119,12 @@ public class TimerHolder<T> implements Runnable
     /**
      * @return the remaining time of the timer, or -1 in case it doesn't exists.
      */
-    public long getRemainingTime()
-    {
-        if (_task == null)
-        {
+    public long getRemainingTime() {
+        if (_task == null) {
             return -1;
         }
 
-        if (_task.isCancelled() || _task.isDone())
-        {
+        if (_task.isCancelled() || _task.isDone()) {
             return -1;
         }
         return _task.getDelay(TimeUnit.MILLISECONDS);
@@ -150,8 +136,7 @@ public class TimerHolder<T> implements Runnable
      * @param player
      * @return {@code true} if event, npc, player are equals to the ones stored in this TimerHolder, {@code false} otherwise
      */
-    public boolean isEqual(T event, L2Npc npc, L2PcInstance player)
-    {
+    public boolean isEqual(T event, L2Npc npc, L2PcInstance player) {
         return _event.equals(event) && (_npc == npc) && (_player == player);
     }
 
@@ -159,14 +144,12 @@ public class TimerHolder<T> implements Runnable
      * @param timer the other timer to be compared with.
      * @return {@code true} of both of timers' npc, event and player match, {@code false} otherwise.
      */
-    public boolean isEqual(TimerHolder<T> timer)
-    {
+    public boolean isEqual(TimerHolder<T> timer) {
         return _event.equals(timer._event) && (_npc == timer._npc) && (_player == timer._player);
     }
 
     @Override
-    public void run()
-    {
+    public void run() {
         // Notify the post executor to remove this timer from the map
         _postExecutor.onTimerPostExecute(this);
 
@@ -175,8 +158,7 @@ public class TimerHolder<T> implements Runnable
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "event: " + _event + " params: " + _params + " time: " + _time + " npc: " + _npc + " player: " + _player + " repeating: " + _isRepeating + " script: " + _eventScript.getClass().getSimpleName() + " postExecutor: " + _postExecutor.getClass().getSimpleName();
     }
 }

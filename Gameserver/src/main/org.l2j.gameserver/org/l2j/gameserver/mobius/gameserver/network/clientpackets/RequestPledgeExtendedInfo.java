@@ -4,22 +4,20 @@ import java.nio.ByteBuffer;
 
 /**
  * Format: (c) S S: pledge name?
+ *
  * @author -Wooden-
  */
-public class RequestPledgeExtendedInfo extends IClientIncomingPacket
-{
+public class RequestPledgeExtendedInfo extends IClientIncomingPacket {
     @SuppressWarnings("unused")
     private String _name;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _name = readString(packet);
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         // TODO: Implement
     }
 }

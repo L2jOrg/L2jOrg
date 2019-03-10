@@ -7,21 +7,18 @@ import java.nio.ByteBuffer;
 
 /**
  * This class ...
+ *
  * @version $Revision: 1.2.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public class RequestPrivateStoreQuitBuy extends IClientIncomingPacket
-{
+public class RequestPrivateStoreQuitBuy extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 

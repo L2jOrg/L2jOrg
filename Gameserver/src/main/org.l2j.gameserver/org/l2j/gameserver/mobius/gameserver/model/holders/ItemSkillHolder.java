@@ -5,32 +5,27 @@ import org.l2j.gameserver.mobius.gameserver.enums.ItemSkillType;
 /**
  * @author UnAfraid
  */
-public class ItemSkillHolder extends SkillHolder
-{
+public class ItemSkillHolder extends SkillHolder {
     private final ItemSkillType _type;
     private final int _chance;
     private final int _value;
 
-    public ItemSkillHolder(int skillId, int skillLvl, ItemSkillType type, int chance, int value)
-    {
+    public ItemSkillHolder(int skillId, int skillLvl, ItemSkillType type, int chance, int value) {
         super(skillId, skillLvl);
         _type = type;
         _chance = chance;
         _value = value;
     }
 
-    public ItemSkillType getType()
-    {
+    public ItemSkillType getType() {
         return _type;
     }
 
-    public int getChance()
-    {
+    public int getChance() {
         return _chance;
     }
 
-    public int getValue()
-    {
+    public int getValue() {
         return _value;
     }
 }

@@ -15,10 +15,10 @@ import java.nio.ByteBuffer;
 
 /**
  * Fromat:(ch) dddddc
+ *
  * @author -Wooden-
  */
-public final class RequestExMagicSkillUseGround extends IClientIncomingPacket
-{
+public final class RequestExMagicSkillUseGround extends IClientIncomingPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestExMagicSkillUseGround.class);
     private int _x;
@@ -29,8 +29,7 @@ public final class RequestExMagicSkillUseGround extends IClientIncomingPacket
     private boolean _shiftPressed;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _x = packet.getInt();
         _y = packet.getInt();
         _z = packet.getInt();
@@ -40,19 +39,16 @@ public final class RequestExMagicSkillUseGround extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         // Get the current L2PcInstance of the player
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         // Get the level of the used skill
         final int level = activeChar.getSkillLevel(_skillId);
-        if (level <= 0)
-        {
+        if (level <= 0) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -61,8 +57,7 @@ public final class RequestExMagicSkillUseGround extends IClientIncomingPacket
         final Skill skill = SkillData.getInstance().getSkill(_skillId, level);
 
         // Check the validity of the skill
-        if (skill != null)
-        {
+        if (skill != null) {
             activeChar.setCurrentSkillWorldPosition(new Location(_x, _y, _z));
 
             // normally magicskilluse packet turns char client side but for these skills, it doesn't (even with correct target)
@@ -70,9 +65,7 @@ public final class RequestExMagicSkillUseGround extends IClientIncomingPacket
             Broadcast.toKnownPlayers(activeChar, new ValidateLocation(activeChar));
 
             activeChar.useMagic(skill, null, _ctrlPressed, _shiftPressed);
-        }
-        else
-        {
+        } else {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             LOGGER.warn("No skill found with id " + _skillId + " and level " + level + " !!");
         }

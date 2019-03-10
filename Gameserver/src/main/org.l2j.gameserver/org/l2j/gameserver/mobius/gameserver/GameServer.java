@@ -46,21 +46,13 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class GameServer {
 
-    private static Logger LOGGER;
-    private static final String LOG4J_CONFIGURATION_FILE = "log4j.configurationFile";
-
     public static final String UPDATE_NAME = "Classic: Saviors (Seven Signs)";
+    private static final String LOG4J_CONFIGURATION_FILE = "log4j.configurationFile";
+    private static Logger LOGGER;
     private static String version;
-
-    private final DeadLockDetector _deadDetectThread;
     private static GameServer INSTANCE;
-
+    private final DeadLockDetector _deadDetectThread;
     private final ConnectionHandler<GameClient> connectionHandler;
-
-    public long getUsedMemoryMB()
-    {
-        return (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576;
-    }
 
     public GameServer() throws Exception {
 
@@ -150,13 +142,11 @@ public class GameServer {
         BeautyShopData.getInstance();
         MentorManager.getInstance();
 
-        if (Config.FACTION_SYSTEM_ENABLED)
-        {
+        if (Config.FACTION_SYSTEM_ENABLED) {
             FactionManager.getInstance();
         }
 
-        if (Config.PREMIUM_SYSTEM_ENABLED)
-        {
+        if (Config.PREMIUM_SYSTEM_ENABLED) {
             LOGGER.info("PremiumManager: Premium system is enabled.");
             PremiumManager.getInstance();
         }
@@ -172,8 +162,7 @@ public class GameServer {
         long geodataMemory = getUsedMemoryMB();
         GeoEngine.getInstance();
         geodataMemory = getUsedMemoryMB() - geodataMemory;
-        if (geodataMemory < 0)
-        {
+        if (geodataMemory < 0) {
             geodataMemory = 0;
         }
 
@@ -208,8 +197,7 @@ public class GameServer {
         CursedWeaponsManager.getInstance();
         TransformData.getInstance();
         BotReportTable.getInstance();
-        if (Config.SELLBUFF_ENABLED)
-        {
+        if (Config.SELLBUFF_ENABLED) {
             SellBuffsManager.getInstance();
         }
 
@@ -248,13 +236,11 @@ public class GameServer {
         SiegeGuardManager.getInstance();
         QuestManager.getInstance().report();
 
-        if (Config.SAVE_DROPPED_ITEM)
-        {
+        if (Config.SAVE_DROPPED_ITEM) {
             ItemsOnGroundManager.getInstance();
         }
 
-        if ((Config.AUTODESTROY_ITEM_AFTER > 0) || (Config.HERB_AUTO_DESTROY_TIME > 0))
-        {
+        if ((Config.AUTODESTROY_ITEM_AFTER > 0) || (Config.HERB_AUTO_DESTROY_TIME > 0)) {
             ItemsAutoDestroy.getInstance();
         }
 
@@ -262,8 +248,7 @@ public class GameServer {
 
         AntiFeedManager.getInstance().registerEvent(AntiFeedManager.GAME_ID);
 
-        if (Config.ALLOW_MAIL)
-        {
+        if (Config.ALLOW_MAIL) {
             MailManager.getInstance();
         }
 
@@ -273,31 +258,25 @@ public class GameServer {
 
         LOGGER.info("IdFactory: Free ObjectID's remaining: " + IdFactory.getInstance().size());
 
-        if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS)
-        {
+        if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS) {
             OfflineTradersTable.getInstance().restoreOfflineTraders();
         }
 
-        if (Config.SERVER_RESTART_SCHEDULE_ENABLED)
-        {
+        if (Config.SERVER_RESTART_SCHEDULE_ENABLED) {
             ServerRestartManager.getInstance();
         }
 
-        if (Config.DEADLOCK_DETECTOR)
-        {
+        if (Config.DEADLOCK_DETECTOR) {
             _deadDetectThread = new DeadLockDetector(Duration.ofSeconds(Config.DEADLOCK_CHECK_INTERVAL), () ->
             {
-                if (Config.RESTART_ON_DEADLOCK)
-                {
+                if (Config.RESTART_ON_DEADLOCK) {
                     Broadcast.toAllOnlinePlayers("Server has stability issues - restarting now.");
                     Shutdown.getInstance().startShutdown(null, 60, true);
                 }
             });
             _deadDetectThread.setDaemon(true);
             _deadDetectThread.start();
-        }
-        else
-        {
+        } else {
             _deadDetectThread = null;
         }
         System.gc();
@@ -313,24 +292,6 @@ public class GameServer {
 
 
         Toolkit.getDefaultToolkit().beep();
-    }
-
-    public long getStartedTime()
-    {
-        return ManagementFactory.getRuntimeMXBean().getStartTime();
-    }
-
-    public String getUptime()
-    {
-        final long uptime = ManagementFactory.getRuntimeMXBean().getUptime() / 1000;
-        final long hours = uptime / 3600;
-        final long mins = (uptime - (hours * 3600)) / 60;
-        final long secs = ((uptime - (hours * 3600)) - (mins * 60));
-        if (hours > 0)
-        {
-            return hours + "hrs " + mins + "mins " + secs + "secs";
-        }
-        return mins + "mins " + secs + "secs";
     }
 
     public static void main(String[] args) throws Exception {
@@ -352,7 +313,7 @@ public class GameServer {
 
     private static void configureDatabase() throws Exception {
         System.setProperty("hikaricp.configurationFile", "config/database.properties");
-        if(!DatabaseAccess.initialize()) {
+        if (!DatabaseAccess.initialize()) {
             throw new Exception("Database Access could not be initialized");
         }
     }
@@ -361,7 +322,7 @@ public class GameServer {
         try {
             var versionProperties = new Properties();
             var versionFile = ClassLoader.getSystemResourceAsStream("version.properties");
-            if(nonNull(versionFile)) {
+            if (nonNull(versionFile)) {
                 versionProperties.load(versionFile);
                 version = versionProperties.getProperty("version");
                 LOGGER.info("======================================================================");
@@ -377,18 +338,34 @@ public class GameServer {
         }
     }
 
-    private static void printSection(String s)
-    {
+    private static void printSection(String s) {
         s = "=[ " + s + " ]";
-        while (s.length() < 61)
-        {
+        while (s.length() < 61) {
             s = "-" + s;
         }
         LOGGER.info(s);
     }
 
-    public static GameServer getInstance()
-    {
+    public static GameServer getInstance() {
         return INSTANCE;
+    }
+
+    public long getUsedMemoryMB() {
+        return (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576;
+    }
+
+    public long getStartedTime() {
+        return ManagementFactory.getRuntimeMXBean().getStartTime();
+    }
+
+    public String getUptime() {
+        final long uptime = ManagementFactory.getRuntimeMXBean().getUptime() / 1000;
+        final long hours = uptime / 3600;
+        final long mins = (uptime - (hours * 3600)) / 60;
+        final long secs = ((uptime - (hours * 3600)) - (mins * 60));
+        if (hours > 0) {
+            return hours + "hrs " + mins + "mins " + secs + "secs";
+        }
+        return mins + "mins " + secs + "secs";
     }
 }

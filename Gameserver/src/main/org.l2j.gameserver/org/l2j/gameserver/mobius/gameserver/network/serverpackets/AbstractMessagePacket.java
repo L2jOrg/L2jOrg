@@ -11,6 +11,7 @@ import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
 import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 
 import java.io.PrintStream;
+import java.nio.ByteBuffer;
 import java.util.Arrays;
 
 /**
@@ -18,470 +19,410 @@ import java.util.Arrays;
  * @author UnAfraid
  */
 @SuppressWarnings("unchecked")
-public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> implements IClientOutgoingPacket
-{
-	private static final SMParam[] EMPTY_PARAM_ARRAY = new SMParam[0];
-	
-	private static final class SMParam
-	{
-		private final byte _type;
-		private final Object _value;
-		
-		public SMParam(byte type, Object value)
-		{
-			_type = type;
-			_value = value;
-		}
-		
-		public final byte getType()
-		{
-			return _type;
-		}
-		
-		public final String getStringValue()
-		{
-			return (String) _value;
-		}
-		
-		public final int getIntValue()
-		{
-			return ((Integer) _value).intValue();
-		}
-		
-		public final long getLongValue()
-		{
-			return ((Long) _value).longValue();
-		}
-		
-		public final int[] getIntArrayValue()
-		{
-			return (int[]) _value;
-		}
-	}
-	
-	private static final byte TYPE_FACTION_NAME = 24; // c(short), faction id.
-	// id 22 d (shared with 1-3,17,22
-	// id 21 h
-	// id 20 c
-	// id 19 c
-	// id 18 Q (read same as 6)
-	// id 17 shared with 1-3,17,22
-	private static final byte TYPE_BYTE = 20;
-	private static final byte TYPE_POPUP_ID = 16;
-	private static final byte TYPE_CLASS_ID = 15;
-	// id 14 dSSSSS
-	private static final byte TYPE_SYSTEM_STRING = 13;
-	private static final byte TYPE_PLAYER_NAME = 12;
-	private static final byte TYPE_DOOR_NAME = 11;
-	private static final byte TYPE_INSTANCE_NAME = 10;
-	private static final byte TYPE_ELEMENT_NAME = 9;
-	// id 8 - ddd
-	private static final byte TYPE_ZONE_NAME = 7;
-	private static final byte TYPE_LONG_NUMBER = 6;
-	private static final byte TYPE_CASTLE_NAME = 5;
-	private static final byte TYPE_SKILL_NAME = 4;
-	private static final byte TYPE_ITEM_NAME = 3;
-	private static final byte TYPE_NPC_NAME = 2;
-	private static final byte TYPE_INT_NUMBER = 1;
-	private static final byte TYPE_TEXT = 0;
-	
-	private SMParam[] _params;
-	private final SystemMessageId _smId;
-	private int _paramIndex;
-	
-	public AbstractMessagePacket(SystemMessageId smId)
-	{
-		if (smId == null)
-		{
-			throw new NullPointerException("SystemMessageId cannot be null!");
-		}
-		_smId = smId;
-		_params = smId.getParamCount() > 0 ? new SMParam[smId.getParamCount()] : EMPTY_PARAM_ARRAY;
-	}
-	
-	public final int getId()
-	{
-		return _smId.getId();
-	}
-	
-	public final SystemMessageId getSystemMessageId()
-	{
-		return _smId;
-	}
-	
-	private void append(SMParam param)
-	{
-		if (_paramIndex >= _params.length)
-		{
-			_params = Arrays.copyOf(_params, _paramIndex + 1);
-			_smId.setParamCount(_paramIndex + 1);
-			// Mobius: With additional on-screen damage param (popup), length is increased.
-			if (param.getType() != TYPE_POPUP_ID)
-			{
-				LOGGER.info("Wrong parameter count '" + (_paramIndex + 1) + "' for SystemMessageId: " + _smId);
-			}
-		}
-		
-		_params[_paramIndex++] = param;
-	}
-	
-	public final T addString(String text)
-	{
-		append(new SMParam(TYPE_TEXT, text));
-		return (T) this;
-	}
-	
-	/**
-	 * Appends a Castle name parameter type, the name will be read from CastleName-e.dat.<br>
-	 * <ul>
-	 * <li>1-9 Castle names</li>
-	 * <li>21 Fortress of Resistance</li>
-	 * <li>22-33 Clan Hall names</li>
-	 * <li>34 Devastated Castle</li>
-	 * <li>35 Bandit Stronghold</li>
-	 * <li>36-61 Clan Hall names</li>
-	 * <li>62 Rainbow Springs</li>
-	 * <li>63 Wild Beast Reserve</li>
-	 * <li>64 Fortress of the Dead</li>
-	 * <li>81-89 Territory names</li>
-	 * <li>90-100 null</li>
-	 * <li>101-121 Fortress names</li>
-	 * </ul>
-	 * @param number the conquerable entity
-	 * @return the system message with the proper parameter
-	 */
-	public final T addCastleId(int number)
-	{
-		append(new SMParam(TYPE_CASTLE_NAME, number));
-		return (T) this;
-	}
-	
-	public final T addInt(int number)
-	{
-		append(new SMParam(TYPE_INT_NUMBER, number));
-		return (T) this;
-	}
-	
-	public final T addLong(long number)
-	{
-		append(new SMParam(TYPE_LONG_NUMBER, number));
-		return (T) this;
-	}
-	
-	public final T addPcName(L2PcInstance pc)
-	{
-		append(new SMParam(TYPE_PLAYER_NAME, pc.getAppearance().getVisibleName()));
-		return (T) this;
-	}
-	
-	/**
-	 * ID from doorData.xml
-	 * @param doorId
-	 * @return
-	 */
-	public final T addDoorName(int doorId)
-	{
-		append(new SMParam(TYPE_DOOR_NAME, doorId));
-		return (T) this;
-	}
-	
-	public final T addNpcName(L2Npc npc)
-	{
-		return addNpcName(npc.getTemplate());
-	}
-	
-	public final T addNpcName(L2Summon npc)
-	{
-		return addNpcName(npc.getId());
-	}
-	
-	public final T addNpcName(L2NpcTemplate template)
-	{
-		if (template.isUsingServerSideName())
-		{
-			return addString(template.getName());
-		}
-		return addNpcName(template.getId());
-	}
-	
-	public final T addNpcName(int id)
-	{
-		append(new SMParam(TYPE_NPC_NAME, 1000000 + id));
-		return (T) this;
-	}
-	
-	public T addItemName(L2ItemInstance item)
-	{
-		return addItemName(item.getId());
-	}
-	
-	public T addItemName(L2Item item)
-	{
-		return addItemName(item.getId());
-	}
-	
-	public final T addItemName(int id)
-	{
-		final L2Item item = ItemTable.getInstance().getTemplate(id);
-		if (item.getDisplayId() != id)
-		{
-			return addString(item.getName());
-		}
-		
-		append(new SMParam(TYPE_ITEM_NAME, id));
-		return (T) this;
-	}
-	
-	public final T addZoneName(int x, int y, int z)
-	{
-		append(new SMParam(TYPE_ZONE_NAME, new int[]
-		{
-			x,
-			y,
-			z
-		}));
-		return (T) this;
-	}
-	
-	public final T addSkillName(Skill skill)
-	{
-		if (skill.getId() != skill.getDisplayId())
-		{
-			return addString(skill.getName());
-		}
-		return addSkillName(skill.getId(), skill.getLevel(), skill.getSubLevel());
-	}
-	
-	public final T addSkillName(int id)
-	{
-		return addSkillName(id, 1, 0);
-	}
-	
-	public final T addSkillName(int id, int lvl, int subLvl)
-	{
-		append(new SMParam(TYPE_SKILL_NAME, new int[]
-		{
-			id,
-			lvl,
-			subLvl
-		}));
-		return (T) this;
-	}
-	
-	/**
-	 * Elemental name - 0(Fire) ...
-	 * @param type
-	 * @return
-	 */
-	public final T addAttribute(int type)
-	{
-		append(new SMParam(TYPE_ELEMENT_NAME, type));
-		return (T) this;
-	}
-	
-	/**
-	 * ID from sysstring-e.dat
-	 * @param type
-	 * @return
-	 */
-	public final T addSystemString(int type)
-	{
-		append(new SMParam(TYPE_SYSTEM_STRING, type));
-		return (T) this;
-	}
-	
-	/**
-	 * ID from ClassInfo-e.dat
-	 * @param type
-	 * @return
-	 */
-	public final T addClassId(int type)
-	{
-		append(new SMParam(TYPE_CLASS_ID, type));
-		return (T) this;
-	}
-	
-	public final T addFactionName(int factionId)
-	{
-		append(new SMParam(TYPE_FACTION_NAME, factionId));
-		return (T) this;
-	}
-	
-	public final T addPopup(int target, int attacker, int damage)
-	{
-		append(new SMParam(TYPE_POPUP_ID, new int[]
-		{
-			target,
-			attacker,
-			damage
-		}));
-		return (T) this;
-	}
-	
-	public final T addByte(int time)
-	{
-		append(new SMParam(TYPE_BYTE, time));
-		return (T) this;
-	}
-	
-	/**
-	 * Instance name from instantzonedata-e.dat
-	 * @param type id of instance
-	 * @return
-	 */
-	public final T addInstanceName(int type)
-	{
-		append(new SMParam(TYPE_INSTANCE_NAME, type));
-		return (T) this;
-	}
-	
-	protected void writeParamsSize(PacketWriter packet, int size)
-	{
-		packet.writeC(size);
-	}
-	
-	protected void writeParamType(PacketWriter packet, int type)
-	{
-		packet.writeC(type);
-	}
-	
-	protected final void writeMe(PacketWriter packet)
-	{
-		writeParamsSize(packet, _params.length);
-		SMParam param;
-		for (int i = 0; i < _paramIndex; i++)
-		{
-			param = _params[i];
-			
-			writeParamType(packet, param.getType());
-			switch (param.getType())
-			{
-				case TYPE_ELEMENT_NAME:
-				case TYPE_BYTE:
-				case TYPE_FACTION_NAME:
-				{
-					packet.writeC(param.getIntValue());
-					break;
-				}
-				
-				case TYPE_CASTLE_NAME:
-				case TYPE_SYSTEM_STRING:
-				case TYPE_INSTANCE_NAME:
-				case TYPE_CLASS_ID:
-				{
-					packet.writeH(param.getIntValue());
-					break;
-				}
-				
-				case TYPE_ITEM_NAME:
-				case TYPE_INT_NUMBER:
-				case TYPE_NPC_NAME:
-				case TYPE_DOOR_NAME:
-				{
-					packet.writeD(param.getIntValue());
-					break;
-				}
-				
-				case TYPE_LONG_NUMBER:
-				{
-					packet.writeQ(param.getLongValue());
-					break;
-				}
-				
-				case TYPE_TEXT:
-				case TYPE_PLAYER_NAME:
-				{
-					packet.writeS(param.getStringValue());
-					break;
-				}
-				
-				case TYPE_SKILL_NAME:
-				{
-					final int[] array = param.getIntArrayValue();
-					packet.writeD(array[0]); // skill id
-					packet.writeH(array[1]); // skill level
-					packet.writeH(array[2]); // skill sub level
-					break;
-				}
-				
-				case TYPE_POPUP_ID:
-				case TYPE_ZONE_NAME:
-				{
-					final int[] array = param.getIntArrayValue();
-					packet.writeD(array[0]); // x
-					packet.writeD(array[1]); // y
-					packet.writeD(array[2]); // z
-					break;
-				}
-			}
-		}
-	}
-	
-	public final void printMe(PrintStream out)
-	{
-		out.println(0x62);
-		
-		out.println(_smId.getId());
-		out.println(_params.length);
-		
-		for (SMParam param : _params)
-		{
-			switch (param.getType())
-			{
-				case TYPE_TEXT:
-				case TYPE_PLAYER_NAME:
-				{
-					out.println(param.getStringValue());
-					break;
-				}
-				
-				case TYPE_LONG_NUMBER:
-				{
-					out.println(param.getLongValue());
-					break;
-				}
-				
-				case TYPE_ITEM_NAME:
-				case TYPE_CASTLE_NAME:
-				case TYPE_INT_NUMBER:
-				case TYPE_NPC_NAME:
-				case TYPE_ELEMENT_NAME:
-				case TYPE_SYSTEM_STRING:
-				case TYPE_INSTANCE_NAME:
-				case TYPE_DOOR_NAME:
-				case TYPE_CLASS_ID:
-				{
-					out.println(param.getIntValue());
-					break;
-				}
-				
-				case TYPE_POPUP_ID:
-				{
-					final int[] array = param.getIntArrayValue();
-					out.println(array[0]); // Target
-					out.println(array[1]); // Attacker
-					out.println(array[2]); // Value
-					break;
-				}
-				
-				case TYPE_SKILL_NAME:
-				{
-					final int[] array = param.getIntArrayValue();
-					out.println(array[0]); // SkillId
-					out.println(array[1]); // SkillLevel
-					out.println(array[2]); // SkillSubLevel
-					break;
-				}
-				
-				case TYPE_ZONE_NAME:
-				{
-					final int[] array = param.getIntArrayValue();
-					out.println(array[0]); // x
-					out.println(array[1]); // y
-					out.println(array[2]); // z
-					break;
-				}
-			}
-		}
-	}
+public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> extends IClientOutgoingPacket {
+    private static final SMParam[] EMPTY_PARAM_ARRAY = new SMParam[0];
+    private static final byte TYPE_FACTION_NAME = 24; // c(short), faction id.
+    // id 22 d (shared with 1-3,17,22
+    // id 21 h
+    // id 20 c
+    // id 19 c
+    // id 18 Q (read same as 6)
+    // id 17 shared with 1-3,17,22
+    private static final byte TYPE_BYTE = 20;
+    private static final byte TYPE_POPUP_ID = 16;
+    private static final byte TYPE_CLASS_ID = 15;
+    // id 14 dSSSSS
+    private static final byte TYPE_SYSTEM_STRING = 13;
+    private static final byte TYPE_PLAYER_NAME = 12;
+    private static final byte TYPE_DOOR_NAME = 11;
+    private static final byte TYPE_INSTANCE_NAME = 10;
+    private static final byte TYPE_ELEMENT_NAME = 9;
+    // id 8 - ddd
+    private static final byte TYPE_ZONE_NAME = 7;
+    private static final byte TYPE_LONG_NUMBER = 6;
+    private static final byte TYPE_CASTLE_NAME = 5;
+    private static final byte TYPE_SKILL_NAME = 4;
+    private static final byte TYPE_ITEM_NAME = 3;
+    private static final byte TYPE_NPC_NAME = 2;
+    private static final byte TYPE_INT_NUMBER = 1;
+    private static final byte TYPE_TEXT = 0;
+    private final SystemMessageId _smId;
+    private SMParam[] _params;
+    private int _paramIndex;
+    public AbstractMessagePacket(SystemMessageId smId) {
+        if (smId == null) {
+            throw new NullPointerException("SystemMessageId cannot be null!");
+        }
+        _smId = smId;
+        _params = smId.getParamCount() > 0 ? new SMParam[smId.getParamCount()] : EMPTY_PARAM_ARRAY;
+    }
+
+    public final int getId() {
+        return _smId.getId();
+    }
+
+    public final SystemMessageId getSystemMessageId() {
+        return _smId;
+    }
+
+    private void append(SMParam param) {
+        if (_paramIndex >= _params.length) {
+            _params = Arrays.copyOf(_params, _paramIndex + 1);
+            _smId.setParamCount(_paramIndex + 1);
+            // Mobius: With additional on-screen damage param (popup), length is increased.
+            if (param.getType() != TYPE_POPUP_ID) {
+                LOGGER.info("Wrong parameter count '" + (_paramIndex + 1) + "' for SystemMessageId: " + _smId);
+            }
+        }
+
+        _params[_paramIndex++] = param;
+    }
+
+    public final T addString(String text) {
+        append(new SMParam(TYPE_TEXT, text));
+        return (T) this;
+    }
+
+    /**
+     * Appends a Castle name parameter type, the name will be read from CastleName-e.dat.<br>
+     * <ul>
+     * <li>1-9 Castle names</li>
+     * <li>21 Fortress of Resistance</li>
+     * <li>22-33 Clan Hall names</li>
+     * <li>34 Devastated Castle</li>
+     * <li>35 Bandit Stronghold</li>
+     * <li>36-61 Clan Hall names</li>
+     * <li>62 Rainbow Springs</li>
+     * <li>63 Wild Beast Reserve</li>
+     * <li>64 Fortress of the Dead</li>
+     * <li>81-89 Territory names</li>
+     * <li>90-100 null</li>
+     * <li>101-121 Fortress names</li>
+     * </ul>
+     *
+     * @param number the conquerable entity
+     * @return the system message with the proper parameter
+     */
+    public final T addCastleId(int number) {
+        append(new SMParam(TYPE_CASTLE_NAME, number));
+        return (T) this;
+    }
+
+    public final T addInt(int number) {
+        append(new SMParam(TYPE_INT_NUMBER, number));
+        return (T) this;
+    }
+
+    public final T addLong(long number) {
+        append(new SMParam(TYPE_LONG_NUMBER, number));
+        return (T) this;
+    }
+
+    public final T addPcName(L2PcInstance pc) {
+        append(new SMParam(TYPE_PLAYER_NAME, pc.getAppearance().getVisibleName()));
+        return (T) this;
+    }
+
+    /**
+     * ID from doorData.xml
+     *
+     * @param doorId
+     * @return
+     */
+    public final T addDoorName(int doorId) {
+        append(new SMParam(TYPE_DOOR_NAME, doorId));
+        return (T) this;
+    }
+
+    public final T addNpcName(L2Npc npc) {
+        return addNpcName(npc.getTemplate());
+    }
+
+    public final T addNpcName(L2Summon npc) {
+        return addNpcName(npc.getId());
+    }
+
+    public final T addNpcName(L2NpcTemplate template) {
+        if (template.isUsingServerSideName()) {
+            return addString(template.getName());
+        }
+        return addNpcName(template.getId());
+    }
+
+    public final T addNpcName(int id) {
+        append(new SMParam(TYPE_NPC_NAME, 1000000 + id));
+        return (T) this;
+    }
+
+    public T addItemName(L2ItemInstance item) {
+        return addItemName(item.getId());
+    }
+
+    public T addItemName(L2Item item) {
+        return addItemName(item.getId());
+    }
+
+    public final T addItemName(int id) {
+        final L2Item item = ItemTable.getInstance().getTemplate(id);
+        if (item.getDisplayId() != id) {
+            return addString(item.getName());
+        }
+
+        append(new SMParam(TYPE_ITEM_NAME, id));
+        return (T) this;
+    }
+
+    public final T addZoneName(int x, int y, int z) {
+        append(new SMParam(TYPE_ZONE_NAME, new int[]
+                {
+                        x,
+                        y,
+                        z
+                }));
+        return (T) this;
+    }
+
+    public final T addSkillName(Skill skill) {
+        if (skill.getId() != skill.getDisplayId()) {
+            return addString(skill.getName());
+        }
+        return addSkillName(skill.getId(), skill.getLevel(), skill.getSubLevel());
+    }
+
+    public final T addSkillName(int id) {
+        return addSkillName(id, 1, 0);
+    }
+
+    public final T addSkillName(int id, int lvl, int subLvl) {
+        append(new SMParam(TYPE_SKILL_NAME, new int[]
+                {
+                        id,
+                        lvl,
+                        subLvl
+                }));
+        return (T) this;
+    }
+
+    /**
+     * Elemental name - 0(Fire) ...
+     *
+     * @param type
+     * @return
+     */
+    public final T addAttribute(int type) {
+        append(new SMParam(TYPE_ELEMENT_NAME, type));
+        return (T) this;
+    }
+
+    /**
+     * ID from sysstring-e.dat
+     *
+     * @param type
+     * @return
+     */
+    public final T addSystemString(int type) {
+        append(new SMParam(TYPE_SYSTEM_STRING, type));
+        return (T) this;
+    }
+
+    /**
+     * ID from ClassInfo-e.dat
+     *
+     * @param type
+     * @return
+     */
+    public final T addClassId(int type) {
+        append(new SMParam(TYPE_CLASS_ID, type));
+        return (T) this;
+    }
+
+    public final T addFactionName(int factionId) {
+        append(new SMParam(TYPE_FACTION_NAME, factionId));
+        return (T) this;
+    }
+
+    public final T addPopup(int target, int attacker, int damage) {
+        append(new SMParam(TYPE_POPUP_ID, new int[]
+                {
+                        target,
+                        attacker,
+                        damage
+                }));
+        return (T) this;
+    }
+
+    public final T addByte(int time) {
+        append(new SMParam(TYPE_BYTE, time));
+        return (T) this;
+    }
+
+    /**
+     * Instance name from instantzonedata-e.dat
+     *
+     * @param type id of instance
+     * @return
+     */
+    public final T addInstanceName(int type) {
+        append(new SMParam(TYPE_INSTANCE_NAME, type));
+        return (T) this;
+    }
+
+    protected void writeParamsSize(ByteBuffer packet, int size) {
+        packet.put((byte) size);
+    }
+
+    protected void writeParamType(ByteBuffer packet, int type) {
+        packet.put((byte) type);
+    }
+
+    protected final void writeMe(ByteBuffer packet) {
+        writeParamsSize(packet, _params.length);
+        SMParam param;
+        for (int i = 0; i < _paramIndex; i++) {
+            param = _params[i];
+
+            writeParamType(packet, param.getType());
+            switch (param.getType()) {
+                case TYPE_ELEMENT_NAME:
+                case TYPE_BYTE:
+                case TYPE_FACTION_NAME: {
+                    packet.put((byte) param.getIntValue());
+                    break;
+                }
+
+                case TYPE_CASTLE_NAME:
+                case TYPE_SYSTEM_STRING:
+                case TYPE_INSTANCE_NAME:
+                case TYPE_CLASS_ID: {
+                    packet.putShort((short) param.getIntValue());
+                    break;
+                }
+
+                case TYPE_ITEM_NAME:
+                case TYPE_INT_NUMBER:
+                case TYPE_NPC_NAME:
+                case TYPE_DOOR_NAME: {
+                    packet.putInt(param.getIntValue());
+                    break;
+                }
+
+                case TYPE_LONG_NUMBER: {
+                    packet.putLong(param.getLongValue());
+                    break;
+                }
+
+                case TYPE_TEXT:
+                case TYPE_PLAYER_NAME: {
+                    writeString(param.getStringValue(), packet);
+                    break;
+                }
+
+                case TYPE_SKILL_NAME: {
+                    final int[] array = param.getIntArrayValue();
+                    packet.putInt(array[0]); // skill id
+                    packet.putShort((short) array[1]); // skill level
+                    packet.putShort((short) array[2]); // skill sub level
+                    break;
+                }
+
+                case TYPE_POPUP_ID:
+                case TYPE_ZONE_NAME: {
+                    final int[] array = param.getIntArrayValue();
+                    packet.putInt(array[0]); // x
+                    packet.putInt(array[1]); // y
+                    packet.putInt(array[2]); // z
+                    break;
+                }
+            }
+        }
+    }
+
+    public final void printMe(PrintStream out) {
+        out.println(0x62);
+
+        out.println(_smId.getId());
+        out.println(_params.length);
+
+        for (SMParam param : _params) {
+            switch (param.getType()) {
+                case TYPE_TEXT:
+                case TYPE_PLAYER_NAME: {
+                    out.println(param.getStringValue());
+                    break;
+                }
+
+                case TYPE_LONG_NUMBER: {
+                    out.println(param.getLongValue());
+                    break;
+                }
+
+                case TYPE_ITEM_NAME:
+                case TYPE_CASTLE_NAME:
+                case TYPE_INT_NUMBER:
+                case TYPE_NPC_NAME:
+                case TYPE_ELEMENT_NAME:
+                case TYPE_SYSTEM_STRING:
+                case TYPE_INSTANCE_NAME:
+                case TYPE_DOOR_NAME:
+                case TYPE_CLASS_ID: {
+                    out.println(param.getIntValue());
+                    break;
+                }
+
+                case TYPE_POPUP_ID: {
+                    final int[] array = param.getIntArrayValue();
+                    out.println(array[0]); // Target
+                    out.println(array[1]); // Attacker
+                    out.println(array[2]); // Value
+                    break;
+                }
+
+                case TYPE_SKILL_NAME: {
+                    final int[] array = param.getIntArrayValue();
+                    out.println(array[0]); // SkillId
+                    out.println(array[1]); // SkillLevel
+                    out.println(array[2]); // SkillSubLevel
+                    break;
+                }
+
+                case TYPE_ZONE_NAME: {
+                    final int[] array = param.getIntArrayValue();
+                    out.println(array[0]); // x
+                    out.println(array[1]); // y
+                    out.println(array[2]); // z
+                    break;
+                }
+            }
+        }
+    }
+
+    private static final class SMParam {
+        private final byte _type;
+        private final Object _value;
+
+        public SMParam(byte type, Object value) {
+            _type = type;
+            _value = value;
+        }
+
+        public final byte getType() {
+            return _type;
+        }
+
+        public final String getStringValue() {
+            return (String) _value;
+        }
+
+        public final int getIntValue() {
+            return ((Integer) _value).intValue();
+        }
+
+        public final long getLongValue() {
+            return ((Long) _value).longValue();
+        }
+
+        public final int[] getIntArrayValue() {
+            return (int[]) _value;
+        }
+    }
 }

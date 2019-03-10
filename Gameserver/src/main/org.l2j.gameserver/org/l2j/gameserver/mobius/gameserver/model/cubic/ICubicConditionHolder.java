@@ -7,8 +7,7 @@ import org.l2j.gameserver.mobius.gameserver.model.cubic.conditions.ICubicConditi
 /**
  * @author UnAfraid
  */
-public interface ICubicConditionHolder
-{
+public interface ICubicConditionHolder {
     boolean validateConditions(CubicInstance cubic, L2Character owner, L2Object target);
 
     void addCondition(ICubicCondition condition);

@@ -13,8 +13,7 @@ import java.util.Set;
 /**
  * @author JIV
  */
-public interface Siegable
-{
+public interface Siegable {
     void startSiege();
 
     void endSiege();

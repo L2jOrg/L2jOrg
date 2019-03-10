@@ -33,10 +33,12 @@ import java.util.function.BiConsumer;
 
 /**
  * Template holder for instances.
+ *
  * @author malyelfik
  */
-public class InstanceTemplate extends ListenersContainer implements IIdentifiable, INamable
-{
+public class InstanceTemplate extends ListenersContainer implements IIdentifiable, INamable {
+    private final Map<Integer, L2DoorTemplate> _doors = new HashMap<>();
+    private final List<SpawnTemplate> _spawns = new ArrayList<>();
     // Basic instance parameters
     private int _templateId = -1;
     private String _name = "UnknownInstance";
@@ -51,8 +53,6 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     private float _expPartyRate = Config.RATE_INSTANCE_PARTY_XP;
     private float _spPartyRate = Config.RATE_INSTANCE_PARTY_SP;
     private StatsSet _parameters = StatsSet.EMPTY_STATSET;
-    private final Map<Integer, L2DoorTemplate> _doors = new HashMap<>();
-    private final List<SpawnTemplate> _spawns = new ArrayList<>();
     // Locations
     private InstanceTeleportType _enterLocationType = InstanceTeleportType.NONE;
     private List<Location> _enterLocations = null;
@@ -71,8 +71,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     /**
      * @param set
      */
-    public InstanceTemplate(StatsSet set)
-    {
+    public InstanceTemplate(StatsSet set) {
         _templateId = set.getInt("id", 0);
         _name = set.getString("name", null);
         _maxWorldCount = set.getInt("maxWorlds", -1);
@@ -83,122 +82,61 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     // -------------------------------------------------------------
 
     /**
-     * Set name of instance world.
-     * @param name instance name
-     */
-    public void setName(String name)
-    {
-        if ((name != null) && !name.isEmpty())
-        {
-            _name = name;
-        }
-    }
-
-    /**
-     * Set instance world duration.
-     * @param duration time in minutes
-     */
-    public void setDuration(int duration)
-    {
-        if (duration > 0)
-        {
-            _duration = duration;
-        }
-    }
-
-    /**
-     * Set time after empty instance will be destroyed.
-     * @param emptyDestroyTime time in minutes
-     */
-    public void setEmptyDestroyTime(long emptyDestroyTime)
-    {
-        if (emptyDestroyTime >= 0)
-        {
-            _emptyDestroyTime = TimeUnit.MINUTES.toMillis(emptyDestroyTime);
-        }
-    }
-
-    /**
-     * Set time after death player will be ejected from instance world.<br>
-     * Default: {@link Config#EJECT_DEAD_PLAYER_TIME}
-     * @param ejectTime time in minutes
-     */
-    public void setEjectTime(int ejectTime)
-    {
-        if (ejectTime >= 0)
-        {
-            _ejectTime = ejectTime;
-        }
-    }
-
-    /**
      * Allow summoning players (that are out of instance) to instance world by players inside.
+     *
      * @param val {@code true} means summon is allowed, {@code false} means summon is prohibited
      */
-    public void allowPlayerSummon(boolean val)
-    {
+    public void allowPlayerSummon(boolean val) {
         _allowPlayerSummon = val;
     }
 
     /**
      * Set instance as PvP world.
+     *
      * @param val {@code true} world is PvP zone, {@code false} world use classic zones
      */
-    public void setIsPvP(boolean val)
-    {
+    public void setIsPvP(boolean val) {
         _isPvP = val;
     }
 
     /**
-     * Set parameters shared between instances with same template id.
-     * @param set map containing parameters
-     */
-    public void setParameters(Map<String, Object> set)
-    {
-        if (!set.isEmpty())
-        {
-            _parameters = new StatsSet(Collections.unmodifiableMap(set));
-        }
-    }
-
-    /**
      * Add door into instance world.
+     *
      * @param templateId template id of door
-     * @param template door template
+     * @param template   door template
      */
-    public void addDoor(int templateId, L2DoorTemplate template)
-    {
+    public void addDoor(int templateId, L2DoorTemplate template) {
         _doors.put(templateId, template);
     }
 
     /**
      * Add new group of NPC spawns into instance world.<br>
      * Group with name "general" will be spawned on instance world create.
+     *
      * @param spawns list of NPC spawn data
      */
-    public void addSpawns(List<SpawnTemplate> spawns)
-    {
+    public void addSpawns(List<SpawnTemplate> spawns) {
         _spawns.addAll(spawns);
     }
 
     /**
      * Set enter locations for instance world.
-     * @param type type of teleport ({@link InstanceTeleportType#FIXED} or {@link InstanceTeleportType#RANDOM} are supported)
+     *
+     * @param type      type of teleport ({@link InstanceTeleportType#FIXED} or {@link InstanceTeleportType#RANDOM} are supported)
      * @param locations list of locations used for determining final enter location
      */
-    public void setEnterLocation(InstanceTeleportType type, List<Location> locations)
-    {
+    public void setEnterLocation(InstanceTeleportType type, List<Location> locations) {
         _enterLocationType = type;
         _enterLocations = locations;
     }
 
     /**
      * Set exit locations for instance world.
-     * @param type type of teleport (see {@link InstanceTeleportType} for all possible types)
+     *
+     * @param type      type of teleport (see {@link InstanceTeleportType} for all possible types)
      * @param locations list of locations used for determining final exit location
      */
-    public void setExitLocation(InstanceTeleportType type, List<Location> locations)
-    {
+    public void setExitLocation(InstanceTeleportType type, List<Location> locations) {
         _exitLocationType = type;
         _exitLocations = locations;
     }
@@ -206,11 +144,11 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     /**
      * Set re-enter data for instance world.<br>
      * This method also enable re-enter condition for instance world.
-     * @param type reenter type means when reenter restriction should be applied (see {@link InstanceReenterType} for more info)
+     *
+     * @param type   reenter type means when reenter restriction should be applied (see {@link InstanceReenterType} for more info)
      * @param holder data which are used to calculate reenter time
      */
-    public void setReenterData(InstanceReenterType type, List<InstanceReenterTimeHolder> holder)
-    {
+    public void setReenterData(InstanceReenterType type, List<InstanceReenterTimeHolder> holder) {
         _reenterType = type;
         _reenterData = holder;
     }
@@ -218,11 +156,11 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     /**
      * Set remove buff list for instance world.<br>
      * These data are used to restrict player buffs when he enters into instance.
-     * @param type type of list like blacklist, whitelist, ... (see {@link InstanceRemoveBuffType} for more info)
+     *
+     * @param type          type of list like blacklist, whitelist, ... (see {@link InstanceRemoveBuffType} for more info)
      * @param exceptionList
      */
-    public void setRemoveBuff(InstanceRemoveBuffType type, List<Integer> exceptionList)
-    {
+    public void setRemoveBuff(InstanceRemoveBuffType type, List<Integer> exceptionList) {
         _removeBuffType = type;
         _removeBuffExceptions = exceptionList;
     }
@@ -230,10 +168,10 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     /**
      * Register conditions to instance world.<br>
      * This method also set new enter group mask according to given conditions.
+     *
      * @param conditions list of conditions
      */
-    public void setConditions(List<Condition> conditions)
-    {
+    public void setConditions(List<Condition> conditions) {
         // Set conditions
         _conditions = conditions;
 
@@ -241,18 +179,12 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
         boolean onlyCC = false;
         int min = 1;
         int max = 1;
-        for (Condition cond : _conditions)
-        {
-            if (cond instanceof ConditionCommandChannel)
-            {
+        for (Condition cond : _conditions) {
+            if (cond instanceof ConditionCommandChannel) {
                 onlyCC = true;
-            }
-            else if (cond instanceof ConditionGroupMin)
-            {
+            } else if (cond instanceof ConditionGroupMin) {
                 min = ((ConditionGroupMin) cond).getLimit();
-            }
-            else if (cond instanceof ConditionGroupMax)
-            {
+            } else if (cond instanceof ConditionGroupMax) {
                 max = ((ConditionGroupMax) cond).getLimit();
             }
         }
@@ -260,23 +192,19 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
         // Reset group mask before setting new group
         _groupMask = 0;
         // Check if player can enter in other group then Command channel
-        if (!onlyCC)
-        {
+        if (!onlyCC) {
             // Player
-            if (min == 1)
-            {
+            if (min == 1) {
                 _groupMask |= GroupType.NONE.getMask();
             }
             // Party
             final int partySize = Config.ALT_PARTY_MAX_MEMBERS;
-            if (((max > 1) && (max <= partySize)) || ((min <= partySize) && (max > partySize)))
-            {
+            if (((max > 1) && (max <= partySize)) || ((min <= partySize) && (max > partySize))) {
                 _groupMask |= GroupType.PARTY.getMask();
             }
         }
         // Command channel
-        if (onlyCC || (max > 7))
-        {
+        if (onlyCC || (max > 7)) {
             _groupMask |= GroupType.COMMAND_CHANNEL.getMask();
         }
     }
@@ -285,42 +213,48 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     // Getters
     // -------------------------------------------------------------
     @Override
-    public int getId()
-    {
+    public int getId() {
         return _templateId;
     }
 
     @Override
-    public String getName()
-    {
+    public String getName() {
         return _name;
     }
 
     /**
+     * Set name of instance world.
+     *
+     * @param name instance name
+     */
+    public void setName(String name) {
+        if ((name != null) && !name.isEmpty()) {
+            _name = name;
+        }
+    }
+
+    /**
      * Get all enter locations defined in XML template.
+     *
      * @return list of enter locations
      */
-    public List<Location> getEnterLocations()
-    {
+    public List<Location> getEnterLocations() {
         return _enterLocations;
     }
 
     /**
      * Get enter location to instance world.
+     *
      * @return enter location if instance has any, otherwise {@code null}
      */
-    public Location getEnterLocation()
-    {
+    public Location getEnterLocation() {
         Location loc = null;
-        switch (_enterLocationType)
-        {
-            case RANDOM:
-            {
+        switch (_enterLocationType) {
+            case RANDOM: {
                 loc = _enterLocations.get(Rnd.get(_enterLocations.size()));
                 break;
             }
-            case FIXED:
-            {
+            case FIXED: {
                 loc = _enterLocations.get(0);
                 break;
             }
@@ -330,40 +264,35 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
     /**
      * Get type of exit location.
+     *
      * @return exit location type (see {@link InstanceTeleportType} for possible values)
      */
-    public InstanceTeleportType getExitLocationType()
-    {
+    public InstanceTeleportType getExitLocationType() {
         return _exitLocationType;
     }
 
     /**
      * Get exit location from instance world.
+     *
      * @param player player who wants to leave instance
      * @return exit location if instance has any, otherwise {@code null}
      */
-    public Location getExitLocation(L2PcInstance player)
-    {
+    public Location getExitLocation(L2PcInstance player) {
         Location location = null;
 
-        switch (_exitLocationType)
-        {
-            case RANDOM:
-            {
+        switch (_exitLocationType) {
+            case RANDOM: {
                 location = _exitLocations.get(Rnd.get(_exitLocations.size()));
                 break;
             }
-            case FIXED:
-            {
+            case FIXED: {
                 location = _exitLocations.get(0);
                 break;
             }
-            case ORIGIN:
-            {
+            case ORIGIN: {
                 final PlayerVariables vars = player.getVariables();
                 final int[] loc = vars.getIntArray("INSTANCE_ORIGIN", ";");
-                if (loc.length == 3)
-                {
+                if (loc.length == 3) {
                     location = new Location(loc[0], loc[1], loc[2]);
                     vars.remove("INSTANCE_ORIGIN");
                 }
@@ -375,120 +304,158 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
     /**
      * Get time after empty instance is destroyed.
+     *
      * @return time in milliseconds
      */
-    public long getEmptyDestroyTime()
-    {
+    public long getEmptyDestroyTime() {
         return _emptyDestroyTime;
     }
 
     /**
+     * Set time after empty instance will be destroyed.
+     *
+     * @param emptyDestroyTime time in minutes
+     */
+    public void setEmptyDestroyTime(long emptyDestroyTime) {
+        if (emptyDestroyTime >= 0) {
+            _emptyDestroyTime = TimeUnit.MINUTES.toMillis(emptyDestroyTime);
+        }
+    }
+
+    /**
      * Get instance duration time.
+     *
      * @return time in minutes
      */
-    public int getDuration()
-    {
+    public int getDuration() {
         return _duration;
     }
 
     /**
+     * Set instance world duration.
+     *
+     * @param duration time in minutes
+     */
+    public void setDuration(int duration) {
+        if (duration > 0) {
+            _duration = duration;
+        }
+    }
+
+    /**
      * Get time after dead player is ejected from instance world.
+     *
      * @return time in minutes
      */
-    public int getEjectTime()
-    {
+    public int getEjectTime() {
         return _ejectTime;
     }
 
     /**
+     * Set time after death player will be ejected from instance world.<br>
+     * Default: {@link Config#EJECT_DEAD_PLAYER_TIME}
+     *
+     * @param ejectTime time in minutes
+     */
+    public void setEjectTime(int ejectTime) {
+        if (ejectTime >= 0) {
+            _ejectTime = ejectTime;
+        }
+    }
+
+    /**
      * Check if summoning player into instance is allowed.
+     *
      * @return {@code true} if summon is allowed, otherwise {@code false}
      */
-    public boolean isPlayerSummonAllowed()
-    {
+    public boolean isPlayerSummonAllowed() {
         return _allowPlayerSummon;
     }
 
     /**
      * Check if instance is PvP zone.
+     *
      * @return {@code true} if instance is PvP, otherwise {@code false}
      */
-    public boolean isPvP()
-    {
+    public boolean isPvP() {
         return _isPvP;
     }
 
     /**
      * Get doors data for instance world.
+     *
      * @return map in form <i>doorId, door template</i>
      */
-    public Map<Integer, L2DoorTemplate> getDoors()
-    {
+    public Map<Integer, L2DoorTemplate> getDoors() {
         return _doors;
     }
 
     /**
      * @return list of all spawn templates
      */
-    public List<SpawnTemplate> getSpawns()
-    {
+    public List<SpawnTemplate> getSpawns() {
         return _spawns;
     }
 
     /**
      * Get count of instance worlds which can run concurrently with same template ID.
+     *
      * @return count of worlds
      */
-    public int getMaxWorlds()
-    {
+    public int getMaxWorlds() {
         return _maxWorldCount;
     }
 
     /**
      * Get instance template parameters.
+     *
      * @return parameters of template
      */
-    public StatsSet getParameters()
-    {
+    public StatsSet getParameters() {
         return _parameters;
     }
 
     /**
+     * Set parameters shared between instances with same template id.
+     *
+     * @param set map containing parameters
+     */
+    public void setParameters(Map<String, Object> set) {
+        if (!set.isEmpty()) {
+            _parameters = new StatsSet(Collections.unmodifiableMap(set));
+        }
+    }
+
+    /**
      * Check if buffs are removed upon instance enter.
+     *
      * @return {@code true} if any buffs should be removed, otherwise {@code false}
      */
-    public boolean isRemoveBuffEnabled()
-    {
+    public boolean isRemoveBuffEnabled() {
         return _removeBuffType != InstanceRemoveBuffType.NONE;
     }
 
     /**
      * Remove buffs from player according to remove buff data
+     *
      * @param player player which loose buffs
      */
-    public void removePlayerBuff(L2PcInstance player)
-    {
+    public void removePlayerBuff(L2PcInstance player) {
         // Make list of affected playable objects
         final List<L2Playable> affected = new ArrayList<>();
         affected.add(player);
         player.getServitors().values().forEach(affected::add);
-        if (player.hasPet())
-        {
+        if (player.hasPet()) {
             affected.add(player.getPet());
         }
 
         // Now remove buffs by type
-        if (_removeBuffType == InstanceRemoveBuffType.ALL)
-        {
-            for (L2Playable playable : affected)
-            {
+        if (_removeBuffType == InstanceRemoveBuffType.ALL) {
+            for (L2Playable playable : affected) {
                 playable.stopAllEffectsExceptThoseThatLastThroughDeath();
             }
-        }
-        else
-        {
-            for (L2Playable playable : affected)
-            {
+        } else {
+            for (L2Playable playable : affected) {
                 // Stop all buffs.
                 playable.getEffectList().stopEffects(info -> !info.getSkill().isIrreplacableBuff() && info.getSkill().getBuffType().isBuff() && hasRemoveBuffException(info.getSkill()), true, true);
             }
@@ -497,35 +464,33 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
     /**
      * Check if given buff {@code skill} should be removed.
+     *
      * @param skill buff which should be removed
      * @return {@code true} if buff will be removed, otherwise {@code false}
      */
-    private boolean hasRemoveBuffException(Skill skill)
-    {
+    private boolean hasRemoveBuffException(Skill skill) {
         final boolean containsSkill = _removeBuffExceptions.contains(skill.getId());
         return (_removeBuffType == InstanceRemoveBuffType.BLACKLIST) ? containsSkill : !containsSkill;
     }
 
     /**
      * Get type of re-enter data.
+     *
      * @return type of re-enter (see {@link InstanceReenterType} for possible values)
      */
-    public InstanceReenterType getReenterType()
-    {
+    public InstanceReenterType getReenterType() {
         return _reenterType;
     }
 
     /**
      * Calculate re-enter time for instance world.
+     *
      * @return re-enter time in milliseconds
      */
-    public long calculateReenterTime()
-    {
+    public long calculateReenterTime() {
         long time = -1;
-        for (InstanceReenterTimeHolder data : _reenterData)
-        {
-            if (data.getTime() > 0)
-            {
+        for (InstanceReenterTimeHolder data : _reenterData) {
+            if (data.getTime() > 0) {
                 time = System.currentTimeMillis() + data.getTime();
                 break;
             }
@@ -536,31 +501,26 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
             calendar.set(Calendar.SECOND, 0);
 
             // If calendar time is lower than current, add one more day
-            if (calendar.getTimeInMillis() <= System.currentTimeMillis())
-            {
+            if (calendar.getTimeInMillis() <= System.currentTimeMillis()) {
                 calendar.add(Calendar.DAY_OF_MONTH, 1);
             }
 
             // Modify calendar day
-            if (data.getDay() != null)
-            {
+            if (data.getDay() != null) {
                 // DayOfWeek starts with Monday(1) but Calendar starts with Sunday(1)
                 int day = data.getDay().getValue() + 1;
-                if (day > 7)
-                {
+                if (day > 7) {
                     day = 1;
                 }
 
                 // Set exact day. If modified date is before current, add one more week.
                 calendar.set(Calendar.DAY_OF_WEEK, day);
-                if (calendar.getTimeInMillis() <= System.currentTimeMillis())
-                {
+                if (calendar.getTimeInMillis() <= System.currentTimeMillis()) {
                     calendar.add(Calendar.WEEK_OF_MONTH, 1);
                 }
             }
 
-            if ((time == -1) || (calendar.getTimeInMillis() < time))
-            {
+            if ((time == -1) || (calendar.getTimeInMillis() < time)) {
                 time = calendar.getTimeInMillis();
             }
         }
@@ -569,54 +529,48 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
     /**
      * Check if enter group mask contains given group type {@code type}.
+     *
      * @param type type of group
      * @return {@code true} if mask contains given group, otherwise {@code false}
      */
-    private final boolean groupMaskContains(GroupType type)
-    {
+    private final boolean groupMaskContains(GroupType type) {
         final int flag = type.getMask();
         return (_groupMask & flag) == flag;
     }
 
     /**
      * Get enter group which can enter into instance world based on player's group.
+     *
      * @param player player who wants to enter
      * @return group type which can enter if any can enter, otherwise {@code null}
      */
-    private final GroupType getEnterGroupType(L2PcInstance player)
-    {
+    private final GroupType getEnterGroupType(L2PcInstance player) {
         // If mask doesn't contain any group
-        if (_groupMask == 0)
-        {
+        if (_groupMask == 0) {
             return null;
         }
 
         // If player can override instance conditions then he can enter alone
-        if (player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
-        {
+        if (player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS)) {
             return GroupType.NONE;
         }
 
         // Check if mask contains player's group
         final GroupType playerGroup = player.getGroupType();
-        if (groupMaskContains(playerGroup))
-        {
+        if (groupMaskContains(playerGroup)) {
             return playerGroup;
         }
 
         // Check if mask contains only one group
         final GroupType type = GroupType.getByMask(_groupMask);
-        if (type != null)
-        {
+        if (type != null) {
             return type;
         }
 
         // When mask contains more group types but without player's group, choose nearest one
         // player < party < command channel
-        for (GroupType t : GroupType.values())
-        {
-            if (t != playerGroup && groupMaskContains(t))
-            {
+        for (GroupType t : GroupType.values()) {
+            if (t != playerGroup && groupMaskContains(t)) {
                 return t;
             }
         }
@@ -626,14 +580,13 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
     /**
      * Get player's group based on result of {@link InstanceTemplate#getEnterGroupType(L2PcInstance)}.
+     *
      * @param player player who wants to enter into instance
      * @return list of players (first player in list is player who make enter request)
      */
-    public List<L2PcInstance> getEnterGroup(L2PcInstance player)
-    {
+    public List<L2PcInstance> getEnterGroup(L2PcInstance player) {
         final GroupType type = getEnterGroupType(player);
-        if (type == null)
-        {
+        if (type == null) {
             return null;
         }
 
@@ -643,18 +596,14 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
         // Check if player has group in which he can enter
         AbstractPlayerGroup pGroup = null;
-        if (type == GroupType.PARTY)
-        {
+        if (type == GroupType.PARTY) {
             pGroup = player.getParty();
-        }
-        else if (type == GroupType.COMMAND_CHANNEL)
-        {
+        } else if (type == GroupType.COMMAND_CHANNEL) {
             pGroup = player.getCommandChannel();
         }
 
         // If any group found then put them into enter group list
-        if (pGroup != null)
-        {
+        if (pGroup != null) {
             pGroup.getMembers().stream().filter(p -> !p.equals(player)).forEach(group::add);
         }
         return group;
@@ -662,17 +611,15 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
     /**
      * Validate instance conditions for given group.
-     * @param group group of players which want to enter instance world
-     * @param npc instance of NPC used to enter to instance
+     *
+     * @param group        group of players which want to enter instance world
+     * @param npc          instance of NPC used to enter to instance
      * @param htmlCallback callback function used to display fail HTML when condition validate failed
      * @return {@code true} when all condition are met, otherwise {@code false}
      */
-    public boolean validateConditions(List<L2PcInstance> group, L2Npc npc, BiConsumer<L2PcInstance, String> htmlCallback)
-    {
-        for (Condition cond : _conditions)
-        {
-            if (!cond.validate(npc, group, htmlCallback))
-            {
+    public boolean validateConditions(List<L2PcInstance> group, L2Npc npc, BiConsumer<L2PcInstance, String> htmlCallback) {
+        for (Condition cond : _conditions) {
+            if (!cond.validate(npc, group, htmlCallback)) {
                 return false;
             }
         }
@@ -681,93 +628,88 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
     /**
      * Apply condition effects for each player from enter group.
+     *
      * @param group players from enter group
      */
-    public void applyConditionEffects(List<L2PcInstance> group)
-    {
+    public void applyConditionEffects(List<L2PcInstance> group) {
         _conditions.forEach(c -> c.applyEffect(group));
     }
 
     /**
      * @return the exp rate of the instance
      **/
-    public float getExpRate()
-    {
+    public float getExpRate() {
         return _expRate;
     }
 
     /**
      * Sets the exp rate of the instance
+     *
      * @param expRate
      **/
-    public void setExpRate(float expRate)
-    {
+    public void setExpRate(float expRate) {
         _expRate = expRate;
     }
 
     /**
      * @return the sp rate of the instance
      */
-    public float getSPRate()
-    {
+    public float getSPRate() {
         return _spRate;
     }
 
     /**
      * Sets the sp rate of the instance
+     *
      * @param spRate
      **/
-    public void setSPRate(float spRate)
-    {
+    public void setSPRate(float spRate) {
         _spRate = spRate;
     }
 
     /**
      * @return the party exp rate of the instance
      */
-    public float getExpPartyRate()
-    {
+    public float getExpPartyRate() {
         return _expPartyRate;
     }
 
     /**
      * Sets the party exp rate of the instance
+     *
      * @param expRate
      **/
-    public void setExpPartyRate(float expRate)
-    {
+    public void setExpPartyRate(float expRate) {
         _expPartyRate = expRate;
     }
 
     /**
      * @return the party sp rate of the instance
      */
-    public float getSPPartyRate()
-    {
+    public float getSPPartyRate() {
         return _spPartyRate;
     }
 
     /**
      * Sets the party sp rate of the instance
+     *
      * @param spRate
      **/
-    public void setSPPartyRate(float spRate)
-    {
+    public void setSPPartyRate(float spRate) {
         _spPartyRate = spRate;
     }
 
     /**
      * Get count of created instance worlds.
+     *
      * @return count of created instances
      */
-    public long getWorldCount()
-    {
+    public long getWorldCount() {
         return InstanceManager.getInstance().getWorldCount(getId());
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "ID: " + _templateId + " Name: " + _name;
     }
 }

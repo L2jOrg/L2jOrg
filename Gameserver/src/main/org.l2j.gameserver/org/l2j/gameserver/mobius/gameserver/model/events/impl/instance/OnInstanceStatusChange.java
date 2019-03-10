@@ -7,30 +7,25 @@ import org.l2j.gameserver.mobius.gameserver.model.instancezone.Instance;
 /**
  * @author malyelfik
  */
-public final class OnInstanceStatusChange implements IBaseEvent
-{
+public final class OnInstanceStatusChange implements IBaseEvent {
     private final Instance _world;
     private final int _status;
 
-    public OnInstanceStatusChange(Instance world, int status)
-    {
+    public OnInstanceStatusChange(Instance world, int status) {
         _world = world;
         _status = status;
     }
 
-    public Instance getWorld()
-    {
+    public Instance getWorld() {
         return _world;
     }
 
-    public int getStatus()
-    {
+    public int getStatus() {
         return _status;
     }
 
     @Override
-    public EventType getType()
-    {
+    public EventType getType() {
         return EventType.ON_INSTANCE_STATUS_CHANGE;
     }
 }

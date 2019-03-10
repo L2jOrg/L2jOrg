@@ -11,47 +11,39 @@ import java.nio.ByteBuffer;
 /**
  * @author Forsaiken
  */
-public final class RequestBidItemAuction extends IClientIncomingPacket
-{
-	private int _instanceId;
-	private long _bid;
-	
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
-		_instanceId = packet.getInt();
-		_bid = packet.getLong();
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		// can't use auction fp here
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("auction"))
-		{
-			activeChar.sendMessage("You are bidding too fast.");
-			return;
-		}
-		
-		if ((_bid < 0) || (_bid > Inventory.MAX_ADENA))
-		{
-			return;
-		}
-		
-		final ItemAuctionInstance instance = ItemAuctionManager.getInstance().getManagerInstance(_instanceId);
-		if (instance != null)
-		{
-			final ItemAuction auction = instance.getCurrentAuction();
-			if (auction != null)
-			{
-				auction.registerBid(activeChar, _bid);
-			}
-		}
-	}
+public final class RequestBidItemAuction extends IClientIncomingPacket {
+    private int _instanceId;
+    private long _bid;
+
+    @Override
+    public void readImpl(ByteBuffer packet) {
+        _instanceId = packet.getInt();
+        _bid = packet.getLong();
+    }
+
+    @Override
+    public void runImpl() {
+        final L2PcInstance activeChar = client.getActiveChar();
+        if (activeChar == null) {
+            return;
+        }
+
+        // can't use auction fp here
+        if (!client.getFloodProtectors().getTransaction().tryPerformAction("auction")) {
+            activeChar.sendMessage("You are bidding too fast.");
+            return;
+        }
+
+        if ((_bid < 0) || (_bid > Inventory.MAX_ADENA)) {
+            return;
+        }
+
+        final ItemAuctionInstance instance = ItemAuctionManager.getInstance().getManagerInstance(_instanceId);
+        if (instance != null) {
+            final ItemAuction auction = instance.getCurrentAuction();
+            if (auction != null) {
+                auction.registerBid(activeChar, _bid);
+            }
+        }
+    }
 }

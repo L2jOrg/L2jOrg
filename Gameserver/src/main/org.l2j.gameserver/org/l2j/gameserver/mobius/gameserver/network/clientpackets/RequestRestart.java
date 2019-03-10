@@ -13,29 +13,25 @@ import java.util.logging.Logger;
 
 /**
  * This class ...
+ *
  * @version $Revision: 1.11.2.1.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRestart extends IClientIncomingPacket
-{
+public final class RequestRestart extends IClientIncomingPacket {
     protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
-        if (!player.canLogout())
-        {
+        if (!player.canLogout()) {
             client.sendPacket(RestartResponse.FALSE);
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
@@ -43,8 +39,7 @@ public final class RequestRestart extends IClientIncomingPacket
 
         LOGGER_ACCOUNTING.info("Logged out, " + client);
 
-        if (!OfflineTradeUtil.enteredOfflineMode(player))
-        {
+        if (!OfflineTradeUtil.enteredOfflineMode(player)) {
             Disconnection.of(client, player).storeMe().deleteMe();
         }
 

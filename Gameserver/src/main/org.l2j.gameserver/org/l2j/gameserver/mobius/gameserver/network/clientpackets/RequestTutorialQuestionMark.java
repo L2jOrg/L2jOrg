@@ -6,23 +6,19 @@ import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.O
 
 import java.nio.ByteBuffer;
 
-public class RequestTutorialQuestionMark extends IClientIncomingPacket
-{
+public class RequestTutorialQuestionMark extends IClientIncomingPacket {
     private int _number = 0;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         packet.get(); // index ?
         _number = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 

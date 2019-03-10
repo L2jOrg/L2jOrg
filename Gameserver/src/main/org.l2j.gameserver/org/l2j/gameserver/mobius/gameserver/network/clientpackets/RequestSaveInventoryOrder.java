@@ -11,23 +11,22 @@ import java.util.List;
 
 /**
  * Format:(ch) d[dd]
+ *
  * @author -Wooden-
  */
-public final class RequestSaveInventoryOrder extends IClientIncomingPacket
-{
+public final class RequestSaveInventoryOrder extends IClientIncomingPacket {
+    /**
+     * client limit
+     */
+    private static final int LIMIT = 125;
     private List<InventoryOrder> _order;
 
-    /** client limit */
-    private static final int LIMIT = 125;
-
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         int sz = packet.getInt();
         sz = Math.min(sz, LIMIT);
         _order = new ArrayList<>(sz);
-        for (int i = 0; i < sz; i++)
-        {
+        for (int i = 0; i < sz; i++) {
             final int objectId = packet.getInt();
             final int order = packet.getInt();
             _order.add(new InventoryOrder(objectId, order));
@@ -35,31 +34,25 @@ public final class RequestSaveInventoryOrder extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player != null)
-        {
+        if (player != null) {
             final Inventory inventory = player.getInventory();
-            for (InventoryOrder order : _order)
-            {
+            for (InventoryOrder order : _order) {
                 final L2ItemInstance item = inventory.getItemByObjectId(order.objectID);
-                if ((item != null) && (item.getItemLocation() == ItemLocation.INVENTORY))
-                {
+                if ((item != null) && (item.getItemLocation() == ItemLocation.INVENTORY)) {
                     item.setItemLocation(ItemLocation.INVENTORY, order.order);
                 }
             }
         }
     }
 
-    private static class InventoryOrder
-    {
+    private static class InventoryOrder {
         int order;
 
         int objectID;
 
-        public InventoryOrder(int id, int ord)
-        {
+        public InventoryOrder(int id, int ord) {
             objectID = id;
             order = ord;
         }

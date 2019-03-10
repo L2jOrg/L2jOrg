@@ -11,8 +11,7 @@ import java.nio.ByteBuffer;
 /**
  * author: Gnacik
  */
-public class RequestPartyMatchList extends IClientIncomingPacket
-{
+public class RequestPartyMatchList extends IClientIncomingPacket {
     private int _roomId;
     private int _maxMembers;
     private int _minLevel;
@@ -21,8 +20,7 @@ public class RequestPartyMatchList extends IClientIncomingPacket
     private String _roomTitle;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _roomId = packet.getInt();
         _maxMembers = packet.getInt();
         _minLevel = packet.getInt();
@@ -32,24 +30,18 @@ public class RequestPartyMatchList extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
-        if ((_roomId <= 0) && (activeChar.getMatchingRoom() == null))
-        {
+        if ((_roomId <= 0) && (activeChar.getMatchingRoom() == null)) {
             final PartyMatchingRoom room = new PartyMatchingRoom(_roomTitle, _lootType, _minLevel, _maxLevel, _maxMembers, activeChar);
             activeChar.setMatchingRoom(room);
-        }
-        else
-        {
+        } else {
             final MatchingRoom room = activeChar.getMatchingRoom();
-            if ((room.getId() == _roomId) && (room.getRoomType() == MatchingRoomType.PARTY) && room.isLeader(activeChar))
-            {
+            if ((room.getId() == _roomId) && (room.getRoomType() == MatchingRoomType.PARTY) && room.isLeader(activeChar)) {
                 room.setLootType(_lootType);
                 room.setMinLvl(_minLevel);
                 room.setMaxLvl(_maxLevel);

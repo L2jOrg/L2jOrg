@@ -8,24 +8,21 @@ import java.nio.ByteBuffer;
 
 /**
  * This class ...
+ *
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestSiegeAttackerList extends IClientIncomingPacket
-{
+public final class RequestSiegeAttackerList extends IClientIncomingPacket {
     private int _castleId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _castleId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final Castle castle = CastleManager.getInstance().getCastleById(_castleId);
-        if (castle != null)
-        {
+        if (castle != null) {
             client.sendPacket(new SiegeAttackerList(castle));
         }
     }

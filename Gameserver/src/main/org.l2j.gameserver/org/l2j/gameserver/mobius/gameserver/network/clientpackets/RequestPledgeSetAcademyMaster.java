@@ -11,54 +11,46 @@ import java.nio.ByteBuffer;
 
 /**
  * Format: (ch) dSS
+ *
  * @author -Wooden-
  */
-public final class RequestPledgeSetAcademyMaster extends IClientIncomingPacket
-{
+public final class RequestPledgeSetAcademyMaster extends IClientIncomingPacket {
     private String _currPlayerName;
     private int _set; // 1 set, 0 delete
     private String _targetPlayerName;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _set = packet.getInt();
         _currPlayerName = readString(packet);
         _targetPlayerName = readString(packet);
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
         final L2Clan clan = activeChar.getClan();
-        if (clan == null)
-        {
+        if (clan == null) {
             return;
         }
 
-        if (!activeChar.hasClanPrivilege(ClanPrivilege.CL_APPRENTICE))
-        {
+        if (!activeChar.hasClanPrivilege(ClanPrivilege.CL_APPRENTICE)) {
             activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_DISMISS_AN_APPRENTICE);
             return;
         }
 
         final L2ClanMember currentMember = clan.getClanMember(_currPlayerName);
         final L2ClanMember targetMember = clan.getClanMember(_targetPlayerName);
-        if ((currentMember == null) || (targetMember == null))
-        {
+        if ((currentMember == null) || (targetMember == null)) {
             return;
         }
 
         L2ClanMember apprenticeMember;
         L2ClanMember sponsorMember;
-        if (currentMember.getPledgeType() == L2Clan.SUBUNIT_ACADEMY)
-        {
+        if (currentMember.getPledgeType() == L2Clan.SUBUNIT_ACADEMY) {
             apprenticeMember = currentMember;
             sponsorMember = targetMember;
-        }
-        else
-        {
+        } else {
             apprenticeMember = targetMember;
             sponsorMember = currentMember;
         }
@@ -67,24 +59,17 @@ public final class RequestPledgeSetAcademyMaster extends IClientIncomingPacket
         final L2PcInstance sponsor = sponsorMember.getPlayerInstance();
 
         SystemMessage sm = null;
-        if (_set == 0)
-        {
+        if (_set == 0) {
             // test: do we get the current sponsor & apprentice from this packet or no?
-            if (apprentice != null)
-            {
+            if (apprentice != null) {
                 apprentice.setSponsor(0);
-            }
-            else
-            {
+            } else {
                 apprenticeMember.setApprenticeAndSponsor(0, 0);
             }
 
-            if (sponsor != null)
-            {
+            if (sponsor != null) {
                 sponsor.setApprentice(0);
-            }
-            else
-            {
+            } else {
                 sponsorMember.setApprenticeAndSponsor(0, 0);
             }
 
@@ -92,30 +77,21 @@ public final class RequestPledgeSetAcademyMaster extends IClientIncomingPacket
             sponsorMember.saveApprenticeAndSponsor(0, 0);
 
             sm = SystemMessage.getSystemMessage(SystemMessageId.S2_CLAN_MEMBER_C1_S_APPRENTICE_HAS_BEEN_REMOVED);
-        }
-        else
-        {
-            if ((apprenticeMember.getSponsor() != 0) || (sponsorMember.getApprentice() != 0) || (apprenticeMember.getApprentice() != 0) || (sponsorMember.getSponsor() != 0))
-            {
+        } else {
+            if ((apprenticeMember.getSponsor() != 0) || (sponsorMember.getApprentice() != 0) || (apprenticeMember.getApprentice() != 0) || (sponsorMember.getSponsor() != 0)) {
                 // TODO retail message
                 activeChar.sendMessage("Remove previous connections first.");
                 return;
             }
-            if (apprentice != null)
-            {
+            if (apprentice != null) {
                 apprentice.setSponsor(sponsorMember.getObjectId());
-            }
-            else
-            {
+            } else {
                 apprenticeMember.setApprenticeAndSponsor(0, sponsorMember.getObjectId());
             }
 
-            if (sponsor != null)
-            {
+            if (sponsor != null) {
                 sponsor.setApprentice(apprenticeMember.getObjectId());
-            }
-            else
-            {
+            } else {
                 sponsorMember.setApprenticeAndSponsor(apprenticeMember.getObjectId(), 0);
             }
 
@@ -127,16 +103,13 @@ public final class RequestPledgeSetAcademyMaster extends IClientIncomingPacket
         }
         sm.addString(sponsorMember.getName());
         sm.addString(apprenticeMember.getName());
-        if ((sponsor != activeChar) && (sponsor != apprentice))
-        {
+        if ((sponsor != activeChar) && (sponsor != apprentice)) {
             activeChar.sendPacket(sm);
         }
-        if (sponsor != null)
-        {
+        if (sponsor != null) {
             sponsor.sendPacket(sm);
         }
-        if (apprentice != null)
-        {
+        if (apprentice != null) {
             apprentice.sendPacket(sm);
         }
     }

@@ -11,18 +11,17 @@ import java.nio.ByteBuffer;
 
 /**
  * Format:(ch) dddd
+ *
  * @author -Wooden-
  */
-public final class RequestConfirmGemStone extends AbstractRefinePacket
-{
+public final class RequestConfirmGemStone extends AbstractRefinePacket {
     private int _targetItemObjId;
     private int _mineralItemObjId;
     private int _feeItemObjId;
     private long _feeCount;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _targetItemObjId = packet.getInt();
         _mineralItemObjId = packet.getInt();
         _feeItemObjId = packet.getInt();
@@ -30,42 +29,35 @@ public final class RequestConfirmGemStone extends AbstractRefinePacket
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
-        if (targetItem == null)
-        {
+        if (targetItem == null) {
             return;
         }
 
         final L2ItemInstance refinerItem = activeChar.getInventory().getItemByObjectId(_mineralItemObjId);
-        if (refinerItem == null)
-        {
+        if (refinerItem == null) {
             return;
         }
 
         final L2ItemInstance gemStoneItem = activeChar.getInventory().getItemByObjectId(_feeItemObjId);
-        if (gemStoneItem == null)
-        {
+        if (gemStoneItem == null) {
             return;
         }
 
         final VariationFee fee = VariationData.getInstance().getFee(targetItem.getId(), refinerItem.getId());
-        if (!isValid(activeChar, targetItem, refinerItem, gemStoneItem, fee))
-        {
+        if (!isValid(activeChar, targetItem, refinerItem, gemStoneItem, fee)) {
             client.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
             return;
         }
 
         // Check for fee count
-        if (_feeCount != fee.getItemCount())
-        {
+        if (_feeCount != fee.getItemCount()) {
             client.sendPacket(SystemMessageId.GEMSTONE_QUANTITY_IS_INCORRECT);
             return;
         }

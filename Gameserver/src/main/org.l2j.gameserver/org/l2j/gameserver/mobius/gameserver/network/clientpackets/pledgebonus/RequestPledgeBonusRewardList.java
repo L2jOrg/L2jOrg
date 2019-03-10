@@ -9,21 +9,18 @@ import java.nio.ByteBuffer;
 /**
  * @author UnAfraid
  */
-public class RequestPledgeBonusRewardList extends IClientIncomingPacket
-{
-	@Override
-	public void readImpl(ByteBuffer packet) {
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance player = client.getActiveChar();
-		if ((player == null) || (player.getClan() == null))
-		{
-			return;
-		}
-		
-		player.sendPacket(new ExPledgeBonusList());
-	}
+public class RequestPledgeBonusRewardList extends IClientIncomingPacket {
+    @Override
+    public void readImpl(ByteBuffer packet) {
+    }
+
+    @Override
+    public void runImpl() {
+        final L2PcInstance player = client.getActiveChar();
+        if ((player == null) || (player.getClan() == null)) {
+            return;
+        }
+
+        player.sendPacket(new ExPledgeBonusList());
+    }
 }

@@ -8,26 +8,22 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestExListMpccWaiting extends IClientIncomingPacket
-{
+public class RequestExListMpccWaiting extends IClientIncomingPacket {
     private int _page;
     private int _location;
     private int _level;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _page = packet.getInt();
         _location = packet.getInt();
         _level = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 

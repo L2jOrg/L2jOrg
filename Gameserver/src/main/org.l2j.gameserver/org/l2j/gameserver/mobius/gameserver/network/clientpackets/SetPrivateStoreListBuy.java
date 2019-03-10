@@ -25,26 +25,22 @@ import java.util.Arrays;
 import static org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
 
-public final class SetPrivateStoreListBuy extends IClientIncomingPacket
-{
+public final class SetPrivateStoreListBuy extends IClientIncomingPacket {
     private TradeItem[] _items = null;
 
     @Override
     public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
         final int count = packet.getInt();
-        if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET))
-        {
+        if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET)) {
             throw new InvalidDataPacketException();
         }
 
         _items = new TradeItem[count];
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
             int itemId = packet.getInt();
 
             final L2Item template = ItemTable.getInstance().getTemplate(itemId);
-            if (template == null)
-            {
+            if (template == null) {
                 _items = null;
                 throw new InvalidDataPacketException();
             }
@@ -55,10 +51,9 @@ public final class SetPrivateStoreListBuy extends IClientIncomingPacket
             long cnt = packet.getLong();
             long price = packet.getLong();
 
-            if ((itemId < 1) || (cnt < 1) || (price < 0))
-            {
+            if ((itemId < 1) || (cnt < 1) || (price < 0)) {
                 _items = null;
-                throw  new InvalidDataPacketException();
+                throw new InvalidDataPacketException();
             }
 
             final int option1 = packet.getInt();
@@ -74,13 +69,11 @@ public final class SetPrivateStoreListBuy extends IClientIncomingPacket
             final int visualId = packet.getInt();
 
             final EnsoulOption[] soulCrystalOptions = new EnsoulOption[packet.get()];
-            for (int k = 0; k < soulCrystalOptions.length; k++)
-            {
+            for (int k = 0; k < soulCrystalOptions.length; k++) {
                 soulCrystalOptions[k] = EnsoulData.getInstance().getOption(packet.getInt());
             }
             final EnsoulOption[] soulCrystalSpecialOptions = new EnsoulOption[packet.get()];
-            for (int k = 0; k < soulCrystalSpecialOptions.length; k++)
-            {
+            for (int k = 0; k < soulCrystalSpecialOptions.length; k++) {
                 soulCrystalSpecialOptions[k] = EnsoulData.getInstance().getOption(packet.getInt());
             }
 
@@ -103,29 +96,24 @@ public final class SetPrivateStoreListBuy extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
-        if (_items == null)
-        {
+        if (_items == null) {
             player.setPrivateStoreType(PrivateStoreType.NONE);
             player.broadcastUserInfo();
             return;
         }
 
-        if (!player.getAccessLevel().allowTransaction())
-        {
+        if (!player.getAccessLevel().allowTransaction()) {
             player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
             return;
         }
 
-        if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) || player.isInDuel())
-        {
+        if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) || player.isInDuel()) {
             player.sendPacket(SystemMessageId.WHILE_YOU_ARE_ENGAGED_IN_COMBAT_YOU_CANNOT_OPERATE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
             player.sendPacket(new PrivateStoreManageListBuy(1, player));
             player.sendPacket(new PrivateStoreManageListBuy(2, player));
@@ -133,8 +121,7 @@ public final class SetPrivateStoreListBuy extends IClientIncomingPacket
             return;
         }
 
-        if (player.isInsideZone(ZoneId.NO_STORE))
-        {
+        if (player.isInsideZone(ZoneId.NO_STORE)) {
             player.sendPacket(new PrivateStoreManageListBuy(1, player));
             player.sendPacket(new PrivateStoreManageListBuy(2, player));
             player.sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE);
@@ -146,8 +133,7 @@ public final class SetPrivateStoreListBuy extends IClientIncomingPacket
         tradeList.clear();
 
         // Check maximum number of allowed slots for pvt shops
-        if (_items.length > player.getPrivateBuyStoreLimit())
-        {
+        if (_items.length > player.getPrivateBuyStoreLimit()) {
             player.sendPacket(new PrivateStoreManageListBuy(1, player));
             player.sendPacket(new PrivateStoreManageListBuy(2, player));
             player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
@@ -155,10 +141,8 @@ public final class SetPrivateStoreListBuy extends IClientIncomingPacket
         }
 
         long totalCost = 0;
-        for (TradeItem i : _items)
-        {
-            if ((MAX_ADENA / i.getCount()) < i.getPrice())
-            {
+        for (TradeItem i : _items) {
+            if ((MAX_ADENA / i.getCount()) < i.getPrice()) {
                 Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set price more than " + MAX_ADENA + " adena in Private Store - Buy.", Config.DEFAULT_PUNISH);
                 return;
             }
@@ -166,16 +150,14 @@ public final class SetPrivateStoreListBuy extends IClientIncomingPacket
             tradeList.addItemByItemId(i.getItem().getId(), i.getCount(), i.getPrice());
 
             totalCost += (i.getCount() * i.getPrice());
-            if (totalCost > MAX_ADENA)
-            {
+            if (totalCost > MAX_ADENA) {
                 Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set total price more than " + MAX_ADENA + " adena in Private Store - Buy.", Config.DEFAULT_PUNISH);
                 return;
             }
         }
 
         // Check for available funds
-        if (totalCost > player.getAdena())
-        {
+        if (totalCost > player.getAdena()) {
             player.sendPacket(new PrivateStoreManageListBuy(1, player));
             player.sendPacket(new PrivateStoreManageListBuy(2, player));
             player.sendPacket(SystemMessageId.THE_PURCHASE_PRICE_IS_HIGHER_THAN_THE_AMOUNT_OF_MONEY_THAT_YOU_HAVE_AND_SO_YOU_CANNOT_OPEN_A_PERSONAL_STORE);

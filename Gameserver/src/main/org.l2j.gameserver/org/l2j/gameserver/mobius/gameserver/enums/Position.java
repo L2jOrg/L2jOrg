@@ -5,8 +5,7 @@ import org.l2j.gameserver.mobius.gameserver.model.interfaces.ILocational;
 /**
  * @author Sdw
  */
-public enum Position
-{
+public enum Position {
     FRONT,
     SIDE,
     BACK;
@@ -19,23 +18,18 @@ public enum Position
      * <li>front: else if ((unsigned int)(heading - 0x2000) <= 0xC000)</li>
      * <li>back: otherwise.</li>
      * </ul>
+     *
      * @param from
      * @param to
      * @return
      */
-    public static Position getPosition(ILocational from, ILocational to)
-    {
+    public static Position getPosition(ILocational from, ILocational to) {
         final int heading = Math.abs(to.getHeading() - from.calculateHeadingTo(to));
-        if (((heading >= 0x2000) && (heading <= 0x6000)) || (Integer.toUnsignedLong(heading - 0xA000) <= 0x4000))
-        {
+        if (((heading >= 0x2000) && (heading <= 0x6000)) || (Integer.toUnsignedLong(heading - 0xA000) <= 0x4000)) {
             return SIDE;
-        }
-        else if (Integer.toUnsignedLong(heading - 0x2000) <= 0xC000)
-        {
+        } else if (Integer.toUnsignedLong(heading - 0x2000) <= 0xC000) {
             return FRONT;
-        }
-        else
-        {
+        } else {
             return BACK;
         }
     }

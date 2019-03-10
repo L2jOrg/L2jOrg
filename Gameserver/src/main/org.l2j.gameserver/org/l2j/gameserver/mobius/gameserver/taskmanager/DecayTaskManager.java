@@ -17,102 +17,77 @@ import java.util.logging.Logger;
 /**
  * @author NosBit
  */
-public final class DecayTaskManager
-{
+public final class DecayTaskManager {
     protected static final Logger LOGGER = Logger.getLogger(DecayTaskManager.class.getName());
 
     protected final Map<L2Character, ScheduledFuture<?>> _decayTasks = new ConcurrentHashMap<>();
+
+    public static DecayTaskManager getInstance() {
+        return SingletonHolder._instance;
+    }
 
     /**
      * Adds a decay task for the specified character.<br>
      * <br>
      * If the decay task already exists it cancels it and re-adds it.
+     *
      * @param character the character
      */
-    public void add(L2Character character)
-    {
-        if (character == null)
-        {
+    public void add(L2Character character) {
+        if (character == null) {
             return;
         }
 
         long delay;
-        if (character.getTemplate() instanceof L2NpcTemplate)
-        {
+        if (character.getTemplate() instanceof L2NpcTemplate) {
             delay = ((L2NpcTemplate) character.getTemplate()).getCorpseTime();
-        }
-        else
-        {
+        } else {
             delay = Config.DEFAULT_CORPSE_TIME;
         }
 
-        if (character.isAttackable() && (((L2Attackable) character).isSpoiled() || ((L2Attackable) character).isSeeded()))
-        {
+        if (character.isAttackable() && (((L2Attackable) character).isSpoiled() || ((L2Attackable) character).isSeeded())) {
             delay += Config.SPOILED_CORPSE_EXTEND_TIME;
         }
 
         // Remove entries that became null.
         _decayTasks.entrySet().removeIf(Objects::isNull);
 
-        try
-        {
+        try {
             _decayTasks.putIfAbsent(character, ThreadPoolManager.getInstance().schedule(new DecayTask(character), delay * 1000));
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             LOGGER.warning("DecayTaskManager add " + character + " caused [" + e.getMessage() + "] exception.");
         }
     }
 
     /**
      * Cancels the decay task of the specified character.
+     *
      * @param character the character
      */
-    public void cancel(L2Character character)
-    {
+    public void cancel(L2Character character) {
         final ScheduledFuture<?> decayTask = _decayTasks.remove(character);
-        if (decayTask != null)
-        {
+        if (decayTask != null) {
             decayTask.cancel(false);
         }
     }
 
     /**
      * Gets the remaining time of the specified character's decay task.
+     *
      * @param character the character
      * @return if a decay task exists the remaining time, {@code Long.MAX_VALUE} otherwise
      */
-    public long getRemainingTime(L2Character character)
-    {
+    public long getRemainingTime(L2Character character) {
         final ScheduledFuture<?> decayTask = _decayTasks.get(character);
-        if (decayTask != null)
-        {
+        if (decayTask != null) {
             return decayTask.getDelay(TimeUnit.MILLISECONDS);
         }
 
         return Long.MAX_VALUE;
     }
 
-    private class DecayTask implements Runnable
-    {
-        private final L2Character _character;
-
-        protected DecayTask(L2Character character)
-        {
-            _character = character;
-        }
-
-        @Override
-        public void run()
-        {
-            _decayTasks.remove(_character);
-            _character.onDecay();
-        }
-    }
-
     @Override
-    public String toString()
-    {
+    public String toString() {
         final StringBuilder ret = new StringBuilder();
         ret.append("============= DecayTask Manager Report ============");
         ret.append(Config.EOL);
@@ -122,8 +97,7 @@ public final class DecayTaskManager
         ret.append("Tasks dump:");
         ret.append(Config.EOL);
 
-        for (Entry<L2Character, ScheduledFuture<?>> entry : _decayTasks.entrySet())
-        {
+        for (Entry<L2Character, ScheduledFuture<?>> entry : _decayTasks.entrySet()) {
             ret.append("Class/Name: ");
             ret.append(entry.getKey().getClass().getSimpleName());
             ret.append('/');
@@ -136,13 +110,21 @@ public final class DecayTaskManager
         return ret.toString();
     }
 
-    public static DecayTaskManager getInstance()
-    {
-        return SingletonHolder._instance;
+    private static class SingletonHolder {
+        protected static final DecayTaskManager _instance = new DecayTaskManager();
     }
 
-    private static class SingletonHolder
-    {
-        protected static final DecayTaskManager _instance = new DecayTaskManager();
+    private class DecayTask implements Runnable {
+        private final L2Character _character;
+
+        protected DecayTask(L2Character character) {
+            _character = character;
+        }
+
+        @Override
+        public void run() {
+            _decayTasks.remove(_character);
+            _character.onDecay();
+        }
     }
 }

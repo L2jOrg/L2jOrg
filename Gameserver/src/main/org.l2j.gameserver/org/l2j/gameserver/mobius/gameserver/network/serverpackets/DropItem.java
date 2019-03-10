@@ -1,63 +1,46 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import org.l2j.commons.network.PacketWriter;
 import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
-public class DropItem implements IClientOutgoingPacket
-{
-	private final L2ItemInstance _item;
-	private final int _charObjId;
-	
-	/**
-	 * Constructor of the DropItem server packet
-	 * @param item : L2ItemInstance designating the item
-	 * @param playerObjId : int designating the player ID who dropped the item
-	 */
-	public DropItem(L2ItemInstance item, int playerObjId)
-	{
-		_item = item;
-		_charObjId = playerObjId;
-	}
-	
-	@Override
-	public boolean write(PacketWriter packet)
-	{
-		OutgoingPackets.DROP_ITEM.writeId(packet);
-		
-		packet.writeD(_charObjId);
-		packet.writeD(_item.getObjectId());
-		packet.writeD(_item.getDisplayId());
-		
-		packet.writeD(_item.getX());
-		packet.writeD(_item.getY());
-		packet.writeD(_item.getZ());
-		// only show item count if it is a stackable item
-		packet.writeC(_item.isStackable() ? 0x01 : 0x00);
-		packet.writeQ(_item.getCount());
-		
-		packet.writeC(0x00);
-		// packet.writeD(0x01); if above C == true (1) then packet.getInt()
-		
-		packet.writeC(_item.getEnchantLevel()); // Grand Crusade
-		packet.writeC(_item.getAugmentation() != null ? 1 : 0); // Grand Crusade
-		packet.writeC(_item.getSpecialAbilities().size()); // Grand Crusade
-		return true;
-	}
+import java.nio.ByteBuffer;
+
+public class DropItem extends IClientOutgoingPacket {
+    private final L2ItemInstance _item;
+    private final int _charObjId;
+
+    /**
+     * Constructor of the DropItem server packet
+     *
+     * @param item        : L2ItemInstance designating the item
+     * @param playerObjId : int designating the player ID who dropped the item
+     */
+    public DropItem(L2ItemInstance item, int playerObjId) {
+        _item = item;
+        _charObjId = playerObjId;
+    }
+
+    @Override
+    public void writeImpl(L2GameClient client, ByteBuffer packet) {
+        OutgoingPackets.DROP_ITEM.writeId(packet);
+
+        packet.putInt(_charObjId);
+        packet.putInt(_item.getObjectId());
+        packet.putInt(_item.getDisplayId());
+
+        packet.putInt(_item.getX());
+        packet.putInt(_item.getY());
+        packet.putInt(_item.getZ());
+        // only show item count if it is a stackable item
+        packet.put((byte) (_item.isStackable() ? 0x01 : 0x00));
+        packet.putLong(_item.getCount());
+
+        packet.put((byte) 0x00);
+        // packet.putInt(0x01); if above C == true (1) then packet.getInt()
+
+        packet.put((byte) _item.getEnchantLevel()); // Grand Crusade
+        packet.put((byte) (_item.getAugmentation() != null ? 1 : 0)); // Grand Crusade
+        packet.put((byte) _item.getSpecialAbilities().size()); // Grand Crusade
+    }
 }

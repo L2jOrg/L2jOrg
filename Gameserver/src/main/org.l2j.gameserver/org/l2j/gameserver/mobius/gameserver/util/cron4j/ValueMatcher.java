@@ -1,8 +1,8 @@
 /*
  * cron4j - A pure Java cron-like scheduler
- * 
+ *
  * Copyright (C) 2007-2010 Carlo Pelliccia (www.sauronsoftware.it)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License version
  * 2.1, as published by the Free Software Foundation.
@@ -22,14 +22,15 @@ package org.l2j.gameserver.mobius.gameserver.util.cron4j;
  * <p>
  * This interface describes the ValueMatcher behavior. A ValueMatcher is an object that validate an integer value against a set of rules.
  * </p>
+ *
  * @author Carlo Pelliccia
  */
-interface ValueMatcher
-{
-	/**
-	 * Validate the given integer value against a set of rules.
-	 * @param value The value.
-	 * @return true if the given value matches the rules of the ValueMatcher, false otherwise.
-	 */
-	boolean match(int value);
+interface ValueMatcher {
+    /**
+     * Validate the given integer value against a set of rules.
+     *
+     * @param value The value.
+     * @return true if the given value matches the rules of the ValueMatcher, false otherwise.
+     */
+    boolean match(int value);
 }

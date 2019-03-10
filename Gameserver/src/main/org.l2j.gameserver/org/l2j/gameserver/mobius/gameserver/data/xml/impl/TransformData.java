@@ -20,72 +20,59 @@ import java.util.logging.Logger;
 
 /**
  * Transformation data.
+ *
  * @author UnAfraid
  */
-public final class TransformData implements IGameXmlReader
-{
+public final class TransformData implements IGameXmlReader {
     private static final Logger LOGGER = Logger.getLogger(TransformData.class.getName());
 
     private final Map<Integer, Transform> _transformData = new HashMap<>();
 
-    protected TransformData()
-    {
+    protected TransformData() {
         load();
     }
 
+    public static TransformData getInstance() {
+        return SingletonHolder._instance;
+    }
+
     @Override
-    public synchronized void load()
-    {
+    public synchronized void load() {
         _transformData.clear();
         parseDatapackDirectory("data/stats/transformations", false);
         LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _transformData.size() + " transform templates.");
     }
 
     @Override
-    public void parseDocument(Document doc, File f)
-    {
-        for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
-        {
-            if ("list".equalsIgnoreCase(n.getNodeName()))
-            {
-                for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-                {
-                    if ("transform".equalsIgnoreCase(d.getNodeName()))
-                    {
+    public void parseDocument(Document doc, File f) {
+        for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
+            if ("list".equalsIgnoreCase(n.getNodeName())) {
+                for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
+                    if ("transform".equalsIgnoreCase(d.getNodeName())) {
                         NamedNodeMap attrs = d.getAttributes();
                         final StatsSet set = new StatsSet();
-                        for (int i = 0; i < attrs.getLength(); i++)
-                        {
+                        for (int i = 0; i < attrs.getLength(); i++) {
                             final Node att = attrs.item(i);
                             set.set(att.getNodeName(), att.getNodeValue());
                         }
                         final Transform transform = new Transform(set);
-                        for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
-                        {
+                        for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling()) {
                             final boolean isMale = "Male".equalsIgnoreCase(cd.getNodeName());
-                            if ("Male".equalsIgnoreCase(cd.getNodeName()) || "Female".equalsIgnoreCase(cd.getNodeName()))
-                            {
+                            if ("Male".equalsIgnoreCase(cd.getNodeName()) || "Female".equalsIgnoreCase(cd.getNodeName())) {
                                 TransformTemplate templateData = null;
-                                for (Node z = cd.getFirstChild(); z != null; z = z.getNextSibling())
-                                {
-                                    switch (z.getNodeName())
-                                    {
-                                        case "common":
-                                        {
-                                            for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling())
-                                            {
-                                                switch (s.getNodeName())
-                                                {
+                                for (Node z = cd.getFirstChild(); z != null; z = z.getNextSibling()) {
+                                    switch (z.getNodeName()) {
+                                        case "common": {
+                                            for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
+                                                switch (s.getNodeName()) {
                                                     case "base":
                                                     case "stats":
                                                     case "defense":
                                                     case "magicDefense":
                                                     case "collision":
-                                                    case "moving":
-                                                    {
+                                                    case "moving": {
                                                         attrs = s.getAttributes();
-                                                        for (int i = 0; i < attrs.getLength(); i++)
-                                                        {
+                                                        for (int i = 0; i < attrs.getLength(); i++) {
                                                             final Node att = attrs.item(i);
                                                             set.set(att.getNodeName(), att.getNodeValue());
                                                         }
@@ -97,17 +84,13 @@ public final class TransformData implements IGameXmlReader
                                             transform.setTemplate(isMale, templateData);
                                             break;
                                         }
-                                        case "skills":
-                                        {
-                                            if (templateData == null)
-                                            {
+                                        case "skills": {
+                                            if (templateData == null) {
                                                 templateData = new TransformTemplate(set);
                                                 transform.setTemplate(isMale, templateData);
                                             }
-                                            for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling())
-                                            {
-                                                if ("skill".equals(s.getNodeName()))
-                                                {
+                                            for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
+                                                if ("skill".equals(s.getNodeName())) {
                                                     attrs = s.getAttributes();
                                                     final int skillId = parseInteger(attrs, "id");
                                                     final int skillLevel = parseInteger(attrs, "level");
@@ -116,10 +99,8 @@ public final class TransformData implements IGameXmlReader
                                             }
                                             break;
                                         }
-                                        case "actions":
-                                        {
-                                            if (templateData == null)
-                                            {
+                                        case "actions": {
+                                            if (templateData == null) {
                                                 templateData = new TransformTemplate(set);
                                                 transform.setTemplate(isMale, templateData);
                                             }
@@ -128,17 +109,13 @@ public final class TransformData implements IGameXmlReader
                                             templateData.setBasicActionList(new ExBasicActionList(actions));
                                             break;
                                         }
-                                        case "additionalSkills":
-                                        {
-                                            if (templateData == null)
-                                            {
+                                        case "additionalSkills": {
+                                            if (templateData == null) {
                                                 templateData = new TransformTemplate(set);
                                                 transform.setTemplate(isMale, templateData);
                                             }
-                                            for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling())
-                                            {
-                                                if ("skill".equals(s.getNodeName()))
-                                                {
+                                            for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
+                                                if ("skill".equals(s.getNodeName())) {
                                                     attrs = s.getAttributes();
                                                     final int skillId = parseInteger(attrs, "id");
                                                     final int skillLevel = parseInteger(attrs, "level");
@@ -148,17 +125,13 @@ public final class TransformData implements IGameXmlReader
                                             }
                                             break;
                                         }
-                                        case "items":
-                                        {
-                                            if (templateData == null)
-                                            {
+                                        case "items": {
+                                            if (templateData == null) {
                                                 templateData = new TransformTemplate(set);
                                                 transform.setTemplate(isMale, templateData);
                                             }
-                                            for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling())
-                                            {
-                                                if ("item".equals(s.getNodeName()))
-                                                {
+                                            for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
+                                                if ("item".equals(s.getNodeName())) {
                                                     attrs = s.getAttributes();
                                                     final int itemId = parseInteger(attrs, "id");
                                                     final boolean allowed = parseBoolean(attrs, "allowed");
@@ -167,22 +140,17 @@ public final class TransformData implements IGameXmlReader
                                             }
                                             break;
                                         }
-                                        case "levels":
-                                        {
-                                            if (templateData == null)
-                                            {
+                                        case "levels": {
+                                            if (templateData == null) {
                                                 templateData = new TransformTemplate(set);
                                                 transform.setTemplate(isMale, templateData);
                                             }
 
                                             final StatsSet levelsSet = new StatsSet();
-                                            for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling())
-                                            {
-                                                if ("level".equals(s.getNodeName()))
-                                                {
+                                            for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
+                                                if ("level".equals(s.getNodeName())) {
                                                     attrs = s.getAttributes();
-                                                    for (int i = 0; i < attrs.getLength(); i++)
-                                                    {
+                                                    for (int i = 0; i < attrs.getLength(); i++) {
                                                         final Node att = attrs.item(i);
                                                         levelsSet.set(att.getNodeName(), att.getNodeValue());
                                                     }
@@ -202,18 +170,11 @@ public final class TransformData implements IGameXmlReader
         }
     }
 
-    public Transform getTransform(int id)
-    {
+    public Transform getTransform(int id) {
         return _transformData.get(id);
     }
 
-    public static TransformData getInstance()
-    {
-        return SingletonHolder._instance;
-    }
-
-    private static class SingletonHolder
-    {
+    private static class SingletonHolder {
         protected static final TransformData _instance = new TransformData();
     }
 }

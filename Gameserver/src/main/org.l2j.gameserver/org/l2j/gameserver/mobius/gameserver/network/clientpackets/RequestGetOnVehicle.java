@@ -12,44 +12,36 @@ import java.nio.ByteBuffer;
 
 /**
  * This class ...
+ *
  * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestGetOnVehicle extends IClientIncomingPacket
-{
+public final class RequestGetOnVehicle extends IClientIncomingPacket {
     private int _boatId;
     private Location _pos;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _boatId = packet.getInt();
         _pos = new Location(packet.getInt(), packet.getInt(), packet.getInt());
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         L2BoatInstance boat;
-        if (activeChar.isInBoat())
-        {
+        if (activeChar.isInBoat()) {
             boat = activeChar.getBoat();
-            if (boat.getObjectId() != _boatId)
-            {
+            if (boat.getObjectId() != _boatId) {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }
-        }
-        else
-        {
+        } else {
             boat = BoatManager.getInstance().getBoat(_boatId);
-            if ((boat == null) || boat.isMoving() || !activeChar.isInsideRadius3D(boat, 1000))
-            {
+            if ((boat == null) || boat.isMoving() || !activeChar.isInsideRadius3D(boat, 1000)) {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }

@@ -1,4 +1,3 @@
-
 package org.l2j.gameserver.mobius.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
@@ -18,89 +17,79 @@ import java.util.stream.Stream;
 
 /**
  * Loads armor set bonuses.
+ *
  * @author godson, Luno, UnAfraid
  */
-public final class ArmorSetsData implements IGameXmlReader
-{
+public final class ArmorSetsData implements IGameXmlReader {
     private static final Logger LOGGER = Logger.getLogger(ArmorSetsData.class.getName());
 
     private final Map<Integer, L2ArmorSet> _armorSets = new HashMap<>();
     private final Map<Integer, List<L2ArmorSet>> _armorSetItems = new HashMap<>();
 
-    protected ArmorSetsData()
-    {
+    protected ArmorSetsData() {
         load();
     }
 
+    /**
+     * Gets the single instance of ArmorSetsData
+     *
+     * @return single instance of ArmorSetsData
+     */
+    public static ArmorSetsData getInstance() {
+        return SingletonHolder._instance;
+    }
+
     @Override
-    public void load()
-    {
+    public void load() {
         _armorSets.clear();
         parseDatapackDirectory("data/stats/armorsets", false);
         LOGGER.info(getClass().getSimpleName() + ": Loaded " + _armorSets.size() + " Armor sets.");
     }
 
     @Override
-    public void parseDocument(Document doc, File f)
-    {
-        for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
-        {
-            if ("list".equalsIgnoreCase(n.getNodeName()))
-            {
-                for (Node setNode = n.getFirstChild(); setNode != null; setNode = setNode.getNextSibling())
-                {
-                    if ("set".equalsIgnoreCase(setNode.getNodeName()))
-                    {
+    public void parseDocument(Document doc, File f) {
+        for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
+            if ("list".equalsIgnoreCase(n.getNodeName())) {
+                for (Node setNode = n.getFirstChild(); setNode != null; setNode = setNode.getNextSibling()) {
+                    if ("set".equalsIgnoreCase(setNode.getNodeName())) {
                         final int id = parseInteger(setNode.getAttributes(), "id");
                         final int minimumPieces = parseInteger(setNode.getAttributes(), "minimumPieces", 0);
                         final boolean isVisual = parseBoolean(setNode.getAttributes(), "visual", false);
                         final L2ArmorSet set = new L2ArmorSet(id, minimumPieces, isVisual);
-                        if (_armorSets.putIfAbsent(id, set) != null)
-                        {
+                        if (_armorSets.putIfAbsent(id, set) != null) {
                             LOGGER.warning("Duplicate set entry with id: " + id + " in file: " + f.getName());
                         }
-                        for (Node innerSetNode = setNode.getFirstChild(); innerSetNode != null; innerSetNode = innerSetNode.getNextSibling())
-                        {
-                            switch (innerSetNode.getNodeName())
-                            {
-                                case "requiredItems":
-                                {
+                        for (Node innerSetNode = setNode.getFirstChild(); innerSetNode != null; innerSetNode = innerSetNode.getNextSibling()) {
+                            switch (innerSetNode.getNodeName()) {
+                                case "requiredItems": {
                                     forEach(innerSetNode, b -> "item".equals(b.getNodeName()), node ->
                                     {
                                         final NamedNodeMap attrs = node.getAttributes();
                                         final int itemId = parseInteger(attrs, "id");
                                         final L2Item item = ItemTable.getInstance().getTemplate(itemId);
-                                        if (item == null)
-                                        {
+                                        if (item == null) {
                                             LOGGER.warning("Attempting to register non existing required item: " + itemId + " to a set: " + f.getName());
-                                        }
-                                        else if (!set.addRequiredItem(itemId))
-                                        {
+                                        } else if (!set.addRequiredItem(itemId)) {
                                             LOGGER.warning("Attempting to register duplicate required item " + item + " to a set: " + f.getName());
                                         }
                                     });
                                     break;
                                 }
-                                case "optionalItems":
-                                {
+                                case "optionalItems": {
                                     forEach(innerSetNode, b -> "item".equals(b.getNodeName()), node ->
                                     {
                                         final NamedNodeMap attrs = node.getAttributes();
                                         final int itemId = parseInteger(attrs, "id");
                                         final L2Item item = ItemTable.getInstance().getTemplate(itemId);
-                                        if (item == null)
-                                        {
+                                        if (item == null) {
                                             LOGGER.warning("Attempting to register non existing optional item: " + itemId + " to a set: " + f.getName());
-                                        }
-                                        else if (!set.addOptionalItem(itemId))
-                                        {
+                                        } else if (!set.addOptionalItem(itemId)) {
                                             LOGGER.warning("Attempting to register duplicate optional item " + item + " to a set: " + f.getName());
                                         }
                                     });
                                     break;
                                 }
-                                case "skills":
-                                {
+                                case "skills": {
                                     forEach(innerSetNode, b -> "skill".equals(b.getNodeName()), node ->
                                     {
                                         final NamedNodeMap attrs = node.getAttributes();
@@ -115,8 +104,7 @@ public final class ArmorSetsData implements IGameXmlReader
                                     });
                                     break;
                                 }
-                                case "stats":
-                                {
+                                case "stats": {
                                     forEach(innerSetNode, b -> "stat".equals(b.getNodeName()), node ->
                                     {
                                         final NamedNodeMap attrs = node.getAttributes();
@@ -138,8 +126,7 @@ public final class ArmorSetsData implements IGameXmlReader
      * @param setId the set id that is attached to a set
      * @return the armor set associated to the given item id
      */
-    public L2ArmorSet getSet(int setId)
-    {
+    public L2ArmorSet getSet(int setId) {
         return _armorSets.get(setId);
     }
 
@@ -147,22 +134,11 @@ public final class ArmorSetsData implements IGameXmlReader
      * @param itemId the item id that is attached to a set
      * @return the armor set associated to the given item id
      */
-    public List<L2ArmorSet> getSets(int itemId)
-    {
+    public List<L2ArmorSet> getSets(int itemId) {
         return _armorSetItems.getOrDefault(itemId, Collections.emptyList());
     }
 
-    /**
-     * Gets the single instance of ArmorSetsData
-     * @return single instance of ArmorSetsData
-     */
-    public static ArmorSetsData getInstance()
-    {
-        return SingletonHolder._instance;
-    }
-
-    private static class SingletonHolder
-    {
+    private static class SingletonHolder {
         protected static final ArmorSetsData _instance = new ArmorSetsData();
     }
 }

@@ -14,32 +14,26 @@ import java.nio.ByteBuffer;
 /**
  * @author Mobius
  */
-public class RequestPledgeSignInForOpenJoiningMethod extends IClientIncomingPacket
-{
+public class RequestPledgeSignInForOpenJoiningMethod extends IClientIncomingPacket {
     private int _clanId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _clanId = packet.getInt();
         packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final PledgeRecruitInfo pledgeRecruitInfo = ClanEntryManager.getInstance().getClanById(_clanId);
-        if (pledgeRecruitInfo != null)
-        {
+        if (pledgeRecruitInfo != null) {
             final L2Clan clan = pledgeRecruitInfo.getClan();
-            if ((clan != null) && (activeChar.getClan() == null))
-            {
+            if ((clan != null) && (activeChar.getClan() == null)) {
                 activeChar.sendPacket(new JoinPledge(clan.getId()));
 
                 // activeChar.setPowerGrade(9); // academy
@@ -53,12 +47,10 @@ public class RequestPledgeSignInForOpenJoiningMethod extends IClientIncomingPack
                 sm.addString(activeChar.getName());
                 clan.broadcastToOnlineMembers(sm);
 
-                if (clan.getCastleId() > 0)
-                {
+                if (clan.getCastleId() > 0) {
                     CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(activeChar);
                 }
-                if (clan.getFortId() > 0)
-                {
+                if (clan.getFortId() > 0) {
                     FortManager.getInstance().getFortByOwner(clan).giveResidentialSkills(activeChar);
                 }
                 activeChar.sendSkillList();

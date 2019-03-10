@@ -4,19 +4,17 @@ import java.nio.ByteBuffer;
 
 /**
  * Format: (c) (no data, trigger)
+ *
  * @author -Wooden-
  */
-public class RequestSiegeInfo extends IClientIncomingPacket
-{
+public class RequestSiegeInfo extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         // TODO this
     }
 }

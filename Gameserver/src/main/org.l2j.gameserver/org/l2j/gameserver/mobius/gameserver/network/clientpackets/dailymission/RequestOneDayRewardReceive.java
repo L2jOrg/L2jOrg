@@ -13,32 +13,28 @@ import java.util.Collection;
 /**
  * @author Sdw
  */
-public class RequestOneDayRewardReceive extends IClientIncomingPacket
-{
-	private int _id;
-	
-	@Override
-	public void readImpl(ByteBuffer packet) {
-		_id = packet.getShort();
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance player = client.getActiveChar();
-		if (player == null)
-		{
-			return;
-		}
-		
-		final Collection<DailyMissionDataHolder> reward = DailyMissionData.getInstance().getDailyMissionData(_id);
-		if ((reward == null) || reward.isEmpty())
-		{
-			return;
-		}
-		
-		reward.stream().filter(o -> o.isDisplayable(player)).forEach(r -> r.requestReward(player));
-		player.sendPacket(new ExConnectedTimeAndGettableReward(player));
-		player.sendPacket(new ExOneDayReceiveRewardList(player, true));
-	}
+public class RequestOneDayRewardReceive extends IClientIncomingPacket {
+    private int _id;
+
+    @Override
+    public void readImpl(ByteBuffer packet) {
+        _id = packet.getShort();
+    }
+
+    @Override
+    public void runImpl() {
+        final L2PcInstance player = client.getActiveChar();
+        if (player == null) {
+            return;
+        }
+
+        final Collection<DailyMissionDataHolder> reward = DailyMissionData.getInstance().getDailyMissionData(_id);
+        if ((reward == null) || reward.isEmpty()) {
+            return;
+        }
+
+        reward.stream().filter(o -> o.isDisplayable(player)).forEach(r -> r.requestReward(player));
+        player.sendPacket(new ExConnectedTimeAndGettableReward(player));
+        player.sendPacket(new ExOneDayReceiveRewardList(player, true));
+    }
 }

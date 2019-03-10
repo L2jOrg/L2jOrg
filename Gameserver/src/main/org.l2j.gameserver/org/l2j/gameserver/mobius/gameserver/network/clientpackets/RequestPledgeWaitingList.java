@@ -8,22 +8,18 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestPledgeWaitingList extends IClientIncomingPacket
-{
+public class RequestPledgeWaitingList extends IClientIncomingPacket {
     private int _clanId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _clanId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if ((activeChar == null) || (activeChar.getClanId() != _clanId))
-        {
+        if ((activeChar == null) || (activeChar.getClanId() != _clanId)) {
             return;
         }
 

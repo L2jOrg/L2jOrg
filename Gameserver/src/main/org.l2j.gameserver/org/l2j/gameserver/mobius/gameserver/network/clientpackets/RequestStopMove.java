@@ -7,20 +7,16 @@ import java.nio.ByteBuffer;
 /**
  * @author Mobius
  */
-public class RequestStopMove extends IClientIncomingPacket
-{
+public class RequestStopMove extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player != null)
-        {
+        if (player != null) {
             player.stopMove(player.getLocation());
         }
     }

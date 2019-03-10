@@ -9,68 +9,56 @@ import java.util.concurrent.ScheduledFuture;
 /**
  * @author UnAfraid
  */
-public abstract class AbstractRequest
-{
+public abstract class AbstractRequest {
     private final L2PcInstance _activeChar;
     private volatile long _timestamp = 0;
     private volatile boolean _isProcessing;
     private ScheduledFuture<?> _timeOutTask;
 
-    public AbstractRequest(L2PcInstance activeChar)
-    {
+    public AbstractRequest(L2PcInstance activeChar) {
         Objects.requireNonNull(activeChar);
         _activeChar = activeChar;
     }
 
-    public L2PcInstance getActiveChar()
-    {
+    public L2PcInstance getActiveChar() {
         return _activeChar;
     }
 
-    public long getTimestamp()
-    {
+    public long getTimestamp() {
         return _timestamp;
     }
 
-    public void setTimestamp(long timestamp)
-    {
+    public void setTimestamp(long timestamp) {
         _timestamp = timestamp;
     }
 
-    public void scheduleTimeout(long delay)
-    {
+    public void scheduleTimeout(long delay) {
         _timeOutTask = ThreadPoolManager.getInstance().schedule(this::onTimeout, delay);
     }
 
-    public boolean isTimeout()
-    {
+    public boolean isTimeout() {
         return (_timeOutTask != null) && !_timeOutTask.isDone();
     }
 
-    public boolean isProcessing()
-    {
+    public boolean isProcessing() {
         return _isProcessing;
     }
 
-    public boolean setProcessing(boolean isProcessing)
-    {
+    public boolean setProcessing(boolean isProcessing) {
         return _isProcessing = isProcessing;
     }
 
-    public boolean canWorkWith(AbstractRequest request)
-    {
+    public boolean canWorkWith(AbstractRequest request) {
         return true;
     }
 
-    public boolean isItemRequest()
-    {
+    public boolean isItemRequest() {
         return false;
     }
 
     public abstract boolean isUsing(int objectId);
 
-    public void onTimeout()
-    {
+    public void onTimeout() {
 
     }
 }

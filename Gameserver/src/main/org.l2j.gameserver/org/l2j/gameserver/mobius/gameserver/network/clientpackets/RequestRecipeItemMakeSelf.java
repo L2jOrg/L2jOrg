@@ -9,38 +9,31 @@ import java.nio.ByteBuffer;
 /**
  * @author Administrator
  */
-public final class RequestRecipeItemMakeSelf extends IClientIncomingPacket
-{
+public final class RequestRecipeItemMakeSelf extends IClientIncomingPacket {
     private int _id;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _id = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
-        if (!client.getFloodProtectors().getManufacture().tryPerformAction("RecipeMakeSelf"))
-        {
+        if (!client.getFloodProtectors().getManufacture().tryPerformAction("RecipeMakeSelf")) {
             return;
         }
 
-        if (activeChar.getPrivateStoreType() != PrivateStoreType.NONE)
-        {
+        if (activeChar.getPrivateStoreType() != PrivateStoreType.NONE) {
             activeChar.sendMessage("You cannot create items while trading.");
             return;
         }
 
-        if (activeChar.isCrafting())
-        {
+        if (activeChar.isCrafting()) {
             activeChar.sendMessage("You are currently in Craft Mode.");
             return;
         }

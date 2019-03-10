@@ -15,10 +15,10 @@ import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 
 import java.util.Arrays;
 
-public abstract class AbstractRefinePacket extends IClientIncomingPacket
-{
+public abstract class AbstractRefinePacket extends IClientIncomingPacket {
     /**
      * Checks player, source item, lifestone and gemstone validity for augmentation process
+     *
      * @param player
      * @param item
      * @param mineralItem
@@ -26,37 +26,30 @@ public abstract class AbstractRefinePacket extends IClientIncomingPacket
      * @param fee
      * @return
      */
-    protected static boolean isValid(L2PcInstance player, L2ItemInstance item, L2ItemInstance mineralItem, L2ItemInstance feeItem, VariationFee fee)
-    {
-        if (fee == null)
-        {
+    protected static boolean isValid(L2PcInstance player, L2ItemInstance item, L2ItemInstance mineralItem, L2ItemInstance feeItem, VariationFee fee) {
+        if (fee == null) {
             return false;
         }
 
-        if (!isValid(player, item, mineralItem))
-        {
+        if (!isValid(player, item, mineralItem)) {
             return false;
         }
 
         // GemStones must belong to owner
-        if (feeItem.getOwnerId() != player.getObjectId())
-        {
+        if (feeItem.getOwnerId() != player.getObjectId()) {
             return false;
         }
         // .. and located in inventory
-        if (feeItem.getItemLocation() != ItemLocation.INVENTORY)
-        {
+        if (feeItem.getItemLocation() != ItemLocation.INVENTORY) {
             return false;
         }
 
         // Check for item id
-        if (fee.getItemId() != feeItem.getId())
-        {
+        if (fee.getItemId() != feeItem.getId()) {
             return false;
         }
         // Count must be greater or equal of required number
-        if (fee.getItemCount() > feeItem.getCount())
-        {
+        if (fee.getItemCount() > feeItem.getCount()) {
             return false;
         }
 
@@ -65,26 +58,23 @@ public abstract class AbstractRefinePacket extends IClientIncomingPacket
 
     /**
      * Checks player, source item and lifestone validity for augmentation process
+     *
      * @param player
      * @param item
      * @param mineralItem
      * @return
      */
-    protected static boolean isValid(L2PcInstance player, L2ItemInstance item, L2ItemInstance mineralItem)
-    {
-        if (!isValid(player, item))
-        {
+    protected static boolean isValid(L2PcInstance player, L2ItemInstance item, L2ItemInstance mineralItem) {
+        if (!isValid(player, item)) {
             return false;
         }
 
         // Item must belong to owner
-        if (mineralItem.getOwnerId() != player.getObjectId())
-        {
+        if (mineralItem.getOwnerId() != player.getObjectId()) {
             return false;
         }
         // Lifestone must be located in inventory
-        if (mineralItem.getItemLocation() != ItemLocation.INVENTORY)
-        {
+        if (mineralItem.getItemLocation() != ItemLocation.INVENTORY) {
             return false;
         }
 
@@ -93,73 +83,59 @@ public abstract class AbstractRefinePacket extends IClientIncomingPacket
 
     /**
      * Check both player and source item conditions for augmentation process
+     *
      * @param player
      * @param item
      * @return
      */
-    protected static boolean isValid(L2PcInstance player, L2ItemInstance item)
-    {
-        if (!isValid(player))
-        {
+    protected static boolean isValid(L2PcInstance player, L2ItemInstance item) {
+        if (!isValid(player)) {
             return false;
         }
 
         // Item must belong to owner
-        if (item.getOwnerId() != player.getObjectId())
-        {
+        if (item.getOwnerId() != player.getObjectId()) {
             return false;
         }
-        if (item.isAugmented())
-        {
+        if (item.isAugmented()) {
             return false;
         }
-        if (item.isHeroItem())
-        {
+        if (item.isHeroItem()) {
             return false;
         }
-        if (item.isShadowItem())
-        {
+        if (item.isShadowItem()) {
             return false;
         }
-        if (item.isCommonItem())
-        {
+        if (item.isCommonItem()) {
             return false;
         }
-        if (item.isEtcItem())
-        {
+        if (item.isEtcItem()) {
             return false;
         }
-        if (item.isTimeLimitedItem())
-        {
+        if (item.isTimeLimitedItem()) {
             return false;
         }
-        if (item.isPvp() && !Config.ALT_ALLOW_AUGMENT_PVP_ITEMS)
-        {
+        if (item.isPvp() && !Config.ALT_ALLOW_AUGMENT_PVP_ITEMS) {
             return false;
         }
 
         // Source item can be equipped or in inventory
-        switch (item.getItemLocation())
-        {
+        switch (item.getItemLocation()) {
             case INVENTORY:
-            case PAPERDOLL:
-            {
+            case PAPERDOLL: {
                 break;
             }
-            default:
-            {
+            default: {
                 return false;
             }
         }
 
-        if (!(item.getItem() instanceof L2Weapon) && !(item.getItem() instanceof L2Armor))
-        {
+        if (!(item.getItem() instanceof L2Weapon) && !(item.getItem() instanceof L2Armor)) {
             return false; // neither weapon nor armor ?
         }
 
         // blacklist check
-        if (Arrays.binarySearch(Config.AUGMENTATION_BLACKLIST, item.getId()) >= 0)
-        {
+        if (Arrays.binarySearch(Config.AUGMENTATION_BLACKLIST, item.getId()) >= 0) {
             return false;
         }
 
@@ -168,47 +144,39 @@ public abstract class AbstractRefinePacket extends IClientIncomingPacket
 
     /**
      * Check if player's conditions valid for augmentation process
+     *
      * @param player
      * @return
      */
-    protected static boolean isValid(L2PcInstance player)
-    {
-        if (player.getPrivateStoreType() != PrivateStoreType.NONE)
-        {
+    protected static boolean isValid(L2PcInstance player) {
+        if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP_IS_IN_OPERATION);
             return false;
         }
-        if (player.getActiveTradeList() != null)
-        {
+        if (player.getActiveTradeList() != null) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_ENGAGED_IN_TRADE_ACTIVITIES);
             return false;
         }
-        if (player.isDead())
-        {
+        if (player.isDead()) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_DEAD);
             return false;
         }
-        if (player.hasBlockActions() && player.hasAbnormalType(AbnormalType.PARALYZE))
-        {
+        if (player.hasBlockActions() && player.hasAbnormalType(AbnormalType.PARALYZE)) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_PARALYZED);
             return false;
         }
-        if (player.isFishing())
-        {
+        if (player.isFishing()) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_FISHING);
             return false;
         }
-        if (player.isSitting())
-        {
+        if (player.isSitting()) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_SITTING_DOWN);
             return false;
         }
-        if (player.isCursedWeaponEquipped())
-        {
+        if (player.isCursedWeaponEquipped()) {
             return false;
         }
-        if (player.hasRequest(EnchantItemRequest.class, EnchantItemAttributeRequest.class) || player.isProcessingTransaction())
-        {
+        if (player.hasRequest(EnchantItemRequest.class, EnchantItemAttributeRequest.class) || player.isProcessingTransaction()) {
             return false;
         }
 

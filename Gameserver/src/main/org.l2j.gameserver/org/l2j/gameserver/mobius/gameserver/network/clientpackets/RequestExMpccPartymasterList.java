@@ -14,26 +14,21 @@ import java.util.stream.Collectors;
 /**
  * @author Sdw
  */
-public class RequestExMpccPartymasterList extends IClientIncomingPacket
-{
+public class RequestExMpccPartymasterList extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final MatchingRoom room = activeChar.getMatchingRoom();
-        if ((room != null) && (room.getRoomType() == MatchingRoomType.COMMAND_CHANNEL))
-        {
+        if ((room != null) && (room.getRoomType() == MatchingRoomType.COMMAND_CHANNEL)) {
             final Set<String> leadersName = room.getMembers().stream().map(L2PcInstance::getParty).filter(Objects::nonNull).map(L2Party::getLeader).map(L2PcInstance::getName).collect(Collectors.toSet());
             activeChar.sendPacket(new ExMPCCPartymasterList(leadersName));
         }

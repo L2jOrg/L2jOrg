@@ -9,20 +9,15 @@ import java.nio.ByteBuffer;
 /**
  * @author KenM
  */
-public class RequestFortressSiegeInfo extends IClientIncomingPacket
-{
+public class RequestFortressSiegeInfo extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
     }
 
     @Override
-    public void runImpl()
-    {
-        for (Fort fort : FortManager.getInstance().getForts())
-        {
-            if ((fort != null) && fort.getSiege().isInProgress())
-            {
+    public void runImpl() {
+        for (Fort fort : FortManager.getInstance().getForts()) {
+            if ((fort != null) && fort.getSiege().isInProgress()) {
                 client.sendPacket(new ExShowFortressSiegeInfo(fort));
             }
         }

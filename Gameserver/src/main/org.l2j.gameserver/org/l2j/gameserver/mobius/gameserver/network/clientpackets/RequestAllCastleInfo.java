@@ -7,17 +7,14 @@ import java.nio.ByteBuffer;
 /**
  * @author KenM
  */
-public class RequestAllCastleInfo extends IClientIncomingPacket
-{
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
+public class RequestAllCastleInfo extends IClientIncomingPacket {
+    @Override
+    public void readImpl(ByteBuffer packet) {
 
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		client.sendPacket(ExShowCastleInfo.STATIC_PACKET);
-	}
+    }
+
+    @Override
+    public void runImpl() {
+        client.sendPacket(ExShowCastleInfo.STATIC_PACKET);
+    }
 }

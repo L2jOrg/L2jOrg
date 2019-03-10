@@ -6,10 +6,10 @@ import org.l2j.gameserver.mobius.gameserver.model.interfaces.IIdentifiable;
 
 /**
  * Doors template.
+ *
  * @author JIV
  */
-public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable
-{
+public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable {
     private final int _doorId;
     private final int _nodeX[];
     private final int _nodeY[];
@@ -30,9 +30,6 @@ public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable
 
     private final boolean _isTargetable;
     private final boolean _default_status;
-
-    private int _openTime;
-    private int _randomTime;
     private final int _closeTime;
     private final int _level;
     private final DoorOpenType _openType;
@@ -40,9 +37,10 @@ public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable
     private final boolean _isAttackableDoor;
     private final boolean _stealth;
     private final boolean _isInverted;
+    private int _openTime;
+    private int _randomTime;
 
-    public L2DoorTemplate(StatsSet set)
-    {
+    public L2DoorTemplate(StatsSet set) {
         super(set);
         _doorId = set.getInt("id");
         _name = set.getString("name");
@@ -52,8 +50,7 @@ public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable
         _nodeZ = set.getInt("nodeZ");
         _nodeX = new int[4]; // 4 * x
         _nodeY = new int[4]; // 4 * y
-        for (int i = 0; i < 4; i++)
-        {
+        for (int i = 0; i < 4; i++) {
             _nodeX[i] = set.getInt("nodeX_" + i);
             _nodeY[i] = set.getInt("nodeY_" + i);
         }
@@ -82,8 +79,7 @@ public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable
 
         _openType = set.getEnum("openMethod", DoorOpenType.class, DoorOpenType.NONE);
         _checkCollision = set.getBoolean("isCheckCollision", true);
-        if (_openType == DoorOpenType.BY_TIME)
-        {
+        if (_openType == DoorOpenType.BY_TIME) {
             _openTime = set.getInt("openTime");
             _randomTime = set.getInt("randomTime", -1);
         }
@@ -94,141 +90,115 @@ public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable
 
     /**
      * Gets the door ID.
+     *
      * @return the door ID
      */
     @Override
-    public int getId()
-    {
+    public int getId() {
         return _doorId;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return _name;
     }
 
-    public int[] getNodeX()
-    {
+    public int[] getNodeX() {
         return _nodeX;
     }
 
-    public int[] getNodeY()
-    {
+    public int[] getNodeY() {
         return _nodeY;
     }
 
-    public int getNodeZ()
-    {
+    public int getNodeZ() {
         return _nodeZ;
     }
 
-    public int getHeight()
-    {
+    public int getHeight() {
         return _height;
     }
 
-    public int getX()
-    {
+    public int getX() {
         return _posX;
     }
 
-    public int getY()
-    {
+    public int getY() {
         return _posY;
     }
 
-    public int getZ()
-    {
+    public int getZ() {
         return _posZ;
     }
 
-    public int getEmmiter()
-    {
+    public int getEmmiter() {
         return _emmiter;
     }
 
-    public int getChildDoorId()
-    {
+    public int getChildDoorId() {
         return _childDoorId;
     }
 
-    public String getGroupName()
-    {
+    public String getGroupName() {
         return _groupName;
     }
 
-    public boolean isShowHp()
-    {
+    public boolean isShowHp() {
         return _showHp;
     }
 
-    public boolean isWall()
-    {
+    public boolean isWall() {
         return _isWall;
     }
 
-    public byte getMasterDoorOpen()
-    {
+    public byte getMasterDoorOpen() {
         return _masterDoorOpen;
     }
 
-    public byte getMasterDoorClose()
-    {
+    public byte getMasterDoorClose() {
         return _masterDoorClose;
     }
 
-    public boolean isTargetable()
-    {
+    public boolean isTargetable() {
         return _isTargetable;
     }
 
-    public boolean isOpenByDefault()
-    {
+    public boolean isOpenByDefault() {
         return _default_status;
     }
 
-    public int getOpenTime()
-    {
+    public int getOpenTime() {
         return _openTime;
     }
 
-    public int getRandomTime()
-    {
+    public int getRandomTime() {
         return _randomTime;
     }
 
-    public int getCloseTime()
-    {
+    public int getCloseTime() {
         return _closeTime;
     }
 
-    public int getLevel()
-    {
+    public int getLevel() {
         return _level;
     }
 
-    public DoorOpenType getOpenType()
-    {
+    public DoorOpenType getOpenType() {
         return _openType;
     }
 
-    public boolean isCheckCollision()
-    {
+    public boolean isCheckCollision() {
         return _checkCollision;
     }
 
-    public boolean isAttackable()
-    {
+    public boolean isAttackable() {
         return _isAttackableDoor;
     }
 
-    public boolean isStealth()
-    {
+    public boolean isStealth() {
         return _stealth;
     }
 
-    public boolean isInverted()
-    {
+    public boolean isInverted() {
         return _isInverted;
     }
 }

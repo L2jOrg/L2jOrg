@@ -1,8 +1,8 @@
 /*
  * cron4j - A pure Java cron-like scheduler
- * 
+ *
  * Copyright (C) 2007-2010 Carlo Pelliccia (www.sauronsoftware.it)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License version
  * 2.1, as published by the Free Software Foundation.
@@ -24,51 +24,45 @@ import java.util.ArrayList;
  * <p>
  * A ValueMatcher whose rules are in a plain array of integer values. When asked to validate a value, this ValueMatcher checks if it is in the array.
  * </p>
+ *
  * @author Carlo Pelliccia
  */
-class IntArrayValueMatcher implements ValueMatcher
-{
-	/**
-	 * The accepted values.
-	 */
-	private final int[] values;
-	
-	/**
-	 * Builds the ValueMatcher.
-	 * @param integers An ArrayList of Integer elements, one for every value accepted by the matcher. The match() method will return true only if its parameter will be one of this list.
-	 */
-	public IntArrayValueMatcher(ArrayList<?> integers)
-	{
-		int size = integers.size();
-		values = new int[size];
-		for (int i = 0; i < size; i++)
-		{
-			try
-			{
-				values[i] = ((Integer) integers.get(i)).intValue();
-			}
-			catch (Exception e)
-			{
-				throw new IllegalArgumentException(e.getMessage());
-			}
-		}
-	}
-	
-	/**
-	 * Returns true if the given value is included in the matcher list.
-	 * @param value
-	 * @return
-	 */
-	@Override
-	public boolean match(int value)
-	{
-		for (int value2 : values)
-		{
-			if (value2 == value)
-			{
-				return true;
-			}
-		}
-		return false;
-	}
+class IntArrayValueMatcher implements ValueMatcher {
+    /**
+     * The accepted values.
+     */
+    private final int[] values;
+
+    /**
+     * Builds the ValueMatcher.
+     *
+     * @param integers An ArrayList of Integer elements, one for every value accepted by the matcher. The match() method will return true only if its parameter will be one of this list.
+     */
+    public IntArrayValueMatcher(ArrayList<?> integers) {
+        int size = integers.size();
+        values = new int[size];
+        for (int i = 0; i < size; i++) {
+            try {
+                values[i] = ((Integer) integers.get(i)).intValue();
+            } catch (Exception e) {
+                throw new IllegalArgumentException(e.getMessage());
+            }
+        }
+    }
+
+    /**
+     * Returns true if the given value is included in the matcher list.
+     *
+     * @param value
+     * @return
+     */
+    @Override
+    public boolean match(int value) {
+        for (int value2 : values) {
+            if (value2 == value) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

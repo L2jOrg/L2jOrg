@@ -11,18 +11,17 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * @author Sdw
  */
-public class WarpedSpaceManager
-{
+public class WarpedSpaceManager {
     private volatile ConcurrentHashMap<L2Character, WarpedSpaceHolder> _warpedSpace = null;
 
-    public void addWarpedSpace(L2Character creature, int radius)
-    {
-        if (_warpedSpace == null)
-        {
-            synchronized (this)
-            {
-                if (_warpedSpace == null)
-                {
+    public static WarpedSpaceManager getInstance() {
+        return SingletonHolder._instance;
+    }
+
+    public void addWarpedSpace(L2Character creature, int radius) {
+        if (_warpedSpace == null) {
+            synchronized (this) {
+                if (_warpedSpace == null) {
                     _warpedSpace = new ConcurrentHashMap<>();
                 }
             }
@@ -30,20 +29,15 @@ public class WarpedSpaceManager
         _warpedSpace.put(creature, new WarpedSpaceHolder(creature, radius));
     }
 
-    public void removeWarpedSpace(L2Character creature)
-    {
+    public void removeWarpedSpace(L2Character creature) {
         _warpedSpace.remove(creature);
     }
 
-    public boolean checkForWarpedSpace(Location origin, Location destination, Instance instance)
-    {
-        if (_warpedSpace != null)
-        {
-            for (WarpedSpaceHolder holder : _warpedSpace.values())
-            {
+    public boolean checkForWarpedSpace(Location origin, Location destination, Instance instance) {
+        if (_warpedSpace != null) {
+            for (WarpedSpaceHolder holder : _warpedSpace.values()) {
                 final L2Character creature = holder.getCreature();
-                if (creature.getInstanceWorld() != instance)
-                {
+                if (creature.getInstanceWorld() != instance) {
                     continue;
                 }
                 final int radius = creature.getTemplate().getCollisionRadius();
@@ -55,13 +49,7 @@ public class WarpedSpaceManager
         return false;
     }
 
-    public static WarpedSpaceManager getInstance()
-    {
-        return SingletonHolder._instance;
-    }
-
-    private static class SingletonHolder
-    {
+    private static class SingletonHolder {
         protected static final WarpedSpaceManager _instance = new WarpedSpaceManager();
     }
 }

@@ -7,36 +7,30 @@ import java.util.function.BiPredicate;
 /**
  * @author UnAfraid
  */
-public class StatsHolder
-{
+public class StatsHolder {
     private final Stats _stat;
     private final double _value;
     private final BiPredicate<L2Character, StatsHolder> _condition;
 
-    public StatsHolder(Stats stat, double value, BiPredicate<L2Character, StatsHolder> condition)
-    {
+    public StatsHolder(Stats stat, double value, BiPredicate<L2Character, StatsHolder> condition) {
         _stat = stat;
         _value = value;
         _condition = condition;
     }
 
-    public StatsHolder(Stats stat, double value)
-    {
+    public StatsHolder(Stats stat, double value) {
         this(stat, value, null);
     }
 
-    public Stats getStat()
-    {
+    public Stats getStat() {
         return _stat;
     }
 
-    public double getValue()
-    {
+    public double getValue() {
         return _value;
     }
 
-    public boolean verifyCondition(L2Character creature)
-    {
+    public boolean verifyCondition(L2Character creature) {
         return (_condition == null) || _condition.test(creature, this);
     }
 }

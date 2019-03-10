@@ -7,23 +7,19 @@ import org.l2j.gameserver.mobius.gameserver.model.events.impl.IBaseEvent;
 /**
  * @author UnAfraid
  */
-public class OnFortSiegeFinish implements IBaseEvent
-{
+public class OnFortSiegeFinish implements IBaseEvent {
     private final FortSiege _siege;
 
-    public OnFortSiegeFinish(FortSiege siege)
-    {
+    public OnFortSiegeFinish(FortSiege siege) {
         _siege = siege;
     }
 
-    public FortSiege getSiege()
-    {
+    public FortSiege getSiege() {
         return _siege;
     }
 
     @Override
-    public EventType getType()
-    {
+    public EventType getType() {
         return EventType.ON_FORT_SIEGE_FINISH;
     }
 }

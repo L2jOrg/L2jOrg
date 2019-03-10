@@ -7,44 +7,35 @@ import org.l2j.gameserver.mobius.gameserver.network.serverpackets.RecipeBookItem
 
 import java.nio.ByteBuffer;
 
-public final class RequestRecipeBookDestroy extends IClientIncomingPacket
-{
+public final class RequestRecipeBookDestroy extends IClientIncomingPacket {
     private int _recipeID;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _recipeID = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
-        if (!client.getFloodProtectors().getTransaction().tryPerformAction("RecipeDestroy"))
-        {
+        if (!client.getFloodProtectors().getTransaction().tryPerformAction("RecipeDestroy")) {
             return;
         }
 
         final L2RecipeList rp = RecipeData.getInstance().getRecipeList(_recipeID);
-        if (rp == null)
-        {
+        if (rp == null) {
             return;
         }
         activeChar.unregisterRecipeList(_recipeID);
 
         final RecipeBookItemList response = new RecipeBookItemList(rp.isDwarvenRecipe(), activeChar.getMaxMp());
-        if (rp.isDwarvenRecipe())
-        {
+        if (rp.isDwarvenRecipe()) {
             response.addRecipes(activeChar.getDwarvenRecipeBook());
-        }
-        else
-        {
+        } else {
             response.addRecipes(activeChar.getCommonRecipeBook());
         }
 

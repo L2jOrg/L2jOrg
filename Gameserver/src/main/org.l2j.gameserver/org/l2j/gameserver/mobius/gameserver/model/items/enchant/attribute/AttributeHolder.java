@@ -5,40 +5,33 @@ import org.l2j.gameserver.mobius.gameserver.enums.AttributeType;
 /**
  * @author UnAfraid
  */
-public class AttributeHolder
-{
+public class AttributeHolder {
     private final AttributeType _type;
     private int _value;
 
-    public AttributeHolder(AttributeType type, int value)
-    {
+    public AttributeHolder(AttributeType type, int value) {
         _type = type;
         _value = value;
     }
 
-    public AttributeType getType()
-    {
+    public AttributeType getType() {
         return _type;
     }
 
-    public int getValue()
-    {
+    public int getValue() {
         return _value;
     }
 
-    public void setValue(int value)
-    {
+    public void setValue(int value) {
         _value = value;
     }
 
-    public void incValue(int with)
-    {
+    public void incValue(int with) {
         _value += with;
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return _type.name() + " +" + _value;
     }
 }

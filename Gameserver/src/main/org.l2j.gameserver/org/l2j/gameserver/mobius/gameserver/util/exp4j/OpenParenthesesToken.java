@@ -15,10 +15,8 @@
  */
 package org.l2j.gameserver.mobius.gameserver.util.exp4j;
 
-class OpenParenthesesToken extends Token
-{
-	OpenParenthesesToken()
-	{
-		super(TOKEN_PARENTHESES_OPEN);
-	}
+class OpenParenthesesToken extends Token {
+    OpenParenthesesToken() {
+        super(TOKEN_PARENTHESES_OPEN);
+    }
 }

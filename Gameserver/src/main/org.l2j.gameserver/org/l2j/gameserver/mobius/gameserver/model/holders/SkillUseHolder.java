@@ -6,32 +6,27 @@ import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
 /**
  * @author UnAfraid
  */
-public class SkillUseHolder extends SkillHolder
-{
+public class SkillUseHolder extends SkillHolder {
     private final L2ItemInstance _item;
     private final boolean _ctrlPressed;
     private final boolean _shiftPressed;
 
-    public SkillUseHolder(Skill skill, L2ItemInstance item, boolean ctrlPressed, boolean shiftPressed)
-    {
+    public SkillUseHolder(Skill skill, L2ItemInstance item, boolean ctrlPressed, boolean shiftPressed) {
         super(skill);
         _item = item;
         _ctrlPressed = ctrlPressed;
         _shiftPressed = shiftPressed;
     }
 
-    public L2ItemInstance getItem()
-    {
+    public L2ItemInstance getItem() {
         return _item;
     }
 
-    public boolean isCtrlPressed()
-    {
+    public boolean isCtrlPressed() {
         return _ctrlPressed;
     }
 
-    public boolean isShiftPressed()
-    {
+    public boolean isShiftPressed() {
         return _shiftPressed;
     }
 }

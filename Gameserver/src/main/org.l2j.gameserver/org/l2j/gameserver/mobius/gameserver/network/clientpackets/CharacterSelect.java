@@ -25,10 +25,10 @@ import java.util.logging.Logger;
 
 /**
  * This class ...
+ *
  * @version $Revision: 1.5.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $
  */
-public class CharacterSelect extends IClientIncomingPacket
-{
+public class CharacterSelect extends IClientIncomingPacket {
     protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 
     // cd
@@ -44,8 +44,7 @@ public class CharacterSelect extends IClientIncomingPacket
     private int _unk4; // new in C4
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _charSlot = packet.getInt();
         _unk1 = packet.getShort();
         _unk2 = packet.getInt();
@@ -55,51 +54,41 @@ public class CharacterSelect extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
-        if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterSelect"))
-        {
+    public void runImpl() {
+        if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterSelect")) {
             return;
         }
 
-        if (SecondaryAuthData.getInstance().isEnabled() && !client.getSecondaryAuth().isAuthed())
-        {
+        if (SecondaryAuthData.getInstance().isEnabled() && !client.getSecondaryAuth().isAuthed()) {
             client.getSecondaryAuth().openDialog();
             return;
         }
 
         // We should always be able to acquire the lock
         // But if we can't lock then nothing should be done (i.e. repeated packet)
-        if (client.getActiveCharLock().tryLock())
-        {
-            try
-            {
+        if (client.getActiveCharLock().tryLock()) {
+            try {
                 // should always be null
                 // but if not then this is repeated packet and nothing should be done here
-                if (client.getActiveChar() == null)
-                {
+                if (client.getActiveChar() == null) {
                     final CharSelectInfoPackage info = client.getCharSelection(_charSlot);
-                    if (info == null)
-                    {
+                    if (info == null) {
                         return;
                     }
 
                     // Banned?
-                    if (PunishmentManager.getInstance().hasPunishment(info.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.BAN) || PunishmentManager.getInstance().hasPunishment(client.getAccountName(), PunishmentAffect.ACCOUNT, PunishmentType.BAN) || PunishmentManager.getInstance().hasPunishment(client.getHostAddress(), PunishmentAffect.IP, PunishmentType.BAN))
-                    {
+                    if (PunishmentManager.getInstance().hasPunishment(info.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.BAN) || PunishmentManager.getInstance().hasPunishment(client.getAccountName(), PunishmentAffect.ACCOUNT, PunishmentType.BAN) || PunishmentManager.getInstance().hasPunishment(client.getHostAddress(), PunishmentAffect.IP, PunishmentType.BAN)) {
                         client.close(ServerClose.STATIC_PACKET);
                         return;
                     }
 
                     // Selected character is banned (compatibility with previous versions).
-                    if (info.getAccessLevel() < 0)
-                    {
+                    if (info.getAccessLevel() < 0) {
                         client.close(ServerClose.STATIC_PACKET);
                         return;
                     }
 
-                    if ((Config.DUALBOX_CHECK_MAX_PLAYERS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddClient(AntiFeedManager.GAME_ID, client, Config.DUALBOX_CHECK_MAX_PLAYERS_PER_IP))
-                    {
+                    if ((Config.DUALBOX_CHECK_MAX_PLAYERS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddClient(AntiFeedManager.GAME_ID, client, Config.DUALBOX_CHECK_MAX_PLAYERS_PER_IP)) {
                         final NpcHtmlMessage msg = new NpcHtmlMessage();
                         msg.setFile(null, "data/html/mods/IPRestriction.htm");
                         msg.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(client, Config.DUALBOX_CHECK_MAX_PLAYERS_PER_IP)));
@@ -107,10 +96,8 @@ public class CharacterSelect extends IClientIncomingPacket
                         return;
                     }
 
-                    if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_BALANCE_ONLINE_PLAYERS)
-                    {
-                        if (info.isGood() && (L2World.getInstance().getAllGoodPlayers().size() >= (L2World.getInstance().getAllEvilPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
-                        {
+                    if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_BALANCE_ONLINE_PLAYERS) {
+                        if (info.isGood() && (L2World.getInstance().getAllGoodPlayers().size() >= (L2World.getInstance().getAllEvilPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))) {
                             final NpcHtmlMessage msg = new NpcHtmlMessage();
                             msg.setFile(null, "data/html/mods/Faction/ExceededOnlineLimit.htm");
                             msg.replace("%more%", Config.FACTION_GOOD_TEAM_NAME);
@@ -118,8 +105,7 @@ public class CharacterSelect extends IClientIncomingPacket
                             client.sendPacket(msg);
                             return;
                         }
-                        if (info.isEvil() && (L2World.getInstance().getAllEvilPlayers().size() >= (L2World.getInstance().getAllGoodPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
-                        {
+                        if (info.isEvil() && (L2World.getInstance().getAllEvilPlayers().size() >= (L2World.getInstance().getAllGoodPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))) {
                             final NpcHtmlMessage msg = new NpcHtmlMessage();
                             msg.setFile(null, "data/html/mods/Faction/ExceededOnlineLimit.htm");
                             msg.replace("%more%", Config.FACTION_EVIL_TEAM_NAME);
@@ -131,8 +117,7 @@ public class CharacterSelect extends IClientIncomingPacket
 
                     // load up character from disk
                     final L2PcInstance cha = client.load(_charSlot);
-                    if (cha == null)
-                    {
+                    if (cha == null) {
                         return; // handled in L2GameClient
                     }
 
@@ -143,8 +128,7 @@ public class CharacterSelect extends IClientIncomingPacket
                     cha.setOnlineStatus(true, true);
 
                     final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(cha, cha.getObjectId(), cha.getName(), client), Containers.Players(), TerminateReturn.class);
-                    if ((terminate != null) && terminate.terminate())
-                    {
+                    if ((terminate != null) && terminate.terminate()) {
                         Disconnection.of(cha).defaultSequence(false);
                         return;
                     }
@@ -152,9 +136,7 @@ public class CharacterSelect extends IClientIncomingPacket
                     client.setConnectionState(ConnectionState.IN_GAME);
                     client.sendPacket(new CharSelected(cha, client.getSessionId().playOkID1));
                 }
-            }
-            finally
-            {
+            } finally {
                 client.getActiveCharLock().unlock();
             }
 

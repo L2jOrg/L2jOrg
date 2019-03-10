@@ -12,45 +12,39 @@ import java.util.logging.Logger;
 
 /**
  * Recieve Private (Friend) Message - 0xCC Format: c SS S: Message S: Receiving Player
+ *
  * @author Tempy
  */
-public final class RequestSendFriendMsg extends IClientIncomingPacket
-{
+public final class RequestSendFriendMsg extends IClientIncomingPacket {
     private static Logger LOGGER_CHAT = Logger.getLogger("chat");
 
     private String _message;
     private String _reciever;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _message = readString(packet);
         _reciever = readString(packet);
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
-        if ((_message == null) || _message.isEmpty() || (_message.length() > 300))
-        {
+        if ((_message == null) || _message.isEmpty() || (_message.length() > 300)) {
             return;
         }
 
         final L2PcInstance targetPlayer = L2World.getInstance().getPlayer(_reciever);
-        if ((targetPlayer == null) || !targetPlayer.getFriendList().contains(activeChar.getObjectId()))
-        {
+        if ((targetPlayer == null) || !targetPlayer.getFriendList().contains(activeChar.getObjectId())) {
             activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
             return;
         }
 
-        if (Config.LOG_CHAT)
-        {
+        if (Config.LOG_CHAT) {
             LOGGER_CHAT.info("PRIV_MSG [" + activeChar + " to " + targetPlayer + "] " + _message);
         }
 

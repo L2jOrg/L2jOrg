@@ -5,8 +5,7 @@ import org.l2j.gameserver.mobius.gameserver.model.interfaces.IUpdateTypeComponen
 /**
  * @author UnAfraid
  */
-public enum NpcInfoType implements IUpdateTypeComponent
-{
+public enum NpcInfoType implements IUpdateTypeComponent {
     // 0
     ID(0x00, 4),
     ATTACKABLE(0x01, 1),
@@ -54,20 +53,17 @@ public enum NpcInfoType implements IUpdateTypeComponent
     private final int _mask;
     private final int _blockLength;
 
-    private NpcInfoType(int mask, int blockLength)
-    {
+    NpcInfoType(int mask, int blockLength) {
         _mask = mask;
         _blockLength = blockLength;
     }
 
     @Override
-    public int getMask()
-    {
+    public int getMask() {
         return _mask;
     }
 
-    public int getBlockLength()
-    {
+    public int getBlockLength() {
         return _blockLength;
     }
 }

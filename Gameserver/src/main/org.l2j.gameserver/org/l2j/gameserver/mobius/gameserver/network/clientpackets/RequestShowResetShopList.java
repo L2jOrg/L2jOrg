@@ -11,48 +11,40 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestShowResetShopList extends IClientIncomingPacket
-{
+public class RequestShowResetShopList extends IClientIncomingPacket {
     private int _hairId;
     private int _faceId;
     private int _colorId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _hairId = packet.getInt();
         _faceId = packet.getInt();
         _colorId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
         final BeautyData beautyData = BeautyShopData.getInstance().getBeautyData(player.getRace(), player.getAppearance().getSexType());
         int requiredAdena = 0;
 
-        if (_hairId > 0)
-        {
+        if (_hairId > 0) {
             final BeautyItem hair = beautyData.getHairList().get(_hairId);
-            if (hair == null)
-            {
+            if (hair == null) {
                 player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.RESTORE, ExResponseBeautyRegistReset.FAILURE));
                 return;
             }
 
             requiredAdena += hair.getResetAdena();
 
-            if (_colorId > 0)
-            {
+            if (_colorId > 0) {
                 final BeautyItem color = hair.getColors().get(_colorId);
-                if (color == null)
-                {
+                if (color == null) {
                     player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.RESTORE, ExResponseBeautyRegistReset.FAILURE));
                     return;
                 }
@@ -61,11 +53,9 @@ public class RequestShowResetShopList extends IClientIncomingPacket
             }
         }
 
-        if (_faceId > 0)
-        {
+        if (_faceId > 0) {
             final BeautyItem face = beautyData.getFaceList().get(_faceId);
-            if (face == null)
-            {
+            if (face == null) {
                 player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.RESTORE, ExResponseBeautyRegistReset.FAILURE));
                 return;
             }
@@ -73,16 +63,13 @@ public class RequestShowResetShopList extends IClientIncomingPacket
             requiredAdena += face.getResetAdena();
         }
 
-        if ((player.getAdena() < requiredAdena))
-        {
+        if ((player.getAdena() < requiredAdena)) {
             player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.RESTORE, ExResponseBeautyRegistReset.FAILURE));
             return;
         }
 
-        if (requiredAdena > 0)
-        {
-            if (!player.reduceAdena(getClass().getSimpleName(), requiredAdena, null, true))
-            {
+        if (requiredAdena > 0) {
+            if (!player.reduceAdena(getClass().getSimpleName(), requiredAdena, null, true)) {
                 player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.RESTORE, ExResponseBeautyRegistReset.FAILURE));
                 return;
             }

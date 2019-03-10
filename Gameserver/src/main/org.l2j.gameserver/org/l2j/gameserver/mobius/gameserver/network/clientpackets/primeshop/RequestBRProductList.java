@@ -13,43 +13,38 @@ import java.nio.ByteBuffer;
  * @author Gnacik, UnAfraid
  */
 public final class RequestBRProductList extends IClientIncomingPacket {
-	private static final Logger LOGGER = LoggerFactory.getLogger(RequestBRProductList.class);
-	private int _type;
-	
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
-		_type = packet.getInt();
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance player = client.getActiveChar();
-		if (player != null)
-		{
-			
-			switch (_type)
-			{
-				case 0: // Home page
-				{
-					player.sendPacket(new ExBRProductList(player, 0, PrimeShopData.getInstance().getPrimeItems().values()));
-					break;
-				}
-				case 1: // History
-				{
-					break;
-				}
-				case 2: // Favorites
-				{
-					break;
-				}
-				default:
-				{
-					LOGGER.warn(player + " send unhandled product list type: " + _type);
-					break;
-				}
-			}
-		}
-	}
+    private static final Logger LOGGER = LoggerFactory.getLogger(RequestBRProductList.class);
+    private int _type;
+
+    @Override
+    public void readImpl(ByteBuffer packet) {
+        _type = packet.getInt();
+    }
+
+    @Override
+    public void runImpl() {
+        final L2PcInstance player = client.getActiveChar();
+        if (player != null) {
+
+            switch (_type) {
+                case 0: // Home page
+                {
+                    player.sendPacket(new ExBRProductList(player, 0, PrimeShopData.getInstance().getPrimeItems().values()));
+                    break;
+                }
+                case 1: // History
+                {
+                    break;
+                }
+                case 2: // Favorites
+                {
+                    break;
+                }
+                default: {
+                    LOGGER.warn(player + " send unhandled product list type: " + _type);
+                    break;
+                }
+            }
+        }
+    }
 }

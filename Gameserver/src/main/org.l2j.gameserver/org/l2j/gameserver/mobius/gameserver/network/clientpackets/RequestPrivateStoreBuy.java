@@ -25,10 +25,10 @@ import static org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc.INTERACTION
 
 /**
  * This class ...
+ *
  * @version $Revision: 1.2.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestPrivateStoreBuy extends IClientIncomingPacket
-{
+public final class RequestPrivateStoreBuy extends IClientIncomingPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestPrivateStoreBuy.class);
     private static final int BATCH_LENGTH = 20; // length of the one item
 
@@ -39,22 +39,19 @@ public final class RequestPrivateStoreBuy extends IClientIncomingPacket
     public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
         _storePlayerId = packet.getInt();
         final int count = packet.getInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.remaining()))
-        {
+        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.remaining())) {
             throw new InvalidDataPacketException();
         }
         _items = new HashSet<>();
 
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
             final int objectId = packet.getInt();
             final long cnt = packet.getLong();
             final long price = packet.getLong();
 
-            if ((objectId < 1) || (cnt < 1) || (price < 0))
-            {
+            if ((objectId < 1) || (cnt < 1) || (price < 0)) {
                 _items = null;
-                throw  new InvalidDataPacketException();
+                throw new InvalidDataPacketException();
             }
 
             _items.add(new ItemRequest(objectId, cnt, price));
@@ -62,23 +59,19 @@ public final class RequestPrivateStoreBuy extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
-        if (_items == null)
-        {
+        if (_items == null) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         // Cannot set private store in Ceremony of Chaos event.
-        if (player.isOnEvent(CeremonyOfChaosEvent.class))
-        {
+        if (player.isOnEvent(CeremonyOfChaosEvent.class)) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_OR_WORKSHOP_IN_THE_CEREMONY_OF_CHAOS);
             return;
         }
@@ -89,51 +82,42 @@ public final class RequestPrivateStoreBuy extends IClientIncomingPacket
             return;
         }
 
-        if (!client.getFloodProtectors().getTransaction().tryPerformAction("privatestorebuy"))
-        {
+        if (!client.getFloodProtectors().getTransaction().tryPerformAction("privatestorebuy")) {
             player.sendMessage("You are buying items too fast.");
             return;
         }
 
         final L2Object object = L2World.getInstance().getPlayer(_storePlayerId);
-        if ((object == null) || player.isCursedWeaponEquipped())
-        {
+        if ((object == null) || player.isCursedWeaponEquipped()) {
             return;
         }
 
         final L2PcInstance storePlayer = (L2PcInstance) object;
-        if (!player.isInsideRadius3D(storePlayer, INTERACTION_DISTANCE))
-        {
+        if (!player.isInsideRadius3D(storePlayer, INTERACTION_DISTANCE)) {
             return;
         }
 
-        if (player.getInstanceWorld() != storePlayer.getInstanceWorld())
-        {
+        if (player.getInstanceWorld() != storePlayer.getInstanceWorld()) {
             return;
         }
 
-        if (!((storePlayer.getPrivateStoreType() == PrivateStoreType.SELL) || (storePlayer.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL)))
-        {
+        if (!((storePlayer.getPrivateStoreType() == PrivateStoreType.SELL) || (storePlayer.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL))) {
             return;
         }
 
         final TradeList storeList = storePlayer.getSellList();
-        if (storeList == null)
-        {
+        if (storeList == null) {
             return;
         }
 
-        if (!player.getAccessLevel().allowTransaction())
-        {
+        if (!player.getAccessLevel().allowTransaction()) {
             player.sendMessage("Transactions are disabled for your Access Level.");
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
-        if (storePlayer.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL)
-        {
-            if (storeList.getItemCount() > _items.size())
-            {
+        if (storePlayer.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL) {
+            if (storeList.getItemCount() > _items.size()) {
                 final String msgErr = "[RequestPrivateStoreBuy] player " + client.getActiveChar().getName() + " tried to buy less items than sold by package-sell, ban this player for bot usage!";
                 Util.handleIllegalPlayerAction(client.getActiveChar(), msgErr, Config.DEFAULT_PUNISH);
                 return;
@@ -141,24 +125,20 @@ public final class RequestPrivateStoreBuy extends IClientIncomingPacket
         }
 
         final int result = storeList.privateStoreBuy(player, _items);
-        if (result > 0)
-        {
+        if (result > 0) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
-            if (result > 1)
-            {
+            if (result > 1) {
                 LOGGER.warn("PrivateStore buy has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());
             }
             return;
         }
 
         // Update offline trade record, if realtime saving is enabled
-        if (Config.OFFLINE_TRADE_ENABLE && Config.STORE_OFFLINE_TRADE_IN_REALTIME && ((storePlayer.getClient() == null) || storePlayer.getClient().isDetached()))
-        {
+        if (Config.OFFLINE_TRADE_ENABLE && Config.STORE_OFFLINE_TRADE_IN_REALTIME && ((storePlayer.getClient() == null) || storePlayer.getClient().isDetached())) {
             OfflineTradersTable.onTransaction(storePlayer, storeList.getItemCount() == 0, false);
         }
 
-        if (storeList.getItemCount() == 0)
-        {
+        if (storeList.getItemCount() == 0) {
             storePlayer.setPrivateStoreType(PrivateStoreType.NONE);
             storePlayer.broadcastUserInfo();
         }

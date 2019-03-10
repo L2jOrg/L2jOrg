@@ -5,23 +5,19 @@ import org.l2j.gameserver.mobius.gameserver.network.serverpackets.HennaRemoveLis
 
 import java.nio.ByteBuffer;
 
-public final class RequestHennaRemoveList extends IClientIncomingPacket
-{
+public final class RequestHennaRemoveList extends IClientIncomingPacket {
     @SuppressWarnings("unused")
     private int _unknown;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _unknown = packet.getInt(); // TODO: Identify.
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
         client.sendPacket(new HennaRemoveList(activeChar));

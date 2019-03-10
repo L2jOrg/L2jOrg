@@ -13,8 +13,7 @@ import java.sql.SQLException;
 /**
  * @author Plim
  */
-public class RequestPetitionFeedback extends IClientIncomingPacket
-{
+public class RequestPetitionFeedback extends IClientIncomingPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestPetitionFeedback.class);
     private static final String INSERT_FEEDBACK = "INSERT INTO petition_feedback VALUES (?,?,?,?,?)";
 
@@ -24,8 +23,7 @@ public class RequestPetitionFeedback extends IClientIncomingPacket
     private String _message;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         // _unknown =
         packet.getInt(); // unknown
         _rate = packet.getInt();
@@ -33,32 +31,26 @@ public class RequestPetitionFeedback extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
 
-        if ((player == null) || (player.getLastPetitionGmName() == null))
-        {
+        if ((player == null) || (player.getLastPetitionGmName() == null)) {
             return;
         }
 
-        if ((_rate > 4) || (_rate < 0))
-        {
+        if ((_rate > 4) || (_rate < 0)) {
             return;
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(INSERT_FEEDBACK))
-        {
+             PreparedStatement statement = con.prepareStatement(INSERT_FEEDBACK)) {
             statement.setString(1, player.getName());
             statement.setString(2, player.getLastPetitionGmName());
             statement.setInt(3, _rate);
             statement.setString(4, _message);
             statement.setLong(5, System.currentTimeMillis());
             statement.execute();
-        }
-        catch (SQLException e)
-        {
+        } catch (SQLException e) {
             LOGGER.error("Error while saving petition feedback");
         }
     }

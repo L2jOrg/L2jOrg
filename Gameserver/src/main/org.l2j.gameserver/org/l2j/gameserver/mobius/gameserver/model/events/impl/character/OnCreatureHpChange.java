@@ -7,37 +7,31 @@ import org.l2j.gameserver.mobius.gameserver.model.events.impl.IBaseEvent;
 /**
  * @author UnAfraid
  */
-public class OnCreatureHpChange implements IBaseEvent
-{
+public class OnCreatureHpChange implements IBaseEvent {
     private final L2Character _creature;
     private final double _newHp;
     private final double _oldHp;
 
-    public OnCreatureHpChange(L2Character creature, double oldHp, double newHp)
-    {
+    public OnCreatureHpChange(L2Character creature, double oldHp, double newHp) {
         _creature = creature;
         _oldHp = oldHp;
         _newHp = newHp;
     }
 
-    public L2Character getCreature()
-    {
+    public L2Character getCreature() {
         return _creature;
     }
 
-    public double getOldHp()
-    {
+    public double getOldHp() {
         return _oldHp;
     }
 
-    public double getNewHp()
-    {
+    public double getNewHp() {
         return _newHp;
     }
 
     @Override
-    public EventType getType()
-    {
+    public EventType getType() {
         return EventType.ON_CREATURE_HP_CHANGE;
     }
 }

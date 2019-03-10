@@ -9,28 +9,23 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestAddExpandQuestAlarm extends IClientIncomingPacket
-{
+public class RequestAddExpandQuestAlarm extends IClientIncomingPacket {
     private int _questId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _questId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final Quest quest = QuestManager.getInstance().getQuest(_questId);
-        if (quest != null)
-        {
+        if (quest != null) {
             quest.sendNpcLogList(activeChar);
         }
     }

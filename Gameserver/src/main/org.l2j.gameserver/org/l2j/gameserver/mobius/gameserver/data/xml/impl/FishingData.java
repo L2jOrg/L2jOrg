@@ -13,10 +13,10 @@ import java.util.logging.Logger;
 
 /**
  * This class holds the Fishing information.
+ *
  * @author bit
  */
-public final class FishingData implements IGameXmlReader
-{
+public final class FishingData implements IGameXmlReader {
     private static final Logger LOGGER = Logger.getLogger(FishingData.class.getName());
     private final Map<Integer, FishingBaitData> _baitData = new HashMap<>();
     private int _baitDistanceMin;
@@ -29,54 +29,50 @@ public final class FishingData implements IGameXmlReader
     /**
      * Instantiates a new fishing data.
      */
-    protected FishingData()
-    {
+    protected FishingData() {
         load();
     }
 
+    /**
+     * Gets the single instance of FishingData.
+     *
+     * @return single instance of FishingData
+     */
+    public static FishingData getInstance() {
+        return SingletonHolder._instance;
+    }
+
     @Override
-    public void load()
-    {
+    public void load() {
         _baitData.clear();
         parseDatapackFile("data/Fishing.xml");
         LOGGER.info(getClass().getSimpleName() + ": Loaded Fishing Data.");
     }
 
     @Override
-    public void parseDocument(Document doc, File f)
-    {
-        for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
-        {
-            if ("list".equalsIgnoreCase(n.getNodeName()))
-            {
-                for (Node listItem = n.getFirstChild(); listItem != null; listItem = listItem.getNextSibling())
-                {
-                    switch (listItem.getNodeName())
-                    {
-                        case "baitDistance":
-                        {
+    public void parseDocument(Document doc, File f) {
+        for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
+            if ("list".equalsIgnoreCase(n.getNodeName())) {
+                for (Node listItem = n.getFirstChild(); listItem != null; listItem = listItem.getNextSibling()) {
+                    switch (listItem.getNodeName()) {
+                        case "baitDistance": {
                             _baitDistanceMin = parseInteger(listItem.getAttributes(), "min");
                             _baitDistanceMax = parseInteger(listItem.getAttributes(), "max");
                             break;
                         }
-                        case "experienceRate":
-                        {
+                        case "experienceRate": {
                             _expRateMin = parseDouble(listItem.getAttributes(), "min");
                             _expRateMax = parseDouble(listItem.getAttributes(), "max");
                             break;
                         }
-                        case "skillPointsRate":
-                        {
+                        case "skillPointsRate": {
                             _spRateMin = parseDouble(listItem.getAttributes(), "min");
                             _spRateMax = parseDouble(listItem.getAttributes(), "max");
                             break;
                         }
-                        case "baits":
-                        {
-                            for (Node bait = listItem.getFirstChild(); bait != null; bait = bait.getNextSibling())
-                            {
-                                if ("bait".equalsIgnoreCase(bait.getNodeName()))
-                                {
+                        case "baits": {
+                            for (Node bait = listItem.getFirstChild(); bait != null; bait = bait.getNextSibling()) {
+                                if ("bait".equalsIgnoreCase(bait.getNodeName())) {
                                     final NamedNodeMap attrs = bait.getAttributes();
                                     final int itemId = parseInteger(attrs, "itemId");
                                     final int level = parseInteger(attrs, "level");
@@ -88,10 +84,8 @@ public final class FishingData implements IGameXmlReader
                                     final int waitMax = parseInteger(attrs, "waitMax");
                                     final FishingBaitData baitData = new FishingBaitData(itemId, level, minPlayerLevel, chance, timeMin, timeMax, waitMin, waitMax);
 
-                                    for (Node c = bait.getFirstChild(); c != null; c = c.getNextSibling())
-                                    {
-                                        if ("catch".equalsIgnoreCase(c.getNodeName()))
-                                        {
+                                    for (Node c = bait.getFirstChild(); c != null; c = c.getNextSibling()) {
+                                        if ("catch".equalsIgnoreCase(c.getNodeName())) {
                                             baitData.addReward(parseInteger(c.getAttributes(), "itemId"));
                                         }
                                     }
@@ -108,55 +102,39 @@ public final class FishingData implements IGameXmlReader
 
     /**
      * Gets the fishing rod.
+     *
      * @param baitItemId the item id
      * @return A list of reward item ids
      */
-    public FishingBaitData getBaitData(int baitItemId)
-    {
+    public FishingBaitData getBaitData(int baitItemId) {
         return _baitData.get(baitItemId);
     }
 
-    public int getBaitDistanceMin()
-    {
+    public int getBaitDistanceMin() {
         return _baitDistanceMin;
     }
 
-    public int getBaitDistanceMax()
-    {
+    public int getBaitDistanceMax() {
         return _baitDistanceMax;
     }
 
-    public double getExpRateMin()
-    {
+    public double getExpRateMin() {
         return _expRateMin;
     }
 
-    public double getExpRateMax()
-    {
+    public double getExpRateMax() {
         return _expRateMax;
     }
 
-    public double getSpRateMin()
-    {
+    public double getSpRateMin() {
         return _spRateMin;
     }
 
-    public double getSpRateMax()
-    {
+    public double getSpRateMax() {
         return _spRateMax;
     }
 
-    /**
-     * Gets the single instance of FishingData.
-     * @return single instance of FishingData
-     */
-    public static FishingData getInstance()
-    {
-        return SingletonHolder._instance;
-    }
-
-    private static class SingletonHolder
-    {
+    private static class SingletonHolder {
         protected static final FishingData _instance = new FishingData();
     }
 }

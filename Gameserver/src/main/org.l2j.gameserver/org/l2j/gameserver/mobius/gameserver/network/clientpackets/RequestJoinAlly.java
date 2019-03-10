@@ -9,47 +9,39 @@ import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
 
 import java.nio.ByteBuffer;
 
-public final class RequestJoinAlly extends IClientIncomingPacket
-{
+public final class RequestJoinAlly extends IClientIncomingPacket {
     private int _objectId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _objectId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final L2PcInstance target = L2World.getInstance().getPlayer(_objectId);
 
-        if (target == null)
-        {
+        if (target == null) {
             activeChar.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
             return;
         }
 
         final L2Clan clan = activeChar.getClan();
 
-        if (clan == null)
-        {
+        if (clan == null) {
             activeChar.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);
             return;
         }
 
-        if (!clan.checkAllyJoinCondition(activeChar, target))
-        {
+        if (!clan.checkAllyJoinCondition(activeChar, target)) {
             return;
         }
-        if (!activeChar.getRequest().setRequest(target, this))
-        {
+        if (!activeChar.getRequest().setRequest(target, this)) {
             return;
         }
 

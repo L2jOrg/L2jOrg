@@ -18,53 +18,42 @@ import java.nio.ByteBuffer;
  */
 public class RequestPledgeBonusReward extends IClientIncomingPacket {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(RequestPledgeBonusReward.class);
-	private int _type;
-	
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
-		_type = packet.get();
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance player = client.getActiveChar();
-		if ((player == null) || (player.getClan() == null))
-		{
-			return;
-		}
-		
-		if ((_type < 0) || (_type > ClanRewardType.values().length))
-		{
-			return;
-		}
-		
-		final L2Clan clan = player.getClan();
-		final ClanRewardType type = ClanRewardType.values()[_type];
-		final L2ClanMember member = clan.getClanMember(player.getObjectId());
-		if (clan.canClaimBonusReward(player, type))
-		{
-			final ClanRewardBonus bonus = type.getAvailableBonus(player.getClan());
-			if (bonus != null)
-			{
-				final ItemHolder itemReward = bonus.getItemReward();
-				final SkillHolder skillReward = bonus.getSkillReward();
-				if (itemReward != null)
-				{
-					player.addItem("ClanReward", itemReward.getId(), itemReward.getCount(), player, true);
-				}
-				else if (skillReward != null)
-				{
-					skillReward.getSkill().activateSkill(player, player);
-				}
-				member.setRewardClaimed(type);
-			}
-			else
-			{
-				LOGGER.warn(player + " Attempting to claim reward but clan(" + clan + ") doesn't have such!");
-			}
-		}
-	}
+    private static final Logger LOGGER = LoggerFactory.getLogger(RequestPledgeBonusReward.class);
+    private int _type;
+
+    @Override
+    public void readImpl(ByteBuffer packet) {
+        _type = packet.get();
+    }
+
+    @Override
+    public void runImpl() {
+        final L2PcInstance player = client.getActiveChar();
+        if ((player == null) || (player.getClan() == null)) {
+            return;
+        }
+
+        if ((_type < 0) || (_type > ClanRewardType.values().length)) {
+            return;
+        }
+
+        final L2Clan clan = player.getClan();
+        final ClanRewardType type = ClanRewardType.values()[_type];
+        final L2ClanMember member = clan.getClanMember(player.getObjectId());
+        if (clan.canClaimBonusReward(player, type)) {
+            final ClanRewardBonus bonus = type.getAvailableBonus(player.getClan());
+            if (bonus != null) {
+                final ItemHolder itemReward = bonus.getItemReward();
+                final SkillHolder skillReward = bonus.getSkillReward();
+                if (itemReward != null) {
+                    player.addItem("ClanReward", itemReward.getId(), itemReward.getCount(), player, true);
+                } else if (skillReward != null) {
+                    skillReward.getSkill().activateSkill(player, player);
+                }
+                member.setRewardClaimed(type);
+            } else {
+                LOGGER.warn(player + " Attempting to claim reward but clan(" + clan + ") doesn't have such!");
+            }
+        }
+    }
 }

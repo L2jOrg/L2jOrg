@@ -14,16 +14,14 @@ import java.util.concurrent.ScheduledFuture;
 /**
  * @author UnAfraid
  */
-public class ResidenceFunction
-{
+public class ResidenceFunction {
     private final int _id;
     private final int _level;
-    private long _expiration;
     private final AbstractResidence _residense;
+    private long _expiration;
     private ScheduledFuture<?> _task;
 
-    public ResidenceFunction(int id, int level, long expiration, AbstractResidence residense)
-    {
+    public ResidenceFunction(int id, int level, long expiration, AbstractResidence residense) {
         _id = id;
         _level = level;
         _expiration = expiration;
@@ -31,8 +29,7 @@ public class ResidenceFunction
         init();
     }
 
-    public ResidenceFunction(int id, int level, AbstractResidence residense)
-    {
+    public ResidenceFunction(int id, int level, AbstractResidence residense) {
         _id = id;
         _level = level;
         final ResidenceFunctionTemplate template = getTemplate();
@@ -44,11 +41,9 @@ public class ResidenceFunction
     /**
      * Initializes the function task
      */
-    private void init()
-    {
+    private void init() {
         final ResidenceFunctionTemplate template = getTemplate();
-        if ((template != null) && (_expiration > System.currentTimeMillis()))
-        {
+        if ((template != null) && (_expiration > System.currentTimeMillis())) {
             _task = ThreadPoolManager.getInstance().schedule(this::onFunctionExpiration, _expiration - System.currentTimeMillis());
         }
     }
@@ -56,40 +51,35 @@ public class ResidenceFunction
     /**
      * @return the function id
      */
-    public int getId()
-    {
+    public int getId() {
         return _id;
     }
 
     /**
      * @return the function level
      */
-    public int getLevel()
-    {
+    public int getLevel() {
         return _level;
     }
 
     /**
      * @return the expiration of this function instance
      */
-    public long getExpiration()
-    {
+    public long getExpiration() {
         return _expiration;
     }
 
     /**
      * @return the owner (clan) of this function instance
      */
-    public int getOwnerId()
-    {
+    public int getOwnerId() {
         return _residense.getOwnerId();
     }
 
     /**
      * @return value of the function
      */
-    public double getValue()
-    {
+    public double getValue() {
         final ResidenceFunctionTemplate template = getTemplate();
         return template == null ? 0 : template.getValue();
     }
@@ -97,8 +87,7 @@ public class ResidenceFunction
     /**
      * @return the type of this function instance
      */
-    public ResidenceFunctionType getType()
-    {
+    public ResidenceFunctionType getType() {
         final ResidenceFunctionTemplate template = getTemplate();
         return template == null ? ResidenceFunctionType.NONE : template.getType();
     }
@@ -106,23 +95,19 @@ public class ResidenceFunction
     /**
      * @return the template of this function instance
      */
-    public ResidenceFunctionTemplate getTemplate()
-    {
+    public ResidenceFunctionTemplate getTemplate() {
         return ResidenceFunctionsData.getInstance().getFunction(_id, _level);
     }
 
     /**
      * The function invoked when task run, it either re-activate the function or removes it (In case clan doesn't cannot pay for it)
      */
-    private void onFunctionExpiration()
-    {
-        if (!reactivate())
-        {
+    private void onFunctionExpiration() {
+        if (!reactivate()) {
             _residense.removeFunction(this);
 
             final L2Clan clan = ClanTable.getInstance().getClan(_residense.getOwnerId());
-            if (clan != null)
-            {
+            if (clan != null) {
                 clan.broadcastToOnlineMembers(new AgitDecoInfo(_residense));
             }
         }
@@ -131,29 +116,24 @@ public class ResidenceFunction
     /**
      * @return {@code true} if function instance is re-activated successfully, {@code false} otherwise
      */
-    public boolean reactivate()
-    {
+    public boolean reactivate() {
         final ResidenceFunctionTemplate template = getTemplate();
-        if (template == null)
-        {
+        if (template == null) {
             return false;
         }
 
         final L2Clan clan = ClanTable.getInstance().getClan(_residense.getOwnerId());
-        if (clan == null)
-        {
+        if (clan == null) {
             return false;
         }
 
         final ItemContainer wh = clan.getWarehouse();
         final L2ItemInstance item = wh.getItemByItemId(template.getCost().getId());
-        if ((item == null) || (item.getCount() < template.getCost().getCount()))
-        {
+        if ((item == null) || (item.getCount() < template.getCost().getCount())) {
             return false;
         }
 
-        if (wh.destroyItem("FunctionFee", item, template.getCost().getCount(), null, this) != null)
-        {
+        if (wh.destroyItem("FunctionFee", item, template.getCost().getCount(), null, this) != null) {
             _expiration = System.currentTimeMillis() + (template.getDuration().getSeconds() * 1000);
             init();
         }
@@ -163,10 +143,8 @@ public class ResidenceFunction
     /**
      * Cancels the task to {@link #onFunctionExpiration()}
      */
-    public void cancelExpiration()
-    {
-        if ((_task != null) && !_task.isDone())
-        {
+    public void cancelExpiration() {
+        if ((_task != null) && !_task.isDone()) {
             _task.cancel(true);
         }
         _task = null;

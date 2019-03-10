@@ -9,34 +9,28 @@ import java.nio.ByteBuffer;
 /**
  * @author JIV
  */
-public class RequestPartyLootModification extends IClientIncomingPacket
-{
+public class RequestPartyLootModification extends IClientIncomingPacket {
     private int _partyDistributionTypeId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _partyDistributionTypeId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final PartyDistributionType partyDistributionType = PartyDistributionType.findById(_partyDistributionTypeId);
-        if (partyDistributionType == null)
-        {
+        if (partyDistributionType == null) {
             return;
         }
 
         final L2Party party = activeChar.getParty();
-        if ((party == null) || !party.isLeader(activeChar) || (partyDistributionType == party.getDistributionType()))
-        {
+        if ((party == null) || !party.isLeader(activeChar) || (partyDistributionType == party.getDistributionType())) {
             return;
         }
         party.requestLootChange(partyDistributionType);

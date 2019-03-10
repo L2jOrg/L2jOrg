@@ -16,39 +16,33 @@ import java.nio.ByteBuffer;
 
 /**
  * This class ...
+ *
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestOustPledgeMember extends IClientIncomingPacket
-{
+public final class RequestOustPledgeMember extends IClientIncomingPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestOustPledgeMember.class);
     private String _target;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _target = readString(packet);
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
-        if (activeChar.getClan() == null)
-        {
+        if (activeChar.getClan() == null) {
             client.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);
             return;
         }
-        if (!activeChar.hasClanPrivilege(ClanPrivilege.CL_DISMISS))
-        {
+        if (!activeChar.hasClanPrivilege(ClanPrivilege.CL_DISMISS)) {
             client.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
             return;
         }
-        if (activeChar.getName().equalsIgnoreCase(_target))
-        {
+        if (activeChar.getName().equalsIgnoreCase(_target)) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_DISMISS_YOURSELF);
             return;
         }
@@ -56,13 +50,11 @@ public final class RequestOustPledgeMember extends IClientIncomingPacket
         final L2Clan clan = activeChar.getClan();
 
         final L2ClanMember member = clan.getClanMember(_target);
-        if (member == null)
-        {
+        if (member == null) {
             LOGGER.warn("Target (" + _target + ") is not member of the clan");
             return;
         }
-        if (member.isOnline() && member.getPlayerInstance().isInCombat())
-        {
+        if (member.isOnline() && member.getPlayerInstance().isInCombat()) {
             client.sendPacket(SystemMessageId.A_CLAN_MEMBER_MAY_NOT_BE_DISMISSED_DURING_COMBAT);
             return;
         }
@@ -82,8 +74,7 @@ public final class RequestOustPledgeMember extends IClientIncomingPacket
         clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(_target));
         clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
 
-        if (member.isOnline())
-        {
+        if (member.isOnline()) {
             final L2PcInstance player = member.getPlayerInstance();
             player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
         }

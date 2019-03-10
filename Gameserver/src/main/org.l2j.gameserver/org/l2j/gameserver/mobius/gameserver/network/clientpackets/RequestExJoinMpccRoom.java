@@ -9,28 +9,23 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestExJoinMpccRoom extends IClientIncomingPacket
-{
+public class RequestExJoinMpccRoom extends IClientIncomingPacket {
     private int _roomId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _roomId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if ((activeChar == null) || (activeChar.getMatchingRoom() != null))
-        {
+        if ((activeChar == null) || (activeChar.getMatchingRoom() != null)) {
             return;
         }
 
         final MatchingRoom room = MatchingRoomManager.getInstance().getCCMatchingRoom(_roomId);
-        if (room != null)
-        {
+        if (room != null) {
             room.addMember(activeChar);
         }
     }

@@ -10,32 +10,26 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestExRemoveEnchantSupportItem extends IClientIncomingPacket
-{
+public class RequestExRemoveEnchantSupportItem extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final EnchantItemRequest request = activeChar.getRequest(EnchantItemRequest.class);
-        if ((request == null) || request.isProcessing())
-        {
+        if ((request == null) || request.isProcessing()) {
             return;
         }
 
         final L2ItemInstance supportItem = request.getSupportItem();
-        if ((supportItem == null) || (supportItem.getCount() < 1))
-        {
+        if ((supportItem == null) || (supportItem.getCount() < 1)) {
             request.setSupportItem(L2PcInstance.ID_NONE);
         }
 

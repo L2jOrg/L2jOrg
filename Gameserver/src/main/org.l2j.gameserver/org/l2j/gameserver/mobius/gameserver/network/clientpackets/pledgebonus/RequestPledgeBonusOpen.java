@@ -9,19 +9,15 @@ import java.nio.ByteBuffer;
 /**
  * @author UnAfraid
  */
-public class RequestPledgeBonusOpen extends IClientIncomingPacket
-{
+public class RequestPledgeBonusOpen extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if ((player == null) || (player.getClan() == null))
-        {
+        if ((player == null) || (player.getClan() == null)) {
             return;
         }
 

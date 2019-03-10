@@ -9,20 +9,16 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class NotifyExitBeautyShop extends IClientIncomingPacket
-{
+public class NotifyExitBeautyShop extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 

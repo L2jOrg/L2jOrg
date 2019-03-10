@@ -6,18 +6,16 @@ import java.nio.ByteBuffer;
 
 /**
  * Format:(ch) just a trigger
+ *
  * @author -Wooden-
  */
-public final class RequestDuelSurrender extends IClientIncomingPacket
-{
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		DuelManager.getInstance().doSurrender(client.getActiveChar());
-	}
+public final class RequestDuelSurrender extends IClientIncomingPacket {
+    @Override
+    public void readImpl(ByteBuffer packet) {
+    }
+
+    @Override
+    public void runImpl() {
+        DuelManager.getInstance().doSurrender(client.getActiveChar());
+    }
 }

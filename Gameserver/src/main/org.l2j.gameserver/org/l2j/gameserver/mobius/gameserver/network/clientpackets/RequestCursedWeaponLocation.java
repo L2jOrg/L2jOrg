@@ -13,41 +13,35 @@ import java.util.List;
 
 /**
  * Format: (ch)
+ *
  * @author -Wooden-
  */
-public final class RequestCursedWeaponLocation extends IClientIncomingPacket
-{
+public final class RequestCursedWeaponLocation extends IClientIncomingPacket {
     @Override
     public void readImpl(ByteBuffer packet) {
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final List<CursedWeaponInfo> list = new LinkedList<>();
-        for (CursedWeapon cw : CursedWeaponsManager.getInstance().getCursedWeapons())
-        {
-            if (!cw.isActive())
-            {
+        for (CursedWeapon cw : CursedWeaponsManager.getInstance().getCursedWeapons()) {
+            if (!cw.isActive()) {
                 continue;
             }
 
             final Location pos = cw.getWorldPosition();
-            if (pos != null)
-            {
+            if (pos != null) {
                 list.add(new CursedWeaponInfo(pos, cw.getItemId(), cw.isActivated() ? 1 : 0));
             }
         }
 
         // send the ExCursedWeaponLocation
-        if (!list.isEmpty())
-        {
+        if (!list.isEmpty()) {
             client.sendPacket(new ExCursedWeaponLocation(list));
         }
     }

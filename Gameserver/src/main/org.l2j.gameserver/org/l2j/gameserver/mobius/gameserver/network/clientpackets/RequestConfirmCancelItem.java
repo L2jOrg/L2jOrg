@@ -12,53 +12,45 @@ import java.nio.ByteBuffer;
 
 /**
  * Format(ch) d
+ *
  * @author -Wooden-
  */
-public final class RequestConfirmCancelItem extends IClientIncomingPacket
-{
+public final class RequestConfirmCancelItem extends IClientIncomingPacket {
     private int _objectId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _objectId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
         final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
-        if (item == null)
-        {
+        if (item == null) {
             return;
         }
 
-        if (item.getOwnerId() != activeChar.getObjectId())
-        {
+        if (item.getOwnerId() != activeChar.getObjectId()) {
             Util.handleIllegalPlayerAction(client.getActiveChar(), "Warning!! Character " + client.getActiveChar().getName() + " of account " + client.getActiveChar().getAccountName() + " tryied to destroy augment on item that doesn't own.", Config.DEFAULT_PUNISH);
             return;
         }
 
-        if (!item.isAugmented())
-        {
+        if (!item.isAugmented()) {
             activeChar.sendPacket(SystemMessageId.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM);
             return;
         }
 
-        if (item.isPvp() && !Config.ALT_ALLOW_AUGMENT_PVP_ITEMS)
-        {
+        if (item.isPvp() && !Config.ALT_ALLOW_AUGMENT_PVP_ITEMS) {
             activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
             return;
         }
 
         final long price = VariationData.getInstance().getCancelFee(item.getId(), item.getAugmentation().getMineralId());
-        if (price < 0)
-        {
+        if (price < 0) {
             activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
             return;
         }

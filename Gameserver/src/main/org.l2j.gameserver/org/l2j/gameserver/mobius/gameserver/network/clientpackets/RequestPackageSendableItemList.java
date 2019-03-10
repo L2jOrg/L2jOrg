@@ -8,22 +8,18 @@ import java.nio.ByteBuffer;
 /**
  * @author Mobius
  */
-public class RequestPackageSendableItemList extends IClientIncomingPacket
-{
+public class RequestPackageSendableItemList extends IClientIncomingPacket {
     private int _objectId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _objectId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
         client.sendPacket(new PackageSendableList(1, activeChar, _objectId));

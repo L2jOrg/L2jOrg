@@ -7,15 +7,12 @@ import java.nio.ByteBuffer;
 /**
  * @author Mobius
  */
-public class RequestRaidServerInfo extends IClientIncomingPacket
-{
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
-	}
-	
-	@Override
-	public void runImpl()
-	{
-	}
+public class RequestRaidServerInfo extends IClientIncomingPacket {
+    @Override
+    public void readImpl(ByteBuffer packet) {
+    }
+
+    @Override
+    public void runImpl() {
+    }
 }

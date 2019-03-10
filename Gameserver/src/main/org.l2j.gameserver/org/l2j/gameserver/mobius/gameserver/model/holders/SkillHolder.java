@@ -5,65 +5,55 @@ import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
 
 /**
  * Simple class for storing skill id/level.
+ *
  * @author BiggBoss
  */
-public class SkillHolder
-{
+public class SkillHolder {
     private final int _skillId;
     private final int _skillLevel;
     private final int _skillSubLevel;
 
-    public SkillHolder(int skillId, int skillLevel)
-    {
+    public SkillHolder(int skillId, int skillLevel) {
         _skillId = skillId;
         _skillLevel = skillLevel;
         _skillSubLevel = 0;
     }
 
-    public SkillHolder(int skillId, int skillLevel, int skillSubLevel)
-    {
+    public SkillHolder(int skillId, int skillLevel, int skillSubLevel) {
         _skillId = skillId;
         _skillLevel = skillLevel;
         _skillSubLevel = skillSubLevel;
     }
 
-    public SkillHolder(Skill skill)
-    {
+    public SkillHolder(Skill skill) {
         _skillId = skill.getId();
         _skillLevel = skill.getLevel();
         _skillSubLevel = skill.getSubLevel();
     }
 
-    public final int getSkillId()
-    {
+    public final int getSkillId() {
         return _skillId;
     }
 
-    public final int getSkillLevel()
-    {
+    public final int getSkillLevel() {
         return _skillLevel;
     }
 
-    public final int getSkillSubLevel()
-    {
+    public final int getSkillSubLevel() {
         return _skillSubLevel;
     }
 
-    public final Skill getSkill()
-    {
+    public final Skill getSkill() {
         return SkillData.getInstance().getSkill(_skillId, Math.max(_skillLevel, 1), _skillSubLevel);
     }
 
     @Override
-    public boolean equals(Object obj)
-    {
-        if (this == obj)
-        {
+    public boolean equals(Object obj) {
+        if (this == obj) {
             return true;
         }
 
-        if (!(obj instanceof SkillHolder))
-        {
+        if (!(obj instanceof SkillHolder)) {
             return false;
         }
 
@@ -72,8 +62,7 @@ public class SkillHolder
     }
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         final int prime = 31;
         int result = 1;
         result = (prime * result) + _skillId;
@@ -83,8 +72,7 @@ public class SkillHolder
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "[SkillId: " + _skillId + " Level: " + _skillLevel + "]";
     }
 }

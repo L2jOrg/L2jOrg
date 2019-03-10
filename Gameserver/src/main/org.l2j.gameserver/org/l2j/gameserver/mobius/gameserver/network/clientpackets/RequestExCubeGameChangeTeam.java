@@ -9,6 +9,7 @@ import java.nio.ByteBuffer;
 
 /**
  * Format: chdd d: Arena d: Team
+ *
  * @author mrTJO
  */
 public final class RequestExCubeGameChangeTeam extends IClientIncomingPacket {
@@ -17,48 +18,40 @@ public final class RequestExCubeGameChangeTeam extends IClientIncomingPacket {
     private int _team;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         // client sends -1,0,1,2 for arena parameter
         _arena = packet.getInt() + 1;
         _team = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         // do not remove players after start
-        if (HandysBlockCheckerManager.getInstance().arenaIsBeingUsed(_arena))
-        {
+        if (HandysBlockCheckerManager.getInstance().arenaIsBeingUsed(_arena)) {
             return;
         }
         final L2PcInstance player = client.getActiveChar();
 
-        switch (_team)
-        {
+        switch (_team) {
             case 0:
-            case 1:
-            {
+            case 1: {
                 // Change Player Team
                 HandysBlockCheckerManager.getInstance().changePlayerToTeam(player, _arena, _team);
                 break;
             }
-            case -1:
-            {
+            case -1: {
                 // Remove Player (me)
             }
             {
                 final int team = HandysBlockCheckerManager.getInstance().getHolder(_arena).getPlayerTeam(player);
                 // client sends two times this packet if click on exit
                 // client did not send this packet on restart
-                if (team > -1)
-                {
+                if (team > -1) {
                     HandysBlockCheckerManager.getInstance().removePlayer(player, _arena, team);
                 }
                 break;
             }
-            default:
-            {
+            default: {
                 LOGGER.warn("Wrong Cube Game Team ID: " + _team);
                 break;
             }

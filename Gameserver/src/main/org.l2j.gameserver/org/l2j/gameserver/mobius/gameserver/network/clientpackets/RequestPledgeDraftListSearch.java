@@ -10,8 +10,7 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestPledgeDraftListSearch extends IClientIncomingPacket
-{
+public class RequestPledgeDraftListSearch extends IClientIncomingPacket {
     private int _levelMin;
     private int _levelMax;
     private int _classId;
@@ -20,8 +19,7 @@ public class RequestPledgeDraftListSearch extends IClientIncomingPacket
     private boolean _descending;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _levelMin = CommonUtil.constrain(packet.getInt(), 0, 107);
         _levelMax = CommonUtil.constrain(packet.getInt(), 0, 107);
         _classId = packet.getInt();
@@ -31,21 +29,16 @@ public class RequestPledgeDraftListSearch extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
 
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
-        if (_query.isEmpty())
-        {
+        if (_query.isEmpty()) {
             client.sendPacket(new ExPledgeDraftListSearch(ClanEntryManager.getInstance().getSortedWaitingList(_levelMin, _levelMax, _classId, _sortBy, _descending)));
-        }
-        else
-        {
+        } else {
             client.sendPacket(new ExPledgeDraftListSearch(ClanEntryManager.getInstance().queryWaitingListByName(_query.toLowerCase())));
         }
     }

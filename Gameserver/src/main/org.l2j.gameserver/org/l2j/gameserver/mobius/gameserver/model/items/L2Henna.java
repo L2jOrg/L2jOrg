@@ -13,10 +13,10 @@ import java.util.Map;
 
 /**
  * Class for the Henna object.
+ *
  * @author Zoey76
  */
-public class L2Henna
-{
+public class L2Henna {
     private final int _dyeId;
     private final int _dyeItemId;
     private final Map<BaseStats, Integer> _baseStats = new HashMap<>();
@@ -28,8 +28,7 @@ public class L2Henna
     private final List<Skill> _skills;
     private final List<ClassId> _wear_class;
 
-    public L2Henna(StatsSet set)
-    {
+    public L2Henna(StatsSet set) {
         _dyeId = set.getInt("dyeId");
         _dyeItemId = set.getInt("dyeItemId");
         _baseStats.put(BaseStats.STR, set.getInt("str", 0));
@@ -50,90 +49,78 @@ public class L2Henna
     /**
      * @return the dye Id.
      */
-    public int getDyeId()
-    {
+    public int getDyeId() {
         return _dyeId;
     }
 
     /**
      * @return the item Id, required for this dye.
      */
-    public int getDyeItemId()
-    {
+    public int getDyeItemId() {
         return _dyeItemId;
     }
 
-    public int getBaseStats(Stats stat)
-    {
+    public int getBaseStats(Stats stat) {
         return _baseStats.getOrDefault(stat, 0);
     }
 
-    public Map<BaseStats, Integer> getBaseStats()
-    {
+    public Map<BaseStats, Integer> getBaseStats() {
         return _baseStats;
     }
 
     /**
      * @return the wear fee, cost for adding this dye to the player.
      */
-    public int getWearFee()
-    {
+    public int getWearFee() {
         return _wear_fee;
     }
 
     /**
      * @return the wear count, the required count to add this dye to the player.
      */
-    public int getWearCount()
-    {
+    public int getWearCount() {
         return _wear_count;
     }
 
     /**
      * @return the cancel fee, cost for removing this dye from the player.
      */
-    public int getCancelFee()
-    {
+    public int getCancelFee() {
         return _cancel_fee;
     }
 
     /**
      * @return the cancel count, the retrieved amount of dye items after removing the dye.
      */
-    public int getCancelCount()
-    {
+    public int getCancelCount() {
         return _cancel_count;
     }
 
     /**
      * @return the duration of this dye.
      */
-    public int getDuration()
-    {
+    public int getDuration() {
         return _duration;
-    }
-
-    /**
-     * @param skillList the list of skills related to this dye.
-     */
-    public void setSkills(List<Skill> skillList)
-    {
-        _skills.addAll(skillList);
     }
 
     /**
      * @return the skills related to this dye.
      */
-    public List<Skill> getSkills()
-    {
+    public List<Skill> getSkills() {
         return _skills;
+    }
+
+    /**
+     * @param skillList the list of skills related to this dye.
+     */
+    public void setSkills(List<Skill> skillList) {
+        _skills.addAll(skillList);
     }
 
     /**
      * @return the list with the allowed classes to wear this dye.
      */
-    public List<ClassId> getAllowedWearClass()
-    {
+    public List<ClassId> getAllowedWearClass() {
         return _wear_class;
     }
 
@@ -141,16 +128,14 @@ public class L2Henna
      * @param c the class trying to wear this dye.
      * @return {@code true} if the player is allowed to wear this dye, {@code false} otherwise.
      */
-    public boolean isAllowedClass(ClassId c)
-    {
+    public boolean isAllowedClass(ClassId c) {
         return _wear_class.contains(c);
     }
 
     /**
      * @param wearClassIds the list of classes that can wear this dye.
      */
-    public void setWearClassIds(List<ClassId> wearClassIds)
-    {
+    public void setWearClassIds(List<ClassId> wearClassIds) {
         _wear_class.addAll(wearClassIds);
     }
 }

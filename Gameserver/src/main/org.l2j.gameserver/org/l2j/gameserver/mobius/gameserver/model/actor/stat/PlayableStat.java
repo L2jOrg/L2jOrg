@@ -15,30 +15,24 @@ import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExNewSkillToLe
 
 import java.util.logging.Logger;
 
-public class PlayableStat extends CharStat
-{
+public class PlayableStat extends CharStat {
     protected static final Logger LOGGER = Logger.getLogger(PlayableStat.class.getName());
 
-    public PlayableStat(L2Playable activeChar)
-    {
+    public PlayableStat(L2Playable activeChar) {
         super(activeChar);
     }
 
-    public boolean addExp(long value)
-    {
+    public boolean addExp(long value) {
         final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnPlayableExpChanged(getActiveChar(), getExp(), getExp() + value), getActiveChar(), TerminateReturn.class);
-        if ((term != null) && term.terminate())
-        {
+        if ((term != null) && term.terminate()) {
             return false;
         }
 
-        if (((getExp() + value) < 0) || ((value > 0) && (getExp() == (getExpForLevel(getMaxLevel()) - 1))))
-        {
+        if (((getExp() + value) < 0) || ((value > 0) && (getExp() == (getExpForLevel(getMaxLevel()) - 1)))) {
             return true;
         }
 
-        if ((getExp() + value) >= getExpForLevel(getMaxLevel()))
-        {
+        if ((getExp() + value) >= getExpForLevel(getMaxLevel())) {
             value = getExpForLevel(getMaxLevel()) - 1 - getExp();
         }
 
@@ -46,34 +40,28 @@ public class PlayableStat extends CharStat
         setExp(getExp() + value);
 
         byte minimumLevel = 1;
-        if (getActiveChar().isPet())
-        {
+        if (getActiveChar().isPet()) {
             // get minimum level from L2NpcTemplate
             minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((L2PetInstance) getActiveChar()).getTemplate().getId());
         }
 
         byte level = minimumLevel; // minimum level
 
-        for (byte tmp = level; tmp <= getMaxLevel(); tmp++)
-        {
-            if (getExp() >= getExpForLevel(tmp))
-            {
+        for (byte tmp = level; tmp <= getMaxLevel(); tmp++) {
+            if (getExp() >= getExpForLevel(tmp)) {
                 continue;
             }
             level = --tmp;
             break;
         }
 
-        if ((level != getLevel()) && (level >= minimumLevel))
-        {
+        if ((level != getLevel()) && (level >= minimumLevel)) {
             addLevel((byte) (level - getLevel()));
         }
 
-        if ((getLevel() > oldLevel) && getActiveChar().isPlayer())
-        {
+        if ((getLevel() > oldLevel) && getActiveChar().isPlayer()) {
             final L2PcInstance activeChar = getActiveChar().getActingPlayer();
-            if (SkillTreesData.getInstance().hasAvailableSkills(activeChar, activeChar.getClassId()))
-            {
+            if (SkillTreesData.getInstance().hasAvailableSkills(activeChar, activeChar.getClassId())) {
                 getActiveChar().sendPacket(ExNewSkillToLearnByLevelUp.STATIC_PACKET);
             }
         }
@@ -81,70 +69,55 @@ public class PlayableStat extends CharStat
         return true;
     }
 
-    public boolean removeExp(long value)
-    {
-        if (((getExp() - value) < getExpForLevel(getLevel())) && (!Config.PLAYER_DELEVEL || (Config.PLAYER_DELEVEL && (getLevel() <= Config.DELEVEL_MINIMUM))))
-        {
+    public boolean removeExp(long value) {
+        if (((getExp() - value) < getExpForLevel(getLevel())) && (!Config.PLAYER_DELEVEL || (Config.PLAYER_DELEVEL && (getLevel() <= Config.DELEVEL_MINIMUM)))) {
             value = getExp() - getExpForLevel(getLevel());
         }
 
-        if ((getExp() - value) < 0)
-        {
+        if ((getExp() - value) < 0) {
             value = getExp() - 1;
         }
 
         setExp(getExp() - value);
 
         byte minimumLevel = 1;
-        if (getActiveChar().isPet())
-        {
+        if (getActiveChar().isPet()) {
             // get minimum level from L2NpcTemplate
             minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((L2PetInstance) getActiveChar()).getTemplate().getId());
         }
         byte level = minimumLevel;
 
-        for (byte tmp = level; tmp <= getMaxLevel(); tmp++)
-        {
-            if (getExp() >= getExpForLevel(tmp))
-            {
+        for (byte tmp = level; tmp <= getMaxLevel(); tmp++) {
+            if (getExp() >= getExpForLevel(tmp)) {
                 continue;
             }
             level = --tmp;
             break;
         }
-        if ((level != getLevel()) && (level >= minimumLevel))
-        {
+        if ((level != getLevel()) && (level >= minimumLevel)) {
             addLevel((byte) (level - getLevel()));
         }
         return true;
     }
 
-    public boolean removeExpAndSp(long removeExp, long removeSp)
-    {
+    public boolean removeExpAndSp(long removeExp, long removeSp) {
         boolean expRemoved = false;
         boolean spRemoved = false;
-        if (removeExp > 0)
-        {
+        if (removeExp > 0) {
             expRemoved = removeExp(removeExp);
         }
-        if (removeSp > 0)
-        {
+        if (removeSp > 0) {
             spRemoved = removeSp(removeSp);
         }
 
         return expRemoved || spRemoved;
     }
 
-    public boolean addLevel(byte value)
-    {
-        if ((getLevel() + value) > (getMaxLevel() - 1))
-        {
-            if (getLevel() < (getMaxLevel() - 1))
-            {
+    public boolean addLevel(byte value) {
+        if ((getLevel() + value) > (getMaxLevel() - 1)) {
+            if (getLevel() < (getMaxLevel() - 1)) {
                 value = (byte) (getMaxLevel() - 1 - getLevel());
-            }
-            else
-            {
+            } else {
                 return false;
             }
         }
@@ -154,18 +127,15 @@ public class PlayableStat extends CharStat
         setLevel(value);
 
         // Sync up exp with current level
-        if ((getExp() >= getExpForLevel(getLevel() + 1)) || (getExpForLevel(getLevel()) > getExp()))
-        {
+        if ((getExp() >= getExpForLevel(getLevel() + 1)) || (getExpForLevel(getLevel()) > getExp())) {
             setExp(getExpForLevel(getLevel()));
         }
 
-        if (!levelIncreased && getActiveChar().isPlayer() && !getActiveChar().isGM() && Config.DECREASE_SKILL_LEVEL)
-        {
+        if (!levelIncreased && getActiveChar().isPlayer() && !getActiveChar().isGM() && Config.DECREASE_SKILL_LEVEL) {
             ((L2PcInstance) getActiveChar()).checkPlayerSkills();
         }
 
-        if (!levelIncreased)
-        {
+        if (!levelIncreased) {
             return false;
         }
 
@@ -175,21 +145,17 @@ public class PlayableStat extends CharStat
         return true;
     }
 
-    public boolean addSp(long value)
-    {
-        if (value < 0)
-        {
+    public boolean addSp(long value) {
+        if (value < 0) {
             LOGGER.warning("wrong usage");
             return false;
         }
         final long currentSp = getSp();
-        if (currentSp >= Config.MAX_SP)
-        {
+        if (currentSp >= Config.MAX_SP) {
             return false;
         }
 
-        if (currentSp > (Config.MAX_SP - value))
-        {
+        if (currentSp > (Config.MAX_SP - value)) {
             value = Config.MAX_SP - currentSp;
         }
 
@@ -197,43 +163,36 @@ public class PlayableStat extends CharStat
         return true;
     }
 
-    public boolean removeSp(long value)
-    {
+    public boolean removeSp(long value) {
         final long currentSp = getSp();
-        if (currentSp < value)
-        {
+        if (currentSp < value) {
             value = currentSp;
         }
         setSp(getSp() - value);
         return true;
     }
 
-    public long getExpForLevel(int level)
-    {
+    public long getExpForLevel(int level) {
         return ExperienceData.getInstance().getExpForLevel(level);
     }
 
     @Override
-    public L2Playable getActiveChar()
-    {
+    public L2Playable getActiveChar() {
         return (L2Playable) super.getActiveChar();
     }
 
-    public int getMaxLevel()
-    {
+    public int getMaxLevel() {
         return ExperienceData.getInstance().getMaxLevel();
     }
 
     @Override
-    public int getPhysicalAttackRadius()
-    {
+    public int getPhysicalAttackRadius() {
         final L2Weapon weapon = getActiveChar().getActiveWeaponItem();
         return weapon != null ? weapon.getBaseAttackRadius() : super.getPhysicalAttackRadius();
     }
 
     @Override
-    public int getPhysicalAttackAngle()
-    {
+    public int getPhysicalAttackAngle() {
         final L2Weapon weapon = getActiveChar().getActiveWeaponItem();
         return weapon != null ? weapon.getBaseAttackAngle() : super.getPhysicalAttackAngle();
     }

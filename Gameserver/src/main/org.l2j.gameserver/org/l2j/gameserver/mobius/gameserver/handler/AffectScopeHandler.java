@@ -8,46 +8,38 @@ import java.util.Map;
 /**
  * @author Nik
  */
-public class AffectScopeHandler implements IHandler<IAffectScopeHandler, Enum<AffectScope>>
-{
+public class AffectScopeHandler implements IHandler<IAffectScopeHandler, Enum<AffectScope>> {
     private final Map<Enum<AffectScope>, IAffectScopeHandler> _datatable;
 
-    protected AffectScopeHandler()
-    {
+    protected AffectScopeHandler() {
         _datatable = new HashMap<>();
     }
 
+    public static AffectScopeHandler getInstance() {
+        return SingletonHolder._instance;
+    }
+
     @Override
-    public void registerHandler(IAffectScopeHandler handler)
-    {
+    public void registerHandler(IAffectScopeHandler handler) {
         _datatable.put(handler.getAffectScopeType(), handler);
     }
 
     @Override
-    public synchronized void removeHandler(IAffectScopeHandler handler)
-    {
+    public synchronized void removeHandler(IAffectScopeHandler handler) {
         _datatable.remove(handler.getAffectScopeType());
     }
 
     @Override
-    public IAffectScopeHandler getHandler(Enum<AffectScope> affectScope)
-    {
+    public IAffectScopeHandler getHandler(Enum<AffectScope> affectScope) {
         return _datatable.get(affectScope);
     }
 
     @Override
-    public int size()
-    {
+    public int size() {
         return _datatable.size();
     }
 
-    public static AffectScopeHandler getInstance()
-    {
-        return SingletonHolder._instance;
-    }
-
-    private static class SingletonHolder
-    {
+    private static class SingletonHolder {
         protected static final AffectScopeHandler _instance = new AffectScopeHandler();
     }
 }

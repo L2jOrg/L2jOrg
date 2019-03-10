@@ -14,33 +14,28 @@ import java.nio.ByteBuffer;
 
 /**
  * This class ...
+ *
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestQuestAbort extends IClientIncomingPacket
-{
+public final class RequestQuestAbort extends IClientIncomingPacket {
     private int _questId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _questId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final Quest qe = QuestManager.getInstance().getQuest(_questId);
-        if (qe != null)
-        {
+        if (qe != null) {
             final QuestState qs = activeChar.getQuestState(qe.getName());
-            if (qs != null)
-            {
+            if (qs != null) {
                 qs.setSimulated(false);
                 qs.exitQuest(QuestType.REPEATABLE);
                 activeChar.sendPacket(new QuestList(activeChar));

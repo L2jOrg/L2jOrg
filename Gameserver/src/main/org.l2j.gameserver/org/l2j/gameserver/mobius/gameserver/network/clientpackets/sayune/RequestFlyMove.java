@@ -9,28 +9,23 @@ import java.nio.ByteBuffer;
 /**
  * @author UnAfraid
  */
-public class RequestFlyMove extends IClientIncomingPacket
-{
+public class RequestFlyMove extends IClientIncomingPacket {
     private int _locationId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _locationId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final SayuneRequest request = activeChar.getRequest(SayuneRequest.class);
-        if (request == null)
-        {
+        if (request == null) {
             return;
         }
 

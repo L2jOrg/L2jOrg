@@ -11,8 +11,7 @@ import java.nio.ByteBuffer;
 /**
  * @author Mobius
  */
-public final class RequestHardWareInfo extends IClientIncomingPacket
-{
+public final class RequestHardWareInfo extends IClientIncomingPacket {
     private String _macAddress;
     private int _windowsPlatformId;
     private int _windowsMajorVersion;
@@ -34,8 +33,7 @@ public final class RequestHardWareInfo extends IClientIncomingPacket
     private String _vgaDriverVersion;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _macAddress = readString(packet);
         _windowsPlatformId = packet.getInt();
         _windowsMajorVersion = packet.getInt();
@@ -62,21 +60,16 @@ public final class RequestHardWareInfo extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         client.setHardwareInfo(new ClientHardwareInfoHolder(_macAddress, _windowsPlatformId, _windowsMajorVersion, _windowsMinorVersion, _windowsBuildNumber, _directxVersion, _directxRevision, _cpuName, _cpuSpeed, _cpuCoreCount, _vgaCount, _vgaPcxSpeed, _physMemorySlot1, _physMemorySlot2, _physMemorySlot3, _videoMemory, _vgaVersion, _vgaName, _vgaDriverVersion));
-        if (Config.HARDWARE_INFO_ENABLED && (Config.MAX_PLAYERS_PER_HWID > 0))
-        {
+        if (Config.HARDWARE_INFO_ENABLED && (Config.MAX_PLAYERS_PER_HWID > 0)) {
             int count = 0;
-            for (L2PcInstance player : L2World.getInstance().getPlayers())
-            {
-                if ((player.isOnlineInt() == 1) && (player.getClient().getHardwareInfo().equals(client.getHardwareInfo())))
-                {
+            for (L2PcInstance player : L2World.getInstance().getPlayers()) {
+                if ((player.isOnlineInt() == 1) && (player.getClient().getHardwareInfo().equals(client.getHardwareInfo()))) {
                     count++;
                 }
             }
-            if (count >= Config.MAX_PLAYERS_PER_HWID)
-            {
+            if (count >= Config.MAX_PLAYERS_PER_HWID) {
                 Disconnection.of(client).defaultSequence(false);
                 return;
             }

@@ -8,27 +8,23 @@ import java.nio.ByteBuffer;
 
 /**
  * This class ...
+ *
  * @version $Revision: 1.5.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestPledgeMemberList extends IClientIncomingPacket
-{
+public final class RequestPledgeMemberList extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
         final L2Clan clan = activeChar.getClan();
-        if (clan != null)
-        {
+        if (clan != null) {
             PledgeShowMemberListAll.sendAllTo(activeChar);
         }
     }

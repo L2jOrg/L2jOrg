@@ -7,23 +7,19 @@ import org.l2j.gameserver.mobius.gameserver.model.events.impl.IBaseEvent;
 /**
  * @author UnAfraid
  */
-public class OnCreatureTeleported implements IBaseEvent
-{
+public class OnCreatureTeleported implements IBaseEvent {
     private final L2Character _creature;
 
-    public OnCreatureTeleported(L2Character creature)
-    {
+    public OnCreatureTeleported(L2Character creature) {
         _creature = creature;
     }
 
-    public L2Character getCreature()
-    {
+    public L2Character getCreature() {
         return _creature;
     }
 
     @Override
-    public EventType getType()
-    {
+    public EventType getType() {
         return EventType.ON_CREATURE_TELEPORTED;
     }
 }

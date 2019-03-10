@@ -8,20 +8,16 @@ import java.nio.ByteBuffer;
 /**
  * @author UnAfraid
  */
-public class RequestInzoneWaitingTime extends IClientIncomingPacket
-{
+public class RequestInzoneWaitingTime extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
         client.sendPacket(new ExInzoneWaiting(activeChar, true));

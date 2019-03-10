@@ -9,22 +9,18 @@ import java.nio.ByteBuffer;
 /**
  * @author UnAfraid
  */
-public class RequestAlchemySkillList extends IClientIncomingPacket
-{
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
+public class RequestAlchemySkillList extends IClientIncomingPacket {
+    @Override
+    public void readImpl(ByteBuffer packet) {
 
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar == null) || (activeChar.getRace() != Race.ERTHEIA))
-		{
-			return;
-		}
-		client.sendPacket(new ExAlchemySkillList(activeChar));
-	}
+    }
+
+    @Override
+    public void runImpl() {
+        final L2PcInstance activeChar = client.getActiveChar();
+        if ((activeChar == null) || (activeChar.getRace() != Race.ERTHEIA)) {
+            return;
+        }
+        client.sendPacket(new ExAlchemySkillList(activeChar));
+    }
 }

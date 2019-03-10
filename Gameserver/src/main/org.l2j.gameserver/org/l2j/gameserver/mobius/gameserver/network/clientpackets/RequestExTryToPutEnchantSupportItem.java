@@ -14,30 +14,25 @@ import java.nio.ByteBuffer;
 /**
  * @author KenM
  */
-public class RequestExTryToPutEnchantSupportItem extends IClientIncomingPacket
-{
+public class RequestExTryToPutEnchantSupportItem extends IClientIncomingPacket {
     private int _supportObjectId;
     private int _enchantObjectId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _supportObjectId = packet.getInt();
         _enchantObjectId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final EnchantItemRequest request = activeChar.getRequest(EnchantItemRequest.class);
-        if ((request == null) || request.isProcessing())
-        {
+        if ((request == null) || request.isProcessing()) {
             return;
         }
 
@@ -47,8 +42,7 @@ public class RequestExTryToPutEnchantSupportItem extends IClientIncomingPacket
         final L2ItemInstance item = request.getEnchantingItem();
         final L2ItemInstance scroll = request.getEnchantingScroll();
         final L2ItemInstance support = request.getSupportItem();
-        if ((item == null) || (scroll == null) || (support == null))
-        {
+        if ((item == null) || (scroll == null) || (support == null)) {
             // message may be custom
             activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
             request.setEnchantingItem(L2PcInstance.ID_NONE);
@@ -58,8 +52,7 @@ public class RequestExTryToPutEnchantSupportItem extends IClientIncomingPacket
 
         final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
         final EnchantSupportItem supportTemplate = EnchantItemData.getInstance().getSupportItem(support);
-        if ((scrollTemplate == null) || (supportTemplate == null) || !scrollTemplate.isValid(item, supportTemplate))
-        {
+        if ((scrollTemplate == null) || (supportTemplate == null) || !scrollTemplate.isValid(item, supportTemplate)) {
             // message may be custom
             activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
             request.setSupportItem(L2PcInstance.ID_NONE);

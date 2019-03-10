@@ -9,33 +9,28 @@ import java.nio.ByteBuffer;
 
 /**
  * This class ...
+ *
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestWithDrawalParty extends IClientIncomingPacket
-{
+public final class RequestWithDrawalParty extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
         final L2Party party = player.getParty();
-        if (party != null)
-        {
+        if (party != null) {
             party.removePartyMember(player, MessageType.LEFT);
 
             final MatchingRoom room = player.getMatchingRoom();
-            if (room != null)
-            {
+            if (room != null) {
                 room.deleteMember(player, false);
             }
         }

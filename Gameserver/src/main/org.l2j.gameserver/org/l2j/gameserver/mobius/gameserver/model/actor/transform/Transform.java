@@ -27,8 +27,7 @@ import java.util.Objects;
 /**
  * @author UnAfraid
  */
-public final class Transform implements IIdentifiable
-{
+public final class Transform implements IIdentifiable {
     private final int _id;
     private final int _displayId;
     private final TransformType _type;
@@ -42,8 +41,7 @@ public final class Transform implements IIdentifiable
     private TransformTemplate _maleTemplate;
     private TransformTemplate _femaleTemplate;
 
-    public Transform(StatsSet set)
-    {
+    public Transform(StatsSet set) {
         _id = set.getInt("id");
         _displayId = set.getInt("displayId", _id);
         _type = set.getEnum("type", TransformType.class, TransformType.COMBAT);
@@ -57,77 +55,62 @@ public final class Transform implements IIdentifiable
 
     /**
      * Gets the transformation ID.
+     *
      * @return the transformation ID
      */
     @Override
-    public int getId()
-    {
+    public int getId() {
         return _id;
     }
 
-    public int getDisplayId()
-    {
+    public int getDisplayId() {
         return _displayId;
     }
 
-    public TransformType getType()
-    {
+    public TransformType getType() {
         return _type;
     }
 
-    public boolean canSwim()
-    {
+    public boolean canSwim() {
         return _canSwim;
     }
 
-    public boolean canAttack()
-    {
+    public boolean canAttack() {
         return _canAttack;
     }
 
-    public int getSpawnHeight()
-    {
+    public int getSpawnHeight() {
         return _spawnHeight;
     }
 
     /**
      * @return name that's going to be set to the player while is transformed with current transformation
      */
-    public String getName()
-    {
+    public String getName() {
         return _name;
     }
 
     /**
      * @return title that's going to be set to the player while is transformed with current transformation
      */
-    public String getTitle()
-    {
+    public String getTitle() {
         return _title;
     }
 
-    private TransformTemplate getTemplate(L2Character creature)
-    {
-        if (creature.isPlayer())
-        {
+    private TransformTemplate getTemplate(L2Character creature) {
+        if (creature.isPlayer()) {
             return (creature.getActingPlayer().getAppearance().getSex() ? _femaleTemplate : _maleTemplate);
-        }
-        else if (creature.isNpc())
-        {
+        } else if (creature.isNpc()) {
             return ((L2Npc) creature).getTemplate().getSex() == Sex.FEMALE ? _femaleTemplate : _maleTemplate;
         }
 
         return null;
     }
 
-    public void setTemplate(boolean male, TransformTemplate template)
-    {
-        if (male)
-        {
+    public void setTemplate(boolean male, TransformTemplate template) {
+        if (male) {
             _maleTemplate = template;
-        }
-        else
-        {
+        } else {
             _femaleTemplate = template;
         }
     }
@@ -135,91 +118,78 @@ public final class Transform implements IIdentifiable
     /**
      * @return Allow all skills for this transformation.
      */
-    public boolean allowAllSkills()
-    {
+    public boolean allowAllSkills() {
         return _allowAllSkills;
     }
 
     /**
      * @return {@code true} if transform type is mode change, {@code false} otherwise
      */
-    public boolean isStance()
-    {
+    public boolean isStance() {
         return _type == TransformType.MODE_CHANGE;
     }
 
     /**
      * @return {@code true} if transform type is combat, {@code false} otherwise
      */
-    public boolean isCombat()
-    {
+    public boolean isCombat() {
         return _type == TransformType.COMBAT;
     }
 
     /**
      * @return {@code true} if transform type is non combat, {@code false} otherwise
      */
-    public boolean isNonCombat()
-    {
+    public boolean isNonCombat() {
         return _type == TransformType.NON_COMBAT;
     }
 
     /**
      * @return {@code true} if transform type is flying, {@code false} otherwise
      */
-    public boolean isFlying()
-    {
+    public boolean isFlying() {
         return _type == TransformType.FLYING;
     }
 
     /**
      * @return {@code true} if transform type is cursed, {@code false} otherwise
      */
-    public boolean isCursed()
-    {
+    public boolean isCursed() {
         return _type == TransformType.CURSED;
     }
 
     /**
      * @return {@code true} if transform type is raiding, {@code false} otherwise
      */
-    public boolean isRiding()
-    {
+    public boolean isRiding() {
         return _type == TransformType.RIDING_MODE;
     }
 
     /**
      * @return {@code true} if transform type is pure stat, {@code false} otherwise
      */
-    public boolean isPureStats()
-    {
+    public boolean isPureStats() {
         return _type == TransformType.PURE_STAT;
     }
 
-    public double getCollisionHeight(L2Character creature, double defaultCollisionHeight)
-    {
+    public double getCollisionHeight(L2Character creature, double defaultCollisionHeight) {
         final TransformTemplate template = getTemplate(creature);
-        if ((template != null) && (template.getCollisionHeight() != null))
-        {
+        if ((template != null) && (template.getCollisionHeight() != null)) {
             return template.getCollisionHeight();
         }
 
         return defaultCollisionHeight;
     }
 
-    public double getCollisionRadius(L2Character creature, double defaultCollisionRadius)
-    {
+    public double getCollisionRadius(L2Character creature, double defaultCollisionRadius) {
         final TransformTemplate template = getTemplate(creature);
-        if ((template != null) && (template.getCollisionRadius() != null))
-        {
+        if ((template != null) && (template.getCollisionRadius() != null)) {
             return template.getCollisionRadius();
         }
 
         return defaultCollisionRadius;
     }
 
-    public void onTransform(L2Character creature, boolean addSkills)
-    {
+    public void onTransform(L2Character creature, boolean addSkills) {
         // Abort attacking and casting.
         creature.abortAttack();
         creature.abortCast();
@@ -227,36 +197,29 @@ public final class Transform implements IIdentifiable
         final L2PcInstance player = creature.getActingPlayer();
 
         // Get off the strider or something else if character is mounted
-        if (creature.isPlayer() && player.isMounted())
-        {
+        if (creature.isPlayer() && player.isMounted()) {
             player.dismount();
         }
 
         final TransformTemplate template = getTemplate(creature);
-        if (template != null)
-        {
+        if (template != null) {
             // Start flying.
-            if (isFlying())
-            {
+            if (isFlying()) {
                 creature.setIsFlying(true);
             }
 
             // Get player a bit higher so he doesn't drops underground after transformation happens
             creature.setXYZ(creature.getX(), creature.getY(), (int) (creature.getZ() + getCollisionHeight(creature, 0)));
 
-            if (creature.isPlayer())
-            {
-                if (_name != null)
-                {
+            if (creature.isPlayer()) {
+                if (_name != null) {
                     player.getAppearance().setVisibleName(_name);
                 }
-                if (_title != null)
-                {
+                if (_title != null) {
                     player.getAppearance().setVisibleTitle(_title);
                 }
 
-                if (addSkills)
-                {
+                if (addSkills) {
                     //@formatter:off
                     // Add common skills.
                     template.getSkills()
@@ -281,43 +244,34 @@ public final class Transform implements IIdentifiable
                 }
 
                 // Set inventory blocks if needed.
-                if (!template.getAdditionalItems().isEmpty())
-                {
+                if (!template.getAdditionalItems().isEmpty()) {
                     final List<Integer> allowed = new ArrayList<>();
                     final List<Integer> notAllowed = new ArrayList<>();
-                    for (AdditionalItemHolder holder : template.getAdditionalItems())
-                    {
-                        if (holder.isAllowedToUse())
-                        {
+                    for (AdditionalItemHolder holder : template.getAdditionalItems()) {
+                        if (holder.isAllowedToUse()) {
                             allowed.add(holder.getId());
-                        }
-                        else
-                        {
+                        } else {
                             notAllowed.add(holder.getId());
                         }
                     }
 
-                    if (!allowed.isEmpty())
-                    {
+                    if (!allowed.isEmpty()) {
                         player.getInventory().setInventoryBlock(allowed, InventoryBlockType.WHITELIST);
                     }
 
-                    if (!notAllowed.isEmpty())
-                    {
+                    if (!notAllowed.isEmpty()) {
                         player.getInventory().setInventoryBlock(notAllowed, InventoryBlockType.BLACKLIST);
                     }
                 }
 
                 // Send basic action list.
-                if (template.hasBasicActionList())
-                {
+                if (template.hasBasicActionList()) {
                     player.sendPacket(template.getBasicActionList());
                 }
 
                 player.getEffectList().stopAllToggles();
 
-                if (player.hasTransformSkills())
-                {
+                if (player.hasTransformSkills()) {
                     player.sendSkillList();
                     player.sendPacket(new SkillCoolTime(player));
                 }
@@ -326,9 +280,7 @@ public final class Transform implements IIdentifiable
 
                 // Notify to scripts
                 EventDispatcher.getInstance().notifyEventAsync(new OnPlayerTransform(player, getId()), player);
-            }
-            else
-            {
+            } else {
                 creature.broadcastInfo();
             }
 
@@ -338,32 +290,26 @@ public final class Transform implements IIdentifiable
         }
     }
 
-    public void onUntransform(L2Character creature)
-    {
+    public void onUntransform(L2Character creature) {
         // Abort attacking and casting.
         creature.abortAttack();
         creature.abortCast();
 
         final TransformTemplate template = getTemplate(creature);
-        if (template != null)
-        {
+        if (template != null) {
             // Stop flying.
-            if (isFlying())
-            {
+            if (isFlying()) {
                 creature.setIsFlying(false);
             }
 
-            if (creature.isPlayer())
-            {
+            if (creature.isPlayer()) {
                 final L2PcInstance player = creature.getActingPlayer();
                 final boolean hasTransformSkills = player.hasTransformSkills();
 
-                if (_name != null)
-                {
+                if (_name != null) {
                     player.getAppearance().setVisibleName(null);
                 }
-                if (_title != null)
-                {
+                if (_title != null) {
                     player.getAppearance().setVisibleTitle(null);
                 }
 
@@ -371,8 +317,7 @@ public final class Transform implements IIdentifiable
                 player.removeAllTransformSkills();
 
                 // Remove inventory blocks if needed.
-                if (!template.getAdditionalItems().isEmpty())
-                {
+                if (!template.getAdditionalItems().isEmpty()) {
                     player.getInventory().unblock();
                 }
 
@@ -381,8 +326,7 @@ public final class Transform implements IIdentifiable
                 player.getEffectList().stopEffects(AbnormalType.TRANSFORM);
                 player.getEffectList().stopEffects(AbnormalType.CHANGEBODY);
 
-                if (hasTransformSkills)
-                {
+                if (hasTransformSkills) {
                     player.sendSkillList();
                     player.sendPacket(new SkillCoolTime(player));
                 }
@@ -391,28 +335,20 @@ public final class Transform implements IIdentifiable
                 player.sendPacket(new ExUserInfoEquipSlot(player));
                 // Notify to scripts
                 EventDispatcher.getInstance().notifyEventAsync(new OnPlayerTransform(player, 0), player);
-            }
-            else
-            {
+            } else {
                 creature.broadcastInfo();
             }
         }
     }
 
-    public void onLevelUp(L2PcInstance player)
-    {
+    public void onLevelUp(L2PcInstance player) {
         final TransformTemplate template = getTemplate(player);
-        if (template != null)
-        {
+        if (template != null) {
             // Add skills depending on level.
-            if (!template.getAdditionalSkills().isEmpty())
-            {
-                for (AdditionalSkillHolder holder : template.getAdditionalSkills())
-                {
-                    if (player.getLevel() >= holder.getMinLevel())
-                    {
-                        if (player.getSkillLevel(holder.getSkillId()) < holder.getSkillLevel())
-                        {
+            if (!template.getAdditionalSkills().isEmpty()) {
+                for (AdditionalSkillHolder holder : template.getAdditionalSkills()) {
+                    if (player.getLevel() >= holder.getMinLevel()) {
+                        if (player.getSkillLevel(holder.getSkillId()) < holder.getSkillLevel()) {
                             player.addTransformSkill(holder.getSkill());
                         }
                     }
@@ -421,38 +357,31 @@ public final class Transform implements IIdentifiable
         }
     }
 
-    public WeaponType getBaseAttackType(L2Character creature, WeaponType defaultAttackType)
-    {
+    public WeaponType getBaseAttackType(L2Character creature, WeaponType defaultAttackType) {
         final TransformTemplate template = getTemplate(creature);
-        if (template != null)
-        {
+        if (template != null) {
             final WeaponType weaponType = template.getBaseAttackType();
-            if (weaponType != null)
-            {
+            if (weaponType != null) {
                 return weaponType;
             }
         }
         return defaultAttackType;
     }
 
-    public double getStats(L2Character creature, Stats stats, double defaultValue)
-    {
+    public double getStats(L2Character creature, Stats stats, double defaultValue) {
         double val = defaultValue;
         final TransformTemplate template = getTemplate(creature);
-        if (template != null)
-        {
+        if (template != null) {
             val = template.getStats(stats, defaultValue);
             final TransformLevelData data = template.getData(creature.getLevel());
-            if (data != null)
-            {
+            if (data != null) {
                 val = data.getStats(stats, defaultValue);
             }
         }
         return val;
     }
 
-    public int getBaseDefBySlot(L2PcInstance player, int slot)
-    {
+    public int getBaseDefBySlot(L2PcInstance player, int slot) {
         final int defaultValue = player.getTemplate().getBaseDefBySlot(slot);
         final TransformTemplate template = getTemplate(player);
 
@@ -463,15 +392,12 @@ public final class Transform implements IIdentifiable
      * @param creature
      * @return {@code -1} if this transformation doesn't alter levelmod, otherwise a new levelmod will be returned.
      */
-    public double getLevelMod(L2Character creature)
-    {
+    public double getLevelMod(L2Character creature) {
         double val = 1;
         final TransformTemplate template = getTemplate(creature);
-        if (template != null)
-        {
+        if (template != null) {
             final TransformLevelData data = template.getData(creature.getLevel());
-            if (data != null)
-            {
+            if (data != null) {
                 val = data.getLevelMod();
             }
         }

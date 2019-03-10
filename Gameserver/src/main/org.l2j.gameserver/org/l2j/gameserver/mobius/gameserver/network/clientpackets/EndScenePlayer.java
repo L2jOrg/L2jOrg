@@ -10,29 +10,24 @@ import java.nio.ByteBuffer;
 /**
  * @author JIV
  */
-public final class EndScenePlayer extends IClientIncomingPacket
-{
+public final class EndScenePlayer extends IClientIncomingPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(EndScenePlayer.class);
     private int _movieId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _movieId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if ((activeChar == null) || (_movieId == 0))
-        {
+        if ((activeChar == null) || (_movieId == 0)) {
             return;
         }
 
         final MovieHolder holder = activeChar.getMovieHolder();
-        if ((holder == null) || (holder.getMovie().getClientId() != _movieId))
-        {
+        if ((holder == null) || (holder.getMovie().getClientId() != _movieId)) {
             LOGGER.warn("Player " + client + " sent EndScenePlayer with wrong movie id: " + _movieId);
             return;
         }

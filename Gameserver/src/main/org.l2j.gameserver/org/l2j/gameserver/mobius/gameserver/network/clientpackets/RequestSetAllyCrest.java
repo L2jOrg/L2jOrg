@@ -14,17 +14,15 @@ import java.nio.ByteBuffer;
 /**
  * Client packet for setting ally crest.
  */
-public final class RequestSetAllyCrest extends IClientIncomingPacket
-{
+public final class RequestSetAllyCrest extends IClientIncomingPacket {
     private int _length;
     private byte[] _data = null;
 
     @Override
     public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
         _length = packet.getInt();
-        if (_length > 192)
-        {
-            throw  new InvalidDataPacketException();
+        if (_length > 192) {
+            throw new InvalidDataPacketException();
         }
 
         _data = new byte[_length];
@@ -32,52 +30,41 @@ public final class RequestSetAllyCrest extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
-        if (_length < 0)
-        {
+        if (_length < 0) {
             activeChar.sendMessage("File transfer error.");
             return;
         }
 
-        if (_length > 192)
-        {
+        if (_length > 192) {
             activeChar.sendPacket(SystemMessageId.PLEASE_ADJUST_THE_IMAGE_SIZE_TO_8X12);
             return;
         }
 
-        if (activeChar.getAllyId() == 0)
-        {
+        if (activeChar.getAllyId() == 0) {
             activeChar.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
             return;
         }
 
         final L2Clan leaderClan = ClanTable.getInstance().getClan(activeChar.getAllyId());
 
-        if ((activeChar.getClanId() != leaderClan.getId()) || !activeChar.isClanLeader())
-        {
+        if ((activeChar.getClanId() != leaderClan.getId()) || !activeChar.isClanLeader()) {
             activeChar.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
             return;
         }
 
-        if (_length == 0)
-        {
-            if (leaderClan.getAllyCrestId() != 0)
-            {
+        if (_length == 0) {
+            if (leaderClan.getAllyCrestId() != 0) {
                 leaderClan.changeAllyCrest(0, false);
             }
-        }
-        else
-        {
+        } else {
             final L2Crest crest = CrestTable.getInstance().createCrest(_data, CrestType.ALLY);
-            if (crest != null)
-            {
+            if (crest != null) {
                 leaderClan.changeAllyCrest(crest.getId(), false);
                 activeChar.sendPacket(SystemMessageId.THE_CREST_WAS_SUCCESSFULLY_REGISTERED);
             }

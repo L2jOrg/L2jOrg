@@ -1,27 +1,13 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import org.l2j.commons.network.PacketWriter;
 import org.l2j.gameserver.mobius.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
 import org.l2j.gameserver.mobius.gameserver.model.L2SiegeClan;
 import org.l2j.gameserver.mobius.gameserver.model.entity.Castle;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
+
+import java.nio.ByteBuffer;
 
 /**
  * Populates the Siege Attacker List in the SiegeInfo Window<BR>
@@ -43,57 +29,49 @@ import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
  * S = AllyName<BR>
  * S = AllyLeaderName<BR>
  * d = AllyCrestID<BR>
+ *
  * @author KenM
  */
-public final class SiegeAttackerList implements IClientOutgoingPacket
-{
-	private final Castle _castle;
-	
-	public SiegeAttackerList(Castle castle)
-	{
-		_castle = castle;
-	}
-	
-	@Override
-	public boolean write(PacketWriter packet)
-	{
-		OutgoingPackets.CASTLE_SIEGE_ATTACKER_LIST.writeId(packet);
-		
-		packet.writeD(_castle.getResidenceId());
-		packet.writeD(0x00); // 0
-		packet.writeD(0x01); // 1
-		packet.writeD(0x00); // 0
-		final int size = _castle.getSiege().getAttackerClans().size();
-		if (size > 0)
-		{
-			L2Clan clan;
-			
-			packet.writeD(size);
-			packet.writeD(size);
-			for (L2SiegeClan siegeclan : _castle.getSiege().getAttackerClans())
-			{
-				clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-				if (clan == null)
-				{
-					continue;
-				}
-				
-				packet.writeD(clan.getId());
-				packet.writeS(clan.getName());
-				packet.writeS(clan.getLeaderName());
-				packet.writeD(clan.getCrestId());
-				packet.writeD(0x00); // signed time (seconds) (not storated by L2J)
-				packet.writeD(clan.getAllyId());
-				packet.writeS(clan.getAllyName());
-				packet.writeS(""); // AllyLeaderName
-				packet.writeD(clan.getAllyCrestId());
-			}
-		}
-		else
-		{
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-		}
-		return true;
-	}
+public final class SiegeAttackerList extends IClientOutgoingPacket {
+    private final Castle _castle;
+
+    public SiegeAttackerList(Castle castle) {
+        _castle = castle;
+    }
+
+    @Override
+    public void writeImpl(L2GameClient client, ByteBuffer packet) {
+        OutgoingPackets.CASTLE_SIEGE_ATTACKER_LIST.writeId(packet);
+
+        packet.putInt(_castle.getResidenceId());
+        packet.putInt(0x00); // 0
+        packet.putInt(0x01); // 1
+        packet.putInt(0x00); // 0
+        final int size = _castle.getSiege().getAttackerClans().size();
+        if (size > 0) {
+            L2Clan clan;
+
+            packet.putInt(size);
+            packet.putInt(size);
+            for (L2SiegeClan siegeclan : _castle.getSiege().getAttackerClans()) {
+                clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
+                if (clan == null) {
+                    continue;
+                }
+
+                packet.putInt(clan.getId());
+                writeString(clan.getName(), packet);
+                writeString(clan.getLeaderName(), packet);
+                packet.putInt(clan.getCrestId());
+                packet.putInt(0x00); // signed time (seconds) (not storated by L2J)
+                packet.putInt(clan.getAllyId());
+                writeString(clan.getAllyName(), packet);
+                writeString("", packet); // AllyLeaderName
+                packet.putInt(clan.getAllyCrestId());
+            }
+        } else {
+            packet.putInt(0x00);
+            packet.putInt(0x00);
+        }
+    }
 }

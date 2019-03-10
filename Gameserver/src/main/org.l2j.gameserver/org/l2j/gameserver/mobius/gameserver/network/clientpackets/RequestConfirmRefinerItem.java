@@ -11,44 +11,38 @@ import java.nio.ByteBuffer;
 
 /**
  * Fromat(ch) dd
+ *
  * @author -Wooden-
  */
-public class RequestConfirmRefinerItem extends AbstractRefinePacket
-{
+public class RequestConfirmRefinerItem extends AbstractRefinePacket {
     private int _targetItemObjId;
     private int _refinerItemObjId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _targetItemObjId = packet.getInt();
         _refinerItemObjId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
-        if (targetItem == null)
-        {
+        if (targetItem == null) {
             return;
         }
 
         final L2ItemInstance refinerItem = activeChar.getInventory().getItemByObjectId(_refinerItemObjId);
-        if (refinerItem == null)
-        {
+        if (refinerItem == null) {
             return;
         }
 
         final VariationFee fee = VariationData.getInstance().getFee(targetItem.getId(), refinerItem.getId());
-        if ((fee == null) || !isValid(activeChar, targetItem, refinerItem))
-        {
+        if ((fee == null) || !isValid(activeChar, targetItem, refinerItem)) {
             activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
             return;
         }

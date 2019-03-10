@@ -19,26 +19,22 @@ import java.nio.ByteBuffer;
 /**
  * @author Mobius
  */
-public class RequestChangeAttributeItem extends IClientIncomingPacket
-{
+public class RequestChangeAttributeItem extends IClientIncomingPacket {
     private int _consumeItemId;
     private int _itemObjId;
     private int _newElementId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _consumeItemId = packet.getInt();
         _itemObjId = packet.getInt();
         _newElementId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
@@ -46,8 +42,7 @@ public class RequestChangeAttributeItem extends IClientIncomingPacket
         final L2ItemInstance item = inventory.getItemByObjectId(_itemObjId);
 
         // attempting to destroy item
-        if (activeChar.getInventory().destroyItemByItemId("ChangeAttribute", _consumeItemId, 1, activeChar, item) == null)
-        {
+        if (activeChar.getInventory().destroyItemByItemId("ChangeAttribute", _consumeItemId, 1, activeChar, item) == null) {
             client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
             client.sendPacket(ExChangeAttributeFail.STATIC);
             Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to change attribute without an attribute change crystal.", Config.DEFAULT_PUNISH);
@@ -68,8 +63,7 @@ public class RequestChangeAttributeItem extends IClientIncomingPacket
         activeChar.sendPacket(msg);
         InventoryUpdate iu = new InventoryUpdate();
         iu.addModifiedItem(item);
-        for (L2ItemInstance i : activeChar.getInventory().getItemsByItemId(_consumeItemId))
-        {
+        for (L2ItemInstance i : activeChar.getInventory().getItemsByItemId(_consumeItemId)) {
             iu.addItem(i);
         }
         activeChar.sendPacket(iu);

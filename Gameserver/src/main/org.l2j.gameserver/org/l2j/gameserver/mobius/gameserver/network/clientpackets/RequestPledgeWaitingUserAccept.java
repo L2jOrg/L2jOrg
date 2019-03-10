@@ -14,35 +14,29 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestPledgeWaitingUserAccept extends IClientIncomingPacket
-{
+public class RequestPledgeWaitingUserAccept extends IClientIncomingPacket {
     private boolean _acceptRequest;
     private int _playerId;
     private int _clanId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _acceptRequest = packet.getInt() == 1;
         _playerId = packet.getInt();
         _clanId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if ((activeChar == null) || (activeChar.getClan() == null))
-        {
+        if ((activeChar == null) || (activeChar.getClan() == null)) {
             return;
         }
 
-        if (_acceptRequest)
-        {
+        if (_acceptRequest) {
             final L2PcInstance player = L2World.getInstance().getPlayer(_playerId);
             final L2Clan clan = activeChar.getClan();
-            if ((player != null) && (player.getClan() == null) && (clan != null))
-            {
+            if ((player != null) && (player.getClan() == null) && (clan != null)) {
                 player.sendPacket(new JoinPledge(clan.getId()));
 
                 // activeChar.setPowerGrade(9); // academy
@@ -56,12 +50,10 @@ public class RequestPledgeWaitingUserAccept extends IClientIncomingPacket
                 sm.addString(player.getName());
                 clan.broadcastToOnlineMembers(sm);
 
-                if (clan.getCastleId() > 0)
-                {
+                if (clan.getCastleId() > 0) {
                     CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(player);
                 }
-                if (clan.getFortId() > 0)
-                {
+                if (clan.getFortId() > 0) {
                     FortManager.getInstance().getFortByOwner(clan).giveResidentialSkills(player);
                 }
                 player.sendSkillList();
@@ -77,9 +69,7 @@ public class RequestPledgeWaitingUserAccept extends IClientIncomingPacket
 
                 ClanEntryManager.getInstance().removePlayerApplication(_clanId, _playerId);
             }
-        }
-        else
-        {
+        } else {
             ClanEntryManager.getInstance().removePlayerApplication(_clanId, _playerId);
         }
     }

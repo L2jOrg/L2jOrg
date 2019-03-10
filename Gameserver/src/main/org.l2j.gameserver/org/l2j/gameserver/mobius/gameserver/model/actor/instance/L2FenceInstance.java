@@ -12,8 +12,7 @@ import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExColosseumFen
 /**
  * @author HoridoJoho / FBIagent
  */
-public final class L2FenceInstance extends L2Object
-{
+public final class L2FenceInstance extends L2Object {
     private final int _xMin;
     private final int _xMax;
     private final int _yMin;
@@ -26,8 +25,7 @@ public final class L2FenceInstance extends L2Object
     private FenceState _state;
     private int[] _heightFences;
 
-    public L2FenceInstance(int x, int y, String name, int width, int length, int height, FenceState state)
-    {
+    public L2FenceInstance(int x, int y, String name, int width, int length, int height, FenceState state) {
         super(IdFactory.getInstance().getNextId());
 
         _xMin = x - (width / 2);
@@ -41,56 +39,45 @@ public final class L2FenceInstance extends L2Object
 
         _state = state;
 
-        if (height > 1)
-        {
+        if (height > 1) {
             _heightFences = new int[height - 1];
-            for (int i = 0; i < _heightFences.length; i++)
-            {
+            for (int i = 0; i < _heightFences.length; i++) {
                 _heightFences[i] = IdFactory.getInstance().getNextId();
             }
         }
     }
 
     @Override
-    public int getId()
-    {
+    public int getId() {
         return getObjectId();
     }
 
     @Override
-    public String getName()
-    {
+    public String getName() {
         return _name;
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker)
-    {
+    public boolean isAutoAttackable(L2Character attacker) {
         return false;
     }
 
     @Override
-    public void sendInfo(L2PcInstance activeChar)
-    {
+    public void sendInfo(L2PcInstance activeChar) {
         activeChar.sendPacket(new ExColosseumFenceInfo(this));
 
-        if (_heightFences != null)
-        {
-            for (int objId : _heightFences)
-            {
+        if (_heightFences != null) {
+            for (int objId : _heightFences) {
                 activeChar.sendPacket(new ExColosseumFenceInfo(objId, getX(), getY(), getZ(), _width, _length, _state));
             }
         }
     }
 
     @Override
-    public boolean decayMe()
-    {
-        if (_heightFences != null)
-        {
+    public boolean decayMe() {
+        if (_heightFences != null) {
             final DeleteObject[] deleteObjects = new DeleteObject[_heightFences.length];
-            for (int i = 0; i < _heightFences.length; i++)
-            {
+            for (int i = 0; i < _heightFences.length; i++) {
                 deleteObjects[i] = new DeleteObject(_heightFences[i]);
             }
 
@@ -100,53 +87,44 @@ public final class L2FenceInstance extends L2Object
         return super.decayMe();
     }
 
-    public boolean deleteMe()
-    {
+    public boolean deleteMe() {
         decayMe();
 
         FenceData.getInstance().removeFence(this);
         return false;
     }
 
-    public FenceState getState()
-    {
+    public FenceState getState() {
         return _state;
     }
 
-    public void setState(FenceState type)
-    {
+    public void setState(FenceState type) {
         _state = type;
 
         broadcastInfo();
     }
 
-    public int getWidth()
-    {
+    public int getWidth() {
         return _width;
     }
 
-    public int getLength()
-    {
+    public int getLength() {
         return _length;
     }
 
-    public int getXMin()
-    {
+    public int getXMin() {
         return _xMin;
     }
 
-    public int getYMin()
-    {
+    public int getYMin() {
         return _yMin;
     }
 
-    public int getXMax()
-    {
+    public int getXMax() {
         return _xMax;
     }
 
-    public int getYMax()
-    {
+    public int getYMax() {
         return _yMax;
     }
 }

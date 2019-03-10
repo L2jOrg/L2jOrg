@@ -9,19 +9,11 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Objects;
 
-public class TradeItem
-{
-    private int _objectId;
+public class TradeItem {
     private final L2Item _item;
     private final int _location;
-    private int _enchant;
     private final int _type1;
     private final int _type2;
-    private long _count;
-    private long _storeCount;
-    private long _price;
-    private byte _elemAtkType;
-    private int _elemAtkPower;
     private final int[] _elemDefAttr =
             {
                     0,
@@ -32,14 +24,20 @@ public class TradeItem
                     0
             };
     private final int[] _enchantOptions;
+    private int _objectId;
+    private int _enchant;
+    private long _count;
+    private long _storeCount;
+    private long _price;
+    private byte _elemAtkType;
+    private int _elemAtkPower;
     private Collection<EnsoulOption> _soulCrystalOptions;
     private Collection<EnsoulOption> _soulCrystalSpecialOptions;
     private int _visualId;
     private int _augmentationOption1 = -1;
     private int _augmentationOption2 = -1;
 
-    public TradeItem(L2ItemInstance item, long count, long price)
-    {
+    public TradeItem(L2ItemInstance item, long count, long price) {
         Objects.requireNonNull(item);
         _objectId = item.getObjectId();
         _item = item.getItem();
@@ -51,8 +49,7 @@ public class TradeItem
         _price = price;
         _elemAtkType = item.getAttackAttributeType().getClientId();
         _elemAtkPower = item.getAttackAttributePower();
-        for (AttributeType type : AttributeType.ATTRIBUTE_TYPES)
-        {
+        for (AttributeType type : AttributeType.ATTRIBUTE_TYPES) {
             _elemDefAttr[type.getClientId()] = item.getDefenceAttribute(type);
         }
         _enchantOptions = item.getEnchantOptions();
@@ -60,15 +57,13 @@ public class TradeItem
         _soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
         _visualId = item.getVisualId();
 
-        if (item.getAugmentation() != null)
-        {
+        if (item.getAugmentation() != null) {
             _augmentationOption1 = item.getAugmentation().getOption1Id();
             _augmentationOption1 = item.getAugmentation().getOption2Id();
         }
     }
 
-    public TradeItem(L2Item item, long count, long price)
-    {
+    public TradeItem(L2Item item, long count, long price) {
         Objects.requireNonNull(item);
         _objectId = 0;
         _item = item;
@@ -86,8 +81,7 @@ public class TradeItem
         _soulCrystalSpecialOptions = Collections.emptyList();
     }
 
-    public TradeItem(TradeItem item, long count, long price)
-    {
+    public TradeItem(TradeItem item, long count, long price) {
         Objects.requireNonNull(item);
         _objectId = item.getObjectId();
         _item = item.getItem();
@@ -100,8 +94,7 @@ public class TradeItem
         _price = price;
         _elemAtkType = item.getAttackElementType();
         _elemAtkPower = item.getAttackElementPower();
-        for (byte i = 0; i < 6; i++)
-        {
+        for (byte i = 0; i < 6; i++) {
             _elemDefAttr[i] = item.getElementDefAttr(i);
         }
         _enchantOptions = item.getEnchantOptions();
@@ -110,149 +103,120 @@ public class TradeItem
         _visualId = item.getVisualId();
     }
 
-    public void setObjectId(int objectId)
-    {
-        _objectId = objectId;
-    }
-
-    public int getObjectId()
-    {
+    public int getObjectId() {
         return _objectId;
     }
 
-    public L2Item getItem()
-    {
+    public void setObjectId(int objectId) {
+        _objectId = objectId;
+    }
+
+    public L2Item getItem() {
         return _item;
     }
 
-    public int getLocationSlot()
-    {
+    public int getLocationSlot() {
         return _location;
     }
 
-    public void setEnchant(int enchant)
-    {
-        _enchant = enchant;
-    }
-
-    public int getEnchant()
-    {
+    public int getEnchant() {
         return _enchant;
     }
 
-    public int getCustomType1()
-    {
+    public void setEnchant(int enchant) {
+        _enchant = enchant;
+    }
+
+    public int getCustomType1() {
         return _type1;
     }
 
-    public int getCustomType2()
-    {
+    public int getCustomType2() {
         return _type2;
     }
 
-    public void setCount(long count)
-    {
-        _count = count;
-    }
-
-    public long getCount()
-    {
+    public long getCount() {
         return _count;
     }
 
-    public long getStoreCount()
-    {
+    public void setCount(long count) {
+        _count = count;
+    }
+
+    public long getStoreCount() {
         return _storeCount;
     }
 
-    public void setPrice(long price)
-    {
-        _price = price;
-    }
-
-    public long getPrice()
-    {
+    public long getPrice() {
         return _price;
     }
 
-    public void setAttackElementType(AttributeType attackElement)
-    {
-        _elemAtkType = attackElement.getClientId();
+    public void setPrice(long price) {
+        _price = price;
     }
 
-    public byte getAttackElementType()
-    {
+    public byte getAttackElementType() {
         return _elemAtkType;
     }
 
-    public void setAttackElementPower(int attackElementPower)
-    {
-        _elemAtkPower = attackElementPower;
+    public void setAttackElementType(AttributeType attackElement) {
+        _elemAtkType = attackElement.getClientId();
     }
 
-    public int getAttackElementPower()
-    {
+    public int getAttackElementPower() {
         return _elemAtkPower;
     }
 
-    public void setElementDefAttr(AttributeType element, int value)
-    {
+    public void setAttackElementPower(int attackElementPower) {
+        _elemAtkPower = attackElementPower;
+    }
+
+    public void setElementDefAttr(AttributeType element, int value) {
         _elemDefAttr[element.getClientId()] = value;
     }
 
-    public int getElementDefAttr(byte i)
-    {
+    public int getElementDefAttr(byte i) {
         return _elemDefAttr[i];
     }
 
-    public int[] getEnchantOptions()
-    {
+    public int[] getEnchantOptions() {
         return _enchantOptions;
     }
 
-    public void setSoulCrystalOptions(Collection<EnsoulOption> soulCrystalOptions)
-    {
-        _soulCrystalOptions = soulCrystalOptions;
-    }
-
-    public Collection<EnsoulOption> getSoulCrystalOptions()
-    {
+    public Collection<EnsoulOption> getSoulCrystalOptions() {
         return _soulCrystalOptions == null ? Collections.emptyList() : _soulCrystalOptions;
     }
 
-    public void setSoulCrystalSpecialOptions(Collection<EnsoulOption> soulCrystalSpecialOptions)
-    {
-        _soulCrystalSpecialOptions = soulCrystalSpecialOptions;
+    public void setSoulCrystalOptions(Collection<EnsoulOption> soulCrystalOptions) {
+        _soulCrystalOptions = soulCrystalOptions;
     }
 
-    public Collection<EnsoulOption> getSoulCrystalSpecialOptions()
-    {
+    public Collection<EnsoulOption> getSoulCrystalSpecialOptions() {
         return _soulCrystalSpecialOptions == null ? Collections.emptyList() : _soulCrystalSpecialOptions;
     }
 
-    public void setAugmentation(int option1, int option2)
-    {
+    public void setSoulCrystalSpecialOptions(Collection<EnsoulOption> soulCrystalSpecialOptions) {
+        _soulCrystalSpecialOptions = soulCrystalSpecialOptions;
+    }
+
+    public void setAugmentation(int option1, int option2) {
         _augmentationOption1 = option1;
         _augmentationOption2 = option2;
     }
 
-    public int getAugmentationOption1()
-    {
+    public int getAugmentationOption1() {
         return _augmentationOption1;
     }
 
-    public int getAugmentationOption2()
-    {
+    public int getAugmentationOption2() {
         return _augmentationOption2;
     }
 
-    public void setVisualId(int visualItemId)
-    {
-        _visualId = visualItemId;
+    public int getVisualId() {
+        return _visualId;
     }
 
-    public int getVisualId()
-    {
-        return _visualId;
+    public void setVisualId(int visualItemId) {
+        _visualId = visualItemId;
     }
 }

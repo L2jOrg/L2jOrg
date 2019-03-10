@@ -7,35 +7,28 @@ import org.l2j.gameserver.mobius.gameserver.network.serverpackets.RecipeShopMana
 
 import java.nio.ByteBuffer;
 
-public final class RequestRecipeShopManageList extends IClientIncomingPacket
-{
+public final class RequestRecipeShopManageList extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
         // Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
-        if (player.isAlikeDead())
-        {
+        if (player.isAlikeDead()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
-        if (player.getPrivateStoreType() != PrivateStoreType.NONE)
-        {
+        if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
             player.setPrivateStoreType(PrivateStoreType.NONE);
             player.broadcastUserInfo();
-            if (player.isSitting())
-            {
+            if (player.isSitting()) {
                 player.standUp();
             }
         }

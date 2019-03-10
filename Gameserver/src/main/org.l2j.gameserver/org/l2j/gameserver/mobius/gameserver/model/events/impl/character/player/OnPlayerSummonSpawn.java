@@ -7,23 +7,19 @@ import org.l2j.gameserver.mobius.gameserver.model.events.impl.IBaseEvent;
 /**
  * @author UnAfraid
  */
-public class OnPlayerSummonSpawn implements IBaseEvent
-{
+public class OnPlayerSummonSpawn implements IBaseEvent {
     private final L2Summon _summon;
 
-    public OnPlayerSummonSpawn(L2Summon summon)
-    {
+    public OnPlayerSummonSpawn(L2Summon summon) {
         _summon = summon;
     }
 
-    public L2Summon getSummon()
-    {
+    public L2Summon getSummon() {
         return _summon;
     }
 
     @Override
-    public EventType getType()
-    {
+    public EventType getType() {
         return EventType.ON_PLAYER_SUMMON_SPAWN;
     }
 }

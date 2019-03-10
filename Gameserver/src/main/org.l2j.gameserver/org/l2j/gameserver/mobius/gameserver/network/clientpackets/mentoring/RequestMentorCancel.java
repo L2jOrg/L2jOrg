@@ -17,39 +17,31 @@ import java.nio.ByteBuffer;
 /**
  * @author UnAfraid
  */
-public class RequestMentorCancel extends IClientIncomingPacket
-{
+public class RequestMentorCancel extends IClientIncomingPacket {
     private int _confirmed;
     private String _name;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _confirmed = packet.getInt();
         _name = readString(packet);
     }
 
     @Override
-    public void runImpl()
-    {
-        if (_confirmed != 1)
-        {
+    public void runImpl() {
+        if (_confirmed != 1) {
             return;
         }
 
         final L2PcInstance player = client.getActiveChar();
         final int objectId = CharNameTable.getInstance().getIdByName(_name);
-        if (player != null)
-        {
-            if (player.isMentor())
-            {
+        if (player != null) {
+            if (player.isMentor()) {
                 final L2Mentee mentee = MentorManager.getInstance().getMentee(player.getObjectId(), objectId);
-                if (mentee != null)
-                {
+                if (mentee != null) {
                     MentorManager.getInstance().cancelAllMentoringBuffs(mentee.getPlayerInstance());
 
-                    if (MentorManager.getInstance().isAllMenteesOffline(player.getObjectId(), mentee.getObjectId()))
-                    {
+                    if (MentorManager.getInstance().isAllMenteesOffline(player.getObjectId(), mentee.getObjectId())) {
                         MentorManager.getInstance().cancelAllMentoringBuffs(player);
                     }
 
@@ -61,16 +53,12 @@ public class RequestMentorCancel extends IClientIncomingPacket
                     EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeRemove(player, mentee), player);
                 }
 
-            }
-            else if (player.isMentee())
-            {
+            } else if (player.isMentee()) {
                 final L2Mentee mentor = MentorManager.getInstance().getMentor(player.getObjectId());
-                if ((mentor != null) && (mentor.getObjectId() == objectId))
-                {
+                if ((mentor != null) && (mentor.getObjectId() == objectId)) {
                     MentorManager.getInstance().cancelAllMentoringBuffs(player);
 
-                    if (MentorManager.getInstance().isAllMenteesOffline(mentor.getObjectId(), player.getObjectId()))
-                    {
+                    if (MentorManager.getInstance().isAllMenteesOffline(mentor.getObjectId(), player.getObjectId())) {
                         MentorManager.getInstance().cancelAllMentoringBuffs(mentor.getPlayerInstance());
                     }
 

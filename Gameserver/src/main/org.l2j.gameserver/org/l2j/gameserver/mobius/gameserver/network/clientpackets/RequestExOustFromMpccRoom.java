@@ -10,34 +10,28 @@ import java.nio.ByteBuffer;
 /**
  * @author jeremy
  */
-public class RequestExOustFromMpccRoom extends IClientIncomingPacket
-{
+public class RequestExOustFromMpccRoom extends IClientIncomingPacket {
     private int _objectId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _objectId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
 
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final MatchingRoom room = activeChar.getMatchingRoom();
 
-        if ((room != null) && (room.getLeader() == activeChar) && (room.getRoomType() == MatchingRoomType.COMMAND_CHANNEL))
-        {
+        if ((room != null) && (room.getLeader() == activeChar) && (room.getRoomType() == MatchingRoomType.COMMAND_CHANNEL)) {
             final L2PcInstance player = L2World.getInstance().getPlayer(_objectId);
 
-            if (player != null)
-            {
+            if (player != null) {
                 room.deleteMember(player, true);
             }
         }

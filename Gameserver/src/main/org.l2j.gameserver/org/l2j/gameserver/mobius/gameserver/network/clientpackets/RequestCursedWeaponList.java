@@ -7,25 +7,22 @@ import java.nio.ByteBuffer;
 
 /**
  * Format: (ch)
+ *
  * @author -Wooden-
  */
-public class RequestCursedWeaponList extends IClientIncomingPacket
-{
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
+public class RequestCursedWeaponList extends IClientIncomingPacket {
+    @Override
+    public void readImpl(ByteBuffer packet) {
 
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2Character activeChar = client.getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		client.sendPacket(new ExCursedWeaponList());
-	}
+    }
+
+    @Override
+    public void runImpl() {
+        final L2Character activeChar = client.getActiveChar();
+        if (activeChar == null) {
+            return;
+        }
+
+        client.sendPacket(new ExCursedWeaponList());
+    }
 }

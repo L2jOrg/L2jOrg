@@ -20,36 +20,28 @@ import java.nio.ByteBuffer;
 /**
  * @author UnAfraid
  */
-public class RequestNewEnchantTry extends IClientIncomingPacket
-{
+public class RequestNewEnchantTry extends IClientIncomingPacket {
     @Override
     public void readImpl(ByteBuffer packet) {
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
-        }
-        else if (activeChar.isInStoreMode())
-        {
+        } else if (activeChar.isInStoreMode()) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
             client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
             return;
-        }
-        else if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest())
-        {
+        } else if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest()) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
             client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
             return;
         }
 
         final CompoundRequest request = activeChar.getRequest(CompoundRequest.class);
-        if ((request == null) || request.isProcessing())
-        {
+        if ((request == null) || request.isProcessing()) {
             client.sendPacket(ExEnchantFail.STATIC_PACKET);
             return;
         }
@@ -58,16 +50,14 @@ public class RequestNewEnchantTry extends IClientIncomingPacket
 
         final L2ItemInstance itemOne = request.getItemOne();
         final L2ItemInstance itemTwo = request.getItemTwo();
-        if ((itemOne == null) || (itemTwo == null))
-        {
+        if ((itemOne == null) || (itemTwo == null)) {
             client.sendPacket(ExEnchantFail.STATIC_PACKET);
             activeChar.removeRequest(request.getClass());
             return;
         }
 
         // Lets prevent using same item twice
-        if (itemOne.getObjectId() == itemTwo.getObjectId())
-        {
+        if (itemOne.getObjectId() == itemTwo.getObjectId()) {
             client.sendPacket(new ExEnchantFail(itemOne.getId(), itemTwo.getId()));
             activeChar.removeRequest(request.getClass());
             return;
@@ -76,8 +66,7 @@ public class RequestNewEnchantTry extends IClientIncomingPacket
         final CombinationItem combinationItem = CombinationItemsData.getInstance().getItemsBySlots(itemOne.getId(), itemTwo.getId());
 
         // Not implemented or not able to merge!
-        if (combinationItem == null)
-        {
+        if (combinationItem == null) {
             client.sendPacket(new ExEnchantFail(itemOne.getId(), itemTwo.getId()));
             activeChar.removeRequest(request.getClass());
             return;
@@ -87,19 +76,15 @@ public class RequestNewEnchantTry extends IClientIncomingPacket
         iu.addRemovedItem(itemOne);
         iu.addRemovedItem(itemTwo);
 
-        if (activeChar.destroyItem("Compound-Item-One", itemOne, 1, null, true) && activeChar.destroyItem("Compound-Item-Two", itemTwo, 1, null, true))
-        {
+        if (activeChar.destroyItem("Compound-Item-One", itemOne, 1, null, true) && activeChar.destroyItem("Compound-Item-Two", itemTwo, 1, null, true)) {
             final double random = (Rnd.nextDouble() * 100);
             final boolean success = random <= combinationItem.getChance();
             final CombinationItemReward rewardItem = combinationItem.getReward(success ? CombinationItemType.ON_SUCCESS : CombinationItemType.ON_FAILURE);
             final L2ItemInstance item = activeChar.addItem("Compound-Result", rewardItem.getId(), rewardItem.getCount(), null, true);
 
-            if (success)
-            {
+            if (success) {
                 client.sendPacket(new ExEnchantSucess(item.getId()));
-            }
-            else
-            {
+            } else {
                 client.sendPacket(new ExEnchantFail(itemOne.getId(), itemTwo.getId()));
             }
         }

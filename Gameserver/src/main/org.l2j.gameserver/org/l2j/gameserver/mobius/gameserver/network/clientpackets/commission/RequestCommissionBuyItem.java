@@ -10,28 +10,23 @@ import java.nio.ByteBuffer;
 /**
  * @author NosBit
  */
-public class RequestCommissionBuyItem extends IClientIncomingPacket
-{
+public class RequestCommissionBuyItem extends IClientIncomingPacket {
     private long _commissionId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _commissionId = packet.getLong();
         // packet.getInt(); // CommissionItemType
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
-        if (!CommissionManager.isPlayerAllowedToInteract(player))
-        {
+        if (!CommissionManager.isPlayerAllowedToInteract(player)) {
             client.sendPacket(ExCloseCommission.STATIC_PACKET);
             return;
         }

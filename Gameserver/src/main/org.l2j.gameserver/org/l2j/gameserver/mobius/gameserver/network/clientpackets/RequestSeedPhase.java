@@ -8,20 +8,16 @@ import java.nio.ByteBuffer;
 /**
  * RequestSeedPhase client packet
  */
-public class RequestSeedPhase extends IClientIncomingPacket
-{
+public class RequestSeedPhase extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
         activeChar.sendPacket(ExShowSeedMapInfo.STATIC_PACKET);

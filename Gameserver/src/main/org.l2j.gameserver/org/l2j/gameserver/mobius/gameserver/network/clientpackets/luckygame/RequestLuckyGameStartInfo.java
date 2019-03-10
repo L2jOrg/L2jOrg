@@ -7,15 +7,13 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestLuckyGameStartInfo extends IClientIncomingPacket
-{
+public class RequestLuckyGameStartInfo extends IClientIncomingPacket {
     @Override
     public void readImpl(ByteBuffer packet) {
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
 
     }
 }

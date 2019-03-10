@@ -6,32 +6,28 @@ import java.nio.ByteBuffer;
 
 /**
  * This class ...
+ *
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestShortCutDel extends IClientIncomingPacket
-{
+public final class RequestShortCutDel extends IClientIncomingPacket {
     private int _slot;
     private int _page;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         final int id = packet.getInt();
         _slot = id % 12;
         _page = id / 12;
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
-        if ((_page > 10) || (_page < 0))
-        {
+        if ((_page > 10) || (_page < 0)) {
             return;
         }
 

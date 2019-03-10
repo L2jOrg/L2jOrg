@@ -2,39 +2,37 @@ package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.mobius.gameserver.model.TeleportBookmark;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author ShanSoft
  */
-public class ExGetBookMarkInfoPacket implements IClientOutgoingPacket
-{
+public class ExGetBookMarkInfoPacket extends IClientOutgoingPacket {
     private final L2PcInstance player;
 
-    public ExGetBookMarkInfoPacket(L2PcInstance cha)
-    {
+    public ExGetBookMarkInfoPacket(L2PcInstance cha) {
         player = cha;
     }
 
     @Override
-    public boolean write(PacketWriter packet)
-    {
+    public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.EX_GET_BOOK_MARK_INFO.writeId(packet);
 
-        packet.writeD(0x00); // Dummy
-        packet.writeD(player.getBookmarkslot());
-        packet.writeD(player.getTeleportBookmarks().size());
+        packet.putInt(0x00); // Dummy
+        packet.putInt(player.getBookmarkslot());
+        packet.putInt(player.getTeleportBookmarks().size());
 
-        for (TeleportBookmark tpbm : player.getTeleportBookmarks())
-        {
-            packet.writeD(tpbm.getId());
-            packet.writeD(tpbm.getX());
-            packet.writeD(tpbm.getY());
-            packet.writeD(tpbm.getZ());
-            packet.writeS(tpbm.getName());
-            packet.writeD(tpbm.getIcon());
-            packet.writeS(tpbm.getTag());
+        for (TeleportBookmark tpbm : player.getTeleportBookmarks()) {
+            packet.putInt(tpbm.getId());
+            packet.putInt(tpbm.getX());
+            packet.putInt(tpbm.getY());
+            packet.putInt(tpbm.getZ());
+            writeString(tpbm.getName(), packet);
+            packet.putInt(tpbm.getIcon());
+            writeString(tpbm.getTag(), packet);
         }
-        return true;
     }
 }

@@ -10,31 +10,25 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class NotifyTrainingRoomEnd extends IClientIncomingPacket
-{
+public class NotifyTrainingRoomEnd extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         // Nothing to read
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final TrainingHolder holder = activeChar.getTraingCampInfo();
-        if (holder == null)
-        {
+        if (holder == null) {
             return;
         }
 
-        if (holder.isTraining())
-        {
+        if (holder.isTraining()) {
             holder.setEndTime(System.currentTimeMillis());
             activeChar.setTraingCampInfo(holder);
             activeChar.enableAllSkills();

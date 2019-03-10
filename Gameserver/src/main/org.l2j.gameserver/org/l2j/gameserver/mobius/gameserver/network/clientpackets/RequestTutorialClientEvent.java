@@ -5,29 +5,24 @@ import org.l2j.gameserver.mobius.gameserver.model.quest.QuestState;
 
 import java.nio.ByteBuffer;
 
-public class RequestTutorialClientEvent extends IClientIncomingPacket
-{
+public class RequestTutorialClientEvent extends IClientIncomingPacket {
     int _eventId = 0;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _eventId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
         // TODO: UNHARDCODE ME!
         final QuestState qs = player.getQuestState("255_Tutorial");
-        if (qs != null)
-        {
+        if (qs != null) {
             qs.getQuest().notifyEvent("CE" + _eventId + "", null, player);
         }
     }

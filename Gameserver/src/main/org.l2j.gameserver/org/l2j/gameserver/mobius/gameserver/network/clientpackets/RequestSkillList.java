@@ -7,20 +7,16 @@ import java.nio.ByteBuffer;
 /**
  * @version 1.4
  */
-public final class RequestSkillList extends IClientIncomingPacket
-{
+public final class RequestSkillList extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance cha = client.getActiveChar();
-        if (cha != null)
-        {
+        if (cha != null) {
             cha.sendSkillList();
         }
     }

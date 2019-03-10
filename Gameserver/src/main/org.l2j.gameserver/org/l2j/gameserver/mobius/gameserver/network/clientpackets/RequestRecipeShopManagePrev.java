@@ -8,26 +8,21 @@ import java.nio.ByteBuffer;
 
 /**
  * This class ...
+ *
  * @version $Revision: 1.1.2.1.2.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRecipeShopManagePrev extends IClientIncomingPacket
-{
+public final class RequestRecipeShopManagePrev extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if ((player == null))
-        {
+        if ((player == null)) {
             return;
-        }
-        else if (player.isAlikeDead() || (player.getTarget() == null) || !player.getTarget().isPlayer())
-        {
+        } else if (player.isAlikeDead() || (player.getTarget() == null) || !player.getTarget().isPlayer()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

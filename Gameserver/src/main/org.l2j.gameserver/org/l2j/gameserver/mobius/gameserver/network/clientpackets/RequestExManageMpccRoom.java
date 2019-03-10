@@ -12,8 +12,7 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestExManageMpccRoom extends IClientIncomingPacket
-{
+public class RequestExManageMpccRoom extends IClientIncomingPacket {
     private int _roomId;
     private int _maxMembers;
     private int _minLevel;
@@ -21,8 +20,7 @@ public class RequestExManageMpccRoom extends IClientIncomingPacket
     private String _title;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _roomId = packet.getInt();
         _maxMembers = packet.getInt();
         _minLevel = packet.getInt();
@@ -32,17 +30,14 @@ public class RequestExManageMpccRoom extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final MatchingRoom room = activeChar.getMatchingRoom();
-        if ((room == null) || (room.getId() != _roomId) || (room.getRoomType() != MatchingRoomType.COMMAND_CHANNEL) || (room.getLeader() != activeChar))
-        {
+        if ((room == null) || (room.getId() != _roomId) || (room.getRoomType() != MatchingRoomType.COMMAND_CHANNEL) || (room.getLeader() != activeChar)) {
             return;
         }
 

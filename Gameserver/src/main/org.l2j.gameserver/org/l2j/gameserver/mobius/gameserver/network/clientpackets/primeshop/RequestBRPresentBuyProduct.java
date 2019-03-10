@@ -24,8 +24,7 @@ import java.util.Calendar;
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRPresentBuyProduct extends IClientIncomingPacket
-{
+public final class RequestBRPresentBuyProduct extends IClientIncomingPacket {
     private static final int HERO_COINS = 23805;
 
     private int _brId;
@@ -34,141 +33,41 @@ public final class RequestBRPresentBuyProduct extends IClientIncomingPacket
     private String _mailTitle;
     private String _mailBody;
 
-    @Override
-    public void readImpl(ByteBuffer packet)
-    {
-        _brId = packet.getInt();
-        _count = packet.getInt();
-        _charName = readString(packet);
-        _mailTitle = readString(packet);
-        _mailBody = readString(packet);
-    }
-
-    @Override
-    public void runImpl()
-    {
-        final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
-            return;
-        }
-
-        final int receiverId = CharNameTable.getInstance().getIdByName(_charName);
-        if (receiverId <= 0)
-        {
-            activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER));
-            return;
-        }
-
-        if (activeChar.hasItemRequest() || activeChar.hasRequest(PrimeShopRequest.class))
-        {
-            activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
-            return;
-        }
-
-        activeChar.addRequest(new PrimeShopRequest(activeChar));
-
-        final PrimeShopGroup item = PrimeShopData.getInstance().getItem(_brId);
-        if (validatePlayer(item, _count, activeChar))
-        {
-            final int price = (item.getPrice() * _count);
-            final int paymentId = validatePaymentId(activeChar, item, price);
-
-            if (paymentId < 0)
-            {
-                activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
-                activeChar.removeRequest(PrimeShopRequest.class);
-                return;
-            }
-            else if (paymentId > 0)
-            {
-                if (!activeChar.destroyItemByItemId("PrimeShop-" + item.getBrId(), paymentId, price, activeChar, true))
-                {
-                    activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
-                    activeChar.removeRequest(PrimeShopRequest.class);
-                    return;
-                }
-            }
-            else if (paymentId == 0)
-            {
-                if (activeChar.getPrimePoints() < price)
-                {
-                    activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
-                    activeChar.removeRequest(PrimeShopRequest.class);
-                    return;
-                }
-                activeChar.setPrimePoints(activeChar.getPrimePoints() - price);
-            }
-
-            activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SUCCESS));
-            activeChar.sendPacket(new ExBRGamePoint(activeChar));
-
-            final Message mail = new Message(receiverId, _mailTitle, _mailBody, MailType.PRIME_SHOP_GIFT);
-
-            final Mail attachement = mail.createAttachments();
-            for (PrimeShopItem subItem : item.getItems())
-            {
-                attachement.addItem("Prime Shop Gift", subItem.getId(), subItem.getCount(), activeChar, this);
-            }
-            MailManager.getInstance().sendMessage(mail);
-        }
-
-        activeChar.removeRequest(PrimeShopRequest.class);
-    }
-
     /**
      * @param item
      * @param count
      * @param player
      * @return
      */
-    private static boolean validatePlayer(PrimeShopGroup item, int count, L2PcInstance player)
-    {
+    private static boolean validatePlayer(PrimeShopGroup item, int count, L2PcInstance player) {
         final long currentTime = System.currentTimeMillis() / 1000;
-        if (item == null)
-        {
+        if (item == null) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_PRODUCT));
             Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid brId from Prime", Config.DEFAULT_PUNISH);
             return false;
-        }
-        else if ((count < 1) || (count > 99))
-        {
+        } else if ((count < 1) || (count > 99)) {
             Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid itemcount [" + count + "] from Prime", Config.DEFAULT_PUNISH);
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
             return false;
-        }
-        else if ((item.getMinLevel() > 0) && (item.getMinLevel() > player.getLevel()))
-        {
+        } else if ((item.getMinLevel() > 0) && (item.getMinLevel() > player.getLevel())) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER));
             return false;
-        }
-        else if ((item.getMaxLevel() > 0) && (item.getMaxLevel() < player.getLevel()))
-        {
+        } else if ((item.getMaxLevel() > 0) && (item.getMaxLevel() < player.getLevel())) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER));
             return false;
-        }
-        else if ((item.getMinBirthday() > 0) && (item.getMinBirthday() > player.getBirthdays()))
-        {
+        } else if ((item.getMinBirthday() > 0) && (item.getMinBirthday() > player.getBirthdays())) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
             return false;
-        }
-        else if ((item.getMaxBirthday() > 0) && (item.getMaxBirthday() < player.getBirthdays()))
-        {
+        } else if ((item.getMaxBirthday() > 0) && (item.getMaxBirthday() < player.getBirthdays())) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
             return false;
-        }
-        else if ((Calendar.getInstance().get(Calendar.DAY_OF_WEEK) & item.getDaysOfWeek()) == 0)
-        {
+        } else if ((Calendar.getInstance().get(Calendar.DAY_OF_WEEK) & item.getDaysOfWeek()) == 0) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.NOT_DAY_OF_WEEK));
             return false;
-        }
-        else if ((item.getStartSale() > 1) && (item.getStartSale() > currentTime))
-        {
+        } else if ((item.getStartSale() > 1) && (item.getStartSale() > currentTime)) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.BEFORE_SALE_DATE));
             return false;
-        }
-        else if ((item.getEndSale() > 1) && (item.getEndSale() < currentTime))
-        {
+        } else if ((item.getEndSale() > 1) && (item.getEndSale() < currentTime)) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.AFTER_SALE_DATE));
             return false;
         }
@@ -176,16 +75,12 @@ public final class RequestBRPresentBuyProduct extends IClientIncomingPacket
         final int weight = item.getWeight() * count;
         final long slots = item.getCount() * count;
 
-        if (player.getInventory().validateWeight(weight))
-        {
-            if (!player.getInventory().validateCapacity(slots))
-            {
+        if (player.getInventory().validateWeight(weight)) {
+            if (!player.getInventory().validateCapacity(slots)) {
                 player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTROY_OVERFLOW));
                 return false;
             }
-        }
-        else
-        {
+        } else {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTROY_OVERFLOW));
             return false;
         }
@@ -193,10 +88,8 @@ public final class RequestBRPresentBuyProduct extends IClientIncomingPacket
         return true;
     }
 
-    private static int validatePaymentId(L2PcInstance player, PrimeShopGroup item, long amount)
-    {
-        switch (item.getPaymentType())
-        {
+    private static int validatePaymentId(L2PcInstance player, PrimeShopGroup item, long amount) {
+        switch (item.getPaymentType()) {
             case 0: // Prime points
             {
                 return 0;
@@ -212,5 +105,73 @@ public final class RequestBRPresentBuyProduct extends IClientIncomingPacket
         }
 
         return -1;
+    }
+
+    @Override
+    public void readImpl(ByteBuffer packet) {
+        _brId = packet.getInt();
+        _count = packet.getInt();
+        _charName = readString(packet);
+        _mailTitle = readString(packet);
+        _mailBody = readString(packet);
+    }
+
+    @Override
+    public void runImpl() {
+        final L2PcInstance activeChar = client.getActiveChar();
+        if (activeChar == null) {
+            return;
+        }
+
+        final int receiverId = CharNameTable.getInstance().getIdByName(_charName);
+        if (receiverId <= 0) {
+            activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER));
+            return;
+        }
+
+        if (activeChar.hasItemRequest() || activeChar.hasRequest(PrimeShopRequest.class)) {
+            activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
+            return;
+        }
+
+        activeChar.addRequest(new PrimeShopRequest(activeChar));
+
+        final PrimeShopGroup item = PrimeShopData.getInstance().getItem(_brId);
+        if (validatePlayer(item, _count, activeChar)) {
+            final int price = (item.getPrice() * _count);
+            final int paymentId = validatePaymentId(activeChar, item, price);
+
+            if (paymentId < 0) {
+                activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
+                activeChar.removeRequest(PrimeShopRequest.class);
+                return;
+            } else if (paymentId > 0) {
+                if (!activeChar.destroyItemByItemId("PrimeShop-" + item.getBrId(), paymentId, price, activeChar, true)) {
+                    activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
+                    activeChar.removeRequest(PrimeShopRequest.class);
+                    return;
+                }
+            } else if (paymentId == 0) {
+                if (activeChar.getPrimePoints() < price) {
+                    activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
+                    activeChar.removeRequest(PrimeShopRequest.class);
+                    return;
+                }
+                activeChar.setPrimePoints(activeChar.getPrimePoints() - price);
+            }
+
+            activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SUCCESS));
+            activeChar.sendPacket(new ExBRGamePoint(activeChar));
+
+            final Message mail = new Message(receiverId, _mailTitle, _mailBody, MailType.PRIME_SHOP_GIFT);
+
+            final Mail attachement = mail.createAttachments();
+            for (PrimeShopItem subItem : item.getItems()) {
+                attachement.addItem("Prime Shop Gift", subItem.getId(), subItem.getCount(), activeChar, this);
+            }
+            MailManager.getInstance().sendMessage(mail);
+        }
+
+        activeChar.removeRequest(PrimeShopRequest.class);
     }
 }

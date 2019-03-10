@@ -16,8 +16,7 @@ import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
 /**
  * This class manages all Guards in the world. It inherits all methods from L2Attackable and adds some more such as tracking PK and aggressive L2MonsterInstance.
  */
-public class L2GuardInstance extends L2Attackable
-{
+public class L2GuardInstance extends L2Attackable {
     /**
      * Constructor of L2GuardInstance (use L2Character and L2NpcInstance constructor).<br>
      * <B><U> Actions</U> :</B>
@@ -26,27 +25,24 @@ public class L2GuardInstance extends L2Attackable
      * <li>Set the name of the L2GuardInstance</li>
      * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li>
      * </ul>
+     *
      * @param template to apply to the NPC
      */
-    public L2GuardInstance(L2NpcTemplate template)
-    {
+    public L2GuardInstance(L2NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2GuardInstance);
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker)
-    {
-        if (attacker.isMonster() && !attacker.isFakePlayer())
-        {
+    public boolean isAutoAttackable(L2Character attacker) {
+        if (attacker.isMonster() && !attacker.isFakePlayer()) {
             return true;
         }
         return super.isAutoAttackable(attacker);
     }
 
     @Override
-    public void addDamage(L2Character attacker, int damage, Skill skill)
-    {
+    public void addDamage(L2Character attacker, int damage, Skill skill) {
         super.addDamage(attacker, damage, skill);
         getAI().startFollow(attacker);
         addDamageHate(attacker, 0, 10);
@@ -61,8 +57,7 @@ public class L2GuardInstance extends L2Attackable
      * Set the home location of its L2GuardInstance.
      */
     @Override
-    public void onSpawn()
-    {
+    public void onSpawn() {
         super.onSpawn();
         setRandomWalking(getTemplate().isRandomWalkEnabled());
         getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
@@ -81,19 +76,16 @@ public class L2GuardInstance extends L2Attackable
      * <li>if page number = 0 : <B>data/html/guard/12006.htm</B> (npcId-page number)</li>
      * <li>if page number > 0 : <B>data/html/guard/12006-1.htm</B> (npcId-page number)</li>
      * </ul>
+     *
      * @param npcId The Identifier of the L2NpcInstance whose text must be display
-     * @param val The number of the page to display
+     * @param val   The number of the page to display
      */
     @Override
-    public String getHtmlPath(int npcId, int val)
-    {
+    public String getHtmlPath(int npcId, int val) {
         String pom = "";
-        if (val == 0)
-        {
+        if (val == 0) {
             pom = Integer.toString(npcId);
-        }
-        else
-        {
+        } else {
             pom = npcId + "-" + val;
         }
         return "data/html/guard/" + pom + ".htm";
@@ -117,68 +109,52 @@ public class L2GuardInstance extends L2Attackable
      * <ul>
      * <li>Client packet : Action, AttackRequest</li>
      * </ul>
+     *
      * @param player The L2PcInstance that start an action on the L2GuardInstance
      */
     @Override
-    public void onAction(L2PcInstance player, boolean interact)
-    {
-        if (!canTarget(player))
-        {
+    public void onAction(L2PcInstance player, boolean interact) {
+        if (!canTarget(player)) {
             return;
         }
 
-        if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && ((player.isGood() && getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME)) || (player.isEvil() && getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME))))
-        {
+        if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && ((player.isGood() && getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME)) || (player.isEvil() && getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME)))) {
             interact = false;
             // TODO: Fix normal targeting
             player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
         }
 
-        if (isFakePlayer() && isInCombat())
-        {
+        if (isFakePlayer() && isInCombat()) {
             interact = false;
             // TODO: Fix normal targeting
             player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
         }
 
         // Check if the L2PcInstance already target the L2GuardInstance
-        if (getObjectId() != player.getTargetId())
-        {
+        if (getObjectId() != player.getTargetId()) {
             // Set the target of the L2PcInstance player
             player.setTarget(this);
-        }
-        else if (interact)
-        {
+        } else if (interact) {
             // Check if the L2PcInstance is in the _aggroList of the L2GuardInstance
-            if (containsTarget(player))
-            {
+            if (containsTarget(player)) {
                 // Set the L2PcInstance Intention to AI_INTENTION_ATTACK
                 player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
-            }
-            else
-            {
+            } else {
                 // Calculate the distance between the L2PcInstance and the L2NpcInstance
-                if (!canInteract(player))
-                {
+                if (!canInteract(player)) {
                     // Set the L2PcInstance Intention to AI_INTENTION_INTERACT
                     player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
-                }
-                else
-                {
+                } else {
                     player.setLastFolkNPC(this);
 
                     // Open a chat window on client with the text of the L2GuardInstance
-                    if (hasListener(EventType.ON_NPC_QUEST_START))
-                    {
+                    if (hasListener(EventType.ON_NPC_QUEST_START)) {
                         player.setLastQuestNpcObject(getObjectId());
                     }
 
-                    if (hasListener(EventType.ON_NPC_FIRST_TALK))
-                    {
+                    if (hasListener(EventType.ON_NPC_FIRST_TALK)) {
                         EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(this, player), this);
-                    }
-                    else
-                    {
+                    } else {
                         showChatWindow(player, 0);
                     }
                 }

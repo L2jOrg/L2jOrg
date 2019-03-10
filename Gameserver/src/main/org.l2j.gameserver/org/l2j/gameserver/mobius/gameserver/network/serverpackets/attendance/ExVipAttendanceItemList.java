@@ -1,67 +1,48 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets.attendance;
 
-import org.l2j.commons.network.PacketWriter;
 import org.l2j.gameserver.mobius.gameserver.data.xml.impl.AttendanceRewardData;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.mobius.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 import org.l2j.gameserver.mobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Mobius
  */
-public class ExVipAttendanceItemList implements IClientOutgoingPacket
-{
-	boolean _available;
-	int _index;
-	
-	public ExVipAttendanceItemList(L2PcInstance player)
-	{
-		final AttendanceInfoHolder attendanceInfo = player.getAttendanceInfo();
-		_available = attendanceInfo.isRewardAvailable();
-		_index = attendanceInfo.getRewardIndex();
-	}
-	
-	@Override
-	public boolean write(PacketWriter packet)
-	{
-		OutgoingPackets.EX_VIP_ATTENDANCE_ITEM_LIST.writeId(packet);
-		packet.writeC(_available ? _index + 1 : _index); // index to receive?
-		packet.writeC(_index); // last received index?
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		packet.writeC(0x01);
-		packet.writeC(_available ? 0x01 : 0x00); // player can receive reward today?
-		packet.writeC(250);
-		packet.writeC(AttendanceRewardData.getInstance().getRewardsCount()); // reward size
-		int rewardCounter = 0;
-		for (ItemHolder reward : AttendanceRewardData.getInstance().getRewards())
-		{
-			rewardCounter++;
-			packet.writeD(reward.getId());
-			packet.writeQ(reward.getCount());
-			packet.writeC(0x01); // is unknown?
-			packet.writeC((rewardCounter % 7) == 0 ? 0x01 : 0x00); // is last in row?
-		}
-		packet.writeC(0x00);
-		packet.writeD(0x00);
-		return true;
-	}
+public class ExVipAttendanceItemList extends IClientOutgoingPacket {
+    boolean _available;
+    int _index;
+
+    public ExVipAttendanceItemList(L2PcInstance player) {
+        final AttendanceInfoHolder attendanceInfo = player.getAttendanceInfo();
+        _available = attendanceInfo.isRewardAvailable();
+        _index = attendanceInfo.getRewardIndex();
+    }
+
+    @Override
+    public void writeImpl(L2GameClient client, ByteBuffer packet) {
+        OutgoingPackets.EX_VIP_ATTENDANCE_ITEM_LIST.writeId(packet);
+        packet.put((byte) (_available ? _index + 1 : _index)); // index to receive?
+        packet.put((byte) _index); // last received index?
+        packet.putInt(0x00);
+        packet.putInt(0x00);
+        packet.put((byte) 0x01);
+        packet.put((byte) (_available ? 0x01 : 0x00)); // player can receive reward today?
+        packet.put((byte) 250);
+        packet.put((byte) AttendanceRewardData.getInstance().getRewardsCount()); // reward size
+        int rewardCounter = 0;
+        for (ItemHolder reward : AttendanceRewardData.getInstance().getRewards()) {
+            rewardCounter++;
+            packet.putInt(reward.getId());
+            packet.putLong(reward.getCount());
+            packet.put((byte) 0x01); // is unknown?
+            packet.put((byte) ((rewardCounter % 7) == 0 ? 0x01 : 0x00)); // is last in row?
+        }
+        packet.put((byte) 0x00);
+        packet.putInt(0x00);
+    }
 }

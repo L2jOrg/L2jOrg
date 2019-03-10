@@ -14,54 +14,44 @@ import java.util.List;
 /**
  * @author Sdw
  */
-public class RequestDivideAdenaStart extends IClientIncomingPacket
-{
+public class RequestDivideAdenaStart extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
         final L2Party party = player.getParty();
 
-        if (party == null)
-        {
+        if (party == null) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_YOU_ARE_NOT_IN_AN_ALLIANCE_OR_PARTY);
             return;
         }
 
         final L2CommandChannel commandChannel = party.getCommandChannel();
 
-        if ((commandChannel != null) && !commandChannel.isLeader(player))
-        {
+        if ((commandChannel != null) && !commandChannel.isLeader(player)) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_YOU_ARE_NOT_AN_ALLIANCE_LEADER_OR_PARTY_LEADER);
             return;
-        }
-        else if (!party.isLeader(player))
-        {
+        } else if (!party.isLeader(player)) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_YOU_ARE_NOT_A_PARTY_LEADER);
             return;
         }
 
         final List<L2PcInstance> targets = commandChannel != null ? commandChannel.getMembers() : party.getMembers();
 
-        if (player.getAdena() < targets.size())
-        {
+        if (player.getAdena() < targets.size()) {
             player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_2);
             return;
         }
 
-        if (targets.stream().anyMatch(t -> t.hasRequest(AdenaDistributionRequest.class)))
-        {
+        if (targets.stream().anyMatch(t -> t.hasRequest(AdenaDistributionRequest.class))) {
             // Handle that case ?
             return;
         }

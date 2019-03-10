@@ -28,8 +28,7 @@ import org.l2j.gameserver.mobius.gameserver.network.serverpackets.EtcStatusUpdat
  * <li>L2Summon</li>
  * </ul>
  */
-public abstract class L2Playable extends L2Character
-{
+public abstract class L2Playable extends L2Character {
     private L2Character _lockedTarget = null;
     private L2PcInstance transferDmgTo = null;
 
@@ -39,61 +38,52 @@ public abstract class L2Playable extends L2Character
      * <ul>
      * <li>Call the L2Character constructor to create an empty _skills slot and link copy basic Calculator set to this L2Playable</li>
      * </ul>
+     *
      * @param objectId the object id
      * @param template The L2CharTemplate to apply to the L2Playable
      */
-    public L2Playable(int objectId, L2CharTemplate template)
-    {
+    public L2Playable(int objectId, L2CharTemplate template) {
         super(objectId, template);
         setInstanceType(InstanceType.L2Playable);
         setIsInvul(false);
     }
 
-    public L2Playable(L2CharTemplate template)
-    {
+    public L2Playable(L2CharTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2Playable);
         setIsInvul(false);
     }
 
     @Override
-    public PlayableStat getStat()
-    {
+    public PlayableStat getStat() {
         return (PlayableStat) super.getStat();
     }
 
     @Override
-    public void initCharStat()
-    {
+    public void initCharStat() {
         setStat(new PlayableStat(this));
     }
 
     @Override
-    public PlayableStatus getStatus()
-    {
+    public PlayableStatus getStatus() {
         return (PlayableStatus) super.getStatus();
     }
 
     @Override
-    public void initCharStatus()
-    {
+    public void initCharStatus() {
         setStatus(new PlayableStatus(this));
     }
 
     @Override
-    public boolean doDie(L2Character killer)
-    {
+    public boolean doDie(L2Character killer) {
         final TerminateReturn returnBack = EventDispatcher.getInstance().notifyEvent(new OnCreatureDeath(killer, this), this, TerminateReturn.class);
-        if ((returnBack != null) && returnBack.terminate())
-        {
+        if ((returnBack != null) && returnBack.terminate()) {
             return false;
         }
 
         // killing is only possible one time
-        synchronized (this)
-        {
-            if (isDead())
-            {
+        synchronized (this) {
+            if (isDead()) {
                 return false;
             }
             // now reset currentHp to zero
@@ -115,24 +105,19 @@ public abstract class L2Playable extends L2Character
 
         boolean deleteBuffs = true;
 
-        if (isNoblesseBlessedAffected())
-        {
+        if (isNoblesseBlessedAffected()) {
             stopEffects(EffectFlag.NOBLESS_BLESSING);
             deleteBuffs = false;
         }
-        if (isResurrectSpecialAffected())
-        {
+        if (isResurrectSpecialAffected()) {
             stopEffects(EffectFlag.RESURRECTION_SPECIAL);
             deleteBuffs = false;
         }
-        if (isPlayer())
-        {
+        if (isPlayer()) {
             final L2PcInstance activeChar = getActingPlayer();
 
-            if (activeChar.hasCharmOfCourage())
-            {
-                if (activeChar.isInSiege())
-                {
+            if (activeChar.hasCharmOfCourage()) {
+                if (activeChar.isInSiege()) {
                     getActingPlayer().reviveRequest(getActingPlayer(), null, false, 0);
                 }
                 activeChar.setCharmOfCourage(false);
@@ -140,8 +125,7 @@ public abstract class L2Playable extends L2Character
             }
         }
 
-        if (deleteBuffs)
-        {
+        if (deleteBuffs) {
             stopAllEffectsExceptThoseThatLastThroughDeath();
         }
 
@@ -153,28 +137,22 @@ public abstract class L2Playable extends L2Character
         // Notify Quest of L2Playable's death
         final L2PcInstance actingPlayer = getActingPlayer();
 
-        if (!actingPlayer.isNotifyQuestOfDeathEmpty())
-        {
-            for (QuestState qs : actingPlayer.getNotifyQuestOfDeath())
-            {
+        if (!actingPlayer.isNotifyQuestOfDeathEmpty()) {
+            for (QuestState qs : actingPlayer.getNotifyQuestOfDeath()) {
                 qs.getQuest().notifyDeath((killer == null ? this : killer), this, qs);
             }
         }
         // Notify instance
-        if (isPlayer())
-        {
+        if (isPlayer()) {
             final Instance instance = getInstanceWorld();
-            if (instance != null)
-            {
+            if (instance != null) {
                 instance.onDeath(getActingPlayer());
             }
         }
 
-        if (killer != null)
-        {
+        if (killer != null) {
             final L2PcInstance killerPlayer = killer.getActingPlayer();
-            if ((killerPlayer != null) && isPlayable())
-            {
+            if ((killerPlayer != null) && isPlayable()) {
                 killerPlayer.onPlayerKill(this);
             }
         }
@@ -184,8 +162,7 @@ public abstract class L2Playable extends L2Character
         return true;
     }
 
-    public boolean checkIfPvP(L2PcInstance target)
-    {
+    public boolean checkIfPvP(L2PcInstance target) {
         final L2PcInstance player = getActingPlayer();
 
         if ((player == null) //
@@ -193,19 +170,15 @@ public abstract class L2Playable extends L2Character
                 || (player == target) //
                 || (target.getReputation() < 0) //
                 || (target.getPvpFlag() > 0) //
-                || target.isOnDarkSide())
-        {
+                || target.isOnDarkSide()) {
             return true;
-        }
-        else if (player.isInParty() && player.getParty().containsPlayer(target))
-        {
+        } else if (player.isInParty() && player.getParty().containsPlayer(target)) {
             return false;
         }
 
         final L2Clan playerClan = player.getClan();
 
-        if ((playerClan != null) && !player.isAcademyMember() && !target.isAcademyMember())
-        {
+        if ((playerClan != null) && !player.isAcademyMember() && !target.isAcademyMember()) {
             final ClanWar war = playerClan.getWarWith(target.getClanId());
             return (war != null) && (war.getState() == ClanWar.ClanWarState.MUTUAL);
         }
@@ -216,70 +189,60 @@ public abstract class L2Playable extends L2Character
      * Return True.
      */
     @Override
-    public boolean canBeAttacked()
-    {
+    public boolean canBeAttacked() {
         return true;
     }
 
     // Support for Noblesse Blessing skill, where buffs are retained after resurrect
-    public final boolean isNoblesseBlessedAffected()
-    {
+    public final boolean isNoblesseBlessedAffected() {
         return isAffected(EffectFlag.NOBLESS_BLESSING);
     }
 
     /**
      * @return {@code true} if char can resurrect by himself, {@code false} otherwise
      */
-    public final boolean isResurrectSpecialAffected()
-    {
+    public final boolean isResurrectSpecialAffected() {
         return isAffected(EffectFlag.RESURRECTION_SPECIAL);
     }
 
     /**
      * @return {@code true} if the Silent Moving mode is active, {@code false} otherwise
      */
-    public boolean isSilentMovingAffected()
-    {
+    public boolean isSilentMovingAffected() {
         return isAffected(EffectFlag.SILENT_MOVE);
     }
 
     /**
      * For Newbie Protection Blessing skill, keeps you safe from an attack by a chaotic character >= 10 levels apart from you.
+     *
      * @return
      */
-    public final boolean isProtectionBlessingAffected()
-    {
+    public final boolean isProtectionBlessingAffected() {
         return isAffected(EffectFlag.PROTECTION_BLESSING);
     }
 
     @Override
-    public void updateEffectIcons(boolean partyOnly)
-    {
+    public void updateEffectIcons(boolean partyOnly) {
         getEffectList().updateEffectIcons(partyOnly);
     }
 
-    public boolean isLockedTarget()
-    {
+    public boolean isLockedTarget() {
         return _lockedTarget != null;
     }
 
-    public L2Character getLockedTarget()
-    {
+    public L2Character getLockedTarget() {
         return _lockedTarget;
     }
 
-    public void setLockedTarget(L2Character cha)
-    {
+    public void setLockedTarget(L2Character cha) {
         _lockedTarget = cha;
     }
 
-    public void setTransferDamageTo(L2PcInstance val)
-    {
+    public void setTransferDamageTo(L2PcInstance val) {
         transferDmgTo = val;
     }
 
-    public L2PcInstance getTransferingDamageTo()
-    {
+    public L2PcInstance getTransferingDamageTo() {
         return transferDmgTo;
     }
 
@@ -294,8 +257,7 @@ public abstract class L2Playable extends L2Character
     public abstract void restoreEffects();
 
     @Override
-    public boolean isPlayable()
-    {
+    public boolean isPlayable() {
         return true;
     }
 }

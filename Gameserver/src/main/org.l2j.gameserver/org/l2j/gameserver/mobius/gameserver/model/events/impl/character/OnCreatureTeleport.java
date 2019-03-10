@@ -8,8 +8,7 @@ import org.l2j.gameserver.mobius.gameserver.model.instancezone.Instance;
 /**
  * @author Nik
  */
-public class OnCreatureTeleport implements IBaseEvent
-{
+public class OnCreatureTeleport implements IBaseEvent {
     private final L2Character _creature;
     private final int _destX;
     private final int _destY;
@@ -17,8 +16,7 @@ public class OnCreatureTeleport implements IBaseEvent
     private final int _destHeading;
     private final Instance _destInstance;
 
-    public OnCreatureTeleport(L2Character creature, int destX, int destY, int destZ, int destHeading, Instance destInstance)
-    {
+    public OnCreatureTeleport(L2Character creature, int destX, int destY, int destZ, int destHeading, Instance destInstance) {
         _creature = creature;
         _destX = destX;
         _destY = destY;
@@ -27,39 +25,32 @@ public class OnCreatureTeleport implements IBaseEvent
         _destInstance = destInstance;
     }
 
-    public L2Character getCreature()
-    {
+    public L2Character getCreature() {
         return _creature;
     }
 
-    public int getDestX()
-    {
+    public int getDestX() {
         return _destX;
     }
 
-    public int getDestY()
-    {
+    public int getDestY() {
         return _destY;
     }
 
-    public int getDestZ()
-    {
+    public int getDestZ() {
         return _destZ;
     }
 
-    public int getDestHeading()
-    {
+    public int getDestHeading() {
         return _destHeading;
     }
 
-    public Instance getDestInstance()
-    {
+    public Instance getDestInstance() {
         return _destInstance;
     }
 
     @Override
-    public EventType getType()
-    {
+    public EventType getType() {
         return EventType.ON_CREATURE_TELEPORT;
     }
 }

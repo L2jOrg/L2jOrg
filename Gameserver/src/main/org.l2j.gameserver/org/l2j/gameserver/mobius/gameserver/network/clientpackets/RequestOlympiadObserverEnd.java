@@ -6,27 +6,23 @@ import java.nio.ByteBuffer;
 
 /**
  * format ch c: (id) 0xD0 h: (subid) 0x12
+ *
  * @author -Wooden-
  */
-public final class RequestOlympiadObserverEnd extends IClientIncomingPacket
-{
+public final class RequestOlympiadObserverEnd extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
-        if (activeChar.inObserverMode())
-        {
+        if (activeChar.inObserverMode()) {
             activeChar.leaveOlympiadObserverMode();
         }
     }

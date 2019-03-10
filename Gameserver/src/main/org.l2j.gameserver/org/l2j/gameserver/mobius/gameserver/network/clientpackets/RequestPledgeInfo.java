@@ -7,29 +7,24 @@ import org.l2j.gameserver.mobius.gameserver.network.serverpackets.PledgeInfo;
 
 import java.nio.ByteBuffer;
 
-public final class RequestPledgeInfo extends IClientIncomingPacket
-{
+public final class RequestPledgeInfo extends IClientIncomingPacket {
     private int _clanId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _clanId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
 
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final L2Clan clan = ClanTable.getInstance().getClan(_clanId);
-        if (clan == null)
-        {
+        if (clan == null) {
             return; // we have no clan data ?!? should not happen
         }
 

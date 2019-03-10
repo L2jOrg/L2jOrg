@@ -12,56 +12,48 @@ import java.util.Set;
 
 /**
  * Format (ch) dd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill lvl
+ *
  * @author -Wooden-
  */
-public final class RequestExEnchantSkillInfo extends IClientIncomingPacket
-{
+public final class RequestExEnchantSkillInfo extends IClientIncomingPacket {
     private int _skillId;
     private int _skillLvl;
     private int _skillSubLvl;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _skillId = packet.getInt();
         _skillLvl = packet.getShort();
         _skillSubLvl = packet.getShort();
     }
 
     @Override
-    public void runImpl()
-    {
-        if ((_skillId <= 0) || (_skillLvl <= 0) || (_skillSubLvl < 0))
-        {
+    public void runImpl() {
+        if ((_skillId <= 0) || (_skillLvl <= 0) || (_skillSubLvl < 0)) {
             return;
         }
 
         final L2PcInstance activeChar = client.getActiveChar();
 
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
-        if (!activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-        {
+        if (!activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) {
             return;
         }
 
         final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLvl, _skillSubLvl);
-        if ((skill == null) || (skill.getId() != _skillId))
-        {
+        if ((skill == null) || (skill.getId() != _skillId)) {
             return;
         }
         final Set<Integer> route = EnchantSkillGroupsData.getInstance().getRouteForSkill(_skillId, _skillLvl);
-        if (route.isEmpty())
-        {
+        if (route.isEmpty()) {
             return;
         }
 
         final Skill playerSkill = activeChar.getKnownSkill(_skillId);
-        if ((playerSkill.getLevel() != _skillLvl) || (playerSkill.getSubLevel() != _skillSubLvl))
-        {
+        if ((playerSkill.getLevel() != _skillLvl) || (playerSkill.getSubLevel() != _skillSubLvl)) {
             return;
         }
 

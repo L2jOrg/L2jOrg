@@ -3,11 +3,10 @@ package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 import org.l2j.gameserver.mobius.gameserver.model.interfaces.IUpdateTypeComponent;
 
 /**
- * @author UnAfraid
  * @param <T>
+ * @author UnAfraid
  */
-public abstract class AbstractMaskPacket<T extends IUpdateTypeComponent> implements IClientOutgoingPacket
-{
+public abstract class AbstractMaskPacket<T extends IUpdateTypeComponent> extends IClientOutgoingPacket {
     protected static final byte[] DEFAULT_FLAG_ARRAY =
             {
                     (byte) 0x80,
@@ -22,36 +21,29 @@ public abstract class AbstractMaskPacket<T extends IUpdateTypeComponent> impleme
 
     protected abstract byte[] getMasks();
 
-    protected void onNewMaskAdded(T component)
-    {
+    protected void onNewMaskAdded(T component) {
 
     }
 
     @SafeVarargs
-    public final void addComponentType(T... updateComponents)
-    {
-        for (T component : updateComponents)
-        {
-            if (!containsMask(component))
-            {
+    public final void addComponentType(T... updateComponents) {
+        for (T component : updateComponents) {
+            if (!containsMask(component)) {
                 addMask(component.getMask());
                 onNewMaskAdded(component);
             }
         }
     }
 
-    protected void addMask(int mask)
-    {
+    protected void addMask(int mask) {
         getMasks()[mask >> 3] |= DEFAULT_FLAG_ARRAY[mask & 7];
     }
 
-    public boolean containsMask(T component)
-    {
+    public boolean containsMask(T component) {
         return containsMask(component.getMask());
     }
 
-    public boolean containsMask(int mask)
-    {
+    public boolean containsMask(int mask) {
         return (getMasks()[mask >> 3] & DEFAULT_FLAG_ARRAY[mask & 7]) != 0;
     }
 
@@ -60,8 +52,7 @@ public abstract class AbstractMaskPacket<T extends IUpdateTypeComponent> impleme
      * @param type
      * @return {@code true} if the mask contains the current update component type
      */
-    public boolean containsMask(int masks, T type)
-    {
+    public boolean containsMask(int masks, T type) {
         return (masks & type.getMask()) == type.getMask();
     }
 }

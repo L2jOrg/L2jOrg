@@ -5,17 +5,14 @@ import java.nio.ByteBuffer;
 /**
  * @author Mobius
  */
-public class RequestStartShowKrateisCubeRank extends IClientIncomingPacket
-{
+public class RequestStartShowKrateisCubeRank extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         // TODO: Implement.
         System.out.println("RequestStartShowKrateisCubeRank");
     }

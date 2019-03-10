@@ -7,41 +7,33 @@ import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 
 import java.nio.ByteBuffer;
 
-public final class AllyLeave extends IClientIncomingPacket
-{
+public final class AllyLeave extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
-        if (player.getClan() == null)
-        {
+        if (player.getClan() == null) {
             player.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);
             return;
         }
-        if (!player.isClanLeader())
-        {
+        if (!player.isClanLeader()) {
             player.sendPacket(SystemMessageId.ONLY_THE_CLAN_LEADER_MAY_APPLY_FOR_WITHDRAWAL_FROM_THE_ALLIANCE);
             return;
         }
         final L2Clan clan = player.getClan();
-        if (clan.getAllyId() == 0)
-        {
+        if (clan.getAllyId() == 0) {
             player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_ALLIED_WITH_ANY_CLANS);
             return;
         }
-        if (clan.getId() == clan.getAllyId())
-        {
+        if (clan.getId() == clan.getAllyId()) {
             player.sendPacket(SystemMessageId.ALLIANCE_LEADERS_CANNOT_WITHDRAW);
             return;
         }

@@ -30,24 +30,23 @@ import java.util.concurrent.ScheduledFuture;
 
 /**
  * Trap instance.
+ *
  * @author Zoey76
  */
-public final class L2TrapInstance extends L2Npc
-{
+public final class L2TrapInstance extends L2Npc {
     private static final int TICK = 1000; // 1s
+    private final int _lifeTime;
+    private final List<Integer> _playersWhoDetectedMe = new ArrayList<>();
+    private final SkillHolder _skill;
     private boolean _hasLifeTime;
     private boolean _isInArena = false;
     private boolean _isTriggered;
-    private final int _lifeTime;
     private L2PcInstance _owner;
-    private final List<Integer> _playersWhoDetectedMe = new ArrayList<>();
-    private final SkillHolder _skill;
     private int _remainingTime;
     // Tasks
     private ScheduledFuture<?> _trapTask = null;
 
-    public L2TrapInstance(L2NpcTemplate template, int instanceId, int lifeTime)
-    {
+    public L2TrapInstance(L2NpcTemplate template, int instanceId, int lifeTime) {
         super(template);
         setInstanceType(InstanceType.L2TrapInstance);
         setInstanceById(instanceId);
@@ -59,37 +58,31 @@ public final class L2TrapInstance extends L2Npc
         _hasLifeTime = lifeTime >= 0;
         _lifeTime = lifeTime != 0 ? lifeTime : 30000;
         _remainingTime = _lifeTime;
-        if (_skill != null)
-        {
+        if (_skill != null) {
             _trapTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new TrapTask(this), TICK, TICK);
         }
     }
 
-    public L2TrapInstance(L2NpcTemplate template, L2PcInstance owner, int lifeTime)
-    {
+    public L2TrapInstance(L2NpcTemplate template, L2PcInstance owner, int lifeTime) {
         this(template, owner.getInstanceId(), lifeTime);
         _owner = owner;
     }
 
     @Override
-    public void broadcastPacket(IClientOutgoingPacket mov)
-    {
+    public void broadcastPacket(IClientOutgoingPacket mov) {
         L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
         {
-            if (_isTriggered || canBeSeen(player))
-            {
+            if (_isTriggered || canBeSeen(player)) {
                 player.sendPacket(mov);
             }
         });
     }
 
     @Override
-    public void broadcastPacket(IClientOutgoingPacket mov, int radiusInKnownlist)
-    {
+    public void broadcastPacket(IClientOutgoingPacket mov, int radiusInKnownlist) {
         L2World.getInstance().forEachVisibleObjectInRange(this, L2PcInstance.class, radiusInKnownlist, player ->
         {
-            if (_isTriggered || canBeSeen(player))
-            {
+            if (_isTriggered || canBeSeen(player)) {
                 player.sendPacket(mov);
             }
         });
@@ -97,164 +90,138 @@ public final class L2TrapInstance extends L2Npc
 
     /**
      * Verify if the character can see the trap.
+     *
      * @param cha the character to verify
      * @return {@code true} if the character can see the trap, {@code false} otherwise
      */
-    public boolean canBeSeen(L2Character cha)
-    {
-        if ((cha != null) && _playersWhoDetectedMe.contains(cha.getObjectId()))
-        {
+    public boolean canBeSeen(L2Character cha) {
+        if ((cha != null) && _playersWhoDetectedMe.contains(cha.getObjectId())) {
             return true;
         }
 
-        if ((_owner == null) || (cha == null))
-        {
+        if ((_owner == null) || (cha == null)) {
             return false;
         }
-        if (cha == _owner)
-        {
+        if (cha == _owner) {
             return true;
         }
 
-        if (cha.isPlayer())
-        {
+        if (cha.isPlayer()) {
             // observers can't see trap
-            if (((L2PcInstance) cha).inObserverMode())
-            {
+            if (((L2PcInstance) cha).inObserverMode()) {
                 return false;
             }
 
             // olympiad competitors can't see trap
-            if (_owner.isInOlympiadMode() && ((L2PcInstance) cha).isInOlympiadMode() && (((L2PcInstance) cha).getOlympiadSide() != _owner.getOlympiadSide()))
-            {
+            if (_owner.isInOlympiadMode() && ((L2PcInstance) cha).isInOlympiadMode() && (((L2PcInstance) cha).getOlympiadSide() != _owner.getOlympiadSide())) {
                 return false;
             }
         }
 
-        if (_isInArena)
-        {
+        if (_isInArena) {
             return true;
         }
 
-        if (_owner.isInParty() && cha.isInParty() && (_owner.getParty().getLeaderObjectId() == cha.getParty().getLeaderObjectId()))
-        {
+        if (_owner.isInParty() && cha.isInParty() && (_owner.getParty().getLeaderObjectId() == cha.getParty().getLeaderObjectId())) {
             return true;
         }
         return false;
     }
 
     @Override
-    public boolean deleteMe()
-    {
+    public boolean deleteMe() {
         _owner = null;
         return super.deleteMe();
     }
 
     @Override
-    public L2PcInstance getActingPlayer()
-    {
+    public L2PcInstance getActingPlayer() {
         return _owner;
     }
 
     @Override
-    public L2Weapon getActiveWeaponItem()
-    {
+    public L2Weapon getActiveWeaponItem() {
         return null;
     }
 
     @Override
-    public int getReputation()
-    {
+    public int getReputation() {
         return _owner != null ? _owner.getReputation() : 0;
     }
 
     /**
      * Get the owner of this trap.
+     *
      * @return the owner
      */
-    public L2PcInstance getOwner()
-    {
+    public L2PcInstance getOwner() {
         return _owner;
     }
 
     @Override
-    public byte getPvpFlag()
-    {
+    public byte getPvpFlag() {
         return _owner != null ? _owner.getPvpFlag() : 0;
     }
 
     @Override
-    public L2ItemInstance getSecondaryWeaponInstance()
-    {
+    public L2ItemInstance getSecondaryWeaponInstance() {
         return null;
     }
 
     @Override
-    public L2Weapon getSecondaryWeaponItem()
-    {
+    public L2Weapon getSecondaryWeaponItem() {
         return null;
     }
 
-    public Skill getSkill()
-    {
+    public Skill getSkill() {
         return _skill.getSkill();
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker)
-    {
+    public boolean isAutoAttackable(L2Character attacker) {
         return !canBeSeen(attacker);
     }
 
     @Override
-    public boolean isTrap()
-    {
+    public boolean isTrap() {
         return true;
     }
 
     /**
      * Checks is triggered
+     *
      * @return True if trap is triggered.
      */
-    public boolean isTriggered()
-    {
+    public boolean isTriggered() {
         return _isTriggered;
     }
 
     @Override
-    public void onSpawn()
-    {
+    public void onSpawn() {
         super.onSpawn();
         _isInArena = isInsideZone(ZoneId.PVP) && !isInsideZone(ZoneId.SIEGE);
         _playersWhoDetectedMe.clear();
     }
 
     @Override
-    public void doAttack(double damage, L2Character target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect)
-    {
+    public void doAttack(double damage, L2Character target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
         super.doAttack(damage, target, skill, isDOT, directlyToHp, critical, reflect);
         sendDamageMessage(target, skill, (int) damage, critical, false);
     }
 
     @Override
-    public void sendDamageMessage(L2Character target, Skill skill, int damage, boolean crit, boolean miss)
-    {
-        if (miss || (_owner == null))
-        {
+    public void sendDamageMessage(L2Character target, Skill skill, int damage, boolean crit, boolean miss) {
+        if (miss || (_owner == null)) {
             return;
         }
 
-        if (_owner.isInOlympiadMode() && target.isPlayer() && ((L2PcInstance) target).isInOlympiadMode() && (((L2PcInstance) target).getOlympiadGameId() == _owner.getOlympiadGameId()))
-        {
+        if (_owner.isInOlympiadMode() && target.isPlayer() && ((L2PcInstance) target).isInOlympiadMode() && (((L2PcInstance) target).getOlympiadGameId() == _owner.getOlympiadGameId())) {
             OlympiadGameManager.getInstance().notifyCompetitorDamage(getOwner(), damage);
         }
 
-        if (target.isHpBlocked() && !target.isNpc())
-        {
+        if (target.isHpBlocked() && !target.isNpc()) {
             _owner.sendPacket(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
-        }
-        else
-        {
+        } else {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
             sm.addString(getName());
             sm.addString(target.getName());
@@ -265,27 +232,21 @@ public final class L2TrapInstance extends L2Npc
     }
 
     @Override
-    public void sendInfo(L2PcInstance activeChar)
-    {
-        if (_isTriggered || canBeSeen(activeChar))
-        {
+    public void sendInfo(L2PcInstance activeChar) {
+        if (_isTriggered || canBeSeen(activeChar)) {
             activeChar.sendPacket(new NpcInfo(this));
         }
     }
 
-    public void setDetected(L2Character detector)
-    {
-        if (_isInArena)
-        {
-            if (detector.isPlayable())
-            {
+    public void setDetected(L2Character detector) {
+        if (_isInArena) {
+            if (detector.isPlayable()) {
                 sendInfo(detector.getActingPlayer());
             }
             return;
         }
 
-        if ((_owner != null) && (_owner.getPvpFlag() == 0) && (_owner.getReputation() >= 0))
-        {
+        if ((_owner != null) && (_owner.getPvpFlag() == 0) && (_owner.getReputation() >= 0)) {
             return;
         }
 
@@ -294,25 +255,22 @@ public final class L2TrapInstance extends L2Npc
         // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(this, detector, TrapAction.TRAP_DETECTED), this);
 
-        if (detector.isPlayable())
-        {
+        if (detector.isPlayable()) {
             sendInfo(detector.getActingPlayer());
         }
     }
 
-    public void stopDecay()
-    {
+    public void stopDecay() {
         DecayTaskManager.getInstance().cancel(this);
     }
 
     /**
      * Trigger the trap.
+     *
      * @param target the target
      */
-    public void triggerTrap(L2Character target)
-    {
-        if (_trapTask != null)
-        {
+    public void triggerTrap(L2Character target) {
+        if (_trapTask != null) {
             _trapTask.cancel(true);
             _trapTask = null;
         }
@@ -326,45 +284,37 @@ public final class L2TrapInstance extends L2Npc
         ThreadPoolManager.getInstance().schedule(new TrapTriggerTask(this), 500);
     }
 
-    public void unSummon()
-    {
-        if (_trapTask != null)
-        {
+    public void unSummon() {
+        if (_trapTask != null) {
             _trapTask.cancel(true);
             _trapTask = null;
         }
 
         _owner = null;
 
-        if (isSpawned() && !isDead())
-        {
+        if (isSpawned() && !isDead()) {
             ZoneManager.getInstance().getRegion(this).removeFromZones(this);
             deleteMe();
         }
     }
 
-    public boolean hasLifeTime()
-    {
+    public boolean hasLifeTime() {
         return _hasLifeTime;
     }
 
-    public void setHasLifeTime(boolean val)
-    {
+    public void setHasLifeTime(boolean val) {
         _hasLifeTime = val;
     }
 
-    public int getRemainingTime()
-    {
+    public int getRemainingTime() {
         return _remainingTime;
     }
 
-    public void setRemainingTime(int time)
-    {
+    public void setRemainingTime(int time) {
         _remainingTime = time;
     }
 
-    public int getLifeTime()
-    {
+    public int getLifeTime() {
         return _lifeTime;
     }
 }

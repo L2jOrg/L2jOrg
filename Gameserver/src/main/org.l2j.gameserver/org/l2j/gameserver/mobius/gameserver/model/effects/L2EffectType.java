@@ -2,10 +2,10 @@ package org.l2j.gameserver.mobius.gameserver.model.effects;
 
 /**
  * Effect types.
+ *
  * @author nBd
  */
-public enum L2EffectType
-{
+public enum L2EffectType {
     AGGRESSION,
     CHARM_OF_LUCK,
     CPHEAL,

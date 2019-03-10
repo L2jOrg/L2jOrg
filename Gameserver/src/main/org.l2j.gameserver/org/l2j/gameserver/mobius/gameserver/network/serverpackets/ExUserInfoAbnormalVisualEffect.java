@@ -2,41 +2,37 @@ package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.mobius.gameserver.model.skills.AbnormalVisualEffect;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
+import java.nio.ByteBuffer;
 import java.util.Set;
 
 /**
  * @author Sdw
  */
-public class ExUserInfoAbnormalVisualEffect implements IClientOutgoingPacket
-{
+public class ExUserInfoAbnormalVisualEffect extends IClientOutgoingPacket {
     private final L2PcInstance _activeChar;
 
-    public ExUserInfoAbnormalVisualEffect(L2PcInstance cha)
-    {
+    public ExUserInfoAbnormalVisualEffect(L2PcInstance cha) {
         _activeChar = cha;
     }
 
     @Override
-    public boolean write(PacketWriter packet)
-    {
+    public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.EX_USER_INFO_ABNORMAL_VISUAL_EFFECT.writeId(packet);
 
-        packet.writeD(_activeChar.getObjectId());
-        packet.writeD(_activeChar.getTransformationId());
+        packet.putInt(_activeChar.getObjectId());
+        packet.putInt(_activeChar.getTransformationId());
 
         final Set<AbnormalVisualEffect> abnormalVisualEffects = _activeChar.getEffectList().getCurrentAbnormalVisualEffects();
         final boolean isInvisible = _activeChar.isInvisible();
-        packet.writeD(abnormalVisualEffects.size() + (isInvisible ? 1 : 0));
-        for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects)
-        {
-            packet.writeH(abnormalVisualEffect.getClientId());
+        packet.putInt(abnormalVisualEffects.size() + (isInvisible ? 1 : 0));
+        for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects) {
+            packet.putShort((short) abnormalVisualEffect.getClientId());
         }
-        if (isInvisible)
-        {
-            packet.writeH(AbnormalVisualEffect.STEALTH.getClientId());
+        if (isInvisible) {
+            packet.putShort((short) AbnormalVisualEffect.STEALTH.getClientId());
         }
-        return true;
     }
 }

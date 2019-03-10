@@ -12,16 +12,14 @@ import java.nio.ByteBuffer;
 /**
  * @author UnAfraid
  */
-public class RequestShuttleGetOn extends IClientIncomingPacket
-{
-    private static final Logger LOGGER  = LoggerFactory.getLogger(RequestShuttleGetOn.class);
+public class RequestShuttleGetOn extends IClientIncomingPacket {
+    private static final Logger LOGGER = LoggerFactory.getLogger(RequestShuttleGetOn.class);
     private int _x;
     private int _y;
     private int _z;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         packet.getInt(); // charId
         _x = packet.getInt();
         _y = packet.getInt();
@@ -29,19 +27,15 @@ public class RequestShuttleGetOn extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         // TODO: better way?
-        for (L2ShuttleInstance shuttle : L2World.getInstance().getVisibleObjects(activeChar, L2ShuttleInstance.class))
-        {
-            if (shuttle.calculateDistance3D(activeChar) < 1000)
-            {
+        for (L2ShuttleInstance shuttle : L2World.getInstance().getVisibleObjects(activeChar, L2ShuttleInstance.class)) {
+            if (shuttle.calculateDistance3D(activeChar) < 1000) {
                 shuttle.addPassenger(activeChar);
                 activeChar.getInVehiclePosition().setXYZ(_x, _y, _z);
                 break;

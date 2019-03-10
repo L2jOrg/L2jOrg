@@ -8,25 +8,22 @@ import java.nio.ByteBuffer;
 
 /**
  * Format: (ch) d
+ *
  * @author -Wooden-
  */
-public class RequestGetBossRecord extends IClientIncomingPacket
-{
+public class RequestGetBossRecord extends IClientIncomingPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestGetBossRecord.class);
     private int _bossId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _bossId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 

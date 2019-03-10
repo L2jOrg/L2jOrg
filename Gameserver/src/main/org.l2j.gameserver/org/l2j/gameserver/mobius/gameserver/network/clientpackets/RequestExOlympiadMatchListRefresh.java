@@ -7,22 +7,19 @@ import java.nio.ByteBuffer;
 
 /**
  * Format: (ch)d d: unknown (always 0?)
+ *
  * @author mrTJO
  */
-public class RequestExOlympiadMatchListRefresh extends IClientIncomingPacket
-{
+public class RequestExOlympiadMatchListRefresh extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 

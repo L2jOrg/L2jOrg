@@ -20,10 +20,10 @@ import java.util.logging.Logger;
 
 /**
  * This class manages the action use request packet.
+ *
  * @author Zoey76
  */
-public final class RequestActionUse extends IClientIncomingPacket
-{
+public final class RequestActionUse extends IClientIncomingPacket {
     private static final Logger LOGGER = Logger.getLogger(RequestActionUse.class.getName());
 
     private int _actionId;
@@ -31,36 +31,29 @@ public final class RequestActionUse extends IClientIncomingPacket
     private boolean _shiftPressed;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _actionId = packet.getInt();
         _ctrlPressed = (packet.getInt() == 1);
         _shiftPressed = (packet.get() == 1);
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         // Don't do anything if player is dead or confused
-        if ((activeChar.isFakeDeath() && (_actionId != 0)) || activeChar.isDead() || activeChar.isControlBlocked())
-        {
+        if ((activeChar.isFakeDeath() && (_actionId != 0)) || activeChar.isDead() || activeChar.isControlBlocked()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         final BuffInfo info = activeChar.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
-        if (info != null)
-        {
-            for (AbstractEffect effect : info.getEffects())
-            {
-                if (!effect.checkCondition(_actionId))
-                {
+        if (info != null) {
+            for (AbstractEffect effect : info.getEffects()) {
+                if (!effect.checkCondition(_actionId)) {
                     activeChar.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
                     activeChar.sendPacket(ActionFailed.STATIC_PACKET);
                     return;
@@ -69,11 +62,9 @@ public final class RequestActionUse extends IClientIncomingPacket
         }
 
         // Don't allow to do some action if player is transformed
-        if (activeChar.isTransformed())
-        {
+        if (activeChar.isTransformed()) {
             final int[] allowedActions = activeChar.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
-            if (!(Arrays.binarySearch(allowedActions, _actionId) >= 0))
-            {
+            if (!(Arrays.binarySearch(allowedActions, _actionId) >= 0)) {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 LOGGER.warning("Player " + activeChar + " used action which he does not have! Id = " + _actionId + " transform: " + activeChar.getTransformation().orElse(null));
                 return;
@@ -81,11 +72,9 @@ public final class RequestActionUse extends IClientIncomingPacket
         }
 
         final ActionDataHolder actionHolder = ActionData.getInstance().getActionData(_actionId);
-        if (actionHolder != null)
-        {
+        if (actionHolder != null) {
             final IPlayerActionHandler actionHandler = PlayerActionHandler.getInstance().getHandler(actionHolder.getHandler());
-            if (actionHandler != null)
-            {
+            if (actionHandler != null) {
                 actionHandler.useAction(activeChar, actionHolder, _ctrlPressed, _shiftPressed);
                 return;
             }
@@ -93,38 +82,32 @@ public final class RequestActionUse extends IClientIncomingPacket
             return;
         }
 
-        switch (_actionId)
-        {
+        switch (_actionId) {
             case 51: // General Manufacture
             {
                 // Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
-                if (activeChar.isAlikeDead())
-                {
+                if (activeChar.isAlikeDead()) {
                     client.sendPacket(ActionFailed.STATIC_PACKET);
                     return;
                 }
 
-                if (activeChar.isSellingBuffs())
-                {
+                if (activeChar.isSellingBuffs()) {
                     client.sendPacket(ActionFailed.STATIC_PACKET);
                     return;
                 }
 
-                if (activeChar.getPrivateStoreType() != PrivateStoreType.NONE)
-                {
+                if (activeChar.getPrivateStoreType() != PrivateStoreType.NONE) {
                     activeChar.setPrivateStoreType(PrivateStoreType.NONE);
                     activeChar.broadcastUserInfo();
                 }
-                if (activeChar.isSitting())
-                {
+                if (activeChar.isSitting()) {
                     activeChar.standUp();
                 }
 
                 client.sendPacket(new RecipeShopManageList(activeChar, false));
                 break;
             }
-            default:
-            {
+            default: {
                 LOGGER.warning(activeChar.getName() + ": unhandled action type " + _actionId);
                 break;
             }

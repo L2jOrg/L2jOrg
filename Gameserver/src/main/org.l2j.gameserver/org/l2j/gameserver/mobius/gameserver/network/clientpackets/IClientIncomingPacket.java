@@ -10,6 +10,7 @@ import java.nio.ByteBuffer;
 
 /**
  * Packets received by the game server from clients
+ *
  * @author KenM
  */
 public abstract class IClientIncomingPacket extends ReadablePacket<L2GameClient> {
@@ -23,8 +24,7 @@ public abstract class IClientIncomingPacket extends ReadablePacket<L2GameClient>
             return true;
         } catch (InvalidDataPacketException e) {
             LOGGER.warn("Invalid data packet {} from client {}", this, client);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             LOGGER.error("Error while reading packet {} from client {}", this, client);
             LOGGER.error(e.getLocalizedMessage(), e);
         }

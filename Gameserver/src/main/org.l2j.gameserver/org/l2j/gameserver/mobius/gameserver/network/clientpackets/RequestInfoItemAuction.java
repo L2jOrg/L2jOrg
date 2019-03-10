@@ -11,39 +11,32 @@ import java.nio.ByteBuffer;
 /**
  * @author Forsaiken
  */
-public final class RequestInfoItemAuction extends IClientIncomingPacket
-{
+public final class RequestInfoItemAuction extends IClientIncomingPacket {
     private int _instanceId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _instanceId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
-        if (!client.getFloodProtectors().getItemAuction().tryPerformAction("RequestInfoItemAuction"))
-        {
+        if (!client.getFloodProtectors().getItemAuction().tryPerformAction("RequestInfoItemAuction")) {
             return;
         }
 
         final ItemAuctionInstance instance = ItemAuctionManager.getInstance().getManagerInstance(_instanceId);
-        if (instance == null)
-        {
+        if (instance == null) {
             return;
         }
 
         final ItemAuction auction = instance.getCurrentAuction();
-        if (auction == null)
-        {
+        if (auction == null) {
             return;
         }
 

@@ -12,33 +12,28 @@ import java.nio.ByteBuffer;
 /**
  * @author KenM
  */
-public class RequestFortressMapInfo extends IClientIncomingPacket
-{
-	private static final Logger LOGGER = LoggerFactory.getLogger(RequestFortressMapInfo.class);
-	private int _fortressId;
-	
-	@Override
-	public void readImpl(ByteBuffer packet)
-	{
-		_fortressId = packet.getInt();
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final Fort fort = FortManager.getInstance().getFortById(_fortressId);
-		if (fort == null)
-		{
-			LOGGER.warn("Fort is not found with id (" + _fortressId + ") in all forts with size of (" + FortManager.getInstance().getForts().size() + ") called by player (" + client.getActiveChar() + ")");
-			
-			if (client.getActiveChar() == null)
-			{
-				return;
-			}
-			
-			client.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		client.sendPacket(new ExShowFortressMapInfo(fort));
-	}
+public class RequestFortressMapInfo extends IClientIncomingPacket {
+    private static final Logger LOGGER = LoggerFactory.getLogger(RequestFortressMapInfo.class);
+    private int _fortressId;
+
+    @Override
+    public void readImpl(ByteBuffer packet) {
+        _fortressId = packet.getInt();
+    }
+
+    @Override
+    public void runImpl() {
+        final Fort fort = FortManager.getInstance().getFortById(_fortressId);
+        if (fort == null) {
+            LOGGER.warn("Fort is not found with id (" + _fortressId + ") in all forts with size of (" + FortManager.getInstance().getForts().size() + ") called by player (" + client.getActiveChar() + ")");
+
+            if (client.getActiveChar() == null) {
+                return;
+            }
+
+            client.sendPacket(ActionFailed.STATIC_PACKET);
+            return;
+        }
+        client.sendPacket(new ExShowFortressMapInfo(fort));
+    }
 }

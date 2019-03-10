@@ -8,8 +8,7 @@ import java.nio.ByteBuffer;
 /**
  * @author ShanSoft Packets Structure: chdd
  */
-public final class RequestTeleportBookMark extends IClientIncomingPacket
-{
+public final class RequestTeleportBookMark extends IClientIncomingPacket {
     private int _id;
 
     public RequestTeleportBookMark(L2GameClient client) {
@@ -17,17 +16,14 @@ public final class RequestTeleportBookMark extends IClientIncomingPacket
     }
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _id = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
         activeChar.teleportBookmarkGo(_id);

@@ -11,34 +11,27 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestPledgeWaitingUser extends IClientIncomingPacket
-{
+public class RequestPledgeWaitingUser extends IClientIncomingPacket {
     private int _clanId;
     private int _playerId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _clanId = packet.getInt();
         _playerId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if ((activeChar == null) || (activeChar.getClanId() != _clanId))
-        {
+        if ((activeChar == null) || (activeChar.getClanId() != _clanId)) {
             return;
         }
 
         final PledgeApplicantInfo infos = ClanEntryManager.getInstance().getPlayerApplication(_clanId, _playerId);
-        if (infos == null)
-        {
+        if (infos == null) {
             client.sendPacket(new ExPledgeWaitingList(_clanId));
-        }
-        else
-        {
+        } else {
             client.sendPacket(new ExPledgeWaitingUser(infos));
         }
     }

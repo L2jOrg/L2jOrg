@@ -9,16 +9,14 @@ import java.nio.ByteBuffer;
 /**
  * @author -Wooden-
  */
-public final class RequestExEnchantSkillInfoDetail extends IClientIncomingPacket
-{
+public final class RequestExEnchantSkillInfoDetail extends IClientIncomingPacket {
     private SkillEnchantType _type;
     private int _skillId;
     private int _skillLvl;
     private int _skillSubLvl;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _type = SkillEnchantType.values()[packet.getInt()];
         _skillId = packet.getInt();
         _skillLvl = packet.getShort();
@@ -26,16 +24,13 @@ public final class RequestExEnchantSkillInfoDetail extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
-        if ((_skillId <= 0) || (_skillLvl <= 0) || (_skillSubLvl < 0))
-        {
+    public void runImpl() {
+        if ((_skillId <= 0) || (_skillLvl <= 0) || (_skillSubLvl < 0)) {
             return;
         }
 
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
         activeChar.sendPacket(new ExEnchantSkillInfoDetail(_type, _skillId, _skillLvl, _skillSubLvl, activeChar));

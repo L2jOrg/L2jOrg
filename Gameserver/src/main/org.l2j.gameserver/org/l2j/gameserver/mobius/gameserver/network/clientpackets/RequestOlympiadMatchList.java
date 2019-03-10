@@ -8,30 +8,26 @@ import java.nio.ByteBuffer;
 
 /**
  * format ch c: (id) 0xD0 h: (subid) 0x13
+ *
  * @author -Wooden-
  */
-public final class RequestOlympiadMatchList extends IClientIncomingPacket
-{
+public final class RequestOlympiadMatchList extends IClientIncomingPacket {
     private static final String COMMAND = "arenalist";
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if ((activeChar == null) || !activeChar.inObserverMode())
-        {
+        if ((activeChar == null) || !activeChar.inObserverMode()) {
             return;
         }
 
         final IBypassHandler handler = BypassHandler.getInstance().getHandler(COMMAND);
-        if (handler != null)
-        {
+        if (handler != null) {
             handler.useBypass(COMMAND, activeChar, null);
         }
     }

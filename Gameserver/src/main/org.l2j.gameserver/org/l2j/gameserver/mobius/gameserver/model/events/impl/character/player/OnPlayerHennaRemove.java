@@ -8,30 +8,25 @@ import org.l2j.gameserver.mobius.gameserver.model.items.L2Henna;
 /**
  * @author UnAfraid
  */
-public class OnPlayerHennaRemove implements IBaseEvent
-{
+public class OnPlayerHennaRemove implements IBaseEvent {
     private final L2PcInstance _activeChar;
     private final L2Henna _henna;
 
-    public OnPlayerHennaRemove(L2PcInstance activeChar, L2Henna henna)
-    {
+    public OnPlayerHennaRemove(L2PcInstance activeChar, L2Henna henna) {
         _activeChar = activeChar;
         _henna = henna;
     }
 
-    public L2PcInstance getActiveChar()
-    {
+    public L2PcInstance getActiveChar() {
         return _activeChar;
     }
 
-    public L2Henna getHenna()
-    {
+    public L2Henna getHenna() {
         return _henna;
     }
 
     @Override
-    public EventType getType()
-    {
+    public EventType getType() {
         return EventType.ON_PLAYER_HENNA_REMOVE;
     }
 }

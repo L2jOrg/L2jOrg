@@ -1,16 +1,17 @@
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.mobius.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
+import java.nio.ByteBuffer;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
  * @author Luca Baldi
  */
-public final class RelationChanged implements IClientOutgoingPacket
-{
+public final class RelationChanged extends IClientOutgoingPacket {
     // TODO: Enum
     public static final int RELATION_PARTY1 = 0x00001; // party member
     public static final int RELATION_PARTY2 = 0x00002; // party member
@@ -34,22 +35,10 @@ public final class RelationChanged implements IClientOutgoingPacket
     public static final byte SEND_ONE = 0x00;
     public static final byte SEND_DEFAULT = 0x01;
     public static final byte SEND_MULTI = 0x04;
-
-    protected static class Relation
-    {
-        int _objId;
-        int _relation;
-        int _autoAttackable;
-        int _reputation;
-        int _pvpFlag;
-    }
-
-    private Relation _singled;
     private final List<Relation> _multi;
+    private Relation _singled;
     private byte _mask = 0x00;
-
-    public RelationChanged(L2Playable activeChar, int relation, boolean autoattackable)
-    {
+    public RelationChanged(L2Playable activeChar, int relation, boolean autoattackable) {
         _mask |= SEND_ONE;
 
         _singled = new Relation();
@@ -61,16 +50,13 @@ public final class RelationChanged implements IClientOutgoingPacket
         _multi = null;
     }
 
-    public RelationChanged()
-    {
+    public RelationChanged() {
         _mask |= SEND_MULTI;
         _multi = new LinkedList<>();
     }
 
-    public void addRelation(L2Playable activeChar, int relation, boolean autoattackable)
-    {
-        if (activeChar.isInvisible())
-        {
+    public void addRelation(L2Playable activeChar, int relation, boolean autoattackable) {
+        if (activeChar.isInvisible()) {
             // throw new IllegalArgumentException("Cannot add invisible character to multi relation packet");
             return;
         }
@@ -84,36 +70,36 @@ public final class RelationChanged implements IClientOutgoingPacket
     }
 
     @Override
-    public boolean write(PacketWriter packet)
-    {
+    public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.RELATION_CHANGED.writeId(packet);
 
-        packet.writeC(_mask);
-        if (_multi == null)
-        {
+        packet.put((byte) _mask);
+        if (_multi == null) {
             writeRelation(packet, _singled);
-        }
-        else
-        {
-            packet.writeH(_multi.size());
-            for (Relation r : _multi)
-            {
+        } else {
+            packet.putShort((short) _multi.size());
+            for (Relation r : _multi) {
                 writeRelation(packet, r);
             }
         }
-        return true;
     }
 
-    private void writeRelation(PacketWriter packet, Relation relation)
-    {
-        packet.writeD(relation._objId);
+    private void writeRelation(ByteBuffer packet, Relation relation) {
+        packet.putInt(relation._objId);
 
-        if ((_mask & SEND_DEFAULT) == 0)
-        {
-            packet.writeD(relation._relation);
-            packet.writeC(relation._autoAttackable);
-            packet.writeD(relation._reputation);
-            packet.writeC(relation._pvpFlag);
+        if ((_mask & SEND_DEFAULT) == 0) {
+            packet.putInt(relation._relation);
+            packet.put((byte) relation._autoAttackable);
+            packet.putInt(relation._reputation);
+            packet.put((byte) relation._pvpFlag);
         }
+    }
+
+    protected static class Relation {
+        int _objId;
+        int _relation;
+        int _autoAttackable;
+        int _reputation;
+        int _pvpFlag;
     }
 }

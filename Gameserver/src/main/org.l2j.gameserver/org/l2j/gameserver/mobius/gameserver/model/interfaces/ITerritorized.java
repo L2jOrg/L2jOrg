@@ -8,8 +8,7 @@ import java.util.List;
 /**
  * @author UnAfraid
  */
-public interface ITerritorized
-{
+public interface ITerritorized {
     void addTerritory(L2SpawnTerritory territory);
 
     List<L2SpawnTerritory> getTerritories();

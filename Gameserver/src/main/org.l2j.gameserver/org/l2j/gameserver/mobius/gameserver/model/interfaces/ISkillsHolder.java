@@ -7,8 +7,7 @@ import java.util.Map;
 /**
  * @author UnAfraid
  */
-public interface ISkillsHolder
-{
+public interface ISkillsHolder {
     Map<Integer, Skill> getSkills();
 
     Skill addSkill(Skill skill);

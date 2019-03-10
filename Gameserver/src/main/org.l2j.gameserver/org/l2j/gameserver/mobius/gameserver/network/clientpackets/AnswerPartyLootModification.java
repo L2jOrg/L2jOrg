@@ -8,28 +8,23 @@ import java.nio.ByteBuffer;
 /**
  * @author JIV
  */
-public class AnswerPartyLootModification extends IClientIncomingPacket
-{
+public class AnswerPartyLootModification extends IClientIncomingPacket {
     public int _answer;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _answer = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final L2Party party = activeChar.getParty();
-        if (party != null)
-        {
+        if (party != null) {
             party.answerLootChangeRequest(activeChar, _answer == 1);
         }
     }

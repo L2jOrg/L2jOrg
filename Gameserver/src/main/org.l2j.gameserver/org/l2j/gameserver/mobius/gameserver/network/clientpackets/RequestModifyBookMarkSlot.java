@@ -9,8 +9,7 @@ import java.nio.ByteBuffer;
  * @author ShanSoft
  * structure chddSdS
  */
-public final class RequestModifyBookMarkSlot extends IClientIncomingPacket
-{
+public final class RequestModifyBookMarkSlot extends IClientIncomingPacket {
     private int id;
     private int icon;
     private String name;
@@ -21,8 +20,7 @@ public final class RequestModifyBookMarkSlot extends IClientIncomingPacket
     }
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         id = packet.getInt();
         name = readString(packet);
         icon = packet.getInt();
@@ -30,11 +28,9 @@ public final class RequestModifyBookMarkSlot extends IClientIncomingPacket
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
         activeChar.teleportBookmarkModify(id, icon, tag, name);

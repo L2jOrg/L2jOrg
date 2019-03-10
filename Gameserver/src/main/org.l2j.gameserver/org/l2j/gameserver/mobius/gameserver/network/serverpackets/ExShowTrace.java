@@ -1,61 +1,41 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import org.l2j.commons.network.PacketWriter;
 import org.l2j.gameserver.mobius.gameserver.model.Location;
 import org.l2j.gameserver.mobius.gameserver.model.interfaces.ILocational;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * This packet shows the mouse click particle for 30 seconds on every location.
+ *
  * @author NosBit
  */
-public final class ExShowTrace implements IClientOutgoingPacket
-{
-	private final List<Location> _locations = new ArrayList<>();
-	
-	public void addLocation(int x, int y, int z)
-	{
-		_locations.add(new Location(x, y, z));
-	}
-	
-	public void addLocation(ILocational loc)
-	{
-		addLocation(loc.getX(), loc.getY(), loc.getZ());
-	}
-	
-	@Override
-	public boolean write(PacketWriter packet)
-	{
-		OutgoingPackets.EX_SHOW_TRACE.writeId(packet);
-		
-		packet.writeH(0); // type broken in H5
-		packet.writeD(0); // time broken in H5
-		packet.writeH(_locations.size());
-		for (Location loc : _locations)
-		{
-			packet.writeD(loc.getX());
-			packet.writeD(loc.getY());
-			packet.writeD(loc.getZ());
-		}
-		return true;
-	}
+public final class ExShowTrace extends IClientOutgoingPacket {
+    private final List<Location> _locations = new ArrayList<>();
+
+    public void addLocation(int x, int y, int z) {
+        _locations.add(new Location(x, y, z));
+    }
+
+    public void addLocation(ILocational loc) {
+        addLocation(loc.getX(), loc.getY(), loc.getZ());
+    }
+
+    @Override
+    public void writeImpl(L2GameClient client, ByteBuffer packet) {
+        OutgoingPackets.EX_SHOW_TRACE.writeId(packet);
+
+        packet.putShort((short) 0); // type broken in H5
+        packet.putInt(0); // time broken in H5
+        packet.putShort((short) _locations.size());
+        for (Location loc : _locations) {
+            packet.putInt(loc.getX());
+            packet.putInt(loc.getY());
+            packet.putInt(loc.getZ());
+        }
+    }
 }

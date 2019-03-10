@@ -24,58 +24,47 @@ import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
 
 import java.nio.ByteBuffer;
 
-public final class AllyDismiss extends IClientIncomingPacket
-{
+public final class AllyDismiss extends IClientIncomingPacket {
     private String _clanName;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _clanName = readString(packet);
     }
 
     @Override
-    public void runImpl()
-    {
-        if (_clanName == null)
-        {
+    public void runImpl() {
+        if (_clanName == null) {
             return;
         }
 
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
-        if (player.getClan() == null)
-        {
+        if (player.getClan() == null) {
             player.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);
             return;
         }
         final L2Clan leaderClan = player.getClan();
-        if (leaderClan.getAllyId() == 0)
-        {
+        if (leaderClan.getAllyId() == 0) {
             player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_ALLIED_WITH_ANY_CLANS);
             return;
         }
-        if (!player.isClanLeader() || (leaderClan.getId() != leaderClan.getAllyId()))
-        {
+        if (!player.isClanLeader() || (leaderClan.getId() != leaderClan.getAllyId())) {
             player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
             return;
         }
         final L2Clan clan = ClanTable.getInstance().getClanByName(_clanName);
-        if (clan == null)
-        {
+        if (clan == null) {
             player.sendPacket(SystemMessageId.THAT_CLAN_DOES_NOT_EXIST);
             return;
         }
-        if (clan.getId() == leaderClan.getId())
-        {
+        if (clan.getId() == leaderClan.getId()) {
             player.sendPacket(SystemMessageId.ALLIANCE_LEADERS_CANNOT_WITHDRAW);
             return;
         }
-        if (clan.getAllyId() != leaderClan.getAllyId())
-        {
+        if (clan.getAllyId() != leaderClan.getAllyId()) {
             player.sendPacket(SystemMessageId.DIFFERENT_ALLIANCE);
             return;
         }

@@ -1,70 +1,50 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network.serverpackets;
 
-import org.l2j.commons.network.PacketWriter;
 import org.l2j.gameserver.mobius.gameserver.enums.MacroUpdateType;
 import org.l2j.gameserver.mobius.gameserver.model.Macro;
 import org.l2j.gameserver.mobius.gameserver.model.MacroCmd;
+import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
 import org.l2j.gameserver.mobius.gameserver.network.OutgoingPackets;
 
-public class SendMacroList implements IClientOutgoingPacket
-{
-	private final int _count;
-	private final Macro _macro;
-	private final MacroUpdateType _updateType;
-	
-	public SendMacroList(int count, Macro macro, MacroUpdateType updateType)
-	{
-		_count = count;
-		_macro = macro;
-		_updateType = updateType;
-	}
-	
-	@Override
-	public boolean write(PacketWriter packet)
-	{
-		OutgoingPackets.MACRO_LIST.writeId(packet);
-		
-		packet.writeC(_updateType.getId());
-		packet.writeD(_updateType != MacroUpdateType.LIST ? _macro.getId() : 0x00); // modified, created or deleted macro's id
-		packet.writeC(_count); // count of Macros
-		packet.writeC(_macro != null ? 1 : 0); // unknown
-		
-		if ((_macro != null) && (_updateType != MacroUpdateType.DELETE))
-		{
-			packet.writeD(_macro.getId()); // Macro ID
-			packet.writeS(_macro.getName()); // Macro Name
-			packet.writeS(_macro.getDescr()); // Desc
-			packet.writeS(_macro.getAcronym()); // acronym
-			packet.writeD(_macro.getIcon()); // icon
-			
-			packet.writeC(_macro.getCommands().size()); // count
-			
-			int i = 1;
-			for (MacroCmd cmd : _macro.getCommands())
-			{
-				packet.writeC(i++); // command count
-				packet.writeC(cmd.getType().ordinal()); // type 1 = skill, 3 = action, 4 = shortcut
-				packet.writeD(cmd.getD1()); // skill id
-				packet.writeC(cmd.getD2()); // shortcut id
-				packet.writeS(cmd.getCmd()); // command name
-			}
-		}
-		return true;
-	}
+import java.nio.ByteBuffer;
+
+public class SendMacroList extends IClientOutgoingPacket {
+    private final int _count;
+    private final Macro _macro;
+    private final MacroUpdateType _updateType;
+
+    public SendMacroList(int count, Macro macro, MacroUpdateType updateType) {
+        _count = count;
+        _macro = macro;
+        _updateType = updateType;
+    }
+
+    @Override
+    public void writeImpl(L2GameClient client, ByteBuffer packet) {
+        OutgoingPackets.MACRO_LIST.writeId(packet);
+
+        packet.put((byte) _updateType.getId());
+        packet.putInt(_updateType != MacroUpdateType.LIST ? _macro.getId() : 0x00); // modified, created or deleted macro's id
+        packet.put((byte) _count); // count of Macros
+        packet.put((byte) (_macro != null ? 1 : 0)); // unknown
+
+        if ((_macro != null) && (_updateType != MacroUpdateType.DELETE)) {
+            packet.putInt(_macro.getId()); // Macro ID
+            writeString(_macro.getName(), packet); // Macro Name
+            writeString(_macro.getDescr(), packet); // Desc
+            writeString(_macro.getAcronym(), packet); // acronym
+            packet.putInt(_macro.getIcon()); // icon
+
+            packet.put((byte) _macro.getCommands().size()); // count
+
+            int i = 1;
+            for (MacroCmd cmd : _macro.getCommands()) {
+                packet.put((byte) i++); // command count
+                packet.put((byte) cmd.getType().ordinal()); // type 1 = skill, 3 = action, 4 = shortcut
+                packet.putInt(cmd.getD1()); // skill id
+                packet.put((byte) cmd.getD2()); // shortcut id
+                writeString(cmd.getCmd(), packet); // command name
+            }
+        }
+    }
 }

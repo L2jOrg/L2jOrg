@@ -10,20 +10,16 @@ import java.nio.ByteBuffer;
 /**
  * @author UnAfraid
  */
-public class RequestExCancelShape_Shifting_Item extends IClientIncomingPacket
-{
+public class RequestExCancelShape_Shifting_Item extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 

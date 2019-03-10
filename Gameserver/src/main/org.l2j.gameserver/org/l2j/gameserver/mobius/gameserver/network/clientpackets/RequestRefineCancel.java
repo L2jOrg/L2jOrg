@@ -13,43 +13,37 @@ import java.nio.ByteBuffer;
 
 /**
  * Format(ch) d
+ *
  * @author -Wooden-
  */
-public final class RequestRefineCancel extends IClientIncomingPacket
-{
+public final class RequestRefineCancel extends IClientIncomingPacket {
     private int _targetItemObjId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _targetItemObjId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
-        if (targetItem == null)
-        {
+        if (targetItem == null) {
             client.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
             return;
         }
 
-        if (targetItem.getOwnerId() != activeChar.getObjectId())
-        {
+        if (targetItem.getOwnerId() != activeChar.getObjectId()) {
             Util.handleIllegalPlayerAction(client.getActiveChar(), "Warning!! Character " + client.getActiveChar().getName() + " of account " + client.getActiveChar().getAccountName() + " tryied to augment item that doesn't own.", Config.DEFAULT_PUNISH);
             return;
         }
 
         // cannot remove augmentation from a not augmented item
-        if (!targetItem.isAugmented())
-        {
+        if (!targetItem.isAugmented()) {
             client.sendPacket(SystemMessageId.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM);
             client.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
             return;
@@ -57,23 +51,20 @@ public final class RequestRefineCancel extends IClientIncomingPacket
 
         // get the price
         final long price = VariationData.getInstance().getCancelFee(targetItem.getId(), targetItem.getAugmentation().getMineralId());
-        if (price < 0)
-        {
+        if (price < 0) {
             client.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
             return;
         }
 
         // try to reduce the players adena
-        if (!activeChar.reduceAdena("RequestRefineCancel", price, targetItem, true))
-        {
+        if (!activeChar.reduceAdena("RequestRefineCancel", price, targetItem, true)) {
             client.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
             client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
             return;
         }
 
         // unequip item
-        if (targetItem.isEquipped())
-        {
+        if (targetItem.isEquipped()) {
             activeChar.disarmWeapons();
         }
 

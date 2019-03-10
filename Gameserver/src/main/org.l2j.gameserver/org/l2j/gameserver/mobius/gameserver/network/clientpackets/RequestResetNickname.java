@@ -7,20 +7,16 @@ import java.nio.ByteBuffer;
 /**
  * @author KenM
  */
-public class RequestResetNickname extends IClientIncomingPacket
-{
+public class RequestResetNickname extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 

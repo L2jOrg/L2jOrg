@@ -10,28 +10,23 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestPledgeRecruitInfo extends IClientIncomingPacket
-{
+public class RequestPledgeRecruitInfo extends IClientIncomingPacket {
     private int _clanId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _clanId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final L2Clan clan = ClanTable.getInstance().getClan(_clanId);
-        if (clan == null)
-        {
+        if (clan == null) {
             return;
         }
 

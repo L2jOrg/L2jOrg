@@ -9,29 +9,24 @@ import java.nio.ByteBuffer;
 /**
  * @author Gnacik
  */
-public class RequestDismissPartyRoom extends IClientIncomingPacket
-{
+public class RequestDismissPartyRoom extends IClientIncomingPacket {
     private int _roomid;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _roomid = packet.getInt();
         packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance player = client.getActiveChar();
-        if (player == null)
-        {
+        if (player == null) {
             return;
         }
 
         final MatchingRoom room = player.getMatchingRoom();
-        if ((room == null) || (room.getId() != _roomid) || (room.getRoomType() != MatchingRoomType.PARTY) || (room.getLeader() != player))
-        {
+        if ((room == null) || (room.getId() != _roomid) || (room.getRoomType() != MatchingRoomType.PARTY) || (room.getLeader() != player)) {
             return;
         }
 

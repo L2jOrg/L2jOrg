@@ -4,19 +4,15 @@ import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 
 import java.nio.ByteBuffer;
 
-public class RequestBuySellUIClose extends IClientIncomingPacket
-{
+public class RequestBuySellUIClose extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if ((activeChar == null) || activeChar.isInventoryDisabled())
-        {
+        if ((activeChar == null) || activeChar.isInventoryDisabled()) {
             return;
         }
 

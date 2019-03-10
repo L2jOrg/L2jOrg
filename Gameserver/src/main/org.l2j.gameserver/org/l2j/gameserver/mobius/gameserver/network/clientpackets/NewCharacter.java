@@ -9,16 +9,14 @@ import java.nio.ByteBuffer;
 /**
  * @author Zoey76
  */
-public final class NewCharacter extends IClientIncomingPacket
-{
+public final class NewCharacter extends IClientIncomingPacket {
     @Override
     public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final NewCharacterSuccess ct = new NewCharacterSuccess();
         ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.FIGHTER)); // Human Figther
         ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.MAGE)); // Human Mystic

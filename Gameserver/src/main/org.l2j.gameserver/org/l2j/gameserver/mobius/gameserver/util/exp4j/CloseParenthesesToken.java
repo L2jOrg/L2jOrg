@@ -18,13 +18,11 @@ package org.l2j.gameserver.mobius.gameserver.util.exp4j;
 /**
  * represents closed parentheses
  */
-class CloseParenthesesToken extends Token
-{
-	/**
-	 * Creare a new instance
-	 */
-	CloseParenthesesToken()
-	{
-		super(Token.TOKEN_PARENTHESES_CLOSE);
-	}
+class CloseParenthesesToken extends Token {
+    /**
+     * Creare a new instance
+     */
+    CloseParenthesesToken() {
+        super(Token.TOKEN_PARENTHESES_CLOSE);
+    }
 }

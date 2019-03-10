@@ -41,21 +41,16 @@ import java.util.stream.Collectors;
  * <li>L2Weapon</li>
  * </ul>
  */
-public abstract class L2Item extends ListenersContainer implements IIdentifiable
-{
-    protected static final Logger LOGGER = Logger.getLogger(L2Item.class.getName());
-
+public abstract class L2Item extends ListenersContainer implements IIdentifiable {
     public static final int TYPE1_WEAPON_RING_EARRING_NECKLACE = 0;
     public static final int TYPE1_SHIELD_ARMOR = 1;
     public static final int TYPE1_ITEM_QUESTITEM_ADENA = 4;
-
     public static final int TYPE2_WEAPON = 0;
     public static final int TYPE2_SHIELD_ARMOR = 1;
     public static final int TYPE2_ACCESSORY = 2;
     public static final int TYPE2_QUEST = 3;
     public static final int TYPE2_MONEY = 4;
     public static final int TYPE2_OTHER = 5;
-
     public static final int SLOT_NONE = 0x0000;
     public static final int SLOT_UNDERWEAR = 0x0001;
     public static final int SLOT_R_EAR = 0x0002;
@@ -88,15 +83,17 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
     public static final long SLOT_AGATHION = 0x3000000000L;
     public static final long SLOT_ARTIFACT_BOOK = 0x20000000000L;
     public static final long SLOT_ARTIFACT = 0x40000000000L;
-
     public static final int SLOT_WOLF = -100;
     public static final int SLOT_HATCHLING = -101;
     public static final int SLOT_STRIDER = -102;
     public static final int SLOT_BABYPET = -103;
     public static final int SLOT_GREATWOLF = -104;
-
     public static final int SLOT_MULTI_ALLWEAPON = SLOT_LR_HAND | SLOT_R_HAND;
-
+    protected static final Logger LOGGER = Logger.getLogger(L2Item.class.getName());
+    protected int _type1; // needed for item list (inventory)
+    protected int _type2; // different lists for armor, weapon, etc
+    protected List<FuncTemplate> _funcTemplates;
+    protected List<Condition> _preConditions;
     private int _itemId;
     private int _displayId;
     private String _name;
@@ -133,12 +130,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
     private boolean _ex_immediate_effect;
     private int _defaultEnchantLevel;
     private ActionType _defaultAction;
-
-    protected int _type1; // needed for item list (inventory)
-    protected int _type2; // different lists for armor, weapon, etc
     private Map<AttributeType, AttributeHolder> _elementals = null;
-    protected List<FuncTemplate> _funcTemplates;
-    protected List<Condition> _preConditions;
     private List<ItemSkillHolder> _skills;
     private List<ItemChanceHolder> _createItems;
 
@@ -154,15 +146,14 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
     /**
      * Constructor of the L2Item that fill class variables.<BR>
      * <BR>
+     *
      * @param set : StatsSet corresponding to a set of couples (key,value) for description of the item
      */
-    protected L2Item(StatsSet set)
-    {
+    protected L2Item(StatsSet set) {
         set(set);
     }
 
-    public void set(StatsSet set)
-    {
+    public void set(StatsSet set) {
         _itemId = set.getInt("item_id");
         _displayId = set.getInt("displayId", _itemId);
         _name = set.getString("name");
@@ -212,69 +203,68 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 
     /**
      * Returns the itemType.
+     *
      * @return Enum
      */
     public abstract ItemType getItemType();
 
     /**
      * Verifies if the item is a magic weapon.
+     *
      * @return {@code true} if the weapon is magic, {@code false} otherwise
      */
-    public boolean isMagicWeapon()
-    {
+    public boolean isMagicWeapon() {
         return false;
     }
 
     /**
      * @return the _equipReuseDelay
      */
-    public int getEquipReuseDelay()
-    {
+    public int getEquipReuseDelay() {
         return _equipReuseDelay;
     }
 
     /**
      * Returns the duration of the item
+     *
      * @return int
      */
-    public final int getDuration()
-    {
+    public final int getDuration() {
         return _duration;
     }
 
     /**
      * Returns the time of the item
+     *
      * @return long
      */
-    public final long getTime()
-    {
+    public final long getTime() {
         return _time;
     }
 
     /**
      * @return the auto destroy time of the item in seconds: 0 or less - default
      */
-    public final int getAutoDestroyTime()
-    {
+    public final int getAutoDestroyTime() {
         return _autoDestroyTime;
     }
 
     /**
      * Returns the ID of the item
+     *
      * @return int
      */
     @Override
-    public final int getId()
-    {
+    public final int getId() {
         return _itemId;
     }
 
     /**
      * Returns the ID of the item
+     *
      * @return int
      */
-    public final int getDisplayId()
-    {
+    public final int getDisplayId() {
         return _displayId;
     }
 
@@ -282,86 +272,81 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 
     /**
      * Return the type of material of the item
+     *
      * @return MaterialType
      */
-    public final MaterialType getMaterialType()
-    {
+    public final MaterialType getMaterialType() {
         return _materialType;
     }
 
     /**
      * Returns the type 2 of the item
+     *
      * @return int
      */
-    public final int getType2()
-    {
+    public final int getType2() {
         return _type2;
     }
 
     /**
      * Returns the weight of the item
+     *
      * @return int
      */
-    public final int getWeight()
-    {
+    public final int getWeight() {
         return _weight;
     }
 
     /**
      * Returns if the item is crystallizable
+     *
      * @return boolean
      */
-    public final boolean isCrystallizable()
-    {
+    public final boolean isCrystallizable() {
         return (_crystalType != CrystalType.NONE) && (_crystalCount > 0);
     }
 
     /**
      * @return return General item grade (No S80, S84, R95, R99)
      */
-    public ItemGrade getItemGrade()
-    {
+    public ItemGrade getItemGrade() {
         return ItemGrade.valueOf(_crystalType);
     }
 
     /**
      * Return the type of crystal if item is crystallizable
+     *
      * @return CrystalType
      */
-    public final CrystalType getCrystalType()
-    {
+    public final CrystalType getCrystalType() {
         return _crystalType;
     }
 
     /**
      * Return the ID of crystal if item is crystallizable
+     *
      * @return int
      */
-    public final int getCrystalItemId()
-    {
+    public final int getCrystalItemId() {
         return _crystalType.getCrystalId();
     }
 
     /**
      * For grades S80 and S84 return S, R95, and R99 return R
+     *
      * @return the grade of the item.
      */
-    public final CrystalType getCrystalTypePlus()
-    {
-        switch (_crystalType)
-        {
+    public final CrystalType getCrystalTypePlus() {
+        switch (_crystalType) {
             case S80:
-            case S84:
-            {
+            case S84: {
                 return CrystalType.S;
             }
             case R95:
-            case R99:
-            {
+            case R99: {
                 return CrystalType.R;
             }
-            default:
-            {
+            default: {
                 return _crystalType;
             }
         }
@@ -370,8 +355,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
     /**
      * @return the quantity of crystals for crystallization.
      */
-    public final int getCrystalCount()
-    {
+    public final int getCrystalCount() {
         return _crystalCount;
     }
 
@@ -379,48 +363,34 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
      * @param enchantLevel
      * @return the quantity of crystals for crystallization on specific enchant level
      */
-    public final int getCrystalCount(int enchantLevel)
-    {
-        if (enchantLevel > 3)
-        {
-            switch (_type2)
-            {
+    public final int getCrystalCount(int enchantLevel) {
+        if (enchantLevel > 3) {
+            switch (_type2) {
                 case TYPE2_SHIELD_ARMOR:
-                case TYPE2_ACCESSORY:
-                {
+                case TYPE2_ACCESSORY: {
                     return _crystalCount + (_crystalType.getCrystalEnchantBonusArmor() * ((3 * enchantLevel) - 6));
                 }
-                case TYPE2_WEAPON:
-                {
+                case TYPE2_WEAPON: {
                     return _crystalCount + (_crystalType.getCrystalEnchantBonusWeapon() * ((2 * enchantLevel) - 3));
                 }
-                default:
-                {
+                default: {
                     return _crystalCount;
                 }
             }
-        }
-        else if (enchantLevel > 0)
-        {
-            switch (_type2)
-            {
+        } else if (enchantLevel > 0) {
+            switch (_type2) {
                 case TYPE2_SHIELD_ARMOR:
-                case TYPE2_ACCESSORY:
-                {
+                case TYPE2_ACCESSORY: {
                     return _crystalCount + (_crystalType.getCrystalEnchantBonusArmor() * enchantLevel);
                 }
-                case TYPE2_WEAPON:
-                {
+                case TYPE2_WEAPON: {
                     return _crystalCount + (_crystalType.getCrystalEnchantBonusWeapon() * enchantLevel);
                 }
-                default:
-                {
+                default: {
                     return _crystalCount;
                 }
             }
-        }
-        else
-        {
+        } else {
             return _crystalCount;
         }
     }
@@ -428,271 +398,235 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
     /**
      * @return the name of the item.
      */
-    public final String getName()
-    {
+    public final String getName() {
         return _name;
     }
 
     /**
      * @return the item's additional name.
      */
-    public String getAdditionalName()
-    {
+    public String getAdditionalName() {
         return _additionalName;
     }
 
-    public Collection<AttributeHolder> getAttributes()
-    {
+    public Collection<AttributeHolder> getAttributes() {
         return _elementals != null ? _elementals.values() : null;
-    }
-
-    public AttributeHolder getAttribute(AttributeType type)
-    {
-        return _elementals != null ? _elementals.get(type) : null;
     }
 
     /**
      * Sets the base elemental of the item.
+     *
      * @param holder the element to set.
      */
-    public void setAttributes(AttributeHolder holder)
-    {
-        if (_elementals == null)
-        {
+    public void setAttributes(AttributeHolder holder) {
+        if (_elementals == null) {
             _elementals = new LinkedHashMap<>(3);
             _elementals.put(holder.getType(), holder);
-        }
-        else
-        {
+        } else {
             final AttributeHolder attribute = getAttribute(holder.getType());
-            if (attribute != null)
-            {
+            if (attribute != null) {
                 attribute.setValue(holder.getValue());
-            }
-            else
-            {
+            } else {
                 _elementals.put(holder.getType(), holder);
             }
         }
     }
 
+    public AttributeHolder getAttribute(AttributeType type) {
+        return _elementals != null ? _elementals.get(type) : null;
+    }
+
     /**
      * @return the part of the body used with the item.
      */
-    public final long getBodyPart()
-    {
+    public final long getBodyPart() {
         return _bodyPart;
     }
 
     /**
      * @return the type 1 of the item.
      */
-    public final int getType1()
-    {
+    public final int getType1() {
         return _type1;
     }
 
     /**
      * @return {@code true} if the item is stackable, {@code false} otherwise.
      */
-    public final boolean isStackable()
-    {
+    public final boolean isStackable() {
         return _stackable;
     }
 
     /**
      * @return {@code true} if the item can be equipped, {@code false} otherwise.
      */
-    public boolean isEquipable()
-    {
+    public boolean isEquipable() {
         return (_bodyPart != 0) && !(getItemType() instanceof EtcItemType);
     }
 
     /**
      * @return the price of reference of the item.
      */
-    public final int getReferencePrice()
-    {
+    public final int getReferencePrice() {
         return _referencePrice;
     }
 
     /**
      * @return {@code true} if the item can be sold, {@code false} otherwise.
      */
-    public final boolean isSellable()
-    {
+    public final boolean isSellable() {
         return _sellable;
     }
 
     /**
      * @return {@code true} if the item can be dropped, {@code false} otherwise.
      */
-    public final boolean isDropable()
-    {
+    public final boolean isDropable() {
         return _dropable;
     }
 
     /**
      * @return {@code true} if the item can be destroyed, {@code false} otherwise.
      */
-    public final boolean isDestroyable()
-    {
+    public final boolean isDestroyable() {
         return _destroyable;
     }
 
     /**
      * @return {@code true} if the item can be traded, {@code false} otherwise.
      */
-    public final boolean isTradeable()
-    {
+    public final boolean isTradeable() {
         return _tradeable;
     }
 
     /**
      * @return {@code true} if the item can be put into warehouse, {@code false} otherwise.
      */
-    public final boolean isDepositable()
-    {
+    public final boolean isDepositable() {
         return _depositable;
     }
 
     /**
      * This method also check the enchant blacklist.
+     *
      * @return {@code true} if the item can be enchanted, {@code false} otherwise.
      */
-    public final int isEnchantable()
-    {
+    public final int isEnchantable() {
         return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, _itemId) < 0 ? _enchantable : 0;
     }
 
     /**
      * @return {@code true} if the item can be elemented, {@code false} otherwise.
      */
-    public final boolean isElementable()
-    {
+    public final boolean isElementable() {
         return _elementable;
     }
 
     /**
      * Returns if item is common
+     *
      * @return boolean
      */
-    public final boolean isCommon()
-    {
+    public final boolean isCommon() {
         return _common;
     }
 
     /**
      * Returns if item is hero-only
+     *
      * @return
      */
-    public final boolean isHeroItem()
-    {
+    public final boolean isHeroItem() {
         return _heroItem;
     }
 
     /**
      * Returns if item is pvp
+     *
      * @return
      */
-    public final boolean isPvpItem()
-    {
+    public final boolean isPvpItem() {
         return _pvpItem;
     }
 
-    public boolean isPotion()
-    {
+    public boolean isPotion() {
         return getItemType() == EtcItemType.POTION;
     }
 
-    public boolean isElixir()
-    {
+    public boolean isElixir() {
         return getItemType() == EtcItemType.ELIXIR;
     }
 
-    public boolean isScroll()
-    {
+    public boolean isScroll() {
         return getItemType() == EtcItemType.SCROLL;
     }
 
-    public List<FuncTemplate> getFunctionTemplates()
-    {
+    public List<FuncTemplate> getFunctionTemplates() {
         return _funcTemplates != null ? _funcTemplates : Collections.emptyList();
     }
 
     /**
      * Add the FuncTemplate f to the list of functions used with the item
+     *
      * @param template : FuncTemplate to add
      */
-    public void addFunctionTemplate(FuncTemplate template)
-    {
-        switch (template.getStat())
-        {
+    public void addFunctionTemplate(FuncTemplate template) {
+        switch (template.getStat()) {
             case FIRE_RES:
-            case FIRE_POWER:
-            {
+            case FIRE_POWER: {
                 setAttributes(new AttributeHolder(AttributeType.FIRE, (int) template.getValue()));
                 break;
             }
             case WATER_RES:
-            case WATER_POWER:
-            {
+            case WATER_POWER: {
                 setAttributes(new AttributeHolder(AttributeType.WATER, (int) template.getValue()));
                 break;
             }
             case WIND_RES:
-            case WIND_POWER:
-            {
+            case WIND_POWER: {
                 setAttributes(new AttributeHolder(AttributeType.WIND, (int) template.getValue()));
                 break;
             }
             case EARTH_RES:
-            case EARTH_POWER:
-            {
+            case EARTH_POWER: {
                 setAttributes(new AttributeHolder(AttributeType.EARTH, (int) template.getValue()));
                 break;
             }
             case HOLY_RES:
-            case HOLY_POWER:
-            {
+            case HOLY_POWER: {
                 setAttributes(new AttributeHolder(AttributeType.HOLY, (int) template.getValue()));
                 break;
             }
             case DARK_RES:
-            case DARK_POWER:
-            {
+            case DARK_POWER: {
                 setAttributes(new AttributeHolder(AttributeType.DARK, (int) template.getValue()));
                 break;
             }
         }
 
-        if (_funcTemplates == null)
-        {
+        if (_funcTemplates == null) {
             _funcTemplates = new ArrayList<>();
         }
         _funcTemplates.add(template);
     }
 
-    public final void attachCondition(Condition c)
-    {
-        if (_preConditions == null)
-        {
+    public final void attachCondition(Condition c) {
+        if (_preConditions == null) {
             _preConditions = new ArrayList<>();
         }
         _preConditions.add(c);
     }
 
-    public List<Condition> getConditions()
-    {
+    public List<Condition> getConditions() {
         return _preConditions;
     }
 
     /**
      * Method to retrieve skills linked to this item armor and weapon: passive skills etcitem: skills used on item use <-- ???
+     *
      * @return Skills linked to this item as SkillHolder[]
      */
-    public final List<ItemSkillHolder> getAllSkills()
-    {
+    public final List<ItemSkillHolder> getAllSkills() {
         return _skills;
     }
 
@@ -700,8 +634,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
      * @param condition
      * @return {@code List} of {@link ItemSkillHolder} if item has skills and matches the condition, {@code null} otherwise
      */
-    public final List<ItemSkillHolder> getSkills(Predicate<ItemSkillHolder> condition)
-    {
+    public final List<ItemSkillHolder> getSkills(Predicate<ItemSkillHolder> condition) {
         return _skills != null ? _skills.stream().filter(condition).collect(Collectors.toList()) : null;
     }
 
@@ -709,108 +642,84 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
      * @param type
      * @return {@code List} of {@link ItemSkillHolder} if item has skills, {@code null} otherwise
      */
-    public final List<ItemSkillHolder> getSkills(ItemSkillType type)
-    {
+    public final List<ItemSkillHolder> getSkills(ItemSkillType type) {
         return _skills != null ? _skills.stream().filter(sk -> sk.getType() == type).collect(Collectors.toList()) : null;
     }
 
     /**
      * Executes the action on each item skill with the specified type (If there are skills at all)
+     *
      * @param type
      * @param action
      */
-    public final void forEachSkill(ItemSkillType type, Consumer<ItemSkillHolder> action)
-    {
-        if (_skills != null)
-        {
+    public final void forEachSkill(ItemSkillType type, Consumer<ItemSkillHolder> action) {
+        if (_skills != null) {
             _skills.stream().filter(sk -> sk.getType() == type).forEach(action);
         }
     }
 
-    public void addSkill(ItemSkillHolder holder)
-    {
-        if (_skills == null)
-        {
+    public void addSkill(ItemSkillHolder holder) {
+        if (_skills == null) {
             _skills = new ArrayList<>();
         }
         _skills.add(holder);
     }
 
-    public List<ItemChanceHolder> getCreateItems()
-    {
+    public List<ItemChanceHolder> getCreateItems() {
         return _createItems != null ? _createItems : Collections.emptyList();
     }
 
-    public void addCreateItem(ItemChanceHolder item)
-    {
-        if (_createItems == null)
-        {
+    public void addCreateItem(ItemChanceHolder item) {
+        if (_createItems == null) {
             _createItems = new ArrayList<>();
         }
         _createItems.add(item);
     }
 
-    public boolean checkCondition(L2Character activeChar, L2Object object, boolean sendMessage)
-    {
-        if (activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !Config.GM_ITEM_RESTRICTION)
-        {
+    public boolean checkCondition(L2Character activeChar, L2Object object, boolean sendMessage) {
+        if (activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !Config.GM_ITEM_RESTRICTION) {
             return true;
         }
 
         // Don't allow hero equipment and restricted items during Olympiad
-        if ((isOlyRestrictedItem() || _heroItem) && (activeChar.isPlayer() && activeChar.getActingPlayer().isInOlympiadMode()))
-        {
-            if (isEquipable())
-            {
+        if ((isOlyRestrictedItem() || _heroItem) && (activeChar.isPlayer() && activeChar.getActingPlayer().isInOlympiadMode())) {
+            if (isEquipable()) {
                 activeChar.sendPacket(SystemMessageId.YOU_CANNOT_EQUIP_THAT_ITEM_IN_A_OLYMPIAD_MATCH);
-            }
-            else
-            {
+            } else {
                 activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_OLYMPIAD_MATCH);
             }
             return false;
         }
 
-        if (_is_coc_restricted && (activeChar.isPlayer() && (activeChar.getActingPlayer().isOnEvent(CeremonyOfChaosEvent.class))))
-        {
+        if (_is_coc_restricted && (activeChar.isPlayer() && (activeChar.getActingPlayer().isOnEvent(CeremonyOfChaosEvent.class)))) {
             activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ITEM_IN_THE_TOURNAMENT);
             return false;
         }
 
-        if (!isConditionAttached())
-        {
+        if (!isConditionAttached()) {
             return true;
         }
 
         final L2Character target = object.isCharacter() ? (L2Character) object : null;
-        for (Condition preCondition : _preConditions)
-        {
-            if (preCondition == null)
-            {
+        for (Condition preCondition : _preConditions) {
+            if (preCondition == null) {
                 continue;
             }
 
-            if (!preCondition.test(activeChar, target, null, null))
-            {
-                if (activeChar.isSummon())
-                {
+            if (!preCondition.test(activeChar, target, null, null)) {
+                if (activeChar.isSummon()) {
                     activeChar.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
                     return false;
                 }
 
-                if (sendMessage)
-                {
+                if (sendMessage) {
                     final String msg = preCondition.getMessage();
                     final int msgId = preCondition.getMessageId();
-                    if (msg != null)
-                    {
+                    if (msg != null) {
                         activeChar.sendMessage(msg);
-                    }
-                    else if (msgId != 0)
-                    {
+                    } else if (msgId != 0) {
                         final SystemMessage sm = SystemMessage.getSystemMessage(msgId);
-                        if (preCondition.isAddName())
-                        {
+                        if (preCondition.isAddName()) {
                             sm.addItemName(_itemId);
                         }
                         activeChar.sendPacket(sm);
@@ -822,156 +731,138 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
         return true;
     }
 
-    public boolean isConditionAttached()
-    {
+    public boolean isConditionAttached() {
         return (_preConditions != null) && !_preConditions.isEmpty();
     }
 
-    public boolean isQuestItem()
-    {
+    public boolean isQuestItem() {
         return _questItem;
     }
 
-    public boolean isFreightable()
-    {
+    public boolean isFreightable() {
         return _freightable;
     }
 
-    public boolean isAllowSelfResurrection()
-    {
+    public boolean isAllowSelfResurrection() {
         return _allow_self_resurrection;
     }
 
-    public boolean isOlyRestrictedItem()
-    {
+    public boolean isOlyRestrictedItem() {
         return _is_oly_restricted || Config.LIST_OLY_RESTRICTED_ITEMS.contains(_itemId);
     }
 
     /**
      * @return {@code true} if item cannot be used in Ceremony of Chaos games.
      */
-    public boolean isCocRestrictedItem()
-    {
+    public boolean isCocRestrictedItem() {
         return _is_coc_restricted;
     }
 
-    public boolean isForNpc()
-    {
+    public boolean isForNpc() {
         return _for_npc;
     }
 
-    public boolean isAppearanceable()
-    {
+    public boolean isAppearanceable() {
         return _isAppearanceable;
     }
 
     /**
      * @return {@code true} if the item is blessed, {@code false} otherwise.
      */
-    public final boolean isBlessed()
-    {
+    public final boolean isBlessed() {
         return _isBlessed;
     }
 
     /**
      * Returns the name of the item followed by the item ID.
+     *
      * @return the name and the ID of the item
      */
     @Override
-    public String toString()
-    {
+    public String toString() {
         return _name + "(" + _itemId + ")";
     }
 
     /**
      * Verifies if the item has effects immediately.<br>
      * <i>Used for herbs mostly.</i>
+     *
      * @return {@code true} if the item applies effects immediately, {@code false} otherwise
      */
-    public boolean hasExImmediateEffect()
-    {
+    public boolean hasExImmediateEffect() {
         return _ex_immediate_effect;
     }
 
     /**
      * Verifies if the item has effects immediately.
+     *
      * @return {@code true} if the item applies effects immediately, {@code false} otherwise
      */
-    public boolean hasImmediateEffect()
-    {
+    public boolean hasImmediateEffect() {
         return _immediate_effect;
     }
 
     /**
      * @return the _default_action
      */
-    public ActionType getDefaultAction()
-    {
+    public ActionType getDefaultAction() {
         return _defaultAction;
     }
 
-    public int useSkillDisTime()
-    {
+    public int useSkillDisTime() {
         return _useSkillDisTime;
     }
 
     /**
      * Gets the item reuse delay time in seconds.
+     *
      * @return the reuse delay time
      */
-    public int getReuseDelay()
-    {
+    public int getReuseDelay() {
         return _reuseDelay;
     }
 
     /**
      * Gets the shared reuse group.<br>
      * Items with the same reuse group will render reuse delay upon those items when used.
+     *
      * @return the shared reuse group
      */
-    public int getSharedReuseGroup()
-    {
+    public int getSharedReuseGroup() {
         return _sharedReuseGroup;
     }
 
-    public CommissionItemType getCommissionItemType()
-    {
+    public CommissionItemType getCommissionItemType() {
         return _commissionItemType;
     }
 
     /**
      * Usable in HTML windows.
+     *
      * @return the icon link in client files
      */
-    public String getIcon()
-    {
+    public String getIcon() {
         return _icon;
     }
 
-    public int getDefaultEnchantLevel()
-    {
+    public int getDefaultEnchantLevel() {
         return _defaultEnchantLevel;
     }
 
-    public boolean isPetItem()
-    {
+    public boolean isPetItem() {
         return getItemType() == EtcItemType.PET_COLLAR;
     }
 
     /**
      * @param extractableProduct
      */
-    public void addCapsuledItem(L2ExtractableProduct extractableProduct)
-    {
+    public void addCapsuledItem(L2ExtractableProduct extractableProduct) {
     }
 
-    public double getStats(Stats stat, double defaultValue)
-    {
-        if (_funcTemplates != null)
-        {
+    public double getStats(Stats stat, double defaultValue) {
+        if (_funcTemplates != null) {
             final FuncTemplate template = _funcTemplates.stream().filter(func -> (func.getStat() == stat) && ((func.getFunctionClass() == FuncAdd.class) || (func.getFunctionClass() == FuncSet.class))).findFirst().orElse(null);
-            if (template != null)
-            {
+            if (template != null) {
                 return template.getValue();
             }
         }

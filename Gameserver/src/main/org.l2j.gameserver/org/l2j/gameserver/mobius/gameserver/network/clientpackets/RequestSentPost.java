@@ -14,45 +14,37 @@ import java.nio.ByteBuffer;
 /**
  * @author Migi, DS
  */
-public final class RequestSentPost extends IClientIncomingPacket
-{
+public final class RequestSentPost extends IClientIncomingPacket {
     private int _msgId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _msgId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if ((activeChar == null) || !Config.ALLOW_MAIL)
-        {
+        if ((activeChar == null) || !Config.ALLOW_MAIL) {
             return;
         }
 
         final Message msg = MailManager.getInstance().getMessage(_msgId);
-        if (msg == null)
-        {
+        if (msg == null) {
             return;
         }
 
-        if (!activeChar.isInsideZone(ZoneId.PEACE) && msg.hasAttachments())
-        {
+        if (!activeChar.isInsideZone(ZoneId.PEACE) && msg.hasAttachments()) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
             return;
         }
 
-        if (msg.getSenderId() != activeChar.getObjectId())
-        {
+        if (msg.getSenderId() != activeChar.getObjectId()) {
             Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to read not own post!", Config.DEFAULT_PUNISH);
             return;
         }
 
-        if (msg.isDeletedBySender())
-        {
+        if (msg.isDeletedBySender()) {
             return;
         }
 

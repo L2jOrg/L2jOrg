@@ -11,30 +11,24 @@ import java.nio.ByteBuffer;
 /**
  * @author Migi, DS
  */
-public final class RequestPostItemList extends IClientIncomingPacket
-{
+public final class RequestPostItemList extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
-        if (!Config.ALLOW_MAIL || !Config.ALLOW_ATTACHMENTS)
-        {
+    public void runImpl() {
+        if (!Config.ALLOW_MAIL || !Config.ALLOW_ATTACHMENTS) {
             return;
         }
 
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
-        if (!activeChar.isInsideZone(ZoneId.PEACE))
-        {
+        if (!activeChar.isInsideZone(ZoneId.PEACE)) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
             return;
         }

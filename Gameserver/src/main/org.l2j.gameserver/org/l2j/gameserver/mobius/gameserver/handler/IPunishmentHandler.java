@@ -8,13 +8,12 @@ import java.util.logging.Logger;
 /**
  * @author UnAfraid
  */
-public interface IPunishmentHandler
-{
-	Logger LOGGER = Logger.getLogger(IPunishmentHandler.class.getName());
-	
-	void onStart(PunishmentTask task);
-	
-	void onEnd(PunishmentTask task);
-	
-	PunishmentType getType();
+public interface IPunishmentHandler {
+    Logger LOGGER = Logger.getLogger(IPunishmentHandler.class.getName());
+
+    void onStart(PunishmentTask task);
+
+    void onEnd(PunishmentTask task);
+
+    PunishmentType getType();
 }

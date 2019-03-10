@@ -7,7 +7,6 @@ import org.l2j.gameserver.mobius.gameserver.model.cubic.CubicInstance;
 /**
  * @author UnAfraid
  */
-public interface ICubicCondition
-{
-	boolean test(CubicInstance cubic, L2Character owner, L2Object target);
+public interface ICubicCondition {
+    boolean test(CubicInstance cubic, L2Character owner, L2Object target);
 }

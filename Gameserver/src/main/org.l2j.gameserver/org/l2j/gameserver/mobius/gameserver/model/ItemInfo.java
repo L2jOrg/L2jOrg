@@ -14,46 +14,7 @@ import java.util.Objects;
 /**
  * Get all information from L2ItemInstance to generate ItemInfo.
  */
-public class ItemInfo
-{
-    /** Identifier of the L2ItemInstance */
-    private int _objectId;
-
-    /** The L2Item template of the L2ItemInstance */
-    private L2Item _item;
-
-    /** The level of enchant on the L2ItemInstance */
-    private int _enchantLevel;
-
-    /** The augmentation of the item */
-    private VariationInstance _augmentation;
-
-    /** The quantity of L2ItemInstance */
-    private long _count;
-
-    /** The price of the L2ItemInstance */
-    private int _price;
-
-    /** The custom L2ItemInstance types (used loto, race tickets) */
-    private int _type1;
-    private int _type2;
-
-    /** If True the L2ItemInstance is equipped */
-    private int _equipped;
-
-    /** The action to do clientside (1=ADD, 2=MODIFY, 3=REMOVE) */
-    private int _change;
-
-    /** The mana of this item */
-    private int _mana;
-    private int _time;
-
-    private boolean _available = true;
-
-    private int _location;
-
-    private byte _elemAtkType = -2;
-    private int _elemAtkPower = 0;
+public class ItemInfo {
     private final int[] _attributeDefence =
             {
                     0,
@@ -63,7 +24,52 @@ public class ItemInfo
                     0,
                     0
             };
-
+    /**
+     * Identifier of the L2ItemInstance
+     */
+    private int _objectId;
+    /**
+     * The L2Item template of the L2ItemInstance
+     */
+    private L2Item _item;
+    /**
+     * The level of enchant on the L2ItemInstance
+     */
+    private int _enchantLevel;
+    /**
+     * The augmentation of the item
+     */
+    private VariationInstance _augmentation;
+    /**
+     * The quantity of L2ItemInstance
+     */
+    private long _count;
+    /**
+     * The price of the L2ItemInstance
+     */
+    private int _price;
+    /**
+     * The custom L2ItemInstance types (used loto, race tickets)
+     */
+    private int _type1;
+    private int _type2;
+    /**
+     * If True the L2ItemInstance is equipped
+     */
+    private int _equipped;
+    /**
+     * The action to do clientside (1=ADD, 2=MODIFY, 3=REMOVE)
+     */
+    private int _change;
+    /**
+     * The mana of this item
+     */
+    private int _mana;
+    private int _time;
+    private boolean _available = true;
+    private int _location;
+    private byte _elemAtkType = -2;
+    private int _elemAtkPower = 0;
     private int[] _option;
     private Collection<EnsoulOption> _soulCrystalOptions;
     private Collection<EnsoulOption> _soulCrystalSpecialOptions;
@@ -72,10 +78,10 @@ public class ItemInfo
 
     /**
      * Get all information from L2ItemInstance to generate ItemInfo.
+     *
      * @param item
      */
-    public ItemInfo(L2ItemInstance item)
-    {
+    public ItemInfo(L2ItemInstance item) {
         Objects.requireNonNull(item);
 
         // Get the Identifier of the L2ItemInstance
@@ -101,20 +107,16 @@ public class ItemInfo
         _equipped = item.isEquipped() ? 1 : 0;
 
         // Get the action to do clientside
-        switch (item.getLastChange())
-        {
-            case L2ItemInstance.ADDED:
-            {
+        switch (item.getLastChange()) {
+            case L2ItemInstance.ADDED: {
                 _change = 1;
                 break;
             }
-            case L2ItemInstance.MODIFIED:
-            {
+            case L2ItemInstance.MODIFIED: {
                 _change = 2;
                 break;
             }
-            case L2ItemInstance.REMOVED:
-            {
+            case L2ItemInstance.REMOVED: {
                 _change = 3;
                 break;
             }
@@ -128,8 +130,7 @@ public class ItemInfo
 
         _elemAtkType = item.getAttackAttributeType().getClientId();
         _elemAtkPower = item.getAttackAttributePower();
-        for (AttributeType type : AttributeType.ATTRIBUTE_TYPES)
-        {
+        for (AttributeType type : AttributeType.ATTRIBUTE_TYPES) {
             _attributeDefence[type.getClientId()] = item.getDefenceAttribute(type);
         }
         _option = item.getEnchantOptions();
@@ -138,17 +139,14 @@ public class ItemInfo
         _visualId = item.getVisualId();
     }
 
-    public ItemInfo(L2ItemInstance item, int change)
-    {
+    public ItemInfo(L2ItemInstance item, int change) {
         this(item);
         _change = change;
         _visualExpiration = item.getVisualLifeTime() > 0 ? (item.getVisualLifeTime() - System.currentTimeMillis()) / 1000 : 0;
     }
 
-    public ItemInfo(TradeItem item)
-    {
-        if (item == null)
-        {
+    public ItemInfo(TradeItem item) {
+        if (item == null) {
             return;
         }
 
@@ -162,8 +160,7 @@ public class ItemInfo
         _enchantLevel = item.getEnchant();
 
         // Get the augmentation bonus
-        if ((item.getAugmentationOption1() >= 0) && (item.getAugmentationOption2() >= 0))
-        {
+        if ((item.getAugmentationOption1() >= 0) && (item.getAugmentationOption2() >= 0)) {
             _augmentation = new VariationInstance(0, item.getAugmentationOption1(), item.getAugmentationOption2());
         }
 
@@ -188,8 +185,7 @@ public class ItemInfo
 
         _elemAtkType = item.getAttackElementType();
         _elemAtkPower = item.getAttackElementPower();
-        for (byte i = 0; i < 6; i++)
-        {
+        for (byte i = 0; i < 6; i++) {
             _attributeDefence[i] = item.getElementDefAttr(i);
         }
 
@@ -199,10 +195,8 @@ public class ItemInfo
         _visualId = item.getVisualId();
     }
 
-    public ItemInfo(Product item)
-    {
-        if (item == null)
-        {
+    public ItemInfo(Product item) {
+        if (item == null) {
             return;
         }
 
@@ -241,10 +235,8 @@ public class ItemInfo
         _soulCrystalSpecialOptions = Collections.emptyList();
     }
 
-    public ItemInfo(L2WarehouseItem item)
-    {
-        if (item == null)
-        {
+    public ItemInfo(L2WarehouseItem item) {
+        if (item == null) {
             return;
         }
 
@@ -277,8 +269,7 @@ public class ItemInfo
 
         _elemAtkType = item.getAttackElementType();
         _elemAtkPower = item.getAttackElementPower();
-        for (byte i = 0; i < 6; i++)
-        {
+        for (byte i = 0; i < 6; i++) {
             _attributeDefence[i] = item.getElementDefAttr(i);
         }
         _option = item.getEnchantOptions();
@@ -286,119 +277,96 @@ public class ItemInfo
         _soulCrystalOptions = item.getSoulCrystalSpecialOptions();
     }
 
-    public int getObjectId()
-    {
+    public int getObjectId() {
         return _objectId;
     }
 
-    public L2Item getItem()
-    {
+    public L2Item getItem() {
         return _item;
     }
 
-    public int getEnchantLevel()
-    {
+    public int getEnchantLevel() {
         return _enchantLevel;
     }
 
-    public VariationInstance getAugmentation()
-    {
+    public VariationInstance getAugmentation() {
         return _augmentation;
     }
 
-    public long getCount()
-    {
+    public long getCount() {
         return _count;
     }
 
-    public int getPrice()
-    {
+    public int getPrice() {
         return _price;
     }
 
-    public int getCustomType1()
-    {
+    public int getCustomType1() {
         return _type1;
     }
 
-    public int getCustomType2()
-    {
+    public int getCustomType2() {
         return _type2;
     }
 
-    public int getEquipped()
-    {
+    public int getEquipped() {
         return _equipped;
     }
 
-    public int getChange()
-    {
+    public int getChange() {
         return _change;
     }
 
-    public int getMana()
-    {
+    public int getMana() {
         return _mana;
     }
 
-    public int getTime()
-    {
+    public int getTime() {
         return _time > 0 ? _time : _visualExpiration > 0 ? (int) _visualExpiration : -9999;
     }
 
-    public boolean isAvailable()
-    {
+    public boolean isAvailable() {
         return _available;
     }
 
-    public int getLocation()
-    {
+    public int getLocation() {
         return _location;
     }
 
-    public int getAttackElementType()
-    {
+    public int getAttackElementType() {
         return _elemAtkType;
     }
 
-    public int getAttackElementPower()
-    {
+    public int getAttackElementPower() {
         return _elemAtkPower;
     }
 
-    public int getAttributeDefence(AttributeType attribute)
-    {
+    public int getAttributeDefence(AttributeType attribute) {
         return _attributeDefence[attribute.getClientId()];
     }
 
-    public int[] getEnchantOptions()
-    {
+    public int[] getEnchantOptions() {
         return _option;
     }
 
-    public int getVisualId()
-    {
+    public int getVisualId() {
         return _visualId;
     }
 
-    public Collection<EnsoulOption> getSoulCrystalOptions()
-    {
+    public Collection<EnsoulOption> getSoulCrystalOptions() {
         return _soulCrystalOptions != null ? _soulCrystalOptions : Collections.emptyList();
     }
 
-    public Collection<EnsoulOption> getSoulCrystalSpecialOptions()
-    {
+    public Collection<EnsoulOption> getSoulCrystalSpecialOptions() {
         return _soulCrystalSpecialOptions != null ? _soulCrystalSpecialOptions : Collections.emptyList();
     }
 
-    public long getVisualExpiration()
-    {
+    public long getVisualExpiration() {
         return _visualExpiration;
     }
 
     @Override
-    public String toString()
-    {
-        return String.valueOf(_item) + "[objId: " + _objectId + ", count: " + _count + "]";
+    public String toString() {
+        return _item + "[objId: " + _objectId + ", count: " + _count + "]";
     }
 }

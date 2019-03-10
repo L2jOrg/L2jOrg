@@ -7,17 +7,14 @@ import java.nio.ByteBuffer;
 /**
  * @author l3x
  */
-public class RequestManorList extends IClientIncomingPacket
-{
+public class RequestManorList extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         client.sendPacket(ExSendManorList.STATIC_PACKET);
     }
 }

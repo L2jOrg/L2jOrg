@@ -9,21 +9,18 @@ import java.nio.ByteBuffer;
 /**
  * @author Mobius
  */
-public class ExPCCafeRequestOpenWindowWithoutNPC extends IClientIncomingPacket
-{
-	@Override
-	public void readImpl(ByteBuffer packet) {
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar != null) && Config.PC_CAFE_ENABLED)
-		{
-			final NpcHtmlMessage html = new NpcHtmlMessage();
-			html.setFile(activeChar, "data/html/pccafe.htm");
-			activeChar.sendPacket(html);
-		}
-	}
+public class ExPCCafeRequestOpenWindowWithoutNPC extends IClientIncomingPacket {
+    @Override
+    public void readImpl(ByteBuffer packet) {
+    }
+
+    @Override
+    public void runImpl() {
+        final L2PcInstance activeChar = client.getActiveChar();
+        if ((activeChar != null) && Config.PC_CAFE_ENABLED) {
+            final NpcHtmlMessage html = new NpcHtmlMessage();
+            html.setFile(activeChar, "data/html/pccafe.htm");
+            activeChar.sendPacket(html);
+        }
+    }
 }

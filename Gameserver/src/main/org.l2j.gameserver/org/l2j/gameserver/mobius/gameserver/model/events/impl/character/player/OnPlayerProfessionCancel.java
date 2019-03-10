@@ -8,30 +8,25 @@ import org.l2j.gameserver.mobius.gameserver.model.events.impl.IBaseEvent;
  * @author Krunchy
  * @since 2.6.0.0
  */
-public class OnPlayerProfessionCancel implements IBaseEvent
-{
+public class OnPlayerProfessionCancel implements IBaseEvent {
     private final L2PcInstance _activeChar;
     private final int _classId;
 
-    public OnPlayerProfessionCancel(L2PcInstance activeChar, int classId)
-    {
+    public OnPlayerProfessionCancel(L2PcInstance activeChar, int classId) {
         _activeChar = activeChar;
         _classId = classId;
     }
 
-    public L2PcInstance getActiveChar()
-    {
+    public L2PcInstance getActiveChar() {
         return _activeChar;
     }
 
-    public int getClassId()
-    {
+    public int getClassId() {
         return _classId;
     }
 
     @Override
-    public EventType getType()
-    {
+    public EventType getType() {
         return EventType.ON_PLAYER_PROFESSION_CANCEL;
     }
 }

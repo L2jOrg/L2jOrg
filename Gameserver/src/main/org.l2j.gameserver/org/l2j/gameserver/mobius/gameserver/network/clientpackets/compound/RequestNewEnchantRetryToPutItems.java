@@ -15,42 +15,33 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class RequestNewEnchantRetryToPutItems extends IClientIncomingPacket
-{
+public class RequestNewEnchantRetryToPutItems extends IClientIncomingPacket {
     private int _firstItemObjectId;
     private int _secondItemObjectId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _firstItemObjectId = packet.getInt();
         _secondItemObjectId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
-        }
-        else if (activeChar.isInStoreMode())
-        {
+        } else if (activeChar.isInStoreMode()) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
             client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
             return;
-        }
-        else if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest())
-        {
+        } else if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest()) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
             client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
             return;
         }
 
         final CompoundRequest request = new CompoundRequest(activeChar);
-        if (!activeChar.addRequest(request))
-        {
+        if (!activeChar.addRequest(request)) {
             client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
             return;
         }
@@ -58,8 +49,7 @@ public class RequestNewEnchantRetryToPutItems extends IClientIncomingPacket
         // Make sure player owns first item.
         request.setItemOne(_firstItemObjectId);
         final L2ItemInstance itemOne = request.getItemOne();
-        if (itemOne == null)
-        {
+        if (itemOne == null) {
             client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
             activeChar.removeRequest(request.getClass());
             return;
@@ -68,8 +58,7 @@ public class RequestNewEnchantRetryToPutItems extends IClientIncomingPacket
         // Make sure player owns second item.
         request.setItemTwo(_secondItemObjectId);
         final L2ItemInstance itemTwo = request.getItemTwo();
-        if (itemTwo == null)
-        {
+        if (itemTwo == null) {
             client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
             activeChar.removeRequest(request.getClass());
             return;
@@ -78,8 +67,7 @@ public class RequestNewEnchantRetryToPutItems extends IClientIncomingPacket
         final CombinationItem combinationItem = CombinationItemsData.getInstance().getItemsBySlots(itemOne.getId(), itemTwo.getId());
 
         // Not implemented or not able to merge!
-        if (combinationItem == null)
-        {
+        if (combinationItem == null) {
             client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
             activeChar.removeRequest(request.getClass());
             return;

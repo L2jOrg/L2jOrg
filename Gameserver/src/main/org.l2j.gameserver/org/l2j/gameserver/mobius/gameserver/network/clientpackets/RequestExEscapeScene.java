@@ -8,25 +8,20 @@ import java.nio.ByteBuffer;
 /**
  * @author St3eT
  */
-public final class RequestExEscapeScene extends IClientIncomingPacket
-{
+public final class RequestExEscapeScene extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
         final MovieHolder holder = activeChar.getMovieHolder();
-        if (holder == null)
-        {
+        if (holder == null) {
             return;
         }
         holder.playerEscapeVote(activeChar);

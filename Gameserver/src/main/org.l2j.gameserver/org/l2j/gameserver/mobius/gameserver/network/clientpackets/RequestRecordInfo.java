@@ -8,20 +8,16 @@ import org.l2j.gameserver.mobius.gameserver.network.serverpackets.UserInfo;
 
 import java.nio.ByteBuffer;
 
-public class RequestRecordInfo extends IClientIncomingPacket
-{
+public class RequestRecordInfo extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
 
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null)
-        {
+        if (activeChar == null) {
             return;
         }
 
@@ -29,19 +25,16 @@ public class RequestRecordInfo extends IClientIncomingPacket
 
         L2World.getInstance().forEachVisibleObject(activeChar, L2Object.class, object ->
         {
-            if (object.isVisibleFor(activeChar))
-            {
+            if (object.isVisibleFor(activeChar)) {
                 object.sendInfo(activeChar);
 
-                if (object.isCharacter())
-                {
+                if (object.isCharacter()) {
                     // Update the state of the L2Character object client
                     // side by sending Server->Client packet
                     // MoveToPawn/CharMoveToLocation and AutoAttackStart to
                     // the L2PcInstance
                     final L2Character obj = (L2Character) object;
-                    if (obj.getAI() != null)
-                    {
+                    if (obj.getAI() != null) {
                         obj.getAI().describeStateToPlayer(activeChar);
                     }
                 }

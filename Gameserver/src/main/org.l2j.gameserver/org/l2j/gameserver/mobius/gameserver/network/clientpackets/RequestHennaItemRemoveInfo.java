@@ -13,29 +13,24 @@ import java.nio.ByteBuffer;
 /**
  * @author Zoey76
  */
-public final class RequestHennaItemRemoveInfo extends IClientIncomingPacket
-{
+public final class RequestHennaItemRemoveInfo extends IClientIncomingPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestHennaItemRemoveInfo.class);
     private int _symbolId;
 
     @Override
-    public void readImpl(ByteBuffer packet)
-    {
+    public void readImpl(ByteBuffer packet) {
         _symbolId = packet.getInt();
     }
 
     @Override
-    public void runImpl()
-    {
+    public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if ((activeChar == null) || (_symbolId == 0))
-        {
+        if ((activeChar == null) || (_symbolId == 0)) {
             return;
         }
 
         final L2Henna henna = HennaData.getInstance().getHenna(_symbolId);
-        if (henna == null)
-        {
+        if (henna == null) {
             LOGGER.warn("Invalid Henna Id: " + _symbolId + " from player " + activeChar);
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;

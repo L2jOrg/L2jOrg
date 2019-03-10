@@ -13,8 +13,7 @@ import java.util.List;
 /**
  * @author UnAfraid
  */
-public class CubicSkill extends SkillHolder implements ICubicConditionHolder
-{
+public class CubicSkill extends SkillHolder implements ICubicConditionHolder {
     private final int _triggerRate;
     private final int _successRate;
     private final boolean _canUseOnStaticObjects;
@@ -22,8 +21,7 @@ public class CubicSkill extends SkillHolder implements ICubicConditionHolder
     private final List<ICubicCondition> _conditions = new ArrayList<>();
     private final boolean _targetDebuff;
 
-    public CubicSkill(StatsSet set)
-    {
+    public CubicSkill(StatsSet set) {
         super(set.getInt("id"), set.getInt("level"));
         _triggerRate = set.getInt("triggerRate", 100);
         _successRate = set.getInt("successRate", 100);
@@ -32,46 +30,38 @@ public class CubicSkill extends SkillHolder implements ICubicConditionHolder
         _targetDebuff = set.getBoolean("targetDebuff", false);
     }
 
-    public int getTriggerRate()
-    {
+    public int getTriggerRate() {
         return _triggerRate;
     }
 
-    public int getSuccessRate()
-    {
+    public int getSuccessRate() {
         return _successRate;
     }
 
-    public boolean canUseOnStaticObjects()
-    {
+    public boolean canUseOnStaticObjects() {
         return _canUseOnStaticObjects;
     }
 
-    public CubicTargetType getTargetType()
-    {
+    public CubicTargetType getTargetType() {
         return _targetType;
     }
 
-    public boolean isTargetingDebuff()
-    {
+    public boolean isTargetingDebuff() {
         return _targetDebuff;
     }
 
     @Override
-    public boolean validateConditions(CubicInstance cubic, L2Character owner, L2Object target)
-    {
+    public boolean validateConditions(CubicInstance cubic, L2Character owner, L2Object target) {
         return (!_targetDebuff || (_targetDebuff && target.isCharacter() && (((L2Character) target).getEffectList().getDebuffCount() > 0))) && (_conditions.isEmpty() || _conditions.stream().allMatch(condition -> condition.test(cubic, owner, target)));
     }
 
     @Override
-    public void addCondition(ICubicCondition condition)
-    {
+    public void addCondition(ICubicCondition condition) {
         _conditions.add(condition);
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Cubic skill id: " + getSkillId() + " level: " + getSkillLevel() + " triggerRate: " + _triggerRate + " successRate: " + _successRate + " canUseOnStaticObjects: " + _canUseOnStaticObjects + " targetType: " + _targetType + " isTargetingDebuff: " + _targetDebuff + Config.EOL;
     }
 }
