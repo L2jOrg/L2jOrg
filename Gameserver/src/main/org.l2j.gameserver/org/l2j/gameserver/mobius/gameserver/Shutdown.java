@@ -28,7 +28,6 @@ import org.l2j.gameserver.mobius.gameserver.model.L2World;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.mobius.gameserver.model.entity.Hero;
 import org.l2j.gameserver.mobius.gameserver.model.olympiad.Olympiad;
-import org.l2j.gameserver.mobius.gameserver.network.ClientNetworkManager;
 import org.l2j.gameserver.mobius.gameserver.network.Disconnection;
 import org.l2j.gameserver.mobius.gameserver.network.EventLoopGroupManager;
 import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;

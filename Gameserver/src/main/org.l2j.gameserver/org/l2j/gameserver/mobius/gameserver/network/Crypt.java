@@ -6,13 +6,15 @@ import org.l2j.gameserver.mobius.gameserver.model.events.impl.server.OnPacketSen
 
 import java.nio.ByteBuffer;
 
+import static java.lang.Byte.toUnsignedInt;
+
 /**
  * @author UnAfraid, Nos
  */
 public class Crypt {
     private final L2GameClient _client;
     private final byte[] _inKey = new byte[16];
-    private final byte[] _outKey = new byte[16];
+    private final byte[] outKey = new byte[16];
     private boolean _isEnabled;
 
     public Crypt(L2GameClient client) {
@@ -21,26 +23,32 @@ public class Crypt {
 
     public void setKey(byte[] key) {
         System.arraycopy(key, 0, _inKey, 0, 16);
-        System.arraycopy(key, 0, _outKey, 0, 16);
+        System.arraycopy(key, 0, outKey, 0, 16);
     }
 
-    public void encrypt(ByteBuffer buf) {
-        if (!_isEnabled) {
+    public void encrypt(final byte[] data, final int offset, final int size) {
+        if(!_isEnabled) {
             _isEnabled = true;
-            onPacketSent(buf);
+            onPacketSent(data);
             return;
         }
 
-        onPacketSent(buf);
+        onPacketSent(data);
 
-        int a = 0;
-        while (buf.isReadable()) {
-            final int b = buf.readByte() & 0xFF;
-            a = b ^ _outKey[(buf.readerIndex() - 1) & 15] ^ a;
-            buf.setByte(buf.readerIndex() - 1, a);
+        int encrypted = 0;
+        for (int i = 0; i < size; i++) {
+            int raw = toUnsignedInt(data[offset + i]);
+            encrypted =  raw ^ outKey[i & 0x0F] ^ encrypted;
+            data[offset + i] = (byte) encrypted;
         }
 
-        shiftKey(_outKey, buf.writerIndex());
+        shiftKey(outKey, size);
+    }
+
+    public boolean decrypt(byte[] data, int offset, int size) {
+        if(_isEnabled) {
+            onPacketReceive(data);
+        }
     }
 
     public void decrypt(ByteBuf buf) {
@@ -67,6 +75,10 @@ public class Crypt {
         EventDispatcher.getInstance().notifyEvent(new OnPacketSent(_client, data));
     }
 
+    private void onPacketSent(byte[] data) {
+        EventDispatcher.getInstance().notifyEvent(new OnPacketSent(_client, data));
+    }
+
     private void onPacketReceive(ByteBuf buf) {
         final byte[] data = new byte[buf.writerIndex()];
         buf.getBytes(0, data);
@@ -86,4 +98,5 @@ public class Crypt {
         key[10] = (byte) ((old >> 0x10) & 0xff);
         key[11] = (byte) ((old >> 0x18) & 0xff);
     }
+
 }

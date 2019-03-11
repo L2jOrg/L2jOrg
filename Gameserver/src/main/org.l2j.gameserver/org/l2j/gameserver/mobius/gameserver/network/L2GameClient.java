@@ -24,7 +24,6 @@ import org.l2j.gameserver.mobius.gameserver.util.FloodProtectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.net.InetAddress;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -192,12 +191,13 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 
     @Override
     public int encrypt(byte[] data, int offset, int size) {
-        return 0;
+        _crypt.encrypt(data, offset, size);
+        return size;
     }
 
     @Override
     public boolean decrypt(byte[] data, int offset, int size) {
-        return false;
+        return _crypt.decrypt(data, offset, size);
     }
 
     @Override
@@ -239,15 +239,6 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         final byte[] key = BlowFishKeygen.getRandomKey();
         _crypt.setKey(key);
         return key;
-    }
-
-    /**
-     * For loaded offline traders returns localhost address.
-     *
-     * @return cached connection IP address, for checking detached clients.
-     */
-    public InetAddress getConnectionAddress() {
-        return address;
     }
 
     public L2PcInstance getActiveChar() {
@@ -491,7 +482,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         sendPacket(ActionFailed.STATIC_PACKET);
     }
 
-    public ICrypt getCrypt() {
+    public Crypt getCrypt() {
         return _crypt;
     }
 

@@ -1,24 +1,5 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.mobius.gameserver.network;
 
-import org.l2j.commons.network.IConnectionState;
-import org.l2j.commons.network.IIncomingPacket;
-import org.l2j.commons.network.IIncomingPackets;
 import org.l2j.gameserver.mobius.gameserver.network.clientpackets.*;
 import org.l2j.gameserver.mobius.gameserver.network.clientpackets.friend.*;
 
@@ -30,7 +11,7 @@ import java.util.function.Supplier;
 /**
  * @author UnAfraid
  */
-public enum IncomingPackets implements IIncomingPackets<L2GameClient> {
+public enum IncomingPackets {
     LOGOUT(0x00, Logout::new, ConnectionState.AUTHENTICATED, ConnectionState.IN_GAME),
     ATTACK(0x01, Attack::new, ConnectionState.IN_GAME),
     REQUEST_START_PLEDGE_WAR(0x03, RequestStartPledgeWar::new, ConnectionState.IN_GAME),
@@ -205,7 +186,7 @@ public enum IncomingPackets implements IIncomingPackets<L2GameClient> {
     public static final IncomingPackets[] PACKET_ARRAY;
 
     static {
-        final short maxPacketId = (short) Arrays.stream(values()).mapToInt(IIncomingPackets::getPacketId).max().orElse(0);
+        final short maxPacketId = (short) Arrays.stream(values()).mapToInt(IncomingPackets::getPacketId).max().orElse(0);
         PACKET_ARRAY = new IncomingPackets[maxPacketId + 1];
         for (IncomingPackets incomingPacket : values()) {
             PACKET_ARRAY[incomingPacket.getPacketId()] = incomingPacket;
@@ -213,10 +194,10 @@ public enum IncomingPackets implements IIncomingPackets<L2GameClient> {
     }
 
     private short _packetId;
-    private Supplier<IIncomingPacket<L2GameClient>> _incomingPacketFactory;
-    private Set<IConnectionState> _connectionStates;
+    private Supplier<IClientIncomingPacket> _incomingPacketFactory;
+    private Set<ConnectionState> _connectionStates;
 
-    IncomingPackets(int packetId, Supplier<IIncomingPacket<L2GameClient>> incomingPacketFactory, IConnectionState... connectionStates) {
+    IncomingPackets(int packetId, Supplier<IClientIncomingPacket> incomingPacketFactory, ConnectionState... connectionStates) {
         // packetId is an unsigned byte
         if (packetId > 0xFF) {
             throw new IllegalArgumentException("packetId must not be bigger than 0xFF");
@@ -227,18 +208,15 @@ public enum IncomingPackets implements IIncomingPackets<L2GameClient> {
         _connectionStates = new HashSet<>(Arrays.asList(connectionStates));
     }
 
-    @Override
     public int getPacketId() {
         return _packetId;
     }
 
-    @Override
-    public IIncomingPacket<L2GameClient> newIncomingPacket() {
+    public IClientIncomingPacket newIncomingPacket() {
         return _incomingPacketFactory.get();
     }
 
-    @Override
-    public Set<IConnectionState> getConnectionStates() {
+    public Set<ConnectionState> getConnectionStates() {
         return _connectionStates;
     }
 }

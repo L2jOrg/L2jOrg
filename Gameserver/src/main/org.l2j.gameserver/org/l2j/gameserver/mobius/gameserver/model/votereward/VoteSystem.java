@@ -17,6 +17,7 @@
 package org.l2j.gameserver.mobius.gameserver.model.votereward;
 
 import com.l2jmobius.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
 import org.l2j.gameserver.mobius.gameserver.model.L2World;
 import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
@@ -115,7 +116,7 @@ public abstract class VoteSystem implements Runnable {
                 }
 
                 boolean canReward = false;
-                String pIp = p.getClient().getConnectionAddress().getHostAddress();
+                String pIp = p.getClient().getHostAddress();
                 if (playerIps.containsKey(pIp)) {
                     int count = playerIps.get(pIp);
                     if (count < boxes) {

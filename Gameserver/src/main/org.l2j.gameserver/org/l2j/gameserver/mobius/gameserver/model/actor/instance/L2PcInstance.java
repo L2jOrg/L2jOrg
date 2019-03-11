@@ -3443,8 +3443,8 @@ public final class L2PcInstance extends L2Playable {
 
     public void setClient(L2GameClient client) {
         _client = client;
-        if ((_client != null) && (_client.getConnectionAddress() != null)) {
-            _ip = _client.getConnectionAddress().getHostAddress();
+        if ((_client != null) && (_client.getHostAddress() != null)) {
+            _ip = _client.getHostAddress();
         }
     }
 
