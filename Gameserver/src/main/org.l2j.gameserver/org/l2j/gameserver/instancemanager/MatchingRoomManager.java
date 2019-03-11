@@ -1,118 +1,137 @@
+/*
+ * This file is part of the L2J Mobius project.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package org.l2j.gameserver.instancemanager;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.CopyOnWriteArraySet;
-
-import org.l2j.commons.lang.ArrayUtils;
-import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.enums.MatchingRoomType;
+import org.l2j.gameserver.enums.PartyMatchingRoomLevelType;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.matching.MatchingRoom;
-import org.l2j.gameserver.templates.mapregion.RestartArea;
-import org.l2j.gameserver.templates.mapregion.RestartPoint;
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.CTreeIntObjectMap;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 /**
- * @author VISTALL
- * @date 0:08/12.06.2011
+ * @author Sdw
  */
-public class MatchingRoomManager
-{
-	private class RoomsHolder
-	{
-		private int _id = 1;
+public class MatchingRoomManager {
+    private static final Map<MatchingRoomType, Map<Integer, MatchingRoom>> _rooms = new ConcurrentHashMap<>(2);
+    private final AtomicInteger _id = new AtomicInteger(0);
+    private volatile Set<L2PcInstance> _waitingList;
 
-		private IntObjectMap<MatchingRoom> _rooms = new CTreeIntObjectMap<MatchingRoom>();
+    public static MatchingRoomManager getInstance() {
+        return SingletonHolder._instance;
+    }
 
-		public int addRoom(MatchingRoom r)
-		{
-			int val = _id ++;
-			_rooms.put(val, r);
-			return val;
-		}
-	}
+    public void addToWaitingList(L2PcInstance player) {
+        if (_waitingList == null) {
+            synchronized (this) {
+                if (_waitingList == null) {
+                    _waitingList = ConcurrentHashMap.newKeySet(1);
+                }
+            }
+        }
+        _waitingList.add(player);
+    }
 
-	private static final MatchingRoomManager _instance = new MatchingRoomManager();
+    public void removeFromWaitingList(L2PcInstance player) {
+        getPlayerInWaitingList().remove(player);
+    }
 
-	public static MatchingRoomManager getInstance()
-	{
-		return _instance;
-	}
+    public Set<L2PcInstance> getPlayerInWaitingList() {
+        return _waitingList == null ? Collections.emptySet() : _waitingList;
+    }
 
-	private RoomsHolder[] _holder = new RoomsHolder[2];
-	private Set<Player> _players = new CopyOnWriteArraySet<Player> ();
+    public List<L2PcInstance> getPlayerInWaitingList(int minLevel, int maxLevel, List<ClassId> classIds, String query) {
+        if (_waitingList == null) {
+            return Collections.emptyList();
+        }
+        return _waitingList.stream() //
+                .filter(p -> (p != null) //
+                        && (p.getLevel() >= minLevel) //
+                        && (p.getLevel() <= maxLevel)) //
+                .filter(p -> (classIds == null) //
+                        || classIds.contains(p.getClassId())) //
+                .filter(p -> (query == null) //
+                        || query.isEmpty() //
+                        || p.getName().toLowerCase().contains(query)) //
+                .collect(Collectors.toList());
+    }
 
-	public MatchingRoomManager()
-	{
-		_holder[MatchingRoom.PARTY_MATCHING] = new RoomsHolder();
-		_holder[MatchingRoom.CC_MATCHING] = new RoomsHolder();
-	}
+    public int addMatchingRoom(MatchingRoom room) {
+        final int roomId = _id.incrementAndGet();
+        _rooms.computeIfAbsent(room.getRoomType(), k -> new ConcurrentHashMap<>()).put(roomId, room);
+        return roomId;
+    }
 
-	public void addToWaitingList(Player player)
-	{
-		_players.add(player);
-	}
+    public void removeMatchingRoom(MatchingRoom room) {
+        _rooms.getOrDefault(room.getRoomType(), Collections.emptyMap()).remove(room.getId());
+    }
 
-	public void removeFromWaitingList(Player player)
-	{
-		_players.remove(player);
-	}
+    public Map<Integer, MatchingRoom> getPartyMathchingRooms() {
+        return _rooms.get(MatchingRoomType.PARTY);
+    }
 
-	public List<Player> getWaitingList(int minLevel, int maxLevel, int[] classes)
-	{
-		List<Player> res = new ArrayList<Player>();
-		for(Player $member : _players)
-			if($member.getLevel() >= minLevel && $member.getLevel() <= maxLevel)
-				if(classes.length == 0 || ArrayUtils.contains(classes, $member.getClassId().getId()))
-					res.add($member);
+    public List<MatchingRoom> getPartyMathchingRooms(int location, PartyMatchingRoomLevelType type, int requestorLevel) {
+        //@formatter:off
+        return _rooms.getOrDefault(MatchingRoomType.PARTY, Collections.emptyMap()).values().stream()
+                .filter(room -> (location < 0) || (room.getLocation() == location))
+                .filter(room -> (type == PartyMatchingRoomLevelType.ALL) || ((room.getMinLvl() >= requestorLevel) && (room.getMaxLvl() <= requestorLevel)))
+                .collect(Collectors.toList());
+        //@formatter:on
+    }
 
-		return res;
-	}
+    public Map<Integer, MatchingRoom> getCCMathchingRooms() {
+        return _rooms.get(MatchingRoomType.COMMAND_CHANNEL);
+    }
 
-	public List<MatchingRoom> getMatchingRooms(int type, int region, boolean allLevels, Player activeChar)
-	{
-		List<MatchingRoom> res = new ArrayList<MatchingRoom>();
-		for(MatchingRoom room : _holder[type]._rooms.values())
-		{
-			if(region > 0 && room.getLocationId() != region)
-				continue;
-			else if(region == -2 && room.getLocationId() != MatchingRoomManager.getInstance().getLocation(activeChar))
-				continue;
-			if(!allLevels && (room.getMinLevel() > activeChar.getLevel() || room.getMaxLevel() < activeChar.getLevel()))
-				continue;
-			res.add(room);
-		}
-		return res;
-	}
+    public List<MatchingRoom> getCCMathchingRooms(int location, int level) {
+        //@formatter:off
+        return _rooms.getOrDefault(MatchingRoomType.COMMAND_CHANNEL, Collections.emptyMap()).values().stream()
+                .filter(r -> r.getLocation() == location)
+                .filter(r -> (r.getMinLvl() <= level) && (r.getMaxLvl() >= level))
+                .collect(Collectors.toList());
+        //@formatter:on
+    }
 
-	public int addMatchingRoom(MatchingRoom r)
-	{
-		return _holder[r.getType()].addRoom(r);
-	}
+    public MatchingRoom getCCMatchingRoom(int roomId) {
+        return _rooms.getOrDefault(MatchingRoomType.COMMAND_CHANNEL, Collections.emptyMap()).get(roomId);
+    }
 
-	public void removeMatchingRoom(MatchingRoom r)
-	{
-		_holder[r.getType()]._rooms.remove(r.getId());
-	}
+    public MatchingRoom getPartyMathchingRoom(int location, int level) {
+        //@formatter:off
+        return _rooms.getOrDefault(MatchingRoomType.PARTY, Collections.emptyMap()).values().stream()
+                .filter(r -> r.getLocation() == location)
+                .filter(r -> (r.getMinLvl() <= level) && (r.getMaxLvl() >= level))
+                .findFirst()
+                .orElse(null);
+        //@formatter:on
+    }
 
-	public MatchingRoom getMatchingRoom(int type, int id)
-	{
-		return _holder[type]._rooms.get(id);
-	}
+    public MatchingRoom getPartyMathchingRoom(int roomId) {
+        return _rooms.getOrDefault(MatchingRoomType.PARTY, Collections.emptyMap()).get(roomId);
+    }
 
-	public int getLocation(Player player)
-	{
-		if(player == null)
-			return 0;
-
-		RestartArea ra = MapRegionManager.getInstance().getRegionData(RestartArea.class, player);
-		if(ra != null)
-		{
-			RestartPoint rp = ra.getRestartPoint().get(player.getRace());
-			return rp.getBbs();
-		}
-
-		return 0;
-	}
+    private static class SingletonHolder {
+        protected static final MatchingRoomManager _instance = new MatchingRoomManager();
+    }
 }

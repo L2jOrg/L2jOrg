@@ -1,6 +1,7 @@
 package org.l2j.gameserver.network.authcomm;
 
 import io.github.joealisson.mmocore.ReadablePacket;
+import org.l2j.gameserver.mobius.gameserver.network.authcomm.as2gs.*;
 import org.l2j.gameserver.network.authcomm.as2gs.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,6 +1,5 @@
 package org.l2j.scripts.handler.dailymissions;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.DailyMission;
 import org.l2j.gameserver.templates.dailymissions.DailyMissionStatus;

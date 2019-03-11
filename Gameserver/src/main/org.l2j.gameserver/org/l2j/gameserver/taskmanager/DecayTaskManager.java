@@ -1,38 +1,130 @@
 package org.l2j.gameserver.taskmanager;
 
-import java.util.concurrent.Future;
-
-import org.l2j.commons.threading.RunnableImpl;
-import org.l2j.commons.threading.SteppingRunnableQueueManager;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.model.Creature;
+import org.l2j.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Objects;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 /**
- * Менеджер задач по "исчезновению" убитых персонажей, шаг выполенния задач 500 мс.
- * 
- * @author G1ta0
+ * @author NosBit
  */
-public class DecayTaskManager extends SteppingRunnableQueueManager
-{
-	private static final DecayTaskManager _instance = new DecayTaskManager();
+public final class DecayTaskManager {
+    protected static final Logger LOGGER = Logger.getLogger(DecayTaskManager.class.getName());
 
-	public static final DecayTaskManager getInstance()
-	{
-		return _instance;
-	}
+    protected final Map<L2Character, ScheduledFuture<?>> _decayTasks = new ConcurrentHashMap<>();
 
-	private DecayTaskManager()
-	{
-		super(500L);
+    public static DecayTaskManager getInstance() {
+        return SingletonHolder._instance;
+    }
 
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(this, 500L, 500L);
+    /**
+     * Adds a decay task for the specified character.<br>
+     * <br>
+     * If the decay task already exists it cancels it and re-adds it.
+     *
+     * @param character the character
+     */
+    public void add(L2Character character) {
+        if (character == null) {
+            return;
+        }
 
-		//Очистка каждую минуту
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(() -> DecayTaskManager.this.purge(), 60000L, 60000L);
-	}
+        long delay;
+        if (character.getTemplate() instanceof L2NpcTemplate) {
+            delay = ((L2NpcTemplate) character.getTemplate()).getCorpseTime();
+        } else {
+            delay = Config.DEFAULT_CORPSE_TIME;
+        }
 
-	public Future<?> addDecayTask(final Creature actor, long delay)
-	{
-		return schedule(() -> actor.doDecay(), delay);
-	}
+        if (character.isAttackable() && (((L2Attackable) character).isSpoiled() || ((L2Attackable) character).isSeeded())) {
+            delay += Config.SPOILED_CORPSE_EXTEND_TIME;
+        }
+
+        // Remove entries that became null.
+        _decayTasks.entrySet().removeIf(Objects::isNull);
+
+        try {
+            _decayTasks.putIfAbsent(character, ThreadPoolManager.getInstance().schedule(new DecayTask(character), delay * 1000));
+        } catch (Exception e) {
+            LOGGER.warning("DecayTaskManager add " + character + " caused [" + e.getMessage() + "] exception.");
+        }
+    }
+
+    /**
+     * Cancels the decay task of the specified character.
+     *
+     * @param character the character
+     */
+    public void cancel(L2Character character) {
+        final ScheduledFuture<?> decayTask = _decayTasks.remove(character);
+        if (decayTask != null) {
+            decayTask.cancel(false);
+        }
+    }
+
+    /**
+     * Gets the remaining time of the specified character's decay task.
+     *
+     * @param character the character
+     * @return if a decay task exists the remaining time, {@code Long.MAX_VALUE} otherwise
+     */
+    public long getRemainingTime(L2Character character) {
+        final ScheduledFuture<?> decayTask = _decayTasks.get(character);
+        if (decayTask != null) {
+            return decayTask.getDelay(TimeUnit.MILLISECONDS);
+        }
+
+        return Long.MAX_VALUE;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder ret = new StringBuilder();
+        ret.append("============= DecayTask Manager Report ============");
+        ret.append(Config.EOL);
+        ret.append("Tasks count: ");
+        ret.append(_decayTasks.size());
+        ret.append(Config.EOL);
+        ret.append("Tasks dump:");
+        ret.append(Config.EOL);
+
+        for (Entry<L2Character, ScheduledFuture<?>> entry : _decayTasks.entrySet()) {
+            ret.append("Class/Name: ");
+            ret.append(entry.getKey().getClass().getSimpleName());
+            ret.append('/');
+            ret.append(entry.getKey().getName());
+            ret.append(" decay timer: ");
+            ret.append(entry.getValue().getDelay(TimeUnit.MILLISECONDS));
+            ret.append(Config.EOL);
+        }
+
+        return ret.toString();
+    }
+
+    private static class SingletonHolder {
+        protected static final DecayTaskManager _instance = new DecayTaskManager();
+    }
+
+    private class DecayTask implements Runnable {
+        private final L2Character _character;
+
+        protected DecayTask(L2Character character) {
+            _character = character;
+        }
+
+        @Override
+        public void run() {
+            _decayTasks.remove(_character);
+            _character.onDecay();
+        }
+    }
 }

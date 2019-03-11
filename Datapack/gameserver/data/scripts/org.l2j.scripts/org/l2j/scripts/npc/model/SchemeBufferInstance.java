@@ -3,7 +3,6 @@ package org.l2j.scripts.npc.model;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Player;

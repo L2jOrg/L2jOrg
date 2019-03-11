@@ -1,110 +1,120 @@
 package org.l2j.gameserver.model.quest;
 
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
-
-import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.model.instances.NpcInstance;
+import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-public class QuestTimer extends RunnableImpl
-{
-	private String _name;
-	private NpcInstance _npc;
-	private long _time;
-	private QuestState _qs;
-	private ScheduledFuture<?> _schedule;
+import java.util.concurrent.ScheduledFuture;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-	public QuestTimer(String name, long time, NpcInstance npc)
-	{
-		_name = name;
-		_time = time;
-		_npc = npc;
-	}
+public class QuestTimer {
+    protected static final Logger LOGGER = Logger.getLogger(QuestTimer.class.getName());
+    final String _name;
+    final Quest _quest;
+    final L2Npc _npc;
+    final L2PcInstance _player;
+    final boolean _isRepeating;
+    private final ScheduledFuture<?> _scheduler;
+    boolean _isActive = true;
+    public QuestTimer(Quest quest, String name, long time, L2Npc npc, L2PcInstance player, boolean repeating) {
+        _name = name;
+        _quest = quest;
+        _player = player;
+        _npc = npc;
+        _isRepeating = repeating;
+        _scheduler = repeating ? ThreadPoolManager.getInstance().scheduleAtFixedRate(new ScheduleTimerTask(), time, time) : ThreadPoolManager.getInstance().schedule(new ScheduleTimerTask(), time);
+    }
 
-	void setQuestState(QuestState qs)
-	{
-		_qs = qs;
-	}
+    public QuestTimer(Quest quest, String name, long time, L2Npc npc, L2PcInstance player) {
+        this(quest, name, time, npc, player, false);
+    }
 
-	QuestState getQuestState()
-	{
-		return _qs;
-	}
+    public QuestTimer(QuestState qs, String name, long time) {
+        this(qs.getQuest(), name, time, null, qs.getPlayer(), false);
+    }
 
-	void start()
-	{
-		_schedule = ThreadPoolManager.getInstance().schedule(this, _time);
-	}
+    /**
+     * Cancel this quest timer.
+     */
+    public void cancel() {
+        _isActive = false;
+        if (_scheduler != null) {
+            _scheduler.cancel(false);
+        }
+    }
 
-	@Override
-	public void runImpl() throws Exception
-	{
-		QuestState qs = getQuestState();
-		if(qs != null)
-		{
-			qs.removeQuestTimer(getName());
-			qs.getQuest().notifyEvent(getName(), qs, getNpc());
-		}
-	}
+    /**
+     * Cancel this quest timer and remove it from the associated quest.
+     */
+    public void cancelAndRemove() {
+        cancel();
+        _quest.removeQuestTimer(this);
+    }
 
-	void pause()
-	{
-		// Запоминаем оставшееся время, для возможности возобновления таска
-		if(_schedule != null)
-		{
-			_time = _schedule.getDelay(TimeUnit.SECONDS);
-			_schedule.cancel(false);
-		}
-	}
+    /**
+     * Compares if this timer matches with the key attributes passed.
+     *
+     * @param quest  the quest to which the timer is attached
+     * @param name   the name of the timer
+     * @param npc    the NPC attached to the desired timer (null if no NPC attached)
+     * @param player the player attached to the desired timer (null if no player attached)
+     * @return
+     */
+    public boolean isMatch(Quest quest, String name, L2Npc npc, L2PcInstance player) {
+        if ((quest == null) || (name == null)) {
+            return false;
+        }
+        if ((quest != _quest) || !name.equalsIgnoreCase(_name)) {
+            return false;
+        }
+        return ((npc == _npc) && (player == _player));
+    }
 
-	void stop()
-	{
-		if(_schedule != null)
-			_schedule.cancel(false);
-	}
+    public final boolean getIsActive() {
+        return _isActive;
+    }
 
-	public boolean isActive()
-	{
-		return _schedule != null && !_schedule.isDone();
-	}
+    public final boolean getIsRepeating() {
+        return _isRepeating;
+    }
 
-	public String getName()
-	{
-		return _name;
-	}
+    public final Quest getQuest() {
+        return _quest;
+    }
 
-	public long getTime()
-	{
-		return _time;
-	}
+    public final String getName() {
+        return _name;
+    }
 
-	public NpcInstance getNpc()
-	{
-		return _npc;
-	}
+    public final L2Npc getNpc() {
+        return _npc;
+    }
 
-	@Override
-	public final String toString()
-	{
-		return _name;
-	}
+    public final L2PcInstance getPlayer() {
+        return _player;
+    }
 
-	@Override
-	public boolean equals(Object o)
-	{
-		if(o == this)
-			return true;
-		if(o == null)
-			return false;
-		if(o.getClass() != this.getClass())
-			return false;
-		return ((QuestTimer) o).getName().equals(this.getName());
-	}
+    @Override
+    public final String toString() {
+        return _name;
+    }
 
-	@Override     
-	public int hashCode()
-	{
-		return 3 * getName().hashCode() + 17570;
-	}
+    public class ScheduleTimerTask implements Runnable {
+        @Override
+        public void run() {
+            if (!_isActive) {
+                return;
+            }
+
+            try {
+                if (!_isRepeating) {
+                    cancelAndRemove();
+                }
+                _quest.notifyEvent(_name, _npc, _player);
+            } catch (Exception e) {
+                LOGGER.log(Level.SEVERE, "", e);
+            }
+        }
+    }
 }

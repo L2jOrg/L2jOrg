@@ -1,7 +1,6 @@
 package org.l2j.scripts.ai.residences;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.DefaultAI;
 import org.l2j.gameserver.model.Creature;

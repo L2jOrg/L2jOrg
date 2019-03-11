@@ -1,7 +1,6 @@
 package org.l2j.scripts.handler.bbs.custom;
 
 import org.l2j.scripts.handler.bbs.ScriptsCommunityHandler;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.dao.CharacterDAO;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;

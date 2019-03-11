@@ -1,6 +1,5 @@
 package org.l2j.scripts.handler.voicecommands;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.data.database.mysql;

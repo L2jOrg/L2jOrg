@@ -2,7 +2,6 @@ package org.l2j.scripts.npc.model.residences.castle;
 
 import org.l2j.scripts.npc.model.residences.ResidenceManager;
 import org.l2j.commons.collections.MultiValueSet;
-import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.dao.CastleDamageZoneDAO;
 import org.l2j.gameserver.data.dao.CastleDoorUpgradeDAO;
 import org.l2j.gameserver.data.xml.holder.MultiSellHolder;

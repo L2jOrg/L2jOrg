@@ -3,7 +3,6 @@ package org.l2j.scripts.handler.bbs.custom;
 import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.configuration.ExProperties;
 import org.l2j.commons.string.StringArrayUtils;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.listener.script.OnLoadScriptListener;
 
 import java.util.List;

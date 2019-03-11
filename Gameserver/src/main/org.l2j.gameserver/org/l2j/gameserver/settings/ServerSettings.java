@@ -2,14 +2,9 @@ package org.l2j.gameserver.settings;
 
 import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ServerType;
-import org.l2j.gameserver.utils.Language;
 
 import java.nio.file.Path;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
 
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
@@ -78,7 +73,6 @@ public class ServerSettings implements Settings {
     private int authServerPort;
     private int maximumOnlineUsers;
     private Path dataPackRootPath;
-    private Set<Language> availableLanguages;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -156,16 +150,7 @@ public class ServerSettings implements Settings {
 
         dataPackRootPath = Path.of(settingsFile.getString("DatapackRoot", "."));
 
-        availableLanguages = new HashSet<>();
-        availableLanguages.add(Language.ENGLISH);
-        String[] langs = settingsFile.getStringArray("AvailableLanguages");
-        for (String lang : langs) {
-            try{
-                availableLanguages.add(Language.valueOf(lang));
-            } catch (Exception e) {
-                // do nothing
-            }
-        }
+
 
     }
 
@@ -436,10 +421,6 @@ public class ServerSettings implements Settings {
 
     public float rateEpicAttack() {
         return rateEpicAttack;
-    }
-
-    public Set<Language> availableLanguages() {
-        return availableLanguages;
     }
 
 }

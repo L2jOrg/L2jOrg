@@ -1,7 +1,6 @@
 package org.l2j.scripts.npc.model;
 
 import org.l2j.commons.collections.MultiValueSet;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.c2s.L2GameClientPacket;

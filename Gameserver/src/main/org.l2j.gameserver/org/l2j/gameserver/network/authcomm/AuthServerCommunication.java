@@ -4,7 +4,8 @@ import io.github.joealisson.mmocore.Connector;
 import io.github.joealisson.mmocore.PacketExecutor;
 import io.github.joealisson.mmocore.ReadablePacket;
 import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.network.l2.GameClient;
+import org.l2j.gameserver.network.ConnectionState;
+import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,8 +31,8 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 	private static final Logger logger = LoggerFactory.getLogger(AuthServerCommunication.class);
 	private static final AuthServerCommunication instance = new AuthServerCommunication();
 
-	private final Map<String, GameClient> waitingClients = new HashMap<>();
-	private final Map<String, GameClient> authedClients = new HashMap<>();
+	private final Map<String, L2GameClient> waitingClients = new HashMap<>();
+	private final Map<String, L2GameClient> authedClients = new HashMap<>();
 
 	private final ReadWriteLock lock = new ReentrantReadWriteLock();
 	private final Lock readLock = lock.readLock();
@@ -68,16 +69,16 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 		}
 	}
 
-	public GameClient addWaitingClient(GameClient client) {
+	public L2GameClient addWaitingClient(L2GameClient client) {
 		writeLock.lock();
 		try {
-			return waitingClients.put(client.getLogin(), client);
+			return waitingClients.put(client.getAccountName(), client);
 		} finally {
 			writeLock.unlock();
 		}
 	}
 
-	public GameClient removeWaitingClient(String account) {
+	public L2GameClient removeWaitingClient(String account) {
 		writeLock.lock();
 		try {
 			return waitingClients.remove(account);
@@ -86,16 +87,16 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 		}
 	}
 
-	public GameClient addAuthedClient(GameClient client) {
+	public L2GameClient addAuthedClient(L2GameClient client) {
 		writeLock.lock();
 		try {
-			return authedClients.put(client.getLogin(), client);
+			return authedClients.put(client.getAccountName(), client);
 		} finally {
 			writeLock.unlock();
 		}
 	}
 
-	public GameClient removeAuthedClient(String login) {
+	public L2GameClient removeAuthedClient(String login) {
 		writeLock.lock();
 		try {
 			return authedClients.remove(login);
@@ -104,7 +105,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 		}
 	}
 
-	public GameClient getAuthedClient(String login) {
+	public L2GameClient getAuthedClient(String login) {
 		readLock.lock();
 		try {
 			return authedClients.get(login);
@@ -113,13 +114,13 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 		}
 	}
 
-	public List<GameClient> getAuthedClientsByIP(String ip) {
-		List<GameClient> clients = new ArrayList<GameClient>();
+	public List<L2GameClient> getAuthedClientsByIP(String ip) {
+		List<L2GameClient> clients = new ArrayList<>();
 
 		readLock.lock();
 		try {
-			for(GameClient client : authedClients.values()) {
-				if(client.getIpAddr().equalsIgnoreCase(ip))
+			for(L2GameClient client : authedClients.values()) {
+				if(client.getHostAddress().equalsIgnoreCase(ip))
 					clients.add(client);
 			}
 		} finally {
@@ -128,15 +129,15 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 		return clients;
 	}
 
-	public List<GameClient> getAuthedClientsByHWID(String hwid) {
-		List<GameClient> clients = new ArrayList<>();
+	public List<L2GameClient> getAuthedClientsByHWID(String hwid) {
+		List<L2GameClient> clients = new ArrayList<>();
 		if(isNullOrEmpty(hwid))
 			return clients;
 
 		readLock.lock();
 		try {
-			for(GameClient client : authedClients.values()) {
-				String h = client.getHWID();
+			for(L2GameClient client : authedClients.values()) {
+				String h = client.getHardwareInfo().getMacAddress();
 				if(!isNullOrEmpty(h) && h.equalsIgnoreCase(hwid))
 					clients.add(client);
 			}
@@ -148,13 +149,13 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 		return clients;
 	}
 
-	public GameClient removeClient(GameClient client) {
+	public L2GameClient removeClient(L2GameClient client) {
 		writeLock.lock();
 		try {
-			if(client.getState() == GameClient.GameClientState.AUTHED) {
-				return authedClients.remove(client.getLogin());
+			if(client.getConnectionState() == ConnectionState.AUTHENTICATED) {
+				return authedClients.remove(client.getAccountName());
 			} else {
-				return waitingClients.remove(client.getLogin());
+				return waitingClients.remove(client.getAccountName());
 			}
 		} finally {
 			writeLock.unlock();

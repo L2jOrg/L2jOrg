@@ -3,7 +3,6 @@ package org.l2j.scripts.npc.model.residences.clanhall;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.dao.SiegeClanDAO;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.model.Player;

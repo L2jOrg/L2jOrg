@@ -51,7 +51,7 @@ public class ThreadPoolManager
 		return _shutdown;
 	}
 
-	public Runnable wrap(Runnable r)
+	public static Runnable wrap(Runnable r)
 	{
 		return Config.ENABLE_RUNNABLE_STATS ? RunnableStatsWrapper.wrap(r) : r;
 	}
@@ -91,9 +91,8 @@ public class ThreadPoolManager
         return _scheduledExecutor.scheduleWithFixedDelay(wrap(r), initial, delay, TimeUnit.MILLISECONDS);
 	}
 
-	public void execute(Runnable r)
-	{
-		_executor.execute(wrap(r));
+	public static void execute(Runnable r) {
+		getInstance()._executor.execute(wrap(r));
 	}
 
 	public void shutdown() throws InterruptedException

@@ -2,10 +2,9 @@ package org.l2j.gameserver.network.authcomm.as2gs;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.Config;
+import org.l2j.gameserver.network.authcomm.gs2as.SetAccountInfo;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
-import org.l2j.gameserver.network.authcomm.gs2as.SetAccountInfo;
 import io.github.joealisson.primitive.Containers;
 import io.github.joealisson.primitive.lists.IntList;
 import io.github.joealisson.primitive.lists.impl.ArrayIntList;

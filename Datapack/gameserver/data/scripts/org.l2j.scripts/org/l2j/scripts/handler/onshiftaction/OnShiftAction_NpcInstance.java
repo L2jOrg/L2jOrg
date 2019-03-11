@@ -1,7 +1,6 @@
 package org.l2j.scripts.handler.onshiftaction;
 
 import org.l2j.scripts.handler.onshiftaction.commons.RewardListInfo;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.bypass.Bypass;
 import org.l2j.gameserver.model.AggroList;
 import org.l2j.gameserver.model.Player;

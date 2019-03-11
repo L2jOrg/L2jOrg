@@ -2,7 +2,6 @@ package org.l2j.scripts.npc.model.residences;
 
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;

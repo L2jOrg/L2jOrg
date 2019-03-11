@@ -1,7 +1,6 @@
 package org.l2j.scripts.handler.bbs;
 
 import org.l2j.scripts.handler.bbs.custom.BBSConfig;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.bbs.BbsHandlerHolder;
 import org.l2j.gameserver.handler.bbs.IBbsHandler;
 import org.l2j.gameserver.listener.script.OnInitScriptListener;

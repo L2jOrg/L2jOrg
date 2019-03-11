@@ -1,6 +1,5 @@
 package org.l2j.scripts.handler.onshiftaction;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.admincommands.impl.AdminEditChar;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;

@@ -1,329 +1,181 @@
+/*
+ * This file is part of the L2J Mobius project.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package org.l2j.gameserver.model.matching;
 
-import java.util.Collection;
+import org.l2j.gameserver.enums.MatchingMemberType;
+import org.l2j.gameserver.enums.MatchingRoomType;
+import org.l2j.gameserver.instancemanager.MapRegionManager;
+import org.l2j.gameserver.instancemanager.MatchingRoomManager;
+import org.l2j.gameserver.enums.UserInfoType;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.interfaces.IIdentifiable;
+
 import java.util.Iterator;
 import java.util.Set;
-import java.util.concurrent.CopyOnWriteArraySet;
-
-import org.l2j.gameserver.instancemanager.MatchingRoomManager;
-import org.l2j.gameserver.listener.actor.player.OnPlayerPartyInviteListener;
-import org.l2j.gameserver.listener.actor.player.OnPlayerPartyLeaveListener;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.PlayerGroup;
-import org.l2j.gameserver.network.l2.components.IBroadcastPacket;
-import org.l2j.gameserver.network.l2.components.SystemMsg;
-import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
-import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author VISTALL
- * @date 18:38/11.06.2011
+ * @author Sdw
  */
-public abstract class MatchingRoom implements PlayerGroup
-{
-	private class PartyListenerImpl implements OnPlayerPartyInviteListener, OnPlayerPartyLeaveListener
-	{
-		@Override
-		public void onPartyInvite(Player player)
-		{
-			broadcastPlayerUpdate(player);
-		}
+public abstract class MatchingRoom implements IIdentifiable {
+    private final int _id;
+    private String _title;
+    private int _loot;
+    private int _minLvl;
+    private int _maxLvl;
+    private int _maxCount;
+    private volatile Set<L2PcInstance> _members;
+    private L2PcInstance _leader;
 
-		@Override
-		public void onPartyLeave(Player player)
-		{
-			broadcastPlayerUpdate(player);
-		}
-	}
+    public MatchingRoom(String title, int loot, int minlvl, int maxlvl, int maxmem, L2PcInstance leader) {
+        _id = MatchingRoomManager.getInstance().addMatchingRoom(this);
+        _title = title;
+        _loot = loot;
+        _minLvl = minlvl;
+        _maxLvl = maxlvl;
+        _maxCount = maxmem;
+        _leader = leader;
 
-	public static int PARTY_MATCHING = 0;
-	public static int CC_MATCHING = 1;
+        addMember(_leader);
+        onRoomCreation(leader);
+    }
 
-	//
-	public static int WAIT_PLAYER = 0;
-	public static int ROOM_MASTER = 1;
-	public static int PARTY_MEMBER = 2;
-	public static int UNION_LEADER = 3;
-	public static int UNION_PARTY = 4;
-	public static int WAIT_PARTY = 5;
-	public static int WAIT_NORMAL = 6;
+    public Set<L2PcInstance> getMembers() {
+        if (_members == null) {
+            synchronized (this) {
+                if (_members == null) {
+                    _members = ConcurrentHashMap.newKeySet(1);
+                }
+            }
+        }
 
-	private final int _id;
-	private int _minLevel;
-	private int _maxLevel;
-	private int _maxMemberSize;
-	private int _lootType;
-	private String _topic;
+        return _members;
+    }
 
-	private final PartyListenerImpl _listener = new PartyListenerImpl();
-	protected Player _leader;
-	protected Set<Player> _members = new CopyOnWriteArraySet<Player>();
+    public void addMember(L2PcInstance player) {
+        if ((player.getLevel() < _minLvl) || (player.getLevel() > _maxLvl) || ((_members != null) && (_members.size() >= _maxCount))) {
+            notifyInvalidCondition(player);
+            return;
+        }
 
-	public MatchingRoom(Player leader, int minLevel, int maxLevel, int maxMemberSize, int lootType, String topic)
-	{
-		_leader = leader;
-		_id = MatchingRoomManager.getInstance().addMatchingRoom(this);
-		_minLevel = minLevel;
-		_maxLevel = maxLevel;
-		_maxMemberSize = maxMemberSize;
-		_lootType = lootType;
-		_topic = topic;
+        getMembers().add(player);
+        MatchingRoomManager.getInstance().removeFromWaitingList(player);
+        notifyNewMember(player);
+        player.setMatchingRoom(this);
+        player.broadcastUserInfo(UserInfoType.CLAN);
+    }
 
-		addMember0(leader, null, true);
-	}
+    public void deleteMember(L2PcInstance player, boolean kicked) {
+        boolean leaderChanged = false;
 
-	//===============================================================================================================================================
-	//                                                            Add/Remove Member
-	//===============================================================================================================================================
-	public boolean addMember(Player player)
-	{
-		if(_members.contains(player))
-			return true;
+        if (player == _leader) {
+            if (getMembers().isEmpty()) {
+                MatchingRoomManager.getInstance().removeMatchingRoom(this);
+            } else {
+                final Iterator<L2PcInstance> iter = getMembers().iterator();
+                if (iter.hasNext()) {
+                    _leader = iter.next();
+                    iter.remove();
+                    leaderChanged = true;
+                }
+            }
+        } else {
+            getMembers().remove(player);
+        }
 
-		if(player.getLevel() < getMinLevel() || player.getLevel() > getMaxLevel() || getPlayers().size() >= getMaxMembersSize())
-		{
-			player.sendPacket(notValidMessage());
-			return false;
-		}
+        player.setMatchingRoom(null);
+        player.broadcastUserInfo(UserInfoType.CLAN);
+        MatchingRoomManager.getInstance().addToWaitingList(player);
 
-		return addMember0(player, new SystemMessagePacket(enterMessage()).addName(player), true);
-	}
+        notifyRemovedMember(player, kicked, leaderChanged);
+    }
 
-	public boolean addMemberForce(Player player)
-	{
-		if(_members.contains(player))
-			return true;
+    @Override
+    public int getId() {
+        return _id;
+    }
 
-		if(getPlayers().size() >= getMaxMembersSize())
-		{
-			player.sendPacket(notValidMessage());
-			return false;
-		}
+    public int getLootType() {
+        return _loot;
+    }
 
-		return addMember0(player, new SystemMessagePacket(enterMessage()).addName(player), false);
-	}
+    public void setLootType(int loot) {
+        _loot = loot;
+    }
 
-	private boolean addMember0(Player player, L2GameServerPacket p, boolean sendInfo)
-	{
-		if(!_members.isEmpty())
-			player.addListener(_listener);
+    public int getMinLvl() {
+        return _minLvl;
+    }
 
-		_members.add(player);
+    public void setMinLvl(int minLvl) {
+        _minLvl = minLvl;
+    }
 
-		player.setMatchingRoom(this);
+    public int getMaxLvl() {
+        return _maxLvl;
+    }
 
-		for(Player $member : this)
-			if($member != player && $member.isMatchingRoomWindowOpened())
-				$member.sendPacket(p, addMemberPacket($member, player));
+    public void setMaxLvl(int maxLvl) {
+        _maxLvl = maxLvl;
+    }
 
-		MatchingRoomManager.getInstance().removeFromWaitingList(player);
-		if (sendInfo)
-		{
-			player.setMatchingRoomWindowOpened(true);
-			player.sendPacket(infoRoomPacket(), membersPacket(player));
-		}
-		player.sendChanges();
-		return true;
-	}
+    public int getLocation() {
+        return MapRegionManager.getInstance().getBBs(_leader.getLocation());
+    }
 
-	public void removeMember(Player member, boolean oust)
-	{
-		if(!_members.remove(member))
-			return;
+    public int getMembersCount() {
+        return _members == null ? 0 : _members.size();
+    }
 
-		member.removeListener(_listener);
-		member.setMatchingRoom(null);
-		if(_members.isEmpty())
-			disband();
-		else
-		{
-			L2GameServerPacket infoPacket = infoRoomPacket();
-			SystemMsg exitMessage0 = exitMessage(true, oust);
-			L2GameServerPacket exitMessage = exitMessage0 != null ? new SystemMessagePacket(exitMessage0).addName(member) : null;
-			for(Player player : this)
-				if (player.isMatchingRoomWindowOpened())
-					player.sendPacket(infoPacket, removeMemberPacket(player, member), exitMessage);
-		}
+    public int getMaxMembers() {
+        return _maxCount;
+    }
 
-		member.sendPacket(closeRoomPacket(), exitMessage(false, oust));
-		member.setMatchingRoomWindowOpened(false);
-		//MatchingRoomManager.getInstance().addToWaitingList(member); // не нужно, клиент добавляет сам
-		member.sendChanges();
-	}
+    public void setMaxMembers(int maxCount) {
+        _maxCount = maxCount;
+    }
 
-	public void broadcastPlayerUpdate(Player player)
-	{
-		for(Player $member : MatchingRoom.this)
-			if ($member.isMatchingRoomWindowOpened())
-				$member.sendPacket(updateMemberPacket($member, player));
-	}
+    public String getTitle() {
+        return _title;
+    }
 
-	public void disband()
-	{
-		for(Player player : this)
-		{
-			player.removeListener(_listener);
-			if (player.isMatchingRoomWindowOpened())
-			{
-				player.sendPacket(closeRoomMessage());
-				player.sendPacket(closeRoomPacket());
-			}
-			player.setMatchingRoom(null);
-			player.sendChanges();
-		}
+    public void setTitle(String title) {
+        _title = title;
+    }
 
-		_members.clear();
+    public L2PcInstance getLeader() {
+        return _leader;
+    }
 
-		MatchingRoomManager.getInstance().removeMatchingRoom(this);
-	}
+    public boolean isLeader(L2PcInstance player) {
+        return player == _leader;
+    }
 
-	public void setLeader(Player leader)
-	{
-		_leader = leader;
+    protected abstract void onRoomCreation(L2PcInstance player);
 
-		if (!_members.contains(leader))
-			addMember0(leader, null, true);
-		else
-		{
-			if (!leader.isMatchingRoomWindowOpened())
-			{
-				leader.setMatchingRoomWindowOpened(true);
-				leader.sendPacket(infoRoomPacket(), membersPacket(leader));
-			}
-			SystemMsg changeLeaderMessage = changeLeaderMessage();
-			for(Player $member : this)
-				if($member.isMatchingRoomWindowOpened())
-					$member.sendPacket(updateMemberPacket($member, leader), changeLeaderMessage);
-		}
-	}
-	//===============================================================================================================================================
-	//                                                            Abstracts
-	//===============================================================================================================================================
-	public abstract SystemMsg notValidMessage();
+    protected abstract void notifyInvalidCondition(L2PcInstance player);
 
-	public abstract SystemMsg enterMessage();
+    protected abstract void notifyNewMember(L2PcInstance player);
 
-	public abstract SystemMsg exitMessage(boolean toOthers, boolean kick);
+    protected abstract void notifyRemovedMember(L2PcInstance player, boolean kicked, boolean leaderChanged);
 
-	public abstract SystemMsg closeRoomMessage();
+    public abstract void disbandRoom();
 
-	public abstract SystemMsg changeLeaderMessage();
+    public abstract MatchingRoomType getRoomType();
 
-	public abstract L2GameServerPacket closeRoomPacket();
-
-	public abstract L2GameServerPacket infoRoomPacket();
-
-	public abstract L2GameServerPacket addMemberPacket(Player $member, Player active);
-
-	public abstract L2GameServerPacket removeMemberPacket(Player $member, Player active);
-
-	public abstract L2GameServerPacket updateMemberPacket(Player $member, Player active);
-
-	public abstract L2GameServerPacket membersPacket(Player active);
-
-	public abstract int getType();
-
-	public abstract int getMemberType(Player member);
-	//===============================================================================================================================================
-	//                                                            Broadcast
-	//===============================================================================================================================================
-	@Override
-	public void broadCast(IBroadcastPacket... arg)
-	{
-		for(Player player : this)
-			player.sendPacket(arg);
-	}
-	//===============================================================================================================================================
-	//                                                            Getters
-	//===============================================================================================================================================
-	public int getId()
-	{
-		return _id;
-	}
-
-	public int getMinLevel()
-	{
-		return _minLevel;
-	}
-
-	public int getMaxLevel()
-	{
-		return _maxLevel;
-	}
-
-	public String getTopic()
-	{
-		return _topic;
-	}
-
-	public int getMaxMembersSize()
-	{
-		return _maxMemberSize;
-	}
-
-	public int getLocationId()
-	{
-		return MatchingRoomManager.getInstance().getLocation(_leader);
-	}
-
-	public Player getLeader()
-	{
-		return _leader;
-	}
-
-	public Collection<Player> getPlayers()
-	{
-		return _members;
-	}
-
-	public int getLootType()
-	{
-		return _lootType;
-	}
-
-	@Override
-	public int getMemberCount()
-	{
-		return getPlayers().size();
-	}
-
-	@Override
-	public Player getGroupLeader()
-	{
-		return getLeader();
-	}
-
-	@Override
-	public Iterator<Player> iterator()
-	{
-		return _members.iterator();
-	}
-
-	//===============================================================================================================================================
-	//                                                            Setters
-	//===============================================================================================================================================
-	public void setMinLevel(int minLevel)
-	{
-		_minLevel = minLevel;
-	}
-
-	public void setMaxLevel(int maxLevel)
-	{
-		_maxLevel = maxLevel;
-	}
-
-	public void setTopic(String topic)
-	{
-		_topic = topic;
-	}
-
-	public void setMaxMemberSize(int maxMemberSize)
-	{
-		_maxMemberSize = maxMemberSize;
-	}
-
-	public void setLootType(int lootType)
-	{
-		_lootType = lootType;
-	}
+    public abstract MatchingMemberType getMemberType(L2PcInstance player);
 }

@@ -10,6 +10,8 @@ module org.l2j.gameserver {
     requires cache.api;
     requires jdk.unsupported;
     requires java.management;
+    requires java.scripting;
+    requires java.compiler;
 
     exports org.l2j.gameserver;
     exports org.l2j.gameserver.model.base;

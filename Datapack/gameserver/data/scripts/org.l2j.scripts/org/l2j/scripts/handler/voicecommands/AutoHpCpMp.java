@@ -1,6 +1,5 @@
 package org.l2j.scripts.handler.voicecommands;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.listener.actor.OnChangeCurrentCpListener;
 import org.l2j.gameserver.listener.actor.OnChangeCurrentHpListener;
 import org.l2j.gameserver.listener.actor.OnChangeCurrentMpListener;

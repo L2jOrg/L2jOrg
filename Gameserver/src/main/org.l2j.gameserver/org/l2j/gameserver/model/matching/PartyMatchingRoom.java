@@ -1,103 +1,120 @@
+/*
+ * This file is part of the L2J Mobius project.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package org.l2j.gameserver.model.matching;
 
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.network.l2.components.SystemMsg;
-import org.l2j.gameserver.network.l2.s2c.ExClosePartyRoomPacket;
-import org.l2j.gameserver.network.l2.s2c.ExPartyRoomMemberPacket;
-import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
-import org.l2j.gameserver.network.l2.s2c.PartyRoomInfoPacket;
+import org.l2j.gameserver.enums.MatchingMemberType;
+import org.l2j.gameserver.enums.MatchingRoomType;
+import org.l2j.gameserver.enums.PartyMatchingRoomLevelType;
+import org.l2j.gameserver.instancemanager.MatchingRoomManager;
+import org.l2j.gameserver.enums.UserInfoType;
+import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.*;
 
 /**
- * @author VISTALL
- * @date 0:44/12.06.2011
+ * @author Sdw
  */
-public class PartyMatchingRoom extends MatchingRoom
-{
-	public PartyMatchingRoom(Player leader, int minLevel, int maxLevel, int maxMemberSize, int lootType, String topic)
-	{
-		super(leader, minLevel, maxLevel, maxMemberSize, lootType, topic);
+public final class PartyMatchingRoom extends MatchingRoom {
+    public PartyMatchingRoom(String title, int loot, int minlvl, int maxlvl, int maxmem, L2PcInstance leader) {
+        super(title, loot, minlvl, maxlvl, maxmem, leader);
+    }
 
-		leader.broadcastCharInfo();
-	}
+    @Override
+    protected void onRoomCreation(L2PcInstance player) {
+        player.broadcastUserInfo(UserInfoType.CLAN);
+        player.sendPacket(new ListPartyWaiting(PartyMatchingRoomLevelType.ALL, -1, 1, player.getLevel()));
+        player.sendPacket(SystemMessageId.YOU_HAVE_CREATED_A_PARTY_ROOM);
+    }
 
-	@Override
-	public SystemMsg notValidMessage()
-	{
-		return SystemMsg.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_ENTER_THAT_PARTY_ROOM;
-	}
+    @Override
+    protected void notifyInvalidCondition(L2PcInstance player) {
+        player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_ENTER_THAT_PARTY_ROOM);
+    }
 
-	@Override
-	public SystemMsg enterMessage()
-	{
-		return SystemMsg.C1_HAS_ENTERED_THE_PARTY_ROOM;
-	}
+    @Override
+    protected void notifyNewMember(L2PcInstance player) {
+        // Update others player
+        getMembers().stream().filter(p -> p != player).forEach(p ->
+        {
+            p.sendPacket(new ExPartyRoomMember(p, this));
+        });
 
-	@Override
-	public SystemMsg exitMessage(boolean toOthers, boolean kick)
-	{
-		if(toOthers)
-			return kick ? SystemMsg.C1_HAS_BEEN_KICKED_FROM_THE_PARTY_ROOM : SystemMsg.C1_HAS_LEFT_THE_PARTY_ROOM;
-		else
-			return kick ? SystemMsg.YOU_HAVE_BEEN_OUSTED_FROM_THE_PARTY_ROOM : SystemMsg.YOU_HAVE_EXITED_THE_PARTY_ROOM;
-	}
+        // Send SystemMessage to others player
+        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ENTERED_THE_PARTY_ROOM);
+        sm.addPcName(player);
+        getMembers().stream().filter(p -> p != player).forEach(sm::sendTo);
 
-	@Override
-	public SystemMsg closeRoomMessage()
-	{
-		return SystemMsg.THE_PARTY_ROOM_HAS_BEEN_DISBANDED;
-	}
+        // Update new player
+        player.sendPacket(new PartyRoomInfo(this));
+        player.sendPacket(new ExPartyRoomMember(player, this));
+    }
 
-	@Override
-	public SystemMsg changeLeaderMessage()
-	{
-		return SystemMsg.THE_LEADER_OF_THE_PARTY_ROOM_HAS_CHANGED;
-	}
+    @Override
+    protected void notifyRemovedMember(L2PcInstance player, boolean kicked, boolean leaderChanged) {
+        final SystemMessage sm = SystemMessage.getSystemMessage(kicked ? SystemMessageId.C1_HAS_BEEN_KICKED_FROM_THE_PARTY_ROOM : SystemMessageId.C1_HAS_LEFT_THE_PARTY_ROOM);
+        sm.addPcName(player);
 
-	@Override
-	public L2GameServerPacket closeRoomPacket()
-	{
-		return ExClosePartyRoomPacket.STATIC;
-	}
+        getMembers().forEach(p ->
+        {
+            p.sendPacket(new PartyRoomInfo(this));
+            p.sendPacket(new ExPartyRoomMember(player, this));
+            p.sendPacket(sm);
+            p.sendPacket(SystemMessageId.THE_LEADER_OF_THE_PARTY_ROOM_HAS_CHANGED);
+        });
 
-	@Override
-	public L2GameServerPacket infoRoomPacket()
-	{
-		return new PartyRoomInfoPacket(this);
-	}
+        final SystemMessage sm2 = SystemMessage.getSystemMessage(kicked ? SystemMessageId.YOU_HAVE_BEEN_OUSTED_FROM_THE_PARTY_ROOM : SystemMessageId.YOU_HAVE_EXITED_THE_PARTY_ROOM);
+        player.sendPacket(sm2);
+        player.sendPacket(ExClosePartyRoom.STATIC_PACKET);
+    }
 
-	@Override
-	public L2GameServerPacket addMemberPacket(Player $member, Player active)
-	{
-		return membersPacket($member);
-	}
+    @Override
+    public void disbandRoom() {
+        getMembers().forEach(p ->
+        {
+            p.sendPacket(SystemMessageId.THE_PARTY_ROOM_HAS_BEEN_DISBANDED);
+            p.sendPacket(ExClosePartyRoom.STATIC_PACKET);
+            p.setMatchingRoom(null);
+            p.broadcastUserInfo(UserInfoType.CLAN);
+            MatchingRoomManager.getInstance().addToWaitingList(p);
+        });
 
-	@Override
-	public L2GameServerPacket removeMemberPacket(Player $member, Player active)
-	{
-		return membersPacket($member);
-	}
+        getMembers().clear();
 
-	@Override
-	public L2GameServerPacket updateMemberPacket(Player $member, Player active)
-	{
-		return membersPacket($member);
-	}
+        MatchingRoomManager.getInstance().removeMatchingRoom(this);
+    }
 
-	@Override
-	public L2GameServerPacket membersPacket(Player active)
-	{
-		return new ExPartyRoomMemberPacket(this, active);
-	}
+    @Override
+    public MatchingRoomType getRoomType() {
+        return MatchingRoomType.PARTY;
+    }
 
-	@Override
-	public int getType()
-	{
-		return PARTY_MATCHING;
-	}
+    @Override
+    public MatchingMemberType getMemberType(L2PcInstance player) {
+        if (isLeader(player)) {
+            return MatchingMemberType.PARTY_LEADER;
+        }
 
-	@Override
-	public int getMemberType(Player member)
-	{
-		return member.equals(_leader) ? ROOM_MASTER : member.getParty() != null && _leader.getParty() == member.getParty() ? PARTY_MEMBER : WAIT_PLAYER;
-	}
+        final L2Party leaderParty = getLeader().getParty();
+        final L2Party playerParty = player.getParty();
+        if ((leaderParty != null) && (playerParty != null) && (playerParty == leaderParty)) {
+            return MatchingMemberType.PARTY_MEMBER;
+        }
+
+        return MatchingMemberType.WAITING_PLAYER;
+    }
 }

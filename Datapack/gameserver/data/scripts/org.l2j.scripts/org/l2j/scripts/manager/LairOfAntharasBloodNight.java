@@ -2,7 +2,6 @@ package org.l2j.scripts.manager;
 
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Announcements;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.holder.NpcHolder;
 import org.l2j.gameserver.instancemanager.ReflectionManager;

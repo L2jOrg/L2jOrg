@@ -1,6 +1,5 @@
 package org.l2j.scripts.services;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.handler.bypass.Bypass;
 import org.l2j.gameserver.model.Player;

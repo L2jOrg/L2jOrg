@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.authcomm.gs2as;
 
+import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
-import org.l2j.gameserver.network.l2.GameClient;
 
 import java.nio.ByteBuffer;
 
@@ -11,13 +11,13 @@ public class PlayerAuthRequest extends SendablePacket
 	private String account;
 	private int playOkID1, playOkID2, loginOkID1, loginOkID2;
 
-	public PlayerAuthRequest(GameClient client)
+	public PlayerAuthRequest(L2GameClient client)
 	{
-		account = client.getLogin();
-		playOkID1 = client.getSessionKey().getGameServerSessionId();
-		playOkID2 = client.getSessionKey().getGameServerAccountId();
-		loginOkID1 = client.getSessionKey().getAuthAccountId();
-		loginOkID2 = client.getSessionKey().getAuthKey();
+		account = client.getAccountName();
+		playOkID1 = client.getSessionId().getGameServerSessionId();
+		playOkID2 = client.getSessionId().getGameServerAccountId();
+		loginOkID1 = client.getSessionId().getAuthAccountId();
+		loginOkID2 = client.getSessionId().getAuthKey();
 	}
 
 	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {

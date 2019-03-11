@@ -1,385 +1,368 @@
+/*
+ * This file is part of the L2J Mobius project.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.dao.ItemsDAO;
-import org.l2j.gameserver.model.entity.Hero;
-import org.l2j.gameserver.model.items.Inventory;
-import org.l2j.gameserver.model.items.ItemInstance;
-import org.l2j.gameserver.model.items.ItemInstance.ItemLocation;
-
-import java.util.Collection;
+import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.variables.PlayerVariables;
 
 /**
- * Used to Store data sent to Client for Character
+ * Used to Store data sent to Client for Character.<br>
  * Selection screen.
  *
  * @version $Revision: 1.2.2.2.2.4 $ $Date: 2005/03/27 15:29:33 $
  */
-public class CharSelectInfoPackage
-{
-	private String _name;
-	private int _objectId = 0;
-	private int _charId = 0x00030b7a;
-	private long _exp = 0;
-	private long _sp = 0;
-	private int _clanId = 0;
-	private int _race = 0;
-	private int _classId = 0;
-	private int _baseClassId = 0;
-	private int _deleteTimer = 0;
-	private long _lastAccess = 0L;
-	private int _face = 0;
-	private int _hairStyle = 0;
-	private int _hairColor = 0;
-	private int _sex = 0;
-	private int _karma = 0, _pk = 0, _pvp = 0;
-	private int _maxHp = 0;
-	private double _currentHp = 0;
-	private int _maxMp = 0;
-	private double _currentMp = 0;
-	private ItemInstance[] _paperdoll;
-	private int _accesslevel = 0;
-	private int _x = 0, _y = 0, _z = 0;
-	private boolean _hairAccessoryEnabled = true;
+public class CharSelectInfoPackage {
+    private final int[][] _paperdoll;
+    private final PlayerVariables _vars;
+    private String _name;
+    private int _objectId = 0;
+    private long _exp = 0;
+    private long _sp = 0;
+    private int _clanId = 0;
+    private int _race = 0;
+    private int _classId = 0;
+    private int _baseClassId = 0;
+    private long _deleteTimer = 0;
+    private long _lastAccess = 0;
+    private int _face = 0;
+    private int _hairStyle = 0;
+    private int _hairColor = 0;
+    private int _sex = 0;
+    private int _level = 1;
+    private int _maxHp = 0;
+    private double _currentHp = 0;
+    private int _maxMp = 0;
+    private double _currentMp = 0;
+    private int _reputation = 0;
+    private int _pkKills = 0;
+    private int _pvpKills = 0;
+    private VariationInstance _augmentation;
+    private int _x = 0;
+    private int _y = 0;
+    private int _z = 0;
+    private String _htmlPrefix = null;
+    private boolean _isGood = false;
+    private boolean _isEvil = false;
+    private int _vitalityPoints = 0;
+    private int _accessLevel = 0;
+    private boolean _isNoble;
 
-	/**
-	 * @param objectId
-	 */
-	public CharSelectInfoPackage(int objectId, String name)
-	{
-		setObjectId(objectId);
-		_name = name;
-		Collection<ItemInstance> items = ItemsDAO.getInstance().getItemsByOwnerIdAndLoc(objectId, ItemLocation.PAPERDOLL);
-		_paperdoll = new ItemInstance[Inventory.PAPERDOLL_MAX];
-		for(ItemInstance item : items)
-			if(item.getEquipSlot() < Inventory.PAPERDOLL_MAX) //FIXME [G1ta0] временный фикс отображения одетых вещей при входе на персонажа в NO CARRIER
-				_paperdoll[item.getEquipSlot()] = item;
-	}
+    /**
+     * Constructor for CharSelectInfoPackage.
+     *
+     * @param objectId character object Id.
+     * @param name     the character's name.
+     */
+    public CharSelectInfoPackage(int objectId, String name) {
+        setObjectId(objectId);
+        _name = name;
+        _paperdoll = PcInventory.restoreVisibleInventory(objectId);
+        _vars = new PlayerVariables(_objectId);
+    }
 
-	public int getObjectId()
-	{
-		return _objectId;
-	}
+    /**
+     * @return the character object Id.
+     */
+    public int getObjectId() {
+        return _objectId;
+    }
 
-	public void setObjectId(int objectId)
-	{
-		_objectId = objectId;
-	}
+    public void setObjectId(int objectId) {
+        _objectId = objectId;
+    }
 
-	public int getCharId()
-	{
-		return _charId;
-	}
+    /**
+     * @return the character's access level.
+     */
+    public int getAccessLevel() {
+        return _accessLevel;
+    }
 
-	public void setCharId(int charId)
-	{
-		_charId = charId;
-	}
+    /**
+     * @param level the character's access level to be set.
+     */
+    public void setAccessLevel(int level) {
+        _accessLevel = level;
+    }
 
-	public int getClanId()
-	{
-		return _clanId;
-	}
+    public boolean isGood() {
+        return _isGood;
+    }
 
-	public void setClanId(int clanId)
-	{
-		_clanId = clanId;
-	}
+    public void setGood() {
+        _isGood = true;
+        _isEvil = false;
+    }
 
-	public int getClassId()
-	{
-		return _classId;
-	}
+    public boolean isEvil() {
+        return _isEvil;
+    }
 
-	public int getBaseClassId()
-	{
-		return _baseClassId;
-	}
+    public void setEvil() {
+        _isGood = false;
+        _isEvil = true;
+    }
 
-	public void setBaseClassId(int baseClassId)
-	{
-		_baseClassId = baseClassId;
-	}
+    public int getClanId() {
+        return _clanId;
+    }
 
-	public void setClassId(int classId)
-	{
-		_classId = classId;
-	}
+    public void setClanId(int clanId) {
+        _clanId = clanId;
+    }
 
-	public double getCurrentHp()
-	{
-		return _currentHp;
-	}
+    public int getClassId() {
+        return _classId;
+    }
 
-	public void setCurrentHp(double currentHp)
-	{
-		_currentHp = currentHp;
-	}
+    public void setClassId(int classId) {
+        _classId = classId;
+    }
 
-	public double getCurrentMp()
-	{
-		return _currentMp;
-	}
+    public int getBaseClassId() {
+        return _baseClassId;
+    }
 
-	public void setCurrentMp(double currentMp)
-	{
-		_currentMp = currentMp;
-	}
+    public void setBaseClassId(int baseClassId) {
+        _baseClassId = baseClassId;
+    }
 
-	public int getDeleteTimer()
-	{
-		return _deleteTimer;
-	}
+    public double getCurrentHp() {
+        return _currentHp;
+    }
 
-	public void setDeleteTimer(int deleteTimer)
-	{
-		_deleteTimer = deleteTimer;
-	}
+    public void setCurrentHp(double currentHp) {
+        _currentHp = currentHp;
+    }
 
-	public long getLastAccess()
-	{
-		return _lastAccess;
-	}
+    public double getCurrentMp() {
+        return _currentMp;
+    }
 
-	public void setLastAccess(long lastAccess)
-	{
-		_lastAccess = lastAccess;
-	}
+    public void setCurrentMp(double currentMp) {
+        _currentMp = currentMp;
+    }
 
-	public long getExp()
-	{
-		return _exp;
-	}
+    public long getDeleteTimer() {
+        return _deleteTimer;
+    }
 
-	public void setExp(long exp)
-	{
-		_exp = exp;
-	}
+    public void setDeleteTimer(long deleteTimer) {
+        _deleteTimer = deleteTimer;
+    }
 
-	public int getFace()
-	{
-		return _face;
-	}
+    public long getLastAccess() {
+        return _lastAccess;
+    }
 
-	public void setFace(int face)
-	{
-		_face = face;
-	}
+    public void setLastAccess(long lastAccess) {
+        _lastAccess = lastAccess;
+    }
 
-	public int getHairColor()
-	{
-		return _hairColor;
-	}
+    public long getExp() {
+        return _exp;
+    }
 
-	public void setHairColor(int hairColor)
-	{
-		_hairColor = hairColor;
-	}
+    public void setExp(long exp) {
+        _exp = exp;
+    }
 
-	public int getHairStyle()
-	{
-		return _hairStyle;
-	}
+    public int getFace() {
+        return _vars.getInt("visualFaceId", _face);
+    }
 
-	public void setHairStyle(int hairStyle)
-	{
-		_hairStyle = hairStyle;
-	}
+    public void setFace(int face) {
+        _face = face;
+    }
 
-	public int getPaperdollObjectId(int slot)
-	{
-		ItemInstance item = _paperdoll[slot];
-		if(item != null)
-			return item.getObjectId();
-		return 0;
-	}
+    public int getHairColor() {
+        return _vars.getInt("visualHairColorId", _hairColor);
+    }
 
-	public int getPaperdollVariation1Id(int slot)
-	{
-		ItemInstance item = _paperdoll[slot];
-		if(item != null && item.isAugmented())
-			return item.getVariation1Id();
-		return 0;
-	}
+    public void setHairColor(int hairColor) {
+        _hairColor = hairColor;
+    }
 
-	public int getPaperdollVariation2Id(int slot)
-	{
-		ItemInstance item = _paperdoll[slot];
-		if(item != null && item.isAugmented())
-			return item.getVariation2Id();
-		return 0;
-	}
+    public int getHairStyle() {
+        return _vars.getInt("visualHairId", _hairStyle);
+    }
 
-	public int getPaperdollItemId(int slot)
-	{
-		ItemInstance item = _paperdoll[slot];
-		if(item != null)
-			return item.getItemId();
-		return 0;
-	}
+    public void setHairStyle(int hairStyle) {
+        _hairStyle = hairStyle;
+    }
 
-	public int getPaperdollVisualId(int slot)
-	{
-		ItemInstance item = _paperdoll[slot];
-		if(item != null)
-			return item.getVisualId();
-		return 0;
-	}
+    public int getPaperdollObjectId(int slot) {
+        return _paperdoll[slot][0];
+    }
 
-	public int getPaperdollEnchantEffect(int slot)
-	{
-		ItemInstance item = _paperdoll[slot];
-		if(item != null)
-			return item.getEnchantLevel();
-		return 0;
-	}
+    public int getPaperdollItemId(int slot) {
+        return _paperdoll[slot][1];
+    }
 
-	public int getMaxHp()
-	{
-		return _maxHp;
-	}
+    public int getPaperdollItemVisualId(int slot) {
+        return _paperdoll[slot][3];
+    }
 
-	public void setMaxHp(int maxHp)
-	{
-		_maxHp = maxHp;
-	}
+    public int getLevel() {
+        return _level;
+    }
 
-	public int getMaxMp()
-	{
-		return _maxMp;
-	}
+    public void setLevel(int level) {
+        _level = level;
+    }
 
-	public void setMaxMp(int maxMp)
-	{
-		_maxMp = maxMp;
-	}
+    public int getMaxHp() {
+        return _maxHp;
+    }
 
-	public String getName()
-	{
-		return _name;
-	}
+    public void setMaxHp(int maxHp) {
+        _maxHp = maxHp;
+    }
 
-	public void setName(String name)
-	{
-		_name = name;
-	}
+    public int getMaxMp() {
+        return _maxMp;
+    }
 
-	public int getRace()
-	{
-		return _race;
-	}
+    public void setMaxMp(int maxMp) {
+        _maxMp = maxMp;
+    }
 
-	public void setRace(int race)
-	{
-		_race = race;
-	}
+    public String getName() {
+        return _name;
+    }
 
-	public int getSex()
-	{
-		return _sex;
-	}
+    public void setName(String name) {
+        _name = name;
+    }
 
-	public void setSex(int sex)
-	{
-		_sex = sex;
-	}
+    public int getRace() {
+        return _race;
+    }
 
-	public long getSp()
-	{
-		return _sp;
-	}
+    public void setRace(int race) {
+        _race = race;
+    }
 
-	public void setSp(long sp)
-	{
-		_sp = sp;
-	}
+    public int getSex() {
+        return _sex;
+    }
 
-	public int getKarma()
-	{
-		return _karma;
-	}
+    public void setSex(int sex) {
+        _sex = sex;
+    }
 
-	public void setKarma(int karma)
-	{
-		_karma = karma;
-	}
+    public long getSp() {
+        return _sp;
+    }
 
-	public int getAccessLevel()
-	{
-		return _accesslevel;
-	}
+    public void setSp(long sp) {
+        _sp = sp;
+    }
 
-	public void setAccessLevel(int accesslevel)
-	{
-		_accesslevel = accesslevel;
-	}
+    public int getEnchantEffect() {
+        return _paperdoll[Inventory.PAPERDOLL_RHAND][2];
+    }
 
-	public int getX()
-	{
-		return _x;
-	}
+    public int getReputation() {
+        return _reputation;
+    }
 
-	public void setX(int x)
-	{
-		_x = x;
-	}
+    public void setReputation(int reputation) {
+        _reputation = reputation;
+    }
 
-	public int getY()
-	{
-		return _y;
-	}
+    public VariationInstance getAugmentation() {
+        return _augmentation;
+    }
 
-	public void setY(int y)
-	{
-		_y = y;
-	}
+    public void setAugmentation(VariationInstance augmentation) {
+        _augmentation = augmentation;
+    }
 
-	public int getZ()
-	{
-		return _z;
-	}
+    public int getPkKills() {
+        return _pkKills;
+    }
 
-	public void setZ(int z)
-	{
-		_z = z;
-	}
+    public void setPkKills(int PkKills) {
+        _pkKills = PkKills;
+    }
 
-	public int getPk()
-	{
-		return _pk;
-	}
+    public int getPvPKills() {
+        return _pvpKills;
+    }
 
-	public void setPk(int pk)
-	{
-		_pk = pk;
-	}
+    public void setPvPKills(int PvPKills) {
+        _pvpKills = PvPKills;
+    }
 
-	public int getPvP()
-	{
-		return _pvp;
-	}
+    public int getX() {
+        return _x;
+    }
 
-	public void setPvP(int pvp)
-	{
-		_pvp = pvp;
-	}
+    public void setX(int x) {
+        _x = x;
+    }
 
-	public boolean isHairAccessoryEnabled()
-	{
-		return _hairAccessoryEnabled;
-	}
+    public int getY() {
+        return _y;
+    }
 
-	public void setHairAccessoryEnabled(boolean value)
-	{
-		_hairAccessoryEnabled = value;
-	}
+    public void setY(int y) {
+        _y = y;
+    }
 
-	public boolean isAvailable()
-	{
-		return getAccessLevel() > -100;
-	}
+    public int getZ() {
+        return _z;
+    }
 
-	public boolean isHero() {
-		return Config.ENABLE_OLYMPIAD && Hero.getInstance().isHero(getObjectId());
-	}
+    public void setZ(int z) {
+        _z = z;
+    }
+
+    public String getHtmlPrefix() {
+        return _htmlPrefix;
+    }
+
+    public void setHtmlPrefix(String s) {
+        _htmlPrefix = s;
+    }
+
+    public int getVitalityPoints() {
+        return _vitalityPoints;
+    }
+
+    public void setVitalityPoints(int points) {
+        _vitalityPoints = points;
+    }
+
+    public boolean isHairAccessoryEnabled() {
+        return _vars.getBoolean(PlayerVariables.HAIR_ACCESSORY_VARIABLE_NAME, true);
+    }
+
+    public int getVitalityItemsUsed() {
+        return _vars.getInt(PlayerVariables.VITALITY_ITEMS_USED_VARIABLE_NAME, 0);
+    }
+
+    public boolean isNoble() {
+        return _isNoble;
+    }
+
+    public void setNoble(boolean noble) {
+        _isNoble = noble;
+    }
 }

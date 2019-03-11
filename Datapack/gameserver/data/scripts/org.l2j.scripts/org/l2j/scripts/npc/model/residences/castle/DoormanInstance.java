@@ -1,7 +1,6 @@
 package org.l2j.scripts.npc.model.residences.castle;
 
 import org.l2j.commons.collections.MultiValueSet;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.residence.Castle;
 import org.l2j.gameserver.model.entity.residence.Residence;

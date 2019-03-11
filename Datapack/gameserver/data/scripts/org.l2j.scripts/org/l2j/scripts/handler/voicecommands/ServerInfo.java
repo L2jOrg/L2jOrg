@@ -1,6 +1,5 @@
 package org.l2j.scripts.handler.voicecommands;
 
-import org.l2j.gameserver.GameServer;
 import org.l2j.gameserver.model.Player;
 
 import java.text.DateFormat;

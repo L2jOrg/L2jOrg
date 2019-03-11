@@ -1,7 +1,6 @@
 package org.l2j.scripts.ai.residences.instantclanhall;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.ai.NpcAI;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
 import org.l2j.gameserver.model.Creature;

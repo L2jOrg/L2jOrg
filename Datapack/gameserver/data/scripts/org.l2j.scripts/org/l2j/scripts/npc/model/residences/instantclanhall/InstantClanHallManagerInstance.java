@@ -1,7 +1,6 @@
 package org.l2j.scripts.npc.model.residences.instantclanhall;
 
 import org.l2j.commons.collections.MultiValueSet;
-import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Skill;

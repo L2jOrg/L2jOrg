@@ -1,6 +1,5 @@
 package org.l2j.scripts.services;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.holder.PetDataHolder;
 import org.l2j.gameserver.handler.bypass.Bypass;

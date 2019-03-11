@@ -1,351 +1,424 @@
+/*
+ * This file is part of the L2J Mobius project.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package org.l2j.gameserver.model.base;
 
-import org.l2j.gameserver.data.xml.holder.ClassDataHolder;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.network.l2.components.CustomMessage;
-import org.l2j.gameserver.templates.player.ClassData;
+import org.l2j.gameserver.enums.Race;
+import org.l2j.gameserver.model.interfaces.IIdentifiable;
 
-public enum ClassId
-{
-	/*Human Fighter 1st and 2nd class list*/
-	/*0*/HUMAN_FIGHTER(ClassType.FIGHTER, Race.HUMAN, null, ClassLevel.NONE, null),
-	/*1*/WARRIOR(ClassType.FIGHTER, Race.HUMAN, HUMAN_FIGHTER, ClassLevel.FIRST, null, 1145),
-	/*2*/GLADIATOR(ClassType.FIGHTER, Race.HUMAN, WARRIOR, ClassLevel.SECOND, ClassType2.WARRIOR, 2627, 2734, 2762),
-	/*3*/WARLORD(ClassType.FIGHTER, Race.HUMAN, WARRIOR, ClassLevel.SECOND, ClassType2.WARRIOR, 2627, 2734, 3276),
-	/*4*/KNIGHT(ClassType.FIGHTER, Race.HUMAN, HUMAN_FIGHTER, ClassLevel.FIRST, null, 1161),
-	/*5*/PALADIN(ClassType.FIGHTER, Race.HUMAN, KNIGHT, ClassLevel.SECOND, ClassType2.KNIGHT, 2633, 2734, 2820),
-	/*6*/DARK_AVENGER(ClassType.FIGHTER, Race.HUMAN, KNIGHT, ClassLevel.SECOND, ClassType2.KNIGHT, 2633, 2734, 3307),
-	/*7*/ROGUE(ClassType.FIGHTER, Race.HUMAN, HUMAN_FIGHTER, ClassLevel.FIRST, null, 1190),
-	/*8*/TREASURE_HUNTER(ClassType.FIGHTER, Race.HUMAN, ROGUE, ClassLevel.SECOND, ClassType2.ROGUE, 2673, 2734, 2809),
-	/*9*/HAWKEYE(ClassType.FIGHTER, Race.HUMAN, ROGUE, ClassLevel.SECOND, ClassType2.ARCHER, 2673, 2734, 3293),
+import java.util.HashSet;
+import java.util.Set;
 
-	/*Human Mage 1st and 2nd class list*/
-	/*10*/HUMAN_MAGE(ClassType.MYSTIC, Race.HUMAN, null, ClassLevel.NONE, null),
-	/*11*/WIZARD(ClassType.MYSTIC, Race.HUMAN, HUMAN_MAGE, ClassLevel.FIRST, null, 1292),
-	/*12*/SORCERER(ClassType.MYSTIC, Race.HUMAN, WIZARD, ClassLevel.SECOND, ClassType2.WIZARD, 2674, 2734, 2840),
-	/*13*/NECROMANCER(ClassType.MYSTIC, Race.HUMAN, WIZARD, ClassLevel.SECOND, ClassType2.WIZARD, 2674, 2734, 3307),
-	/*14*/WARLOCK(ClassType.MYSTIC, Race.HUMAN, WIZARD, ClassLevel.SECOND, ClassType2.SUMMONER, 2674, 2734, 3336),
-	/*15*/CLERIC(ClassType.MYSTIC, Race.HUMAN, HUMAN_MAGE, ClassLevel.FIRST, null, 1201),
-	/*16*/BISHOP(ClassType.MYSTIC, Race.HUMAN, CLERIC, ClassLevel.SECOND, ClassType2.HEALER, 2721, 2734, 2820),
-	/*17*/PROPHET(ClassType.MYSTIC, Race.HUMAN, CLERIC, ClassLevel.SECOND, ClassType2.ENCHANTER, 2721, 2734, 2821),
+/**
+ * This class defines all classes (ex : human fighter, darkFighter...) that a player can chose.<br>
+ * Data:
+ * <ul>
+ * <li>id : The Identifier of the class</li>
+ * <li>isMage : True if the class is a mage class</li>
+ * <li>race : The race of this class</li>
+ * <li>parent : The parent ClassId or null if this class is the root</li>
+ * </ul>
+ *
+ * @version $Revision: 1.4.4.4 $ $Date: 2005/03/27 15:29:33 $
+ */
+public enum ClassId implements IIdentifiable {
+    FIGHTER(0, false, Race.HUMAN, null),
 
-	/*Elven Fighter 1st and 2nd class list*/
-	/*18*/ELVEN_FIGHTER(ClassType.FIGHTER, Race.ELF, null, ClassLevel.NONE, null),
-	/*19*/ELVEN_KNIGHT(ClassType.FIGHTER, Race.ELF, ELVEN_FIGHTER, ClassLevel.FIRST, null, 1204),
-	/*20*/TEMPLE_KNIGHT(ClassType.FIGHTER, Race.ELF, ELVEN_KNIGHT, ClassLevel.SECOND, ClassType2.KNIGHT, 2633, 3140, 2820),
-	/*21*/SWORDSINGER(ClassType.FIGHTER, Race.ELF, ELVEN_KNIGHT, ClassLevel.SECOND, ClassType2.ENCHANTER, 2627, 3140, 2762),
-	/*22*/ELVEN_SCOUT(ClassType.FIGHTER, Race.ELF, ELVEN_FIGHTER, ClassLevel.FIRST, null, 1217),
-	/*23*/PLAIN_WALKER(ClassType.FIGHTER, Race.ELF, ELVEN_SCOUT, ClassLevel.SECOND, ClassType2.ROGUE, 2673, 3140, 2809),
-	/*24*/SILVER_RANGER(ClassType.FIGHTER, Race.ELF, ELVEN_SCOUT, ClassLevel.SECOND, ClassType2.ARCHER, 2673, 3140, 3293),
+    WARRIOR(1, false, Race.HUMAN, FIGHTER),
+    GLADIATOR(2, false, Race.HUMAN, WARRIOR),
+    WARLORD(3, false, Race.HUMAN, WARRIOR),
+    KNIGHT(4, false, Race.HUMAN, FIGHTER),
+    PALADIN(5, false, Race.HUMAN, KNIGHT),
+    DARK_AVENGER(6, false, Race.HUMAN, KNIGHT),
+    ROGUE(7, false, Race.HUMAN, FIGHTER),
+    TREASURE_HUNTER(8, false, Race.HUMAN, ROGUE),
+    HAWKEYE(9, false, Race.HUMAN, ROGUE),
 
-	/*Elven Mage 1st and 2nd class list*/
-	/*25*/ELVEN_MAGE(ClassType.MYSTIC, Race.ELF, null, ClassLevel.NONE, null),
-	/*26*/ELVEN_WIZARD(ClassType.MYSTIC, Race.ELF, ELVEN_MAGE, ClassLevel.FIRST, null, 1230),
-	/*27*/SPELLSINGER(ClassType.MYSTIC, Race.ELF, ELVEN_WIZARD, ClassLevel.SECOND, ClassType2.WIZARD, 2674, 3140, 2840),
-	/*28*/ELEMENTAL_SUMMONER(ClassType.MYSTIC, Race.ELF, ELVEN_WIZARD, ClassLevel.SECOND, ClassType2.SUMMONER, 2674, 3140, 3336),
-	/*29*/ORACLE(ClassType.MYSTIC, Race.ELF, ELVEN_MAGE, ClassLevel.FIRST, null, 1235),
-	/*30*/ELDER(ClassType.MYSTIC, Race.ELF, ORACLE, ClassLevel.SECOND, ClassType2.HEALER, 2721, 3140, 2820),
+    MAGE(10, true, Race.HUMAN, null),
+    WIZARD(11, true, Race.HUMAN, MAGE),
+    SORCERER(12, true, Race.HUMAN, WIZARD),
+    NECROMANCER(13, true, Race.HUMAN, WIZARD),
+    WARLOCK(14, true, true, Race.HUMAN, WIZARD),
+    CLERIC(15, true, Race.HUMAN, MAGE),
+    BISHOP(16, true, Race.HUMAN, CLERIC),
+    PROPHET(17, true, Race.HUMAN, CLERIC),
 
-	/*Darkelf Fighter 1st and 2nd class list*/
-	/*31*/DARK_FIGHTER(ClassType.FIGHTER, Race.DARKELF, null, ClassLevel.NONE, null),
-	/*32*/PALUS_KNIGHT(ClassType.FIGHTER, Race.DARKELF, DARK_FIGHTER, ClassLevel.FIRST, null, 1244),
-	/*33*/SHILLEN_KNIGHT(ClassType.FIGHTER, Race.DARKELF, PALUS_KNIGHT, ClassLevel.SECOND, ClassType2.KNIGHT, 2633, 3172, 3307),
-	/*34*/BLADEDANCER(ClassType.FIGHTER, Race.DARKELF, PALUS_KNIGHT, ClassLevel.SECOND, ClassType2.ENCHANTER, 2627, 3172, 2762),
-	/*35*/ASSASIN(ClassType.FIGHTER, Race.DARKELF, DARK_FIGHTER, ClassLevel.FIRST, null, 1252),
-	/*36*/ABYSS_WALKER(ClassType.FIGHTER, Race.DARKELF, ASSASIN, ClassLevel.SECOND, ClassType2.ROGUE, 2673, 3172, 2809),
-	/*37*/PHANTOM_RANGER(ClassType.FIGHTER, Race.DARKELF, ASSASIN, ClassLevel.SECOND, ClassType2.ARCHER, 2673, 3172, 3293),
+    ELVEN_FIGHTER(18, false, Race.ELF, null),
+    ELVEN_KNIGHT(19, false, Race.ELF, ELVEN_FIGHTER),
+    TEMPLE_KNIGHT(20, false, Race.ELF, ELVEN_KNIGHT),
+    SWORDSINGER(21, false, Race.ELF, ELVEN_KNIGHT),
+    ELVEN_SCOUT(22, false, Race.ELF, ELVEN_FIGHTER),
+    PLAINS_WALKER(23, false, Race.ELF, ELVEN_SCOUT),
+    SILVER_RANGER(24, false, Race.ELF, ELVEN_SCOUT),
 
-	/*Darkelf Mage 1st and 2nd class list*/
-	/*38*/DARK_MAGE(ClassType.MYSTIC, Race.DARKELF, null, ClassLevel.NONE, null),
-	/*39*/DARK_WIZARD(ClassType.MYSTIC, Race.DARKELF, DARK_MAGE, ClassLevel.FIRST, null, 1261),
-	/*40*/SPELLHOWLER(ClassType.MYSTIC, Race.DARKELF, DARK_WIZARD, ClassLevel.SECOND, ClassType2.WIZARD, 2674, 3172, 2840),
-	/*41*/PHANTOM_SUMMONER(ClassType.MYSTIC, Race.DARKELF, DARK_WIZARD, ClassLevel.SECOND, ClassType2.SUMMONER, 2674, 3172, 3336),
-	/*42*/SHILLEN_ORACLE(ClassType.MYSTIC, Race.DARKELF, DARK_MAGE, ClassLevel.FIRST, null, 1270),
-	/*43*/SHILLEN_ELDER(ClassType.MYSTIC, Race.DARKELF, SHILLEN_ORACLE, ClassLevel.SECOND, ClassType2.HEALER, 2721, 3172, 2821),
+    ELVEN_MAGE(25, true, Race.ELF, null),
+    ELVEN_WIZARD(26, true, Race.ELF, ELVEN_MAGE),
+    SPELLSINGER(27, true, Race.ELF, ELVEN_WIZARD),
+    ELEMENTAL_SUMMONER(28, true, true, Race.ELF, ELVEN_WIZARD),
+    ORACLE(29, true, Race.ELF, ELVEN_MAGE),
+    ELDER(30, true, Race.ELF, ORACLE),
 
-	/*Orc Fighter 1st and 2nd class list*/
-	/*44*/ORC_FIGHTER(ClassType.FIGHTER, Race.ORC, null, ClassLevel.NONE, null),
-	/*45*/ORC_RAIDER(ClassType.FIGHTER, Race.ORC, ORC_FIGHTER, ClassLevel.FIRST, null, 1592),
-	/*46*/DESTROYER(ClassType.FIGHTER, Race.ORC, ORC_RAIDER, ClassLevel.SECOND, ClassType2.WARRIOR, 2627, 3203, 3276),
-	/*47*/ORC_MONK(ClassType.FIGHTER, Race.ORC, ORC_FIGHTER, ClassLevel.FIRST, null, 1615),
-	/*48*/TYRANT(ClassType.FIGHTER, Race.ORC, ORC_MONK, ClassLevel.SECOND, ClassType2.WARRIOR, 2627, 3203, 2762),
+    DARK_FIGHTER(31, false, Race.DARK_ELF, null),
+    PALUS_KNIGHT(32, false, Race.DARK_ELF, DARK_FIGHTER),
+    SHILLIEN_KNIGHT(33, false, Race.DARK_ELF, PALUS_KNIGHT),
+    BLADEDANCER(34, false, Race.DARK_ELF, PALUS_KNIGHT),
+    ASSASSIN(35, false, Race.DARK_ELF, DARK_FIGHTER),
+    ABYSS_WALKER(36, false, Race.DARK_ELF, ASSASSIN),
+    PHANTOM_RANGER(37, false, Race.DARK_ELF, ASSASSIN),
 
-	/*Orc Mage 1st and 2nd class list*/
-	/*49*/ORC_MAGE(ClassType.MYSTIC, Race.ORC, null, ClassLevel.NONE, null),
-	/*50*/ORC_SHAMAN(ClassType.MYSTIC, Race.ORC, ORC_MAGE, ClassLevel.FIRST, null, 1631),
-	/*51*/OVERLORD(ClassType.MYSTIC, Race.ORC, ORC_SHAMAN, ClassLevel.SECOND, ClassType2.ENCHANTER, 2721, 3203, 3390),
-	/*52*/WARCRYER(ClassType.MYSTIC, Race.ORC, ORC_SHAMAN, ClassLevel.SECOND, ClassType2.ENCHANTER, 2721, 3203, 2879),
+    DARK_MAGE(38, true, Race.DARK_ELF, null),
+    DARK_WIZARD(39, true, Race.DARK_ELF, DARK_MAGE),
+    SPELLHOWLER(40, true, Race.DARK_ELF, DARK_WIZARD),
+    PHANTOM_SUMMONER(41, true, true, Race.DARK_ELF, DARK_WIZARD),
+    SHILLIEN_ORACLE(42, true, Race.DARK_ELF, DARK_MAGE),
+    SHILLIEN_ELDER(43, true, Race.DARK_ELF, SHILLIEN_ORACLE),
 
-	/*Dwarf Fighter 1st and 2nd class list*/
-	/*53*/DWARVEN_FIGHTER(ClassType.FIGHTER, Race.DWARF, null, ClassLevel.NONE, null),
-	/*54*/SCAVENGER(ClassType.FIGHTER, Race.DWARF, DWARVEN_FIGHTER, ClassLevel.FIRST, null, 1642),
-	/*55*/BOUNTY_HUNTER(ClassType.FIGHTER, Race.DWARF, SCAVENGER, ClassLevel.SECOND, ClassType2.ROGUE, 3119, 3238, 2809),
-	/*56*/ARTISAN(ClassType.FIGHTER, Race.DWARF, DWARVEN_FIGHTER, ClassLevel.FIRST, null, 1635),
-	/*57*/WARSMITH(ClassType.FIGHTER, Race.DWARF, ARTISAN, ClassLevel.SECOND, ClassType2.WARRIOR, 3119, 3238, 2867),
+    ORC_FIGHTER(44, false, Race.ORC, null),
+    ORC_RAIDER(45, false, Race.ORC, ORC_FIGHTER),
+    DESTROYER(46, false, Race.ORC, ORC_RAIDER),
+    ORC_MONK(47, false, Race.ORC, ORC_FIGHTER),
+    TYRANT(48, false, Race.ORC, ORC_MONK),
 
-	/*Dummy Entries*/
-	/*58*/DUMMY_ENTRY_58,
-	/*59*/DUMMY_ENTRY_59,
-	/*60*/DUMMY_ENTRY_60,
-	/*61*/DUMMY_ENTRY_61,
-	/*62*/DUMMY_ENTRY_62,
-	/*63*/DUMMY_ENTRY_63,
-	/*64*/DUMMY_ENTRY_64,
-	/*65*/DUMMY_ENTRY_65,
-	/*66*/DUMMY_ENTRY_66,
-	/*67*/DUMMY_ENTRY_67,
-	/*68*/DUMMY_ENTRY_68,
-	/*69*/DUMMY_ENTRY_69,
-	/*70*/DUMMY_ENTRY_70,
-	/*71*/DUMMY_ENTRY_71,
-	/*72*/DUMMY_ENTRY_72,
-	/*73*/DUMMY_ENTRY_73,
-	/*74*/DUMMY_ENTRY_74,
-	/*75*/DUMMY_ENTRY_75,
-	/*76*/DUMMY_ENTRY_76,
-	/*77*/DUMMY_ENTRY_77,
-	/*78*/DUMMY_ENTRY_78,
-	/*79*/DUMMY_ENTRY_79,
-	/*80*/DUMMY_ENTRY_80,
-	/*81*/DUMMY_ENTRY_81,
-	/*82*/DUMMY_ENTRY_82,
-	/*83*/DUMMY_ENTRY_83,
-	/*84*/DUMMY_ENTRY_84,
-	/*85*/DUMMY_ENTRY_85,
-	/*86*/DUMMY_ENTRY_86,
-	/*87*/DUMMY_ENTRY_87,
+    ORC_MAGE(49, true, Race.ORC, null),
+    ORC_SHAMAN(50, true, Race.ORC, ORC_MAGE),
+    OVERLORD(51, true, Race.ORC, ORC_SHAMAN),
+    WARCRYER(52, true, Race.ORC, ORC_SHAMAN),
 
-	/*Human Fighter 3th class list*/
-	/*88*/DUELIST(ClassType.FIGHTER, Race.HUMAN, GLADIATOR, ClassLevel.THIRD, ClassType2.WARRIOR),
-	/*89*/DREADNOUGHT(ClassType.FIGHTER, Race.HUMAN, WARLORD, ClassLevel.THIRD, ClassType2.WARRIOR),
-	/*90*/PHOENIX_KNIGHT(ClassType.FIGHTER, Race.HUMAN, PALADIN, ClassLevel.THIRD, ClassType2.KNIGHT),
-	/*91*/HELL_KNIGHT(ClassType.FIGHTER, Race.HUMAN, DARK_AVENGER, ClassLevel.THIRD, ClassType2.KNIGHT),
-	/*92*/SAGITTARIUS(ClassType.FIGHTER, Race.HUMAN, HAWKEYE, ClassLevel.THIRD, ClassType2.ARCHER),
-	/*93*/ADVENTURER(ClassType.FIGHTER, Race.HUMAN, TREASURE_HUNTER, ClassLevel.THIRD, ClassType2.ROGUE),
+    DWARVEN_FIGHTER(53, false, Race.DWARF, null),
+    SCAVENGER(54, false, Race.DWARF, DWARVEN_FIGHTER),
+    BOUNTY_HUNTER(55, false, Race.DWARF, SCAVENGER),
+    ARTISAN(56, false, Race.DWARF, DWARVEN_FIGHTER),
+    WARSMITH(57, false, Race.DWARF, ARTISAN),
 
-	/*Human Mage 3th class list*/
-	/*94*/ARCHMAGE(ClassType.MYSTIC, Race.HUMAN, SORCERER, ClassLevel.THIRD, ClassType2.WIZARD),
-	/*95*/SOULTAKER(ClassType.MYSTIC, Race.HUMAN, NECROMANCER, ClassLevel.THIRD, ClassType2.WIZARD),
-	/*96*/ARCANA_LORD(ClassType.MYSTIC, Race.HUMAN, WARLOCK, ClassLevel.THIRD, ClassType2.SUMMONER),
-	/*97*/CARDINAL(ClassType.MYSTIC, Race.HUMAN, BISHOP, ClassLevel.THIRD, ClassType2.HEALER),
-	/*98*/HIEROPHANT(ClassType.MYSTIC, Race.HUMAN, PROPHET, ClassLevel.THIRD, ClassType2.ENCHANTER),
+    DUMMY_ENTRY_1(58, false, null, null),
+    DUMMY_ENTRY_2(59, false, null, null),
+    DUMMY_ENTRY_3(60, false, null, null),
+    DUMMY_ENTRY_4(61, false, null, null),
+    DUMMY_ENTRY_5(62, false, null, null),
+    DUMMY_ENTRY_6(63, false, null, null),
+    DUMMY_ENTRY_7(64, false, null, null),
+    DUMMY_ENTRY_8(65, false, null, null),
+    DUMMY_ENTRY_9(66, false, null, null),
+    DUMMY_ENTRY_10(67, false, null, null),
+    DUMMY_ENTRY_11(68, false, null, null),
+    DUMMY_ENTRY_12(69, false, null, null),
+    DUMMY_ENTRY_13(70, false, null, null),
+    DUMMY_ENTRY_14(71, false, null, null),
+    DUMMY_ENTRY_15(72, false, null, null),
+    DUMMY_ENTRY_16(73, false, null, null),
+    DUMMY_ENTRY_17(74, false, null, null),
+    DUMMY_ENTRY_18(75, false, null, null),
+    DUMMY_ENTRY_19(76, false, null, null),
+    DUMMY_ENTRY_20(77, false, null, null),
+    DUMMY_ENTRY_21(78, false, null, null),
+    DUMMY_ENTRY_22(79, false, null, null),
+    DUMMY_ENTRY_23(80, false, null, null),
+    DUMMY_ENTRY_24(81, false, null, null),
+    DUMMY_ENTRY_25(82, false, null, null),
+    DUMMY_ENTRY_26(83, false, null, null),
+    DUMMY_ENTRY_27(84, false, null, null),
+    DUMMY_ENTRY_28(85, false, null, null),
+    DUMMY_ENTRY_29(86, false, null, null),
+    DUMMY_ENTRY_30(87, false, null, null),
 
-	/*Elven Fighter 3th class list*/
-	/*99*/EVAS_TEMPLAR(ClassType.FIGHTER, Race.ELF, TEMPLE_KNIGHT, ClassLevel.THIRD, ClassType2.KNIGHT),
-	/*100*/SWORD_MUSE(ClassType.FIGHTER, Race.ELF, SWORDSINGER, ClassLevel.THIRD, ClassType2.ENCHANTER),
-	/*101*/WIND_RIDER(ClassType.FIGHTER, Race.ELF, PLAIN_WALKER, ClassLevel.THIRD, ClassType2.ROGUE),
-	/*102*/MOONLIGHT_SENTINEL(ClassType.FIGHTER, Race.ELF, SILVER_RANGER, ClassLevel.THIRD, ClassType2.ARCHER),
+    DUELIST(88, false, Race.HUMAN, GLADIATOR),
+    DREADNOUGHT(89, false, Race.HUMAN, WARLORD),
+    PHOENIX_KNIGHT(90, false, Race.HUMAN, PALADIN),
+    HELL_KNIGHT(91, false, Race.HUMAN, DARK_AVENGER),
+    SAGITTARIUS(92, false, Race.HUMAN, HAWKEYE),
+    ADVENTURER(93, false, Race.HUMAN, TREASURE_HUNTER),
+    ARCHMAGE(94, true, Race.HUMAN, SORCERER),
+    SOULTAKER(95, true, Race.HUMAN, NECROMANCER),
+    ARCANA_LORD(96, true, true, Race.HUMAN, WARLOCK),
+    CARDINAL(97, true, Race.HUMAN, BISHOP),
+    HIEROPHANT(98, true, Race.HUMAN, PROPHET),
 
-	/*Elven Mage 3th class list*/
-	/*103*/MYSTIC_MUSE(ClassType.MYSTIC, Race.ELF, SPELLSINGER, ClassLevel.THIRD, ClassType2.WIZARD),
-	/*104*/ELEMENTAL_MASTER(ClassType.MYSTIC, Race.ELF, ELEMENTAL_SUMMONER, ClassLevel.THIRD, ClassType2.SUMMONER),
-	/*105*/EVAS_SAINT(ClassType.MYSTIC, Race.ELF, ELDER, ClassLevel.THIRD, ClassType2.HEALER),
+    EVA_TEMPLAR(99, false, Race.ELF, TEMPLE_KNIGHT),
+    SWORD_MUSE(100, false, Race.ELF, SWORDSINGER),
+    WIND_RIDER(101, false, Race.ELF, PLAINS_WALKER),
+    MOONLIGHT_SENTINEL(102, false, Race.ELF, SILVER_RANGER),
+    MYSTIC_MUSE(103, true, Race.ELF, SPELLSINGER),
+    ELEMENTAL_MASTER(104, true, true, Race.ELF, ELEMENTAL_SUMMONER),
+    EVA_SAINT(105, true, Race.ELF, ELDER),
 
-	/*Darkelf Fighter 3th class list*/
-	/*106*/SHILLIEN_TEMPLAR(ClassType.FIGHTER, Race.DARKELF, SHILLEN_KNIGHT, ClassLevel.THIRD, ClassType2.KNIGHT),
-	/*107*/SPECTRAL_DANCER(ClassType.FIGHTER, Race.DARKELF, BLADEDANCER, ClassLevel.THIRD, ClassType2.ENCHANTER),
-	/*108*/GHOST_HUNTER(ClassType.FIGHTER, Race.DARKELF, ABYSS_WALKER, ClassLevel.THIRD, ClassType2.ROGUE),
-	/*109*/GHOST_SENTINEL(ClassType.FIGHTER, Race.DARKELF, PHANTOM_RANGER, ClassLevel.THIRD, ClassType2.ARCHER),
+    SHILLIEN_TEMPLAR(106, false, Race.DARK_ELF, SHILLIEN_KNIGHT),
+    SPECTRAL_DANCER(107, false, Race.DARK_ELF, BLADEDANCER),
+    GHOST_HUNTER(108, false, Race.DARK_ELF, ABYSS_WALKER),
+    GHOST_SENTINEL(109, false, Race.DARK_ELF, PHANTOM_RANGER),
+    STORM_SCREAMER(110, true, Race.DARK_ELF, SPELLHOWLER),
+    SPECTRAL_MASTER(111, true, true, Race.DARK_ELF, PHANTOM_SUMMONER),
+    SHILLIEN_SAINT(112, true, Race.DARK_ELF, SHILLIEN_ELDER),
 
-	/*Darkelf Mage 3th class list*/
-	/*110*/STORM_SCREAMER(ClassType.MYSTIC, Race.DARKELF, SPELLHOWLER, ClassLevel.THIRD, ClassType2.WIZARD),
-	/*111*/SPECTRAL_MASTER(ClassType.MYSTIC, Race.DARKELF, PHANTOM_SUMMONER, ClassLevel.THIRD, ClassType2.SUMMONER),
-	/*112*/SHILLIEN_SAINT(ClassType.MYSTIC, Race.DARKELF, SHILLEN_ELDER, ClassLevel.THIRD, ClassType2.HEALER),
+    TITAN(113, false, Race.ORC, DESTROYER),
+    GRAND_KHAVATARI(114, false, Race.ORC, TYRANT),
+    DOMINATOR(115, true, Race.ORC, OVERLORD),
+    DOOMCRYER(116, true, Race.ORC, WARCRYER),
 
-	/*Orc Fighter 3th class list*/
-	/*113*/TITAN(ClassType.FIGHTER, Race.ORC, DESTROYER, ClassLevel.THIRD, ClassType2.WARRIOR),
-	/*114*/GRAND_KHAVATARI(ClassType.FIGHTER, Race.ORC, TYRANT, ClassLevel.THIRD, ClassType2.WARRIOR),
+    FORTUNE_SEEKER(117, false, Race.DWARF, BOUNTY_HUNTER),
+    MAESTRO(118, false, Race.DWARF, WARSMITH),
 
-	/*Orc Mage 3th class list*/
-	/*115*/DOMINATOR(ClassType.MYSTIC, Race.ORC, OVERLORD, ClassLevel.THIRD, ClassType2.ENCHANTER),
-	/*116*/DOOMCRYER(ClassType.MYSTIC, Race.ORC, WARCRYER, ClassLevel.THIRD, ClassType2.ENCHANTER),
+    DUMMY_ENTRY_31(119, false, null, null),
+    DUMMY_ENTRY_32(120, false, null, null),
+    DUMMY_ENTRY_33(121, false, null, null),
+    DUMMY_ENTRY_34(122, false, null, null),
 
-	/*Dwarf Fighter 3th class list*/
-	/*117*/FORTUNE_SEEKER(ClassType.FIGHTER, Race.DWARF, BOUNTY_HUNTER, ClassLevel.THIRD, ClassType2.ROGUE),
-	/*118*/MAESTRO(ClassType.FIGHTER, Race.DWARF, WARSMITH, ClassLevel.THIRD, ClassType2.WARRIOR);
+    MALE_SOLDIER(123, false, Race.KAMAEL, null),
+    FEMALE_SOLDIER(124, false, Race.KAMAEL, null),
+    TROOPER(125, false, Race.KAMAEL, MALE_SOLDIER),
+    WARDER(126, false, Race.KAMAEL, FEMALE_SOLDIER),
+    BERSERKER(127, false, Race.KAMAEL, TROOPER),
+    MALE_SOULBREAKER(128, false, Race.KAMAEL, TROOPER),
+    FEMALE_SOULBREAKER(129, false, Race.KAMAEL, WARDER),
+    ARBALESTER(130, false, Race.KAMAEL, WARDER),
+    DOOMBRINGER(131, false, Race.KAMAEL, BERSERKER),
+    MALE_SOUL_HOUND(132, false, Race.KAMAEL, MALE_SOULBREAKER),
+    FEMALE_SOUL_HOUND(133, false, Race.KAMAEL, FEMALE_SOULBREAKER),
+    TRICKSTER(134, false, Race.KAMAEL, ARBALESTER),
+    INSPECTOR(135, false, Race.KAMAEL, WARDER),
+    JUDICATOR(136, false, Race.KAMAEL, INSPECTOR),
 
-	public static final ClassId[] VALUES = values();
+    DUMMY_ENTRY_35(137, false, null, null),
+    DUMMY_ENTRY_36(138, false, null, null),
 
-	public static ClassId valueOf(int id)
-	{
-		if(id < 0 || id >= VALUES.length)
-			return null;
+    SIGEL_KNIGHT(139, false, null, null),
+    TYRR_WARRIOR(140, false, null, null),
+    OTHELL_ROGUE(141, false, null, null),
+    YUL_ARCHER(142, false, null, null),
+    FEOH_WIZARD(143, false, null, null),
+    ISS_ENCHANTER(144, false, null, null),
+    WYNN_SUMMONER(145, false, null, null),
+    AEORE_HEALER(146, false, null, null),
 
-		ClassId result = VALUES[id];
-		if(result != null && !result.isDummy())
-			return result;
+    DUMMY_ENTRY_37(147, false, null, null),
 
-		return null;
-	}
+    SIGEL_PHOENIX_KNIGHT(148, false, Race.HUMAN, PHOENIX_KNIGHT),
+    SIGEL_HELL_KNIGHT(149, false, Race.HUMAN, HELL_KNIGHT),
+    SIGEL_EVA_TEMPLAR(150, false, Race.ELF, EVA_TEMPLAR),
+    SIGEL_SHILLIEN_TEMPLAR(151, false, Race.DARK_ELF, SHILLIEN_TEMPLAR),
+    TYRR_DUELIST(152, false, Race.HUMAN, DUELIST),
+    TYRR_DREADNOUGHT(153, false, Race.HUMAN, DREADNOUGHT),
+    TYRR_TITAN(154, false, Race.ORC, TITAN),
+    TYRR_GRAND_KHAVATARI(155, false, Race.ORC, GRAND_KHAVATARI),
+    TYRR_MAESTRO(156, false, Race.DWARF, MAESTRO),
+    TYRR_DOOMBRINGER(157, false, Race.KAMAEL, DOOMBRINGER),
+    OTHELL_ADVENTURER(158, false, Race.HUMAN, ADVENTURER),
+    OTHELL_WIND_RIDER(159, false, Race.ELF, WIND_RIDER),
+    OTHELL_GHOST_HUNTER(160, false, Race.DARK_ELF, GHOST_HUNTER),
+    OTHELL_FORTUNE_SEEKER(161, false, Race.DWARF, FORTUNE_SEEKER),
+    YUL_SAGITTARIUS(162, false, Race.HUMAN, SAGITTARIUS),
+    YUL_MOONLIGHT_SENTINEL(163, false, Race.ELF, MOONLIGHT_SENTINEL),
+    YUL_GHOST_SENTINEL(164, false, Race.DARK_ELF, GHOST_SENTINEL),
+    YUL_TRICKSTER(165, false, Race.KAMAEL, TRICKSTER),
+    FEOH_ARCHMAGE(166, true, Race.HUMAN, ARCHMAGE),
+    FEOH_SOULTAKER(167, true, Race.HUMAN, SOULTAKER),
+    FEOH_MYSTIC_MUSE(168, true, Race.ELF, MYSTIC_MUSE),
+    FEOH_STORM_SCREAMER(169, true, Race.DARK_ELF, STORM_SCREAMER),
+    FEOH_SOUL_HOUND(170, true, Race.KAMAEL, MALE_SOUL_HOUND), // fix me ?
+    ISS_HIEROPHANT(171, true, Race.HUMAN, HIEROPHANT),
+    ISS_SWORD_MUSE(172, false, Race.ELF, SWORD_MUSE),
+    ISS_SPECTRAL_DANCER(173, false, Race.DARK_ELF, SPECTRAL_DANCER),
+    ISS_DOMINATOR(174, true, Race.ORC, DOMINATOR),
+    ISS_DOOMCRYER(175, true, Race.ORC, DOOMCRYER),
+    WYNN_ARCANA_LORD(176, true, true, Race.HUMAN, ARCANA_LORD),
+    WYNN_ELEMENTAL_MASTER(177, true, true, Race.ELF, ELEMENTAL_MASTER),
+    WYNN_SPECTRAL_MASTER(178, true, true, Race.DARK_ELF, SPECTRAL_MASTER),
+    AEORE_CARDINAL(179, true, Race.HUMAN, CARDINAL),
+    AEORE_EVA_SAINT(180, true, Race.ELF, EVA_SAINT),
+    AEORE_SHILLIEN_SAINT(181, true, Race.DARK_ELF, SHILLIEN_SAINT),
 
-	private final Race _race;
-	private final ClassId _parent;
-	private final ClassId _firstParent;
-	private final ClassLevel _level;
-	private final ClassType _type;
-	private final ClassType2 _type2;
-	private final boolean _isDummy;
-	private final int[] _changeClassItemIds;
+    ERTHEIA_FIGHTER(182, false, Race.ERTHEIA, null),
+    ERTHEIA_WIZARD(183, true, Race.ERTHEIA, null),
 
-	private ClassId()
-	{
-		this(null, null, null, null, null, true);
-	}
+    MARAUDER(184, false, Race.ERTHEIA, ERTHEIA_FIGHTER),
+    CLOUD_BREAKER(185, true, Race.ERTHEIA, ERTHEIA_WIZARD),
 
-	private ClassId(ClassType classType, Race race, ClassId parent, ClassLevel level, ClassType2 type2, int... changeClassItemIds)
-	{
-		this(classType, race, parent, level, type2, false, changeClassItemIds);
-	}
+    RIPPER(186, false, Race.ERTHEIA, MARAUDER),
+    STRATOMANCER(187, true, Race.ERTHEIA, CLOUD_BREAKER),
 
-	private ClassId(ClassType classType, Race race, ClassId parent, ClassLevel level, ClassType2 type2, boolean isDummy, int... changeClassItemIds)
-	{
-		_type = classType;
-		_race = race;
-		_parent = parent;
-		_level = level;
-		_type2 = type2;
-		_isDummy = isDummy;
-		_firstParent = _parent == null ? this : _parent.getFirstParent(0);
-		_changeClassItemIds = changeClassItemIds;
-	}
+    EVISCERATOR(188, false, Race.ERTHEIA, RIPPER),
+    SAYHA_SEER(189, true, Race.ERTHEIA, STRATOMANCER);
 
-	public final int getId()
-	{
-		return ordinal();
-	}
+    /**
+     * The Identifier of the Class
+     */
+    private final int _id;
 
-	public final Race getRace()
-	{
-		return _race;
-	}
+    /**
+     * True if the class is a mage class
+     */
+    private final boolean _isMage;
 
-	public final boolean isOfRace(Race race)
-	{
-		return _race == race;
-	}
+    /**
+     * True if the class is a summoner class
+     */
+    private final boolean _isSummoner;
 
-	public final ClassLevel getClassLevel()
-	{
-		return _level;
-	}
+    /**
+     * The Race object of the class
+     */
+    private final Race _race;
 
-	public final boolean isOfLevel(ClassLevel level)
-	{
-		return _level == level;
-	}
+    /**
+     * The parent ClassId or null if this class is a root
+     */
+    private final ClassId _parent;
 
-	public final ClassType getType()
-	{
-		return _type;
-	}
+    /**
+     * List of available Class for next transfer
+     **/
+    private final Set<ClassId> _nextClassIds = new HashSet<>(1);
 
-	public final boolean isOfType(ClassType type)
-	{
-		return _type == type;
-	}
+    /**
+     * Class constructor.
+     *
+     * @param pId     the class Id.
+     * @param pIsMage {code true} if the class is mage class.
+     * @param race    the race related to the class.
+     * @param pParent the parent class Id.
+     */
+    private ClassId(int pId, boolean pIsMage, Race race, ClassId pParent) {
+        _id = pId;
+        _isMage = pIsMage;
+        _isSummoner = false;
+        _race = race;
+        _parent = pParent;
 
-	public ClassType2 getType2()
-	{
-		return _type2;
-	}
+        if (_parent != null) {
+            _parent.addNextClassId(this);
+        }
+    }
 
-	public final boolean isOfType2(ClassType2 type)
-	{
-		return _type2 == type;
-	}
+    /**
+     * Class constructor.
+     *
+     * @param pId         the class Id.
+     * @param pIsMage     {code true} if the class is mage class.
+     * @param pIsSummoner {code true} if the class is summoner class.
+     * @param race        the race related to the class.
+     * @param pParent     the parent class Id.
+     */
+    private ClassId(int pId, boolean pIsMage, boolean pIsSummoner, Race race, ClassId pParent) {
+        _id = pId;
+        _isMage = pIsMage;
+        _isSummoner = pIsSummoner;
+        _race = race;
+        _parent = pParent;
 
-	public final boolean isMage()
-	{
-		return _type.isMagician();
-	}
+        if (_parent != null) {
+            _parent.addNextClassId(this);
+        }
+    }
 
-	public final boolean isDummy()
-	{
-		return _isDummy;
-	}
+    public static ClassId getClassId(int cId) {
+        try {
+            return ClassId.values()[cId];
+        } catch (Exception e) {
+            return null;
+        }
+    }
 
-	public boolean childOf(ClassId cid)
-	{
-		if(_parent == null)
-			return false;
+    /**
+     * Gets the ID of the class.
+     *
+     * @return the ID of the class
+     */
+    @Override
+    public final int getId() {
+        return _id;
+    }
 
-		if(_parent == cid)
-			return true;
+    /**
+     * @return {code true} if the class is a mage class.
+     */
+    public final boolean isMage() {
+        return _isMage;
+    }
 
-		return _parent.childOf(cid);
-	}
+    /**
+     * @return {code true} if the class is a summoner class.
+     */
+    public final boolean isSummoner() {
+        return _isSummoner;
+    }
 
-	public final boolean equalsOrChildOf(ClassId cid)
-	{
-		return this == cid || childOf(cid);
-	}
+    /**
+     * @return the Race object of the class.
+     */
+    public final Race getRace() {
+        return _race;
+    }
 
-	public final ClassId getParent(int sex)
-	{
-		return _parent;
-	}
+    /**
+     * @param cid the parent ClassId to check.
+     * @return {code true} if this Class is a child of the selected ClassId.
+     */
+    public final boolean childOf(ClassId cid) {
+        if (_parent == null) {
+            return false;
+        }
 
-	public final ClassId getFirstParent(int sex)
-	{
-		return _firstParent;
-	}
+        if (_parent == cid) {
+            return true;
+        }
 
-	public ClassData getClassData()
-	{
-		return ClassDataHolder.getInstance().getClassData(getId());
-	}
+        return _parent.childOf(cid);
 
-	public double getBaseCp(int level)
-	{
-		return getClassData().getHpMpCpData(level).getCP();
-	}
+    }
 
-	public double getBaseHp(int level)
-	{
-		return getClassData().getHpMpCpData(level).getHP();
-	}
+    /**
+     * @param cid the parent ClassId to check.
+     * @return {code true} if this Class is equal to the selected ClassId or a child of the selected ClassId.
+     */
+    public final boolean equalsOrChildOf(ClassId cid) {
+        return (this == cid) || childOf(cid);
+    }
 
-	public double getBaseMp(int level)
-	{
-		return getClassData().getHpMpCpData(level).getMP();
-	}
+    /**
+     * @return the child level of this Class (0=root, 1=child leve 1...)
+     */
+    public final int level() {
+        if (_parent == null) {
+            return 0;
+        }
 
-	public final String getName(Player player)
-	{
-		return new CustomMessage("org.l2j.gameserver.model.base.ClassId.name." + getId()).toString(player);
-	}
+        return 1 + _parent.level();
+    }
 
-	public int getClassMinLevel(boolean forNextClass)
-	{
-		ClassLevel classLevel = getClassLevel();
-		if(forNextClass)
-		{
-			if(classLevel == ClassLevel.THIRD)
-				return -1;
+    /**
+     * @return its parent Class Id
+     */
+    public final ClassId getParent() {
+        return _parent;
+    }
 
-			classLevel = ClassLevel.VALUES[classLevel.ordinal() + 1];
-		}
+    public final ClassId getRootClassId() {
+        if (_parent != null) {
+            return _parent.getRootClassId();
+        }
+        return this;
+    }
 
-		switch(classLevel)
-		{
-			case FIRST:
-				return 20;
-			case SECOND:
-				return 40;
-			case THIRD:
-				return 76;
-		}
+    /**
+     * @return list of possible class transfer for this class
+     */
+    public Set<ClassId> getNextClassIds() {
+        return _nextClassIds;
+    }
 
-		return 1;
-	}
-
-	public boolean isLast()
-	{
-		return isOfLevel(ClassLevel.THIRD);
-	}
-
-	public int[] getChangeClassItemIds()
-	{
-		return _changeClassItemIds;
-	}
+    private final void addNextClassId(ClassId cId) {
+        _nextClassIds.add(cId);
+    }
 }

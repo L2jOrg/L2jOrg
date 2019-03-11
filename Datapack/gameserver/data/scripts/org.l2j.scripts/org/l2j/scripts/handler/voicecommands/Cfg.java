@@ -1,7 +1,6 @@
 package org.l2j.scripts.handler.voicecommands;
 
 import org.l2j.commons.util.Converter;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
 import org.l2j.gameserver.data.string.Messages;

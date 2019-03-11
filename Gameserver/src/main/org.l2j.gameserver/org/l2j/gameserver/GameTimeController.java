@@ -1,129 +1,191 @@
+/*
+ * This file is part of the L2J Mobius project.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package org.l2j.gameserver;
 
-import org.l2j.commons.listener.ListenerList;
-import org.l2j.commons.threading.RunnableImpl;
-import org.l2j.gameserver.listener.GameListener;
-import org.l2j.gameserver.listener.game.OnDayNightChangeListener;
-import org.l2j.gameserver.listener.game.OnStartListener;
-import org.l2j.gameserver.model.GameObjectsStorage;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.network.l2.s2c.ClientSetTimePacket;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.model.events.impl.OnDayNightChange;
+import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.Calendar;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-import static org.l2j.commons.util.Util.HOUR_IN_MILLIS;
+/**
+ * Game Time controller class.
+ *
+ * @author Forsaiken
+ */
+public final class GameTimeController extends Thread {
+    public static final int TICKS_PER_SECOND = 10; // not able to change this without checking through code
+    public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
+    public static final int IG_DAYS_PER_DAY = 6;
+    public static final int MILLIS_PER_IG_DAY = (3600000 * 24) / IG_DAYS_PER_DAY;
+    public static final int SECONDS_PER_IG_DAY = MILLIS_PER_IG_DAY / 1000;
+    public static final int TICKS_PER_IG_DAY = SECONDS_PER_IG_DAY * TICKS_PER_SECOND;
+    private static final Logger LOGGER = Logger.getLogger(GameTimeController.class.getName());
+    private final static int SHADOW_SENSE_ID = 294;
 
-public class GameTimeController {
+    private static GameTimeController _instance;
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(GameTimeController.class);
+    private final Set<L2Character> _movingObjects = ConcurrentHashMap.newKeySet();
+    private final Set<L2Character> _shadowSenseCharacters = ConcurrentHashMap.newKeySet();
+    private final long _referenceTime;
 
-	private static final int TICKS_PER_SECOND = 10;
-	private static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
-	private static final GameTimeController _instance = new GameTimeController();
+    private GameTimeController() {
+        super("GameTimeController");
+        super.setDaemon(true);
+        super.setPriority(MAX_PRIORITY);
 
-	private GameTimeListenerList listenerEngine = new GameTimeListenerList();
-	private Runnable _dayChangeNotify = new CheckSunState();
-	private long _gameStartTime;
+        final Calendar c = Calendar.getInstance();
+        c.set(Calendar.HOUR_OF_DAY, 0);
+        c.set(Calendar.MINUTE, 0);
+        c.set(Calendar.SECOND, 0);
+        c.set(Calendar.MILLISECOND, 0);
+        _referenceTime = c.getTimeInMillis();
 
-	private GameTimeController() {
-		_gameStartTime = getDayStartTime();
+        super.start();
+    }
 
-		GameServer.getInstance().addListener((OnStartListener) () -> ThreadPoolManager.getInstance().execute(_dayChangeNotify));
-		var min = getGameMinutes();
-		LOGGER.info("Time Controller Initialized. Current time is {}:{} in the {}.", getGameHour(), min < 10 ? "0" + min : min, isNowNight() ? "night" : "day");
+    public static void init() {
+        _instance = new GameTimeController();
+    }
 
-		long nightStart = 0;
-		long dayStart = HOUR_IN_MILLIS;
+    public static GameTimeController getInstance() {
+        return _instance;
+    }
 
-		var currentTime = System.currentTimeMillis();
-		while(_gameStartTime + nightStart < currentTime)
-			nightStart += 4 * HOUR_IN_MILLIS;
+    public final int getGameTime() {
+        return (getGameTicks() % TICKS_PER_IG_DAY) / MILLIS_IN_TICK;
+    }
 
-		while(_gameStartTime + dayStart < currentTime)
-			dayStart += 4 * HOUR_IN_MILLIS;
+    public final int getGameHour() {
+        return getGameTime() / 60;
+    }
 
-		dayStart -= currentTime - _gameStartTime;
-		nightStart -= currentTime - _gameStartTime;
+    public final int getGameMinute() {
+        return getGameTime() % 60;
+    }
 
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(_dayChangeNotify, nightStart, 4 * HOUR_IN_MILLIS);
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(_dayChangeNotify, dayStart, 4 * HOUR_IN_MILLIS);
-	}
+    public final boolean isNight() {
+        return getGameHour() < 6;
+    }
 
-	private long getDayStartTime() {
-		Calendar dayStart = Calendar.getInstance();
+    /**
+     * The true GameTime tick. Directly taken from current time. This represents the tick of the time.
+     *
+     * @return
+     */
+    public final int getGameTicks() {
+        return (int) ((System.currentTimeMillis() - _referenceTime) / MILLIS_IN_TICK);
+    }
 
-		int HOUR_OF_DAY = dayStart.get(Calendar.HOUR_OF_DAY);
+    /**
+     * Add a L2Character to movingObjects of GameTimeController.
+     *
+     * @param cha The L2Character to add to movingObjects of GameTimeController
+     */
+    public final void registerMovingObject(L2Character cha) {
+        if (cha == null) {
+            return;
+        }
 
-		dayStart.add(Calendar.HOUR_OF_DAY, -(HOUR_OF_DAY + 1) % 4); //1 Day in Game is 4 hour in real time
-		dayStart.set(Calendar.MINUTE, 0);
-		dayStart.set(Calendar.SECOND, 0);
-		dayStart.set(Calendar.MILLISECOND, 0);
+        _movingObjects.add(cha);
+    }
 
-		return dayStart.getTimeInMillis();
-	}
+    /**
+     * Move all L2Characters contained in movingObjects of GameTimeController.<BR>
+     * <B><U> Concept</U> :</B><BR>
+     * All L2Character in movement are identified in <B>movingObjects</B> of GameTimeController.<BR>
+     * <B><U> Actions</U> :</B><BR>
+     * <ul>
+     * <li>Update the position of each L2Character</li>
+     * <li>If movement is finished, the L2Character is removed from movingObjects</li>
+     * <li>Create a task to update the _knownObject and _knowPlayers of each L2Character that finished its movement and of their already known L2Object then notify AI with EVT_ARRIVED</li>
+     * </ul>
+     */
+    private void moveObjects() {
+        _movingObjects.removeIf(L2Character::updatePosition);
+    }
 
-	public boolean isNowNight() {
-		return getGameHour() < 6;
-	}
+    public final void stopTimer() {
+        super.interrupt();
+        LOGGER.info(getClass().getSimpleName() + ": Stopped.");
+    }
 
-	public int getGameTime() {
-		return getGameTicks() / MILLIS_IN_TICK;
-	}
+    @Override
+    public final void run() {
+        LOGGER.info(getClass().getSimpleName() + ": Started.");
 
-	public int getGameHour() {
-		return getGameTime() / 60 % 24;
-	}
+        long nextTickTime;
+        long sleepTime;
+        boolean isNight = isNight();
 
-	public int getGameMinutes() {
-		return getGameTime() % 60;
-	}
+        EventDispatcher.getInstance().notifyEventAsync(new OnDayNightChange(isNight));
 
-	private int getGameTicks() {
-		return (int) ((System.currentTimeMillis() - _gameStartTime) / MILLIS_IN_TICK);
-	}
+        while (true) {
+            nextTickTime = ((System.currentTimeMillis() / MILLIS_IN_TICK) * MILLIS_IN_TICK) + 100;
 
-	private GameTimeListenerList getListenerEngine() {
-		return listenerEngine;
-	}
+            try {
+                moveObjects();
+            } catch (Throwable e) {
+                LOGGER.log(Level.WARNING, getClass().getSimpleName(), e);
+            }
 
-	public <T extends GameListener> boolean addListener(T listener) {
-		return listenerEngine.add(listener);
-	}
+            sleepTime = nextTickTime - System.currentTimeMillis();
+            if (sleepTime > 0) {
+                try {
+                    Thread.sleep(sleepTime);
+                } catch (InterruptedException e) {
+                }
+            }
 
-	public <T extends GameListener> boolean removeListener(T listener) {
-		return listenerEngine.remove(listener);
-	}
+            if (isNight() != isNight) {
+                isNight = !isNight;
+                EventDispatcher.getInstance().notifyEventAsync(new OnDayNightChange(isNight));
+                notifyShadowSense();
+            }
+        }
+    }
 
-	public class CheckSunState extends RunnableImpl {
-		@Override
-		public void runImpl() throws Exception {
-			if(isNowNight()) {
-				getInstance().getListenerEngine().onNight();
-			} else {
-				getInstance().getListenerEngine().onDay();
-			}
+    public synchronized void addShadowSenseCharacter(L2Character character) {
+        if (!_shadowSenseCharacters.contains(character)) {
+            _shadowSenseCharacters.add(character);
+            if (isNight()) {
+                final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT);
+                msg.addSkillName(SHADOW_SENSE_ID);
+                character.sendPacket(msg);
+            }
+        }
+    }
 
-			for(Player player : GameObjectsStorage.getPlayers()) {
-				player.checkDayNightMessages();
-				player.sendPacket(new ClientSetTimePacket());
-			}
-		}
-	}
+    public void removeShadowSenseCharacter(L2Character character) {
+        _shadowSenseCharacters.remove(character);
+    }
 
-
-	public static GameTimeController getInstance() {
-		return _instance;
-	}
-
-	private class GameTimeListenerList extends ListenerList<GameServer> {
-		private void onDay() {
-			listeners.stream().filter( l -> l instanceof OnDayNightChangeListener).forEach(l -> ((OnDayNightChangeListener)l).onDay());
-		}
-
-		private void onNight() {
-			listeners.stream().filter( l -> l instanceof OnDayNightChangeListener).forEach(l -> ((OnDayNightChangeListener)l).onNight());
-		}
-	}
+    private void notifyShadowSense() {
+        final SystemMessage msg = SystemMessage.getSystemMessage(isNight() ? SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT : SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR);
+        msg.addSkillName(SHADOW_SENSE_ID);
+        for (L2Character character : _shadowSenseCharacters) {
+            character.getStat().recalculateStats(true);
+            character.sendPacket(msg);
+        }
+    }
 }

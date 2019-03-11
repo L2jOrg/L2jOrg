@@ -1,24 +1,23 @@
 package org.l2j.gameserver.network.authcomm.as2gs;
 
 import org.l2j.commons.network.SessionKey;
+import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.dao.AccountInfoDAO;
-import org.l2j.gameserver.data.dao.HardwareLimitsDAO;
-import org.l2j.gameserver.data.htm.HtmCache;
-import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.network.ConnectionState;
+import org.l2j.gameserver.network.Disconnection;
+import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.authcomm.gs2as.PlayerInGame;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
-import org.l2j.gameserver.network.authcomm.gs2as.PlayerInGame;
-import org.l2j.gameserver.network.l2.GameClient;
-import org.l2j.gameserver.network.l2.components.SystemMsg;
-import org.l2j.gameserver.network.l2.s2c.*;
+import org.l2j.gameserver.network.serverpackets.*;
 
 import java.nio.ByteBuffer;
 import java.util.List;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 public class PlayerAuthResponse extends ReceivablePacket {
     private String account;
@@ -45,17 +44,17 @@ public class PlayerAuthResponse extends ReceivablePacket {
 
     @Override
     protected void runImpl() {
-        GameClient client = AuthServerCommunication.getInstance().removeWaitingClient(account);
+        L2GameClient client = AuthServerCommunication.getInstance().removeWaitingClient(account);
         if(isNull(client)) {
             return;
         }
 
         SessionKey skey = new SessionKey(authAccountId, authKey, gameserverSession, gameserverAccountId);
-        if(authed && client.getSessionKey().equals(skey)) {
+        if(authed && client.getSessionId().equals(skey)) {
             if(Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_IP > 0 && isNull(AuthServerCommunication.getInstance().getAuthedClient(account))) {
                 boolean ignored = false;
                 for(String ignoredIP : Config.MAX_ACTIVE_ACCOUNTS_IGNORED_IP) {
-                    if(ignoredIP.equalsIgnoreCase(client.getIpAddr())) {
+                    if(ignoredIP.equalsIgnoreCase(client.getHostAddress())) {
                         ignored = true;
                         break;
                     }
@@ -64,12 +63,7 @@ public class PlayerAuthResponse extends ReceivablePacket {
                 if(!ignored) {
                     int limit = Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_IP;
 
-                    int[] limits = HardwareLimitsDAO.getInstance().select(client.getIpAddr());
-                    if(limits[1] == -1 || limits[1] > System.currentTimeMillis() / 1000L) {
-                        limit += limits[0];
-                    }
-
-                    List<GameClient> clients = AuthServerCommunication.getInstance().getAuthedClientsByHWID(client.getIpAddr());
+                    List<L2GameClient> clients = AuthServerCommunication.getInstance().getAuthedClientsByIP(client.getHostAddress());
                     clients.add(client);
                     if (hasMoreClientThanLimit(client, limit, clients)) {
                         return;
@@ -80,12 +74,9 @@ public class PlayerAuthResponse extends ReceivablePacket {
             if(Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_HWID > 0 && isNull(AuthServerCommunication.getInstance().getAuthedClient(account))) {
                 int limit = Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_HWID;
 
-                int[] limits = HardwareLimitsDAO.getInstance().select(client.getHWID());
-                if(limits[1] == -1 || limits[1] > System.currentTimeMillis() / 1000L) {
-                    limit += limits[0];
-                }
+                var whId = client.getHardwareInfo().getMacAddress();
 
-                List<GameClient> clients = AuthServerCommunication.getInstance().getAuthedClientsByHWID(client.getHWID());
+                List<L2GameClient> clients = AuthServerCommunication.getInstance().getAuthedClientsByHWID(whId);
                 clients.add(client);
                 if(hasMoreClientThanLimit(client, limit, clients)) {
                     return;
@@ -93,58 +84,46 @@ public class PlayerAuthResponse extends ReceivablePacket {
             }
 
             if(Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_IP > 0 || Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_HWID > 0) {
-                client.sendPacket(TutorialCloseHtmlPacket.STATIC);
+                client.sendPacket(TutorialCloseHtml.STATIC_PACKET);
             }
 
-            client.setState(GameClient.GameClientState.AUTHED);
-            client.sendPacket(LoginResultPacket.SUCCESS);
-            client.setAccountInfo(getDAO(AccountInfoDAO.class).findById(account));
+            client.setConnectionState(ConnectionState.AUTHENTICATED);
+            client.sendPacket(LoginFail.LOGIN_SUCCESS);
 
-            client.setPoints(points);
-
-            GameClient oldClient = AuthServerCommunication.getInstance().addAuthedClient(client);
+            L2GameClient oldClient = AuthServerCommunication.getInstance().addAuthedClient(client);
             if(nonNull(oldClient))  {
-                oldClient.setState(GameClient.GameClientState.DISCONNECTED);
-                Player activeChar = oldClient.getActiveChar();
+                oldClient.setConnectionState(ConnectionState.DISCONNECTED);
+                L2PcInstance activeChar = oldClient.getActiveChar();
 
                 if(nonNull(activeChar )) {
-                    activeChar.sendPacket(SystemMsg.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT);
-                    activeChar.logout();
+                    activeChar.sendPacket(SystemMessageId.YOU_ARE_LOGGED_IN_TO_TWO_PLACES_IF_YOU_SUSPECT_ACCOUNT_THEFT_WE_RECOMMEND_CHANGING_YOUR_PASSWORD_SCANNING_YOUR_COMPUTER_FOR_VIRUSES_AND_USING_AN_ANTI_VIRUS_SOFTWARE);
+                    Disconnection.of(activeChar).defaultSequence(false);
                 } else  {
-                    oldClient.close(ServerCloseSocketPacket.STATIC);
+                    oldClient.close(ServerClose.STATIC_PACKET);
                 }
             }
 
-            sendPacket(new PlayerInGame(client.getLogin()));
-
-            CharacterSelectionInfoPacket csi = new CharacterSelectionInfoPacket(client);
-            client.sendPacket(csi);
-            client.setCharSelection(csi.getCharInfo());
-            client.checkHwid(hwid);
-            client.setPhoneNumber(phoneNumber);
+            sendPacket(new PlayerInGame(client.getAccountName()));
+            var charSelectionInfo = new CharSelectionInfo(client.getAccountName(), client.getSessionId().getGameServerSessionId());
+            client.sendPacket(charSelectionInfo);
+            client.setCharSelection(charSelectionInfo.getCharInfo());
         } else {
-            client.close(LoginResultPacket.ACCESS_FAILED_TRY_LATER);
+            client.close(new LoginFail(LoginFail.ACCESS_FAILED_TRY_LATER));
         }
     }
 
-    private boolean hasMoreClientThanLimit(GameClient client, int limit, List<GameClient> clients) {
-        for(GameClient c : clients) {
-            int[] limitsByAccount = HardwareLimitsDAO.getInstance().select(c.getLogin());
-            if(limitsByAccount[1] == -1 || limitsByAccount[1] > System.currentTimeMillis() / 1000L) {
-                limit += limitsByAccount[0];
-            }
-        }
-        int activeWindows = AuthServerCommunication.getInstance().getAuthedClientsByIP(client.getIpAddr()).size();
+    private boolean hasMoreClientThanLimit(L2GameClient client, int limit, List<L2GameClient> clients) {
+        int activeWindows = clients.size();
 
         if(activeWindows >= limit) {
-            String html = HtmCache.getInstance().getCache("windows_limit_ip.htm", client.getLanguage());
+            String html = HtmCache.getInstance().getHtm(null,"windows_limit_ip.htm");
             if(nonNull(html)) {
                 html = html.replace("<?active_windows?>", String.valueOf(activeWindows));
                 html = html.replace("<?windows_limit?>", String.valueOf(limit));
-                client.close(new TutorialShowHtmlPacket(TutorialShowHtmlPacket.NORMAL_WINDOW, html));
+                client.close(new TutorialShowHtml(html));
             }
             else {
-                client.close(LoginResultPacket.ACCESS_FAILED_TRY_LATER);
+                client.close(new LoginFail(LoginFail.ACCESS_FAILED_TRY_LATER));
             }
             return true;
         }

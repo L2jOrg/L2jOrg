@@ -2,7 +2,6 @@ package org.l2j.scripts.npc.model.events;
 
 import org.l2j.scripts.events.AbstractCustomObservableEvent;
 import org.l2j.commons.collections.MultiValueSet;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.ObservePoint;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Servitor;

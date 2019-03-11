@@ -1,7 +1,5 @@
 package org.l2j.scripts.services;
 
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.xml.holder.PremiumAccountHolder;
 import org.l2j.gameserver.handler.bypass.Bypass;

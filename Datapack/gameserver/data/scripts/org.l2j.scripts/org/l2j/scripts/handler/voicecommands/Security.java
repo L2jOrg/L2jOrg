@@ -1,6 +1,5 @@
 package org.l2j.scripts.handler.voicecommands;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.ChangeAllowedHwid;

@@ -1,6 +1,5 @@
 package org.l2j.scripts.handler.bbs;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;

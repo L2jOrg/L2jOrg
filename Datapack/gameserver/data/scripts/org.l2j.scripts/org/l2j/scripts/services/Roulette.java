@@ -1,7 +1,6 @@
 package org.l2j.scripts.services;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.handler.bypass.Bypass;
 import org.l2j.gameserver.model.Player;
