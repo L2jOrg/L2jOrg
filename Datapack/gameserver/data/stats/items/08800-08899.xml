@@ -1,0 +1,730 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="8800" name="Naga Storm" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
+		<set name="icon" val="icon.weapon_naga_storm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="930" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3051" level="2" /> <!-- Special Ability: Focus -->
+		</skills>
+		<stats>
+			<stat type="pAtk">220</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8801" name="Naga Storm" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
+		<set name="icon" val="icon.weapon_naga_storm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="930" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3066" level="2" /> <!-- Special Ability: Critical Damage -->
+		</skills>
+		<stats>
+			<stat type="pAtk">220</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8802" name="Naga Storm" additionalName="Mortal Strike" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases the probability of a deadly attack. -->
+		<set name="icon" val="icon.weapon_naga_storm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="930" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3063" level="1" /> <!-- Special Ability: Back Blow -->
+		</skills>
+		<stats>
+			<stat type="pAtk">220</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8803" name="Tiphon's Spear" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="1820" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
+			<skill id="3070" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Stun -->
+		</skills>
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="8804" name="Tiphon's Spear" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;80;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="1820" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
+		</skills>
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="8805" name="Tiphon's Spear" additionalName="Critical Stun" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. 24% chance of casting Stun upon the target during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;180" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="1820" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
+		</skills>
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="8806" name="Shyeed's Bow" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 40. -->
+		<set name="icon" val="icon.weapon_shyid_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1640" />
+		<set name="price" val="26968400" />
+		<set name="change_weaponId" val="9361" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="5" />
+		<set name="enchant_enabled" val="1" />
+		<set name="reuse_delay" val="820" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="isAppearanceable" val="true" />
+		<set name="reduced_mp_consume" val="30,1" />
+		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
+		</skills>
+		<stats>
+			<stat type="pAtk">570</stat>
+			<stat type="mAtk">133</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">227</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="8807" name="Shyeed's Bow" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+		<set name="icon" val="icon.weapon_shyid_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1640" />
+		<set name="price" val="26968400" />
+		<set name="change_weaponId" val="9362" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="5" />
+		<set name="enchant_enabled" val="1" />
+		<set name="reuse_delay" val="820" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Ability: Focus -->
+		</skills>
+		<stats>
+			<stat type="pAtk">570</stat>
+			<stat type="mAtk">133</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">227</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="8808" name="Shyeed's Bow" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. +198 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_shyid_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1640" />
+		<set name="price" val="26968400" />
+		<set name="change_weaponId" val="9363" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="5" />
+		<set name="enchant_enabled" val="1" />
+		<set name="reuse_delay" val="639" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
+		</skills>
+		<stats>
+			<stat type="pAtk">570</stat>
+			<stat type="mAtk">133</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">227</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="8809" name="Sobekk's Hurricane" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1330" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3056" level="3" /> <!-- Special Ability: Rsk. Haste -->
+		</skills>
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8810" name="Sobekk's Hurricane" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1330" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Ability: Haste -->
+		</skills>
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8811" name="Sobekk's Hurricane" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. +302 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1330" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
+			<skill id="3039" level="7" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Drain -->
+		</skills>
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8812" name="Themis' Tongue" additionalName="Empower" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. M. Atk. +159. -->
+		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="820" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3014" level="3" /> <!-- Special Ability: Mana Up -->
+		</skills>
+		<stats>
+			<stat type="pAtk">202</stat>
+			<stat type="mAtk">161</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8813" name="Themis' Tongue" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="820" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="1035" level="4" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
+		</skills>
+		<stats>
+			<stat type="pAtk">202</stat>
+			<stat type="mAtk">161</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8814" name="Themis' Tongue" additionalName="Magic Regeneration" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12%. -->
+		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="820" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="1077" level="3" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Focus -->
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
+		</skills>
+		<stats>
+			<stat type="pAtk">202</stat>
+			<stat type="mAtk">161</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8815" name="Cabrio's Hand" additionalName="Empower" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. M. Atk. +159. -->
+		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1510" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3048" level="3" /> <!-- Special Ability: Conversion -->
+		</skills>
+		<stats>
+			<stat type="pAtk">202</stat>
+			<stat type="mAtk">161</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8816" name="Cabrio's Hand" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1510" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3014" level="3" /> <!-- Special Ability: Mana Up -->
+		</skills>
+		<stats>
+			<stat type="pAtk">202</stat>
+			<stat type="mAtk">161</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8817" name="Cabrio's Hand" additionalName="Magic Regeneration" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12%. -->
+		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1510" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3074" level="2" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
+		</skills>
+		<stats>
+			<stat type="pAtk">202</stat>
+			<stat type="mAtk">161</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8818" name="Daimon Crystal" additionalName="Empower" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. M. Atk. +159. -->
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="880" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3014" level="3" /> <!-- Special Ability: Mana Up -->
+		</skills>
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">177</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8819" name="Daimon Crystal" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="880" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<skills>
+			<skill id="3047" level="3" /> <!-- Special Ability: Acumen -->
+		</skills>
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">177</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8820" name="Daimon Crystal" additionalName="Magic Regeneration" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12%. -->
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="880" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="1035" level="4" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
+		</skills>
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">177</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8868" name="Ziggo's Jewel" type="EtcItem">
+		<!-- A gem shining brightly. Looks like you could get a lot of money for it in a store. -->
+		<set name="icon" val="icon.etc_jewel_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="price" val="200000000" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8871" name="Strategy Guide" type="EtcItem">
+		<!-- This book contains information about the methods and strategies used to lead a Command Channel. Use it to create a Command Channel. Lv. 20 or above. -->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="default_action" val="CREATE_MPCC" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="20" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="price" val="10000" />
+		<cond msgId="113">
+			<player level="20" />
+		</cond>
+	</item>
+	<item id="8872" name="Flash Gunpowder" type="EtcItem">
+		<!-- This specially processed gunpowder doesn't create smoke. It is consumed while using the swoop cannon skill. -->
+		<set name="icon" val="icon.etc_powder_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="20" />
+		<set name="price" val="1500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8890" name="Spellbook: Summon Attractive Cubic" type="EtcItem">
+		<!-- Spellbook needed to learn Summon Attractive Cubic. Used by a Temple Knight. Required level: 62 -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="200000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8891" name="Spellbook: Aura Flash" type="EtcItem">
+		<!-- Spellbook needed to learn Aura Flash. Used by a Sorcerer, Spellsinger, and Spellhowler. Required level: 58 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

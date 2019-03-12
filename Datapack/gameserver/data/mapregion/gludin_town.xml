@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Gludin Town -->
+	<region name="gludin_town" town="Gludin Castle Town" castle="1" locId="911" bbs="2">
+		<respawnPoint X="-83520" Y="150560" Z="-3000" />
+		<respawnPoint X="-82464" Y="150848" Z="-3000" />
+		<respawnPoint X="-84064" Y="150864" Z="-3000" />
+		<respawnPoint X="-83408" Y="151376" Z="-3000" />
+		<respawnPoint X="-82195" Y="150489" Z="-3000" />
+		<respawnPoint X="-81787" Y="150780" Z="-3000" />
+		<respawnPoint X="-81721" Y="151202" Z="-3000" />
+		<respawnPoint X="-82241" Y="151163" Z="-3000" />
+		<respawnPoint X="-82575" Y="151025" Z="-3000" />
+		<respawnPoint X="-82909" Y="150357" Z="-3000" />
+		<respawnPoint X="-83584" Y="150512" Z="-3000" />
+		<respawnPoint X="-83529" Y="151205" Z="-3000" />
+		<respawnPoint X="-82035" Y="152647" Z="-3000" />
+		<respawnPoint X="-80053" Y="154348" Z="-3000" />
+		<respawnPoint X="-81616" Y="157104" Z="-3150" isChaotic="true" />
+		<respawnPoint X="-80688" Y="157216" Z="-3150" isChaotic="true" />
+		<respawnPoint X="-79568" Y="156960" Z="-3150" isChaotic="true" />
+		<respawnPoint X="-78800" Y="157744" Z="-3150" isChaotic="true" />
+		<respawnPoint X="-80448" Y="157968" Z="-3130" isChaotic="true" />
+		<respawnPoint X="-81712" Y="159536" Z="-3230" isChaotic="true" />
+		<respawnPoint X="-79744" Y="160592" Z="-3330" isChaotic="true" />
+		<respawnPoint X="-79584" Y="159408" Z="-3180" isChaotic="true" />
+		<respawnPoint X="-74016" Y="150656" Z="-2800" isChaotic="true" />
+		<respawnPoint X="-72720" Y="149632" Z="-2780" isChaotic="true" />
+		<respawnPoint X="-75904" Y="162000" Z="-3300" isChaotic="true" />
+		<respawnPoint X="-75488" Y="161472" Z="-3250" isChaotic="true" />
+		<respawnPoint X="-74688" Y="160736" Z="-3200" isChaotic="true" />
+		<respawnPoint X="-74352" Y="161488" Z="-3250" isChaotic="true" />
+		<respawnPoint X="-76656" Y="160768" Z="-3280" isChaotic="true" />
+		<respawnPoint X="-77472" Y="160960" Z="-3470" isChaotic="true" />
+		<respawnPoint X="-77776" Y="158752" Z="-3270" isChaotic="true" />
+		<respawnPoint X="-80448" Y="161488" Z="-3420" isChaotic="true" />
+		<respawnPoint X="-75440" Y="162672" Z="-3350" isChaotic="true" />
+		<respawnPoint X="-81760" Y="161248" Z="-3200" isChaotic="true" />
+		<map X="16" Y="20" />
+		<map X="16" Y="21" />
+		<map X="16" Y="22" />
+		<map X="17" Y="20" />
+		<map X="17" Y="21" />
+		<map X="17" Y="22" />
+		<map X="17" Y="23" />
+		<map X="18" Y="22" />
+		<map X="18" Y="23" />
+		<map X="18" Y="24" />
+		<map X="19" Y="24" />
+	</region>
+	<!-- Oracle Of Dawn -->
+	<region name="oracle_of_dawn" town="Gludin Castle Town" castle="1" locId="911" bbs="2">
+		<respawnPoint X="-78853" Y="111363" Z="-4896" />
+		<respawnPoint X="-78819" Y="111323" Z="-4896" />
+		<respawnPoint X="-78859" Y="111321" Z="-4896" />
+		<respawnPoint X="-78900" Y="111320" Z="-4896" />
+		<respawnPoint X="-78900" Y="111367" Z="-4896" />
+		<respawnPoint X="-78896" Y="111406" Z="-4896" />
+		<respawnPoint X="-78856" Y="111400" Z="-4896" />
+		<respawnPoint X="-78814" Y="111402" Z="-4896" />
+		<respawnPoint X="-78816" Y="111358" Z="-4896" />
+		<respawnPoint X="-78797" Y="111301" Z="-4896" />
+		<respawnPoint X="-78862" Y="111297" Z="-4896" />
+		<respawnPoint X="-78919" Y="111299" Z="-4896" />
+		<respawnPoint X="-78919" Y="111370" Z="-4896" />
+		<respawnPoint X="-78926" Y="111417" Z="-4896" />
+		<respawnPoint X="-78854" Y="111425" Z="-4896" />
+		<respawnPoint X="-78783" Y="111429" Z="-4896" />
+		<respawnPoint X="-78785" Y="111362" Z="-4896" />
+		<respawnPoint X="-78853" Y="111363" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78819" Y="111323" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78859" Y="111321" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78900" Y="111320" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78900" Y="111367" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78896" Y="111406" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78856" Y="111400" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78814" Y="111402" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78816" Y="111358" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78797" Y="111301" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78862" Y="111297" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78919" Y="111299" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78919" Y="111370" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78926" Y="111417" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78854" Y="111425" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78783" Y="111429" Z="-4896" isChaotic="true" />
+		<respawnPoint X="-78785" Y="111362" Z="-4896" isChaotic="true" />
+	</region>
+	<!-- Oracle Of Dusk -->
+	<region name="oracle_of_dusk" town="Gludin Castle Town" castle="1" locId="911" bbs="2">
+		<respawnPoint X="-80070" Y="86517" Z="-5152" />
+		<respawnPoint X="-80113" Y="86563" Z="-5152" />
+		<respawnPoint X="-80069" Y="86569" Z="-5152" />
+		<respawnPoint X="-80029" Y="86563" Z="-5152" />
+		<respawnPoint X="-80035" Y="86529" Z="-5152" />
+		<respawnPoint X="-80035" Y="86468" Z="-5152" />
+		<respawnPoint X="-80075" Y="86487" Z="-5152" />
+		<respawnPoint X="-80117" Y="86485" Z="-5152" />
+		<respawnPoint X="-80116" Y="86525" Z="-5152" />
+		<respawnPoint X="-80147" Y="86594" Z="-5152" />
+		<respawnPoint X="-80074" Y="86596" Z="-5152" />
+		<respawnPoint X="-80005" Y="86607" Z="-5152" />
+		<respawnPoint X="-80005" Y="86520" Z="-5152" />
+		<respawnPoint X="-80002" Y="86477" Z="-5152" />
+		<respawnPoint X="-80075" Y="86466" Z="-5152" />
+		<respawnPoint X="-80148" Y="86462" Z="-5152" />
+		<respawnPoint X="-80144" Y="86520" Z="-5152" />
+		<respawnPoint X="-80070" Y="86517" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80113" Y="86563" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80069" Y="86569" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80029" Y="86563" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80035" Y="86529" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80035" Y="86468" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80075" Y="86487" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80117" Y="86485" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80116" Y="86525" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80147" Y="86594" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80074" Y="86596" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80005" Y="86607" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80005" Y="86520" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80002" Y="86477" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80075" Y="86466" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80148" Y="86462" Z="-5152" isChaotic="true" />
+		<respawnPoint X="-80144" Y="86520" Z="-5152" isChaotic="true" />
+	</region>
+</list>

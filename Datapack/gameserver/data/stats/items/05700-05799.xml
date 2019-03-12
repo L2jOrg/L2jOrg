@@ -1,0 +1,1232 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="5703" name="Lucky Charm (No-grade)" type="EtcItem">
+		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by a character whose level is 19 or below. -->
+		<set name="icon" val="icon.etc_charm_of_luck_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="100" />
+		<set name="reuse_delay" val="10000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2168" level="1" /> <!-- Lucky Charm -->
+		</skills>
+	</item>
+	<item id="5705" name="Keshanberk*Damascus" type="Weapon">
+		<!-- When enchanted, P. Atk. of dualswords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. 1 ordinary Soul Crystal and 1 Special Soul Crystal can be applied. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1485" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2080" />
+		<set name="price" val="18567400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3013" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Health -->
+		</skills>
+		<stats>
+			<stat type="pAtk">275</stat>
+			<stat type="mAtk">112</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5706" name="Damascus*Damascus" type="Weapon">
+		<!-- When enchanted, P. Atk. of dualswords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. 1 ordinary Soul Crystal and 1 Special Soul Crystal can be applied. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2080" />
+		<set name="price" val="20741000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<skills>
+			<skill id="3046" level="20" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Guidance -->
+		</skills>
+		<stats>
+			<stat type="pAtk">282</stat>
+			<stat type="mAtk">114</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5707" name="Record of Seven Signs" type="EtcItem">
+		<!-- Item used for studying the current situation of the Seven Signs system. -->
+		<set name="icon" val="icon.etc_ssq_scroll_i00" />
+		<set name="default_action" val="SHOW_SSQ_STATUS" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="price" val="500" />
+	</item>
+	<item id="5708" name="Lord's Certificate of Approval" type="EtcItem">
+		<!-- When one possesses this item, although one does not belong to a castle owning clan, one can join the Lords of Dawn. -->
+		<set name="icon" val="icon.etc_permit_card_i00" />
+		<set name="etcitem_type" val="TICKET_OF_LORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="5710" name="Zubei's Gauntlets" additionalName="Heavy" type="Armor">
+		<!-- Part of the heavy Zubei's set. -->
+		<set name="icon" val="icon.armor_t64_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="590" />
+		<set name="price" val="519000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5711" name="Zubei's Gauntlets" additionalName="Light" type="Armor">
+		<!-- Part of the light Zubei's set. -->
+		<set name="icon" val="icon.armor_t65_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="590" />
+		<set name="price" val="519000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5712" name="Zubei's Gauntlets" additionalName="Robe" type="Armor">
+		<!-- Part of the Zubei's robe set. -->
+		<set name="icon" val="icon.armor_t56_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="590" />
+		<set name="price" val="519000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5714" name="Avadon Gloves" additionalName="Heavy" type="Armor">
+		<!-- Part of the heavy avadon set. -->
+		<set name="icon" val="icon.armor_t66_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="590" />
+		<set name="price" val="519000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5715" name="Avadon Gloves" additionalName="Light" type="Armor">
+		<!-- Part of the light avadon set. -->
+		<set name="icon" val="icon.armor_t67_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="590" />
+		<set name="price" val="519000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5716" name="Avadon Gloves" additionalName="Robe" type="Armor">
+		<!-- Part of the Avadon Robe set. -->
+		<set name="icon" val="icon.armor_t59_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="590" />
+		<set name="price" val="519000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5718" name="Blue Wolf Gloves" additionalName="Heavy" type="Armor">
+		<!-- Part of the heavy blue wolf set. -->
+		<set name="icon" val="icon.armor_t68_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="590" />
+		<set name="price" val="804000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5719" name="Blue Wolf Gloves" additionalName="Light" type="Armor">
+		<!-- Part of the light blue wolf set. -->
+		<set name="icon" val="icon.armor_t69_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="590" />
+		<set name="price" val="804000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5720" name="Blue Wolf Gloves" additionalName="Robe" type="Armor">
+		<!-- Part of the blue wolf robe set. -->
+		<set name="icon" val="icon.armor_t70_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="590" />
+		<set name="price" val="804000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5722" name="Doom Gloves" additionalName="Heavy" type="Armor">
+		<!-- Part of the heavy doom set. -->
+		<set name="icon" val="icon.armor_t71_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="804000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5723" name="Doom Gloves" additionalName="Light" type="Armor">
+		<!-- Part of the light doom set. -->
+		<set name="icon" val="icon.armor_t72_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="804000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5724" name="Doom Gloves" additionalName="Robe" type="Armor">
+		<!-- Part of the doom robe set. -->
+		<set name="icon" val="icon.armor_t73_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="804000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5726" name="Zubei's Boots" additionalName="Heavy" type="Armor">
+		<!-- Part of the heavy Zubei's set. -->
+		<set name="icon" val="icon.armor_t64_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1180" />
+		<set name="price" val="519000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5727" name="Zubei's Boots" additionalName="Light" type="Armor">
+		<!-- Part of the light Zubei's set. -->
+		<set name="icon" val="icon.armor_t65_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1180" />
+		<set name="price" val="519000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5728" name="Zubei's Boots" additionalName="Robe" type="Armor">
+		<!-- Part of the Zubei's robe set. -->
+		<set name="icon" val="icon.armor_t56_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1180" />
+		<set name="price" val="519000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5730" name="Avadon Boots" additionalName="Heavy" type="Armor">
+		<!-- Part of the heavy avadon set. -->
+		<set name="icon" val="icon.armor_t66_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1180" />
+		<set name="price" val="519000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5731" name="Avadon Boots" additionalName="Light" type="Armor">
+		<!-- Part of the light avadon set. -->
+		<set name="icon" val="icon.armor_t67_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1180" />
+		<set name="price" val="519000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5732" name="Avadon Boots" additionalName="Robe" type="Armor">
+		<!-- Part of the Avadon Robe set. -->
+		<set name="icon" val="icon.armor_t59_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1180" />
+		<set name="price" val="519000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5734" name="Blue Wolf Boots" additionalName="Heavy" type="Armor">
+		<!-- Part of the heavy blue wolf set. -->
+		<set name="icon" val="icon.armor_t68_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1130" />
+		<set name="price" val="804000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5735" name="Blue Wolf Boots" additionalName="Light" type="Armor">
+		<!-- Part of the light blue wolf set. -->
+		<set name="icon" val="icon.armor_t69_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1130" />
+		<set name="price" val="804000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5736" name="Blue Wolf Boots" additionalName="Robe" type="Armor">
+		<!-- Part of the blue wolf robe set. -->
+		<set name="icon" val="icon.armor_t70_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1130" />
+		<set name="price" val="804000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5738" name="Doom Boots" additionalName="Heavy" type="Armor">
+		<!-- Part of the heavy doom set. -->
+		<set name="icon" val="icon.armor_t71_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1130" />
+		<set name="price" val="804000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5739" name="Doom Boots" additionalName="Light" type="Armor">
+		<!-- Part of the light doom set. -->
+		<set name="icon" val="icon.armor_t72_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1130" />
+		<set name="price" val="804000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5740" name="Doom Boots" additionalName="Robe" type="Armor">
+		<!-- Part of the doom robe set. -->
+		<set name="icon" val="icon.armor_t73_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1130" />
+		<set name="price" val="804000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5765" name="Dark Crystal Gloves" additionalName="Heavy" type="Armor">
+		<!-- Part of Dark Crystal Breastplate Heavy Armor. -->
+		<set name="icon" val="icon.armor_t74_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="890000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5766" name="Dark Crystal Gloves" additionalName="Light" type="Armor">
+		<!-- Part of Dark Crystal Light Armor. -->
+		<set name="icon" val="icon.armor_t75_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="890000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5767" name="Dark Crystal Gloves" additionalName="Robe" type="Armor">
+		<!-- Part of Dark Crystal Robe. -->
+		<set name="icon" val="icon.armor_t76_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="890000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5768" name="Tallum Gloves" additionalName="Heavy" type="Armor">
+		<!-- Part of Tallum Heavy Armor. -->
+		<set name="icon" val="icon.armor_t77_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="890000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5769" name="Tallum Gloves" additionalName="Light" type="Armor">
+		<!-- Part of Tallum Light Armor. -->
+		<set name="icon" val="icon.armor_t78_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="890000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5770" name="Tallum Gloves" additionalName="Robe" type="Armor">
+		<!-- Part of Tallum Robe. -->
+		<set name="icon" val="icon.armor_t79_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="890000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5771" name="Gauntlets of Nightmare" additionalName="Heavy" type="Armor">
+		<!-- Part of Heavy Armor of Nightmare. -->
+		<set name="icon" val="icon.armor_t80_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="550" />
+		<set name="price" val="1355000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5772" name="Gauntlets of Nightmare" additionalName="Light" type="Armor">
+		<!-- Part of Light Armor of Nightmare. -->
+		<set name="icon" val="icon.armor_t81_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="550" />
+		<set name="price" val="1355000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5773" name="Gauntlets of Nightmare" additionalName="Robe" type="Armor">
+		<!-- Part of Robe of Nightmare. -->
+		<set name="icon" val="icon.armor_t82_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="550" />
+		<set name="price" val="1355000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5774" name="Majestic Gauntlets" additionalName="Heavy" type="Armor">
+		<!-- Part of Majestic Heavy Armor. -->
+		<set name="icon" val="icon.armor_t83_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="540" />
+		<set name="price" val="1355000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5775" name="Majestic Gauntlets" additionalName="Light" type="Armor">
+		<!-- Part of Majestic Light Armor. -->
+		<set name="icon" val="icon.armor_t84_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="540" />
+		<set name="price" val="1355000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5776" name="Majestic Gauntlets" additionalName="Robe" type="Armor">
+		<!-- Part of Majestic Robe. -->
+		<set name="icon" val="icon.armor_t85_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="540" />
+		<set name="price" val="1355000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5777" name="Dark Crystal Boots" additionalName="Heavy" type="Armor">
+		<!-- Part of Dark Crystal Breastplate Heavy Armor. -->
+		<set name="icon" val="icon.armor_t74_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="1110" />
+		<set name="price" val="890000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5778" name="Dark Crystal Boots" additionalName="Light" type="Armor">
+		<!-- Part of Dark Crystal Light Armor. -->
+		<set name="icon" val="icon.armor_t75_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="1110" />
+		<set name="price" val="890000" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5779" name="Dark Crystal Boots" additionalName="Robe" type="Armor">
+		<!-- Part of Dark Crystal Robe. -->
+		<set name="icon" val="icon.armor_t76_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="1110" />
+		<set name="price" val="890000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5780" name="Tallum Boots" additionalName="Heavy" type="Armor">
+		<!-- Part of Tallum Heavy Armor. -->
+		<set name="icon" val="icon.armor_t77_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1130" />
+		<set name="price" val="890000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5781" name="Tallum Boots" additionalName="Light" type="Armor">
+		<!-- Part of Tallum Light Armor. -->
+		<set name="icon" val="icon.armor_t78_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1130" />
+		<set name="price" val="890000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5782" name="Tallum Boots" additionalName="Robe" type="Armor">
+		<!-- Part of Tallum Robe. -->
+		<set name="icon" val="icon.armor_t79_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1130" />
+		<set name="price" val="890000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="5783" name="Boots of Nightmare" additionalName="Heavy" type="Armor">
+		<!-- Part of Heavy Armor of Nightmare. -->
+		<set name="icon" val="icon.armor_t80_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1110" />
+		<set name="price" val="1355000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5784" name="Boots of Nightmare" additionalName="Light" type="Armor">
+		<!-- Part of Light Armor of Nightmare. -->
+		<set name="icon" val="icon.armor_t81_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1110" />
+		<set name="price" val="1355000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5785" name="Boots of Nightmare" additionalName="Robe" type="Armor">
+		<!-- Part of Robe of Nightmare. -->
+		<set name="icon" val="icon.armor_t82_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1110" />
+		<set name="price" val="1355000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5786" name="Majestic Boots" additionalName="Heavy" type="Armor">
+		<!-- Part of Majestic Heavy Armor. -->
+		<set name="icon" val="icon.armor_t83_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1110" />
+		<set name="price" val="1355000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5787" name="Majestic Boots" additionalName="Light" type="Armor">
+		<!-- Part of Majestic Light Armor. -->
+		<set name="icon" val="icon.armor_t84_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1110" />
+		<set name="price" val="1355000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5788" name="Majestic Boots" additionalName="Robe" type="Armor">
+		<!-- Part of Majestic Robe. -->
+		<set name="icon" val="icon.armor_t85_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1110" />
+		<set name="price" val="1355000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5789" name="Soulshot (No-grade) (Novice)" type="EtcItem">
+		<!-- A Soulshot (No-grade) for use by newbies. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
+		<set name="icon" val="icon.etc_soulshot_none_for_rookie_i00" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="2039" level="1" /> <!-- Soulshot (No-grade) -->
+		</skills>
+	</item>
+	<item id="5790" name="Spiritshot (No-grade) (Novice)" type="EtcItem">
+		<!-- A Spiritshot (No-grade) for use by newbies. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
+		<set name="icon" val="icon.etc_spiritshot_none_for_rookie_i00" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SpiritShot" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="2047" level="1" /> <!-- Spiritshot (No-grade) -->
+		</skills>
+	</item>
+	<item id="5791" name="Tomb Guard A" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2180" />
+		<set name="price" val="1355000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">78</stat>
+			<stat type="mAtk">39</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5792" name="Tomb Guard B" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2180" />
+		<set name="price" val="1355000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">78</stat>
+			<stat type="mAtk">39</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5793" name="Tomb Savant A" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1380" />
+		<set name="price" val="1355000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">156</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5794" name="Tomb Savant B" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1380" />
+		<set name="price" val="1355000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">156</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5795" name="Tomb Guard A" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2180" />
+		<set name="price" val="1355000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">78</stat>
+			<stat type="mAtk">39</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5796" name="Tomb Guard B" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2180" />
+		<set name="price" val="1355000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">78</stat>
+			<stat type="mAtk">39</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5797" name="Tomb Savant A" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1380" />
+		<set name="price" val="1355000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">156</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5798" name="Tomb Savant B" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1380" />
+		<set name="price" val="1355000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">156</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5799" name="Nephilim Lord" type="Armor">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1320" />
+		<set name="price" val="1355000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">142</stat>
+		</stats>
+	</item>
+</list>

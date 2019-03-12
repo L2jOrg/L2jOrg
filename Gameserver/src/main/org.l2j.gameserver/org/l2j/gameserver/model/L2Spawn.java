@@ -109,7 +109,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
             return;
         }
 
-        final String className = "com.l2jmobius.gameserver.model.actor.instance." + _template.getType() + "Instance";
+        final String className = "org.l2j.gameserver.model.actor.instance." + _template.getType() + "Instance";
 
         // Create the generic constructor of L2Npc managed by this L2Spawn
         _constructor = Class.forName(className).asSubclass(L2Npc.class).getConstructor(L2NpcTemplate.class);
@@ -128,7 +128,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
         super(0, 0, 0);
         _template = Objects.requireNonNull(NpcData.getInstance().getTemplate(npcId), "NpcTemplate not found for NPC ID: " + npcId);
 
-        final String className = "com.l2jmobius.gameserver.model.actor.instance." + _template.getType() + "Instance";
+        final String className = "org.l2j.gameserver.model.actor.instance." + _template.getType() + "Instance";
 
         // Create the generic constructor of L2Npc managed by this L2Spawn
         _constructor = Class.forName(className).asSubclass(L2Npc.class).getConstructor(L2NpcTemplate.class);

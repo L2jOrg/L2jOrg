@@ -6,6 +6,7 @@ import io.github.joealisson.mmocore.ReadablePacket;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.authcomm.gs2as.ChangePassword;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -194,6 +195,10 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 	}
 
 	public void restart() {
-		ThreadPoolManager.getInstance().execute(this);
+		ThreadPoolManager.execute(this);
+	}
+
+	public void sendChangePassword(String accountName, String oldPass, String curpass) {
+		sendPacket(new ChangePassword(accountName, oldPass, curpass, ""));
 	}
 }

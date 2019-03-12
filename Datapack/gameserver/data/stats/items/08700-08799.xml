@@ -1,0 +1,674 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="8700" name="Recipe: Tiphon's Spear (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Tiphon's Spear. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="706000" />
+		<set name="recipe_id" val="854" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8701" name="Recipe: Tiphon's Spear (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Tiphon's Spear. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="706000" />
+		<set name="recipe_id" val="855" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8702" name="Recipe: Shyeed's Bow (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Shyeed's Bow. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="706000" />
+		<set name="recipe_id" val="856" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8703" name="Recipe: Shyeed's Bow (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Shyeed's Bow. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="706000" />
+		<set name="recipe_id" val="857" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8704" name="Recipe: Sobekk's Hurricane (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sobekk's Hurricane. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="706000" />
+		<set name="recipe_id" val="858" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8705" name="Recipe: Sobekk's Hurricane (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sobekk's Hurricane. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="706000" />
+		<set name="recipe_id" val="859" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8706" name="Recipe: Themis' Tongue (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Themis' Tongue. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="706000" />
+		<set name="recipe_id" val="860" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8707" name="Recipe: Themis' Tongue (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Themis' Tongue. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="706000" />
+		<set name="recipe_id" val="861" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8708" name="Recipe: Cabrio's Hand (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Cabrio's Hand. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="706000" />
+		<set name="recipe_id" val="862" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8709" name="Recipe: Cabrio's Hand (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Cabrio's Hand. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="706000" />
+		<set name="recipe_id" val="863" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8710" name="Recipe: Daimon Crystal (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Daimon Crystal. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="706000" />
+		<set name="recipe_id" val="864" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8711" name="Recipe: Daimon Crystal (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Daimon Crystal. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="706000" />
+		<set name="recipe_id" val="865" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8712" name="Sirra's Blade Edge" type="EtcItem">
+		<!-- An ingredient that Dwarves use to make Sirra's Blade. Can be sold. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="82400" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8713" name="Sword of Ipos Blade" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sword of Ipos. Can be sold. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="82400" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8714" name="Barakiel's Axe Piece" type="EtcItem">
+		<!-- An ingredient that Dwarves use to make Barakiel's Axe. Can be sold. -->
+		<set name="icon" val="icon.etc_bark_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="82400" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8715" name="Behemoth' Tuning Fork Piece" type="EtcItem">
+		<!-- An ingredient that Dwarves use to make Behemoth' Tuning Fork. Can be sold. -->
+		<set name="icon" val="icon.etc_bark_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="82400" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8716" name="Naga Storm Piece" type="EtcItem">
+		<!-- An ingredient that Dwarves use to make Naga Storm. Can be sold. -->
+		<set name="icon" val="icon.etc_bark_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="82400" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8717" name="Tiphon's Spear Edge" type="EtcItem">
+		<!-- Key material that Dwarves use to make Tiphon's Spear. Can be sold. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="82400" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8718" name="Shyeed's Bow Shaft" type="EtcItem">
+		<!-- An ingredient that Dwarves use to make Shyeed's Bow. Can be sold. -->
+		<set name="icon" val="icon.etc_branch_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="82400" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8719" name="Sobekk's Hurricane Edge" type="EtcItem">
+		<!-- An ingredient that Dwarves use to make Sobekk's Hurricane. Can be sold. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="82400" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8720" name="Themis' Tongue Piece" type="EtcItem">
+		<!-- An ingredient that Dwarves use to make Themis' Tongue. Can be sold. -->
+		<set name="icon" val="icon.etc_bark_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="82400" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8721" name="Cabrio's Hand Head" type="EtcItem">
+		<!-- An ingredient that Dwarves use to make Cabrio's Hand. Can be sold. -->
+		<set name="icon" val="icon.etc_squares_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="82400" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8722" name="Daimon Crystal Fragment" type="EtcItem">
+		<!-- An ingredient that Dwarves use to make Daimon Crystal. Can be sold. -->
+		<set name="icon" val="icon.etc_bark_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="82400" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8765" name="Red Gem" type="EtcItem">
+		<!-- Red gems which Warehouse Chief Klump collects in Aden. Bring 100 or more gems to him, and he will play a card game with you. -->
+		<set name="icon" val="icon.ets_red_abead_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8788" name="Sirra's Blade" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 52. -->
+		<set name="icon" val="icon.weapon_sirr_blade_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1300" />
+		<set name="price" val="26968400" />
+		<set name="change_weaponId" val="9353" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Ability: Haste -->
+		</skills>
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8789" name="Sirra's Blade" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
+		<set name="icon" val="icon.weapon_sirr_blade_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1300" />
+		<set name="price" val="26968400" />
+		<set name="change_weaponId" val="9354" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3013" level="5" /> <!-- Special Ability: Health -->
+		</skills>
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8790" name="Sirra's Blade" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. +255 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_sirr_blade_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1300" />
+		<set name="price" val="26968400" />
+		<set name="change_weaponId" val="9355" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
+			<skill id="3061" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Poison -->
+		</skills>
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8791" name="Sword of Ipos" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1820" />
+		<set name="price" val="26968400" />
+		<set name="change_weaponId" val="9357" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Ability: Focus -->
+		</skills>
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8792" name="Sword of Ipos" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1820" />
+		<set name="price" val="26968400" />
+		<set name="change_weaponId" val="9358" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Ability: Haste -->
+		</skills>
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8793" name="Sword of Ipos" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. +302 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1820" />
+		<set name="price" val="26968400" />
+		<set name="change_weaponId" val="9359" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3013" level="5" /> <!-- Special Ability: Health -->
+		</skills>
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8794" name="Barakiel's Axe" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1550" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3013" level="5" /> <!-- Special Ability: Health -->
+		</skills>
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8795" name="Barakiel's Axe" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
+		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1550" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Ability: Haste -->
+		</skills>
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8796" name="Barakiel's Axe" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. +255 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1550" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Ability: Focus -->
+		</skills>
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8797" name="Behemoth' Tuning Fork" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1890" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Ability: Focus -->
+		</skills>
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8798" name="Behemoth' Tuning Fork" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1890" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3013" level="5" /> <!-- Special Ability: Health -->
+		</skills>
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8799" name="Behemoth' Tuning Fork" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. +302 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1890" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3057" level="3" /> <!-- Special Ability: Anger -->
+		</skills>
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+</list>

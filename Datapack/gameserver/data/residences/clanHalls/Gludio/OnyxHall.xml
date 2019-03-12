@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/clanHall.xsd">
+	<clanHall id="23" name="Onyx Hall" grade="GRADE_B" type="AUCTIONABLE">
+	 	<auction minBid="5000000" lease="500000" deposit="500000" />
+	 	<npcs>
+	 	   	<npc id="35387" /> <!-- Baback -->
+   			<npc id="35386" /> <!-- Boyer -->
+	 	</npcs>
+	 	<doorlist>
+	 		<door id="19210011" />
+	 		<door id="19210012" />
+	 	</doorlist>
+	 	<ownerRestartPoint x="-14848" y="125552" z="-3128" />
+		<banishPoint x="-14684" y="125655" z="-3142" />
+	</clanHall>
+</list>

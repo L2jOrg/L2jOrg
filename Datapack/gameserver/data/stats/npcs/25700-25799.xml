@@ -1,0 +1,2989 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="25735" level="90" type="L2RaidBoss" name="Giant Golden Pig" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="20946193" hpRegen="10.5" mp="478" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="270" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>		<collision>
+			<radius normal="77" />
+			<height normal="120" />
+		</collision>
+	</npc>
+	<npc id="25736" level="90" type="L2RaidBoss" name="Giant Golden Pig" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="20946193" hpRegen="10.5" mp="747" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="270" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>		<collision>
+			<radius normal="77" />
+			<height normal="120" />
+		</collision>
+	</npc>
+	<npc id="25737" level="90" type="L2RaidBoss" name="Giant Golden Pig" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="20946193" hpRegen="10.5" mp="747" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="270" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>		<collision>
+			<radius normal="77" />
+			<height normal="120" />
+		</collision>
+	</npc>
+	<npc id="25738" level="75" type="L2RaidBoss" name="Queen Ant Drone Priest" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>BUG</race>
+		<acquire exp="87480000" sp="2624400" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="3015" mpRegen="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
+			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="925.6666666666667" magical="537.3333333333333" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="7122" level="1" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+		</skillList>
+		<collision>
+			<radius normal="35" />
+			<height normal="77.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="6323" min="1" max="1" chance="24.39" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="1" chance="24.27" /> <!-- Sealed Phoenix Earring -->
+				<item id="6325" min="1" max="1" chance="22.49" /> <!-- Sealed Phoenix Ring -->
+				<item id="5305" min="1" max="1" chance="1.9275" /> <!-- Sealed Tallum Stockings -->
+				<item id="5308" min="1" max="1" chance="1.9215" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5295" min="1" max="1" chance="1.885" /> <!-- Sealed Tallum Gloves -->
+				<item id="5288" min="1" max="1" chance="1.8705" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5289" min="1" max="1" chance="1.8685" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5304" min="1" max="1" chance="1.8685" /> <!-- Sealed Tallum Tunic -->
+				<item id="5287" min="1" max="1" chance="1.864" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5290" min="1" max="1" chance="1.8585" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5301" min="1" max="1" chance="1.8545" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5293" min="1" max="1" chance="1.8445" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5296" min="1" max="1" chance="1.841" /> <!-- Sealed Tallum Boots -->
+				<item id="5298" min="1" max="1" chance="1.825" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5292" min="1" max="1" chance="1.8185" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5291" min="1" max="1" chance="1.816" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5297" min="1" max="1" chance="1.816" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5294" min="1" max="1" chance="1.8085" /> <!-- Sealed Tallum Helmet -->
+				<item id="7884" min="1" max="1" chance="0.3" /> <!-- Infernal Master -->
+				<item id="7894" min="1" max="1" chance="0.3" /> <!-- Spiritual Eye -->
+				<item id="80" min="1" max="1" chance="0.3" /> <!-- Tallum Blade -->
+				<item id="98" min="1" max="1" chance="0.3" /> <!-- Halberd -->
+				<item id="150" min="1" max="1" chance="0.3" /> <!-- Elemental Sword -->
+				<item id="212" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff -->
+				<item id="235" min="1" max="1" chance="0.3" /> <!-- Bloody Orchid -->
+				<item id="269" min="1" max="1" chance="0.3" /> <!-- Blood Tornado -->
+				<item id="288" min="1" max="1" chance="0.3" /> <!-- Carnage Bow -->
+				<item id="2504" min="1" max="1" chance="0.3" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.3" /> <!-- Destroyer Hammer -->
+				<item id="6660" min="1" max="1" chance="0.03" /> <!-- Queen Ant's Ring -->
+				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25739" level="75" type="L2RaidBoss" name="Angel Priest of Baium" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>DIVINE</race>
+		<equipment rhand="98" />
+		<acquire exp="87480000" sp="2624400" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="3015" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="170" />
+			</speed>
+			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="925.6666666666667" magical="537.3333333333333" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="7123" level="1" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="8" /> <!-- Angel -->
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="120" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="6325" min="1" max="1" chance="23.86" /> <!-- Sealed Phoenix Ring -->
+				<item id="6324" min="1" max="1" chance="22.52" /> <!-- Sealed Phoenix Earring -->
+				<item id="6323" min="1" max="1" chance="22.2" /> <!-- Sealed Phoenix Necklace -->
+				<item id="5294" min="1" max="1" chance="1.933" /> <!-- Sealed Tallum Helmet -->
+				<item id="5288" min="1" max="1" chance="1.9295" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5289" min="1" max="1" chance="1.9155" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5293" min="1" max="1" chance="1.9115" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5304" min="1" max="1" chance="1.9075" /> <!-- Sealed Tallum Tunic -->
+				<item id="5298" min="1" max="1" chance="1.9055" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5290" min="1" max="1" chance="1.8795" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5301" min="1" max="1" chance="1.8705" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5308" min="1" max="1" chance="1.8685" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5296" min="1" max="1" chance="1.8665" /> <!-- Sealed Tallum Boots -->
+				<item id="5292" min="1" max="1" chance="1.8625" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5305" min="1" max="1" chance="1.8525" /> <!-- Sealed Tallum Stockings -->
+				<item id="5297" min="1" max="1" chance="1.8305" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5287" min="1" max="1" chance="1.8305" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5291" min="1" max="1" chance="1.8185" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5295" min="1" max="1" chance="1.8045" /> <!-- Sealed Tallum Gloves -->
+				<item id="7899" min="1" max="1" chance="0.3" /> <!-- Destroyer Hammer -->
+				<item id="7894" min="1" max="1" chance="0.3" /> <!-- Spiritual Eye -->
+				<item id="7884" min="1" max="1" chance="0.3" /> <!-- Infernal Master -->
+				<item id="80" min="1" max="1" chance="0.3" /> <!-- Tallum Blade -->
+				<item id="2504" min="1" max="1" chance="0.3" /> <!-- Meteor Shower -->
+				<item id="288" min="1" max="1" chance="0.3" /> <!-- Carnage Bow -->
+				<item id="269" min="1" max="1" chance="0.3" /> <!-- Blood Tornado -->
+				<item id="235" min="1" max="1" chance="0.3" /> <!-- Bloody Orchid -->
+				<item id="212" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff -->
+				<item id="150" min="1" max="1" chance="0.3" /> <!-- Elemental Sword -->
+				<item id="98" min="1" max="1" chance="0.3" /> <!-- Halberd -->
+				<item id="49580" min="1" max="1" chance="0.03" /> <!-- Baium's Ring -->
+				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25740" level="80" type="L2Npc" name="Angel Blade" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="120" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="170" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="25741" level="80" type="L2Npc" name="Angel's Staff" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="206" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="170" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="38.5" />
+		</collision>
+	</npc>
+	<npc id="25742" level="75" type="L2RaidBoss" name="Priest of Core Decar" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>GIANT</race>
+		<acquire exp="87480000" sp="2624400" raidPoints="5" />
+		<equipment rhand="15302" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="3015" mpRegen="3" />
+			<speed>
+				<walk ground="30" />
+				<run ground="140" />
+			</speed>
+			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="925.6666666666667" magical="537.3333333333333" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="7124" level="1" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="11" /> <!-- Giant -->
+		</skillList>
+		<collision>
+			<radius normal="90" />
+			<height normal="81.6" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="6323" min="1" max="1" chance="24.28" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="1" chance="24.27" /> <!-- Sealed Phoenix Earring -->
+				<item id="6325" min="1" max="1" chance="23.96" /> <!-- Sealed Phoenix Ring -->
+				<item id="5298" min="1" max="1" chance="1.9375" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5289" min="1" max="1" chance="1.934" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5301" min="1" max="1" chance="1.9235" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5292" min="1" max="1" chance="1.9055" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5287" min="1" max="1" chance="1.9035" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5291" min="1" max="1" chance="1.8975" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5293" min="1" max="1" chance="1.893" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5305" min="1" max="1" chance="1.8835" /> <!-- Sealed Tallum Stockings -->
+				<item id="5296" min="1" max="1" chance="1.875" /> <!-- Sealed Tallum Boots -->
+				<item id="5297" min="1" max="1" chance="1.865" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5308" min="1" max="1" chance="1.8605" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5290" min="1" max="1" chance="1.856" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5294" min="1" max="1" chance="1.8545" /> <!-- Sealed Tallum Helmet -->
+				<item id="5304" min="1" max="1" chance="1.841" /> <!-- Sealed Tallum Tunic -->
+				<item id="5295" min="1" max="1" chance="1.84" /> <!-- Sealed Tallum Gloves -->
+				<item id="5288" min="1" max="1" chance="1.8345" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="7884" min="1" max="1" chance="0.3" /> <!-- Infernal Master -->
+				<item id="7894" min="1" max="1" chance="0.3" /> <!-- Spiritual Eye -->
+				<item id="80" min="1" max="1" chance="0.3" /> <!-- Tallum Blade -->
+				<item id="98" min="1" max="1" chance="0.3" /> <!-- Halberd -->
+				<item id="150" min="1" max="1" chance="0.3" /> <!-- Elemental Sword -->
+				<item id="212" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff -->
+				<item id="235" min="1" max="1" chance="0.3" /> <!-- Bloody Orchid -->
+				<item id="269" min="1" max="1" chance="0.3" /> <!-- Blood Tornado -->
+				<item id="288" min="1" max="1" chance="0.3" /> <!-- Carnage Bow -->
+				<item id="2504" min="1" max="1" chance="0.3" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.3" /> <!-- Destroyer Hammer -->
+				<item id="6662" min="1" max="1" chance="0.03" /> <!-- Ring of Core -->
+				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25743" level="75" type="L2RaidBoss" name="Priest Orfen Lord Ipos" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="87480000" sp="2624400" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="3015" mpRegen="3" />
+			<speed>
+				<walk ground="90" />
+				<run ground="140" />
+			</speed>
+			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="925.6666666666667" magical="537.3333333333333" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="7125" level="1" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="56" />
+			<height normal="76.1" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="6325" min="1" max="1" chance="23.36" /> <!-- Sealed Phoenix Ring -->
+				<item id="6323" min="1" max="1" chance="22.75" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="1" chance="22.63" /> <!-- Sealed Phoenix Earring -->
+				<item id="5288" min="1" max="1" chance="1.9375" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5296" min="1" max="1" chance="1.933" /> <!-- Sealed Tallum Boots -->
+				<item id="5295" min="1" max="1" chance="1.9215" /> <!-- Sealed Tallum Gloves -->
+				<item id="5297" min="1" max="1" chance="1.893" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5293" min="1" max="1" chance="1.886" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5308" min="1" max="1" chance="1.872" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5294" min="1" max="1" chance="1.8705" /> <!-- Sealed Tallum Helmet -->
+				<item id="5305" min="1" max="1" chance="1.8625" /> <!-- Sealed Tallum Stockings -->
+				<item id="5290" min="1" max="1" chance="1.8605" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5289" min="1" max="1" chance="1.8545" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5304" min="1" max="1" chance="1.8505" /> <!-- Sealed Tallum Tunic -->
+				<item id="5298" min="1" max="1" chance="1.8465" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5292" min="1" max="1" chance="1.841" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5287" min="1" max="1" chance="1.8305" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5301" min="1" max="1" chance="1.8225" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5291" min="1" max="1" chance="1.816" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="7884" min="1" max="1" chance="0.3" /> <!-- Infernal Master -->
+				<item id="7894" min="1" max="1" chance="0.3" /> <!-- Spiritual Eye -->
+				<item id="80" min="1" max="1" chance="0.3" /> <!-- Tallum Blade -->
+				<item id="98" min="1" max="1" chance="0.3" /> <!-- Halberd -->
+				<item id="150" min="1" max="1" chance="0.3" /> <!-- Elemental Sword -->
+				<item id="212" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff -->
+				<item id="235" min="1" max="1" chance="0.3" /> <!-- Bloody Orchid -->
+				<item id="269" min="1" max="1" chance="0.3" /> <!-- Blood Tornado -->
+				<item id="288" min="1" max="1" chance="0.3" /> <!-- Carnage Bow -->
+				<item id="2504" min="1" max="1" chance="0.3" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.3" /> <!-- Destroyer Hammer -->
+				<item id="6661" min="1" max="1" chance="0.03" /> <!-- Orfen's Earring -->
+				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25744" level="55" type="L2RaidBoss" name="Zombie Lord Dorkhon" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>UNDEAD</race>
+		<acquire exp="23522400" sp="705672" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="758696" hpRegen="349.8393333333333" mp="303479" mpRegen="2.4" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="2619" magical="1320.285714285714" critical="4" attackSpeed="253" range="40" />
+			<defence physical="679" magical="337.7142857142857" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="1" /> <!-- Raid Boss (Lv. 55) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="36" />
+			<height normal="26.1" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="2502" min="1" max="1" chance="2.986" /> <!-- Dwarven War Hammer -->
+				<item id="285" min="1" max="1" chance="2.981" /> <!-- Noble Elven Bow -->
+				<item id="74" min="1" max="1" chance="2.948" /> <!-- Katana -->
+				<item id="242" min="1" max="1" chance="2.933" /> <!-- Soulfire Dirk -->
+				<item id="195" min="1" max="1" chance="2.91" /> <!-- Cursed Staff -->
+				<item id="133" min="1" max="1" chance="2.908" /> <!-- Raid Sword -->
+				<item id="94" min="1" max="1" chance="2.904" /> <!-- Bec de Corbin -->
+				<item id="282" min="1" max="1" chance="2.884" /> <!-- Elemental Bow -->
+				<item id="325" min="1" max="1" chance="2.873" /> <!-- Horn of Glory -->
+				<item id="131" min="1" max="1" chance="2.871" /> <!-- Spirit Sword -->
+				<item id="227" min="1" max="1" chance="2.868" /> <!-- Stiletto -->
+				<item id="73" min="1" max="1" chance="2.864" /> <!-- Shamshir -->
+				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="70000" min="9" max="27" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="951" min="1" max="1" chance="29.79" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25745" level="55" type="L2RaidBoss" name="Orc Timak Darphen" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="23522400" sp="705672" raidPoints="5" />
+		<equipment rhand="6719" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="758696" hpRegen="349.8393333333333" mp="303479" mpRegen="2.4" />
+			<speed>
+				<walk ground="24" />
+				<run ground="160" />
+			</speed>
+			<attack physical="2619" magical="1320.285714285714" critical="4" attackSpeed="253" range="40" />
+			<defence physical="679" magical="337.7142857142857" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="2" /> <!-- Raid Boss (Lv. 55) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="17" />
+			<height normal="46.2" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="2502" min="1" max="1" chance="2.95" /> <!-- Dwarven War Hammer -->
+				<item id="74" min="1" max="1" chance="2.94" /> <!-- Katana -->
+				<item id="131" min="1" max="1" chance="2.934" /> <!-- Spirit Sword -->
+				<item id="282" min="1" max="1" chance="2.918" /> <!-- Elemental Bow -->
+				<item id="227" min="1" max="1" chance="2.908" /> <!-- Stiletto -->
+				<item id="73" min="1" max="1" chance="2.907" /> <!-- Shamshir -->
+				<item id="94" min="1" max="1" chance="2.903" /> <!-- Bec de Corbin -->
+				<item id="133" min="1" max="1" chance="2.889" /> <!-- Raid Sword -->
+				<item id="242" min="1" max="1" chance="2.887" /> <!-- Soulfire Dirk -->
+				<item id="325" min="1" max="1" chance="2.881" /> <!-- Horn of Glory -->
+				<item id="195" min="1" max="1" chance="2.877" /> <!-- Cursed Staff -->
+				<item id="285" min="1" max="1" chance="2.847" /> <!-- Noble Elven Bow -->
+				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="70000" min="9" max="27" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="951" min="1" max="1" chance="29.3" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25746" level="60" type="L2RaidBoss" name="Evil Magikus" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>BEAST</race>
+		<acquire exp="27993600" sp="839808" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1005193" hpRegen="409.4993333333333" mp="335065" mpRegen="2.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="175" />
+			</speed>
+			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="740.6666666666667" magical="368.5714285714286" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="3" /> <!-- Raid Boss (Lv. 60) -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="36" />
+			<height normal="55.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="857" min="1" max="1" chance="5.614" /> <!-- Holy Earring -->
+				<item id="917" min="1" max="1" chance="5.553" /> <!-- Necklace of Mermaid -->
+				<item id="885" min="1" max="1" chance="5.551" /> <!-- Ring of Ages -->
+				<item id="119" min="1" max="1" chance="5.523" /> <!-- Necklace of Seal -->
+				<item id="854" min="1" max="1" chance="5.515" /> <!-- Earring of Seal -->
+				<item id="919" min="1" max="1" chance="5.513" /> <!-- Blessed Necklace -->
+				<item id="888" min="1" max="1" chance="5.4965" /> <!-- Blessed Ring -->
+				<item id="855" min="1" max="1" chance="5.49" /> <!-- Nassen's Earring -->
+				<item id="886" min="1" max="1" chance="5.4885" /> <!-- Ring of Seal -->
+				<item id="2463" min="1" max="1" chance="3.387" /> <!-- Divine Gloves -->
+				<item id="2462" min="1" max="1" chance="3.383" /> <!-- Full Plate Gauntlets -->
+				<item id="2438" min="1" max="1" chance="3.381" /> <!-- Full Plate Boots -->
+				<item id="603" min="1" max="1" chance="3.377" /> <!-- Divine Boots -->
+				<item id="356" min="1" max="1" chance="3.363" /> <!-- Full Plate Armor -->
+				<item id="499" min="1" max="1" chance="3.358" /> <!-- Mithril Helmet -->
+				<item id="442" min="1" max="1" chance="3.354" /> <!-- Divine Tunic -->
+				<item id="2468" min="1" max="1" chance="3.346" /> <!-- Blessed Gloves -->
+				<item id="2414" min="1" max="1" chance="3.335" /> <!-- Full Plate Helmet -->
+				<item id="473" min="1" max="1" chance="3.323" /> <!-- Divine Stockings -->
+				<item id="2497" min="1" max="1" chance="3.324" /> <!-- Full Plate Shield -->
+				<item id="401" min="1" max="1" chance="3.286" /> <!-- Drake Leather Armor -->
+				<item id="2461" min="1" max="1" chance="3.271" /> <!-- Drake Leather Gloves -->
+				<item id="2437" min="1" max="1" chance="3.267" /> <!-- Drake Leather Boots -->
+				<item id="1128" min="1" max="1" chance="3.264" /> <!-- Adamantite Boots -->
+				<item id="299" min="1" max="1" chance="1.717" /> <!-- Orcish Poleaxe -->
+				<item id="2503" min="1" max="1" chance="1.7" /> <!-- Yaksa Mace -->
+				<item id="266" min="1" max="1" chance="1.691" /> <!-- Great Pata -->
+				<item id="206" min="1" max="1" chance="1.682" /> <!-- Demon's Staff -->
+				<item id="205" min="1" max="1" chance="1.656" /> <!-- Ghoul's Staff -->
+				<item id="204" min="1" max="1" chance="1.654" /> <!-- Deadman's Staff -->
+				<item id="135" min="1" max="1" chance="1.651" /> <!-- Samurai Long Sword -->
+				<item id="228" min="1" max="1" chance="1.649" /> <!-- Crystal Dagger -->
+				<item id="286" min="1" max="1" chance="1.648" /> <!-- Eminence Bow -->
+				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="951" min="1" max="1" chance="30.4" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25747" level="60" type="L2RaidBoss" name="Rael Mahum Radium" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="27993600" sp="839808" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1005193" hpRegen="409.4993333333333" mp="335065" mpRegen="2.4" />
+			<speed>
+				<walk ground="40" />
+				<run ground="175" />
+			</speed>
+			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="740.6666666666667" magical="368.5714285714286" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="4" /> <!-- Raid Boss (Lv. 60) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="22.5" />
+			<height normal="72.75" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="886" min="1" max="1" chance="5.62" /> <!-- Ring of Seal -->
+				<item id="855" min="1" max="1" chance="5.602" /> <!-- Nassen's Earring -->
+				<item id="888" min="1" max="1" chance="5.586" /> <!-- Blessed Ring -->
+				<item id="119" min="1" max="1" chance="5.583" /> <!-- Necklace of Seal -->
+				<item id="919" min="1" max="1" chance="5.5595" /> <!-- Blessed Necklace -->
+				<item id="854" min="1" max="1" chance="5.554" /> <!-- Earring of Seal -->
+				<item id="917" min="1" max="1" chance="5.551" /> <!-- Necklace of Mermaid -->
+				<item id="885" min="1" max="1" chance="5.535" /> <!-- Ring of Ages -->
+				<item id="857" min="1" max="1" chance="5.51" /> <!-- Holy Earring -->
+				<item id="2463" min="1" max="1" chance="3.394" /> <!-- Divine Gloves -->
+				<item id="473" min="1" max="1" chance="3.38" /> <!-- Divine Stockings -->
+				<item id="2497" min="1" max="1" chance="3.378" /> <!-- Full Plate Shield -->
+				<item id="2461" min="1" max="1" chance="3.368" /> <!-- Drake Leather Gloves -->
+				<item id="2437" min="1" max="1" chance="3.365" /> <!-- Drake Leather Boots -->
+				<item id="2462" min="1" max="1" chance="3.359" /> <!-- Full Plate Gauntlets -->
+				<item id="356" min="1" max="1" chance="3.354" /> <!-- Full Plate Armor -->
+				<item id="442" min="1" max="1" chance="3.337" /> <!-- Divine Tunic -->
+				<item id="499" min="1" max="1" chance="3.316" /> <!-- Mithril Helmet -->
+				<item id="2468" min="1" max="1" chance="3.312" /> <!-- Blessed Gloves -->
+				<item id="2438" min="1" max="1" chance="3.305" /> <!-- Full Plate Boots -->
+				<item id="2414" min="1" max="1" chance="3.283" /> <!-- Full Plate Helmet -->
+				<item id="603" min="1" max="1" chance="3.274" /> <!-- Divine Boots -->
+				<item id="401" min="1" max="1" chance="3.268" /> <!-- Drake Leather Armor -->
+				<item id="1128" min="1" max="1" chance="3.266" /> <!-- Adamantite Boots -->
+				<item id="228" min="1" max="1" chance="1.715" /> <!-- Crystal Dagger -->
+				<item id="204" min="1" max="1" chance="1.666" /> <!-- Deadman's Staff -->
+				<item id="299" min="1" max="1" chance="1.63" /> <!-- Orcish Poleaxe -->
+				<item id="2503" min="1" max="1" chance="1.628" /> <!-- Yaksa Mace -->
+				<item id="135" min="1" max="1" chance="1.627" /> <!-- Samurai Long Sword -->
+				<item id="286" min="1" max="1" chance="1.624" /> <!-- Eminence Bow -->
+				<item id="205" min="1" max="1" chance="1.614" /> <!-- Ghoul's Staff -->
+				<item id="206" min="1" max="1" chance="1.61" /> <!-- Demon's Staff -->
+				<item id="266" min="1" max="1" chance="1.605" /> <!-- Great Pata -->
+				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="951" min="1" max="1" chance="29.42" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25748" level="60" type="L2RaidBoss" name="Rael Mahum Supercium" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="27993600" sp="839808" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1005193" hpRegen="409.4993333333333" mp="335065" mpRegen="2.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="175" />
+			</speed>
+			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="740.6666666666667" magical="368.5714285714286" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="5" /> <!-- Raid Boss (Lv. 60) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="22.5" />
+			<height normal="50.25" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="857" min="1" max="1" chance="5.607" /> <!-- Holy Earring -->
+				<item id="886" min="1" max="1" chance="5.579" /> <!-- Ring of Seal -->
+				<item id="855" min="1" max="1" chance="5.577" /> <!-- Nassen's Earring -->
+				<item id="888" min="1" max="1" chance="5.5355" /> <!-- Blessed Ring -->
+				<item id="854" min="1" max="1" chance="5.5335" /> <!-- Earring of Seal -->
+				<item id="119" min="1" max="1" chance="5.524" /> <!-- Necklace of Seal -->
+				<item id="885" min="1" max="1" chance="5.502" /> <!-- Ring of Ages -->
+				<item id="919" min="1" max="1" chance="5.5" /> <!-- Blessed Necklace -->
+				<item id="917" min="1" max="1" chance="5.499" /> <!-- Necklace of Mermaid -->
+				<item id="2468" min="1" max="1" chance="3.398" /> <!-- Blessed Gloves -->
+				<item id="499" min="1" max="1" chance="3.388" /> <!-- Mithril Helmet -->
+				<item id="356" min="1" max="1" chance="3.375" /> <!-- Full Plate Armor -->
+				<item id="2497" min="1" max="1" chance="3.373" /> <!-- Full Plate Shield -->
+				<item id="2462" min="1" max="1" chance="3.352" /> <!-- Full Plate Gauntlets -->
+				<item id="2438" min="1" max="1" chance="3.337" /> <!-- Full Plate Boots -->
+				<item id="473" min="1" max="1" chance="3.331" /> <!-- Divine Stockings -->
+				<item id="2463" min="1" max="1" chance="3.33" /> <!-- Divine Gloves -->
+				<item id="442" min="1" max="1" chance="3.324" /> <!-- Divine Tunic -->
+				<item id="2414" min="1" max="1" chance="3.314" /> <!-- Full Plate Helmet -->
+				<item id="603" min="1" max="1" chance="3.303" /> <!-- Divine Boots -->
+				<item id="401" min="1" max="1" chance="3.302" /> <!-- Drake Leather Armor -->
+				<item id="2437" min="1" max="1" chance="3.293" /> <!-- Drake Leather Boots -->
+				<item id="2461" min="1" max="1" chance="3.274" /> <!-- Drake Leather Gloves -->
+				<item id="1128" min="1" max="1" chance="3.261" /> <!-- Adamantite Boots -->
+				<item id="204" min="1" max="1" chance="1.734" /> <!-- Deadman's Staff -->
+				<item id="2503" min="1" max="1" chance="1.721" /> <!-- Yaksa Mace -->
+				<item id="206" min="1" max="1" chance="1.708" /> <!-- Demon's Staff -->
+				<item id="205" min="1" max="1" chance="1.669" /> <!-- Ghoul's Staff -->
+				<item id="286" min="1" max="1" chance="1.661" /> <!-- Eminence Bow -->
+				<item id="228" min="1" max="1" chance="1.658" /> <!-- Crystal Dagger -->
+				<item id="266" min="1" max="1" chance="1.632" /> <!-- Great Pata -->
+				<item id="299" min="1" max="1" chance="1.602" /> <!-- Orcish Poleaxe -->
+				<item id="135" min="1" max="1" chance="1.6" /> <!-- Samurai Long Sword -->
+				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="951" min="1" max="1" chance="30.95" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25749" level="60" type="L2RaidBoss" name="Tayga Feron King" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="27993600" sp="839808" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1005193" hpRegen="409.4993333333333" mp="335065" mpRegen="2.4" />
+			<speed>
+				<walk ground="60" />
+				<run ground="175" />
+			</speed>
+			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="740.6666666666667" magical="368.5714285714286" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="6" /> <!-- Raid Boss (Lv. 60) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="18" />
+			<height normal="55.8" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="917" min="1" max="1" chance="5.612" /> <!-- Necklace of Mermaid -->
+				<item id="857" min="1" max="1" chance="5.587" /> <!-- Holy Earring -->
+				<item id="854" min="1" max="1" chance="5.571" /> <!-- Earring of Seal -->
+				<item id="886" min="1" max="1" chance="5.526" /> <!-- Ring of Seal -->
+				<item id="919" min="1" max="1" chance="5.518" /> <!-- Blessed Necklace -->
+				<item id="855" min="1" max="1" chance="5.502" /> <!-- Nassen's Earring -->
+				<item id="888" min="1" max="1" chance="5.4985" /> <!-- Blessed Ring -->
+				<item id="885" min="1" max="1" chance="5.492" /> <!-- Ring of Ages -->
+				<item id="119" min="1" max="1" chance="5.489" /> <!-- Necklace of Seal -->
+				<item id="401" min="1" max="1" chance="3.395" /> <!-- Drake Leather Armor -->
+				<item id="2463" min="1" max="1" chance="3.391" /> <!-- Divine Gloves -->
+				<item id="499" min="1" max="1" chance="3.388" /> <!-- Mithril Helmet -->
+				<item id="1128" min="1" max="1" chance="3.35" /> <!-- Adamantite Boots -->
+				<item id="356" min="1" max="1" chance="3.344" /> <!-- Full Plate Armor -->
+				<item id="2497" min="1" max="1" chance="3.33" /> <!-- Full Plate Shield -->
+				<item id="2437" min="1" max="1" chance="3.309" /> <!-- Drake Leather Boots -->
+				<item id="2462" min="1" max="1" chance="3.294" /> <!-- Full Plate Gauntlets -->
+				<item id="2438" min="1" max="1" chance="3.29" /> <!-- Full Plate Boots -->
+				<item id="442" min="1" max="1" chance="3.289" /> <!-- Divine Tunic -->
+				<item id="473" min="1" max="1" chance="3.288" /> <!-- Divine Stockings -->
+				<item id="2461" min="1" max="1" chance="3.282" /> <!-- Drake Leather Gloves -->
+				<item id="2414" min="1" max="1" chance="3.281" /> <!-- Full Plate Helmet -->
+				<item id="2468" min="1" max="1" chance="3.269" /> <!-- Blessed Gloves -->
+				<item id="603" min="1" max="1" chance="3.268" /> <!-- Divine Boots -->
+				<item id="204" min="1" max="1" chance="1.721" /> <!-- Deadman's Staff -->
+				<item id="206" min="1" max="1" chance="1.718" /> <!-- Demon's Staff -->
+				<item id="266" min="1" max="1" chance="1.703" /> <!-- Great Pata -->
+				<item id="228" min="1" max="1" chance="1.694" /> <!-- Crystal Dagger -->
+				<item id="205" min="1" max="1" chance="1.652" /> <!-- Ghoul's Staff -->
+				<item id="286" min="1" max="1" chance="1.637" /> <!-- Eminence Bow -->
+				<item id="2503" min="1" max="1" chance="1.622" /> <!-- Yaksa Mace -->
+				<item id="135" min="1" max="1" chance="1.611" /> <!-- Samurai Long Sword -->
+				<item id="299" min="1" max="1" chance="1.597" /> <!-- Orcish Poleaxe -->
+				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="951" min="1" max="1" chance="29.27" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25750" level="60" type="L2RaidBoss" name="Tayga Marga Shaman" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="38564" lhand="38432" />
+		<acquire exp="27993600" sp="839808" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1005193" hpRegen="409.4993333333333" mp="335065" mpRegen="2.4" />
+			<speed>
+				<walk ground="60" />
+				<run ground="175" />
+			</speed>
+			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="740.6666666666667" magical="368.5714285714286" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="7" /> <!-- Raid Boss (Lv. 60) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="22.5" />
+			<height normal="55.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="888" min="1" max="1" chance="5.587" /> <!-- Blessed Ring -->
+				<item id="854" min="1" max="1" chance="5.587" /> <!-- Earring of Seal -->
+				<item id="886" min="1" max="1" chance="5.563" /> <!-- Ring of Seal -->
+				<item id="919" min="1" max="1" chance="5.554" /> <!-- Blessed Necklace -->
+				<item id="917" min="1" max="1" chance="5.553" /> <!-- Necklace of Mermaid -->
+				<item id="119" min="1" max="1" chance="5.497" /> <!-- Necklace of Seal -->
+				<item id="855" min="1" max="1" chance="5.4935" /> <!-- Nassen's Earring -->
+				<item id="857" min="1" max="1" chance="5.492" /> <!-- Holy Earring -->
+				<item id="885" min="1" max="1" chance="5.49" /> <!-- Ring of Ages -->
+				<item id="1128" min="1" max="1" chance="3.386" /> <!-- Adamantite Boots -->
+				<item id="473" min="1" max="1" chance="3.385" /> <!-- Divine Stockings -->
+				<item id="356" min="1" max="1" chance="3.381" /> <!-- Full Plate Armor -->
+				<item id="442" min="1" max="1" chance="3.371" /> <!-- Divine Tunic -->
+				<item id="2438" min="1" max="1" chance="3.369" /> <!-- Full Plate Boots -->
+				<item id="603" min="1" max="1" chance="3.362" /> <!-- Divine Boots -->
+				<item id="2468" min="1" max="1" chance="3.359" /> <!-- Blessed Gloves -->
+				<item id="2497" min="1" max="1" chance="3.339" /> <!-- Full Plate Shield -->
+				<item id="2461" min="1" max="1" chance="3.31" /> <!-- Drake Leather Gloves -->
+				<item id="2463" min="1" max="1" chance="3.307" /> <!-- Divine Gloves -->
+				<item id="2414" min="1" max="1" chance="3.296" /> <!-- Full Plate Helmet -->
+				<item id="401" min="1" max="1" chance="3.29" /> <!-- Drake Leather Armor -->
+				<item id="2437" min="1" max="1" chance="3.279" /> <!-- Drake Leather Boots -->
+				<item id="2462" min="1" max="1" chance="3.269" /> <!-- Full Plate Gauntlets -->
+				<item id="499" min="1" max="1" chance="3.261" /> <!-- Mithril Helmet -->
+				<item id="206" min="1" max="1" chance="1.722" /> <!-- Demon's Staff -->
+				<item id="228" min="1" max="1" chance="1.72" /> <!-- Crystal Dagger -->
+				<item id="299" min="1" max="1" chance="1.719" /> <!-- Orcish Poleaxe -->
+				<item id="2503" min="1" max="1" chance="1.693" /> <!-- Yaksa Mace -->
+				<item id="286" min="1" max="1" chance="1.683" /> <!-- Eminence Bow -->
+				<item id="205" min="1" max="1" chance="1.66" /> <!-- Ghoul's Staff -->
+				<item id="266" min="1" max="1" chance="1.659" /> <!-- Great Pata -->
+				<item id="135" min="1" max="1" chance="1.657" /> <!-- Samurai Long Sword -->
+				<item id="204" min="1" max="1" chance="1.604" /> <!-- Deadman's Staff -->
+				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="951" min="1" max="1" chance="29.19" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25751" level="60" type="L2RaidBoss" name="Tayga Septon Champion" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="38429" lhand="38435" />
+		<acquire exp="27993600" sp="839808" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1005193" hpRegen="409.4993333333333" mp="335065" mpRegen="2.4" />
+			<speed>
+				<walk ground="40" />
+				<run ground="175" />
+			</speed>
+			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="740.6666666666667" magical="368.5714285714286" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="8" /> <!-- Raid Boss (Lv. 60) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="22.5" />
+			<height normal="54" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="885" min="1" max="1" chance="5.625" /> <!-- Ring of Ages -->
+				<item id="119" min="1" max="1" chance="5.59" /> <!-- Necklace of Seal -->
+				<item id="855" min="1" max="1" chance="5.55" /> <!-- Nassen's Earring -->
+				<item id="917" min="1" max="1" chance="5.546" /> <!-- Necklace of Mermaid -->
+				<item id="854" min="1" max="1" chance="5.543" /> <!-- Earring of Seal -->
+				<item id="919" min="1" max="1" chance="5.543" /> <!-- Blessed Necklace -->
+				<item id="886" min="1" max="1" chance="5.522" /> <!-- Ring of Seal -->
+				<item id="857" min="1" max="1" chance="5.502" /> <!-- Holy Earring -->
+				<item id="888" min="1" max="1" chance="5.4985" /> <!-- Blessed Ring -->
+				<item id="2497" min="1" max="1" chance="3.431" /> <!-- Full Plate Shield -->
+				<item id="356" min="1" max="1" chance="3.391" /> <!-- Full Plate Armor -->
+				<item id="2468" min="1" max="1" chance="3.371" /> <!-- Blessed Gloves -->
+				<item id="473" min="1" max="1" chance="3.37" /> <!-- Divine Stockings -->
+				<item id="603" min="1" max="1" chance="3.351" /> <!-- Divine Boots -->
+				<item id="2462" min="1" max="1" chance="3.334" /> <!-- Full Plate Gauntlets -->
+				<item id="2437" min="1" max="1" chance="3.327" /> <!-- Drake Leather Boots -->
+				<item id="401" min="1" max="1" chance="3.32" /> <!-- Drake Leather Armor -->
+				<item id="1128" min="1" max="1" chance="3.309" /> <!-- Adamantite Boots -->
+				<item id="2438" min="1" max="1" chance="3.304" /> <!-- Full Plate Boots -->
+				<item id="2461" min="1" max="1" chance="3.293" /> <!-- Drake Leather Gloves -->
+				<item id="2414" min="1" max="1" chance="3.292" /> <!-- Full Plate Helmet -->
+				<item id="499" min="1" max="1" chance="3.285" /> <!-- Mithril Helmet -->
+				<item id="442" min="1" max="1" chance="3.276" /> <!-- Divine Tunic -->
+				<item id="2463" min="1" max="1" chance="3.269" /> <!-- Divine Gloves -->
+				<item id="266" min="1" max="1" chance="1.733" /> <!-- Great Pata -->
+				<item id="2503" min="1" max="1" chance="1.717" /> <!-- Yaksa Mace -->
+				<item id="204" min="1" max="1" chance="1.676" /> <!-- Deadman's Staff -->
+				<item id="205" min="1" max="1" chance="1.653" /> <!-- Ghoul's Staff -->
+				<item id="299" min="1" max="1" chance="1.651" /> <!-- Orcish Poleaxe -->
+				<item id="135" min="1" max="1" chance="1.64" /> <!-- Samurai Long Sword -->
+				<item id="286" min="1" max="1" chance="1.638" /> <!-- Eminence Bow -->
+				<item id="228" min="1" max="1" chance="1.598" /> <!-- Crystal Dagger -->
+				<item id="206" min="1" max="1" chance="1.597" /> <!-- Demon's Staff -->
+				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="951" min="1" max="1" chance="28.6" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25752" level="80" type="L2Npc" name="Tayga Warrior" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="38434" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="42592" hpRegen="10.5" mp="33506" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27.4" />
+		</collision>
+	</npc>
+	<npc id="25753" level="80" type="L2Npc" name="Tayga Archer" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="38430" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="42592" hpRegen="10.5" mp="33506" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="26.6" />
+		</collision>
+	</npc>
+	<npc id="25754" level="65" type="L2RaidBoss" name="Flamestone Giant" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="32853600" sp="985608" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1153981" hpRegen="458.8006666666667" mp="384661" mpRegen="2.7" />
+			<speed>
+				<walk ground="13" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="802.3333333333333" magical="399.1428571428571" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="9" /> <!-- Raid Boss (Lv. 65) -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<collision>
+			<radius normal="38" />
+			<height normal="45" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="856" min="1" max="1" chance="30.49" /> <!-- Adamantite Earring -->
+				<item id="918" min="1" max="1" chance="29.86" /> <!-- Adamantite Necklace -->
+				<item id="887" min="1" max="3" chance="29.78" /> <!-- Adamantite Ring -->
+				<item id="300" min="1" max="1" chance="2.562" /> <!-- Great Axe -->
+				<item id="267" min="1" max="1" chance="2.546" /> <!-- Arthro Nail -->
+				<item id="142" min="1" max="1" chance="2.514" /> <!-- Keshanberk -->
+				<item id="284" min="1" max="1" chance="2.46" /> <!-- Dark Elven Longbow -->
+				<item id="243" min="1" max="1" chance="2.443" /> <!-- Twilight Knife -->
+				<item id="78" min="1" max="1" chance="2.442" /> <!-- Great Sword -->
+				<item id="91" min="1" max="1" chance="2.44" /> <!-- Heavy War Axe -->
+				<item id="229" min="1" max="1" chance="2.438" /> <!-- Kris -->
+				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="947" min="1" max="1" chance="50.34" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="948" min="1" max="1" chance="49.43" /> <!-- Scroll: Enchant Armor (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25755" level="65" type="L2RaidBoss" name="Gross Salamander" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>ELEMENTAL</race>
+		<acquire exp="32853600" sp="985608" raidPoints="5" />
+		<equipment rhand="15302" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1153981" hpRegen="458.8006666666667" mp="384661" mpRegen="2.7" />
+			<speed>
+				<walk ground="39" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="802.3333333333333" magical="399.1428571428571" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="10" /> <!-- Raid Boss (Lv. 65) -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="39" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="887" min="1" max="3" chance="31.21" /> <!-- Adamantite Ring -->
+				<item id="918" min="1" max="1" chance="31.08" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="1" chance="30.41" /> <!-- Adamantite Earring -->
+				<item id="91" min="1" max="1" chance="2.526" /> <!-- Heavy War Axe -->
+				<item id="142" min="1" max="1" chance="2.524" /> <!-- Keshanberk -->
+				<item id="284" min="1" max="1" chance="2.479" /> <!-- Dark Elven Longbow -->
+				<item id="229" min="1" max="1" chance="2.474" /> <!-- Kris -->
+				<item id="267" min="1" max="1" chance="2.468" /> <!-- Arthro Nail -->
+				<item id="243" min="1" max="1" chance="2.468" /> <!-- Twilight Knife -->
+				<item id="78" min="1" max="1" chance="2.445" /> <!-- Great Sword -->
+				<item id="300" min="1" max="1" chance="2.439" /> <!-- Great Axe -->
+				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="947" min="1" max="1" chance="49.94" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="948" min="1" max="1" chance="49.34" /> <!-- Scroll: Enchant Armor (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25756" level="65" type="L2RaidBoss" name="Gross Dre Vanul" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>DEMONIC</race>
+		<acquire exp="32853600" sp="985608" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1153981" hpRegen="458.8006666666667" mp="384661" mpRegen="2.7" />
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="802.3333333333333" magical="399.1428571428571" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="11" /> <!-- Raid Boss (Lv. 65) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="26" />
+			<height normal="43.15" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="918" min="1" max="1" chance="29.22" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="1" chance="28.67" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="3" chance="28.51" /> <!-- Adamantite Ring -->
+				<item id="142" min="1" max="1" chance="2.552" /> <!-- Keshanberk -->
+				<item id="300" min="1" max="1" chance="2.549" /> <!-- Great Axe -->
+				<item id="243" min="1" max="1" chance="2.543" /> <!-- Twilight Knife -->
+				<item id="284" min="1" max="1" chance="2.514" /> <!-- Dark Elven Longbow -->
+				<item id="91" min="1" max="1" chance="2.498" /> <!-- Heavy War Axe -->
+				<item id="267" min="1" max="1" chance="2.484" /> <!-- Arthro Nail -->
+				<item id="229" min="1" max="1" chance="2.471" /> <!-- Kris -->
+				<item id="78" min="1" max="1" chance="2.439" /> <!-- Great Sword -->
+				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="948" min="1" max="1" chance="50.83" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="49.96" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25757" level="65" type="L2RaidBoss" name="Gross Ifrit" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="32853600" sp="985608" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1153981" hpRegen="458.8006666666667" mp="384661" mpRegen="2.7" />
+			<speed>
+				<walk ground="39" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="802.3333333333333" magical="399.1428571428571" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="12" /> <!-- Raid Boss (Lv. 65) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="33.6" />
+			<height normal="58.8" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="918" min="1" max="1" chance="30.41" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="1" chance="30.37" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="3" chance="29.44" /> <!-- Adamantite Ring -->
+				<item id="91" min="1" max="1" chance="2.569" /> <!-- Heavy War Axe -->
+				<item id="243" min="1" max="1" chance="2.555" /> <!-- Twilight Knife -->
+				<item id="284" min="1" max="1" chance="2.552" /> <!-- Dark Elven Longbow -->
+				<item id="78" min="1" max="1" chance="2.521" /> <!-- Great Sword -->
+				<item id="267" min="1" max="1" chance="2.515" /> <!-- Arthro Nail -->
+				<item id="300" min="1" max="1" chance="2.483" /> <!-- Great Axe -->
+				<item id="229" min="1" max="1" chance="2.458" /> <!-- Kris -->
+				<item id="142" min="1" max="1" chance="2.44" /> <!-- Keshanberk -->
+				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="947" min="1" max="1" chance="50.1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="948" min="1" max="1" chance="48.96" /> <!-- Scroll: Enchant Armor (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25758" level="65" type="L2RaidBoss" name="Fiend Goblier" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>DEMONIC</race>
+		<acquire exp="32853600" sp="985608" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1153981" hpRegen="458.8006666666667" mp="384661" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="802.3333333333333" magical="399.1428571428571" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="13" /> <!-- Raid Boss (Lv. 65) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="31.5" />
+			<height normal="61.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="918" min="1" max="1" chance="30.89" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="1" chance="30.27" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="3" chance="30.07" /> <!-- Adamantite Ring -->
+				<item id="91" min="1" max="1" chance="2.554" /> <!-- Heavy War Axe -->
+				<item id="300" min="1" max="1" chance="2.544" /> <!-- Great Axe -->
+				<item id="267" min="1" max="1" chance="2.535" /> <!-- Arthro Nail -->
+				<item id="78" min="1" max="1" chance="2.528" /> <!-- Great Sword -->
+				<item id="284" min="1" max="1" chance="2.502" /> <!-- Dark Elven Longbow -->
+				<item id="142" min="1" max="1" chance="2.482" /> <!-- Keshanberk -->
+				<item id="229" min="1" max="1" chance="2.478" /> <!-- Kris -->
+				<item id="243" min="1" max="1" chance="2.436" /> <!-- Twilight Knife -->
+				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="947" min="1" max="1" chance="50.68" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="948" min="1" max="1" chance="50.24" /> <!-- Scroll: Enchant Armor (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25759" level="65" type="L2RaidBoss" name="Fiend Cherkia" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>DEMONIC</race>
+		<acquire exp="32853600" sp="985608" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1153981" hpRegen="458.8006666666667" mp="384661" mpRegen="2.7" />
+			<speed>
+				<walk ground="60" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="802.3333333333333" magical="399.1428571428571" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="14" /> <!-- Raid Boss (Lv. 65) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="25.2" />
+			<height normal="52.8" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="856" min="1" max="1" chance="31.49" /> <!-- Adamantite Earring -->
+				<item id="918" min="1" max="1" chance="30.76" /> <!-- Adamantite Necklace -->
+				<item id="887" min="1" max="3" chance="29.58" /> <!-- Adamantite Ring -->
+				<item id="284" min="1" max="1" chance="2.555" /> <!-- Dark Elven Longbow -->
+				<item id="78" min="1" max="1" chance="2.553" /> <!-- Great Sword -->
+				<item id="243" min="1" max="1" chance="2.55" /> <!-- Twilight Knife -->
+				<item id="229" min="1" max="1" chance="2.525" /> <!-- Kris -->
+				<item id="91" min="1" max="1" chance="2.523" /> <!-- Heavy War Axe -->
+				<item id="142" min="1" max="1" chance="2.51" /> <!-- Keshanberk -->
+				<item id="300" min="1" max="1" chance="2.498" /> <!-- Great Axe -->
+				<item id="267" min="1" max="1" chance="2.494" /> <!-- Arthro Nail -->
+				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="947" min="1" max="1" chance="51.15" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="948" min="1" max="1" chance="49.29" /> <!-- Scroll: Enchant Armor (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25760" level="65" type="L2RaidBoss" name="Fiend Harthemon" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>DEMONIC</race>
+		<acquire exp="32853600" sp="985608" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1153981" hpRegen="458.8006666666667" mp="384661" mpRegen="2.7" />
+			<speed>
+				<walk ground="25" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="802.3333333333333" magical="399.1428571428571" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="15" /> <!-- Raid Boss (Lv. 65) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="54" />
+			<height normal="59.1" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="887" min="1" max="3" chance="29.67" /> <!-- Adamantite Ring -->
+				<item id="918" min="1" max="1" chance="28.94" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="1" chance="28.54" /> <!-- Adamantite Earring -->
+				<item id="91" min="1" max="1" chance="2.565" /> <!-- Heavy War Axe -->
+				<item id="142" min="1" max="1" chance="2.541" /> <!-- Keshanberk -->
+				<item id="267" min="1" max="1" chance="2.534" /> <!-- Arthro Nail -->
+				<item id="243" min="1" max="1" chance="2.531" /> <!-- Twilight Knife -->
+				<item id="284" min="1" max="1" chance="2.499" /> <!-- Dark Elven Longbow -->
+				<item id="78" min="1" max="1" chance="2.462" /> <!-- Great Sword -->
+				<item id="300" min="1" max="1" chance="2.459" /> <!-- Great Axe -->
+				<item id="229" min="1" max="1" chance="2.436" /> <!-- Kris -->
+				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="947" min="1" max="1" chance="51.04" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="948" min="1" max="1" chance="49.09" /> <!-- Scroll: Enchant Armor (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25761" level="65" type="L2RaidBoss" name="Fiend Sarboth" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>DEMONIC</race>
+		<acquire exp="32853600" sp="985608" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1153981" hpRegen="458.8006666666667" mp="384661" mpRegen="2.7" />
+			<speed>
+				<walk ground="45" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="802.3333333333333" magical="399.1428571428571" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="16" /> <!-- Raid Boss (Lv. 65) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="25" />
+			<height normal="68" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="918" min="1" max="1" chance="31.21" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="1" chance="31.19" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="3" chance="29.84" /> <!-- Adamantite Ring -->
+				<item id="142" min="1" max="1" chance="2.559" /> <!-- Keshanberk -->
+				<item id="91" min="1" max="1" chance="2.548" /> <!-- Heavy War Axe -->
+				<item id="229" min="1" max="1" chance="2.533" /> <!-- Kris -->
+				<item id="284" min="1" max="1" chance="2.521" /> <!-- Dark Elven Longbow -->
+				<item id="300" min="1" max="1" chance="2.51" /> <!-- Great Axe -->
+				<item id="243" min="1" max="1" chance="2.486" /> <!-- Twilight Knife -->
+				<item id="267" min="1" max="1" chance="2.468" /> <!-- Arthro Nail -->
+				<item id="78" min="1" max="1" chance="2.454" /> <!-- Great Sword -->
+				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="947" min="1" max="1" chance="49.65" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="948" min="1" max="1" chance="49.32" /> <!-- Scroll: Enchant Armor (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25762" level="65" type="L2RaidBoss" name="Demon Bedukel" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>DEMONIC</race>
+		<equipment rhand="8203" lhand="8203" />
+		<acquire exp="32853600" sp="985608" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1153981" hpRegen="458.8006666666667" mp="384661" mpRegen="2.7" />
+			<speed>
+				<walk ground="79" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="802.3333333333333" magical="399.1428571428571" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="17" /> <!-- Raid Boss (Lv. 65) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="56" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="856" min="1" max="1" chance="31.43" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="3" chance="29.12" /> <!-- Adamantite Ring -->
+				<item id="918" min="1" max="1" chance="28.65" /> <!-- Adamantite Necklace -->
+				<item id="267" min="1" max="1" chance="2.551" /> <!-- Arthro Nail -->
+				<item id="142" min="1" max="1" chance="2.54" /> <!-- Keshanberk -->
+				<item id="243" min="1" max="1" chance="2.521" /> <!-- Twilight Knife -->
+				<item id="284" min="1" max="1" chance="2.517" /> <!-- Dark Elven Longbow -->
+				<item id="300" min="1" max="1" chance="2.462" /> <!-- Great Axe -->
+				<item id="91" min="1" max="1" chance="2.453" /> <!-- Heavy War Axe -->
+				<item id="229" min="1" max="1" chance="2.445" /> <!-- Kris -->
+				<item id="78" min="1" max="1" chance="2.43" /> <!-- Great Sword -->
+				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="948" min="1" max="1" chance="50.96" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="49.18" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25763" level="65" type="L2RaidBoss" name="Bloody Witch Rumilla" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>UNDEAD</race>
+		<acquire exp="32853600" sp="985608" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1153981" hpRegen="458.8006666666667" mp="384661" mpRegen="2.7" />
+			<speed>
+				<walk ground="60" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="802.3333333333333" magical="399.1428571428571" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="18" /> <!-- Raid Boss (Lv. 65) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="80" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="918" min="1" max="1" chance="29.43" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="1" chance="28.94" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="3" chance="28.81" /> <!-- Adamantite Ring -->
+				<item id="91" min="1" max="1" chance="2.566" /> <!-- Heavy War Axe -->
+				<item id="300" min="1" max="1" chance="2.545" /> <!-- Great Axe -->
+				<item id="267" min="1" max="1" chance="2.524" /> <!-- Arthro Nail -->
+				<item id="229" min="1" max="1" chance="2.505" /> <!-- Kris -->
+				<item id="284" min="1" max="1" chance="2.484" /> <!-- Dark Elven Longbow -->
+				<item id="243" min="1" max="1" chance="2.446" /> <!-- Twilight Knife -->
+				<item id="142" min="1" max="1" chance="2.437" /> <!-- Keshanberk -->
+				<item id="78" min="1" max="1" chance="2.432" /> <!-- Great Sword -->
+				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="947" min="1" max="1" chance="50.07" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="948" min="1" max="1" chance="48.95" /> <!-- Scroll: Enchant Armor (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25764" level="80" type="L2Npc" name="Demon Collector" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="48897" hpRegen="10.5" mp="38466" mpRegen="3.6" />
+			<speed>
+				<walk ground="110" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="40" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="25765" level="80" type="L2Npc" name="Demon Servant" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="15302" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="48897" hpRegen="10.5" mp="38466" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="25766" level="70" type="L2RaidBoss" name="Monster Minotaur" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="38448" />
+		<acquire exp="38102400" sp="1143072" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1337781" hpRegen="497.848" mp="445927" mpRegen="2.7" />
+			<speed>
+				<walk ground="45" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="864" magical="430" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="19" /> <!-- Raid Boss (Lv. 70) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="60" />
+			<height normal="75.75" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="856" min="1" max="1" chance="27.65" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="1" chance="27.22" /> <!-- Adamantite Ring -->
+				<item id="918" min="1" max="1" chance="26.89" /> <!-- Adamantite Necklace -->
+				<item id="2406" min="1" max="1" chance="3.857" /> <!-- Avadon Robe -->
+				<item id="633" min="1" max="1" chance="3.846" /> <!-- Zubei's Shield -->
+				<item id="503" min="1" max="1" chance="3.842" /> <!-- Sealed Zubei's Helmet -->
+				<item id="2404" min="1" max="1" chance="3.841" /> <!-- Stockings of Doom -->
+				<item id="2415" min="1" max="1" chance="3.833" /> <!-- Sealed Avadon Circlet -->
+				<item id="2402" min="1" max="1" chance="3.827" /> <!-- Stockings of Zubei -->
+				<item id="2384" min="1" max="1" chance="3.816" /> <!-- Zubei's Leather Shirt -->
+				<item id="110" min="1" max="1" chance="3.813" /> <!-- Doom Shield -->
+				<item id="357" min="1" max="1" chance="3.812" /> <!-- Zubei's Breastplate -->
+				<item id="612" min="1" max="1" chance="3.811" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="2379" min="1" max="1" chance="3.808" /> <!-- Avadon Gaiters -->
+				<item id="2390" min="1" max="1" chance="3.79" /> <!-- Avadon Leather Armor -->
+				<item id="383" min="1" max="1" chance="3.79" /> <!-- Zubei's Gaiters -->
+				<item id="2388" min="1" max="1" chance="3.778" /> <!-- Zubei's Leather Gaiters -->
+				<item id="2464" min="1" max="1" chance="3.765" /> <!-- Sealed Avadon Gloves -->
+				<item id="2399" min="1" max="1" chance="3.762" /> <!-- Tunic of Doom -->
+				<item id="600" min="1" max="1" chance="3.753" /> <!-- Sealed Avadon Boots -->
+				<item id="2376" min="1" max="1" chance="3.752" /> <!-- Avadon Breastplate -->
+				<item id="2397" min="1" max="1" chance="3.743" /> <!-- Tunic of Zubei -->
+				<item id="673" min="1" max="1" chance="3.742" /> <!-- Avadon Shield -->
+				<item id="554" min="1" max="1" chance="3.741" /> <!-- Sealed Zubei's Boots -->
+				<item id="300" min="1" max="1" chance="1.142" /> <!-- Great Axe -->
+				<item id="267" min="1" max="1" chance="1.116" /> <!-- Arthro Nail -->
+				<item id="91" min="1" max="1" chance="1.112" /> <!-- Heavy War Axe -->
+				<item id="171" min="1" max="1" chance="1.071" /> <!-- Deadman's Glory -->
+				<item id="210" min="1" max="1" chance="1.061" /> <!-- Staff of Evil Spirits -->
+				<item id="243" min="1" max="1" chance="1.058" /> <!-- Twilight Knife -->
+				<item id="79" min="1" max="1" chance="1.052" /> <!-- Damascus -->
+				<item id="229" min="1" max="1" chance="1.05" /> <!-- Kris -->
+				<item id="148" min="1" max="1" chance="1.048" /> <!-- Sword of Valhalla -->
+				<item id="175" min="1" max="1" chance="1.039" /> <!-- Art of Battle Axe -->
+				<item id="268" min="1" max="1" chance="1.037" /> <!-- Bellion Cestus -->
+				<item id="92" min="1" max="1" chance="1.032" /> <!-- Spirit's Staff -->
+				<item id="284" min="1" max="1" chance="1.031" /> <!-- Dark Elven Longbow -->
+				<item id="264" min="1" max="1" chance="1.02" /> <!-- Pata -->
+				<item id="287" min="1" max="1" chance="1.015" /> <!-- Bow of Peril -->
+				<item id="97" min="1" max="1" chance="1.007" /> <!-- Lance -->
+				<item id="142" min="1" max="1" chance="1.003" /> <!-- Keshanberk -->
+				<item id="234" min="1" max="1" chance="1" /> <!-- Demon's Dagger -->
+				<item id="78" min="1" max="1" chance="0.989" /> <!-- Great Sword -->
+				<item id="70000" min="15" max="45" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="948" min="1" max="1" chance="78.7" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="20.82" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25767" level="70" type="L2RaidBoss" name="Monster Bulleroth" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="38102400" sp="1143072" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1337781" hpRegen="497.848" mp="445927" mpRegen="2.7" />
+			<speed>
+				<walk ground="52" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="864" magical="430" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="20" /> <!-- Raid Boss (Lv. 70) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="22.5" />
+			<height normal="48" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="887" min="1" max="1" chance="26.67" /> <!-- Adamantite Ring -->
+				<item id="856" min="1" max="1" chance="26.4" /> <!-- Adamantite Earring -->
+				<item id="918" min="1" max="1" chance="26.12" /> <!-- Adamantite Necklace -->
+				<item id="2376" min="1" max="1" chance="3.874" /> <!-- Avadon Breastplate -->
+				<item id="2397" min="1" max="1" chance="3.87" /> <!-- Tunic of Zubei -->
+				<item id="612" min="1" max="1" chance="3.86" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="110" min="1" max="1" chance="3.854" /> <!-- Doom Shield -->
+				<item id="2415" min="1" max="1" chance="3.843" /> <!-- Sealed Avadon Circlet -->
+				<item id="383" min="1" max="1" chance="3.836" /> <!-- Zubei's Gaiters -->
+				<item id="2402" min="1" max="1" chance="3.822" /> <!-- Stockings of Zubei -->
+				<item id="2406" min="1" max="1" chance="3.821" /> <!-- Avadon Robe -->
+				<item id="600" min="1" max="1" chance="3.82" /> <!-- Sealed Avadon Boots -->
+				<item id="2404" min="1" max="1" chance="3.82" /> <!-- Stockings of Doom -->
+				<item id="503" min="1" max="1" chance="3.816" /> <!-- Sealed Zubei's Helmet -->
+				<item id="357" min="1" max="1" chance="3.815" /> <!-- Zubei's Breastplate -->
+				<item id="2399" min="1" max="1" chance="3.809" /> <!-- Tunic of Doom -->
+				<item id="673" min="1" max="1" chance="3.807" /> <!-- Avadon Shield -->
+				<item id="633" min="1" max="1" chance="3.8" /> <!-- Zubei's Shield -->
+				<item id="2388" min="1" max="1" chance="3.789" /> <!-- Zubei's Leather Gaiters -->
+				<item id="2384" min="1" max="1" chance="3.781" /> <!-- Zubei's Leather Shirt -->
+				<item id="554" min="1" max="1" chance="3.779" /> <!-- Sealed Zubei's Boots -->
+				<item id="2464" min="1" max="1" chance="3.775" /> <!-- Sealed Avadon Gloves -->
+				<item id="2379" min="1" max="1" chance="3.773" /> <!-- Avadon Gaiters -->
+				<item id="2390" min="1" max="1" chance="3.742" /> <!-- Avadon Leather Armor -->
+				<item id="300" min="1" max="1" chance="1.141" /> <!-- Great Axe -->
+				<item id="267" min="1" max="1" chance="1.111" /> <!-- Arthro Nail -->
+				<item id="91" min="1" max="1" chance="1.099" /> <!-- Heavy War Axe -->
+				<item id="210" min="1" max="1" chance="1.098" /> <!-- Staff of Evil Spirits -->
+				<item id="243" min="1" max="1" chance="1.093" /> <!-- Twilight Knife -->
+				<item id="175" min="1" max="1" chance="1.075" /> <!-- Art of Battle Axe -->
+				<item id="287" min="1" max="1" chance="1.065" /> <!-- Bow of Peril -->
+				<item id="264" min="1" max="1" chance="1.051" /> <!-- Pata -->
+				<item id="92" min="1" max="1" chance="1.042" /> <!-- Spirit's Staff -->
+				<item id="234" min="1" max="1" chance="1.033" /> <!-- Demon's Dagger -->
+				<item id="171" min="1" max="1" chance="1.013" /> <!-- Deadman's Glory -->
+				<item id="97" min="1" max="1" chance="1.009" /> <!-- Lance -->
+				<item id="79" min="1" max="1" chance="1.004" /> <!-- Damascus -->
+				<item id="268" min="1" max="1" chance="0.994" /> <!-- Bellion Cestus -->
+				<item id="142" min="1" max="1" chance="0.993" /> <!-- Keshanberk -->
+				<item id="284" min="1" max="1" chance="0.991" /> <!-- Dark Elven Longbow -->
+				<item id="148" min="1" max="1" chance="0.986" /> <!-- Sword of Valhalla -->
+				<item id="78" min="1" max="1" chance="0.985" /> <!-- Great Sword -->
+				<item id="229" min="1" max="1" chance="0.981" /> <!-- Kris -->
+				<item id="70000" min="15" max="45" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="948" min="1" max="1" chance="79.63" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="19.18" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25768" level="70" type="L2RaidBoss" name="Dorcaus" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="38102400" sp="1143072" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1337781" hpRegen="497.848" mp="445927" mpRegen="2.7" />
+			<speed>
+				<walk ground="38" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="864" magical="430" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="21" /> <!-- Raid Boss (Lv. 70) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="22.5" />
+			<height normal="60.75" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="887" min="1" max="1" chance="26.51" /> <!-- Adamantite Ring -->
+				<item id="918" min="1" max="1" chance="26.4" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="1" chance="26.11" /> <!-- Adamantite Earring -->
+				<item id="2399" min="1" max="1" chance="3.868" /> <!-- Tunic of Doom -->
+				<item id="503" min="1" max="1" chance="3.86" /> <!-- Sealed Zubei's Helmet -->
+				<item id="2379" min="1" max="1" chance="3.858" /> <!-- Avadon Gaiters -->
+				<item id="2388" min="1" max="1" chance="3.856" /> <!-- Zubei's Leather Gaiters -->
+				<item id="2402" min="1" max="1" chance="3.84" /> <!-- Stockings of Zubei -->
+				<item id="2390" min="1" max="1" chance="3.83" /> <!-- Avadon Leather Armor -->
+				<item id="383" min="1" max="1" chance="3.817" /> <!-- Zubei's Gaiters -->
+				<item id="2384" min="1" max="1" chance="3.815" /> <!-- Zubei's Leather Shirt -->
+				<item id="673" min="1" max="1" chance="3.804" /> <!-- Avadon Shield -->
+				<item id="2406" min="1" max="1" chance="3.785" /> <!-- Avadon Robe -->
+				<item id="357" min="1" max="1" chance="3.784" /> <!-- Zubei's Breastplate -->
+				<item id="110" min="1" max="1" chance="3.783" /> <!-- Doom Shield -->
+				<item id="612" min="1" max="1" chance="3.776" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="600" min="1" max="1" chance="3.766" /> <!-- Sealed Avadon Boots -->
+				<item id="2464" min="1" max="1" chance="3.764" /> <!-- Sealed Avadon Gloves -->
+				<item id="2397" min="1" max="1" chance="3.756" /> <!-- Tunic of Zubei -->
+				<item id="2415" min="1" max="1" chance="3.756" /> <!-- Sealed Avadon Circlet -->
+				<item id="2404" min="1" max="1" chance="3.754" /> <!-- Stockings of Doom -->
+				<item id="2376" min="1" max="1" chance="3.751" /> <!-- Avadon Breastplate -->
+				<item id="554" min="1" max="1" chance="3.749" /> <!-- Sealed Zubei's Boots -->
+				<item id="633" min="1" max="1" chance="3.743" /> <!-- Zubei's Shield -->
+				<item id="300" min="1" max="1" chance="1.138" /> <!-- Great Axe -->
+				<item id="142" min="1" max="1" chance="1.093" /> <!-- Keshanberk -->
+				<item id="210" min="1" max="1" chance="1.093" /> <!-- Staff of Evil Spirits -->
+				<item id="148" min="1" max="1" chance="1.09" /> <!-- Sword of Valhalla -->
+				<item id="287" min="1" max="1" chance="1.084" /> <!-- Bow of Peril -->
+				<item id="91" min="1" max="1" chance="1.075" /> <!-- Heavy War Axe -->
+				<item id="284" min="1" max="1" chance="1.075" /> <!-- Dark Elven Longbow -->
+				<item id="79" min="1" max="1" chance="1.065" /> <!-- Damascus -->
+				<item id="78" min="1" max="1" chance="1.061" /> <!-- Great Sword -->
+				<item id="267" min="1" max="1" chance="1.057" /> <!-- Arthro Nail -->
+				<item id="268" min="1" max="1" chance="1.047" /> <!-- Bellion Cestus -->
+				<item id="243" min="1" max="1" chance="1.025" /> <!-- Twilight Knife -->
+				<item id="92" min="1" max="1" chance="1.02" /> <!-- Spirit's Staff -->
+				<item id="175" min="1" max="1" chance="1.013" /> <!-- Art of Battle Axe -->
+				<item id="97" min="1" max="1" chance="1.012" /> <!-- Lance -->
+				<item id="264" min="1" max="1" chance="1.005" /> <!-- Pata -->
+				<item id="234" min="1" max="1" chance="0.998" /> <!-- Demon's Dagger -->
+				<item id="171" min="1" max="1" chance="0.982" /> <!-- Deadman's Glory -->
+				<item id="229" min="1" max="1" chance="0.981" /> <!-- Kris -->
+				<item id="70000" min="15" max="45" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="948" min="1" max="1" chance="81.57" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="20.5" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25769" level="70" type="L2RaidBoss" name="Kerfaus" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="38102400" sp="1143072" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1337781" hpRegen="497.848" mp="445927" mpRegen="2.7" />
+			<speed>
+				<walk ground="40" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="864" magical="430" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="22" /> <!-- Raid Boss (Lv. 70) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="18" />
+			<height normal="57" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="856" min="1" max="1" chance="27.31" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="1" chance="26.82" /> <!-- Adamantite Ring -->
+				<item id="918" min="1" max="1" chance="26.7" /> <!-- Adamantite Necklace -->
+				<item id="2404" min="1" max="1" chance="3.878" /> <!-- Stockings of Doom -->
+				<item id="2402" min="1" max="1" chance="3.877" /> <!-- Stockings of Zubei -->
+				<item id="503" min="1" max="1" chance="3.874" /> <!-- Sealed Zubei's Helmet -->
+				<item id="2376" min="1" max="1" chance="3.872" /> <!-- Avadon Breastplate -->
+				<item id="383" min="1" max="1" chance="3.87" /> <!-- Zubei's Gaiters -->
+				<item id="673" min="1" max="1" chance="3.861" /> <!-- Avadon Shield -->
+				<item id="554" min="1" max="1" chance="3.858" /> <!-- Sealed Zubei's Boots -->
+				<item id="2399" min="1" max="1" chance="3.853" /> <!-- Tunic of Doom -->
+				<item id="633" min="1" max="1" chance="3.844" /> <!-- Zubei's Shield -->
+				<item id="2464" min="1" max="1" chance="3.843" /> <!-- Sealed Avadon Gloves -->
+				<item id="110" min="1" max="1" chance="3.841" /> <!-- Doom Shield -->
+				<item id="2397" min="1" max="1" chance="3.837" /> <!-- Tunic of Zubei -->
+				<item id="2390" min="1" max="1" chance="3.833" /> <!-- Avadon Leather Armor -->
+				<item id="600" min="1" max="1" chance="3.832" /> <!-- Sealed Avadon Boots -->
+				<item id="2384" min="1" max="1" chance="3.811" /> <!-- Zubei's Leather Shirt -->
+				<item id="2379" min="1" max="1" chance="3.799" /> <!-- Avadon Gaiters -->
+				<item id="2388" min="1" max="1" chance="3.795" /> <!-- Zubei's Leather Gaiters -->
+				<item id="2406" min="1" max="1" chance="3.777" /> <!-- Avadon Robe -->
+				<item id="612" min="1" max="1" chance="3.768" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="357" min="1" max="1" chance="3.762" /> <!-- Zubei's Breastplate -->
+				<item id="2415" min="1" max="1" chance="3.745" /> <!-- Sealed Avadon Circlet -->
+				<item id="300" min="1" max="1" chance="1.152" /> <!-- Great Axe -->
+				<item id="234" min="1" max="1" chance="1.12" /> <!-- Demon's Dagger -->
+				<item id="264" min="1" max="1" chance="1.11" /> <!-- Pata -->
+				<item id="148" min="1" max="1" chance="1.107" /> <!-- Sword of Valhalla -->
+				<item id="287" min="1" max="1" chance="1.106" /> <!-- Bow of Peril -->
+				<item id="229" min="1" max="1" chance="1.083" /> <!-- Kris -->
+				<item id="78" min="1" max="1" chance="1.08" /> <!-- Great Sword -->
+				<item id="91" min="1" max="1" chance="1.071" /> <!-- Heavy War Axe -->
+				<item id="210" min="1" max="1" chance="1.061" /> <!-- Staff of Evil Spirits -->
+				<item id="284" min="1" max="1" chance="1.06" /> <!-- Dark Elven Longbow -->
+				<item id="142" min="1" max="1" chance="1.06" /> <!-- Keshanberk -->
+				<item id="175" min="1" max="1" chance="1.057" /> <!-- Art of Battle Axe -->
+				<item id="267" min="1" max="1" chance="1.053" /> <!-- Arthro Nail -->
+				<item id="92" min="1" max="1" chance="1.026" /> <!-- Spirit's Staff -->
+				<item id="268" min="1" max="1" chance="1.019" /> <!-- Bellion Cestus -->
+				<item id="97" min="1" max="1" chance="1.018" /> <!-- Lance -->
+				<item id="79" min="1" max="1" chance="1.014" /> <!-- Damascus -->
+				<item id="243" min="1" max="1" chance="0.999" /> <!-- Twilight Knife -->
+				<item id="171" min="1" max="1" chance="0.989" /> <!-- Deadman's Glory -->
+				<item id="70000" min="15" max="45" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="948" min="1" max="1" chance="78.48" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="19.22" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25770" level="70" type="L2RaidBoss" name="Milinaus" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="38427" />
+		<acquire exp="38102400" sp="1143072" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1337781" hpRegen="497.848" mp="445927" mpRegen="2.7" />
+			<speed>
+				<walk ground="30" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="864" magical="430" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="23" /> <!-- Raid Boss (Lv. 70) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="22.5" />
+			<height normal="46.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="918" min="1" max="1" chance="27.61" /> <!-- Adamantite Necklace -->
+				<item id="887" min="1" max="1" chance="27.46" /> <!-- Adamantite Ring -->
+				<item id="856" min="1" max="1" chance="25.81" /> <!-- Adamantite Earring -->
+				<item id="673" min="1" max="1" chance="3.868" /> <!-- Avadon Shield -->
+				<item id="357" min="1" max="1" chance="3.866" /> <!-- Zubei's Breastplate -->
+				<item id="2402" min="1" max="1" chance="3.867" /> <!-- Stockings of Zubei -->
+				<item id="2404" min="1" max="1" chance="3.862" /> <!-- Stockings of Doom -->
+				<item id="2399" min="1" max="1" chance="3.852" /> <!-- Tunic of Doom -->
+				<item id="633" min="1" max="1" chance="3.835" /> <!-- Zubei's Shield -->
+				<item id="2388" min="1" max="1" chance="3.832" /> <!-- Zubei's Leather Gaiters -->
+				<item id="2390" min="1" max="1" chance="3.815" /> <!-- Avadon Leather Armor -->
+				<item id="612" min="1" max="1" chance="3.81" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="554" min="1" max="1" chance="3.803" /> <!-- Sealed Zubei's Boots -->
+				<item id="383" min="1" max="1" chance="3.776" /> <!-- Zubei's Gaiters -->
+				<item id="2406" min="1" max="1" chance="3.776" /> <!-- Avadon Robe -->
+				<item id="2415" min="1" max="1" chance="3.776" /> <!-- Sealed Avadon Circlet -->
+				<item id="600" min="1" max="1" chance="3.765" /> <!-- Sealed Avadon Boots -->
+				<item id="2464" min="1" max="1" chance="3.761" /> <!-- Sealed Avadon Gloves -->
+				<item id="2379" min="1" max="1" chance="3.758" /> <!-- Avadon Gaiters -->
+				<item id="110" min="1" max="1" chance="3.756" /> <!-- Doom Shield -->
+				<item id="2397" min="1" max="1" chance="3.748" /> <!-- Tunic of Zubei -->
+				<item id="2376" min="1" max="1" chance="3.746" /> <!-- Avadon Breastplate -->
+				<item id="2384" min="1" max="1" chance="3.745" /> <!-- Zubei's Leather Shirt -->
+				<item id="503" min="1" max="1" chance="3.741" /> <!-- Sealed Zubei's Helmet -->
+				<item id="300" min="1" max="1" chance="1.139" /> <!-- Great Axe -->
+				<item id="210" min="1" max="1" chance="1.109" /> <!-- Staff of Evil Spirits -->
+				<item id="243" min="1" max="1" chance="1.092" /> <!-- Twilight Knife -->
+				<item id="91" min="1" max="1" chance="1.089" /> <!-- Heavy War Axe -->
+				<item id="229" min="1" max="1" chance="1.085" /> <!-- Kris -->
+				<item id="175" min="1" max="1" chance="1.061" /> <!-- Art of Battle Axe -->
+				<item id="92" min="1" max="1" chance="1.048" /> <!-- Spirit's Staff -->
+				<item id="171" min="1" max="1" chance="1.048" /> <!-- Deadman's Glory -->
+				<item id="234" min="1" max="1" chance="1.045" /> <!-- Demon's Dagger -->
+				<item id="287" min="1" max="1" chance="1.023" /> <!-- Bow of Peril -->
+				<item id="97" min="1" max="1" chance="1.019" /> <!-- Lance -->
+				<item id="284" min="1" max="1" chance="1.016" /> <!-- Dark Elven Longbow -->
+				<item id="142" min="1" max="1" chance="1.008" /> <!-- Keshanberk -->
+				<item id="264" min="1" max="1" chance="1" /> <!-- Pata -->
+				<item id="268" min="1" max="1" chance="0.997" /> <!-- Bellion Cestus -->
+				<item id="78" min="1" max="1" chance="0.995" /> <!-- Great Sword -->
+				<item id="267" min="1" max="1" chance="0.994" /> <!-- Arthro Nail -->
+				<item id="148" min="1" max="1" chance="0.988" /> <!-- Sword of Valhalla -->
+				<item id="79" min="1" max="1" chance="0.986" /> <!-- Damascus -->
+				<item id="70000" min="15" max="45" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="948" min="1" max="1" chance="78.74" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="19.91" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25771" level="80" type="L2Npc" name="Centaur Thrower" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="38446" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="56685" hpRegen="10.5" mp="44592" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="34.5" />
+		</collision>
+	</npc>
+	<npc id="25772" level="70" type="L2RaidBoss" name="Evil Orc Zetahl" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="38102400" sp="1143072" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1337781" hpRegen="497.848" mp="445927" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="864" magical="430" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="24" /> <!-- Raid Boss (Lv. 70) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="40.8" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="918" min="1" max="1" chance="27.58" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="1" chance="27.14" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="1" chance="26.91" /> <!-- Adamantite Ring -->
+				<item id="2388" min="1" max="1" chance="3.865" /> <!-- Zubei's Leather Gaiters -->
+				<item id="383" min="1" max="1" chance="3.862" /> <!-- Zubei's Gaiters -->
+				<item id="503" min="1" max="1" chance="3.85" /> <!-- Sealed Zubei's Helmet -->
+				<item id="2464" min="1" max="1" chance="3.85" /> <!-- Sealed Avadon Gloves -->
+				<item id="2397" min="1" max="1" chance="3.847" /> <!-- Tunic of Zubei -->
+				<item id="2390" min="1" max="1" chance="3.836" /> <!-- Avadon Leather Armor -->
+				<item id="357" min="1" max="1" chance="3.834" /> <!-- Zubei's Breastplate -->
+				<item id="2415" min="1" max="1" chance="3.833" /> <!-- Sealed Avadon Circlet -->
+				<item id="2384" min="1" max="1" chance="3.825" /> <!-- Zubei's Leather Shirt -->
+				<item id="2399" min="1" max="1" chance="3.823" /> <!-- Tunic of Doom -->
+				<item id="600" min="1" max="1" chance="3.814" /> <!-- Sealed Avadon Boots -->
+				<item id="110" min="1" max="1" chance="3.811" /> <!-- Doom Shield -->
+				<item id="2404" min="1" max="1" chance="3.81" /> <!-- Stockings of Doom -->
+				<item id="2376" min="1" max="1" chance="3.804" /> <!-- Avadon Breastplate -->
+				<item id="612" min="1" max="1" chance="3.797" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="673" min="1" max="1" chance="3.797" /> <!-- Avadon Shield -->
+				<item id="633" min="1" max="1" chance="3.792" /> <!-- Zubei's Shield -->
+				<item id="554" min="1" max="1" chance="3.786" /> <!-- Sealed Zubei's Boots -->
+				<item id="2379" min="1" max="1" chance="3.769" /> <!-- Avadon Gaiters -->
+				<item id="2402" min="1" max="1" chance="3.76" /> <!-- Stockings of Zubei -->
+				<item id="2406" min="1" max="1" chance="3.75" /> <!-- Avadon Robe -->
+				<item id="268" min="1" max="1" chance="1.102" /> <!-- Bellion Cestus -->
+				<item id="171" min="1" max="1" chance="1.087" /> <!-- Deadman's Glory -->
+				<item id="142" min="1" max="1" chance="1.076" /> <!-- Keshanberk -->
+				<item id="234" min="1" max="1" chance="1.067" /> <!-- Demon's Dagger -->
+				<item id="284" min="1" max="1" chance="1.052" /> <!-- Dark Elven Longbow -->
+				<item id="97" min="1" max="1" chance="1.047" /> <!-- Lance -->
+				<item id="91" min="1" max="1" chance="1.046" /> <!-- Heavy War Axe -->
+				<item id="300" min="1" max="1" chance="1.05" /> <!-- Great Axe -->
+				<item id="210" min="1" max="1" chance="1.041" /> <!-- Staff of Evil Spirits -->
+				<item id="148" min="1" max="1" chance="1.019" /> <!-- Sword of Valhalla -->
+				<item id="287" min="1" max="1" chance="1.015" /> <!-- Bow of Peril -->
+				<item id="243" min="1" max="1" chance="1.012" /> <!-- Twilight Knife -->
+				<item id="229" min="1" max="1" chance="1.011" /> <!-- Kris -->
+				<item id="79" min="1" max="1" chance="1" /> <!-- Damascus -->
+				<item id="92" min="1" max="1" chance="0.999" /> <!-- Spirit's Staff -->
+				<item id="175" min="1" max="1" chance="0.998" /> <!-- Art of Battle Axe -->
+				<item id="267" min="1" max="1" chance="0.991" /> <!-- Arthro Nail -->
+				<item id="78" min="1" max="1" chance="0.988" /> <!-- Great Sword -->
+				<item id="264" min="1" max="1" chance="0.986" /> <!-- Pata -->
+				<item id="70000" min="15" max="45" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="948" min="1" max="1" chance="81.16" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="20.25" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25773" level="70" type="L2RaidBoss" name="Evil Orc Tabris" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="38102400" sp="1143072" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1337781" hpRegen="497.848" mp="445927" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="864" magical="430" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="25" /> <!-- Raid Boss (Lv. 70) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="28" />
+			<height normal="54.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="918" min="1" max="1" chance="27.79" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="1" chance="27.13" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="1" chance="25.94" /> <!-- Adamantite Ring -->
+				<item id="2415" min="1" max="1" chance="3.877" /> <!-- Sealed Avadon Circlet -->
+				<item id="673" min="1" max="1" chance="3.866" /> <!-- Avadon Shield -->
+				<item id="554" min="1" max="1" chance="3.858" /> <!-- Sealed Zubei's Boots -->
+				<item id="2464" min="1" max="1" chance="3.854" /> <!-- Sealed Avadon Gloves -->
+				<item id="2397" min="1" max="1" chance="3.842" /> <!-- Tunic of Zubei -->
+				<item id="2388" min="1" max="1" chance="3.831" /> <!-- Zubei's Leather Gaiters -->
+				<item id="503" min="1" max="1" chance="3.827" /> <!-- Sealed Zubei's Helmet -->
+				<item id="2379" min="1" max="1" chance="3.822" /> <!-- Avadon Gaiters -->
+				<item id="633" min="1" max="1" chance="3.821" /> <!-- Zubei's Shield -->
+				<item id="2399" min="1" max="1" chance="3.82" /> <!-- Tunic of Doom -->
+				<item id="2404" min="1" max="1" chance="3.813" /> <!-- Stockings of Doom -->
+				<item id="2406" min="1" max="1" chance="3.799" /> <!-- Avadon Robe -->
+				<item id="2390" min="1" max="1" chance="3.795" /> <!-- Avadon Leather Armor -->
+				<item id="2376" min="1" max="1" chance="3.791" /> <!-- Avadon Breastplate -->
+				<item id="110" min="1" max="1" chance="3.792" /> <!-- Doom Shield -->
+				<item id="383" min="1" max="1" chance="3.788" /> <!-- Zubei's Gaiters -->
+				<item id="600" min="1" max="1" chance="3.772" /> <!-- Sealed Avadon Boots -->
+				<item id="612" min="1" max="1" chance="3.761" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="2384" min="1" max="1" chance="3.76" /> <!-- Zubei's Leather Shirt -->
+				<item id="2402" min="1" max="1" chance="3.757" /> <!-- Stockings of Zubei -->
+				<item id="357" min="1" max="1" chance="3.742" /> <!-- Zubei's Breastplate -->
+				<item id="234" min="1" max="1" chance="1.117" /> <!-- Demon's Dagger -->
+				<item id="79" min="1" max="1" chance="1.109" /> <!-- Damascus -->
+				<item id="243" min="1" max="1" chance="1.109" /> <!-- Twilight Knife -->
+				<item id="97" min="1" max="1" chance="1.099" /> <!-- Lance -->
+				<item id="91" min="1" max="1" chance="1.094" /> <!-- Heavy War Axe -->
+				<item id="78" min="1" max="1" chance="1.09" /> <!-- Great Sword -->
+				<item id="229" min="1" max="1" chance="1.083" /> <!-- Kris -->
+				<item id="148" min="1" max="1" chance="1.069" /> <!-- Sword of Valhalla -->
+				<item id="300" min="1" max="1" chance="1.071" /> <!-- Great Axe -->
+				<item id="284" min="1" max="1" chance="1.056" /> <!-- Dark Elven Longbow -->
+				<item id="92" min="1" max="1" chance="1.047" /> <!-- Spirit's Staff -->
+				<item id="267" min="1" max="1" chance="1.044" /> <!-- Arthro Nail -->
+				<item id="171" min="1" max="1" chance="1.039" /> <!-- Deadman's Glory -->
+				<item id="175" min="1" max="1" chance="1.037" /> <!-- Art of Battle Axe -->
+				<item id="210" min="1" max="1" chance="1.034" /> <!-- Staff of Evil Spirits -->
+				<item id="268" min="1" max="1" chance="1.021" /> <!-- Bellion Cestus -->
+				<item id="264" min="1" max="1" chance="1.011" /> <!-- Pata -->
+				<item id="287" min="1" max="1" chance="1.01" /> <!-- Bow of Peril -->
+				<item id="142" min="1" max="1" chance="0.989" /> <!-- Keshanberk -->
+				<item id="70000" min="15" max="45" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="948" min="1" max="1" chance="79.42" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="20.21" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25774" level="70" type="L2RaidBoss" name="Evil Orc Ravolas" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="38102400" sp="1143072" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1337781" hpRegen="497.848" mp="445927" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="864" magical="430" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="26" /> <!-- Raid Boss (Lv. 70) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="26" />
+			<height normal="50" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="887" min="1" max="1" chance="27.22" /> <!-- Adamantite Ring -->
+				<item id="918" min="1" max="1" chance="26.68" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="1" chance="25.65" /> <!-- Adamantite Earring -->
+				<item id="357" min="1" max="1" chance="3.877" /> <!-- Zubei's Breastplate -->
+				<item id="2384" min="1" max="1" chance="3.87" /> <!-- Zubei's Leather Shirt -->
+				<item id="2464" min="1" max="1" chance="3.87" /> <!-- Sealed Avadon Gloves -->
+				<item id="2404" min="1" max="1" chance="3.866" /> <!-- Stockings of Doom -->
+				<item id="2406" min="1" max="1" chance="3.864" /> <!-- Avadon Robe -->
+				<item id="2390" min="1" max="1" chance="3.853" /> <!-- Avadon Leather Armor -->
+				<item id="2397" min="1" max="1" chance="3.848" /> <!-- Tunic of Zubei -->
+				<item id="2399" min="1" max="1" chance="3.841" /> <!-- Tunic of Doom -->
+				<item id="612" min="1" max="1" chance="3.839" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="633" min="1" max="1" chance="3.814" /> <!-- Zubei's Shield -->
+				<item id="673" min="1" max="1" chance="3.807" /> <!-- Avadon Shield -->
+				<item id="2379" min="1" max="1" chance="3.794" /> <!-- Avadon Gaiters -->
+				<item id="503" min="1" max="1" chance="3.786" /> <!-- Sealed Zubei's Helmet -->
+				<item id="2415" min="1" max="1" chance="3.783" /> <!-- Sealed Avadon Circlet -->
+				<item id="2376" min="1" max="1" chance="3.767" /> <!-- Avadon Breastplate -->
+				<item id="2388" min="1" max="1" chance="3.764" /> <!-- Zubei's Leather Gaiters -->
+				<item id="110" min="1" max="1" chance="3.761" /> <!-- Doom Shield -->
+				<item id="554" min="1" max="1" chance="3.749" /> <!-- Sealed Zubei's Boots -->
+				<item id="2402" min="1" max="1" chance="3.746" /> <!-- Stockings of Zubei -->
+				<item id="383" min="1" max="1" chance="3.742" /> <!-- Zubei's Gaiters -->
+				<item id="600" min="1" max="1" chance="3.738" /> <!-- Sealed Avadon Boots -->
+				<item id="171" min="1" max="1" chance="1.116" /> <!-- Deadman's Glory -->
+				<item id="148" min="1" max="1" chance="1.115" /> <!-- Sword of Valhalla -->
+				<item id="234" min="1" max="1" chance="1.106" /> <!-- Demon's Dagger -->
+				<item id="300" min="1" max="1" chance="1.106" /> <!-- Great Axe -->
+				<item id="229" min="1" max="1" chance="1.096" /> <!-- Kris -->
+				<item id="97" min="1" max="1" chance="1.08" /> <!-- Lance -->
+				<item id="79" min="1" max="1" chance="1.056" /> <!-- Damascus -->
+				<item id="268" min="1" max="1" chance="1.05" /> <!-- Bellion Cestus -->
+				<item id="284" min="1" max="1" chance="1.045" /> <!-- Dark Elven Longbow -->
+				<item id="264" min="1" max="1" chance="1.042" /> <!-- Pata -->
+				<item id="91" min="1" max="1" chance="1.041" /> <!-- Heavy War Axe -->
+				<item id="210" min="1" max="1" chance="1.038" /> <!-- Staff of Evil Spirits -->
+				<item id="142" min="1" max="1" chance="1.036" /> <!-- Keshanberk -->
+				<item id="175" min="1" max="1" chance="1.03" /> <!-- Art of Battle Axe -->
+				<item id="267" min="1" max="1" chance="1.016" /> <!-- Arthro Nail -->
+				<item id="92" min="1" max="1" chance="1.012" /> <!-- Spirit's Staff -->
+				<item id="243" min="1" max="1" chance="1.005" /> <!-- Twilight Knife -->
+				<item id="287" min="1" max="1" chance="0.994" /> <!-- Bow of Peril -->
+				<item id="78" min="1" max="1" chance="0.986" /> <!-- Great Sword -->
+				<item id="70000" min="15" max="45" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="948" min="1" max="1" chance="81.54" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="20.26" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25775" level="70" type="L2RaidBoss" name="Evil Orc Dephracor" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="38102400" sp="1143072" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1337781" hpRegen="497.848" mp="445927" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="864" magical="430" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="27" /> <!-- Raid Boss (Lv. 70) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="47.4" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="887" min="1" max="1" chance="27.39" /> <!-- Adamantite Ring -->
+				<item id="856" min="1" max="1" chance="27.3" /> <!-- Adamantite Earring -->
+				<item id="918" min="1" max="1" chance="26.43" /> <!-- Adamantite Necklace -->
+				<item id="2415" min="1" max="1" chance="3.865" /> <!-- Sealed Avadon Circlet -->
+				<item id="2384" min="1" max="1" chance="3.851" /> <!-- Zubei's Leather Shirt -->
+				<item id="2399" min="1" max="1" chance="3.848" /> <!-- Tunic of Doom -->
+				<item id="2390" min="1" max="1" chance="3.839" /> <!-- Avadon Leather Armor -->
+				<item id="2464" min="1" max="1" chance="3.837" /> <!-- Sealed Avadon Gloves -->
+				<item id="2402" min="1" max="1" chance="3.829" /> <!-- Stockings of Zubei -->
+				<item id="2404" min="1" max="1" chance="3.829" /> <!-- Stockings of Doom -->
+				<item id="600" min="1" max="1" chance="3.828" /> <!-- Sealed Avadon Boots -->
+				<item id="2379" min="1" max="1" chance="3.821" /> <!-- Avadon Gaiters -->
+				<item id="2388" min="1" max="1" chance="3.821" /> <!-- Zubei's Leather Gaiters -->
+				<item id="2406" min="1" max="1" chance="3.809" /> <!-- Avadon Robe -->
+				<item id="383" min="1" max="1" chance="3.805" /> <!-- Zubei's Gaiters -->
+				<item id="503" min="1" max="1" chance="3.8" /> <!-- Sealed Zubei's Helmet -->
+				<item id="357" min="1" max="1" chance="3.8" /> <!-- Zubei's Breastplate -->
+				<item id="633" min="1" max="1" chance="3.794" /> <!-- Zubei's Shield -->
+				<item id="612" min="1" max="1" chance="3.789" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="673" min="1" max="1" chance="3.777" /> <!-- Avadon Shield -->
+				<item id="110" min="1" max="1" chance="3.773" /> <!-- Doom Shield -->
+				<item id="554" min="1" max="1" chance="3.758" /> <!-- Sealed Zubei's Boots -->
+				<item id="2397" min="1" max="1" chance="3.756" /> <!-- Tunic of Zubei -->
+				<item id="2376" min="1" max="1" chance="3.748" /> <!-- Avadon Breastplate -->
+				<item id="300" min="1" max="1" chance="1.118" /> <!-- Great Axe -->
+				<item id="92" min="1" max="1" chance="1.1" /> <!-- Spirit's Staff -->
+				<item id="284" min="1" max="1" chance="1.096" /> <!-- Dark Elven Longbow -->
+				<item id="171" min="1" max="1" chance="1.096" /> <!-- Deadman's Glory -->
+				<item id="268" min="1" max="1" chance="1.088" /> <!-- Bellion Cestus -->
+				<item id="148" min="1" max="1" chance="1.087" /> <!-- Sword of Valhalla -->
+				<item id="234" min="1" max="1" chance="1.083" /> <!-- Demon's Dagger -->
+				<item id="79" min="1" max="1" chance="1.083" /> <!-- Damascus -->
+				<item id="91" min="1" max="1" chance="1.069" /> <!-- Heavy War Axe -->
+				<item id="243" min="1" max="1" chance="1.067" /> <!-- Twilight Knife -->
+				<item id="97" min="1" max="1" chance="1.066" /> <!-- Lance -->
+				<item id="142" min="1" max="1" chance="1.052" /> <!-- Keshanberk -->
+				<item id="175" min="1" max="1" chance="1.026" /> <!-- Art of Battle Axe -->
+				<item id="267" min="1" max="1" chance="1.021" /> <!-- Arthro Nail -->
+				<item id="264" min="1" max="1" chance="1.018" /> <!-- Pata -->
+				<item id="229" min="1" max="1" chance="1.013" /> <!-- Kris -->
+				<item id="78" min="1" max="1" chance="1.011" /> <!-- Great Sword -->
+				<item id="287" min="1" max="1" chance="0.993" /> <!-- Bow of Peril -->
+				<item id="210" min="1" max="1" chance="0.981" /> <!-- Staff of Evil Spirits -->
+				<item id="70000" min="15" max="45" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="948" min="1" max="1" chance="78.82" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="20.53" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25776" level="70" type="L2RaidBoss" name="Amden Orc Turahot" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="38102400" sp="1143072" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1337781" hpRegen="497.848" mp="445927" mpRegen="2.7" />
+			<speed>
+				<walk ground="42" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="864" magical="430" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="28" /> <!-- Raid Boss (Lv. 70) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="22.5" />
+			<height normal="56.25" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="918" min="1" max="1" chance="26.15" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="1" chance="25.94" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="1" chance="25.62" /> <!-- Adamantite Ring -->
+				<item id="2376" min="1" max="1" chance="3.877" /> <!-- Avadon Breastplate -->
+				<item id="2384" min="1" max="1" chance="3.876" /> <!-- Zubei's Leather Shirt -->
+				<item id="633" min="1" max="1" chance="3.861" /> <!-- Zubei's Shield -->
+				<item id="2415" min="1" max="1" chance="3.859" /> <!-- Sealed Avadon Circlet -->
+				<item id="2399" min="1" max="1" chance="3.858" /> <!-- Tunic of Doom -->
+				<item id="554" min="1" max="1" chance="3.854" /> <!-- Sealed Zubei's Boots -->
+				<item id="2406" min="1" max="1" chance="3.851" /> <!-- Avadon Robe -->
+				<item id="2390" min="1" max="1" chance="3.847" /> <!-- Avadon Leather Armor -->
+				<item id="673" min="1" max="1" chance="3.825" /> <!-- Avadon Shield -->
+				<item id="2379" min="1" max="1" chance="3.825" /> <!-- Avadon Gaiters -->
+				<item id="2404" min="1" max="1" chance="3.82" /> <!-- Stockings of Doom -->
+				<item id="357" min="1" max="1" chance="3.819" /> <!-- Zubei's Breastplate -->
+				<item id="2464" min="1" max="1" chance="3.8" /> <!-- Sealed Avadon Gloves -->
+				<item id="600" min="1" max="1" chance="3.793" /> <!-- Sealed Avadon Boots -->
+				<item id="2402" min="1" max="1" chance="3.791" /> <!-- Stockings of Zubei -->
+				<item id="2397" min="1" max="1" chance="3.778" /> <!-- Tunic of Zubei -->
+				<item id="110" min="1" max="1" chance="3.77" /> <!-- Doom Shield -->
+				<item id="2388" min="1" max="1" chance="3.765" /> <!-- Zubei's Leather Gaiters -->
+				<item id="612" min="1" max="1" chance="3.757" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="503" min="1" max="1" chance="3.749" /> <!-- Sealed Zubei's Helmet -->
+				<item id="383" min="1" max="1" chance="3.74" /> <!-- Zubei's Gaiters -->
+				<item id="268" min="1" max="1" chance="1.116" /> <!-- Bellion Cestus -->
+				<item id="148" min="1" max="1" chance="1.116" /> <!-- Sword of Valhalla -->
+				<item id="284" min="1" max="1" chance="1.111" /> <!-- Dark Elven Longbow -->
+				<item id="267" min="1" max="1" chance="1.107" /> <!-- Arthro Nail -->
+				<item id="210" min="1" max="1" chance="1.088" /> <!-- Staff of Evil Spirits -->
+				<item id="142" min="1" max="1" chance="1.083" /> <!-- Keshanberk -->
+				<item id="300" min="1" max="1" chance="1.083" /> <!-- Great Axe -->
+				<item id="79" min="1" max="1" chance="1.072" /> <!-- Damascus -->
+				<item id="91" min="1" max="1" chance="1.052" /> <!-- Heavy War Axe -->
+				<item id="97" min="1" max="1" chance="1.033" /> <!-- Lance -->
+				<item id="287" min="1" max="1" chance="1.028" /> <!-- Bow of Peril -->
+				<item id="78" min="1" max="1" chance="1.022" /> <!-- Great Sword -->
+				<item id="243" min="1" max="1" chance="1.018" /> <!-- Twilight Knife -->
+				<item id="171" min="1" max="1" chance="1.015" /> <!-- Deadman's Glory -->
+				<item id="92" min="1" max="1" chance="1.008" /> <!-- Spirit's Staff -->
+				<item id="264" min="1" max="1" chance="0.995" /> <!-- Pata -->
+				<item id="229" min="1" max="1" chance="0.993" /> <!-- Kris -->
+				<item id="175" min="1" max="1" chance="0.988" /> <!-- Art of Battle Axe -->
+				<item id="234" min="1" max="1" chance="0.985" /> <!-- Demon's Dagger -->
+				<item id="70000" min="15" max="45" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="948" min="1" max="1" chance="78.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="19.09" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25777" level="70" type="L2RaidBoss" name="Amden Orc Turation" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="38425" />
+		<acquire exp="38102400" sp="1143072" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1337781" hpRegen="497.848" mp="445927" mpRegen="2.7" />
+			<speed>
+				<walk ground="48" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="864" magical="430" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="29" /> <!-- Raid Boss (Lv. 70) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="22.5" />
+			<height normal="51" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="887" min="1" max="1" chance="26.51" /> <!-- Adamantite Ring -->
+				<item id="918" min="1" max="1" chance="26.4" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="1" chance="26.31" /> <!-- Adamantite Earring -->
+				<item id="2388" min="1" max="1" chance="3.869" /> <!-- Zubei's Leather Gaiters -->
+				<item id="2376" min="1" max="1" chance="3.862" /> <!-- Avadon Breastplate -->
+				<item id="2384" min="1" max="1" chance="3.854" /> <!-- Zubei's Leather Shirt -->
+				<item id="110" min="1" max="1" chance="3.853" /> <!-- Doom Shield -->
+				<item id="673" min="1" max="1" chance="3.844" /> <!-- Avadon Shield -->
+				<item id="2404" min="1" max="1" chance="3.843" /> <!-- Stockings of Doom -->
+				<item id="554" min="1" max="1" chance="3.836" /> <!-- Sealed Zubei's Boots -->
+				<item id="633" min="1" max="1" chance="3.829" /> <!-- Zubei's Shield -->
+				<item id="2402" min="1" max="1" chance="3.821" /> <!-- Stockings of Zubei -->
+				<item id="600" min="1" max="1" chance="3.819" /> <!-- Sealed Avadon Boots -->
+				<item id="2415" min="1" max="1" chance="3.813" /> <!-- Sealed Avadon Circlet -->
+				<item id="503" min="1" max="1" chance="3.791" /> <!-- Sealed Zubei's Helmet -->
+				<item id="383" min="1" max="1" chance="3.791" /> <!-- Zubei's Gaiters -->
+				<item id="2397" min="1" max="1" chance="3.79" /> <!-- Tunic of Zubei -->
+				<item id="2464" min="1" max="1" chance="3.79" /> <!-- Sealed Avadon Gloves -->
+				<item id="2399" min="1" max="1" chance="3.789" /> <!-- Tunic of Doom -->
+				<item id="2390" min="1" max="1" chance="3.778" /> <!-- Avadon Leather Armor -->
+				<item id="2406" min="1" max="1" chance="3.772" /> <!-- Avadon Robe -->
+				<item id="357" min="1" max="1" chance="3.767" /> <!-- Zubei's Breastplate -->
+				<item id="612" min="1" max="1" chance="3.752" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="2379" min="1" max="1" chance="3.751" /> <!-- Avadon Gaiters -->
+				<item id="79" min="1" max="1" chance="1.115" /> <!-- Damascus -->
+				<item id="229" min="1" max="1" chance="1.113" /> <!-- Kris -->
+				<item id="171" min="1" max="1" chance="1.107" /> <!-- Deadman's Glory -->
+				<item id="264" min="1" max="1" chance="1.107" /> <!-- Pata -->
+				<item id="78" min="1" max="1" chance="1.106" /> <!-- Great Sword -->
+				<item id="284" min="1" max="1" chance="1.106" /> <!-- Dark Elven Longbow -->
+				<item id="148" min="1" max="1" chance="1.098" /> <!-- Sword of Valhalla -->
+				<item id="268" min="1" max="1" chance="1.085" /> <!-- Bellion Cestus -->
+				<item id="243" min="1" max="1" chance="1.081" /> <!-- Twilight Knife -->
+				<item id="300" min="1" max="1" chance="1.084" /> <!-- Great Axe -->
+				<item id="91" min="1" max="1" chance="1.068" /> <!-- Heavy War Axe -->
+				<item id="267" min="1" max="1" chance="1.062" /> <!-- Arthro Nail -->
+				<item id="210" min="1" max="1" chance="1.061" /> <!-- Staff of Evil Spirits -->
+				<item id="175" min="1" max="1" chance="1.055" /> <!-- Art of Battle Axe -->
+				<item id="92" min="1" max="1" chance="1.049" /> <!-- Spirit's Staff -->
+				<item id="234" min="1" max="1" chance="1.033" /> <!-- Demon's Dagger -->
+				<item id="142" min="1" max="1" chance="1.028" /> <!-- Keshanberk -->
+				<item id="287" min="1" max="1" chance="0.998" /> <!-- Bow of Peril -->
+				<item id="97" min="1" max="1" chance="0.997" /> <!-- Lance -->
+				<item id="70000" min="15" max="45" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="948" min="1" max="1" chance="80.5" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="19.85" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25778" level="80" type="L2Npc" name="Puppet Orc Archer" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="288" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="56685" hpRegen="10.5" mp="44592" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="25779" level="75" type="L2RaidBoss" name="Gariott" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="43740000" sp="1312200" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1674864" hpRegen="529.916" mp="558288" mpRegen="3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="925.6666666666667" magical="460.5714285714286" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="30" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<collision>
+			<radius normal="63" />
+			<height normal="69" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="6324" min="1" max="1" chance="24.74" /> <!-- Sealed Phoenix Earring -->
+				<item id="6323" min="1" max="1" chance="24.67" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6325" min="1" max="1" chance="23.8" /> <!-- Sealed Phoenix Ring -->
+				<item id="5287" min="1" max="1" chance="2.258" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5295" min="1" max="1" chance="2.256" /> <!-- Sealed Tallum Gloves -->
+				<item id="5290" min="1" max="1" chance="2.254" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5298" min="1" max="1" chance="2.253" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5292" min="1" max="1" chance="2.244" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5293" min="1" max="1" chance="2.242" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5289" min="1" max="1" chance="2.24" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5305" min="1" max="1" chance="2.235" /> <!-- Sealed Tallum Stockings -->
+				<item id="5304" min="1" max="1" chance="2.227" /> <!-- Sealed Tallum Tunic -->
+				<item id="5296" min="1" max="1" chance="2.214" /> <!-- Sealed Tallum Boots -->
+				<item id="5297" min="1" max="1" chance="2.21" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5301" min="1" max="1" chance="2.206" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5288" min="1" max="1" chance="2.16" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5291" min="1" max="1" chance="2.144" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5308" min="1" max="1" chance="2.143" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5294" min="1" max="1" chance="2.121" /> <!-- Sealed Tallum Helmet -->
+				<item id="7884" min="1" max="1" chance="0.75" /> <!-- Infernal Master -->
+				<item id="7894" min="1" max="1" chance="0.75" /> <!-- Spiritual Eye -->
+				<item id="80" min="1" max="1" chance="0.75" /> <!-- Tallum Blade -->
+				<item id="2504" min="1" max="1" chance="0.75" /> <!-- Meteor Shower -->
+				<item id="288" min="1" max="1" chance="0.75" /> <!-- Carnage Bow -->
+				<item id="269" min="1" max="1" chance="0.75" /> <!-- Blood Tornado -->
+				<item id="235" min="1" max="1" chance="0.75" /> <!-- Bloody Orchid -->
+				<item id="212" min="1" max="1" chance="0.75" /> <!-- Dasparion's Staff -->
+				<item id="150" min="1" max="1" chance="0.75" /> <!-- Elemental Sword -->
+				<item id="98" min="1" max="1" chance="0.75" /> <!-- Halberd -->
+				<item id="7899" min="1" max="1" chance="0.75" /> <!-- Destroyer Hammer -->
+				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25780" level="75" type="L2RaidBoss" name="Varbasion" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="43740000" sp="1312200" raidPoints="5" />
+		<equipment rhand="5800" lhand="5799" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1674864" hpRegen="529.916" mp="558288" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="925.6666666666667" magical="460.5714285714286" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="31" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="45" />
+			<height normal="68.25" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="6325" min="1" max="1" chance="25.8" /> <!-- Sealed Phoenix Ring -->
+				<item id="6323" min="1" max="1" chance="25.47" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="1" chance="24.04" /> <!-- Sealed Phoenix Earring -->
+				<item id="5288" min="1" max="1" chance="2.256" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5308" min="1" max="1" chance="2.226" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5304" min="1" max="1" chance="2.224" /> <!-- Sealed Tallum Tunic -->
+				<item id="5294" min="1" max="1" chance="2.21" /> <!-- Sealed Tallum Helmet -->
+				<item id="5292" min="1" max="1" chance="2.203" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5298" min="1" max="1" chance="2.185" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5287" min="1" max="1" chance="2.179" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5291" min="1" max="1" chance="2.165" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5305" min="1" max="1" chance="2.164" /> <!-- Sealed Tallum Stockings -->
+				<item id="5297" min="1" max="1" chance="2.155" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5293" min="1" max="1" chance="2.155" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5301" min="1" max="1" chance="2.155" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5290" min="1" max="1" chance="2.153" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5295" min="1" max="1" chance="2.146" /> <!-- Sealed Tallum Gloves -->
+				<item id="5289" min="1" max="1" chance="2.13" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5296" min="1" max="1" chance="2.124" /> <!-- Sealed Tallum Boots -->
+				<item id="7884" min="1" max="1" chance="0.75" /> <!-- Infernal Master -->
+				<item id="7894" min="1" max="1" chance="0.75" /> <!-- Spiritual Eye -->
+				<item id="80" min="1" max="1" chance="0.75" /> <!-- Tallum Blade -->
+				<item id="2504" min="1" max="1" chance="0.75" /> <!-- Meteor Shower -->
+				<item id="288" min="1" max="1" chance="0.75" /> <!-- Carnage Bow -->
+				<item id="269" min="1" max="1" chance="0.75" /> <!-- Blood Tornado -->
+				<item id="235" min="1" max="1" chance="0.75" /> <!-- Bloody Orchid -->
+				<item id="212" min="1" max="1" chance="0.75" /> <!-- Dasparion's Staff -->
+				<item id="150" min="1" max="1" chance="0.75" /> <!-- Elemental Sword -->
+				<item id="98" min="1" max="1" chance="0.75" /> <!-- Halberd -->
+				<item id="7899" min="1" max="1" chance="0.75" /> <!-- Destroyer Hammer -->
+				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25781" level="75" type="L2RaidBoss" name="Varmoni" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="43740000" sp="1312200" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1674864" hpRegen="529.916" mp="558288" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="925.6666666666667" magical="460.5714285714286" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="32" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="60" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="6323" min="1" max="1" chance="25.18" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="1" chance="24.99" /> <!-- Sealed Phoenix Earring -->
+				<item id="6325" min="1" max="1" chance="23.81" /> <!-- Sealed Phoenix Ring -->
+				<item id="5298" min="1" max="1" chance="2.233" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5292" min="1" max="1" chance="2.23" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5291" min="1" max="1" chance="2.221" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5287" min="1" max="1" chance="2.213" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5288" min="1" max="1" chance="2.21" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5289" min="1" max="1" chance="2.197" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5304" min="1" max="1" chance="2.189" /> <!-- Sealed Tallum Tunic -->
+				<item id="5290" min="1" max="1" chance="2.189" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5294" min="1" max="1" chance="2.188" /> <!-- Sealed Tallum Helmet -->
+				<item id="5295" min="1" max="1" chance="2.186" /> <!-- Sealed Tallum Gloves -->
+				<item id="5297" min="1" max="1" chance="2.184" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5296" min="1" max="1" chance="2.163" /> <!-- Sealed Tallum Boots -->
+				<item id="5305" min="1" max="1" chance="2.162" /> <!-- Sealed Tallum Stockings -->
+				<item id="5308" min="1" max="1" chance="2.152" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5293" min="1" max="1" chance="2.141" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5301" min="1" max="1" chance="2.127" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="7884" min="1" max="1" chance="0.75" /> <!-- Infernal Master -->
+				<item id="7894" min="1" max="1" chance="0.75" /> <!-- Spiritual Eye -->
+				<item id="80" min="1" max="1" chance="0.75" /> <!-- Tallum Blade -->
+				<item id="2504" min="1" max="1" chance="0.75" /> <!-- Meteor Shower -->
+				<item id="288" min="1" max="1" chance="0.75" /> <!-- Carnage Bow -->
+				<item id="269" min="1" max="1" chance="0.75" /> <!-- Blood Tornado -->
+				<item id="235" min="1" max="1" chance="0.75" /> <!-- Bloody Orchid -->
+				<item id="212" min="1" max="1" chance="0.75" /> <!-- Dasparion's Staff -->
+				<item id="150" min="1" max="1" chance="0.75" /> <!-- Elemental Sword -->
+				<item id="98" min="1" max="1" chance="0.75" /> <!-- Halberd -->
+				<item id="7899" min="1" max="1" chance="0.75" /> <!-- Destroyer Hammer -->
+				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25782" level="75" type="L2RaidBoss" name="Overlord Muscel" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>GIANT</race>
+		<acquire exp="43740000" sp="1312200" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1674864" hpRegen="529.916" mp="558288" mpRegen="3" />
+			<speed>
+				<walk ground="55" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="925.6666666666667" magical="460.5714285714286" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="33" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="11" /> <!-- Giant -->
+		</skillList>
+		<collision>
+			<radius normal="48" />
+			<height normal="77.25" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="6324" min="1" max="1" chance="25.13" /> <!-- Sealed Phoenix Earring -->
+				<item id="6325" min="1" max="1" chance="24.43" /> <!-- Sealed Phoenix Ring -->
+				<item id="6323" min="1" max="1" chance="23.95" /> <!-- Sealed Phoenix Necklace -->
+				<item id="5304" min="1" max="1" chance="2.238" /> <!-- Sealed Tallum Tunic -->
+				<item id="5291" min="1" max="1" chance="2.232" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5292" min="1" max="1" chance="2.221" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5298" min="1" max="1" chance="2.22" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5290" min="1" max="1" chance="2.195" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5305" min="1" max="1" chance="2.193" /> <!-- Sealed Tallum Stockings -->
+				<item id="5289" min="1" max="1" chance="2.193" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5301" min="1" max="1" chance="2.189" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5293" min="1" max="1" chance="2.17" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5288" min="1" max="1" chance="2.161" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5287" min="1" max="1" chance="2.153" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5297" min="1" max="1" chance="2.152" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5295" min="1" max="1" chance="2.142" /> <!-- Sealed Tallum Gloves -->
+				<item id="5308" min="1" max="1" chance="2.138" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5294" min="1" max="1" chance="2.132" /> <!-- Sealed Tallum Helmet -->
+				<item id="5296" min="1" max="1" chance="2.124" /> <!-- Sealed Tallum Boots -->
+				<item id="7884" min="1" max="1" chance="0.75" /> <!-- Infernal Master -->
+				<item id="7894" min="1" max="1" chance="0.75" /> <!-- Spiritual Eye -->
+				<item id="80" min="1" max="1" chance="0.75" /> <!-- Tallum Blade -->
+				<item id="2504" min="1" max="1" chance="0.75" /> <!-- Meteor Shower -->
+				<item id="288" min="1" max="1" chance="0.75" /> <!-- Carnage Bow -->
+				<item id="269" min="1" max="1" chance="0.75" /> <!-- Blood Tornado -->
+				<item id="235" min="1" max="1" chance="0.75" /> <!-- Bloody Orchid -->
+				<item id="212" min="1" max="1" chance="0.75" /> <!-- Dasparion's Staff -->
+				<item id="150" min="1" max="1" chance="0.75" /> <!-- Elemental Sword -->
+				<item id="98" min="1" max="1" chance="0.75" /> <!-- Halberd -->
+				<item id="7899" min="1" max="1" chance="0.75" /> <!-- Destroyer Hammer -->
+				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25783" level="75" type="L2RaidBoss" name="Bathus Elbogen" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>GIANT</race>
+		<acquire exp="43740000" sp="1312200" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1674864" hpRegen="529.916" mp="558288" mpRegen="3" />
+			<speed>
+				<walk ground="55" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="925.6666666666667" magical="460.5714285714286" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="34" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="11" /> <!-- Giant -->
+		</skillList>
+		<collision>
+			<radius normal="36" />
+			<height normal="70.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="6325" min="1" max="1" chance="24.78" /> <!-- Sealed Phoenix Ring -->
+				<item id="6323" min="1" max="1" chance="24.75" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="1" chance="24.36" /> <!-- Sealed Phoenix Earring -->
+				<item id="5305" min="1" max="1" chance="2.256" /> <!-- Sealed Tallum Stockings -->
+				<item id="5290" min="1" max="1" chance="2.248" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5288" min="1" max="1" chance="2.248" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5289" min="1" max="1" chance="2.245" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5291" min="1" max="1" chance="2.239" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5297" min="1" max="1" chance="2.234" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5301" min="1" max="1" chance="2.231" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5287" min="1" max="1" chance="2.226" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5308" min="1" max="1" chance="2.222" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5294" min="1" max="1" chance="2.193" /> <!-- Sealed Tallum Helmet -->
+				<item id="5295" min="1" max="1" chance="2.188" /> <!-- Sealed Tallum Gloves -->
+				<item id="5292" min="1" max="1" chance="2.178" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5293" min="1" max="1" chance="2.174" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5298" min="1" max="1" chance="2.142" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5304" min="1" max="1" chance="2.142" /> <!-- Sealed Tallum Tunic -->
+				<item id="5296" min="1" max="1" chance="2.133" /> <!-- Sealed Tallum Boots -->
+				<item id="7884" min="1" max="1" chance="0.75" /> <!-- Infernal Master -->
+				<item id="7894" min="1" max="1" chance="0.75" /> <!-- Spiritual Eye -->
+				<item id="80" min="1" max="1" chance="0.75" /> <!-- Tallum Blade -->
+				<item id="2504" min="1" max="1" chance="0.75" /> <!-- Meteor Shower -->
+				<item id="288" min="1" max="1" chance="0.75" /> <!-- Carnage Bow -->
+				<item id="269" min="1" max="1" chance="0.75" /> <!-- Blood Tornado -->
+				<item id="235" min="1" max="1" chance="0.75" /> <!-- Bloody Orchid -->
+				<item id="212" min="1" max="1" chance="0.75" /> <!-- Dasparion's Staff -->
+				<item id="150" min="1" max="1" chance="0.75" /> <!-- Elemental Sword -->
+				<item id="98" min="1" max="1" chance="0.75" /> <!-- Halberd -->
+				<item id="7899" min="1" max="1" chance="0.75" /> <!-- Destroyer Hammer -->
+				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25784" level="75" type="L2RaidBoss" name="Daumen Kshana" title="Raid Boss">
+		<!-- Source: www.l2wiki.com -->
+		<race>GIANT</race>
+		<acquire exp="43740000" sp="1312200" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1674864" hpRegen="529.916" mp="558288" mpRegen="3" />
+			<speed>
+				<walk ground="55" />
+				<run ground="175" />
+			</speed>
+			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="925.6666666666667" magical="460.5714285714286" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="35" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="11" /> <!-- Giant -->
+		</skillList>
+		<collision>
+			<radius normal="36" />
+			<height normal="72.75" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="6323" min="1" max="1" chance="24.84" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="1" chance="24.77" /> <!-- Sealed Phoenix Earring -->
+				<item id="6325" min="1" max="1" chance="24.36" /> <!-- Sealed Phoenix Ring -->
+				<item id="5292" min="1" max="1" chance="2.251" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5297" min="1" max="1" chance="2.25" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5305" min="1" max="1" chance="2.247" /> <!-- Sealed Tallum Stockings -->
+				<item id="5304" min="1" max="1" chance="2.245" /> <!-- Sealed Tallum Tunic -->
+				<item id="5301" min="1" max="1" chance="2.243" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5287" min="1" max="1" chance="2.239" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5298" min="1" max="1" chance="2.227" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5291" min="1" max="1" chance="2.222" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5295" min="1" max="1" chance="2.221" /> <!-- Sealed Tallum Gloves -->
+				<item id="5293" min="1" max="1" chance="2.22" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5308" min="1" max="1" chance="2.211" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5294" min="1" max="1" chance="2.199" /> <!-- Sealed Tallum Helmet -->
+				<item id="5296" min="1" max="1" chance="2.175" /> <!-- Sealed Tallum Boots -->
+				<item id="5289" min="1" max="1" chance="2.144" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5290" min="1" max="1" chance="2.143" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5288" min="1" max="1" chance="2.129" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="7884" min="1" max="1" chance="0.75" /> <!-- Infernal Master -->
+				<item id="7894" min="1" max="1" chance="0.75" /> <!-- Spiritual Eye -->
+				<item id="80" min="1" max="1" chance="0.75" /> <!-- Tallum Blade -->
+				<item id="2504" min="1" max="1" chance="0.75" /> <!-- Meteor Shower -->
+				<item id="288" min="1" max="1" chance="0.75" /> <!-- Carnage Bow -->
+				<item id="269" min="1" max="1" chance="0.75" /> <!-- Blood Tornado -->
+				<item id="235" min="1" max="1" chance="0.75" /> <!-- Bloody Orchid -->
+				<item id="212" min="1" max="1" chance="0.75" /> <!-- Dasparion's Staff -->
+				<item id="150" min="1" max="1" chance="0.75" /> <!-- Elemental Sword -->
+				<item id="98" min="1" max="1" chance="0.75" /> <!-- Halberd -->
+				<item id="7899" min="1" max="1" chance="0.75" /> <!-- Destroyer Hammer -->
+				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25785" level="80" type="L2Npc" name="Lesser Giant Warrior" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="3937" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="70968" hpRegen="10.5" mp="55828" mpRegen="3.6" />
+			<speed>
+				<walk ground="15" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="31.5" />
+			<height normal="69" />
+		</collision>
+	</npc>
+	<npc id="25786" level="80" type="L2Npc" name="Lesser Giant Soldier" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="4028" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="70968" hpRegen="10.5" mp="55828" mpRegen="3.6" />
+			<speed>
+				<walk ground="15" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="50" />
+			<height normal="66" />
+		</collision>
+	</npc>
+	<npc id="25787" level="80" type="L2Npc" name="Death Knight" title="Raid Soul Drinker">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="437200" hpRegen="10.5" mp="218600" mpRegen="3.6" />
+			<speed>
+				<walk ground="63" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="37.5" />
+			<height normal="72" />
+		</collision>
+	</npc>
+	<npc id="25788" level="80" type="L2Npc" name="Death Knight" title="Raid Soul Drinker">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="482940" hpRegen="10.5" mp="241470" mpRegen="3.6" />
+			<speed>
+				<walk ground="63" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="37.5" />
+			<height normal="72" />
+		</collision>
+	</npc>
+	<npc id="25789" level="80" type="L2Npc" name="Death Knight" title="Raid Soul Drinker">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="533467" hpRegen="10.5" mp="266734" mpRegen="3.6" />
+			<speed>
+				<walk ground="63" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="37.5" />
+			<height normal="72" />
+		</collision>
+	</npc>
+	<npc id="25790" level="80" type="L2Npc" name="Death Knight" title="Raid Soul Drinker">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="758696" hpRegen="10.5" mp="303479" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="23" />
+			<height normal="64" />
+		</collision>
+	</npc>
+	<npc id="25791" level="80" type="L2Npc" name="Death Knight" title="Raid Soul Drinker">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1153981" hpRegen="10.5" mp="384661" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="23" />
+			<height normal="64" />
+		</collision>
+	</npc>
+	<npc id="25792" level="80" type="L2Npc" name="Death Knight" title="Raid Soul Drinker">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1674864" hpRegen="10.5" mp="558288" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="23" />
+			<height normal="64" />
+		</collision>
+	</npc>
+	<npc id="25793" level="80" type="L2Npc" name="Giant Golden Pig" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="18648000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="270" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="77" />
+			<height normal="120" />
+		</collision>
+	</npc>
+	<npc id="25794" level="62" type="L2Monster" name="Kutis" title="Kutus' Nemesis">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="77" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="902929.02" mp="607971.6" mpRegen="3.5" hpRegen="3.5" />
+			<attack physical="126427.8196" magical="117773.35043478" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="270878.706" magical="451464.51" />
+			<attribute>
+				<attack type="FIRE" value="280" />
+				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="170" />
+			</speed>
+			<abnormalResist physical="100" magical="100" />
+		</stats>
+		<status attackable="true" canMove="true" />
+		<collision>
+			<radius normal="21.0" />
+			<height normal="43.5" />
+		</collision>
+		<skillList>
+			<skill id="50028" level="1" /> <!-- 62 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5464" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>CLAN_ARENA</clan>
+			</clanList>
+		</ai>
+	</npc>
+	<npc id="25795" level="64" type="L2Monster" name="Garan" title="Korim's Messenger">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="160" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="995477.64" mp="644997.6" mpRegen="3.5" hpRegen="3.5" />
+			<attack physical="139385.1992" magical="129844.90956522" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="298643.292" magical="497738.82" />
+			<attribute>
+				<attack type="FIRE" value="280" />
+				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="36" />
+				<run ground="170" />
+			</speed>
+			<abnormalResist physical="100" magical="100" />
+		</stats>
+		<status attackable="true" canMove="true" />
+		<collision>
+			<radius normal="15.6" />
+			<height normal="37.8" />
+		</collision>
+		<skillList>
+			<skill id="50028" level="2" /> <!-- 64 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5464" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
+			<skill id="4416" level="3" />
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>CLAN_ARENA</clan>
+			</clanList>
+		</ai>
+	</npc>
+	<npc id="25796" level="66" type="L2Monster" name="Batur" title="Kelbar's Leader">
+		<!-- Source: www.l2wiki.com -->
+		<race>GIANT</race>
+		<equipment rhand="75" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1149777.78" mp="684279" mpRegen="1222.2222222222" hpRegen="60000" />
+			<attack physical="31428.571428571" magical="5546.218487395" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2444.4444444444" magical="1419.3548387097" />
+			<attribute>
+				<attack type="FIRE" value="430" />
+				<defence fire="300" water="350" wind="350" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
+			<abnormalResist physical="100" magical="100" />
+		</stats>
+		<status attackable="true" canMove="true" />
+		<collision>
+			<radius normal="24.0" />
+			<height normal="47.0" />
+		</collision>
+		<skillList>
+			<skill id="50028" level="3" /> <!-- 66 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4437" level="3" />
+			<skill id="4441" level="3" />
+			<skill id="4435" level="3" />
+			<skill id="4436" level="3" />
+			<skill id="4440" level="3" />
+			<skill id="4439" level="3" />
+			<skill id="4438" level="3" />
+			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="4494" level="1" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>CLAN_ARENA</clan>
+			</clanList>
+		</ai>
+	</npc>
+	<npc id="25797" level="68" type="L2Monster" name="Venir" title="Kraven's Best Friend">
+		<!-- Source: www.l2wiki.com -->
+		<race>UNDEAD</race>
+		<equipment rhand="76" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1391230.35" mp="725949.9" mpRegen="1259.2592592593" hpRegen="61818.181818182" />
+			<attack physical="32380.952380952" magical="5714.2857142857" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2518.5185185185" magical="1462.3655913978" />
+			<attribute>
+				<attack type="FIRE" value="430" />
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="27" />
+				<run ground="170" />
+			</speed>
+			<abnormalResist physical="100" magical="100" />
+		</stats>
+		<status attackable="true" canMove="true" />
+		<collision>
+			<radius normal="18.0" />
+			<height normal="47.5" />
+		</collision>
+		<skillList>
+			<skill id="50028" level="4" /> <!-- 68 Lv. Raid Boss -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5462" level="1" />
+			<skill id="4415" level="19" />
+			<skill id="4494" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>CLAN_ARENA</clan>
+			</clanList>
+		</ai>
+	</npc>
+	<npc id="25798" level="70" type="L2Monster" name="Oel" title="Blue Flag Captain">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="2503" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1683388.98" mp="770160.6" mpRegen="1296.2962962963" hpRegen="63636.363636364" />
+			<attack physical="33333.333333333" magical="5882.3529411765" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2592.5925925926" magical="1505.376344086" />
+			<attribute>
+				<attack type="FIRE" value="430" />
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="70" />
+				<run ground="170" />
+			</speed>
+			<abnormalResist physical="100" magical="100" />
+		</stats>
+		<status attackable="true" canMove="true" />
+		<collision>
+			<radius normal="24.0" />
+			<height normal="45.0" />
+		</collision>
+		<skillList>
+			<skill id="50028" level="5" /> <!-- 70 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5462" level="1" />
+			<skill id="4415" level="7" />
+			<skill id="4414" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
+			<skill id="4084" level="1" />
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>CLAN_ARENA</clan>
+			</clanList>
+		</ai>
+	</npc>
+	<npc id="25799" level="72" type="L2Monster" name="Taranka" title="Kandra's Follower">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="2502" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2036901.27" mp="832928.4" mpRegen="1333.3333333333" hpRegen="65454.545454545" />
+			<attack physical="34285.714285714" magical="6050.4201680672" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2666.6666666667" magical="1548.3870967742" />
+			<attribute>
+				<attack type="FIRE" value="430" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="27" />
+				<run ground="170" />
+			</speed>
+			<abnormalResist physical="100" magical="100" />
+		</stats>
+		<status attackable="true" canMove="true" />
+		<collision>
+			<radius normal="15.6" />
+			<height normal="38.4" />
+		</collision>
+		<skillList>
+			<skill id="50028" level="6" /> <!-- 72 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5238" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="4494" level="1" />
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>CLAN_ARENA</clan>
+			</clanList>
+		</ai>
+	</npc>
+</list>

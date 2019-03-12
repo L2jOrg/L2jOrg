@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance id="3049" name="coliseum" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
+	<time empty="0" />
+	<misc isPvP="true" />
+	<removeBuffs type="ALL" />
+	<locations>
+		<exit type="ORIGIN" />
+	</locations>
+	<doorlist>
+		<door id="24190001">
+			<openStatus default="close" />
+		</door>
+		<door id="24190002">
+			<openStatus default="close" />
+		</door>
+		<door id="24190003">
+			<openStatus default="close" />
+		</door>
+		<door id="24190004">
+			<openStatus default="close" />
+		</door>
+	</doorlist>
+</instance>

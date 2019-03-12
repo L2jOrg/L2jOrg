@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Monster Race -->
+	<region name="monster_race" town="Floran Town" castle="2" locId="917" bbs="5">
+		<respawnPoint X="11892" Y="181700" Z="-3560" />
+		<respawnPoint X="14028" Y="181695" Z="-3560" />
+		<respawnPoint X="13111" Y="181695" Z="-3560" />
+		<respawnPoint X="12587" Y="181702" Z="-3560" />
+		<respawnPoint X="13588" Y="181695" Z="-3560" />
+		<respawnPoint X="14077" Y="182490" Z="-3560" />
+		<respawnPoint X="13631" Y="182490" Z="-3560" />
+		<respawnPoint X="13157" Y="182490" Z="-3560" />
+		<respawnPoint X="12675" Y="182490" Z="-3560" />
+		<respawnPoint X="11926" Y="182503" Z="-3560" />
+		<respawnPoint X="12288" Y="182497" Z="-3560" />
+		<respawnPoint X="12292" Y="181707" Z="-3560" />
+		<respawnPoint X="11825" Y="181822" Z="-3560" />
+		<respawnPoint X="11827" Y="182334" Z="-3560" />
+		<respawnPoint X="11814" Y="181984" Z="-3560" />
+		<respawnPoint X="11824" Y="182172" Z="-3560" />
+		<respawnPoint X="11892" Y="181700" Z="-3560" isChaotic="true" />
+		<respawnPoint X="14028" Y="181695" Z="-3560" isChaotic="true" />
+		<respawnPoint X="13111" Y="181695" Z="-3560" isChaotic="true" />
+		<respawnPoint X="12587" Y="181702" Z="-3560" isChaotic="true" />
+		<respawnPoint X="13588" Y="181695" Z="-3560" isChaotic="true" />
+		<respawnPoint X="14077" Y="182490" Z="-3560" isChaotic="true" />
+		<respawnPoint X="13631" Y="182490" Z="-3560" isChaotic="true" />
+		<respawnPoint X="13157" Y="182490" Z="-3560" isChaotic="true" />
+		<respawnPoint X="12675" Y="182490" Z="-3560" isChaotic="true" />
+		<respawnPoint X="11926" Y="182503" Z="-3560" isChaotic="true" />
+		<respawnPoint X="12288" Y="182497" Z="-3560" isChaotic="true" />
+		<respawnPoint X="12292" Y="181707" Z="-3560" isChaotic="true" />
+		<respawnPoint X="11825" Y="181822" Z="-3560" isChaotic="true" />
+		<respawnPoint X="11827" Y="182334" Z="-3560" isChaotic="true" />
+		<respawnPoint X="11814" Y="181984" Z="-3560" isChaotic="true" />
+		<respawnPoint X="11824" Y="182172" Z="-3560" isChaotic="true" />
+	</region>
+	<!-- Monster Race PVP -->
+	<region name="monster_race_PVP" town="Floran Town" castle="2" locId="917" bbs="5">
+		<respawnPoint X="11817" Y="182897" Z="-3560" />
+		<respawnPoint X="12438" Y="182887" Z="-3560" />
+		<respawnPoint X="13047" Y="182902" Z="-3560" />
+		<respawnPoint X="13061" Y="183518" Z="-3560" />
+		<respawnPoint X="13059" Y="184123" Z="-3560" />
+		<respawnPoint X="12430" Y="184133" Z="-3560" />
+		<respawnPoint X="11822" Y="184143" Z="-3560" />
+		<respawnPoint X="11803" Y="183473" Z="-3560" />
+		<respawnPoint X="12115" Y="182896" Z="-3560" />
+		<respawnPoint X="12740" Y="182901" Z="-3560" />
+		<respawnPoint X="13059" Y="183199" Z="-3560" />
+		<respawnPoint X="13049" Y="182796" Z="-3560" />
+		<respawnPoint X="12740" Y="184138" Z="-3560" />
+		<respawnPoint X="12172" Y="184133" Z="-3560" />
+		<respawnPoint X="11820" Y="183806" Z="-3560" />
+		<respawnPoint X="11811" Y="183209" Z="-3560" />
+		<respawnPoint X="11817" Y="182897" Z="-3560" isChaotic="true" />
+		<respawnPoint X="12438" Y="182887" Z="-3560" isChaotic="true" />
+		<respawnPoint X="13047" Y="182902" Z="-3560" isChaotic="true" />
+		<respawnPoint X="13061" Y="183518" Z="-3560" isChaotic="true" />
+		<respawnPoint X="13059" Y="184123" Z="-3560" isChaotic="true" />
+		<respawnPoint X="12430" Y="184133" Z="-3560" isChaotic="true" />
+		<respawnPoint X="11822" Y="184143" Z="-3560" isChaotic="true" />
+		<respawnPoint X="11803" Y="183473" Z="-3560" isChaotic="true" />
+		<respawnPoint X="12115" Y="182896" Z="-3560" isChaotic="true" />
+		<respawnPoint X="12740" Y="182901" Z="-3560" isChaotic="true" />
+		<respawnPoint X="13059" Y="183199" Z="-3560" isChaotic="true" />
+		<respawnPoint X="13049" Y="182796" Z="-3560" isChaotic="true" />
+		<respawnPoint X="12740" Y="184138" Z="-3560" isChaotic="true" />
+		<respawnPoint X="12172" Y="184133" Z="-3560" isChaotic="true" />
+		<respawnPoint X="11820" Y="183806" Z="-3560" isChaotic="true" />
+		<respawnPoint X="11811" Y="183209" Z="-3560" isChaotic="true" />
+	</region>
+</list>

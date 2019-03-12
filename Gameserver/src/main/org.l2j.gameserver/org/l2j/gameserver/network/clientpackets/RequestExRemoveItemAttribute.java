@@ -9,7 +9,6 @@ import org.l2j.gameserver.network.serverpackets.ExBaseAttributeCancelResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
-import org.l2j.gameserver.model.items.type.CrystalType;
 
 import java.nio.ByteBuffer;
 
@@ -90,7 +89,7 @@ public class RequestExRemoveItemAttribute extends IClientIncomingPacket {
 
     private long getPrice(L2ItemInstance item) {
         switch (item.getItem().getCrystalType()) {
-            case CrystalType.S: {
+            case S: {
                 if (item.getItem() instanceof L2Weapon) {
                     _price = 50000;
                 } else {
@@ -98,7 +97,7 @@ public class RequestExRemoveItemAttribute extends IClientIncomingPacket {
                 }
                 break;
             }
-            case CrystalType.S80: {
+            case S80: {
                 if (item.getItem() instanceof L2Weapon) {
                     _price = 100000;
                 } else {
@@ -106,7 +105,7 @@ public class RequestExRemoveItemAttribute extends IClientIncomingPacket {
                 }
                 break;
             }
-            case CrystalType.S84: {
+            case S84: {
                 if (item.getItem() instanceof L2Weapon) {
                     _price = 200000;
                 } else {
@@ -114,7 +113,7 @@ public class RequestExRemoveItemAttribute extends IClientIncomingPacket {
                 }
                 break;
             }
-            case CrystalType.R: {
+            case R: {
                 if (item.getItem() instanceof L2Weapon) {
                     _price = 400000;
                 } else {
@@ -122,7 +121,7 @@ public class RequestExRemoveItemAttribute extends IClientIncomingPacket {
                 }
                 break;
             }
-            case CrystalType.R95: {
+            case R95: {
                 if (item.getItem() instanceof L2Weapon) {
                     _price = 800000;
                 } else {
@@ -130,7 +129,7 @@ public class RequestExRemoveItemAttribute extends IClientIncomingPacket {
                 }
                 break;
             }
-            case CrystalType.R99: {
+            case R99: {
                 if (item.getItem() instanceof L2Weapon) {
                     _price = 3200000;
                 } else {

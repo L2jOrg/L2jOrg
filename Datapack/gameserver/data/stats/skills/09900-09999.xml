@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="9985" toLevel="7" name="Elixir of Life">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<itemConsumeId>37097</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<reuseDelay>120000</reuseDelay>
+		<isDebuff>false</isDebuff>
+	</skill>
+	<skill id="9986" toLevel="7" name="Elixir of Mind">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<itemConsumeId>37098</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<reuseDelay>120000</reuseDelay>
+		<isDebuff>false</isDebuff>
+	</skill>
+</list>

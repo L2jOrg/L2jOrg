@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="GludinVillage">
+		<group>
+			<npc id="30010" x="-81861" y="149197" z="-3120" heading="16384" respawnTime="60sec" /> <!-- Auron -->
+			<npc id="30014" x="-82212" y="149197" z="-3120" heading="16384" respawnTime="60sec" /> <!-- Celma -->
+			<npc id="30022" x="-79256" y="150676" z="-3040" heading="16384" respawnTime="60sec" /> <!-- Zigaunt -->
+			<npc id="30034" x="-79559" y="150661" z="-3040" heading="16384" respawnTime="60sec" /> <!-- Iris -->
+			<npc id="30037" x="-78982" y="150830" z="-3024" heading="32768" respawnTime="60sec" /> <!-- Levian -->
+			<npc id="30207" x="-80343" y="154897" z="-3160" heading="16384" respawnTime="60sec" /> <!-- Arodin -->
+			<npc id="30208" x="-80935" y="155526" z="-3160" respawnTime="60sec" /> <!-- Damion -->
+			<npc id="30209" x="-81908" y="152077" z="-3120" respawnTime="60sec" /> <!-- Colleen -->
+			<npc id="30210" x="-81857" y="153545" z="-3168" heading="49152" respawnTime="60sec" /> <!-- Norman -->
+			<npc id="30290" x="-84401" y="149606" z="-3120" heading="16384" respawnTime="60sec" /> <!-- Xenos -->
+			<npc id="30313" x="-81266" y="152076" z="-3120" heading="32768" respawnTime="60sec" /> <!-- Asha -->
+			<npc id="30314" x="-80108" y="153307" z="-3152" respawnTime="60sec" /> <!-- Nestle -->
+			<npc id="30315" x="-79405" y="153963" z="-3152" heading="49152" respawnTime="60sec" /> <!-- Poesia -->
+			<npc id="30316" x="-81966" y="153547" z="-3168" heading="49152" respawnTime="60sec" /> <!-- Raut -->
+			<npc id="30317" x="-83172" y="155483" z="-3176" respawnTime="60sec" /> <!-- Kluto -->
+			<npc id="30320" x="-80752" y="149776" z="-3024" heading="20480" respawnTime="60sec" /> <!-- Richlin -->
+			<npc id="30369" x="-81864" y="149502" z="-3120" heading="49152" respawnTime="60sec" /> <!-- Baenedes -->
+			<npc id="30373" x="-81688" y="149350" z="-3120" heading="32768" respawnTime="60sec" /> <!-- Ramos -->
+			<npc id="30374" x="-82211" y="149504" z="-3120" heading="49152" respawnTime="60sec" /> <!-- Rhodiell -->
+			<npc id="30375" x="-79274" y="150966" z="-3040" heading="49152" respawnTime="60sec" /> <!-- Adonius -->
+			<npc id="30376" x="-79557" y="150982" z="-3040" heading="49152" respawnTime="60sec" /> <!-- Nell -->
+			<npc id="30377" x="-84642" y="149630" z="-3120" heading="8192" respawnTime="60sec" /> <!-- Talbot -->
+			<npc id="30378" x="-84661" y="149989" z="-3120" respawnTime="60sec" /> <!-- Estella -->
+			<npc id="30379" x="-85019" y="152887" z="-3168" heading="62508" respawnTime="60sec" /> <!-- Bezique -->
+			<npc id="30380" x="-85019" y="152592" z="-3152" heading="32768" respawnTime="60sec" /> <!-- Plink -->
+			<npc id="30381" x="-83520" y="149262" z="-3120" heading="3709" respawnTime="60sec" /> <!-- Alvah -->
+			<npc id="30382" x="-82822" y="149258" z="-3112" heading="43686" respawnTime="60sec" /> <!-- Leikan -->
+			<npc id="30383" x="-78621" y="152517" z="-3168" respawnTime="60sec" /> <!-- Scott -->
+			<npc id="30384" x="-78621" y="152973" z="-3160" respawnTime="60sec" /> <!-- Linus -->
+			<npc id="30385" x="-77291" y="155983" z="-3192" heading="19190" respawnTime="60sec" /> <!-- Weisz -->
+			<npc id="30386" x="-77989" y="156475" z="-3184" heading="60458" respawnTime="60sec" /> <!-- Luis -->
+			<npc id="30391" x="-80430" y="150694" z="-3040" heading="24576" respawnTime="60sec" /> <!-- Parina -->
+			<npc id="30417" x="-82437" y="150282" z="-3120" heading="16384" respawnTime="60sec" /> <!-- Sir Klaus Vasper -->
+			<npc id="30422" x="-84400" y="149872" z="-3129" heading="49152" respawnTime="60sec" /> <!-- Kalinta -->
+			<npc id="30425" x="-83414" y="151924" z="-3120" heading="57344" respawnTime="60sec" /> <!-- Neti -->
+			<npc id="30435" x="-79705" y="155131" z="-3168" heading="49152" respawnTime="60sec" /> <!-- Leopold -->
+			<npc id="30498" x="-81913" y="153545" z="-3168" heading="49152" respawnTime="60sec" /> <!-- Moke -->
+			<npc id="30499" x="-82954" y="155618" z="-3176" heading="47152" respawnTime="60sec" /> <!-- Tapoy -->
+			<npc id="30500" x="-80386" y="153282" z="-3176" heading="32000" respawnTime="60sec" /> <!-- Osborn -->
+			<npc id="30501" x="-80448" y="153408" z="-3176" heading="32000" respawnTime="60sec" /> <!-- Kasman -->
+			<npc id="30502" x="-80448" y="153208" z="-3176" heading="32000" respawnTime="60sec" /> <!-- Umos -->
+			<npc id="30634" x="-81199" y="151904" z="-3120" heading="27000" respawnTime="60sec" /> <!-- Galatea -->
+			<npc id="31031" x="-81280" y="154369" z="-3165" heading="16384" respawnTime="5sec" /> <!-- Broadcasting Tower -->
+			<npc id="31046" x="-81520" y="152256" z="-3120" heading="49376" respawnTime="60sec" /> <!-- Marsden -->
+			<npc id="31688" x="-84816" y="151056" z="-3120" respawnTime="60sec" /> <!-- Olympiad Manager -->
+			<npc id="31690" x="-84816" y="151008" z="-3120" respawnTime="60sec" /> <!-- Monument of Heroes -->
+			<npc id="32478" x="-82368" y="153664" z="-3168" heading="16500" respawnTime="60sec" /> <!-- Dimensional Merchant -->
+			<npc id="33359" x="-81332" y="151708" z="-3120" heading="49152" respawnTime="60sec" /> <!-- Kerry -->
+			<npc id="35392" x="-84596" y="152253" z="-3120" heading="53248" respawnTime="60sec" /> <!-- Bremmer -->
+			<npc id="35393" x="-83954" y="151814" z="-3120" heading="49152" respawnTime="60sec" /> <!-- Faolan -->
+			<npc id="35394" x="-84276" y="153321" z="-3160" respawnTime="60sec" /> <!-- Kalis -->
+			<npc id="35395" x="-83943" y="153704" z="-3168" respawnTime="60sec" /> <!-- Kogan -->
+			<npc id="35396" x="-84282" y="155597" z="-3160" heading="48512" respawnTime="60sec" /> <!-- Winker -->
+			<npc id="35397" x="-83884" y="155274" z="-3168" heading="57344" respawnTime="60sec" /> <!-- Merton -->
+			<npc id="35398" x="-79357" y="150232" z="-3032" heading="40000" respawnTime="60sec" /> <!-- Ruben -->
+			<npc id="35399" x="-79803" y="150032" z="-3040" heading="32768" respawnTime="60sec" /> <!-- Luce -->
+			<npc id="35400" x="-79587" y="151436" z="-3040" heading="8192" respawnTime="60sec" /> <!-- Horner -->
+			<npc id="35401" x="-79800" y="151598" z="-3040" heading="32768" respawnTime="60sec" /> <!-- Amiel -->
+		</group>
+	</spawn>
+</list>

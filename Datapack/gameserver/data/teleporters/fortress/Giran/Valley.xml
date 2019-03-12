@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="35758"> <!-- Foreman -->
+		<teleport name="tel1" type="OTHER">
+			<location npcStringId="1010658" x="126066" y="120350" z="-2584" /> <!-- Fortress North Gate -->
+			<location npcStringId="1010659" x="126023" y="125853" z="-2584" /> <!-- Fortress South Gate -->
+			<location npcStringId="1010665" x="81749" y="149171" z="-3464" /> <!-- Giran Town Square -->
+			<location npcStringId="1010666" x="107954" y="145841" z="-3224" /> <!-- Front of the Giran Castle Gate -->
+		</teleport>
+		<teleport name="tel2" type="OTHER">
+			<location npcStringId="1010658" x="126066" y="120350" z="-2584" /> <!-- Fortress North Gate -->
+			<location npcStringId="1010659" x="126023" y="125853" z="-2584" /> <!-- Fortress South Gate -->
+			<location npcStringId="1010665" x="81749" y="149171" z="-3464" /> <!-- Giran Town Square -->
+			<location npcStringId="1010666" x="107954" y="145841" z="-3224" /> <!-- Front of the Giran Castle Gate -->
+			<location npcStringId="1010118" x="85546" y="131328" z="-3672" feeCount="500" /> <!-- Breka's Stronghold (Lv. 30) -->
+			<location npcStringId="1010567" x="43408" y="206881" z="-3752" feeCount="500" /> <!-- Devil's Isle (Lv. 92) -->
+			<location npcStringId="1010067" x="73024" y="118485" z="-3720" feeCount="500" /> <!-- Dragon Valley (Lv. 76) -->
+			<location npcStringId="1010115" x="60374" y="164301" z="-2856" feeCount="500" /> <!-- Tanor Canyon (Lv. 46) -->
+		</teleport>
+	</npc>
+</list>

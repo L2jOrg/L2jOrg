@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/cubics.xsd">
+	<cubic id="3" level="1" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="1" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="1" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="1" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="3" level="2" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="2" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="2" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="2" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="3" level="3" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="3" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="3" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="3" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="3" level="4" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="4" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="4" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="4" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="3" level="5" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="5" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="5" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="5" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="3" level="6" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="6" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="6" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="6" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="3" level="7" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="7" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="7" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="7" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="3" level="101" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="9" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="9" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="9" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="3" level="102" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="10" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="10" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="10" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="3" level="103" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="11" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="11" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="11" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="3" level="104" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="12" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="12" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="12" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="3" level="105" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="13" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="13" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="13" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="3" level="106" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="14" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="14" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="14" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="3" level="107" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="15" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="15" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="15" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="3" level="108" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="16" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="16" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="16" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="3" level="20" slot="3" duration="3600" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+		<skills>
+			<skill id="4051" level="20" successRate="13"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="60" max="90" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="20" successRate="33"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="30" max="60" />
+				</conditions>
+			</skill>
+			<skill id="4051" level="20" successRate="53"> <!-- Cubic Heal -->
+				<conditions>
+					<healthPercent min="0" max="30" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+</list>

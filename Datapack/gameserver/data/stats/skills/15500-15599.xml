@@ -1,0 +1,1002 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="15500" toLevel="1" name="Major Energy of Life">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>2000</castRange>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+	<skill id="15501" toLevel="1" name="Superior Energy of Life">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>2000</castRange>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+	<skill id="15502" toLevel="1" name="Energy of Mana">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>2000</castRange>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+	<skill id="15503" toLevel="1" name="Major Energy of Mana">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>2000</castRange>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+	<skill id="15504" toLevel="1" name="Superior Energy of Mana">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>2000</castRange>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+	<skill id="15506" toLevel="1" name="Wondrous Herb of Power">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 1 hr. 30 sec., P. Atk. + 100%. -->
+		<icon>icon.etc_warrior_set_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>2000</castRange>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+	<skill id="15507" toLevel="1" name="Wondrous Herb of Magic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 1 hr. 30 sec., M. Atk. + 400%. -->
+		<icon>icon.etc_magic_set_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>2000</castRange>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+	<skill id="15508" toLevel="4" name="Special Armor">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Special armor reduces damage received from servitors. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="15509" toLevel="1" name="Laido Destruction">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful attack on enemies near target. -->
+		<icon>icon.skill0036</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15510" toLevel="1" name="Laido Repair">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Repairs ally. -->
+		<icon>icon.skill1217</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>50</castRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15511" toLevel="1" name="Laido Punch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful attack on enemy. -->
+		<icon>icon.skill0003</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15512" toLevel="1" name="Single Stroke">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks a single enemy. -->
+		<icon>icon.skill0003</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+	<skill id="15513" toLevel="1" name="Vital Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks a single enemy. -->
+		<icon>icon.skill0003</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+	<skill id="15514" toLevel="1" name="Bloody Chain">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Connects target and nearby enemies with chains for damage. -->
+		<icon>icon.skill0036</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>150</castRange>
+		<hitTime>2000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15515" toLevel="1" name="Penetrating Eyes">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Emits power from the eyes for powerful damage. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>100</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>4000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15516" toLevel="1" name="Summon Giant Illusion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Twists the flow of time to summon a bigger version of the self upon death (Presentation). -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15517" toLevel="1" name="Chaos Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Swings arms to attack target. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>70</castRange>
+		<hitTime>1000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="15518" toLevel="2" name="Confuse Body">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Confuses the interior of the target's body, decreasing P. Def. / M. Def. by 10%. -->
+		<icon>icon.skill1422</icon>
+		<operateType>A2</operateType>
+		<castRange>300</castRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15519" toLevel="1" name="Summon Undead">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons real body. (Presentation) -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15520" toLevel="1" name="Rush Raid">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful rush attack on enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="15521" toLevel="1" name="Flailing Spin">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Swings arms to attack target. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>70</castRange>
+		<hitTime>1000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="15522" toLevel="1" name="Dark Poison">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damages enemy with dark poison and drains HP gradually. -->
+		<icon>icon.skill4035</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>4000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15523" toLevel="1" name="Accelerate">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Speed. -->
+		<icon>icon.skill1204</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>2</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15524" toLevel="1" name="Suck Blood">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Sucks blood from the enemy, continuously draining HP. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15525" toLevel="2" name="Rush Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful rush attack on enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<hitTime>100</hitTime>
+	</skill>
+	<skill id="15526" toLevel="1" name="Karamar Breaker">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful attack on enemies near target. -->
+		<icon>icon.skill0036</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15527" toLevel="1" name="Chaos Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- AoE M. Atk. On target's area. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>300</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15528" toLevel="1" name="Kaonel Rush">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful rush attack on enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<hitTime>100</hitTime>
+	</skill>
+	<skill id="15529" toLevel="1" name="Absorb Spirit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Soul is drained. P. Def./ M. Def. - 30%, and Atk. Spd. + 10%. -->
+		<icon>icon.skill1422</icon>
+		<operateType>A2</operateType>
+		<castRange>300</castRange>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15530" toLevel="1" name="Slumber">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<icon>icon.skill4046</icon>
+		<operateType>A2</operateType>
+		<mpConsume>13</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>3000</hitTime>
+		<reuseDelay>8000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15531" toLevel="1" name="Hold">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Afflicted with Hold and unable to move momentarily. -->
+		<icon>icon.skill4047</icon>
+		<operateType>A2</operateType>
+		<mpConsume>13</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>8000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15532" toLevel="1" name="Pupil Focus">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Emits power from the eyes for powerful damage. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15533" toLevel="1" name="Spiteful Grudge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damages enemy with poison and drains HP gradually. -->
+		<icon>icon.skill4035</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15534" toLevel="1" name="Mutilate Body">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cuts enemy for powerful damage. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>70</castRange>
+		<hitTime>1000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="15535" toLevel="1" name="Bloody Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Breathes a crimson breath on enemies within 120 degrees in front of you to inflict damage. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>300</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15536" toLevel="1" name="Chaotic Mana">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- You are in the Land of Chaos. You can feel Krogel's power around you. -->
+		<icon>icon.skill0046</icon>
+		<operateType>A2</operateType>
+		<hitTime>500</hitTime>
+		<effectPoint>1</effectPoint>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="15537" toLevel="2" name="Blood Sacrifice: Decrease Speed">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores 50% of enemy's HP and gives an abnormal status debuff. -->
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15538" toLevel="2" name="Blood Sacrifice: Decrease Accuracy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores 50% of enemy's HP and gives an abnormal status debuff. -->
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15539" toLevel="2" name="Blood Sacrifice: Decrease P. Def.">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores 50% of enemy's HP and gives an abnormal status debuff. -->
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15540" toLevel="2" name="Blood Sacrifice: Decrease M. Def.">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores 50% of enemy's HP and gives an abnormal status debuff. -->
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15541" toLevel="1" name="Flame Pillar">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- A pillar of fire rushes from beneath your target's feet for damage. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>300</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15542" toLevel="1" name="Rush Raid">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful rush attack on enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<hitTime>100</hitTime>
+	</skill>
+	<skill id="15543" toLevel="1" name="Poison Fog">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Throws poison dust on enemy, draining their HP. -->
+		<icon>icon.skill4035</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>300</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-687</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15544" toLevel="2" name="Rush Attack">
+		<!-- TODO: Auto level parse, Requires manual update -->
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful rush attack on enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>300</castRange>
+		<hitTime>100</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15545" toLevel="1" name="Cubit Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful attack on enemies in a fan-shaped radius of you. -->
+		<icon>icon.skill0003</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>200</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-680</effectPoint>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+	<skill id="15546" toLevel="1" name="Dark Invisibility">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hides for a while. -->
+		<icon>icon.skill10784</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>1000</hitTime>
+		<effectPoint>2</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15547" toLevel="1" name="Point Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Swings sword at an enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>150</castRange>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1000</hitTime>
+	</skill>
+	<skill id="15548" toLevel="1" name="Partial Healing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores a part of allies' HP. -->
+		<icon>icon.skill1219</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>694</effectPoint>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="15549" toLevel="1" name="Soul Break">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases near enemies' Casting Spd. by 20% and Critical Damage by 30%. -->
+		<icon>icon.skill0036</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>4000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15550" toLevel="1" name="Heart Destroyer">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful attack on enemy's vital point. Speed increases upon hit. Has a low chance of doing Half-kill. -->
+		<icon>icon.skill10509</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-687</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15551" toLevel="1" name="Weaken Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hits enemy's vital point, weakening P. Atk. -->
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>200</castRange>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15552" toLevel="1" name="Hell's Prison">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases target's P. Atk. By 30%. -->
+		<icon>icon.skill1068</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>200</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15554" toLevel="1" name="Broad Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful attack on target and nearby enemies. -->
+		<icon>icon.skill10016</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>400</castRange>
+		<hitTime>6800</hitTime>
+		<coolTime>1000</coolTime>
+		<effectPoint>-2093</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15555" toLevel="1" name="Cunning Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hits enemy's vital point. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>200</castRange>
+		<hitTime>2000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="15556" toLevel="1" name="Provoke">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Provokes target into attacking you by forcefully changing their target. -->
+		<icon>icon.skill10027</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15557" toLevel="1" name="Crane Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases target's Atk. Spd. by 10%. -->
+		<icon>icon.skill0101</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>300</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-867</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15558" toLevel="1" name="Soul Howl">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks enemy and decreases their Casting Spd. -->
+		<icon>icon.skill4038</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>300</castRange>
+		<hitTime>4000</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-507</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15559" toLevel="1" name="Poison Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful attack on the whole party and poison damage. -->
+		<icon>icon.skill4035</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15561" toLevel="1" name="Connected Drain">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bleeding for 5 sec. -->
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>400</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-574</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15562" toLevel="1" name="Lethal Edge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Instantly kills a party member. -->
+		<icon>icon.skill0223</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15564" toLevel="2" name="Theor's Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. On a single enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>70</castRange>
+		<hitTime>2000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15565" toLevel="1" name="Theor's AoE Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- AoE P. Atk. On nearby enemies. -->
+		<icon>icon.skill0036</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>3000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15566" toLevel="1" name="Disarm">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Disarms nearby enemies. -->
+		<icon>icon.skill0485</icon>
+		<operateType>A2</operateType>
+		<trait>DISARM</trait>
+		<mpConsume>10</mpConsume>
+		<hitTime>2000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15567" toLevel="1" name="Aerial Yoke">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Aerial Yoke. -->
+		<icon>icon.skill1042</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>2000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15568" toLevel="1" name="Charge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful rush attack on enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="15570" toLevel="1" name="Master Siege Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., reflects 50% of received damage. -->
+		<icon>icon.skill_transform_buff</icon>
+		<operateType>A2</operateType>
+		<mpConsume>100</mpConsume>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>379</effectPoint>
+		<reuseDelay>150000</reuseDelay>
+	</skill>
+	<skill id="15571" toLevel="1" name="Master Siege Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful attack on enemy. -->
+		<icon>icon.skill_transform_etc</icon>
+		<operateType>A1</operateType>
+		<mpConsume>100</mpConsume>
+		<castRange>80</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-867</effectPoint>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="15572" toLevel="1" name="Krogel's Haste">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. + 15%. -->
+		<icon>icon.skill1086</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<effectPoint>100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15574" toLevel="1" name="Master Siege Hammer">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful attack on castle doors and walls. -->
+		<icon>icon.skill_transform_s_attack</icon>
+		<operateType>A1</operateType>
+		<mpConsume>100</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>5000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-709</effectPoint>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="15575" toLevel="1" name="Dedicated Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful P. Atk. on enemy. -->
+		<icon>icon.skill0003</icon>
+		<operateType>A1</operateType>
+		<castRange>150</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>200</coolTime>
+		<effectPoint>-2</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15576" toLevel="1" name="Dedicated Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful P. Atk. on enemy. -->
+		<icon>icon.skill0056</icon>
+		<operateType>A1</operateType>
+		<castRange>250</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>200</coolTime>
+		<effectPoint>-2</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15577" toLevel="1" name="Furious Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful P. Atk. on enemy. -->
+		<icon>icon.skill0110</icon>
+		<operateType>A1</operateType>
+		<castRange>150</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>200</coolTime>
+		<effectPoint>-2</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15578" toLevel="1" name="Furious Bombing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful P. Atk. On enemies 180 degrees to the front of you. -->
+		<icon>icon.skill1068</icon>
+		<operateType>A1</operateType>
+		<castRange>200</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>200</coolTime>
+		<effectPoint>-2</effectPoint>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="15579" toLevel="1" name="Cursed Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful P. Atk. on enemy. -->
+		<icon>icon.skill0110</icon>
+		<operateType>A1</operateType>
+		<castRange>150</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>200</coolTime>
+		<effectPoint>-2</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15580" toLevel="1" name="Cursed Bombing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful M. Atk. On target and nearby enemies. -->
+		<icon>icon.skill1092</icon>
+		<operateType>A1</operateType>
+		<castRange>250</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-2</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15581" toLevel="1" name="Fearsome Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful P. Atk. on enemy. -->
+		<icon>icon.skill0101</icon>
+		<operateType>A1</operateType>
+		<castRange>150</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>200</coolTime>
+		<effectPoint>-2</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15582" toLevel="1" name="Fearsome Bombing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful M. Atk. On target and nearby enemies. -->
+		<icon>icon.skill0003</icon>
+		<operateType>A1</operateType>
+		<castRange>250</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-2</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15583" toLevel="1" name="Despairing Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful P. Atk. on enemy. -->
+		<icon>icon.skill1072</icon>
+		<operateType>A1</operateType>
+		<castRange>150</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>200</coolTime>
+		<effectPoint>-2</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15584" toLevel="1" name="Despairing Bombing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful attack on nearby enemies. -->
+		<icon>icon.skill0922</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<coolTime>200</coolTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="15585" toLevel="1" name="Hateful Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Swings a spark-filled chain for a powerful M. Atk. -->
+		<icon>icon.skill10768</icon>
+		<operateType>A1</operateType>
+		<castRange>150</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-2</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15586" toLevel="1" name="Chains of Hatred">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Swings a spark-filled chain for a powerful M. Atk. On target and nearby enemies. -->
+		<icon>icon.skill0003</icon>
+		<operateType>A1</operateType>
+		<castRange>250</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15587" toLevel="1" name="High-speed Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Ranged attack on enemies to the front in a rectangular radius of you. -->
+		<icon>icon.skill1086</icon>
+		<operateType>A1</operateType>
+		<castRange>300</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>200</coolTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="15588" toLevel="1" name="Soulful Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful M. Atk. on enemy. -->
+		<icon>icon.skill1167</icon>
+		<operateType>A1</operateType>
+		<castRange>250</castRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-2</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15589" toLevel="1" name="Painful Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful P. Atk. on enemy. -->
+		<icon>icon.skill1275</icon>
+		<operateType>A1</operateType>
+		<castRange>150</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>200</coolTime>
+		<effectPoint>-2</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="15590" toLevel="1" name="Fear of Lindvior">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Afflicted with Fear and moving against own will. -->
+		<icon>icon.skill4108</icon>
+		<operateType>A2</operateType>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-867</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15592" toLevel="1" name="Dark Wind Armor">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Reflects a part of received damage. -->
+		<icon>icon.skill4095</icon>
+		<operateType>A2</operateType>
+		<hitTime>3000</hitTime>
+		<effectPoint>100</effectPoint>
+		<coolTime>1500</coolTime>
+	</skill>
+	<skill id="15593" toLevel="1" name="Air Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Ranged projectile. -->
+		<icon>icon.skill0101</icon>
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-867</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15594" toLevel="1" name="Lindvior's Speed Decrease">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stomping on the ground when enraged. -->
+		<icon>icon.skill0127</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<effectPoint>-867</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15595" toLevel="1" name="Lindvior's Fall">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. On nearby enemies. -->
+		<icon>icon.skill0036</icon>
+		<operateType>A2</operateType>
+		<isMagic>1</isMagic>
+		<effectPoint>-574</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15596" toLevel="1" name="Presentation - Lindvior's Takeoff">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Lindvior takes off. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>4200</hitTime>
+	</skill>
+	<skill id="15597" toLevel="1" name="Presentation - Lindvior's Landing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Lindvior lands. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>5000</hitTime>
+	</skill>
+	<skill id="15598" toLevel="1" name="Mighty Wind Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Ranged projectile. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>2500</castRange>
+		<hitTime>2500</hitTime>
+		<effectPoint>-707</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+</list>

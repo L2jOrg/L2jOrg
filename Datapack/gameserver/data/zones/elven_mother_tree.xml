@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Elven Mother Tree Zones -->
+	<zone name="mother_tree_start_zone" type="MotherTreeZone" shape="NPoly" minZ="-3550" maxZ="-3350"> <!-- [21_19] -->
+		<stat name="HpRegenBonus" val="2" />
+		<stat name="MpRegenBonus" val="1" />
+		<stat name="affectedRace" val="1" /> <!-- Elf -->
+		<stat name="enterMsgId" val="114" />
+		<stat name="leaveMsgId" val="115" />
+		<node X="45889" Y="41890" />
+		<node X="45277" Y="41672" />
+		<node X="45028" Y="41478" />
+		<node X="44809" Y="41230" />
+		<node X="44522" Y="40689" />
+		<node X="44501" Y="39970" />
+		<node X="44725" Y="39407" />
+		<node X="44930" Y="39145" />
+		<node X="45447" Y="38764" />
+		<node X="46073" Y="38618" />
+		<node X="46710" Y="38716" />
+		<node X="47255" Y="39049" />
+		<node X="47743" Y="39834" />
+		<node X="47772" Y="40568" />
+		<node X="47545" Y="41125" />
+		<node X="47108" Y="41599" />
+		<node X="46531" Y="41868" />
+	</zone>
+	<zone name="mother_tree_town" type="MotherTreeZone" shape="NPoly" minZ="-3121" maxZ="-2921"> <!-- [21_19] -->
+		<stat name="HpRegenBonus" val="2" />
+		<stat name="MpRegenBonus" val="1" />
+		<stat name="affectedRace" val="1" /> <!-- Elf -->
+		<stat name="enterMsgId" val="114" />
+		<stat name="leaveMsgId" val="115" />
+		<node X="45234" Y="49892" />
+		<node X="45117" Y="49826" />
+		<node X="45031" Y="49722" />
+		<node X="44986" Y="49597" />
+		<node X="44985" Y="49462" />
+		<node X="45032" Y="49336" />
+		<node X="45116" Y="49233" />
+		<node X="45233" Y="49165" />
+		<node X="45365" Y="49143" />
+		<node X="45498" Y="49166" />
+		<node X="45614" Y="49235" />
+		<node X="45700" Y="49336" />
+		<node X="45746" Y="49462" />
+		<node X="45747" Y="49596" />
+		<node X="45699" Y="49723" />
+		<node X="45614" Y="49825" />
+		<node X="45498" Y="49893" />
+		<node X="45366" Y="49914" />
+	</zone>
+	<zone name="20_19_worldtree" type="MotherTreeZone" shape="NPoly" minZ="-3745" maxZ="-3545">
+		<stat name="HpRegenBonus" val="2" />
+		<stat name="MpRegenBonus" val="1" />
+		<stat name="affectedRace" val="1" /> <!-- Elf -->
+		<stat name="enterMsgId" val="114" />
+		<stat name="leaveMsgId" val="115" />
+		<node X="21101" Y="50538" />
+		<node X="21511" Y="50683" />
+		<node X="21642" Y="51005" />
+		<node X="21583" Y="51349" />
+		<node X="21255" Y="51581" />
+		<node X="20852" Y="51473" />
+		<node X="20627" Y="51121" />
+		<node X="20728" Y="50743" />
+	</zone>
+	<zone name="20_20_worldtree" type="MotherTreeZone" shape="NPoly" minZ="-3260" maxZ="-3060">
+		<stat name="HpRegenBonus" val="2" />
+		<stat name="MpRegenBonus" val="1" />
+		<stat name="affectedRace" val="1" /> <!-- Elf -->
+		<stat name="enterMsgId" val="114" />
+		<stat name="leaveMsgId" val="115" />
+		<node X="25548" Y="81124" />
+		<node X="25660" Y="81548" />
+		<node X="25380" Y="81884" />
+		<node X="24960" Y="81972" />
+		<node X="24660" Y="81716" />
+		<node X="24604" Y="81324" />
+		<node X="24816" Y="81012" />
+		<node X="25248" Y="80944" />
+	</zone>
+	<zone name="21_20_worldtree" type="MotherTreeZone" shape="NPoly" minZ="-3775" maxZ="-3575">
+		<stat name="HpRegenBonus" val="2" />
+		<stat name="MpRegenBonus" val="1" />
+		<stat name="affectedRace" val="1" /> <!-- Elf -->
+		<stat name="enterMsgId" val="114" />
+		<stat name="leaveMsgId" val="115" />
+		<node X="57755" Y="85802" />
+		<node X="57974" Y="86079" />
+		<node X="57953" Y="86404" />
+		<node X="57711" Y="86683" />
+		<node X="57324" Y="86686" />
+		<node X="57105" Y="86436" />
+		<node X="57088" Y="86061" />
+		<node X="57404" Y="85785" />
+	</zone>
+</list>

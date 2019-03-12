@@ -35,15 +35,4 @@ public final class ScriptingClassLoader extends ClassLoader {
         _compiledClasses = null;
     }
 
-    @Override
-    protected Class<?> findClass(String name) throws ClassNotFoundException {
-        for (ScriptingOutputFileObject compiledClass : _compiledClasses) {
-            if (compiledClass.getJavaName().equals(name)) {
-                final byte[] classBytes = compiledClass.getJavaData();
-                return defineClass(name, classBytes, 0, classBytes.length);
-            }
-        }
-
-        return super.findClass(name);
-    }
 }

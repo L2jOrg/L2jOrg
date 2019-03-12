@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="14765" toLevel="5" name="Blood Siphon Resistance">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="14767" toLevel="1" name="Siege Punch">
+		<!-- Glory Days confirmed -->
+		<!-- Launches a powerful attack on the target around you -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>4600</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>4.6</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>85</magicLvl>
+		<affectRange>300</affectRange>
+		<affectLimit>5-12</affectLimit>
+		<reuseDelay>5000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>31500</power>
+			</effect>
+		</effects>
+	</skill>
+</list>

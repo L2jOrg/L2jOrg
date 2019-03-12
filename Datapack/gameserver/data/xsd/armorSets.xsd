@@ -1,0 +1,68 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="set" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="requiredItems">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute type="xs:positiveInteger" name="id" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="optionalItems" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute type="xs:positiveInteger" name="id" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="skills" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="skill" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute type="xs:positiveInteger" name="id" use="required" />
+												<xs:attribute type="xs:byte" name="level" use="required" />
+												<xs:attribute type="xs:byte" name="minimumPieces" use="optional" />
+												<xs:attribute type="xs:byte" name="minimumEnchant" use="optional" />
+												<xs:attribute type="xs:boolean" name="optional" use="optional" />
+												<xs:attribute type="xs:positiveInteger" name="slotMask" use="optional" />
+												<xs:attribute type="xs:positiveInteger" name="bookSlot" use="optional" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="stats" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="stat" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute type="xs:string" name="type" use="required" />
+												<xs:attribute type="xs:short" name="val" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:nonNegativeInteger" name="id" />
+						<xs:attribute type="xs:boolean" name="visual" use="optional" />
+						<xs:attribute type="xs:byte" name="minimumPieces" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

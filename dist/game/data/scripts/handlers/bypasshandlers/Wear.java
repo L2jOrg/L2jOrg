@@ -19,14 +19,14 @@ package handlers.bypasshandlers;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
 
-import com.l2jmobius.Config;
-import org.l2j.gameserver.mobius.gameserver.data.xml.impl.BuyListData;
-import org.l2j.gameserver.mobius.gameserver.handler.IBypassHandler;
-import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.model.buylist.ProductList;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ShopPreviewList;
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.xml.impl.BuyListData;
+import org.l2j.gameserver.handler.IBypassHandler;
+import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.buylist.ProductList;
+import org.l2j.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.network.serverpackets.ShopPreviewList;
 
 public class Wear implements IBypassHandler
 {

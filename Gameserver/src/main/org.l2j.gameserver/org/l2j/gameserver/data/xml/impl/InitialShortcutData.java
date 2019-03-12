@@ -18,7 +18,6 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.enums.MacroType;
 import org.l2j.gameserver.enums.ShortcutType;
-import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.model.Macro;
 import org.l2j.gameserver.model.MacroCmd;
 import org.l2j.gameserver.model.Shortcut;
@@ -26,6 +25,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
+import org.l2j.gameserver.util.IGameXmlReader;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -251,7 +251,7 @@ public final class InitialShortcutData implements IGameXmlReader {
         for (Shortcut shortcut : _initialGlobalShortcutList) {
             int shortcutId = shortcut.getId();
             switch (shortcut.getType()) {
-                case ShortcutType.ITEM: {
+                case ITEM: {
                     final L2ItemInstance item = player.getInventory().getItemByItemId(shortcutId);
                     if (item == null) {
                         continue;
@@ -259,13 +259,13 @@ public final class InitialShortcutData implements IGameXmlReader {
                     shortcutId = item.getObjectId();
                     break;
                 }
-                case ShortcutType.SKILL: {
+                case SKILL: {
                     if (!player.getSkills().containsKey(shortcutId)) {
                         continue;
                     }
                     break;
                 }
-                case ShortcutType.MACRO: {
+                case MACRO: {
                     final Macro macro = _macroPresets.get(shortcutId);
                     if (macro == null) {
                         continue;
@@ -286,7 +286,7 @@ public final class InitialShortcutData implements IGameXmlReader {
             for (Shortcut shortcut : _initialShortcutData.get(player.getClassId())) {
                 int shortcutId = shortcut.getId();
                 switch (shortcut.getType()) {
-                    case ShortcutType.ITEM: {
+                    case ITEM: {
                         final L2ItemInstance item = player.getInventory().getItemByItemId(shortcutId);
                         if (item == null) {
                             continue;
@@ -294,13 +294,13 @@ public final class InitialShortcutData implements IGameXmlReader {
                         shortcutId = item.getObjectId();
                         break;
                     }
-                    case ShortcutType.SKILL: {
+                    case SKILL: {
                         if (!player.getSkills().containsKey(shortcut.getId())) {
                             continue;
                         }
                         break;
                     }
-                    case ShortcutType.MACRO: {
+                    case MACRO: {
                         final Macro macro = _macroPresets.get(shortcutId);
                         if (macro == null) {
                             continue;

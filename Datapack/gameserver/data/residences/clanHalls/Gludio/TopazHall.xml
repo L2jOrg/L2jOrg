@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/clanHall.xsd">
+	<clanHall id="24" name="Topaz Hall" grade="GRADE_B" type="AUCTIONABLE">
+	 	<auction minBid="5000000" lease="500000" deposit="500000" />
+	 	<npcs>
+	 	   	<npc id="35389" /> <!-- Loring -->
+   			<npc id="35388" /> <!-- Tim -->
+	 	</npcs>
+	 	<doorlist>
+	 		<door id="19210013" />
+	 		<door id="19210014" />
+	 	</doorlist>
+	 	<ownerRestartPoint x="-13879" y="125413" z="-3128" />
+		<banishPoint x="-14192" y="125584" z="-3139" />
+	</clanHall>
+</list>

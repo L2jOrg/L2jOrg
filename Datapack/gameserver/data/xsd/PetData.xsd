@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="pets">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="pet" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="set" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="name" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:token">
+												<xs:enumeration value="evolve" />
+												<xs:enumeration value="food" />
+												<xs:enumeration value="hungry_limit" />
+												<xs:enumeration value="load" />
+												<xs:enumeration value="sync_level" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="val" type="xs:token" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="skills" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence minOccurs="1" maxOccurs="1">
+										<xs:element name="skill" minOccurs="1" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="minLvl" type="xs:positiveInteger" use="required" />
+												<xs:attribute name="skillId" type="xs:positiveInteger" use="required" />
+												<xs:attribute name="skillLvl" type="xs:integer" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="stats" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence minOccurs="1" maxOccurs="1">
+										<xs:element name="stat" minOccurs="1" maxOccurs="100">
+											<xs:complexType>
+												<xs:sequence minOccurs="1" maxOccurs="1">
+													<xs:element name="set" minOccurs="1" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:attribute name="name" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:token">
+																		<xs:enumeration value="attack_speed_on_ride" />
+																		<xs:enumeration value="consume_meal_in_battle" />
+																		<xs:enumeration value="consume_meal_in_battle_on_ride" />
+																		<xs:enumeration value="consume_meal_in_normal" />
+																		<xs:enumeration value="consume_meal_in_normal_on_ride" />
+																		<xs:enumeration value="exp" />
+																		<xs:enumeration value="get_exp_type" />
+																		<xs:enumeration value="mattack_on_ride" />
+																		<xs:enumeration value="max_hp_on_ride" />
+																		<xs:enumeration value="max_mp_on_ride" />
+																		<xs:enumeration value="max_meal" />
+																		<xs:enumeration value="org_hp" />
+																		<xs:enumeration value="org_hp_regen" />
+																		<xs:enumeration value="org_mattack" />
+																		<xs:enumeration value="org_mdefend" />
+																		<xs:enumeration value="org_mp" />
+																		<xs:enumeration value="org_mp_regen" />
+																		<xs:enumeration value="org_pattack" />
+																		<xs:enumeration value="org_pdefend" />
+																		<xs:enumeration value="pattack_on_ride" />
+																		<xs:enumeration value="soulshot_count" />
+																		<xs:enumeration value="speed_on_ride" />
+																		<xs:enumeration value="spiritshot_count" />
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="val" type="xs:token" use="required" />
+															<xs:attribute name="walk" type="xs:positiveInteger" />
+															<xs:attribute name="run" type="xs:positiveInteger" />
+															<xs:attribute name="slowSwim" type="xs:positiveInteger" />
+															<xs:attribute name="fastSwim" type="xs:positiveInteger" />
+															<xs:attribute name="slowFly" type="xs:positiveInteger" />
+															<xs:attribute name="fastFly" type="xs:positiveInteger" />
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="level" type="xs:positiveInteger" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="itemId" type="xs:integer" use="required" />
+						<xs:attribute name="index" type="xs:positiveInteger" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -48,9 +48,9 @@ public class ExpressionBuilder {
     }
 
     /**
-     * Add a {@link com.l2jmobius.gameserver.util.exp4j.Function} implementation available for use in the expression
+     * Add a {@link org.l2j.gameserver.util.exp4j.Function} implementation available for use in the expression
      *
-     * @param function the custom {@link com.l2jmobius.gameserver.util.exp4j.Function} implementation that should be available for use in the expression.
+     * @param function the custom {@link org.l2j.gameserver.util.exp4j.Function} implementation that should be available for use in the expression.
      * @return the ExpressionBuilder instance
      */
     public ExpressionBuilder function(Function function) {
@@ -59,9 +59,9 @@ public class ExpressionBuilder {
     }
 
     /**
-     * Add multiple {@link com.l2jmobius.gameserver.util.exp4j.Function} implementations available for use in the expression
+     * Add multiple {@link org.l2j.gameserver.util.exp4j.Function} implementations available for use in the expression
      *
-     * @param functions the custom {@link com.l2jmobius.gameserver.util.exp4j.Function} implementations
+     * @param functions the custom {@link org.l2j.gameserver.util.exp4j.Function} implementations
      * @return the ExpressionBuilder instance
      */
     public ExpressionBuilder functions(Function... functions) {
@@ -72,9 +72,9 @@ public class ExpressionBuilder {
     }
 
     /**
-     * Add multiple {@link com.l2jmobius.gameserver.util.exp4j.Function} implementations available for use in the expression
+     * Add multiple {@link org.l2j.gameserver.util.exp4j.Function} implementations available for use in the expression
      *
-     * @param functions A {@link List} of custom {@link com.l2jmobius.gameserver.util.exp4j.Function} implementations
+     * @param functions A {@link List} of custom {@link org.l2j.gameserver.util.exp4j.Function} implementations
      * @return the ExpressionBuilder instance
      */
     public ExpressionBuilder functions(List<Function> functions) {
@@ -123,9 +123,9 @@ public class ExpressionBuilder {
     }
 
     /**
-     * Add an {@link com.l2jmobius.gameserver.util.exp4j.Operator} which should be available for use in the expression
+     * Add an {@link org.l2j.gameserver.util.exp4j.Operator} which should be available for use in the expression
      *
-     * @param operator the custom {@link com.l2jmobius.gameserver.util.exp4j.Operator} to add
+     * @param operator the custom {@link org.l2j.gameserver.util.exp4j.Operator} to add
      * @return the ExpressionBuilder instance
      */
     public ExpressionBuilder operator(Operator operator) {
@@ -144,9 +144,9 @@ public class ExpressionBuilder {
     }
 
     /**
-     * Add multiple {@link com.l2jmobius.gameserver.util.exp4j.Operator} implementations which should be available for use in the expression
+     * Add multiple {@link org.l2j.gameserver.util.exp4j.Operator} implementations which should be available for use in the expression
      *
-     * @param operators the set of custom {@link com.l2jmobius.gameserver.util.exp4j.Operator} implementations to add
+     * @param operators the set of custom {@link org.l2j.gameserver.util.exp4j.Operator} implementations to add
      * @return the ExpressionBuilder instance
      */
     public ExpressionBuilder operator(Operator... operators) {
@@ -157,9 +157,9 @@ public class ExpressionBuilder {
     }
 
     /**
-     * Add multiple {@link com.l2jmobius.gameserver.util.exp4j.Operator} implementations which should be available for use in the expression
+     * Add multiple {@link org.l2j.gameserver.util.exp4j.Operator} implementations which should be available for use in the expression
      *
-     * @param operators the {@link List} of custom {@link com.l2jmobius.gameserver.util.exp4j.Operator} implementations to add
+     * @param operators the {@link List} of custom {@link org.l2j.gameserver.util.exp4j.Operator} implementations to add
      * @return the ExpressionBuilder instance
      */
     public ExpressionBuilder operator(List<Operator> operators) {

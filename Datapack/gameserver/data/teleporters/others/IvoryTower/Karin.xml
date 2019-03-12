@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="30162"> <!-- Karin -->	
+		<teleport type="NORMAL">
+			<location npcStringId="1010015" x="85289" y="16225" z="-3672" feeCount="0" /> <!-- 1st Floor Lobby -->
+			<location npcStringId="1010017" x="85336" y="16137" z="-2800" feeCount="0" /> <!-- 2nd Floor Human Wizard Guild -->
+			<location npcStringId="1010018" x="85336" y="16137" z="-2288" feeCount="0" /> <!-- 3rd Floor Elven Wizard Guild -->
+			<location npcStringId="1010019" x="85336" y="16137" z="-1768" feeCount="0" /> <!-- 4th Floor Dark Wizard Guild -->
+		</teleport>
+	</npc>
+</list>

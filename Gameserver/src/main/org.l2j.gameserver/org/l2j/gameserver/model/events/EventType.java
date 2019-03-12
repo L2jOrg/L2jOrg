@@ -20,11 +20,11 @@ import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.events.impl.OnDayNightChange;
 import org.l2j.gameserver.model.events.impl.ceremonyofchaos.OnCeremonyOfChaosMatchResult;
-import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.npc.*;
-import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.*;
+import org.l2j.gameserver.model.events.impl.character.*;
+import org.l2j.gameserver.model.events.impl.character.npc.*;
+import org.l2j.gameserver.model.events.impl.character.player.*;
 import org.l2j.gameserver.model.events.impl.clan.OnClanWarFinish;
 import org.l2j.gameserver.model.events.impl.clan.OnClanWarStart;
-import org.l2j.gameserver.mobius.gameserver.model.events.impl.instance.*;
 import org.l2j.gameserver.model.events.impl.instance.*;
 import org.l2j.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
@@ -32,15 +32,11 @@ import org.l2j.gameserver.model.events.impl.item.OnItemTalk;
 import org.l2j.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
 import org.l2j.gameserver.model.events.impl.server.OnPacketReceived;
 import org.l2j.gameserver.model.events.impl.server.OnPacketSent;
-import org.l2j.gameserver.mobius.gameserver.model.events.impl.sieges.*;
 import org.l2j.gameserver.model.events.impl.sieges.*;
 import org.l2j.gameserver.model.events.returns.ChatFilterReturn;
 import org.l2j.gameserver.model.events.returns.DamageReturn;
 import org.l2j.gameserver.model.events.returns.LocationReturn;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.model.events.impl.character.*;
-import org.l2j.gameserver.model.events.impl.character.npc.*;
-import org.l2j.gameserver.model.events.impl.character.player.*;
 
 /**
  * @author UnAfraid

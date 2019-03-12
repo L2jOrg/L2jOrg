@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Heros's Vestiges Arena -->
+<instance id="149" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
+	<doorlist>
+		<door id="17100201" />
+		<door id="17100202" />
+	</doorlist>
+	<spawnlist>
+		<group>
+			<npc id="36402" x="-89192" y="-239351" z="-8475" heading="0" />
+			<npc id="36402" x="-86998" y="-239351" z="-8475" heading="0" />
+		</group>
+	</spawnlist>
+</instance>

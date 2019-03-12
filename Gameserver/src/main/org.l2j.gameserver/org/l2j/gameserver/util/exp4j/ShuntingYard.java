@@ -29,7 +29,7 @@ public class ShuntingYard {
      * @param userOperators          the custom operators used
      * @param variableNames          the variable names used in the expression
      * @param implicitMultiplication set to fasle to turn off implicit multiplication
-     * @return a {@link com.l2jmobius.gameserver.util.exp4j.Token} array containing the result
+     * @return a {@link org.l2j.gameserver.util.exp4j.Token} array containing the result
      */
     public static Token[] convertToRPN(final String expression, final Map<String, Function> userFunctions, final Map<String, Operator> userOperators, final Set<String> variableNames, final boolean implicitMultiplication) {
         final Stack<Token> stack = new Stack<>();

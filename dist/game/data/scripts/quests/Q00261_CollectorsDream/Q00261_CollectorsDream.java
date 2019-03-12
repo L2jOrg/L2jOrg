@@ -16,15 +16,15 @@
  */
 package quests.Q00261_CollectorsDream;
 
-import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.model.quest.Quest;
-import org.l2j.gameserver.mobius.gameserver.model.quest.QuestState;
-import org.l2j.gameserver.mobius.gameserver.model.quest.State;
-import org.l2j.gameserver.mobius.gameserver.model.variables.PlayerVariables;
-import org.l2j.gameserver.mobius.gameserver.network.NpcStringId;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2j.gameserver.mobius.gameserver.util.Util;
+import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.quest.Quest;
+import org.l2j.gameserver.model.quest.QuestState;
+import org.l2j.gameserver.model.quest.State;
+import org.l2j.gameserver.model.variables.PlayerVariables;
+import org.l2j.gameserver.network.NpcStringId;
+import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2j.gameserver.util.Util;
 
 /**
  * Collector's Dream (261)

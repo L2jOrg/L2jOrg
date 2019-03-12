@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/cubics.xsd">
+	<cubic id="18" level="1" slot="14" duration="900" delay="10" maxCount="50" useUp="0" power="0.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="10083" level="1" triggerRate="67" successRate="30" target="MASTER" /> <!-- Basic Cubic Heal -->
+			<skill id="10082" level="1" triggerRate="33" successRate="30" target="MASTER" /> <!-- Strong Cubic Heal -->
+		</skills>
+	</cubic>
+	<cubic id="18" level="2" slot="14" duration="900" delay="10" maxCount="50" useUp="0" power="0.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="10083" level="2" triggerRate="67" successRate="30" target="MASTER" /> <!-- Basic Cubic Heal -->
+			<skill id="10082" level="2" triggerRate="33" successRate="30" target="MASTER" /> <!-- Strong Cubic Heal -->
+		</skills>
+	</cubic>
+	<cubic id="18" level="3" slot="14" duration="900" delay="10" maxCount="50" useUp="0" power="0.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="10083" level="3" triggerRate="67" successRate="30" target="MASTER" /> <!-- Basic Cubic Heal -->
+			<skill id="10082" level="3" triggerRate="33" successRate="30" target="MASTER" /> <!-- Strong Cubic Heal -->
+		</skills>
+	</cubic>
+	<cubic id="18" level="4" slot="14" duration="900" delay="10" maxCount="50" useUp="0" power="0.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="10083" level="4" triggerRate="67" successRate="30" target="MASTER" /> <!-- Basic Cubic Heal -->
+			<skill id="10082" level="4" triggerRate="33" successRate="30" target="MASTER" /> <!-- Strong Cubic Heal -->
+		</skills>
+	</cubic>
+	<cubic id="18" level="5" slot="14" duration="900" delay="10" maxCount="50" useUp="0" power="0.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="10083" level="5" triggerRate="67" successRate="30" target="MASTER" /> <!-- Basic Cubic Heal -->
+			<skill id="10082" level="5" triggerRate="33" successRate="30" target="MASTER" /> <!-- Strong Cubic Heal -->
+		</skills>
+	</cubic>
+	<cubic id="18" level="6" slot="14" duration="900" delay="10" maxCount="50" useUp="0" power="0.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="10083" level="6" triggerRate="67" successRate="30" target="MASTER" /> <!-- Basic Cubic Heal -->
+			<skill id="10082" level="6" triggerRate="33" successRate="30" target="MASTER" /> <!-- Strong Cubic Heal -->
+		</skills>
+	</cubic>
+	<cubic id="18" level="7" slot="14" duration="900" delay="10" maxCount="50" useUp="0" power="0.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="10083" level="7" triggerRate="67" successRate="30" target="MASTER" /> <!-- Basic Cubic Heal -->
+			<skill id="10082" level="7" triggerRate="33" successRate="30" target="MASTER" /> <!-- Strong Cubic Heal -->
+		</skills>
+	</cubic>
+</list>

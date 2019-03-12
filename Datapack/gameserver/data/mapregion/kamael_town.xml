@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Kamael Town -->
+	<region name="kamael_town" town="Soul Island" castle="5" locId="2189" bbs="13">
+		<respawnPoint X="-118092" Y="46955" Z="342" />
+		<respawnPoint X="-116739" Y="45949" Z="342" />
+		<respawnPoint X="-118087" Y="45021" Z="341" />
+		<respawnPoint X="-119401" Y="45949" Z="342" />
+		<respawnPoint X="-122237" Y="55073" Z="-1609" isChaotic="true" />
+		<respawnPoint X="-120736" Y="58526" Z="-2032" isChaotic="true" />
+		<respawnPoint X="-106674" Y="49527" Z="-1735" isChaotic="true" />
+		<respawnPoint X="-107156" Y="45055" Z="-1673" isChaotic="true" />
+		<respawnPoint X="-106104" Y="47189" Z="-1529" isChaotic="true" />
+		<map X="16" Y="19" />
+		<map X="16" Y="20" />
+		<map X="17" Y="19" />
+	</region>
+</list>

@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="15623" name="XP" type="EtcItem">
+		<!-- You acquire XP as a reward. -->
+		<set name="icon" val="icon.etc_exp_point_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="15624" name="SP" type="EtcItem">
+		<!-- You acquire SP as a reward. -->
+		<set name="icon" val="icon.etc_sp_point_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="15625" name="Unknown Reward" type="EtcItem">
+		<!-- Reward given if you fulfill certain conditions. -->
+		<set name="icon" val="icon.etc_question_mark_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="15626" name="Vitality" type="EtcItem">
+		<!-- You acquire Vitality points as a reward. -->
+		<set name="icon" val="icon.etc_vitality_point_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="15627" name="Clan Point" type="EtcItem">
+		<!-- You acquire clan points as a reward. -->
+		<set name="icon" val="icon.etc_bloodpledge_point_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="15628" name="Gamble Reward" type="EtcItem">
+		<!-- Reward based on a game of chance. -->
+		<set name="icon" val="icon.etc_quest_game_reward_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="15629" name="Random Reward" type="EtcItem">
+		<!-- Random reward given to player. -->
+		<set name="icon" val="icon.etc_quest_random_reward_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="15630" name="Flexible Reward" type="EtcItem">
+		<!-- Reward is chosen based on your performance. -->
+		<set name="icon" val="icon.etc_quest_account_reward_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="15631" name="Bonus Reward" type="EtcItem">
+		<!-- Little extra in addition to the current reward. -->
+		<set name="icon" val="icon.etc_quest_add_reward_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="15632" name="Subclass Reward" type="EtcItem">
+		<!-- Subclass authority was obtained. -->
+		<set name="icon" val="icon.etc_quest_subclass_reward_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="15633" name="PK Reduction" type="EtcItem">
+		<!-- The PK Count is decreased. -->
+		<set name="icon" val="icon.etc_quest_pkcount_reward_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+</list>

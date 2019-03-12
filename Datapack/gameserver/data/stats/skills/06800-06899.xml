@@ -1,0 +1,2486 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="6800" toLevel="1" name="Presentation - Yellow Portal Ray">
+		<!-- none -->
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6801" toLevel="1" name="Presentation - Yellow-Green Portal Ray">
+		<!-- none -->
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6802" toLevel="1" name="Presentation - SSQ2 General Purpose 6">
+		<!-- none -->
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<icon>icon.skill0922</icon>
+		<operateType>A2</operateType>
+		<effectPoint>679</effectPoint>
+		<abnormalType>HIDE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>86400</abnormalTime>
+		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6803" toLevel="1" name="Arena Haste">
+		<!-- High Five Skill -->
+		<!-- Arena Skill -->
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>624</effectPoint>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1086</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>33</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6804" toLevel="1" name="Arena Wind Walk">
+		<!-- High Five Skill -->
+		<!-- Arena Skill -->
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>SPEED_UP</abnormalType>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>624</effectPoint>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1204</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6805" toLevel="1" name="Arena Empower">
+		<!-- High Five Skill -->
+		<!-- Arena Skill -->
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MA_UP</abnormalType>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>624</effectPoint>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1059</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>75</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6806" toLevel="1" name="Arena Acumen">
+		<!-- High Five Skill -->
+		<!-- Arena Skill -->
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>CASTING_TIME_DOWN</abnormalType>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>624</effectPoint>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1085</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6807" toLevel="1" name="Arena Concentration">
+		<!-- High Five Skill -->
+		<!-- Arena Skill -->
+		<abnormalLvl>6</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>624</effectPoint>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1078</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ReduceCancel">
+				<amount>-53</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6808" toLevel="1" name="Arena Might">
+		<!-- High Five Skill -->
+		<!-- Arena Skill -->
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>624</effectPoint>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1068</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6809" toLevel="1" name="Arena Guidance">
+		<!-- High Five Skill -->
+		<!-- Arena Skill -->
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>HIT_UP</abnormalType>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>624</effectPoint>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1240</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Accuracy">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6810" toLevel="1" name="Arena Focus">
+		<!-- High Five Skill -->
+		<!-- Arena Skill -->
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>CRITICAL_PROB_UP</abnormalType>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>624</effectPoint>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1077</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6811" toLevel="1" name="Arena Death Whisper">
+		<!-- High Five Skill -->
+		<!-- Arena Skill -->
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>CRITICAL_DMG_UP</abnormalType>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>624</effectPoint>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1242</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6812" toLevel="1" name="Arena Berserker Spirit">
+		<!-- High Five Skill -->
+		<!-- Arena Skill -->
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>BERSERKER</abnormalType>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>624</effectPoint>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1062</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>-4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6813" toLevel="8" name="Sonic Focus">
+		<!-- High Five Skill -->
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">43</value>
+			<value level="3">49</value>
+			<value level="4">55</value>
+			<value level="5">60</value>
+			<value level="6">66</value>
+			<value level="7">70</value>
+			<value level="8">79</value>
+		</magicLvl>
+		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
+		<reuseDelay>10000</reuseDelay> <!-- FIXME: value unconfirmed -->
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUAL</item>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+			<condition name="OpEnergyMax">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+				</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="FocusMomentum">
+				<maxCharges>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+				</maxCharges>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6814" toLevel="8" name="Focus Force">
+		<!-- High Five Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>
+			<value level="1">24</value>
+			<value level="2">32</value>
+			<value level="3">40</value>
+			<value level="4">52</value>
+			<value level="5">60</value>
+			<value level="6">66</value>
+			<value level="7">72</value>
+			<value level="8">79</value>
+		</magicLvl>
+		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
+		<reuseDelay>10000</reuseDelay> <!-- FIXME: value unconfirmed -->
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+			<condition name="OpEnergyMax">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+				</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="FocusMomentum">
+				<maxCharges>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+				</maxCharges>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6815" toLevel="16" name="Deadly Poison">
+		<!-- "Poison seeps deeper and for 10 seconds, 800 HP is decreased every second. If not treated, the poison will worsen." -->
+		<operateType>A2</operateType>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<abnormalType>POISON</abnormalType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>
+			<value level="1">84</value>
+			<value level="2">85</value>
+			<value level="3">86</value>
+			<value level="4">87</value>
+			<value level="5">88</value>
+			<value level="6">89</value>
+			<value level="7">90</value>
+			<value level="8">91</value>
+			<value level="9">92</value>
+			<value level="10">93</value>
+			<value level="11">94</value>
+			<value level="12">95</value>
+			<value level="13">96</value>
+			<value level="14">97</value>
+			<value level="15">98</value>
+			<value level="16">99</value>
+		</magicLvl>
+		<abnormalLvl>10</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<trait>POISON</trait>
+		<icon>icon.skill6815</icon>
+		<isDebuff>true</isDebuff>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6816" toLevel="16" name="Deadly Bleed">
+		<!-- "Bleed becomes deeper and for 10 seconds, 800 HP is decreased every second. If not treated, the bleed will worsen." -->
+		<operateType>A2</operateType>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<abnormalType>BLEEDING</abnormalType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>
+			<value level="1">84</value>
+			<value level="2">85</value>
+			<value level="3">86</value>
+			<value level="4">87</value>
+			<value level="5">88</value>
+			<value level="6">89</value>
+			<value level="7">90</value>
+			<value level="8">91</value>
+			<value level="9">92</value>
+			<value level="10">93</value>
+			<value level="11">94</value>
+			<value level="12">95</value>
+			<value level="13">96</value>
+			<value level="14">97</value>
+			<value level="15">98</value>
+			<value level="16">99</value>
+		</magicLvl>
+		<abnormalLvl>10</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<trait>BLEED</trait>
+		<icon>icon.skill6816</icon>
+		<isDebuff>true</isDebuff>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6817" toLevel="1" name="Arena HP Recovery">
+		<!-- Arena Skill -->
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>562</effectPoint>
+		<effectRange>900</effectRange>
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealPercent">
+				<power>100</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6818" toLevel="1" name="Powerful Rage">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<effectPoint>1</effectPoint>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>85</magicLvl>
+		<mpConsume>75</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<affectRange>300</affectRange>
+		<targetType>SELF</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6819" toLevel="1" name="Banshee's Curse">
+		<!-- "For 15 seconds, Atk. Spd. is decreased by 20%." -->
+		<operateType>A2</operateType>
+		<effectPoint>-507</effectPoint>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<basicProperty>MAGIC</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1400</effectRange>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<affectRange>300</affectRange>
+		<icon>icon.skill4038</icon>
+		<hitTime>1500</hitTime>
+		<reuseDelay>15000</reuseDelay>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="6820" toLevel="1" name="P. Def. Enhance">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>1800</hitTime>
+		<magicLvl>85</magicLvl>
+		<mpConsume>30</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<affectRange>300</affectRange>
+		<targetType>SELF</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6821" toLevel="1" name="Decrease P. Def.">
+		<!-- "For 4 seconds, P. Def. decreases by 23%." -->
+		<abnormalTime>4</abnormalTime>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-347</effectPoint>
+		<icon>icon.skill0122</icon>
+		<operateType>A2</operateType>
+		<abnormalType>PD_DOWN</abnormalType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>300</effectRange>
+		<lvlBonusRate>4</lvlBonusRate>
+		<magicLvl>84</magicLvl>
+		<abnormalLvl>3</abnormalLvl>
+		<hitTime>1500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<isDebuff>true</isDebuff>
+		<castRange>140</castRange>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6822" toLevel="1" name="Decrease P. Def.">
+		<!-- "For 4 seconds, P. Def. decreases by 40%." -->
+		<operateType>A2</operateType>
+		<effectPoint>-347</effectPoint>
+		<abnormalType>PD_DOWN</abnormalType>
+		<basicProperty>MAGIC</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>300</effectRange>
+		<lvlBonusRate>4</lvlBonusRate>
+		<magicLvl>84</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>4</abnormalTime>
+		<icon>icon.skill0122</icon>
+		<hitTime>1500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<isDebuff>true</isDebuff>
+		<castRange>140</castRange>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6823" toLevel="1" name="Reflect Attack">
+		<!-- none -->
+		<operateType>A2</operateType>
+		<effectPoint>438</effectPoint>
+		<abnormalType>DMG_SHIELD</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<icon>icon.skill0086</icon>
+		<hitTime>4000</hitTime>
+		<reuseDelay>4000</reuseDelay>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6824" toLevel="1" name="Piercing Storm">
+		<!-- none -->
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<effectPoint>-10000</effectPoint>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>600</effectRange>
+		<magicLvl>84</magicLvl>
+		<affectRange>200</affectRange>
+		<hitTime>3000</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<isMagic>1</isMagic>
+		<castRange>300</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="6825" toLevel="2" name="Bleed">
+		<!-- "For 8 seconds, inflicts bleed and decreases 120 HP every second." -->
+		<abnormalTime>8</abnormalTime>
+		<activateRate>100</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<effectPoint>-10000</effectPoint>
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<abnormalType>BLEEDING</abnormalType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>600</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>84</magicLvl>
+		<abnormalLvl>9</abnormalLvl>
+		<affectRange>200</affectRange>
+		<hitTime>3000</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<castRange>300</castRange>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="6826" toLevel="1" name="Critical Blow">
+		<!-- none -->
+		<effectPoint>-10000</effectPoint>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>150</effectRange>
+		<magicLvl>84</magicLvl>
+		<hitTime>2000</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<castRange>40</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6827" toLevel="1" name="Petrify">
+		<!-- "Inflicted with petrification, the body is rigid like stone for 30 seconds." -->
+		<abnormalTime>3</abnormalTime>
+		<activateRate>80</activateRate>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<icon>icon.skill4111</icon>
+		<operateType>A2</operateType>
+		<abnormalType>TURN_STONE</abnormalType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>600</effectRange>
+		<magicLvl>84</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<hitTime>2500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<isDebuff>true</isDebuff>
+		<castRange>300</castRange>
+		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6828" toLevel="1" name="Dust Storm">
+		<!-- "For 30 seconds, Atk. Spd. is decreased by 50% and Casting Spd. is decreased by 50%." -->
+		<abnormalTime>10</abnormalTime>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-10000</effectPoint>
+		<icon>icon.skill1386</icon>
+		<operateType>A2</operateType>
+		<abnormalType>CASTING_TIME_UP</abnormalType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1200</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>84</magicLvl>
+		<abnormalLvl>3</abnormalLvl>
+		<affectRange>1000</affectRange>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="6829" toLevel="1" name="Vampiric Attack">
+		<!-- none -->
+		<effectPoint>-655</effectPoint>
+		<icon>icon.skill1234</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1200</effectRange>
+		<magicLvl>84</magicLvl>
+		<hitTime>1500</hitTime>
+		<reuseDelay>1500</reuseDelay>
+		<isMagic>1</isMagic>
+		<castRange>800</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6830" toLevel="1" name="Bleed">
+		<!-- "For 5 seconds, inflicts bleed and decreases 100 HP every second. Decreases the effect of recovery magic by 600." -->
+		<abnormalTime>5</abnormalTime>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>-10000</effectPoint>
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<abnormalType>BLEEDING</abnormalType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1200</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>84</magicLvl>
+		<abnormalLvl>9</abnormalLvl>
+		<affectRange>200</affectRange>
+		<hitTime>3000</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<castRange>800</castRange>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="6831" toLevel="1" name="Blood Burst">
+		<!-- none -->
+		<effectPoint>-10000</effectPoint>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>600</effectRange>
+		<magicLvl>84</magicLvl>
+		<affectRange>200</affectRange>
+		<hitTime>2500</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<isMagic>1</isMagic>
+		<castRange>300</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="6832" toLevel="1" name="Summon Parasitic Leech">
+		<!-- none -->
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>84</magicLvl>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6833" toLevel="1" name="Power Strike">
+		<!-- none -->
+		<effectPoint>-10000</effectPoint>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>150</effectRange>
+		<magicLvl>84</magicLvl>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<castRange>40</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6834" toLevel="1" name="Range Magic Attack">
+		<!-- none -->
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<effectPoint>-10000</effectPoint>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1200</effectRange>
+		<magicLvl>84</magicLvl>
+		<affectRange>1000</affectRange>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic>
+		<castRange>900</castRange>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="6835" toLevel="1" name="Summon Skeleton">
+		<!-- none -->
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>84</magicLvl>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6836" toLevel="1" name="Silence">
+		<!-- Magic skills are blocked. -->
+		<abnormalTime>5</abnormalTime>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-10000</effectPoint>
+		<icon>icon.skill1064</icon>
+		<operateType>A2</operateType>
+		<abnormalType>SILENCE</abnormalType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1500</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<trait>DERANGEMENT</trait>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<castRange>1000</castRange>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6837" toLevel="1" name="Range Magic Attack">
+		<!-- none -->
+		<effectPoint>-10000</effectPoint>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1200</effectRange>
+		<magicLvl>85</magicLvl>
+		<affectRange>1000</affectRange>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic>
+		<castRange>900</castRange>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="6838" toLevel="1" name="Self-destruction">
+		<!-- none -->
+		<operateType>A1</operateType>
+		<effectPoint>-10000</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>800</effectRange>
+		<magicLvl>85</magicLvl>
+		<affectRange>200</affectRange>
+		<hitTime>4000</hitTime>
+		<castRange>600</castRange>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="6839" toLevel="2" name="Power Attack">
+		<!-- none -->
+		<effectPoint>-10000</effectPoint>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>400</effectRange>
+		<magicLvl>85</magicLvl>
+		<hitTime>2500</hitTime>
+		<castRange>40</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6840" toLevel="1" name="Paralysis">
+		<!-- Temporarily inflicted with paralysis and cannot move. -->
+		<abnormalTime>30</abnormalTime>
+		<activateRate>50</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<icon>icon.skill1170</icon>
+		<operateType>A2</operateType>
+		<abnormalType>PARALYZE</abnormalType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>300</effectRange>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<trait>PARALYZE</trait>
+		<affectRange>300</affectRange>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<castRange>150</castRange>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="6841" toLevel="1" name="Summon Subordinate">
+		<!-- none -->
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>84</magicLvl>
+		<hitTime>5000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6842" toLevel="2" name="Enhance">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>CASTING_TIME_UP</abnormalType>
+		<affectRange>600</affectRange>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<effectPoint>100</effectPoint>
+		<hitTime>3000</hitTime>
+		<icon>icon.skill1086</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>85</magicLvl>
+		<mpConsume>75</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>MAGIC</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<lvlBonusRate>2</lvlBonusRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">12</value>
+					<value level="2">0</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">40</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6843" toLevel="1" name="Enhance">
+		<!-- Atk. Spd. is increased by 33%. -->
+		<operateType>A2</operateType>
+		<abnormalType>CASTING_TIME_UP</abnormalType>
+		<basicProperty>MAGIC</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<lvlBonusRate>2</lvlBonusRate>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<icon>icon.skill1086</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6844" toLevel="1" name="Power Strike">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<affectLimit>5-15</affectLimit>
+		<castRange>300</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>500</effectRange>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>3000</hitTime>
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<fanRange>0;0;300;60</fanRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6845" toLevel="1" name="Power Strike">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>40</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>400</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2500</hitTime>
+		<magicLvl>80</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>3000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6846" toLevel="1" name="Vampiric Claw">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>800</castRange>
+		<effectRange>1200</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>81</magicLvl>
+		<mpConsume>123</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<effectPoint>-10000</effectPoint>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpDrain">
+				<power>300</power>
+				<percentage>100</percentage>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6847" toLevel="1" name="Self Heal">
+		<!-- none -->
+		<operateType>A1</operateType>
+		<effectPoint>546</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>81</magicLvl>
+		<hitTime>5000</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6848" toLevel="1" name="Summoner Appearance">
+		<!-- none -->
+		<operateType>A1</operateType>
+		<effectPoint>546</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>81</magicLvl>
+		<hitTime>5000</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6849" toLevel="1" name="Summoner Strike">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>120</attributeValue>
+		<hitTime>3000</hitTime>
+		<magicLvl>82</magicLvl>
+		<mpConsume>100</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<effectPoint>-10000</effectPoint>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>3000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6850" toLevel="1" name="Self-destruction">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<affectRange>200</affectRange>
+		<effectPoint>-10000</effectPoint>
+		<hitTime>3000</hitTime>
+		<magicLvl>81</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>800</effectRange>
+		<castRange>600</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>3000</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6851" toLevel="1" name="Power Strike">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>40</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>400</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>3000</hitTime>
+		<magicLvl>81</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>3000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6852" toLevel="1" name="Magic Strike">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>600</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>1100</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>81</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>100</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6853" toLevel="1" name="Sleep">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>6</abnormalTime>
+		<abnormalType>SLEEP</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<castRange>600</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>3000</hitTime>
+		<icon>icon.skill1069</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>82</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A2</operateType>
+		<removedOnDamage>true</removedOnDamage>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SLEEP</trait>
+		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="6854" toLevel="1" name="Hold">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<activateRate>50</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>3000</hitTime>
+		<icon>icon.skill4047</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>82</magicLvl>
+		<mpConsume>73</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>HOLD</trait>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Root" />
+		</effects>
+	</skill>
+	<skill id="6855" toLevel="1" name="Magic Strike">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>600</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>1100</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>82</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>150</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6856" toLevel="1" name="Heal">
+		<!-- none -->
+		<operateType>A1</operateType>
+		<effectPoint>546</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>900</effectRange>
+		<magicLvl>82</magicLvl>
+		<hitTime>2500</hitTime>
+		<reuseDelay>30000</reuseDelay>
+		<isMagic>1</isMagic>
+		<castRange>400</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6857" toLevel="1" name="Power Strike">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>80</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>400</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>120</attributeValue>
+		<hitTime>2500</hitTime>
+		<magicLvl>83</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6858" toLevel="1" name="Summon">
+		<!-- none -->
+		<operateType>A1</operateType>
+		<effectPoint>546</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>81</magicLvl>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6859" toLevel="1" name="Power Strike">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>80</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>400</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>120</attributeValue>
+		<hitTime>2500</hitTime>
+		<magicLvl>83</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6860" toLevel="1" name="Power Strike">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>80</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>400</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>120</attributeValue>
+		<hitTime>2000</hitTime>
+		<magicLvl>83</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6861" toLevel="1" name="Enhance">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>CASTING_TIME_UP</abnormalType>
+		<affectRange>600</affectRange>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<icon>icon.skill1086</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>85</magicLvl>
+		<mpConsume>75</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>MAGIC</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<effectRange>900</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<castRange>600</castRange>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6862" toLevel="1" name="Poison">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>6</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>70</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>100</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill0129</icon>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>83</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>POISON</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>100</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6863" toLevel="1" name="Poison">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<abnormalLvl>10</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>150</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>300</effectRange>
+		<hitTime>3000</hitTime>
+		<icon>icon.skill0129</icon>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>83</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<affectRange>600</affectRange>
+		<trait>POISON</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="DamOverTime">
+				<power>120</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6864" toLevel="1" name="Summon">
+		<!-- none -->
+		<operateType>A1</operateType>
+		<effectPoint>546</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>81</magicLvl>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6865" toLevel="1" name="Poison">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>8</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<castRange>100</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>2500</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>83</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<effectPoint>-10000</effectPoint>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<icon>icon.skill0129</icon>
+		<trait>POISON</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>100</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6866" toLevel="1" name="Vampiric Claw">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>800</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>800</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>83</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpDrain">
+				<power>200</power>
+				<percentage>100</percentage>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6867" toLevel="1" name="Magic Strike">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>900</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>1400</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>83</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<affectRange>1000</affectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>150</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6868" toLevel="1" name="Summon">
+		<!-- none -->
+		<operateType>A1</operateType>
+		<effectPoint>546</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>83</magicLvl>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6869" toLevel="1" name="Detonate">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<castRange>900</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>1400</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isSuicideAttack>true</isSuicideAttack>
+		<magicLvl>83</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<affectRange>1000</affectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>300</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6870" toLevel="1" name="Vampiric Claw">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>800</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>800</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>83</magicLvl>
+		<mpConsume>123</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpDrain">
+				<power>100</power>
+				<percentage>100</percentage>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6871" toLevel="1" name="Range Magic Attack">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<affectRange>200</affectRange>
+		<castRange>150</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>300</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>83</magicLvl>
+		<mpConsume>122</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>100</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6872" toLevel="1" name="Self-destruction">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<affectRange>200</affectRange>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<effectPoint>-10000</effectPoint>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>5000</hitTime>
+		<isSuicideAttack>true</isSuicideAttack>
+		<magicLvl>83</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>800</effectRange>
+		<castRange>600</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>300</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6873" toLevel="2" name="Hex">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<abnormalLvl>
+			<value level="1">3</value>
+			<value level="2">4</value>
+		</abnormalLvl>
+		<abnormalTime>4</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>150</castRange>
+		<effectPoint>-299</effectPoint>
+		<effectRange>300</effectRange>
+		<hitTime>1500</hitTime>
+		<icon>icon.skill0122</icon>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>83</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>2000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">-23</value>
+					<value level="2">-33</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6874" toLevel="1" name="Range Magic Attack">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<affectRange>200</affectRange>
+		<effectPoint>-10000</effectPoint>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>83</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>600</effectRange>
+		<castRange>300</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>150</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6875" toLevel="2" name="Poison">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<abnormalLvl>10</abnormalLvl>
+		<abnormalTime>8</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>300</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill0129</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>83</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<lvlBonusRate>2</lvlBonusRate>
+		<affectRange>200</affectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="DamOverTime">
+				<power>
+					<value level="1">120</value>
+					<value level="2">140</value>
+				</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6876" toLevel="1" name="Power Strike">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>80</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>400</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2000</hitTime>
+		<magicLvl>83</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6877" toLevel="1" name="Power Strike">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>80</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>400</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2000</hitTime>
+		<magicLvl>83</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6878" toLevel="1" name="Paralysis">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<activateRate>30</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>80</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>300</effectRange>
+		<hitTime>6000</hitTime>
+		<icon>icon.skill1170</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>85</magicLvl>
+		<mpConsume>78</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<affectRange>800</affectRange>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<trait>PARALYZE</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="6879" toLevel="1" name="Vampiric Claw">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>300</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>500</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>83</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpDrain">
+				<power>100</power>
+				<percentage>100</percentage>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6880" toLevel="1" name="Silence">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>SILENCE</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>300</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>500</effectRange>
+		<hitTime>3000</hitTime>
+		<icon>icon.skill1064</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>85</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>4000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<trait>DERANGEMENT</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mute" />
+		</effects>
+	</skill>
+	<skill id="6881" toLevel="1" name="Critical Blow">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>40</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>300</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2500</hitTime>
+		<magicLvl>84</magicLvl>
+		<mpConsume>89</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6882" toLevel="1" name="Petrify">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>TURN_STONE</abnormalType>
+		<castRange>40</castRange>
+		<effectRange>300</effectRange>
+		<hitTime>2500</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>84</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<rideState>NONE</rideState>
+		<effectPoint>-100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<icon>icon.skill4111</icon>
+		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="6884" toLevel="1" name="Morale Boost">
+		<!-- none -->
+		<abnormalTime>60</abnormalTime>
+		<activateRate>80</activateRate>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<effectPoint>-100</effectPoint>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>2000</effectRange>
+		<magicLvl>80</magicLvl>
+		<castRange>1600</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6885" toLevel="3" name="Morale Boost">
+		<!-- "The persistence of the brave who fight together in Dragon Valley receive resistance to Paralysis/Bleed/Poison/Stun +90, Critical Rate +50%, Critical Damage +15%, P. Atk. +15%, M. Atk. +15%, Atk. Spd. +15%, Casting Spd. +15%, and EXP bonus +20%." -->
+		<!-- High Five Skill -->
+		<abnormalTime>60</abnormalTime>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<effectPoint>100</effectPoint>
+		<icon>icon.skill6885</icon>
+		<magicLvl>85</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<abnormalType>MORALE_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>2000</effectRange>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<affectRange>1600</affectRange>
+		<isMagic>4</isMagic>
+		<castRange>1600</castRange>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<targetType>TARGET</targetType>
+		<affectScope>PARTY</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<PARALYZE>
+					<value level="1">50</value>
+					<value level="2">80</value>
+					<value level="3">90</value>
+				</PARALYZE>
+				<POISON>
+					<value level="1">50</value>
+					<value level="2">80</value>
+					<value level="3">90</value>
+				</POISON>
+				<BLEED>
+					<value level="1">50</value>
+					<value level="2">80</value>
+					<value level="3">90</value>
+				</BLEED>
+				<SHOCK>
+					<value level="1">50</value>
+					<value level="2">80</value>
+					<value level="3">90</value>
+				</SHOCK>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">15</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">15</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">30</value>
+					<value level="3">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6886" toLevel="1" name="Full Recovery">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<hitTime>2500</hitTime>
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>900000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealPercent">
+				<power>100</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6887" toLevel="1" name="Fatal Strike">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>100</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>3000</hitTime>
+		<magicLvl>85</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6888" toLevel="1" name="Fatal Shot">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>2000</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>2000</effectRange>
+		<hitTime>3000</hitTime>
+		<magicLvl>85</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<affectRange>300</affectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6889" toLevel="1" name="Range Attack">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>40</castRange>
+		<effectRange>100</effectRange>
+		<hitTime>2000</hitTime>
+		<magicLvl>85</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<effectPoint>-10000</effectPoint>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<fanRange>0;0;300;60</fanRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6890" toLevel="1" name="Bleed">
+		<!-- "For 10 seconds, inflicts bleed and decreases 100 HP every second." -->
+		<operateType>A2</operateType>
+		<effectPoint>-10000</effectPoint>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<abnormalType>BLEEDING</abnormalType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>600</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>84</magicLvl>
+		<abnormalLvl>10</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<icon>icon.skill0096</icon>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<castRange>300</castRange>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6891" toLevel="1" name="Power Attack">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>200</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>2000</hitTime>
+		<magicLvl>84</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<attributeType>DARK</attributeType>
+		<attributeValue>120</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6892" toLevel="1" name="Power Shot">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>2000</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>2000</effectRange>
+		<hitTime>3000</hitTime>
+		<magicLvl>84</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<attributeType>DARK</attributeType>
+		<attributeValue>120</attributeValue>
+		<affectRange>300</affectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6893" toLevel="1" name="Power Attack">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>200</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>2000</hitTime>
+		<magicLvl>84</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<attributeType>EARTH</attributeType>
+		<attributeValue>120</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6894" toLevel="1" name="Power Shot">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>2000</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>2000</effectRange>
+		<hitTime>3000</hitTime>
+		<magicLvl>84</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<attributeType>EARTH</attributeType>
+		<attributeValue>120</attributeValue>
+		<affectRange>300</affectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6895" toLevel="1" name="Power Attack">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>200</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>2000</hitTime>
+		<magicLvl>84</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<attributeType>EARTH</attributeType>
+		<attributeValue>120</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6896" toLevel="1" name="Power Shot">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<castRange>2000</castRange>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>2000</effectRange>
+		<hitTime>3000</hitTime>
+		<magicLvl>84</magicLvl>
+		<mpConsume>80</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<attributeType>EARTH</attributeType>
+		<attributeValue>120</attributeValue>
+		<affectRange>300</affectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15000</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6897" toLevel="12" name="Stun">
+		<!-- Temporarily in shock and unable to move. -->
+		<operateType>A2</operateType>
+		<effectPoint>-100</effectPoint>
+		<abnormalType>STUN</abnormalType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<lvlBonusRate>1</lvlBonusRate>
+		<activateRate>30</activateRate>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<trait>SHOCK</trait>
+		<affectRange>150</affectRange>
+		<icon>icon.skill0100</icon>
+		<hitTime>1000</hitTime>
+		<coolTime>800</coolTime>
+		<isDebuff>true</isDebuff>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="6898" toLevel="1" name="Raid Boss (Lv. 84)">
+		<!-- High Five Skill -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="6899" toLevel="1" name="Raid Boss (Lv. 84)">
+		<!-- High Five Skill -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+</list>

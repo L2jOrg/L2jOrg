@@ -1,0 +1,14 @@
+<html><body>
+<font color="LEVEL">You can create up to %max_schemes% schemes.</font> Is it clear for you?<br1>
+If not, read until you get it! I can't afford idiots...<br>
+You can register a new scheme filling this form, here!
+<center><table width=220>
+	<tr>
+		<td width="140"><edit var="name" width=140 height=15></td>
+		<td width="60"><button value="Create" action="bypass -h npc_%objectId%_createscheme $name" width=75 height=21 back="L2UI_ch3.Btn1_normalOn" fore="L2UI_ch3.Btn1_normal"></td>
+	</tr>
+</table></center><br>
+Here are listed your schemes and their fee.<br>
+%schemes%<br>
+<Button ALIGN=LEFT ICON="RETURN" action="bypass -h npc_%objectId%_menu">Back</Button>
+</body></html>

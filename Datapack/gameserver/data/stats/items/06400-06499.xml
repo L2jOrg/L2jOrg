@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="6400" name="Hyena Crest" type="EtcItem">
+		<!-- The crest indicating that its bearer's event collector is hyena. Without this badge, one cannot prove one's grade. \0 -->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6401" name="Fox Crest" type="EtcItem">
+		<!-- The crest indicating that its bearer's event collector is fox. Without this badge, one cannot prove one's grade. \0 -->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6402" name="Wolf Crest" type="EtcItem">
+		<!-- The crest indicating that its bearer's event collector is wolf. Without this badge, one cannot prove one's grade. \0 -->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6403" name="Star Shard" type="EtcItem">
+		<!-- Starlight Festival Event - Gift from the sky. When it is thrown, it creates a small explosion. Can be used as an ingredient to make other types of fireworks. -->
+		<set name="icon" val="icon.etc_fairy_fire_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2023" level="1" /> <!-- Star Shard -->
+		</skills>
+	</item>
+	<item id="6404" name="Boomboom Powder" type="EtcItem">
+		<!-- Starlight Festival Event - Black powder. Ingredient used to make larger fireworks. -->
+		<set name="icon" val="icon.etc_powder_black_i00" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6405" name="Magnesium" type="EtcItem">
+		<!-- Starlight Festival Event - Chemical compound that generates a powerful flash when ignited. It is needed to make large fireworks. -->
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6406" name="Firecracker" type="EtcItem">
+		<!-- Explosive device that brilliantly lights up the sky. -->
+		<set name="icon" val="icon.etc_small_ultra_bomb_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_coc_restricted" val="true" />
+		<skills>
+			<skill id="2024" level="1" /> <!-- Firecracker -->
+		</skills>
+	</item>
+	<item id="6407" name="Large Firecracker" type="EtcItem">
+		<!-- Large explosive device that ignites to light up the sky. -->
+		<set name="icon" val="icon.etc_ultra_bomb_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2025" level="1" /> <!-- Large Firecracker -->
+		</skills>
+	</item>
+	<item id="6408" name="Formal Wear" type="Armor">
+		<!-- Tuxedo for male characters, and a wedding dress for female characters. Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. -->
+		<set name="icon" val="icon.armor_t2000_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="price" val="5000000" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+	</item>
+</list>

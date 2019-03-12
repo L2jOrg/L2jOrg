@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- No Drop Item Zones -->
+	<!-- Steel's Star B Tower -->
+	<zone name="b_tower_bascule_bridge" type="ConditionZone" shape="NPoly" minZ="10956" maxZ="11956">
+		<stat name="NoItemDrop" val="true" />
+		<node X="17887" Y="244199" />
+		<node X="20797" Y="243918" />
+		<node X="20808" Y="244101" />
+		<node X="17900" Y="244403" />
+	</zone>
+	<!-- Underground Coliseum -->
+	<zone name="kerthang_area1" type="ConditionZone" shape="NPoly" minZ="-11624" maxZ="-11224">
+		<stat name="NoItemDrop" val="true" />
+		<node X="-85850" Y="-45960" />
+		<node X="-86761" Y="-45935" />
+		<node X="-87000" Y="-46986" />
+		<node X="-87535" Y="-48793" />
+		<node X="-87049" Y="-49419" />
+		<node X="-85458" Y="-49051" />
+		<node X="-84224" Y="-49803" />
+		<node X="-83446" Y="-49477" />
+		<node X="-83154" Y="-47528" />
+		<node X="-83863" Y="-47202" />
+		<node X="-84291" Y="-47449" />
+		<node X="-84711" Y="-47094" />
+	</zone>
+	<zone name="kerthang_area2" type="ConditionZone" shape="NPoly" minZ="-11620" maxZ="-11220">
+		<stat name="NoItemDrop" val="true" />
+		<node X="-84112" Y="-50103" />
+		<node X="-84830" Y="-51342" />
+		<node X="-86142" Y="-51844" />
+		<node X="-86553" Y="-52634" />
+		<node X="-85640" Y="-53190" />
+		<node X="-84380" Y="-54211" />
+		<node X="-83379" Y="-54413" />
+		<node X="-82972" Y="-52054" />
+		<node X="-81938" Y="-51822" />
+		<node X="-82193" Y="-50685" />
+		<node X="-82732" Y="-50575" />
+		<node X="-83454" Y="-49986" />
+	</zone>
+	<zone name="kerthang_area3" type="ConditionZone" shape="NPoly" minZ="-11716" maxZ="-11316">
+		<stat name="NoItemDrop" val="true" />
+		<node X="-79843" Y="-49874" />
+		<node X="-81401" Y="-50399" />
+		<node X="-81709" Y="-51148" />
+		<node X="-81639" Y="-51704" />
+		<node X="-80712" Y="-52824" />
+		<node X="-80414" Y="-54463" />
+		<node X="-79510" Y="-54322" />
+		<node X="-78717" Y="-52952" />
+		<node X="-77725" Y="-52968" />
+		<node X="-77416" Y="-51996" />
+		<node X="-78890" Y="-51583" />
+		<node X="-79378" Y="-50568" />
+	</zone>
+	<zone name="kerthang_area4" type="ConditionZone" shape="NPoly" minZ="-11592" maxZ="-11192">
+		<stat name="NoItemDrop" val="true" />
+		<node X="-79343" Y="-47478" />
+		<node X="-80117" Y="-47109" />
+		<node X="-80672" Y="-47858" />
+		<node X="-80382" Y="-49156" />
+		<node X="-79813" Y="-49685" />
+		<node X="-79130" Y="-49730" />
+		<node X="-77951" Y="-49052" />
+		<node X="-76485" Y="-49456" />
+		<node X="-76221" Y="-48619" />
+		<node X="-76710" Y="-48032" />
+		<node X="-76946" Y="-46451" />
+		<node X="-77668" Y="-45794" />
+	</zone>
+	<zone name="kerthang_area5" type="ConditionZone" shape="NPoly" minZ="-11640" maxZ="-11240">
+		<stat name="NoItemDrop" val="true" />
+		<node X="-82326" Y="-43857" />
+		<node X="-83361" Y="-43681" />
+		<node X="-83614" Y="-44430" />
+		<node X="-82884" Y="-46072" />
+		<node X="-83209" Y="-47165" />
+		<node X="-82621" Y="-47718" />
+		<node X="-81071" Y="-47576" />
+		<node X="-80636" Y="-47169" />
+		<node X="-80853" Y="-46291" />
+		<node X="-79968" Y="-44123" />
+		<node X="-80245" Y="-43614" />
+		<node X="-81544" Y="-43878" />
+	</zone>
+	<!-- Fantasy Island (Handy's Block Checker) -->
+	<zone name="18_16_etc08_nodrop" type="ConditionZone" shape="NPoly" minZ="-2425" maxZ="-2225">
+		<stat name="NoItemDrop" val="true" />
+		<node X="-58571" Y="-64074" />
+		<node X="-56368" Y="-64071" />
+		<node X="-56370" Y="-61896" />
+		<node X="-58565" Y="-61904" />
+	</zone>
+</list>

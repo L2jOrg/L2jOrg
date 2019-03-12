@@ -1,0 +1,1493 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="55600" toLevel="1" name="Blessed Support Cube">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55601" toLevel="1" name="Party Support Cube - Lv. 2">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55602" toLevel="1" name="Fishing Support Cube">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55603" toLevel="1" name="Potion Support Cube - Lv. 2">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55604" toLevel="1" name="Progression Support Cube">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55605" toLevel="1" name="Artisan's Goggles (STR+1 INT+1)">
+		<icon>icon.skill55605</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55606" toLevel="1" name="Artisan's Goggles (DEX +1 WIT +1)">
+		<icon>icon.skill55606</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55607" toLevel="1" name="Artisan's Goggles (CON+1 MEN+1)">
+		<icon>icon.skill55607</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55608" toLevel="1" name="Uniform Hat (STR+1 INT+1)">
+		<icon>icon.skill55608</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55609" toLevel="1" name="Uniform Hat (DEX +1 WIT +1)">
+		<icon>icon.skill55609</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55610" toLevel="1" name="Uniform Hat (CON+1 MEN+1)">
+		<icon>icon.skill55610</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55611" toLevel="1" name="Assassin's Bamboo Hat (STR+1 INT+1)">
+		<icon>icon.skill55611</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55612" toLevel="1" name="Assassin's Bamboo Hat (DEX +1 WIT +1)">
+		<icon>icon.skill55612</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55613" toLevel="1" name="Assassin's Bamboo Hat (CON+1 MEN+1)">
+		<icon>icon.skill55613</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55614" toLevel="1" name="Valkyrie Hat (STR+1 INT+1)">
+		<icon>icon.skill55614</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55615" toLevel="1" name="Valkyrie Hat (DEX +1 WIT +1)">
+		<icon>icon.skill55615</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55616" toLevel="1" name="Valkyrie Hat (CON+1 MEN+1)">
+		<icon>icon.skill55616</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55617" toLevel="1" name="Gatekeeper Hat (STR+1 INT+1)">
+		<icon>icon.skill55617</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55618" toLevel="1" name="Gatekeeper Hat (DEX +1 WIT +1)">
+		<icon>icon.skill55618</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55619" toLevel="1" name="Gatekeeper Hat (CON+1 MEN+1)">
+		<icon>icon.skill55619</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55620" toLevel="1" name="Wedding Veil (STR+1 INT+1)">
+		<icon>icon.skill55620</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55621" toLevel="1" name="Wedding Veil (DEX +1 WIT +1)">
+		<icon>icon.skill55621</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55622" toLevel="1" name="Wedding Veil (CON+1 MEN+1)">
+		<icon>icon.skill55622</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55623" toLevel="1" name="Maid Hair Accessory (STR+1 INT+1)">
+		<icon>icon.skill55623</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55624" toLevel="1" name="Maid Hair Accessory (DEX +1 WIT +1)">
+		<icon>icon.skill55624</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55625" toLevel="1" name="Maid Hair Accessory (CON+1 MEN+1)">
+		<icon>icon.skill55625</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55626" toLevel="1" name="Refined Romantic Chapeau: Red (STR+1 INT+1)">
+		<icon>icon.skill55626</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55627" toLevel="1" name="Refined Romantic Chapeau: Red (DEX+1 WIT+1)">
+		<icon>icon.skill55627</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55628" toLevel="1" name="Refined Romantic Chapeau: Red (CON+1 MEN+1)">
+		<icon>icon.skill55628</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55629" toLevel="1" name="Refined Angel Ring (STR+1 INT+1)">
+		<icon>icon.skill55629</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55630" toLevel="1" name="Refined Angel Ring (DEX +1 WIT +1)">
+		<icon>icon.skill55630</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55631" toLevel="1" name="Refined Angel Ring (CON+1 MEN+1)">
+		<icon>icon.skill55631</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55632" toLevel="1" name="Refined Wizard Hat (STR+1 INT+1)">
+		<icon>icon.skill55632</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55633" toLevel="1" name="Refined Wizard Hat (DEX +1 WIT +1)">
+		<icon>icon.skill55633</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55634" toLevel="1" name="Refined Wizard Hat (CON+1 MEN+1)">
+		<icon>icon.skill55634</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55635" toLevel="1" name="Laborer Hat (STR+1 INT+1)">
+		<icon>icon.skill55635</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55636" toLevel="1" name="Laborer Hat (DEX +1 WIT +1)">
+		<icon>icon.skill55636</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55637" toLevel="1" name="Laborer Hat (CON+1 MEN+1)">
+		<icon>icon.skill55637</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55638" toLevel="1" name="Top Hat (STR+1 INT+1)">
+		<icon>icon.skill55638</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55639" toLevel="1" name="Top Hat (DEX +1 WIT +1)">
+		<icon>icon.skill55639</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55640" toLevel="1" name="Wizard Hat (CON+1 MEN+1)">
+		<icon>icon.skill55640</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55641" toLevel="1" name="Vigilante Hat (STR+1 INT+1)">
+		<icon>icon.skill55641</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55642" toLevel="1" name="Vigilante Hat (DEX +1 WIT +1)">
+		<icon>icon.skill55642</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55643" toLevel="1" name="Vigilante Hat (CON+1 MEN+1)">
+		<icon>icon.skill55643</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55644" toLevel="1" name="White Uniform Hat (STR+1 INT+1)">
+		<icon>icon.skill55644</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55645" toLevel="1" name="White Uniform Hat (DEX +1 WIT +1)">
+		<icon>icon.skill55645</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55646" toLevel="1" name="White Uniform Hat (CON+1 MEN+1)">
+		<icon>icon.skill55646</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55647" toLevel="1" name="Warrior's Helmet (STR+1 INT+1)">
+		<icon>icon.skill55647</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55648" toLevel="1" name="Warrior's Helmet (DEX +1 WIT +1)">
+		<icon>icon.skill55648</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55649" toLevel="1" name="Warrior's Helmet (CON+1 MEN+1)">
+		<icon>icon.skill55649</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55650" toLevel="1" name="First Mate Hat (STR+1 INT+1)">
+		<icon>icon.skill55650</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55651" toLevel="1" name="First Mate Hat (DEX +1 WIT +1)">
+		<icon>icon.skill55651</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55652" toLevel="1" name="First Mate Hat (CON+1 MEN+1)">
+		<icon>icon.skill55652</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55653" toLevel="1" name="Refined Romantic Chapeau: Blue (STR+1 INT+1)">
+		<icon>icon.skill55653</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55654" toLevel="1" name="Refined Romantic Chapeau: Blue (DEX+1 WIT+1)">
+		<icon>icon.skill55654</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55655" toLevel="1" name="Refined Romantic Chapeau: Blue (CON+1 MEN+1)">
+		<icon>icon.skill55655</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55656" toLevel="1" name="Gold-rimmed Glasses (STR+1 INT+1)">
+		<icon>icon.skill55656</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55657" toLevel="1" name="Gold-rimmed Glasses (DEX+1 WIT+1)">
+		<icon>icon.skill55657</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55658" toLevel="1" name="Gold-rimmed Glasses (CON+1 MEN+1)">
+		<icon>icon.skill55658</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55659" toLevel="1" name="Horn-rimmed Glasses (STR+1 INT+1)">
+		<icon>icon.skill55659</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55660" toLevel="1" name="Horn-rimmed Glasses (DEX+1 WIT+1)">
+		<icon>icon.skill55660</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55661" toLevel="1" name="Horn-rimmed Glasses (CON+1 MEN+1)">
+		<icon>icon.skill55661</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55662" toLevel="1" name="Stylish Straw Hat (STR+1 INT+1)">
+		<icon>icon.skill55662</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55663" toLevel="1" name="Stylish Straw Hat (DEX +1 WIT +1)">
+		<icon>icon.skill55663</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55664" toLevel="1" name="Stylish Straw Hat (CON+1 MEN+1)">
+		<icon>icon.skill55664</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55665" toLevel="1" name="Chic Silver Chapeau (STR+1 INT+1)">
+		<icon>icon.skill55665</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55666" toLevel="1" name="Chic Silver Chapeau (DEX +1 WIT +1)">
+		<icon>icon.skill55666</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55667" toLevel="1" name="Chic Silver Chapeau (CON+1 MEN+1)">
+		<icon>icon.skill55667</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55668" toLevel="1" name="Afro Hair (STR+1 INT+1)">
+		<icon>icon.skill55668</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55669" toLevel="1" name="Afro Hair (DEX +1 WIT +1)">
+		<icon>icon.skill55669</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55670" toLevel="1" name="Afro Hair (CON+1 MEN+1)">
+		<icon>icon.skill55670</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55671" toLevel="1" name="Eva's Scroll: Enchant Hair Accessory">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55672" toLevel="1" name="Stabilized Eva's Scroll: Enchant Hair Accessory">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55673" toLevel="1" name="Eva's Enhancement Pack - Hair Accessory">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55674" toLevel="1" name="Eva's Hair Accessory Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55675" toLevel="1" name="Eva's Enhancement Pack - Hair Accessory">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55676" toLevel="1" name="Scroll: Enchant Weapon (A-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55677" toLevel="1" name="Shining Pendant Varnish">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55678" toLevel="1" name="Improved Scroll: Enchant Weapon (A-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55679" toLevel="1" name="Strawberry Juice">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55680" toLevel="1" name="Mango Juice">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55681" toLevel="1" name="Cherry Juice">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55682" toLevel="1" name="Special Dragons Fruit">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55683" toLevel="1" name="Royal Tears">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55684" toLevel="1" name="Red Candy of the Royal Family">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55685" toLevel="1" name="Blue Candy of the Royal Family">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55686" toLevel="1" name="The Royal Confectionary Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55687" toLevel="1" name="Ultimate Confidence">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55688" toLevel="1" name="Pirates Treasure Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55689" toLevel="1" name="Newbie Talisman">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55690" toLevel="2" name="Transformation Scroll: Pirate">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55691" toLevel="2" name="Transformation Scroll: Dark Assassin">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55692" toLevel="2" name="Transformation Scroll: White Assassin">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55693" toLevel="1" name="Blue Dynasty Transformation Scroll">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55694" toLevel="1" name="Red Zubei Transformation Scroll">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55695" toLevel="1" name="Transformation Support Cube">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55696" toLevel="1" name="Newbie Amulet">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55697" toLevel="1" name="Kusto Lucky Enchant Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55698" toLevel="1" name="Giant's Treasure Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="55699" toLevel="1" name="Scroll: Hunter's Song">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+</list>

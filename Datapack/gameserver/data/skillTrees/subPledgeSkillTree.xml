@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
+	<skillTree type="subPledgeSkillTree">
+		<!-- Confirmed CT2.5 -->
+		<skill skillName="Fire Squad" skillId="611" skillLvl="1" getLevel="8" levelUpSp="12000">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9910" count="8" />
+		</skill>
+		<skill skillName="Fire Squad" skillId="611" skillLvl="2" getLevel="9" levelUpSp="17400">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9910" count="11" />
+		</skill>
+		<skill skillName="Fire Squad" skillId="611" skillLvl="3" getLevel="10" levelUpSp="24000">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9911" count="2" />
+		</skill>
+		<skill skillName="Water Squad" skillId="612" skillLvl="1" getLevel="7" levelUpSp="10400">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9910" count="4" />
+		</skill>
+		<skill skillName="Water Squad" skillId="612" skillLvl="2" getLevel="8" levelUpSp="12000">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9910" count="8" />
+		</skill>
+		<skill skillName="Water Squad" skillId="612" skillLvl="3" getLevel="9" levelUpSp="17400">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9910" count="11" />
+		</skill>
+		<skill skillName="Wind Squad" skillId="613" skillLvl="1" getLevel="8" levelUpSp="12000">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9910" count="8" />
+		</skill>
+		<skill skillName="Wind Squad" skillId="613" skillLvl="2" getLevel="9" levelUpSp="17400">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9910" count="11" />
+		</skill>
+		<skill skillName="Wind Squad" skillId="613" skillLvl="3" getLevel="10" levelUpSp="24000">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9911" count="2" />
+		</skill>
+		<skill skillName="Earth Squad" skillId="614" skillLvl="1" getLevel="8" levelUpSp="12000">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9910" count="8" />
+		</skill>
+		<skill skillName="Earth Squad" skillId="614" skillLvl="2" getLevel="9" levelUpSp="17400">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9910" count="11" />
+		</skill>
+		<skill skillName="Earth Squad" skillId="614" skillLvl="3" getLevel="10" levelUpSp="24000">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9911" count="2" />
+		</skill>
+		<skill skillName="Divine Squad" skillId="615" skillLvl="1" getLevel="7" levelUpSp="10400">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9910" count="4" />
+		</skill>
+		<skill skillName="Divine Squad" skillId="615" skillLvl="2" getLevel="8" levelUpSp="12000">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9910" count="8" />
+		</skill>
+		<skill skillName="Divine Squad" skillId="615" skillLvl="3" getLevel="9" levelUpSp="17400">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9910" count="11" />
+		</skill>
+		<skill skillName="Dark Squad" skillId="616" skillLvl="1" getLevel="8" levelUpSp="12000">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9910" count="8" />
+		</skill>
+		<skill skillName="Dark Squad" skillId="616" skillLvl="2" getLevel="9" levelUpSp="17400">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9910" count="11" />
+		</skill>
+		<skill skillName="Dark Squad" skillId="616" skillLvl="3" getLevel="10" levelUpSp="24000">
+			<socialClass>KNIGHT</socialClass>
+			<item id="9911" count="2" />
+		</skill>
+	</skillTree>
+</list>

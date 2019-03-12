@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="classId" minOccurs="1" maxOccurs="1">
+					<xs:simpleType>
+						<xs:restriction base="xs:nonNegativeInteger">
+							<xs:minInclusive value="0" />
+							<xs:maxInclusive value="189" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="staticData" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence maxOccurs="1" minOccurs="1">
+							<xs:element type="xs:nonNegativeInteger" name="baseINT" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:nonNegativeInteger" name="baseSTR" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:nonNegativeInteger" name="baseCON" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:nonNegativeInteger" name="baseMEN" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:nonNegativeInteger" name="baseDEX" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:nonNegativeInteger" name="baseWIT" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:integer" name="physicalAbnormalResist" minOccurs="0" maxOccurs="1" />
+							<xs:element type="xs:integer" name="magicAbnormalResist" minOccurs="0" maxOccurs="1" />
+							<xs:element name="creationPoints" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence maxOccurs="1" minOccurs="0">
+										<xs:element name="node" maxOccurs="unbounded" minOccurs="1">
+											<xs:complexType>
+												<xs:attribute type="xs:integer" name="x" use="required" />
+												<xs:attribute type="xs:integer" name="y" use="required" />
+												<xs:attribute type="xs:integer" name="z" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:positiveInteger" name="basePAtk" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:positiveInteger" name="baseCritRate" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:positiveInteger" name="baseMCritRate" minOccurs="1" maxOccurs="1" />
+							<xs:element name="baseAtkType" minOccurs="1" maxOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:enumeration value="FIST" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element type="xs:positiveInteger" name="basePAtkSpd" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:positiveInteger" name="baseMAtkSpd" minOccurs="0" maxOccurs="1" />
+							<xs:element name="basePDef" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence maxOccurs="1" minOccurs="1">
+										<xs:element type="xs:positiveInteger" name="chest" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:positiveInteger" name="legs" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:positiveInteger" name="head" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:positiveInteger" name="feet" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:positiveInteger" name="gloves" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:positiveInteger" name="underwear" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:positiveInteger" name="cloak" minOccurs="1" maxOccurs="1" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:positiveInteger" name="baseMAtk" minOccurs="1" maxOccurs="1" />
+							<xs:element name="baseMDef" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence maxOccurs="1" minOccurs="1">
+										<xs:element type="xs:positiveInteger" name="rear" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:positiveInteger" name="lear" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:positiveInteger" name="rfinger" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:positiveInteger" name="lfinger" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:positiveInteger" name="neck" minOccurs="1" maxOccurs="1" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:nonNegativeInteger" name="baseCanPenetrate" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:positiveInteger" name="baseAtkRange" minOccurs="1" maxOccurs="1" />
+							<xs:element name="baseDamRange" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence maxOccurs="1" minOccurs="1">
+										<xs:element type="xs:nonNegativeInteger" name="verticalDirection" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:nonNegativeInteger" name="horizontalDirection" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:nonNegativeInteger" name="distance" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:nonNegativeInteger" name="width" minOccurs="1" maxOccurs="1" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:positiveInteger" name="baseRndDam" minOccurs="1" maxOccurs="1" />
+							<xs:element name="baseMoveSpd" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence maxOccurs="1" minOccurs="1">
+										<xs:element type="xs:positiveInteger" name="walk" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:positiveInteger" name="run" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:positiveInteger" name="slowSwim" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:positiveInteger" name="fastSwim" minOccurs="1" maxOccurs="1" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:positiveInteger" name="baseBreath" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:positiveInteger" name="baseSafeFall" minOccurs="1" maxOccurs="1" />
+							<xs:element name="collisionMale" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence maxOccurs="1" minOccurs="1">
+										<xs:element type="xs:decimal" name="radius" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:decimal" name="height" minOccurs="1" maxOccurs="1" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="collisionFemale" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence maxOccurs="1" minOccurs="1">
+										<xs:element type="xs:decimal" name="radius" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:decimal" name="height" minOccurs="1" maxOccurs="1" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="lvlUpgainData" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence maxOccurs="1" minOccurs="1">
+							<xs:element name="level" maxOccurs="107" minOccurs="107">
+								<xs:complexType>
+									<xs:sequence maxOccurs="1" minOccurs="1">
+										<xs:element type="xs:decimal" name="hp" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:decimal" name="mp" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:decimal" name="cp" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:decimal" name="hpRegen" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:decimal" name="mpRegen" minOccurs="1" maxOccurs="1" />
+										<xs:element type="xs:decimal" name="cpRegen" minOccurs="1" maxOccurs="1" />
+									</xs:sequence>
+									<xs:attribute name="val" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:positiveInteger">
+												<xs:minInclusive value="1"></xs:minInclusive>
+												<xs:maxInclusive value="107"></xs:maxInclusive>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

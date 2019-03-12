@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="21400" level="80" type="L2Npc" name="Hexa Beetle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="145" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="25" />
+			<height normal="54.5" />
+		</collision>
+	</npc>
+	<npc id="21401" level="80" type="L2Npc" name="Hexa Beetle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="145" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="25" />
+			<height normal="54.5" />
+		</collision>
+	</npc>
+	<npc id="21402" level="80" type="L2Npc" name="Katraxith">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="37" />
+				<run ground="165" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="52.8" />
+		</collision>
+	</npc>
+	<npc id="21403" level="80" type="L2Npc" name="Katraxith">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="37" />
+				<run ground="165" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="52.8" />
+		</collision>
+	</npc>
+	<npc id="21404" level="80" type="L2Npc" name="Tera Beetle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="185" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="25" />
+			<height normal="54.5" />
+		</collision>
+	</npc>
+	<npc id="21405" level="80" type="L2Npc" name="Tera Beetle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="185" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="25" />
+			<height normal="54.5" />
+		</collision>
+	</npc>
+	<npc id="21406" level="80" type="L2Npc" name="Imperial Knight">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="150" lhand="103" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="145" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="21407" level="80" type="L2Npc" name="Imperial Knight">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="150" lhand="103" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="145" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="21408" level="80" type="L2Npc" name="Imperial Royal Guard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="21409" level="80" type="L2Npc" name="Imperial Royal Guard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="21410" level="80" type="L2Npc" name="Guardian Scarab">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="195" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="17" />
+			<height normal="26.5" />
+		</collision>
+	</npc>
+	<npc id="21411" level="80" type="L2Npc" name="Guardian Scarab">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="195" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="17" />
+			<height normal="26.5" />
+		</collision>
+	</npc>
+	<npc id="21412" level="80" type="L2Npc" name="Ustralith">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="37" />
+				<run ground="130" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="28" />
+			<height normal="66" />
+		</collision>
+	</npc>
+	<npc id="21413" level="80" type="L2Npc" name="Ustralith">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="37" />
+				<run ground="130" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="28" />
+			<height normal="66" />
+		</collision>
+	</npc>
+	<npc id="21414" level="80" type="L2Npc" name="Imperial Assassin">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="946" lhand="945" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="28.5" />
+		</collision>
+	</npc>
+	<npc id="21415" level="80" type="L2Npc" name="Imperial Assassin">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="946" lhand="945" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="28.5" />
+		</collision>
+	</npc>
+	<npc id="21416" level="80" type="L2Npc" name="Imperial Commander">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="134" lhand="6721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="39" />
+				<run ground="140" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="21417" level="80" type="L2Npc" name="Imperial Commander">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="134" lhand="6721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="39" />
+				<run ground="140" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="21418" level="80" type="L2Npc" name="Imperial Guard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="142" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="27" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="21419" level="80" type="L2Npc" name="Imperial Guard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="142" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="27" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="21420" level="80" type="L2Npc" name="Ashuras">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="41" />
+				<run ground="200" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+	</npc>
+	<npc id="21421" level="80" type="L2Npc" name="Ashuras">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="41" />
+				<run ground="200" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+	</npc>
+	<npc id="21422" level="80" type="L2Npc" name="Imperial Dancer">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="21423" level="80" type="L2Npc" name="Imperial Dancer">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="21424" level="80" type="L2Npc" name="Ashikenas">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="41" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+	</npc>
+	<npc id="21425" level="80" type="L2Npc" name="Ashikenas">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="41" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+	</npc>
+	<npc id="21426" level="80" type="L2Npc" name="Abraxian">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="31" />
+				<run ground="130" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="21" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="21427" level="80" type="L2Npc" name="Abraxian">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="31" />
+				<run ground="130" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="21" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="21428" level="80" type="L2Npc" name="Hasturan">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="31" />
+				<run ground="150" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="21" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="21429" level="80" type="L2Npc" name="Hasturan">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="31" />
+				<run ground="150" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="21" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="21430" level="80" type="L2Npc" name="Ahrimanes">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="6722" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="35" />
+				<run ground="210" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="57.75" />
+		</collision>
+	</npc>
+	<npc id="21431" level="80" type="L2Npc" name="Ahrimanes">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="6722" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="35" />
+				<run ground="210" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="57.75" />
+		</collision>
+	</npc>
+	<npc id="21432" level="80" type="L2Npc" name="Chakram Beetle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="19" />
+			<height normal="54.5" />
+		</collision>
+	</npc>
+	<npc id="21433" level="80" type="L2Npc" name="Jamadhr Beetle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="43.6" />
+		</collision>
+	</npc>
+	<npc id="21434" level="80" type="L2Npc" name="Blood Priest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="31" />
+				<run ground="150" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="21" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="21435" level="80" type="L2Npc" name="Sacrifice Guide">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="134" lhand="6721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="39" />
+				<run ground="150" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="21436" level="80" type="L2Npc" name="Sacrifice Leader">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="134" lhand="6721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="39" />
+				<run ground="150" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="21437" level="80" type="L2Npc" name="Sacrifice Insect">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="21438" level="80" type="L2Npc" name="Ghost of Gatekeeper">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="150" lhand="103" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15744" hpRegen="10.5" mp="2666" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="165" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="21439" level="80" type="L2Npc" name="Ghost of Gatekeeper">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="150" lhand="103" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15744" hpRegen="10.5" mp="2666" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="165" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="21440" level="80" type="L2Npc" name="Ghost of Vassal">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15744" hpRegen="10.5" mp="2666" mpRegen="3.6" />
+			<speed>
+				<walk ground="15" />
+				<run ground="15" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="21" />
+		</collision>
+	</npc>
+</list>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>34292</npc> <!-- Chef Monkey -->
+	</npcs>
+	<item>
+		<ingredient id="3031" count="250" /> <!-- Spirit Ore -->
+		<production id="90168" count="1" /> <!-- Monkey Bait -->
+	</item>
+	<item>
+		<ingredient id="3031" count="250" /> <!-- Spirit Ore -->
+		<production id="90169" count="1" /> <!-- Monkey Bait -->
+	</item>
+	<item>
+		<ingredient id="3031" count="250" /> <!-- Spirit Ore -->
+		<production id="90170" count="1" /> <!-- Monkey Bait -->
+	</item>
+</list>

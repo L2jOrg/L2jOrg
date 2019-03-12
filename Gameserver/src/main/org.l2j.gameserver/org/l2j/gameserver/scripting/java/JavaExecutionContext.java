@@ -1,38 +1,42 @@
 package org.l2j.gameserver.scripting.java;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.scripting.AbstractExecutionContext;
 import org.l2j.gameserver.scripting.annotations.Disabled;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.tools.Diagnostic;
-import javax.tools.DiagnosticCollector;
+import javax.tools.DiagnosticListener;
 import javax.tools.JavaFileObject;
-import java.io.PrintWriter;
+import javax.tools.StandardLocation;
+import java.io.File;
 import java.io.StringWriter;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
 import java.util.Map.Entry;
-import java.util.logging.Logger;
+
+import static java.util.Objects.nonNull;
 
 /**
  * @author HorridoJoho
  */
 public final class JavaExecutionContext extends AbstractExecutionContext<JavaScriptingEngine> {
-    private static final Logger LOGGER = Logger.getLogger(JavaExecutionContext.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(JavaExecutionContext.class.getName());
 
     private static final List<String> _options = new LinkedList<>();
+    private static final DiagnosticListener<JavaFileObject> listener = new DefaultDiagnosticListener();
 
     JavaExecutionContext(JavaScriptingEngine engine) {
         super(engine);
 
+        addOptionIfNotNull(_options, System.getProperty("jdk.module.path"), "--module-path");
+        addOptionIfNotNull(_options, new File(Config.DATAPACK_ROOT, getProperty("sourcepath")).getAbsolutePath(), "--module-source-path");
         // Set options.
-        addOptionIfNotNull(_options, getProperty("source"), "-source");
-        addOptionIfNotNull(_options, getProperty("sourcepath"), "-sourcepath");
-        if (!addOptionIfNotNull(_options, getProperty("cp"), "-cp") && !addOptionIfNotNull(_options, getProperty("classpath"), "-classpath")) {
-            addOptionIfNotNull(_options, System.getProperty("java.class.path"), "-cp");
-        }
         addOptionIfNotNull(_options, getProperty("g"), "-g:");
 
         // We always set the target JVM to the current running version.
@@ -91,47 +95,25 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 
     @Override
     public Map<Path, Throwable> executeScripts(Iterable<Path> sourcePaths) throws Exception {
-        final DiagnosticCollector<javax.tools.JavaFileObject> fileManagerDiagnostics = new DiagnosticCollector<>();
-        final DiagnosticCollector<JavaFileObject> compilationDiagnostics = new DiagnosticCollector<>();
 
-        try (ScriptingFileManager fileManager = new ScriptingFileManager(getScriptingEngine().getCompiler().getStandardFileManager(fileManagerDiagnostics, null, StandardCharsets.UTF_8))) {
-            // We really need an iterable of files or strings.
-            final List<String> sourcePathStrings = new LinkedList<>();
-            for (Path sourcePath : sourcePaths) {
-                sourcePathStrings.add(sourcePath.toString());
-            }
+        try (var fileManager = getScriptingEngine().getCompiler().getStandardFileManager(listener, null, StandardCharsets.UTF_8);
+             ScriptingFileManager scriptingFileManager = new ScriptingFileManager(fileManager);
+             StringWriter strOut = new StringWriter()) {
 
-            final StringWriter strOut = new StringWriter();
-            final PrintWriter out = new PrintWriter(strOut);
-            final boolean compilationSuccess = getScriptingEngine().getCompiler().getTask(out, fileManager, compilationDiagnostics, _options, null, fileManager.getJavaFileObjectsFromStrings(sourcePathStrings)).call();
+            var destination = Path.of("compiledScripts");
+            Files.createDirectories(destination);
+            fileManager.setLocation(StandardLocation.CLASS_PATH, Collections.emptyList());
+            fileManager.setLocationFromPaths(StandardLocation.CLASS_OUTPUT,  Collections.singletonList(destination));
+
+            final boolean compilationSuccess = getScriptingEngine().getCompiler().getTask(strOut, scriptingFileManager, listener, _options, null, fileManager.getJavaFileObjectsFromPaths(sourcePaths)).call();
             if (!compilationSuccess) {
-                out.println();
-                out.println("----------------");
-                out.println("File diagnostics");
-                out.println("----------------");
-                for (Diagnostic<? extends JavaFileObject> diagnostic : fileManagerDiagnostics.getDiagnostics()) {
-                    out.println("\t" + diagnostic.getKind() + ": " + diagnostic.getSource().getName() + ", Line " + diagnostic.getLineNumber() + ", Column " + diagnostic.getColumnNumber());
-                    out.println("\t\tcode: " + diagnostic.getCode());
-                    out.println("\t\tmessage: " + diagnostic.getMessage(null));
-                }
-
-                out.println();
-                out.println("-----------------------");
-                out.println("Compilation diagnostics");
-                out.println("-----------------------");
-                for (Diagnostic<? extends JavaFileObject> diagnostic : compilationDiagnostics.getDiagnostics()) {
-                    out.println("\t" + diagnostic.getKind() + ": " + diagnostic.getSource().getName() + ", Line " + diagnostic.getLineNumber() + ", Column " + diagnostic.getColumnNumber());
-                    out.println("\t\tcode: " + diagnostic.getCode());
-                    out.println("\t\tmessage: " + diagnostic.getMessage(null));
-                }
-
                 throw new JavaCompilerException(strOut.toString());
             }
 
             final ClassLoader parentClassLoader = determineScriptParentClassloader();
 
             final Map<Path, Throwable> executionFailures = new LinkedHashMap<>();
-            final Iterable<ScriptingOutputFileObject> compiledClasses = fileManager.getCompiledClasses();
+            final Iterable<ScriptingOutputFileObject> compiledClasses = scriptingFileManager.getCompiledClasses();
             for (Path sourcePath : sourcePaths) {
                 boolean found = false;
 
@@ -173,7 +155,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
                 }
 
                 if (!found) {
-                    LOGGER.severe("Compilation successfull, but class coresponding to " + sourcePath.toString() + " not found!");
+                    LOGGER.error("Compilation successfull, but class coresponding to " + sourcePath.toString() + " not found!");
                 }
             }
 
@@ -188,5 +170,16 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
             return executionFailures.entrySet().iterator().next();
         }
         return null;
+    }
+
+    private static class DefaultDiagnosticListener implements DiagnosticListener<JavaFileObject> {
+        @Override
+        public void report(Diagnostic<? extends JavaFileObject> diagnostic) {
+            if(nonNull(diagnostic.getSource())) {
+                LOGGER.error("Error on {} {}:{} - {}", diagnostic.getSource().getName(), diagnostic.getLineNumber(), diagnostic.getColumnNumber(), diagnostic.getMessage(Locale.getDefault()));
+            } else {
+                LOGGER.error("Error {}", diagnostic.getMessage(Locale.getDefault()));
+            }
+        }
     }
 }

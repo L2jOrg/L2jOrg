@@ -1,0 +1,1545 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="39000" toLevel="1" name="Ol Mahum Adena Bank">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39001" toLevel="1" name="Turek Orc Adena Bank">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39002" toLevel="1" name="Healing Potion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39003" toLevel="1" name="Greater Healing Potion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39004" toLevel="1" name="Facelifting Potion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39005" toLevel="1" name="Facelifting Potion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39006" toLevel="1" name="Facelifting Potion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39007" toLevel="1" name="Dye Potion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39008" toLevel="1" name="Dye Potion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39009" toLevel="1" name="Dye Potion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39010" toLevel="1" name="Dye Potion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39011" toLevel="1" name="Facelifting Potion Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39012" toLevel="1" name="Dye Potion Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39013" toLevel="1" name="Scroll: Empower">
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MA_UP</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3932</itemConsumeId>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_scroll_white_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>55</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39014" toLevel="1" name="Scroll: Might">
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_scroll_white_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>29685</itemConsumeId> <!-- L2Day - Might Scroll -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39015" toLevel="1" name="Scroll: Shield">
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_scroll_white_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>29684</itemConsumeId> <!-- L2Day - Shield Scroll -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39016" toLevel="1" name="Dance of Fury">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>AGATHION_SONG_DANCE</abnormalType>
+		<affectRange>1000</affectRange>
+		<effectPoint>549</effectPoint>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill39016</icon>
+		<isMagic>4</isMagic> <!-- Dance Skill -->
+		<magicLvl>58</magicLvl>
+		<mpConsume>60</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39017" toLevel="1" name="Dance of Concentration">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>AGATHION_SONG_DANCE</abnormalType>
+		<affectRange>1000</affectRange>
+		<effectPoint>495</effectPoint>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill39017</icon>
+		<isMagic>4</isMagic> <!-- Dance Skill -->
+		<magicLvl>52</magicLvl>
+		<mpConsume>60</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39018" toLevel="1" name="Song of Wind">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>AGATHION_SONG_DANCE</abnormalType>
+		<affectRange>1000</affectRange>
+		<effectPoint>438</effectPoint>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill39018</icon>
+		<isMagic>4</isMagic> <!-- Dance Skill -->
+		<magicLvl>46</magicLvl>
+		<mpConsume>60</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39019" toLevel="1" name="Scion Ring">
+		<icon>icon.event_classic_ring</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="WeightLimit">
+				<amount>5000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>1.05</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39020" toLevel="1" name="Scroll: PK (No-grade)">
+		<icon>icon.skill39020</icon>
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<itemConsumeId>49026</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNotCursed" />
+			<condition name="OpPkcount">
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PkCount">
+				<amount>-1</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39021" toLevel="1" name="Scroll: PK (D-grade)">
+		<icon>icon.skill39021</icon>
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<itemConsumeId>49027</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNotCursed" />
+			<condition name="OpPkcount">
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PkCount">
+				<amount>-1</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39022" toLevel="1" name="Scroll: PK (C-grade)">
+		<icon>icon.skill39022</icon>
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<itemConsumeId>49028</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNotCursed" />
+			<condition name="OpPkcount">
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PkCount">
+				<amount>-1</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39023" toLevel="1" name="Scroll: PK (B-grade)">
+		<icon>icon.skill39023</icon>
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<itemConsumeId>49029</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNotCursed" />
+			<condition name="OpPkcount">
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PkCount">
+				<amount>-1</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39024" toLevel="1" name="Scroll: PK (A-grade)">
+		<icon>icon.skill39024</icon>
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<itemConsumeId>49030</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNotCursed" />
+			<condition name="OpPkcount">
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PkCount">
+				<amount>-1</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39025" toLevel="1" name="Adventurer's Scroll of Escape">
+		<icon>icon.skill39025</icon>
+		<hitTime>20000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>TOWN</escapeType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39026" toLevel="1" name="Ol Mahum Adena Pouch (Event)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39027" toLevel="1" name="Turek Orc Adena Pouch (Event)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39028" toLevel="1" name="Newbie Wind Walk Potion">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SPEED_UP</abnormalType>
+		<icon>icon.etc_potion_green_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39029" toLevel="1" name="Mysterious Spiritshot (No-grade)">
+		<icon>icon.skill39029</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39030" toLevel="1" name="Mysterious Spiritshot (D-grade)">
+		<icon>icon.skill39030</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39031" toLevel="1" name="Mysterious Spiritshot (C-grade)">
+		<icon>icon.skill39031</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39032" toLevel="1" name="Lucky Package: Soulshots (No-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39033" toLevel="1" name="Lucky Package: Soulshots (D-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39034" toLevel="1" name="Lucky Package: Soulshots (C-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39035" toLevel="1" name="Lucky Package: Spiritshots (No-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39036" toLevel="1" name="Lucky Package: Spiritshots (D-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39037" toLevel="1" name="Lucky Package: Spiritshots (C-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39038" toLevel="1" name="Lucky Package: Blessed Spiritshots (No-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39039" toLevel="1" name="Lucky Package: Blessed Spiritshots (D-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39040" toLevel="1" name="Lucky Package: Blessed Spiritshots (C-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39041" toLevel="1" name="Incredibly Quick Step">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39042" toLevel="1" name="Spirit Revival">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39043" toLevel="1" name="Side Effect">
+ 		<!--	Side Effect: makes character's head bigger for 10 minutes. Reuse Time: 30 minutes. -->
+		<icon>icon.skill39043</icon>
+		<abnormalLvl>0</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>BIG_HEAD</abnormalType>
+		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
+		<activateRate>0</activateRate>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>1800000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<trait>ETC</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CannotUseInTransform">
+				<transformId>103</transformId>
+			</condition>
+		</conditions>
+	</skill>
+	<skill id="39044" toLevel="1" name="Holiday Hat">
+ 		<!--	Holiday Hat: resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore(s). Reuse Time: 30 minutes. -->
+		<icon>icon.skill39044</icon>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<reuseDelay>1800000</reuseDelay>
+		<targetType>PC_BODY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpResurrection" />
+		</conditions>
+		<effects>
+			<effect name="Resurrection">
+				<power>50</power>
+			</effect>
+            <effect name="HealPercent">
+                <power>50</power>
+            </effect>
+		</effects>
+	</skill>
+	<skill id="39045" toLevel="1" name="Overwhelming Power of a Holiday Hat"> <!-- increases XP and SP gain by 5% for 20 minutes -->
+ 		<!-- increases XP and SP gain by 5% for 20 minutes -->
+		<icon>icon.skill39045</icon>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<abnormalTime>1200</abnormalTime>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+		<effects>
+			<effect name="ExpModify">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39046" toLevel="1" name="Letter Collector's Gift">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39047" toLevel="1" name="Fish Stew - Might">
+		<icon>icon.skill39047</icon>
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49460</itemConsumeId> <!-- Fish Stew: Might -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39048" toLevel="1" name="Fish Stew - Shield">
+		<icon>icon.skill39048</icon>
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49461</itemConsumeId> <!-- Fish Stew: Shield -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39049" toLevel="1" name="Fish Stew - Magic Barrier">
+		<icon>icon.skill39049</icon>
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MD_UP</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49462</itemConsumeId> <!-- Fish Stew: Magic Barrier -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>23</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39050" toLevel="1" name="Fish Stew - Vampiric Rage">
+		<icon>icon.skill39050</icon>
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49463</itemConsumeId> <!-- Fish Stew: Vampiric Rage -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>6</amount>
+				<chance>80</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39051" toLevel="1" name="Fish Stew - Empower">
+		<icon>icon.skill39051</icon>
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MA_UP</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49464</itemConsumeId> <!-- Fish Stew: Empower -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>55</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39052" toLevel="1" name="Golden Treasure Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39053" toLevel="1" name="Agathion Teleport: Gludio">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>3000</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-14225</x>
+				<y>123540</y>
+				<z>-3116</z>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39054" toLevel="1" name="Agathion Teleport: Dion">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>3000</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>18748</x>
+				<y>145437</y>
+				<z>-3127</z>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39055" toLevel="1" name="Agathion Teleport: Giran">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>3000</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>82698</x>
+				<y>148638</y>
+				<z>-3468</z>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39056" toLevel="1" name="Agathion Teleport: Oren">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>3000</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>82321</x>
+				<y>55139</y>
+				<z>-1524</z>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39057" toLevel="1" name="Hero Experience Rune">
+		<icon>icon.skill19226</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>85</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>20</amount>
+				<mode>DIFF</mode> <!-- FIX -->
+			</effect>
+			<effect name="SpModify">
+				<amount>20</amount>
+				<mode>DIFF</mode> <!-- FIX -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39058" toLevel="1" name="Rare Accessory Box">
+		<icon>icon.skil39058</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>29578</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100.0">
+						<item id="29575" count="1" />
+					</item>
+					<item chance="100.0">
+						<item id="29576" count="1" />
+					</item>
+					<item chance="100.0">
+						<item id="29577" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39059" toLevel="1" name="Spellbok Box">
+		<icon>icon.skil39059</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49541</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2.5">
+						<item id="3047" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3046" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3052" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3044" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3080" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3079" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="8891" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3064" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3063" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3066" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5811" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="4922" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3072" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="6398" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="4912" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3101" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3099" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="8388" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="8389" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3051" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3045" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="8890" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="4923" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3942" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="8397" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5815" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3050" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3041" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3055" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3089" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="4924" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="4205" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3109" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3111" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3118" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="6397" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3116" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3940" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="4915" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39060" toLevel="1" name="Pendant Varnish">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39061" toLevel="1" name="Shining Pendant Varnish">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39062" toLevel="1" name="Black Mask Teleport">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39063" toLevel="1" name="Solid Scroll: Enchant Armor (D-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39064" toLevel="1" name="Solid Scroll: Enchant Weapon (D-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39065" toLevel="1" name="Solid Scroll: Enchant Armor (C-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39066" toLevel="1" name="Solid Scroll: Enchant Weapon (C-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39067" toLevel="1" name="Solid Scroll: Enchant Armor (B-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39068" toLevel="1" name="Solid Scroll: Enchant Weapon (B-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39069" toLevel="1" name="Major Warrior Healing Potion">
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>HP_RECOVER</abnormalType>
+		<icon>icon.etc_reagent_white_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealOverTime">
+				<power>50</power>
+				<ticks>3</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39070" toLevel="1" name="Parts of Enchantment Scrolls Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39071" toLevel="1" name="Luck Cube">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39072" toLevel="1" name="Weapon Supply Box (D-grade)">
+		<icon>icon.skill39072</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49491</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="7.14">
+						<item id="2499" count="1" />
+					</item>
+					<item chance="7.14">
+						<item id="70" count="1" />
+					</item>
+					<item chance="7.14">
+						<item id="224" count="1" />
+					</item>
+					<item chance="7.14">
+						<item id="225" count="1" />
+					</item>
+					<item chance="7.14">
+						<item id="1660" count="1" />
+					</item>
+					<item chance="7.14">
+						<item id="278" count="1" />
+					</item>
+					<item chance="7.14">
+						<item id="279" count="1" />
+					</item>
+					<item chance="7.14">
+						<item id="280" count="1" />
+					</item>
+					<item chance="7.14">
+						<item id="262" count="1" />
+					</item>
+					<item chance="7.14">
+						<item id="297" count="1" />
+					</item>
+					<item chance="7.14">
+						<item id="159" count="1" />
+					</item>
+					<item chance="7.14">
+						<item id="189" count="1" />
+					</item>
+					<item chance="7.14">
+						<item id="188" count="1" />
+					</item>
+					<item chance="7.14">
+						<item id="190" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39073" toLevel="1" name="Weapon Supply Box (C-grade)">
+		<icon>icon.skill39073</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49492</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="8.3">
+						<item id="242" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="7887" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="72" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="71" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="281" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="193" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="160" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="161" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="192" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="194" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="302" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="263" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39074" toLevel="1" name="Angel Cat's Energy">
+		<!-- For 60 min., Max HP/MP + 5%, and XP/SP gained through hunting + 20%. -->
+		<icon>icon.skilltransform4</icon>
+		<operateType>A2</operateType>
+		<reuseDelay>1800000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>-3</magicLvl>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<stayAfterDeath>true</stayAfterDeath>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>85</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MaxHp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39075" toLevel="1" name="Improved Scroll of Escape">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39076" toLevel="1" name="Fish Stew - Guild's Gratitude">
+		<icon>icon.skill39076</icon>
+		<operateType>A2</operateType>
+		<reuseDelay>1800</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39077" toLevel="1" name="Teleport: Gludin Harbor">
+		<icon>icon.skill39077</icon>
+		<hitTime>1800</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeId>49503</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-91191</x>
+				<y>150344</y>
+				<z>-3624</z>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39078" toLevel="1" name="Teleport: Giran Harbor">
+		<icon>icon.skill39078</icon>
+		<hitTime>1800</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeId>49502</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>47874</x>
+				<y>186700</y>
+				<z>-3486</z>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39079" toLevel="1" name="Sheep Resurrection">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39080" toLevel="2" name="Sheep�s Benediction">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39081" toLevel="1" name="Sheep Gift">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39082" toLevel="1" name="Amulet: Prosperity">
+		<icon>icon.skill39082</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39083" toLevel="1" name="Receive Ian�s Gift">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39084" toLevel="1" name="Pirate Trophy Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39085" toLevel="1" name="Special Pirate Fruit">
+		<icon>icon.skill39085</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>29817</itemConsumeId>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpDrain">
+				<power>49</power>
+				<percentage>3</percentage>
+			</effect>
+			<effect name="ExpModify">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39086" toLevel="1" name="King Pirate's Treasure Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39087" toLevel="1" name="Captain Pirate Hat Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39088" toLevel="1" name="Improved Scroll of Resurrection">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39089" toLevel="1" name="Pirate Healing Potion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39090" toLevel="1" name="Agathion Teleport - Giran Castle">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39091" toLevel="1" name="Agathion Teleport - Dion Castle">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39092" toLevel="1" name="Agathion Teleport - Oren Castle">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39093" toLevel="1" name="Agathion Teleport - Gludio Castle">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39094" toLevel="1" name="Strength of Aries">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39095" toLevel="1" name="Blessing of Aries">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39096" toLevel="1" name="Agathion Teleport: Giran">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39097" toLevel="1" name="Agathion Teleport: Gludio">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39098" toLevel="1" name="Agathion Teleport: Dion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39099" toLevel="1" name="Agathion Teleport: Oren">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+</list>

@@ -8,6 +8,9 @@ import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.Set;
 
+import static org.l2j.gameserver.enums.Race.DARK_ELF;
+import static org.l2j.gameserver.enums.Race.ELF;
+
 /**
  * @author luisantonioa
  */
@@ -31,33 +34,33 @@ public enum PlayerClass {
     Bishop(Race.HUMAN, ClassType.Priest, ClassLevel.THIRD),
     Prophet(Race.HUMAN, ClassType.Priest, ClassLevel.THIRD),
 
-    ElvenFighter(Race.ELF, ClassType.Fighter, ClassLevel.FIRST),
-    ElvenKnight(Race.ELF, ClassType.Fighter, ClassLevel.SECOND),
-    TempleKnight(Race.ELF, ClassType.Fighter, ClassLevel.THIRD),
-    Swordsinger(Race.ELF, ClassType.Fighter, ClassLevel.THIRD),
-    ElvenScout(Race.ELF, ClassType.Fighter, ClassLevel.SECOND),
-    Plainswalker(Race.ELF, ClassType.Fighter, ClassLevel.THIRD),
-    SilverRanger(Race.ELF, ClassType.Fighter, ClassLevel.THIRD),
-    ElvenMystic(Race.ELF, ClassType.Mystic, ClassLevel.FIRST),
-    ElvenWizard(Race.ELF, ClassType.Mystic, ClassLevel.SECOND),
-    Spellsinger(Race.ELF, ClassType.Mystic, ClassLevel.THIRD),
-    ElementalSummoner(Race.ELF, ClassType.Mystic, ClassLevel.THIRD),
-    ElvenOracle(Race.ELF, ClassType.Priest, ClassLevel.SECOND),
-    ElvenElder(Race.ELF, ClassType.Priest, ClassLevel.THIRD),
+    ElvenFighter(ELF, ClassType.Fighter, ClassLevel.FIRST),
+    ElvenKnight(ELF, ClassType.Fighter, ClassLevel.SECOND),
+    TempleKnight(ELF, ClassType.Fighter, ClassLevel.THIRD),
+    Swordsinger(ELF, ClassType.Fighter, ClassLevel.THIRD),
+    ElvenScout(ELF, ClassType.Fighter, ClassLevel.SECOND),
+    Plainswalker(ELF, ClassType.Fighter, ClassLevel.THIRD),
+    SilverRanger(ELF, ClassType.Fighter, ClassLevel.THIRD),
+    ElvenMystic(ELF, ClassType.Mystic, ClassLevel.FIRST),
+    ElvenWizard(ELF, ClassType.Mystic, ClassLevel.SECOND),
+    Spellsinger(ELF, ClassType.Mystic, ClassLevel.THIRD),
+    ElementalSummoner(ELF, ClassType.Mystic, ClassLevel.THIRD),
+    ElvenOracle(ELF, ClassType.Priest, ClassLevel.SECOND),
+    ElvenElder(ELF, ClassType.Priest, ClassLevel.THIRD),
 
-    DarkElvenFighter(Race.DARK_ELF, ClassType.Fighter, ClassLevel.FIRST),
-    PalusKnight(Race.DARK_ELF, ClassType.Fighter, ClassLevel.SECOND),
-    ShillienKnight(Race.DARK_ELF, ClassType.Fighter, ClassLevel.THIRD),
-    Bladedancer(Race.DARK_ELF, ClassType.Fighter, ClassLevel.THIRD),
-    Assassin(Race.DARK_ELF, ClassType.Fighter, ClassLevel.SECOND),
-    AbyssWalker(Race.DARK_ELF, ClassType.Fighter, ClassLevel.THIRD),
-    PhantomRanger(Race.DARK_ELF, ClassType.Fighter, ClassLevel.THIRD),
-    DarkElvenMystic(Race.DARK_ELF, ClassType.Mystic, ClassLevel.FIRST),
-    DarkElvenWizard(Race.DARK_ELF, ClassType.Mystic, ClassLevel.SECOND),
-    Spellhowler(Race.DARK_ELF, ClassType.Mystic, ClassLevel.THIRD),
-    PhantomSummoner(Race.DARK_ELF, ClassType.Mystic, ClassLevel.THIRD),
-    ShillienOracle(Race.DARK_ELF, ClassType.Priest, ClassLevel.SECOND),
-    ShillienElder(Race.DARK_ELF, ClassType.Priest, ClassLevel.THIRD),
+    DarkElvenFighter(DARK_ELF, ClassType.Fighter, ClassLevel.FIRST),
+    PalusKnight(DARK_ELF, ClassType.Fighter, ClassLevel.SECOND),
+    ShillienKnight(DARK_ELF, ClassType.Fighter, ClassLevel.THIRD),
+    Bladedancer(DARK_ELF, ClassType.Fighter, ClassLevel.THIRD),
+    Assassin(DARK_ELF, ClassType.Fighter, ClassLevel.SECOND),
+    AbyssWalker(DARK_ELF, ClassType.Fighter, ClassLevel.THIRD),
+    PhantomRanger(DARK_ELF, ClassType.Fighter, ClassLevel.THIRD),
+    DarkElvenMystic(DARK_ELF, ClassType.Mystic, ClassLevel.FIRST),
+    DarkElvenWizard(DARK_ELF, ClassType.Mystic, ClassLevel.SECOND),
+    Spellhowler(DARK_ELF, ClassType.Mystic, ClassLevel.THIRD),
+    PhantomSummoner(DARK_ELF, ClassType.Mystic, ClassLevel.THIRD),
+    ShillienOracle(DARK_ELF, ClassType.Priest, ClassLevel.SECOND),
+    ShillienElder(DARK_ELF, ClassType.Priest, ClassLevel.THIRD),
 
     OrcFighter(Race.ORC, ClassType.Fighter, ClassLevel.FIRST),
     OrcRaider(Race.ORC, ClassType.Fighter, ClassLevel.SECOND),
@@ -120,21 +123,21 @@ public enum PlayerClass {
     cardinal(Race.HUMAN, ClassType.Priest, ClassLevel.FOURTH),
     hierophant(Race.HUMAN, ClassType.Priest, ClassLevel.FOURTH),
 
-    evaTemplar(Race.ELF, ClassType.Fighter, ClassLevel.FOURTH),
-    swordMuse(Race.ELF, ClassType.Fighter, ClassLevel.FOURTH),
-    windRider(Race.ELF, ClassType.Fighter, ClassLevel.FOURTH),
-    moonlightSentinel(Race.ELF, ClassType.Fighter, ClassLevel.FOURTH),
-    mysticMuse(Race.ELF, ClassType.Mystic, ClassLevel.FOURTH),
-    elementalMaster(Race.ELF, ClassType.Mystic, ClassLevel.FOURTH),
-    evaSaint(Race.ELF, ClassType.Priest, ClassLevel.FOURTH),
+    evaTemplar(ELF, ClassType.Fighter, ClassLevel.FOURTH),
+    swordMuse(ELF, ClassType.Fighter, ClassLevel.FOURTH),
+    windRider(ELF, ClassType.Fighter, ClassLevel.FOURTH),
+    moonlightSentinel(ELF, ClassType.Fighter, ClassLevel.FOURTH),
+    mysticMuse(ELF, ClassType.Mystic, ClassLevel.FOURTH),
+    elementalMaster(ELF, ClassType.Mystic, ClassLevel.FOURTH),
+    evaSaint(ELF, ClassType.Priest, ClassLevel.FOURTH),
 
-    shillienTemplar(Race.DARK_ELF, ClassType.Fighter, ClassLevel.FOURTH),
-    spectralDancer(Race.DARK_ELF, ClassType.Fighter, ClassLevel.FOURTH),
-    ghostHunter(Race.DARK_ELF, ClassType.Fighter, ClassLevel.FOURTH),
-    ghostSentinel(Race.DARK_ELF, ClassType.Fighter, ClassLevel.FOURTH),
-    stormScreamer(Race.DARK_ELF, ClassType.Mystic, ClassLevel.FOURTH),
-    spectralMaster(Race.DARK_ELF, ClassType.Mystic, ClassLevel.FOURTH),
-    shillienSaint(Race.DARK_ELF, ClassType.Priest, ClassLevel.FOURTH),
+    shillienTemplar(DARK_ELF, ClassType.Fighter, ClassLevel.FOURTH),
+    spectralDancer(DARK_ELF, ClassType.Fighter, ClassLevel.FOURTH),
+    ghostHunter(DARK_ELF, ClassType.Fighter, ClassLevel.FOURTH),
+    ghostSentinel(DARK_ELF, ClassType.Fighter, ClassLevel.FOURTH),
+    stormScreamer(DARK_ELF, ClassType.Mystic, ClassLevel.FOURTH),
+    spectralMaster(DARK_ELF, ClassType.Mystic, ClassLevel.FOURTH),
+    shillienSaint(DARK_ELF, ClassType.Priest, ClassLevel.FOURTH),
 
     titan(Race.ORC, ClassType.Fighter, ClassLevel.FOURTH),
     grandKhavatari(Race.ORC, ClassType.Fighter, ClassLevel.FOURTH),
@@ -180,8 +183,8 @@ public enum PlayerClass {
 
     sigelPhoenixKnight(Race.HUMAN, ClassType.Fighter, ClassLevel.AWAKEN),
     sigelHellKnight(Race.HUMAN, ClassType.Fighter, ClassLevel.AWAKEN),
-    sigelEvasTemplar(Race.ELF, ClassType.Fighter, ClassLevel.AWAKEN),
-    sigelShilenTemplar(Race.DARK_ELF, ClassType.Fighter, ClassLevel.AWAKEN),
+    sigelEvasTemplar(ELF, ClassType.Fighter, ClassLevel.AWAKEN),
+    sigelShilenTemplar(DARK_ELF, ClassType.Fighter, ClassLevel.AWAKEN),
     tyrrDuelist(Race.HUMAN, ClassType.Fighter, ClassLevel.AWAKEN),
     tyrrDreadnought(Race.HUMAN, ClassType.Fighter, ClassLevel.AWAKEN),
     tyrrTitan(Race.ORC, ClassType.Fighter, ClassLevel.AWAKEN),
@@ -189,29 +192,29 @@ public enum PlayerClass {
     tyrrMaestro(Race.DWARF, ClassType.Fighter, ClassLevel.AWAKEN),
     tyrrDoombringer(Race.KAMAEL, ClassType.Fighter, ClassLevel.AWAKEN),
     othellAdventurer(Race.HUMAN, ClassType.Fighter, ClassLevel.AWAKEN),
-    othellWindRider(Race.ELF, ClassType.Fighter, ClassLevel.AWAKEN),
-    othellGhostHunter(Race.DARK_ELF, ClassType.Fighter, ClassLevel.AWAKEN),
+    othellWindRider(ELF, ClassType.Fighter, ClassLevel.AWAKEN),
+    othellGhostHunter(DARK_ELF, ClassType.Fighter, ClassLevel.AWAKEN),
     othellFortuneSeeker(Race.DWARF, ClassType.Fighter, ClassLevel.AWAKEN),
     yulSagittarius(Race.HUMAN, ClassType.Fighter, ClassLevel.AWAKEN),
-    yulMoonlightSentinel(Race.ELF, ClassType.Fighter, ClassLevel.AWAKEN),
-    yulGhostSentinel(Race.DARK_ELF, ClassType.Fighter, ClassLevel.AWAKEN),
+    yulMoonlightSentinel(ELF, ClassType.Fighter, ClassLevel.AWAKEN),
+    yulGhostSentinel(DARK_ELF, ClassType.Fighter, ClassLevel.AWAKEN),
     yulTrickster(Race.KAMAEL, ClassType.Fighter, ClassLevel.AWAKEN),
     feohArchmage(Race.HUMAN, ClassType.Mystic, ClassLevel.AWAKEN),
     feohSoultaker(Race.HUMAN, ClassType.Mystic, ClassLevel.AWAKEN),
-    feohMysticMuse(Race.ELF, ClassType.Mystic, ClassLevel.AWAKEN),
-    feoStormScreamer(Race.DARK_ELF, ClassType.Mystic, ClassLevel.AWAKEN),
+    feohMysticMuse(ELF, ClassType.Mystic, ClassLevel.AWAKEN),
+    feoStormScreamer(DARK_ELF, ClassType.Mystic, ClassLevel.AWAKEN),
     feohSoulHound(Race.KAMAEL, ClassType.Mystic, ClassLevel.AWAKEN), // fix me
     issHierophant(Race.HUMAN, ClassType.Priest, ClassLevel.AWAKEN),
-    issSwordMuse(Race.ELF, ClassType.Fighter, ClassLevel.AWAKEN),
-    issSpectralDancer(Race.DARK_ELF, ClassType.Fighter, ClassLevel.AWAKEN),
+    issSwordMuse(ELF, ClassType.Fighter, ClassLevel.AWAKEN),
+    issSpectralDancer(DARK_ELF, ClassType.Fighter, ClassLevel.AWAKEN),
     issDominator(Race.ORC, ClassType.Priest, ClassLevel.AWAKEN),
     issDoomcryer(Race.ORC, ClassType.Priest, ClassLevel.AWAKEN),
     wynnArcanaLord(Race.HUMAN, ClassType.Mystic, ClassLevel.AWAKEN),
-    wynnElementalMaster(Race.ELF, ClassType.Mystic, ClassLevel.AWAKEN),
-    wynnSpectralMaster(Race.DARK_ELF, ClassType.Mystic, ClassLevel.AWAKEN),
+    wynnElementalMaster(ELF, ClassType.Mystic, ClassLevel.AWAKEN),
+    wynnSpectralMaster(DARK_ELF, ClassType.Mystic, ClassLevel.AWAKEN),
     aeoreCardinal(Race.HUMAN, ClassType.Priest, ClassLevel.AWAKEN),
-    aeoreEvaSaint(Race.ELF, ClassType.Priest, ClassLevel.AWAKEN),
-    aeoreShillienSaint(Race.DARK_ELF, ClassType.Priest, ClassLevel.AWAKEN),
+    aeoreEvaSaint(ELF, ClassType.Priest, ClassLevel.AWAKEN),
+    aeoreShillienSaint(DARK_ELF, ClassType.Priest, ClassLevel.AWAKEN),
 
     ertheiaFighter(Race.ERTHEIA, ClassType.Fighter, ClassLevel.FIRST),
     ertheiaWizzard(Race.ERTHEIA, ClassType.Mystic, ClassLevel.FIRST),
@@ -296,11 +299,11 @@ public enum PlayerClass {
                 subclasses.remove(this);
 
                 switch (player.getRace()) {
-                    case Race.ELF:
-                        subclasses.removeAll(getSet(Race.DARK_ELF, ClassLevel.THIRD));
+                    case ELF:
+                        subclasses.removeAll(getSet(DARK_ELF, ClassLevel.THIRD));
                         break;
-                    case Race.DARK_ELF:
-                        subclasses.removeAll(getSet(Race.ELF, ClassLevel.THIRD));
+                    case DARK_ELF:
+                        subclasses.removeAll(getSet(ELF, ClassLevel.THIRD));
                         break;
                 }
 

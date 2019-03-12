@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network;
 
+import org.l2j.gameserver.network.clientpackets.*;
 import org.l2j.gameserver.network.clientpackets.adenadistribution.RequestDivideAdena;
 import org.l2j.gameserver.network.clientpackets.adenadistribution.RequestDivideAdenaCancel;
 import org.l2j.gameserver.network.clientpackets.adenadistribution.RequestDivideAdenaStart;
@@ -15,9 +16,8 @@ import org.l2j.gameserver.network.clientpackets.attributechange.SendChangeAttrib
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestCancelCuriousHouse;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHouseHtml;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCuriousHouse;
-import org.l2j.gameserver.mobius.gameserver.network.clientpackets.commission.*;
-import org.l2j.gameserver.mobius.gameserver.network.clientpackets.compound.*;
 import org.l2j.gameserver.network.clientpackets.commission.*;
+import org.l2j.gameserver.network.clientpackets.compound.*;
 import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystallizeEstimate;
 import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
 import org.l2j.gameserver.network.clientpackets.dailymission.RequestOneDayRewardReceive;
@@ -27,12 +27,10 @@ import org.l2j.gameserver.network.clientpackets.ensoul.RequestTryEnSoulExtractio
 import org.l2j.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
 import org.l2j.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
 import org.l2j.gameserver.network.clientpackets.luckygame.RequestLuckyGameStartInfo;
-import org.l2j.gameserver.mobius.gameserver.network.clientpackets.mentoring.*;
 import org.l2j.gameserver.network.clientpackets.mentoring.*;
 import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusOpen;
 import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusReward;
 import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusRewardList;
-import org.l2j.gameserver.mobius.gameserver.network.clientpackets.primeshop.*;
 import org.l2j.gameserver.network.clientpackets.primeshop.*;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidBossSpawnInfo;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerInfo;
@@ -43,8 +41,6 @@ import org.l2j.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
 import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
 import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOn;
 import org.l2j.gameserver.network.clientpackets.training.NotifyTrainingRoomEnd;
-import org.l2j.gameserver.network.clientpackets.*;
-import org.l2j.gameserver.network.clientpackets.compound.*;
 
 import java.nio.ByteBuffer;
 import java.util.Arrays;

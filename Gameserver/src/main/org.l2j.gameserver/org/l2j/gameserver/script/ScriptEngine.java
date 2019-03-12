@@ -29,7 +29,7 @@ public class ScriptEngine {
         if (s == null) // shape not found
         {
             try {
-                Class.forName("com.l2jmobius.gameserver.script." + name);
+                Class.forName("org.l2j.gameserver.script." + name);
                 // By now the static block with no function would
                 // have been executed if the shape was found.
                 // the shape is expected to have put its factory

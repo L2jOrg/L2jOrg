@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Plains of the Lizardmen Zones -->
+	<zone name="oren21_2220_a01_1" type="EffectZone" shape="NPoly" minZ="-3764" maxZ="-3464">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6435-3;" /> <!-- s_area_poison_bow3 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="83885" Y="80497" />
+		<node X="83325" Y="80678" />
+		<node X="82690" Y="80480" />
+		<node X="82628" Y="79804" />
+		<node X="82713" Y="79397" />
+		<node X="82713" Y="79397" />
+		<node X="82025" Y="78227" />
+		<node X="81718" Y="77815" />
+		<node X="81959" Y="77379" />
+		<node X="82656" Y="77511" />
+		<node X="82656" Y="77511" />
+		<node X="83152" Y="77939" />
+		<node X="83913" Y="78957" />
+		<node X="84190" Y="79474" />
+		<node X="84276" Y="80099" />
+	</zone>
+	<zone name="oren21_2220_a01_2" type="EffectZone" shape="NPoly" minZ="-3740" maxZ="-3240">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6435-2;" /> <!-- s_area_poison_bow2 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="82755" Y="81625" />
+		<node X="82309" Y="81855" />
+		<node X="81625" Y="81248" />
+		<node X="81626" Y="80626" />
+		<node X="82228" Y="79566" />
+		<node X="82228" Y="79566" />
+		<node X="81220" Y="78236" />
+		<node X="81030" Y="77077" />
+		<node X="82472" Y="76149" />
+		<node X="83270" Y="76354" />
+		<node X="83589" Y="77629" />
+		<node X="84703" Y="78917" />
+		<node X="84777" Y="79993" />
+		<node X="84676" Y="80864" />
+		<node X="84018" Y="81088" />
+		<node X="83337" Y="81240" />
+		<!-- stat name="bannedZoneRange" val="oren21_2220_a01_1" / -->
+	</zone>
+	<zone name="oren21_2220_a01_3" type="EffectZone" shape="NPoly" minZ="-3744" maxZ="-3044">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6435-1;" /> <!-- s_area_poison_bow1 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="80948" Y="81704" />
+		<node X="80002" Y="80533" />
+		<node X="80106" Y="79870" />
+		<node X="81333" Y="80359" />
+		<node X="81434" Y="79192" />
+		<node X="79905" Y="78427" />
+		<node X="80363" Y="76612" />
+		<node X="80879" Y="75452" />
+		<node X="83080" Y="74980" />
+		<node X="85000" Y="73955" />
+		<node X="85759" Y="75136" />
+		<node X="84154" Y="77015" />
+		<node X="84228" Y="77737" />
+		<node X="85242" Y="78306" />
+		<node X="85692" Y="81525" />
+		<node X="84399" Y="82252" />
+		<node X="83365" Y="81953" />
+		<node X="81610" Y="83388" />
+		<node X="80473" Y="82612" />
+		<!-- stat name="bannedZoneRange" val="oren21_2220_a01_2" / -->
+	</zone>
+	<zone name="oren21_2220_a02_1" type="EffectZone" shape="NPoly" minZ="-3344" maxZ="-3044">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6435-3;" /> <!-- s_area_poison_bow3 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="91337" Y="77665" />
+		<node X="92093" Y="78507" />
+		<node X="92023" Y="79105" />
+		<node X="90291" Y="79743" />
+		<node X="89466" Y="79279" />
+		<node X="89466" Y="79279" />
+		<node X="89600" Y="77834" />
+		<node X="88778" Y="76650" />
+		<node X="89692" Y="76002" />
+		<node X="90764" Y="77561" />
+	</zone>
+	<zone name="oren21_2220_a02_2" type="EffectZone" shape="NPoly" minZ="-3432" maxZ="-3032">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6435-2;" /> <!-- s_area_poison_bow2 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="90731" Y="76824" />
+		<node X="91716" Y="77112" />
+		<node X="93656" Y="79500" />
+		<node X="91801" Y="80446" />
+		<node X="88992" Y="80261" />
+		<node X="88992" Y="80261" />
+		<node X="88408" Y="79497" />
+		<node X="89140" Y="78440" />
+		<node X="87884" Y="75539" />
+		<node X="89076" Y="74755" />
+		<node X="90815" Y="76046" />
+		<!-- stat name="bannedZoneRange" val="oren21_2220_a02_1" / -->
+	</zone>
+	<zone name="oren21_2220_a02_3" type="EffectZone" shape="NPoly" minZ="-3600" maxZ="-3200">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6435-1;" /> <!-- s_area_poison_bow1 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="88436" Y="81303" />
+		<node X="87307" Y="79562" />
+		<node X="88166" Y="78344" />
+		<node X="86441" Y="78316" />
+		<node X="86179" Y="77546" />
+		<node X="87330" Y="75984" />
+		<node X="86509" Y="74262" />
+		<node X="88049" Y="72874" />
+		<node X="89061" Y="74238" />
+		<node X="91577" Y="75214" />
+		<node X="92445" Y="74710" />
+		<node X="92777" Y="75434" />
+		<node X="92125" Y="76318" />
+		<node X="92587" Y="76918" />
+		<node X="94066" Y="76677" />
+		<node X="94437" Y="79460" />
+		<node X="93369" Y="81194" />
+		<node X="91425" Y="81782" />
+		<node X="90501" Y="81054" />
+		<!-- stat name="bannedZoneRange" val="oren21_2220_a02_2" / -->
+	</zone>
+	<zone name="oren21_2220_a03_1" type="EffectZone" shape="NPoly" minZ="-3744" maxZ="-3444">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6435-3;" /> <!-- s_area_poison_bow3 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="92254" Y="83601" />
+		<node X="92513" Y="84114" />
+		<node X="92406" Y="84883" />
+		<node X="92553" Y="85384" />
+		<node X="91805" Y="85573" />
+		<node X="91805" Y="85573" />
+		<node X="91193" Y="84531" />
+		<node X="91293" Y="83868" />
+	</zone>
+	<zone name="oren21_2220_a03_2" type="EffectZone" shape="NPoly" minZ="-3728" maxZ="-3428">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6435-2;" /> <!-- s_area_poison_bow2 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="92437" Y="83030" />
+		<node X="93139" Y="83525" />
+		<node X="92934" Y="85775" />
+		<node X="92261" Y="86141" />
+		<node X="90864" Y="85353" />
+		<node X="90864" Y="85353" />
+		<node X="90622" Y="83941" />
+		<node X="91126" Y="83342" />
+		<node X="91818" Y="83153" />
+		<!-- stat name="bannedZoneRange" val="oren21_2220_a03_1" / -->
+	</zone>
+	<zone name="oren21_2220_a03_3" type="EffectZone" shape="NPoly" minZ="-3700" maxZ="-3400">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6435-1;" /> <!-- s_area_poison_bow1 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="94254" Y="83444" />
+		<node X="93570" Y="83984" />
+		<node X="93445" Y="86178" />
+		<node X="91313" Y="86422" />
+		<node X="90275" Y="86358" />
+		<node X="89791" Y="85414" />
+		<node X="90219" Y="83874" />
+		<node X="89607" Y="83262" />
+		<node X="90015" Y="82634" />
+		<node X="92143" Y="82182" />
+		<node X="94099" Y="82550" />
+		<!-- stat name="bannedZoneRange" val="oren21_2220_a03_2" / -->
+	</zone>
+	<zone name="oren21_2220_a04_1" type="EffectZone" shape="NPoly" minZ="-3584" maxZ="-3184">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6435-3;" /> <!-- s_area_poison_bow3 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="93513" Y="87903" />
+		<node X="93911" Y="88740" />
+		<node X="93830" Y="89533" />
+		<node X="93276" Y="89513" />
+		<node X="92059" Y="88226" />
+		<node X="92059" Y="88226" />
+		<node X="91971" Y="87777" />
+		<node X="92480" Y="87548" />
+		<node X="92795" Y="87327" />
+		<node X="93262" Y="87501" />
+	</zone>
+	<zone name="oren21_2220_a04_2" type="EffectZone" shape="NPoly" minZ="-3620" maxZ="-3220">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6435-2;" /> <!-- s_area_poison_bow2 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="92727" Y="86380" />
+		<node X="94103" Y="87753" />
+		<node X="94451" Y="89784" />
+		<node X="93104" Y="90072" />
+		<node X="91228" Y="88097" />
+		<node X="91228" Y="88097" />
+		<node X="91568" Y="87205" />
+		<node X="92330" Y="86409" />
+		<!-- stat name="bannedZoneRange" val="oren21_2220_a04_1" / -->
+	</zone>
+	<zone name="oren21_2220_a04_3" type="EffectZone" shape="NPoly" minZ="-3640" maxZ="-3140">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6435-1;" /> <!-- s_area_poison_bow1 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="94664" Y="90851" />
+		<node X="93241" Y="91517" />
+		<node X="92850" Y="90548" />
+		<node X="91950" Y="90369" />
+		<node X="91525" Y="89361" />
+		<node X="90345" Y="88918" />
+		<node X="91377" Y="86446" />
+		<node X="93171" Y="86240" />
+		<node X="94273" Y="87094" />
+		<node X="94625" Y="87946" />
+		<node X="95849" Y="89386" />
+		<node X="95401" Y="90138" />
+		<node X="94917" Y="90406" />
+		<!-- stat name="bannedZoneRange" val="oren21_2220_a04_2" / -->
+	</zone>
+	<zone name="oren21_2220_a05_1" type="EffectZone" shape="NPoly" minZ="-3288" maxZ="-2788">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6435-3;" /> <!-- s_area_poison_bow3 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="88568" Y="92008" />
+		<node X="90012" Y="92048" />
+		<node X="90093" Y="92642" />
+		<node X="88464" Y="92784" />
+		<node X="87451" Y="93745" />
+		<node X="87451" Y="93745" />
+		<node X="86372" Y="92881" />
+		<node X="87136" Y="92149" />
+	</zone>
+	<zone name="oren21_2220_a05_2" type="EffectZone" shape="NPoly" minZ="-3476" maxZ="-2976">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6435-2;" /> <!-- s_area_poison_bow2 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="87196" Y="94553" />
+		<node X="86308" Y="93675" />
+		<node X="85314" Y="94270" />
+		<node X="84520" Y="93898" />
+		<node X="85968" Y="92702" />
+		<node X="85968" Y="92702" />
+		<node X="86478" Y="91730" />
+		<node X="88406" Y="91514" />
+		<node X="90392" Y="91279" />
+		<node X="90923" Y="92101" />
+		<node X="90953" Y="92766" />
+		<node X="89935" Y="93237" />
+		<node X="88741" Y="93082" />
+		<node X="88416" Y="93943" />
+		<!-- stat name="bannedZoneRange" val="oren21_2220_a05_1" / -->
+	</zone>
+	<zone name="oren21_2220_a05_3" type="EffectZone" shape="NPoly" minZ="-3600" maxZ="-3000">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6435-1;" /> <!-- s_area_poison_bow1 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="90965" Y="93248" />
+		<node X="86669" Y="95030" />
+		<node X="86060" Y="94247" />
+		<node X="85132" Y="95244" />
+		<node X="83537" Y="94333" />
+		<node X="84037" Y="93518" />
+		<node X="85621" Y="92454" />
+		<node X="86735" Y="90612" />
+		<node X="90830" Y="90531" />
+		<node X="91352" Y="91601" />
+		<node X="92529" Y="92534" />
+		<node X="92241" Y="93634" />
+		<!-- stat name="bannedZoneRange" val="oren21_2220_a05_2" / -->
+	</zone>
+	<zone id="70307" name="oren21_mb2220_ugoz01" type="EffectZone" shape="NPoly" minZ="-3792" maxZ="-3292">
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="5" / -->
+		<stat name="skillIdLvl" val="6436-1;" /> <!-- s_area_poison_ugoros -->
+		<stat name="default_enabled" val="true" />
+		<stat name="reuse" val="5000" /> <!-- Guess -->
+		<node X="96971" Y="84648" />
+		<node X="97842" Y="86047" />
+		<node X="97803" Y="86717" />
+		<node X="95982" Y="86676" />
+		<node X="95046" Y="85676" />
+		<node X="95166" Y="84573" />
+		<node X="96095" Y="84213" />
+	</zone>
+	<zone name="oren21_mb2220_ugoz01" type="NoRestartZone" shape="NPoly" minZ="-3758" maxZ="-2758">
+		<stat name="restartTime" val="1800" />
+		<stat name="restartAllowedTime" val="1" />
+		<node X="97040" Y="84524" />
+		<node X="98383" Y="85869" />
+		<node X="98344" Y="87269" />
+		<node X="95708" Y="87235" />
+		<node X="94661" Y="85673" />
+		<node X="95107" Y="84457" />
+		<node X="96094" Y="84094" />
+	</zone>
+</list>

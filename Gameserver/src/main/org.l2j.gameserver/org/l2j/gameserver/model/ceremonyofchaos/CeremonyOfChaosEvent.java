@@ -1,9 +1,9 @@
 package org.l2j.gameserver.model.ceremonyofchaos;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.enums.CeremonyOfChaosResult;
 import org.l2j.gameserver.instancemanager.CeremonyOfChaosManager;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
-import org.l2j.gameserver.enums.CeremonyOfChaosResult;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.StatsSet;
@@ -29,7 +29,6 @@ import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.appearance.ExCuriousHouseMemberUpdate;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ceremonyofchaos.*;
 import org.l2j.gameserver.network.serverpackets.ceremonyofchaos.*;
 
 import java.util.*;

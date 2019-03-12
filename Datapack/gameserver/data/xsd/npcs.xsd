@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="dropListItem">
+		<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+		<xs:attribute name="min" type="xs:nonNegativeInteger" />
+		<xs:attribute name="max" type="xs:positiveInteger" />
+		<xs:attribute name="chance" type="xs:decimal" />
+	</xs:complexType>
+	<xs:complexType name="dropList">
+		<xs:choice minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="item" type="dropListItem" />
+		</xs:choice>
+	</xs:complexType>
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="npc" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="parameters" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:choice minOccurs="1" maxOccurs="unbounded">
+										<xs:element name="param">
+											<xs:complexType>
+												<xs:attribute name="name" type="xs:token" use="required" />
+												<xs:attribute name="value" type="xs:string" use="required" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="skill">
+											<xs:complexType>
+												<xs:attribute name="name" type="xs:token" use="required" />
+												<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+												<xs:attribute name="level" type="xs:positiveInteger" use="required" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="minions">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="npc" minOccurs="1" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="count" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="respawnTime" type="xs:nonNegativeInteger" use="required" />
+															<xs:attribute name="weightPoint" type="xs:integer" use="required" />
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="name" type="xs:token" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="race" type="xs:token" minOccurs="0" maxOccurs="1" />
+							<xs:element name="sex" type="xs:token" minOccurs="0" maxOccurs="1" />
+							<xs:element name="equipment" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="chest" type="xs:nonNegativeInteger" />
+									<xs:attribute name="rhand" type="xs:nonNegativeInteger" />
+									<xs:attribute name="lhand" type="xs:nonNegativeInteger" />
+									<xs:attribute name="weaponEnchant" type="xs:nonNegativeInteger" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="acquire" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="exp" type="xs:decimal" />
+									<xs:attribute name="sp" type="xs:decimal" />
+									<xs:attribute name="raidPoints" type="xs:decimal" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="mpReward" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="value" type="xs:positiveInteger" />
+									<xs:attribute name="type">
+										<xs:simpleType>
+											<xs:restriction base="xs:token">
+												<xs:enumeration value="DIFF" />
+												<xs:enumeration value="PER" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="ticks" type="xs:positiveInteger" />
+									<xs:attribute name="affects">
+										<xs:simpleType>
+											<xs:restriction base="xs:token">
+												<xs:enumeration value="SOLO" />
+												<xs:enumeration value="PARTY" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="stats" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="vitals" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="hp" type="xs:decimal" />
+												<xs:attribute name="hpRegen" type="xs:decimal" />
+												<xs:attribute name="mp" type="xs:decimal" />
+												<xs:attribute name="mpRegen" type="xs:decimal" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="attack" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="physical" type="xs:decimal" />
+												<xs:attribute name="magical" type="xs:decimal" />
+												<xs:attribute name="random" type="xs:nonNegativeInteger" />
+												<xs:attribute name="critical" type="xs:decimal" />
+												<xs:attribute name="accuracy" type="xs:float" />
+												<xs:attribute name="attackSpeed" type="xs:float" />
+												<xs:attribute name="reuseDelay" type="xs:nonNegativeInteger" />
+												<xs:attribute name="type" type="xs:token" />
+												<xs:attribute name="range" type="xs:nonNegativeInteger" />
+												<xs:attribute name="distance" type="xs:nonNegativeInteger" />
+												<xs:attribute name="width" type="xs:nonNegativeInteger" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="defence" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="physical" type="xs:decimal" />
+												<xs:attribute name="magical" type="xs:decimal" />
+												<xs:attribute name="evasion" type="xs:integer" />
+												<xs:attribute name="shield" type="xs:nonNegativeInteger" />
+												<xs:attribute name="shieldRate" type="xs:nonNegativeInteger" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="abnormalResist" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="physical" type="xs:decimal" />
+												<xs:attribute name="magical" type="xs:decimal" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="attribute" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="attack" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="type" type="xs:token" />
+															<xs:attribute name="value" type="xs:nonNegativeInteger" />
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="defence" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="fire" type="xs:integer" />
+															<xs:attribute name="water" type="xs:integer" />
+															<xs:attribute name="wind" type="xs:integer" />
+															<xs:attribute name="earth" type="xs:integer" />
+															<xs:attribute name="holy" type="xs:integer" />
+															<xs:attribute name="dark" type="xs:integer" />
+															<xs:attribute name="default" type="xs:integer" />
+														</xs:complexType>
+													</xs:element>
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="speed" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="walk" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="ground" type="xs:decimal" />
+															<xs:attribute name="swim" type="xs:decimal" />
+															<xs:attribute name="fly" type="xs:decimal" />
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="run" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="ground" type="xs:decimal" />
+															<xs:attribute name="swim" type="xs:decimal" />
+															<xs:attribute name="fly" type="xs:decimal" />
+														</xs:complexType>
+													</xs:element>
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="hitTime" type="xs:nonNegativeInteger" minOccurs="0" maxOccurs="1" />
+									</xs:all>
+									<xs:attribute name="str" type="xs:nonNegativeInteger" />
+									<xs:attribute name="int" type="xs:nonNegativeInteger" />
+									<xs:attribute name="dex" type="xs:nonNegativeInteger" />
+									<xs:attribute name="wit" type="xs:nonNegativeInteger" />
+									<xs:attribute name="con" type="xs:nonNegativeInteger" />
+									<xs:attribute name="men" type="xs:nonNegativeInteger" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="status" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="unique" type="xs:boolean" />
+									<xs:attribute name="attackable" type="xs:boolean" />
+									<xs:attribute name="talkable" type="xs:boolean" />
+									<xs:attribute name="targetable" type="xs:boolean" />
+									<xs:attribute name="undying" type="xs:boolean" />
+									<xs:attribute name="showName" type="xs:boolean" />
+									<xs:attribute name="randomWalk" type="xs:boolean" />
+									<xs:attribute name="randomAnimation" type="xs:boolean" />
+									<xs:attribute name="flying" type="xs:boolean" />
+									<xs:attribute name="canMove" type="xs:boolean" />
+									<xs:attribute name="noSleepMode" type="xs:boolean" />
+									<xs:attribute name="passableDoor" type="xs:boolean" />
+									<xs:attribute name="hasSummoner" type="xs:boolean" />
+									<xs:attribute name="canBeSown" type="xs:boolean" />
+									<xs:attribute name="isDeathPenalty" type="xs:boolean" />
+									<xs:attribute name="fakePlayer" type="xs:boolean" />
+									<xs:attribute name="fakePlayerTalkable" type="xs:boolean" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="skillList" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="skill" minOccurs="1" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="id" type="xs:nonNegativeInteger" use="required" />
+												<xs:attribute name="level" type="xs:nonNegativeInteger" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="shots" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="soul" type="xs:nonNegativeInteger" />
+									<xs:attribute name="spirit" type="xs:nonNegativeInteger" />
+									<xs:attribute name="shotChance" type="xs:nonNegativeInteger" />
+									<xs:attribute name="spiritChance" type="xs:nonNegativeInteger" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="corpseTime" type="xs:nonNegativeInteger" minOccurs="0" maxOccurs="1" />
+							<xs:element name="exCrtEffect" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+							<xs:element name="sNpcPropHpRate" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+							<xs:element name="ai" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="skill" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="minChance" type="xs:nonNegativeInteger" />
+												<xs:attribute name="maxChance" type="xs:nonNegativeInteger" />
+												<xs:attribute name="primaryId" type="xs:nonNegativeInteger" />
+												<xs:attribute name="shortRangeId" type="xs:nonNegativeInteger" />
+												<xs:attribute name="shortRangeChance" type="xs:nonNegativeInteger" />
+												<xs:attribute name="longRangeId" type="xs:nonNegativeInteger" />
+												<xs:attribute name="longRangeChance" type="xs:nonNegativeInteger" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="clanList" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:choice minOccurs="1" maxOccurs="unbounded">
+													<xs:element name="clan" type="xs:token" />
+													<xs:element name="ignoreNpcId" type="xs:nonNegativeInteger" />
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+									</xs:all>
+									<xs:attribute name="type" type="xs:token" />
+									<xs:attribute name="aggroRange" type="xs:nonNegativeInteger" />
+									<xs:attribute name="clanHelpRange" type="xs:nonNegativeInteger" />
+									<xs:attribute name="dodge" type="xs:nonNegativeInteger" />
+									<xs:attribute name="isChaos" type="xs:boolean" />
+									<xs:attribute name="isAggressive" type="xs:boolean" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="dropLists" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="drop" type="dropList" minOccurs="0" maxOccurs="1" />
+										<xs:element name="spoil" type="dropList" minOccurs="0" maxOccurs="1" />
+										<xs:element name="lucky" type="dropList" minOccurs="0" maxOccurs="1" />
+									</xs:all>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="collision" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="radius" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="normal" type="xs:decimal" />
+												<xs:attribute name="grown" type="xs:decimal" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="height" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="normal" type="xs:decimal" />
+												<xs:attribute name="grown" type="xs:decimal" />
+											</xs:complexType>
+										</xs:element>
+									</xs:all>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="extendDrop" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:byte" name="id" maxOccurs="unbounded" minOccurs="1" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="displayId" type="xs:positiveInteger" />
+						<xs:attribute name="level" type="xs:byte" />
+						<xs:attribute name="type" type="xs:token" />
+						<xs:attribute name="name" type="xs:string" />
+						<xs:attribute name="usingServerSideName" type="xs:boolean" />
+						<xs:attribute name="title" type="xs:string" />
+						<xs:attribute name="usingServerSideTitle" type="xs:boolean" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

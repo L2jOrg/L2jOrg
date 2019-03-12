@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="35858"> <!-- Foreman -->
+		<teleport name="tel1" type="OTHER">
+			<location npcStringId="1010658" x="189894" y="36746" z="-3408" /> <!-- Fortress North Gate -->
+			<location npcStringId="1010659" x="189914" y="42242" z="-3408" /> <!-- Fortress South Gate -->
+			<location npcStringId="1010678" x="147450" y="28081" z="-2294" /> <!-- Aden Town Square -->
+			<location npcStringId="1010679" x="147428" y="20161" z="-2008" /> <!-- Front of the Aden Castle Gate -->
+		</teleport>
+		<teleport name="tel2" type="OTHER">
+			<location npcStringId="1010658" x="189894" y="36746" z="-3408" /> <!-- Fortress North Gate -->
+			<location npcStringId="1010659" x="189914" y="42242" z="-3408" /> <!-- Fortress South Gate -->
+			<location npcStringId="1010678" x="147450" y="28081" z="-2294" /> <!-- Aden Town Square -->
+			<location npcStringId="1010679" x="147428" y="20161" z="-2008" /> <!-- Front of the Aden Castle Gate -->
+			<location npcStringId="1010127" x="118509" y="-4779" z="-4000" feeCount="500" /> <!-- Ancient Battleground -->
+			<location npcStringId="1010618" x="124904" y="61992" z="-3973" feeCount="500" /> <!-- Enchanted Valley, Southern Region (Lv. 45) -->
+			<location npcStringId="1010619" x="104426" y="33746" z="-3825" feeCount="500" /> <!-- Enchanted Valley, Northern Region (Lv. 45) -->
+			<location npcStringId="1010060" x="155310" y="-16339" z="-3320" feeCount="500" /> <!-- Blazing Swamp (Lv. 97) -->
+			<location npcStringId="1010702" x="183985" y="61424" z="-3992" feeCount="500" /> <!-- Giant's Cave Upper Layer -->
+			<location npcStringId="1010703" x="191754" y="56760" z="-7624" feeCount="500" /> <!-- Giant's Cave Lower Layer -->
+		</teleport>
+	</npc>
+</list>

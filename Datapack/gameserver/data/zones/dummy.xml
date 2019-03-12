@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Dummy Zones -->
+	<zone name="no_escape_1" id="10501" type="ScriptZone" shape="NPoly" minZ="-3050" maxZ="-2850">
+		<node X="-115727" Y="-251652" />
+		<node X="-113365" Y="-251655" />
+		<node X="-113365" Y="-248191" />
+		<node X="-115727" Y="-248194" />
+	</zone>
+	<zone name="no_escape_2" id="10502" type="ScriptZone" shape="NPoly" minZ="-3049" maxZ="-2849">
+		<node X="-116299" Y="-251426" />
+		<node X="-115745" Y="-251426" />
+		<node X="-115745" Y="-250840" />
+		<node X="-116296" Y="-250840" />
+	</zone>
+	<zone name="no_escape_3" id="10503" type="ScriptZone" shape="NPoly" minZ="-3053" maxZ="-2853">
+		<node X="-113350" Y="-251408" />
+		<node X="-112797" Y="-251407" />
+		<node X="-112798" Y="-250855" />
+		<node X="-113353" Y="-250857" />
+	</zone>
+	<zone name="no_escape_4" id="10504" type="ScriptZone" shape="NPoly" minZ="-11624" maxZ="-11224">
+		<node X="-85850" Y="-45960" />
+		<node X="-86761" Y="-45935" />
+		<node X="-87000" Y="-46986" />
+		<node X="-87535" Y="-48793" />
+		<node X="-87049" Y="-49419" />
+		<node X="-85458" Y="-49051" />
+		<node X="-84224" Y="-49803" />
+		<node X="-83446" Y="-49477" />
+		<node X="-83154" Y="-47528" />
+		<node X="-83863" Y="-47202" />
+		<node X="-84291" Y="-47449" />
+		<node X="-84711" Y="-47094" />
+	</zone>
+	<zone name="no_escape_5" id="10505" type="ScriptZone" shape="NPoly" minZ="-11620" maxZ="-11220">
+		<node X="-84112" Y="-50103" />
+		<node X="-84830" Y="-51342" />
+		<node X="-86142" Y="-51844" />
+		<node X="-86553" Y="-52634" />
+		<node X="-85640" Y="-53190" />
+		<node X="-84380" Y="-54211" />
+		<node X="-83379" Y="-54413" />
+		<node X="-82972" Y="-52054" />
+		<node X="-81938" Y="-51822" />
+		<node X="-82193" Y="-50685" />
+		<node X="-82732" Y="-50575" />
+		<node X="-83454" Y="-49986" />
+	</zone>
+	<zone name="no_escape_6" id="10506" type="ScriptZone" shape="NPoly" minZ="-11716" maxZ="-11316">
+		<node X="-79843" Y="-49874" />
+		<node X="-81401" Y="-50399" />
+		<node X="-81709" Y="-51148" />
+		<node X="-81639" Y="-51704" />
+		<node X="-80712" Y="-52824" />
+		<node X="-80414" Y="-54463" />
+		<node X="-79510" Y="-54322" />
+		<node X="-78717" Y="-52952" />
+		<node X="-77725" Y="-52968" />
+		<node X="-77416" Y="-51996" />
+		<node X="-78890" Y="-51583" />
+		<node X="-79378" Y="-50568" />
+	</zone>
+	<zone name="no_escape_7" id="10507" type="ScriptZone" shape="NPoly" minZ="-11592" maxZ="-11192">
+		<node X="-79343" Y="-47478" />
+		<node X="-80117" Y="-47109" />
+		<node X="-80672" Y="-47858" />
+		<node X="-80382" Y="-49156" />
+		<node X="-79813" Y="-49685" />
+		<node X="-79130" Y="-49730" />
+		<node X="-77951" Y="-49052" />
+		<node X="-76485" Y="-49456" />
+		<node X="-76221" Y="-48619" />
+		<node X="-76710" Y="-48032" />
+		<node X="-76946" Y="-46451" />
+		<node X="-77668" Y="-45794" />
+	</zone>
+	<zone name="no_escape_8" id="10508" type="ScriptZone" shape="NPoly" minZ="-11640" maxZ="-11240">
+		<node X="-82326" Y="-43857" />
+		<node X="-83361" Y="-43681" />
+		<node X="-83614" Y="-44430" />
+		<node X="-82884" Y="-46072" />
+		<node X="-83209" Y="-47165" />
+		<node X="-82621" Y="-47718" />
+		<node X="-81071" Y="-47576" />
+		<node X="-80636" Y="-47169" />
+		<node X="-80853" Y="-46291" />
+		<node X="-79968" Y="-44123" />
+		<node X="-80245" Y="-43614" />
+		<node X="-81544" Y="-43878" />
+	</zone>
+	<zone name="no_s_swoop_cannon_1" id="51101" type="ScriptZone" shape="NPoly" minZ="-3325" maxZ="-325">
+		<node X="-19761" Y="106717" />
+		<node X="-17065" Y="106707" />
+		<node X="-16372" Y="107407" />
+		<node X="-16365" Y="108351" />
+		<node X="-15653" Y="108857" />
+		<node X="-15650" Y="109747" />
+		<node X="-16149" Y="110295" />
+		<node X="-16149" Y="112445" />
+		<node X="-17783" Y="113928" />
+		<node X="-18965" Y="113925" />
+		<node X="-20477" Y="112395" />
+		<node X="-20475" Y="109024" />
+		<node X="-19757" Y="108203" />
+	</zone>
+	<zone name="no_s_swoop_cannon_2" id="51102" type="ScriptZone" shape="NPoly" minZ="-3533" maxZ="-533">
+		<node X="24389" Y="157488" />
+		<node X="24398" Y="160923" />
+		<node X="23789" Y="161566" />
+		<node X="23798" Y="163079" />
+		<node X="21170" Y="163085" />
+		<node X="20090" Y="162065" />
+		<node X="20099" Y="161445" />
+		<node X="19397" Y="160439" />
+		<node X="19971" Y="159494" />
+		<node X="19971" Y="157487" />
+		<node X="21554" Y="155879" />
+		<node X="23105" Y="155885" />
+	</zone>
+	<zone name="no_s_swoop_cannon_3" id="51103" type="ScriptZone" shape="NPoly" minZ="-3000" maxZ="0">
+		<node X="113630" Y="142600" />
+		<node X="117151" Y="142602" />
+		<node X="118085" Y="143188" />
+		<node X="119331" Y="143280" />
+		<node X="119351" Y="146088" />
+		<node X="118505" Y="147038" />
+		<node X="117672" Y="147096" />
+		<node X="116511" Y="147715" />
+		<node X="115540" Y="147237" />
+		<node X="113723" Y="147237" />
+		<node X="112723" Y="146279" />
+		<node X="112027" Y="145412" />
+		<node X="112013" Y="144502" />
+	</zone>
+	<zone name="no_s_swoop_cannon_4" id="51104" type="ScriptZone" shape="NPoly" minZ="-3320" maxZ="-320">
+		<node X="79720" Y="34771" />
+		<node X="83242" Y="34773" />
+		<node X="84176" Y="35359" />
+		<node X="85422" Y="35451" />
+		<node X="85441" Y="38258" />
+		<node X="84584" Y="39110" />
+		<node X="83762" Y="39119" />
+		<node X="82601" Y="39886" />
+		<node X="81631" Y="39407" />
+		<node X="79814" Y="39408" />
+		<node X="78814" Y="38450" />
+		<node X="78118" Y="37583" />
+		<node X="78104" Y="36672" />
+	</zone>
+	<zone name="no_s_swoop_cannon_5" id="51105" type="ScriptZone" shape="NPoly" minZ="-1062" maxZ="8938">
+		<node X="144406" Y="1077" />
+		<node X="150586" Y="1051" />
+		<node X="150592" Y="5125" />
+		<node X="149973" Y="6169" />
+		<node X="150232" Y="8978" />
+		<node X="144667" Y="8971" />
+		<node X="144992" Y="6142" />
+		<node X="144411" Y="5220" />
+	</zone>
+	<zone name="no_s_swoop_cannon_6" id="51106" type="ScriptZone" shape="NPoly" minZ="-1936" maxZ="1064">
+		<node X="118288" Y="246245" />
+		<node X="118297" Y="249680" />
+		<node X="117688" Y="250323" />
+		<node X="117696" Y="251836" />
+		<node X="115069" Y="251842" />
+		<node X="113988" Y="250822" />
+		<node X="113997" Y="250202" />
+		<node X="113296" Y="249196" />
+		<node X="113870" Y="248251" />
+		<node X="113869" Y="246244" />
+		<node X="115460" Y="244643" />
+		<node X="117004" Y="244642" />
+	</zone>
+	<zone name="no_s_swoop_cannon_7" id="51107" type="ScriptZone" shape="NPoly" minZ="-3000" maxZ="1400">
+		<node X="143803" Y="-49155" />
+		<node X="151092" Y="-49185" />
+		<node X="151084" Y="-47725" />
+		<node X="150320" Y="-45980" />
+		<node X="147872" Y="-44463" />
+		<node X="147085" Y="-44462" />
+		<node X="144627" Y="-46006" />
+		<node X="143802" Y="-47669" />
+	</zone>
+	<zone name="no_s_swoop_cannon_8" id="51108" type="ScriptZone" shape="NPoly" minZ="-3000" maxZ="8000">
+		<node X="11670" Y="-52692" />
+		<node X="16653" Y="-52693" />
+		<node X="18368" Y="-51762" />
+		<node X="19492" Y="-49506" />
+		<node X="19492" Y="-48773" />
+		<node X="18368" Y="-46554" />
+		<node X="16836" Y="-45585" />
+		<node X="11699" Y="-45596" />
+	</zone>
+	<zone name="no_s_swoop_cannon_9" id="51109" type="ScriptZone" shape="NPoly" minZ="-1251" maxZ="3149">
+		<node X="73859" Y="-153166" />
+		<node X="81148" Y="-153196" />
+		<node X="81139" Y="-151736" />
+		<node X="80376" Y="-149992" />
+		<node X="77928" Y="-148474" />
+		<node X="77141" Y="-148473" />
+		<node X="74683" Y="-150017" />
+		<node X="73858" Y="-151680" />
+	</zone>
+	<zone name="allow_s_disrupting_arrow" id="2234" type="ScriptZone" shape="NPoly" minZ="-9239" maxZ="-8739">
+		<node X="-86067" Y="-152626" />
+		<node X="-86292" Y="-152322" />
+		<node X="-87125" Y="-151593" />
+		<node X="-88505" Y="-151586" />
+		<node X="-89313" Y="-152278" />
+		<node X="-89503" Y="-152648" />
+		<node X="-89500" Y="-153806" />
+		<node X="-89429" Y="-154257" />
+		<node X="-88538" Y="-155006" />
+		<node X="-87030" Y="-155003" />
+		<node X="-86063" Y="-154215" />
+	</zone>
+	<zone name="allow_s_item_scroll_of_stone" id="2239" type="ScriptZone" shape="NPoly" minZ="-5064" maxZ="-64">
+		<node X="99294" Y="-130555" />
+		<node X="114151" Y="-130344" />
+		<node X="113630" Y="-124346" />
+		<node X="99617" Y="-122509" />
+	</zone>
+	<zone name="allow_s_item_hot_spring" id="2240123" type="ScriptZone" shape="NPoly" minZ="-2460" maxZ="-1860">
+		<node X="150253" Y="-127587" />
+		<node X="154061" Y="-128780" />
+		<node X="157203" Y="-125699" />
+		<node X="154870" Y="-123511" />
+		<node X="150933" Y="-124975" />
+	</zone>
+	<zone name="allow_s_disrupting_dew" id="2276" type="ScriptZone" shape="NPoly" minZ="-9239" maxZ="-8739">
+		<node X="-86067" Y="-152626" />
+		<node X="-86292" Y="-152322" />
+		<node X="-87125" Y="-151593" />
+		<node X="-88505" Y="-151586" />
+		<node X="-89313" Y="-152278" />
+		<node X="-89503" Y="-152648" />
+		<node X="-89500" Y="-153806" />
+		<node X="-89429" Y="-154257" />
+		<node X="-88538" Y="-155006" />
+		<node X="-87030" Y="-155003" />
+		<node X="-86063" Y="-154215" />
+	</zone>
+	<zone name="allow_s_item_detect_hide_door" id="2353" type="ScriptZone" shape="NPoly" minZ="-12923" maxZ="-12723">
+		<node X="-107560" Y="83571" />
+		<node X="-107293" Y="83571" />
+		<node X="-107293" Y="83823" />
+		<node X="-107560" Y="83823" />
+	</zone>
+	<zone name="allow_s_frintessa_daemon_charge" id="5015" type="ScriptZone" shape="NPoly" minZ="-5175" maxZ="-4675">
+		<node X="174657" Y="-88953" />
+		<node X="175155" Y="-88446" />
+		<node X="175142" Y="-87562" />
+		<node X="174600" Y="-87099" />
+		<node X="173854" Y="-87098" />
+		<node X="173331" Y="-87540" />
+		<node X="173322" Y="-88469" />
+		<node X="173812" Y="-88958" />
+	</zone>
+	<zone name="allow_s_item_freezing_core" id="90578" type="ScriptZone" shape="NPoly" minZ="-11249" maxZ="-10749">
+		<node X="112898" Y="-117865" />
+		<node X="116554" Y="-117891" />
+		<node X="116597" Y="-112972" />
+		<node X="112920" Y="-112997" />
+	</zone>
+</list>

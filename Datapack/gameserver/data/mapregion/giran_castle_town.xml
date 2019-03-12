@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Giran Castle Town -->
+	<region name="giran_castle_town" town="Giran Castle Town" castle="3" locId="918" bbs="6">
+		<respawnPoint X="82480" Y="149087" Z="-3350" />
+		<respawnPoint X="81440" Y="149119" Z="-3350" />
+		<respawnPoint X="81376" Y="148095" Z="-3350" />
+		<respawnPoint X="82496" Y="148095" Z="-3350" />
+		<respawnPoint X="83473" Y="149223" Z="-3300" />
+		<respawnPoint X="83426" Y="148835" Z="-3300" />
+		<respawnPoint X="83409" Y="148578" Z="-3300" />
+		<respawnPoint X="83415" Y="148235" Z="-3300" />
+		<respawnPoint X="82272" Y="147801" Z="-3350" />
+		<respawnPoint X="81562" Y="147782" Z="-3350" />
+		<respawnPoint X="81062" Y="148144" Z="-3350" />
+		<respawnPoint X="81033" Y="148883" Z="-3350" />
+		<respawnPoint X="81637" Y="149427" Z="-3350" />
+		<respawnPoint X="82292" Y="149450" Z="-3350" />
+		<respawnPoint X="74450" Y="144238" Z="-3730" isChaotic="true" />
+		<respawnPoint X="74209" Y="142395" Z="-3730" isChaotic="true" />
+		<respawnPoint X="77279" Y="145045" Z="-3630" isChaotic="true" />
+		<respawnPoint X="74809" Y="146119" Z="-3600" isChaotic="true" />
+		<respawnPoint X="75006" Y="143520" Z="-3700" isChaotic="true" />
+		<respawnPoint X="81347" Y="140579" Z="-3520" isChaotic="true" />
+		<respawnPoint X="79543" Y="142050" Z="-3500" isChaotic="true" />
+		<respawnPoint X="86223" Y="140993" Z="-3400" isChaotic="true" />
+		<respawnPoint X="78692" Y="154573" Z="-3450" isChaotic="true" />
+		<respawnPoint X="77870" Y="156209" Z="-3430" isChaotic="true" />
+		<respawnPoint X="79832" Y="154009" Z="-3500" isChaotic="true" />
+		<respawnPoint X="75501" Y="147178" Z="-3530" isChaotic="true" />
+		<map X="21" Y="23" />
+		<map X="22" Y="22" />
+		<map X="23" Y="22" />
+		<!-- Heiness region -->
+		<map X="22" Y="23" />
+		<map X="22" Y="24" />
+		<map X="22" Y="25" />
+		<map X="23" Y="23" />
+		<map X="23" Y="24" />
+		<map X="23" Y="25" />
+	</region>
+</list>	

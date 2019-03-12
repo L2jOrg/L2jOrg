@@ -1,0 +1,1002 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="70800" name="Transformation Scroll: White Assassin" additionalName="Event" type="EtcItem">
+		<!-- Makes you armor look like a White Assassin one. P. / M. Atk. +3%, P. / M. Def. +3%, Atk. Spd. +5%, Max. HP/MP +7%, Speed +5, P. / M. Accuracy +2, M. Critical Rate +20. Duration: 60 minutes. -->
+		<set name="icon" val="icon.etc_charm_of_courage_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70801" name="Blue Dynasty Transformation Scroll" additionalName="Event" type="EtcItem">
+		<!-- Makes you armor look like Blue Dynasty one. P. / M. Atk. +3%, P. / M. Def. +3%, Atk. Spd. +5%, Max. HP/MP +7%, Speed +5, P. / M. Accuracy +2, M. Critical Rate +2. Duration: 60 minutes. -->
+		<set name="icon" val="icon.etc_charm_of_courage_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70802" name="Red Zubei Transformation Scroll" additionalName="Event" type="EtcItem">
+		<!-- Makes you armor look like Red Zubei one. P. / M. Atk. +2%, P. / M. Def. +2%, Atk. Spd. +3%, Max. HP/MP +5%, Speed +4, P. / M. Accuracy +1, M. Critical Rate +1. Duration: 60 minutes. -->
+		<set name="icon" val="icon.etc_charm_of_courage_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70803" name="Transformation Support Cube" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to get one of the Transformation Scrolls that remain active for one hour: Transformation Scroll: Pirate, Transformation Scroll: White Assassin, Transformation Scroll: Dark Assassin, Blue Dynasty Transformation Scroll, Red Zubei Transformation Scroll. <Note:>. Support Cube can be used only once a day. A new day starts every day at 6:30 a.m. Cannot be stacked with other Support Cubes. Cannot be exchanged, dropped, destroyed, sold, or shared within account. Can be stored in a private warehouse. Duration: 7 days. -->
+		<set name="icon" val="icon.cube_upgrade" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="70804" name="Chicken Amulet" additionalName="5-day" type="EtcItem">
+		<!-- A 5-day item. Increases XP and SP gain by +50% while hunting. For characters of level 40 or above. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.lcon.br_life_rune_i00" />
+		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="7200" />
+	</item>
+	<item id="70805" name="Kusto Lucky Enchant Pack" type="EtcItem">
+		<!-- Double-click to randomly obtain Scroll: Enchant Armor or Kusto's Special Alloy. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70806" name="Penitent's Manacles" type="Armor">
+		<!-- Bracelet used to summon Sin Eater Agathion and to activate Hour of Penitence. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_leash_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70807" name="Crumbs of Penitence" type="EtcItem">
+		<!-- Item that drops from monster if it is killed during the Hour of Penitence. Bring it to Dark Judge and lower your PC count. -->
+		<set name="icon" val="icon.etc_powder_white_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70808" name="Giant's Treasure Chest" type="EtcItem">
+		<!-- Double-click to receive one of the Giant's Treasures. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70809" name="Blessed Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
+		<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers and spears. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons.  Starting from +4 and above, Atk. / M. Atk. bonus doubles. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70810" name="Blessed Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
+		<!-- P. Def. +1 for A-grade armor and accessories. Increases by 3 starting from +4. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70811" name="Red Cat's Eye" additionalName="Lv. 1" type="Armor">
+		<!-- P. Critical Damage +2%. Effect does not stack with additional jewels of the same type.  Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70812" name="Red Cat's Eye" additionalName="Lv. 2" type="Armor">
+		<!-- P. Critical Damage +4%. Effect does not stack with additional jewels of the same type.  Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70813" name="Red Cat's Eye" additionalName="Lv. 3" type="Armor">
+		<!-- P. Critical Damage +6%. Effect does not stack with additional jewels of the same type.  Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70814" name="Red Cat's Eye" additionalName="Lv. 4" type="Armor">
+		<!-- P. Critical Damage +8%. Effect does not stack with additional jewels of the same type.  Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70815" name="Red Cat's Eye" additionalName="Lv. 5" type="Armor">
+		<!-- P. Critical Damage +15%. Effect does not stack with additional jewels of the same type.  Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70816" name="Blue Cat's Eye" additionalName="Lv. 1" type="Armor">
+		<!-- M. Critical Damage +2%. Effect does not stack with additional jewels of the same type.  Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="Icon.bm_jewel_blue_catseye" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70817" name="Blue Cat's Eye" additionalName="Lv. 2" type="Armor">
+		<!-- M. Critical Damage +4%. Effect does not stack with additional jewels of the same type.  Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="Icon.bm_jewel_blue_catseye" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70818" name="Blue Cat's Eye" additionalName="Lv. 3" type="Armor">
+		<!-- M. Critical Damage +6%. Effect does not stack with additional jewels of the same type.  Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="Icon.bm_jewel_blue_catseye" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70819" name="Blue Cat's Eye" additionalName="Lv. 4" type="Armor">
+		<!-- M. Critical Damage +8%. Effect does not stack with additional jewels of the same type.  Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="Icon.bm_jewel_blue_catseye" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70820" name="Blue Cat's Eye" additionalName="Lv. 5" type="Armor">
+		<!-- M. Critical Damage +15%. Effect does not stack with additional jewels of the same type.  Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="Icon.bm_jewel_blue_catseye" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70821" name="Red Cat's Eye Chest" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 1 Red Cat's Eye. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70822" name="Lv. 3 Red Cat's Eye Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 3 Red Cat's Eye. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70823" name="Lv. 4 Red Cat's Eye Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 4 Red Cat's Eye. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70824" name="Lv. 5 Red Cat's Eye Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 5 Red Cat's Eye. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70825" name="Blue Cat's Eye Chest" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 1 Blue Cat's Eye. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewelbox_blue_catseye_lavianrose" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70826" name="Lv. 3 Blue Cat's Eye Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 3 Blue Cat's Eye. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewelbox_blue_catseye_lavianrose" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70827" name="Lv. 4 Blue Cat's Eye Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 4 Blue Cat's Eye. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewelbox_blue_catseye_lavianrose" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70828" name="Lv. 5 Blue Cat's Eye Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 5 Blue Cat's Eye. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewelbox_blue_catseye_lavianrose" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70829" name="Shining Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 1 chest with one of these items: Vital Stone, Pearl, Diamond, Ruby, Sapphire, Jade, Garnet, Topaz, Aquamarine, Red/Blue Cat's Eye. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i01" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70830" name="Shining Ore" type="EtcItem">
+		<!-- Can be used for enhancing a Brooch, sealing jewels, or exchanged for a Shining Jewelry Box. -->
+		<set name="icon" val="icon.bm_piece_of_ensoul_stone" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70831" name="Brooch" additionalName="Lv. 4" type="Armor">
+		<!-- Activates 5 jewel slots when equipped. Inventory Slot +12. -->
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70832" name="Fortune Red Cat's Eye Chest" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 1-5 Red Cat's Eye. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70833" name="Fortune Blue Cat's Eye Chest" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 1-5 Blue Cat's Eye. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewelbox_blue_catseye_lavianrose" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70834" name="Shining Golden Bait" type="EtcItem">
+		<!-- Fishing bait. Can be used to catch a Glowing Whale with a low probability of getting a Shining Golden Boot. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70835" name="Shining Golden Boot" type="EtcItem">
+		<!-- Double-click on the Shining Golden Boot to get one of its treasures. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_gold_shose" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70836" name="Glowing Whale" type="EtcItem">
+		<!-- Double-click to obtain a Fishing Coin. If you are lucky, you will also get a Shining Golden Boot. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.fish_huge_i15" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70837" name="Shining Golden Chest of Mermaid's Fishing Supplies" type="EtcItem">
+		<!-- Double-click to obtain the following items: Shining Golden Bait (180 pcs), Fishing Shot (180 pcs), Scroll of Escape to Giran Harbor/Gludin Harbor (5 of each). Cannot be dropped. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70838" name="Chef's Fish Stew Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to randomly receive one of the following items: Chef's Fish Stew - Victory / Fire / Water / Wind. -->
+		<set name="icon" val="icon.bm_silver_lure_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70839" name="Shilen's Treasure Chest" type="EtcItem">
+		<!-- Double-click to receive one of Shilen's treasures. -->
+		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70840" name="Lvl 4. Personal Pack with Shiny Jewelry" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Lv. 4 Jade (30-day), Lv. 4 Vital Stone (30-day), Lv. 4 Garnet (30-day). Cannot be dropped. -->
+		<set name="icon" val="icon.etc_pi_box_wish_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70841" name="Lv. 4 Jade" additionalName="30 days" type="Armor">
+		<!-- 30-day item. Atk. Spd./Casting Spd. +7%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70842" name="Vital Stone - Lv. 4" additionalName="30 days" type="Armor">
+		<!-- XP/SP +8%, and allows to use Lv. 2 Vital Wind skill, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70843" name="Lv. 4 Garnet" additionalName="30 days" type="Armor">
+		<!-- 30-day item. Stun / Pulling / Silence / Petrification / Fear Resistance +11%, when equipped. When using a skill, character becomes invulnerable to debuff for 5 seconds. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_garnet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70844" name="XP Rune - 50%" additionalName="1 hour" type="EtcItem">
+		<!-- A 1-hour item. When in inventory, your XP and SP gain is increased by 50%. Can be used by characters with lvl 1-60. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.skill19226" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="60" />
+	</item>
+	<item id="70845" name="Package: XP Rune - 50% (1 Hour)" type="EtcItem">
+		<!-- Pack containing XP Rune - 50% (1 Hour). Can be used by characters with lvl 1-60. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70846" name="XP Rune - 50%" additionalName="5 hours" type="EtcItem">
+		<!-- A 5-hour item. When in inventory, your XP and SP gain is increased by 50%. Can be used by characters with lvl 1-60. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.skill19226" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="300" />
+	</item>
+	<item id="70847" name="Package: XP Rune - 50% (5 Hours)" type="EtcItem">
+		<!-- Pack containing XP Rune - 50% (5 Hour). Can be used by characters with lvl 1-60. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70848" name="XP Rune - 50%" additionalName="7-day" type="EtcItem">
+		<!-- A 7-hour item. When in inventory, your XP and SP gain is increased by 50%. Can be used by characters with lvl 1-60. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.skill19226" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="70849" name="Package: XP Rune - 50% (7 Days)" type="EtcItem">
+		<!-- Pack containing XP Rune - 50% (7 Days). Can be used by characters with lvl 1-60. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70850" name="Package: Irene' Hourglass - 1 Hour" type="EtcItem">
+		<!-- Pack containing Irene' Hourglass - 1 Hour. Can be used by characters with lvl 1-60. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70851" name="High-grade Fishing XP Growth Amulet" additionalName="7-day" type="EtcItem">
+		<!-- If stored in the inventory during fishing, acquired XP/ SP +50%. Cannot be exchanged, dropped or sold. Can store in a private warehouse. Duration: 7 day. -->
+		<set name="icon" val="icon.fishing_zone_ticket" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="70852" name="Package: High-grade Fishing XP Growth Amulet (7-day)" type="EtcItem">
+		<!-- Pack containing High-grade Fishing XP Growth Amulet (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70853" name="Expertise Rune (C-grade)" additionalName="7-day" type="EtcItem">
+		<!-- When possessed, gives Expertise C Skill. Cannot be exchanged, dropped or sold, shared within account. Can store in a private warehouse. Duration: 7 days. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="70854" name="Package: Expertise Rune C-grade (7 days)" type="EtcItem">
+		<!-- Pack containing Expertise Rune (C-grade) (7 days). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70855" name="Feather Rune" additionalName="7-day" type="EtcItem">
+		<!-- When possessed, increase weight limit by 20%. Cannot be exchanged, dropped or sold, shared within account. Can store in a private warehouse. Duration: 7 days. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="70856" name="Package: Feater Rune (7 days)" type="EtcItem">
+		<!-- Pack containing Feater Rune (7 days). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70857" name="Squeaking Shoes" type="Armor">
+		<!-- Makes a unique sound when walking in them. -->
+		<set name="icon" val="icon.armor_t02_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70858" name="Irene' Hourglass - 1 Hour" type="EtcItem">
+		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1-60 characters. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70859" name="Scroll: Summon Storm" type="EtcItem">
+		<!-- Fills you with Storm Energy, granting +50% XP and SP gain bonus for 2 hours. Cooldown: 2 hours. Storm Energy does not disappear after character's death. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Available for  Lv. 40-51 characters. -->
+		<set name="icon" val="icon.scrl_of_storm" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70860" name="Note on Changing Name" type="EtcItem">
+		<!-- How to change your character's name:. 1. Create a new character on the same account and give it the name you want to transfer to your current character. 2. Create a request with the following subject: Change character's name. 3. The request must be created on your account.\0 -->
+		<set name="icon" val="icon.etc_exchange_ticket_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70861" name="Note on Changing Gender" type="EtcItem">
+		<!-- How to change your character's gender:. 1. Create a request with the following subject: Change character's gender. 2. The request must be created on your account.  Warning: the gender of Kamael characters cannot be changed.\0 -->
+		<set name="icon" val="icon.etc_exchange_ticket_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70862" name="Note on Changing Clan Name" type="EtcItem">
+		<!-- How to change your clan's name:. 1. Create a request on your account. 2. Subject: Change clan name. 3. The leader of the clan must have the item required for clan name change in their inventory.\0 -->
+		<set name="icon" val="icon.etc_exchange_ticket_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70863" name="Facelifting Potion - A" type="EtcItem">
+		<!-- Beauty potion that changes one's facial appearance to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="50" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70864" name="Facelifting Potion - B" type="EtcItem">
+		<!-- Beauty potion that changes one's facial appearance to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="50" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70865" name="Facelifting Potion - C" type="EtcItem">
+		<!-- Beauty potion that changes one's facial appearance to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="50" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70866" name="Dye Potion - A" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="50" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70867" name="Dye Potion - B" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="50" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70868" name="Dye Potion - C" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="50" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70869" name="Dye Potion - D" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="50" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70870" name="Hair Style Change Potion - A" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="50" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70871" name="Hair Style Change Potion - B" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="50" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70872" name="Hair Style Change Potion - C" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="50" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70873" name="Hair Style Change Potion - D" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="50" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70874" name="Hair Style Change Potion - E" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type E. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="50" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70875" name="Hair Style Change Potion - F" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type F. May be used only by female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="50" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70876" name="Hair Style Change Potion - G" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type G. May be used only by female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="50" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70877" name="Elmoreden Cloak" type="Armor">
+		<!-- Cloak with the crest of the ancient Elmoreden Empire. Can be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. Use Spirit Stone - Ancient Empire at +10 to bestow an additional effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elmoreden_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">10</stat>
+		</stats>
+	</item>
+	<item id="70878" name="Aden Cloak" type="Armor">
+		<!-- Cloak with the crest of the ancient Aden Empire. Can be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. Use Spirit Stone - Ancient Empire at +10 to bestow an additional effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aden_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">10</stat>
+		</stats>
+	</item>
+	<item id="70879" name="Elmore Cloak" type="Armor">
+		<!-- Cloak with the crest of the ancient Elmore Empire. Can be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. Use Spirit Stone - Ancient Empire at +10 to bestow an additional effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elmore_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">10</stat>
+		</stats>
+	</item>
+	<item id="70880" name="Ferios Cloak" type="Armor">
+		<!-- Cloak with the crest of the ancient Ferios Empire. Can be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. Use Spirit Stone - Ancient Empire at +10 to bestow an additional effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_perios_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">10</stat>
+		</stats>
+	</item>
+	<item id="70881" name="Elmoreden Cloak - Legendary" type="Armor">
+		<!-- Legendary cloak with the crest of the ancient Elmoreden Empire. Can be enchanted up to +20 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. Use Spirit Stone - Ancient Empire at +10 to bestow an additional effect, and use Spirit Stone - Elmoreden at +15 to add a second effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elmoreden_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="mDef">20</stat>
+			<stat type="pDef">10</stat>
+		</stats>
+	</item>
+	<item id="70882" name="Aden Cloak - Legendary" type="Armor">
+		<!-- Legendary cloak with the crest of the ancient Aden Empire. Can be enchanted up to +20 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. Use Spirit Stone - Ancient Empire at +10 to bestow an additional effect, and use Spirit Stone - Aden at +15 to add a second effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aden_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="mDef">20</stat>
+			<stat type="pDef">10</stat>
+		</stats>
+	</item>
+	<item id="70883" name="Elmore Cloak - Legendary" type="Armor">
+		<!-- Legendary cloak with the crest of the ancient Elmore Empire. Can be enchanted up to +20 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. Use Spirit Stone - Ancient Empire at +10 to bestow an additional effect, and use Spirit Stone - Elmore at +15 to add a second effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elmore_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="mDef">20</stat>
+			<stat type="pDef">10</stat>
+		</stats>
+	</item>
+	<item id="70884" name="Ferios Cloak - Legendary" type="Armor">
+		<!-- Legendary cloak with the crest of the ancient Ferios Empire. Can be enchanted up to +20 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. +10Use Spirit Stone - Ancient Empire at +10 to bestow an additional effect, and use Spirit Stone - Ferios at +15 to add a second effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_perios_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="mDef">20</stat>
+			<stat type="pDef">10</stat>
+		</stats>
+	</item>
+	<item id="70885" name="Scroll: Enchant Cloak" type="EtcItem">
+		<!-- Enchant scroll for the Ancient Kingdom's Coak. Can be enchanted up to +10. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_enchant_scroll_normal" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70886" name="Scroll: Enchant Cloak - Legendary" type="EtcItem">
+		<!-- Enchant scroll for the Ancient Kingdom's Coak. Can be enchanted between +11-20. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70887" name="Scroll: Ancient Cloak" type="EtcItem">
+		<!-- Enchant scroll for the Ancient Kingdom's Coak. Can be enchanted between +8-20 and the success rate increases by 10%. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70888" name="Legendary Scroll" type="EtcItem">
+		<!-- Exchange a Elmoreden/Aden/Elmore/Ferios Cloak for a legendary cloak through the Dimensional Merchant. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_legend_scroll" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70889" name="Life Stone - Ancient Kingdom" type="EtcItem">
+		<!-- Life Stone for the Ancient Kingdom's Coak. Can augment all ancient kingdom cloaks when they have been enchanted to +10, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +10 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_normal" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70890" name="Life Stone - Elmoreden" type="EtcItem">
+		<!-- Legendary Life Stone for the Elmoreden Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmoreden" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70891" name="Life Stone - Aden" type="EtcItem">
+		<!-- Legendary Life Stone for the Aden Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_aden" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70892" name="Life Stone - Elmore" type="EtcItem">
+		<!-- Legendary Life Stone for the Elmore Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmore" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70893" name="Life Stone - Ferios" type="EtcItem">
+		<!-- Legendary Life Stone for the Ferios Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_perios" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70894" name="Legendary Life Stone Chest" type="EtcItem">
+		<!-- Double-click to obtain 1 Life Stone - Elmoreden/Aden/Elmore/Ferios randomly. -->
+		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70895" name="Chevalier Outfit" type="Armor">
+		<!-- Outfit of a noble chevalier of an ancient kingdom. -->
+		<set name="icon" val="icon.chevalier_chest_change" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70896" name="Valkyrie Outfit" type="Armor">
+		<!-- Outfit of a glorious valkyrie of an ancient kingdom. -->
+		<set name="icon" val="icon.valkyrie_chest_change_0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70897" name="Iron Gate Guild Treasure Chest" type="EtcItem">
+		<!-- Double-click to receive one of the treasures of the Iron Gate Guild. -->
+		<set name="icon" val="icon.bm_freya_snowman_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70898" name="Red Musketeer Garment" type="Armor">
+		<!-- Red Musketeer Garment. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.inquisitor_red" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70899" name="Gatekeeper Hat" type="Armor">
+		<!-- Hat worn by Gatekeepers. Uses 2 hair accessory slots. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>

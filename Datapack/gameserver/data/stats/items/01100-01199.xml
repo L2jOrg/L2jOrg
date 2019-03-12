@@ -1,0 +1,1566 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="1100" name="Cotton Tunic" type="Armor">
+		<!-- Tunic made of tough cotton. -->
+		<set name="icon" val="icon.armor_t50_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="2120" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="2430" />
+		<stats>
+			<stat type="pDef">21</stat>
+			<stat type="maxMp">38</stat>
+		</stats>
+	</item>
+	<item id="1101" name="Tunic of Devotion" type="Armor">
+		<set name="icon" val="icon.armor_t55_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="2090" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="20300" />
+		<stats>
+			<stat type="pDef">30</stat>
+			<stat type="maxMp">67</stat>
+		</stats>
+	</item>
+	<item id="1102" name="Tunic of Magic" type="Armor">
+		<!-- Tunic, comfortably designed for mages. -->
+		<set name="icon" val="icon.armor_t58_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="2080" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="36900" />
+		<stats>
+			<stat type="pDef">34</stat>
+			<stat type="maxMp">86</stat>
+		</stats>
+	</item>
+	<item id="1103" name="Cotton Stockings" type="Armor">
+		<!-- Pair of pants made of tough cotton. -->
+		<set name="icon" val="icon.armor_t50_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1060" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="1520" />
+		<stats>
+			<stat type="pDef">13</stat>
+			<stat type="maxMp">23</stat>
+		</stats>
+	</item>
+	<item id="1104" name="Stockings of Devotion" type="Armor">
+		<!-- Part of the devotion set. -->
+		<set name="icon" val="icon.armor_t55_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1040" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="12700" />
+		<stats>
+			<stat type="pDef">19</stat>
+			<stat type="maxMp">42</stat>
+		</stats>
+	</item>
+	<item id="1105" name="Stockings of Magic" type="Armor">
+		<!-- Pair of pants, comfortably designed for mages. -->
+		<set name="icon" val="icon.armor_t58_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1030" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="23000" />
+		<stats>
+			<stat type="pDef">21</stat>
+			<stat type="maxMp">54</stat>
+		</stats>
+	</item>
+	<item id="1106" name="Norman's Letter" type="EtcItem">
+		<!-- First half year financial summary of the Iron Gate guild: balance sheet and profit and loss statement of the Gludio region guild. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1107" name="Bone Fragment" type="EtcItem">
+		<!-- Bone fragments of the undead skeletons. Collect ten of these and go back to Magister Harne. -->
+		<set name="icon" val="icon.etc_piece_bone_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1112" name="Leaf of the Mother Tree" type="EtcItem">
+		<set name="icon" val="icon.etc_leaf_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1113" name="Blood of Mitraell" type="EtcItem">
+		<set name="icon" val="icon.item_canuse48" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1114" name="Orc Amulet" type="EtcItem">
+		<!-- Amulet possessed by Kaboo Orcs for magic purposes. Take it to Sentinel Rayen. -->
+		<set name="icon" val="icon.etc_feather_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1115" name="Orc's Necklace" type="EtcItem">
+		<!-- Bone necklace possessed by Kaboo Orc fighters for magic purposes. Take it to Sentinel Rayen. -->
+		<set name="icon" val="icon.accessary_necklace_of_anguish_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1116" name="Orc Amulet" type="EtcItem">
+		<!-- Amulet that the Balor Orcs possess for magical purposes. Take this to Sentry Kayleen. -->
+		<set name="icon" val="icon.etc_feather_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1117" name="Orc's Necklace" type="EtcItem">
+		<!-- Bone necklace that the Balor Orc fighters carry for magical purposes. Take this to Sentry Kayleen. -->
+		<set name="icon" val="icon.accessary_necklace_of_anguish_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1118" name="Spore Sac" type="EtcItem">
+		<!-- Sac containing spore pollen. Give 10 spore sacs to Herbiel. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1119" name="Short Leather Gloves" type="Armor">
+		<set name="icon" val="icon.armor_t04_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="660" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="607" />
+		<stats>
+			<stat type="pDef">11</stat>
+		</stats>
+	</item>
+	<item id="1120" name="Pa'agrio Hand" type="Armor">
+		<set name="icon" val="icon.armor_short_leather_gloves_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="64" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1600" />
+		<set name="price" val="123900" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">34</stat>
+		</stats>
+	</item>
+	<item id="1121" name="Apprentice's Shoes" type="Armor">
+		<set name="icon" val="icon.armor_t01_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1320" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="7" />
+		<stats>
+			<stat type="pDef">8</stat>
+		</stats>
+	</item>
+	<item id="1122" name="Cotton Shoes" type="Armor">
+		<set name="icon" val="icon.armor_t50_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1320" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="607" />
+		<stats>
+			<stat type="pDef">11</stat>
+		</stats>
+	</item>
+	<item id="1123" name="Blue Buckskin Boots" type="Armor">
+		<set name="icon" val="icon.armor_t18_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="60" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1300" />
+		<set name="price" val="33300" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">22</stat>
+		</stats>
+	</item>
+	<item id="1124" name="Boots of Strength" type="Armor">
+		<set name="icon" val="icon.armor_t40_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="135" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1250" />
+		<set name="price" val="74700" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">27</stat>
+		</stats>
+	</item>
+	<item id="1125" name="Assault Boots" type="Armor">
+		<set name="icon" val="icon.armor_t44_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="177" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1240" />
+		<set name="price" val="97800" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">29</stat>
+		</stats>
+	</item>
+	<item id="1126" name="Crimson Boots" type="Armor">
+		<set name="icon" val="icon.armor_t57_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="64" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1210" />
+		<set name="price" val="161000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">34</stat>
+		</stats>
+	</item>
+	<item id="1127" name="Forgotten Boots" type="Armor">
+		<set name="icon" val="icon.armor_iron_boots_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="98" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="4000" />
+		<set name="price" val="245000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">36</stat>
+		</stats>
+	</item>
+	<item id="1128" name="Adamantite Boots" type="Armor">
+		<set name="icon" val="icon.armor_iron_boots_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="143" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="4000" />
+		<set name="price" val="358000" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">39</stat>
+		</stats>
+	</item>
+	<item id="1129" name="Crude Leather Shoes" type="Armor">
+		<set name="icon" val="icon.armor_t04_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1320" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="607" />
+		<stats>
+			<stat type="pDef">11</stat>
+		</stats>
+	</item>
+	<item id="1130" name="Cobendell's Medicine" type="EtcItem">
+		<!-- Fever medicine concocted by Master Cobendell. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1131" name="Cobendell's Medicine" type="EtcItem">
+		<!-- Fever medicine concocted by Master Cobendell. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1132" name="Cobendell's Medicine" type="EtcItem">
+		<!-- Fever medicine concocted by Master Cobendell. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1133" name="Cobendell's Medicine" type="EtcItem">
+		<!-- Fever medicine concocted by Master Cobendell. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1134" name="Cobendell's Medicine" type="EtcItem">
+		<!-- Fever medicine concocted by Master Cobendell. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1135" name="Spiritbound Wand" type="EtcItem">
+		<!-- The wand where the spirit of mirrors is bound to. Trap all three spirits of mirrors into a the wand and take it to Grand Magister Gallint. -->
+		<set name="icon" val="icon.weapon_club_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1136" name="Spiritbound Wand" type="EtcItem">
+		<!-- The wand where the spirit of mirrors is bound to. Trap all three spirits of mirrors into a the wand and take it to Grand Magister Gallint. -->
+		<set name="icon" val="icon.weapon_club_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1137" name="Spiritbound Wand" type="EtcItem">
+		<!-- The wand where the spirit of mirrors is bound to. Trap all three spirits of mirrors into a the wand and take it to Grand Magister Gallint. -->
+		<set name="icon" val="icon.weapon_club_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1138" name="Auron's Letter" type="EtcItem">
+		<!-- Letter written by Master Auron. Take this to Trader Simplon in the Town of Gludio. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1139" name="Warrior Guild Badge" type="EtcItem">
+		<!-- A badge that shows that a player is a member of the Warrior Guild. Have it with you in Ruins of Agony when you hunt for Skeleton Trackers. -->
+		<set name="icon" val="icon.etc_badge_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1140" name="Rusted Bronze Sword" type="EtcItem">
+		<!-- Old bronze sword used by tracker skeletons. Collect ten and give them to Trader Simplon. -->
+		<set name="icon" val="icon.weapon_broad_sword_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1141" name="Rusted Bronze Sword" type="EtcItem">
+		<!-- Old and rusted bronze sword given by Trader Simplon, who said it was a 'Sword of Trial'. Take this to Master Auron. -->
+		<set name="icon" val="icon.weapon_broad_sword_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1142" name="Rusted Bronze Sword" type="Weapon">
+		<!-- An old and rusty bronze sword called the 'Sword of Trial'. Use it to kill Giant Venomous Spiders and Arachnid Trackers. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.weapon_broad_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">18</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="1143" name="Simplon's Letter" type="EtcItem">
+		<!-- Letter written by Trader Simplon. Take this to Master Auron. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1144" name="Giant Venomous Spider's Leg" type="EtcItem">
+		<!-- Leg cut from a dead Venomous Spider or an Arachnid Tracker. Collect twenty of these and take to Master Auron. -->
+		<set name="icon" val="icon.etc_horn_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1145" name="Medallion of Warrior" type="EtcItem">
+		<!-- Take this medallion to the Grand Master of the Warrior's Guild to change your class to a Warrior. -->
+		<set name="icon" val="icon.accessary_earing_of_protection_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1146" name="Squire's Shirt" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_t01_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="3301" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">33</stat>
+		</stats>
+	</item>
+	<item id="1147" name="Squire's Pants" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_t01_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1750" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">20</stat>
+		</stats>
+	</item>
+	<item id="1148" name="Durable Leather Helmet" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="640" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="price" val="18400" />
+		<stats>
+			<stat type="pDef">26</stat>
+		</stats>
+	</item>
+	<item id="1149" name="Shining Circlet" type="Armor">
+		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="147" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="600" />
+		<set name="price" val="368000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
+		<stats>
+			<stat type="pDef">54</stat>
+		</stats>
+	</item>
+	<item id="1150" name="Spellbook: Wind Strike" type="EtcItem">
+		<!-- Spellbook needed to learn Wind Strike. -->
+		<set name="icon" val="icon.etc_spell_books_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="50" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1151" name="Spellbook: Self Heal" type="EtcItem">
+		<!-- Spellbook needed to learn Self Heal. -->
+		<set name="icon" val="icon.etc_spell_books_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="50" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1152" name="Spellbook: Heal" type="EtcItem">
+		<!-- Spellbook needed to learn Heal. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7 -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1153" name="Jenna's Letter" type="EtcItem">
+		<!-- Letter from Sentry Jenna to Master Harant. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1154" name="Sentry Blade" type="EtcItem">
+		<!-- Adamantite sword newly issued to sentries. -->
+		<set name="icon" val="icon.weapon_bastard_sword_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1155" name="Sentry Blade" type="EtcItem">
+		<!-- Adamantite sword newly issued to sentries. -->
+		<set name="icon" val="icon.weapon_bastard_sword_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1156" name="Sentry Blade" type="EtcItem">
+		<!-- Adamantite sword newly issued to sentries. -->
+		<set name="icon" val="icon.weapon_bastard_sword_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1157" name="Old Bronze Sword" type="EtcItem">
+		<!-- Bronze sword used in the past by sentries. Recover this and take it to Sentry Jenna. -->
+		<set name="icon" val="icon.weapon_crimson_sword_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1158" name="Bone Fragment" type="EtcItem">
+		<!-- Bone fragment obtained from the undead skeletons. Gather 10 bone fragments and 3 Elf skulls, and take them to Unoren. -->
+		<set name="icon" val="icon.etc_piece_bone_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1159" name="Elf Skull" type="EtcItem">
+		<!-- The skull of an undead Elf. Gather 10 bone fragments and 3 Elf skulls, and take them to Unoren. -->
+		<set name="icon" val="icon.etc_skull_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1160" name="Dark Bezoar" type="EtcItem">
+		<!-- Gather 13 Abyss Spirit Ore and take them to Sentry Nelsya. -->
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1161" name="Ritual Sword" type="EtcItem">
+		<!-- Take this sword to the Grand Master of the Fighter Guild to transfer your class to Knight. -->
+		<set name="icon" val="icon.weapon_flamberge_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1162" name="Coin of Lords" type="EtcItem">
+		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
+		<set name="icon" val="icon.etc_coins_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1163" name="Coin of Lords" type="EtcItem">
+		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
+		<set name="icon" val="icon.etc_coins_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1164" name="Coin of Lords" type="EtcItem">
+		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
+		<set name="icon" val="icon.etc_coins_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1165" name="Coin of Lords" type="EtcItem">
+		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
+		<set name="icon" val="icon.etc_coins_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1166" name="Coin of Lords" type="EtcItem">
+		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
+		<set name="icon" val="icon.etc_coins_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1167" name="Coin of Lords" type="EtcItem">
+		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
+		<set name="icon" val="icon.etc_coins_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1168" name="Gludio Guard's 1st Crest" type="EtcItem">
+		<!-- Crest that proves guard membership. As Captain Bathis requested, hunt Bugbear Raiders. -->
+		<set name="icon" val="icon.etc_badge_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1169" name="Bugbear Necklace" type="EtcItem">
+		<!-- Necklace worn by Bugbears for incantation purposes. Collect ten of these and visit Captain Bathis. -->
+		<set name="icon" val="icon.etc_totem_necklace_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1170" name="Einhasad's 1st Temple Badge" type="EtcItem">
+		<!-- As High Priest Raymond requested, go to the Ruins of Despair, defeat the departed spirits of priests, and collect 12 Einhasad's Crucifixes. -->
+		<set name="icon" val="icon.accessary_earing_of_holy_spirit_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1171" name="Einhasad's Crucifix" type="EtcItem">
+		<!-- Holy symbol of Einhasad, the goddess of light. Collect 12 of these and go to High Priest Raymond. -->
+		<set name="icon" val="icon.accessary_necklace_of_knowledge_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1172" name="Gludio Guard's 1st Crest" type="EtcItem">
+		<!-- Crest that distinguishes guard membership. As Captain Bezique requested, hunt giant spiders. -->
+		<set name="icon" val="icon.etc_badge_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1173" name="Giant Venomous Spider's Leg" type="EtcItem">
+		<!-- Severed leg of a dead Venomous Spider. Collect twenty of these and go to Captain Bezique. -->
+		<set name="icon" val="icon.etc_horn_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1174" name="Einhasad's 1st Temple Badge" type="EtcItem">
+		<!-- As High Priest Levian requested, kill Langk Lizardmen and collect the proof. -->
+		<set name="icon" val="icon.accessary_earing_of_holy_spirit_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1175" name="Lizardman's Totem" type="EtcItem">
+		<!-- Small sculpture Langk Lizardmen carry with them. Collect twenty of these and take them to High Priestess Levian. -->
+		<set name="icon" val="icon.etc_totem_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1176" name="Gludio Guard's 1st Crest" type="EtcItem">
+		<!-- Crest that proves guard membership. As Captain Gilbert requested, hunt giant spiders. -->
+		<set name="icon" val="icon.etc_badge_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1177" name="Giant Spider's Husk" type="EtcItem">
+		<!-- The husk of a giant spider that you peeled off. Collect twenty of these and take them to Captain Gilbert. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1178" name="Einhasad's 1st Temple Badge" type="EtcItem">
+		<!-- As High Priest Biotin requested, hunt Silent Horrors in the Elven Ruins. -->
+		<set name="icon" val="icon.accessary_earing_of_holy_spirit_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1179" name="Skull of Silent Horror" type="EtcItem">
+		<!-- The skull of a long-dead Elf. Collect 10 and take them to High Priest Biotin. -->
+		<set name="icon" val="icon.etc_skull_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1180" name="Bezique's Letter" type="EtcItem">
+		<!-- Captain Bezique's letter to Neti. Find Neti in Gludin Village and give her the letter. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1181" name="Neti's Bow" type="Weapon">
+		<!-- Favorite bow used by Neti, who was once a Treasure Hunter. Use it when hunting the Skeletons and Spartoi of the Ruins of Agony to gather bone pieces. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.weapon_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1850" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">45</stat>
+			<stat type="mAtk">16</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="1182" name="Neti's Dagger" type="Weapon">
+		<!-- Neti used this dagger when she was a Treasure Hunter. Use it when hunting the Skeletons and Spartoi of the Ruins of Agony to gather bone pieces. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.weapon_knife_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">19</stat>
+			<stat type="mAtk">16</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="1183" name="Spartoi's Bones" type="EtcItem">
+		<!-- Undead bone pieces. Collect 10 and take them to Neti. -->
+		<set name="icon" val="icon.etc_piece_bone_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1184" name="Horseshoe of Light" type="EtcItem">
+		<!-- Proof you received after passing Neti's test. You must take it to Captain Bezique. -->
+		<set name="icon" val="icon.accessary_red_cresent_earing_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1185" name="Most Wanted List" type="EtcItem">
+		<!-- It is written that whoever does away with the Cat's Eye Bandits and recovers the stolen goods will be rewarded. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1186" name="Stolen Jewelry" type="EtcItem">
+		<!-- Fair amount of jewelry the Cat's Eye Bandits stole. You must take them to Captain Bezique. -->
+		<set name="icon" val="icon.etc_jewel_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1187" name="Stolen Tomes" type="EtcItem">
+		<!-- Rare tome the Cat's Eye Bandits stole. You must take it to Captain Bezique. -->
+		<set name="icon" val="icon.etc_spell_books_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1188" name="Stolen Ring" type="EtcItem">
+		<!-- Expensive necklace that the Cat's Eye Bandits stole. You must take it back to Captain Bezique. -->
+		<set name="icon" val="icon.accessary_ring_of_grace_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1189" name="Stolen Necklace" type="EtcItem">
+		<!-- Expensive necklace the Cat's Eye Bandits stole. You must take it to Captain Bezique. -->
+		<set name="icon" val="icon.accessary_necklace_of_blessing_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1190" name="Bezique's Recommendation" type="EtcItem">
+		<!-- Take this letter to the Grand Masters of the Warrior Guild to change your class to a Rogue. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1191" name="1st Letter of Order" type="EtcItem">
+		<!-- Certificate of forbidden book collection given by Priest Zigaunt. Carry this around and collect all the forbidden books. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1192" name="2nd Letter of Order" type="EtcItem">
+		<!-- Certificate that proves that you represent the religious body. This certificate is given by Priest Zigaunt. Take this to Lionel for covenant. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1193" name="Lionel's Book" type="EtcItem">
+		<!-- The last book of Lioniel. Hand this book to Grand Magister Gallint in the Einhovant School of Magic. -->
+		<set name="icon" val="icon.etc_spell_books_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1194" name="Book of Vivyan" type="EtcItem">
+		<!-- Forbidden book Simplon sold to Vivyan. Collect five forbidden books and take them to Priest Zigaunt. -->
+		<set name="icon" val="icon.etc_spell_books_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1195" name="Book of Simplon" type="EtcItem">
+		<!-- The rest of Simplon's forbidden books. Collect 5 forbidden books and take them to Priest Zigaunt. -->
+		<set name="icon" val="icon.etc_spell_books_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1196" name="Book of Praga" type="EtcItem">
+		<!-- Forbidden book Simplon sold to Praga. Collect 5 forbidden books and take them to Priest Zigaunt. -->
+		<set name="icon" val="icon.etc_spell_books_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1197" name="Gallint's Certificate" type="EtcItem">
+		<!-- Certificate that Gallint gives for safekeeping of forbidden books. Give to Lionel and receive covenant. -->
+		<set name="icon" val="icon.etc_letter_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1198" name="Pendant of Mother" type="EtcItem">
+		<!-- The pendant of his mother that Guard Praga lost in the ruins. Take this to Guard Praga and receive a forbidden book. -->
+		<set name="icon" val="icon.accessary_blessed_earing_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1199" name="Necklace of Mother" type="EtcItem">
+		<!-- Necklace chain where a pendant used to hang. Recover the pendant from the zombies in the Ruins of Agony to make it complete. -->
+		<set name="icon" val="icon.accessary_blessed_necklace_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+</list>

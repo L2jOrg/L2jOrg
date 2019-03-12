@@ -1,0 +1,1410 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="49000" name="Agathion - Singer and Dancer" additionalName="30-day" type="Armor">
+		<!-- Summons Singer and Dancer Agathion when equipped. 30-day. Cannot be exchanged, dropped, or sold. <Active Skill>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30 days. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
+			<skill id="23234" level="1" /> <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="39016" level="1" /> <!-- Seal Agathion -->
+			<skill id="39017" level="1" /> <!-- Seal Agathion -->
+			<skill id="39018" level="1" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="49001" name="Agathion - Singer and Dancer Pack (30-day)" type="EtcItem">
+		<!-- Allows to summon a Singer and Dancer Agathion (30-day) with double right-click. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49000" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="49002" name="Agathion - Singer and Dancer" additionalName="90-day" type="Armor">
+		<!-- Summons Singer and Dancer Agathion when equipped. 90-day. Cannot be exchanged, dropped, or sold. <Active Skill>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 90 days. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<skills>
+			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
+			<skill id="23234" level="1" /> <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="39016" level="1" /> <!-- Seal Agathion -->
+			<skill id="39017" level="1" /> <!-- Seal Agathion -->
+			<skill id="39018" level="1" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="49003" name="Agathion - Singer and Dancer Pack (90-day)" type="EtcItem">
+		<!-- Allows to summon a Singer and Dancer Agathion (90-day) with double right-click. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49002" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="49004" name="Ol Mahum Memo" additionalName="Event" type="EtcItem">
+		<!-- 10-year-old Memo from the Ol Mahum. Take 10 of these to the Turek Orc Elder for a Mahum Adena Bank. You can only get one, so the rest of the Memo is yours to do as you wish. Cannot be exchanged, dropped, or sold. Deleted after event. -->
+		<set name="icon" val="icon.event_mahum_memo" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49005" name="Turek Orc Memo" additionalName="Event" type="EtcItem">
+		<!-- 10-year-old Memo from the Turek Orcs. Take 10 of these to the Turek Orc Elder for an Orc Adena Bank. You can only get one, so the rest of the Memo is yours to do as you wish. Deleted after event. -->
+		<set name="icon" val="icon.event_orc_memo" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49006" name="Ol Mahum Adena Bank" additionalName="15-day" type="EtcItem">
+		<!-- Shake and pour. Sometimes you get items, and sometimes you get money! Once a day only. 15-day. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+	</item>
+	<item id="49007" name="Turek Orc Adena Bank" additionalName="30-day" type="EtcItem">
+		<!-- Shake and pour. Sometimes you get items, and sometimes you get money! Once a day only. 30-day. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="49008" name="Soulshot (No-grade)" additionalName="Event" type="EtcItem">
+		<!-- Immediately deals considerable P. Damage. Used with a No-grade weapon. -->
+		<set name="icon" val="icon.etc_soulshot_none_for_rookie_i00" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49009" name="Spiritshot (No-grade)" additionalName="Event" type="EtcItem">
+		<!-- Immediately deals considerable M. Damage. Used with a No-grade weapon. -->
+		<set name="icon" val="icon.etc_spiritshot_none_for_rookie_i00" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49010" name="Soulshot (D-grade)" additionalName="Event" type="EtcItem">
+		<!-- Immediately deals considerable P. Damage. Used with a D-grade weapon. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49011" name="Spiritshot (D-grade)" additionalName="Event" type="EtcItem">
+		<!-- Immediately deals considerable M. Damage. Used with a D-grade weapon. -->
+		<set name="icon" val="icon.etc_spell_shot_blue_i00" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="4" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49012" name="Healing Potion" additionalName="Event" type="EtcItem">
+		<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
+		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49013" name="Major Healing Potion" additionalName="Event" type="EtcItem">
+		<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
+		<set name="icon" val="icon.etc_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49014" name="Facelifting Potion - A" additionalName="Event" type="EtcItem">
+		<!-- Beauty potion that changes one's facial appearance to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="50" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49015" name="Facelifting Potion - B" additionalName="Event" type="EtcItem">
+		<!-- Beauty potion that changes one's facial appearance to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="50" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49016" name="Facelifting Potion - C" additionalName="Event" type="EtcItem">
+		<!-- Beauty potion that changes one's facial appearance to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="50" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49017" name="Dye Potion - A" additionalName="Event" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="50" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49018" name="Dye Potion - B" additionalName="Event" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="50" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49019" name="Dye Potion - C" additionalName="Event" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="50" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49020" name="Dye Potion - D" additionalName="Event" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="50" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49021" name="Facelifting Potion Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped Pack containing either Facelifting Potion A, B, or C. -->
+		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49022" name="Dye Potion Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped Pack containing either Dye Potion A, B, C, or D. -->
+		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49023" name="Scroll: Empower" additionalName="Event" type="EtcItem">
+		<!-- Double click for a buff that increases your magic. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49024" name="Scroll: Might" additionalName="Event" type="EtcItem">
+		<!-- Double click for a buff that increases your P. Atk. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49025" name="Scroll: Shield" additionalName="Event" type="EtcItem">
+		<!-- Double click for a buff that increases your defenses. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49026" name="Scroll: PK (No-grade)" type="EtcItem">
+		<!-- Double-click to lower PK value by 1. It can only be used when the PK value is greater than or above 1, and reputation is 0. Intended for Lv. 1-19. Cannot be sold in the grocery store. -->
+		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<target levelRange="21;85" />
+		</cond>
+		<cond msgId="113">
+			<player chaotic="false" />
+		</cond>
+		<skills>
+			<skill id="39020" level="1" /> <!-- Scroll: PK (No-grade) -->
+		</skills>
+	</item>
+	<item id="49027" name="Scroll: PK (D-grade)" type="EtcItem">
+		<!-- Double-click to lower PK value by 1. It can only be used when the PK value is greater than or above 1, and reputation is 0. Intended for Lv. 20-39. Cannot be sold in the grocery store. -->
+		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<target levelRange="20;39" />
+		</cond>
+		<cond msgId="113">
+			<player chaotic="false" />
+		</cond>
+		<skills>
+			<skill id="39021" level="1" /> <!-- Scroll: PK (D-grade) -->
+		</skills>
+	</item>
+	<item id="49028" name="Scroll: PK (C-grade)" type="EtcItem">
+		<!-- Double-click to lower PK value by 1. It can only be used when the PK value is greater than or above 1, and reputation is 0. Intended for Lv. 40-51. Cannot be sold in the grocery store. -->
+		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<target levelRange="40;51" />
+		</cond>
+		<cond msgId="113">
+			<player chaotic="false" />
+		</cond>
+		<skills>
+			<skill id="39022" level="1" /> <!-- Scroll: PK (C-grade) -->
+		</skills>
+	</item>
+	<item id="49029" name="Scroll: PK (B-grade)" type="EtcItem">
+		<!-- Double-click to lower PK value by 1. It can only be used when the PK value is greater than or above 1, and reputation is 0. Intended for Lv. 52-60. Cannot be sold in the grocery store. -->
+		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<target levelRange="52;60" />
+		</cond>
+		<cond msgId="113">
+			<player chaotic="false" />
+		</cond>
+		<skills>
+			<skill id="39023" level="1" /> <!-- Scroll: PK (B-grade) -->
+		</skills>
+	</item>
+	<item id="49030" name="Scroll: PK (A-grade)" type="EtcItem">
+		<!-- Double-click to lower PK value by 1. It can only be used when the PK value is greater than or above 1, and reputation is 0. Intended for Lv. 61 and higher. Cannot be sold in the grocery store. -->
+		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<target levelRange="61;75" />
+		</cond>
+		<cond msgId="113">
+			<player chaotic="false" />
+		</cond>
+		<skills>
+			<skill id="39024" level="1" /> <!-- Scroll: PK (A-grade) -->
+		</skills>
+	</item>
+	<item id="49031" name="Ring of Heir" type="Armor">
+		<!-- HP Recovery Bonus + 5%, P./M. Accuracy + 1, Weight Limit + 5000. Effect does not stack. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.event_classic_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="commissionItemType" val="RING" />
+		<set name="is_sellable" val="false"/>
+		<set name="is_private_storeable" val="false"/>
+		<set name="is_dropable" val="false"/>
+		<set name="is_destroyable" val="false"/>
+		<set name="is_tradable" val="false" />
+		<skills>
+			<skill id="39019" level="1"/>
+		</skills>
+		<stats>
+			<stat type="mDef">14</stat>
+		</stats>
+	</item>
+	<item id="49032" name="Eva's Mark" additionalName="30-day" type="Armor">
+		<!-- Celebrate the launch of the classic server! Equip and use the skill created to teleport to the nearest town. Cooldown is 60 min. 30-day. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.bm_soaring_bird" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="39025" level="1" /> <!-- Adventurer's Scroll of Escape -->
+		</skills>
+	</item>
+	<item id="49033" name="Classic Gift Box" type="EtcItem">
+		<!-- A Lineage II Souvenir to commemorate the opening of the Classic Server. Double-click to obtain an Eva's Mark (30-day). Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.etc_pi_box_love_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49034" name="Ol Mahum Adena Bank" additionalName="Event" type="EtcItem">
+		<!-- Shake and pour. Sometimes you get items, and sometimes you get money! One use only. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="49035" name="Turek Orc Adena Bank" additionalName="Event" type="EtcItem">
+		<!-- Shake and pour. Sometimes you get items, and sometimes you get money! One use only. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="49036" name="Newbie Wind Walk Potion" type="EtcItem">
+		<!-- Magical potion that increases movement Speed. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="20" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="for_npc" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="39028" level="1" /> <!-- Newbie Wind Walk Potion -->
+		</skills>
+	</item>
+	<item id="49037" name="Classic Inventory 1" type="EtcItem">
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49038" name="Classic Inventory 2" type="EtcItem">
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49039" name="Necklace (Novice)" type="Armor">
+		<!-- Novice Necklace. -->
+		<set name="icon" val="icon.accessary_necklace_of_knowledge_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<stats>
+			<stat type="mDef">18</stat>
+		</stats>
+	</item>
+	<item id="49040" name="Earring (Novice)" type="Armor">
+		<!-- Novice Earring. -->
+		<set name="icon" val="icon.accessary_mage_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<stats>
+			<stat type="mDef">13</stat>
+		</stats>
+	</item>
+	<item id="49041" name="Ring (Novice)" type="Armor">
+		<!-- Novice Ring. -->
+		<set name="icon" val="icon.accessary_ring_of_knowledge_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<stats>
+			<stat type="mDef">10</stat>
+		</stats>
+	</item>
+	<item id="49042" name="Shield (Novice)" type="Armor">
+		<!-- Novice Shield. -->
+		<set name="icon" val="icon.shield_small_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1410" />
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">68</stat>
+		</stats>
+	</item>
+	<item id="49043" name="Sword of Solidarity (Novice)" type="Weapon">
+		<!-- A mithril sword forged long ago to commemorate the alliance between Elves and Humans. Novice only. -->
+		<set name="icon" val="icon.weapon_long_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">13</stat>
+			<stat type="mAtk">10</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49044" name="Wand of Adept (Novice)" type="Weapon">
+		<!-- The wand presented to those who have finished their studies at the school of magic. Novice only. -->
+		<set name="icon" val="icon.weapon_apprentices_wand_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">12</stat>
+			<stat type="mAtk">14</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49045" name="Red Sunset Staff (Novice)" type="Weapon">
+		<!-- A staff used by warriors belonging to the Red Sunset clan.  Novice only. -->
+		<set name="icon" val="icon.weapon_cedar_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1700" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">14</stat>
+			<stat type="mAtk">15</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49046" name="Red Sunset Sword (Novice)" type="Weapon">
+		<!-- A sword used by warriors belonging to the Red Sunset clan. Novice only. -->
+		<set name="icon" val="icon.weapon_brandish_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">17</stat>
+			<stat type="mAtk">11</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49047" name="Sword of Sentinel (Novice)" type="Weapon">
+		<!-- A steel blade issued to those fighters that have been acknowledged as protectors of the woods. Novice only. -->
+		<set name="icon" val="icon.weapon_broad_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">15</stat>
+			<stat type="mAtk">12</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49048" name="Staff of Sentinel (Novice)" type="Weapon">
+		<!-- Staff issued to those magicians that have been acknowledged as protectors of the woods. Novice only. -->
+		<set name="icon" val="icon.weapon_cedar_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1800" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">14</stat>
+			<stat type="mAtk">16</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49049" name="Eldritch Dagger (Novice)" type="Weapon">
+		<!-- A steel dagger engraved with the runes of Shilen and Gran Kain. Novice only. -->
+		<set name="icon" val="icon.weapon_knife_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1130" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">12</stat>
+			<stat type="mAtk">11</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49050" name="Blood Saber (Novice)" type="Weapon">
+		<!-- An Oriharukon sword crafted in the Abella style of the east. Novice only. -->
+		<set name="icon" val="icon.weapon_broad_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1450" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">15</stat>
+			<stat type="mAtk">12</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49051" name="Club (Novice)" type="Weapon">
+		<!-- Club for Novices. -->
+		<set name="icon" val="icon.weapon_club_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1870" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">9</stat>
+			<stat type="mAtk">7</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49052" name="Butcher's Sword (Novice)" type="Weapon">
+		<!-- Sword granted to young Orc Fighters who distinguished themselves at war. -->
+		<set name="icon" val="icon.weapon_orcish_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1450" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">14</stat>
+			<stat type="mAtk">11</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49053" name="Silversmith Hammer (Novice)" type="Weapon">
+		<!-- A hammer silversmiths of the ancient Elmoreden used. Novice only. -->
+		<set name="icon" val="icon.weapon_iron_hammer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1860" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">14</stat>
+			<stat type="mAtk">11</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49054" name="Soulstone Shard" type="EtcItem">
+		<!-- Soulstone Shard, found in the Forgotten Temple. Take it to Magister Nell in Gludio. -->
+		<set name="icon" val="icon.general_energy_condense_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49055" name="Thunder Charge" additionalName="Event" type="EtcItem">
+		<!-- When Spirit Thunder Rifle is charged with a Soulshot / Spiritshot / Blessed Spiritshot 3 Magic Bombs are produced. Can be created once per day using a Thunder Charge. Can be received again after 6:30 PM. Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.block_boom" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49056" name="Lucky Package: Soulshots (No-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the package to get from 100 to 10 000 Mysterious Soulshots (No-grade)   Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49057" name="Lucky Package: Soulshots (D-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the package to get from 100 to 10 000 Mysterious Soulshots (D-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49058" name="Lucky Package: Soulshots (C-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the package to get from 50 to 5000 Mysterious Soulshots (C-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_treasure_box_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49059" name="Lucky Package: Spiritshots (No-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the package to get from 50 to 1000 Mysterious Spiritshots (No-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49060" name="Lucky Package: Spiritshots (D-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the package to get from 80 to 3000 Mysterious Spiritshots (D-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49061" name="Lucky Package: Spiritshots (C-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the package to get from 30 to 1000 Mysterious Spiritshots (C-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_treasure_box_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49062" name="Mysterious Spiritshot (No-grade)" type="EtcItem">
+		<!-- Spiritshot bestowed upon a weapon increases its magic power. Used with No-grade weapons. Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_spell_shot_white_i00" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SpiritShot" />
+		<skills>
+			<skill id="39029" level="1" /> <!-- Player Commendation - Spiritshot (No-grade) -->
+		</skills>
+	</item>
+	<item id="49063" name="Mysterious Spiritshot (D-grade)" type="EtcItem">
+		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing power of magic attack. Used with D-grade weapons. Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_spell_shot_blue_i00" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SpiritShot" />
+		<skills>
+			<skill id="39030" level="1" /> <!-- Player Commendation - Spiritshot (D-grade) -->
+		</skills>
+	</item>
+	<item id="49064" name="Mysterious Spiritshot (C-grade)" type="EtcItem">
+		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing power of magic attack. Used with C-grade weapons. Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_spell_shot_green_i00" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SpiritShot" />
+		<skills>
+			<skill id="39031" level="1" /> <!-- Player Commendation - Spiritshot (C-grade) -->
+		</skills>
+	</item>
+	<item id="49065" name="Lucky Package: Blessed Spiritshots (No-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the package to get from 100 to 10 000 Mysterious Blessed Spiritshots (No-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49066" name="Lucky Package: Blessed Spiritshots (D-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the package to get from 100 to 10 000 Mysterious Blessed Spiritshots (D-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49067" name="Lucky Package: Blessed Spiritshots (C-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the package to get from 50 to 5000 Mysterious Blessed Spiritshots (C-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_treasure_box_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49068" name="Stone of Speed" additionalName="Event" type="EtcItem">
+		<!-- Increases XP and SP gain by 10% for 20 minutes. Cooldown: 10 minutes. <Attention!> Stone of Speed will have no effect, if used throughout the duration time of Quick Step skill or Speed-increasing potion. -->
+		<set name="icon" val="icon.stone_8_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49069" name="Spirit Thunder Chest: Soulshots (No-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the chest to get 600 Mysterious Soulshots (No-grade) or Lucky Package: Soulshots (No-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49070" name="Spirit Thunder Chest: Soulshots (D-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the chest to get 1350 Mysterious Soulshots (D-grade) or Lucky Package: Soulshots (D-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49071" name="Spirit Thunder Chest: Soulshots (C-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the chest to get 900 Mysterious Soulshots (C-grade) or Lucky Package: Soulshots (C-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49072" name="Spirit Thunder Chest: Spiritshots (No-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the chest to get 270 Mysterious Soulshots (No-grade) or Lucky Package: Spiritshots (No-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49073" name="Spirit Thunder Chest: Spiritshots (D-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the chest to get 750 Mysterious Soulshots (D-grade) or Lucky Package: Spiritshots (D-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49074" name="Spirit Thunder Chest: Spiritshots (C-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the chest to get 750 Mysterious Soulshots (C-grade) or Lucky Package: Spiritshots (C-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49075" name="Spirit Thunder Chest: Blessed Spiritshots (No-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the chest to get 120 Mysterious Blessed Spiritshots (No-grade) or Lucky Package: Blessed Spiritshots (No-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49076" name="Spirit Thunder Chest: Blessed Spiritshots (D-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the chest to get 300 Mysterious Blessed Spiritshots (D-grade) or Lucky Package: Blessed Spiritshots (D-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49077" name="Spirit Thunder Chest: Blessed Spiritshots (C-grade)" additionalName="Event" type="EtcItem">
+		<!-- Open the chest to get 150 Mysterious Blessed Spiritshots (D-grade) or Lucky Package: Blessed Spiritshots (D-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49078" name="Package: Romantic Chapeau (100-day)" type="EtcItem">
+		<!-- Open the package to get Refined Romantic Chapeau: Gold (100-day). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49079" name="Package: Romantic Chapeau (33-day)" type="EtcItem">
+		<!-- Open the package to get Refined Romantic Chapeau: Yellow (100-day). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49080" name="Rice Cake of Fighting Spirit" type="EtcItem">
+		<!-- Increases XP and SP gain by 20% for 20 minutes. The effect remains after character's death. Cooldown: 10 minutes. <Attention> The effect changes to the effect of Rice Cake of Flaming Fighting Spirit, if it is used throughout the duration time of Rice Cake of Fighting Spirit. -->
+		<set name="icon" val="icon.bm_rice_cake_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="32000" level="1"/> <!-- Rice Cake of Fighting Spirit -->
+		</skills>
+	</item>
+	<item id="49081" name="Rice Cake of Flaming Fighting Spirit" type="EtcItem">
+		<!-- Increases XP and SP gain by 30% for 20 minutes. The effect remains after character's death. Cooldown: 10 minutes. <Attention> The effect does not change is Rice Cake of Fighting Spirit is used throughout the duration time of Rice Cake of Flaming Fighting Spirit. -->
+		<set name="icon" val="icon.bm_rice_cake_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="32002" level="1"/> <!-- Rice Cake of Flaming Fighting Spirit -->
+		</skills>
+	</item>
+	<item id="49082" name="Get-Rich-Quick Supply Chest" type="EtcItem">
+		<!-- Open the chest to get one of the following items: Scroll: Enchant Weapon / Armor (D / C-grade), Magic Haste Potion, Greater Magic Haste Potion, Haste Potion, Greater Haste Potion, Greater Scroll of Resurrection, Scroll of Escape. -->
+		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49083" name="Commander's Dagger" type="Weapon">
+		<!-- Dagger, which is both a weapon and a symbol of power. This dagger is made by a bladesmith with the purest heart, and has the power to lead a force of 100 000 warriors. When equipped, allows to use the Power of Commander. Can be bought from Aden merchants. <Active Skills> 1. Power of Commander: deals 50 points of damage in PvP. Cooldown: 1 minute. -->
+		<set name="icon" val="icon.weapon_shining_knife_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1150" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">10</stat>
+			<stat type="mAtk">9</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49084" name="Greater Scroll of Resurrection" type="EtcItem">
+		<!-- Magic scroll, used to resurrect a dead character, restoring 50% of XP. -->
+		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49085" name="Battle Support Chest" type="EtcItem">
+		<!-- Double-click the chest to get 2 Rice Cakes of Fighting Spirit. You can additionally receive a Get-Rich-Quick Supply Chest with low probability rate. -->
+		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49086" name="Rice Cake of Fighting Spirit" additionalName="For XP" type="EtcItem">
+		<!-- Increases XP and SP gain by 20% for 20 minutes. The effect remains after character's death. Cooldown: 10 minutes. <Attention> The effect changes to the effect of Rice Cake of Flaming Fighting Spirit, if it is used throughout the duration time of Rice Cake of Fighting Spirit (inc. the one for XP). -->
+		<set name="icon" val="icon.bm_rice_cake_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49087" name="Improved Scroll of Escape" type="EtcItem">
+		<!-- Magic Scroll that relocates you to the nearest village. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49088" name="Gold Medal" type="EtcItem">
+		<!-- Shiny medal. Any trader will pay good money for such thing. Cannot drop or destroy. -->
+		<set name="icon" val="icon.etc_event_medal_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49089" name="Teleport: Entrance to Cruma Tower" type="EtcItem">
+		<!-- Magic scroll, used to teleport the character to the Entrance to Cruma Tower. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="32044" level="1" /> <!-- Teleport: Entrance to Cruma Tower -->
+		</skills>
+	</item>
+	<item id="49090" name="Teleport: Entrance to Dragon Valley" type="EtcItem">
+		<!-- Magic scroll, used to teleport the character to the Entrance to Dragon Valley. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="32045" level="1" /> <!-- Teleport: Entrance to Dragon Valley -->
+		</skills>
+	</item>
+	<item id="49091" name="Teleport: Dragon Valley Bridge" type="EtcItem">
+		<!-- Magic scroll, used to teleport the character to Dragon Valley Bridge. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="32046" level="1" /> <!-- Teleport: Entrance to Dragon Valley Bridge -->
+		</skills>
+	</item>
+	<item id="49092" name="Teleport: Talking Island Village" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to Dragon Valley. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="32031" level="1" /> <!-- Teleport: Talking Island Village -->
+		</skills>
+	</item>
+	<item id="49093" name="Teleport: Elven Village" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to Elven Village. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="32032" level="1" /> <!-- Teleport: Elven Village -->
+		</skills>
+	</item>
+	<item id="49094" name="Teleport: Dark Elf Village" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to Dark Elf Village. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="32033" level="1" /> <!-- Teleport: Dark Elf Village -->
+		</skills>
+	</item>
+	<item id="49095" name="Teleport: Orc Village" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to Orc Village. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="32034" level="1" /> <!-- Teleport: Orc Village -->
+		</skills>
+	</item>
+	<item id="49096" name="Teleport: Dwarven Village" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to Dwarven Village. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="32035" level="1" /> <!-- Teleport: Dwarven Village -->
+		</skills>
+	</item>
+	<item id="49097" name="Teleport: Gludin" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to Gludin. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="32036" level="1" /> <!-- Teleport: Gludin Village -->
+		</skills>
+	</item>
+	<item id="49098" name="Teleport: Gludio" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to Gludio. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="32037" level="1" /> <!-- Teleport: Gludio Village -->
+		</skills>
+	</item>
+	<item id="49099" name="Teleport: Dion" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to Dion. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="32038" level="1" /> <!-- Teleport: Dion Village -->
+		</skills>
+	</item>
+</list>

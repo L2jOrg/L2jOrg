@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Fortress HQ Zones -->
+	<zone name="gludio_fort_a_headquarter_territory" type="HqZone" shape="NPoly" minZ="-3950" maxZ="1050">
+		<stat name="fortId" val="101" />
+		<!-- headquarter_territory -->
+		<node X="-51350" Y="153139" />
+		<node X="-48668" Y="156359" />
+		<node X="-51990" Y="159614" />
+		<node X="-56397" Y="158120" />
+		<node X="-56414" Y="155051" />
+	</zone>
+	<zone name="gludio_fort_b_headquarter_territory" type="HqZone" shape="NPoly" minZ="-5267" maxZ="-267">
+		<stat name="fortId" val="102" />
+		<!-- headquarter_territory -->
+		<node X="-23904" Y="215879" />
+		<node X="-18666" Y="217928" />
+		<node X="-17457" Y="220961" />
+		<node X="-21539" Y="223804" />
+		<node X="-27440" Y="221210" />
+		<node X="-27262" Y="218372" />
+	</zone>
+	<zone name="dion_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-4763" maxZ="237">
+		<stat name="fortId" val="103" />
+		<!-- headquarter_territory -->
+		<node X="16806" Y="184151" />
+		<node X="18658" Y="185948" />
+		<node X="19811" Y="188016" />
+		<node X="18313" Y="190851" />
+		<node X="14432" Y="189919" />
+		<node X="13658" Y="186916" />
+		<node X="14463" Y="185414" />
+	</zone>
+	<zone name="giran_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-4498" maxZ="502">
+		<stat name="fortId" val="104" />
+		<!-- headquarter_territory -->
+		<node X="124284" Y="119446" />
+		<node X="128574" Y="119995" />
+		<node X="129735" Y="123571" />
+		<node X="128400" Y="126683" />
+		<node X="124116" Y="126248" />
+		<node X="122777" Y="124293" />
+		<node X="122690" Y="121280" />
+	</zone>
+	<zone name="oren_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-4926" maxZ="74">
+		<stat name="fortId" val="105" />
+		<!-- headquarter_territory -->
+		<node X="71484" Y="1432" />
+		<node X="75340" Y="1205" />
+		<node X="76621" Y="4854" />
+		<node X="72909" Y="7357" />
+		<node X="71016" Y="7512" />
+		<node X="69961" Y="4638" />
+	</zone>
+	<zone name="aden_fort_a_headquarter_territory" type="HqZone" shape="NPoly" minZ="-5130" maxZ="-130">
+		<stat name="fortId" val="106" />
+		<!-- headquarter_territory -->
+		<node X="154558" Y="52235" />
+		<node X="156800" Y="53060" />
+		<node X="158118" Y="54785" />
+		<node X="157627" Y="57248" />
+		<node X="154860" Y="58637" />
+		<node X="153165" Y="58063" />
+		<node X="151591" Y="55815" />
+		<node X="151765" Y="54393" />
+		<node X="152779" Y="52962" />
+	</zone>
+	<zone name="aden_fort_b_headquarter_territory" type="HqZone" shape="NPoly" minZ="-5193" maxZ="-193">
+		<stat name="fortId" val="107" />
+		<!-- headquarter_territory -->
+		<node X="188581" Y="35178" />
+		<node X="192930" Y="36794" />
+		<node X="193336" Y="41634" />
+		<node X="191834" Y="43367" />
+		<node X="187645" Y="42951" />
+		<node X="185955" Y="38633" />
+	</zone>
+	<zone name="inna_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-5158" maxZ="-158">
+		<stat name="fortId" val="108" />
+		<!-- headquarter_territory -->
+		<node X="116995" Y="201928" />
+		<node X="120569" Y="202176" />
+		<node X="121141" Y="206722" />
+		<node X="117936" Y="208342" />
+		<node X="115047" Y="206898" />
+		<node X="115703" Y="203324" />
+	</zone>
+	<zone name="godad_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-4677" maxZ="323">
+		<stat name="fortId" val="109" />
+		<!-- headquarter_territory -->
+		<node X="157327" Y="-73226" />
+		<node X="162307" Y="-73709" />
+		<node X="162890" Y="-68333" />
+		<node X="158281" Y="-66517" />
+		<node X="155844" Y="-68174" />
+		<node X="155347" Y="-70351" />
+	</zone>
+	<zone name="rune_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-4544" maxZ="456">
+		<stat name="fortId" val="110" />
+		<!-- headquarter_territory -->
+		<node X="66706" Y="-63705" />
+		<node X="69655" Y="-64519" />
+		<node X="72607" Y="-63744" />
+		<node X="73096" Y="-60007" />
+		<node X="70204" Y="-57367" />
+		<node X="66604" Y="-59399" />
+	</zone>
+	<zone name="schutt_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-4744" maxZ="256">
+		<stat name="fortId" val="111" />
+		<!-- headquarter_territory -->
+		<node X="108236" Y="-143972" />
+		<node X="110775" Y="-143634" />
+		<node X="113016" Y="-141709" />
+		<node X="111508" Y="-138829" />
+		<node X="107114" Y="-138401" />
+		<node X="105935" Y="-141913" />
+	</zone>
+	<zone name="glu_di_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-4776" maxZ="224">
+		<stat name="fortId" val="112" />
+		<!-- headquarter_territory -->
+		<node X="4841" Y="145037" />
+		<node X="8162" Y="146059" />
+		<node X="8695" Y="150157" />
+		<node X="7735" Y="153473" />
+		<node X="3175" Y="152995" />
+		<node X="2625" Y="149463" />
+		<node X="3003" Y="148080" />
+	</zone>
+	<zone name="glu_ore_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-5416" maxZ="-416">
+		<stat name="fortId" val="113" />
+		<!-- headquarter_territory -->
+		<node X="-57784" Y="88538" />
+		<node X="-49335" Y="88648" />
+		<node X="-48981" Y="93886" />
+		<node X="-57853" Y="93471" />
+	</zone>
+	<zone name="di_gi_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-3620" maxZ="1380">
+		<stat name="fortId" val="114" />
+		<!-- headquarter_territory -->
+		<node X="57267" Y="137306" />
+		<node X="62461" Y="136798" />
+		<node X="63626" Y="139896" />
+		<node X="62337" Y="142501" />
+		<node X="57884" Y="141884" />
+		<node X="56277" Y="139496" />
+	</zone>
+	<zone name="di_ore_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-5457" maxZ="-457">
+		<stat name="fortId" val="115" />
+		<!-- headquarter_territory -->
+		<node X="8304" Y="92707" />
+		<node X="11224" Y="92625" />
+		<node X="14885" Y="92948" />
+		<node X="14742" Y="95949" />
+		<node X="13106" Y="97755" />
+		<node X="9421" Y="97504" />
+		<node X="7680" Y="96618" />
+	</zone>
+	<zone name="ore_gi_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-4710" maxZ="290">
+		<stat name="fortId" val="116" />
+		<!-- headquarter_territory -->
+		<node X="78726" Y="86600" />
+		<node X="81087" Y="86176" />
+		<node X="83452" Y="88657" />
+		<node X="80971" Y="93477" />
+		<node X="78396" Y="95036" />
+		<node X="74691" Y="93089" />
+		<node X="76675" Y="89735" />
+	</zone>
+	<zone name="a_o_g_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-2505" maxZ="2495">
+		<stat name="fortId" val="117" />
+		<!-- headquarter_territory -->
+		<node X="106731" Y="-19032" />
+		<node X="115932" Y="-19301" />
+		<node X="115716" Y="-11679" />
+		<node X="111792" Y="-9682" />
+		<node X="106440" Y="-13306" />
+	</zone>
+	<zone name="aden_gi_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-3988" maxZ="1012">
+		<stat name="fortId" val="118" />
+		<!-- headquarter_territory -->
+		<node X="122054" Y="91956" />
+		<node X="128690" Y="92822" />
+		<node X="128716" Y="97660" />
+		<node X="121811" Y="97944" />
+		<node X="121349" Y="93373" />
+	</zone>
+	<zone name="inna_gi_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-4393" maxZ="607">
+		<stat name="fortId" val="119" />
+		<!-- headquarter_territory -->
+		<node X="71458" Y="182308" />
+		<node X="73539" Y="182370" />
+		<node X="76657" Y="185241" />
+		<node X="75146" Y="189567" />
+		<node X="69945" Y="187518" />
+		<node X="69014" Y="185651" />
+	</zone>
+	<zone name="ru_go_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-2414" maxZ="2586">
+		<stat name="fortId" val="120" />
+		<!-- headquarter_territory -->
+		<node X="98350" Y="-58747" />
+		<node X="103100" Y="-58279" />
+		<node X="102972" Y="-52300" />
+		<node X="98379" Y="-52053" />
+	</zone>
+	<zone name="ru_sch_fort_headquarter_territory" type="HqZone" shape="NPoly" minZ="-3246" maxZ="1754">
+		<stat name="fortId" val="121" />
+		<!-- headquarter_territory -->
+		<node X="68828" Y="-96543" />
+		<node X="72135" Y="-97648" />
+		<node X="75413" Y="-97103" />
+		<node X="76387" Y="-92770" />
+		<node X="71298" Y="-90403" />
+		<node X="68701" Y="-92263" />
+	</zone>
+</list>

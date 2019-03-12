@@ -19,21 +19,21 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
-import org.l2j.gameserver.mobius.gameserver.data.xml.impl.AdminData;
-import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
-import org.l2j.gameserver.mobius.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.mobius.gameserver.model.L2Object;
-import org.l2j.gameserver.mobius.gameserver.model.L2World;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.model.entity.Hero;
-import org.l2j.gameserver.mobius.gameserver.model.olympiad.Olympiad;
-import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.CreatureSay;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExWorldChatCnt;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2j.gameserver.mobius.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.mobius.gameserver.util.Util;
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.xml.impl.AdminData;
+import org.l2j.gameserver.enums.ChatType;
+import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.entity.Hero;
+import org.l2j.gameserver.model.olympiad.Olympiad;
+import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.CreatureSay;
+import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
+import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.util.Util;
 
 /**
  * This class handles following admin commands: - admin|admin1/admin2/admin3/admin4/admin5 = slots for the 5 starting admin menus - gmliston/gmlistoff = includes/excludes active character from /gmlist results - silence = toggles private messages acceptance mode - diet = toggles weight penalty mode -

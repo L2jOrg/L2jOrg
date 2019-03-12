@@ -1,10 +1,9 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.xml.impl.SkillTreesData;
-import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillData;
-import org.l2j.gameserver.mobius.gameserver.enums.*;
+import org.l2j.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2SkillLearn;

@@ -1,0 +1,56 @@
+Multisells contain information about "special" shops that require any kind of item to be
+given in exchange for purchasing another item.
+Items given by the player are referred to as "ingredients".
+Items rewarded by the NPC are referred to as "products"
+Each entry in a multisell can have many ingredients and many products.
+
+All multisell files have a NUMERIC filename which corresponds to the ID of the multisell, followed by .xml
+Multisell lists can be shown by linking them from an html using: 
+	<a action="bypass -h npc_%objectId%_exc_multisell 123456">
+OR
+	<a action="bypass -h npc_%objectId%_multisell 123456">
+where 123456 is the id of the multisell (this would show the contents of file "123456.xml")
+The difference between these two links is as follows:
+npc_%objectId%_multisell displays a FULL multisell.  That is, all of the entries of the xml are shown exactly 
+as defined.
+npc_%objectId%_exc_multisell displays an "inventory only" multisell.  That is, it looks through the player's 
+inventory for weapons and armors (not equipped) and it only shows multisell entries that have these weapons
+and armors as ingredients!
+
+Each multisell file defines a "list"
+A list can have the following attributes:
+1) applyTaxes
+	optional; default value is "false"
+	if set to true, then all adena amounts in the multisell are taxed (and the tax dollars go to the
+	owning castle).  Also, 5/6 of ancient adena amounts are taxed in adena.  For example, a taxable 
+	list with 10% tax, containing an entry that requires 3600 ancient adena will actually require
+	3600 ancient adena AND 300 adena!  That is:  (10%)*(5/6)*(3600)
+2) maintainEnchantment
+	optional; default value is "false"
+	if set to true and the list is shown in FULL mode, it is ignored (works as "false")
+	if set to true and the list is shown in "Inventory only" mode, then any weapons and armors defined
+	as products will have the same enchantment level as the weapons and armor that the player gave as 
+	ingredients.  For example, in an SA addition multisell, if the player gives a Crystal Staff +3, 
+	the player will receive a Crystal Staff with Body Bless +3
+
+TAGS:
+<list></list>                            : start and end the list
+<item></item>                            : start and end a single entry within the list
+<production id="itemID" count="amount"/> : add a product for the entry
+<ingredient id="ItemID" count="amount"/> : add an ingredient for the entry
+enchantmentLevel                         : add item enchantment level
+
+
+Sample:
+<list applyTaxes="true">
+	<item>
+		<production id="2" count="1">
+		<production id="3" count="1">
+		<ingredient id="10" count="1">
+		<ingredient id="57" count="200">
+	</item>
+	<item>
+		<production id="123" enchantmentLevel="16" count="1">
+		<ingredient id="57" count="2030">
+	</item>
+</list>

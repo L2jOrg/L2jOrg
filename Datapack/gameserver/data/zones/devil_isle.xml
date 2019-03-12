@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Devil Isle Zones -->
+	<!-- Physical Damage -->
+	<zone name="devil_damage_001" type="DamageZone" shape="NPoly" minZ="-4048" maxZ="-3848"> <!-- [21_24] -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="60000" />
+		<node X="51296" Y="205421" />
+		<node X="51788" Y="205266" />
+		<node X="51496" Y="205621" />
+		<node X="51072" Y="205896" />
+	</zone>
+	<zone name="devil_damage_002" type="DamageZone" shape="NPoly" minZ="-4032" maxZ="-3732"> <!-- [21_24] -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="60000" />
+		<node X="51820" Y="205340" />
+		<node X="52535" Y="205305" />
+		<node X="52535" Y="205436" />
+		<node X="51705" Y="205528" />
+	</zone>
+	<zone name="devil_damage_003" type="DamageZone" shape="NPoly" minZ="-3776" maxZ="-3626"> <!-- [21_24] -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="60000" />
+		<node X="43439" Y="213259" />
+		<node X="43589" Y="213249" />
+		<node X="43750" Y="213760" />
+		<node X="43680" Y="214092" />
+	</zone>
+	<zone name="devil_damage_004" type="DamageZone" shape="NPoly" minZ="-3764" maxZ="-3564"> <!-- [21_24] -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="60000" />
+		<node X="42805" Y="214266" />
+		<node X="43627" Y="214195" />
+		<node X="43386" Y="214355" />
+		<node X="42805" Y="214405" />
+	</zone>
+	<zone name="devil_damage_005" type="DamageZone" shape="NPoly" minZ="-3856" maxZ="-3656"> <!-- [21_24] -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="60000" />
+		<node X="43511" Y="218426" />
+		<node X="43711" Y="218426" />
+		<node X="43711" Y="218759" />
+		<node X="43511" Y="218759" />
+	</zone>
+	<zone name="devil_damage_006" type="DamageZone" shape="NPoly" minZ="-3940" maxZ="-3740"> <!-- [21_24] -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="60000" />
+		<node X="43012" Y="218850" />
+		<node X="43708" Y="218850" />
+		<node X="43719" Y="219260" />
+		<node X="43001" Y="219260" />
+	</zone>
+	<zone name="devil_damage_007" type="DamageZone" shape="NPoly" minZ="-3060" maxZ="-2860"> <!-- [21_24] -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="60000" />
+		<node X="50630" Y="211383" />
+		<node X="51129" Y="211383" />
+		<node X="51129" Y="211858" />
+		<node X="50642" Y="211858" />
+	</zone>
+	<zone name="devil_damage_008" type="DamageZone" shape="NPoly" minZ="-4008" maxZ="-3608"> <!-- [21_24] -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="60000" />
+		<node X="51820" Y="206520" />
+		<node X="52792" Y="206500" />
+		<node X="52812" Y="207128" />
+		<node X="51844" Y="207060" />
+	</zone>
+	<zone name="devil_damage_009" type="DamageZone" shape="NPoly" minZ="-3056" maxZ="-2706"> <!-- [21_24] -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="60000" />
+		<node X="50673" Y="210566" />
+		<node X="51054" Y="210572" />
+		<node X="51054" Y="211317" />
+		<node X="50667" Y="211311" />
+	</zone>
+	<zone name="devil_damage_010" type="DamageZone" shape="NPoly" minZ="-2736" maxZ="-2536"> <!-- [21_24] -->
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="60000" />
+		<node X="50608" Y="209718" />
+		<node X="51145" Y="209718" />
+		<node X="51150" Y="210201" />
+		<node X="50614" Y="210201" />
+	</zone>
+	<!-- Poison -->
+	<zone name="devil_poison_001" type="EffectZone" shape="NPoly" minZ="-3752" maxZ="-3552"> <!-- [21_24] -->
+		<stat name="skillIdLvl" val="4148-4;" /> <!-- s_area_poison4 -->
+		<stat name="chance" val="30" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="5000" />
+		<node X="41707" Y="211982" />
+		<node X="42025" Y="211917" />
+		<node X="42463" Y="212012" />
+		<node X="42702" Y="212346" />
+		<node X="42593" Y="212977" />
+		<node X="42301" Y="213144" />
+		<node X="41821" Y="213081" />
+		<node X="41600" Y="212602" />
+	</zone>
+	<zone name="devil_poison_002" type="EffectZone" shape="NPoly" minZ="-3800" maxZ="-3600"> <!-- [21_24] -->
+		<stat name="skillIdLvl" val="4148-4;" /> <!-- s_area_poison4 -->
+		<stat name="chance" val="30" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="5000" />
+		<node X="45296" Y="213219" />
+		<node X="46136" Y="213081" />
+		<node X="46289" Y="213374" />
+		<node X="46158" Y="213669" />
+		<node X="45105" Y="213668" />
+	</zone>
+	<zone name="devil_poison_003" type="EffectZone" shape="NPoly" minZ="-3628" maxZ="-3428"> <!-- [21_24] -->
+		<stat name="skillIdLvl" val="4148-4;" /> <!-- s_area_poison4 -->
+		<stat name="chance" val="30" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="5000" />
+		<node X="47790" Y="220792" />
+		<node X="48632" Y="220818" />
+		<node X="48683" Y="220992" />
+		<node X="47828" Y="220980" />
+	</zone>
+	<!-- Swamp -->
+	<zone name="devil_slow_8" type="SwampZone" shape="NPoly" minZ="-3964" maxZ="-3364"> <!-- [21_24] -->
+		<!-- stat name="initialDelay" val="1000" / -->
+		<stat name="move_bonus" val="0.2" /> <!-- -80% -->
+		<node X="55250" Y="210873" />
+		<node X="55762" Y="211217" />
+		<node X="55934" Y="212274" />
+		<node X="55686" Y="212533" />
+		<node X="54639" Y="212740" />
+		<node X="54276" Y="212407" />
+		<node X="54160" Y="211696" />
+		<node X="54332" Y="211108" />
+	</zone>
+	<!-- Recovery -->
+	<zone name="devil_healing_zone" type="MotherTreeZone" shape="NPoly" minZ="-3913" maxZ="-3413"> <!-- [21_24] -->
+		<stat name="HpRegenBonus" val="2" />
+		<stat name="MpRegenBonus" val="1" />
+		<stat name="enterMsgId" val="1054" />
+		<stat name="leaveMsgId" val="1055" />
+		<node X="41520" Y="205163" />
+		<node X="44448" Y="205623" />
+		<node X="44352" Y="208957" />
+		<node X="42813" Y="208983" />
+		<node X="41473" Y="207893" />
+	</zone>
+</list>

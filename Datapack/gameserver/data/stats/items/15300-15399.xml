@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="15300" name="Transparent Dual (NPC)" type="Weapon">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">282</stat>
+			<stat type="mAtk">114</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="15301" name="Transparent Pole (NPC)" type="Weapon">
+		<set name="icon" val="icon.weapon_long_spear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1950" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">156</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="15302" name="Transparent Bow (NPC)" type="Weapon">
+		<set name="icon" val="icon.weapon_long_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1830" />
+		<set name="soulshots" val="6" />
+		<set name="spiritshots" val="2" />
+		<set name="mp_consume" val="4" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">114</stat>
+			<stat type="mAtk">35</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">227</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="15303" name="Transparent Claw (NPC)" type="Weapon">
+		<set name="icon" val="icon.weapon_foxs_nail_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1013" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">376</stat>
+			<stat type="mAtk">119</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="15304" name="Transparent Crossbow (NPC)" type="Weapon">
+		<set name="icon" val="icon.weapon_hunting_gun_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1850" />
+		<set name="soulshots" val="4" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">64</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="15305" name="Transparent Rapier (NPC)" type="Weapon">
+		<set name="icon" val="icon.weapon_rapier_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">36</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="randomDamage">40</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="15306" name="Transparent Dual Dagger (NPC)" type="Weapon">
+		<set name="icon" val="icon.dual_dagger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2150" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">304</stat>
+			<stat type="mAtk">157</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="15366" name="Watermelon seed" type="EtcItem">
+		<!-- Giant Watermelon Event: double-click summons a Young Watermelon. -->
+		<set name="icon" val="icon.event_honey_watermelon_seed_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="9029" level="1" /> <!-- Watermelon Seed -->
+		</skills>
+	</item>
+	<item id="15367" name="Honey Watermelon Seed" type="EtcItem">
+		<!-- Giant Watermelon Event: double-click summons a Young Honey Watermelon. -->
+		<set name="icon" val="icon.event_watermelon_seed_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="9030" level="1" /> <!-- Honey Watermelon Seed -->
+		</skills>
+	</item>
+	<item id="15368" name="Copied Watermelon Seed" type="EtcItem">
+		<!-- Giant Watermelon Event: double-click summons a Young Watermelon. -->
+		<set name="icon" val="icon.event_honey_watermelon_seed_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="15369" name="Copied Honey Watermelon Seed" type="EtcItem">
+		<!-- Giant Watermelon Event: double-click summons a Young Honey Watermelon. -->
+		<set name="icon" val="icon.event_watermelon_seed_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

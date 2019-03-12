@@ -1,0 +1,81 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="drop">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="items">
+								<xs:annotation>
+									<xs:documentation>Energy of destruction</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:int" name="id" />
+														<xs:attribute type="xs:byte" name="count" />
+														<xs:attribute type="xs:byte" name="maxCount" />
+														<xs:attribute type="xs:float" name="chance" />
+														<xs:attribute type="xs:float" name="additionalChance" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="conditions">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="condition" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element type="xs:byte" name="minLevel" minOccurs="0" />
+													<xs:element type="xs:byte" name="maxLevel" minOccurs="0" />
+													<xs:element name="category" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>FIFTH_CLASS_GROUP (Supposed to be old awaken class) / SIXTH_CLASS_GROUP (Supposed to be post diversity class)</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element type="xs:string" name="item" maxOccurs="unbounded" minOccurs="0" />
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute type="xs:string" name="name" use="optional" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="systemMessages">
+								<xs:annotation>
+									<xs:documentation>You have obtained the second Energy of Destruction. You can obtain up to 2 of these a day, and can begin obtaining them again at 6:30am every day.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="systemMessage" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:byte" name="amount" use="optional" />
+														<xs:attribute type="xs:short" name="id" use="optional" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:byte" name="id" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

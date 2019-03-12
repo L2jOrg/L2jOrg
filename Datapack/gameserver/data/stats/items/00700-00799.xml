@@ -1,0 +1,907 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="701" name="Fungus Juice" type="EtcItem">
+		<!-- The juice of a fungus. -->
+		<set name="icon" val="icon.item_canuse28" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="702" name="Wolf Pelt" type="EtcItem">
+		<!-- Gather forty wolf pelts and take them to Trader Lector of the weapons and armor shop. -->
+		<set name="icon" val="icon.etc_leather_brown_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="703" name="Giant Spider's Poison Sac" type="EtcItem">
+		<!-- Giant Spider's Poison Sacs obtained from the dead giant spider. Take this to Priest Yohanes. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="704" name="Fever Medicine" type="EtcItem">
+		<!-- Medicine concocted by Priest Yohanes for the students who are ill with fever. Take this to Elias. -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="706" name="Basilisk's Claw" type="EtcItem">
+		<!-- Basilisk's claw. -->
+		<set name="icon" val="icon.item_normal141" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="707" name="Spore Sac" type="EtcItem">
+		<!-- Sac obtained from the spore fungus. Gather 10 of these and take them to Trader Vollodos. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="708" name="Sylph Headband" type="EtcItem">
+		<!-- A Sylph Headband -->
+		<set name="icon" val="icon.item_system03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="709" name="Leather Shirt" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_leather_shirt_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="400" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">50</stat>
+			<stat type="pDef">75</stat>
+		</stats>
+	</item>
+	<item id="710" name="Durable Leather Shirt" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_leather_shirt_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="400" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">52</stat>
+			<stat type="pDef">77</stat>
+		</stats>
+	</item>
+	<item id="711" name="Piece Bone Breastplate" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_mithril_banded_mail_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="800" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">54</stat>
+			<stat type="pDef">79</stat>
+		</stats>
+	</item>
+	<item id="712" name="Half Plate Armor" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_dwarven_scale_mail_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">56</stat>
+			<stat type="pDef">81</stat>
+		</stats>
+	</item>
+	<item id="713" name="Leather Pants" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_squires_pants_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="250" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">30</stat>
+			<stat type="pDef">45</stat>
+		</stats>
+	</item>
+	<item id="714" name="Durable Leather Pants" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_leather_pants_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="300" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">32</stat>
+			<stat type="pDef">47</stat>
+		</stats>
+	</item>
+	<item id="715" name="Piece Bone Gaiters" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_mithril_banded_gaiters_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">34</stat>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="716" name="Plate Gaiters" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_dwarven_scale_mail_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="800" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">36</stat>
+			<stat type="pDef">51</stat>
+		</stats>
+	</item>
+	<item id="717" name="Leather Gloves" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_gauntlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">20</stat>
+			<stat type="pDef">30</stat>
+		</stats>
+	</item>
+	<item id="718" name="Durable Leather Gloves" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_gauntlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">22</stat>
+			<stat type="pDef">32</stat>
+		</stats>
+	</item>
+	<item id="719" name="Quality Leather Gloves" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_gauntlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">24</stat>
+			<stat type="pDef">34</stat>
+		</stats>
+	</item>
+	<item id="720" name="Reinforced Gloves" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_gauntlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">26</stat>
+			<stat type="pDef">36</stat>
+		</stats>
+	</item>
+	<item id="721" name="Leather Boots" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_iron_boots_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">20</stat>
+			<stat type="pDef">30</stat>
+		</stats>
+	</item>
+	<item id="722" name="Durable Leather Boots" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_iron_boots_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">22</stat>
+			<stat type="pDef">32</stat>
+		</stats>
+	</item>
+	<item id="723" name="Quality Leather Boots" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_feet99" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">24</stat>
+			<stat type="pDef">34</stat>
+		</stats>
+	</item>
+	<item id="724" name="Reinforced Boots" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.armor_iron_boots_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="250" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">26</stat>
+			<stat type="pDef">36</stat>
+		</stats>
+	</item>
+	<item id="729" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
+		<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Safe Enchant: +3. -->
+		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="1800000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="2006" level="1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+		</skills>
+	</item>
+	<item id="730" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
+		<!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. -->
+		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="240000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="2007" level="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
+		</skills>
+	</item>
+	<item id="734" name="Wind Walk Potion" type="EtcItem">
+		<!-- Magical potion that increases movement Speed. -->
+		<set name="icon" val="icon.etc_potion_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="20" />
+		<set name="price" val="1200" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="for_npc" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2011" level="1" /> <!-- Wind Walk Potion -->
+		</skills>
+	</item>
+	<item id="735" name="Haste Potion" type="EtcItem">
+		<!-- Magical potion that increases Atk. Spd. -->
+		<set name="icon" val="icon.etc_reagent_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="20" />
+		<set name="price" val="2400" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="for_npc" val="true" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2012" level="1" /> <!-- Haste Potion -->
+		</skills>
+	</item>
+	<item id="736" name="Scroll of Escape" type="EtcItem">
+		<!-- Magical scroll that relocates you to the nearest village. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="400" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="2013" level="1" /> <!-- Scroll of Escape -->
+		</skills>
+	</item>
+	<item id="737" name="Scroll of Resurrection" type="EtcItem">
+		<!-- Magical scroll that resurrects a dead character. -->
+		<set name="icon" val="icon.etc_scroll_of_resurrection_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="2000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="2014" level="1" /> <!-- Scroll of Resurrection -->
+		</skills>
+	</item>
+	<item id="738" name="Sword of Solidarity" type="Weapon">
+		<!-- Bronze sword crafted long ago in memory of the union between the Humans and the Elves. -->
+		<set name="icon" val="icon.weapon_long_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1300" />
+		<set name="price" val="18500" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">12</stat>
+			<stat type="mAtk">9</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="739" name="Broken Sword Handle" type="EtcItem">
+		<!-- The handle part of the sword of solidarity. Take this to Blacksmith Altran. -->
+		<set name="icon" val="icon.weapon_small_sword_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="740" name="Broken Blade Bottom" type="EtcItem">
+		<!-- Take this, and the upper part of the blade to Blacksmith Altran. -->
+		<set name="icon" val="icon.weapon_great_sword_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="741" name="Broken Blade Top" type="EtcItem">
+		<!-- Take this, and the lower part of the blade to Blacksmith Altran. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="742" name="Altran's Note" type="EtcItem">
+		<!-- Letter requesting the handle of the sword from Roien. Take this to Grand Master Roien of Sedrick's Training Hall. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="743" name="Sword of Sentinel" type="Weapon">
+		<!-- Steel blade issued to those fighters that have been acknowledged as protectors of the woods. -->
+		<set name="icon" val="icon.weapon_broad_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="price" val="33600" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">14</stat>
+			<stat type="mAtk">11</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="744" name="Staff of Sentinel" type="Weapon">
+		<!-- Staff issued to those magicians that have been acknowledged as protectors of the woods. -->
+		<set name="icon" val="icon.weapon_cedar_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1800" />
+		<set name="price" val="33600" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">13</stat>
+			<stat type="mAtk">15</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="745" name="Cobendell's Medicine" type="EtcItem">
+		<set name="icon" val="icon.item_normal40" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="746" name="Alberius' List" type="EtcItem">
+		<!-- Deliver the medicine to Sentinel Berros, Sentinel Veltress, Sentinel Rayen, and Sentinel Gartrandell. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="747" name="Wand of Adept" type="Weapon">
+		<!-- The wand presented to those who have finished their studies at the school of magic. -->
+		<set name="icon" val="icon.weapon_apprentices_wand_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1300" />
+		<set name="price" val="25500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">11</stat>
+			<stat type="mAtk">13</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="748" name="Gallint's Oak Wand" type="Weapon">
+		<!-- Oak wand enchanted by Gallint's spell. This will capture and seal the spirit of mirrors, if used physically. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.weapon_club_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1350" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">10</stat>
+			<stat type="mAtk">11</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="750" name="Kinship Crystal" type="EtcItem">
+		<set name="icon" val="icon.item_normal45" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="751" name="Cracked Kinship Crystal" type="EtcItem">
+		<set name="icon" val="icon.item_canuse07" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="752" name="Orc Amulet" type="EtcItem">
+		<!-- Amulet that the Orcs carry for magical purposes. Take this to Captain Gilbert. -->
+		<set name="icon" val="icon.etc_feather_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="753" name="Silverleaf Brooch" type="EtcItem">
+		<set name="icon" val="icon.item_normal12" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="754" name="Red Sunset Staff" type="Weapon">
+		<!-- Staff used by warriors belonging to the Red Sunset clan. -->
+		<set name="icon" val="icon.weapon_cedar_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1700" />
+		<set name="price" val="25500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">13</stat>
+			<stat type="mAtk">14</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="796" name="Roien's Letter" type="EtcItem">
+		<!-- Letter on which Roien summarized the historical information related to the sword of solidarity. Take this to Blacksmith Altran. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+</list>

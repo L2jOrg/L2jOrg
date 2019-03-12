@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Inner Annihilation01 -->
+	<region name="inner_annihilation01" town="Seed of Annihilation" castle="0" locId="3170" bbs="2">
+		<respawnPoint X="-178256" Y="153397" Z="2472" />
+		<respawnPoint X="-178256" Y="153397" Z="2472" isChaotic="true" />
+	</region>
+	<!-- Inner Annihilation02 -->
+	<region name="inner_annihilation02" town="Seed of Annihilation" castle="0" locId="3170" bbs="2">
+		<respawnPoint X="-178256" Y="153397" Z="2472" />
+		<respawnPoint X="-178256" Y="153397" Z="2472" isChaotic="true" />
+	</region>
+</list>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="11" parentClassId="10">
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="3" getLevel="20" levelUpSp="600" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="2" getLevel="20" levelUpSp="600" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="5" getLevel="20" levelUpSp="600" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="6" getLevel="20" levelUpSp="600" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="2" getLevel="20" levelUpSp="600" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Quick Recovery" skillId="164" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Ice Bolt" skillId="1184" skillLvl="5" getLevel="20" levelUpSp="600" />
+		<skill skillName="Ice Bolt" skillId="1184" skillLvl="6" getLevel="20" levelUpSp="600" />
+		<skill skillName="Vampiric Touch" skillId="1147" skillLvl="3" getLevel="20" levelUpSp="600" />
+		<skill skillName="Vampiric Touch" skillId="1147" skillLvl="4" getLevel="20" levelUpSp="600" />
+		<skill skillName="Blaze" skillId="1220" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Blaze" skillId="1220" skillLvl="2" getLevel="20" levelUpSp="600" />
+		<skill skillName="Aura Burn" skillId="1172" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Aura Burn" skillId="1172" skillLvl="2" getLevel="20" levelUpSp="600" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="2" getLevel="20" levelUpSp="600" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="3" getLevel="20" levelUpSp="600" />
+		<skill skillName="Curse Weakness" skillId="1164" skillLvl="2" getLevel="20" levelUpSp="600" />
+		<skill skillName="Energy Bolt" skillId="1274" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Flame Strike" skillId="1181" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Curse Poison" skillId="1168" skillLvl="2" getLevel="20" levelUpSp="600" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLvl="1" getLevel="20" levelUpSp="600" />
+		<skill skillName="Concentration" skillId="1078" skillLvl="1" getLevel="20" levelUpSp="600">
+			<item id="1399" count="1" />
+		</skill>
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="7" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="3" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="4" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Blaze" skillId="1220" skillLvl="3" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="4" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="1" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Vampiric Touch" skillId="1147" skillLvl="5" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Aura Burn" skillId="1172" skillLvl="3" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="3" getLevel="23" levelUpSp="2300" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="1" getLevel="23" levelUpSp="2300">
+			<item id="1394" count="1" />
+		</skill>
+		
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="5" getLevel="24" levelUpSp="2300" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="2" getLevel="24" levelUpSp="2300" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="5" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="4" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="8" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="4" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Fast Spell Casting" skillId="228" skillLvl="1" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="1" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Vampiric Touch" skillId="1147" skillLvl="6" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Blaze" skillId="1220" skillLvl="4" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Aura Burn" skillId="1172" skillLvl="4" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="6" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="3" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="2" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Curse Weakness" skillId="1164" skillLvl="3" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Energy Bolt" skillId="1274" skillLvl="2" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Flame Strike" skillId="1181" skillLvl="2" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLvl="2" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLvl="2" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Poisonous Cloud" skillId="1167" skillLvl="1" getLevel="25" levelUpSp="2300" />
+		<skill skillName="Body To Mind" skillId="1157" skillLvl="1" getLevel="25" levelUpSp="2300">
+			<item id="1517" count="1" />
+		</skill>
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="9" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="5" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="6" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Blaze" skillId="1220" skillLvl="5" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="7" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="3" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Aura Burn" skillId="1172" skillLvl="5" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="5" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="4" getLevel="28" levelUpSp="5700" />
+		
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="8" getLevel="29" levelUpSp="5700" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="5" getLevel="29" levelUpSp="5700" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="7" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="6" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="10" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="6" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="2" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Quick Recovery" skillId="164" skillLvl="2" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Blaze" skillId="1220" skillLvl="6" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Aura Burn" skillId="1172" skillLvl="6" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="9" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="4" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="6" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Curse Weakness" skillId="1164" skillLvl="4" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Energy Bolt" skillId="1274" skillLvl="3" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Flame Strike" skillId="1181" skillLvl="3" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Curse Poison" skillId="1168" skillLvl="3" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLvl="3" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLvl="3" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Concentration" skillId="1078" skillLvl="2" getLevel="30" levelUpSp="5700" />
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLvl="1" getLevel="30" levelUpSp="5700" />
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="11" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="7" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="8" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Blaze" skillId="1220" skillLvl="7" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="10" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="5" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Aura Burn" skillId="1172" skillLvl="7" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="7" getLevel="33" levelUpSp="13000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="7" getLevel="33" levelUpSp="13000" />
+		
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="11" getLevel="34" levelUpSp="13000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="8" getLevel="34" levelUpSp="13000" />
+		
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="9" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="8" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="12" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="8" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="1" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="2" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Blaze" skillId="1220" skillLvl="8" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Aura Burn" skillId="1172" skillLvl="8" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLvl="12" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="6" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="9" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Curse Weakness" skillId="1164" skillLvl="5" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Slow" skillId="1160" skillLvl="1" getLevel="35" levelUpSp="13000">
+			<item id="1409" count="1" />
+		</skill>
+		<skill skillName="Energy Bolt" skillId="1274" skillLvl="4" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Curse Chaos" skillId="1222" skillLvl="1" getLevel="35" levelUpSp="13000">
+			<item id="1416" count="1" />
+		</skill>
+		<skill skillName="Servitor Wind Walk" skillId="1144" skillLvl="1" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLvl="4" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLvl="4" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Poisonous Cloud" skillId="1167" skillLvl="2" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLvl="2" getLevel="35" levelUpSp="13000" />
+	</skillTree>
+</list>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="35727"> <!-- Foreman -->
+		<teleport name="tel1" type="OTHER">
+			<location npcStringId="1010658" x="15383" y="186025" z="-2920" /> <!-- Fortress North Gate -->
+			<location npcStringId="1010659" x="18046" y="190017" z="-2920" /> <!-- Fortress South Gate -->
+			<location npcStringId="1010669" x="19025" y="145245" z="-3107" /> <!-- Dion Town Square -->
+			<location npcStringId="1010670" x="19888" y="153395" z="-3144" /> <!-- Front of the Dion Castle Gate -->
+		</teleport>
+		<teleport name="tel2" type="OTHER">
+			<location npcStringId="1010658" x="15383" y="186025" z="-2920" /> <!-- Fortress North Gate -->
+			<location npcStringId="1010659" x="18046" y="190017" z="-2920" /> <!-- Fortress South Gate -->
+			<location npcStringId="1010669" x="19025" y="145245" z="-3107" /> <!-- Dion Town Square -->
+			<location npcStringId="1010670" x="19888" y="153395" z="-3144" /> <!-- Front of the Dion Castle Gate -->
+			<location npcStringId="1010614" x="5106" y="126916" z="-3664" feeCount="500" /> <!-- Cruma Marshlands (Lv. 25) -->
+			<location npcStringId="1010113" x="47382" y="111278" z="-2104" feeCount="500" /> <!-- Fortress of Resistance (Lv. 23) -->
+			<location npcStringId="1010111" x="630" y="179184" z="-3720" feeCount="500" /> <!-- Plains of Dion (Lv. 23) -->
+			<location npcStringId="1010115" x="60374" y="164301" z="-2856" feeCount="500" /> <!-- Tanor Canyon (Lv. 46) -->
+		</teleport>
+	</npc>
+</list>

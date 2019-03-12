@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="table">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="experience" minOccurs="1" maxOccurs="108">
+					<xs:complexType>
+						<xs:attribute name="level" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:positiveInteger">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="108" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="tolevel" type="xs:nonNegativeInteger" use="required" />
+						<xs:attribute name="trainingRate" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:decimal">
+									<xs:minInclusive value="0" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="maxLevel" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:positiveInteger">
+						<xs:minInclusive value="1" />
+						<xs:maxInclusive value="108" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="maxPetLevel" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:positiveInteger">
+						<xs:minInclusive value="1" />
+						<xs:maxInclusive value="108" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

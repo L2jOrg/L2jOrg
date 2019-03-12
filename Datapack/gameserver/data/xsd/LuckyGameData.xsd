@@ -1,0 +1,69 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="luckygame" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="common_reward">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:float" name="chance" use="optional" />
+														<xs:attribute type="xs:byte" name="count" use="optional" />
+														<xs:attribute type="xs:int" name="id" use="optional" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="unique_reward" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:byte" name="count" use="optional" />
+														<xs:attribute type="xs:int" name="id" use="optional" />
+														<xs:attribute type="xs:short" name="points" use="optional" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="modify_reward" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:float" name="chance" />
+														<xs:attribute type="xs:byte" name="count" />
+														<xs:attribute type="xs:int" name="id" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute type="xs:byte" name="max_game" />
+									<xs:attribute type="xs:byte" name="min_game" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:int" name="turning_point" use="optional" />
+						<xs:attribute type="xs:byte" name="index" use="optional" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

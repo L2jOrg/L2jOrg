@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="5000" name="Recipe: Damascus Sword (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Damascus Sword. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="262000" />
+		<set name="recipe_id" val="458" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5001" name="Recipe: Lance (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Lance. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="262000" />
+		<set name="recipe_id" val="460" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5002" name="Recipe: Deadman's Glory (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Deadman's Glory. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="262000" />
+		<set name="recipe_id" val="462" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5003" name="Recipe: Art of Battle Axe (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Art of Battle Axe. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="262000" />
+		<set name="recipe_id" val="464" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5004" name="Recipe: Staff of Evil Spirits (60%)" type="EtcItem">
+		<!-- For Dwarves only. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="262000" />
+		<set name="recipe_id" val="466" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5005" name="Recipe: Demon's Dagger (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Demon's Dagger. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="262000" />
+		<set name="recipe_id" val="468" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5006" name="Recipe: Bellion Cestus (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Bellion Cestus. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="262000" />
+		<set name="recipe_id" val="470" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5007" name="Recipe: Bow of Peril (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Bow of Peril. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="262000" />
+		<set name="recipe_id" val="472" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5008" name="Recipe: Pata (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Pata. Requires Create Item - Skill Lv. 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="156600" />
+		<set name="recipe_id" val="138" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="5009" name="Trophy of Alliance" type="EtcItem">
+		<!-- Mark that is needed to participate in a clan hall war. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
+		<set name="icon" val="icon.etc_trophy_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="5010" name="Echo Crystal - Theme of Victory" type="EtcItem">
+		<!-- Echo crystal that plays the theme music of victory. Will work once and then disappear. -->
+		<set name="icon" val="icon.etc_echo_crystal_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="100" />
+		<set name="reuse_delay" val="3000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2066" level="1" /> <!-- Item - Theme Sound Crystal -->
+		</skills>
+	</item>
+	<item id="5011" name="Star of Destiny" type="EtcItem">
+		<!-- Accessory that Maestro Reorin created after receiving a request from a woman of unknown identity. -->
+		<set name="icon" val="icon.etc_badge_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5012" name="Leikan's Note" type="EtcItem">
+		<!-- Letter received from Guard Leikan. Take it to Piotur at the farm east of the Orc Barracks. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5013" name="Spellbook: Elemental Assault" type="EtcItem">
+		<!-- Spellbook needed to learn Elemental Assault. Used by Sorcerers and Spellsingers. Required level: 72 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5014" name="Spellbook: Elemental Symphony" type="EtcItem">
+		<!-- Spellbook needed to learn Elemental Symphony. Used by Spellsingers. Required level: 72 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5015" name="Spellbook: Elemental Storm" type="EtcItem">
+		<!-- Spellbook needed to learn Elemental Storm. Used by Spellhowlers. Required level: 72 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

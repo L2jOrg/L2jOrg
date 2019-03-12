@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="11316" toLevel="1" name="Summon Soulshots">
+		<icon>icon.skill11316</icon>
+		<itemConsumeCount>4</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<operateType>A1</operateType>
+		<mpInitialConsume>10</mpInitialConsume>
+		<hitTime>1000</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>40</magicLvl>
+		<isMagic>1</isMagic>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>6645</itemId> <!-- Beast Soulshot -->
+				<itemCount>20</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11318" toLevel="1" name="Summon Spiritshots">
+		<icon>icon.skill11318</icon>
+		<itemConsumeCount>4</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<operateType>A1</operateType>
+		<mpInitialConsume>10</mpInitialConsume>
+		<hitTime>1000</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>40</magicLvl>
+		<isMagic>1</isMagic>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>6646</itemId> <!-- Beast Spiritshot -->
+				<itemCount>16</itemCount>
+			</effect>
+		</effects>
+	</skill>
+</list>

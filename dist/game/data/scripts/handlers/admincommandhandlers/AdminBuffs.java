@@ -22,25 +22,25 @@ import java.util.List;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-import com.l2jmobius.Config;
-import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillData;
-import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillTreesData;
-import org.l2j.gameserver.mobius.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.mobius.gameserver.model.L2World;
-import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.mobius.gameserver.model.html.PageBuilder;
-import org.l2j.gameserver.mobius.gameserver.model.html.PageResult;
-import org.l2j.gameserver.mobius.gameserver.model.html.styles.ButtonsStyle;
-import org.l2j.gameserver.mobius.gameserver.model.skills.AbnormalType;
-import org.l2j.gameserver.mobius.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
-import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SkillCoolTime;
-import org.l2j.gameserver.mobius.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.mobius.gameserver.util.GMAudit;
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.effects.AbstractEffect;
+import org.l2j.gameserver.model.html.PageBuilder;
+import org.l2j.gameserver.model.html.PageResult;
+import org.l2j.gameserver.model.html.styles.ButtonsStyle;
+import org.l2j.gameserver.model.skills.AbnormalType;
+import org.l2j.gameserver.model.skills.BuffInfo;
+import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
+import org.l2j.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.util.GMAudit;
 
 public class AdminBuffs implements IAdminCommandHandler
 {

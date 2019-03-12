@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/BeautyShop.xsd">
+	<race type="HUMAN">
+		<sex type="MALE">
+			<hair id="10008" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10001" adena="15000000" reset_adena="1000000">
+				<color id="101" />
+			</hair>
+			<hair id="10009" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10002" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10010" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10003" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10011" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10004" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10005" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10013" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10006" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10007" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<face id="20001" adena="2000000" reset_adena="500000" />
+			<face id="20002" adena="2000000" reset_adena="500000" />
+			<face id="20003" adena="2000000" reset_adena="500000" />
+			<face id="20004" reset_adena="1000000" beauty_shop_ticket="1" />
+			<face id="20005" reset_adena="1000000" beauty_shop_ticket="1" />
+		</sex>
+		<sex type="FEMALE">
+			<hair id="10008" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10001" adena="15000000" reset_adena="1000000" beauty_shop_ticket="0">
+				<color id="101" />
+			</hair>
+			<hair id="10009" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10002" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10010" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10003" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10011" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10004" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10005" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10013" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10006" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10007" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<face id="20001" adena="2000000" reset_adena="500000" />
+			<face id="20002" adena="2000000" reset_adena="500000" />
+			<face id="20003" adena="2000000" reset_adena="500000" />
+			<face id="20004" reset_adena="1000000" beauty_shop_ticket="1" />
+			<face id="20005" reset_adena="1000000" beauty_shop_ticket="1" />
+		</sex>
+	</race>
+	<race type="ELF">
+		<sex type="MALE">
+			<hair id="10008" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10001" adena="15000000" reset_adena="1000000">
+				<color id="101" />
+			</hair>
+			<hair id="10009" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10002" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10010" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10003" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10011" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10004" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10005" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10013" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10006" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10007" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<face id="20001" adena="2000000" reset_adena="500000" />
+			<face id="20002" adena="2000000" reset_adena="500000" />
+			<face id="20003" adena="2000000" reset_adena="500000" />
+			<face id="20004" reset_adena="1000000" beauty_shop_ticket="1" />
+			<face id="20005" reset_adena="1000000" beauty_shop_ticket="1" />
+		</sex>
+		<sex type="FEMALE">
+			<hair id="10008" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10001" adena="15000000" reset_adena="1000000">
+				<color id="101" />
+			</hair>
+			<hair id="10009" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10002" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10010" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10003" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10011" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10004" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10005" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10013" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10006" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10007" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<face id="20001" adena="2000000" reset_adena="500000" />
+			<face id="20002" adena="2000000" reset_adena="500000" />
+			<face id="20003" adena="2000000" reset_adena="500000" />
+			<face id="20004" reset_adena="1000000" beauty_shop_ticket="1" />
+			<face id="20005" reset_adena="1000000" beauty_shop_ticket="1" />
+		</sex>
+	</race>
+	<race type="DARK_ELF">
+		<sex type="MALE">
+			<hair id="10008" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10001" adena="15000000" reset_adena="1000000">
+				<color id="101" />
+			</hair>
+			<hair id="10009" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10002" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10010" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10003" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10011" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10004" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10005" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10013" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10006" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10007" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<face id="20001" adena="2000000" reset_adena="500000" />
+			<face id="20002" adena="2000000" reset_adena="500000" />
+			<face id="20003" adena="2000000" reset_adena="500000" />
+			<face id="20004" reset_adena="1000000" beauty_shop_ticket="1" />
+			<face id="20005" reset_adena="1000000" beauty_shop_ticket="1" />
+		</sex>
+		<sex type="FEMALE">
+			<hair id="10008" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10001" adena="15000000" reset_adena="1000000">
+				<color id="101" />
+			</hair>
+			<hair id="10009" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10002" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10010" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10003" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10011" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10004" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10005" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10013" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10006" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10007" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<face id="20001" adena="2000000" reset_adena="500000" />
+			<face id="20002" adena="2000000" reset_adena="500000" />
+			<face id="20003" adena="2000000" reset_adena="500000" />
+			<face id="20004" reset_adena="1000000" beauty_shop_ticket="1" />
+			<face id="20005" reset_adena="1000000" beauty_shop_ticket="1" />
+		</sex>
+	</race>
+	<race type="ORC">
+		<sex type="MALE">
+			<hair id="10008" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10001" adena="15000000" reset_adena="1000000">
+				<color id="101" />
+			</hair>
+			<hair id="10009" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10002" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10010" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10003" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10011" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10004" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10005" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10013" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10006" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10007" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<face id="20001" adena="2000000" reset_adena="500000" />
+			<face id="20002" adena="2000000" reset_adena="500000" />
+			<face id="20003" adena="2000000" reset_adena="500000" />
+			<face id="20004" reset_adena="1000000" beauty_shop_ticket="1" />
+			<face id="20005" reset_adena="1000000" beauty_shop_ticket="1" />
+		</sex>
+		<sex type="FEMALE">
+			<hair id="10008" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10001" adena="15000000" reset_adena="1000000">
+				<color id="101" />
+			</hair>
+			<hair id="10009" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10002" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10010" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10003" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10011" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10004" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10005" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10013" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10006" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10007" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<face id="20001" adena="2000000" reset_adena="500000" />
+			<face id="20002" adena="2000000" reset_adena="500000" />
+			<face id="20003" adena="2000000" reset_adena="500000" />
+			<face id="20004" reset_adena="1000000" beauty_shop_ticket="1" />
+			<face id="20005" reset_adena="1000000" beauty_shop_ticket="1" />
+		</sex>
+	</race>
+	<race type="DWARF">
+		<sex type="MALE">
+			<hair id="10008" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10001" adena="15000000" reset_adena="1000000">
+				<color id="101" />
+			</hair>
+			<hair id="10009" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10002" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10010" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10003" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10011" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10004" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10005" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10013" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10006" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10007" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<face id="20001" adena="2000000" reset_adena="500000" />
+			<face id="20002" adena="2000000" reset_adena="500000" />
+			<face id="20003" adena="2000000" reset_adena="500000" />
+			<face id="20004" reset_adena="1000000" beauty_shop_ticket="1" />
+			<face id="20005" reset_adena="1000000" beauty_shop_ticket="1" />
+		</sex>
+		<sex type="FEMALE">
+			<hair id="10008" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10001" adena="15000000" reset_adena="1000000">
+				<color id="101" />
+			</hair>
+			<hair id="10009" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10002" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10010" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10003" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10011" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10004" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10005" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10013" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10006" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10007" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<face id="20001" adena="2000000" reset_adena="500000" />
+			<face id="20002" adena="2000000" reset_adena="500000" />
+			<face id="20003" adena="2000000" reset_adena="500000" />
+			<face id="20004" reset_adena="1000000" beauty_shop_ticket="1" />
+			<face id="20005" reset_adena="1000000" beauty_shop_ticket="1" />
+		</sex>
+	</race>
+	<race type="KAMAEL">
+		<sex type="MALE">
+			<hair id="10008" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10001" adena="15000000" reset_adena="1000000">
+				<color id="101" />
+			</hair>
+			<hair id="10009" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10002" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10010" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10003" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10011" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10004" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10005" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10013" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10006" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10007" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<face id="20001" adena="2000000" reset_adena="500000" />
+			<face id="20002" adena="2000000" reset_adena="500000" />
+			<face id="20003" adena="2000000" reset_adena="500000" />
+			<face id="20004" reset_adena="1000000" beauty_shop_ticket="1" />
+			<face id="20005" reset_adena="1000000" beauty_shop_ticket="1" />
+		</sex>
+	</race>
+	<race type="ERTHEIA">
+		<sex type="FEMALE">
+			<hair id="10008" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10001" adena="15000000" reset_adena="1000000">
+				<color id="101" />
+			</hair>
+			<hair id="10009" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10002" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10010" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10003" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10011" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10004" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10005" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10013" reset_adena="1000000" beauty_shop_ticket="7">
+				<color id="104" adena="3000000" />
+				<color id="105" adena="3000000" />
+				<color id="106" adena="3000000" />
+				<color id="107" adena="3000000" />
+				<color id="108" adena="3000000" />
+				<color id="101" adena="3000000" />
+				<color id="109" adena="3000000" />
+				<color id="102" adena="3000000" />
+				<color id="110" adena="3000000" />
+				<color id="103" adena="3000000" />
+			</hair>
+			<hair id="10006" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<hair id="10007" reset_adena="1000000" beauty_shop_ticket="4">
+				<color id="101" />
+			</hair>
+			<face id="20001" adena="2000000" reset_adena="500000" />
+			<face id="20002" adena="2000000" reset_adena="500000" />
+			<face id="20003" adena="2000000" reset_adena="500000" />
+			<face id="20004" reset_adena="1000000" beauty_shop_ticket="1" />
+			<face id="20005" reset_adena="1000000" beauty_shop_ticket="1" />
+		</sex>
+	</race>
+</list>

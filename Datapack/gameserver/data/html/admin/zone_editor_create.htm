@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>Zone Creator</title>
+</head>
+<body>
+<center>
+	<table width=270 border=0 bgcolor="444444">
+		<tr>
+			<td><button value="Main" action="bypass -h admin_admin" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+			<td><button value="Char" action="bypass -h admin_admin6" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+			<td><button value="Game" action="bypass -h admin_admin2" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+			<td><button value="GM" action="bypass -h admin_admin7" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+		</tr>
+	</table>
+	<br>
+</center>
+<center>
+	<table>	
+		<tr>
+			<td><edit var="name" width=127 height=15></td>
+			<td><button action="bypass -h admin_zones setname $name" value="Set name" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		</tr>
+		<tr>
+			<td><edit var="minZ" width=127 height=15></td>
+			<td><button action="bypass -h admin_zones setMinZ $minZ" value="Set minZ" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		</tr>
+		<tr>
+			<td><edit var="maxZ" width=127 height=15></td>
+			<td><button action="bypass -h admin_zones setMaxZ $maxZ" value="Set maxZ" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		</tr>
+		<tr>
+			<td><button action="bypass -h admin_zones start" value="Picking" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+			<td><button action="bypass -h admin_zones finish" value="Moving" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		</tr>
+		<tr>
+			<td><button action="bypass -h admin_zones dump" value="Dump" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+			<td><button action="bypass -h admin_zones clear" value="Clear" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		</tr>
+		<tr>
+			<td><button action="bypass -h admin_zones show" value="Show" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+			<td><button action="bypass -h admin_zones hide" value="Hide" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		</tr>
+	</table>
+</center>
+<br1>
+<table>
+	<tr>
+		%pages%
+	</tr>
+</table>
+<br1>
+Name: <font color="LEVEL">%name%</font><br1>
+Min Z: <font color="LEVEL">%minZ%</font> Max Z: <font color="LEVEL">%maxZ%</font>
+<br>
+<table width=280 height=20 cellspacing=0 background="L2UI_CT1.Button_DF_Calculator">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=20>#</td>
+		<td fixwidth=60>X</td>
+		<td fixwidth=60>Y</td>
+		<td fixwidth=60>Z</td>
+		<td fixwidth=30>Edit</td>
+		<td fixwidth=30>Tele</td>
+		<td fixwidth=30>Dele</td>
+		<td fixwidth=5></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+%nodes%
+</table>
+</body>
+</html>

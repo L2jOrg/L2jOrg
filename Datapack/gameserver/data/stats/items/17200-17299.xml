@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="17270" name="Agathion Bracelet Agathion - Nevit's Herald Kanna" type="Armor">
+		<!-- A bracelet summoning Agathion, Nevit's Herald Kanna. -->
+		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+		</stats>
+	</item>
+</list>

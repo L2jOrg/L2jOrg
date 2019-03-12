@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
+	<option id="16163" name="o_s_75_2s_1">
+		<!-- Passive: Reduces MP consumption of magic. -->
+		<active_skill id="3203" level="1" /> <!-- Item Skill: Mystery Skill -->
+	</option>
+	<option id="16164" name="o_s_75_2s_2">
+		<!-- Active: Temporarily increases lung capacity. -->
+		<active_skill id="3143" level="10" /> <!-- Item Skill: Kiss of Eva -->
+	</option>
+	<option id="16165" name="o_s_75_2s_3">
+		<!-- Active: Increases the height from which you can jump without sustaining damage for a fixed time. -->
+		<active_skill id="3144" level="10" /> <!-- Item Skill: Acrobatics -->
+	</option>
+	<option id="16166" name="o_s_75_2s_4">
+		<!-- Active: Increases Resistance to damage from falling. -->
+		<active_skill id="3145" level="10" /> <!-- Item Skill: Iron Body -->
+	</option>
+	<option id="16167" name="o_s_75_2s_5">
+		<!-- Active: Ignites a firecracker. -->
+		<active_skill id="3156" level="1" /> <!-- Item Skill: Firework -->
+	</option>
+	<option id="16168" name="o_s_75_2s_6">
+		<!-- Active: Temporarily plays music. -->
+		<active_skill id="3206" level="1" /> <!-- Item Skill: Music -->
+	</option>
+	<option id="16169" name="o_s_75_2s_7">
+		<!-- Active: Ignites a large firecracker. -->
+		<active_skill id="3157" level="1" /> <!-- Item Skill: Large Firework -->
+	</option>
+	<option id="16170" name="o_s_75_2s_8">
+		<!-- Chance: During a physical attack, decreases the target's attacking desire for oneself by a fixed rate. -->
+		<attack_skill id="3081" level="10" chance="1.0" /> <!-- Item Skill: Charm -->
+	</option>
+	<option id="16171" name="o_s_75_2s_9">
+		<!-- Chance: During a physical attack, stimulates the target's attacking desire by a fixed rate. -->
+		<attack_skill id="3080" level="10" chance="1.0" /> <!-- Item Skill: Aggression -->
+	</option>
+	<option id="16172" name="o_s_75_2s_10">
+		<!-- Chance: During a physical attack, decreases the target's moving speed by a fixed rate. -->
+		<attack_skill id="3083" level="10" chance="1.0" /> <!-- Item Skill: Slow -->
+	</option>
+	<option id="16173" name="o_s_75_2s_11">
+		<!-- Chance: During a critical attack, decreases the target's attacking desire for oneself by a fixed rate. -->
+		<critical_skill id="3109" level="10" chance="5.0" /> <!-- Item Skill: Aggression Down -->
+	</option>
+	<option id="16174" name="o_s_75_2s_12">
+		<!-- Chance: During a critical attack, stimulates the target's attacking desire by a fixed rate. -->
+		<critical_skill id="3108" level="10" chance="5.0" /> <!-- Item Skill: Aggression Up -->
+	</option>
+	<option id="16175" name="o_s_75_2s_13">
+		<!-- Chance: During a critical attack, decreases the target's moving speed by a fixed rate. -->
+		<critical_skill id="3111" level="10" chance="5.0" /> <!-- Item Skill: Slow -->
+	</option>
+	<option id="16176" name="o_s_75_2s_14">
+		<!-- Chance: During a magic attack, decreases the target's moving speed by a fixed rate. Effect 3. -->
+		<magic_skill id="3096" level="10" chance="2.0" /> <!-- Item Skill: Slow -->
+	</option>
+	<option id="16177" name="o_s_75_2s_15">
+		<!-- Passive: Increases lung capacity. -->
+		<passive_skill id="3252" level="10" /> <!-- Item Skill: Kiss of Eva -->
+	</option>
+	<option id="16178" name="o_s_75_2s_16">
+		<!-- Passive: Increases the height from which you can jump without sustaining damage. -->
+		<passive_skill id="3253" level="10" /> <!-- Item Skill: Acrobatics -->
+	</option>
+	<option id="16179" name="o_s_75_2s_17">
+		<!-- Passive: Increases Resistance to damage from falling. -->
+		<passive_skill id="3254" level="10" /> <!-- Item Skill: Iron Body -->
+	</option>
+	<option id="16180" name="o_s_75_2r_1">
+		<!-- Active: Decreases the target's Atk. Spd. By a fixed rate. -->
+		<active_skill id="3188" level="10" /> <!-- Item Skill: Winter -->
+	</option>
+	<option id="16181" name="o_s_75_2r_2">
+		<!-- Active: Temporarily increase Evasion. -->
+		<active_skill id="3139" level="10" /> <!-- Item Skill: Agility -->
+	</option>
+	<option id="16182" name="o_s_75_2r_3">
+		<!-- Active: Inflicts bleed on the target by a fixed rate. -->
+		<active_skill id="3196" level="10" /> <!-- Item Skill: Bleed -->
+	</option>
+	<option id="16183" name="o_s_75_2r_4">
+		<!-- Active: Restores your CP. -->
+		<active_skill id="3130" level="10" /> <!-- Item Skill: Ritual -->
+	</option>
+	<option id="16184" name="o_s_75_2r_5">
+		<!-- Active: Inflicts damage by throwing a boulder. -->
+		<active_skill id="3169" level="10" /> <!-- Item Skill: Stone -->
+	</option>
+	<option id="16185" name="o_s_75_2r_6">
+		<!-- Active: Inflicts fear on the target by a fixed rate and causes him to flee. -->
+		<active_skill id="3194" level="10" /> <!-- Item Skill: Fear -->
+	</option>
+	<option id="16186" name="o_s_75_2r_7">
+		<!-- Active: Condenses air to burst flames. -->
+		<active_skill id="3165" level="10" /> <!-- Item Skill: Prominence -->
+	</option>
+	<option id="16187" name="o_s_75_2r_8">
+		<!-- Active: Calms the enemy's heart and causes attacking desire to disappear. -->
+		<active_skill id="3151" level="10" /> <!-- Item Skill: Peace -->
+	</option>
+	<option id="16188" name="o_s_75_2r_9">
+		<!-- Active: Decreases the target's attacking desire for oneself. -->
+		<active_skill id="3150" level="10" /> <!-- Item Skill: Charm -->
+	</option>
+	<option id="16189" name="o_s_75_2r_10">
+		<!-- Active: Increases your target's will to attack. -->
+		<active_skill id="3149" level="10" /> <!-- Item Skill: Aggression -->
+	</option>
+	<option id="16190" name="o_s_75_2r_11">
+		<!-- Active: Temporarily increases accuracy. -->
+		<active_skill id="3140" level="10" /> <!-- Item Skill: Guidance -->
+	</option>
+	<option id="16191" name="o_s_75_2r_12">
+		<!-- Active: Inflicts hold on the target by a fixed rate. Additional Hold is not available while the effect lasts. -->
+		<active_skill id="3190" level="10" /> <!-- Item Skill: Hold -->
+	</option>
+	<option id="16192" name="o_s_75_2r_13">
+		<!-- Active: Launches a holy magic attack. -->
+		<active_skill id="3170" level="10" /> <!-- Item Skill: Solar Flare -->
+	</option>
+	<option id="16193" name="o_s_75_2r_14">
+		<!-- Active: Temporarily increases the power of HP recovery magic. -->
+		<active_skill id="3138" level="10" /> <!-- Item Skill: Heal Empower -->
+	</option>
+	<option id="16194" name="o_s_75_2r_15">
+		<!-- Active: Temporarily increases HP recovery magic effect. -->
+		<active_skill id="3126" level="10" /> <!-- Item Skill: Prayer -->
+	</option>
+	<option id="16195" name="o_s_75_2r_16">
+		<!-- Active: Regenerates your own HP immediately. -->
+		<active_skill id="3123" level="10" /> <!-- Item Skill: Heal -->
+	</option>
+	<option id="16196" name="o_s_75_2r_17">
+		<!-- Active: Temporarily increases M. Atk. -->
+		<active_skill id="3133" level="10" /> <!-- Item Skill: Empower -->
+	</option>
+	<option id="16197" name="o_s_75_2r_18">
+		<!-- Active: Temporarily increases Max CP. -->
+		<active_skill id="3131" level="10" /> <!-- Item Skill: Cheer -->
+	</option>
+	<option id="16198" name="o_s_75_2r_19">
+		<!-- Active: Temporarily increases Max HP and recovers the amount of increased HP. -->
+		<active_skill id="3125" level="10" /> <!-- Item Skill: Battle Roar -->
+	</option>
+	<option id="16199" name="o_s_75_2r_20">
+		<!-- Active: Temporarily increases Max HP. -->
+		<active_skill id="3124" level="10" /> <!-- Item Skill: Blessed Body -->
+	</option>
+</list>

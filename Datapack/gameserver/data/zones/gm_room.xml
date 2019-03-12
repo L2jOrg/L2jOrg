@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- GM Room Zones -->
+	<zone name="gm_room_solo1" type="JailZone" shape="NPoly" minZ="-3049" maxZ="-2849"> <!-- [16_10] -->
+		<node X="-116299" Y="-251426" />
+		<node X="-115745" Y="-251426" />
+		<node X="-115745" Y="-250840" />
+		<node X="-116296" Y="-250840" />
+	</zone>
+	<zone name="gm_room_solo2" type="JailZone" shape="NPoly" minZ="-3053" maxZ="-2853"> <!-- [16_10] -->
+		<node X="-113350" Y="-251408" />
+		<node X="-112797" Y="-251407" />
+		<node X="-112798" Y="-250855" />
+		<node X="-113353" Y="-250857" />
+	</zone>
+	<zone name="gm_room" type="JailZone" shape="NPoly" minZ="-3050" maxZ="-2850"> <!-- [16_10] -->
+		<node X="-115727" Y="-251652" />
+		<node X="-113365" Y="-251655" />
+		<node X="-113365" Y="-248191" />
+		<node X="-115727" Y="-248194" />
+	</zone>
+</list>

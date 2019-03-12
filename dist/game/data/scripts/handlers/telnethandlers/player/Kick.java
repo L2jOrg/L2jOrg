@@ -16,10 +16,10 @@
  */
 package handlers.telnethandlers.player;
 
-import org.l2j.gameserver.mobius.gameserver.model.L2World;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.network.Disconnection;
-import org.l2j.gameserver.mobius.gameserver.network.telnet.ITelnetCommand;
+import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.network.Disconnection;
+import org.l2j.gameserver.network.telnet.ITelnetCommand;
 
 import io.netty.channel.ChannelHandlerContext;
 

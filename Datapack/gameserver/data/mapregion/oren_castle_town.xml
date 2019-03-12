@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Oren Castle Town -->
+	<region name="oren_castle_town" town="Oren Castle Town" castle="4" locId="922" bbs="10">
+		<respawnPoint X="80304" Y="56241" Z="-1500" />
+		<respawnPoint X="80594" Y="55837" Z="-1500" />
+		<respawnPoint X="79933" Y="55752" Z="-1500" />
+		<respawnPoint X="80267" Y="55497" Z="-1500" />
+		<respawnPoint X="80334" Y="54400" Z="-1500" />
+		<respawnPoint X="82445" Y="56012" Z="-1480" />
+		<respawnPoint X="82323" Y="55466" Z="-1480" />
+		<respawnPoint X="82880" Y="55390" Z="-1480" />
+		<respawnPoint X="82638" Y="53885" Z="-1440" />
+		<respawnPoint X="82552" Y="53447" Z="-1440" />
+		<respawnPoint X="82213" Y="53964" Z="-1440" />
+		<respawnPoint X="80054" Y="53209" Z="-1500" />
+		<respawnPoint X="79706" Y="52986" Z="-1500" />
+		<respawnPoint X="82123" Y="53535" Z="-1440" />
+		<respawnPoint X="76576" Y="50151" Z="-3200" isChaotic="true" />
+		<respawnPoint X="77310" Y="50317" Z="-3160" isChaotic="true" />
+		<respawnPoint X="77250" Y="51285" Z="-3160" isChaotic="true" />
+		<respawnPoint X="78811" Y="51106" Z="-3160" isChaotic="true" />
+		<respawnPoint X="75755" Y="51372" Z="-3250" isChaotic="true" />
+		<respawnPoint X="75613" Y="52504" Z="-3200" isChaotic="true" />
+		<respawnPoint X="74459" Y="52441" Z="-3260" isChaotic="true" />
+		<respawnPoint X="74467" Y="53354" Z="-3200" isChaotic="true" />
+		<respawnPoint X="73600" Y="53918" Z="-3170" isChaotic="true" />
+		<respawnPoint X="71102" Y="57875" Z="-3330" isChaotic="true" />
+		<respawnPoint X="70052" Y="59300" Z="-3580" isChaotic="true" />
+		<respawnPoint X="70420" Y="57480" Z="-3480" isChaotic="true" />
+		<respawnPoint X="75474" Y="60125" Z="-2730" isChaotic="true" />
+		<respawnPoint X="74880" Y="60818" Z="-2820" isChaotic="true" />
+		<respawnPoint X="88011" Y="56589" Z="-3560" isChaotic="true" />
+		<respawnPoint X="91239" Y="53120" Z="-3430" isChaotic="true" />
+		<respawnPoint X="81785" Y="46306" Z="-3160" isChaotic="true" />
+		<respawnPoint X="80708" Y="44609" Z="-3120" isChaotic="true" />
+		<respawnPoint X="70139" Y="55885" Z="-3550" isChaotic="true" />
+		<respawnPoint X="80236" Y="45675" Z="-3150" isChaotic="true" />
+		<map X="19" Y="10" />
+		<map X="21" Y="18" />
+		<map X="22" Y="20" />
+		<map X="22" Y="19" />
+		<map X="22" Y="18" />
+		<map X="22" Y="17" />
+		<map X="23" Y="17" />
+	</region>
+</list>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="9504" toLevel="1" name="Scroll: PK (Low-grade)">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<itemConsumeId>35751</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNotCursed" />
+			<condition name="OpPkcount">
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PkCount">
+				<amount>-1</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="9505" toLevel="1" name="Scroll: PK (Mid-grade)">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<itemConsumeId>35752</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNotCursed" />
+			<condition name="OpPkcount">
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PkCount">
+				<amount>-3</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="9506" toLevel="1" name="Scroll: PK (High-grade)">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<itemConsumeId>35753</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNotCursed" />
+			<condition name="OpPkcount">
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PkCount">
+				<amount>-5</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="9507" toLevel="1" name="Scroll: PK (Top-grade)">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<itemConsumeId>35754</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNotCursed" />
+			<condition name="OpPkcount">
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PkCount">
+				<amount>-10</amount>
+			</effect>
+		</effects>
+	</skill>
+</list>

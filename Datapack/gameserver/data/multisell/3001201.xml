@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30012</npc> <!-- Fishing Guildsman -->
+	</npcs>
+	<item>
+		<!-- Adena -->
+		<ingredient count="20514" id="57" />
+		<!-- Fishing Rod Pack (1-day) -->
+		<production count="1" id="45493" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="28" id="57" />
+		<!-- Fishing Shot -->
+		<production count="1" id="38154" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="7" id="57" />
+		<!-- Normal Bait -->
+		<production count="1" id="45495" />
+	</item>
+	<item>
+		<!-- Fresh Blue Mackerel -->
+		<ingredient count="1000" id="45481" />
+		<!-- Fishing Rod Pack (1-day) -->
+		<production count="1" id="45493" />
+	</item>
+	<item>
+		<!-- Fresh Blue Mackerel -->
+		<ingredient count="1" id="45473" />
+		<!-- Fishing Shot -->
+		<production count="1" id="38154" />
+	</item>
+	<item>
+		<!-- Fresh Blue Mackerel -->
+		<ingredient count="1" id="45473" />
+		<!-- Normal Bait -->
+		<production count="2" id="45495" />
+	</item>
+</list>

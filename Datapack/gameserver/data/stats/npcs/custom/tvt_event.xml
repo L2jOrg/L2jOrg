@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
+	<npc id="70010" displayId="31226" name="Manager" usingServerSideName="true" title="TvT Event" usingServerSideTitle="true" type="L2Npc">
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="7884" /> <!-- Infernal Master -->
+		<stats>
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="95" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+</list>

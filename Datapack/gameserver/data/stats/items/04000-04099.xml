@@ -1,0 +1,1097 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="4000" name="Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
+		<!-- Oren/Spear/Stationary. -->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4001" name="Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
+		<!-- Oren/Bow/Stationary. -->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="40000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4002" name="Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
+		<!-- Oren/Cleric/Stationary. -->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4003" name="Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
+		<!-- Oren/Wizard/Stationary. -->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4004" name="Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
+		<!-- Oren/Sword/Mobile. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="20000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4005" name="Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
+		<!-- Oren/Spear/Mobile. -->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4006" name="Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
+		<!-- Oren/Bow/Mobile. -->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="40000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4007" name="Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
+		<!-- Oren/Cleric/Mobile. -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4008" name="Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
+		<!-- Oren/Wizard/Mobile. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4009" name="Mercenary Posting Ticket (Teleporter1)" type="EtcItem">
+		<!-- Placed in Oren, at the Teleporter or inside the castle, this ticket allows teleportation to the inner castle or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="500000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4010" name="Mercenary Posting Ticket (Teleporter2)" type="EtcItem">
+		<!-- Placed in Oren, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="500000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4011" name="Mercenary Posting Ticket (Teleporter3)" type="EtcItem">
+		<!-- Placed in Oren, at the Teleporter or inside the castle, this ticket allows teleportation to the inner or outer castle. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="500000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4012" name="Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
+		<!-- Aden/Sword/Stationary. -->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="20000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4013" name="Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
+		<!-- Aden/Spear/Stationary. -->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4014" name="Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
+		<!-- Aden/Bow/Stationary. -->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="40000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4015" name="Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
+		<!-- Aden/Cleric/Stationary. -->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4016" name="Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
+		<!-- Aden/Wizard/Stationary. -->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4017" name="Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
+		<!-- Aden/Sword/Mobile. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="20000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4018" name="Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
+		<!-- Aden/Spear/Mobile. -->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4019" name="Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
+		<!-- Aden/Bow/Mobile. -->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="40000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4020" name="Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
+		<!-- Aden/Cleric/Mobile. -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4021" name="Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
+		<!-- Aden/Wizard/Mobile. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4022" name="Mercenary Posting Ticket (Teleporter1)" type="EtcItem">
+		<!-- Placed in Aden, at the Teleporter or inside the castle, this ticket allows teleportation to the East or West Gate of the inner castle, the halls or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="500000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4023" name="Mercenary Posting Ticket (Teleporter2)" type="EtcItem">
+		<!-- Placed in Aden, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the East Gate of the inner castle, the halls or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="500000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4024" name="Mercenary Posting Ticket (Teleporter3)" type="EtcItem">
+		<!-- Placed in Aden, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the West Gate of the inner castle, the halls or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="500000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4025" name="Mercenary Posting Ticket (Teleporter4)" type="EtcItem">
+		<!-- Placed in Aden, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the East or West Gate of the inner castle, or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="500000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4026" name="Mercenary Posting Ticket (Teleporter5)" type="EtcItem">
+		<!-- Placed in Aden, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the East or West Gate of the inner castle, or the halls. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="500000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4027" name="Bouquet" type="Weapon">
+		<set name="icon" val="icon.etc_plan_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="material" val="PAPER" />
+		<stats>
+			<stat type="pAtk">8</stat>
+			<stat type="mAtk">6</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4028" name="Giant Cannon" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="101" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="300" />
+		<set name="price" val="500000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">5</stat>
+			<stat type="mAtk">5</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4029" name="Red Paper" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4030" name="Orange Paper" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4031" name="Yellow Paper" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4032" name="Green Paper" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4033" name="Blue Paper" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4034" name="Purple Paper" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4035" name="White Paper" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4036" name="Black Paper" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4037" name="Coin of Luck" type="EtcItem">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_coins_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4039" name="Mold Glue" type="EtcItem">
+		<!-- Used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_reagent_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="6000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4040" name="Mold Lubricant" type="EtcItem">
+		<!-- Used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_reagent_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="10000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4041" name="Mold Hardener" type="EtcItem">
+		<!-- Used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_reagent_blue_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="23000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4042" name="Enria" type="EtcItem">
+		<!-- Used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_gem_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4043" name="Asofe" type="EtcItem">
+		<!-- Crystal representing life and protection. It is used for making elixirs. Can also be sold at a general store. -->
+		<set name="icon" val="icon.etc_gem_blue_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="6000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4044" name="Thons" type="EtcItem">
+		<!-- Used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_gem_clear_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="6000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4045" name="Maestro Holder" type="EtcItem">
+		<!-- Used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_lump_yellow_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="411000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4046" name="Maestro Anvil Lock" type="EtcItem">
+		<!-- Used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_lump_dark_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="90400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4047" name="Craftsman Mold" type="EtcItem">
+		<!-- Used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_mold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="710000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4048" name="Maestro Mold" type="EtcItem">
+		<!-- Used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_silver_mold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="154000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4049" name="Adamantite Earring Gemstone" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Admantite Earrings. Can be sold. -->
+		<set name="icon" val="icon.etc_crystal_ball_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3813" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4050" name="Adamantite Ring Wire" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Admantite Ring. Can be sold. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3228" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4051" name="Adamantite Necklace Chain" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Admantite Necklace. Can be sold. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="5157" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4052" name="Black Ore Earring Piece" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Black Ore Earring. Can be sold. -->
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="5649" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4053" name="Black Ore Ring Gemstone" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Black Ore Ring. Can be sold. -->
+		<set name="icon" val="icon.etc_gem_black_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4666" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4054" name="Black Ore Necklace Beads" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Black Ore Necklace. Can be sold. -->
+		<set name="icon" val="BranchSys2.icon.etc_blackorenecklace_beads_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="10154" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4055" name="Compound Shield Fragment" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Compound Shield. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3120" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4056" name="Zubei's Breastplate Part" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Breastplate. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="11050" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4057" name="Zubei's Gaiter Material" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Gaiters. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="7150" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4058" name="Implosion Boot Fragment" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Implosion Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4059" name="Boots of Silence Fabric" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Boots of Silence. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3843" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4060" name="Guardian's Boot Fabric" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Guardian's Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3843" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4061" name="Paradia Boot Pattern" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Paradia Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4062" name="Elemental Boot Lining" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Elemental Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4063" name="Boots of Grace Lining" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Boots of Grace. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4064" name="Avadon Breastplate Part" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make an Avadon Breastplate. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="11050" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4065" name="Avadon Gaiter Material" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Avadon Gaiters. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="7150" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4066" name="Zubei's Leather Shirt Fabric" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Leather Shirt. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="8483" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4067" name="Zubei's Leather Gaiter Texture" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Leather Gaiters. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="5587" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4068" name="Avadon Leather Armor Lining" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Avadon Leather Armor. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="11042" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4069" name="Tunic of Zubei Fabric" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Tunic of Zubei. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="8483" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4070" name="Stockings of Zubei Fabric" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Stockings of Zubei. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="5587" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4071" name="Avadon Robe Fabric" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Avadon Robe. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="11042" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4072" name="Avadon Circlet Pattern" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Avadon Circlet. Can be sold. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4453" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4073" name="Sealed Avadon Glove Fragment" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Avadon Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3843" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4074" name="Chain Gloves of Silence Design" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Chain Gloves of Silence. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3843" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4075" name="Guardian's Glove Design" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to Guardian's Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3843" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4076" name="Gloves of Blessing Pattern" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Gloves of Blessing. Can be sold. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3843" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4077" name="Doom Shield Fragment" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Doom Shield. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4446" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4078" name="Blue Wolf Breastplate Part" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Breastplate. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="13692" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4079" name="Boots of Blessing Design" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Boots of Blessing. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3843" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4080" name="Blue Wolf Gaiter Material" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Gaiters. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="9723" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4081" name="Doom Plate Armor Temper" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Doom Plate Armor. Can be sold. -->
+		<set name="icon" val="icon.etc_lump_white_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="20292" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4082" name="Blue Wolf Leather Armor Texture" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Leather Armor. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4083" name="Leather Armor of Doom Design" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Leather Armor of Doom. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4084" name="Blue Wolf Tunic Fabric" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Tunic. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="11508" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4085" name="Tunic of Doom Pattern" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Tunic of Doom. Can be sold. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="11508" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4086" name="Blue Wolf Stocking Pattern" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Stockings. Can be sold. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="8523" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4087" name="Stockings of Doom Pattern" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Stockings of Doom. Can be sold. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="8523" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4088" name="Blue Wolf Helmet Design" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Helmet. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="5292" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4089" name="Doom Helmet Pattern" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Doom Helmet. Can be sold. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="5292" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4090" name="Sealed Blue Wolf Boot Design" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4091" name="Sealed Doom Glove Fragment" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Doom Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4092" name="Elemental Glove Lining" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Elemental Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4093" name="Gloves of Grace Lining" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Gloves of Grace. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4094" name="Implosion Gauntlet Fabric" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Implosion Gauntlets. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4095" name="Paradia Glove Pattern" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Paradia Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4096" name="Sealed Blue Wolf Glove Fabric" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4097" name="Sealed Zubei's Boot Design" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3843" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4098" name="Sealed Avadon Boot Design" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Avadon Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3843" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4099" name="Sealed Doom Boot Fragment" type="EtcItem">
+		<!-- Main ingredient definitely required for a Dwarf to make Doom Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+	</item>
+</list>

@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="31842" level="70" type="L2Npc" name="Teleportation Cubic">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<acquire sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688.86" magical="470.4" random="30" critical="7" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="40" />
+			<height normal="80" />
+		</collision>
+	</npc>
+	<npc id="31843" level="70" type="L2Teleporter" name="Teleportation Cubic">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<acquire exp="490" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="40" />
+			<height normal="80" />
+		</collision>
+	</npc>
+	<npc id="31844" level="50" type="L2Monster" name="Aracna">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>BUG</race>
+		<sex>FEMALE</sex>
+		<acquire exp="11761" sp="2" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
+			<attack physical="336.1" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="200.24" magical="146.53" />
+			<speed>
+				<walk ground="64" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>ALL_ELEMENTAL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="31845" level="50" type="L2FriendlyMob" name="Bloody Pixy">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>FEMALE</sex>
+		<acquire exp="11761" sp="2" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
+			<attack physical="336.1" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="200.24" magical="146.53" />
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hitTime>720</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ALL_ELEMENTAL2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="5" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="31846" level="50" type="L2Monster" name="Satyros">
+		<parameters>
+			<param name="MoveAroundSocial" value="71" />
+			<param name="MoveAroundSocial1" value="71" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<equipment rhand="291" /> <!-- Trident -->
+		<acquire exp="11761" sp="2" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
+			<attack physical="336.1" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="200.24" magical="146.53" />
+			<speed>
+				<walk ground="45" />
+				<run ground="110" />
+			</speed>
+			<hitTime>580</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>ALL_ELEMENTAL2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="31847" level="50" type="L2Monster" name="Pan">
+		<parameters>
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<equipment rhand="291" /> <!-- Trident -->
+		<acquire exp="7680" sp="226" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
+			<attack physical="336.1" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="200.24" magical="146.53" />
+			<speed>
+				<walk ground="45" />
+				<run ground="110" />
+			</speed>
+			<hitTime>580</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>ALL_ELEMENTAL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="31848" level="50" type="L2FriendlyMob" name="Fairy">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>FEMALE</sex>
+		<acquire exp="11761" sp="2" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
+			<attack physical="336.1" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="200.24" magical="146.53" />
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hitTime>720</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>ALL_ELEMENTAL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="5" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="31849" level="50" type="L2Monster" name="Red Arachne">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>BUG</race>
+		<sex>FEMALE</sex>
+		<acquire exp="11761" sp="2" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
+			<attack physical="336.1" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="200.24" magical="146.53" />
+			<speed>
+				<walk ground="64" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>ALL_ELEMENTAL2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="31850" level="50" type="L2FriendlyMob" name="Blight Treant">
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="11761" sp="2" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
+			<attack physical="305.55" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="200.24" magical="146.53" />
+			<speed>
+				<walk ground="12" />
+				<run ground="12" />
+			</speed>
+			<hitTime>610</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4277" level="3" /> <!-- Resist Poison Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>ALL_ELEMENTAL2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="23" />
+			<height normal="90" />
+		</collision>
+	</npc>
+	<npc id="31851" level="50" type="L2FriendlyMob" name="Treant">
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="11761" sp="2" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
+			<attack physical="305.55" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="200.24" magical="146.53" />
+			<speed>
+				<walk ground="12" />
+				<run ground="12" />
+			</speed>
+			<hitTime>610</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4277" level="3" /> <!-- Resist Poison Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>ALL_ELEMENTAL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="23" />
+			<height normal="90" />
+		</collision>
+	</npc>
+	<npc id="31852" level="50" type="L2Npc" name="Pixy Murika">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>FEMALE</sex>
+		<acquire exp="3000" sp="226" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1421" hpRegen="5.5" mp="747" mpRegen="2.1" />
+			<attack physical="305.55" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="200.24" magical="146.53" />
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hitTime>720</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>ALL_ELEMENTAL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="5" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="31853" level="50" type="L2FriendlyMob" name="Treant Bremec">
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="11761" sp="2" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
+			<attack physical="305.55" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="200.24" magical="146.53" />
+			<speed>
+				<walk ground="12" />
+				<run ground="12" />
+			</speed>
+			<hitTime>610</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>ALL_ELEMENTAL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="23" />
+			<height normal="90" />
+		</collision>
+	</npc>
+	<npc id="31854" level="70" type="L2Npc" name="Event Manager">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<acquire exp="490" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="8" />
+			<height normal="20.5" />
+		</collision>
+	</npc>
+	<npc id="31855" level="70" type="L2Npc" name="Event Manager">
+		<race>ELF</race>
+		<sex>FEMALE</sex>
+		<acquire exp="490" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="8" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="31856" level="70" type="L2Npc" name="Event Manager">
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<acquire exp="490" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="31857" level="70" type="L2Npc" name="Event Manager">
+		<race>DWARF</race>
+		<sex>FEMALE</sex>
+		<acquire exp="490" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="7" />
+			<height normal="18.5" />
+		</collision>
+	</npc>
+	<npc id="31858" level="70" type="L2Npc" name="Event Manager">
+		<race>ORC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="490" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="31859" level="70" type="L2Npc" name="Teleportation Cubic">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<acquire exp="490" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="40" />
+			<height normal="80" />
+		</collision>
+	</npc>
+	<npc id="31860" level="70" type="L2Npc" name="Puss the Cat" title="Event Manager">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire exp="490" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<hitTime>610</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="9" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="31861" level="56" type="L2Teleporter" name="Gatekeeper">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<acquire exp="313" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1724" hpRegen="6.5" mp="918" mpRegen="2.4" />
+			<attack physical="405.96" magical="277.22" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.4" magical="167.13" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="600" aggroRange="450">
+			<clanList>
+				<clan>DION_SIEGE</clan>
+				<clan>DOOR</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="31862" level="70" type="L2Npc" name="Angelic Vortex">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<acquire exp="490" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="7" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="31863" level="70" type="L2Npc" name="Sky" title="Blue's Chamberlain">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="85" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<acquire exp="490" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
+			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="15.6" />
+			<height normal="15" />
+		</collision>
+	</npc>
+</list>

@@ -1,0 +1,65 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="classMaster">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="classChangeOption" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="appliesTo">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element type="xs:string" name="category"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="rewards" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute type="xs:int" name="id" use="optional"/>
+																	<xs:attribute type="xs:byte" name="count" use="optional"/>
+																	<xs:attribute type="xs:byte" name="chance" use="optional"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="conditions" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute type="xs:short" name="id" use="optional"/>
+																	<xs:attribute type="xs:int" name="count" use="optional"/>
+																	<xs:attribute type="xs:byte" name="chance" use="optional"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute type="xs:string" name="name" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="classChangeEnabled"/>
+						<xs:attribute type="xs:string" name="spawnClassMasters"/>
+						<xs:attribute type="xs:string" name="showPopupWindow"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

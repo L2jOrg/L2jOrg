@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="13339" toLevel="5" name="Heavy Armor Set +6">
+		<!-- Source: https://l2wiki.com/classic/Item_Enchanting#Extra_enchantment_bonuses_for_armor_Grade_D_-_A -->
+		<icon>icon.skill0000</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">360</value>
+					<value level="2">360</value>
+					<value level="3">360</value>
+					<value level="4">360</value>
+					<value level="5">360</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>STANDING</type>
+				<value>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>STANDING</type>
+				<value>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</value>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">47</value>
+					<value level="3">47</value>
+					<value level="4">47</value>
+					<value level="5">47</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">28</value>
+					<value level="3">28</value>
+					<value level="4">28</value>
+					<value level="5">28</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">2</value>
+					<value level="4">2</value>
+					<value level="5">2</value>
+				</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="4" toLevel="5">
+				<SHOCK>10</SHOCK>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">6</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="13340" toLevel="5" name="Light Armor Set +6">
+		<!-- Source: https://l2wiki.com/classic/Item_Enchanting#Extra_enchantment_bonuses_for_armor_Grade_D_-_A -->
+		<icon>icon.skill0000</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">200</value>
+					<value level="3">200</value>
+					<value level="4">200</value>
+					<value level="5">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">80</value>
+					<value level="2">80</value>
+					<value level="3">80</value>
+					<value level="4">80</value>
+					<value level="5">80</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>STANDING</type>
+				<value>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>STANDING</type>
+				<value>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</value>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">47</value>
+					<value level="3">47</value>
+					<value level="4">47</value>
+					<value level="5">47</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">28</value>
+					<value level="3">28</value>
+					<value level="4">28</value>
+					<value level="5">28</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="4" toLevel="5">
+				<DERANGEMENT>5</DERANGEMENT>
+				<PARALYZE>5</PARALYZE>
+				<SHOCK>5</SHOCK>
+			</effect>
+			<effect name="ResistDDMagic">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="13341" toLevel="5" name="Robe Armor Set +6">
+		<!-- Source: https://l2wiki.com/classic/Item_Enchanting#Extra_enchantment_bonuses_for_armor_Grade_D_-_A -->
+		<icon>icon.skill0000</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">140</value>
+					<value level="2">140</value>
+					<value level="3">140</value>
+					<value level="4">140</value>
+					<value level="5">140</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>STANDING</type>
+				<value>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>STANDING</type>
+				<value>
+					<value level="1">6</value>
+					<value level="2">6</value>
+					<value level="3">6</value>
+					<value level="4">6</value>
+					<value level="5">6</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">6</value>
+					<value level="2">6</value>
+					<value level="3">6</value>
+					<value level="4">6</value>
+					<value level="5">6</value>
+				</value>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">47</value>
+					<value level="3">47</value>
+					<value level="4">47</value>
+					<value level="5">47</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">28</value>
+					<value level="3">28</value>
+					<value level="4">28</value>
+					<value level="5">28</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">52</value>
+					<value level="4">52</value>
+					<value level="5">52</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">-4</value>
+					<value level="4">-4</value>
+					<value level="5">-4</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="4" toLevel="5">
+				<PARALYZE>10</PARALYZE>
+				<SHOCK>5</SHOCK>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">7</value>
+				</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+</list>

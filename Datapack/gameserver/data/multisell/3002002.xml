@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30020</npc> <!-- Baggins -->
+	</npcs>
+	<item>
+		<ingredient count="40" id="49543" /> <!-- Elemental Stone -->
+		<ingredient count="1" id="49685" /> <!-- Energy of Insolence -->
+		<production count="1" id="49676" /> <!-- Talisman of Insolence I -->
+	</item>
+</list>

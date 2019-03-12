@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="DarkElfTerritory">
+		<group>
+			<npc id="20105" x="-18324" y="52244" z="-3715" heading="17791" respawnTime="60sec" /> <!-- Dark Horror -->
+			<npc id="20105" x="-18099" y="51224" z="-3705" heading="52967" respawnTime="60sec" /> <!-- Dark Horror -->
+			<npc id="20105" x="-18846" y="50144" z="-3701" heading="43032" respawnTime="60sec" /> <!-- Dark Horror -->
+			<npc id="20105" x="-20419" y="48428" z="-3772" heading="44876" respawnTime="60sec" /> <!-- Dark Horror -->
+			<npc id="20105" x="-22554" y="50842" z="-3782" heading="29601" respawnTime="60sec" /> <!-- Dark Horror -->
+			<npc id="20105" x="-21320" y="48790" z="-3771" heading="32739" respawnTime="60sec" /> <!-- Dark Horror -->
+			<npc id="20105" x="-22759" y="52774" z="-3612" heading="26125" respawnTime="60sec" /> <!-- Dark Horror -->
+		</group>
+	</spawn>
+</list>

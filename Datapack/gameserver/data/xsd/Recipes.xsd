@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="item" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="altStatChange" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="name" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:token">
+												<xs:enumeration value="GIM" />
+												<xs:enumeration value="SP" />
+												<xs:enumeration value="XP" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="value" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ingredient" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="production" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="productionRare" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="rarity" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="statUse" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="name" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:token">
+												<xs:enumeration value="HP" />
+												<xs:enumeration value="MP" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="value" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="craftLevel" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="14" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="name" type="xs:normalizedString" use="required" />
+						<xs:attribute name="recipeId" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="successRate" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:enumeration value="10" />
+									<xs:enumeration value="25" />
+									<xs:enumeration value="60" />
+									<xs:enumeration value="70" />
+									<xs:enumeration value="95" />
+									<xs:enumeration value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="type" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="common" />
+									<xs:enumeration value="dwarven" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

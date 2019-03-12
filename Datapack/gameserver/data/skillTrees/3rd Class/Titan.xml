@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="113" parentClassId="46">
+		<skill skillName="Immortal Life" skillId="1608" skillLvl="2" getLevel="76" levelUpSp="5900000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="5900000">
+			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="5900000">
+			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+		</skill>
+		<skill skillName="Spinning Slasher" skillId="36" skillLvl="38" getLevel="76" levelUpSp="5900000" />
+		<skill skillName="Two-handed Weapon Mastery" skillId="293" skillLvl="21" getLevel="76" levelUpSp="5900000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="46" getLevel="76" levelUpSp="5900000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="51" getLevel="76" levelUpSp="5900000" />
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="46" getLevel="76" levelUpSp="5900000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="51" getLevel="76" levelUpSp="5900000" />
+		<skill skillName="Mount Black Bear" skillId="1837" skillLvl="1" getLevel="76">
+			<item id="90042" count="1" /> <!--  Spellbook: Mount Black Bear -->
+		</skill>
+		<skill skillName="Hammer Crush" skillId="260" skillLvl="38" getLevel="76" levelUpSp="5900000" />
+		<skill skillName="Excruciating Strike" skillId="1607" skillLvl="38" getLevel="76" levelUpSp="5900000" />
+		<skill skillName="Fatal Strike" skillId="190" skillLvl="38" getLevel="76" levelUpSp="5900000" />
+		<skill skillName="Broad Sweep" skillId="1628" skillLvl="1" getLevel="76" levelUpSp="5900000" />
+		
+		<skill skillName="Spinning Slasher" skillId="36" skillLvl="39" getLevel="77" levelUpSp="5900000" />
+		<skill skillName="Two-handed Weapon Mastery" skillId="293" skillLvl="22" getLevel="77" levelUpSp="5900000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="47" getLevel="77" levelUpSp="5900000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="52" getLevel="77" levelUpSp="5900000" />
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="47" getLevel="77" levelUpSp="5900000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="52" getLevel="77" levelUpSp="5900000" />
+		<skill skillName="Armor Crush" skillId="362" skillLvl="1" getLevel="77" levelUpSp="5900000">
+			<item id="90078" count="1" /> <!-- Scroll: Armor Crush -->
+		</skill>
+		<skill skillName="Destroyer's Roar" skillId="1627" skillLvl="1" getLevel="77" levelUpSp="5900000">
+			<item id="90073" count="1" /> <!-- Scroll: Destroyer's Roar -->
+		</skill>
+		<skill skillName="Hammer Crush" skillId="260" skillLvl="39" getLevel="77" levelUpSp="5900000" />
+		<skill skillName="Excruciating Strike" skillId="1607" skillLvl="39" getLevel="77" levelUpSp="5900000" />
+		<skill skillName="Fatal Strike" skillId="190 " skillLvl="39" getLevel="77" levelUpSp="5900000" />
+		
+		<skill skillName="Spinning Slasher" skillId="36" skillLvl="40" getLevel="78" levelUpSp="13700000" />
+		<skill skillName="Two-handed Weapon Mastery" skillId="293" skillLvl="23" getLevel="78" levelUpSp="13700000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="48" getLevel="78" levelUpSp="13700000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="53" getLevel="78" levelUpSp="13700000" />
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="48" getLevel="78" levelUpSp="13700000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="53" getLevel="78" levelUpSp="13700000" />
+		<skill skillName="Master of Combat" skillId="430" skillLvl="1" getLevel="78" levelUpSp="13700000" />
+		<skill skillName="Over the Body" skillId="536" skillLvl="1" getLevel="78" levelUpSp="13700000">
+			<item id="900740" count="1" /> <!-- Scroll: Over the Body -->
+		</skill>
+		<skill skillName="Hammer Crush" skillId="260" skillLvl="40" getLevel="78" levelUpSp="13700000" />
+		<skill skillName="Excruciating Strike" skillId="1607" skillLvl="40" getLevel="78" levelUpSp="13700000" />
+		<skill skillName="Fatal Strike" skillId="190 " skillLvl="40" getLevel="78" levelUpSp="13700000" />
+		<skill skillName="Braveheart" skillId="440" skillLvl="1" getLevel="78" levelUpSp="13700000" />
+		
+		<skill skillName="Final Secret" skillId="917" skillLvl="1" getLevel="79" levelUpSp="13700000">
+			<item id="90080" count="1" /> <!-- Scroll: Final Secret -->
+		</skill>
+		
+		<skill skillName="Two-handed Weapon Mastery" skillId="293" skillLvl="24" getLevel="80" levelUpSp="13700000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="49" getLevel="80" levelUpSp="13700000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="54" getLevel="80" levelUpSp="13700000" />
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="49" getLevel="80" levelUpSp="13700000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="54" getLevel="80" levelUpSp="13700000" />
+		<skill skillName="Excruciating Strike" skillId="1607" skillLvl="41" getLevel="80" levelUpSp="13700000" />
+		<skill skillName="Demolition Impact" skillId="777" skillLvl="1" getLevel="80" levelUpSp="13700000">
+			<item id="90075" count="1" />
+ 		</skill>
+		<skill skillName="Fatal Strike" skillId="190 " skillLvl="41" getLevel="80" levelUpSp="13700000" />
+
+		<skill skillName="Two-handed Weapon Mastery" skillId="293" skillLvl="25" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="50" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="55" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="50" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="55" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Excruciating Strike" skillId="1607" skillLvl="42" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Fatal Strike" skillId="190 " skillLvl="42" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Full Knockdown" skillId="1896 " skillLvl="1" getLevel="81" levelUpSp="160000000" />
+
+		<skill skillName="Two-handed Weapon Mastery" skillId="293" skillLvl="26" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="51" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="56" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="51" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="56" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Excruciating Strike" skillId="1607" skillLvl="43" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Fatal Strike" skillId="190 " skillLvl="43" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Sword Expert" skillId="1609 " skillLvl="4" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Full Knockdown" skillId="1896 " skillLvl="2" getLevel="82" levelUpSp="170000000" />
+
+		<skill skillName="Two-handed Weapon Mastery" skillId="293" skillLvl="27" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="52" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="57" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="52" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="57" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Excruciating Strike" skillId="1607" skillLvl="44" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Fatal Strike" skillId="190 " skillLvl="44" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Full Knockdown" skillId="1896 " skillLvl="3" getLevel="83" levelUpSp="240000000" />
+
+		<skill skillName="Two-handed Weapon Mastery" skillId="293" skillLvl="28" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="53" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="58" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="53" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="58" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Excruciating Strike" skillId="1607" skillLvl="45" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Fatal Strike" skillId="190 " skillLvl="45" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Full Knockdown" skillId="1896 " skillLvl="4" getLevel="84" levelUpSp="240000000" />
+	</skillTree>
+</list>

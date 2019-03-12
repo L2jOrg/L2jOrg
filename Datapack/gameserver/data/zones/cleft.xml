@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Cleft Zones -->
+	<!-- TODO: Require Support -->
+	<!-- Cleft Territory Zone -->
+	<!-- <zone name="cleft_zone_territory" type="CleftZone" shape="NPoly" minZ="-4274" maxZ="15796"> -->
+	<!-- <node X="-217824" Y="235786" /> -->
+	<!-- <node X="-210211" Y="235784" /> -->
+	<!-- <node X="-204827" Y="241105" /> -->
+	<!-- <node X="-204797" Y="248701" /> -->
+	<!-- <node X="-210263" Y="254132" /> -->
+	<!-- <node X="-217851" Y="254063" /> -->
+	<!-- <node X="-223234" Y="248801" /> -->
+	<!-- <node X="-223226" Y="241093" /> -->
+	<!-- red_start_point -->
+	<!-- <spawn X="-222704" Y="247803" Z="1744" type="redStartPoint" /> -->
+	<!-- <spawn X="-222649" Y="247945" Z="1728" type="redStartPoint" /> -->
+	<!-- <spawn X="-222652" Y="247666" Z="1728" type="redStartPoint" /> -->
+	<!-- blue_start_point -->
+	<!-- <spawn X="-205312" Y="242144" Z="1744" type="blueStartPoint" /> -->
+	<!-- <spawn X="-205376" Y="241997" Z="1744" type="blueStartPoint" /> -->
+	<!-- <spawn X="-205376" Y="242276" Z="1744" type="blueStartPoint" /> -->
+	<!-- red_banish_point -->
+	<!-- <spawn X="-223701" Y="247795" Z="1744" type="redBanishPoint" /> -->
+	<!-- <spawn X="-223780" Y="247661" Z="1744" type="redBanishPoint" /> -->
+	<!-- <spawn X="-223776" Y="247914" Z="1744" type="redBanishPoint" /> -->
+	<!-- blue_banish_point -->
+	<!-- <spawn X="-204350" Y="242148" Z="1744" type="blueBanishPoint" /> -->
+	<!-- <spawn X="-204284" Y="242288" Z="1744" type="blueBanishPoint" /> -->
+	<!-- <spawn X="-204288" Y="242026" Z="1728" type="blueBanishPoint" /> -->
+	<!-- </zone> -->
+	<!-- Cleft Battle Zone -->
+	<zone name="cleft_battle1" type="ArenaZone" shape="NPoly" minZ="-4274" maxZ="15796"> <!-- [13_25] -->
+		<node X="-217824" Y="235786" />
+		<node X="-210211" Y="235784" />
+		<node X="-204827" Y="241105" />
+		<node X="-204797" Y="248701" />
+		<node X="-210263" Y="254132" />
+		<node X="-217851" Y="254063" />
+		<node X="-223234" Y="248801" />
+		<node X="-223226" Y="241093" />
+	</zone>
+	<!-- Cleft Poison Zones -->
+	<zone name="cleft_center_zone" type="EffectZone" shape="NPoly" minZ="825" maxZ="2225"> <!-- [13_25] -->
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" />
+		<stat name="skillIdLvl" val="4148-12;" /> <!-- s_area_poison12 -->
+		<node X="-215486" Y="244252" />
+		<node X="-214474" Y="244260" />
+		<node X="-214122" Y="243191" />
+		<node X="-212817" Y="243193" />
+		<node X="-212467" Y="244257" />
+		<node X="-211784" Y="244249" />
+		<node X="-211809" Y="245512" />
+		<node X="-212470" Y="245526" />
+		<node X="-212470" Y="245526" />
+		<node X="-212824" Y="246603" />
+		<node X="-214123" Y="246608" />
+		<node X="-214475" Y="245517" />
+		<node X="-215486" Y="245546" />
+	</zone>
+	<zone name="cleft_side_zone_001" type="EffectZone" shape="NPoly" minZ="1898" maxZ="3098"> <!-- [13_25] -->
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" />
+		<stat name="skillIdLvl" val="4148-12;" /> <!-- s_area_poison12 -->
+		<node X="-219104" Y="242255" />
+		<node X="-218169" Y="241864" />
+		<node X="-217675" Y="242180" />
+		<node X="-217181" Y="243968" />
+		<node X="-219053" Y="244216" />
+		<node X="-219543" Y="243881" />
+		<node X="-219503" Y="242859" />
+	</zone>
+	<zone name="cleft_side_zone_002" type="EffectZone" shape="NPoly" minZ="831" maxZ="2031"> <!-- [13_25] -->
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" />
+		<stat name="skillIdLvl" val="4148-12;" /> <!-- s_area_poison12 -->
+		<node X="-212074" Y="238553" />
+		<node X="-211374" Y="238673" />
+		<node X="-210629" Y="239412" />
+		<node X="-210735" Y="239978" />
+		<node X="-212238" Y="241156" />
+		<node X="-213155" Y="239467" />
+		<node X="-213038" Y="238912" />
+	</zone>
+	<zone name="cleft_side_zone_003" type="EffectZone" shape="NPoly" minZ="2478" maxZ="3678"> <!-- [13_25] -->
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="5000" />
+		<stat name="skillIdLvl" val="4148-12;" /> <!-- s_area_poison12 -->
+		<node X="-211928" Y="250675" />
+		<node X="-211250" Y="250475" />
+		<node X="-210580" Y="249742" />
+		<node X="-210733" Y="249209" />
+		<node X="-212327" Y="248187" />
+		<node X="-213081" Y="249929" />
+		<node X="-212916" Y="250460" />
+	</zone>
+	<!-- Cleft No Restart Zone -->
+	<zone name="cleft_no_restart" type="NoRestartZone" shape="NPoly" minZ="-4274" maxZ="15796"> <!-- [13_25] -->
+		<stat name="default_enabled" val="true" />
+		<stat name="restartTime" val="0" />
+		<node X="-217824" Y="235786" />
+		<node X="-210211" Y="235784" />
+		<node X="-204827" Y="241105" />
+		<node X="-204797" Y="248701" />
+		<node X="-210263" Y="254132" />
+		<node X="-217851" Y="254063" />
+		<node X="-223234" Y="248801" />
+		<node X="-223226" Y="241093" />
+	</zone>
+	<!-- Cleft Peace Zones -->
+	<zone name="cleft_peace_zone1" type="PeaceZone" shape="NPoly" minZ="-4274" maxZ="15806"> <!-- [13_25] -->
+		<node X="-225160" Y="247247" />
+		<node X="-223198" Y="246851" />
+		<node X="-223200" Y="248734" />
+		<node X="-225164" Y="248358" />
+	</zone>
+	<zone name="cleft_peace_zone2" type="PeaceZone" shape="NPoly" minZ="-4274" maxZ="15806"> <!-- [13_25] -->
+		<node X="-202896" Y="241626" />
+		<node X="-202883" Y="242666" />
+		<node X="-204843" Y="243061" />
+		<node X="-204851" Y="241165" />
+	</zone>
+</list>

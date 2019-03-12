@@ -257,7 +257,7 @@ public final class ZoneManager implements IGameXmlReader {
                         Constructor<?> zoneConstructor = null;
                         L2ZoneType temp;
                         try {
-                            newZone = Class.forName("com.l2jmobius.gameserver.model.zone.type.L2" + zoneType);
+                            newZone = Class.forName("org.l2j.gameserver.model.zone.type.L2" + zoneType);
                             zoneConstructor = newZone.getConstructor(int.class);
                             temp = (L2ZoneType) zoneConstructor.newInstance(zoneId);
                             temp.setZone(zoneForm);

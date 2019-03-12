@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Floran Town -->
+	<region name="floran_town" town="Floran Town" castle="2" locId="917" bbs="5">
+		<respawnPoint X="19025" Y="145245" Z="-3107" />
+		<respawnPoint X="18576" Y="145136" Z="-3104" />
+		<respawnPoint X="18717" Y="145711" Z="-3097" />
+		<respawnPoint X="18512" Y="145536" Z="-3100" />
+		<respawnPoint X="18954" Y="144428" Z="-3000" />
+		<respawnPoint X="19150" Y="143941" Z="-3020" />
+		<respawnPoint X="19134" Y="144847" Z="-3020" />
+		<respawnPoint X="19613" Y="145607" Z="-3020" />
+		<respawnPoint X="18078" Y="145925" Z="-3020" />
+		<respawnPoint X="17398" Y="145456" Z="-3000" />
+		<respawnPoint X="17144" Y="145055" Z="-3000" />
+		<respawnPoint X="19012" Y="145140" Z="-3020" />
+		<respawnPoint X="17555" Y="170393" Z="-3451" isChaotic="true" />
+		<respawnPoint X="17699" Y="170153" Z="-3451" isChaotic="true" />
+		<respawnPoint X="17315" Y="170041" Z="-3451" isChaotic="true" />
+		<respawnPoint X="17283" Y="170329" Z="-3451" isChaotic="true" />
+		<respawnPoint X="17536" Y="170505" Z="-3451" isChaotic="true" />
+		<respawnPoint X="17299" Y="170341" Z="-3451" isChaotic="true" />
+		<respawnPoint X="17085" Y="170170" Z="-3451" isChaotic="true" />
+		<respawnPoint X="17421" Y="169993" Z="-3451" isChaotic="true" />
+		<respawnPoint X="17820" Y="170054" Z="-3451" isChaotic="true" />
+		<respawnPoint X="18054" Y="170263" Z="-3451" isChaotic="true" />
+		<respawnPoint X="17931" Y="170381" Z="-3451" isChaotic="true" />
+		<map X="20" Y="23" />
+	</region>
+</list>	

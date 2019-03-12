@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Colosseum -->
+	<region name="colosseum" town="Coliseum" castle="5" locId="925" bbs="13">
+		<respawnPoint X="147420" Y="46378" Z="-3350" />
+		<respawnPoint X="147696" Y="46416" Z="-3350" />
+		<respawnPoint X="147248" Y="47048" Z="-3350" />
+		<respawnPoint X="147449" Y="47051" Z="-3350" />
+		<respawnPoint X="147680" Y="47040" Z="-3350" />
+		<respawnPoint X="147232" Y="46352" Z="-3350" />
+		<respawnPoint X="147696" Y="46928" Z="-3350" />
+		<respawnPoint X="147456" Y="46928" Z="-3350" />
+		<respawnPoint X="147232" Y="46928" Z="-3350" />
+		<respawnPoint X="147232" Y="46464" Z="-3350" />
+		<respawnPoint X="147424" Y="46464" Z="-3350" />
+		<respawnPoint X="147696" Y="46512" Z="-3350" />
+		<respawnPoint X="151294" Y="46378" Z="-3350" />
+		<respawnPoint X="151535" Y="46353" Z="-3350" />
+		<respawnPoint X="151712" Y="46368" Z="-3350" />
+		<respawnPoint X="151753" Y="46500" Z="-3405" />
+		<respawnPoint X="151760" Y="46928" Z="-3350" />
+		<respawnPoint X="151760" Y="47104" Z="-3350" />
+		<respawnPoint X="151536" Y="46960" Z="-3350" />
+		<respawnPoint X="151536" Y="47104" Z="-3350" />
+		<respawnPoint X="151264" Y="47136" Z="-3350" />
+		<respawnPoint X="151264" Y="47008" Z="-3350" />
+		<respawnPoint X="151536" Y="46482" Z="-3350" />
+		<respawnPoint X="151296" Y="46480" Z="-3350" />
+		<respawnPoint X="147420" Y="46378" Z="-3350" isChaotic="true" />
+		<respawnPoint X="147696" Y="46416" Z="-3350" isChaotic="true" />
+		<respawnPoint X="147248" Y="47048" Z="-3350" isChaotic="true" />
+		<respawnPoint X="147449" Y="47051" Z="-3350" isChaotic="true" />
+		<respawnPoint X="147680" Y="47040" Z="-3350" isChaotic="true" />
+		<respawnPoint X="147232" Y="46352" Z="-3350" isChaotic="true" />
+		<respawnPoint X="147696" Y="46928" Z="-3350" isChaotic="true" />
+		<respawnPoint X="147456" Y="46928" Z="-3350" isChaotic="true" />
+		<respawnPoint X="147232" Y="46928" Z="-3350" isChaotic="true" />
+		<respawnPoint X="147232" Y="46464" Z="-3350" isChaotic="true" />
+		<respawnPoint X="147424" Y="46464" Z="-3350" isChaotic="true" />
+		<respawnPoint X="147696" Y="46512" Z="-3350" isChaotic="true" />
+		<respawnPoint X="151294" Y="46378" Z="-3350" isChaotic="true" />
+		<respawnPoint X="151535" Y="46353" Z="-3350" isChaotic="true" />
+		<respawnPoint X="151712" Y="46368" Z="-3350" isChaotic="true" />
+		<respawnPoint X="151753" Y="46500" Z="-3405" isChaotic="true" />
+		<respawnPoint X="151760" Y="46928" Z="-3350" isChaotic="true" />
+		<respawnPoint X="151760" Y="47104" Z="-3350" isChaotic="true" />
+		<respawnPoint X="151536" Y="46960" Z="-3350" isChaotic="true" />
+		<respawnPoint X="151536" Y="47104" Z="-3350" isChaotic="true" />
+		<respawnPoint X="151264" Y="47136" Z="-3350" isChaotic="true" />
+		<respawnPoint X="151264" Y="47008" Z="-3350" isChaotic="true" />
+		<respawnPoint X="151536" Y="46482" Z="-3350" isChaotic="true" />
+		<respawnPoint X="151296" Y="46480" Z="-3350" isChaotic="true" />
+	</region>
+</list>

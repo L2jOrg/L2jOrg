@@ -33,7 +33,7 @@ public final class FuncTemplate {
         _value = value;
 
         try {
-            _functionClass = Class.forName("com.l2jmobius.gameserver.model.stats.functions.Func" + function.getName());
+            _functionClass = Class.forName("org.l2j.gameserver.model.stats.functions.Func" + function.getName());
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }

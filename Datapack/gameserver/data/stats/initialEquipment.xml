@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/initialEquipment.xsd">
+	<!-- Human Fighter -->
+	<equipment classId="0">
+		<item id="2369" count="1" equipped="true" /> <!-- Squire's Sword -->
+		<item id="10" count="1" /> <!-- Dagger -->
+		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
+		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
+		<item id="29510" count="1" /> <!-- Newbie Kit - Lvl 1 -->
+		<item id="34610" count="1000" /> <!-- Mysterious Blessed No-grade Spiritshot -->
+		<item id="34603" count="5000" /> <!-- Mysterious No-grade Soulshot -->
+		<item id="34611" count="2000" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+		<item id="34604" count="9000" /> <!-- Mysterious Soulshot (D-grade) -->
+	</equipment>
+	<!-- Human Mystic -->
+	<equipment classId="10">
+		<item id="6" count="1" equipped="true" /> <!-- Apprentice's Wand -->
+		<item id="425" count="1" equipped="true" /> <!-- Apprentice's Tunic -->
+		<item id="461" count="1" equipped="true" /> <!-- Apprentice's Stockings -->
+		<item id="29510" count="1" /> <!-- Newbie Kit - Lvl 1 -->
+		<item id="34610" count="1000" /> <!-- Mysterious Blessed No-grade Spiritshot -->
+		<item id="34603" count="5000" /> <!-- Mysterious No-grade Soulshot -->
+		<item id="34611" count="2000" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+		<item id="34604" count="9000" /> <!-- Mysterious Soulshot (D-grade) -->
+	</equipment>
+	<!-- Elven Fighter -->
+	<equipment classId="18">
+		<item id="2369" count="1" equipped="true" /> <!-- Squire's Sword -->
+		<item id="10" count="1" /> <!-- Dagger -->
+		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
+		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
+		<item id="29510" count="1" /> <!-- Newbie Kit - Lvl 1 -->
+		<item id="34610" count="1000" /> <!-- Mysterious Blessed No-grade Spiritshot -->
+		<item id="34603" count="5000" /> <!-- Mysterious No-grade Soulshot -->
+		<item id="34611" count="2000" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+		<item id="34604" count="9000" /> <!-- Mysterious Soulshot (D-grade) -->
+	</equipment>
+	<!-- Elven Mystic -->
+	<equipment classId="25">
+		<item id="6" count="1" equipped="true" /> <!-- Apprentice's Wand -->
+		<item id="425" count="1" equipped="true" /> <!-- Apprentice's Tunic -->
+		<item id="461" count="1" equipped="true" /> <!-- Apprentice's Stockings -->
+		<item id="29510" count="1" /> <!-- Newbie Kit - Lvl 1 -->
+		<item id="34610" count="1000" /> <!-- Mysterious Blessed No-grade Spiritshot -->
+		<item id="34603" count="5000" /> <!-- Mysterious No-grade Soulshot -->
+		<item id="34611" count="2000" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+		<item id="34604" count="9000" /> <!-- Mysterious Soulshot (D-grade) -->
+	</equipment>
+	<!-- Dark Fighter -->
+	<equipment classId="31">
+		<item id="2369" count="1" equipped="true" /> <!-- Squire's Sword -->
+		<item id="10" count="1" /> <!-- Dagger -->
+		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
+		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
+		<item id="29510" count="1" /> <!-- Newbie Kit - Lvl 1 -->
+		<item id="34610" count="1000" /> <!-- Mysterious Blessed No-grade Spiritshot -->
+		<item id="34603" count="5000" /> <!-- Mysterious No-grade Soulshot -->
+		<item id="34611" count="2000" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+		<item id="34604" count="9000" /> <!-- Mysterious Soulshot (D-grade) -->
+	</equipment>
+	<!-- Dark Mystic -->
+	<equipment classId="38">
+		<item id="6" count="1" equipped="true" /> <!-- Apprentice's Wand -->
+		<item id="425" count="1" equipped="true" /> <!-- Apprentice's Tunic -->
+		<item id="461" count="1" equipped="true" /> <!-- Apprentice's Stockings -->
+		<item id="29510" count="1" /> <!-- Newbie Kit - Lvl 1 -->
+		<item id="34610" count="1000" /> <!-- Mysterious Blessed No-grade Spiritshot -->
+		<item id="34603" count="5000" /> <!-- Mysterious No-grade Soulshot -->
+		<item id="34611" count="2000" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+		<item id="34604" count="9000" /> <!-- Mysterious Soulshot (D-grade) -->
+	</equipment>
+	<!-- Orc Fighter -->
+	<equipment classId="44">
+		<item id="2369" count="1" /> <!-- Squire's Sword -->
+		<item id="2368" count="1" equipped="true" /> <!-- Training Gloves -->
+		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
+		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
+		<item id="29510" count="1" /> <!-- Newbie Kit - Lvl 1 -->
+		<item id="34610" count="1000" /> <!-- Mysterious Blessed No-grade Spiritshot -->
+		<item id="34603" count="5000" /> <!-- Mysterious No-grade Soulshot -->
+		<item id="34611" count="2000" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+		<item id="34604" count="9000" /> <!-- Mysterious Soulshot (D-grade) -->
+	</equipment>
+	<!-- Orc Mystic -->
+	<!-- NOTE: This is orc_mage (orc_shaman is retail typo) -->
+	<equipment classId="49">
+		<item id="2368" count="1" equipped="true" /> <!-- Training Gloves -->
+		<item id="425" count="1" equipped="true" /> <!-- Apprentice's Tunic -->
+		<item id="461" count="1" equipped="true" /> <!-- Apprentice's Stockings -->
+		<item id="29510" count="1" /> <!-- Newbie Kit - Lvl 1 -->
+		<item id="34610" count="1000" /> <!-- Mysterious Blessed No-grade Spiritshot -->
+		<item id="34603" count="5000" /> <!-- Mysterious No-grade Soulshot -->
+		<item id="34611" count="2000" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+		<item id="34604" count="9000" /> <!-- Mysterious Soulshot (D-grade) -->
+	</equipment>
+	<!-- Dwarf Fighter -->
+	<equipment classId="53">
+		<item id="2370" count="1" equipped="true" /> <!-- Guild Member's Club -->
+		<item id="10" count="1" /> <!-- Dagger -->
+		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
+		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
+		<item id="29510" count="1" /> <!-- Newbie Kit - Lvl 1 -->
+		<item id="34610" count="1000" /> <!-- Mysterious Blessed No-grade Spiritshot -->
+		<item id="34603" count="5000" /> <!-- Mysterious No-grade Soulshot -->
+		<item id="34611" count="2000" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+		<item id="34604" count="9000" /> <!-- Mysterious Soulshot (D-grade) -->
+	</equipment>
+</list>

@@ -17,23 +17,23 @@
 package handlers.punishmenthandlers;
 
 import org.l2j.commons.concurrent.ThreadPool;
-import org.l2j.gameserver.mobius.gameserver.LoginServerThread;
-import org.l2j.gameserver.mobius.gameserver.cache.HtmCache;
-import org.l2j.gameserver.mobius.gameserver.handler.IPunishmentHandler;
-import org.l2j.gameserver.mobius.gameserver.model.L2World;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.model.actor.tasks.player.TeleportTask;
-import org.l2j.gameserver.mobius.gameserver.model.events.Containers;
-import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
-import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import org.l2j.gameserver.mobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2j.gameserver.mobius.gameserver.model.olympiad.OlympiadManager;
-import org.l2j.gameserver.mobius.gameserver.model.punishment.PunishmentTask;
-import org.l2j.gameserver.mobius.gameserver.model.punishment.PunishmentType;
-import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.mobius.gameserver.model.zone.type.L2JailZone;
-import org.l2j.gameserver.mobius.gameserver.network.L2GameClient;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.LoginServerThread;
+import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.handler.IPunishmentHandler;
+import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.tasks.player.TeleportTask;
+import org.l2j.gameserver.model.events.Containers;
+import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2j.gameserver.model.olympiad.OlympiadManager;
+import org.l2j.gameserver.model.punishment.PunishmentTask;
+import org.l2j.gameserver.model.punishment.PunishmentType;
+import org.l2j.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.model.zone.type.L2JailZone;
+import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * This class handles jail punishment.

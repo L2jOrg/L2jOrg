@@ -1,0 +1,1555 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="3503" name="Deliverymen Certificate" type="EtcItem">
+		<!-- Official certification for making deliveries. Issued by the Iron Gate Guild. Seal of Lockirin of the Iron Gate is affixed. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3504" name="Kiruna's Horn" type="EtcItem">
+		<!-- Item that Warehouse Chief Gesto entrusted saying to take it to High Prefect Penatus. You must deliver it quickly. -->
+		<set name="icon" val="icon.etc_horn_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3505" name="Mithril Mold" type="EtcItem">
+		<!-- Item that Warehouse Chief Gesto entrusted saying to take it to Blacksmith Rupio. You must deliver it quickly. -->
+		<set name="icon" val="icon.etc_silver_mold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3506" name="Bloody Letter" type="EtcItem">
+		<!-- Item that Warehouse Chief Gesto entrusted saying to take it to Martin. You must deliver it quickly. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3507" name="Supplies" type="EtcItem">
+		<!-- Supply item. It's really heavy. Let's take it to Alex in Florin Village. -->
+		<set name="icon" val="icon.etc_squares_wood_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3508" name="Supplies" type="EtcItem">
+		<!-- Supply item. It's really heavy. Let's take it to Watchman Endrigo at the Execution Grounds. -->
+		<set name="icon" val="icon.etc_squares_wood_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3509" name="Alex's Coins" type="EtcItem">
+		<!-- Return gift given by Alex as expression of thanks for having brought enough of the supply item. -->
+		<set name="icon" val="icon.etc_coins_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3510" name="Watchman's Appreciation" type="EtcItem">
+		<!-- Letter of thanks given by Watchman Endrigo of the Execution Grounds as expression of thanks for having brought enough of the supplied items. -->
+		<set name="icon" val="icon.etc_paper_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3511" name="Black Box to Orim" type="EtcItem">
+		<!-- Item that Warehouse Chief Gesto entrusted saying to take it to Shadow Orim. What could be inside...? -->
+		<set name="icon" val="icon.etc_squares_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3512" name="Deluxe Windsus Ham" type="EtcItem">
+		<!-- Item that Warehouse Chief Gesto entrusted saying to take it to Shadow Orim. What could be inside...? -->
+		<set name="icon" val="icon.etc_meat_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3513" name="Heart of Silenos" type="EtcItem">
+		<!-- Heart obtained by killing silenos. Item specially ordered by Shadow Orim. -->
+		<set name="icon" val="icon.etc_heart_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3514" name="Request Giran" type="EtcItem">
+		<!-- Order received from the warehouse of Town of Giran. You can receive the delivery fee by taking this and the receipt. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3515" name="Request Gludin" type="EtcItem">
+		<!-- Order received from the warehouse of the Town of Gludio. You can receive the delivery fee by taking this and the receipt. -->
+		<set name="icon" val="icon.etc_letter_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3516" name="Request Hunters" type="EtcItem">
+		<!-- Order received from the warehouse of Hunter Village. You can receive the delivery fee by taking this and the receipt. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3517" name="Red Delivery Slip" type="EtcItem">
+		<!-- Certificate received each time a delivery is completed successfully. If you collect 50 certificates, you can exchange it for a blue delivery statement. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3518" name="Blue Delivery Slip" type="EtcItem">
+		<!-- Certificate that you can receive if you successfully complete 50 deliveries. The delivery fee increases by 4% for each certificate. -->
+		<set name="icon" val="icon.etc_ticket_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3519" name="Deliverymen Advanced Certificate Super" type="EtcItem">
+		<!-- Certificate of a Master Deliveryman received for having successfully completed 1,000 deliveries. Received 120% of the delivery fee! -->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3520" name="Delivery Receipt" type="EtcItem">
+		<!-- Confirmation form the person receiving delivery of an item signs. Collect three sheets and take it to Warehouse Chief Gesto. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3521" name="Delivery Receipt" type="EtcItem">
+		<!-- Confirmation form the person receiving delivery of an item signs. Collect two sheets and take it to Warehouse Chief Gesto. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3522" name="Scroll" type="EtcItem">
+		<!-- Scroll to be taken to Magister Baulro of Einhasad Temple on Talking Island. -->
+		<set name="icon" val="icon.etc_roll_of_paper_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3523" name="Send Mail" type="EtcItem">
+		<!-- Letter to be taken to Lighthouse Keeper Rockswell of Talking Island. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3524" name="Book" type="EtcItem">
+		<!-- Book to be taken to Marius at the private beach house on the north side of Talking Island. -->
+		<set name="icon" val="icon.etc_spellbook_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3525" name="Document" type="EtcItem">
+		<!-- Document to be taken to Matheo at the ruins near the port on Talking Island. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3526" name="Send Mail" type="EtcItem">
+		<!-- Letter to be taken to Sir Collin Windawood in front of the Obelisk of Victory on Talking Island. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3527" name="Shaft" type="EtcItem">
+		<!-- Shaft to be taken to Orc Guild High Prefect Osborn of Gludin Village. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3528" name="Send Mail" type="EtcItem">
+		<!-- Letter to be taken to Lighthouse Keeper Perrin at the wharf in Gludin Village. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3529" name="Picture" type="EtcItem">
+		<!-- Picture to be taken to Wharf Manager Clancy of Gludin Village. -->
+		<set name="icon" val="icon.etc_painting_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3530" name="Urn" type="EtcItem">
+		<!-- Urn to be taken to Sir Karrel Vasper of Gludin Village. -->
+		<set name="icon" val="icon.etc_oil_pot_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3531" name="Box" type="EtcItem">
+		<!-- Box to be taken to Samed of the Town of Gludio. -->
+		<set name="icon" val="icon.etc_squares_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3532" name="Urn" type="EtcItem">
+		<!-- Urn to be taken to Priestess Vivyan at Einhasad Temple in the Town of Gludio. -->
+		<set name="icon" val="icon.etc_oil_pot_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3533" name="Box" type="EtcItem">
+		<!-- Box to be taken to Warrior Guild Master Leona in the Town of Gludio. -->
+		<set name="icon" val="icon.etc_squares_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3534" name="Machine" type="EtcItem">
+		<!-- Mechanical device to be taken to Blacksmith Pinter at the blacksmith' shop in the Town of Gludio. -->
+		<set name="icon" val="icon.etc_instrument_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3535" name="Jewelry Box" type="EtcItem">
+		<!-- Jewelry box to be taken to Sentinel Knight Alberius in Elven Village. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3536" name="Jewelry Box" type="EtcItem">
+		<!-- Jewelry box to be taken to Pixy Murika in front of the Mother Tree of Elven Village. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3537" name="Send Mail" type="EtcItem">
+		<!-- Letter to be taken to Karna in Dark Elf Village. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3538" name="Book" type="EtcItem">
+		<!-- Book to be taken to Magister Harne in Dark Elf Village. -->
+		<set name="icon" val="icon.etc_spellbook_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3539" name="Statue" type="EtcItem">
+		<!-- Statue to be taken to Sir Ortho Lancer in Town of Giran. -->
+		<set name="icon" val="icon.etc_holy_statue_bronze_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3540" name="Box" type="EtcItem">
+		<!-- Box to be taken to Martin in Town of Giran. -->
+		<set name="icon" val="icon.etc_squares_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3541" name="Statue" type="EtcItem">
+		<!-- Statue to be taken to Bishop Maximillian of Einhasad Temple in Town of Giran. -->
+		<set name="icon" val="icon.etc_statue_of_einhasad_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3542" name="Jewelry Box" type="EtcItem">
+		<!-- Jewelry box to be taken to Master Stapin of Dark Elf Guild in Town of Giran. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3543" name="Document" type="EtcItem">
+		<!-- Document to be taken to Master Genwitter at the Warrior Guild in Town of Giran. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3544" name="Medicine" type="EtcItem">
+		<!-- Medicine bottle to be taken to High Prefect Clogg at the Orc Guild in the Town of Dion. -->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3545" name="Statue" type="EtcItem">
+		<!-- Statue to be taken to Sir Kiel Nighthawk in the Town of Dion. -->
+		<set name="icon" val="icon.etc_holy_statue_bronze_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3546" name="Ore" type="EtcItem">
+		<!-- Ore to be taken to Blacksmith Poitan at the blacksmith' shop in the Town of Dion. -->
+		<set name="icon" val="icon.etc_synthetic_cokes_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3547" name="Book" type="EtcItem">
+		<!-- Book to be taken to Cardinal Seresin of Einhasad Temple in the Town of Oren. -->
+		<set name="icon" val="icon.etc_spellbook_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3548" name="Scroll" type="EtcItem">
+		<!-- Scroll to be taken to Duda-Mara Chief Takuna near the Orc Guild in the Town of Oren. -->
+		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3549" name="Picture" type="EtcItem">
+		<!-- Picture to be taken to Hunter Guild Member Colin in Hunter Village. -->
+		<set name="icon" val="icon.etc_painting_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3550" name="Cloth" type="EtcItem">
+		<!-- Fabric to be taken to Guard Makhis in Hunter Village. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3551" name="Urn" type="EtcItem">
+		<!-- Jar which should be taken to Elder Cronos in Hunter Village. -->
+		<set name="icon" val="icon.etc_oil_pot_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3552" name="Diamond" type="EtcItem">
+		<!-- Diamond to be taken to Grand Magister Scraide of Mystic Guild in Hunter Village. -->
+		<set name="icon" val="icon.etc_gem_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3553" name="Jewelry Box" type="EtcItem">
+		<!-- Jewelry box to be taken to Grocer Pano in Floran Village. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3554" name="Gold Bar" type="EtcItem">
+		<!-- Gold nuggets to be taken to Alex in Floran Village. -->
+		<set name="icon" val="icon.etc_lump_yellow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3555" name="Shaft" type="EtcItem">
+		<!-- Shaft to be taken to Militiaman Leirynn in Floran Village. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3556" name="Send Mail" type="EtcItem">
+		<!-- Letter to be taken to Fisherman Evert in Floran Village. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3557" name="Cloth" type="EtcItem">
+		<!-- Fabric to be taken to Astrologer Creta in Floran Village. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3558" name="Book" type="EtcItem">
+		<!-- Book to be taken to Magister Kaiena of Dark Elf Guild on the 4th floor of the Ivory Tower. -->
+		<set name="icon" val="icon.etc_spellbook_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3559" name="Ore" type="EtcItem">
+		<!-- Ore to be taken to Rex in the underground shopping area at the Ivory Tower. -->
+		<set name="icon" val="icon.etc_synthetic_cokes_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3560" name="Medicine" type="EtcItem">
+		<!-- Medicine bottle to be taken to Uruha near the waterfall in the north of the marshlands in the Dark Elven region. -->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3561" name="Small Boxes" type="EtcItem">
+		<!-- Small boxes to be taken to Sentry Irene in front of the western bridge of the Neutral Zone. -->
+		<set name="icon" val="icon.etc_adamantite_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3562" name="Document" type="EtcItem">
+		<!-- Document to be taken to Sentinel Trionell in front of the eastern bridge of the Neutral Zone. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3563" name="Scroll" type="EtcItem">
+		<!-- Scroll to be taken to Northwind in front of the Underground Fortress in the Elven region. -->
+		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3564" name="Document" type="EtcItem">
+		<!-- Document to be taken to Thalia on the east side of Iris Lake in the Elven region. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3565" name="Box" type="EtcItem">
+		<!-- Box to be taken to Peter of the Turek orc encampment in the south of the Dark Elven autonomous region. -->
+		<set name="icon" val="icon.etc_squares_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3566" name="Shaft" type="EtcItem">
+		<!-- Shaft to be taken to Bodyguard Jax on the coastal road in the Southern Wastelands. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3567" name="Key" type="EtcItem">
+		<!-- Key to be taken to Researcher Lorain near the entrance to Cruma Tower. -->
+		<set name="icon" val="icon.etc_key_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3568" name="Machine" type="EtcItem">
+		<!-- Mechanical device to be taken to Maestro Nikola on the southwest side of Cruma Tower. -->
+		<set name="icon" val="icon.etc_instrument_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3569" name="Document" type="EtcItem">
+		<!-- Document to be taken to Warden Roderik of the Execution Grounds. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3570" name="Small Boxes" type="EtcItem">
+		<!-- Small boxes to be taken to Summoner Belthus on the southeast side of Cruma Tower. -->
+		<set name="icon" val="icon.etc_adamantite_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3571" name="Shaft" type="EtcItem">
+		<!-- Shaft to be taken to Enku Chief Kepra on the southern coast of Floran Village. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3572" name="Box" type="EtcItem">
+		<!-- Box to be taken to Summoner Celestiel at the ruins of the Circular Coliseum to the south of the Underground Fortress of the Elven autonomous region. -->
+		<set name="icon" val="icon.etc_squares_wood_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3573" name="Picture" type="EtcItem">
+		<!-- Picture to be delivered to Orphanage Master Gupu in the Wastelands, west of the Town of Gludio. -->
+		<set name="icon" val="icon.etc_painting_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3574" name="Scroll" type="EtcItem">
+		<!-- Scroll to be delivered to Summoner Basillia on the coastal road, south of the Wastelands. -->
+		<set name="icon" val="icon.etc_roll_of_paper_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3575" name="Box" type="EtcItem">
+		<!-- Box to be delivered to Sir Aaron Tanford on the coastal road, south of the Wastelands. -->
+		<set name="icon" val="icon.etc_squares_wood_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3576" name="Urn" type="EtcItem">
+		<!-- Urn to be delivered to Prophet Sla on the east side of the Ant Tunnel Dungeon. -->
+		<set name="icon" val="icon.etc_oil_pot_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3577" name="Jewelry Box" type="EtcItem">
+		<!-- Jewelry box to be delivered to Windy Shaoring on the west side of the Ant Tunnel Dungeon. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3578" name="Book" type="EtcItem">
+		<!-- Book which should be taken to Elder Casian at the south-side of the Ant Tunnel Dungeon located in the Wastelands. -->
+		<set name="icon" val="icon.etc_spellbook_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3579" name="Medicine" type="EtcItem">
+		<!-- Medicine bottle to be taken to Annika on the south side of the Black Magic Laboratory in the Dark Elven autonomous region. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3580" name="Scroll" type="EtcItem">
+		<!-- Scroll to be taken to Slein Shining Blade on the east side of the Altar of Coming-of-Age Ceremony in the Dark Elven autonomous region. -->
+		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3581" name="Small Boxes" type="EtcItem">
+		<!-- Small boxes to be taken to Shaman Varika at the Altar of Coming-of-Age Ceremony in the Dark Elven autonomous region. -->
+		<set name="icon" val="icon.etc_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3582" name="Medicine" type="EtcItem">
+		<!-- Medicine bottle to be taken to Tyra across the western road at the Altar of Rites in the Dark Elven autonomous region. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3583" name="Scroll" type="EtcItem">
+		<!-- Scroll to be taken to Piper Longbow at the altar on the north side of the marshlands waterfall in the Dark Elven autonomous region. -->
+		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3584" name="Send Mail" type="EtcItem">
+		<!-- Letter to be taken to Katari at the altar on the north side of the marshlands waterfall in the Dark Elven autonomous region. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3585" name="Jewelry Box" type="EtcItem">
+		<!-- Jewelry box to be taken to Summoner Camoniell at the southern coast of Floran Village. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3586" name="Sample" type="EtcItem">
+		<!-- Sample to be taken to Shadow Orim at the north side of Death Pass in Giran Territory. -->
+		<set name="icon" val="icon.etc_parasite_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3587" name="Shaft" type="EtcItem">
+		<!-- Shaft to be taken to Breka Chief Voltar at the north-eastern side of the Death Pass in Giran Territory. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3588" name="Book" type="EtcItem">
+		<!-- Book to be taken to Summoner Brynthea at the north-western side of Town of Giran. -->
+		<set name="icon" val="icon.etc_spellbook_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3589" name="Delivery Receipt" type="EtcItem">
+		<!-- Confirmation document received when delivering item. It is signed by Magister Baulro. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3590" name="Delivery Receipt" type="EtcItem">
+		<!-- Confirmation document received when delivering item. It is signed by Rockswell. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3591" name="Delivery Receipt" type="EtcItem">
+		<!-- Confirmation document received when delivering item. It is signed by Marius. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3592" name="Delivery Receipt" type="EtcItem">
+		<!-- Confirmation document received when delivering item. It is signed by Matheo. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3593" name="Delivery Receipt" type="EtcItem">
+		<!-- Confirmation document received when delivering item. It is signed by Sir Collin Windawood. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3594" name="Delivery Receipt" type="EtcItem">
+		<!-- Confirmation document received when delivering item. It is signed by High Prefect Osborn. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3595" name="Delivery Receipt" type="EtcItem">
+		<!-- Confirmation document received when delivering item. It is signed by Perrin. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3596" name="Delivery Receipt" type="EtcItem">
+		<!-- Confirmation document received when delivering item. It is signed by Clancy. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3597" name="Delivery Receipt" type="EtcItem">
+		<!-- Confirmation document received when delivering item. It is signed by Sir Karrel Vasper. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3598" name="Delivery Receipt" type="EtcItem">
+		<!-- Confirmation document received when delivering item. It is signed by Samed. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3599" name="Delivery Receipt" type="EtcItem">
+		<!-- Confirmation document received when delivering item. It is signed by Priestess Vivyan. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+</list>

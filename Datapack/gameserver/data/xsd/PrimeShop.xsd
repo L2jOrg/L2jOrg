@@ -1,0 +1,43 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute type="xs:int" name="itemId" use="optional" />
+									<xs:attribute type="xs:int" name="count" use="optional" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:int" name="id" use="optional" />
+						<xs:attribute type="xs:byte" name="cat" use="optional" />
+						<xs:attribute type="xs:byte" name="paymentType" use="optional" />
+						<xs:attribute type="xs:int" name="price" use="optional" />
+						<xs:attribute type="xs:byte" name="panelType" use="optional" />
+						<xs:attribute type="xs:byte" name="recommended" use="optional" />
+						<xs:attribute type="xs:int" name="startSale" use="optional" />
+						<xs:attribute type="xs:int" name="endSale" use="optional" />
+						<xs:attribute type="xs:byte" name="dayOfWeek" use="optional" />
+						<xs:attribute type="xs:byte" name="startHour" use="optional" />
+						<xs:attribute type="xs:byte" name="startMinute" use="optional" />
+						<xs:attribute type="xs:byte" name="stopHour" use="optional" />
+						<xs:attribute type="xs:byte" name="stopMinute" use="optional" />
+						<xs:attribute type="xs:byte" name="stock" use="optional" />
+						<xs:attribute type="xs:byte" name="maxStock" use="optional" />
+						<xs:attribute type="xs:byte" name="salePercent" use="optional" />
+						<xs:attribute type="xs:byte" name="minLevel" use="optional" />
+						<xs:attribute type="xs:byte" name="maxLevel" use="optional" />
+						<xs:attribute type="xs:byte" name="minBirthday" use="optional" />
+						<xs:attribute type="xs:byte" name="maxBirthday" use="optional" />
+						<xs:attribute type="xs:byte" name="restrictionDay" use="optional" />
+						<xs:attribute type="xs:byte" name="availableCount" use="optional" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute type="xs:boolean" name="enabled" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

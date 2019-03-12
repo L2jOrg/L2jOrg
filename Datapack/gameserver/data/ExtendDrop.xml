@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/ExtendDrop.xsd">
+	<drop id="1">
+		<items>
+			<item id="35562" count="1" maxCount="2" chance="1.0" additionalChance="0.5" /> <!-- Energy of destruction -->
+		</items>
+		<conditions>
+			<condition name="PlayerLevel">
+				<minLevel>85</minLevel>
+				<maxLevel>105</maxLevel>
+			</condition>
+			<condition name="CategoryType">
+				<category>
+					<item>FOURTH_CLASS_GROUP</item>
+					<item>FIFTH_CLASS_GROUP</item>
+					<item>SIXTH_CLASS_GROUP</item>
+				</category>
+			</condition>
+		</conditions>
+		<systemMessages>
+			<systemMessage amount="1" id="3791" /> <!-- You have obtained the first Energy of Destruction. You can obtain up to 2 of these a day, and can begin obtaining them again at 6:30am every day. -->
+			<systemMessage amount="2" id="3792" /> <!-- You have obtained the second Energy of Destruction. You can obtain up to 2 of these a day, and can begin obtaining them again at 6:30am every day. -->
+		</systemMessages>
+	</drop>
+</list>

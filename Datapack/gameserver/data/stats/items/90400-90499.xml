@@ -1,0 +1,1300 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="90400" name="Lv. 5 Vital Stone Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 5 Vital Stone. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_vital_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90401" name="Melodys Luck Cube" additionalName="30 days" type="EtcItem">
+		<!-- 30-day item. Double-click to receive various rewards at random. (Can be used only once per day.) Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. For characters of level 20 or higher. -->
+		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90402" name="Fire Dragon Pendant +6" additionalName="15-day" type="Armor">
+		<!-- M. Def. +16, XP/SP gain +10%, P./M. Atk. +20. Duration: 15 days. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_pendant_pve" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<stats>
+			<stat type="pDef">40</stat>
+		</stats>
+	</item>
+	<item id="90403" name="Melodys Teleport Pouch" type="EtcItem">
+		<!-- Double-click to get 1 My Teleport Book or 10 My Teleport Scrolls. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.bookmark_scroll_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90404" name="My Teleport Book" additionalName="For XP" type="EtcItem">
+		<!-- Increases the number of return points to save by 1. Maximum number - 18. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.bookmark_book_i00" />
+		<set name="default_action" val="CALL_SKILL" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90405" name="My Teleport Scroll" additionalName="For XP" type="EtcItem">
+		<!-- Item that is consumed when moving to the remembered location. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.bookmark_scroll_i00" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90406" name="Melodys Fish Stew Pouch" type="EtcItem">
+		<!-- Double-click to receive the following items: Chef's Fish Stew (Victory/Fire/Water/Wind), 2 Special Pirate Fruits, 2 Scrolls of Mood Melody. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.fish_stew_residence_cha" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90407" name="Chef's Fish Stew - Victory" additionalName="Event" type="EtcItem">
+		<!-- For 10 min. activates Chant of Victory Lv. 1. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. <Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="39228" level="1" /> <!-- Chef's Fish Stew - Victory -->
+		</skills>
+	</item>
+	<item id="90408" name="Chef's Fish Stew - Fire" additionalName="Event" type="EtcItem">
+		<!-- For 10 min. activates Prophecy of Fire Lv. 1. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. <Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="39229" level="1" /> <!-- Chef's Fish Stew - Fire -->
+		</skills>
+	</item>
+	<item id="90409" name="Chef's Fish Stew - Water" additionalName="Event" type="EtcItem">
+		<!-- For 10 min. activates Prophecy of Water Lv. 1. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. <Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="39230" level="1" /> <!-- Chef's Fish Stew - Water -->
+		</skills>
+	</item>
+	<item id="90410" name="Chef's Fish Stew - Wind" type="EtcItem">
+		<!-- For 10 min. activates Prophecy of Wind Lv. 1. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. <Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="39231" level="1" /> <!-- Chef's Fish Stew - Wind -->
+		</skills>
+	</item>
+	<item id="90411" name="Melodys Scroll Pouch" type="EtcItem">
+		<!-- Double-click to receive 3 Improved Scrolls of Escape, Improved Scroll of Resurrection, 2 Scrolls of Mood Melody. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90412" name="Melodys Enhance Pouch" type="EtcItem">
+		<!-- Double-click to receive 2 Blade Spirits, Common Life Stone, 2 Scrolls of Mood Melody. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.etc_mineral_general_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90413" name="Melodys Rice Cake Pouch" type="EtcItem">
+		<!-- Double-click to receive 2 Rice Cakes of Fighting Spirit, Angel Cat's Blessing, 2 Scrolls of Mood Melody. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.bm_rice_cake_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90414" name="Melodys Potion Pouch" type="EtcItem">
+		<!-- Double-click to receive 30 Major Warrior Healing Potions, 30 Warrior MP Recovery Potion, 2 Scrolls of Mood Melody. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.five_vairy_potion" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90415" name="Warrior MP Recovery Potion" type="EtcItem">
+		<!-- Magical MP-recovering potion. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.etc_reagent_blue_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="39258" level="1" /> <!-- Major Warrior Healing Potion -->
+		</skills>
+	</item>
+	<item id="90416" name="Melodys Growth Pouch" type="EtcItem">
+		<!-- Double-click to receive Hero's Dual Swords (15-day) Fishing Rod (10-day), 2160 Normal Baits, 2160 Fishing Shots, 3 Teleports: Giran Harbor, 20 Soulshot Tickets. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.ev_charge_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90417" name="Melodys Fishing Pouch" type="EtcItem">
+		<!-- Double-click to receive 2160 Silver Baits, Golden Necklace of Mermaid (7-day), Savior's Experience Box. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.fishing_zone_ticket" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90418" name="Savior's Experience Box" type="EtcItem">
+		<!-- Double-click to receive one of the following items: Low-grade/Mid-grade/High-grade/Top-grade XP Scroll. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90419" name="Warrior's Shining Dualsword" additionalName="30 days" type="Weapon">
+		<!-- 30-day item. Atk. Spd. +5%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">200</stat>
+			<stat type="mAtk">93</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="90420" name="Warrior's Shining Staff" additionalName="30 days" type="Weapon">
+		<!-- 30-day item. Casting Spd. +12%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_sages_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">160</stat>
+			<stat type="mAtk">126</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="90421" name="Warrior's Shining Bow" additionalName="30 days" type="Weapon">
+		<!-- 30-day item. P. Critical +52. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_akat_long_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="HORN" />
+		<set name="weight" val="1" />
+		<set name="soulshots" val="4" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="3" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">348</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">227</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="90422" name="Warrior's Shining Dagger" additionalName="30 days" type="Weapon">
+		<!-- 30-day item. P. Critical +66. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_grace_dagger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">142</stat>
+			<stat type="mAtk">91</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="90423" name="Warrior's Shining Spear" additionalName="30 days" type="Weapon">
+		<!-- 30-day item. Stun Attack Success Rate +25%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_poleaxe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">159</stat>
+			<stat type="mAtk">91</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="90424" name="Warrior's Shining Helmet" additionalName="30 days" type="Armor">
+		<!-- 30-day item. Heavy. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="600" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">58</stat>
+		</stats>
+	</item>
+	<item id="90425" name="Warrior's Shining Armor" additionalName="30 days" type="Armor">
+		<!-- 30-day item. Heavy. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
+		<set name="icon" val="icon.armor_t62_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="10480" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">239</stat>
+		</stats>
+	</item>
+	<item id="90426" name="Warrior's Shining Gauntlets" additionalName="30 days" type="Armor">
+		<!-- 30-day item. Heavy. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
+		<set name="icon" val="icon.armor_t62_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="600" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">39</stat>
+		</stats>
+	</item>
+	<item id="90427" name="Warrior's Shining Boots" additionalName="30 days" type="Armor">
+		<!-- 30-day item. Heavy. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
+		<set name="icon" val="icon.armor_t62_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1200" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">39</stat>
+		</stats>
+	</item>
+	<item id="90428" name="Warrior's Shining Helmet" additionalName="30 days" type="Armor">
+		<!-- 30-day item. Light. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="620" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">47</stat>
+		</stats>
+	</item>
+	<item id="90429" name="Warrior's Shining Rags" additionalName="30 days" type="Armor">
+		<!-- 30-day item. Light. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
+		<set name="icon" val="icon.armor_t45_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="5800" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">179</stat>
+		</stats>
+	</item>
+	<item id="90430" name="Warrior's Shining Gloves" additionalName="30 days" type="Armor">
+		<!-- 30-day item. Light. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
+		<set name="icon" val="icon.armor_t45_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="600" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">39</stat>
+		</stats>
+	</item>
+	<item id="90431" name="Warrior's Shining Shoes" additionalName="30 days" type="Armor">
+		<!-- 30-day item. Light. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
+		<set name="icon" val="icon.armor_t45_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1210" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">39</stat>
+		</stats>
+	</item>
+	<item id="90432" name="Warrior's Shining Circlet" additionalName="30 days" type="Armor">
+		<!-- 30-day item. Magical. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
+		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="600" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">54</stat>
+		</stats>
+	</item>
+	<item id="90433" name="Warrior's Shining Tunic" additionalName="30 days" type="Armor">
+		<!-- 30-day item. Magical. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
+		<set name="icon" val="icon.armor_t57_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1980" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">74</stat>
+			<stat type="maxMp">314</stat>
+		</stats>
+	</item>
+	<item id="90434" name="Warrior's Shining Stockings" additionalName="30 days" type="Armor">
+		<!-- 30-day item. Magical. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
+		<set name="icon" val="icon.armor_t57_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="960" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">46</stat>
+			<stat type="maxMp">196</stat>
+		</stats>
+	</item>
+	<item id="90435" name="Warrior's Shining Gloves" additionalName="30 days" type="Armor">
+		<!-- 30-day item. Magical. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
+		<set name="icon" val="icon.armor_t57_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="610" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">39</stat>
+		</stats>
+	</item>
+	<item id="90436" name="Warrior's Shining Shoes" additionalName="30 days" type="Armor">
+		<!-- 30-day item. Magical. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
+		<set name="icon" val="icon.armor_t57_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1210" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">34</stat>
+		</stats>
+	</item>
+	<item id="90437" name="Aden Warrior Hat" additionalName="60-day" type="Armor">
+		<!-- Hat for a returned hero. A 60-day item. When equipped, increases P. Atk. and M. Atk. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_yellow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
+	</item>
+	<item id="90438" name="Fish Stew: Might Lv. 2" type="EtcItem">
+		<!-- For 20 min. P. Atk. +12%. Cannot be dropped. -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90439" name="Fish Stew: Might Lv. 3" type="EtcItem">
+		<!-- For 20 min. P. Atk. +15%. Cannot be dropped. -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90440" name="Fish Stew: Shield Lv. 2" type="EtcItem">
+		<!-- For 20 min. P. Def. +12%. Cannot be dropped. -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90441" name="Fish Stew: Shield Lv. 3" type="EtcItem">
+		<!-- For 20 min. P. Def. +15%. Cannot be dropped. -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90442" name="Fish Stew: Empower Lv. 2" type="EtcItem">
+		<!-- For 20 min. M. Atk. +65%. Cannot be dropped. -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90443" name="Fish Stew: Empower Lv. 3" type="EtcItem">
+		<!-- For 20 min. M. Atk. +75%. Cannot be dropped. -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90444" name="Fish Stew: Magic Barrier Lv. 2" type="EtcItem">
+		<!-- For 20 min. M. Def. +30%. Cannot be dropped. -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90445" name="Fish Stew: Vampiric Rage Lv. 2" type="EtcItem">
+		<!-- For 20 min. recovers as HP 7% of the physical damage inflicted on the enemy with a certain probability. Cannot be dropped. -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90446" name="Fish Stew: Vampiric Rage Lv. 3" type="EtcItem">
+		<!-- For 20 min. recovers as HP 8% of the physical damage inflicted on the enemy with a certain probability. Cannot be dropped. -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90447" name="Fish Stew: Greater Might Lv. 1" type="EtcItem">
+		<!-- For 20 min. P. Atk. +4%. Cannot be dropped. -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90448" name="Fish Stew: Greater Shield Lv. 1" type="EtcItem">
+		<!-- For 20 min. P. Def. +5%. Cannot be dropped. -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90449" name="Fish Stew: Wild Magic Lv. 1" type="EtcItem">
+		<!-- For 20 min. M. Critical Rate +10. Cannot be dropped. -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90450" name="Fish Stew: Berserker Spirit Lv. 1" type="EtcItem">
+		<!-- For 20 min. P. Def. -5%, M. Def. -10%, P. Evasion -2 -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90451" name="Fish Stew: Berserker Spirit Lv. 2" type="EtcItem">
+		<!-- For 20 min. P. Def. -8%, M. Def. -16%, P. Evasion -4 -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90452" name="Fish Stew: Decrease Weight Lv. 1" type="EtcItem">
+		<!-- For 20 min. Weight limit +3000. Cannot be dropped. -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90453" name="Fish Stew: Decrease Weight Lv. 2" type="EtcItem">
+		<!-- For 20 min. Weight limit +6000. Cannot be dropped. -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90454" name="Fish Stew: Decrease Weight Lv. 3" type="EtcItem">
+		<!-- For 20 min. Weight limit +9000. Cannot be dropped. -->
+		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90455" name="Avadon Circlet" additionalName="Heavy" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="11" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="590" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">62</stat>
+		</stats>
+	</item>
+	<item id="90456" name="Avadon Circlet" additionalName="Light" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="11" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="590" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">62</stat>
+		</stats>
+	</item>
+	<item id="90457" name="Avadon Circlet" additionalName="Robe" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="11" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="590" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">62</stat>
+		</stats>
+	</item>
+	<item id="90458" name="Zubei's Helmet" additionalName="Heavy" type="Armor">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="11" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="590" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">62</stat>
+		</stats>
+	</item>
+	<item id="90459" name="Zubei's Helmet" additionalName="Light" type="Armor">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="11" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="590" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">62</stat>
+		</stats>
+	</item>
+	<item id="90460" name="Zubei's Helmet" additionalName="Robe" type="Armor">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="11" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="590" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">62</stat>
+		</stats>
+	</item>
+	<item id="90461" name="Blue Wolf Helmet" additionalName="Heavy" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="17" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">66</stat>
+		</stats>
+	</item>
+	<item id="90462" name="Blue Wolf Helmet" additionalName="Light" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="17" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">66</stat>
+		</stats>
+	</item>
+	<item id="90463" name="Blue Wolf Helmet" additionalName="Robe" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="17" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">66</stat>
+		</stats>
+	</item>
+	<item id="90464" name="Doom Helmet" additionalName="Heavy" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="17" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">66</stat>
+		</stats>
+	</item>
+	<item id="90465" name="Doom Helmet" additionalName="Light" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="17" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">66</stat>
+		</stats>
+	</item>
+	<item id="90466" name="Doom Helmet" additionalName="Robe" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="17" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">66</stat>
+		</stats>
+	</item>
+	<item id="90467" name="Tallum Helmet" additionalName="Heavy" type="Armor">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="570" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="90468" name="Tallum Helmet" additionalName="Light" type="Armor">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="570" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="90469" name="Tallum Helmet" additionalName="Robe" type="Armor">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="570" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="90470" name="Dark Crystal Helmet" additionalName="Heavy" type="Armor">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="570" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="90471" name="Dark Crystal Helmet" additionalName="Light" type="Armor">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="570" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="90472" name="Dark Crystal Helmet" additionalName="Robe" type="Armor">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="570" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="90473" name="Helm of Nightmare" additionalName="Heavy" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="108" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="560" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">73</stat>
+		</stats>
+	</item>
+	<item id="90474" name="Helm of Nightmare" additionalName="Light" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="108" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="560" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">73</stat>
+		</stats>
+	</item>
+	<item id="90475" name="Helm of Nightmare" additionalName="Robe" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="108" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="560" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">73</stat>
+		</stats>
+	</item>
+	<item id="90476" name="Majestic Circlet" additionalName="Heavy" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="163" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="550" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">73</stat>
+		</stats>
+	</item>
+	<item id="90477" name="Majestic Circlet" additionalName="Light" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="163" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="550" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">73</stat>
+		</stats>
+	</item>
+	<item id="90478" name="Majestic Circlet" additionalName="Robe" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="163" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="550" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">73</stat>
+		</stats>
+	</item>
+	<item id="90479" name="Shiny Jewelry Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 1 Jewel (Lv.1). Cannot be exchanged, dropped, stored in private warehouse or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90480" name="Lucky Enchant Stone: Save Armor (D-grade)" type="EtcItem">
+		<!-- Enchant success rate +10% for armor (D-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. Cannot be dropped. -->
+		<set name="icon" val="icon.ench_am_stone_i03" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90481" name="Lucky Enchant Stone: Save Armor (C-grade)" type="EtcItem">
+		<!-- Enchant success rate +10% for armor (C-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. Cannot be dropped. -->
+		<set name="icon" val="icon.ench_am_stone_i03" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90482" name="Lucky Enchant Stone: Save Armor (B-grade)" type="EtcItem">
+		<!-- Enchant success rate +10% for armor (B-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. Cannot be dropped. -->
+		<set name="icon" val="icon.ench_am_stone_i03" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90483" name="Lucky Enchant Stone: Save Armor (A-grade)" type="EtcItem">
+		<!-- Enchant success rate +10% for armor (A-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. Cannot be dropped. -->
+		<set name="icon" val="icon.ench_am_stone_i03" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90484" name="Lucky Enchant Stone: Protect Armor (D-grade)" type="EtcItem">
+		<!-- Enchant success rate +10% for armor (D-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1. Cannot be dropped. -->
+		<set name="icon" val="icon.ench_am_stone_i01" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90485" name="Lucky Enchant Stone: Protect Armor (C-grade)" type="EtcItem">
+		<!-- Enchant success rate +10% for armor (C-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1. Cannot be dropped. -->
+		<set name="icon" val="icon.ench_am_stone_i01" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90486" name="Lucky Enchant Stone: Protect Armor (B-grade)" type="EtcItem">
+		<!-- Enchant success rate +10% for armor (B-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1. Cannot be dropped. -->
+		<set name="icon" val="icon.ench_am_stone_i01" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90487" name="Lucky Enchant Stone: Protect Armor (A-grade)" type="EtcItem">
+		<!-- Enchant success rate +10% for armor (A-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1. Cannot be dropped. -->
+		<set name="icon" val="icon.ench_am_stone_i01" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90488" name="Lucky Enchant Stone: Armor (D-grade)" type="EtcItem">
+		<!-- Enchant success rate +10% for armor (D-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be dropped. -->
+		<set name="icon" val="icon.ench_am_stone_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90489" name="Lucky Enchant Stone: Armor (C-grade)" type="EtcItem">
+		<!-- Enchant success rate +10% for armor (C-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be dropped. -->
+		<set name="icon" val="icon.ench_am_stone_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90490" name="Lucky Enchant Stone: Armor (B-grade)" type="EtcItem">
+		<!-- Enchant success rate +10% for armor (B-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be dropped. -->
+		<set name="icon" val="icon.ench_am_stone_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90491" name="Lucky Enchant Stone: Armor (A-grade)" type="EtcItem">
+		<!-- Enchant success rate +10% for armor (A-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be dropped. -->
+		<set name="icon" val="icon.ench_am_stone_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90492" name="Giant's Lucky Enchant Stone (A-grade)" type="EtcItem">
+		<!-- Enchant success rate +10% for armor (A-grade) when using an improved scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be dropped. -->
+		<set name="icon" val="icon.giant_ench_armor_stone_r_i02" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90493" name="Blessed Lucky Enchant Stone (A-grade)" type="EtcItem">
+		<!-- Enchant success rate +10% for armor (A-grade) when using a blessed scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be dropped. -->
+		<set name="icon" val="icon.giant_ench_armor_stone_r_i02" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90494" name="Eva's Scroll: Enchant Hair Accessory" type="EtcItem">
+		<!-- Hair Accessory M. Def. +2. Starting from +5, an additional effect is activated and HP/MP/CP are increased. Can be safely enchanted up to +3. Cannot be dropped. Cannot be dropped. -->
+		<set name="icon" val="icon.scroll_of_unidentify_am_d" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90495" name="Scroll of Mood Melody" type="EtcItem">
+		<!-- For 20 minutes, grants the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. Will not be deleted upon death. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_magmeld" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90496" name="Land Dragon Belt" type="Armor">
+		<!-- CON +1, MEN +1, HP Recovery Bonus +2.31, Max MP +1.54, CP Recovery +3.07, Max HP/MP/CP +15%, Inventory Slots +6, Weight Gauge +7000, Healing Potions Effect +100, Incoming Damage -6%. (Can be applied to Melissa's Recovery Potion, Warrior's Quick Healing Potion). Cannot be dropped. -->
+		<set name="icon" val="icon.bm_antaras_belt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">14</stat>
+		</stats>
+	</item>
+	<item id="90497" name="Fire Dragon Belt" type="Armor">
+		<!-- STR +1, INT +1, HP Recovery Bonus +2.31, Max MP +1.54, CP Recovery +3.07, Max HP/MP/CP +10%, Inventory Slots +6, Weight Gauge +7000, M. Critical Damage +4%, Healing Potions Effect +100, Incoming Damage -6%. (Can be applied to Melissa's Recovery Potion, Warrior's Quick Healing Potion). Cannot be dropped. -->
+		<set name="icon" val="icon.bm_vallakas_belt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">14</stat>
+		</stats>
+	</item>
+	<item id="90498" name="Mysterious Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Shiny Jewelry Box level 5. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_special_jewelbox_lv5" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90499" name="Special Dragon's Fruit" type="EtcItem">
+		<!-- For 20 minutes, P./M. Atk. +12%, P./M. Def. +12%, Max. HP/CP/MP +15%, HP/MP Recovery Bonus +25%, P./M. Critical Rate +10, P./M. Critical Damage +5%, HP/MP Recovery +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. XP and SP gained through hunting +10%. Cooldown is 1 minute. Buff remains after death. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_dragon_fruit" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

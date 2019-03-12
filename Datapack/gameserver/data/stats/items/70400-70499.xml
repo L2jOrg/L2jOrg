@@ -1,0 +1,1325 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="70400" name="Refined Romantic Chapeau: Yellow" type="Armor">
+		<!-- Refined yellow romantic chapeau. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="icon.bm_romantic_chaperon_yellow" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70401" name="Agathion - One-eyed Bat Drove" type="Armor">
+		<!-- Bracelet that summons the image of One-eyed Bat Drove as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_bat_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55416" level="1" /> <!-- Release Agathion - One-eyed Bat Drove -->
+			<skill id="55440" level="1" /> <!-- One-eyed Bat Drove Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70402" name="Agathion - Zaken's Spirit Swords" type="Armor">
+		<!-- Bracelet that summons the image of Zaken's Spirit Swords as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys2.Icon.br_aga_zaken_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55417" level="1" /> <!-- Release Agathion - Zaken's Spirit Swords -->
+			<skill id="55441" level="1" /> <!-- Release Agathion - Zaken's Spirit Swords -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70403" name="Agathion - Pegasus" type="Armor">
+		<!-- Bracelet that summons the image of Pegasus as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_pegasus_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55418" level="1" /> <!-- Release Agathion - Pegasus -->
+			<skill id="55442" level="1" /> <!-- Release Agathion - Pegasus -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70404" name="Agathion - Guangong" type="Armor">
+		<!-- Bracelet that summons the image of Guangong as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_warriorgod_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55419" level="1" /> <!-- Release Agathion - Guangong -->
+			<skill id="55443" level="1" /> <!-- Release Agathion - Guangong -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70405" name="Agathion - God of Fortune" type="Armor">
+		<!-- Bracelet that summons the image of God of Fortune as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_wealth_god_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55420" level="1" /> <!-- Release Agathion - God of Fortune -->
+			<skill id="55444" level="1" /> <!-- Release Agathion - God of Fortune -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70406" name="Agathion - Phoenix" type="Armor">
+		<!-- Bracelet that summons the image of Phoenix as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys2.icon.br_aga_china_phoenix_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55421" level="1" /> <!-- Release Agathion - Phoenix -->
+			<skill id="55445" level="1" /> <!-- Release Agathion - Phoenix -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70407" name="Agathion - Saerom" type="Armor">
+		<!-- Bracelet that summons the image of Saerom as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55422" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55446" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70408" name="Agathion - Gwanseum Nyang" type="Armor">
+		<!-- Bracelet that summons the image of Gwanseum Nyang  as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_mercygod_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55423" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55447" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70409" name="Agathion - Blue Opera" type="Armor">
+		<!-- Bracelet that summons the image of Blue Opera as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_blue_pekingopera_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55424" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55448" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70410" name="Agathion - Red Opera" type="Armor">
+		<!-- Bracelet that summons the image of Red Opera as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_pekingopera_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55425" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55449" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70411" name="Agathion - Miss Chipao" type="Armor">
+		<!-- Bracelet that summons the image of Miss Chipao as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_chinesedress_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55426" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55450" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70412" name="Agathion - Flower Fairy Spirit" type="Armor">
+		<!-- Bracelet that summons the image of Flower Fairy Spirit as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys2.icon.br_aga_flower_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55427" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55451" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70413" name="Agathion - Iken" type="Armor">
+		<!-- Bracelet that summons the image of Iken as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_local2009_b_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55428" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55452" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70414" name="Agathion - Lanya" type="Armor">
+		<!-- Bracelet that summons the image of Lanya as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_local2009_a_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55429" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55453" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70415" name="Agathion - Gnosian" type="Armor">
+		<!-- Bracelet that summons the image of Gnosian as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_local2009_f_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55430" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55454" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70416" name="Agathion - Cheerleader Orodriel" type="Armor">
+		<!-- Bracelet that summons the image of Orodriel as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_local2009_e_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55431" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55455" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70417" name="Agathion - Lakinos" type="Armor">
+		<!-- Bracelet that summons the image of Lakinos as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_local2009_d_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55432" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55456" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70418" name="Agathion - Mortia" type="Armor">
+		<!-- Bracelet that summons the image of Mortia as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_local2009_c_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55433" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55457" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70419" name="Agathion - Heintz" type="Armor">
+		<!-- Bracelet that summons the image of Heintz as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_local2009_h_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55434" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55458" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70420" name="Agathion - Meruril" type="Armor">
+		<!-- Bracelet that summons the image of Meruril as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_local2009_g_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55435" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55459" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70421" name="Agathion - Taman Zu Rapatui" type="Armor">
+		<!-- Bracelet that summons the image of Taman Zu Rapatui as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_local2009_i_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55436" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55460" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70422" name="Agathion - Kaurin" type="Armor">
+		<!-- Bracelet that summons the image of Kaurin as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_local2009_j_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55437" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55461" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70423" name="Agathion - Ahertbein" type="Armor">
+		<!-- Bracelet that summons the image of Ahertbein as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_local2009_l_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55438" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55462" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70424" name="Agathion - Naonin" type="Armor">
+		<!-- Bracelet that summons the image of Naonin as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys.icon.br_aga_local2009_k_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55439" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="55463" level="1" /> <!-- Release Agathion - Saerom -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="70425" name="Flag Hat" type="Armor">
+		<!-- Hat displaying the flag of Taiwan. Looks good for cheering. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<set name="icon" val="BranchSys2.icon.br_flag_cap_i00" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="70426" name="Energy of Protection" additionalName="Event" type="EtcItem">
+		<!-- For 20 min. Max HP / MP +5%, XP / SP +30%. Provides Mental Attack/Paralysis Resistance. <Attention> Cannot be stacked with Life Control Tower's and  Angel Cat's Blessing. -->
+		<set name="icon" val="icon.general_energy_condense_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70427" name="Talisman of Border Pack +4" type="EtcItem">
+		<!-- Double-click to get Talisman of Border Pack +4. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.bm_ensoulbox_PvE" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="70297" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="70428" name="Talisman of Border Pack +5" type="EtcItem">
+		<!-- Double-click to get Talisman of Border Pack +5. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.bm_ensoulbox_PvP" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="70298" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="70429" name="Agathion - Singer and Dancer Pack (7-day)" type="EtcItem">
+		<!-- Double-click to get Agathion - Singer and Dancer (7-day). Cannot be exchanged, dropped, sold or shared within account. Can store in private warehouse. -->
+		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="70114" min="1" max="1" chance="100" />
+		</capsuled_items>
+	</item>
+	<item id="70430" name="Shaft with Antharas treasures" type="EtcItem">
+		<!-- Double-click to get one of Antharas treasures. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_antaras_pocket_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70431" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i00" />
+		<set name="bodypart" val="brooch" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70432" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70433" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70434" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i00" />
+		<set name="bodypart" val="brooch" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70435" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i01" />
+		<set name="bodypart" val="brooch" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70436" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70437" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70438" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70439" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70440" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70441" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_garnet" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70442" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_garnet" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70443" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_garnet" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70444" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_garnet" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70445" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_garnet" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70446" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70447" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70448" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70449" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70450" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70451" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70452" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70453" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70454" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70455" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70456" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70457" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70458" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70459" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70460" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70461" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70462" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70463" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70464" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70465" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70466" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70467" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70468" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70469" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70470" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70471" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70472" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70473" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70474" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70475" name="NoItemName" type="Armor">
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="70476" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewel_piece" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70477" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70478" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70479" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70480" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_jade_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70481" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70482" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70483" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70484" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70485" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_vital_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70486" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70487" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70488" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70489" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_jade_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70490" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70491" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70492" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70493" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70494" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_vital_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70495" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70496" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70497" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70498" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="70499" name="NoItemName" type="EtcItem">
+		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

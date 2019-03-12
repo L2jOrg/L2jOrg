@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
+	<option id="24521" name="o_s_84_2s_1">
+		<!-- Active: Head size increases temporarily. Increase. -->
+		<active_skill id="3203" level="1" /> <!-- Item Skill: Mystery Skill -->
+	</option>
+	<option id="24522" name="o_s_84_2s_2">
+		<!-- Active: Temporarily increases lung capacity. -->
+		<active_skill id="3143" level="10" /> <!-- Item Skill: Kiss of Eva -->
+	</option>
+	<option id="24523" name="o_s_84_2s_3">
+		<!-- Active: Increases the height from which you can jump without sustaining damage for a fixed time. -->
+		<active_skill id="3144" level="10" /> <!-- Item Skill: Acrobatics -->
+	</option>
+	<option id="24524" name="o_s_84_2s_4">
+		<!-- Active: Increases Resistance to damage from falling. -->
+		<active_skill id="3145" level="10" /> <!-- Item Skill: Iron Body -->
+	</option>
+	<option id="24525" name="o_s_84_2s_5">
+		<!-- Active: Ignites a firecracker. -->
+		<active_skill id="3156" level="1" /> <!-- Item Skill: Firework -->
+	</option>
+	<option id="24526" name="o_s_84_2s_6">
+		<!-- Active: Temporarily plays music. -->
+		<active_skill id="3206" level="1" /> <!-- Item Skill: Music -->
+	</option>
+	<option id="24527" name="o_s_84_2s_7">
+		<!-- Active: Ignites a large firecracker. -->
+		<active_skill id="3157" level="1" /> <!-- Item Skill: Large Firework -->
+	</option>
+	<option id="24528" name="o_s_84_2s_8">
+		<!-- Chance: During a physical attack, temporarily decreases the target's attacking desire for oneself. -->
+		<attack_skill id="3081" level="10" chance="1.0" /> <!-- Item Skill: Charm -->
+	</option>
+	<option id="24529" name="o_s_84_2s_9">
+		<!-- Chance: During a physical attack, temporarily stimulates the target's attacking desire. -->
+		<attack_skill id="3080" level="10" chance="1.0" /> <!-- Item Skill: Aggression -->
+	</option>
+	<option id="24530" name="o_s_84_2s_10">
+		<!-- Chance: During a physical attack, temporarily decreases the target's moving speed. -->
+		<attack_skill id="3083" level="10" chance="1.0" /> <!-- Item Skill: Slow -->
+	</option>
+	<option id="24531" name="o_s_84_2s_11">
+		<!-- Chance: During a critical attack, temporarily decreases the target's attacking desire for oneself. -->
+		<critical_skill id="3109" level="10" chance="5.0" /> <!-- Item Skill: Aggression Down -->
+	</option>
+	<option id="24532" name="o_s_84_2s_12">
+		<!-- Chance: During a critical attack, temporarily stimulates the target's attacking desire. -->
+		<critical_skill id="3108" level="10" chance="5.0" /> <!-- Item Skill: Aggression Up -->
+	</option>
+	<option id="24533" name="o_s_84_2s_13">
+		<!-- Chance: During a critical attack, temporarily decreases the target's moving speed. -->
+		<critical_skill id="3111" level="10" chance="5.0" /> <!-- Item Skill: Slow -->
+	</option>
+	<option id="24534" name="o_s_84_2s_14">
+		<!-- Chance: Instantly decreases a target's moving speed during a magic attack. Effect 3. -->
+		<magic_skill id="3096" level="10" chance="2.0" /> <!-- Item Skill: Slow -->
+	</option>
+	<option id="24535" name="o_s_84_2s_15">
+		<!-- Passive: Increases lung capacity. -->
+		<passive_skill id="3252" level="10" /> <!-- Item Skill: Kiss of Eva -->
+	</option>
+	<option id="24536" name="o_s_84_2s_16">
+		<!-- Passive: Increases the height from which you can jump without sustaining damage. -->
+		<passive_skill id="3253" level="10" /> <!-- Item Skill: Acrobatics -->
+	</option>
+	<option id="24537" name="o_s_84_2s_17">
+		<!-- Passive: Increases Resistance to damage from falling. -->
+		<passive_skill id="3254" level="10" /> <!-- Item Skill: Iron Body -->
+	</option>
+	<option id="24538" name="o_s_84_2r_1">
+		<!-- Active: Temporarily decreases the target's Atk. Spd. -->
+		<active_skill id="3188" level="10" /> <!-- Item Skill: Winter -->
+	</option>
+	<option id="24539" name="o_s_84_2r_2">
+		<!-- Active: Temporarily increase Evasion. -->
+		<active_skill id="3139" level="10" /> <!-- Item Skill: Agility -->
+	</option>
+	<option id="24540" name="o_s_84_2r_3">
+		<!-- Active: Instantly inflicts bleed on the target. -->
+		<active_skill id="3196" level="10" /> <!-- Item Skill: Bleed -->
+	</option>
+	<option id="24541" name="o_s_84_2r_4">
+		<!-- Active: Restores your CP. -->
+		<active_skill id="3130" level="10" /> <!-- Item Skill: Ritual -->
+	</option>
+	<option id="24542" name="o_s_84_2r_5">
+		<!-- Active: Inflicts damage by throwing a boulder. -->
+		<active_skill id="3169" level="10" /> <!-- Item Skill: Stone -->
+	</option>
+	<option id="24543" name="o_s_84_2r_6">
+		<!-- Active: Instantly inflicts fear on the target and cause him to flee. -->
+		<active_skill id="3194" level="10" /> <!-- Item Skill: Fear -->
+	</option>
+	<option id="24544" name="o_s_84_2r_7">
+		<!-- Active: Condenses air to burst flames. -->
+		<active_skill id="3165" level="10" /> <!-- Item Skill: Prominence -->
+	</option>
+	<option id="24545" name="o_s_84_2r_8">
+		<!-- Active: Calms the enemy's heart and causes attacking desire to disappear. -->
+		<active_skill id="3151" level="10" /> <!-- Item Skill: Peace -->
+	</option>
+	<option id="24546" name="o_s_84_2r_9">
+		<!-- Active: Decreases the target's attacking desire for oneself. -->
+		<active_skill id="3150" level="10" /> <!-- Item Skill: Charm -->
+	</option>
+	<option id="24547" name="o_s_84_2r_10">
+		<!-- Active: Increases your target's will to attack. -->
+		<active_skill id="3149" level="10" /> <!-- Item Skill: Aggression -->
+	</option>
+	<option id="24548" name="o_s_84_2r_11">
+		<!-- Active: Temporarily increases accuracy. -->
+		<active_skill id="3140" level="10" /> <!-- Item Skill: Guidance -->
+	</option>
+	<option id="24549" name="o_s_84_2r_12">
+		<!-- Active: Momentarily throws a target into a state of hold. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<active_skill id="3190" level="10" /> <!-- Item Skill: Hold -->
+	</option>
+	<option id="24550" name="o_s_84_2r_13">
+		<!-- Active: Launches a holy magic attack. -->
+		<active_skill id="3170" level="10" /> <!-- Item Skill: Solar Flare -->
+	</option>
+	<option id="24551" name="o_s_84_2r_14">
+		<!-- Active: Temporarily increases the power of HP recovery magic. -->
+		<active_skill id="3138" level="10" /> <!-- Item Skill: Heal Empower -->
+	</option>
+	<option id="24552" name="o_s_84_2r_15">
+		<!-- Active: Temporarily increases HP recovery magic effect. -->
+		<active_skill id="3126" level="10" /> <!-- Item Skill: Prayer -->
+	</option>
+	<option id="24553" name="o_s_84_2r_16">
+		<!-- Active: Immediately regenerates the target's HP. -->
+		<active_skill id="3123" level="10" /> <!-- Item Skill: Heal -->
+	</option>
+	<option id="24554" name="o_s_84_2r_17">
+		<!-- Active: Temporarily increases M. Atk. -->
+		<active_skill id="3133" level="10" /> <!-- Item Skill: Empower -->
+	</option>
+	<option id="24555" name="o_s_84_2r_18">
+		<!-- Active: Temporarily increases Max CP. -->
+		<active_skill id="3131" level="10" /> <!-- Item Skill: Cheer -->
+	</option>
+	<option id="24556" name="o_s_84_2r_19">
+		<!-- Active: Temporarily increases Max HP and recovers the amount of increased HP. -->
+		<active_skill id="3125" level="10" /> <!-- Item Skill: Battle Roar -->
+	</option>
+	<option id="24557" name="o_s_84_2r_20">
+		<!-- Active: Temporarily increases Max HP. -->
+		<active_skill id="3124" level="10" /> <!-- Item Skill: Blessed Body -->
+	</option>
+	<option id="24558" name="o_s_84_2r_21">
+		<!-- Active: Temporarily increases Max MP. -->
+		<active_skill id="3128" level="10" /> <!-- Item Skill: Blessed Soul -->
+	</option>
+	<option id="24559" name="o_s_84_2r_22">
+		<!-- Active: Temporarily increases M. Def.. -->
+		<active_skill id="3136" level="10" /> <!-- Item Skill: Magic Barrier -->
+	</option>
+	<option id="24560" name="o_s_84_2r_23">
+		<!-- Active: Burns up your enemy's MP. -->
+		<active_skill id="3154" level="10" /> <!-- Item Skill: Mana Burn -->
+	</option>
+	<option id="24561" name="o_s_84_2r_24">
+		<!-- Active: Increases the recovery rate when MP is being recovered by recharge. -->
+		<active_skill id="3129" level="10" /> <!-- Item Skill: Mana Gain -->
+	</option>
+	<option id="24562" name="o_s_84_2r_25">
+		<!-- Active: Restores MP. -->
+		<active_skill id="3127" level="10" /> <!-- Item Skill: Recharge -->
+	</option>
+	<option id="24563" name="o_s_84_2r_26">
+		<!-- Active: Inflicts a non-attribute attack. -->
+		<active_skill id="3172" level="10" /> <!-- Item Skill: Aura Flare -->
+	</option>
+	<option id="24564" name="o_s_84_2r_27">
+		<!-- Active: Temporarily increases P. Atk. -->
+		<active_skill id="3132" level="10" /> <!-- Item Skill: Might -->
+	</option>
+	<option id="24565" name="o_s_84_2r_28">
+		<!-- Active: Instantly inflicts paralysis on the target. -->
+		<active_skill id="3192" level="10" /> <!-- Item Skill: Paralyze -->
+	</option>
+	<option id="24566" name="o_s_84_2r_29">
+		<!-- Active: Temporarily increases P. Def.. -->
+		<active_skill id="3135" level="10" /> <!-- Item Skill: Shield -->
+	</option>
+	<option id="24567" name="o_s_84_2r_30">
+		<!-- Active: Instantly inflicts poison on the target. -->
+		<active_skill id="3195" level="10" /> <!-- Item Skill: Poison -->
+	</option>
+	<option id="24568" name="o_s_84_2r_31">
+		<!-- Active: Temporarily decreases the PvP opponent's P. Atk. -->
+		<active_skill id="3137" level="10" /> <!-- Item Skill: Duel Weakness -->
+	</option>
+	<option id="24569" name="o_s_84_2r_32">
+		<!-- Active: Temporarily increases PvP P. Atk. -->
+		<active_skill id="3134" level="10" /> <!-- Item Skill: Duel Might -->
+	</option>
+	<option id="24570" name="o_s_84_2r_33">
+		<!-- Active: Teleports to a town. Cannot be used in special areas such as the GM info center. -->
+		<active_skill id="3146" level="1" /> <!-- Item Skill: Recall -->
+	</option>
+	<option id="24571" name="o_s_84_2r_34">
+		<!-- Active: Resurrects a corpse. -->
+		<active_skill id="3160" level="9" /> <!-- Item Skill: Resurrection -->
+	</option>
+	<option id="24572" name="o_s_84_2r_35">
+		<!-- Active: Emits an area of effect earth attack. -->
+		<active_skill id="3183" level="10" /> <!-- Item Skill: Stone -->
+	</option>
+	<option id="24573" name="o_s_84_2r_36">
+		<!-- Active: Emits an area of effect fire attack. -->
+		<active_skill id="3180" level="10" /> <!-- Item Skill: Prominence -->
+	</option>
+	<option id="24574" name="o_s_84_2r_37">
+		<!-- Active: Emits an area of effect holy magic attack. -->
+		<active_skill id="3184" level="10" /> <!-- Item Skill: Solar Flare -->
+	</option>
+	<option id="24575" name="o_s_84_2r_38">
+		<!-- Active: Emits elemental damage over an area. -->
+		<active_skill id="3186" level="10" /> <!-- Item Skill: Aura Flare -->
+	</option>
+	<option id="24576" name="o_s_84_2r_39">
+		<!-- Active: Emits an area of effect dark attack. -->
+		<active_skill id="3185" level="10" /> <!-- Item Skill: Shadow Flare -->
+	</option>
+	<option id="24577" name="o_s_84_2r_40">
+		<!-- Active: Emits an area of effect water attack. -->
+		<active_skill id="3181" level="10" /> <!-- Item Skill: Hydro Blast -->
+	</option>
+	<option id="24578" name="o_s_84_2r_41">
+		<!-- Active: Emits an area of effect wind attack. -->
+		<active_skill id="3182" level="10" /> <!-- Item Skill: Hurricane -->
+	</option>
+	<option id="24579" name="o_s_84_2r_42">
+		<!-- Active: Momentarily puts a target into sleep. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
+		<active_skill id="3191" level="10" /> <!-- Item Skill: Sleep -->
+	</option>
+	<option id="24580" name="o_s_84_2r_43">
+		<!-- Active: Temporarily decreases the target's moving speed. -->
+		<active_skill id="3187" level="10" /> <!-- Item Skill: Slow -->
+	</option>
+	<option id="24581" name="o_s_84_2r_44">
+		<!-- Active: Instantly inflicts shock on the target. -->
+		<active_skill id="3189" level="10" /> <!-- Item Skill: Stun -->
+	</option>
+	<option id="24582" name="o_s_84_2r_45">
+		<!-- Active: Emits an area of effect earth attack. -->
+		<active_skill id="3176" level="10" /> <!-- Item Skill: Stone -->
+	</option>
+	<option id="24583" name="o_s_84_2r_46">
+		<!-- Active: Inflicts a fire attack. -->
+		<active_skill id="3173" level="10" /> <!-- Item Skill: Prominence -->
+	</option>
+	<option id="24584" name="o_s_84_2r_47">
+		<!-- Active: Inflicts a holy magic attack. -->
+		<active_skill id="3177" level="10" /> <!-- Item Skill: Solar Flare -->
+	</option>
+	<option id="24585" name="o_s_84_2r_48">
+		<!-- Active: Emits elemental damage over an area. -->
+		<active_skill id="3179" level="10" /> <!-- Item Skill: Aura Flare -->
+	</option>
+	<option id="24586" name="o_s_84_2r_49">
+		<!-- Active: Emits an area of effect dark attack. -->
+		<active_skill id="3178" level="10" /> <!-- Item Skill: Shadow Flare -->
+	</option>
+	<option id="24587" name="o_s_84_2r_50">
+		<!-- Active: Emits an area of effect water attack. -->
+		<active_skill id="3174" level="10" /> <!-- Item Skill: Hydro Blast -->
+	</option>
+	<option id="24588" name="o_s_84_2r_51">
+		<!-- Active: Inflicts a wind attack. -->
+		<active_skill id="3175" level="10" /> <!-- Item Skill: Hurricane -->
+	</option>
+	<option id="24589" name="o_s_84_2r_52">
+		<!-- Active: Cancels the target. -->
+		<active_skill id="3152" level="10" /> <!-- Item Skill: Trick -->
+	</option>
+	<option id="24590" name="o_s_84_2r_53">
+		<!-- Active: Instantly inflicts flint. -->
+		<active_skill id="3193" level="10" /> <!-- Item Skill: Medusa -->
+	</option>
+	<option id="24591" name="o_s_84_2r_54">
+		<!-- Active: Launches a dark attack. -->
+		<active_skill id="3171" level="10" /> <!-- Item Skill: Shadow Flare -->
+	</option>
+	<option id="24592" name="o_s_84_2r_55">
+		<!-- Active: Opens doors and treasure chests by a fixed rate. Requires a Thief Key. -->
+		<active_skill id="3155" level="10" /> <!-- Item Skill: Unlock -->
+	</option>
+	<option id="24593" name="o_s_84_2r_56">
+		<!-- Active: Absorbs HP from your target. -->
+		<active_skill id="3153" level="10" /> <!-- Item Skill: Vampiric Touch -->
+	</option>
+	<option id="24594" name="o_s_84_2r_57">
+		<!-- Active: Inflicts a water attack. -->
+		<active_skill id="3167" level="10" /> <!-- Item Skill: Hydro Blast -->
+	</option>
+	<option id="24595" name="o_s_84_2r_58">
+		<!-- Active: Inflicts a fire attack. -->
+		<active_skill id="3168" level="10" /> <!-- Item Skill: Tempest -->
+	</option>
+	<option id="24596" name="o_s_84_2r_59">
+		<!-- Chance: During a physical attack, temporarily decreases the target's Atk. Spd. -->
+		<attack_skill id="3084" level="10" chance="1.0" /> <!-- Item Skill: Winter -->
+	</option>
+	<option id="24597" name="o_s_84_2r_60">
+		<!-- Chance: During a physical attack, instantly inflicts bleed on the target. -->
+		<attack_skill id="3092" level="10" chance="1.0" /> <!-- Item Skill: Bleed -->
+	</option>
+	<option id="24598" name="o_s_84_2r_61">
+		<!-- Chance: During a physical attack, instantly inflicts fear on the target and cause him to flee. -->
+		<attack_skill id="3090" level="10" chance="1.0" /> <!-- Item Skill: Fear -->
+	</option>
+	<option id="24599" name="o_s_84_2r_62">
+		<!-- Chance: Momentarily throws a target into a state of hold during a physical attack. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<attack_skill id="3086" level="10" chance="1.0" /> <!-- Item Skill: Hold -->
+	</option>
+</list>

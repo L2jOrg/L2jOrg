@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30134"> <!-- Jasmine -->
+		<teleport type="NORMAL">
+			<!-- feeCount from Interlude, unconfirmed from retail classic -->
+			<location npcStringId="1010004" x="-80684" y="149834" z="-3040" feeCount="22000" /> <!-- The Village of Gludin -->
+			<location npcStringId="1010005" x="-14608" y="123920" z="-3128" feeCount="10000" /> <!-- Town of Gludio -->
+			<location npcStringId="1010163" x="-22224" y="14168" z="-3232" feeCount="890" /> <!-- Dark Forest -->
+			<location npcStringId="1010166" x="-61095" y="75104" z="-3352" feeCount="3600" /> <!-- Spider Nest (Lv. 16) -->
+			<location npcStringId="1010043" x="-21472" y="36244" z="-2776" feeCount="760" /> <!-- Northern Marshlands (Lv. 13) -->
+			<location npcStringId="1010164" x="-21966" y="40544" z="-3192" feeCount="1100" /> <!-- Swampland (Lv. 13) -->
+			<location npcStringId="1010612" x="-10612" y="75881" z="-3592" feeCount="1700" /> <!-- Neutral Zone (Lv. 15) -->
+		</teleport>
+	</npc>
+</list>

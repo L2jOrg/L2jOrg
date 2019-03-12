@@ -1,0 +1,1253 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="3800" name="Vanor Silenos Mane" type="EtcItem">
+		<!-- Mane of vanor silenos soldiers, scouts or warriors. Collect 30 and take them to Guild Member Tor. -->
+		<set name="icon" val="icon.etc_mane_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3801" name="Tarlk Bugbear Totem" type="EtcItem">
+		<!-- Small statue that Tarlk Bugbear warriors carry around on their bodies. Collect 30 and take them to Guild Member Tor. -->
+		<set name="icon" val="icon.etc_totem_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3802" name="Okun's Head" type="EtcItem">
+		<!-- Certificate of having killed timak overlord okun. Take it to Guild Member Tor. -->
+		<set name="icon" val="icon.etc_skull_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3803" name="Kakran's Head" type="EtcItem">
+		<!-- Certificate of having killed taik overlord kakran. Take it to Guild Member Tor. -->
+		<set name="icon" val="icon.etc_skull_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3804" name="Narcissus' Soulstone" type="EtcItem">
+		<!-- Fragment of destroyed mirror. Collect 40 and take them to Guild Member Tor. -->
+		<set name="icon" val="icon.etc_crystal_ball_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3805" name="Deprive Eye" type="EtcItem">
+		<!-- Eye obtained from deprive corpse. Collect 20 and take them to Guild Member Tor. -->
+		<set name="icon" val="icon.etc_eyeball_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3806" name="Unicorn's Horn" type="EtcItem">
+		<!-- Horn obtained from killing unicorn or unicorn elder. Collect 20 and take them to Guild Member Tor. -->
+		<set name="icon" val="icon.etc_unicorn_horn_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3807" name="Kerunos' Gold Mane" type="EtcItem">
+		<!-- Mane removed after killing vanor chief kerunos. Take it to Guild Member Tor. -->
+		<set name="icon" val="icon.etc_mane_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3808" name="Skull of Executed" type="EtcItem">
+		<!-- Skull obtained from killing grave wanderer. Collect 20 and take them to Guild Member Tor. -->
+		<set name="icon" val="icon.etc_skull_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3809" name="Bust of Travis" type="EtcItem">
+		<!-- Bust of King Travis recovered from hatar chieftain kubel. Take it to Guild Member Tor. -->
+		<set name="icon" val="icon.etc_holy_statue_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3810" name="Sword of Cadmus" type="EtcItem">
+		<!-- Sword of bodyguard of King Cadmus recovered from judge of marsh. Collect 10 and take them to Guild Member Tor. -->
+		<set name="icon" val="icon.weapon_sword_of_watershadow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3811" name="Coin Diagram" type="EtcItem">
+		<!-- Illustration of the coin that Warehouse Keeper Sorint wants you to retrieve. Meet with Hunter Guild President Bernard who will instruct you on what to do next. -->
+		<set name="icon" val="icon.etc_spell_books_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3812" name="Kaldis Gold Dragon" type="EtcItem">
+		<!-- Coin that is the same as that which Hunter Guild President Bernard has. Take this to Warehouse Keeper Sorint. -->
+		<set name="icon" val="icon.etc_magic_coin_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3813" name="Coin Collector Membership 1" type="EtcItem">
+		<!-- Lv. 1 coin collector club membership card. You must have this to exchange coins with members of other places. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3814" name="Coin Collector Membership 2" type="EtcItem">
+		<!-- Lv. 2 coin collector club membership card. You must have this to exchange coins with level 2 or level 3 members of other places. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3815" name="Coin Collector Membership 3" type="EtcItem">
+		<!-- Lv. 3 coin collector club membership card. You must have this to exchange coins with level 3 members of other places. -->
+		<set name="icon" val="icon.etc_letter_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3816" name="Fairy Stone" type="EtcItem">
+		<!-- Jewel required to meet and talk with fairy Mimyu. -->
+		<set name="icon" val="icon.etc_gem_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3817" name="Deluxe Fairy Stone" type="EtcItem">
+		<!-- Jewel required to meet and talk with fairy Mimyu. Be careful because creatures living in Enchanted Valley disappear when killed. -->
+		<set name="icon" val="icon.etc_gem_clear_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3818" name="Fairy Stone List" type="EtcItem">
+		<!-- 4 Accessory Gems (Low-grade), 2 Armor Fragments (Low-grade), 1 Gemstone (D-grade), 10 pieces of Toad Lord Back Skin and 1 Cokes -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3819" name="Deluxe Fairy Stone List" type="EtcItem">
+		<!-- 5 Accessory Gems (Low-grade), 2 Armor Fragments (Low-grade), 1 Gemstone (C-grade), 10 pieces of Toad Lord Back Skin and 1 Cokes -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3820" name="Toad Lord Back Skin" type="EtcItem">
+		<!-- Haggard backskin of a toad lord. Ingredient used for removing impurities from fairy stone. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3821" name="Juice of Monkshood" type="EtcItem">
+		<!-- Medicine needed to talk with drakes or Wyrms. -->
+		<set name="icon" val="icon.etc_potion_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3822" name="Scale of Drake Exarion" type="EtcItem">
+		<!-- Scale of drake exarion. Take this and recover 20 eggs from leto lizardman warriors near Oren Castle. -->
+		<set name="icon" val="icon.etc_scale_of_medusa_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3823" name="Egg of Drake Exarion" type="EtcItem">
+		<!-- Egg of drake exarion recovered from leto lizardman warriors. -->
+		<set name="icon" val="icon.etc_dragon_egg_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3824" name="Scale of Drake Zwov" type="EtcItem">
+		<!-- Scale of drake zwov. Take this and recover 20 eggs from marsh spiders of Cruma Marshlands. -->
+		<set name="icon" val="icon.etc_scale_of_medusa_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3825" name="Egg of Drake Zwov" type="EtcItem">
+		<!-- Egg of drake zwov recovered from marsh spiders. -->
+		<set name="icon" val="icon.etc_dragon_egg_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3826" name="Scale of Drake Kalibran" type="EtcItem">
+		<!-- Scale of Drake Kalibran. Take this and recover 20 Eggs from Road Scavengers near Death Pass. -->
+		<set name="icon" val="icon.etc_scale_of_medusa_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3827" name="Egg of Drake Kalibran" type="EtcItem">
+		<!-- Drake Kalibran Egg recovered from Road Scavengers. -->
+		<set name="icon" val="icon.etc_dragon_egg_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3828" name="Scale of Wyvern Suzet" type="EtcItem">
+		<!-- Scale of Wyvern Suzet. Take this and recover 20 eggs from Breka Orc Overlords in northern Giran. -->
+		<set name="icon" val="icon.etc_seed_yellow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3829" name="Egg of Wyvern Suzet" type="EtcItem">
+		<!-- Egg of Wyvern Suzet recovered from Breka Orc Overlords. -->
+		<set name="icon" val="icon.etc_dragon_egg_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3830" name="Scale of Wyvern Shamhai" type="EtcItem">
+		<!-- Scale of wyvern shamhai. Take this and recover 20 eggs from deadseekers of the Execution Grounds. -->
+		<set name="icon" val="icon.etc_seed_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3831" name="Egg of Wyvern Shamhai" type="EtcItem">
+		<!-- Egg of wyvern shamhai recovered from deadseekers. -->
+		<set name="icon" val="icon.etc_dragon_egg_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3832" name="Herb of Harit" type="EtcItem">
+		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_herb_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3833" name="Herb of Vanor" type="EtcItem">
+		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_herb_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3834" name="Herb of Oel Mahum" type="EtcItem">
+		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_herb_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3835" name="Blood of Eva" type="EtcItem">
+		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_dragon_blood_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3836" name="Ritasha's Coin" type="EtcItem">
+		<!-- If you collect three Ritasha's coins and take them to Sorceress Ritasha, you will be able to obtain Blood of Eva. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_coins_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3837" name="Symbol of Loyalty" type="EtcItem">
+		<!-- Certificate acquired in exchange for the life of a clan member. Take this to the clan leader. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_jewel_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3838" name="Recipe: Giant's Powerstone (25%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Quest. Required to make a Giant's Powerstone. Requires Create Item - Skill Lv. 2. The success rate is 25%. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="recipe_id" val="322" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3839" name="Mist Drake's Egg" type="EtcItem">
+		<!-- Egg of mist drake. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_dragon_egg_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3840" name="Blitz Wyrm Egg" type="EtcItem">
+		<!-- Egg of blitz Wyrm. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_dragon_egg_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3841" name="Drake's Egg" type="EtcItem">
+		<!-- Egg of drake. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_dragon_egg_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3842" name="Thunder Wyrm Egg" type="EtcItem">
+		<!-- Egg of thunder Wyrm. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_dragon_egg_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3843" name="Brooch of the Magpie" type="EtcItem">
+		<!-- This brooch that was left by a dying Dwarf to be delivered to Head Blacksmith Kusto, his younger brother in Town of Giran. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_feather_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="1000" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3844" name="Nebulite Crystals" type="EtcItem">
+		<!-- Soulshot of unknown identity. The clan leader must collect ten each of this and Giant's Powerstones and take it all to Balthazar. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_crystal_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3845" name="Giant's Broken Powerstone" type="EtcItem">
+		<!-- Giant's Powerstone. It is broken and useless. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_instrument_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="500" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3846" name="Giant's Powerstone" type="EtcItem">
+		<!-- Giant's Powerstone. The clan leader must collect ten of these and also, ten Nebulite Crystals and take them all to Balthazar. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_mechanic_box_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3847" name="Imperial Key" type="EtcItem">
+		<!-- Key used when opening imperial coffer. Must have all six to open the coffer. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_key_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3848" name="Undead Ash" type="EtcItem">
+		<!-- Ash dust remaining after an undead of the Execution Grounds is destroyed. Collect this and take it to Mercenary Sophya. -->
+		<set name="icon" val="icon.etc_powder_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3849" name="Bloody Axe Insignia" type="EtcItem">
+		<!-- Insignia obtained from killing Ol Mahums in the Fortress of Resistance. Collect these and take them to Mercenary Sophya. -->
+		<set name="icon" val="icon.etc_badge_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3850" name="Delu Lizardman Fang" type="EtcItem">
+		<!-- Tooth removed after killing a Delu Lizardman. Collect these and take them to Mercenary Sophya. -->
+		<set name="icon" val="icon.etc_fang_ivory_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3851" name="Stakato Talon" type="EtcItem">
+		<!-- Claw cut off after killing Marsh Stakatos of the Cruma Marshlands. Collect this and take it to Mercenary Sophya. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3852" name="Gabrielle's Feather" type="EtcItem">
+		<!-- Mark given by Seal Guardian Gabrielle. Receive recognition for your abilities after taking this and meeting the other guardians. -->
+		<set name="icon" val="icon.etc_feather_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3853" name="Marsh Stalker Horn" type="EtcItem">
+		<!-- The horn that was cut off of a marsh stalker after it was killed. Take it to Magister Kaiena, the Watchman of the Seal. -->
+		<set name="icon" val="icon.etc_horn_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3854" name="Marsh Drake Talons" type="EtcItem">
+		<!-- The talons that were removed from a marsh drake after it was killed. Take them to Magister Kaiena, the Watchman of the Seal. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3855" name="Kranrot Skin" type="EtcItem">
+		<!-- The skin that was removed from a Kranrot after it was killed. Take it to Prefect Chakiris, the Watchman of the Seal. -->
+		<set name="icon" val="icon.etc_leather_brown_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3856" name="Hamrut Leg" type="EtcItem">
+		<!-- The leg that was removed from a Hamrut and skinned after it was killed. Take it to Prefect Chakiris, the Watchman of the Seal. -->
+		<set name="icon" val="icon.etc_insect_leg_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3857" name="Remains of Sacrifice" type="EtcItem">
+		<!-- The remains of a sacrificed soul. Take them to High Priest Orven, the Watchman of the Seal. -->
+		<set name="icon" val="icon.etc_skull_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3858" name="Totem of Land Dragon" type="EtcItem">
+		<!-- The totem created by Harit lizardmen who worship Antharas. Take it to Master Kendra the Watchman of the Seal. -->
+		<set name="icon" val="icon.etc_parasite_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3859" name="1st Fragment of Abyssal Jewel" type="EtcItem">
+		<!-- Fragment obtained by destroying an Abyssal Jewel in Gludio. Take it to Warehouse Chief Moke, the Watchman of the Seal. -->
+		<set name="icon" val="icon.etc_broken_crystal_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3860" name="1st Fragment of Abyssal Jewel" type="EtcItem">
+		<!-- Fragment obtained by destroying an Abyssal Jewel in Oren. Take it to Blacksmith Helton, the Watchman of the Seal. -->
+		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3861" name="1st Fragment of Abyssal Jewel" type="EtcItem">
+		<!-- Fragment obtained from destroying Abyssal Jewel. Take this to Antharas Watchman Theodric at the entrance to Antharas' Lair. -->
+		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3862" name="Mara Fang" type="EtcItem">
+		<!-- The proof obtained after killing jewel guardian Mara. Take it to Warehouse Chief Moke, the Watchman of the Seal. -->
+		<set name="icon" val="icon.etc_fang_ivory_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3863" name="Musfel Fang" type="EtcItem">
+		<!-- The proof obtained after killing jewel guardian Musfel. Take it to Blacksmith Helton, the Watchman of the Seal. -->
+		<set name="icon" val="icon.etc_fang_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3864" name="Guardian's Mark" type="EtcItem">
+		<!-- Certificate of having been recognized by seal guardian. Return to Gabrielle after receiving certificates from guardians of each region. -->
+		<set name="icon" val="icon.etc_eyeball_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3865" name="Portal Stone" type="EtcItem">
+		<!-- Item needed to activate the teleport crystal that teleports to Antharas' Lair. -->
+		<set name="icon" val="icon.etc_plate_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3866" name="Gustav's 1st Letter" type="EtcItem">
+		<!-- Secret letter sent by Sir Gustav Athebaldt to his aides. Get a hold of it and take it to Martien of the Town of Giran. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3867" name="Gustav's 1st Letter" type="EtcItem">
+		<!-- Letter sent by Sir Gustav Athebaldt to those supporting him. Take it to Balthazar of Hunter Village. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3868" name="Gustav's 1st Letter" type="EtcItem">
+		<!-- Letter sent by Sir Gustav Athebaldt to those supporting him. Take it to Sir Eric Rodemai of the Town of Aden. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3869" name="Scepter of Judgment" type="EtcItem">
+		<!-- Scepter bestowed on Founding Emperor Shunaiman of the ancient Elmoreden Empire by the god of light. Certificate representing the emperor's authority. -->
+		<set name="icon" val="icon.etc_royal_seal_of_lord_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3870" name="Proof of Aspiration" type="EtcItem">
+		<!-- Item needed for a clan leader to raise the clan to level 5. -->
+		<set name="icon" val="icon.etc_paper_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3871" name="Black Anvil Coin" type="EtcItem">
+		<!-- Commemorative coin given as an expression of gratitude by the Black Anvil Guild. -->
+		<set name="icon" val="icon.etc_coins_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3872" name="Antidote Ingredients List" type="EtcItem">
+		<!-- Herb of Vanor, Herb of Oel Mahum, Herb of Harit and Blood of Eva. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3873" name="Voucher of Faith" type="EtcItem">
+		<!-- If you take this document to Sir Kristof Rodemai, you will receive the Proof of Alliance. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3874" name="Proof of Alliance" type="EtcItem">
+		<!-- Item needed for a clan leader to raise the clan to level 4. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3875" name="Letter A" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_a_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3876" name="Letter C" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_c_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3877" name="Letter E" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_e_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3878" name="Letter F" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_f_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3879" name="Letter G" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_g_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3880" name="Letter H" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_h_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3881" name="Letter I" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_i_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3882" name="Letter L" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_l_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3883" name="Letter N" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_n_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3884" name="Letter O" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_o_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3885" name="Letter R" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_r_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3886" name="Letter S" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_s_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3887" name="Letter T" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_t_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3888" name="Number II" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_ii_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3889" name="Antidote" type="EtcItem">
+		<!-- Remedy that can neutralize the Poison of Witch Kalis. If the clan leader uses this, the Poisoning is healed. -->
+		<set name="icon" val="icon.etc_herb_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="180" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2060" level="1" /> <!-- Healing Medicine -->
+		</skills>
+	</item>
+	<item id="3890" name="Badge of Slayer" type="EtcItem">
+		<!-- Certificate showing eligibility to participate in the group to conquer Antharas. Take this and go meet Antharas Watchman Gilmore. -->
+		<set name="icon" val="icon.etc_badge_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+</list>

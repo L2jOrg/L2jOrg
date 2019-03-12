@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="46444" name="Kain's Soul Crystal - Stage 1" type="EtcItem">
+		<!-- A crystal filled with a monster�s soul. Adds special properties to a weapon. You can enhance the level of a crystal by combining. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="46459" name="Mermoden's Soul Crystal - Stage 1" type="EtcItem">
+		<!-- A crystal filled with a monster�s soul. Adds special properties to a weapon. You can enhance the level of a crystal by combining. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="46474" name="Leona's Soul Crystal - Stage 1" type="EtcItem">
+		<!-- A crystal filled with a monster�s soul. Adds special properties to a weapon. You can enhance the level of a crystal by combining. -->
+		<set name="icon" val="icon.ensoul_big_pp" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="46489" name="Pantheon's Soul Crystal - Stage 1" type="EtcItem">
+		<!-- A crystal filled with a monster�s soul. Adds special properties to a weapon. You can enhance the level of a crystal by combining. -->
+		<set name="icon" val="icon.ensoul_big_mm" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+</list>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- Crate01 -->
+	<region name="crate01" town="Fantasy Island" castle="0" locId="2259" bbs="14">
+		<respawnPoint X="-87123" Y="-16464" Z="-8320" />
+		<respawnPoint X="-87123" Y="-16464" Z="-8320" isChaotic="true" />
+	</region>
+	<!-- Crate02 -->
+	<region name="crate02" town="Fantasy Island" castle="0" locId="2259" bbs="14">
+		<respawnPoint X="-86974" Y="-81844" Z="-8364" />
+		<respawnPoint X="-86974" Y="-81844" Z="-8364" isChaotic="true" />
+	</region>
+	<!-- Crate03 -->
+	<region name="crate03" town="Fantasy Island" castle="0" locId="2259" bbs="14">
+		<respawnPoint X="-53892" Y="-82896" Z="-8320" />
+		<respawnPoint X="-53892" Y="-82896" Z="-8320" isChaotic="true" />
+	</region>
+	<!-- Themepark -->
+	<region name="themepark" town="Fantasy Island" castle="0" locId="2259" bbs="14">
+		<respawnPoint X="-60012" Y="-57445" Z="-2030" />
+		<respawnPoint X="-59078" Y="-56898" Z="-2030" />
+		<respawnPoint X="-60009" Y="-56328" Z="-2030" />
+		<respawnPoint X="-60012" Y="-57445" Z="-2030" isChaotic="true" />
+		<respawnPoint X="-59078" Y="-56898" Z="-2030" isChaotic="true" />
+		<respawnPoint X="-60009" Y="-56328" Z="-2030" isChaotic="true" />
+		<map X="17" Y="15" />
+		<map X="18" Y="15" />
+		<map X="17" Y="16" />
+		<map X="18" Y="16" />
+	</region>
+</list>

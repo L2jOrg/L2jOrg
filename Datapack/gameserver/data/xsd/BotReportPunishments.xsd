@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="list">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="punishment" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:short" name="neededReportCount" use="required"/>
+                <xs:attribute type="xs:short" name="skillId" use="required"/>
+                <xs:attribute type="xs:byte" name="skillLevel" use="optional"/>
+                <xs:attribute type="xs:short" name="sysMessageId" use="optional"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

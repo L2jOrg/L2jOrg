@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree">
+		<skill skillName="Lucky" skillId="194" skillLvl="1" getLevel="1" autoGet="true" />
+		<skill skillName="Expertise D" skillId="239" skillLvl="1" getLevel="20" autoGet="true" />
+		<skill skillName="Expertise C" skillId="239" skillLvl="2" getLevel="40" autoGet="true" />
+		<skill skillName="Expertise B" skillId="239" skillLvl="3" getLevel="52" autoGet="true" />
+		<skill skillName="Expertise A" skillId="239" skillLvl="4" getLevel="61" autoGet="true" />
+
+		<skill skillName="Pirate" skillId="1800" skillLvl="1" getLevel="45" autoGet="true" />
+		<skill skillName="Dark Assassin" skillId="1801" skillLvl="1" getLevel="60" autoGet="true" />
+		<skill skillName="White Assassin" skillId="1802" skillLvl="1" getLevel="70" autoGet="true" />
+	</skillTree>
+</list>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="13136" toLevel="1" name="Hero's Cloak">
+		<!-- Increases Max HP by 10% and Max CP by 15%, and increases STR/INT/CON/MEN/DEX/WIT + 2, and Fire/Water/Wind/Earth/Holy/Dark Resistance + 10 when equipped. -->
+		<icon>icon.vesper_cloack_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>55</magicLvl>
+		<effects>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<BLUNT>5</BLUNT>
+				<SWORD>5</SWORD>
+				<DUAL>5</DUAL>
+				<BOW>5</BOW>
+				<POLE>5</POLE>
+				<DAGGER>5</DAGGER>
+				<DUALFIST>5</DUALFIST>
+				<DUALDAGGER>5</DUALDAGGER>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+</list>

@@ -1,0 +1,1245 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="5404" name="Recipe: Sealed Gauntlets of Nightmare (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Gauntlets of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="35200" />
+		<set name="recipe_id" val="549" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5405" name="Recipe: Sealed Gauntlets of Nightmare (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Gauntlets of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="35200" />
+		<set name="recipe_id" val="550" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5406" name="Recipe: Sealed Majestic Gauntlets (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Majestic Gauntlets. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="35200" />
+		<set name="recipe_id" val="551" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5407" name="Recipe: Sealed Majestic Gauntlets (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Majestic Gauntlets. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="35200" />
+		<set name="recipe_id" val="552" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5416" name="Recipe: Sealed Dark Crystal Breastplate (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Dark Crystal Breastplate. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="92600" />
+		<set name="recipe_id" val="553" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5417" name="Recipe: Sealed Dark Crystal Breastplate (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Dark Crystal Breastplate. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="92600" />
+		<set name="recipe_id" val="554" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5418" name="Recipe: Sealed Tallum Plate Armor (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Tallum Plate Armor. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="135400" />
+		<set name="recipe_id" val="555" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5419" name="Recipe: Sealed Tallum Plate Armor (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Tallum Plate Armor. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="135400" />
+		<set name="recipe_id" val="556" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5420" name="Recipe: Sealed Armor of Nightmare (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Armor of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="206000" />
+		<set name="recipe_id" val="557" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5421" name="Recipe: Sealed Armor of Nightmare (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Armor of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="206000" />
+		<set name="recipe_id" val="558" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5422" name="Recipe: Sealed Majestic Plate Armor (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Majestic Plate Armor. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="206000" />
+		<set name="recipe_id" val="559" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5423" name="Recipe: Sealed Majestic Plate Armor (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Majestic Plate Armor. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="206000" />
+		<set name="recipe_id" val="560" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5424" name="Recipe: Sealed Dark Crystal Gaiters (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Dark Crystal Gaiters. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="57800" />
+		<set name="recipe_id" val="561" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5425" name="Recipe: Sealed Dark Crystal Gaiters (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Dark Crystal Gaiters. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="57800" />
+		<set name="recipe_id" val="562" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5426" name="Recipe: Sealed Dark Crystal Helmet (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Dark Crystal Helmet. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="34800" />
+		<set name="recipe_id" val="563" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5427" name="Recipe: Sealed Dark Crystal Helmet (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Dark Crystal Helmet. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="34800" />
+		<set name="recipe_id" val="564" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5428" name="Recipe: Sealed Tallum Helmet (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Tallum Helmet. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="34800" />
+		<set name="recipe_id" val="565" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5429" name="Recipe: Sealed Tallum Helmet (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Tallum Helmet. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="34800" />
+		<set name="recipe_id" val="566" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5430" name="Recipe: Sealed Helm of Nightmare (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Helm of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="52800" />
+		<set name="recipe_id" val="567" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5431" name="Recipe: Sealed Helm of Nightmare (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Helm of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="52800" />
+		<set name="recipe_id" val="568" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5432" name="Recipe: Sealed Majestic Circlet (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Majestic Circlet. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="52800" />
+		<set name="recipe_id" val="569" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5433" name="Recipe: Sealed Majestic Circlet (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Majestic Circlet. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="52800" />
+		<set name="recipe_id" val="570" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5434" name="Recipe: Dragon Slayer (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Dragon Slayer. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="571" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5435" name="Recipe: Dragon Slayer (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Dragon Slayer. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="572" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5436" name="Recipe: Berserker Blade" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Berserker Blade. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="122600" />
+		<set name="recipe_id" val="573" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5437" name="Recipe: Heavy Sword" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Heavy Sword. Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="8180" />
+		<set name="recipe_id" val="574" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5438" name="Recipe: Meteor Shower (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Meteor Shower. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="575" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5439" name="Recipe: Meteor Shower (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Meteor Shower. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="576" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5440" name="Recipe: Elysian (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Elysian. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="577" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5441" name="Recipe: Elysian (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Elysian. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="578" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5442" name="Recipe: Soul Bow (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Soul Bow. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="579" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5443" name="Recipe: Soul Bow (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Soul Bow. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="580" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5444" name="Recipe: Carnage Bow (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Carnage Bow. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="581" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5445" name="Recipe: Carnage Bow (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Carnage Bow. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="582" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5446" name="Recipe: Bloody Orchid (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Bloody Orchid. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="583" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5447" name="Recipe: Bloody Orchid (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Bloody Orchid. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="584" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5448" name="Recipe: Soul Separator (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Soul Separator. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="585" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5449" name="Recipe: Soul Separator (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Soul Separator. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="586" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5450" name="Recipe: Dragon Grinder (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Dragon Grinder. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="587" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5451" name="Recipe: Dragon Grinder (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Dragon Grinder. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="588" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5452" name="Recipe: Blood Tornado (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Blood Tornado. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="589" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5453" name="Recipe: Blood Tornado (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Blood Tornado. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="590" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5456" name="Recipe: Tallum Glaive (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Tallum Glaive. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="591" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5457" name="Recipe: Tallum Glaive (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Tallum Glaive. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="592" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5458" name="Recipe: Halberd (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Halberd. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="593" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5459" name="Recipe: Halberd (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Halberd. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="594" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5460" name="Recipe: Dasparion's Staff (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Dasparion's Staff. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="595" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5461" name="Recipe: Dasparion's Staff (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Dasparion's Staff. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="596" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5462" name="Recipe: Branch of the Mother Tree (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Branch of the Mother Tree. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="597" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5463" name="Recipe: Branch of the Mother Tree (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Branch of the Mother Tree. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="598" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5464" name="Recipe: Dark Legion's Edge (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Dark Legion's Edge. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="599" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5465" name="Recipe: Dark Legion's Edge (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Dark Legion's Edge. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="600" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5466" name="Recipe: Sword of Miracles (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sword of Miracles. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="601" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5467" name="Recipe: Sword of Miracles (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sword of Miracles. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="540000" />
+		<set name="recipe_id" val="602" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5468" name="Recipe: Elemental Sword (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Elemental Sword. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="603" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5469" name="Recipe: Elemental Sword (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Elemental Sword. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="604" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5470" name="Recipe: Tallum Blade (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Tallum Blade. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="605" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5471" name="Recipe: Tallum Blade (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Tallum Blade. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="366000" />
+		<set name="recipe_id" val="606" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5472" name="Recipe: Metallic Thread" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Metallic Thread. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2800" />
+		<set name="recipe_id" val="607" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5473" name="Recipe: Reinforced Metal Plate" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Reinforced Metal Plate. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2800" />
+		<set name="recipe_id" val="608" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5474" name="Recipe: Reorin's Mold" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Reorin's Mold. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="4800" />
+		<set name="recipe_id" val="609" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5475" name="Recipe: Warsmith' Mold" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Warsmith' Mold. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="7700" />
+		<set name="recipe_id" val="610" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5476" name="Recipe: Arcsmith' Anvil" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Arcsmith' Anvil. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="10600" />
+		<set name="recipe_id" val="611" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5477" name="Recipe: Warsmith' Holder" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Warsmith' Holder. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="recipe_id" val="612" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="5478" name="Sealed Dark Crystal Leather Armor Pattern" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Dark Crystal Leather Armor. Can be sold. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="23784" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5479" name="Sealed Tallum Leather Armor Pattern" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Tallum Leather Armor. Can be sold. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="33800" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5480" name="Sealed Leather Armor of Nightmare Fabric" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Leather Armor of Nightmare. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="44571" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5481" name="Sealed Majestic Leather Armor Fabric" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Majestic Leather Armor. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="44571" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5482" name="Sealed Dark Crystal Legging Design" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Dark Crystal Leggings. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="15153" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5485" name="Sealed Tallum Tunic Texture" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Tallum Tunic. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_yellow_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="23784" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5486" name="Sealed Dark Crystal Robe Fabric" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Dark Crystal Robe. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="33800" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5487" name="Sealed Robe of Nightmare Fabric" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Robe of Nightmare. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="44414" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5488" name="Sealed Majestic Robe Fabric" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Majestic Robe. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="44414" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5489" name="Sealed Tallum Stocking Fabric" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Tallum Stockings. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="15153" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5494" name="Sealed Dark Crystal Shield Fragment" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Dark Crystal Shield. Can be sold. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="9523" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5495" name="Sealed Shield of Nightmare Fragment" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Shield of Nightmare. Can be sold. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="13171" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5496" name="Sealed Dark Crystal Boot Lining" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Dark Crystal Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_black_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="8530" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5497" name="Sealed Tallum Boot Lining" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Tallum Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_black_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="8530" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

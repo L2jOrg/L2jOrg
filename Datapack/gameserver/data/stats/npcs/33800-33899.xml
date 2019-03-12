@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="33833" level="80" type="L2Npc" name="Spirit Thunder" title="Spiritshot Maker">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="33888" level="80" type="L2Npc" name="Santa Claus" title="Merry Christmas 2017">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290" hpRegen="8.5" mp="1674" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="2169.4790355337" magical="1647.827770464" critical="4" attackSpeed="253" range="40" />
+			<defence physical="451.47928994083" magical="330.42357490187" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="33889" level="80" type="L2Npc" name="Blue Snowman">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="500" hpRegen="10.5" mp="1" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="33890" level="80" type="L2Npc" name="Red Snowman">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="500" hpRegen="10.5" mp="1" mpRegen="3.6" />
+			<speed>
+				<walk ground="20" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="28" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="33893" level="80" type="L2Npc" name="Coco Brownie" title="Cupid's Messenger">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="22" />
+		</collision>
+	</npc>
+</list>

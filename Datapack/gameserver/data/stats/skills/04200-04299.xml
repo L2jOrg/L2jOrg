@@ -1,0 +1,3477 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="4200" toLevel="12" name="Decrease Atk. Spd.">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">2</value>
+			<value level="4">3</value>
+			<value level="5">3</value>
+			<value level="6">3</value>
+			<value level="7">3</value>
+			<value level="8">3</value>
+			<value level="9">3</value>
+			<value level="10">3</value>
+			<value level="11">3</value>
+			<value level="12">3</value>
+		</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ATTACK_TIME_UP</abnormalType>
+		<activateRate>90</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>750</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1250</effectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill1206</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">17</value>
+			<value level="2">29</value>
+			<value level="3">39</value>
+			<value level="4">53</value>
+			<value level="5">67</value>
+			<value level="6">83</value>
+			<value level="7">97</value>
+			<value level="8">103</value>
+			<value level="9">108</value>
+			<value level="10">112</value>
+			<value level="11">115</value>
+			<value level="12">116</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">-17</value>
+					<value level="2">-20</value>
+					<value level="3">-20</value>
+					<value level="4">-23</value>
+					<value level="5">-23</value>
+					<value level="6">-23</value>
+					<value level="7">-23</value>
+					<value level="8">-23</value>
+					<value level="9">-23</value>
+					<value level="10">-23</value>
+					<value level="11">-23</value>
+					<value level="12">-23</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4201" toLevel="12" name="Sleep">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value level="1">10</value>
+			<value level="2">10</value>
+			<value level="3">10</value>
+			<value level="4">10</value>
+			<value level="5">10</value>
+			<value level="6">10</value>
+			<value level="7">10</value>
+			<value level="8">10</value>
+			<value level="9">10</value>
+			<value level="10">30</value>
+			<value level="11">30</value>
+			<value level="12">30</value>
+		</abnormalTime>
+		<abnormalType>SLEEP</abnormalType>
+		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
+		<activateRate>70</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>750</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1250</effectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill1069</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">17</value>
+			<value level="2">29</value>
+			<value level="3">39</value>
+			<value level="4">53</value>
+			<value level="5">67</value>
+			<value level="6">83</value>
+			<value level="7">97</value>
+			<value level="8">103</value>
+			<value level="9">108</value>
+			<value level="10">112</value>
+			<value level="11">115</value>
+			<value level="12">116</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<removedOnDamage>true</removedOnDamage>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SLEEP</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="4202" toLevel="12" name="Hold">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value level="1">10</value>
+			<value level="2">10</value>
+			<value level="3">10</value>
+			<value level="4">10</value>
+			<value level="5">10</value>
+			<value level="6">10</value>
+			<value level="7">10</value>
+			<value level="8">10</value>
+			<value level="9">10</value>
+			<value level="10">30</value>
+			<value level="11">30</value>
+			<value level="12">30</value>
+		</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>70</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>750</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1250</effectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill1201</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">17</value>
+			<value level="2">29</value>
+			<value level="3">39</value>
+			<value level="4">53</value>
+			<value level="5">67</value>
+			<value level="6">83</value>
+			<value level="7">97</value>
+			<value level="8">103</value>
+			<value level="9">108</value>
+			<value level="10">112</value>
+			<value level="11">115</value>
+			<value level="12">116</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>HOLD</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Root" />
+		</effects>
+	</skill>
+	<skill id="4203" toLevel="12" name="Decrease Speed">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">2</value>
+			<value level="4">3</value>
+			<value level="5">3</value>
+			<value level="6">3</value>
+			<value level="7">3</value>
+			<value level="8">3</value>
+			<value level="9">3</value>
+			<value level="10">3</value>
+			<value level="11">3</value>
+			<value level="12">3</value>
+		</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>50</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>750</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1250</effectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill1160</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">17</value>
+			<value level="2">29</value>
+			<value level="3">39</value>
+			<value level="4">53</value>
+			<value level="5">67</value>
+			<value level="6">83</value>
+			<value level="7">97</value>
+			<value level="8">103</value>
+			<value level="9">108</value>
+			<value level="10">112</value>
+			<value level="11">115</value>
+			<value level="12">116</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-20</value>
+					<value level="3">-20</value>
+					<value level="4">-30</value>
+					<value level="5">-30</value>
+					<value level="6">-30</value>
+					<value level="7">-30</value>
+					<value level="8">-30</value>
+					<value level="9">-30</value>
+					<value level="10">-30</value>
+					<value level="11">-30</value>
+					<value level="12">-30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4204" toLevel="12" name="Bleed">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
+			<value level="6">7</value>
+			<value level="7">8</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">9</value>
+			<value level="11">10</value>
+			<value level="12">10</value>
+		</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>750</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1250</effectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill0096</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">17</value>
+			<value level="2">29</value>
+			<value level="3">39</value>
+			<value level="4">53</value>
+			<value level="5">67</value>
+			<value level="6">83</value>
+			<value level="7">97</value>
+			<value level="8">103</value>
+			<value level="9">108</value>
+			<value level="10">112</value>
+			<value level="11">115</value>
+			<value level="12">116</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>BLEED</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>
+					<value level="1">19</value>
+					<value level="2">28</value>
+					<value level="3">38</value>
+					<value level="4">49</value>
+					<value level="5">60</value>
+					<value level="6">69</value>
+					<value level="7">75</value>
+					<value level="8">75</value>
+					<value level="9">78</value>
+					<value level="10">78</value>
+					<value level="11">79</value>
+					<value level="12">79</value>
+				</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4205" toLevel="12" name="Paralysis">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value level="1">10</value>
+			<value level="2">10</value>
+			<value level="3">10</value>
+			<value level="4">10</value>
+			<value level="5">10</value>
+			<value level="6">10</value>
+			<value level="7">10</value>
+			<value level="8">10</value>
+			<value level="9">10</value>
+			<value level="10">30</value>
+			<value level="11">30</value>
+			<value level="12">30</value>
+		</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>750</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1250</effectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill1170</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">17</value>
+			<value level="2">29</value>
+			<value level="3">39</value>
+			<value level="4">53</value>
+			<value level="5">67</value>
+			<value level="6">83</value>
+			<value level="7">97</value>
+			<value level="8">103</value>
+			<value level="9">108</value>
+			<value level="10">112</value>
+			<value level="11">115</value>
+			<value level="12">116</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>PARALYZE</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="4206" toLevel="12" name="Aura Sink">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">2</value>
+			<value level="3">2</value>
+			<value level="4">2</value>
+			<value level="5">2</value>
+			<value level="6">3</value>
+			<value level="7">4</value>
+			<value level="8">5</value>
+			<value level="9">6</value>
+			<value level="10">7</value>
+			<value level="11">8</value>
+			<value level="12">8</value>
+		</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>DOT_MP</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>750</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1250</effectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill1170</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">17</value>
+			<value level="2">29</value>
+			<value level="3">39</value>
+			<value level="4">53</value>
+			<value level="5">67</value>
+			<value level="6">83</value>
+			<value level="7">97</value>
+			<value level="8">103</value>
+			<value level="9">108</value>
+			<value level="10">112</value>
+			<value level="11">115</value>
+			<value level="12">116</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ManaDamOverTime">
+				<power>
+					<value level="1">2</value>
+					<value level="2">2</value>
+					<value level="3">2</value>
+					<value level="4">2</value>
+					<value level="5">2</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">7</value>
+					<value level="9">8</value>
+					<value level="10">10</value>
+					<value level="11">12</value>
+					<value level="12">12</value>
+				</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4207" toLevel="12" name="Power Shot">
+		<!-- Freya retail confirmed -->
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<hitTime>4500</hitTime>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">32</value>
+			<value level="2">45</value>
+			<value level="3">63</value>
+			<value level="4">83</value>
+			<value level="5">106</value>
+			<value level="6">129</value>
+			<value level="7">150</value>
+			<value level="8">158</value>
+			<value level="9">164</value>
+			<value level="10">168</value>
+			<value level="11">170</value>
+			<value level="12">173</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">352</value>
+					<value level="2">949</value>
+					<value level="3">2607</value>
+					<value level="4">6828</value>
+					<value level="5">17184</value>
+					<value level="6">33213</value>
+					<value level="7">51007</value>
+					<value level="8">59177</value>
+					<value level="9">67888</value>
+					<value level="10">77001</value>
+					<value level="11">86359</value>
+					<value level="12">95790</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4208" toLevel="12" name="Stun">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value level="1">5</value>
+			<value level="2">5</value>
+			<value level="3">5</value>
+			<value level="4">5</value>
+			<value level="5">5</value>
+			<value level="6">5</value>
+			<value level="7">5</value>
+			<value level="8">5</value>
+			<value level="9">5</value>
+			<value level="10">9</value>
+			<value level="11">9</value>
+			<value level="12">9</value>
+		</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<hitTime>4500</hitTime>
+		<icon>icon.skill0101</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">32</value>
+			<value level="2">45</value>
+			<value level="3">63</value>
+			<value level="4">83</value>
+			<value level="5">106</value>
+			<value level="6">129</value>
+			<value level="7">150</value>
+			<value level="8">158</value>
+			<value level="9">164</value>
+			<value level="10">168</value>
+			<value level="11">170</value>
+			<value level="12">173</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">176</value>
+					<value level="2">475</value>
+					<value level="3">1304</value>
+					<value level="4">3414</value>
+					<value level="5">8592</value>
+					<value level="6">16607</value>
+					<value level="7">25504</value>
+					<value level="8">29589</value>
+					<value level="9">33944</value>
+					<value level="10">38501</value>
+					<value level="11">43180</value>
+					<value level="12">47895</value>
+				</power>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="4209" toLevel="12" name="Heal">
+		<!-- Freya retail confirmed -->
+		<castRange>700</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>2000</hitTime>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">21</value>
+			<value level="2">34</value>
+			<value level="3">50</value>
+			<value level="4">67</value>
+			<value level="5">86</value>
+			<value level="6">104</value>
+			<value level="7">119</value>
+			<value level="8">125</value>
+			<value level="9">129</value>
+			<value level="10">131</value>
+			<value level="11">131</value>
+			<value level="12">132</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Heal">
+				<power>
+					<value level="1">2516</value>
+					<value level="2">3150</value>
+					<value level="3">4708</value>
+					<value level="4">7611</value>
+					<value level="5">11465</value>
+					<value level="6">14839</value>
+					<value level="7">17138</value>
+					<value level="8">18081</value>
+					<value level="9">19008</value>
+					<value level="10">19977</value>
+					<value level="11">13303</value>
+					<value level="12">13157</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4210" toLevel="12" name="Chant of Life">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>
+			<value level="1">11</value>
+			<value level="2">12</value>
+			<value level="3">13</value>
+			<value level="4">14</value>
+			<value level="5">15</value>
+			<value level="6">16</value>
+			<value level="7">17</value>
+			<value level="8">17</value>
+			<value level="9">18</value>
+			<value level="10">18</value>
+			<value level="11">19</value>
+			<value level="12">19</value>
+		</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
+		<castRange>700</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">43</value>
+			<value level="2">69</value>
+			<value level="3">99</value>
+			<value level="4">134</value>
+			<value level="5">173</value>
+			<value level="6">207</value>
+			<value level="7">239</value>
+			<value level="8">250</value>
+			<value level="9">258</value>
+			<value level="10">262</value>
+			<value level="11">262</value>
+			<value level="12">263</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<icon>icon.skill1229</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealOverTime">
+				<power>
+					<value level="1">180</value>
+					<value level="2">228</value>
+					<value level="3">337</value>
+					<value level="4">544</value>
+					<value level="5">819</value>
+					<value level="6">1060</value>
+					<value level="7">1225</value>
+					<value level="8">1292</value>
+					<value level="9">1358</value>
+					<value level="10">1427</value>
+					<value level="11">951</value>
+					<value level="12">940</value>
+				</power>
+				<ticks>1</ticks>
+			</effect>
+			<effect name="HealPercent">
+				<power>3</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4211" toLevel="12" name="Might">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>99</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<affectRange>400</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>1500</hitTime>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">6</value>
+			<value level="2">10</value>
+			<value level="3">13</value>
+			<value level="4">18</value>
+			<value level="5">23</value>
+			<value level="6">28</value>
+			<value level="7">33</value>
+			<value level="8">35</value>
+			<value level="9">36</value>
+			<value level="10">38</value>
+			<value level="11">39</value>
+			<value level="12">39</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<icon>icon.skill1068</icon>
+		<targetType>SELF</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="PAtk">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4212" toLevel="12" name="Shield">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>99</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<affectRange>400</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>1500</hitTime>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">6</value>
+			<value level="2">10</value>
+			<value level="3">13</value>
+			<value level="4">18</value>
+			<value level="5">23</value>
+			<value level="6">28</value>
+			<value level="7">33</value>
+			<value level="8">35</value>
+			<value level="9">36</value>
+			<value level="10">38</value>
+			<value level="11">39</value>
+			<value level="12">39</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<icon>icon.skill1040</icon>
+		<targetType>SELF</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4213" toLevel="12" name="Haste">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>99</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<affectRange>400</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>1500</hitTime>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">6</value>
+			<value level="2">10</value>
+			<value level="3">13</value>
+			<value level="4">18</value>
+			<value level="5">23</value>
+			<value level="6">28</value>
+			<value level="7">33</value>
+			<value level="8">35</value>
+			<value level="9">36</value>
+			<value level="10">38</value>
+			<value level="11">39</value>
+			<value level="12">39</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<icon>icon.skill1086</icon>
+		<targetType>SELF</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4214" toLevel="12" name="Reflect Damage">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>99</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>DMG_SHIELD</abnormalType>
+		<affectRange>400</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>1500</hitTime>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">6</value>
+			<value level="2">10</value>
+			<value level="3">13</value>
+			<value level="4">18</value>
+			<value level="5">23</value>
+			<value level="6">28</value>
+			<value level="7">33</value>
+			<value level="8">35</value>
+			<value level="9">36</value>
+			<value level="10">38</value>
+			<value level="11">39</value>
+			<value level="12">39</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<icon>icon.skill0086</icon>
+		<targetType>SELF</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="DamageShield">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4215" toLevel="1" name="Raid Curse">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>99</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SILENCE_ALL</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<canBeDispelled>false</canBeDispelled>
+		<castRange>1500</castRange>
+		<effectRange>2000</effectRange>
+		<icon>icon.skill1064</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mute" />
+			<effect name="PhysicalMute" />
+		</effects>
+	</skill>
+	<skill id="4216" toLevel="1" name="Scatter Enemy">
+		<!-- Confirmed CT2.5 -->
+		<!-- Zaken skills -->
+		<!-- Teleport PC Animation -->
+		<castRange>800</castRange>
+		<coolTime>100</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1300</effectRange>
+		<hitTime>2900</hitTime>
+		<magicLvl>60</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="4217" toLevel="1" name="none">
+		<!-- Confirmed CT2.5 -->
+		<!-- Zaken skills -->
+		<!-- Teleport PC Area Animation -->
+		<affectRange>300</affectRange>
+		<castRange>800</castRange>
+		<coolTime>100</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1300</effectRange>
+		<hitTime>2900</hitTime>
+		<magicLvl>60</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="4218" toLevel="1" name="Drain">
+		<!-- Confirmed CT2.5 -->
+		<!-- Zaken skills -->
+		<affectRange>100</affectRange>
+		<castRange>600</castRange>
+		<coolTime>2000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2000</hitTime>
+		<magicLvl>60</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="HpDrain">
+				<power>57</power>
+				<percentage>40</percentage>
+			</effect>
+			<effect name="Mp">
+				<amount>-274</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4219" toLevel="1" name="Hold">
+		<!-- Confirmed CT2.5 -->
+		<!-- Zaken skills -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>95</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>800</castRange>
+		<coolTime>2000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1300</effectRange>
+		<hitTime>2000</hitTime>
+		<icon>icon.skill1201</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>HOLD</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Root" />
+		</effects>
+	</skill>
+	<skill id="4220" toLevel="1" name="Dual Attack">
+		<!-- Confirmed CT2.5 -->
+		<!-- Zaken skills -->
+		<castRange>50</castRange>
+		<coolTime>900</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>2100</hitTime>
+		<magicLvl>60</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>9390</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4221" toLevel="1" name="Range Dual Attack">
+		<!-- Confirmed CT2.5 -->
+		<!-- Zaken skills -->
+		<affectRange>100</affectRange>
+		<coolTime>1500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1500</hitTime>
+		<magicLvl>60</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>5164</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4222" toLevel="1" name="Teleport">
+		<!-- Confirmed CT2.5 -->
+		<!-- Zaken skills -->
+		<!-- Teleport Self Animation -->
+		<hitTime>500</hitTime>
+		<magicLvl>60</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="4223" toLevel="1" name="Daytime Zaken">
+		<!-- Confirmed CT2.5 -->
+		<!-- Zaken skills -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>14400</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<abnormalVisualEffect>CHANGE_TEXTURE</abnormalVisualEffect>
+		<coolTime>1900</coolTime>
+		<hitTime>1100</hitTime>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="4224" toLevel="1" name="Nighttime Zaken">
+		<!-- Confirmed CT2.5 -->
+		<!-- Zaken skills -->
+		<!-- Change Texture for Day to Night Face -->
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<coolTime>1900</coolTime>
+		<hitTime>1100</hitTime>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="4225" toLevel="5" name="Stun Resistance">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4225</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4226" toLevel="1" name="Ban Heal">
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="HealEffect">
+				<amount>-100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4227" toLevel="1" name="Zaken Regeneration">
+		<!-- Confirmed CT2.5 -->
+		<!-- Zaken skills -->
+		<abnormalLvl>11</abnormalLvl>
+		<abnormalTime>14400</abnormalTime>
+		<abnormalType>HP_REGEN_UP</abnormalType>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpRegen">
+				<amount>1900</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4228" toLevel="12" name="Double Dagger Attack">
+		<!-- Freya retail confirmed -->
+		<castRange>700</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>4000</hitTime>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">25</value>
+			<value level="2">40</value>
+			<value level="3">56</value>
+			<value level="4">76</value>
+			<value level="5">99</value>
+			<value level="6">121</value>
+			<value level="7">142</value>
+			<value level="8">151</value>
+			<value level="9">159</value>
+			<value level="10">165</value>
+			<value level="11">168</value>
+			<value level="12">170</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>17000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">122</value>
+					<value level="2">279</value>
+					<value level="3">584</value>
+					<value level="4">1110</value>
+					<value level="5">1923</value>
+					<value level="6">3030</value>
+					<value level="7">4336</value>
+					<value level="8">5002</value>
+					<value level="9">5632</value>
+					<value level="10">6187</value>
+					<value level="11">6632</value>
+					<value level="12">6978</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4229" toLevel="12" name="Double Wind Fist">
+		<!-- Freya retail confirmed -->
+		<castRange>700</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>4000</hitTime>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">25</value>
+			<value level="2">40</value>
+			<value level="3">56</value>
+			<value level="4">76</value>
+			<value level="5">99</value>
+			<value level="6">121</value>
+			<value level="7">142</value>
+			<value level="8">151</value>
+			<value level="9">159</value>
+			<value level="10">165</value>
+			<value level="11">168</value>
+			<value level="12">170</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>17000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">122</value>
+					<value level="2">279</value>
+					<value level="3">584</value>
+					<value level="4">1110</value>
+					<value level="5">1923</value>
+					<value level="6">3030</value>
+					<value level="7">4336</value>
+					<value level="8">5002</value>
+					<value level="9">5632</value>
+					<value level="10">6187</value>
+					<value level="11">6632</value>
+					<value level="12">6978</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4230" toLevel="1" name="Wild Cannon">
+		<!-- Confirmed CT2.5 -->
+		<!-- Wild Hog Cannon Skill -->
+		<castRange>2500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>3000</effectRange>
+		<hitTime>10000</hitTime>
+		<magicLvl>70</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>10500</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1330120</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4231" toLevel="12" name="Spit Attack">
+		<!-- Freya retail confirmed -->
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<attributeType>WIND</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">18</value>
+					<value level="2">26</value>
+					<value level="3">38</value>
+					<value level="4">52</value>
+					<value level="5">68</value>
+					<value level="6">85</value>
+					<value level="7">102</value>
+					<value level="8">110</value>
+					<value level="9">116</value>
+					<value level="10">122</value>
+					<value level="11">126</value>
+					<value level="12">129</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4232" toLevel="12" name="Spinning Slasher">
+		<!-- Freya retail confirmed -->
+		<affectRange>20</affectRange>
+		<castRange>40</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1000</hitTime>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">28</value>
+			<value level="4">38</value>
+			<value level="5">50</value>
+			<value level="6">61</value>
+			<value level="7">71</value>
+			<value level="8">76</value>
+			<value level="9">80</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
+			<value level="12">85</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack" />
+		</effects>
+	</skill>
+	<skill id="4233" toLevel="1" name="Vampiric Attack">
+		<!-- Freya retail confirmed -->
+		<!-- Summon Shadow Skill -->
+		<icon>icon.skill4233</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>15</amount>
+				<chance>30</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4234" toLevel="12" name="Spear Attack">
+		<!-- Freya retail confirmed -->
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<hitTime>4500</hitTime>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">32</value>
+			<value level="2">45</value>
+			<value level="3">63</value>
+			<value level="4">83</value>
+			<value level="5">106</value>
+			<value level="6">129</value>
+			<value level="7">150</value>
+			<value level="8">158</value>
+			<value level="9">164</value>
+			<value level="10">168</value>
+			<value level="11">170</value>
+			<value level="12">173</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">352</value>
+					<value level="2">949</value>
+					<value level="3">2607</value>
+					<value level="4">6828</value>
+					<value level="5">17184</value>
+					<value level="6">33213</value>
+					<value level="7">51007</value>
+					<value level="8">59177</value>
+					<value level="9">67888</value>
+					<value level="10">77001</value>
+					<value level="11">86359</value>
+					<value level="12">95790</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4235" toLevel="1" name="none">
+		<!-- Freya retail confirmed -->
+		<!-- Dietrich/Mikhail/Gustav Recall Skill -->
+		<hitTime>15000</hitTime>
+		<magicLvl>70</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="4236" toLevel="1" name="Decrease Heal">
+		<!-- Freya retail confirmed -->
+		<!-- Gustav Skill -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
+		<activateRate>90</activateRate>
+		<affectRange>200</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<attributeType>WIND</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1269</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>70</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>75000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>51</power>
+			</effect>
+			<effect name="HealEffect">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4237" toLevel="1" name="Decrease Speed">
+		<!-- Freya retail confirmed -->
+		<!-- Mikhail Skill -->
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>90</activateRate>
+		<affectRange>200</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>40</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>400</effectRange>
+		<attributeType>WATER</attributeType>
+		<attributeValue>20</attributeValue>
+		<fanRange>0;0;200;180</fanRange>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1236</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>70</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>75000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>72</power>
+			</effect>
+			<effect name="Speed">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4238" toLevel="1" name="Increase Cooldown">
+		<!-- Freya retail confirmed -->
+		<!-- Dietrich Skill -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>REUSE_DELAY_UP</abnormalType>
+		<affectRange>200</affectRange>
+		<effectPoint>-100</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1248</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>70</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>75000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="Reuse">
+				<amount>200</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>200</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4239" toLevel="1" name="Antharas Recovery">
+		<!-- Confirmed CT2.5 -->
+		<!-- Antharas Skills -->
+		<abnormalLvl>12</abnormalLvl>
+		<abnormalTime>43200</abnormalTime>
+		<abnormalType>HP_REGEN_DOWN</abnormalType>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<icon>icon.skill1044</icon>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpRegen">
+				<amount>-60</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4240" toLevel="1" name="Antharas Recovery">
+		<!-- Confirmed CT2.5 -->
+		<!-- Antharas Skills -->
+		<abnormalLvl>13</abnormalLvl>
+		<abnormalTime>43200</abnormalTime>
+		<abnormalType>HP_REGEN_DOWN</abnormalType>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<icon>icon.skill1044</icon>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpRegen">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4241" toLevel="1" name="Antharas Recovery">
+		<!-- Confirmed CT2.5 -->
+		<!-- Antharas Skills -->
+		<abnormalLvl>14</abnormalLvl>
+		<abnormalTime>43200</abnormalTime>
+		<abnormalType>HP_REGEN_DOWN</abnormalType>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<icon>icon.skill1044</icon>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpRegen">
+				<amount>0</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4242" toLevel="1" name="Zaken Regeneration">
+		<!-- Confirmed CT2.5 -->
+		<!-- Zaken skills -->
+		<abnormalLvl>12</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>HP_REGEN_UP</abnormalType>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="4243" toLevel="1" name="Venomous Poison">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<castRange>2000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>2500</effectRange>
+		<icon>icon.skill4082</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>70</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>98</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4244" toLevel="12" name="Wild Sweep">
+		<!-- Freya retail confirmed -->
+		<affectRange>80</affectRange>
+		<castRange>40</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<fanRange>0;0;80;150</fanRange>
+		<hitTime>1000</hitTime>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">28</value>
+			<value level="4">38</value>
+			<value level="5">50</value>
+			<value level="6">61</value>
+			<value level="7">71</value>
+			<value level="8">76</value>
+			<value level="9">80</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
+			<value level="12">85</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">46</value>
+					<value level="2">105</value>
+					<value level="3">219</value>
+					<value level="4">417</value>
+					<value level="5">722</value>
+					<value level="6">1136</value>
+					<value level="7">1626</value>
+					<value level="8">1876</value>
+					<value level="9">2112</value>
+					<value level="10">2320</value>
+					<value level="11">2487</value>
+					<value level="12">2617</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4245" toLevel="1" name="Mimic of Wrath">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>76</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>76</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>42</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4246" toLevel="1" name="Bow Magic Resistance">
+		<!-- Freya retail confirmed -->
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>50</BOW>
+				<BLEED>50</BLEED>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4247" toLevel="12" name="Dagger Storm">
+		<!-- Freya retail confirmed -->
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<attributeType>WIND</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>2</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">5</value>
+					<value level="2">8</value>
+					<value level="3">12</value>
+					<value level="4">17</value>
+					<value level="5">24</value>
+					<value level="6">31</value>
+					<value level="7">39</value>
+					<value level="8">39</value>
+					<value level="9">39</value>
+					<value level="10">39</value>
+					<value level="11">39</value>
+					<value level="12">39</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4248" toLevel="12" name="Energy Drain">
+		<!-- Freya retail confirmed -->
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">17</value>
+			<value level="2">28</value>
+			<value level="3">38</value>
+			<value level="4">49</value>
+			<value level="5">63</value>
+			<value level="6">78</value>
+			<value level="7">92</value>
+			<value level="8">97</value>
+			<value level="9">102</value>
+			<value level="10">105</value>
+			<value level="11">108</value>
+			<value level="12">109</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>2</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpDrain">
+				<power>
+					<value level="1">5</value>
+					<value level="2">8</value>
+					<value level="3">12</value>
+					<value level="4">17</value>
+					<value level="5">24</value>
+					<value level="6">31</value>
+					<value level="7">39</value>
+					<value level="8">39</value>
+					<value level="9">39</value>
+					<value level="10">39</value>
+					<value level="11">39</value>
+					<value level="12">39</value>
+				</power>
+				<percentage>20</percentage>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4249" toLevel="12" name="Decrease Speed">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>60</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>1000</castRange>
+		<coolTime>200</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<attributeType>WATER</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>1500</hitTime>
+		<icon>icon.skill1184</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">8</value>
+					<value level="4">11</value>
+					<value level="5">15</value>
+					<value level="6">19</value>
+					<value level="7">24</value>
+					<value level="8">24</value>
+					<value level="9">24</value>
+					<value level="10">24</value>
+					<value level="11">24</value>
+					<value level="12">24</value>
+				</power>
+			</effect>
+			<effect name="Speed">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4250" toLevel="12" name="Twister">
+		<!-- Freya retail confirmed -->
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<attributeType>WIND</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>2</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">5</value>
+					<value level="2">8</value>
+					<value level="3">12</value>
+					<value level="4">17</value>
+					<value level="5">24</value>
+					<value level="6">31</value>
+					<value level="7">39</value>
+					<value level="8">39</value>
+					<value level="9">39</value>
+					<value level="10">39</value>
+					<value level="11">39</value>
+					<value level="12">39</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4251" toLevel="12" name="Beam Cannon">
+		<!-- Freya retail confirmed -->
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>2</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">5</value>
+					<value level="2">8</value>
+					<value level="3">12</value>
+					<value level="4">17</value>
+					<value level="5">24</value>
+					<value level="6">31</value>
+					<value level="7">39</value>
+					<value level="8">39</value>
+					<value level="9">39</value>
+					<value level="10">39</value>
+					<value level="11">39</value>
+					<value level="12">39</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4252" toLevel="12" name="Flame Strike">
+		<!-- Freya retail confirmed -->
+		<affectRange>200</affectRange>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">18</value>
+			<value level="2">29</value>
+			<value level="3">40</value>
+			<value level="4">53</value>
+			<value level="5">68</value>
+			<value level="6">83</value>
+			<value level="7">98</value>
+			<value level="8">104</value>
+			<value level="9">109</value>
+			<value level="10">113</value>
+			<value level="11">115</value>
+			<value level="12">117</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>2</hitCancelTime>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">7</value>
+					<value level="4">9</value>
+					<value level="5">13</value>
+					<value level="6">16</value>
+					<value level="7">20</value>
+					<value level="8">20</value>
+					<value level="9">20</value>
+					<value level="10">20</value>
+					<value level="11">20</value>
+					<value level="12">20</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4253" toLevel="12" name="Blaze">
+		<!-- Freya retail confirmed -->
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>2</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">7</value>
+					<value level="4">9</value>
+					<value level="5">13</value>
+					<value level="6">16</value>
+					<value level="7">20</value>
+					<value level="8">20</value>
+					<value level="9">20</value>
+					<value level="10">20</value>
+					<value level="11">20</value>
+					<value level="12">20</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4254" toLevel="12" name="Prominence">
+		<!-- Freya retail confirmed -->
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>2</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">5</value>
+					<value level="2">8</value>
+					<value level="3">12</value>
+					<value level="4">17</value>
+					<value level="5">24</value>
+					<value level="6">31</value>
+					<value level="7">39</value>
+					<value level="8">39</value>
+					<value level="9">39</value>
+					<value level="10">39</value>
+					<value level="11">39</value>
+					<value level="12">39</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4255" toLevel="12" name="Beam Cannon">
+		<!-- Freya retail confirmed -->
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>2</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">5</value>
+					<value level="2">8</value>
+					<value level="3">12</value>
+					<value level="4">17</value>
+					<value level="5">24</value>
+					<value level="6">31</value>
+					<value level="7">39</value>
+					<value level="8">39</value>
+					<value level="9">39</value>
+					<value level="10">39</value>
+					<value level="11">39</value>
+					<value level="12">39</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4256" toLevel="1" name="Stun Resistance">
+		<!-- Freya retail confirmed -->
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4257" toLevel="12" name="Hydro Blast">
+		<!-- Freya retail confirmed -->
+		<affectRange>200</affectRange>
+		<castRange>500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1000</effectRange>
+		<attributeType>WATER</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">9</value>
+			<value level="2">15</value>
+			<value level="3">20</value>
+			<value level="4">27</value>
+			<value level="5">34</value>
+			<value level="6">42</value>
+			<value level="7">49</value>
+			<value level="8">53</value>
+			<value level="9">55</value>
+			<value level="10">57</value>
+			<value level="11">58</value>
+			<value level="12">59</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>3.5</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">9</value>
+					<value level="2">13</value>
+					<value level="3">19</value>
+					<value level="4">26</value>
+					<value level="5">34</value>
+					<value level="6">43</value>
+					<value level="7">51</value>
+					<value level="8">55</value>
+					<value level="9">58</value>
+					<value level="10">61</value>
+					<value level="11">63</value>
+					<value level="12">65</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4258" toLevel="1" name="Hinder Strider">
+		<!-- Freya retail confirmed -->
+		<!-- AI driven skill in GrandBosses -->
+		<abnormalLvl>99</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<castRange>1000</castRange>
+		<effectPoint>-1</effectPoint>
+		<effectRange>2000</effectRange>
+		<hitTime>500</hitTime>
+		<icon>icon.skill1160</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4259" toLevel="12" name="Toxic Smoke">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
+			<value level="6">7</value>
+			<value level="7">8</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">9</value>
+			<value level="11">10</value>
+			<value level="12">10</value>
+		</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>35</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>
+			<value level="1">500</value>
+			<value level="2">600</value>
+			<value level="3">600</value>
+			<value level="4">750</value>
+			<value level="5">750</value>
+			<value level="6">750</value>
+			<value level="7">750</value>
+			<value level="8">750</value>
+			<value level="9">750</value>
+			<value level="10">750</value>
+			<value level="11">750</value>
+			<value level="12">750</value>
+		</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1000</effectRange>
+		<hitTime>2000</hitTime>
+		<icon>icon.skill4036</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">18</value>
+			<value level="2">29</value>
+			<value level="3">40</value>
+			<value level="4">53</value>
+			<value level="5">68</value>
+			<value level="6">83</value>
+			<value level="7">98</value>
+			<value level="8">104</value>
+			<value level="9">109</value>
+			<value level="10">113</value>
+			<value level="11">115</value>
+			<value level="12">117</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<trait>POISON</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="DamOverTime">
+				<power>
+					<value level="1">16</value>
+					<value level="2">24</value>
+					<value level="3">32</value>
+					<value level="4">41</value>
+					<value level="5">50</value>
+					<value level="6">58</value>
+					<value level="7">63</value>
+					<value level="8">63</value>
+					<value level="9">66</value>
+					<value level="10">66</value>
+					<value level="11">68</value>
+					<value level="12">68</value>
+				</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4260" toLevel="12" name="Steal Blood">
+		<!-- Freya retail confirmed -->
+		<castRange>
+			<value level="1">600</value>
+			<value level="2">750</value>
+			<value level="3">750</value>
+			<value level="4">900</value>
+			<value level="5">900</value>
+			<value level="6">900</value>
+			<value level="7">900</value>
+			<value level="8">900</value>
+			<value level="9">900</value>
+			<value level="10">900</value>
+			<value level="11">900</value>
+			<value level="12">900</value>
+		</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>
+			<value level="1">1100</value>
+			<value level="2">1250</value>
+			<value level="3">1250</value>
+			<value level="4">1400</value>
+			<value level="5">1400</value>
+			<value level="6">1400</value>
+			<value level="7">1400</value>
+			<value level="8">1400</value>
+			<value level="9">1400</value>
+			<value level="10">1400</value>
+			<value level="11">1400</value>
+			<value level="12">1400</value>
+		</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">17</value>
+			<value level="2">28</value>
+			<value level="3">38</value>
+			<value level="4">49</value>
+			<value level="5">63</value>
+			<value level="6">78</value>
+			<value level="7">92</value>
+			<value level="8">97</value>
+			<value level="9">102</value>
+			<value level="10">105</value>
+			<value level="11">108</value>
+			<value level="12">109</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpDrain">
+				<power>
+					<value level="1">18</value>
+					<value level="2">26</value>
+					<value level="3">38</value>
+					<value level="4">52</value>
+					<value level="5">68</value>
+					<value level="6">85</value>
+					<value level="7">102</value>
+					<value level="8">110</value>
+					<value level="9">116</value>
+					<value level="10">122</value>
+					<value level="11">126</value>
+					<value level="12">129</value>
+				</power>
+				<percentage>20</percentage>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4261" toLevel="12" name="Mega Storm Strike">
+		<!-- Freya retail confirmed -->
+		<castRange>
+			<value level="1">600</value>
+			<value level="2">750</value>
+			<value level="3">750</value>
+			<value level="4">900</value>
+			<value level="5">900</value>
+			<value level="6">900</value>
+			<value level="7">900</value>
+			<value level="8">900</value>
+			<value level="9">900</value>
+			<value level="10">900</value>
+			<value level="11">900</value>
+			<value level="12">900</value>
+		</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<attributeType>WIND</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">18</value>
+					<value level="2">26</value>
+					<value level="3">38</value>
+					<value level="4">52</value>
+					<value level="5">68</value>
+					<value level="6">85</value>
+					<value level="7">102</value>
+					<value level="8">110</value>
+					<value level="9">116</value>
+					<value level="10">122</value>
+					<value level="11">126</value>
+					<value level="12">129</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4262" toLevel="2" name="Holiday Wind Walk">
+		<!-- Freya retail confirmed -->
+		<!-- This skill only has one level, 2. -->
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>SPEED_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>285</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<icon>icon.skill1204</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>30</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<basicProperty>NONE</basicProperty>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4263" toLevel="1" name="Holiday Haste">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>418</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<icon>icon.skill1086</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>44</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4264" toLevel="1" name="Holiday Empower">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MA_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>243</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<icon>icon.skill1059</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>25</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>55</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4265" toLevel="3" name="Holiday Might">
+		<!-- Freya retail confirmed -->
+		<!-- This skill only has one level, 3. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>379</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<icon>icon.skill1068</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>40</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4266" toLevel="3" name="Holiday Shield">
+		<!-- Freya retail confirmed -->
+		<!-- This skill only has one level, 3. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>418</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<icon>icon.skill1040</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>44</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4267" toLevel="1" name="Grade Penalty">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4267</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<stayAfterDeath>true</stayAfterDeath>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4268" toLevel="1" name="Danger Area">
+		<!-- Freya retail confirmed -->
+		<!-- This Skill Is Only For Description In The Client -->
+		<icon>icon.skill4268</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4269" toLevel="1" name="Block All Chat">
+		<!-- Freya retail confirmed -->
+		<!-- This Skill Is Only For Description In The Client -->
+		<icon>icon.skill4269</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4270" toLevel="4" name="Weight Penalty">
+		<!-- Freya retail confirmed -->
+		<!-- This Skill SHOULD BE Only For Description In The Client - probably hardcoded on retail -->
+		<icon>
+			<value level="1">icon.skill4270_1</value>
+			<value level="2">icon.skill4270_2</value>
+			<value level="3">icon.skill4270_3</value>
+			<value level="4">icon.skill4270_3</value>
+		</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<stayAfterDeath>true</stayAfterDeath>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="Speed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-50</value>
+					<value level="3">-50</value>
+					<value level="4">-100</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">-50</value>
+					<value level="2">-50</value>
+					<value level="3">-50</value>
+					<value level="4">-50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">-50</value>
+					<value level="2">-50</value>
+					<value level="3">-50</value>
+					<value level="4">-50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4271" toLevel="50" name="Momentum">
+		<!-- Freya retail confirmed and Updated to Ertheia -->
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<icon>
+			<value level="1">icon.skill_ct3_force01</value>
+			<value level="2">icon.skill_ct3_force02</value>
+			<value level="3">icon.skill_ct3_force03</value>
+			<value level="4">icon.skill_ct3_force04</value>
+			<value level="5">icon.skill_ct3_force05</value>
+			<value level="6">icon.skill_ct3_force06</value>
+			<value level="7">icon.skill_ct3_force07</value>
+			<value level="8">icon.skill_ct3_force08</value>
+			<value level="9">icon.skill_ct3_force09</value>
+			<value level="10">icon.skill_ct3_force10</value>
+			<value level="11">icon.skill_ct3_force11</value>
+			<value level="12">icon.skill_ct3_force12</value>
+			<value level="13">icon.skill_ct3_force13</value>
+			<value level="14">icon.skill_ct3_force14</value>
+			<value level="15">icon.skill_ct3_force15</value>
+			<value level="16">icon.skill_ct3_force16</value>
+			<value level="17">icon.skill_ct3_force17</value>
+			<value level="18">icon.skill_ct3_force18</value>
+			<value level="19">icon.skill_ct3_force19</value>
+			<value level="20">icon.skill_ct3_force20</value>
+			<value level="21">icon.skill_ct3_force21</value>
+			<value level="22">icon.skill_ct3_force22</value>
+			<value level="23">icon.skill_ct3_force23</value>
+			<value level="24">icon.skill_ct3_force24</value>
+			<value level="25">icon.skill_ct3_force25</value>
+			<value level="26">icon.skill_ct3_force26</value>
+			<value level="27">icon.skill_ct3_force27</value>
+			<value level="28">icon.skill_ct3_force28</value>
+			<value level="29">icon.skill_ct3_force29</value>
+			<value level="30">icon.skill_ct3_force30</value>
+			<value level="31">icon.skill_ct3_force31</value>
+			<value level="32">icon.skill_ct3_force32</value>
+			<value level="33">icon.skill_ct3_force33</value>
+			<value level="34">icon.skill_ct3_force34</value>
+			<value level="35">icon.skill_ct3_force35</value>
+			<value level="36">icon.skill_ct3_force36</value>
+			<value level="37">icon.skill_ct3_force37</value>
+			<value level="38">icon.skill_ct3_force38</value>
+			<value level="39">icon.skill_ct3_force39</value>
+			<value level="40">icon.skill_ct3_force40</value>
+			<value level="41">icon.skill_ct3_force41</value>
+			<value level="42">icon.skill_ct3_force42</value>
+			<value level="43">icon.skill_ct3_force43</value>
+			<value level="44">icon.skill_ct3_force44</value>
+			<value level="45">icon.skill_ct3_force45</value>
+			<value level="46">icon.skill_ct3_force46</value>
+			<value level="47">icon.skill_ct3_force47</value>
+			<value level="48">icon.skill_ct3_force48</value>
+			<value level="49">icon.skill_ct3_force49</value>
+			<value level="50">icon.skill_ct3_force50</value>
+		</icon>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4272" toLevel="1" name="Greater Bow/Crossbow Resistance">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4272</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>70</BOW>
+				<CROSSBOW>70</CROSSBOW>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4273" toLevel="5" name="Dagger/Rapier Resistance">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4273_new</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<DAGGER>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</DAGGER>
+				<DUALDAGGER>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</DUALDAGGER>
+				<RAPIER>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</RAPIER>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4274" toLevel="5" name="Blunt Weapon Vulnerability">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4274_new</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<BLUNT>
+					<value level="1">-11</value>
+					<value level="2">-25</value>
+					<value level="3">-43</value>
+					<value level="4">-67</value>
+					<value level="5">-100</value>
+				</BLUNT>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4275" toLevel="5" name="Holy Attack Vulnerability">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4275_new</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4276" toLevel="5" name="Bow / Crossbow Vulnerability">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4276_new</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>
+					<value level="1">-11</value>
+					<value level="2">-25</value>
+					<value level="3">-43</value>
+					<value level="4">-67</value>
+					<value level="5">-100</value>
+				</BOW>
+				<CROSSBOW>
+					<value level="1">-11</value>
+					<value level="2">-25</value>
+					<value level="3">-43</value>
+					<value level="4">-67</value>
+					<value level="5">-100</value>
+				</CROSSBOW>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4277" toLevel="5" name="Poison Resistance">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4277</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<POISON>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</POISON>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4278" toLevel="1" name="Dark Attack">
+		<icon>icon.skill4278</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="AttackAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4279" toLevel="5" name="Fire Vulnerability">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4279_new</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4280" toLevel="5" name="Water Vulnerability">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4280_new</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4281" toLevel="5" name="Wind Attack Vulnerability">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4281_new</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4282" toLevel="5" name="Earth Attack Vulnerability">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4282_new</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4283" toLevel="1" name="Greater Magic Attack Resistance">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4283_new</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4284" toLevel="5" name="Bleed Resistance">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4284</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<BLEED>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</BLEED>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4285" toLevel="5" name="Sleep Resistance">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4285</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<SLEEP>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</SLEEP>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4286" toLevel="1" name="Greater Sleep Resistance">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4286</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<SLEEP>95</SLEEP>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4287" toLevel="5" name="Hold Resistance">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4287</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<HOLD>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</HOLD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4288" toLevel="1" name="Greater Hold Resistance">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4288</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<HOLD>95</HOLD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4289" toLevel="1" name="Wyvern Breath">
+		<!-- Freya retail confirmed -->
+		<affectRange>200</affectRange>
+		<castRange>700</castRange>
+		<effectPoint>-1500</effectPoint>
+		<effectRange>1200</effectRange>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>3600</hitTime>
+		<icon>icon.skill4289</icon>
+		<magicLvl>60</magicLvl>
+		<mpConsume>400</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>WYVERN</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>3.6</hitCancelTime>
+		<targetType>WYVERN_TARGET</targetType>
+		<affectScope>WYVERN_SCOPE</affectScope>
+		<affectObject>WYVERN_OBJECT</affectObject>
+		<conditions>
+			<condition name="OpWyvern" />
+		</conditions>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>379</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4290" toLevel="1" name="Race">
+		<!-- Freya retail confirmed -->
+		<!-- Race Undead -->
+		<icon>icon.skill4290</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4291" toLevel="1" name="Race">
+		<!-- Freya retail confirmed -->
+		<!-- Race Construct -->
+		<icon>icon.skill4291</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4292" toLevel="1" name="Race">
+		<!-- Freya retail confirmed -->
+		<!-- Race Beast -->
+		<icon>icon.skill4292</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4293" toLevel="1" name="Race">
+		<!-- Freya retail confirmed -->
+		<!-- Race Animal -->
+		<icon>icon.skill4293</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4294" toLevel="1" name="Race">
+		<!-- Freya retail confirmed -->
+		<!-- Race Plant -->
+		<icon>icon.skill4294</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4295" toLevel="1" name="Race">
+		<!-- Freya retail confirmed -->
+		<!-- Race Humanoid -->
+		<icon>icon.skill4295</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4296" toLevel="1" name="Race">
+		<!-- Freya retail confirmed -->
+		<!-- Race Spirit -->
+		<icon>icon.skill4296</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4297" toLevel="1" name="Race">
+		<!-- Freya retail confirmed -->
+		<!-- Race Divine -->
+		<icon>icon.skill4297</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4298" toLevel="1" name="Race">
+		<!-- Freya retail confirmed -->
+		<!-- Race Demonic -->
+		<icon>icon.skill4298</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="4299" toLevel="1" name="Race">
+		<!-- Freya retail confirmed -->
+		<!-- Race Dragon -->
+		<icon>icon.skill4299</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+</list>

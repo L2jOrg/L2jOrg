@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="35451"> <!-- Emma -->
+		<teleport name="tel1" type="OTHER">
+			<location npcStringId="1010024" x="81749" y="149171" z="-3464" /> <!-- Village Square -->
+			<location npcStringId="1010025" x="81525" y="143821" z="-3528" /> <!-- North Gate Entrance -->
+			<location npcStringId="1010026" x="88342" y="147329" z="-3400" /> <!-- East Gate Entrance -->
+			<location npcStringId="1010028" x="81548" y="152633" z="-3528" /> <!-- South Gate Entrance -->
+			<location npcStringId="1010027" x="77305" y="148636" z="-3592" /> <!-- West Gate Entrance -->
+		</teleport>
+		<teleport name="tel2" type="OTHER">
+			<location npcStringId="1010024" x="81749" y="149171" z="-3464" /> <!-- Village Square -->
+			<location npcStringId="1010025" x="81525" y="143821" z="-3528" /> <!-- North Gate Entrance -->
+			<location npcStringId="1010026" x="88342" y="147329" z="-3400" /> <!-- East Gate Entrance -->
+			<location npcStringId="1010028" x="81548" y="152633" z="-3528" /> <!-- South Gate Entrance -->
+			<location npcStringId="1010027" x="77305" y="148636" z="-3592" /> <!-- West Gate Entrance -->
+			<location npcStringId="1010118" x="85546" y="131328" z="-3672" feeCount="2000" /> <!-- Breka's Stronghold (Lv. 30) -->
+			<location npcStringId="1010152" x="43408" y="206881" z="-3752" feeCount="10000" /> <!--Devil's Isle-->
+			<location npcStringId="1010067" x="73024" y="118485" z="-3720" feeCount="2000" /> <!-- Dragon Valley (Lv. 76) -->
+			<location npcStringId="1010115" x="60374" y="164301" z="-2856" feeCount="2000" /> <!-- Tanor Canyon (Lv. 46) -->
+		</teleport>
+	</npc>
+</list>

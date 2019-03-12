@@ -1,0 +1,1262 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="2900" name="Hermodt's Thigh Bone" type="EtcItem">
+		<!-- The thigh bones of Hermodt, an ancient Orc hero. Take this, along with the additional 4 remains, to Priest Manakia. -->
+		<set name="icon" val="icon.etc_piece_bone_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2901" name="Hermodt's Remains" type="EtcItem">
+		<!-- The remains of Hermodt, an ancient Orc hero. Take this, along with the other three heroes' remains, to Seer Somak. -->
+		<set name="icon" val="icon.etc_ashes_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2902" name="Racoy's Totem" type="EtcItem">
+		<!-- Totem given by Seer Racoy. Take this and go to the Temple of Einhasad in the Town of Gludio to ask about Kiruna. -->
+		<set name="icon" val="icon.etc_totem_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2903" name="Vivyan's Letter" type="EtcItem">
+		<!-- Letter from Priestess Vivyan. Take this to Trader Sarien of the Southern Wastelands. -->
+		<set name="icon" val="icon.etc_letter_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2904" name="Insect Diagram Book" type="EtcItem">
+		<!-- Insect encyclopedia that Grocer Sarien has given to you. Take this and hunt Noble Ants to recover Kiruna's remains. -->
+		<set name="icon" val="icon.etc_spellbook_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2905" name="Kiruna's Skull" type="EtcItem">
+		<!-- Skull of Kiruna, an ancient Orc hero. Take this, along with the additional 4 remains, to Seer Racoy. -->
+		<set name="icon" val="icon.etc_skull_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2906" name="Kiruna's Rib Bone" type="EtcItem">
+		<!-- Rib Bone of Kiruna, an ancient Orc hero. Take this, along with the additional 4 remains, to Seer Racoy. -->
+		<set name="icon" val="icon.etc_rib_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2907" name="Kiruna's Spine" type="EtcItem">
+		<!-- Spine of Kiruna, an ancient Orc hero. Take this, along with the additional 4 remains, to Seer Racoy. -->
+		<set name="icon" val="icon.etc_ginseng_yellow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2908" name="Kiruna's Arm Bone" type="EtcItem">
+		<!-- Arm Bone of Kiruna, an ancient Orc hero. Take this, along with the additional 4 remains, to Seer Racoy. -->
+		<set name="icon" val="icon.etc_piece_bone_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2909" name="Kiruna's Thigh Bone" type="EtcItem">
+		<!-- The thigh bones of Kiruna, an ancient Orc hero. Take this, along with the additional 4 remains, to Seer Racoy. -->
+		<set name="icon" val="icon.etc_piece_bone_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2910" name="Kiruna's Remains" type="EtcItem">
+		<!-- The Remains of Kiruna, a great Orc warrior. Take this, along with the other 3 heroes' remains, to Seer Somak. -->
+		<set name="icon" val="icon.etc_ashes_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2911" name="Braki's Remains" type="EtcItem">
+		<!-- The remains of the hero, Braki, encased in an urn. Take this to the Ancestor Martankus in the Cave of Trials. -->
+		<set name="icon" val="icon.etc_oil_pot_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2912" name="Tonar's Remains" type="EtcItem">
+		<!-- The remains of the hero, Tonar, encased in an urn. Take this to the Ancestor Martankus in the Cave of Trials. -->
+		<set name="icon" val="icon.etc_oil_pot_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2913" name="Hermodt's Remains" type="EtcItem">
+		<!-- The remains of the hero, Hermodt, encased in an urn. Take this to the Ancestor Martankus in the Cave of Trials. -->
+		<set name="icon" val="icon.etc_oil_pot_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2914" name="Kiruna's Remains" type="EtcItem">
+		<!-- The remains of the warrior, Kiruna, encased in an urn. Take this to the Ancestor Martankus in the Cave of Trials. -->
+		<set name="icon" val="icon.etc_oil_pot_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2916" name="Broken Teleport Device" type="EtcItem">
+		<!-- The teleport device given by Master Toma. Take this back to Master Toma. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="2917" name="Ring of Seal Gemstone" type="EtcItem">
+		<!-- Key material for Dwarves to make a Ring of Seal. Can be sold. -->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3482" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2918" name="Mithril Scale Gaiter Material" type="EtcItem">
+		<!-- Key material for Dwarves to make Mithril Scale Gaiters. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3371" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2919" name="Brigandine Gaiter Material" type="EtcItem">
+		<!-- Key material for Dwarves to make Brigandine Gaiters. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3371" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2920" name="Mithril Tunic Pattern" type="EtcItem">
+		<!-- Key material for Dwarves to make an Elven Mithril Tunic. Can be sold. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3921" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2921" name="Mithril Stocking Pattern" type="EtcItem">
+		<!-- Key material for Dwarves to make Mithril Stockings. Can be sold. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2518" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2922" name="Brigandine Helmet Design" type="EtcItem">
+		<!-- Key material for Dwarves to make a Brigandine Helmet. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="5193" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2923" name="Manticore Skin Boot Lining" type="EtcItem">
+		<!-- Key material for Dwarves to make Manticore Skin Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1480" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2924" name="Brigandine Boot Design" type="EtcItem">
+		<!-- Key material for Dwarves to make Brigandine Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1480" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2925" name="Elven Mithril Boot Design" type="EtcItem">
+		<!-- Key material for Dwarves to make Elven Mithril Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1480" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2926" name="Manticore Skin Glove Lining" type="EtcItem">
+		<!-- Key material for Dwarves to make Manticore Skin Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1480" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2927" name="Brigandine Gauntlet Pattern" type="EtcItem">
+		<!-- Key material for Dwarves to make a Brigandine Gauntlets. Can be sold. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1480" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2928" name="Elven Mithril Glove Design" type="EtcItem">
+		<!-- Key material that Dwarves use to make Mithril Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1480" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2929" name="Brigandine Shield Fragment" type="EtcItem">
+		<!-- Key material for Dwarves to make a Brigandine Shield. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1389" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2930" name="Plate Helmet Design" type="EtcItem">
+		<!-- Key material for Dwarves to make a Plate Helmet. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2481" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2931" name="Salamander Skin Boot Lining" type="EtcItem">
+		<!-- Key material for Dwarves to make Salamander Skin Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1792" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2932" name="Plate Boot Design" type="EtcItem">
+		<!-- Key material for Dwarves to make Plate Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1792" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2933" name="Sage's Worn Glove Lining" type="EtcItem">
+		<!-- Key material for Dwarves to make Sage's Worn Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1792" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2934" name="Plate Shield Fragment" type="EtcItem">
+		<!-- Key material for Dwarves to make a Plate Shield. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1762" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2935" name="Reinforced Mithril Gaiter Fragment" type="EtcItem">
+		<!-- Key material for Dwarves to make Reinforced Mithril Gaiters. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3762" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2936" name="Chain Hood Pattern" type="EtcItem">
+		<!-- Key material for Dwarves to make a Chain Hood. Can be sold. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2725" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2937" name="Chain Boot Fragment" type="EtcItem">
+		<!-- Key material for Dwarves to make Chain Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2225" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2938" name="Karmian Boot Fabric" type="EtcItem">
+		<!-- Key material for Dwarves to make Karmian Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2225" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2939" name="Plated Leather Boot Lining" type="EtcItem">
+		<!-- Key material for Dwarves to make Plated Leather Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2225" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2940" name="Dwarven Chain Boot Fragment" type="EtcItem">
+		<!-- Key material for Dwarves to make Dwarven Chain Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2225" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2941" name="Boots of Seal Pattern" type="EtcItem">
+		<!-- Key material for Dwarves to make Boots of Seal. Can be sold. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2225" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2942" name="Reinforced Mithril Glove Design" type="EtcItem">
+		<!-- Key material for Dwarves to make Reinforced Mithril Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2225" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2943" name="Chain Glove Design" type="EtcItem">
+		<!-- Key material for Dwarves to make Chain Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2225" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2944" name="Karmian Glove Fabric" type="EtcItem">
+		<!-- Key material for Dwarves to make Karmian Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2225" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2945" name="Chain Shield Fragment" type="EtcItem">
+		<!-- Key material for Dwarves to make a Chain Shield. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2475" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2946" name="Plated Leather Glove Design" type="EtcItem">
+		<!-- Key material for Dwarves to make Plated Leather Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3578" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2947" name="Dwarven Chain Shield Fragment" type="EtcItem">
+		<!-- Key material for Dwarves to make a Dwarven Chain Shield. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2800" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2948" name="Rind Leather Boot Lining" type="EtcItem">
+		<!-- Key material for Dwarves to make Rind Leather Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2378" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2949" name="Dwarven Chain Glove Design" type="EtcItem">
+		<!-- Key material for Dwarves to make Dwarven Chain Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2378" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2950" name="Gloves of Seal Pattern" type="EtcItem">
+		<!-- Key material for Dwarves to make Gloves of Seal. Can be sold. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2378" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2951" name="Rind Leather Glove Design" type="EtcItem">
+		<!-- Key material for Dwarves to make Rind Leather Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2378" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2952" name="Demon's Boot Fabric" type="EtcItem">
+		<!-- Key material for Dwarves to make Demon's Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3400" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2953" name="Demon's Glove Fabric" type="EtcItem">
+		<!-- Key material for Dwarves to make Demon's Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3400" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2954" name="Theca Leather Boot Texture" type="EtcItem">
+		<!-- Key material for Dwarves to make Theca Leather Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3160" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2955" name="Theca Leather Glove Texture" type="EtcItem">
+		<!-- Key material for Dwarves to make Theca Leather Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3160" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2956" name="Compound Boot Fragment" type="EtcItem">
+		<!-- Key material for Dwarves to make Compound Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3400" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2957" name="Compound Helmet Design" type="EtcItem">
+		<!-- Key material for Dwarves to make the Compound Helmet. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4560" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2958" name="Divine Boot Fabric" type="EtcItem">
+		<!-- Key material for Dwarves to make Divine Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3673" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2959" name="Full Plate Helmet Design" type="EtcItem">
+		<!-- Key material for Dwarves to make the Full Plate Helmet. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="5782" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2960" name="Drake Leather Boot Design" type="EtcItem">
+		<!-- Key material for Dwarves to make Drake Leather Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3673" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2961" name="Full Plate Boot Fragment" type="EtcItem">
+		<!-- Key material for Dwarves to make Full Plate Boots. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3673" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2962" name="Drake Leather Glove Design" type="EtcItem">
+		<!-- Key material for Dwarves to make Drake Leather Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3673" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2963" name="Full Plate Gauntlet Fragment" type="EtcItem">
+		<!-- Key material for Dwarves to make Full Plate Gauntlets. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3673" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2964" name="Divine Glove Pattern" type="EtcItem">
+		<!-- Key material for Dwarves to make Divine Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3673" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2965" name="Blessed Glove Design" type="EtcItem">
+		<!-- Key material for Dwarves to make Blessed Gloves. Can be sold. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3673" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2966" name="Full Plate Shield Fragment" type="EtcItem">
+		<!-- Key material for Dwarves to make a Full Plate Shield. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3655" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2967" name="Elven Long Sword Blade" type="EtcItem">
+		<!-- Key material for Dwarves to make an Elven Long Sword. Can be sold. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="23062" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2968" name="Dwarven War Hammer Head" type="EtcItem">
+		<!-- Key material for Dwarves to make a Dwarven War Hammer. Can be sold. -->
+		<set name="icon" val="icon.etc_squares_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="29644" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2969" name="Yaksa Mace Head" type="EtcItem">
+		<!-- Key material for Dwarves to make a Yaksa Mace. Can be sold. -->
+		<set name="icon" val="icon.etc_squares_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="41636" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="2970" name="Recipe: Ring of Seal" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Ring of Seal. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="5640" />
+		<set name="recipe_id" val="261" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2971" name="Recipe: Mithril Scale Gaiters" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Mithril Scale Gaiters. Requires Create Item - Skill Lv. 3. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="3740" />
+		<set name="recipe_id" val="262" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2972" name="Recipe: Brigandine Gaiters" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Brigandine Gaiters. Requires Create Item - Skill Lv. 3. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="3740" />
+		<set name="recipe_id" val="263" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2973" name="Recipe: Elven Mithril Tunic" type="EtcItem">
+		<!-- For Dwarves only. Recipe for an Elven Mithril Tunic. Requires Create Item - Skill Lv. 3. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="4480" />
+		<set name="recipe_id" val="264" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2974" name="Recipe: Elven Mithril Stockings" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Mithril Stockings. Requires Create Item - Skill Lv. 3. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2800" />
+		<set name="recipe_id" val="265" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2975" name="Recipe: Brigandine Helmet" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Brigandine Helmet. Requires Create Item - Skill Lv. 3. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2240" />
+		<set name="recipe_id" val="266" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2976" name="Recipe: Manticore Skin Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Manticore Leather Boots. Requires Create Item - Skill Lv. 3. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1494" />
+		<set name="recipe_id" val="267" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2977" name="Recipe: Brigandine Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Brigandine Boots. Requires Create Item - Skill Lv. 3. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1494" />
+		<set name="recipe_id" val="268" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2978" name="Recipe: Elven Mithril Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Elven Mithril Boots. Requires Create Item - Skill Lv. 3. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1494" />
+		<set name="recipe_id" val="269" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2979" name="Recipe: Manticore Skin Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Manticore Leather Gloves. Requires Create Item - Skill Lv. 3. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1494" />
+		<set name="recipe_id" val="270" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2980" name="Recipe: Brigandine Gauntlets" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Brigandine Gauntlets. Requires Create Item - Skill Lv. 3 The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1494" />
+		<set name="recipe_id" val="271" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2981" name="Recipe: Elven Mithril Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Mithril Gloves. Requires Create Item - Skill Lv. 3. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1494" />
+		<set name="recipe_id" val="272" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2982" name="Recipe: Brigandine Shield" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Brigandine Shield. Requires Create Item - Skill Lv. 3. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1568" />
+		<set name="recipe_id" val="273" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2983" name="Recipe: Plate Helmet" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Plate Helmet. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2940" />
+		<set name="recipe_id" val="274" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2984" name="Recipe: Salamander Skin Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Salamander Skin Boots. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1956" />
+		<set name="recipe_id" val="275" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2985" name="Recipe: Plate Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Plate Boots. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1956" />
+		<set name="recipe_id" val="276" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2986" name="Recipe: Sage's Worn Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sage's Worn Gloves. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1956" />
+		<set name="recipe_id" val="277" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2987" name="Recipe: Plate Shield" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Plate Shield. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2060" />
+		<set name="recipe_id" val="278" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2988" name="Recipe: Reinforced Mithril Gaiters" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Reinforced Mithril Gaiters. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="4740" />
+		<set name="recipe_id" val="279" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2989" name="Recipe: Chain Hood" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Chain Hood. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="3780" />
+		<set name="recipe_id" val="280" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2990" name="Recipe: Chain Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Chain Boots. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2520" />
+		<set name="recipe_id" val="281" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2991" name="Recipe: Karmian Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Karmian Boots. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2520" />
+		<set name="recipe_id" val="282" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2992" name="Recipe: Plated Leather Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Plated Leather Boots. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2520" />
+		<set name="recipe_id" val="283" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2993" name="Recipe: Dwarven Chain Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Dwarven Chain Boots. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2520" />
+		<set name="recipe_id" val="284" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2994" name="Recipe: Boots of Seal" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Boots of Seal. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2520" />
+		<set name="recipe_id" val="285" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2995" name="Recipe: Reinforced Mithril Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Reinforced Mithril Gloves. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2520" />
+		<set name="recipe_id" val="286" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2996" name="Recipe: Chain Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Chain Gloves. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2520" />
+		<set name="recipe_id" val="287" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2997" name="Recipe: Karmian Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Karmian Gloves. Requires Create Item - Skill Lv. 4 The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2520" />
+		<set name="recipe_id" val="288" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2998" name="Recipe: Chain Shield" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Chain Shield. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2660" />
+		<set name="recipe_id" val="289" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2999" name="Recipe: Plated Leather Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Plated Leather Gloves. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2980" />
+		<set name="recipe_id" val="290" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+</list>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="STR" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="stat" minOccurs="1" maxOccurs="201">
+								<xs:complexType>
+									<xs:attribute name="bonus" type="xs:decimal" use="required" />
+									<xs:attribute name="value" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="INT" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="stat" minOccurs="1" maxOccurs="201">
+								<xs:complexType>
+									<xs:attribute name="bonus" type="xs:decimal" use="required" />
+									<xs:attribute name="value" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CON" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="stat" minOccurs="1" maxOccurs="201">
+								<xs:complexType>
+									<xs:attribute name="bonus" type="xs:decimal" use="required" />
+									<xs:attribute name="value" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MEN" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="stat" minOccurs="1" maxOccurs="201">
+								<xs:complexType>
+									<xs:attribute name="bonus" type="xs:decimal" use="required" />
+									<xs:attribute name="value" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DEX" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="stat" minOccurs="1" maxOccurs="201">
+								<xs:complexType>
+									<xs:attribute name="bonus" type="xs:decimal" use="required" />
+									<xs:attribute name="value" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="WIT" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="stat" minOccurs="1" maxOccurs="201">
+								<xs:complexType>
+									<xs:attribute name="bonus" type="xs:decimal" use="required" />
+									<xs:attribute name="value" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

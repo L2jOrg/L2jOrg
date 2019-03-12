@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="13752" name="Olympiad Warrior's Ring" type="Armor">
+		<!-- Olympiad Warrior's Ring. Can be used for 60 days. Provides MP +21 and increases Accuracy, Critical Damage, Hold Resistance by 30%, and Atk. Rate +30%. The effect does not stack if two identical rings are equipped. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">42</stat>
+			<stat type="maxMp">21</stat>
+		</stats>
+	</item>
+	<item id="13753" name="Olympiad Warrior's Necklace" type="Armor">
+		<!-- Olympiad Warrior's Necklace. Can be used for 60 days. Provides MP +42 and increases Sleep/Hold/Stun Resistance by 15%, Sleep/Hold/Stun Rate +15%, and decreases skill reuse time. Reflects a part of received damage. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">85</stat>
+			<stat type="maxMp">42</stat>
+		</stats>
+	</item>
+	<item id="13754" name="Olympiad Warrior's Earring" type="Armor">
+		<!-- Olympiad Warrior's Earring. Can be used for 60 days. Provides MP +31, Stun / Mental Attack Resistance and Atk. Rate +20%. Vampiric Rage effect. The effect does not stack if two identical earrings are equipped. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">63</stat>
+			<stat type="maxMp">31</stat>
+		</stats>
+	</item>
+</list>

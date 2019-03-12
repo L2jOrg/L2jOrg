@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.mobius.gameserver.model.olympiad.*;
 import org.l2j.gameserver.model.olympiad.*;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;

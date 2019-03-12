@@ -20,14 +20,14 @@ import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 import org.l2j.commons.concurrent.ThreadPool;
-import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillData;
-import org.l2j.gameserver.mobius.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.mobius.gameserver.model.L2Object;
-import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.MagicSkillUse;
-import org.l2j.gameserver.mobius.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
+import org.l2j.gameserver.util.BuilderUtil;
 
 /**
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $

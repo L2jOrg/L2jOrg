@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Clan Hall Zones -->
+	<zone name="clanhall_gludio_monster_hall" type="ClanHallZone" shape="NPoly" minZ="-3598" maxZ="-2098">
+		<stat name="clanHallId" val="22" />
+		<node X="-16342" Y="123496" />
+		<node X="-15748" Y="123315" />
+		<node X="-15645" Y="123655" />
+		<node X="-16234" Y="123831" />
+	</zone>
+	<zone name="clanhall_gludio_onyx_hall" type="ClanHallZone" shape="NPoly" minZ="-3777" maxZ="-2277">
+		<stat name="clanHallId" val="23" />
+		<node X="-15098" Y="125352" />
+		<node X="-14789" Y="125352" />
+		<node X="-14789" Y="125816" />
+		<node X="-15098" Y="125816" />
+	</zone>	
+	<zone name="clanhall_gludio_topaz_hall" type="ClanHallZone" shape="NPoly" minZ="-3745" maxZ="-2245">
+		<stat name="clanHallId" val="24" />
+		<node X="-14028" Y="125062" />
+		<node X="-13695" Y="125070" />
+		<node X="-13695" Y="125693" />
+		<node X="-14108" Y="125693" />
+		<node X="-14108" Y="125588" />
+		<node X="-14028" Y="125588" />
+	</zone>
+	<zone name="clanhall_gludio_ruby_hall" type="ClanHallZone" shape="NPoly" minZ="-3809" maxZ="-2309">
+		<stat name="clanHallId" val="25" />
+		<node X="-12942" Y="123872" />
+		<node X="-12327" Y="123872" />
+		<node X="-12327" Y="124231" />
+		<node X="-12942" Y="124231" />
+	</zone>	
+	<zone name="clanhall_gludin_crystal_hall" type="ClanHallZone" shape="NPoly" minZ="-4076" maxZ="-2576">
+		<stat name="clanHallId" val="26" />
+		<node X="-84691" Y="151557" />
+		<node X="-84261" Y="151557" />
+		<node X="-84261" Y="151962" />
+		<node X="-84071" Y="151962" />
+		<node X="-84071" Y="151850" />
+		<node X="-83945" Y="151850" />
+		<node X="-83945" Y="151962" />
+		<node X="-83819" Y="151962" />
+		<node X="-83819" Y="152328" />
+		<node X="-84691" Y="152328" />		
+	</zone>
+	<zone name="clanhall_gludin_onyx_hall" type="ClanHallZone" shape="NPoly" minZ="-4012" maxZ="-2512">
+		<stat name="clanHallId" val="27" />
+		<node X="-84367" Y="153086" />
+		<node X="-83983" Y="153086" />
+		<node X="-83977" Y="154046" />
+		<node X="-84367" Y="154054" />
+		<node X="-84160" Y="153086" />
+		<node X="-83586" Y="153085" />
+		<node X="-83585" Y="153564" />
+		<node X="-84160" Y="153561" />			
+	</zone>
+	<zone name="clanhall_gludin_sapphire_hall" type="ClanHallZone" shape="NPoly" minZ="-4044" maxZ="-2544">
+		<stat name="clanHallId" val="28" />
+		<node X="-84463" Y="154941" />
+		<node X="-83987" Y="154941" />
+		<node X="-83986" Y="155688" />
+		<node X="-84463" Y="155685" />
+		<node X="-79657" Y="149419" />
+		<node X="-79290" Y="149424" />
+		<node X="-79284" Y="150296" />
+		<node X="-79656" Y="150298" />
+	</zone>		
+	<zone name="clanhall_gludin_moonstone_hall" type="ClanHallZone" shape="NPoly" minZ="-3948" maxZ="-2448">
+		<stat name="clanHallId" val="29" />
+		<node X="-80066" Y="149420" />
+		<node X="-79491" Y="149419" />
+		<node X="-79491" Y="149859" />
+		<node X="-80066" Y="149857" />
+	</zone>	
+	<zone name="clanhall_gludin_emerald_hall" type="ClanHallZone" shape="NPoly" minZ="-3980" maxZ="-2480">
+		<stat name="clanHallId" val="30" />
+		<node X="-80067" Y="151809" />
+		<node X="-79493" Y="151808" />
+		<node X="-79493" Y="152247" />
+		<node X="-80067" Y="152245" />
+	</zone>	
+	<zone name="clanhall_dion_the_atramental_barracks" type="ClanHallZone" shape="NPoly" minZ="-3365" maxZ="-1865">
+		<stat name="clanHallId" val="31" />
+		<node X="17597" Y="144823" />
+		<node X="17989" Y="145089" />
+		<node X="17828" Y="145333" />
+		<node X="17433" Y="145067" />
+	</zone>
+	<zone name="clanhall_dion_scarlet_barracks" type="ClanHallZone" shape="NPoly" minZ="-3333" maxZ="-1833">
+		<stat name="clanHallId" val="32" />
+		<node X="18849" Y="143099" />
+		<node X="18897" Y="143562" />
+		<node X="18615" Y="143588" />
+		<node X="18571" Y="143128" />
+	</zone>
+	<zone name="clanhall_dion_viridian_barracks" type="ClanHallZone" shape="NPoly" minZ="-3397" maxZ="-1897">
+		<stat name="clanHallId" val="33" />
+		<node X="19942" Y="145996" />
+		<node X="20414" Y="145996" />
+		<node X="20414" Y="146292" />
+		<node X="19942" Y="146292" />
+	</zone>
+	<zone name="clanhall_aden_golden_chamber" type="ClanHallZone" shape="NPoly" minZ="-2160" maxZ="-1960">
+		<stat name="clanHallId" val="36" />
+		<node X="148844" Y="22709" />
+		<node X="149424" Y="22709" />
+		<node X="149424" Y="23569" />
+		<node X="148844" Y="23569" />
+	</zone>
+	<zone name="clanhall_aden_silver_chamber" type="ClanHallZone" shape="NPoly" minZ="-2150" maxZ="-1950">
+		<stat name="clanHallId" val="37" />
+		<node X="150343" Y="23193" />
+		<node X="150943" Y="23193" />
+		<node X="150943" Y="24113" />
+		<node X="150343" Y="24113" />
+		<node X="150343" Y="23693" />
+		<node X="150305" Y="23693" />
+		<node X="150305" Y="23618" />
+		<node X="150343" Y="23618" />
+	</zone>
+	<zone name="clanhall_aden_mithril_chamber" type="ClanHallZone" shape="NPoly" minZ="-2150" maxZ="-1950">
+		<stat name="clanHallId" val="38" />
+		<node X="145362" Y="24890" />
+		<node X="145972" Y="24890" />
+		<node X="145972" Y="25820" />
+		<node X="145362" Y="25820" />
+	</zone>
+	<zone name="clanhall_aden_silver_manor" type="ClanHallZone" shape="NPoly" minZ="-2280" maxZ="-2080">
+		<stat name="clanHallId" val="39" />
+		<node X="150460" Y="26108" />
+		<node X="151036" Y="26108" />
+		<node X="151036" Y="26972" />
+		<node X="150460" Y="26972" />
+		<node X="150460" Y="26585" />
+		<node X="150450" Y="26585" />
+		<node X="150450" Y="26505" />
+		<node X="150460" Y="26505" />
+	</zone>
+	<zone name="clanhall_aden_gold_manor" type="ClanHallZone" shape="NPoly" minZ="-2290" maxZ="-2090">
+		<stat name="clanHallId" val="40" />
+		<node X="143701" Y="26661" />
+		<node X="144299" Y="26661" />
+		<node X="144299" Y="27521" />
+		<node X="143701" Y="27521" />
+	</zone>
+	<zone name="clanhall_aden_bronze_chamber" type="ClanHallZone" shape="NPoly" minZ="-2280" maxZ="-2080">
+		<stat name="clanHallId" val="41" />
+		<node X="143704" Y="27734" />
+		<node X="144324" Y="27734" />
+		<node X="144324" Y="28155" />
+		<node X="144360" Y="28155" />
+		<node X="144360" Y="28245" />
+		<node X="144324" Y="28245" />
+		<node X="144324" Y="28670" />
+		<node X="143704" Y="28670" />
+	</zone>	
+	<zone name="clanhall_giran_golden_chamber" type="ClanHallZone" shape="NPoly" minZ="-3647" maxZ="-3297">
+		<stat name="clanHallId" val="42" />
+		<node X="78059" Y="147906" />
+		<node X="79122" Y="147906" />
+		<node X="79122" Y="148296" />
+		<node X="78620" Y="148296" />
+		<node X="78620" Y="148316" />
+		<node X="78524" Y="148316" />
+		<node X="78524" Y="148296" />
+		<node X="78059" Y="148296" />
+	</zone>
+	<zone name="clanhall_giran_silver_chamber" type="ClanHallZone" shape="NPoly" minZ="-3647" maxZ="-3297">
+		<stat name="clanHallId" val="43" />
+		<node X="81859" Y="144802" />
+		<node X="82254" Y="144802" />
+		<node X="82254" Y="145870" />
+		<node X="81859" Y="145870" />
+		<node X="81859" Y="145355" />
+		<node X="81833" Y="145355" />
+		<node X="81833" Y="145274" />
+		<node X="81859" Y="145274" />
+	</zone>
+	<zone name="clanhall_giran_mithril_chamber " type="ClanHallZone" shape="NPoly" minZ="-3540" maxZ="-3190">
+		<stat name="clanHallId" val="44" />
+		<node X="83195" Y="144779" />
+		<node X="83591" Y="144779" />
+		<node X="83591" Y="145287" />
+		<node X="83615" Y="145287" />
+		<node X="83615" Y="145374" />
+		<node X="83594" Y="145374" />
+		<node X="83591" Y="145847" />
+		<node X="83195" Y="145847" />
+	</zone>
+	<zone name="clanhall_giran_bronze_chamber" type="ClanHallZone" shape="NPoly" minZ="-3647" maxZ="-3297">
+		<stat name="clanHallId" val="45" />
+		<node X="80773" Y="151053" />
+		<node X="81169" Y="151053" />
+		<node X="81169" Y="151560" />
+		<node X="81185" Y="151560" />
+		<node X="81185" Y="151653" />
+		<node X="81169" Y="151653" />
+		<node X="81169" Y="152121" />
+		<node X="80773" Y="152121" />
+	</zone>
+	<zone name="clanhall_giran_silver_manor" type="ClanHallZone" shape="NPoly" minZ="-3647" maxZ="-3297">
+		<stat name="clanHallId" val="46" />
+		<node X="81903" Y="151377" />
+		<node X="82299" Y="151377" />
+		<node X="82299" Y="152445" />
+		<node X="81903" Y="152445" />
+		<node X="81903" Y="151945" />
+		<node X="81883" Y="151945" />
+		<node X="81883" Y="151850" />
+		<node X="81903" Y="151850" />
+	</zone>
+	<zone name="clanhall_goddard_moonstone_hall" type="ClanHallZone" shape="NPoly" minZ="-2828" maxZ="-2528">
+		<stat name="clanHallId" val="47" />
+		<node X="145660" Y="-55829" />
+		<node X="146459" Y="-55730" />
+		<node X="146402" Y="-55280" />
+		<node X="145605" Y="-55378" />
+	</zone>
+	<zone name="clanhall_goddard_onyx_hall" type="ClanHallZone" shape="NPoly" minZ="-2828" maxZ="-2528">
+		<stat name="clanHallId" val="48" />
+		<node X="146936" Y="-57320" />
+		<node X="147308" Y="-56607" />
+		<node X="146906" Y="-56397" />
+		<node X="146535" Y="-57111" />
+	</zone>
+	<zone name="clanhall_goddard_emerald_hall" type="ClanHallZone" shape="NPoly" minZ="-2828" maxZ="-2528">
+		<stat name="clanHallId" val="49" />
+		<node X="148487" Y="-57327" />
+		<node X="148887" Y="-57113" />
+		<node X="148508" Y="-56405" />
+		<node X="148108" Y="-56618" />
+	</zone>
+	<zone name="clanhall_goddard_sapphire_hall" type="ClanHallZone" shape="NPoly" minZ="-2828" maxZ="-2528">
+		<stat name="clanHallId" val="50" />
+		<node X="148962" Y="-55739" />
+		<node X="149759" Y="-55838" />
+		<node X="149815" Y="-55388" />
+		<node X="149018" Y="-55289" />
+	</zone>	
+	<zone name="clanhall_rune_mont_chamber" type="ClanHallZone" shape="NPoly" minZ="850" maxZ="1150">
+		<stat name="clanHallId" val="51" />
+		<node X="37433" Y="-51016" />
+		<node X="38034" Y="-51016" />
+		<node X="38034" Y="-50565" />
+		<node X="37765" Y="-50565" />
+		<node X="37765" Y="-50445" />
+		<node X="37680" Y="-50445" />
+		<node X="37680" Y="-50565" />
+		<node X="37433" Y="-50565" />
+	</zone>
+	<zone name="clanhall_rune_astaire_chamber" type="ClanHallZone" shape="NPoly" minZ="850" maxZ="1150">
+		<stat name="clanHallId" val="52" />
+		<node X="38569" Y="-50790" />
+		<node X="39107" Y="-50522" />
+		<node X="38908" Y="-50119" />
+		<node X="38674" Y="-50238" />
+		<node X="38612" Y="-50125" />
+		<node X="38538" Y="-50162" />
+		<node X="38592" Y="-50271" />
+		<node X="38369" Y="-50386" />
+	</zone>
+	<zone name="clanhall_rune_aria_chamber" type="ClanHallZone" shape="NPoly" minZ="850" maxZ="1150">
+		<stat name="clanHallId" val="53" />
+		<node X="39123" Y="-49827" />
+		<node X="39513" Y="-50048" />
+		<node X="39808" Y="-49526" />
+		<node X="39414" Y="-49304" />
+		<node X="39286" Y="-49533" />
+		<node X="39172" Y="-49472" />
+		<node X="39136" Y="-49546" />
+		<node X="39246" Y="-49605" />
+	</zone>
+	<zone name="clanhall_rune_yiana_chamber" type="ClanHallZone" shape="NPoly" minZ="850" maxZ="1150">
+		<stat name="clanHallId" val="54" />
+		<node X="39394" Y="-48636" />
+		<node X="39846" Y="-48636" />
+		<node X="39845" Y="-47837" />
+		<node X="39394" Y="-47837" />
+		<node X="39394" Y="-48198" />
+		<node X="39347" Y="-48198" />
+		<node X="39348" Y="-48290" />
+		<node X="39394" Y="-48290" />
+	</zone>
+	<zone name="clanhall_rune_roien_chamber" type="ClanHallZone" shape="NPoly" minZ="850" maxZ="1150">
+		<stat name="clanHallId" val="55" />
+		<!-- residence_territory -->
+		<node X="39123" Y="-46646" />
+		<node X="39254" Y="-46879" />
+		<node X="39146" Y="-46939" />
+		<node X="39187" Y="-47014" />
+		<node X="39296" Y="-46958" />
+		<node X="39414" Y="-47172" />
+		<node X="39808" Y="-46954" />
+		<node X="39517" Y="-46427" />
+	</zone>
+	<zone name="clanhall_rune_luna_chamber" type="ClanHallZone" shape="NPoly" minZ="850" maxZ="1150">
+		<stat name="clanHallId" val="56" />
+		<node X="38371" Y="-46086" />
+		<node X="38577" Y="-45688" />
+		<node X="39111" Y="-45960" />
+		<node X="38906" Y="-46362" />
+		<node X="38688" Y="-46252" />
+		<node X="38631" Y="-46361" />
+		<node X="38554" Y="-46324" />
+		<node X="38610" Y="-46214" />
+	</zone>
+	<zone name="clanhall_rune_traban_chamber" type="ClanHallZone" shape="NPoly" minZ="850" maxZ="1150">
+		<stat name="clanHallId" val="57" />
+		<node X="37432" Y="-45908" />
+		<node X="37700" Y="-45908" />
+		<node X="37700" Y="-46030" />
+		<node X="37790" Y="-46030" />
+		<node X="37790" Y="-45908" />
+		<node X="38033" Y="-45908" />
+		<node X="38033" Y="-45457" />
+		<node X="37432" Y="-45457" />
+	</zone>	
+	<zone name="clanhall_schuttgart_eisen_hall" type="ClanHallZone" shape="NPoly" minZ="-1380" maxZ="-1130">
+		<stat name="clanHallId" val="58" />
+		<node X="85259" Y="-143315" />
+		<node X="86057" Y="-143416" />
+		<node X="86108" Y="-142966" />
+		<node X="85311" Y="-142865" />
+	</zone>
+	<zone name="clanhall_schuttgart_heavy_metal_hall" type="ClanHallZone" shape="NPoly" minZ="-1380" maxZ="-1130">
+		<stat name="clanHallId" val="59" />
+		<node X="86184" Y="-141594" />
+		<node X="86582" Y="-141377" />
+		<node X="86964" Y="-142085" />
+		<node X="86563" Y="-142300" />
+	</zone>
+	<zone name="clanhall_schuttgart_molten_ore_hall" type="ClanHallZone" shape="NPoly" minZ="-1380" maxZ="-1130">
+		<stat name="clanHallId" val="60" />
+		<node X="87767" Y="-142096" />
+		<node X="88135" Y="-141383" />
+		<node X="88537" Y="-141591" />
+		<node X="88167" Y="-142307" />
+	</zone>
+	<zone name="clanhall_schuttgart_titan_hall" type="ClanHallZone" shape="NPoly" minZ="-1380" maxZ="-1130">
+		<stat name="clanHallId" val="61" />
+		<node X="88668" Y="-143423" />
+		<node X="89462" Y="-143324" />
+		<node X="89409" Y="-142877" />
+		<node X="88613" Y="-142975" />
+	</zone>	
+	<zone name="clanhall_outskirts_gludio_emerald_hall" type="ClanHallZone" shape="NPoly" minZ="-3909" maxZ="-3509">
+		<stat name="clanHallId" val="65" />		
+		<node X="-27574" Y="122619" />
+		<node X="-27153" Y="122619" />
+		<node X="-27152" Y="122000" />
+		<node X="-27475" Y="122005" />
+		<node X="-27479" Y="122496" />
+		<node X="-27574" Y="122497" />
+	</zone>		
+	<zone name="clanhall_outskirts_gludio_crystal_hall" type="ClanHallZone" shape="NPoly" minZ="-3925" maxZ="-3525">
+		<stat name="clanHallId" val="66" />	
+		<node X="-28358" Y="121524" />
+		<node X="-28358" Y="121959" />
+		<node X="-28647" Y="121940" />
+		<node X="-28646" Y="121532" />
+	</zone>	
+	<zone name="clanhall_outskirts_gludio_sapphire_hall" type="ClanHallZone" shape="NPoly" minZ="-3913" maxZ="-3513">
+		<stat name="clanHallId" val="67" />	
+		<node X="-27878" Y="121068" />
+		<node X="-27752" Y="121070" />
+		<node X="-27760" Y="120675" />
+		<node X="-28371" Y="120647" />
+		<node X="-28372" Y="120973" />
+		<node X="-27878" Y="120977" />
+	</zone>
+	<zone name="clanhall_outskirts_gludio_aquamarine_hall" type="ClanHallZone" shape="NPoly" minZ="-3913" maxZ="-3513">
+		<stat name="clanHallId" val="68" />
+		<node X="-27616" Y="121886" />
+		<node X="-27615" Y="121450" />
+		<node X="-27326" Y="121470" />
+		<node X="-27327" Y="121867" />
+	</zone>	
+	<zone name="clanhall_outskirts_dion_blue_barracks" type="ClanHallZone" shape="NPoly" minZ="-3817" maxZ="-3417">
+		<stat name="clanHallId" val="69" />
+		<node X="16165" Y="156055" />
+		<node X="16165" Y="155780" />
+		<node X="16632" Y="155780" />
+		<node X="16632" Y="156052" />
+	</zone>	
+	<zone name="clanhall_outskirts_dion_brown_barracks" type="ClanHallZone" shape="NPoly" minZ="-3816" maxZ="-3416">
+		<stat name="clanHallId" val="70" />
+		<node X="15203" Y="156227" />
+		<node X="15203" Y="155953" />
+		<node X="15670" Y="155954" />
+		<node X="15670" Y="156227" />
+	</zone>	
+	<zone name="clanhall_outskirts_dion_yellow_barracks" type="ClanHallZone" shape="NPoly" minZ="-3816" maxZ="-3416">
+		<stat name="clanHallId" val="71" />
+		<node X="14343" Y="155201" />
+		<node X="14618" Y="155201" />
+		<node X="14618" Y="155668" />
+		<node X="14344" Y="155668" />
+	</zone>
+	<zone name="clanhall_outskirts_dion_white_barracks" type="ClanHallZone" shape="NPoly" minZ="-3697" maxZ="-3297">
+		<stat name="clanHallId" val="72" />
+		<node X="15667" Y="154464" />
+		<node X="15942" Y="154465" />
+		<node X="15942" Y="154931" />
+		<node X="15668" Y="154931" />
+	</zone>	
+	<zone name="clanhall_floran_black_barracks" type="ClanHallZone" shape="NPoly" minZ="-3689" maxZ="-3289">
+		<stat name="clanHallId" val="73" />	
+		<node X="17404" Y="169510" />
+		<node X="17404" Y="169787" />
+		<node X="16940" Y="169787" />
+		<node X="16940" Y="169509" />
+	</zone>	
+	<zone name="clanhall_floran_green_barracks" type="ClanHallZone" shape="NPoly" minZ="-3688" maxZ="-3288">
+		<stat name="clanHallId" val="74" />	
+		<node X="18200" Y="170592" />
+		<node X="18199" Y="170868" />
+		<node X="17736" Y="170870" />
+		<node X="17736" Y="170592" />
+	</zone>										
+</list>

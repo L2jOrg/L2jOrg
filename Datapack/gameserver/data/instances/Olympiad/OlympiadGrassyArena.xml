@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Grassy Arena -->
+<instance id="147" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
+	<doorlist>
+		<door id="17100001" />
+		<door id="17100002" />
+	</doorlist>
+	<spawnlist>
+		<group>
+			<npc id="36402" x="-89400" y="-252843" z="-3341" heading="0" />
+			<npc id="36402" x="-86763" y="-252843" z="-3341" heading="0" />
+		</group>
+	</spawnlist>
+</instance>

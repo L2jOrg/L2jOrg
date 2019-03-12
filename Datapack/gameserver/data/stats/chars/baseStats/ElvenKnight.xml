@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/charTemplate.xsd">
+	<classId>19</classId>
+	<staticData>
+		<baseINT>23</baseINT>
+		<baseSTR>36</baseSTR>
+		<baseCON>36</baseCON>
+		<baseMEN>26</baseMEN>
+		<baseDEX>35</baseDEX>
+		<baseWIT>14</baseWIT>
+		<physicalAbnormalResist>10</physicalAbnormalResist>
+		<magicAbnormalResist>15</magicAbnormalResist>
+		<creationPoints>
+			<node x="46045" y="41251" z="-3440" />
+			<node x="46117" y="41247" z="-3440" />
+			<node x="46182" y="41198" z="-3440" />
+			<node x="46115" y="41141" z="-3440" />
+			<node x="46048" y="41141" z="-3440" />
+			<node x="45978" y="41196" z="-3440" />
+		</creationPoints>
+		<basePAtk>4</basePAtk>
+		<baseCritRate>4</baseCritRate>
+		<baseMCritRate>5</baseMCritRate>
+		<baseAtkType>FIST</baseAtkType>
+		<basePAtkSpd>300</basePAtkSpd>
+		<baseMAtkSpd>333</baseMAtkSpd>
+		<basePDef>
+			<chest>31</chest>
+			<legs>18</legs>
+			<head>12</head>
+			<feet>7</feet>
+			<gloves>8</gloves>
+			<underwear>3</underwear>
+			<cloak>1</cloak>
+		</basePDef>
+		<baseMAtk>6</baseMAtk>
+		<baseMDef>
+			<rear>9</rear>
+			<lear>9</lear>
+			<rfinger>5</rfinger>
+			<lfinger>5</lfinger>
+			<neck>13</neck>
+		</baseMDef>
+		<baseCanPenetrate>0</baseCanPenetrate>
+		<baseAtkRange>20</baseAtkRange>
+		<baseDamRange>
+			<verticalDirection>0</verticalDirection>
+			<horizontalDirection>0</horizontalDirection>
+			<distance>26</distance>
+			<width>120</width>
+		</baseDamRange>
+		<baseRndDam>10</baseRndDam>
+		<baseMoveSpd>
+			<walk>90</walk>
+			<run>143</run>
+			<slowSwim>50</slowSwim>
+			<fastSwim>50</fastSwim>
+		</baseMoveSpd>
+		<baseBreath>150</baseBreath>
+		<baseSafeFall>350</baseSafeFall>
+		<collisionMale>
+			<radius>7.5</radius>
+			<height>24</height>
+		</collisionMale>
+		<collisionFemale>
+			<radius>7.5</radius>
+			<height>23</height>
+		</collisionFemale>
+	</staticData>
+	<lvlUpgainData>
+		<level val="1">
+			<hp>89.0</hp>
+			<mp>30.0</mp>
+			<cp>44.5</cp>
+			<hpRegen>2.0</hpRegen>
+			<mpRegen>0.9</mpRegen>
+			<cpRegen>2.0</cpRegen>
+		</level>
+		<level val="2">
+			<hp>101.74</hp>
+			<mp>35.46</mp>
+			<cp>50.87</cp>
+			<hpRegen>2.05</hpRegen>
+			<mpRegen>0.9</mpRegen>
+			<cpRegen>2.0</cpRegen>
+		</level>
+		<level val="3">
+			<hp>114.62</hp>
+			<mp>40.98</mp>
+			<cp>57.31</cp>
+			<hpRegen>2.1</hpRegen>
+			<mpRegen>0.9</mpRegen>
+			<cpRegen>2.0</cpRegen>
+		</level>
+		<level val="4">
+			<hp>127.64</hp>
+			<mp>46.56</mp>
+			<cp>63.82</cp>
+			<hpRegen>2.15</hpRegen>
+			<mpRegen>0.9</mpRegen>
+			<cpRegen>2.0</cpRegen>
+		</level>
+		<level val="5">
+			<hp>140.8</hp>
+			<mp>52.2</mp>
+			<cp>70.4</cp>
+			<hpRegen>2.2</hpRegen>
+			<mpRegen>0.9</mpRegen>
+			<cpRegen>2.0</cpRegen>
+		</level>
+		<level val="6">
+			<hp>154.1</hp>
+			<mp>57.9</mp>
+			<cp>77.05</cp>
+			<hpRegen>2.25</hpRegen>
+			<mpRegen>0.9</mpRegen>
+			<cpRegen>2.0</cpRegen>
+		</level>
+		<level val="7">
+			<hp>167.54</hp>
+			<mp>63.66</mp>
+			<cp>83.77</cp>
+			<hpRegen>2.3</hpRegen>
+			<mpRegen>0.9</mpRegen>
+			<cpRegen>2.0</cpRegen>
+		</level>
+		<level val="8">
+			<hp>181.12</hp>
+			<mp>69.48</mp>
+			<cp>90.56</cp>
+			<hpRegen>2.35</hpRegen>
+			<mpRegen>0.9</mpRegen>
+			<cpRegen>2.0</cpRegen>
+		</level>
+		<level val="9">
+			<hp>194.84</hp>
+			<mp>75.36</mp>
+			<cp>97.42</cp>
+			<hpRegen>2.4</hpRegen>
+			<mpRegen>0.9</mpRegen>
+			<cpRegen>2.0</cpRegen>
+		</level>
+		<level val="10">
+			<hp>208.7</hp>
+			<mp>81.3</mp>
+			<cp>104.35</cp>
+			<hpRegen>2.45</hpRegen>
+			<mpRegen>0.9</mpRegen>
+			<cpRegen>2.0</cpRegen>
+		</level>
+		<level val="11">
+			<hp>222.7</hp>
+			<mp>87.3</mp>
+			<cp>111.35</cp>
+			<hpRegen>2.5</hpRegen>
+			<mpRegen>1.2</mpRegen>
+			<cpRegen>2.5</cpRegen>
+		</level>
+		<level val="12">
+			<hp>236.84</hp>
+			<mp>93.36</mp>
+			<cp>118.42</cp>
+			<hpRegen>2.6</hpRegen>
+			<mpRegen>1.2</mpRegen>
+			<cpRegen>2.5</cpRegen>
+		</level>
+		<level val="13">
+			<hp>251.12</hp>
+			<mp>99.48</mp>
+			<cp>125.56</cp>
+			<hpRegen>2.7</hpRegen>
+			<mpRegen>1.2</mpRegen>
+			<cpRegen>2.5</cpRegen>
+		</level>
+		<level val="14">
+			<hp>265.54</hp>
+			<mp>105.66</mp>
+			<cp>132.77</cp>
+			<hpRegen>2.8</hpRegen>
+			<mpRegen>1.2</mpRegen>
+			<cpRegen>2.5</cpRegen>
+		</level>
+		<level val="15">
+			<hp>280.1</hp>
+			<mp>111.9</mp>
+			<cp>140.05</cp>
+			<hpRegen>2.9</hpRegen>
+			<mpRegen>1.2</mpRegen>
+			<cpRegen>2.5</cpRegen>
+		</level>
+		<level val="16">
+			<hp>294.8</hp>
+			<mp>118.2</mp>
+			<cp>147.4</cp>
+			<hpRegen>3.0</hpRegen>
+			<mpRegen>1.2</mpRegen>
+			<cpRegen>2.5</cpRegen>
+		</level>
+		<level val="17">
+			<hp>309.64</hp>
+			<mp>124.56</mp>
+			<cp>154.82</cp>
+			<hpRegen>3.1</hpRegen>
+			<mpRegen>1.2</mpRegen>
+			<cpRegen>2.5</cpRegen>
+		</level>
+		<level val="18">
+			<hp>324.62</hp>
+			<mp>130.98</mp>
+			<cp>162.31</cp>
+			<hpRegen>3.2</hpRegen>
+			<mpRegen>1.2</mpRegen>
+			<cpRegen>2.5</cpRegen>
+		</level>
+		<level val="19">
+			<hp>339.74</hp>
+			<mp>137.46</mp>
+			<cp>169.87</cp>
+			<hpRegen>3.3</hpRegen>
+			<mpRegen>1.2</mpRegen>
+			<cpRegen>2.5</cpRegen>
+		</level>
+		<level val="20">
+			<hp>355.0</hp>
+			<mp>144.0</mp>
+			<cp>177.5</cp>
+			<hpRegen>3.4</hpRegen>
+			<mpRegen>1.2</mpRegen>
+			<cpRegen>2.5</cpRegen>
+		</level>
+		<level val="21">
+			<hp>388.0</hp>
+			<mp>153.9</mp>
+			<cp>194.0</cp>
+			<hpRegen>3.5</hpRegen>
+			<mpRegen>1.5</mpRegen>
+			<cpRegen>3.5</cpRegen>
+		</level>
+		<level val="22">
+			<hp>421.3</hp>
+			<mp>163.89</mp>
+			<cp>210.65</cp>
+			<hpRegen>3.6</hpRegen>
+			<mpRegen>1.5</mpRegen>
+			<cpRegen>3.5</cpRegen>
+		</level>
+		<level val="23">
+			<hp>454.9</hp>
+			<mp>173.97</mp>
+			<cp>227.45</cp>
+			<hpRegen>3.7</hpRegen>
+			<mpRegen>1.5</mpRegen>
+			<cpRegen>3.5</cpRegen>
+		</level>
+		<level val="24">
+			<hp>488.8</hp>
+			<mp>184.14</mp>
+			<cp>244.4</cp>
+			<hpRegen>3.8</hpRegen>
+			<mpRegen>1.5</mpRegen>
+			<cpRegen>3.5</cpRegen>
+		</level>
+		<level val="25">
+			<hp>523.0</hp>
+			<mp>194.4</mp>
+			<cp>261.5</cp>
+			<hpRegen>3.9</hpRegen>
+			<mpRegen>1.5</mpRegen>
+			<cpRegen>3.5</cpRegen>
+		</level>
+		<level val="26">
+			<hp>557.5</hp>
+			<mp>204.75</mp>
+			<cp>278.75</cp>
+			<hpRegen>4.0</hpRegen>
+			<mpRegen>1.5</mpRegen>
+			<cpRegen>3.5</cpRegen>
+		</level>
+		<level val="27">
+			<hp>592.3</hp>
+			<mp>215.19</mp>
+			<cp>296.15</cp>
+			<hpRegen>4.1</hpRegen>
+			<mpRegen>1.5</mpRegen>
+			<cpRegen>3.5</cpRegen>
+		</level>
+		<level val="28">
+			<hp>627.4</hp>
+			<mp>225.72</mp>
+			<cp>313.7</cp>
+			<hpRegen>4.2</hpRegen>
+			<mpRegen>1.5</mpRegen>
+			<cpRegen>3.5</cpRegen>
+		</level>
+		<level val="29">
+			<hp>662.8</hp>
+			<mp>236.34</mp>
+			<cp>331.4</cp>
+			<hpRegen>4.3</hpRegen>
+			<mpRegen>1.5</mpRegen>
+			<cpRegen>3.5</cpRegen>
+		</level>
+		<level val="30">
+			<hp>698.5</hp>
+			<mp>247.05</mp>
+			<cp>349.25</cp>
+			<hpRegen>4.4</hpRegen>
+			<mpRegen>1.5</mpRegen>
+			<cpRegen>3.5</cpRegen>
+		</level>
+		<level val="31">
+			<hp>734.5</hp>
+			<mp>257.85</mp>
+			<cp>367.25</cp>
+			<hpRegen>4.5</hpRegen>
+			<mpRegen>1.8</mpRegen>
+			<cpRegen>4.5</cpRegen>
+		</level>
+		<level val="32">
+			<hp>770.8</hp>
+			<mp>268.74</mp>
+			<cp>385.4</cp>
+			<hpRegen>4.6</hpRegen>
+			<mpRegen>1.8</mpRegen>
+			<cpRegen>4.5</cpRegen>
+		</level>
+		<level val="33">
+			<hp>807.4</hp>
+			<mp>279.72</mp>
+			<cp>403.7</cp>
+			<hpRegen>4.7</hpRegen>
+			<mpRegen>1.8</mpRegen>
+			<cpRegen>4.5</cpRegen>
+		</level>
+		<level val="34">
+			<hp>844.3</hp>
+			<mp>290.79</mp>
+			<cp>422.15</cp>
+			<hpRegen>4.8</hpRegen>
+			<mpRegen>1.8</mpRegen>
+			<cpRegen>4.5</cpRegen>
+		</level>
+		<level val="35">
+			<hp>881.5</hp>
+			<mp>301.95</mp>
+			<cp>440.75</cp>
+			<hpRegen>4.9</hpRegen>
+			<mpRegen>1.8</mpRegen>
+			<cpRegen>4.5</cpRegen>
+		</level>
+		<level val="36">
+			<hp>919.0</hp>
+			<mp>313.2</mp>
+			<cp>459.5</cp>
+			<hpRegen>5.0</hpRegen>
+			<mpRegen>1.8</mpRegen>
+			<cpRegen>4.5</cpRegen>
+		</level>
+		<level val="37">
+			<hp>956.8</hp>
+			<mp>324.54</mp>
+			<cp>478.4</cp>
+			<hpRegen>5.1</hpRegen>
+			<mpRegen>1.8</mpRegen>
+			<cpRegen>4.5</cpRegen>
+		</level>
+		<level val="38">
+			<hp>994.9</hp>
+			<mp>335.97</mp>
+			<cp>497.45</cp>
+			<hpRegen>5.2</hpRegen>
+			<mpRegen>1.8</mpRegen>
+			<cpRegen>4.5</cpRegen>
+		</level>
+		<level val="39">
+			<hp>1033.3</hp>
+			<mp>347.49</mp>
+			<cp>516.65</cp>
+			<hpRegen>5.3</hpRegen>
+			<mpRegen>1.8</mpRegen>
+			<cpRegen>4.5</cpRegen>
+		</level>
+		<level val="40">
+			<hp>1072.0</hp>
+			<mp>359.1</mp>
+			<cp>536.0</cp>
+			<hpRegen>5.4</hpRegen>
+			<mpRegen>1.8</mpRegen>
+			<cpRegen>4.5</cpRegen>
+		</level>
+		<level val="41">
+			<hp>1111.0</hp>
+			<mp>370.8</mp>
+			<cp>555.5</cp>
+			<hpRegen>5.5</hpRegen>
+			<mpRegen>2.1</mpRegen>
+			<cpRegen>5.5</cpRegen>
+		</level>
+		<level val="42">
+			<hp>1150.3</hp>
+			<mp>382.59</mp>
+			<cp>575.15</cp>
+			<hpRegen>5.6</hpRegen>
+			<mpRegen>2.1</mpRegen>
+			<cpRegen>5.5</cpRegen>
+		</level>
+		<level val="43">
+			<hp>1189.9</hp>
+			<mp>394.47</mp>
+			<cp>594.95</cp>
+			<hpRegen>5.7</hpRegen>
+			<mpRegen>2.1</mpRegen>
+			<cpRegen>5.5</cpRegen>
+		</level>
+		<level val="44">
+			<hp>1229.8</hp>
+			<mp>406.44</mp>
+			<cp>614.9</cp>
+			<hpRegen>5.8</hpRegen>
+			<mpRegen>2.1</mpRegen>
+			<cpRegen>5.5</cpRegen>
+		</level>
+		<level val="45">
+			<hp>1270.0</hp>
+			<mp>418.5</mp>
+			<cp>635.0</cp>
+			<hpRegen>5.9</hpRegen>
+			<mpRegen>2.1</mpRegen>
+			<cpRegen>5.5</cpRegen>
+		</level>
+		<level val="46">
+			<hp>1310.5</hp>
+			<mp>430.65</mp>
+			<cp>655.25</cp>
+			<hpRegen>6.0</hpRegen>
+			<mpRegen>2.1</mpRegen>
+			<cpRegen>5.5</cpRegen>
+		</level>
+		<level val="47">
+			<hp>1351.3</hp>
+			<mp>442.89</mp>
+			<cp>675.65</cp>
+			<hpRegen>6.1</hpRegen>
+			<mpRegen>2.1</mpRegen>
+			<cpRegen>5.5</cpRegen>
+		</level>
+		<level val="48">
+			<hp>1392.4</hp>
+			<mp>455.22</mp>
+			<cp>696.2</cp>
+			<hpRegen>6.2</hpRegen>
+			<mpRegen>2.1</mpRegen>
+			<cpRegen>5.5</cpRegen>
+		</level>
+		<level val="49">
+			<hp>1433.8</hp>
+			<mp>467.64</mp>
+			<cp>716.9</cp>
+			<hpRegen>6.3</hpRegen>
+			<mpRegen>2.1</mpRegen>
+			<cpRegen>5.5</cpRegen>
+		</level>
+		<level val="50">
+			<hp>1475.5</hp>
+			<mp>480.15</mp>
+			<cp>737.75</cp>
+			<hpRegen>6.4</hpRegen>
+			<mpRegen>2.1</mpRegen>
+			<cpRegen>5.5</cpRegen>
+		</level>
+		<level val="51">
+			<hp>1517.5</hp>
+			<mp>492.75</mp>
+			<cp>758.75</cp>
+			<hpRegen>6.5</hpRegen>
+			<mpRegen>2.4</mpRegen>
+			<cpRegen>6.5</cpRegen>
+		</level>
+		<level val="52">
+			<hp>1559.8</hp>
+			<mp>505.44</mp>
+			<cp>779.9</cp>
+			<hpRegen>6.6</hpRegen>
+			<mpRegen>2.4</mpRegen>
+			<cpRegen>6.5</cpRegen>
+		</level>
+		<level val="53">
+			<hp>1602.4</hp>
+			<mp>518.22</mp>
+			<cp>801.2</cp>
+			<hpRegen>6.7</hpRegen>
+			<mpRegen>2.4</mpRegen>
+			<cpRegen>6.5</cpRegen>
+		</level>
+		<level val="54">
+			<hp>1645.3</hp>
+			<mp>531.09</mp>
+			<cp>822.65</cp>
+			<hpRegen>6.8</hpRegen>
+			<mpRegen>2.4</mpRegen>
+			<cpRegen>6.5</cpRegen>
+		</level>
+		<level val="55">
+			<hp>1688.5</hp>
+			<mp>544.05</mp>
+			<cp>844.25</cp>
+			<hpRegen>6.9</hpRegen>
+			<mpRegen>2.4</mpRegen>
+			<cpRegen>6.5</cpRegen>
+		</level>
+		<level val="56">
+			<hp>1732.0</hp>
+			<mp>557.1</mp>
+			<cp>866.0</cp>
+			<hpRegen>7.0</hpRegen>
+			<mpRegen>2.4</mpRegen>
+			<cpRegen>6.5</cpRegen>
+		</level>
+		<level val="57">
+			<hp>1775.8</hp>
+			<mp>570.24</mp>
+			<cp>887.9</cp>
+			<hpRegen>7.1</hpRegen>
+			<mpRegen>2.4</mpRegen>
+			<cpRegen>6.5</cpRegen>
+		</level>
+		<level val="58">
+			<hp>1819.9</hp>
+			<mp>583.47</mp>
+			<cp>909.95</cp>
+			<hpRegen>7.2</hpRegen>
+			<mpRegen>2.4</mpRegen>
+			<cpRegen>6.5</cpRegen>
+		</level>
+		<level val="59">
+			<hp>1864.3</hp>
+			<mp>596.79</mp>
+			<cp>932.15</cp>
+			<hpRegen>7.3</hpRegen>
+			<mpRegen>2.4</mpRegen>
+			<cpRegen>6.5</cpRegen>
+		</level>
+		<level val="60">
+			<hp>1909.0</hp>
+			<mp>610.2</mp>
+			<cp>954.5</cp>
+			<hpRegen>7.4</hpRegen>
+			<mpRegen>2.4</mpRegen>
+			<cpRegen>6.5</cpRegen>
+		</level>
+		<level val="61">
+			<hp>1954.0</hp>
+			<mp>623.7</mp>
+			<cp>977.0</cp>
+			<hpRegen>7.5</hpRegen>
+			<mpRegen>2.7</mpRegen>
+			<cpRegen>7.5</cpRegen>
+		</level>
+		<level val="62">
+			<hp>1999.3</hp>
+			<mp>637.29</mp>
+			<cp>999.65</cp>
+			<hpRegen>7.6</hpRegen>
+			<mpRegen>2.7</mpRegen>
+			<cpRegen>7.5</cpRegen>
+		</level>
+		<level val="63">
+			<hp>2044.9</hp>
+			<mp>650.97</mp>
+			<cp>1022.45</cp>
+			<hpRegen>7.7</hpRegen>
+			<mpRegen>2.7</mpRegen>
+			<cpRegen>7.5</cpRegen>
+		</level>
+		<level val="64">
+			<hp>2090.8</hp>
+			<mp>664.74</mp>
+			<cp>1045.4</cp>
+			<hpRegen>7.8</hpRegen>
+			<mpRegen>2.7</mpRegen>
+			<cpRegen>7.5</cpRegen>
+		</level>
+		<level val="65">
+			<hp>2137.0</hp>
+			<mp>678.6</mp>
+			<cp>1068.5</cp>
+			<hpRegen>7.9</hpRegen>
+			<mpRegen>2.7</mpRegen>
+			<cpRegen>7.5</cpRegen>
+		</level>
+		<level val="66">
+			<hp>2183.5</hp>
+			<mp>692.55</mp>
+			<cp>1091.75</cp>
+			<hpRegen>8.0</hpRegen>
+			<mpRegen>2.7</mpRegen>
+			<cpRegen>7.5</cpRegen>
+		</level>
+		<level val="67">
+			<hp>2230.3</hp>
+			<mp>706.59</mp>
+			<cp>1115.15</cp>
+			<hpRegen>8.1</hpRegen>
+			<mpRegen>2.7</mpRegen>
+			<cpRegen>7.5</cpRegen>
+		</level>
+		<level val="68">
+			<hp>2277.4</hp>
+			<mp>720.72</mp>
+			<cp>1138.7</cp>
+			<hpRegen>8.2</hpRegen>
+			<mpRegen>2.7</mpRegen>
+			<cpRegen>7.5</cpRegen>
+		</level>
+		<level val="69">
+			<hp>2324.8</hp>
+			<mp>734.94</mp>
+			<cp>1162.4</cp>
+			<hpRegen>8.3</hpRegen>
+			<mpRegen>2.7</mpRegen>
+			<cpRegen>7.5</cpRegen>
+		</level>
+		<level val="70">
+			<hp>2372.5</hp>
+			<mp>749.25</mp>
+			<cp>1186.25</cp>
+			<hpRegen>8.4</hpRegen>
+			<mpRegen>2.7</mpRegen>
+			<cpRegen>7.5</cpRegen>
+		</level>
+		<level val="71">
+			<hp>2420.5</hp>
+			<mp>763.65</mp>
+			<cp>1210.25</cp>
+			<hpRegen>8.5</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="72">
+			<hp>2468.8</hp>
+			<mp>778.14</mp>
+			<cp>1234.4</cp>
+			<hpRegen>8.6</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="73">
+			<hp>2517.4</hp>
+			<mp>792.72</mp>
+			<cp>1258.7</cp>
+			<hpRegen>8.7</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="74">
+			<hp>2566.3</hp>
+			<mp>807.39</mp>
+			<cp>1283.15</cp>
+			<hpRegen>8.8</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="75">
+			<hp>2615.5</hp>
+			<mp>822.15</mp>
+			<cp>1307.75</cp>
+			<hpRegen>8.9</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="76">
+			<hp>2665.0</hp>
+			<mp>837.0</mp>
+			<cp>1332.5</cp>
+			<hpRegen>9.0</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="77">
+			<hp>2714.8</hp>
+			<mp>851.94</mp>
+			<cp>1357.4</cp>
+			<hpRegen>9.1</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="78">
+			<hp>2764.9</hp>
+			<mp>866.97</mp>
+			<cp>1382.45</cp>
+			<hpRegen>9.2</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="79">
+			<hp>2815.3</hp>
+			<mp>882.09</mp>
+			<cp>1407.65</cp>
+			<hpRegen>9.3</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="80">
+			<hp>2866.0</hp>
+			<mp>897.3</mp>
+			<cp>1433.0</cp>
+			<hpRegen>9.4</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="81">
+			<hp>2917.0</hp>
+			<mp>912.6</mp>
+			<cp>1458.5</cp>
+			<hpRegen>9.5</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="82">
+			<hp>2968.3</hp>
+			<mp>927.99</mp>
+			<cp>1484.15</cp>
+			<hpRegen>9.6</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="83">
+			<hp>3019.9</hp>
+			<mp>943.47</mp>
+			<cp>1509.95</cp>
+			<hpRegen>9.7</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="84">
+			<hp>3071.8</hp>
+			<mp>959.04</mp>
+			<cp>1535.9</cp>
+			<hpRegen>9.8</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="85">
+			<hp>3124.0</hp>
+			<mp>974.7</mp>
+			<cp>1562.0</cp>
+			<hpRegen>9.9</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="86">
+			<hp>3176.5</hp>
+			<mp>990.45</mp>
+			<cp>1588.25</cp>
+			<hpRegen>10</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="87">
+			<hp>3229.3</hp>
+			<mp>1006.29</mp>
+			<cp>1614.65</cp>
+			<hpRegen>10.1</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="88">
+			<hp>3282.4</hp>
+			<mp>1022.22</mp>
+			<cp>1641.2</cp>
+			<hpRegen>10.2</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="89">
+			<hp>3335.8</hp>
+			<mp>1038.24</mp>
+			<cp>1667.9</cp>
+			<hpRegen>10.3</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="90">
+			<hp>3389.5</hp>
+			<mp>1054.35</mp>
+			<cp>1694.75</cp>
+			<hpRegen>10.4</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="91">
+			<hp>3443.5</hp>
+			<mp>1070.55</mp>
+			<cp>1721.75</cp>
+			<hpRegen>10.5</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="92">
+			<hp>3497.8</hp>
+			<mp>1086.84</mp>
+			<cp>1748.9</cp>
+			<hpRegen>10.6</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="93">
+			<hp>3552.4</hp>
+			<mp>1103.22</mp>
+			<cp>1776.2</cp>
+			<hpRegen>10.7</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="94">
+			<hp>3607.3</hp>
+			<mp>1119.69</mp>
+			<cp>1803.65</cp>
+			<hpRegen>10.8</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="95">
+			<hp>3662.5</hp>
+			<mp>1136.25</mp>
+			<cp>1831.25</cp>
+			<hpRegen>10.9</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="96">
+			<hp>3718.0</hp>
+			<mp>1152.9</mp>
+			<cp>1859.0</cp>
+			<hpRegen>11</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="97">
+			<hp>3773.8</hp>
+			<mp>1169.64</mp>
+			<cp>1886.9</cp>
+			<hpRegen>11.1</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="98">
+			<hp>3829.9</hp>
+			<mp>1186.47</mp>
+			<cp>1914.95</cp>
+			<hpRegen>11.2</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="99">
+			<hp>3886.3</hp>
+			<mp>1203.39</mp>
+			<cp>1943.15</cp>
+			<hpRegen>11.3</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="100">
+			<hp>3943</hp>
+			<mp>1220.4</mp>
+			<cp>1971.5</cp>
+			<hpRegen>11.4</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="101">
+			<hp>4000</hp>
+			<mp>1237.5</mp>
+			<cp>2000</cp>
+			<hpRegen>11.5</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="102">
+			<hp>4057.3</hp>
+			<mp>1254.69</mp>
+			<cp>2028.65</cp>
+			<hpRegen>11.6</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="103">
+			<hp>4114.9</hp>
+			<mp>1271.97</mp>
+			<cp>2057.45</cp>
+			<hpRegen>11.7</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="104">
+			<hp>4172.8</hp>
+			<mp>1289.34</mp>
+			<cp>2086.4</cp>
+			<hpRegen>11.8</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="105">
+			<hp>4231</hp>
+			<mp>1306.8</mp>
+			<cp>2115.5</cp>
+			<hpRegen>11.9</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="106">
+			<hp>4289.5</hp>
+			<mp>1324.35</mp>
+			<cp>2144.75</cp>
+			<hpRegen>12</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="107">
+			<hp>4348.3</hp>
+			<mp>1341.99</mp>
+			<cp>2174.15</cp>
+			<hpRegen>12.1</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+	</lvlUpgainData>
+</list>

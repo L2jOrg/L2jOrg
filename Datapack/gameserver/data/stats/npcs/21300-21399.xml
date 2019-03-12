@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="21396" level="80" type="L2Npc" name="Carrion Scarab">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="130" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="21397" level="80" type="L2Npc" name="Carrion Scarab">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="130" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="21398" level="80" type="L2Npc" name="Soldier Scarab">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="21399" level="80" type="L2Npc" name="Soldier Scarab">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+</list>

@@ -5,7 +5,6 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.*;
-import org.l2j.gameserver.mobius.gameserver.enums.*;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.holders.DropHolder;
@@ -675,8 +674,8 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
      */
     private ItemHolder calculateDrop(DropHolder dropItem, L2Character victim, L2Character killer) {
         switch (dropItem.getDropType()) {
-            case DropType.DROP:
-            case DropType.LUCKY: {
+            case DROP:
+            case LUCKY: {
                 final L2Item item = ItemTable.getInstance().getTemplate(dropItem.getItemId());
 
                 // chance
@@ -742,7 +741,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
                 }
                 break;
             }
-            case DropType.SPOIL: {
+            case SPOIL: {
                 // chance
                 double rateChance = Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER;
                 // premium chance

@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="37662" name="Refined Romantic Chapeau: Gold" additionalName="100-day" type="Armor">
+		<!-- Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Holiday Hat: resurrects dead characters using Spirit Ore. Bonus XP +50%. Cooldown: 30 minutes. 2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 20 minutes. Cooldown: 60 minutes. 3. Side Effect: makes character's head bigger for 10 minutes. Cooldown: 30 minutes. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_gold" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="37665" name="Refined Romantic Chapeau: Yellow" additionalName="33-day" type="Armor">
+		<!-- Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Holiday Hat: resurrects dead characters using Spirit Ore. Bonus XP +50%. Cooldown: 30 minutes. 2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 20 minutes. Cooldown: 60 minutes. 3. Side Effect: makes character's head bigger for 10 minutes. Cooldown: 30 minutes. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_yellow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="37688" name="Valentine Dagger" type="Weapon">
+		<!-- Modifies the appearance of a weapon. Valentine Dagger form. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="500" />
+		<stats>
+			<stat type="pAtk">685</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="37689" name="Valentine One-handed Sword" type="Weapon">
+		<!-- Modifies the appearance of a weapon. Valentine One-handed Sword form. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="500" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="37690" name="Valentine Two-handed Sword" type="Weapon">
+		<!-- Modifies the appearance of a weapon. Valentine Two-handed Sword form. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="500" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="37691" name="Valentine One-handed Blunt Weapon" type="Weapon">
+		<!-- Modifies the appearance of a weapon. Valentine One-handed Blunt Weapon form. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="500" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="37692" name="Valentine Fist Weapon" type="Weapon">
+		<!-- Modifies the appearance of a weapon. Valentine Fist Weapon form. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="500" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="37693" name="Valentine Spear" type="Weapon">
+		<!-- Modifies the appearance of a weapon. Valentine Spear form. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="weapon_type" val="POLE" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="500" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+	</item>
+	<item id="37694" name="Valentine Bow" type="Weapon">
+		<!-- Modifies the appearance of a weapon. Valentine Bow form. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="weapon_type" val="BOW" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="500" />
+		<stats>
+			<stat type="pAtk">1481</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="37695" name="Valentine Crossbow" type="Weapon">
+		<!-- Modifies the appearance of a weapon. Valentine Crossbow form. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weight" val="500" />
+		<stats>
+			<stat type="pAtk">1333</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="37696" name="Valentine One-handed Magic Sword" type="Weapon">
+		<!-- Modifies the appearance of a weapon. Valentine One-handed Magic Sword form. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="500" />
+		<stats>
+			<stat type="pAtk">602</stat>
+			<stat type="mAtk">486</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="37697" name="Valentine One-handed Magic Blunt Weapon" type="Weapon">
+		<!-- Modifies the appearance of a weapon. Valentine One-handed Magic Blunt Weapon form. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="500" />
+		<stats>
+			<stat type="pAtk">602</stat>
+			<stat type="mAtk">486</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="37698" name="Valentine Two-handed Magic Blunt Weapon" type="Weapon">
+		<!-- Modifies the appearance of a weapon. Valentine Two-handed Magic Blunt Weapon form. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="500" />
+		<stats>
+			<stat type="pAtk">733</stat>
+			<stat type="mAtk">535</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="37699" name="Valentine Dualsword" type="Weapon">
+		<!-- Modifies the appearance of a weapon. Valentine Dualsword form. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="500" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+</list>

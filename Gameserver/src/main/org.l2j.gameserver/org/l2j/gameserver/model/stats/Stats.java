@@ -2,7 +2,6 @@ package org.l2j.gameserver.model.stats;
 
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.mobius.gameserver.model.stats.finalizers.*;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.model.stats.finalizers.*;
 

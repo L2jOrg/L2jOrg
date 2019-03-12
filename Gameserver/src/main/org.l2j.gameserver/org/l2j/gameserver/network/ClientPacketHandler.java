@@ -3,7 +3,6 @@ package org.l2j.gameserver.network;
 import io.github.joealisson.mmocore.PacketHandler;
 import io.github.joealisson.mmocore.ReadablePacket;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.network.l2.GamePacketHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,7 +15,7 @@ import static java.util.Objects.nonNull;
 
 public class ClientPacketHandler implements PacketHandler<L2GameClient> {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(GamePacketHandler.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ClientPacketHandler.class);
 
     @Override
     public ReadablePacket<L2GameClient> handlePacket(ByteBuffer buffer, L2GameClient client) {

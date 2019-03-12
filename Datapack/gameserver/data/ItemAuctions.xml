@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/ItemAuctions.xsd">
+	<!-- Documentation: -->
+	<!-- <instance id="NPC ID of the auctioneer" day_of_week="1 - Monday, 7 - Sunday" hour_of_day="0-23" minute_of_hour="0-59"> -->
+	<!-- <item auctionItemId="1" itemId="9901" itemCount="1" auctionInitBid="100000" auctionLenght="300 (in minutes)"> -->
+	<!-- <extra enchant_level="15" /> -->
+	<!-- </item> -->
+	<!-- </instance> -->
+	<!-- instead of day_of_week you can use interval between auction in days -->
+	<!-- <instance id="NPC ID of the auctioneer" interval="1" hour_of_day="0-23" minute_of_hour="0-59"> -->
+	<!-- <item auctionItemId="1" itemId="10485" itemCount="1" auctionInitBid="100000" auctionLenght="300" /> -->
+	<!-- </instance> -->
+</list>

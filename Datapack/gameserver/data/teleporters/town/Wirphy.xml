@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30540"> <!-- Wirphy -->
+		<teleport type="NORMAL">
+			<!-- feeCount from Interlude, unconfirmed from retail classic -->
+			<location npcStringId="1010004" x="-80684" y="149834" z="-3040" feeCount="22000" /> <!-- The Village of Gludin -->
+			<location npcStringId="1010011" x="169008" y="-208272" z="-3496" feeCount="2400" /> <!-- Eastern Mining Zone (Lv. 18) -->
+			<location npcStringId="1010190" x="139714" y="-177456" z="-1536" feeCount="690" /> <!-- Entrance to the Abandoned Coal Mines -->
+			<location npcStringId="1010191" x="171946" y="-173352" z="3440" feeCount="2200" /> <!-- Entrance to the Mithril Mines -->
+			<location npcStringId="1010187" x="124054" y="-200170" z="-3704" feeCount="970" /> <!-- Western Mining Zone -->
+		</teleport>
+	</npc>
+</list>

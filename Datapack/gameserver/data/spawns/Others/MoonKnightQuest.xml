@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="MoonKnightQuest">
+	<!-- Quest Monsters -->
+		<group>
+			<npc id="27201" x="-60389" y="141479" z="-2040" heading="40772" respawnTime="45sec" /> <!-- Ol Mahum Thief -->
+			<npc id="27201" x="-60828" y="141558" z="-2033" heading="32690" respawnTime="45sec" /> <!-- Ol Mahum Thief -->
+			<npc id="27201" x="-60434" y="141794" z="-2052" heading="5628" respawnTime="45sec" /> <!-- Ol Mahum Thief -->
+			<npc id="27201" x="-60105" y="141769" z="-2059" heading="64744" respawnTime="45sec" /> <!-- Ol Mahum Thief -->
+			<npc id="27201" x="-60717" y="141276" z="-2022" heading="40416" respawnTime="45sec" /> <!-- Ol Mahum Thief -->
+			<npc id="27201" x="-60991" y="141273" z="-2015" heading="32882" respawnTime="45sec" /> <!-- Ol Mahum Thief -->
+			<npc id="27201" x="-61376" y="141400" z="-2016" heading="29444" respawnTime="45sec" /> <!-- Ol Mahum Thief -->
+			<npc id="27201" x="-61441" y="141815" z="-2033" heading="18004" respawnTime="45sec" /> <!-- Ol Mahum Thief -->
+			<npc id="27201" x="-60972" y="140812" z="-1993" heading="53176" respawnTime="45sec" /> <!-- Ol Mahum Thief -->
+			<npc id="27201" x="-61714" y="141147" z="-2006" heading="30336" respawnTime="45sec" /> <!-- Ol Mahum Thief -->
+			<npc id="27201" x="-61839" y="141620" z="-1996" heading="19078" respawnTime="45sec" /> <!-- Ol Mahum Thief -->
+			<npc id="27201" x="-61799" y="140699" z="-2005" heading="49848" respawnTime="45sec" /> <!-- Ol Mahum Thief -->
+			<npc id="27201" x="-61356" y="140962" z="-2001" heading="4074" respawnTime="45sec" /> <!-- Ol Mahum Thief -->
+			<npc id="27202" x="-88523" y="98075" z="-3542" heading="796" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27202" x="-88677" y="97585" z="-3591" heading="45975" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27202" x="-88941" y="97821" z="-3542" heading="25159" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27202" x="-89275" y="97487" z="-3585" heading="40959" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27202" x="-89600" y="97096" z="-3602" heading="41918" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27202" x="-90057" y="96879" z="-3609" heading="37391" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27202" x="-90081" y="97141" z="-3598" heading="12733" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27202" x="-89964" y="97378" z="-3575" heading="12752" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27202" x="-89781" y="97558" z="-3555" heading="8105" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27202" x="-89446" y="97829" z="-3539" heading="7094" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27202" x="-89156" y="98137" z="-3528" heading="8505" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27202" x="-89015" y="96886" z="-3608" heading="50113" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27202" x="-88374" y="97285" z="-3613" heading="65263" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27203" x="-99944" y="110147" z="-3490" heading="12796" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27203" x="-99819" y="109877" z="-3490" heading="53674" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27203" x="-99772" y="109565" z="-3492" heading="50711" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27203" x="-100242" y="109600" z="-3490" heading="31980" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27203" x="-100499" y="109442" z="-3487" heading="39951" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27203" x="-100466" y="108960" z="-3490" heading="49865" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27203" x="-100978" y="108849" z="-3489" heading="34983" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27203" x="-100839" y="108469" z="-3490" heading="55906" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27203" x="-100427" y="108471" z="-3498" heading="50" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27203" x="-100660" y="107982" z="-3535" heading="44514" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27203" x="-101057" y="107674" z="-3520" heading="39650" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+			<npc id="27203" x="-101360" y="108104" z="-3495" heading="37604" respawnTime="45sec" /> <!-- Turek Orc Commander -->
+		</group>
+	<!-- NPCs -->
+		<group>
+			<npc id="30940" x="-68636" y="122845" z="-3558" heading="41227" respawnTime="60sec" /> <!-- Amora -->
+			<npc id="27202" x="-88467" y="98314" z="-3535" heading="7988" respawnTime="60sec" /> <!-- Turek Orc Commander -->
+			<npc id="30941" x="-74483" y="121201" z="-3676" heading="43018" respawnTime="60sec" /> <!-- Gudz -->
+		</group>
+	</spawn>
+</list>

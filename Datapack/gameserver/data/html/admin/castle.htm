@@ -1,0 +1,42 @@
+<html><body>
+<table width=270><tr>
+<td width=45><button value="Main" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Siege Menu</center></td>
+<td width=45><button value="Back" action="bypass -h admin_siege" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table>
+<center>
+<br><br><font color="LEVEL">Castle: %castleName%</font><br>
+<table width=270>
+<tr>
+<td width=140 align="center"><button value="Set Siege Time" action="bypass -h admin_setsiegetime %castleName%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<table width=270>
+<tr>
+<td width=135 align="center"><button value="Add Attacker" action="bypass -h admin_add_attacker %castleName%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=135 align="center"><button value="Add Defender" action="bypass -h admin_add_defender %castleName%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr><tr>
+<td width=135 align="center"><button value="List Clans" action="bypass -h admin_list_siege_clans %castleName%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=135 align="center"><button value="Clear List" action="bypass -h admin_clear_siege_list %castleName%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td width=135 align="center"><button value="Move Defenders" action="bypass -h admin_move_defenders %castleName%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=135 align="center"><button value="Spawn Doors" action="bypass -h admin_spawn_doors %castleName%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td width=90 align="center"><button value="Start Siege" action="bypass -h admin_startsiege %castleName%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=90 align="center"><button value="End Siege" action="bypass -h admin_endsiege %castleName%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td width=135 align="center"><button value="Give Castle" action="bypass -h admin_setcastle %castleName%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=135 align="center"><button value="Remove Castle" action="bypass -h admin_removecastle %castleName%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+</tr>
+</table>
+<br>
+<table width=270>
+<tr><td width=60 align="center">NpcId:</td>
+<td align="center"><edit var="value" width=40></td>
+<td align="center"><button value="Add Guard" action="bypass -h admin_add_guard %castleName% $value" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table>
+</center>
+</body></html>

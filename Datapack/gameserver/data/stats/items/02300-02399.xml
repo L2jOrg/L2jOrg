@@ -1,0 +1,1446 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="2300" name="Recipe: Scythe" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Scythe. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45800" />
+		<set name="recipe_id" val="193" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2301" name="Recipe: Battle Axe" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Battle Axe. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45800" />
+		<set name="recipe_id" val="194" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2302" name="Recipe: Silver Axe" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a War Pick. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45800" />
+		<set name="recipe_id" val="195" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2303" name="Recipe: Skull Graver" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Skull Graver. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45800" />
+		<set name="recipe_id" val="196" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2304" name="Recipe: Heavy Doom Hammer" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Heavy Doom Hammer. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45800" />
+		<set name="recipe_id" val="197" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2305" name="Recipe: Crystal Staff" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Crystal Staff. Requires Create Item - Skill Lv. 4 The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45800" />
+		<set name="recipe_id" val="198" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2306" name="Recipe: Stick of Faith" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Stick of Faith. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45800" />
+		<set name="recipe_id" val="199" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2307" name="Recipe: Heavy Doom Axe" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Heavy Doom Axe. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45800" />
+		<set name="recipe_id" val="200" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2308" name="Recipe: Cursed Dagger" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Cursed Dagger. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45800" />
+		<set name="recipe_id" val="201" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2309" name="Recipe: Needle Wolverine" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Wolverine Needle. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45800" />
+		<set name="recipe_id" val="202" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2310" name="Recipe: Dark Elven Dagger" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Dark Elven Dagger. Requires Create Item - Skill Lv. 4 The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45800" />
+		<set name="recipe_id" val="203" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2311" name="Recipe: Chakram" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Chakram. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45800" />
+		<set name="recipe_id" val="204" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2312" name="Recipe: Crystallized Ice Bow" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Crystallized Ice Bow. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45800" />
+		<set name="recipe_id" val="205" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2313" name="Recipe: Orcish Glaive" type="EtcItem">
+		<!-- For Dwarves only. Recipe for an Orcish Glaive. Requires Create Item - Skill Lv. 4 The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45800" />
+		<set name="recipe_id" val="206" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2314" name="Recipe: Body Slasher" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Body Slasher. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45800" />
+		<set name="recipe_id" val="207" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2315" name="Recipe: Shamshir" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Shamshir. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="57400" />
+		<set name="recipe_id" val="208" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2316" name="Recipe: Katana" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Kanata. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="57400" />
+		<set name="recipe_id" val="209" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2317" name="Recipe: Bec de Corbin" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Bec de Corbin. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="57400" />
+		<set name="recipe_id" val="210" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2318" name="Recipe: Spirit Sword" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a spirit's sword. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="57400" />
+		<set name="recipe_id" val="211" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2319" name="Recipe: Raid Sword" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Raid Sword. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="57400" />
+		<set name="recipe_id" val="212" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2320" name="Recipe: Cursed Staff" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Cursed Staff. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="57400" />
+		<set name="recipe_id" val="213" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2321" name="Recipe: Stiletto" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Stiletto. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="57400" />
+		<set name="recipe_id" val="214" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2322" name="Recipe: Soulfire Dirk" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Soulfire Dirk. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="57400" />
+		<set name="recipe_id" val="215" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2323" name="Recipe: Elemental Bow" type="EtcItem">
+		<!-- For Dwarves only. Recipe for an Elemental Bow. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="57400" />
+		<set name="recipe_id" val="216" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2324" name="Recipe: Noble Elven Bow" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a noble Elven Bow. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="57400" />
+		<set name="recipe_id" val="217" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2326" name="Recipe: Horn of Glory" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Horn of Glory. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="57400" />
+		<set name="recipe_id" val="219" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2327" name="Recipe: Caliburs" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Caliburs. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="220" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2328" name="Recipe: Sword of Delusion" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Sword of Delusion. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="221" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2329" name="Recipe: Tsurugi" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Tsurugi. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="222" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2330" name="Recipe: Homunkulus' Sword" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Homunkulus' Sword. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="223" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2331" name="Recipe: Poleaxe" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Poleaxe. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="224" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2332" name="Recipe: Ultimate Sword" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Ultimate Sword. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="225" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2333" name="Recipe: Sword of Nightmare" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Sword of Nightmare. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="226" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2334" name="Recipe: Sword of Whispering Death" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sword of Whispering Death. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="227" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2335" name="Recipe: War Axe" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a War Axe. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="228" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2336" name="Recipe: Nirvana Axe" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Nirvana Axe. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="229" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2337" name="Recipe: Stick of Eternity" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Stick of Eternity. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="230" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2338" name="Recipe: Paradia Staff" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Paradia Staff. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="231" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2339" name="Recipe: Inferno Staff" type="EtcItem">
+		<!-- For Dwarves only. Recipe for an Inferno Staff. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="232" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2340" name="Recipe: Pa'agrio Hammer" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Pa'agrio Hammer. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="233" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2341" name="Recipe: Sage's Staff" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Sage's Staff. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="234" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2342" name="Recipe: Club of Nature" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Club of Nature. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="235" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2343" name="Recipe: Mace of Underworld" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Mace of Underworld. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="236" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2344" name="Recipe: Grace Dagger" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Grace Dagger. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="237" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2345" name="Recipe: Dark Screamer" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Dark Screamer. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="238" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2346" name="Recipe: Fisted Blade" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Fisted Blade. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="239" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2347" name="Recipe: Akat Longbow" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Akat Longbow. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="86000" />
+		<set name="recipe_id" val="240" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2350" name="Recipe: Pa'agrio Axe" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Pa'agrio Axe. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="95600" />
+		<set name="recipe_id" val="243" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2351" name="Recipe: Scorpion" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Scorpion. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="95600" />
+		<set name="recipe_id" val="244" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2352" name="Recipe: Widow Maker" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Widow Maker. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="95600" />
+		<set name="recipe_id" val="245" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2353" name="Recipe: Samurai Long Sword" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Samurai Long Sword. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="122600" />
+		<set name="recipe_id" val="246" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2354" name="Recipe: Deadman's Staff" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Deadman's Staff. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="122600" />
+		<set name="recipe_id" val="247" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2355" name="Recipe: Ghoul's Staff" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Ghoul's Staff. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="122600" />
+		<set name="recipe_id" val="248" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2356" name="Recipe: Demon's Staff" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Demon's Staff. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="122600" />
+		<set name="recipe_id" val="249" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2357" name="Recipe: Crystal Dagger" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Crystal Dagger. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="122600" />
+		<set name="recipe_id" val="250" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2358" name="Recipe: Great Pata" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Great Pata. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="122600" />
+		<set name="recipe_id" val="251" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2359" name="Recipe: Eminence Bow" type="EtcItem">
+		<!-- For Dwarves only. Recipe for an Eminence Bow. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="122600" />
+		<set name="recipe_id" val="252" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2360" name="Recipe: Orcish Poleaxe" type="EtcItem">
+		<!-- For Dwarves only. Recipe for an Orcish Poleaxe. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="122600" />
+		<set name="recipe_id" val="253" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2368" name="Training Gloves" type="Weapon">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.weapon_training_gloves_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1580" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">7</stat>
+			<stat type="mAtk">5</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="2369" name="Squire's Sword" type="Weapon">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.weapon_squires_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1600" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">6</stat>
+			<stat type="mAtk">5</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="2370" name="Guild Member's Club" type="Weapon">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.weapon_club_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1910" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">6</stat>
+			<stat type="mAtk">5</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="2371" name="Fist of Butcher" type="Weapon">
+		<set name="icon" val="icon.weapon_iron_glove_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1400" />
+		<set name="price" val="25500" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">16</stat>
+			<stat type="mAtk">10</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="2372" name="Dagger of Adept" type="Weapon">
+		<set name="icon" val="icon.weapon_doomed_dagger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1050" />
+		<set name="price" val="25500" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">11</stat>
+			<stat type="mAtk">10</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="2373" name="Eldritch Staff" type="Weapon">
+		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1050" />
+		<set name="price" val="25500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">13</stat>
+			<stat type="mAtk">13</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="2374" name="Red Sunset Dagger" type="Weapon">
+		<set name="icon" val="icon.weapon_doomed_dagger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1100" />
+		<set name="price" val="25500" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">11</stat>
+			<stat type="mAtk">10</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="2376" name="Avadon Breastplate" type="Armor">
+		<set name="icon" val="icon.armor_t66_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="277" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="7920" />
+		<set name="price" val="2080000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<stats>
+			<stat type="pDef">157</stat>
+		</stats>
+	</item>
+	<item id="2377" name="Mithril Scale Gaiters" type="Armor">
+		<set name="icon" val="icon.armor_t40_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="340" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="3870" />
+		<set name="price" val="187000" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">64</stat>
+		</stats>
+	</item>
+	<item id="2378" name="Brigandine Gaiters" type="Armor">
+		<set name="icon" val="icon.armor_t43_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="340" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="3820" />
+		<set name="price" val="187000" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">64</stat>
+		</stats>
+	</item>
+	<item id="2379" name="Avadon Gaiters" type="Armor">
+		<set name="icon" val="icon.armor_t66_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="173" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="3520" />
+		<set name="price" val="1300000" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">98</stat>
+		</stats>
+	</item>
+	<item id="2380" name="Blue Wolf Gaiters" type="Armor">
+		<set name="icon" val="icon.armor_t68_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="268" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="3370" />
+		<set name="price" val="2010000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<stats>
+			<stat type="pDef">104</stat>
+		</stats>
+	</item>
+	<item id="2381" name="Doom Plate Armor" type="Armor">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t71_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="628" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="9980" />
+		<set name="price" val="4710000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FULL_BODY" />
+		<stats>
+			<stat type="pDef">270</stat>
+		</stats>
+	</item>
+	<item id="2382" name="Tallum Plate Armor" type="Armor">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t77_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="463" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="9780" />
+		<set name="price" val="5788000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FULL_BODY" />
+		<stats>
+			<stat type="pDef">278</stat>
+		</stats>
+	</item>
+	<item id="2383" name="Majestic Plate Armor" type="Armor">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t83_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="704" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="9200" />
+		<set name="price" val="8804000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FULL_BODY" />
+		<stats>
+			<stat type="pDef">293</stat>
+		</stats>
+	</item>
+	<item id="2384" name="Zubei's Leather Shirt" type="Armor">
+		<set name="icon" val="icon.armor_t65_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="208" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="4330" />
+		<set name="price" val="1560000" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">117</stat>
+		</stats>
+	</item>
+	<item id="2385" name="Dark Crystal Leather Armor" type="Armor">
+		<set name="icon" val="icon.armor_t75_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="214" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="4300" />
+		<set name="price" val="2671000" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">128</stat>
+		</stats>
+	</item>
+	<item id="2386" name="Wooden Gaiters" type="Armor">
+		<set name="icon" val="icon.armor_t06_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1670" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="4970" />
+		<stats>
+			<stat type="pDef">29</stat>
+		</stats>
+	</item>
+	<item id="2387" name="Reinforced Mithril Gaiters" type="Armor">
+		<set name="icon" val="icon.armor_t47_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="94" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1530" />
+		<set name="price" val="237000" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">56</stat>
+		</stats>
+	</item>
+	<item id="2388" name="Zubei's Leather Gaiters" type="Armor">
+		<set name="icon" val="icon.armor_t65_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="129" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1480" />
+		<set name="price" val="973000" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">73</stat>
+		</stats>
+	</item>
+	<item id="2389" name="Dark Crystal Leggings" type="Armor">
+		<set name="icon" val="icon.armor_t75_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="134" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1480" />
+		<set name="price" val="1670000" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">80</stat>
+		</stats>
+	</item>
+	<item id="2390" name="Avadon Leather Armor" type="Armor">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t67_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="304" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="5600" />
+		<set name="price" val="2280000" />
+		<set name="commissionItemType" val="FULL_BODY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">191</stat>
+		</stats>
+	</item>
+	<item id="2391" name="Blue Wolf Leather Armor" type="Armor">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t69_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="470" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="5500" />
+		<set name="price" val="3530000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FULL_BODY" />
+		<stats>
+			<stat type="pDef">202</stat>
+		</stats>
+	</item>
+	<item id="2392" name="Leather Armor of Doom" type="Armor">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t72_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="470" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="5500" />
+		<set name="price" val="3530000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FULL_BODY" />
+		<stats>
+			<stat type="pDef">202</stat>
+		</stats>
+	</item>
+	<item id="2393" name="Tallum Leather Armor" type="Armor">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t78_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="347" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="5400" />
+		<set name="price" val="4341000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FULL_BODY" />
+		<stats>
+			<stat type="pDef">209</stat>
+		</stats>
+	</item>
+	<item id="2394" name="Leather Armor of Nightmare" type="Armor">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t81_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="528" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="5300" />
+		<set name="price" val="6603000" />
+		<set name="commissionItemType" val="FULL_BODY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">220</stat>
+		</stats>
+	</item>
+	<item id="2395" name="Majestic Leather Armor" type="Armor">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t84_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="528" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="5350" />
+		<set name="price" val="6603000" />
+		<set name="commissionItemType" val="FULL_BODY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">220</stat>
+		</stats>
+	</item>
+	<item id="2396" name="Elven Mithril Tunic" type="Armor">
+		<set name="icon" val="icon.armor_elven_tunic_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="407" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="720" />
+		<set name="price" val="224000" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">54</stat>
+			<stat type="maxMp">169</stat>
+		</stats>
+	</item>
+	<item id="2397" name="Tunic of Zubei" type="Armor">
+		<set name="icon" val="icon.armor_t56_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="208" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1960" />
+		<set name="price" val="1560000" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">78</stat>
+			<stat type="maxMp">345</stat>
+		</stats>
+	</item>
+	<item id="2398" name="Blue Wolf Tunic" type="Armor">
+		<set name="icon" val="icon.armor_t70_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="321" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1920" />
+		<set name="price" val="2410000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<stats>
+			<stat type="pDef">83</stat>
+			<stat type="maxMp">377</stat>
+		</stats>
+	</item>
+	<item id="2399" name="Tunic of Doom" type="Armor">
+		<set name="icon" val="icon.armor_t73_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="321" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1900" />
+		<set name="price" val="2410000" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">83</stat>
+			<stat type="maxMp">377</stat>
+		</stats>
+	</item>
+</list>

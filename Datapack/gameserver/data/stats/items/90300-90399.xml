@@ -1,0 +1,1052 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="90300" name="Hunter Tarantula's Venom" type="EtcItem">
+		<!-- Though lethal, Hunter Tarantula's Venom is used as glue thanks to its ability to harden instantly. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90301" name="Plunder Tarantula's Kidney Stone" type="EtcItem">
+		<!-- A transparent stone that can be found in a body of Plunder Tarantula. Very smooth and shiny, used as an adornment. -->
+		<set name="icon" val="icon.r_soul_stone_piece_i04" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90302" name="New Cleaning Tool's Supply List" type="EtcItem">
+		<!-- Priest Gerald tries to make tools for decorating the inner parts of the Temple that is currently under repairs. This is the list of materials that he needs. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90303" name="Bat Bristle" type="EtcItem">
+		<!-- Bristles from the neck of a Barbed Bat. Very soft, used for making brushes. -->
+		<set name="icon" val="icon.etc_mane_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90304" name="Trimden Web" type="EtcItem">
+		<!-- Trimden Web. When its sticky enzyme is removed, it becomes very smooth and gleaming. Used as a fiber for making expensive fabric. -->
+		<set name="icon" val="icon.etc_cobweb_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90305" name="Kerope Werewolf's Twig Charm" type="EtcItem">
+		<!-- Kerope Werewolf Charm. -->
+		<set name="icon" val="icon.etc_royal_seal_of_lord_i04" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90306" name="Warrior's Armor" type="Armor">
+		<!-- Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.armor_t33_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="8970" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">45</stat>
+		</stats>
+	</item>
+	<item id="90307" name="Warrior's Gaiters" type="Armor">
+		<!-- Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.armor_t33_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="4020" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">29</stat>
+		</stats>
+	</item>
+	<item id="90308" name="Medium's Tunic" type="Armor">
+		<!-- Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.armor_t58_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="2080" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">27</stat>
+			<stat type="maxMp">60</stat>
+		</stats>
+	</item>
+	<item id="90309" name="Medium's Stockings" type="Armor">
+		<!-- Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.armor_t58_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1030" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">17</stat>
+			<stat type="maxMp">38</stat>
+		</stats>
+	</item>
+	<item id="90310" name="MP Recovery Potion (Novice)" type="EtcItem">
+		<!-- Magical MP-recovering potion. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_lesser_potion_blue_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90311" name="Brooch" additionalName="Lv. 1" type="Armor">
+		<!-- Activates 2 jewel slots when equipped. Inventory Slot + 5. -->
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90312" name="Brooch" additionalName="Lv. 2" type="Armor">
+		<!-- Activates 3 jewel slots when equipped. Inventory Slot + 9. -->
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90313" name="Topaz" additionalName="Lv. 1" type="Armor">
+		<!-- Disrupts the target's skill casting when used. Inflicts 475 damage in PvP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90314" name="Topaz" additionalName="Lv. 2" type="Armor">
+		<!-- Disrupts the target's skill casting when used. Inflicts 633 damage in PvP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90315" name="Topaz" additionalName="Lv. 3" type="Armor">
+		<!-- Disrupts the target's skill casting when used. Inflicts 950 damage in PvP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90316" name="Topaz" additionalName="Lv. 4" type="Armor">
+		<!-- Disrupts the target's skill casting when used. Inflicts 1357 damage in PvP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90317" name="Topaz" additionalName="Lv. 5" type="Armor">
+		<!-- Disrupts the target's skill casting when used. Inflicts 2375 damage in PvP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90318" name="Garnet" additionalName="Lv. 1" type="Armor">
+		<!-- Stun / Pulling / Silence / Petrification / Fear Resistance +3%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_garnet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90319" name="Garnet" additionalName="Lv. 2" type="Armor">
+		<!-- Stun / Pulling / Silence / Petrification / Fear Resistance +5%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_garnet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90320" name="Garnet" additionalName="Lv. 3" type="Armor">
+		<!-- Stun / Pulling / Silence / Petrification / Fear Resistance +8%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_garnet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90321" name="Garnet" additionalName="Lv. 4" type="Armor">
+		<!-- Stun / Pulling / Silence / Petrification / Fear Resistance +11%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_garnet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90322" name="Garnet" additionalName="Lv. 5" type="Armor">
+		<!-- Stun / Pulling / Silence / Petrification / Fear Resistance +15%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_garnet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90323" name="Jade" additionalName="Lv. 1" type="Armor">
+		<!-- Atk. Spd./Casting Spd. +1%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90324" name="Jade" additionalName="Lv. 2" type="Armor">
+		<!-- Atk. Spd./Casting Spd. +2%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90325" name="Jade" additionalName="Lv. 3" type="Armor">
+		<!-- Atk. Spd./Casting Spd. +4%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90326" name="Jade" additionalName="Lv. 4" type="Armor">
+		<!-- Atk. Spd./Casting Spd. +7%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90327" name="Jade" additionalName="Lv. 5" type="Armor">
+		<!-- Atk. Spd./Casting Spd. +10%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90328" name="Ruby" additionalName="Lv. 1" type="Armor">
+		<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot damage 2%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90329" name="Ruby" additionalName="Lv. 2" type="Armor">
+		<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot damage +3%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90330" name="Ruby" additionalName="Lv. 3" type="Armor">
+		<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot damage +5%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90331" name="Ruby" additionalName="Lv. 4" type="Armor">
+		<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot damage +8%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90332" name="Ruby" additionalName="Lv. 5" type="Armor">
+		<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot damage +12%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90333" name="Sapphire" additionalName="Lv. 1" type="Armor">
+		<!-- When equipped, increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +2%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90334" name="Sapphire" additionalName="Lv. 2" type="Armor">
+		<!-- When equipped, increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +3%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90335" name="Sapphire" additionalName="Lv. 3" type="Armor">
+		<!-- When equipped, increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +5%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90336" name="Sapphire" additionalName="Lv. 4" type="Armor">
+		<!-- When equipped, increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +8%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90337" name="Sapphire" additionalName="Lv. 5" type="Armor">
+		<!-- When equipped, increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +12%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90338" name="Diamond" additionalName="Lv. 1" type="Armor">
+		<!-- P. Def. +11, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90339" name="Diamond" additionalName="Lv. 2" type="Armor">
+		<!-- P. Def. +25, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90340" name="Diamond" additionalName="Lv. 3" type="Armor">
+		<!-- P. Def. +50, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90341" name="Diamond" additionalName="Lv. 4" type="Armor">
+		<!-- P. Def. +81, Received P. Critical Damage -4%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90342" name="Diamond" additionalName="Lv. 5" type="Armor">
+		<!-- P. Def. +112, Received P. Critical Damage -7%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90343" name="Pearl" additionalName="Lv. 1" type="Armor">
+		<!-- M. Def. +7, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90344" name="Pearl" additionalName="Lv. 2" type="Armor">
+		<!-- M. Def. +14, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90345" name="Pearl" additionalName="Lv. 3" type="Armor">
+		<!-- M. Def. +28, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90346" name="Pearl" additionalName="Lv. 4" type="Armor">
+		<!-- M. Def. +46, Received M. Critical Damage -4%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90347" name="Pearl" additionalName="Lv. 5" type="Armor">
+		<!-- M. Def. +64, Received M. Critical Damage -7%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90353" name="Vital Stone" additionalName="Lv. 1" type="Armor">
+		<!-- Sayha Grace XP/SP +3%, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90354" name="Vital Stone" additionalName="Lv. 2" type="Armor">
+		<!-- Sayha Grace XP/SP +4%, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90355" name="Vital Stone" additionalName="Lv. 3" type="Armor">
+		<!-- Sayha Grace XP/SP +6%, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90356" name="Vital Stone" additionalName="Lv. 4" type="Armor">
+		<!-- Sayha Grace XP/SP +8%, Sayha Grace Consumption -10% while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90357" name="Vital Stone" additionalName="Lv. 5" type="Armor">
+		<!-- Sayha Grace XP/SP +15%, Sayha Grace Consumption -20% while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90358" name="Shine Ore" type="EtcItem">
+		<!-- You can exchange some amount of Ore for Lv. 1 Brooch, Lv. 3-5 jewels or Jewelry Box through Dimensional Merchant. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewel_piece" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90359" name="Fortune Brooch" type="EtcItem">
+		<!-- Double-click to obtain Fortune Jewelry Chest. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90360" name="Fortune Topaz Chest" type="EtcItem">
+		<!-- Double-click to obtain Lv. 1-5 Topaz. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90361" name="Fortune Garnet Chest" type="EtcItem">
+		<!-- Double-click to obtain Lv. 1-5 Garnet. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i01" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90362" name="Fortune Jade Chest" type="EtcItem">
+		<!-- Double-click to obtain  Lv. 1-5 Jade. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_jade_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90363" name="Fortune Ruby Chest" type="EtcItem">
+		<!-- Double-click to obtain Lv. 1-5 Ruby. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90364" name="Fortune Sapphire Chest" type="EtcItem">
+		<!-- Double-click to obtain Lv. 1-5 Sapphire. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90365" name="Fortune Diamond Chest" type="EtcItem">
+		<!-- Double-click to obtain Lv. 1-5 Diamond. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90366" name="Fortune Pearl Chest" type="EtcItem">
+		<!-- Double-click to obtain Lv. 1-5 Pearl. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90367" name="Fortune Vital Stone Chest" type="EtcItem">
+		<!-- Double-click to obtain Lv. 1-5 Vital Stone. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_vital_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90368" name="Shiny Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Shiny Jewelry Box. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90369" name="Topaz Chest" type="EtcItem">
+		<!-- Double-click to obtain Lv. 1 Topaz. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90370" name="Garnet Chest" type="EtcItem">
+		<!-- Double-click to obtain Lv. 1 Garnet. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90371" name="Jade Chest" type="EtcItem">
+		<!-- Double-click to obtain Lv. 1 Jade. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_jade_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90372" name="Ruby Chest" type="EtcItem">
+		<!-- Double-click to obtain Lv. 1 Ruby. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90373" name="Sapphire Chest" type="EtcItem">
+		<!-- Double-click to obtain Lv. 1 Sapphire. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90374" name="Diamond Chest" type="EtcItem">
+		<!-- Double-click to obtain Lv. 1 Diamond. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90375" name="Pearl Chest" type="EtcItem">
+		<!-- Double-click to obtain Lv. 1 Pearl. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90376" name="Vital Stone Chest" type="EtcItem">
+		<!-- Double-click to obtain Lv. 1 Vital Stone. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_vital_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90377" name="Lv. 3 Topaz Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 3 Topaz. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90378" name="Lv. 4 Topaz Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 4 Topaz. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90379" name="Lv. 5 Topaz Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 5 Topaz. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90380" name="Lv. 3 Garnet Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 3 Garnet. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90381" name="Lv. 4 Garnet Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 4 Garnet. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90382" name="Lv. 5 Garnet Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 5 Garnet. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90383" name="Lv. 3 Jade Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 3 Jade. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_jade_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90384" name="Lv. 4 Jade Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 4 Jade. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_jade_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90385" name="Lv. 4 Jade Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 5 Jade. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_jade_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90386" name="Lv. 3 Ruby Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 3 Ruby. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90387" name="Lv. 4 Ruby Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 4 Ruby. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90388" name="Lv. 5 Ruby Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 5 Ruby. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90389" name="Lv. 3 Sapphire Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 3 Sapphire. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90390" name="Lv. 4 Sapphire Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 4 Sapphire. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90391" name="Lv. 5 Sapphire Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 5 Sapphire. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90392" name="Lv. 3 Diamond Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 3 Diamond. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90393" name="Lv. 4 Diamond Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 4 Diamond. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90394" name="Lv. 5 Diamond Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 5 Diamond. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90395" name="Lv. 3 Pearl Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 3 Pearl. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90396" name="Lv. 4 Pearl Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 4 Pearl. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90397" name="Lv. 5 Pearl Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 5 Pearl. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90398" name="Lv. 3 Vital Stone Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 3 Vital Stone. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_vital_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90399" name="Lv. 4 Vital Stone Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Lv. 4 Vital Stone. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_vital_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

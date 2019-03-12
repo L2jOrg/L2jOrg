@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/LuckyGameData.xsd">
+	<luckygame index="2" turning_point="50000">
+		<common_reward>
+			<item id="29564" count="50" chance="0.0151" /> <!-- Attendance Coin -->
+			<item id="29553" count="3" chance="0.0151" /> <!-- 2nd Class Buff Scroll -->
+			<item id="29554" count="10" chance="0.0151" /> <!-- Quick Healing Potion -->
+			<item id="29565" count="3" chance="0.0151" /> <!-- XP/SP Scroll -->
+			<item id="29584" count="2" chance="0.0151" /> <!-- Angel Cat's Blessing Chest -->
+			<item id="29566" count="1" chance="0.0151" /> <!-- Attendance XP Rune -->
+			<item id="29585" count="1" chance="0.0151" /> <!-- Refined Romantic Chapeau -->
+			<item id="49512" count="1" chance="0.0151" /> <!-- Amulet: Prosperity -->
+			<item id="29578" count="1" chance="0.0151" /> <!-- Rare Accessory Pack -->
+			<item id="29587" count="1" chance="0.0151" /> <!-- Agathion - Singer & Dancer -->
+		</common_reward>
+	</luckygame>
+	<luckygame index="102" turning_point="10000">
+		<common_reward>
+			<item id="29564" count="50" chance="0.0151" /> <!-- Attendance Coin -->
+			<item id="29553" count="3" chance="0.0151" /> <!-- 2nd Class Buff Scroll -->
+			<item id="29554" count="10" chance="0.0151" /> <!-- Quick Healing Potion -->
+			<item id="29565" count="3" chance="0.0151" /> <!-- XP/SP Scroll -->
+			<item id="29584" count="2" chance="0.0151" /> <!-- Angel Cat's Blessing Chest -->
+			<item id="29566" count="1" chance="0.0151" /> <!-- Attendance XP Rune -->
+			<item id="29585" count="1" chance="0.0151" /> <!-- Refined Romantic Chapeau -->
+			<item id="49512" count="1" chance="0.0151" /> <!-- Amulet: Prosperity -->
+			<item id="29578" count="1" chance="0.0151" /> <!-- Rare Accessory Pack -->
+			<item id="29587" count="1" chance="0.0151" /> <!-- Agathion - Singer & Dancer -->
+		</common_reward>
+		<unique_reward>
+			<item id="6656" count="1" points="10000" /> <!-- Antharas' Earring -->
+		</unique_reward>
+		<modify_reward min_game="40" max_game="50">
+			<item id="6660" count="1" chance="0.0679" /> <!-- Queen Ant's Ring -->
+		</modify_reward>
+	</luckygame>
+</list>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="18342" level="1" type="L2Monster" name="Gremlin">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<acquire exp="44" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="20" />
+				<run ground="50" />
+			</speed>
+			<hitTime>370</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="10" />
+			<height normal="15" />
+		</collision>
+	</npc>
+</list>

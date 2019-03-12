@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Effects of %targetName%</title>
+	</head>
+	<body>
+		<table width="100%">
+			<tr>
+				<td width=45>
+					<button value="Main" action="bypass -h admin_admin" width=45 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+				</td>
+				<td width=180>
+					<center><font color="LEVEL">Effects of %targetName%</font></center>
+				</td>
+				<td width=45>
+					<button value="Back" action="bypass -h admin_current_player" width=45 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+				</td>
+			</tr>
+		</table>
+		<br>
+		<table width="100%">
+			<tr>
+				<td width=200>Skill</td>
+				<td width=30>Rem. Time</td>
+				<td width=70>Action</td>
+			</tr>
+			%buffs%
+		</table>
+		<br>%pages%<br>
+		<button value="View Blocked Effects" action="bypass -h admin_viewblockedeffects %targetObjId%" width=160 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"><br>
+		<button value="Remove All" action="bypass -h admin_stopallbuffs %targetObjId%" width=80 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+		<br>
+		Total buff count: %effectSize%
+	</body>
+</html>

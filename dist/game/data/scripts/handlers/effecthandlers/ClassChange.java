@@ -17,18 +17,18 @@
 package handlers.effecthandlers;
 
 import org.l2j.commons.concurrent.ThreadPool;
-import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillData;
-import org.l2j.gameserver.mobius.gameserver.enums.SubclassInfoType;
-import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
-import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
-import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
-import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.AcquireSkillList;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExSubjobInfo;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.enums.SubclassInfoType;
+import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.effects.AbstractEffect;
+import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.AcquireSkillList;
+import org.l2j.gameserver.network.serverpackets.ExSubjobInfo;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Sdw

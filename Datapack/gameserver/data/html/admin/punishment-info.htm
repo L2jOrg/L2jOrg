@@ -1,0 +1,33 @@
+<html><title>Punishment Information Panel</title><body>
+<center>
+<table width=270>
+<tr>
+<td width=45><button value="Main" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>%affect_type%: %player_name%</center></td>
+<td width=45><button value="Back" action="bypass -h admin_punishment" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+<table width=280 bgcolor="666666" cellspacing="0" cellpadding="6">
+	<tr>
+		<td>Affect Type:</td>
+		<td><combobox width=120 height=12 var="affectType" list="%affects%"></td>
+	</tr>
+	<tr>
+		<td>Key:</td>
+		<td><edit var="key" width="130" height="12"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><a action="bypass -h admin_punishment info $key $affectType">Check</a></td>
+	</tr>
+</table>
+<br>
+<table width=280 bgcolor="666666" cellspacing="0" cellpadding="6">
+	<tr>
+		<td>Type</td>
+		<td>Expiration</td>
+		<td>Action</td>
+	</tr>
+	%punishments%
+</table>

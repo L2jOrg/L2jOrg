@@ -1,0 +1,44 @@
+<html><title>Admin Teleports</title><body>
+<center>
+<table width=256><tr>
+<td align=center><button value="Main" action="bypass -h admin_admin" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td align=center width=176>Admin Teleport Menu</td>
+<td align=center><button value="Back" action="bypass -h admin_admin" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table><br>
+<table width=256><tr>
+<td align=center><button action="bypass -h admin_html teleports/TownAreas.htm" value="Town Areas" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td align=center><button action="bypass -h admin_html teleports/WorldAreas.htm" value="World Areas" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td align=center><button action="bypass -h admin_html teleports/CastleAreas.htm" value="Castle Areas" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td align=center><button action="bypass -h admin_html teleports/fort.htm" value="Fortress" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td align=center><button action="bypass -h admin_html teleports/sevensigns.htm" value="Seven Signs" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td align=center><button action="bypass -h admin_html teleports/instance.htm" value="Instances" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td align=center><button action="bypass -h admin_html teleports/raid.htm" value="Raidboss" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td align=center><button action="bypass -h admin_html teleports/OlympiadStadiums.htm" value="Olympiad Stadiums" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td align=center><button action="bypass -h admin_html teleports/clanhall/clanhall.htm" value="Conquerable Halls" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td align=center><button action="bypass -h admin_html teleports/OtherLocations.htm" value="Other Locations" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table><br>
+<button value="Additional Movement Options" action="bypass -h admin_tele" width=180 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br>
+Move to the given coordinates<br1>
+<table width=256><tr>
+<td align=center width=85><font color="LEVEL">X</font></td>
+<td align=center width=85><font color="LEVEL">Y</font></td>
+<td align=center width=85><font color="LEVEL">Z</font></td>
+</tr></table>
+<table width=256><tr>
+<td align=center><edit var="char_cord_x" width=75></td>
+<td align=center><edit var="char_cord_y" width=75></td>
+<td align=center><edit var="char_cord_z" width=75></td>
+</tr></table>
+<table width=256><tr>
+<td align=center><button value="Go" action="bypass -h admin_move_to $char_cord_x $char_cord_y $char_cord_z" width=31 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table>
+</center>
+</body></html>

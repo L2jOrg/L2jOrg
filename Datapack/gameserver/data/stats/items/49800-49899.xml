@@ -1,0 +1,953 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="49800" name="Sibis Coin Box" type="EtcItem">
+		<!-- Double-click to receive 200 Sibis Coins. The item will be removed after the event is over. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49801" name="Dandy Pendant" additionalName="2 hours" type="Armor">
+		<!-- M. Def. +20, XP and SP gain +30%, P./M. Atk. +50, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_pendant_pve" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="120" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="49802" name="Dandy Shining Pendant" additionalName="2 hours" type="Armor">
+		<!-- M. Def. +21, XP and SP gain +30%, P./M. Atk. +60, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon and Fire Dragon's Protection skills. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_pendant_pve" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="120" />
+		<stats>
+			<stat type="pDef">52</stat>
+		</stats>
+	</item>
+	<item id="49803" name="Dandy’s Uniform" type="Armor">
+		<!-- Makes your armor look like Dandy�s Uniform. Allows using the Excellent Hit and Excellent Serve skills. When equipped, the armor you previously wore becomes unavailable. However, hair accessories, weapons, and magical armor are not taken off. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.london_olympic_bikini" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="49804" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49805" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49806" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49807" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49808" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49809" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49810" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49811" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49812" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49813" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49814" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49815" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49816" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49817" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49818" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49819" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49820" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49821" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49822" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49823" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49824" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49825" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49826" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49827" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49828" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49829" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49830" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49831" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49832" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49833" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49834" name="Ice Crystal Fragment" type="EtcItem">
+		<!-- A crystal which emits freezing energy. -->
+		<set name="icon" val="icon.event_cubic_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49835" name="Food Sack" type="EtcItem">
+		<!-- Food for the poor. Well-packed, so that all the contents remain inside. -->
+		<set name="icon" val="icon.etc_oil_pot_white_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49836" name="Food Sack" type="EtcItem">
+		<!-- Food for the poor. Well-packed, so that all the contents remain inside. -->
+		<set name="icon" val="icon.etc_oil_pot_white_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49837" name="Food Sack" type="EtcItem">
+		<!-- Food for the poor. It is well-packed, so that all the contents remain inside. -->
+		<set name="icon" val="icon.etc_oil_pot_white_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49838" name="Food Sack" type="EtcItem">
+		<!-- Food for the poor. Well-packed, so that all the contents remain inside. -->
+		<set name="icon" val="icon.etc_oil_pot_white_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49839" name="Rifken's Dish" type="EtcItem">
+		<!-- A dish cooked by Rifken. -->
+		<set name="icon" val="icon.etc_fish_seawater_i02" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49840" name="Rifken’s Recipe Book" type="EtcItem">
+		<!-- A book containing secret recipes of Rifken. -->
+		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49841" name="Bitter Cold Vodka" type="EtcItem">
+		<!-- Vodka which combines blistering cold of ice and soft warmth of fire. -->
+		<set name="icon" val="icon.etc_luxury_wine_c_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49842" name="Bitter Cold Vodka" type="EtcItem">
+		<!-- Vodka which combines blistering cold of ice and soft warmth of fire. -->
+		<set name="icon" val="icon.etc_luxury_wine_c_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49843" name="Bitter Cold Vodka" type="EtcItem">
+		<!-- Vodka which combines blistering cold of ice and soft warmth of fire. -->
+		<set name="icon" val="icon.etc_luxury_wine_c_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49844" name="Sayha's Blessing Chest" type="EtcItem">
+		<!-- Double-click the chest to get one of the following items: Sayha's Silver Light Blessing / Sayha's Golden Light Blessing. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm_sayha_blessed_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49845" name="Sayha's Blessing" type="EtcItem">
+		<!-- Sayha Grace points +35,000 (1 slot). Reuse Time is 10 minutes. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.etc_wind_potion_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49846" name="Sayha's Silver Light Blessing" type="EtcItem">
+		<!-- Sayha Grace points +70,000 (2 slots). Reuse Time is 10 minutes. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm_sayha_silver_blessed" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49847" name="Sayha's Golden Light Blessing" type="EtcItem">
+		<!-- Sayha Grace points +105,000 (3 slots). Reuse Time is 10 minutes. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm_sayha_gold_blessed" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49848" name="Fire Dragon Pendant Chest +10" type="EtcItem">
+		<!-- Double-click to get Fire Dragon Pendant +10. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm_pendant_pve_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49467" min="1" max="1" chance="100" minEnchant="10" maxEnchant="10" />
+		</capsuled_items>
+	</item>
+	<item id="49849" name="Land Dragon Pendant +10" type="EtcItem">
+		<!-- Double-click to get Land Dragon Pendant +10. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm_pendant_pvp_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49850" name="Ornament Supply Box (A-grade)" type="EtcItem">
+		<!-- Double-click to get an A-grade Ornament. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39187" level="1"/> <!--Ornament Supply Box (A-grade)-->
+		</skills>
+	</item>
+	<item id="49851" name="Sayha's Gust" type="EtcItem">
+		<!-- Sayha Grace points +100%, XP/SP gain +100%. This effect remains even after character's death. Duration: 10 minutes. Reuse Time: 10 minutes. Available when more than one slot of the bar of Sayha�s Grace points is filled. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.skill11137" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49852" name="Secret Book of Baggins’ Enchantments - IV" type="EtcItem">
+		<!-- Prevents the Talisman of Insolence from degrading to Lv. 2 in case of a failed enchantment to Lv. 4 using the Secret Method of Baggins. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.mercenary_certification_i02" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49853" name="Secret Book of Baggins’ Enchantments - V" type="EtcItem">
+		<!-- Prevents the Talisman of Insolence from degrading to Lv. 3 in case of a failed enchantment to Lv. 5 using the Secret Method of Baggins. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.mercenary_certification_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49854" name="Melissa’s MP Recovery Potion" type="EtcItem">
+		<!-- Instantly recovers MP. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.freya_potion" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49855" name="Sayha's Golden Gift" type="EtcItem">
+		<!-- Double-click to randomly receive one rare accessory or one rare item. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm_sayha_gold_present" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49856" name="Sayha's Silver Gift" type="EtcItem">
+		<!-- Double-click to get one of Ready Product (C/B/A-grade) Boxes, one of various Enchantment Scrolls, or one Sayha's Golden Light Blessing. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm_sayha_silver_present" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49857" name="Sayha's Gift" type="EtcItem">
+		<!-- Double-click to randomly receive one of Talismans of Insolence, one of the enchantment items, or one of the supply types. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm_sayha_present" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49858" name="Wind Token" type="EtcItem">
+		<!-- Double-click to receive Sayha's Blessing Box and Sayha's Gust. If you are lucky, you can also get one of the following items: Golden, Silver, or Average Gift. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.bm_sayha_token" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49859" name="Weapon Exchange Coupon" additionalName="Event" type="EtcItem">
+		<!-- Using Dimensional Merchant, you can trade it for an excellent D-, C-, or No-grade item. A certain amount of coupons is required for exchange. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_exchange_ticket_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49860" name="Hero’s Wondrous Cubic" additionalName="7-day" type="EtcItem">
+		<!-- Available at level 20 or higher. Double-click the Cube to receive one of the following items: Ticket for Soulshot, Scroll of Mood Melody, Warrior's Major Healing Potion, Warrior's Quick Healing Potion, Angel Cat's Blessing, Greater Scroll of Resurrection, Parts of Enchantment Scrolls Chest, Fishing Kit Box, Box of Scroll of Escape to the Base, Blade Spirit, or Weapon Exchange Coupon (can be used only once a day). Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Duration: 7 days. -->
+		<set name="icon" val="icon.etc_pink_crystal_cube_pc_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="49861" name="Life Stone - Tester" additionalName="Tester" type="EtcItem">
+		<!-- A test item. -->
+		<set name="icon" val="icon.etc_mineral_general_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49862" name="Bracelet of Border Chest" type="EtcItem">
+		<!-- Double-click the chest to get Bracelet of Border. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49863" name="Best Dye of STR (STR +1 CON - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_str" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49864" name="Best Dye of STR (STR + 1 DEX - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_str" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49865" name="Best Dye of CON (CON + 1 STR - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_con" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49866" name="Best Dye of CON (CON + 1 DEX - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_con" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49867" name="Best Dye of DEX (DEX + 1 STR - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_dex" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49868" name="Best Dye of DEX (DEX + 1 CON - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_dex" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49869" name="Best Dye of INT (INT + 1 MEN - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_int" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49870" name="Best Dye of INT (INT + 1 WIT - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 1st class transfer, before 2nd class transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_int" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49871" name="Best Dye of MEN (MEN + 1 INT - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_men" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49872" name="Best Dye of MEN (MEN + 1 WIT - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_men" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49873" name="Best Dye of WIT (WIT + 1 INT - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_wit" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49874" name="Greater Dye of WIT (Wit + 1 Men - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_wit" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49875" name="Best Dye of STR (STR + 1 CON - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_str" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49876" name="Best Dye of STR (STR + 1 DEX - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_str" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49877" name="Best Dye of CON (CON + 1 STR - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_con" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49878" name="Best Dye of CON (CON + 1 DEX - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_con" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49879" name="Best Dye of DEX (DEX + 1 STR - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_dex" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49880" name="Best Dye of DEX (DEX + 1 CON - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_dex" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49881" name="Best Dye of INT (INT + 1 MEN - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_int" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49882" name="Best Dye of INT (INT + 1 WIT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_int" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49883" name="Best Dye of MEN (MEN + 1 INT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_men" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49884" name="Best Dye of MEN (MEN + 1 WIT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_men" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49885" name="Best Dye of WIT (WIT + 1 INT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_wit" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49886" name="Best Dye of WIT (WIT + 1 MEN - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_wit" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49887" name="Best Dye of STR (STR + 1 CON - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_str" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49888" name="Best Dye of STR (STR + 1 DEX - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_str" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49889" name="Best Dye of CON (CON + 1 STR - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_con" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49890" name="Best Dye of CON (CON + 1 DEX - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_con" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49891" name="Best Dye of DEX (DEX + 1 STR - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_dex" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49892" name="Best Dye of DEX (DEX + 1 CON - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_dex" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49893" name="Best Dye of INT (INT + 1 MEN - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_int" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49894" name="Best Dye of INT (INT + 1 WIT - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_int" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49895" name="Best Dye of MEN (MEN + 1 INT - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_men" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49896" name="Best Dye of MEN (MEN + 1 WIT - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_men" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49897" name="Best Dye of WIT (WIT + 1 INT - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_wit" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49898" name="Best Dye of WIT (WIT + 1 MEN - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
+		<set name="icon" val="icon.lv1_1_dye_wit" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49899" name="Best Dye of STR (STR + 2 CON - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.lv2_1_dye_str" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

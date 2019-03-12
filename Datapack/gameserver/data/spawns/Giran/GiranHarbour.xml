@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="GiranHarbour">
+		<group>
+			<npc id="30013" x="48668" y="186341" z="-3480" heading="39805" respawnTime="60sec" /> <!-- Pierre -->
+			<npc id="30012" x="48765" y="186205" z="-3480" heading="39805" respawnTime="60sec" /> <!-- Fishing Guild Member -->
+			<npc id="34019" x="36447" y="193137" z="-3094" heading="43370" respawnTime="60sec" /> <!-- Fethin -->
+		</group>
+	</spawn>
+</list>

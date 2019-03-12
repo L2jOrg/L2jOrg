@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="4400" name="White Cloth" type="EtcItem">
+		<!-- A reward for eliminating Angels. Collect 1,000 pcs. and bring them to Magister Hanellin. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4404" name="Green Dimensional Stone - Shard" type="EtcItem">
+		<!-- Broken shard of the green Dimensional Stone. Collect these and take them to Researcher Kaplan. -->
+		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="10" />
+		<set name="price" val="10" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4405" name="Blue Dimensional Stone - Shard" type="EtcItem">
+		<!-- Broken shard of the blue Dimensional Stone. Collect these and take them to Researcher Euclie. -->
+		<set name="icon" val="icon.etc_broken_crystal_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="10" />
+		<set name="price" val="10" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4406" name="Red Dimensional Stone - Shard" type="EtcItem">
+		<!-- Broken shard of the red Dimensional Stone. Collect these and take them to Researcher Pitagon. -->
+		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="10" />
+		<set name="price" val="10" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4408" name="Musical Score - Theme of Love" type="EtcItem">
+		<!-- Posthumously released musical score of Gillian. If you take it to Maestro Melody, you can have an echo crystal made. -->
+		<set name="icon" val="icon.etc_musical_note_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4409" name="Musical Score - Theme of Battle" type="EtcItem">
+		<!-- The musical score for the Battle March of Flames. If you take it to Maestro Melody, you can have an echo crystal made. -->
+		<set name="icon" val="icon.etc_musical_note_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4410" name="Musical Score - Theme of Journey" type="EtcItem">
+		<!-- Musical score composed by Troubadour Swan. If you take it to Maestro Melody, you can have an echo crystal made. -->
+		<set name="icon" val="icon.etc_musical_note_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4411" name="Echo Crystal - Theme of Journey" type="EtcItem">
+		<!-- Echo crystal that plays the theme music of a journey. May only be used once. -->
+		<set name="icon" val="icon.etc_echo_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="reuse_delay" val="20000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2069" level="1" /> <!-- Item - Race Sound Crystal -->
+		</skills>
+	</item>
+	<item id="4412" name="Echo Crystal - Theme of Battle" type="EtcItem">
+		<!-- Echo crystal that plays the theme music of a battle. -->
+		<set name="icon" val="icon.etc_echo_crystal_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="reuse_delay" val="24000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2068" level="1" /> <!-- Item - Race Sound Crystal -->
+		</skills>
+	</item>
+	<item id="4413" name="Echo Crystal - Theme of Love" type="EtcItem">
+		<!-- Echo crystal that plays the theme music of love. May only be used once. -->
+		<set name="icon" val="icon.etc_echo_crystal_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="reuse_delay" val="24000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2070" level="1" /> <!-- Item - Race Sound Crystal -->
+		</skills>
+	</item>
+	<item id="4414" name="Echo Crystal - Theme of Solitude" type="EtcItem">
+		<!-- Echo crystal that plays the theme music of solitude. May only be used once. -->
+		<set name="icon" val="icon.etc_echo_crystal_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="reuse_delay" val="20000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2072" level="1" /> <!-- Item - Race Sound Crystal -->
+		</skills>
+	</item>
+	<item id="4415" name="Echo Crystal - Theme of Festival" type="EtcItem">
+		<!-- Echo crystal that plays the theme music of a feast. May only be used once. -->
+		<set name="icon" val="icon.etc_echo_crystal_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="reuse_delay" val="3000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2071" level="1" /> <!-- Item - Race Sound Crystal -->
+		</skills>
+	</item>
+	<item id="4416" name="Echo Crystal - Theme of Celebration" type="EtcItem">
+		<!-- Echo crystal that plays the theme music of a celebration. May only be used once. -->
+		<set name="icon" val="icon.etc_echo_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="reuse_delay" val="3000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2073" level="1" /> <!-- Item - Theme Sound Crystal -->
+		</skills>
+	</item>
+	<item id="4417" name="Echo Crystal - Theme of Comedy" type="EtcItem">
+		<!-- Echo crystal that plays the theme music of a comedy. May only be used once. -->
+		<set name="icon" val="icon.etc_echo_crystal_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="reuse_delay" val="3000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2067" level="1" /> <!-- Item - Theme Sound Crystal -->
+		</skills>
+	</item>
+	<item id="4418" name="Musical Score - Theme of Celebration" type="EtcItem">
+		<!-- Musical score containing the theme music of a celebration. If you take it to Maestro Melody, you can have an echo crystal made. -->
+		<set name="icon" val="icon.etc_musical_note_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4419" name="Musical Score - Theme of Comedy" type="EtcItem">
+		<!-- Musical score containing the theme music of a comedy. If you take it to Maestro Melody, you can have an echo crystal made. -->
+		<set name="icon" val="icon.etc_musical_note_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4420" name="Musical Score - Theme of Solitude" type="EtcItem">
+		<!-- Musical score composed by Musician Nanarin. If you take it to Maestro Melody, you can have an echo crystal made. -->
+		<set name="icon" val="icon.etc_musical_note_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4421" name="Musical Score - Theme of Festival" type="EtcItem">
+		<!-- Musical score composed by Musician Barbado. If you take it to Maestro Melody, you can have an echo crystal made. -->
+		<set name="icon" val="icon.etc_musical_note_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4433" name="Elemental Stone Powder" type="EtcItem">
+		<!-- Elemental stone powder obtained from a stone statue in the Forgotten Temple. Can be sold at any store or taken to Magister Nell. -->
+		<set name="icon" val="icon.etc_powder_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="10" />
+		<set name="price" val="50" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4434" name="Collector of Jewels" type="EtcItem">
+		<!-- The shards of Elemental stones obtained from stone statues in the Forgotten Temple. Can be sold at any store or taken to Magister Nell. -->
+		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="100" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4435" name="Elemental Stone Lump" type="EtcItem">
+		<!-- The lumps of Elemental stone obtained from stone statues in the Forgotten Temple. Can be sold at any store or taken to Magister Nell. -->
+		<set name="icon" val="icon.etc_crystal_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="1000" />
+		<set name="price" val="5000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4436" name="Bentley's Request" type="EtcItem">
+		<!-- Request to find and bring back jade crystals from creatures such as Fline, Liele, Satyr etc. that inhabit the Enchanted Valley. -->
+		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4437" name="Carson's Request" type="EtcItem">
+		<!-- Request to recover the works of the ancient sculptor Berona from Hatar Ratmen and Vanor Silenos in the area near the Cemetery. -->
+		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4438" name="Knuckle Duster Edge" type="EtcItem">
+		<!-- Essential ingredient needed by a Dwarf to make a Knuckle Duster. Can be sold. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="28044" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4439" name="Avadon Shield Fragment" type="EtcItem">
+		<!-- Essential ingredient needed by a Dwarf to make an Avadon Shield. Can be sold. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2900" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4440" name="Recipe: Knuckle Duster" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Knuckle Duster. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="57400" />
+		<set name="recipe_id" val="495" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4441" name="Recipe: Avadon Shield" type="EtcItem">
+		<!-- For Dwarves only. Recipe for an Avadon Shield. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="10900" />
+		<set name="recipe_id" val="479" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4445" name="Dye of STR (STR + 1 CON - 3)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_str_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="5100" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4446" name="Dye of STR (STR + 1 DEX - 3)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_str_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="5100" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4447" name="Dye of CON (Con + 1 Str - 3)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_con_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="5100" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4448" name="Dye of CON (Con + 1 DEX - 3)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_con_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="5100" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4449" name="Dye of DEX (Dex + 1 Str - 3)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="5100" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4450" name="Dye of DEX (Dex + 1 CON - 3)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="5100" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4451" name="Dye of INT (Int + 1 Men - 3)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_int_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="5100" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4452" name="Dye of INT (Int + 1 Wit - 3)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wisards after 1st class transfer, before 2nd class transfer. -->
+		<set name="icon" val="icon.etc_int_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="5100" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4453" name="Dye of MEN (Men + 1 Int - 3)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_men_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="5100" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4454" name="Dye of MEN (Men + 1 Wit - 3)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_men_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="5100" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4455" name="Dye of WIT (Wit + 1 Int - 3)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="5100" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4456" name="Dye of WIT (Wit + 1 Men - 3)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="5100" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4457" name="Dye of STR (STR + 1 CON - 2)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_str_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4458" name="Dye of STR (STR + 1 DEX - 2)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_str_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4459" name="Dye of CON (Con + 1 Str - 2)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_con_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4460" name="Dye of CON (Con + 1 DEX - 2)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_con_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4461" name="Dye of DEX (Dex + 1 Str - 2)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4462" name="Dye of DEX (Dex + 1 CON - 2)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4463" name="Dye of INT (Int + 1 Men - 2)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_int_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4464" name="Dye of INT (Int + 1 Wit - 2)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_int_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4465" name="Dye of MEN (Men + 1 Int - 2)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_men_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4466" name="Dye of MEN (Men + 1 Wit - 2)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_men_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4467" name="Dye of WIT (Wit + 1 Int - 2)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4468" name="Dye of WIT (Wit + 1 Men - 2)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4469" name="Dye of STR (STR + 1 CON - 1)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_str_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="35000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4470" name="Dye of STR (STR + 1 DEX - 1)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_str_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="35000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4471" name="Dye of CON (Con + 1 Str - 1)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_con_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="35000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4472" name="Dye of CON (Con + 1 DEX - 1)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_con_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="35000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4473" name="Dye of DEX (Dex + 1 Str - 1)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="35000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4474" name="Dye of DEX (Dex + 1 CON - 1)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="35000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4475" name="Dye of INT (Int + 1 Men - 1)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_int_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="35000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4476" name="Dye of INT (Int + 1 Wit - 1)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_int_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="35000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4477" name="Dye of MEN (Men + 1 Int - 1)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_men_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="35000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4478" name="Dye of MEN (Men + 1 Wit - 1)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_men_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="35000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4479" name="Dye of WIT (Wit + 1 Int - 1)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="35000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4480" name="Dye of WIT (Wit + 1 Men - 1)" additionalName="1st Class Transfer" type="EtcItem">
+		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="35000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4481" name="Greater Dye of STR (STR + 1 CON - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_str_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4482" name="Greater Dye of STR (STR + 1 DEX - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_str_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4483" name="Greater Dye of CON(Con + 1 Str - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_con_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4484" name="Greater Dye of CON(Con + 1 DEX - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_con_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4485" name="Greater Dye of DEX (Dex + 1 Str - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4486" name="Greater Dye of DEX (Dex + 1 CON - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4487" name="Greater Dye of INT (Int + 1 Men - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_int_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4488" name="Greater Dye of INT (Int + 1 Wit - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_int_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4489" name="Greater Dye of MEN (Men + 1 Int - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_men_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4490" name="Greater Dye of MEN (Men + 1 Wit - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_men_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4491" name="Greater Dye of WIT (Wit + 1 Int - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_wit_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4492" name="Greater Dye of WIT (Wit + 1 Men - 3)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_wit_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4493" name="Greater Dye of STR (STR + 1 CON - 2)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_str_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="21000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4494" name="Greater Dye of STR (STR + 1 DEX - 2)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_str_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="21000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4495" name="Greater Dye of CON (Con + 1 Str - 2)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_con_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="21000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4496" name="Greater Dye of CON (Con + 1 DEX - 2)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_con_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="21000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4497" name="Greater Dye of DEX (Dex + 1 Str - 2)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="21000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4498" name="Greater Dye of DEX (Dex + 1 CON - 2)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="21000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4499" name="Greater Dye of INT (Int + 1 Men - 2)" additionalName="2nd Class Transfer" type="EtcItem">
+		<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 2nd Class Transfer. -->
+		<set name="icon" val="icon.etc_int_hena_i01" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="21000" />
+		<set name="commissionItemType" val="DYES" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

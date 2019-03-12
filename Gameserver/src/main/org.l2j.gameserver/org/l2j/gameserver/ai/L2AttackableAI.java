@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Playable;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.*;
+import org.l2j.gameserver.model.actor.instance.*;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableFactionCall;
@@ -28,7 +28,6 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.util.Util;
-import org.l2j.gameserver.model.actor.instance.*;
 
 import java.util.Comparator;
 import java.util.List;

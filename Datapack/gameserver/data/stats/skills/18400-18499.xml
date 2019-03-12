@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="18448" toLevel="1" name="Scroll: Summon Piero">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summon Piero. -->
+		<!-- On summon npcString: 1802963 -->
+		<!-- Piero starts to cast Check Giveaway Number 1-1.5secs after being spawned. -->
+		<icon>icon.skill0000</icon>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>46219</itemConsumeId> <!-- Summon Scroll: Piero -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>3000</hitTime>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>34084</npcId>
+				<npcCount>1</npcCount>
+				<despawnDelay>180000</despawnDelay>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18449" toLevel="1" name="Magic Number Cube">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Apply for the giveaway. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>1500</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>6000</reuseDelay>
+	</skill>
+	<skill id="18450" toLevel="6" name="Confirm Number">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shows number 1. -->
+		<!-- Piero casts the skill, 3 seconds later, you cast the skill. Skill level is random. You can guess who wins by logging the skill level when skill cast starts. -->
+		<!-- Rules: You win if you get number higher than Piero. If you both get same numbers, you still lose (that fucker). When you lose, you get 1 coin. Upon win you get 1 Piero's Victory Box Event (46245) -->
+		<!-- Upon lose you get the message: 1802956 -->
+		<!-- Upon win you get the message: 1802957 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>75</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>3000</hitTime>
+		<effectPoint>204</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="18451" toLevel="2" name="1st Anniversary Buff">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Receive an additional 11% XP/SP when hunting. Receive an 11th Anniversary Coin once the buff ends. (Note:) Cannot receive item if you are dead or don't have space in your inventory. -->
+		<!-- When level 1 ends, you get 11 coins and lvl 2 is casted. It cannot be canceled. Lv2 gives no coins. NPC which gives this buff doesnt give again, until it disappears. -->
+		<icon>icon.ev_buff_11th</icon>
+		<abnormalTime>
+			<value level="1">3600</value>
+			<value level="2">7200</value>
+		</abnormalTime>
+		<canBeDispelled>false</canBeDispelled>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">11</value>
+					<value level="2">30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18472" toLevel="6" name="Lucky number 1">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18475" toLevel="2" name="11th Anniversary Coin">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.ev_buff_11th</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+</list>

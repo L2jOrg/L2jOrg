@@ -36,6 +36,7 @@ import java.util.stream.IntStream;
 public final class Config {
     // --------------------------------------------------
     // Constants
+    private static final Logger LOGGER = Logger.getLogger(Config.class.getName());
     // --------------------------------------------------
     public static final String EOL = System.lineSeparator();
     // --------------------------------------------------
@@ -45,7 +46,6 @@ public final class Config {
     public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
     public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
-    private static final Logger LOGGER = Logger.getLogger(Config.class.getName());
     private static final String ATTENDANCE_CONFIG_FILE = "./config/AttendanceRewards.ini";
     private static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
     private static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
@@ -68,6 +68,7 @@ public final class Config {
     public static final int MAX_ACTIVE_ACCOUNTS_ON_ONE_IP = 0;
     public static final String[] MAX_ACTIVE_ACCOUNTS_IGNORED_IP = { "127.0.0.1"};
     public static final int MAX_ACTIVE_ACCOUNTS_ON_ONE_HWID = 0;
+    public static final int CHARACTER_DELETE_AFTER_HOURS = 168;
 
     // --------------------------------------------------
     // Custom Config File Definitions
@@ -2715,7 +2716,8 @@ public final class Config {
 
     private static class IPConfigData implements IGameXmlReader {
         private static final List<String> _subnets = new ArrayList<>(5);
-        private static final List<String> _hosts = new ArrayList<>(5);
+        private static final List<String>
+                _hosts = new ArrayList<>(5);
 
         public IPConfigData() {
             load();
@@ -2767,12 +2769,12 @@ public final class Config {
         protected void autoIpConfig() {
             String externalIp = "127.0.0.1";
             try {
-                final URL autoIp = new URL("http://ip1.dynupdate.no-ip.com:8245/");
+                final URL autoIp = new URL("https://api.ipify.org/");
                 try (BufferedReader in = new BufferedReader(new InputStreamReader(autoIp.openStream()))) {
                     externalIp = in.readLine();
                 }
             } catch (IOException e) {
-                LOGGER.log(Level.INFO, "Failed to connect to api.externalip.net please check your internet connection using 127.0.0.1!");
+                LOGGER.log(Level.INFO, "Failed to connect to api.ipify.org please check your internet connection using 127.0.0.1!");
                 externalIp = "127.0.0.1";
             }
 

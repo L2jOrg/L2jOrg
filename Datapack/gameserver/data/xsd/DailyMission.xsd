@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list" type="listType" />
+	<xs:complexType name="paramType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="name" type="xs:string" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="handlerType">
+		<xs:sequence>
+			<xs:element type="paramType" name="param" maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" />
+	</xs:complexType>
+	<xs:complexType name="itemType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute type="xs:int" name="id" />
+				<xs:attribute type="xs:byte" name="count" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="itemsType">
+		<xs:sequence>
+			<xs:element type="itemType" name="item" maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="rewardType">
+		<xs:sequence>
+			<xs:element type="xs:short" name="classId" maxOccurs="unbounded" minOccurs="0" />
+			<xs:element type="handlerType" name="handler" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type="itemsType" name="items" />
+		</xs:sequence>
+		<xs:attribute type="xs:short" name="id" />
+		<xs:attribute type="xs:short" name="reward_id" />
+		<xs:attribute type="xs:string" name="name" />
+		<xs:attribute type="xs:short" name="requiredCompletion" />
+		<xs:attribute type="xs:boolean" name="isOneTime" />
+		<xs:attribute type="xs:boolean" name="isMainClassOnly" />
+		<xs:attribute type="xs:boolean" name="isDualClassOnly" />
+		<xs:attribute type="xs:boolean" name="isDisplayedWhenNotAvailable" />
+	</xs:complexType>
+	<xs:complexType name="listType">
+		<xs:sequence>
+			<xs:element type="rewardType" name="reward" maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

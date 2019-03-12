@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="23173" name="Alluring Swimsuit" type="Armor">
+		<!-- Alluring Swimsuit with a fancy pattern. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_swimsuit_event_02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>

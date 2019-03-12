@@ -170,7 +170,7 @@ public final class DocumentItem extends DocumentBase implements IGameXmlReader {
         }
 
         try {
-            final Constructor<?> itemClass = Class.forName("com.l2jmobius.gameserver.model.items.L2" + _currentItem.type).getConstructor(StatsSet.class);
+            final Constructor<?> itemClass = Class.forName("org.l2j.gameserver.model.items.L2" + _currentItem.type).getConstructor(StatsSet.class);
             _currentItem.item = (L2Item) itemClass.newInstance(_currentItem.set);
         } catch (Exception e) {
             throw new InvocationTargetException(e);

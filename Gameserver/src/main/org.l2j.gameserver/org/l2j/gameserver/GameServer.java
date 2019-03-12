@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.net.InetSocketAddress;
 import java.time.Duration;
+import java.util.Calendar;
 import java.util.Properties;
 
 import static java.util.Objects.nonNull;
@@ -45,6 +46,7 @@ public class GameServer {
 
     public static final String UPDATE_NAME = "Classic: Saviors (Seven Signs)";
     private static final String LOG4J_CONFIGURATION_FILE = "log4j.configurationFile";
+    public static Calendar dateTimeServerStarted;
     private static Logger LOGGER;
     private static String version;
     private static GameServer INSTANCE;
@@ -280,8 +282,7 @@ public class GameServer {
         LOGGER.info(getClass().getSimpleName() + ": Maximum number of connected players is " + Config.MAXIMUM_ONLINE_USERS + ".");
         LOGGER.info(getClass().getSimpleName() + ": Server loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
 
-        ClientPacketHandler packetHandler = new ClientPacketHandler();
-        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(Config.PORT_GAME), L2GameClient::new, packetHandler, ThreadPoolManager::execute).bufferLargeSize(24 * 1024).build();
+        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(Config.PORT_GAME), L2GameClient::new, new ClientPacketHandler(), ThreadPoolManager::execute).bufferLargeSize(24 * 1024).build();
         connectionHandler.start();
     }
 
@@ -292,6 +293,8 @@ public class GameServer {
         Config.load();
         INSTANCE = new GameServer();
         ThreadPoolManager.execute(AuthServerCommunication.getInstance());
+        dateTimeServerStarted = Calendar.getInstance();
+
     }
 
     private static void configureLogger() {

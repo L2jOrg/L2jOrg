@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+	<npcs>
+		<npc>-1</npc> <!-- CB -->
+	</npcs>
+	<item>
+		<!-- Adena -->
+		<ingredient count="10000000" id="57" />
+		<!-- Proof of Blood -->
+		<production count="1" id="1419" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="20000000" id="57" />
+		<!-- Proof of Alliance -->
+		<production count="1" id="3874" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="40000000" id="57" />
+		<!-- Proof of Aspiration -->
+		<production count="1" id="3870" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="1" id="57" />
+		<!-- Blood-stained Cloth -->
+		<production count="1" id="4295" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="1" id="57" />
+		<!-- Portal Stone -->
+		<production count="1" id="3865" />
+	</item>
+</list>

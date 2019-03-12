@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30080"> <!-- Clarissa -->
+		<teleport type="NORMAL">
+			<!-- feeCount from Interlude, unconfirmed from retail classic -->
+			<location npcStringId="1010006" x="15671" y="142994" z="-2696" feeCount="6800" /> <!-- Town of Dion -->
+			<location npcStringId="1010013" x="83011" y="53207" z="-1488" feeCount="9400" /> <!-- Town of Oren -->
+            <location npcStringId="1010020" x="117088" y="76931" z="-2696" feeCount="4100" /> <!-- Hunter's Village -->
+			<location npcStringId="1001007" x="148024" y="-55281" z="-2728" feeCount="11100" /> <!-- Goddard -->
+			<location npcStringId="1010023" x="146813" y="25807" z="-2008" feeCount="13000" /> <!-- Town of Aden -->
+			<location npcStringId="1010022" x="105918" y="109759" z="-3192" feeCount="4400" /> <!-- Hardin's Academy -->
+			<location npcStringId="1010021" x="47935" y="186810" z="-3480" feeCount="5200" /> <!-- Giran Harbor -->
+			<location npcStringId="1010117" x="73024" y="118485" z="-3696" feeCount="1800" /> <!-- Three-way crossroads at Dragon Valley -->
+			<location npcStringId="1010518" x="115583" y="192261" z="-3488" feeCount="2100" /> <!-- Entrance to the Alligator Island -->
+			<location npcStringId="1010504" x="43408" y="206881" z="-3752" feeCount="5700" /> <!-- Entrance to the Devil's Isle -->
+			<location npcStringId="1010228" x="177347" y="173049" z="-1920" feeCount="8000" /> <!-- Land of Winds (Lv. 78) -->
+			<location npcStringId="1010153" x="82098" y="252437" z="-10592" feeCount="8000" /> <!-- Garden of Eva (Lv. 78) -->
+		</teleport>
+	</npc>
+</list>

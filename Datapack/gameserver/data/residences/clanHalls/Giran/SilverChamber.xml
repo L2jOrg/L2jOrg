@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/clanHall.xsd">
+	<clanHall id="43" name="Silver Chamber" grade="GRADE_A" type="AUCTIONABLE">
+	 	<auction minBid="10000000" lease="1000000" deposit="1000000" />
+	 	<npcs>
+	 	   	<npc id="35454" /> <!-- Rosconne -->
+   			<npc id="35453" /> <!-- Adrienne -->
+	 	</npcs>
+	 	<doorlist>
+	 		<door id="22220010" />
+	 		<door id="22220009" />
+	 	</doorlist>
+	 	<ownerRestartPoint x="82032" y="145328" z="-3520" />
+		<banishPoint x="83409" y="148578" z="-3300" />
+	</clanHall>
+</list>

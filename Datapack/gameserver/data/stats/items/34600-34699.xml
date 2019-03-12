@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="34603" name="Mysterious No-grade Soulshot" type="EtcItem">
+		<!-- Soulshot bestowed upon a weapon increases its attack power. Used with No-grade weapons. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.etc_spirit_bullet_white_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
+		<skills>
+			<skill id="9293" level="1" /> <!-- Player Commendation - Soulshot (No-grade) -->
+		</skills>
+	</item>
+	<item id="34604" name="Mysterious Soulshot (D-grade)" type="EtcItem">
+		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing power of attack. Used with D-grade weapons. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="crystal_type" val="D" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
+		<skills>
+			<skill id="9294" level="1" /> <!-- Player Commendation - Soulshot (D-grade) -->
+		</skills>
+	</item>
+	<item id="34605" name="Mysterious Soulshot (C-grade)" type="EtcItem">
+		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing power of attack. Used with C-grade weapons. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="crystal_type" val="C" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
+		<skills>
+			<skill id="9295" level="1" /> <!-- Player Commendation - Soulshot (C-grade) -->
+		</skills>
+	</item>
+	<item id="34606" name="Mysterious Soulshot (B-grade)" type="EtcItem">
+		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with B-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_spirit_bullet_red_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="crystal_type" val="B" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
+		<skills>
+			<skill id="9296" level="1" /> <!-- Player Commendation - Soulshot (B-grade) -->
+		</skills>
+	</item>
+	<item id="34607" name="Mysterious Soulshot (A-grade)" type="EtcItem">
+		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with A-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="crystal_type" val="A" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
+		<skills>
+			<skill id="9297" level="1" /> <!-- Player Commendation - Soulshot (A-grade) -->
+		</skills>
+	</item>
+	<item id="34610" name="Mysterious Blessed No-grade Spiritshot" type="EtcItem">
+		<!-- Spiritshot bestowed upon a weapon increases its magic power. Used with No-grade weapons. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.etc_spell_shot_white_i01" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<skills>
+			<skill id="8910" level="1" /> <!-- Player Commendation - Blessed Spiritshot (No-grade) -->
+		</skills>
+	</item>
+	<item id="34611" name="Mysterious Blessed Spiritshot (D-grade)" type="EtcItem">
+		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing power of magic attack. Used with D-grade weapons. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="crystal_type" val="D" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<skills>
+			<skill id="8911" level="1" /> <!-- Player Commendation - Blessed Spiritshot (D-grade) -->
+		</skills>
+	</item>
+	<item id="34612" name="Mysterious Blessed Spiritshot (C-grade)" type="EtcItem">
+		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing power of magic attack. Used with C-grade weapons. Cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.etc_spell_shot_green_i01" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="crystal_type" val="C" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<skills>
+			<skill id="8912" level="1" /> <!-- Player Commendation - Blessed Spiritshot (C-grade) -->
+		</skills>
+	</item>
+	<item id="34613" name="Mysterious Blessed Spiritshot (B-grade)" type="EtcItem">
+		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with B-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_spell_shot_red_i01" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="crystal_type" val="B" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<skills>
+			<skill id="8913" level="1" /> <!-- Player Commendation - Blessed Spiritshot (B-grade) -->
+		</skills>
+	</item>
+	<item id="34614" name="Mysterious Blessed Spiritshot (A-grade)" type="EtcItem">
+		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with A-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="crystal_type" val="A" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<skills>
+			<skill id="8907" level="1" /> <!-- Player Commendation - Blessed Spiritshot (A-grade) -->
+		</skills>
+	</item>
+</list>

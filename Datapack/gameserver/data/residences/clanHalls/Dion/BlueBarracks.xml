@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/clanHall.xsd">
+	<clanHall id="69" name="Blue Barracks" grade="GRADE_B" type="AUCTIONABLE">
+	 	<auction minBid="5000000" lease="500000" deposit="500000" />
+	 	<npcs>
+	 	   	<npc id="36730" /> <!-- Faolin -->
+   			<npc id="36729" /> <!-- Bremen -->
+	 	</npcs>
+	 	<doorlist>
+	 		<door id="20220120" />
+	 		<door id="20220119" />
+	 	</doorlist>
+	 	<ownerRestartPoint x="16370" y="155983" z="-3617" />
+		<banishPoint x="16208" y="155285" z="-3640" />
+	</clanHall>
+</list>

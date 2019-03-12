@@ -19,17 +19,17 @@ package handlers.effecthandlers;
 import java.util.logging.Logger;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.mobius.gameserver.data.xml.impl.CubicData;
-import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
-import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.model.actor.templates.L2CubicTemplate;
-import org.l2j.gameserver.mobius.gameserver.model.cubic.CubicInstance;
-import org.l2j.gameserver.mobius.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
-import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
-import org.l2j.gameserver.mobius.gameserver.model.stats.Stats;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExUserInfoCubic;
+import org.l2j.gameserver.data.xml.impl.CubicData;
+import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.templates.L2CubicTemplate;
+import org.l2j.gameserver.model.cubic.CubicInstance;
+import org.l2j.gameserver.model.effects.AbstractEffect;
+import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.network.serverpackets.ExUserInfoCubic;
 
 /**
  * Summon Cubic effect implementation.

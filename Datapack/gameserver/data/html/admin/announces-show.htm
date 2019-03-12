@@ -1,0 +1,54 @@
+<html noscrollbar>
+	<body>
+		<center>
+			<br>
+			<table border="0" cellpadding="0" cellspacing="0" width="97%" height="480" background="L2UI_CH3.refinewnd_back_Pattern">
+				<tr>
+					<td valign="top" align="center">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td width="256" height="185" background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td>
+							</tr>
+						</table>
+						Announcement: %id%<br1>
+						<table width=600 height=185 cellspacing=5 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+							<tr>
+								<td>Type</td>
+								<td>%type%</td>
+							</tr>
+							<tr>
+								<td>Initial Delay</td>
+								<td>%initial%</td>
+							</tr>
+							<tr>
+								<td>Delay</td>
+								<td>%delay%</td>
+							</tr>
+							<tr>
+								<td>Repeat:</td>
+								<td>%repeat%</td>
+							</tr>
+							<tr>
+								<td>Author:</td>
+								<td>%author%</td>
+							</tr>
+							<tr>
+								<td>Text:</td>
+								<td>%content%</td>
+							</tr>
+						</table>
+						<center>
+							<table>
+								<tr>
+									<td><button value="Remove" action="bypass -h admin_announces remove %id%" width="70" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+									<td><button value="Restart" action="bypass -h admin_announces restart %id" width="70" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+									<td><button value="Back" action="bypass -h admin_announces list" width="70" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+								</tr>
+							</table>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</center>
+	</body>
+</html>

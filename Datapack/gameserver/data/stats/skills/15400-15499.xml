@@ -1,0 +1,1845 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="15400" toLevel="1" name="Shield of Darkness">
+		<!-- Glory Days confirmed -->
+		<!-- P. Def. greatly increases temporarily due to the power of darkness. -->
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>PD_UP_SPECIAL</abnormalType>
+		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
+		<icon>icon.skill0110</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<effectPoint>100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>DARK</attributeType>
+		<attributeValue>50</attributeValue>
+		<reuseDelay>30000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-80</amount>
+				<slot>BUFF</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15402" toLevel="1" name="Wisp's Blessing">
+		<!-- Glory Days confirmed -->
+		<!-- P. Atk. And M. Atk. increases temporarily. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>NPC_MULTI_BUFF1</abnormalType>
+		<icon>icon.skill11046</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>696</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>90</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15403" toLevel="1" name="Favor Exchange">
+		<!-- For 15 sec., Speed + 30%. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>MULTI_DEBUFF</abnormalType>
+		<icon>icon.skill1204</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>2</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>93</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15404" toLevel="1" name="Unable to Target">
+		<!-- Glory Days confirmed -->
+		<!-- Cannot target. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>MA_DOWN</abnormalType>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<icon>icon.notargetting</icon>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>0</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DisableTargeting" />
+		</effects>
+	</skill>
+	<skill id="15405" toLevel="1" name="Master's Blessing (Awakening)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Uses the Master's Blessing buff. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15406" toLevel="1" name="Warrior's Harmony Zone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Creates a zone that provides the Harmony skill. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15407" toLevel="1" name="Knight's Harmony Zone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Creates a zone that provides the Harmony skill. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15408" toLevel="1" name="Wizard's Harmony Zone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Creates a zone that provides the Harmony skill. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15409" toLevel="1" name="Summon Buff Servant">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons the Buff Servant. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15411" toLevel="1" name="Soul Break">
+		<!-- Glory Days confirmed -->
+		<!-- Inflicts a powerful attack on a target. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>7</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<icon>icon.skill0223</icon>
+		<operateType>A2</operateType>
+		<castRange>500</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-111</effectPoint>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>460</effectRange>
+		<magicLvl>95</magicLvl>
+		<trait>BLEED</trait>
+		<attributeType>EARTH</attributeType>
+		<attributeValue>50</attributeValue>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>75000</power>
+			</effect>
+			<effect name="DamOverTime">
+				<power>2000</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15412" toLevel="1" name="Presentation - Toad Cannon Explosion">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15413" toLevel="1" name="Raid Boss (Lv. 97)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Giant golem created by Dr. Chaos to excavate the Nornil Ruins. This Detector Golem is equipped with attack functions as well, and is a complete collection of all of Dr. Chaos' technological wonders. -->
+		<icon>icon.skillraid</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+	</skill>
+	<skill id="15414" toLevel="1" name="Raid Boss (Lv. 97)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Leader of the Spiculas that activated the Intruder Elimination Project under Mother Nornil's orders. This prototype Spicula is emotionless and almost machine-like. It is currently creating mutations in various machines by spreading the Laido Virus. -->
+		<icon>icon.skillraid</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+	</skill>
+	<skill id="15415" toLevel="1" name="Appearance Modification (No-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Changed to the appearance of a No-grade item. -->
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<abnormalVisualEffect>NGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15416" toLevel="1" name="Appearance Modification (D-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Changed to the appearance of a D-grade item. -->
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<abnormalVisualEffect>DGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15417" toLevel="1" name="Appearance Modification (C-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Changed to the appearance of a C-grade item. -->
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<abnormalVisualEffect>CGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15418" toLevel="1" name="Appearance Modification (B-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Changed to the appearance of a B-grade item. -->
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<abnormalVisualEffect>BGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15419" toLevel="1" name="Appearance Modification (A-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Changed to the appearance of an A-grade item. -->
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<abnormalVisualEffect>AGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15420" toLevel="1" name="Before Lind Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="15421" toLevel="1" name="Lind Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill11755</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<reuseDelay>1500</reuseDelay>
+	</skill>
+	<skill id="15426" toLevel="1" name="Energy Drain">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>145000</castRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>500</hitTime>
+	</skill>
+	<skill id="15427" toLevel="1" name="Bleed">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- AoE Bleeding. -->
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-574</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15429" toLevel="1" name="Hold">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Lindvior's AoE Aerial Yoke. -->
+		<icon>icon.skill1042</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>10000</hitTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-867</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15431" toLevel="1" name="Supersonic Blaster">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>42</mpConsume>
+		<castRange>1200</castRange>
+		<hitTime>1900</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1700</effectRange>
+		<magicLvl>97</magicLvl>
+		<reuseDelay>7000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>45000</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15432" toLevel="1" name="Power Strike">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>80</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>200</effectRange>
+		<magicLvl>97</magicLvl>
+		<reuseDelay>6000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>45000</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15433" toLevel="1" name="Surrender to Dark">
+		<!-- Glory Days confirmed -->
+		<!-- Dark Attack Resistance decreased, and Holy Attack Resistance increases momentarily. -->
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ARMOR_UNHOLY</abnormalType>
+		<icon>icon.skill4336_new</icon>
+		<operateType>A2</operateType>
+		<mpConsume>65</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>8000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<basicProperty>MAGIC</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<activateRate>80</activateRate>
+		<magicLvl>97</magicLvl>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>-30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>15</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15434" toLevel="1" name="Drain HP">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>73</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpDrain">
+				<power>300</power>
+				<percentage>100</percentage>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15435" toLevel="1" name="Power Strike">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>20</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>200</effectRange>
+		<magicLvl>97</magicLvl>
+		<reuseDelay>6000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>45000</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15436" toLevel="1" name="Wide Sweep">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>119</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1800</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>200</effectRange>
+		<magicLvl>97</magicLvl>
+		<fanRange>0;0;1000;180</fanRange>
+		<reuseDelay>6000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>35000</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15437" toLevel="1" name="Sonic Blaster">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>80</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1900</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<reuseDelay>15000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>45000</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15438" toLevel="1" name="Hold">
+		<!-- Glory Days confirmed -->
+		<!-- Afflicted with Hold and unable to move temporarily. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<icon>icon.skill4047</icon>
+		<operateType>A2</operateType>
+		<mpConsume>73</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2500</hitTime>
+		<reuseDelay>8000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<basicProperty>MAGIC</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<activateRate>80</activateRate>
+		<magicLvl>97</magicLvl>
+		<trait>HOLD</trait>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockMove" />
+		</effects>
+	</skill>
+	<skill id="15439" toLevel="1" name="Drain HP">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>109</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpDrain">
+				<power>300</power>
+				<percentage>50</percentage>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15440" toLevel="1" name="Aura Burn">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>150</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<effectRange>650</effectRange>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>400</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15441" toLevel="1" name="Death Bomb">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>97</magicLvl>
+		<affectRange>150</affectRange>
+		<mpConsume>119</mpConsume>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>350</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15442" toLevel="1" name="Bleed">
+		<!-- Glory Days confirmed -->
+		<!-- HP decreases from bleeding momentarily. -->
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<mpConsume>80</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>200</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<activateRate>100</activateRate>
+		<magicLvl>97</magicLvl>
+		<trait>BLEED</trait>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>70</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15443" toLevel="1" name="Drain HP">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>102</mpConsume>
+		<castRange>400</castRange>
+		<hitTime>2500</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>2.5</hitCancelTime>
+		<effectRange>900</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpDrain">
+				<power>200</power>
+				<percentage>20</percentage>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15444" toLevel="1" name="Bleed">
+		<!-- Glory Days confirmed -->
+		<!-- HP decreases from bleeding momentarily. -->
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<mpConsume>120</mpConsume>
+		<castRange>500</castRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>6000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1000</effectRange>
+		<lvlBonusRate>1</lvlBonusRate>
+		<activateRate>50</activateRate>
+		<magicLvl>97</magicLvl>
+		<trait>BLEED</trait>
+		<affectRange>200</affectRange>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="DamOverTime">
+				<power>70</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15445" toLevel="1" name="Super Strike">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>247</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1800</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>200</effectRange>
+		<magicLvl>97</magicLvl>
+		<reuseDelay>6000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>45000</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15446" toLevel="1" name="Drain HP">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>282</mpConsume>
+		<castRange>500</castRange>
+		<hitTime>2500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>3.5</hitCancelTime>
+		<effectRange>1000</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<affectRange>200</affectRange>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="HpDrain">
+				<power>400</power>
+				<percentage>80</percentage>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15447" toLevel="1" name="Bleed">
+		<!-- Glory Days confirmed -->
+		<!-- HP decreases from bleeding momentarily. -->
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<mpConsume>83</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>200</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<activateRate>100</activateRate>
+		<magicLvl>97</magicLvl>
+		<trait>BLEED</trait>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>70</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15448" toLevel="1" name="Aura Burn">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>3</mpConsume>
+		<castRange>150</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<effectRange>650</effectRange>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15449" toLevel="1" name="Dagger Storm">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>7</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>3000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>3.5</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>WIND</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>400</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15450" toLevel="1" name="Weakness">
+		<!-- Glory Days confirmed -->
+		<!-- P. Atk. decreases momentarily. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PA_DOWN</abnormalType>
+		<icon>icon.skill4037</icon>
+		<operateType>A2</operateType>
+		<mpConsume>20</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>8000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<basicProperty>MAGIC</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<lvlBonusRate>1</lvlBonusRate>
+		<activateRate>70</activateRate>
+		<magicLvl>97</magicLvl>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>-17</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15451" toLevel="1" name="Bleed">
+		<!-- Glory Days confirmed -->
+		<!-- HP decreases from bleeding momentarily. -->
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<mpConsume>112</mpConsume>
+		<hitTime>3300</hitTime>
+		<effectPoint>-100</effectPoint>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<activateRate>90</activateRate>
+		<magicLvl>97</magicLvl>
+		<trait>BLEED</trait>
+		<affectRange>200</affectRange>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="DamOverTime">
+				<power>78</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15452" toLevel="1" name="P. Atk. Decrease">
+		<!-- Glory Days confirmed -->
+		<!-- P. Atk. decreases momentarily. -->
+		<icon>icon.skill1164</icon>
+		<operateType>A2</operateType>
+		<mpConsume>112</mpConsume>
+		<hitTime>3300</hitTime>
+		<effectPoint>-100</effectPoint>
+		<abnormalType>PA_DOWN</abnormalType>
+		<basicProperty>MAGIC</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<activateRate>90</activateRate>
+		<magicLvl>97</magicLvl>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<affectRange>200</affectRange>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PAtk">
+				<amount>-23</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15453" toLevel="1" name="Vampiric Touch">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>135</mpConsume>
+		<castRange>750</castRange>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1250</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2500</hitTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpDrain">
+				<power>400</power>
+				<percentage>40</percentage>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15454" toLevel="1" name="Memorable Raid Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 hr., P. Atk. + 5%, M. Atk. + 20%, P. Def. + 5%, M. Def. + 5%, Atk. Spd. + 5%, Casting Spd. + 5%, Max HP/ MP + 5%, and XP/ SP gained through hunting + 30%. -->
+		<icon>icon.skilltransform4</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<reuseDelay>1800000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1500</effectRange>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>7200</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<staticReuse>true</staticReuse>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15455" toLevel="1" name="Thin Skin">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Received damage increases due to skin sensitivity. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>97</magicLvl>
+	</skill>
+	<skill id="15456" toLevel="1" name="Triol's Voice">
+		<!-- Glory Days confirmed -->
+		<!-- Triol's Voice. -->
+		<icon>icon.skill0223</icon>
+		<operateType>A1</operateType>
+		<hitTime>5000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>5</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<affectRange>800</affectRange>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="HealPercent">
+				<power>-99</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15457" toLevel="2" name="Triol's Reign">
+		<!-- Glory Days confirmed -->
+		<!-- Blood is drained by Triol, one of the 4 Demons of Hell. -->
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+		</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<effectPoint>-100</effectPoint>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<trait>BLEED</trait>
+		<isDebuff>true</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>450</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15458" toLevel="1" name="Memorable Raid Shield">
+		<!-- Glory Days confirmed -->
+		<!-- Defensive shield cast by the Memorable Raid boss unto itself. For 10 min., it only receives a certain amount of damage. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>PD_UP_SPECIAL</abnormalType>
+		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
+		<icon>icon.skill0110</icon>
+		<operateType>A2</operateType>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GetDamageLimit">
+				<amount>500</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15459" toLevel="1" name="Blaze">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>73</mpConsume>
+		<castRange>1000</castRange>
+		<hitTime>2000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>2</hitCancelTime>
+		<effectRange>1500</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>450</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15460" toLevel="1" name="Poison">
+		<!-- Glory Days confirmed -->
+		<!-- HP decreases from poison momentarily. -->
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<icon>icon.skill4036</icon>
+		<operateType>A2</operateType>
+		<mpConsume>109</mpConsume>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<lvlBonusRate>1</lvlBonusRate>
+		<activateRate>35</activateRate>
+		<magicLvl>97</magicLvl>
+		<trait>POISON</trait>
+		<affectRange>200</affectRange>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="DamOverTime">
+				<power>350</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15461" toLevel="1" name="Drain HP">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>52</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>4000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>3.5</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpDrain">
+				<power>400</power>
+				<percentage>20</percentage>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15462" toLevel="1" name="Heal">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>127</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>8000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Heal">
+				<power>1600</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15463" toLevel="1" name="Prominence">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>37</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>4000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>3.5</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>450</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15464" toLevel="1" name="Death Link">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>37</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>4000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>3.5</hitCancelTime>
+		<effectRange>1400</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DeathLink">
+				<power>350</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15466" toLevel="1" name="Triol's CON Increase">
+		<!-- Glory Days confirmed -->
+		<!-- Max HP + 200%. -->
+		<icon>icon.skill1045</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<magicLvl>99</magicLvl>
+		<mpConsume>110</mpConsume>
+		<effects>
+			<effect name="MaxHp">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15467" toLevel="1" name="Triol's P. Def. Increase">
+		<!-- Glory Days confirmed -->
+		<!-- P. Def. + 200%. -->
+		<icon>icon.skill1040</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15468" toLevel="1" name="Triol's M. Def. Decrease">
+		<!-- Glory Days confirmed -->
+		<!-- M. Def. - 50%. -->
+		<icon>icon.skill1388</icon>
+		<operateType>P</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15469" toLevel="1" name="Rites for Triol">
+		<!-- Updated to Helios -->
+		<!-- For 60 min., HP Recovery Bonus + 20%. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>HP_REGEN_UP</abnormalType>
+		<icon>icon.skill1044</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15470" toLevel="1" name="Cancel HP Regeneration">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill01703</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>HP_REGEN_UP,9</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15471" toLevel="1" name="Appearance Modification (No-grade) (Raid)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Changed to the appearance of a No-grade item. -->
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalVisualEffect>NGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15472" toLevel="1" name="Appearance Modification (D-grade) (Raid)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Changed to the appearance of a D-grade item. -->
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalVisualEffect>DGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15473" toLevel="1" name="Appearance Modification (C-grade) (Raid)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Changed to the appearance of a C-grade item. -->
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalVisualEffect>CGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15474" toLevel="1" name="Appearance Modification (B-grade) (Raid)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Changed to the appearance of a B-grade item. -->
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalVisualEffect>BGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15475" toLevel="1" name="Appearance Modification (A-grade) (Raid)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Changed to the appearance of an A-grade item. -->
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalVisualEffect>AGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15476" toLevel="1" name="Spore Spray">
+		<!-- Glory Days confirmed -->
+		<!-- HP and Speed decreased due to spores. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>MULTI_DEBUFF</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<activateRate>100</activateRate>
+		<magicLvl>53</magicLvl>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>100</power>
+				<ticks>5</ticks>
+			</effect>
+			<effect name="Speed">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15477" toLevel="1" name="Corrosive Acid Spray">
+		<!-- Glory Days confirmed -->
+		<!-- P. Def. and M. Def. decreased. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<icon>icon.skill0122</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-190</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<activateRate>100</activateRate>
+		<magicLvl>54</magicLvl>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealPercent">
+				<power>-20</power>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15478" toLevel="1" name="Spread Disease">
+		<!-- Glory Days confirmed -->
+		<!-- HP decreases from disease momentarily. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<activateRate>100</activateRate>
+		<magicLvl>55</magicLvl>
+		<trait>POISON</trait>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealPercent">
+				<power>-20</power>
+			</effect>
+			<effect name="Accuracy">
+				<amount>-9</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15479" toLevel="1" name="Vomit Mucus">
+		<!-- Glory Days confirmed -->
+		<!-- P. Accuracy decreased due to mucus. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>HIT_DOWN</abnormalType>
+		<icon>icon.skill1222</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-331</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<activateRate>100</activateRate>
+		<magicLvl>57</magicLvl>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15480" toLevel="1" name="Shoot Poison">
+		<!-- Glory Days confirmed -->
+		<!-- HP decreased due to poison. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<activateRate>100</activateRate>
+		<magicLvl>57</magicLvl>
+		<trait>POISON</trait>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>100</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15481" toLevel="1" name="Shoot Spider Web">
+		<!-- Updated to Helios -->
+		<!-- The web decreases Speed by 10%. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<icon>icon.skill0102</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-341</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<activateRate>100</activateRate>
+		<magicLvl>57</magicLvl>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15482" toLevel="1" name="Presentation - Lind">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Lindvior's Event Presentation Skill. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>10000</hitTime>
+	</skill>
+	<skill id="15483" toLevel="1" name="Destroy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. On a single enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="15484" toLevel="1" name="Lightning">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Atk. On a single enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15485" toLevel="1" name="Eliminate">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. On a single enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="15486" toLevel="1" name="Straight Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bleed on a single enemy. -->
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>750</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15487" toLevel="1" name="Disarray">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. On a single enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="15488" toLevel="1" name="Penetrate">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. On a single enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="15489" toLevel="1" name="Vivacity">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Def. for 5 sec. -->
+		<icon>icon.skill1040</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>750</hitTime>
+		<effectPoint>100</effectPoint>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="15490" toLevel="1" name="Rush">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Rush toward enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<effectPoint>-100</effectPoint>
+		<castRange>600</castRange>
+	</skill>
+	<skill id="15491" toLevel="1" name="Deadly Weapon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. On a single enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="15492" toLevel="1" name="Immediate Response">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Poison on a single enemy. -->
+		<icon>icon.skill4035</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="15493" toLevel="1" name="Charge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Rush toward enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<effectPoint>-100</effectPoint>
+		<castRange>600</castRange>
+	</skill>
+	<skill id="15494" toLevel="1" name="Strategic Response">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Atk. Spd. for 5 sec. -->
+		<icon>icon.skill1086</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>750</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15495" toLevel="1" name="Ingenious Response">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Def. for 5 sec. -->
+		<icon>icon.skill1040</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>750</hitTime>
+		<effectPoint>100</effectPoint>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="15496" toLevel="1" name="Travis' Authority">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- AoE M. Atk. On target's area. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="15497" toLevel="1" name="Summons Royal Guard Member.">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons Royal Guard Member. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="15498" toLevel="1" name="Dragon Defender">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 hr., Atk. Spd. + 10%, Casting Spd. + 10%, Max HP/MP + 10%, and Speed + 10. -->
+		<icon>icon.skill4689</icon>
+		<operateType>A2</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="15499" toLevel="1" name="Energy of Life">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>2000</castRange>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+</list>

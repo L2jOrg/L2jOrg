@@ -19,16 +19,16 @@ package handlers.voicedcommandhandlers;
 import java.util.HashMap;
 import java.util.concurrent.Future;
 
-import com.l2jmobius.Config;
+import org.l2j.gameserver.Config;
 import org.l2j.commons.concurrent.ThreadPool;
-import org.l2j.gameserver.mobius.gameserver.handler.IVoicedCommandHandler;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.model.actor.tasks.player.AutoPotionTask;
-import org.l2j.gameserver.mobius.gameserver.model.events.EventType;
-import org.l2j.gameserver.mobius.gameserver.model.events.ListenerRegisterType;
-import org.l2j.gameserver.mobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2j.gameserver.mobius.gameserver.model.events.annotations.RegisterType;
-import org.l2j.gameserver.mobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import org.l2j.gameserver.handler.IVoicedCommandHandler;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.tasks.player.AutoPotionTask;
+import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.ListenerRegisterType;
+import org.l2j.gameserver.model.events.annotations.RegisterEvent;
+import org.l2j.gameserver.model.events.annotations.RegisterType;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
 
 /**
  * @author Gigi, Mobius

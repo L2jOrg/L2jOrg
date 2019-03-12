@@ -1,0 +1,36 @@
+<html><body>
+<center>
+<table width=260>
+<tr>
+<td width=40><button value="Main" action="bypass -h admin_admin" width=45 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180>Mob Group Control Instructions</td>
+<td width=40><button value="Back" action="bypass -h admin_mobmenu" width=45 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table><br>
+</center>
+<font color="LEVEL">//mobgroup_create</font> [groupId] [npcId] [number]<br>
+Creates a group with [number] mobs of type [npcId], in the group [groupId].<br>
+There is no visual effect using this command, and the members of this group need to be spawned to become active.<br><br>
+<font color="LEVEL">//mobgroup_remove</font> [groupId]<br>
+Removes/deletes the group [groupId], subsequently unspawning any group members still alive.<br><br>
+<font color="LEVEL">//mobgroup_spawn</font> [groupId] [locx] [locy] [locz]<br>
+Spawns the members of group [groupId]. If a location isn't specified, the group will be spawned around the GM.<br>
+By default, mobs are in an idle state, and await further commands.<br>
+<font color="LEVEL">//mobgroup_unspawn</font> [groupId]<br>
+Unspawns the members of group [groupId]. The group is not deleted and can be invoked by the use of //mobgroup_spawn once more.<br>
+<font color="LEVEL">//mobgroup_list</font> ([groupId])<br>
+Lists all created monster groups. If [groupId] is specified, then a list of the members of that group is displayed.<br>
+<img src="L2UI.SquareGray" width="200" height="1"><br>
+<font color="999999">Other Commands</font><br>
+<font color="LEVEL">//mobgroup_follow</font> [groupId] - The group [groupId] will follow the GM.<br>
+<font color="LEVEL">//mobgroup_return</font> [groupId] - The group [groupId] will return to the GM.<br>
+<font color="LEVEL">//mobgroup_teleport</font> [groupId] ([playerName]) - The group [groupId] will be teleport to and follow the specified player (or the GM if none specified).<br>
+<font color="LEVEL">//mobgroup_attack</font> [groupId] - The group [groupId] will attack the GM's current target (if any).<br>
+<font color="LEVEL">//mobgroup_rnd</font> [groupId] - The group [groupId] will attack a randomly selected targets.<br>
+<font color="LEVEL">//mobgroup_attackgrp</font> [groupId1] [groupId2] - The group [groupId1] will attack the members in [groupId2].<br>
+<font color="LEVEL">//mobgroup_casting</font> [groupId] - The group [groupId] mobs will only use their skills to attack.<br>
+<font color="LEVEL">//mobgroup_nomove</font> [groupId] [on/off] - Toggle the mobs of group [groupId] to no longer move. Interesting when used with casting-only mode.<br>
+<font color="LEVEL">//mobgroup_invul</font> [groupId] [on/off] - Toggle the mobs of group [groupId] to be invulnerable.<br>
+<font color="LEVEL">//mobgroup_idle</font> [groupId] - Return the mobs in group [groupId] to an idle (waiting) state.<br>
+<font color="LEVEL">//mobgroup_kill</font> [groupId] - Kills all alive mobs in group [groupId].
+</body></html>

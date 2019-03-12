@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="baitDistance">
+					<xs:complexType>
+						<xs:attribute type="xs:positiveInteger" name="min" use="required" />
+						<xs:attribute type="xs:positiveInteger" name="max" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="experienceRate">
+					<xs:complexType>
+						<xs:attribute type="xs:double" name="min" use="required" />
+						<xs:attribute type="xs:double" name="max" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="skillPointsRate">
+					<xs:complexType>
+						<xs:attribute type="xs:double" name="min" use="required" />
+						<xs:attribute type="xs:double" name="max" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="baits">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="bait" maxOccurs="unbounded" minOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="catch" maxOccurs="unbounded" minOccurs="1">
+											<xs:complexType>
+												<xs:attribute type="xs:positiveInteger" name="itemId" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute type="xs:positiveInteger" name="itemId" use="required" />
+									<xs:attribute type="xs:positiveInteger" name="level" use="required" />
+									<xs:attribute type="xs:positiveInteger" name="minPlayerLevel" use="required" />
+									<xs:attribute type="xs:double" name="chance" use="required" />
+									<xs:attribute type="xs:positiveInteger" name="timeMin" use="required" />
+									<xs:attribute type="xs:positiveInteger" name="timeMax" use="required" />
+									<xs:attribute type="xs:positiveInteger" name="waitMin" use="required" />
+									<xs:attribute type="xs:positiveInteger" name="waitMax" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

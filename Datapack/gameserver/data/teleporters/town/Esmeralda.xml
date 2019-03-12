@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30233"> <!-- Esmeralda -->
+		<teleport type="NORMAL">
+			<!-- feeCount from Interlude, unconfirmed from retail classic -->
+			<location npcStringId="1010007" x="83458" y="148012" z="-3400" feeCount="6900" /> <!-- Town of Giran -->
+			<location npcStringId="1010013" x="82956" y="53162" z="-1488" feeCount="4100" /> <!-- Town of Oren -->
+			<location npcStringId="1010023" x="146813" y="25807" z="-2008" feeCount="5900" /> <!-- Town of Aden -->
+			<location npcStringId="1010014" x="85343" y="16267" z="-3672" feeCount="2000" /> <!-- Ivory Tower -->
+			<location npcStringId="1010618" x="124904" y="61992" z="-3920" feeCount="1300" /> <!-- Enchanted Valley, Southern Region (Lv. 45) -->
+			<location npcStringId="1010619" x="116220" y="41380" z="-3880" feeCount="3600" /> <!-- Enchanted Valley, Northern Region (Lv. 45) -->
+			<location npcStringId="1010022" x="105846" y="109762" z="-3184" feeCount="3400" /> <!-- Hardin's Academy -->
+		</teleport>
+	</npc>
+</list>

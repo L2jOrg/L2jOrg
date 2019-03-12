@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="48016" name="White Knight Suit" type="Armor">
+		<!-- N Shop Platinum exclusive item. Evening dress. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
+		<set name="icon" val="icon.agathion_leo_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="48017" name="Healer Costume" type="Armor">
+		<set name="icon" val="icon.healer_chest_change" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48018" name="Chevalier Costume" type="Armor">
+		<set name="icon" val="icon.chevalier_chest_change" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48019" name="Kat the Cat Costume" type="Armor">
+		<set name="icon" val="icon.cat_the_cat_change_0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48020" name="Barbarian Wolf Costume" type="Armor">
+		<set name="icon" val="icon.barbarian_chest_change_0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48021" name="Valkyrie Costume" type="Armor">
+		<set name="icon" val="icon.valkyrie_chest_change_0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48022" name="Teddy Bear Wear" type="Armor">
+		<!-- Teddy Bear wear. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
+		<set name="icon" val="icon.agathion_gem_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48046" name="Agathion Enchant Scroll" type="EtcItem">
+		<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. -->
+		<set name="icon" val="icon.star_scrl_of_ench_ag" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48047" name="Quality Agathion Enchant Scroll" type="EtcItem">
+		<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. Enchant randomly from +1 to +3 on success. Can not use for items with enchant level more than +8. -->
+		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48048" name="Agathion - Virgo" type="Armor">
+		<!-- An item which can be used to obtain the power of the Virgo Agathion. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. M. Def. increased. Starting from +6, bonus to mental attacks. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.agathion_sco_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48049" name="Agathion - Capricorn" type="Armor">
+		<!-- An item which can be used to obtain the power of the Caprocorn Agathion. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. M. Critical Rate increased. Starting from +6, cooldown of M. Skills and songs/dances decreased. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.agathion_aqu_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48050" name="Agathion - Libra" type="Armor">
+		<!-- An item which can be used to obtain the power of the Libra Agathion. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Casting Spd. increased. Starting from +6, MP Consumption for M. Skills and songs/dances decreased. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.agathion_sag_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48052" name="Agathion - Taurus" type="Armor">
+		<!-- An item which can be used to obtain the power of the Taurus Agathion. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Def. increased. Starting from +6, bonus to stun attacks. Cannot be dropped or sold. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48053" name="Agathion - Leo" type="Armor">
+		<!-- An item which can be used to obtain the power of the Leo Agathion. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Atk. increased. Starting from +6, bonus to paralyse attacks. Cannot be dropped or sold. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48054" name="Agathion - Gemini" type="Armor">
+		<!-- An item which can be used to obtain the power of the Gemini Agathion. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Effect of Sayha Grace increased. Starting from +6, Max HP/MP increased. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.event_classic_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48055" name="Agathion - Scorpio" type="Armor">
+		<!-- An item which can be used to obtain the power of the Libra Scorpio. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Critical Rate increased. Starting from +6, cooldown of P. Skills and songs/dances decreased. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.bm_soaring_bird" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48056" name="Agathion - Aquarius" type="Armor">
+		<!-- An item which can be used to obtain the power of the Auarius Agathion. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Def. increased. Starting from +6, bonus to hold/sleep. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.accessary_necklace_of_knowledge_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48058" name="Agathion - Sagittarius" type="Armor">
+		<!-- An item which can be used to obtain the power of the Sagittarius Agathion. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Atk. Spd. increased. Starting from +6, MP Consumption for P. Skills and songs/dances decreased. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.accessary_mage_earing_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48066" name="Zodiac Agathion Box" type="EtcItem">
+		<!-- Double-click to get a random Zodiac Agathion. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.star_agathion_cube" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

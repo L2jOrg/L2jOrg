@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="35796"> <!-- Foreman -->
+		<teleport name="tel1" type="OTHER">
+			<location npcStringId="1010658" x="74367" y="2533" z="-3040" /> <!-- Fortress North Gate -->
+			<location npcStringId="1010659" x="71388" y="6235" z="-3032" /> <!-- Fortress South Gate -->
+			<location npcStringId="1010681" x="82323" y="55466" z="-1480" /> <!-- Oren Town Square -->
+			<location npcStringId="1010682" x="75648" y="39380" z="-2952" /> <!-- Front of the Oren Castle Gate -->
+		</teleport>
+		<teleport name="tel2" type="OTHER">
+			<location npcStringId="1010658" x="74367" y="2533" z="-3040" /> <!-- Fortress North Gate -->
+			<location npcStringId="1010659" x="71388" y="6235" z="-3032" /> <!-- Fortress South Gate -->
+			<location npcStringId="1010681" x="82323" y="55466" z="-1480" /> <!-- Oren Town Square -->
+			<location npcStringId="1010682" x="75648" y="39380" z="-2952" /> <!-- Front of the Oren Castle Gate -->
+			<location npcStringId="1010121" x="64328" y="26803" z="-3768" feeCount="500" /> <!-- Sea of Spores (Lv. 52) -->
+			<location npcStringId="1010618" x="124904" y="61992" z="-3973" feeCount="500" /> <!-- Enchanted Valley, Southern Region (Lv. 45) -->
+			<location npcStringId="1010619" x="104426" y="33746" z="-3825" feeCount="500" /> <!-- Enchanted Valley, Northern Region (Lv. 45) -->
+			<location npcStringId="1010127" x="118509" y="-4779" z="-4000" feeCount="500" /> <!-- Ancient Battleground -->
+		</teleport>
+	</npc>
+</list>

@@ -16,12 +16,11 @@
  */
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.model.options.*;
-import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
-import org.l2j.gameserver.mobius.gameserver.model.options.*;
+import org.l2j.gameserver.model.options.*;
+import org.l2j.gameserver.util.IGameXmlReader;
 import org.w3c.dom.Document;
 
 import java.io.File;

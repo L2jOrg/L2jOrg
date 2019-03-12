@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/EnchantItemGroups.xsd">
+	<!-- General armor enchant group. -->
+	<enchantRateGroup name="ARMOR_GROUP">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3-15" chance="66.67" />
+		<current enchant="16-19" chance="33" />
+		<current enchant="20-29" chance="20" />
+		<current enchant="30-65535" chance="0" />
+	</enchantRateGroup>
+
+	<!-- General full armor enchant group. -->
+	<enchantRateGroup name="FULL_ARMOR_GROUP">
+		<current enchant="0-3" chance="100" />
+		<current enchant="4-15" chance="66.67" />
+		<current enchant="16-19" chance="33" />
+		<current enchant="20-29" chance="20" />
+		<current enchant="30-65535" chance="0" />
+	</enchantRateGroup>
+
+	<!-- General fighter weapon enchant group. -->
+	<enchantRateGroup name="FIGHTER_WEAPON_GROUP">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3-15" chance="66.67" />
+		<current enchant="16-19" chance="33" />
+		<current enchant="20-29" chance="20" />
+		<current enchant="30-65535" chance="0" />
+	</enchantRateGroup>
+
+	<!-- General mage weapon enchant group. -->
+	<enchantRateGroup name="MAGE_WEAPON_GROUP">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3-15" chance="66.67" />
+		<current enchant="16-19" chance="33" />
+		<current enchant="20-29" chance="20" />
+		<current enchant="30-65535" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Default scrolls enchanting route line. -->
+	<enchantScrollGroup id="0">
+		<!-- Bind armor group to all item slots except full armor. -->
+		<enchantRate group="ARMOR_GROUP">
+			<item slot="lhand" /> <!-- Left hand: Shields, Sigils -->
+			<item slot="head" /> <!-- Head: Helmet -->
+			<item slot="chest" /> <!-- Chest: Armor upper body. -->
+			<item slot="legs" /> <!-- Legs: Armor lower body. -->
+			<item slot="feet" /> <!-- Feet: Boots -->
+			<item slot="gloves" /> <!-- Gloves: Gloves -->
+			<item slot="neck" /> <!-- Neck: Necklaces -->
+			<item slot="rear;lear" /> <!-- Right ear, Left ear: Earrings -->
+			<item slot="rfinger;lfinger" /> <!-- Right finger, Left finger: Rings -->
+			<item slot="belt" /> <!-- Belt: Belts -->
+			<item slot="shirt" /> <!-- Shirt: Shirts -->
+			<item slot="hair" /> <!-- Hair Accessories -->
+			<item slot="hair2" /> <!-- Hair Accessories -->
+			<item slot="hairall" /> <!-- Hair Accessories -->
+		</enchantRate>
+		<!-- Bind only full armor group to to full armor slot items. -->
+		<enchantRate group="FULL_ARMOR_GROUP">
+			<item slot="fullarmor" /> <!-- Full Armor: Full armor pants are included. -->
+		</enchantRate>
+		<!-- Bind only fighter weapon group to all fighter weapons. -->
+		<enchantRate group="FIGHTER_WEAPON_GROUP">
+			<item slot="rhand" magicWeapon="false" /> <!-- Right hand: Weapons, Non magic weapon -->
+			<item slot="lrhand" magicWeapon="false" /> <!-- Two hands: Weapons, Non magic weapon -->
+		</enchantRate>
+		<!-- Bind only mage weapon group to all magic weapons. -->
+		<enchantRate group="MAGE_WEAPON_GROUP">
+			<item slot="rhand" magicWeapon="true" /> <!-- Right hand: Weapons, Magic weapon -->
+			<item slot="lrhand" magicWeapon="true" /> <!-- Two hands: Weapons, Magic weapon -->
+		</enchantRate>
+	</enchantScrollGroup>
+</list>

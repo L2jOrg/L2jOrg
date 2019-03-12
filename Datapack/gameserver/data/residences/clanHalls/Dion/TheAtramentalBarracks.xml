@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/clanHall.xsd">
+	<clanHall id="31" name="The Atramental Barracks" grade="GRADE_B" type="AUCTIONABLE">
+	 	<auction minBid="5000000" lease="500000" deposit="500000" />
+	 	<npcs>
+	 	   	<npc id="35402" /> <!-- Borna -->
+   			<npc id="35403" /> <!-- Ron -->
+	 	</npcs>
+	 	<doorlist>
+	 		<door id="20220013" />
+	 		<door id="20220014" />
+	 	</doorlist>
+	 	<ownerRestartPoint x="17760" y="145200" z="-3036" />
+		<banishPoint x="17552" y="145248" z="-3050" />
+	</clanHall>
+</list>

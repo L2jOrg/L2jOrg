@@ -1,0 +1,79 @@
+<html><title>Admin Server Info</title><body>
+<center>
+<table width=270>
+<tr>
+<td width=45><button value="Main" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Server Info</center></td>
+<td width=45><button value="Back" action="bypass -h admin_admin4" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+<font color="LEVEL">General:<font><br1>
+	<table width="270" border="0" bgcolor="444444">
+		<tr>
+			<td>OS:</td>
+			<td><font color="00FF00">%os_name%</font></td>
+		</tr>
+				<tr>
+			<td>OS version:</td>
+			<td><font color="00FF00">%os_ver%</font></td>
+		</tr>
+		<tr>
+			<td>Server slots:</td>
+			<td><font color="00FF00">%slots%</font></td>
+		</tr>
+		<tr>
+			<td>Server UpTime:</td>
+			<td><font color="00FF00">%serverUpTime%</font></td>
+		</tr>
+		<tr>
+			<td>Server Time:</td>
+			<td><font color="00FF00">%serverTime%</font></td>
+		</tr>
+		<tr>
+			<td>Game Time:</td>
+			<td><font color="00FF00">%gameTime% (%dayNight%)</font></td>
+		</tr>
+		<tr>
+			<td>Pathfinding:</td>
+			<td><font color="00FF00">%geodata%</font></td>
+		</tr>
+	</table>
+<br>
+<font color="LEVEL">Players:<font><br1>
+	<table width="270" border="0" bgcolor="444444">
+		<tr>
+			<td>Total players count:</td>
+			<td><font color="00FF00">%onlineAll%</font></td>
+		</tr>
+		<tr>
+			<td>Offline trade count:</td>
+			<td><font color="00FF00">%offlineTrade%</font></td>
+		</tr>
+		<tr>
+			<td>Online GM count:</td>
+			<td><font color="00FF00">%onlineGM%</font></td>
+		</tr>
+		<tr>
+			<td>Real player count:</td>
+			<td><font color="00FF00">%onlineReal%</font></td>
+		</tr>
+	</table>
+<br>
+<font color="LEVEL">Memory:<font><br1>
+	<table width="270" border="0" bgcolor="444444">
+		<tr>
+			<td>Used Memory:</td>
+			<td><font color="00FF00">%usedMem% MB</font></td>
+		</tr>
+		<tr>
+			<td>Free Memory:</td>
+			<td><font color="00FF00">%freeMem% MB</font></td>
+		</tr>
+		<tr>
+			<td>Total Memory:</td>
+			<td><font color="00FF00">%totalMem% MB</font></td>
+		</tr>
+	</table>
+</center>
+</body></html>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
+	<option id="23975" name="o_f_84_2r_1">
+		<!-- P. Def. increases by 28.85. -->
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>28.852</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23976" name="o_f_84_2r_2">
+		<!-- M. Def. increases by 24.47. -->
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>24.468</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23977" name="o_f_84_2r_3">
+		<!-- Max HP increases by 106.22 -->
+		<effects>
+			<effect name="MaxHp">
+				<amount>106.22</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23978" name="o_f_84_2r_4">
+		<!-- Max HP increases by 34.88. -->
+		<effects>
+			<effect name="MaxMp">
+				<amount>34.877</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23979" name="o_f_84_2r_5">
+		<!-- Max CP increases by 191.2. -->
+		<effects>
+			<effect name="MaxCp">
+				<amount>191.196</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23980" name="o_f_84_2r_6">
+		<!-- P. Atk. increases by 19.67. -->
+		<effects>
+			<effect name="PAtk">
+				<amount>19.673</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23981" name="o_f_84_2r_7">
+		<!-- M. Atk. increases by 24.74. -->
+		<effects>
+			<effect name="MAtk">
+				<amount>24.741</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23982" name="o_f_84_2r_8">
+		<!-- HP Regen increases by 0.46. -->
+		<effects>
+			<effect name="HpRegen">
+				<amount>0.463</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23983" name="o_f_84_2r_9">
+		<!-- MP Regen increases by 0.2. -->
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.195</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23984" name="o_f_84_2r_10">
+		<!-- CP Regen increases by 0.46. -->
+		<effects>
+			<effect name="CpRegen">
+				<amount>0.463</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23985" name="o_f_84_2r_11">
+		<!-- Evasion increases by 2.34. -->
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>2.337</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23986" name="o_f_84_2r_12">
+		<!-- Accuracy increases by 2.34. -->
+		<effects>
+			<effect name="Accuracy">
+				<amount>2.337</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23987" name="o_f_84_2r_13">
+		<!-- Critical increases by 17.6. -->
+		<effects>
+			<effect name="CriticalRate">
+				<amount>17.6</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23988" name="o_f_84_2r_14">
+		<!-- P. Def. increases by 14.43. M. Def. increases by 12.23. -->
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>14.426</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>12.234</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23989" name="o_f_84_2r_15">
+		<!-- P. Def. increases by 14.43. Max HP increases by 53.11 -->
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>14.426</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>53.11</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23990" name="o_f_84_2r_16">
+		<!-- P. Def. increases by 14.43. Max HP increases by 17.44. -->
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>14.426</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>17.439</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23991" name="o_f_84_2r_17">
+		<!-- P. Def. increases by 14.43. Max CP increases by 95.6. -->
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>14.426</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>95.598</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23992" name="o_f_84_2r_18">
+		<!-- P. Def. increases by 14.43. P. Atk. increases by 9.84. -->
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>14.426</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>9.836</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23993" name="o_f_84_2r_19">
+		<!-- P. Def. increases by 14.43. M. Atk. increases by 12.37. -->
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>14.426</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>12.371</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23994" name="o_f_84_2r_20">
+		<!-- P. Def. increases by 14.43. HP Regen increases by 0.23. -->
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>14.426</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.232</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23995" name="o_f_84_2r_21">
+		<!-- P. Def. increases by 14.43. MP Regen increases by 0.1. -->
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>14.426</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.098</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23996" name="o_f_84_2r_22">
+		<!-- P. Def. increases by 14.43. CP Regen increases by 0.23. -->
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>14.426</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CpRegen">
+				<amount>0.232</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23997" name="o_f_84_2r_23">
+		<!-- P. Def. increases by 14.43. Evasion increases by 1.17. -->
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>14.426</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>1.169</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23998" name="o_f_84_2r_24">
+		<!-- P. Def. increases by 14.43. Accuracy increases by 1.17. -->
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>14.426</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>1.169</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+	<option id="23999" name="o_f_84_2r_25">
+		<!-- P. Def. increases by 14.43. Critical increases by 8.8. -->
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>14.426</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>8.8</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</option>
+</list>

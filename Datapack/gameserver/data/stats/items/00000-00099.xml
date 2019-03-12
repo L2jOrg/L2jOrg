@@ -1,0 +1,1944 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="1" name="Short Sword" type="Weapon">
+		<set name="icon" val="icon.weapon_small_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1600" />
+		<set name="price" val="768" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">8</stat>
+			<stat type="mAtk">6</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="2" name="Long Sword" type="Weapon">
+		<set name="icon" val="icon.weapon_long_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1560" />
+		<set name="price" val="136000" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">24</stat>
+			<stat type="mAtk">17</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3" name="Broadsword" type="Weapon">
+		<set name="icon" val="icon.weapon_broad_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1590" />
+		<set name="price" val="12500" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">11</stat>
+			<stat type="mAtk">9</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4" name="Club" type="Weapon">
+		<set name="icon" val="icon.weapon_club_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1870" />
+		<set name="price" val="768" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">8</stat>
+			<stat type="mAtk">6</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5" name="Mace" type="Weapon">
+		<set name="icon" val="icon.weapon_mace_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1880" />
+		<set name="price" val="12500" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">11</stat>
+			<stat type="mAtk">9</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6" name="Apprentice's Wand" type="Weapon">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.weapon_apprentices_wand_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1350" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">5</stat>
+			<stat type="mAtk">7</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7" name="Apprentice's Rod" type="Weapon">
+		<set name="icon" val="icon.weapon_apprentices_rod_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1330" />
+		<set name="price" val="768" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">6</stat>
+			<stat type="mAtk">8</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8" name="Willow Staff" type="Weapon">
+		<set name="icon" val="icon.weapon_willow_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="price" val="12500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">11</stat>
+			<stat type="mAtk">13</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="9" name="Cedar Staff" type="Weapon">
+		<set name="icon" val="icon.weapon_cedar_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1090" />
+		<set name="price" val="54100" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">16</stat>
+			<stat type="mAtk">18</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="10" name="Dagger" type="Weapon">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<set name="icon" val="icon.weapon_dagger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1160" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">5</stat>
+			<stat type="mAtk">5</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="11" name="Bone Dagger" type="Weapon">
+		<set name="icon" val="icon.weapon_bone_dagger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1150" />
+		<set name="price" val="768" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">7</stat>
+			<stat type="mAtk">6</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="12" name="Knife" type="Weapon">
+		<set name="icon" val="icon.weapon_knife_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1140" />
+		<set name="price" val="12500" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">10</stat>
+			<stat type="mAtk">9</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="13" name="Short Bow" type="Weapon">
+		<set name="icon" val="icon.weapon_short_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1950" />
+		<set name="price" val="768" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="1" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="isAppearanceable" val="true" />
+		<set name="reuse_delay" val="1500" />
+		<stats>
+			<stat type="pAtk">16</stat>
+			<stat type="mAtk">6</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="14" name="Bow" type="Weapon">
+		<set name="icon" val="icon.weapon_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1930" />
+		<set name="price" val="12500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="1" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="isAppearanceable" val="true" />
+		<set name="reuse_delay" val="1500" />
+		<stats>
+			<stat type="pAtk">23</stat>
+			<stat type="mAtk">9</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="15" name="Short Spear" type="Weapon">
+		<set name="icon" val="icon.weapon_short_spear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2140" />
+		<set name="price" val="136000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">24</stat>
+			<stat type="mAtk">17</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="16" name="Great Spear" type="Weapon">
+		<set name="icon" val="icon.weapon_long_spear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2120" />
+		<set name="price" val="244000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">31</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="17" name="Wooden Arrow" type="EtcItem">
+		<!-- An arrow made of wood. It is an arrow used for a No-grade bow. -->
+		<set name="icon" val="icon.etc_wooden_quiver_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="ARROW" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="6" />
+		<set name="price" val="2" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="18" name="Leather Shield" type="Armor">
+		<set name="icon" val="icon.shield_leather_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1430" />
+		<set name="commissionItemType" val="SHIELD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="39" />
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">47</stat>
+		</stats>
+	</item>
+	<item id="19" name="Small Shield" type="Armor">
+		<set name="icon" val="icon.shield_small_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1420" />
+		<set name="commissionItemType" val="SHIELD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="638" />
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">56</stat>
+		</stats>
+	</item>
+	<item id="20" name="Buckler" type="Armor">
+		<set name="icon" val="icon.shield_buckler_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1410" />
+		<set name="commissionItemType" val="SHIELD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="2780" />
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">67</stat>
+		</stats>
+	</item>
+	<item id="21" name="Shirt" type="Armor">
+		<set name="icon" val="icon.armor_t02_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="4830" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="147" />
+		<stats>
+			<stat type="pDef">36</stat>
+		</stats>
+	</item>
+	<item id="22" name="Leather Shirt" type="Armor">
+		<set name="icon" val="icon.armor_t04_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="4830" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="2430" />
+		<stats>
+			<stat type="pDef">43</stat>
+		</stats>
+	</item>
+	<item id="23" name="Wooden Breastplate" type="Armor">
+		<set name="icon" val="icon.armor_t06_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="4820" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="7960" />
+		<stats>
+			<stat type="pDef">47</stat>
+		</stats>
+	</item>
+	<item id="24" name="Bone Breastplate" type="Armor">
+		<set name="icon" val="icon.armor_t32_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="4770" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="20300" />
+		<stats>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="25" name="Piece Bone Breastplate" type="Armor">
+		<set name="icon" val="icon.armor_t33_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="8970" />
+		<set name="price" val="31800" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<stats>
+			<stat type="pDef">62</stat>
+		</stats>
+	</item>
+	<item id="26" name="Bronze Breastplate" type="Armor">
+		<set name="icon" val="icon.armor_t34_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="8920" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="49200" />
+		<stats>
+			<stat type="pDef">68</stat>
+		</stats>
+	</item>
+	<item id="27" name="Durable Leather Shirt" type="Armor">
+		<set name="icon" val="icon.armor_t30_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="4720" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="36900" />
+		<stats>
+			<stat type="pDef">53</stat>
+		</stats>
+	</item>
+	<item id="28" name="Pants" type="Armor">
+		<set name="icon" val="icon.armor_t02_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1740" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="92" />
+		<stats>
+			<stat type="pDef">22</stat>
+		</stats>
+	</item>
+	<item id="29" name="Leather Pants" type="Armor">
+		<set name="icon" val="icon.armor_t04_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1730" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="1520" />
+		<stats>
+			<stat type="pDef">27</stat>
+		</stats>
+	</item>
+	<item id="30" name="Durable Leather Pants" type="Armor">
+		<set name="icon" val="icon.armor_t06_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1700" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="4970" />
+		<stats>
+			<stat type="pDef">29</stat>
+		</stats>
+	</item>
+	<item id="31" name="Bone Gaiters" type="Armor">
+		<set name="icon" val="icon.armor_t32_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1680" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="12700" />
+		<stats>
+			<stat type="pDef">32</stat>
+		</stats>
+	</item>
+	<item id="32" name="Piece Bone Gaiters" type="Armor">
+		<set name="icon" val="icon.armor_t33_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="4020" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="19900" />
+		<stats>
+			<stat type="pDef">39</stat>
+		</stats>
+	</item>
+	<item id="33" name="Durable Leather Gaiters" type="Armor">
+		<set name="icon" val="icon.armor_t30_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1610" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="23000" />
+		<stats>
+			<stat type="pDef">33</stat>
+		</stats>
+	</item>
+	<item id="34" name="Bronze Gaiters" type="Armor">
+		<set name="icon" val="icon.armor_t34_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="3960" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="30700" />
+		<stats>
+			<stat type="pDef">43</stat>
+		</stats>
+	</item>
+	<item id="35" name="Cloth Shoes" type="Armor">
+		<set name="icon" val="icon.armor_t02_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1320" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="37" />
+		<stats>
+			<stat type="pDef">9</stat>
+		</stats>
+	</item>
+	<item id="36" name="Leather Sandals" type="Armor">
+		<set name="icon" val="icon.armor_t03_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1320" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="37" />
+		<stats>
+			<stat type="pDef">9</stat>
+		</stats>
+	</item>
+	<item id="37" name="Leather Shoes" type="Armor">
+		<set name="icon" val="icon.armor_t05_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1320" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="2650" />
+		<stats>
+			<stat type="pDef">13</stat>
+		</stats>
+	</item>
+	<item id="38" name="Low Boots" type="Armor">
+		<set name="icon" val="icon.armor_t32_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1320" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="6770" />
+		<stats>
+			<stat type="pDef">15</stat>
+		</stats>
+	</item>
+	<item id="39" name="Boots" type="Armor">
+		<set name="icon" val="icon.armor_t30_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1310" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="12300" />
+		<stats>
+			<stat type="pDef">17</stat>
+		</stats>
+	</item>
+	<item id="40" name="Leather Boots" type="Armor">
+		<set name="icon" val="icon.armor_t09_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="38" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1300" />
+		<set name="price" val="20900" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">19</stat>
+		</stats>
+	</item>
+	<item id="41" name="Cloth Cap" type="Armor">
+		<set name="icon" val="icon.armor_cloth_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="660" />
+		<set name="price" val="55" />
+		<set name="commissionItemType" val="HELMET" />
+		<stats>
+			<stat type="pDef">13</stat>
+		</stats>
+	</item>
+	<item id="42" name="Leather Cap" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="660" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="price" val="911" />
+		<stats>
+			<stat type="pDef">16</stat>
+		</stats>
+	</item>
+	<item id="43" name="Wooden Helmet" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="660" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="price" val="3980" />
+		<stats>
+			<stat type="pDef">19</stat>
+		</stats>
+	</item>
+	<item id="44" name="Leather Helmet" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="650" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="price" val="10200" />
+		<stats>
+			<stat type="pDef">23</stat>
+		</stats>
+	</item>
+	<item id="45" name="Bone Helmet" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="56" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="640" />
+		<set name="price" val="31300" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">29</stat>
+		</stats>
+	</item>
+	<item id="46" name="Bronze Helmet" type="Armor">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="90" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="630" />
+		<set name="price" val="50000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
+		<stats>
+			<stat type="pDef">33</stat>
+		</stats>
+	</item>
+	<item id="47" name="Headgear" type="Armor">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="138" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="640" />
+		<set name="price" val="76200" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">37</stat>
+		</stats>
+	</item>
+	<item id="48" name="Short Gloves" type="Armor">
+		<set name="icon" val="icon.armor_t02_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="660" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="37" />
+		<stats>
+			<stat type="pDef">9</stat>
+		</stats>
+	</item>
+	<item id="49" name="Gloves" type="Armor">
+		<set name="icon" val="icon.armor_t06_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="660" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="2650" />
+		<stats>
+			<stat type="pDef">13</stat>
+		</stats>
+	</item>
+	<item id="50" name="Leather Gloves" type="Armor">
+		<set name="icon" val="icon.armor_t32_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="650" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="6770" />
+		<stats>
+			<stat type="pDef">15</stat>
+		</stats>
+	</item>
+	<item id="51" name="Bracer" type="Armor">
+		<set name="icon" val="icon.armor_t30_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="650" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="12300" />
+		<stats>
+			<stat type="pDef">17</stat>
+		</stats>
+	</item>
+	<item id="57" name="Adena" type="EtcItem">
+		<set name="icon" val="icon.etc_adena_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="price" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="58" name="Mithril Breastplate" type="Armor">
+		<set name="icon" val="icon.armor_t19_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="332" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="8670" />
+		<set name="price" val="183000" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">95</stat>
+		</stats>
+	</item>
+	<item id="59" name="Mithril Gaiters" type="Armor">
+		<set name="icon" val="icon.armor_t19_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="230" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="3830" />
+		<set name="price" val="127000" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">61</stat>
+		</stats>
+	</item>
+	<item id="60" name="Compound Armor" type="Armor">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t61_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="576" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="10980" />
+		<set name="price" val="1440000" />
+		<set name="commissionItemType" val="FULL_BODY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">224</stat>
+		</stats>
+	</item>
+	<item id="61" name="Mithril Gloves" type="Armor">
+		<set name="icon" val="icon.armor_t46_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="177" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="630" />
+		<set name="price" val="97800" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">29</stat>
+		</stats>
+	</item>
+	<item id="62" name="Reinforced Mithril Boots" type="Armor">
+		<set name="icon" val="icon.armor_t47_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="50" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1230" />
+		<set name="price" val="126000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<stats>
+			<stat type="pDef">32</stat>
+		</stats>
+	</item>
+	<item id="63" name="Gauntlets" type="Armor">
+		<set name="icon" val="icon.armor_t10_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="640" />
+		<set name="price" val="50800" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">24</stat>
+		</stats>
+	</item>
+	<item id="64" name="Compound Boots" type="Armor">
+		<set name="icon" val="icon.armor_t61_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="98" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1220" />
+		<set name="price" val="245000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<stats>
+			<stat type="pDef">36</stat>
+		</stats>
+	</item>
+	<item id="66" name="Gladius" type="Weapon">
+		<set name="icon" val="icon.weapon_gladius_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1570" />
+		<set name="price" val="54100" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">17</stat>
+			<stat type="mAtk">12</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="67" name="Orcish Sword" type="Weapon">
+		<set name="icon" val="icon.weapon_orcish_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1570" />
+		<set name="price" val="54100" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">17</stat>
+			<stat type="mAtk">12</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="68" name="Falchion" type="Weapon">
+		<set name="icon" val="icon.weapon_falchion_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1530" />
+		<set name="price" val="244000" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">31</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="69" name="Bastard Sword" type="Weapon">
+		<set name="icon" val="icon.weapon_bastard_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;42;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1170" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1510" />
+		<set name="price" val="644000" />
+		<set name="change_weaponId" val="9213" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="70" name="Claymore" type="Weapon">
+		<set name="icon" val="icon.weapon_claymore_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="3272" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2090" />
+		<set name="price" val="1800000" />
+		<set name="change_weaponId" val="9226" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<stats>
+			<stat type="pAtk">112</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="71" name="Flamberge" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_flamberge_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="916" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="price" val="2290000" />
+		<set name="change_weaponId" val="9232" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<stats>
+			<stat type="pAtk">130</stat>
+			<stat type="mAtk">61</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="72" name="StormBringer" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_stormbringer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="916" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1430" />
+		<set name="price" val="2290000" />
+		<set name="change_weaponId" val="9228" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<stats>
+			<stat type="pAtk">107</stat>
+			<stat type="mAtk">61</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="73" name="Shamshir" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_shamshir_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1420" />
+		<set name="price" val="2870000" />
+		<set name="change_weaponId" val="9240" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="74" name="Katana" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_katana_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1420" />
+		<set name="price" val="2870000" />
+		<set name="change_weaponId" val="9244" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="75" name="Caliburs" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_caliburs_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1400" />
+		<set name="price" val="4300000" />
+		<set name="change_weaponId" val="9264" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="76" name="Sword of Delusion" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_sword_of_delusion_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1400" />
+		<set name="price" val="4300000" />
+		<set name="change_weaponId" val="9268" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="77" name="Tsurugi" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_tsurugi_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1400" />
+		<set name="price" val="4300000" />
+		<set name="change_weaponId" val="9272" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="78" name="Great Sword" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_great_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1157" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1930" />
+		<set name="price" val="8680000" />
+		<set name="change_weaponId" val="9308" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<stats>
+			<stat type="pAtk">213</stat>
+			<stat type="mAtk">91</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="79" name="Damascus Sword" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1746" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="1350" />
+		<set name="price" val="13100000" />
+		<set name="change_weaponId" val="9316" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<stats>
+			<stat type="pAtk">194</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80" name="Tallum Blade" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_tallum_blade_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1128" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1330" />
+		<set name="price" val="14098000" />
+		<set name="change_weaponId" val="9328" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">213</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81" name="Dragon Slayer" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1659" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1840" />
+		<set name="price" val="20741000" />
+		<set name="change_weaponId" val="9344" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<stats>
+			<stat type="pAtk">282</stat>
+			<stat type="mAtk">114</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="83" name="Sword of Magic" type="Weapon">
+		<set name="icon" val="icon.weapon_sword_of_magic_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1301" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="970" />
+		<set name="price" val="716000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">43</stat>
+			<stat type="mAtk">45</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="84" name="Homunkulus' Sword" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_homunkuluss_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="950" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="86" name="Tomahawk" type="Weapon">
+		<set name="icon" val="icon.weapon_tomahawk_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1170" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1780" />
+		<set name="price" val="644000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="87" name="Iron Hammer" type="Weapon">
+		<set name="icon" val="icon.weapon_iron_hammer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1850" />
+		<set name="price" val="244000" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">31</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="88" name="Morning Star" type="Weapon">
+		<set name="icon" val="icon.weapon_morning_star_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2545" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1720" />
+		<set name="price" val="1400000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">79</stat>
+			<stat type="mAtk">47</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="89" name="Big Hammer" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_big_hammer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="916" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1710" />
+		<set name="price" val="2290000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">107</stat>
+			<stat type="mAtk">61</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="90" name="Goat Head Staff" type="Weapon">
+		<set name="icon" val="icon.weapon_goathead_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2545" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1000" />
+		<set name="price" val="1400000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">77</stat>
+			<stat type="mAtk">69</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="91" name="Heavy War Axe" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1157" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1620" />
+		<set name="price" val="8680000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">175</stat>
+			<stat type="mAtk">91</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92" name="Spirit's Staff" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_sprites_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1157" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="960" />
+		<set name="price" val="8680000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">170</stat>
+			<stat type="mAtk">134</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="93" name="Winged Spear" type="Weapon">
+		<set name="icon" val="icon.weapon_winged_spear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2545" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2060" />
+		<set name="price" val="1400000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">79</stat>
+			<stat type="mAtk">47</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="94" name="Bec de Corbin" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_bech_de_corbin_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2020" />
+		<set name="price" val="2870000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="95" name="Poleaxe" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_poleaxe_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="96" name="Scythe" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_scythe_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="916" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2040" />
+		<set name="price" val="2290000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">107</stat>
+			<stat type="mAtk">61</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="97" name="Lance" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_lancia_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1746" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1920" />
+		<set name="price" val="13100000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="SPEAR" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">194</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="98" name="Halberd" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<set name="icon" val="icon.weapon_halbard_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1128" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1900" />
+		<set name="price" val="14098000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">213</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="99" name="Apprentice's Spellbook" type="Weapon">
+		<set name="icon" val="icon.weapon_apprentices_spellbook_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="650" />
+		<set name="price" val="12500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="OTHER_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">9</stat>
+			<stat type="mAtk">12</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+</list>

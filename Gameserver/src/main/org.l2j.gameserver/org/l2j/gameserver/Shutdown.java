@@ -444,6 +444,10 @@ public class Shutdown extends Thread {
         }
     }
 
+    public long getSecondsToRestart() {
+        return _secondsShut;
+    }
+
     /**
      * A simple class used to track down the estimated time of method executions.<br>
      * Once this class is created, it saves the start time, and when you want to get the estimated time, use the getEstimatedTime() method.

@@ -18,18 +18,18 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
-import org.l2j.gameserver.mobius.gameserver.cache.HtmCache;
-import org.l2j.gameserver.mobius.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.mobius.gameserver.instancemanager.MapRegionManager;
-import org.l2j.gameserver.mobius.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.mobius.gameserver.model.Location;
-import org.l2j.gameserver.mobius.gameserver.model.TeleportWhereType;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.model.zone.L2ZoneType;
-import org.l2j.gameserver.mobius.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.mobius.gameserver.model.zone.type.L2SpawnTerritory;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2j.gameserver.mobius.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.instancemanager.MapRegionManager;
+import org.l2j.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.TeleportWhereType;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.model.zone.type.L2SpawnTerritory;
+import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.util.BuilderUtil;
 
 /**
  * Small typo fix by Zoey76 24/02/2011

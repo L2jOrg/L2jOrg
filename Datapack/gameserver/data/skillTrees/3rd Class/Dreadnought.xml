@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="89" parentClassId="3">
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="7200000">
+			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="7200000">
+			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+		</skill>
+		<skill skillName="Spinning Slasher" skillId="36" skillLvl="38" getLevel="76" levelUpSp="7200000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="46" getLevel="76" levelUpSp="7200000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="51" getLevel="76" levelUpSp="7200000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="51" getLevel="76" levelUpSp="7200000" />
+		<skill skillName="Howl" skillId="116" skillLvl="15" getLevel="76" levelUpSp="5000" />
+		<skill skillName="Thunder Storm" skillId="48" skillLvl="38" getLevel="76" levelUpSp="7200000" />
+		<skill skillName="Mount Gold Maned Lion" skillId="1833" skillLvl="1" getLevel="76">
+			<item id="90038" count="1" /> <!-- Spellbook: Mount Golden Lion -->
+		</skill>
+		<skill skillName="Spike Thrust" skillId="921" skillLvl="1" getLevel="76" levelUpSp="7200000" />
+		<skill skillName="Focus Attack" skillId="317" skillLvl="6" getLevel="76" levelUpSp="7200000" />
+
+		<skill skillName="Spinning Slasher" skillId="36" skillLvl="39" getLevel="77" levelUpSp="7200000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="47" getLevel="77" levelUpSp="7200000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="52" getLevel="77" levelUpSp="7200000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="52" getLevel="77" levelUpSp="7200000" />
+		<skill skillName="Thunder Storm" skillId="48" skillLvl="39" getLevel="77" levelUpSp="7200000" />
+		<skill skillName="Stun Blast" skillId="361" skillLvl="1" getLevel="77" levelUpSp="7200000">
+			<item id="90076" count="1" /> <!-- Scroll: Stun Blast -->
+		</skill>
+		
+		<skill skillName="Throwing Spear" skillId="1625" skillLvl="1" getLevel="78" levelUpSp="16800000" />
+		<skill skillName="Spinning Slasher" skillId="36" skillLvl="40" getLevel="78" levelUpSp="16800000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="48" getLevel="78" levelUpSp="16800000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="53" getLevel="78" levelUpSp="16800000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="53" getLevel="78" levelUpSp="16800000" />
+		<skill skillName="Howl" skillId="116" skillLvl="16" getLevel="78" levelUpSp="16800000" />
+		<skill skillName="Thunder Storm" skillId="48" skillLvl="40" getLevel="78" levelUpSp="16800000" />
+		<skill skillName="Master of Combat" skillId="430" skillLvl="1" getLevel="78" levelUpSp="16800000" />
+		<skill skillName="Quick Spear" skillId="1606" skillLvl="10" getLevel="78" levelUpSp="16800000" />
+		<skill skillName="Provoke" skillId="286" skillLvl="8" getLevel="78" levelUpSp="16800000" />
+		<skill skillName="Braveheart" skillId="440" skillLvl="1" getLevel="78" levelUpSp="16800000" />
+		
+		<skill skillName="Final Secret" skillId="917" skillLvl="1" getLevel="79" levelUpSp="16800000">
+			<item id="90080" count="1" /> <!-- Scroll: Final Secret -->
+		</skill>
+		
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="49" getLevel="80" levelUpSp="16800000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="54" getLevel="80" levelUpSp="16800000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="54" getLevel="80" levelUpSp="16800000" />
+		<skill skillName="Thunder Storm" skillId="48" skillLvl="41" getLevel="80" levelUpSp="16800000" />
+		<skill skillName="War Cry" skillId="78" skillLvl="3" getLevel="80" levelUpSp="16800000" />
+		<skill skillName="Stun Blast" skillId="361" skillLvl="2" getLevel="80" levelUpSp="16800000" />
+		<skill skillName="Spear Howl" skillId="1626" skillLvl="1" getLevel="80" levelUpSp="16800000">
+			<item id="90077" count="1" /> <!-- Scroll: Spear Howl -->
+		</skill>
+
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="50" getLevel="81" levelUpSp="303000000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="55" getLevel="81" levelUpSp="303000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="55" getLevel="81" levelUpSp="303000000" />
+		<skill skillName="Thunder Storm" skillId="48" skillLvl="42" getLevel="81" levelUpSp="303000000" />
+
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="51" getLevel="82" levelUpSp="311000000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="56" getLevel="82" levelUpSp="311000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="56" getLevel="82" levelUpSp="311000000" />
+		<skill skillName="Thunder Storm" skillId="48" skillLvl="43" getLevel="82" levelUpSp="311000000" />
+
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="52" getLevel="83" levelUpSp="425000000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="57" getLevel="83" levelUpSp="425000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="57" getLevel="83" levelUpSp="425000000" />
+		<skill skillName="Thunder Storm" skillId="48" skillLvl="44" getLevel="83" levelUpSp="425000000" />
+		<skill skillName="War Cry" skillId="78" skillLvl="4" getLevel="83" levelUpSp="425000000" />
+		<skill skillName="Stun Blast" skillId="361" skillLvl="3" getLevel="83" levelUpSp="425000000" />
+
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="53" getLevel="84" levelUpSp="457000000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="58" getLevel="84" levelUpSp="457000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="58" getLevel="84" levelUpSp="457000000" />
+		<skill skillName="Thunder Storm" skillId="48" skillLvl="45" getLevel="84" levelUpSp="457000000" />
+	</skillTree>
+</list>

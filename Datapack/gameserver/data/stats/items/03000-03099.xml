@@ -1,0 +1,1229 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="3000" name="Recipe: Dwarven Chain Shield" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Dwarven Chain Shield. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="3120" />
+		<set name="recipe_id" val="291" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3001" name="Recipe: Rind Leather Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Rind Leather Boots. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="3220" />
+		<set name="recipe_id" val="292" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3002" name="Recipe: Dwarven Chain Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Dwarven Chain Gloves. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="3220" />
+		<set name="recipe_id" val="293" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3003" name="Recipe: Gloves of Seal" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Gloves of Seal. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="3220" />
+		<set name="recipe_id" val="294" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3004" name="Recipe: Rind Leather Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Rind Leather Gloves. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="3220" />
+		<set name="recipe_id" val="295" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3005" name="Recipe: Demon's Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Demon's Boots. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="4900" />
+		<set name="recipe_id" val="296" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3006" name="Recipe: Demon's Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Demon's Gloves. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="4900" />
+		<set name="recipe_id" val="297" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3007" name="Recipe: Theca Leather Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Theca Leather Boots. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="5500" />
+		<set name="recipe_id" val="298" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3008" name="Recipe: Theca Leather Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Theca Leather Gloves. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="5500" />
+		<set name="recipe_id" val="299" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3009" name="Recipe: Compound Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Compound Boots. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="4900" />
+		<set name="recipe_id" val="300" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3010" name="Recipe: Compound Helmet" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Compound Helmet. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="7360" />
+		<set name="recipe_id" val="301" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3011" name="Recipe: Divine Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Divine Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="7160" />
+		<set name="recipe_id" val="302" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3012" name="Recipe: Full Plate Helmet" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Full Plate Helmet. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="10720" />
+		<set name="recipe_id" val="303" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3013" name="Recipe: Drake Leather Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Drake Leather Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="7160" />
+		<set name="recipe_id" val="304" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3014" name="Recipe: Full Plate Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Full Plate Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="7160" />
+		<set name="recipe_id" val="305" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3015" name="Recipe: Drake Leather Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Drake Leather Gloves. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="7160" />
+		<set name="recipe_id" val="306" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3016" name="Recipe: Full Plate Gauntlets" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Full Plate Gauntlets. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="7160" />
+		<set name="recipe_id" val="307" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3017" name="Recipe: Divine Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Blessed Gloves. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="7160" />
+		<set name="recipe_id" val="308" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3018" name="Recipe: Blessed Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Divine Gloves. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="7160" />
+		<set name="recipe_id" val="309" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3019" name="Recipe: Full Plate Shield" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Full Plate Shield. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="7500" />
+		<set name="recipe_id" val="310" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3020" name="Recipe: Elven Long Sword" type="EtcItem">
+		<!-- For Dwarves only. Recipe for an Elven Long Sword. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="36000" />
+		<set name="recipe_id" val="311" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3021" name="Recipe: Dwarven War Hammer" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Dwarven War Hammer. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="57400" />
+		<set name="recipe_id" val="312" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3022" name="Recipe: Yaksa Mace" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Yaksa Mace. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="122600" />
+		<set name="recipe_id" val="313" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3023" name="Recipe: Lesser Giant's Key" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Quest. Required to make a Lesser Giant's Key. Requires Create Item - Skill Lv. 1. The success rate is 100%. Cannot be exchanged, dropped, sold, destroyed, or stored in a warehouse. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="recipe_id" val="314" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3024" name="Recipe: Journeyman Ring" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Quest. Required to make a Journeyman Ring. Requires Create Item - Skill Lv. 1. The success rate is 100%. Cannot be exchanged, dropped, sold, destroyed, or stored in a warehouse. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="recipe_id" val="315" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3025" name="Recipe: Amber Bead" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Quest. Required to make an Amber Bead. Requires Create Item - Skill Lv. 2. The success rate is 100%. Cannot be exchanged, dropped, sold, destroyed, or stored in a warehouse. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="recipe_id" val="316" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3026" name="Talin's Spear" type="Weapon">
+		<!-- Use this spear to deliver the final blow to Eva's unicorn. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
+		<set name="icon" val="icon.weapon_short_spear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="800" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">24</stat>
+			<stat type="mAtk">17</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="3027" name="Old Knight Sword" type="Weapon">
+		<!-- Use this sword to deliver the final blow to the spirit of Sir Herod. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
+		<set name="icon" val="icon.weapon_brandish_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2100" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">29</stat>
+			<stat type="mAtk">17</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3028" name="Crescent Moon Bow" type="Weapon">
+		<!-- Use this bow to deliver the final blow to Commander Kadesh. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
+		<set name="icon" val="icon.weapon_short_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="600" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">34</stat>
+			<stat type="mAtk">12</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="3029" name="Sword of Seal" type="Weapon">
+		<!-- Use this sword to deliver the final blow to Zeruel. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
+		<set name="icon" val="icon.weapon_gladius_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1200" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">17</stat>
+			<stat type="mAtk">12</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3030" name="Lesser Giant's Key" type="EtcItem">
+		<!-- Special key that opens the Lesser Giant's Box -->
+		<set name="icon" val="icon.etc_key_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="10" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3031" name="Spirit Ore" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_stone_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3032" name="Recipe: Spiritshot (D-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Spiritshot D-grade. Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="5000" />
+		<set name="recipe_id" val="317" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3033" name="Recipe: Spiritshot (C-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Spiritshot C-grade. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="60000" />
+		<set name="recipe_id" val="318" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3034" name="Recipe: Spiritshot (B-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Spiritshot B-grade. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="100000" />
+		<set name="recipe_id" val="319" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3035" name="Recipe: Spiritshot (A-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Spiritshot (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="150000" />
+		<set name="recipe_id" val="320" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+		<set name="commissionItemType" val="RECIPE" />
+	</item>
+	<item id="3037" name="Kakan's Letter" type="EtcItem">
+		<!-- Kakan's reply letter to Sla. Collect three reply letters from Sla's disciples and deliver them to Sla. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3038" name="Blueprint: Summon Mechanic Golem" type="EtcItem">
+		<!-- Blueprint needed to learn the Summon Mechanic Golem technique. Used by Artisans. Required level: 28 -->
+		<set name="icon" val="icon.etc_plan_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="21437" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3039" name="Spellbook: Summon Storm Cubic" type="EtcItem">
+		<!-- Spellbook needed to learn Summon Storm Cubic. Used by Temple Knights and Warlocks. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3040" name="Spellbook: Summon Vampiric Cubic" type="EtcItem">
+		<!-- Spellbook needed to learn Summon Vampiric Cubic. Used by Shillien Knights. Required level: 43 -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3700" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3041" name="Spellbook: Summon Phantom Cubic" type="EtcItem">
+		<!-- Spellbook needed to learn Summon Phantom Cubic. Used by Shillien Knights. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3042" name="Spellbook: Life Scavenge" type="EtcItem">
+		<!-- Spellbook needed to learn Life Scavenge. Used by Dark Avengers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3043" name="Spellbook: Divine Strike" type="EtcItem">
+		<!-- Spellbook needed to learn Divine Strike. Used by Paladins. Required level: 46 -->
+		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="4250" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3044" name="Spellbook: Horror" type="EtcItem">
+		<!-- Spellbook needed to learn Horror. Used by Dark Avengers. Required level: 46 -->
+		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3045" name="Spellbook: Summon Life Cubic" type="EtcItem">
+		<!-- Spellbook needed to learn Summon Life Cubic. Used by Temple Knights. Required level: 42 -->
+		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3046" name="Spellbook: Sacrifice" type="EtcItem">
+		<!-- Spellbook needed to learn Sacrifice. Used by Paladins. Required level: 50 -->
+		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3047" name="Spellbook: Iron Will" type="EtcItem">
+		<!-- Spellbook needed to learn Iron Will. Used by Paladins and Dark Avengers. Required level: 43 -->
+		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3048" name="Spellbook: Reflect Damage" type="EtcItem">
+		<!-- Spellbook needed to learn Reflect Damage. Used by Dark Avengers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3049" name="Spellbook: Corpse Plague" type="EtcItem">
+		<!-- Spellbook needed to learn Corpse Plague. Used by Dark Avengers and Shillien Knights. Required level: 46 -->
+		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3050" name="Spellbook: Hex" type="EtcItem">
+		<!-- Spellbook needed to learn Hex. Used by Shillien Knights, Bladedancers, Abyss Walkers, and Phantom Rangers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3051" name="Spellbook: Spirit Barrier" type="EtcItem">
+		<!-- Spellbook needed to learn Spirit Barrier. Used by Temple Knights, Swordsingers, Plainswalkers, and Silver Rangers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_efighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3052" name="Spellbook: Hamstring" type="EtcItem">
+		<!-- Spellbook needed to learn Hamstring. Used by Dark Avengers. Required level: 43 -->
+		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3053" name="Spellbook: Blessing of Holy" type="EtcItem">
+		<!-- Spellbook needed to learn Blessing of Holy. Used by Paladins. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3054" name="Spellbook: Summon Viper Cubic" type="EtcItem">
+		<!-- Spellbook needed to learn Summon Viper Cubic. Used by Shillien Knights. Required level: 49 -->
+		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="4800" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3055" name="Spellbook: Lightning Strike" type="EtcItem">
+		<!-- Spellbook needed to learn Lightning Strike. Used by Shillien Knights. Required level: 58 -->
+		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3056" name="Spellbook: Summon Dark Panther" type="EtcItem">
+		<!-- Spellbook needed to learn Summon Dark Panther. Used by Dark Avengers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3057" name="Spellbook: Summon Reanimated Man" type="EtcItem">
+		<!-- Spellbook needed to learn Summon Reanimated Man. Used by Necromancers. Required level: 44 -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3058" name="Spellbook: Summon Corrupted Man" type="EtcItem">
+		<!-- Spellbook needed to learn Summon Corrupted Man. Used by Necromancers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3059" name="Spellbook: Corpse Burst" type="EtcItem">
+		<!-- Spellbook needed to learn Corpse Burst. Used by Necromancers. Required level: 48 -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="4600" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3060" name="Spellbook: Forget" type="EtcItem">
+		<!-- Spellbook needed to learn Forget. Used by Necromancers. Required level: 44 -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3061" name="Spellbook: Curse Discord" type="EtcItem">
+		<!-- Spellbook needed to learn Curse Discord. Used by Necromancers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3062" name="Spellbook: Curse Fear" type="EtcItem">
+		<!-- Spellbook needed to learn the spell Curse Fear. Used by Necromancers, Spellsingers, Spellhowlers and Sorcerers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3063" name="Spellbook: Anchor" type="EtcItem">
+		<!-- Spellbook needed to learn Anchor. Used by Necromancers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3064" name="Spellbook: Silence" type="EtcItem">
+		<!-- Spellbook needed to learn Silence. Used by Necromancers and Spellhowlers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3065" name="Spellbook: Death Spike" type="EtcItem">
+		<!-- Spellbook needed to learn Death Spike. Used by Necromancers, Spellhowlers, and Phantom Summoners. Required level: 44 -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3066" name="Spellbook: Curse Death Link" type="EtcItem">
+		<!-- Spellbook needed to learn Curse Death Link. Used by Necromancers and Spellhowlers. Required level: 50 -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3067" name="Spellbook: Vampiric Claw" type="EtcItem">
+		<!-- Spellbook needed to learn Vampiric Claw. Used by Necromancers and Spellhowlers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3068" name="Spellbook: Vitalize" type="EtcItem">
+		<!-- Spellbook needed to learn Vitalize. Used by Bishops and Elven Elders. Required level: 48 -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="4600" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3069" name="Spellbook: Repose" type="EtcItem">
+		<!-- Spellbook needed to learn Repose. Used by Bishops. Required level: 44 -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3070" name="Spellbook: Hold Undead" type="EtcItem">
+		<!-- Spellbook needed to learn Hold Undead. Used by Bishops. Required level: 48 -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="4600" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3071" name="Spellbook: Requiem" type="EtcItem">
+		<!-- Spellbook needed to learn Requiem. Used by Bishops. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3072" name="Spellbook: Purify" type="EtcItem">
+		<!-- Spellbook needed to learn Purify. Used by Bishops and Shillien Elders. Required level: 44 -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3073" name="Spellbook: Might of Heaven" type="EtcItem">
+		<!-- Spellbook needed to learn Might of Heaven. Used by Bishops and Elven Elders. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3074" name="Spellbook: Surrender to Wind" type="EtcItem">
+		<!-- Spellbook needed to learn Surrender to Wind. Used by Sorcerers and Spellhowlers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3075" name="Spellbook: Blazing Circle" type="EtcItem">
+		<!-- Spellbook needed to learn Blazing Circle. Used by Sorcerers and Spellsingers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3076" name="Spellbook: Prominence" type="EtcItem">
+		<!-- Spellbook needed to learn Prominence. Used by Sorcerers and Spellsingers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3077" name="Spellbook: Blazing Skin" type="EtcItem">
+		<!-- Spellbook needed to learn Blazing Skin. Used by Sorcerers and Spellsingers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3078" name="Spellbook: Decay" type="EtcItem">
+		<!-- Spellbook needed to learn Decay. Used by Sorcerers. Required level: 48 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="4600" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3079" name="Spellbook: Cancel" type="EtcItem">
+		<!-- Spellbook needed to learn Cancel. Used by Sorcerers and Spellsingers. Required level: 48 -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3080" name="Spellbook: Sleeping Cloud" type="EtcItem">
+		<!-- Spellbook needed to learn Sleeping Cloud. Used by Sorcerers and Spellsingers. Required level: 44 -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3081" name="Spellbook: Aura Flare" type="EtcItem">
+		<!-- Spellbook needed to learn Aura Flare. Used by Sorcerers and Spellsingers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3082" name="Spellbook: Surrender to Water" type="EtcItem">
+		<!-- Spellbook needed to learn Surrender to Water. Used by Spellsingers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3083" name="Spellbook: Frost Wall" type="EtcItem">
+		<!-- Spellbook needed to learn Frost Wall. Used by Spellsingers. Required level: 52 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="5400" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3084" name="Spellbook: Freezing Shackle" type="EtcItem">
+		<!-- Spellbook needed to learn Freezing Shackle. Used by Spellsingers. Required level: 44 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3085" name="Spellbook: Hydro Blast" type="EtcItem">
+		<!-- Spellbook needed to learn Hydro Blast. Used by Spellsingers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3086" name="Spellbook: Frost Bolt" type="EtcItem">
+		<!-- Spellbook needed to learn Frost Bolt. Used by Spellsingers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3087" name="Spellbook: Ice Dagger" type="EtcItem">
+		<!-- Spellbook needed to learn Ice Dagger. Used by Spellsingers. Required level: 44 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3088" name="Spellbook: Freezing Skin" type="EtcItem">
+		<!-- Spellbook needed to learn Freezing Skin. Used by Spellsingers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3089" name="Spellbook: Tempest" type="EtcItem">
+		<!-- Spellbook needed to learn Tempest. Used by Spellhowlers. Required level: 46 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3090" name="Spellbook: Hurricane" type="EtcItem">
+		<!-- Spellbook needed to learn Hurricane. Used by Spellhowlers. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3091" name="Spellbook: Servitor Magic Shield" type="EtcItem">
+		<!-- Spellbook needed to learn Servitor Magic Shield. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 44 -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3092" name="Spellbook: Servitor Physical Shield" type="EtcItem">
+		<!-- Spellbook needed to learn Servitor Physical Shield. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3093" name="Spellbook: Servitor Haste" type="EtcItem">
+		<!-- Spellbook needed to learn Servitor Haste. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 44 -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3094" name="Spellbook: Invigor" type="EtcItem">
+		<!-- Spellbook needed to learn Invigor. Used by Prophets. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3095" name="Spellbook: Magic Barrier" type="EtcItem">
+		<!-- Spellbook needed to learn Magic Barrier. Used by Prophets. Required level: 44 -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3096" name="Spellbook: Blessed Body" type="EtcItem">
+		<!-- Spellbook needed to learn Blessed Body. Used by Prophets. Required level: 44 -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3097" name="Spellbook: Blessed Soul" type="EtcItem">
+		<!-- Spellbook needed to learn Blessed Soul. Used by Prophets. Required level: 44 -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3098" name="Spellbook: Return" type="EtcItem">
+		<!-- Spellbook needed to learn Return. Used by Prophets and Elven Elders. Required level: Prophet: 40, Elven Elder: 44 -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3099" name="Spellbook: Haste" type="EtcItem">
+		<!-- Spellbook needed to learn Haste. Used by Prophets. Required level: 44 -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

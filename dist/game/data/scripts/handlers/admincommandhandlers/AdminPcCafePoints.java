@@ -19,15 +19,15 @@ package handlers.admincommandhandlers;
 import java.util.Collection;
 import java.util.StringTokenizer;
 
-import com.l2jmobius.Config;
-import org.l2j.gameserver.mobius.gameserver.cache.HtmCache;
-import org.l2j.gameserver.mobius.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.mobius.gameserver.model.L2World;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExPCCafePointInfo;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2j.gameserver.mobius.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.mobius.gameserver.util.Util;
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.network.serverpackets.ExPCCafePointInfo;
+import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.util.Util;
 
 /**
  * Admin PC Points manage admin commands.

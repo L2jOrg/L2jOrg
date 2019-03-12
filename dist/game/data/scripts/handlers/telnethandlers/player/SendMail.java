@@ -19,14 +19,14 @@ package handlers.telnethandlers.player;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2j.gameserver.mobius.gameserver.data.sql.impl.CharNameTable;
-import org.l2j.gameserver.mobius.gameserver.enums.MailType;
-import org.l2j.gameserver.mobius.gameserver.instancemanager.MailManager;
-import org.l2j.gameserver.mobius.gameserver.model.entity.Message;
-import org.l2j.gameserver.mobius.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.mobius.gameserver.model.itemcontainer.Mail;
-import org.l2j.gameserver.mobius.gameserver.network.telnet.ITelnetCommand;
-import org.l2j.gameserver.mobius.gameserver.util.Util;
+import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.enums.MailType;
+import org.l2j.gameserver.instancemanager.MailManager;
+import org.l2j.gameserver.model.entity.Message;
+import org.l2j.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.model.itemcontainer.Mail;
+import org.l2j.gameserver.network.telnet.ITelnetCommand;
+import org.l2j.gameserver.util.Util;
 
 import io.netty.channel.ChannelHandlerContext;
 

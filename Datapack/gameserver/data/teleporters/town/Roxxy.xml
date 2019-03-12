@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30006"> <!-- Roxxy -->
+		<teleport type="NORMAL">
+			<!-- feeCount from Interlude, unconfirmed from retail classic -->
+			<location npcStringId="1010004" x="-80684" y="149834" z="-3040" feeCount="18000" /> <!-- The Village of Gludin -->
+			<location npcStringId="1010168" x="-99843" y="237583" z="-3568" feeCount="470" /> <!-- Obelisk of Victory -->
+			<location npcStringId="1010169" x="-106696" y="214691" z="-3424" feeCount="1000" /> <!-- Northern Territory of Talking Island -->
+			<location npcStringId="1010170" x="-95336" y="240478" z="-3264" feeCount="1100" /> <!-- Southern Territory of Talking Island -->
+			<location npcStringId="1010557" x="-112367" y="234703" z="-3688" feeCount="830" /> <!-- Elven Ruins (Lv. 9) -->
+			<location npcStringId="1010558" x="-111728" y="244330" z="-3448" feeCount="770" /> <!-- Singing Waterfall -->
+		</teleport>
+	</npc>
+</list>

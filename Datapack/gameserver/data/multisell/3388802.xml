@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>33888</npc> <!-- Santa -->
+	</npcs>
+	<item>
+		<ingredient id="37543" count="100" /> <!-- Snowy Squash Nectar -->
+		<production id="4202" count="1" /> <!-- Chrono Cithara -->
+	</item>
+	<item>
+		<ingredient id="37543" count="150" /> <!-- Snowy Squash Nectar -->
+		<production id="5133" count="1" /> <!-- Chrono Unitus-->
+	</item>
+	<item>
+		<ingredient id="37543" count="200" /> <!-- Snowy Squash Nectar -->
+		<production id="5817" count="1" /> <!-- Chrono Campana -->
+	</item>
+	<item>
+		<ingredient id="37543" count="250" /> <!-- Snowy Squash Nectar -->
+		<production id="7058" count="1" /> <!-- Chrono Darubka -->
+	</item>
+	<item>
+		<ingredient id="37543" count="300" /> <!-- Snowy Squash Nectar -->
+		<production id="8350" count="1" /> <!-- Chrono Marakas -->
+	</item>
+</list>

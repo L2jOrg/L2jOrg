@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+    <!-- The Patriot's Necropolis -->
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq1" minZ="-5168" maxZ="-5176">
+				<node x="-14725" y="80388" />
+				<node x="-14088" y="80388" />
+				<node x="-14088" y="82303" />
+				<node x="-14725" y="82303" />
+			</territory>
+		</territories>
+		<npc id="21626" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21622" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21628" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21627" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq2" minZ="-5168" maxZ="-5176">
+				<node x="-14712" y="79304" />
+				<node x="-14712" y="79880" />
+				<node x="-14120" y="79880" />
+				<node x="-14120" y="79304" />
+			</territory>
+		</territories>
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq3" minZ="-5168" maxZ="-5176">
+				<node x="-13288" y="80408" />
+				<node x="-13288" y="79785" />
+				<node x="-11893" y="79785" />
+				<node x="-11893" y="80408" />
+			</territory>
+		</territories>
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21626" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21627" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21628" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21622" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq4" minZ="-5168" maxZ="-5176">
+				<node x="-15383" y="79816" />
+				<node x="-16008" y="79816" />
+				<node x="-16008" y="78392" />
+				<node x="-15383" y="78392" />
+			</territory>
+		</territories>
+		<npc id="21627" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21628" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq5" minZ="-5168" maxZ="-5176">
+				<node x="-15992" y="77080" />
+				<node x="-15992" y="77672" />
+				<node x="-15400" y="77672" />
+				<node x="-15400" y="77080" />
+			</territory>
+		</territories>
+		<npc id="21626" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21622" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq6" minZ="-5168" maxZ="-5176">
+				<node x="-16504" y="77096" />
+				<node x="-16504" y="77667" />
+				<node x="-17075" y="77667" />
+				<node x="-17075" y="77096" />
+			</territory>
+		</territories>
+		<npc id="21626" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21622" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq7" minZ="-5168" maxZ="-5176">
+				<node x="-21688" y="83368" />
+				<node x="-21688" y="82776" />
+				<node x="-21096" y="82776" />
+				<node x="-21096" y="83368" />
+			</territory>
+		</territories>
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21622" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21626" count="1" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq8" minZ="-5168" maxZ="-5176">
+				<node x="-21096" y="81688" />
+				<node x="-21096" y="81688" />
+				<node x="-21681" y="82282" />
+				<node x="-21681" y="82282" />
+			</territory>
+		</territories>
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21626" count="1" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21622" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq9" minZ="-5168" maxZ="-5176">
+				<node x="-18952" y="81672" />
+				<node x="-18952" y="82295" />
+				<node x="-20367" y="82295" />
+				<node x="-20367" y="81672" />
+			</territory>
+		</territories>
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21627" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq10" minZ="-5168" maxZ="-5176">
+				<node x="-20760" y="80315" />
+				<node x="-21384" y="80315" />
+				<node x="-21384" y="78920" />
+				<node x="-20760" y="78920" />
+			</territory>
+		</territories>
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21627" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq11" minZ="-5168" maxZ="-5176">
+				<node x="-19640" y="79000" />
+				<node x="-20296" y="79000" />
+				<node x="-20296" y="77080" />
+				<node x="-19640" y="77080" />
+			</territory>
+		</territories>
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21627" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21622" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21626" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21628" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq12" minZ="-5168" maxZ="-5176">
+				<node x="-18984" y="78184" />
+				<node x="-18360" y="78184" />
+				<node x="-18360" y="79592" />
+				<node x="-18984" y="79592" />
+			</territory>
+		</territories>
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21628" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq13" minZ="-5168" maxZ="-5176">
+				<node x="-16792" y="86136" />
+				<node x="-17416" y="86136" />
+				<node x="-17416" y="84737" />
+				<node x="-16792" y="84737" />
+			</territory>
+		</territories>
+		<npc id="21622" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21628" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21626" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq14" minZ="-5168" maxZ="-5176">
+				<node x="-17896" y="87960" />
+				<node x="-18563" y="87960" />
+				<node x="-18563" y="86056" />
+				<node x="-17896" y="86056" />
+			</territory>
+		</territories>
+		<npc id="21627" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21626" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21628" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq15" minZ="-5168" maxZ="-5176">
+				<node x="-19816" y="85464" />
+				<node x="-18563" y="85464" />
+				<node x="-18563" y="86872" />
+				<node x="-19816" y="86872" />
+			</territory>
+		</territories>
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21627" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq16" minZ="-5168" maxZ="-5176">
+				<node x="-21720" y="84696" />
+				<node x="-21720" y="84008" />
+				<node x="-19800" y="84008" />
+				<node x="-19800" y="84696" />
+			</territory>
+		</territories>
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21628" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21627" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21626" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq17" minZ="-5168" maxZ="-5176">
+				<node x="-19288" y="84648" />
+				<node x="-19288" y="84056" />
+				<node x="-18696" y="84056" />
+				<node x="-18696" y="84648" />
+			</territory>
+		</territories>
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq18" minZ="-5168" maxZ="-5176">
+				<node x="-19988" y="80537" />
+				<node x="-20571" y="80537" />
+				<node x="-20571" y="81128" />
+				<node x="-19988" y="81128" />
+			</territory>
+		</territories>
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21626" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21622" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq19" minZ="-5168" maxZ="-5176">
+				<node x="-16472" y="80376" />
+				<node x="-16472" y="81043" />
+				<node x="-18384" y="81043" />
+				<node x="-18384" y="80376" />
+			</territory>
+		</territories>
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21628" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21627" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21626" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21622" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq20" minZ="-5168" maxZ="-5176">
+				<node x="-18904" y="81016" />
+				<node x="-18904" y="80408" />
+				<node x="-19464" y="80408" />
+				<node x="-19464" y="81016" />
+			</territory>
+		</territories>
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq21" minZ="-5168" maxZ="-5176">
+				<node x="-16488" y="83368" />
+				<node x="-17080" y="83368" />
+				<node x="-17080" y="82776" />
+				<node x="-16488" y="82776" />
+			</territory>
+		</territories>
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq22" minZ="-5168" maxZ="-5176">
+				<node x="-19224" y="83384" />
+				<node x="-19224" y="82755" />
+				<node x="-17800" y="82755" />
+				<node x="-17800" y="83384" />
+			</territory>
+		</territories>
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21628" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq23" minZ="-5168" maxZ="-5176">
+				<node x="-17080" y="81688" />
+				<node x="-16504" y="81688" />
+				<node x="-16504" y="82280" />
+				<node x="-17080" y="82280" />
+			</territory>
+		</territories>
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq24" minZ="-5168" maxZ="-5176">
+				<node x="-17064" y="87384" />
+				<node x="-16488" y="87384" />
+				<node x="-16488" y="87976" />
+				<node x="-17064" y="87976" />
+			</territory>
+		</territories>
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq25" minZ="-5168" maxZ="-5176">
+				<node x="-15992" y="81688" />
+				<node x="-15402" y="81688" />
+				<node x="-15402" y="82264" />
+				<node x="-15992" y="82264" />
+			</territory>
+		</territories>
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21622" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21626" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq26" minZ="-5168" maxZ="-5176">
+				<node x="-12632" y="77384" />
+				<node x="-12632" y="78008" />
+				<node x="-14040" y="78008" />
+				<node x="-14040" y="77384" />
+			</territory>
+		</territories>
+		<npc id="21628" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21627" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq27" minZ="-5168" maxZ="-5176">
+				<node x="-21108" y="87384" />
+				<node x="-21108" y="87972" />
+				<node x="-21688" y="87972" />
+				<node x="-21688" y="87384" />
+			</territory>
+		</territories>
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21626" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21622" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq28" minZ="-5168" maxZ="-5176">
+				<node x="-17608" y="83928" />
+				<node x="-17608" y="84520" />
+				<node x="-18200" y="84520" />
+				<node x="-18200" y="83928" />
+			</territory>
+		</territories>
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21622" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21626" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq29" minZ="-5168" maxZ="-5176">
+				<node x="-11384" y="82280" />
+				<node x="-11384" y="81688" />
+				<node x="-10792" y="82280" />
+				<node x="-10792" y="81688" />
+			</territory>
+		</territories>
+		<npc id="21625" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21621" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21623" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq30" minZ="-5168" maxZ="-5176">
+				<node x="-10792" y="77656" />
+				<node x="-11384" y="77656" />
+				<node x="-11384" y="77080" />
+				<node x="-10792" y="77080" />
+			</territory>
+		</territories>
+		<npc id="21622" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21626" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq31" minZ="-5168" maxZ="-5176">
+				<node x="-12712" y="79160" />
+				<node x="-12712" y="78472" />
+				<node x="-10808" y="78472" />
+				<node x="-10808" y="79160" />
+			</territory>
+		</territories>
+		<npc id="21624" count="3" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21628" count="3" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21627" count="3" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="3" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21623" count="3" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="сatacombs_ssq32" minZ="-5168" maxZ="-5176">
+				<node x="-14840" y="78792" />
+				<node x="-14840" y="78200" />
+				<node x="-14248" y="78200" />
+				<node x="-14248" y="78792" />
+			</territory>
+		</territories>
+		<npc id="21624" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21620" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21626" count="2" respawnTime="122sec" respawnRandom="40sec" />
+		<npc id="21622" count="2" respawnTime="122sec" respawnRandom="40sec" />
+	</spawn>
+</list>

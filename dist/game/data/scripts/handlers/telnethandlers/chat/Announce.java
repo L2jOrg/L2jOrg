@@ -16,8 +16,8 @@
  */
 package handlers.telnethandlers.chat;
 
-import org.l2j.gameserver.mobius.gameserver.network.telnet.ITelnetCommand;
-import org.l2j.gameserver.mobius.gameserver.util.Broadcast;
+import org.l2j.gameserver.network.telnet.ITelnetCommand;
+import org.l2j.gameserver.util.Broadcast;
 
 import io.netty.channel.ChannelHandlerContext;
 

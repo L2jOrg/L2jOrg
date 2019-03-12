@@ -5,7 +5,7 @@ plugins {
     id "eclipse"
 }
 
-ext.moduleName = 'org.l2j.scritps'
+ext.moduleName = 'org.l2j.scripts'
 
 dependencies {
     compile project(':Commons')

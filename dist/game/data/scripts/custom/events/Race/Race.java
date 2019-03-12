@@ -21,19 +21,19 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 
-import com.l2jmobius.Config;
+import org.l2j.gameserver.Config;
 import org.l2j.commons.concurrent.ThreadPool;
-import org.l2j.gameserver.mobius.gameserver.data.xml.impl.SkillData;
-import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
-import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.model.quest.Event;
-import org.l2j.gameserver.mobius.gameserver.model.quest.QuestState;
-import org.l2j.gameserver.mobius.gameserver.model.skills.AbnormalType;
-import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.CreatureSay;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2j.gameserver.mobius.gameserver.util.Broadcast;
+import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.enums.ChatType;
+import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.quest.Event;
+import org.l2j.gameserver.model.quest.QuestState;
+import org.l2j.gameserver.model.skills.AbnormalType;
+import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.network.serverpackets.CreatureSay;
+import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.util.Broadcast;
 
 /**
  * @author Gnacik

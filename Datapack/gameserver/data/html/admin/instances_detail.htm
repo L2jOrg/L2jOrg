@@ -1,0 +1,56 @@
+<html><title>Main Admin Menu</title><body>
+<center>
+<table width=270 border=0 bgcolor="444444">
+<tr>
+<td><button value="Main" action="bypass -h admin_admin" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Char" action="bypass -h admin_admin6" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Game" action="bypass -h admin_admin2" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="GM" action="bypass -h admin_admin7" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+<font name="hs11" color="LEVEL">%templateName% (%templateId%)</font>
+<br>
+
+<font name="hs10" color="LEVEL">Info:</font><br1>
+<table border=0 cellpadding=0 cellspacing=0 bgcolor="363636">
+<tr>
+<td align=center fixwidth="250">Active worlds:</font></td>
+<td align=center fixwidth="250"><font color="LEVEL">%activeWorlds%</font></td>
+</tr>
+
+<tr>
+<td align=center fixwidth="250">Duration:</font></td>
+<td align=center fixwidth="250"><font color="LEVEL">%duration%</font></td>
+</tr>
+
+<tr>
+<td align=center fixwidth="250">Empty destroy time:</font></td>
+<td align=center fixwidth="250"><font color="LEVEL">%emptyDuration%</font></td>
+</tr>
+
+<tr>
+<td align=center fixwidth="250">Eject time:</font></td>
+<td align=center fixwidth="250"><font color="LEVEL">%ejectDuration%</font></td>
+</tr>
+
+<tr>
+<td align=center fixwidth="250">Remove buff:</font></td>
+<td align=center fixwidth="250"><font color="LEVEL">%removeBuff%</font></td>
+</tr>
+</table>
+
+<br><br>
+<font name="hs10" color="LEVEL">Create Instance from template:</font><br1>
+
+<combobox width=120 height=17 var=ebox list=Alone;Party;CommandChannel><br>
+<button value="Create Instance!" action="bypass -h admin_instancecreate %templateId% $ebox" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+
+<br><br>
+<font name="hs10" color="LEVEL">Active Instances:</font><br1>
+
+%instanceList%
+
+<button value="Back" action="bypass -h admin_instancelist" width=200 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
+</center>
+</body></html>

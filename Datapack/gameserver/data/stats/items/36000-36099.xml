@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="36079" name="Yum Yum Candy" type="EtcItem">
+		<!-- Yum Yum Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Acquired XP / SP + 15%. Stacks with Nom Nom Candy. Temporary event item. -->
+		<set name="icon" val="icon.etc_whiteday_candy_i05" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<skills>
+			<skill id="9618" level="1" /> <!-- Yum Yum Candy -->
+		</skills>
+	</item>
+	<item id="36080" name="Nom Nom Candy" type="EtcItem">
+		<!-- Nom Nom Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Acquired XP / SP + 15%. Stacks with Yum Yum Candy. Temporary event item. -->
+		<set name="icon" val="icon.etc_whiteday_candy_i06" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<skills>
+			<skill id="9619" level="1" /> <!-- Nom Nom Candy -->
+		</skills>
+	</item>
+	<item id="36081" name="Yummy Gift Box" type="EtcItem">
+		<!-- You can get one box per account. Double-click to receive two Yum Yum Candies or two Nom Nom Candies. (The item will be removed after the event is over.) -->
+		<set name="icon" val="icon.etc_candy_basket_i04_1" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9620" level="1" /> <!-- Yummy Gift Box -->
+		</skills>
+	</item>
+</list>

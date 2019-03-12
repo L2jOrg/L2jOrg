@@ -1,0 +1,65 @@
+<html><title>Main Admin Menu</title><body>
+<center>
+<table width=270 border=0 bgcolor="444444">
+<tr>
+<td><button value="Main" action="bypass -h admin_admin" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Char" action="bypass -h admin_admin6" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Game" action="bypass -h admin_admin2" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="GM" action="bypass -h admin_admin7" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+<font name="hs11" color="LEVEL">&%%clanHallId%; (%clanHallId%)</font><br1>
+(&*%clanHallId%;)<br>
+<font name="hs10" color="LEVEL">Info:</font><br1>
+
+<table border=0 cellpadding=0 cellspacing=0 bgcolor="363636">
+<tr>
+<td align=center fixwidth="250">Location:</font></td>
+<td align=center fixwidth="250"><font color="LEVEL">&^%clanHallId%;</font></td>
+</tr>
+
+<table border=0 cellpadding=0 cellspacing=0 bgcolor="363636">
+<tr>
+<td align=center fixwidth="250">Grade:</font></td>
+<td align=center fixwidth="250"><font color="LEVEL">%clanHallGrade%</font></td>
+</tr>
+
+<table border=0 cellpadding=0 cellspacing=0 bgcolor="363636">
+<tr>
+<td align=center fixwidth="250">Size:</font></td>
+<td align=center fixwidth="250"><font color="LEVEL">%clanHallSize% square feet</font></td>
+</tr>
+
+<table border=0 cellpadding=0 cellspacing=0 bgcolor="363636">
+<tr>
+<td align=center fixwidth="250">Owner:</font></td>
+<td align=center fixwidth="250">%clanHallOwner%</td>
+</tr>
+</table>
+<br><br>
+
+<font name="hs10" color="LEVEL">Actions:</font><br1>
+<table border=0 cellpadding=0 cellspacing=0 bgcolor="363636">
+<tr>
+<td align=center fixwidth="250"><button value="Give" action="bypass -h admin_clanhall id=%clanHallId% action=give" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td align=center fixwidth="250"><button value="Take" action="bypass -h admin_clanhall id=%clanHallId% action=take" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td align=center fixwidth="250"><button value="Open doors" action="bypass -h admin_clanhall id=%clanHallId% action=openCloseDoors actionVal=true" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td align=center fixwidth="250"><button value="Close doors" action="bypass -h admin_clanhall id=%clanHallId% action=openCloseDoors actionVal=false" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td align=center fixwidth="250"><button value="Teleport inside" action="bypass -h admin_clanhall id=%clanHallId% action=teleport actionVal=inside" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td align=center fixwidth="250"><button value="Teleport outside" action="bypass -h admin_clanhall id=%clanHallId% action=teleport actionVal=outside" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br><br>
+
+<font name="hs10" color="LEVEL">Functions:</font><br1>
+%functionList%
+
+<br>
+<button value="Back" action="bypass -h admin_clanhall" width=200 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
+</center>
+</body></html>

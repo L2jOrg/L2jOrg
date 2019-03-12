@@ -13,7 +13,6 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2j.gameserver.data.xml.impl.OptionData;
 import org.l2j.gameserver.datatables.ItemTable;
-import org.l2j.gameserver.mobius.gameserver.enums.*;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.L2Character;

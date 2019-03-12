@@ -8,7 +8,6 @@ import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.AffectScopeHandler;
 import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.data.xml.impl.SkillData;
-import org.l2j.gameserver.mobius.gameserver.enums.*;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.model.L2Object;

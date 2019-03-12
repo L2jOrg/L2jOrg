@@ -1,0 +1,80 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/ShuttleData.xsd">
+	<shuttle id="1" name="Magmeld 1" x="206580" y="82700" z="-1035" heading="0">
+		<doors>
+			<door id="26200002" />
+			<door id="26200005" />
+		</doors>
+		<stops>
+			<stop id="0">
+				<dimension x="0" y="0" z="-50" />
+				<dimension x="0" y="0" z="0" />
+				<dimension x="0" y="200" z="45" />
+			</stop>
+			<stop id="1">
+				<dimension x="0" y="0" z="-50" />
+				<dimension x="0" y="0" z="0" />
+				<dimension x="0" y="200" z="45" />
+			</stop>
+		</stops>
+		<routes>
+			<route id="0">
+				<loc x="206580" y="82700" z="323" heading="0" /> <!-- UP -->
+			</route>
+			<route id="1">
+				<loc x="206580" y="82700" z="-1035" heading="0" /> <!-- DOWN -->
+			</route>
+		</routes>
+	</shuttle>
+	<shuttle id="2" name="Magmeld 2" x="209885" y="83357" z="-1035" heading="0">
+		<doors>
+			<door id="26200003" />
+			<door id="26200004" />
+		</doors>
+		<stops>
+			<stop id="0">
+				<dimension x="0" y="0" z="-50" />
+				<dimension x="0" y="0" z="0" />
+				<dimension x="0" y="200" z="45" />
+			</stop>
+			<stop id="1">
+				<dimension x="0" y="0" z="-50" />
+				<dimension x="0" y="0" z="0" />
+				<dimension x="0" y="200" z="45" />
+			</stop>
+		</stops>
+		<routes>
+			<route id="0">
+				<loc x="209885" y="83357" z="85" heading="0" />
+			</route>
+			<route id="1">
+				<loc x="209885" y="83357" z="-1035" heading="0" />
+			</route>
+		</routes>
+	</shuttle>
+	<shuttle id="3" name="Cruma" x="17728" y="114176" z="-3502" heading="0">
+		<doors>
+			<door id="20210004" />
+			<door id="20210005" />
+		</doors>
+		<stops>
+			<stop id="0">
+				<dimension x="0" y="0" z="-115" />
+				<dimension x="0" y="0" z="0" />
+				<dimension x="0" y="0" z="0" />
+			</stop>
+			<stop id="1">
+				<dimension x="0" y="0" z="-115" />
+				<dimension x="0" y="0" z="0" />
+				<dimension x="0" y="0" z="0" />
+			</stop>
+		</stops>
+		<routes>
+			<route id="0">
+				<loc x="17728" y="114176" z="-11712" heading="0" /> <!-- DOWN -->
+			</route>
+			<route id="1">
+				<loc x="17728" y="114176" z="-3502" heading="0" /> <!-- UP -->
+			</route>
+		</routes>
+	</shuttle>
+</list>

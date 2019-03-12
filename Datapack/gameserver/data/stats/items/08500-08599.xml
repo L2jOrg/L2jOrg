@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="8543" name="Bead Parcel" type="EtcItem">
+		<!-- Take this parcel of woven beads to Warehouse Chief Yasheni in the Town of Schuttgart. -->
+		<set name="icon" val="icon.accessary_mage_earing_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8544" name="Timora Orc's Head" type="EtcItem">
+		<!-- Severed head of the cowardly Timora Orc who betrayed his own tribe and joined the Ragna Orcs. -->
+		<set name="icon" val="icon.etc_skull_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8545" name="Kasha Spider's Tooth" type="EtcItem">
+		<!-- This crooked spider's tooth was pulled out by hand during close combat. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8546" name="Horn of Baar Dre Vanul" type="EtcItem">
+		<!-- This smooth, flawless horn comes from Baar Dre Vanul, who inhabits the Immortal Plateau's Southern Region. -->
+		<set name="icon" val="icon.etc_horn_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8559" name="Coronet" type="Armor">
+		<!-- Hair accessory worn by a bride at her wedding ceremony. Female only. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_flower_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="weight" val="10" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
+	</item>
+	<item id="8560" name="Teddy Bear Hat" type="Armor">
+		<!-- Fun, bear-shaped hair accessory. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_bear_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="2000000" />
+	</item>
+	<item id="8561" name="Piggy Hat" type="Armor">
+		<!-- Fun, pig-shaped hair accessory. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_pig_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="2000000" />
+	</item>
+	<item id="8562" name="Jester Hat" type="Armor">
+		<!-- Festive Jester Hat with a split top. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_jester_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="2000000" />
+	</item>
+	<item id="8563" name="Wizard Hat" type="Armor">
+		<!-- A Wizard Hat with a wide brim and bent tip. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_magic_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="2000000" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+	</item>
+	<item id="8564" name="Dapper Cap" type="Armor">
+		<!-- Stylish Cap with a visor. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_dandy_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="2000000" />
+	</item>
+	<item id="8569" name="Half Face Mask" type="Armor">
+		<!-- An accessory covering half of the wearer�s face. -->
+		<set name="icon" val="icon.accessory_half_face_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="500000" />
+	</item>
+</list>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Katei's Cube Zones -->
+	<zone name="crataer_race1" type="PeaceZone" shape="NPoly" minZ="-8355" maxZ="-8105"> <!-- [17_17] -->
+		<node X="-87901" Y="-17029" />
+		<node X="-86611" Y="-17044" />
+		<node X="-86618" Y="-15767" />
+		<node X="-87894" Y="-15770" />
+	</zone>
+	<zone name="crataer_race2" type="PeaceZone" shape="NPoly" minZ="-8459" maxZ="-8209"> <!-- [17_15] -->
+		<node X="-87827" Y="-82417" />
+		<node X="-86552" Y="-82421" />
+		<node X="-86548" Y="-81200" />
+		<node X="-87826" Y="-81190" />
+	</zone>
+	<zone name="crataer_race3" type="PeaceZone" shape="NPoly" minZ="-8403" maxZ="-8153"> <!-- [18_15] -->
+		<node X="-54654" Y="-83602" />
+		<node X="-53357" Y="-83594" />
+		<node X="-53359" Y="-82330" />
+		<node X="-54650" Y="-82341" />
+	</zone>
+	<zone name="crataer_battle1" type="ArenaZone" shape="NPoly" minZ="-8375" maxZ="-8095"> <!-- [17_17] -->
+		<node X="-86726" Y="-21076" />
+		<node X="-77193" Y="-21079" />
+		<node X="-77321" Y="-11710" />
+		<node X="-86670" Y="-11714" />
+	</zone>
+	<zone name="crataer_battle2" type="ArenaZone" shape="NPoly" minZ="-8483" maxZ="-8233"> <!-- [17_15] -->
+		<node X="-86608" Y="-86506" />
+		<node X="-77222" Y="-86479" />
+		<node X="-77064" Y="-76900" />
+		<node X="-86576" Y="-76829" />
+	</zone>
+	<zone name="crataer_battle3" type="ArenaZone" shape="NPoly" minZ="-8471" maxZ="-8221"> <!-- [18_15] -->
+		<node X="-53365" Y="-87679" />
+		<node X="-43940" Y="-87683" />
+		<node X="-43926" Y="-78026" />
+		<node X="-53311" Y="-77966" />
+	</zone>
+	<zone name="cratae_no_restart1" type="NoRestartZone" shape="NPoly" minZ="-8375" maxZ="-8095"> <!-- 17_17 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="restartTime" val="0" />
+		<node X="-86726" Y="-21076" />
+		<node X="-77193" Y="-21079" />
+		<node X="-77321" Y="-11710" />
+		<node X="-86670" Y="-11714" />
+	</zone>
+	<zone name="cratae_no_restart2" type="NoRestartZone" shape="NPoly" minZ="-8483" maxZ="-8233"> <!-- 17_15 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="restartTime" val="0" />
+		<node X="-86608" Y="-86506" />
+		<node X="-77222" Y="-86479" />
+		<node X="-77064" Y="-76900" />
+		<node X="-86576" Y="-76829" />
+	</zone>
+	<zone name="cratae_no_restart3" type="NoRestartZone" shape="NPoly" minZ="-8471" maxZ="-8221"> <!-- 18_15 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="restartTime" val="0" />
+		<node X="-53365" Y="-87679" />
+		<node X="-43940" Y="-87683" />
+		<node X="-43926" Y="-78026" />
+		<node X="-53311" Y="-77966" />
+	</zone>
+</list>

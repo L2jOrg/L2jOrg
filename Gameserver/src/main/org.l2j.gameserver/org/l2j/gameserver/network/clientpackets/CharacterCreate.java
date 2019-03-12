@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.xml.impl.*;
-import org.l2j.gameserver.mobius.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;

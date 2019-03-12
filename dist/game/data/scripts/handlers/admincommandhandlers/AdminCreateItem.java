@@ -18,18 +18,18 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
-import org.l2j.gameserver.mobius.gameserver.datatables.ItemTable;
-import org.l2j.gameserver.mobius.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.mobius.gameserver.handler.IItemHandler;
-import org.l2j.gameserver.mobius.gameserver.handler.ItemHandler;
-import org.l2j.gameserver.mobius.gameserver.model.L2Object;
-import org.l2j.gameserver.mobius.gameserver.model.L2World;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.model.items.L2Item;
-import org.l2j.gameserver.mobius.gameserver.model.items.instance.L2ItemInstance;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExAdenaInvenCount;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.GMViewItemList;
-import org.l2j.gameserver.mobius.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.handler.IItemHandler;
+import org.l2j.gameserver.handler.ItemHandler;
+import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.network.serverpackets.ExAdenaInvenCount;
+import org.l2j.gameserver.network.serverpackets.GMViewItemList;
+import org.l2j.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - itemcreate = show menu - create_item <id> [num] = creates num items with respective id, if num is not specified, assumes 1.

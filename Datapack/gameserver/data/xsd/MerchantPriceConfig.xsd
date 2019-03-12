@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="merchantPriceConfig">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="priceConfig" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="baseTax" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="castleId">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="9" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="id" type="xs:integer" use="required" />
+						<xs:attribute name="name" type="xs:normalizedString" use="required" />
+						<xs:attribute name="zoneId" type="xs:positiveInteger" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="defaultPriceConfig" type="xs:positiveInteger" use="required" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

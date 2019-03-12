@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="115" parentClassId="51">
+		<skill skillName="Anti Magic" skillId="146" skillLvl="46" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="4500000">
+			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="4500000">
+			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+		</skill>
+		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="46" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Robe Mastery" skillId="251" skillLvl="46" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Weapon Mastery" skillId="250" skillLvl="43" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Heavy Armor Mastery" skillId="253" skillLvl="44" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Steal Essence" skillId="1245" skillLvl="15" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Mount Black Bear" skillId="1837" skillLvl="1" getLevel="76">
+			<item id="90042" count="1" /> <!--  Spellbook: Mount Black Bear -->
+		</skill>
+		<skill skillName="Seal of Silence" skillId="1246" skillLvl="13" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Seal of Slow" skillId="1099" skillLvl="16" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Seal of Winter" skillId="1104" skillLvl="15" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Seal of Scourge" skillId="1247" skillLvl="15" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Seal of Binding" skillId="1208" skillLvl="18" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Seal of Suspension" skillId="1248" skillLvl="13" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Seal of Chaos" skillId="1096" skillLvl="17" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Victories of Pa'agrio" skillId="1414" skillLvl="1" getLevel="76" levelUpSp="4500000">
+			<item id="90117" count="1" /> <!-- Scroll: Victories of Pa'agrio -->
+		</skill>
+		<skill skillName="Ritual of Life" skillId="1306" skillLvl="11" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Pa'agrio's Heart" skillId="1256" skillLvl="14" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Dreaming Spirit" skillId="1097" skillLvl="21" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Fear" skillId="1092" skillLvl="20" getLevel="76" levelUpSp="4500000" />
+		<skill skillName="Pa'agrio's Honor" skillId="1305" skillLvl="11" getLevel="76" levelUpSp="4500000" />
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="47" getLevel="77" levelUpSp="4500000" />
+		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="47" getLevel="77" levelUpSp="4500000" />
+		<skill skillName="Robe Mastery" skillId="251" skillLvl="47" getLevel="77" levelUpSp="4500000" />
+		<skill skillName="Weapon Mastery" skillId="250" skillLvl="44" getLevel="77" levelUpSp="4500000" />
+		<skill skillName="Heavy Armor Mastery" skillId="253" skillLvl="45" getLevel="77" levelUpSp="4500000" />
+		<skill skillName="Seal of Disease" skillId="1367" skillLvl="1" getLevel="77" levelUpSp="4500000">
+			<item id="90118" count="1" /> <!-- Scroll: Seal of Disease -->
+		</skill>
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="48" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="48" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Robe Mastery" skillId="251" skillLvl="48" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Weapon Mastery" skillId="250" skillLvl="45" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Heavy Armor Mastery" skillId="253" skillLvl="46" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Steal Essence" skillId="1245" skillLvl="16" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Pa'agrio's Fist" skillId="1416" skillLvl="1" getLevel="78" levelUpSp="9800000">
+			<item id="90119" count="1" /> <!-- Scroll: Pa'agrio's Fist -->
+		</skill>
+		<skill skillName="Seal of Silence" skillId="1246" skillLvl="14" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Seal of Slow" skillId="1099" skillLvl="17" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Seal of Winter" skillId="1104" skillLvl="16" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Seal of Scourge" skillId="1247" skillLvl="16" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Seal of Binding" skillId="1208" skillLvl="19" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Seal of Suspension" skillId="1248" skillLvl="14" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Seal of Chaos" skillId="1096" skillLvl="18" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Ritual of Life" skillId="1306" skillLvl="12" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Pa'agrio's Heart" skillId="1256" skillLvl="15" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Dreaming Spirit" skillId="1097" skillLvl="22" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Fear" skillId="1092" skillLvl="21" getLevel="78" levelUpSp="9800000" />
+		<skill skillName="Pa'agrio's Honor" skillId="1305" skillLvl="12" getLevel="78" levelUpSp="9800000" />
+
+		<skill skillName="Seal of Despair" skillId="1366" skillLvl="1" getLevel="79" levelUpSp="9800000">
+			<item id="90120" count="1" /> <!-- Scroll: Seal of Despair -->
+		</skill>
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="49" getLevel="80" levelUpSp="9800000" />
+		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="49" getLevel="80" levelUpSp="9800000" />
+		<skill skillName="Robe Mastery" skillId="251" skillLvl="49" getLevel="80" levelUpSp="9800000" />
+		<skill skillName="Weapon Mastery" skillId="250" skillLvl="46" getLevel="80" levelUpSp="9800000" />
+		<skill skillName="Heavy Armor Mastery" skillId="253" skillLvl="47" getLevel="80" levelUpSp="9800000" />
+		<skill skillName="Steal Essence" skillId="1245" skillLvl="17" getLevel="80" levelUpSp="9800000" />
+		<skill skillName="Flames of Invincibility" skillId="1427" skillLvl="1" getLevel="80" levelUpSp="9800000">
+			<item id="90121" count="1" /> <!-- Scroll: Flames of Invincibility -->
+		</skill>
+		<skill skillName="Pa'agrio's Heart" skillId="1256" skillLvl="16" getLevel="80" levelUpSp="9800000" />
+		<skill skillName="Dreaming Spirit" skillId="1097" skillLvl="23" getLevel="80" levelUpSp="9800000" />
+
+		<skill skillName="Anti Magic" skillId="146" skillLvl="50" getLevel="81" levelUpSp="208000000" />
+		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="50" getLevel="81" levelUpSp="208000000" />
+		<skill skillName="Robe Mastery" skillId="251" skillLvl="50" getLevel="81" levelUpSp="208000000" />
+		<skill skillName="Weapon Mastery" skillId="250" skillLvl="47" getLevel="81" levelUpSp="208000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="253" skillLvl="48" getLevel="81" levelUpSp="208000000" />
+
+		<skill skillName="Anti Magic" skillId="146" skillLvl="51" getLevel="82" levelUpSp="215000000" />
+		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="51" getLevel="82" levelUpSp="215000000" />
+		<skill skillName="Robe Mastery" skillId="251" skillLvl="51" getLevel="82" levelUpSp="215000000" />
+		<skill skillName="Weapon Mastery" skillId="250" skillLvl="48" getLevel="82" levelUpSp="215000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="253" skillLvl="49" getLevel="82" levelUpSp="215000000" />
+		<skill skillName="Steal Essence" skillId="1245" skillLvl="18" getLevel="82" levelUpSp="215000000" />
+		<skill skillName="Victories of Pa'agrio" skillId="1414" skillLvl="2" getLevel="82" levelUpSp="215000000" />
+		<skill skillName="Pa'agrio's Heart" skillId="1256" skillLvl="17" getLevel="82" levelUpSp="215000000" />
+		<skill skillName="Dreaming Spirit" skillId="1097" skillLvl="24" getLevel="82" levelUpSp="215000000" />
+
+		<skill skillName="Anti Magic" skillId="146" skillLvl="52" getLevel="83" levelUpSp="296000000" />
+		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="52" getLevel="83" levelUpSp="296000000" />
+		<skill skillName="Robe Mastery" skillId="251" skillLvl="52" getLevel="83" levelUpSp="296000000" />
+		<skill skillName="Weapon Mastery" skillId="250" skillLvl="49" getLevel="83" levelUpSp="296000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="253" skillLvl="50" getLevel="83" levelUpSp="296000000" />
+
+		<skill skillName="Anti Magic" skillId="146" skillLvl="53" getLevel="84" levelUpSp="304000000" />
+		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="53" getLevel="84" levelUpSp="304000000" />
+		<skill skillName="Robe Mastery" skillId="251" skillLvl="53" getLevel="84" levelUpSp="304000000" />
+		<skill skillName="Weapon Mastery" skillId="250" skillLvl="50" getLevel="84" levelUpSp="304000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="253" skillLvl="51" getLevel="84" levelUpSp="304000000" />
+		<skill skillName="Steal Essence" skillId="1245" skillLvl="19" getLevel="84" levelUpSp="304000000" />
+		<skill skillName="Pa'agrio's Heart" skillId="1256" skillLvl="18" getLevel="84" levelUpSp="304000000" />
+		<skill skillName="Dreaming Spirit" skillId="1097" skillLvl="25" getLevel="84" levelUpSp="304000000" />
+	</skillTree>
+</list>

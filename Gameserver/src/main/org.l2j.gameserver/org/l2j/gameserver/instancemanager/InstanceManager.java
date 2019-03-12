@@ -289,7 +289,7 @@ public final class InstanceManager implements IGameXmlReader {
 
                             // Now when everything is loaded register condition to template
                             try {
-                                final Class<?> clazz = Class.forName("com.l2jmobius.gameserver.model.instancezone.conditions.Condition" + type);
+                                final Class<?> clazz = Class.forName("org.l2j.gameserver.model.instancezone.conditions.Condition" + type);
                                 final Constructor<?> constructor = clazz.getConstructor(InstanceTemplate.class, StatsSet.class, boolean.class, boolean.class);
                                 conditions.add((Condition) constructor.newInstance(template, params, onlyLeader, showMessageAndHtml));
                             } catch (Exception ex) {

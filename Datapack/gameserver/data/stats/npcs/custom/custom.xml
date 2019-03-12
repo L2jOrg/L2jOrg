@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
+	<npc id="900100" displayId="22228" level="1" usingServerSideName="true" name="Elpy" type="L2EventMonster">
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats>
+			<vitals hp="39.74519" hpRegen="2" mp="40.0" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="50" />
+				<run ground="80" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="5" />
+			<height normal="4.5" />
+		</collision>
+	</npc>
+	<npc id="900101" displayId="32365" name="Snowden" usingServerSideName="true" title="Event Manager">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats>
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="75" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12.5" />
+		</collision>
+	</npc>
+	<npc id="900102" displayId="13098" level="80" name="Event Treasure Chest" type="L2Monster">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats>
+			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="894.75854" magical="611.00409" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="900103" displayId="32365" name="Start" usingServerSideName="true" title="Event Manager">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats>
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="75" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12.5" />
+		</collision>
+	</npc>
+	<npc id="900104" displayId="32365" name="Finish" usingServerSideName="true" title="Event Manager">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats>
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="75" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12.5" />
+		</collision>
+	</npc>
+</list>

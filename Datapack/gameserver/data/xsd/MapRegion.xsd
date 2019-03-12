@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="region" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="respawnPoint" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="isChaotic" type="xs:boolean" />
+									<xs:attribute name="X" type="xs:integer" use="required" />
+									<xs:attribute name="Y" type="xs:integer" use="required" />
+									<xs:attribute name="Z" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="map" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="X" type="xs:integer" use="required" />
+									<xs:attribute name="Y" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="banned" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="point" type="xs:token" use="required" />
+									<xs:attribute name="race" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:token">
+												<xs:enumeration value="DARK_ELF" />
+												<xs:enumeration value="DWARF" />
+												<xs:enumeration value="ELF" />
+												<xs:enumeration value="HUMAN" />
+												<xs:enumeration value="KAMAEL" />
+												<xs:enumeration value="ORC" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="castle" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:nonNegativeInteger">
+									<xs:minInclusive value="0" />
+									<xs:maxInclusive value="9" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="bbs" type="xs:token" use="required" />
+						<xs:attribute name="locId" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="name" type="xs:token" use="required" />
+						<xs:attribute name="town" type="xs:token" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="enabled" type="xs:boolean" use="required" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -4,7 +4,6 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.model.items.type.CrystalType;
 
 import java.nio.ByteBuffer;
 import java.util.Collection;
@@ -36,7 +35,7 @@ public class ExShowBaseAttributeCancelWindow extends IClientOutgoingPacket {
      */
     private long getPrice(L2ItemInstance item) {
         switch (item.getItem().getCrystalType()) {
-            case CrystalType.S: {
+            case S: {
                 if (item.isWeapon()) {
                     _price = 50000;
                 } else {
@@ -44,7 +43,7 @@ public class ExShowBaseAttributeCancelWindow extends IClientOutgoingPacket {
                 }
                 break;
             }
-            case CrystalType.S80: {
+            case S80: {
                 if (item.isWeapon()) {
                     _price = 100000;
                 } else {
@@ -52,7 +51,7 @@ public class ExShowBaseAttributeCancelWindow extends IClientOutgoingPacket {
                 }
                 break;
             }
-            case CrystalType.S84: {
+            case S84: {
                 if (item.isWeapon()) {
                     _price = 200000;
                 } else {

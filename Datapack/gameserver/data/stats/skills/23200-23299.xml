@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="23234" toLevel="1" name="Singer and Dancer Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+	</skill>
+	<skill id="23298" toLevel="1" name="Flame Hawk">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>DOT_ATTR</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>80</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>MAGIC</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<lvlBonusRate>1</lvlBonusRate>
+		<icon>icon.skill0771</icon>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>150</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="23299" toLevel="1" name="Arrow Rain">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>DOT_ATTR</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<attributeType>WIND</attributeType>
+		<attributeValue>20</attributeValue>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>80</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<effectPoint>100</effectPoint>
+		<basicProperty>MAGIC</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<lvlBonusRate>1</lvlBonusRate>
+		<icon>icon.skill0772</icon>
+		<isDebuff>true</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>150</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+</list>

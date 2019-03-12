@@ -18,13 +18,13 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
-import com.l2jmobius.Config;
-import org.l2j.gameserver.mobius.gameserver.LoginServerThread;
-import org.l2j.gameserver.mobius.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.network.loginserverpackets.game.ServerStatus;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2j.gameserver.mobius.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.LoginServerThread;
+import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.network.loginserverpackets.game.ServerStatus;
+import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.util.BuilderUtil;
 
 /**
  * This class handles the admin commands that acts on the login

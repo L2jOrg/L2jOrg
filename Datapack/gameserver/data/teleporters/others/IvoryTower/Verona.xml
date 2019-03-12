@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="30727"> <!-- Verona -->
+		<teleport type="NORMAL">
+			<!-- feeCount from Interlude, unconfirmed from retail classic -->
+			<location npcStringId="1010013" x="82971" y="53207" z="-1488" feeCount="3700" /> <!-- Town of Oren -->
+			<location npcStringId="1010020" x="117088" y="76931" z="-2696" feeCount="6800" /> <!-- Hunters Village -->
+		</teleport>
+		<teleport name="ivory_inside" type="OTHER">
+			<location npcStringId="1010016" x="84852" y="15863" z="-4288" feeCount="0" /> <!-- Underground Shopping Area-->
+			<location npcStringId="1010017" x="85289" y="16225" z="-2800" feeCount="0" /> <!-- 2nd Floor Human Wizard Guild -->
+			<location npcStringId="1010018" x="85289" y="16225" z="-2288" feeCount="0" /> <!-- 3rd Floor Elven Wizard Guild -->
+			<location npcStringId="1010019" x="85289" y="16225" z="-1768" feeCount="0" /> <!-- 4th Floor Dark Wizard Guild -->
+		</teleport>
+		<teleport name="ivory_outside" type="OTHER">
+			<location x="90880" y="12439" z="-4960" /> <!-- Ivory Tower - Outside -->
+		</teleport>
+	</npc>
+</list>

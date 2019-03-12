@@ -20,11 +20,11 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2j.gameserver.mobius.gameserver.LoginServerThread;
-import org.l2j.gameserver.mobius.gameserver.cache.HtmCache;
-import org.l2j.gameserver.mobius.gameserver.handler.IVoicedCommandHandler;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.LoginServerThread;
+import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.handler.IVoicedCommandHandler;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * @author Nik

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="35400"> <!-- Horner -->
+		<teleport name="tel1" type="OTHER">
+			<location npcStringId="1010024" x="-82445" y="150788" z="-3129" /> <!-- Village Square -->
+			<location npcStringId="1010025" x="-83331" y="148563" z="-3148" /> <!-- North Gate Entrance -->
+			<location npcStringId="1010026" x="-78405" y="152723" z="-3181" /> <!-- East Gate Entrance -->
+			<location npcStringId="1010028" x="-77460" y="155995" z="-3194" /> <!-- South Gate Entrance -->
+			<location npcStringId="1010027" x="-85138" y="152749" z="-3160" /> <!-- West Gate Entrance -->
+		</teleport>
+		<teleport name="tel2" type="OTHER">
+			<location npcStringId="1010024" x="-82445" y="150788" z="-3129" /> <!-- Village Square -->
+			<location npcStringId="1010025" x="-83331" y="148563" z="-3148" /> <!-- North Gate Entrance -->
+			<location npcStringId="1010026" x="-78405" y="152723" z="-3181" /> <!-- East Gate Entrance -->
+			<location npcStringId="1010028" x="-77460" y="155995" z="-3194" /> <!-- South Gate Entrance -->
+			<location npcStringId="1010027" x="-85138" y="152749" z="-3160" /> <!-- West Gate Entrance -->
+			<location npcStringId="1010175" x="-75437" y="168800" z="-3632" feeCount="2000" /> <!-- Windmill Hill (Lv. 20) -->
+			<location npcStringId="1010096" x="-63736" y="101522" z="-3552" feeCount="2000" castleId="1" /> <!-- Fellmere Harvesting Grounds (Lv. 17) -->
+			<location npcStringId="1010094" x="-88539" y="83389" z="-2864" feeCount="2000" /> <!-- Windy Hill (Lv. 26) -->
+			<location npcStringId="1010621" x="-16526" y="208032" z="-3664" feeCount="2000" /> <!-- Wastelands (Lv. 35) -->
+			<location npcStringId="1010098" x="-49853" y="147089" z="-2784" feeCount="2000" /> <!-- Abandoned Camp -->
+		</teleport>
+	</npc>
+</list>

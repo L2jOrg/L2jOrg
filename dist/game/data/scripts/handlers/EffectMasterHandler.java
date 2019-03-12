@@ -18,7 +18,7 @@ package handlers;
 
 import java.util.logging.Logger;
 
-import org.l2j.gameserver.mobius.gameserver.handler.EffectHandler;
+import org.l2j.gameserver.handler.EffectHandler;
 
 import handlers.effecthandlers.*;
 

@@ -1,0 +1,982 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="39200" toLevel="1" name="Weapons Ingredient Box - A-grade">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39201" toLevel="1" name="Box of Best Dye">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39202" toLevel="1" name="Spellbok Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39203" toLevel="1" name="Life Stone Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39204" toLevel="1" name="Dimensional Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39205" toLevel="1" name="Dark Assassin Transformation Potion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39206" toLevel="1" name="Monster Arena Belt">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39207" toLevel="1" name="Dimensional Gift">
+		<icon>icon.etc_box_of_adventure_5_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90136</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="60">
+						<item id="35669" count="1" />
+					</item>
+					<item chance="30">
+						<item id="49541" count="1" />
+					</item>
+					<item chance="5">
+						<item id="952" count="1" />
+					</item>
+					<item chance="5">
+						<item id="951" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39208" toLevel="1" name="Pendant Matte Varnish">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39209" toLevel="1" name="Varnish for Deluxe Pendant">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39210" toLevel="1" name="White Assassin Transformation Scroll">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39211" toLevel="1" name="Savior' Growth Scroll">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39212" toLevel="1" name="Einsahad�s Protection">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39213" toLevel="1" name="Savior Scroll: Enchant Weapon">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39214" toLevel="1" name="Savior�s Cube">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39215" toLevel="1" name="Ring of Savior">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39216" toLevel="1" name="Transformation into an Apostle">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39217" toLevel="1" name="Transformation into a Shillien Saint">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39218" toLevel="1" name="Transformation into an Eva's Saint">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39219" toLevel="3" name="Dark Knight">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39220" toLevel="1" name="Ticket for Monster Arena">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39221" toLevel="1" name="Elite Ticket for Monster Arena">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39222" toLevel="1" name="Battle Cure">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39223" toLevel="1" name="Bunch of Bananas">
+		<icon>icon.skill39223</icon>
+		<operateType>A2</operateType>
+		<abnormalInstant>true</abnormalInstant>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>PA_UP_HERB</abnormalType>
+		<magicLvl>1</magicLvl>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<stayAfterDeath>true</stayAfterDeath>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="ExpModify">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39224" toLevel="1" name="Strawberry-Banana Cocktail">
+		<icon>icon.skill39224</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>STRAWBERRY_FRUIT</abnormalType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<deleteAbnormalOnLeave>true</deleteAbnormalOnLeave>
+		<effects>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39225" toLevel="1" name="Mango-Banana Cocktail">
+		<icon>icon.skill39225</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MONGO_FRUIT</abnormalType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MpRegen">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39226" toLevel="1" name="Cherry-Banana Cocktail">
+		<icon>icon.skill39226</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>CHERRY_FRUIT</abnormalType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>3</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>3</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39227" toLevel="1" name="Tuna">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39228" toLevel="1" name="Chef's Fish Stew - Victory">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<effectPoint>669</effectPoint>
+		<hitTime>0</hitTime>
+		<icon>icon.skill0000</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90407</itemConsumeId>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">15</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39229" toLevel="1" name="Chef's Fish Stew - Fire">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<effectPoint>669</effectPoint>
+		<hitTime>0</hitTime>
+		<icon>icon.skill0000</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90408</itemConsumeId>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39230" toLevel="1" name="Chef's Fish Stew - Water">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<effectPoint>669</effectPoint>
+		<hitTime>0</hitTime>
+		<icon>icon.skill0000</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90409</itemConsumeId>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39231" toLevel="1" name="Chef's Fish Stew - Wind">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<effectPoint>669</effectPoint>
+		<hitTime>0</hitTime>
+		<icon>icon.skill0000</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90410</itemConsumeId>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39232" toLevel="1" name="Gold Urn">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39233" toLevel="1" name="Glowing  Whale">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39234" toLevel="1" name="Giant's Enchant Scroll Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39235" toLevel="1" name="Low-grade Arena Loot">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39236" toLevel="1" name="Intermediate Arena Loot">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39237" toLevel="1" name="High-grade Arena Loot">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39238" toLevel="1" name="MOPP Combat Ration">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39239" toLevel="2" name="Sapphire">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39240" toLevel="1" name="Sapphire">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39241" toLevel="1" name="Sapphire">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39242" toLevel="1" name="Sapphire">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39243" toLevel="1" name="Topaz Jewelry Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39244" toLevel="1" name="Garnet Jewelry Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39245" toLevel="1" name="Jade Jewelry Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39246" toLevel="1" name="Ruby Jewelry Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39247" toLevel="1" name="Sapphire Jewelry Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39248" toLevel="1" name="Diamond Jewelry Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39249" toLevel="1" name="Pearl Jewelry Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39250" toLevel="1" name="Vital Stone Jewelry Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39251" toLevel="1" name="Melodys Luck Cube">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39252" toLevel="1" name="My Teleport Book">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39253" toLevel="1" name="Chef's Fish Stew - Victory">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39254" toLevel="1" name="Chef's Fish Stew - Fire">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39255" toLevel="1" name="Chef's Fish Stew - Water">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39256" toLevel="1" name="Chef's Fish Stew - Wind">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39257" toLevel="1" name="Newbie MP Recovery Potion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39258" toLevel="1" name="Warrior MP Recovery Potion">
+		<!-- Lineage II Classic Zaken -->
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mp">
+				<amount>40</amount> <!-- Retail value is 40 -->
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39259" toLevel="1" name="Savior's Experience Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39260" toLevel="1" name="Magical Potion of Leaping - Lv. 4">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39261" toLevel="1" name="Fish Stew - Greater Might">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39262" toLevel="1" name="Fish Stew - Greater Shield">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39263" toLevel="1" name="Fish Stew - Wild Magic">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39264" toLevel="2" name="Fish Stew - Berserker Spirit">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39265" toLevel="3" name="Fish Stew - Decrease Weight">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39266" toLevel="1" name="Shiny Jewelry Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39267" toLevel="1" name="Mood Melody">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39268" toLevel="1" name="Mysterious Jewelry Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39269" toLevel="1" name="Special Dragon's Fruit">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39270" toLevel="1" name="Dragon??s Treasure Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39271" toLevel="1" name="Dragon's Shining Treasure Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39272" toLevel="1" name="Officer of Balthus Knights">
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90506</itemConsumeId>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<icon>icon.skill39171</icon>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>20</minLevel>
+				<maxLevel>85</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39273" toLevel="1" name="Special Dragon's Fruit">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39274" toLevel="1" name="Lesser GM's Blessing Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39275" toLevel="1" name="Greater GM's Blessing Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39276" toLevel="1" name="Greatest GM's Blessing Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39277" toLevel="1" name="Transform Raid Hero">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39278" toLevel="1" name="Flower Sweets">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39279" toLevel="1" name="Pumpkin Sweets">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39280" toLevel="1" name="Banana Sweets">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39281" toLevel="1" name="Sealed Rune Lvl 1">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39282" toLevel="1" name="Sealed Rune Lvl 2">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39283" toLevel="1" name="Sealed Rune Lvl 3">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39284" toLevel="1" name="Sealed Rune Lvl 4">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39285" toLevel="1" name="Sealed Rune Lvl 5">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39286" toLevel="1" name="Sealed Rune Lvl 6">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39287" toLevel="1" name="Sealed Rune Lvl 7">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39288" toLevel="1" name="Sealed Rune Lvl 8">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39289" toLevel="1" name="Sealed Rune Lvl 9">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39290" toLevel="1" name="Sealed Rune Lvl 10">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39291" toLevel="1" name="Sealed Rune Lvl 11">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39292" toLevel="1" name="Sealed Rune Lvl 12">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39293" toLevel="1" name="Sealed Rune Lvl 13">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39294" toLevel="1" name="Pirate's Treasure Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39295" toLevel="1" name="Teleport: Entrance to the Devil's Isle">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39296" toLevel="1" name="Teleports you to the entrance to the Devil's Isle">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39297" toLevel="1" name="Escape: Clan Hall">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39298" toLevel="1" name="Shining Scroll of Mood Melody">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39299" toLevel="1" name="Gracia's Cube">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+</list>

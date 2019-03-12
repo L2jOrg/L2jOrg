@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Castle Siege Zones -->
+	<zone name="gludio_castle_battlefield_territory " type="SiegeZone" shape="NPoly" minZ="-4448" maxZ="3551">
+		<stat name="castleId" val="1" />
+		<node X="-22615" Y="104510" />
+		<node X="-13290" Y="104564" />
+		<node X="-13313" Y="116950" />
+		<node X="-22638" Y="116896" />
+	</zone>
+	<zone name="dion_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-4642" maxZ="4000">
+		<stat name="castleId" val="2" />
+		<node X="26575" Y="165240" />
+		<node X="17250" Y="165186" />
+		<node X="17273" Y="152800" />
+		<node X="26598" Y="152854" />
+	</zone>
+	<zone name="giran_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-4515" maxZ="19935">
+		<stat name="castleId" val="3" />
+		<node X="121412" Y="140594" />
+		<node X="121358" Y="149919" />
+		<node X="108972" Y="149896" />
+		<node X="109026" Y="140571" />
+	</zone>
+	<zone name="oren_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-4242" maxZ="19935">
+		<stat name="castleId" val="4" />
+		<node X="87488" Y="32689" />
+		<node X="87434" Y="42014" />
+		<node X="75048" Y="41991" />
+		<node X="75102" Y="32666" />
+	</zone>
+	<zone name="aden_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-3184" maxZ="6816">
+		<stat name="castleId" val="5" />
+		<node X="142431" Y="362" />
+		<node X="152319" Y="344" />
+		<node X="152282" Y="15197" />
+		<node X="142393" Y="15215" />
+	</zone>
+	<zone name="innadrile_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-2738" maxZ="4000">
+		<stat name="castleId" val="6" />
+		<node X="120526" Y="254019" />
+		<node X="111201" Y="253965" />
+		<node X="111224" Y="241579" />
+		<node X="120549" Y="241633" />
+	</zone>
+	<zone name="godad_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-3397" maxZ="5100">
+		<stat name="castleId" val="7" />
+		<node X="143023" Y="-53210" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be -2300 -->
+		<node X="151893" Y="-53210" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be -2300 -->
+		<node X="151949" Y="-39107" />
+		<node X="145899" Y="-39107" />
+		<node X="141457" Y="-44407" />
+	</zone>
+	<zone name="rune_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-4350" maxZ="10030">
+		<stat name="castleId" val="8" />
+		<node X="6015" Y="-56316" />
+		<node X="17343" Y="-53750" />
+		<node X="19486" Y="-52556" />
+		<node X="23783" Y="-52570" />
+		<node X="27027" Y="-49433" />
+		<node X="27020" Y="-48831" />
+		<node X="23887" Y="-45218" />
+		<node X="19385" Y="-45203" />
+		<node X="17413" Y="-44022" />
+		<node X="6015" Y="-41600" />
+	</zone>
+	<zone name="schuttgart_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-3997" maxZ="8503">
+		<stat name="castleId" val="9" />
+		<node X="71420" Y="-159445" />
+		<node X="83119" Y="-159442" />
+		<node X="83122" Y="-150000" />
+		<node X="77897" Y="-143861" />
+		<node X="71420" Y="-148782" />
+	</zone>
+</list>

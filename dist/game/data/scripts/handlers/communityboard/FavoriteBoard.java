@@ -22,11 +22,11 @@ import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.mobius.gameserver.cache.HtmCache;
-import org.l2j.gameserver.mobius.gameserver.handler.CommunityBoardHandler;
-import org.l2j.gameserver.mobius.gameserver.handler.IParseBoardHandler;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.util.Util;
+import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.handler.CommunityBoardHandler;
+import org.l2j.gameserver.handler.IParseBoardHandler;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.util.Util;
 
 /**
  * Favorite board.

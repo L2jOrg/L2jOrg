@@ -1,0 +1,94 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="variations">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="variation" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="optionGroup" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="optionCategory" maxOccurs="unbounded" minOccurs="0">
+														<xs:complexType>
+															<xs:choice maxOccurs="unbounded" minOccurs="0">
+																<xs:element name="option">
+																	<xs:complexType>
+																		<xs:attribute type="xs:int" name="id" use="optional"/>
+																		<xs:attribute type="xs:double" name="chance" use="optional"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="optionRange">
+																	<xs:complexType>
+																		<xs:attribute type="xs:int" name="from" use="optional"/>
+																		<xs:attribute type="xs:int" name="to" use="optional"/>
+																		<xs:attribute type="xs:double" name="chance" use="optional"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:choice>
+															<xs:attribute type="xs:float" name="chance" use="optional"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute type="xs:string" name="weaponType" use="optional"/>
+												<xs:attribute type="xs:byte" name="order" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute type="xs:int" name="mineralId" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="itemGroups">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="itemGroup" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute type="xs:int" name="id" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute type="xs:byte" name="id" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="fees">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="fee" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:choice maxOccurs="unbounded" minOccurs="0">
+										<xs:element name="mineral">
+											<xs:complexType>
+												<xs:attribute type="xs:int" name="id" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="mineralRange">
+											<xs:complexType>
+												<xs:attribute type="xs:int" name="from" use="optional"/>
+												<xs:attribute type="xs:int" name="to" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+									<xs:attribute type="xs:int" name="itemGroup" use="optional"/>
+									<xs:attribute type="xs:int" name="itemId" use="optional"/>
+									<xs:attribute type="xs:long" name="itemCount" use="optional"/>
+									<xs:attribute type="xs:long" name="cancelFee" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -23,21 +23,21 @@ import java.util.List;
 import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 
-import org.l2j.gameserver.mobius.gameserver.data.xml.impl.ClanHallData;
-import org.l2j.gameserver.mobius.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.mobius.gameserver.model.L2Clan;
-import org.l2j.gameserver.mobius.gameserver.model.Location;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.model.entity.ClanHall;
-import org.l2j.gameserver.mobius.gameserver.model.html.PageBuilder;
-import org.l2j.gameserver.mobius.gameserver.model.html.PageResult;
-import org.l2j.gameserver.mobius.gameserver.model.html.formatters.BypassParserFormatter;
-import org.l2j.gameserver.mobius.gameserver.model.html.pagehandlers.NextPrevPageHandler;
-import org.l2j.gameserver.mobius.gameserver.model.html.styles.ButtonsStyle;
-import org.l2j.gameserver.mobius.gameserver.model.residences.ResidenceFunction;
-import org.l2j.gameserver.mobius.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2j.gameserver.mobius.gameserver.util.BypassParser;
+import org.l2j.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.entity.ClanHall;
+import org.l2j.gameserver.model.html.PageBuilder;
+import org.l2j.gameserver.model.html.PageResult;
+import org.l2j.gameserver.model.html.formatters.BypassParserFormatter;
+import org.l2j.gameserver.model.html.pagehandlers.NextPrevPageHandler;
+import org.l2j.gameserver.model.html.styles.ButtonsStyle;
+import org.l2j.gameserver.model.residences.ResidenceFunction;
+import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.util.BypassParser;
 
 /**
  * Clan Hall admin commands.

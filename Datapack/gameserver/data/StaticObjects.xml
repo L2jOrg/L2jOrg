@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/StaticObjects.xsd">
+	<!-- Town Maps -->
+	<object id="17250001" name="town_map_talking_1" type="0" x="-82873" y="244808" z="-3717" texture="town_map_talking_t00" map_x="365" map_y="152" />
+	<object id="17250002" name="town_map_talking_2" type="0" x="-82765" y="241438" z="-3718" texture="town_map_talking_t00" map_x="164" map_y="154" />
+	<object id="17250003" name="town_map_talking_3" type="0" x="-86121" y="241452" z="-3719" texture="town_map_talking_t00" map_x="146" map_y="358" />
+	<object id="18140001" name="town_map_orc_1" type="0" x="-45824" y="-116763" z="-219" texture="town_map_orc_t00" map_x="265" map_y="120" />
+	<object id="18140002" name="town_map_orc_2" type="0" x="-46504" y="-110394" z="-220" texture="town_map_orc_t00" map_x="138" map_y="413" />
+	<object id="18140003" name="town_map_orc_3" type="0" x="-47332" y="-113245" z="-220" texture="town_map_orc_t00" map_x="141" map_y="235" />
+	<object id="20180001" name="town_map_darkelf_1" type="0" x="15258" y="15630" z="-4366" texture="town_map_darkelf_t00" map_x="339" map_y="170" />
+	<object id="20180002" name="town_map_darkelf_2" type="0" x="7556" y="18054" z="-4366" texture="town_map_darkelf_t00" map_x="54" map_y="315" />
+	<object id="21190001" name="town_map_elf_1" type="0" x="47615" y="51349" z="-2967" texture="town_map_elf_t00" map_x="430" map_y="315" />
+	<object id="21190002" name="town_map_elf_2" type="0" x="45914" y="46695" z="-2968" texture="town_map_elf_t00" map_x="248" map_y="106" />
+	<object id="21190003" name="town_map_elf_3" type="0" x="43175" y="51424" z="-2967" texture="town_map_elf_t00" map_x="110" map_y="345" />
+	<object id="23120001" name="town_map_dwarf_1" type="0" x="115462" y="-177294" z="-880" texture="town_map_dwarf_t00" map_x="165" map_y="386" />
+	<object id="23120002" name="town_map_dwarf_2" type="0" x="117449" y="-182298" z="-1488" texture="town_map_dwarf_t00" map_x="368" map_y="161" />
+	<object id="23120003" name="town_map_dwarf_3" type="0" x="116657" y="-183997" z="-1550" texture="town_map_dwarf_t00" map_x="319" map_y="110" />
+	<!-- Chairs and Thrones -->
+	<object id="19210010" name="gludio_castle_throne" type="1" x="-18112" y="108761" z="-2492" />
+	<object id="20160010" name="rune_castle_throne" type="1" x="10087" y="-49151" z="-289" />
+	<object id="20220010" name="dion_castle_throne" type="1" x="22073" y="160989" z="-2686" />
+	<object id="22130016" name="schutt_castle_throne" type="1" x="77552" y="-153406" z="-400" />
+	<object id="22190010" name="oren_castle_throne" type="1" x="83237" y="37192" z="-2286" />
+	<object id="23220010" name="giran_castle_throne" type="1" x="117161" y="145097" z="-2559" />
+	<object id="23250010" name="innadrile_castle_throne" type="1" x="116024" y="249768" z="-782" />
+	<object id="24160024" name="godad_castle_throne" type="1" x="147462" y="-49342" z="-2132" />
+	<object id="24180017" name="aden_castle_throne" type="1" x="147456" y="3272" z="-42" />
+	<!-- Signboards -->
+	<object id="17220015" name="pvp_signboard_gl_1" type="2" x="-88696" y="142315" z="-3621" />
+	<object id="17220016" name="pvp_signboard_gl_2" type="2" x="-87136" y="142490" z="-3623" />
+	<object id="22220001" name="giran_arena_001" type="2" x="73766" y="142489" z="-3748" />
+	<object id="22220002" name="giran_arena_002" type="2" x="72200" y="143102" z="-3748" />
+	<object id="20230001" name="floran_arena_001" type="2" x="12110" y="182770" z="-3538" />
+	<object id="20230002" name="floran_arena_002" type="2" x="12978" y="183364" z="-3538" />
+	<object id="24230101" name="tomb_of_crystalgolem_2423" type="2" x="159887" y="168717" z="-3564" />
+	<!-- Flagpoles -->
+	<object id="18200500" name="Cloud Mountain_flagpole" type="3" x="-53233" y="91221" z="-1839" />
+	<object id="18220500" name="Shanty_flagpole" type="3" x="-52761" y="156493" z="-1071" />
+	<object id="19240500" name="Southern_flagpole" type="3" x="-22705" y="219801" z="-2254" />
+	<object id="20200500" name="Dragonspine_flagpole" type="3" x="11536" y="94987" z="-2443" />
+	<object id="20220500" name="Floran_flagpole" type="3" x="5612" y="149751" z="-1907" />
+	<object id="20230500" name="Hive_flagpole" type="3" x="16579" y="188062" z="-1942" />
+	<object id="21220500" name="Tanor_flagpole" type="3" x="60280" y="139434" z="-772" />
+	<object id="22150500" name="Monastic_flagpole" type="3" x="72167" y="-94766" z="-446" />
+	<object id="22160500" name="Swamp_flagpole" type="3" x="69834" y="-61427" z="-1804" />
+	<object id="22180500" name="Ivory_flagpole" type="3" x="72859" y="4276" z="-2063" />
+	<object id="22200500" name="Antharas_flagpole" type="3" x="79238" y="91049" z="-1901" />
+	<object id="22230500" name="Aaru_flagpole" type="3" x="73112" y="185986" z="-1599" />
+	<object id="23130500" name="Archaic_flagpole" type="3" x="109484" y="-141224" z="-1975" />
+	<object id="23160500" name="Demon_flagpole" type="3" x="100716" y="-55319" z="336" />
+	<object id="23170500" name="Western_flagpole" type="3" x="111367" y="-15148" z="-13" />
+	<object id="23200500" name="Hunters_flagpole" type="3" x="125245" y="95134" z="-1158" />
+	<object id="23210500" name="Valley_flagpole" type="3" x="126078" y="123344" z="-1603" />
+	<object id="23240500" name="White Sands_flagpole" type="3" x="118412" y="204919" z="-2351" />
+	<object id="24150500" name="Borderland_flagpole" type="3" x="159149" y="-70308" z="-1882" />
+	<object id="24190500" name="Narsell_flagpole" type="3" x="154898" y="55303" z="-2272" />
+	<object id="25190500" name="Bayou_flagpole" type="3" x="189930" y="39739" z="-2428" />
+	<!-- Mystical Tavern Chair -->
+	<object id="18130056" name="Chair" type="1" x="-49440" y="-147974" z="-14162"/>
+	<object id="18130055" name="Chair" type="1" x="-49438" y="-148030" z="-14162"/>
+	<object id="18130054" name="Chair" type="1" x="-49528" y="-148063" z="-14162"/>
+	<object id="18130053" name="Chair" type="1" x="-49563" y="-148028" z="-14162"/>
+	<object id="18130052" name="Chair" type="1" x="-49565" y="-147978" z="-14162"/>
+	<object id="18130051" name="Chair" type="1" x="-49527" y="-147944" z="-14162"/>
+	<object id="18130050" name="Chair" type="1" x="-49474" y="-147942" z="-14162"/>
+	<object id="18130046" name="Chair" type="1" x="-49294" y="-148228" z="-14162"/>
+	<object id="18130045" name="Chair" type="1" x="-49326" y="-148260" z="-14162"/>
+	<object id="18130044" name="Chair" type="1" x="-49379" y="-148263" z="-14162"/>
+	<object id="18130043" name="Chair" type="1" x="-49413" y="-148228" z="-14162"/>
+	<object id="18130042" name="Chair" type="1" x="-49414" y="-148174" z="-14162"/>
+	<object id="18130041" name="Chair" type="1" x="-49382" y="-148141" z="-14162"/>
+	<object id="18130040" name="Chair" type="1" x="-49326" y="-148139" z="-14162"/>
+	<object id="18130036" name="Chair" type="1" x="-49980" y="-148622" z="-14162"/>
+	<object id="18130035" name="Chair" type="1" x="-49997" y="-148667" z="-14162"/>
+	<object id="18130034" name="Chair" type="1" x="-50044" y="-148688" z="-14162"/>
+	<object id="18130033" name="Chair" type="1" x="-50091" y="-148669" z="-14162"/>
+	<object id="18130032" name="Chair" type="1" x="-50110" y="-148620" z="-14162"/>
+	<object id="18130031" name="Chair" type="1" x="-50094" y="-148577" z="-14162"/>
+	<object id="18130030" name="Chair" type="1" x="-50046" y="-148556" z="-14162"/>
+	<object id="18130026" name="Chair" type="1" x="-50126" y="-148388" z="-14162"/>
+	<object id="18130025" name="Chair" type="1" x="-50110" y="-148434" z="-14162"/>
+	<object id="18130024" name="Chair" type="1" x="-50128" y="-148482" z="-14162"/>
+	<object id="18130023" name="Chair" type="1" x="-50174" y="-148501" z="-14162"/>
+	<object id="18130022" name="Chair" type="1" x="-50222" y="-148481" z="-14162"/>
+	<object id="18130021" name="Chair" type="1" x="-50240" y="-148438" z="-14162"/>
+	<object id="18130020" name="Chair" type="1" x="-50221" y="-148388" z="-14162"/>
+	<object id="18130016" name="Chair" type="1" x="-50140" y="-148116" z="-14162"/>
+	<object id="18130015" name="Chair" type="1" x="-50186" y="-148100" z="-14162"/>
+	<object id="18130014" name="Chair" type="1" x="-50206" y="-148052" z="-14162"/>
+	<object id="18130013" name="Chair" type="1" x="-50186" y="-148006" z="-14162"/>
+	<object id="18130012" name="Chair" type="1" x="-50138" y="-147986" z="-14162"/>
+	<object id="18130011" name="Chair" type="1" x="-50094" y="-148003" z="-14162"/>
+	<object id="18130010" name="Chair" type="1" x="-50073" y="-148052" z="-14162"/>
+	<!-- Custom static objects -->
+	<!-- Note: There is known issue with them if player sit on them it may looks like it's sitting on the air its because they do not exists on NA/EU client. -->
+	<!-- <object id="18150002" name="TP_AT_chair_star_01" type="1" x="-59660" y="-68916" z="-2915" /> -->
+	<!-- <object id="18150004" name="TP_AT_chair_star_01" type="1" x="-59840" y="-69023" z="-2910" /> -->
+	<!-- <object id="18150005" name="TP_AT_chair_star_01" type="1" x="-59803" y="-69210" z="-2910" /> -->
+	<!-- <object id="18150007" name="TP_AT_chair_star_01" type="1" x="-59763" y="-69250" z="-2910" /> -->
+	<!-- <object id="18150008" name="TP_AT_chair_star_01" type="1" x="-59675" y="-69463" z="-2910" /> -->
+	<!-- <object id="18150011" name="TP_AT_chair_star_01" type="1" x="-59095" y="-69277" z="-2911" /> -->
+	<!-- <object id="18150012" name="TP_AT_chair_star_01" type="1" x="-60032" y="-69890" z="-2866" /> -->
+	<!-- <object id="18150013" name="TP_AT_chair_star_01" type="1" x="-60247" y="-69834" z="-2861" /> -->
+	<!-- <object id="18150015" name="TP_AT_chair_star_01" type="1" x="-60037" y="-69998" z="-2866" /> -->
+	<!-- <object id="18150021" name="TPchair" type="1" x="-54176" y="-67088" z="-3169" /> -->
+	<!-- <object id="18150022" name="TPchair" type="1" x="-53952" y="-67088" z="-3168" /> -->
+	<!-- <object id="18150023" name="TPchair" type="1" x="-52160" y="-67136" z="-3169" /> -->
+	<!-- <object id="18150024" name="TPchair" type="1" x="-51936" y="-67136" z="-3167" /> -->
+	<!-- <object id="18150025" name="TPchair" type="1" x="-49435" y="-68435" z="-3171" /> -->
+	<!-- <object id="18150026" name="TPchair" type="1" x="-49433" y="-68287" z="-3171" /> -->
+	<!-- <object id="18150027" name="TPchair" type="1" x="-49199" y="-68438" z="-3172" /> -->
+	<!-- <object id="18150028" name="TPchair" type="1" x="-49197" y="-68290" z="-3172" /> -->
+	<!-- <object id="18150029" name="TPchair" type="1" x="-51968" y="-71952" z="-3169" /> -->
+	<!-- <object id="18150030" name="TPchair" type="1" x="-52192" y="-71952" z="-3169" /> -->
+	<!-- <object id="18150031" name="TPchair" type="1" x="-52576" y="-71952" z="-3169" /> -->
+	<!-- <object id="18150032" name="TPchair" type="1" x="-52800" y="-71952" z="-3169" /> -->
+	<!-- <object id="18150033" name="TPchair" type="1" x="-53280" y="-71952" z="-3169" /> -->
+	<!-- <object id="18150034" name="TPchair" type="1" x="-53504" y="-71952" z="-3169" /> -->
+	<!-- <object id="18150035" name="TPchair" type="1" x="-53984" y="-71936" z="-3169" /> -->
+	<!-- <object id="18150036" name="TPchair" type="1" x="-54208" y="-71936" z="-3169" /> -->
+	<!-- <object id="18150037" name="TPchair" type="1" x="-54784" y="-71936" z="-3169" /> -->
+	<!-- <object id="18150038" name="TPchair" type="1" x="-55008" y="-71936" z="-3169" /> -->
+	<!-- <object id="18150039" name="TPchair" type="1" x="-55659" y="-71678" z="-3169" /> -->
+	<!-- <object id="18150040" name="TPchair" type="1" x="-55833" y="-71504" z="-3169" /> -->
+	<!-- <object id="18150041" name="TPchair" type="1" x="-56187" y="-71150" z="-3169" /> -->
+	<!-- <object id="18150042" name="TPchair" type="1" x="-56361" y="-70976" z="-3169" /> -->
+	<!-- <object id="18160001" name="TP_WeddingHall_chair" type="1" x="-50833" y="-54754" z="-2834" /> -->
+	<!-- <object id="18160002" name="TP_WeddingHall_chair" type="1" x="-50874" y="-54732" z="-2834" /> -->
+	<!-- <object id="18160003" name="TP_WeddingHall_chair" type="1" x="-50910" y="-54702" z="-2834" /> -->
+	<!-- <object id="18160004" name="TP_WeddingHall_chair" type="1" x="-50974" y="-54602" z="-2834" /> -->
+	<!-- <object id="18160005" name="TP_WeddingHall_chair" type="1" x="-50987" y="-54557" z="-2834" /> -->
+	<!-- <object id="18160006" name="TP_WeddingHall_chair" type="1" x="-50992" y="-54510" z="-2834" /> -->
+	<!-- <object id="18160007" name="TP_WeddingHall_chair" type="1" x="-50991" y="-53829" z="-2834" /> -->
+	<!-- <object id="18160008" name="TP_WeddingHall_chair" type="1" x="-50987" y="-53782" z="-2834" /> -->
+	<!-- <object id="18160009" name="TP_WeddingHall_chair" type="1" x="-50973" y="-53738" z="-2834" /> -->
+	<!-- <object id="18160010" name="TP_WeddingHall_chair" type="1" x="-50910" y="-53646" z="-2834" /> -->
+	<!-- <object id="18160011" name="TP_WeddingHall_chair" type="1" x="-50873" y="-53617" z="-2834" /> -->
+	<!-- <object id="18160012" name="TP_WeddingHall_chair" type="1" x="-50832" y="-53595" z="-2834" /> -->
+	<!-- <object id="18160013" name="TPchair" type="1" x="-61876" y="-55177" z="-2023" /> -->
+	<!-- <object id="18160014" name="TPchair" type="1" x="-61876" y="-55229" z="-2023" /> -->
+	<!-- <object id="18160015" name="TPchair" type="1" x="-61860" y="-56371" z="-2024" /> -->
+	<!-- <object id="18160016" name="TPchair" type="1" x="-61860" y="-56423" z="-2024" /> -->
+	<!-- <object id="18160017" name="TPchair" type="1" x="-61888" y="-57375" z="-2023" /> -->
+	<!-- <object id="18160018" name="TPchair" type="1" x="-61888" y="-57427" z="-2023" /> -->
+	<!-- <object id="18160019" name="TPchair" type="1" x="-61534" y="-57505" z="-2023" /> -->
+	<!-- <object id="18160020" name="TPchair" type="1" x="-61534" y="-57453" z="-2023" /> -->
+	<!-- <object id="18160021" name="TPchair" type="1" x="-61450" y="-57421" z="-2023" /> -->
+	<!-- <object id="18160022" name="TPchair" type="1" x="-61398" y="-57421" z="-2023" /> -->
+	<!-- <object id="18160023" name="TPchair" type="1" x="-61433" y="-56378" z="-2023" /> -->
+	<!-- <object id="18160024" name="TPchair" type="1" x="-61381" y="-56378" z="-2023" /> -->
+	<!-- <object id="18160025" name="TPchair" type="1" x="-59997" y="-58651" z="-2021" /> -->
+	<!-- <object id="18160026" name="TPchair" type="1" x="-59944" y="-58651" z="-2021" /> -->
+	<!-- <object id="18160027" name="TPchair" type="1" x="-59504" y="-58656" z="-2024" /> -->
+	<!-- <object id="18160028" name="TPchair" type="1" x="-59452" y="-58656" z="-2023" /> -->
+	<!-- <object id="18160029" name="TPchair" type="1" x="-55926" y="-61170" z="-2366" /> -->
+	<!-- <object id="18160030" name="TPchair" type="1" x="-55823" y="-61282" z="-2364" /> -->
+	<!-- <object id="18160031" name="TPchair" type="1" x="-55611" y="-61587" z="-2369" /> -->
+	<!-- <object id="18160032" name="TPchair" type="1" x="-55520" y="-61708" z="-2367" /> -->
+	<!-- <object id="18160033" name="TPchair" type="1" x="-53346" y="-63772" z="-2371" /> -->
+	<!-- <object id="18160034" name="TPchair" type="1" x="-53243" y="-63859" z="-2369" /> -->
+	<!-- <object id="18160035" name="TPchair" type="1" x="-53571" y="-63818" z="-2371" /> -->
+	<!-- <object id="18160036" name="TPchair" type="1" x="-53685" y="-63710" z="-2369" /> -->
+	<!-- <object id="18160037" name="TPchair" type="1" x="-59039" y="-61222" z="-2368" /> -->
+	<!-- <object id="18160038" name="TPchair" type="1" x="-58941" y="-61126" z="-2366" /> -->
+	<!-- <object id="18160039" name="TPchair" type="1" x="-61323" y="-61471" z="-2820" /> -->
+	<!-- <object id="18160040" name="TPchair" type="1" x="-61455" y="-61509" z="-2821" /> -->
+	<!-- <object id="18160041" name="TPchair" type="1" x="-55534" y="-64458" z="-2368" /> -->
+	<!-- <object id="18160042" name="TPchair" type="1" x="-55531" y="-64615" z="-2370" /> -->
+</list>

@@ -1,0 +1,60 @@
+<html><title>Admin PC Points Manager</title><body>
+<center>
+<table width=270 align=center>
+<tr>
+<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Admin PC Points Manager</center></td>
+<td width=45><button value="Back" action="bypass -h admin_admin6" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+<font color="LEVEL">Target info</font><br1>
+	<table width="270" align=center border="0" bgcolor="444444">
+		<tr>
+			<td>Player Name:</td>
+			<td><font color="00FF00">%targetName%<font></td>
+		</tr>
+		<tr>
+			<td>Player Points:</td>
+			<td><font color="00FF00">%points%<font></td>
+		</tr>
+	</table>
+	<br>
+	<font color="LEVEL">Target Operations</font><br1>
+	<table width=256 align=center border=0 bgcolor="444444">
+		<tr>
+			<td width=128 align=center>Operation</td>
+			<td width=128 align=center><combobox width=120 height=17 var=ebox list=increase;decrease;set></td>
+		</tr>
+		<tr>
+			<td width=128 align=center>Value</td>
+			<td width=128 align=center><edit var="val" width=120 type="number"></td>
+		</tr>
+	</table>
+	<table width="270" align=center border="0" bgcolor="444444">
+		<tr>
+			<td><center><br><button value="Confirm" action="bypass -h admin_pccafepoints $ebox $val" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></center></td>
+		</tr>
+	</table>
+	<br>
+	<font color="LEVEL">Reward More players</font><br1>
+	<table width=256 align=center border=0 bgcolor="444444">
+		<tr>
+			<td width=128 align=center>Range</td>
+			<td width=128 align=center><edit var="range" width=120 type="number"></td>
+		</tr>
+		<tr>
+			<td width=128 align=center>Value</td>
+			<td width=128 align=center><edit var="val2" width=120 type="number"></td>
+		</tr>
+	</table>
+	<table width="257" align=center border="0" bgcolor="444444">
+		<tr>
+			<td><center><br><button value="Confirm" action="bypass -h admin_pccafepoints rewardOnline $val2 $range" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></center></td>
+		</tr>
+		<tr>
+			<td><center>Note: If you leave 'Range' empty or set 0,<br1>it will reward all online players.</center></td>
+		</tr>
+	</table>
+</center>
+</body></html>

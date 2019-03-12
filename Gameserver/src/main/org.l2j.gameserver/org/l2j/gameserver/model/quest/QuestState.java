@@ -91,7 +91,7 @@ public final class QuestState {
 
     /**
      * @return the current State of this QuestState
-     * @see com.l2jmobius.gameserver.model.quest.State
+     * @see org.l2j.gameserver.model.quest.State
      */
     public byte getState() {
         return _state;
@@ -99,7 +99,7 @@ public final class QuestState {
 
     /**
      * @return {@code true} if the State of this QuestState is CREATED, {@code false} otherwise
-     * @see com.l2jmobius.gameserver.model.quest.State
+     * @see org.l2j.gameserver.model.quest.State
      */
     public boolean isCreated() {
         return _state == State.CREATED;
@@ -107,7 +107,7 @@ public final class QuestState {
 
     /**
      * @return {@code true} if the State of this QuestState is STARTED, {@code false} otherwise
-     * @see com.l2jmobius.gameserver.model.quest.State
+     * @see org.l2j.gameserver.model.quest.State
      */
     public boolean isStarted() {
         return _state == State.STARTED;
@@ -115,7 +115,7 @@ public final class QuestState {
 
     /**
      * @return {@code true} if the State of this QuestState is COMPLETED, {@code false} otherwise
-     * @see com.l2jmobius.gameserver.model.quest.State
+     * @see org.l2j.gameserver.model.quest.State
      */
     public boolean isCompleted() {
         return _state == State.COMPLETED;
@@ -125,7 +125,7 @@ public final class QuestState {
      * @param state the new state of the quest to set
      * @return {@code true} if state was changed, {@code false} otherwise
      * @see #setState(byte state, boolean saveInDb)
-     * @see com.l2jmobius.gameserver.model.quest.State
+     * @see org.l2j.gameserver.model.quest.State
      */
     public boolean setState(byte state) {
         return setState(state, true);
@@ -137,7 +137,7 @@ public final class QuestState {
      * @param state    the new state of the quest to set
      * @param saveInDb if {@code true}, will save the state change in the database
      * @return {@code true} if state was changed, {@code false} otherwise
-     * @see com.l2jmobius.gameserver.model.quest.State
+     * @see org.l2j.gameserver.model.quest.State
      */
     public boolean setState(byte state, boolean saveInDb) {
         if (_simulated) {

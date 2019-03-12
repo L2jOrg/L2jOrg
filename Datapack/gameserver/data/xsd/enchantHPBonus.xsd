@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="enchantHP" minOccurs="0" maxOccurs="12">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="bonus" type="xs:integer" minOccurs="1" maxOccurs="20" />
+						</xs:sequence>
+						<xs:attribute name="grade" type="xs:token" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

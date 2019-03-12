@@ -1,0 +1,65 @@
+<html><title>GM Menu</title><body>
+<center>
+<table width=270 border=0 bgcolor="444444">
+<tr>
+<td><button value="Main" action="bypass -h admin_admin" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Char" action="bypass -h admin_admin6" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Game" action="bypass -h admin_admin2" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="GM" action="bypass -h admin_admin7" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table><br>
+<table width=270>
+<tr>
+<td><font color="LEVEL">QuickBox:</font></td>
+<td><edit var="qbox" width=120 height=15></td>
+<td><button value="Help" action="bypass -h admin_html help/main_menu.htm" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<table width=270><tr>
+<td><button value="List ON" action="bypass -h admin_gmliston" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="List OFF" action="bypass -h admin_gmlistoff" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Diet" action="bypass -h admin_diet" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Invis" action="bypass -h admin_invis_menu" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr><tr>
+<td><button value="Petitions" action="bypass -h admin_view_petitions" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Silence" action="bypass -h admin_silence" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="TradeOff" action="bypass -h admin_tradeoff" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Invul" action="bypass -h admin_invul" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr><tr>
+<td><button value="Announces" action="bypass -h admin_announces list" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Enhance" action="bypass -h admin_enchant" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="GM Shop" action="bypass -h admin_gmshop" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr><tr>
+<td><button value="Instance" action="bypass -h admin_html instancezone.htm" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Events" action="bypass -h admin_event_menu" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Exceptions" action="bypass -h admin_exceptions" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Server" action="bypass -h admin_admin4" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table><br1>
+<table width=270><tr>
+<td><font color="LEVEL">Super Haste:</font></td>
+<td><button value="1" action="bypass -h admin_superhaste 1" width=30 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="2" action="bypass -h admin_superhaste 2" width=30 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="3" action="bypass -h admin_superhaste 3" width=30 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="4" action="bypass -h admin_superhaste 4" width=30 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Off" action="bypass -h admin_superhaste 0" width=30 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table><br>
+<center><multiedit var="new_announcement" width=250 height=80></center>
+<table width="160"><tr>
+<td><button value="Announce" action="bypass -h admin_announce $new_announcement" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Critical" action="bypass -h admin_announce_crit $new_announcement" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="On-Screen" action="bypass -h admin_announce_screen $new_announcement" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="GM Chat" action="bypass -h admin_gmchat_menu $new_announcement" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table><br>
+<!--
+<table width=270><tr>
+<td><button value="Fenrir" action="bypass -h admin_ride_wolf" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Strider" action="bypass -h admin_ride_strider" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Wyvern" action="bypass -h admin_ride_wyvern" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Horse" action="bypass -h admin_ride_horse" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr><tr>
+<td><button value="Jet Bike" action="bypass -h admin_ride_bike" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table>
+-->
+<br>
+</center></body></html>

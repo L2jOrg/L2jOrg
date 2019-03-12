@@ -1,0 +1,2619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="24000" level="80" type="L2Npc" name="Leona Blackbird" title="Dragon�s Advocate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="98" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="67763" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<speed>
+				<walk ground="64" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="24001" level="80" type="L2Npc" name="Kain Van Halter" title="Prince of the Second Dimension">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="5233" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="67763" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<speed>
+				<walk ground="64" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="24002" level="80" type="L2Npc" name="Queen Ant" title="Successor in the Ant Nest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="151492" hpRegen="10.5" mp="1540" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="45" />
+			<height normal="53" />
+		</collision>
+	</npc>
+	<npc id="24003" level="80" type="L2Npc" name="Escort Ant">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="55088" hpRegen="10.5" mp="1540" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="24004" level="80" type="L2Npc" name="Royal Guard Ant">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="55088" hpRegen="10.5" mp="1540" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="24005" level="80" type="L2Npc" name="Urfen" title="Orfen Kin">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="167822" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="53" />
+		</collision>
+	</npc>
+	<npc id="24006" level="80" type="L2Npc" name="Laikel">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="62933" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="18.5" />
+			<height normal="30.5" />
+		</collision>
+	</npc>
+	<npc id="24007" level="80" type="L2Npc" name="Riba">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="62933" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="12.5" />
+			<height normal="34.5" />
+		</collision>
+	</npc>
+	<npc id="24008" level="80" type="L2Npc" name="Zaken" title="Unworldly Pirate King">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="188800" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="42" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="16" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="24009" level="80" type="L2Npc" name="Zaken" title="Unworldly Pirate King">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="188800" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="42" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="16" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="24010" level="80" type="L2Npc" name="Pirate Zombie Captain">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="69926" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="14" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="17" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="24011" level="80" type="L2Npc" name="Pirate Zombie">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="69926" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="11" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="24012" level="80" type="L2Npc" name="Saium" title="Relative of the Emperor">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="212878" hpRegen="10.5" mp="1607" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="26" />
+			<height normal="67.8" />
+		</collision>
+	</npc>
+	<npc id="24013" level="80" type="L2Npc" name="Traitor Angel">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="97" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="70959" hpRegen="10.5" mp="1607" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+	</npc>
+	<npc id="24014" level="66" type="L2Monster" name="Vanor" title="Mercenary of Glory">
+		<race>HUMANOID</race>
+		<sex>FEMALE</sex>
+		<acquire exp="13094" sp="392" />
+		<equipment rhand="160" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2367" hpRegen="10.5" mp="1219" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="174" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="15.6" />
+			<height normal="37.8" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="503" min="1" max="1" chance="0.03" /> <!-- Sealed Zubei's Helmet -->
+				<item id="2415" min="1" max="1" chance="0.03" /> <!-- Sealed Avadon Circlet -->
+				<item id="2416" min="1" max="1" chance="0.0075" /> <!-- Sealed Blue Wolf Helmet -->
+				<item id="2417" min="1" max="1" chance="0.0075" /> <!-- Sealed Doom Helmet -->
+				<item id="57" min="672" max="1570" chance="70" /> <!-- Adena -->
+				<item id="1870" min="1" max="1" chance="29.96" /> <!-- Coal -->
+				<item id="4072" min="1" max="1" chance="2.308" /> <!-- Sealed Avadon Circlet Pattern -->
+				<item id="4102" min="1" max="1" chance="2.269" /> <!-- Sealed Zubei's Helmet Design -->
+				<item id="1875" min="1" max="1" chance="2.027" /> <!-- Stone of Purity -->
+				<item id="1874" min="1" max="1" chance="2.003" /> <!-- Oriharukon Ore -->
+				<item id="4088" min="1" max="1" chance="1.999" /> <!-- Sealed Blue Wolf Helmet Design -->
+				<item id="4089" min="1" max="1" chance="1.888" /> <!-- Sealed Doom Helmet Design -->
+				<item id="90012" min="1" max="1" chance="0.03" /> <!-- Common Life Stone -->
+			</drop>
+			<spoil>
+				<item id="1870" min="1" max="7" chance="80.21" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="21.22" /> <!-- Oriharukon Ore -->
+				<item id="1875" min="1" max="1" chance="20.91" /> <!-- Stone of Purity -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24015" level="76" type="L2Monster" name="Barif Camrin">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="196742" sp="5902" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5738" hpRegen="8.5" mp="2311" mpRegen="3" />
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<attack physical="19039.3" magical="2079.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="8159.7" magical="1155.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="32" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="5313" min="1" max="1" chance="0.03" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="57" min="4066" max="9485" chance="70" /> <!-- Adena -->
+				<item id="1880" min="1" max="1" chance="17.83" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="14.68" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="9.83" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="3.18" /> <!-- Iron Ore -->
+				<item id="5515" min="1" max="1" chance="2.872" /> <!-- Sealed Majestic Gauntlet Design -->
+				<item id="5502" min="1" max="1" chance="2.845" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="5503" min="1" max="1" chance="2.812" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5514" min="1" max="1" chance="2.772" /> <!-- Sealed Gauntlets of Nightmare Design -->
+			</drop>
+			<spoil>
+				<item id="1865" min="1" max="25" chance="86.25" /> <!-- Varnish -->
+				<item id="5382" min="1" max="1" chance="3.339" /> <!-- Recipe: Sealed Majestic Boots (60%) -->
+				<item id="5406" min="1" max="1" chance="3.317" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
+				<item id="5404" min="1" max="1" chance="3.274" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
+				<item id="5380" min="1" max="1" chance="3.219" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24016" level="78" type="L2Monster" name="Lesser Giant Commander">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>GIANT</race>
+		<acquire exp="341811" sp="10254" />
+		<equipment rhand="3937" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5913" hpRegen="8.5" mp="2411" mpRegen="3" />
+			<speed>
+				<walk ground="30" />
+				<run ground="220" />
+			</speed>
+			<attack physical="39240.6" magical="2169.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="16817.4" magical="1205.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+		</skillList>
+		<collision>
+			<radius normal="50" />
+			<height normal="44" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="5288" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5287" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5293" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="57" min="6917" max="16148" chance="70" /> <!-- Adena -->
+				<item id="1865" min="9" max="27" chance="16.21" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.358" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="3.811" /> <!-- Steel -->
+				<item id="1873" min="22" max="66" chance="2.738" /> <!-- Silver Nugget -->
+				<item id="5524" min="1" max="1" chance="2.276" /> <!-- Sealed Dark Crystal Gaiter Pattern -->
+				<item id="5520" min="1" max="1" chance="1.567" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
+				<item id="5521" min="1" max="1" chance="1.097" /> <!-- Sealed Tallum Plate Armor Pattern -->
+			</drop>
+			<spoil>
+				<item id="1873" min="1" max="21" chance="85.57" /> <!-- Silver Nugget -->
+				<item id="5424" min="1" max="1" chance="4.227" /> <!-- Recipe: Sealed Dark Crystal Gaiters (60%) -->
+				<item id="5416" min="1" max="1" chance="2.631" /> <!-- Recipe: Sealed Dark Crystal Breastplate (60%) -->
+				<item id="5418" min="1" max="1" chance="1.812" /> <!-- Recipe: Sealed Tallum Plate Armor (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24017" level="80" type="L2Npc" name="Destroyer" title="Converted Giant">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2361" mpRegen="3.6" />
+			<speed>
+				<walk ground="27" />
+				<run ground="150" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="42.6" />
+		</collision>
+	</npc>
+	<npc id="24018" level="78" type="L2Monster" name="Hekaton Prime" title="Giants' Cave Master">
+		<race>GIANT</race>
+		<acquire exp="1444329" sp="43329" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5913" hpRegen="8.5" mp="2411" mpRegen="3" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<attack physical="294273" magical="2169.9" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="126117" magical="1205.5" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+		</skillList>
+		<collision>
+			<radius normal="32" />
+			<height normal="57.8" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="28325" max="66123" chance="70" /> <!-- Adena -->
+				<item id="90045" min="1" max="1" chance="4.955" /> <!-- Magical Tablet -->
+				<item id="730" min="1" max="1" chance="3.031" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+			</drop>
+			<spoil>
+				<item id="1875" min="1" max="19" chance="85.18" /> <!-- Stone of Purity -->
+				<item id="5426" min="1" max="1" chance="40" /> <!-- Recipe: Sealed Dark Crystal Helmet (60%) -->
+				<item id="5428" min="1" max="1" chance="39.09" /> <!-- Recipe: Sealed Tallum Helmet (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24019" level="77" type="L2Monster" name="Hekaton Chires">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>GIANT</race>
+		<acquire exp="528416" sp="15852" />
+		<equipment rhand="3937" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5827" hpRegen="8.5" mp="2361" mpRegen="3" />
+			<speed>
+				<walk ground="30" />
+				<run ground="140" />
+			</speed>
+			<attack physical="77332.5" magical="2124.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="33142.5" magical="1180.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+		</skillList>
+		<collision>
+			<radius normal="27.5" />
+			<height normal="48.7" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6675" max="15590" chance="70" /> <!-- Adena -->
+				<item id="1873" min="2" max="6" chance="23.85" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="15.58" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.23" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="3.665" /> <!-- Steel -->
+				<item id="8346" min="1" max="1" chance="2.862" /> <!-- Destroyer Hammer Piece -->
+				<item id="8331" min="1" max="1" chance="2.858" /> <!-- Infernal Master Blade -->
+				<item id="8342" min="1" max="1" chance="2.387" /> <!-- Flaming Dragon Skull Piece -->
+				<item id="5532" min="1" max="1" chance="0.75" /> <!-- Meteor Shower Head -->
+				<item id="5539" min="1" max="1" chance="0.75" /> <!-- Blood Tornado Edge -->
+				<item id="5536" min="1" max="1" chance="0.75" /> <!-- Bloody Orchid Head -->
+				<item id="5538" min="1" max="1" chance="0.3" /> <!-- Dragon Grinder Edge -->
+				<item id="5541" min="1" max="1" chance="0.3" /> <!-- Tallum Glaive Edge -->
+			</drop>
+			<spoil>
+				<item id="1873" min="1" max="21" chance="89.39" /> <!-- Silver Nugget -->
+				<item id="5446" min="1" max="1" chance="0.75" /> <!-- Recipe: Bloody Orchid (60%) -->
+				<item id="5452" min="1" max="1" chance="0.75" /> <!-- Recipe: Blood Tornado (60%) -->
+				<item id="5456" min="1" max="1" chance="0.3" /> <!-- Recipe: Tallum Glaive (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24020" level="77" type="L2Monster" name="Batur" title="Lesser Giant Soldier">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>GIANT</race>
+		<acquire exp="1051810" sp="31554" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5827" hpRegen="8.5" mp="2361" mpRegen="3" />
+			<speed>
+				<walk ground="55" />
+				<run ground="140" />
+			</speed>
+			<attack physical="38669.4" magical="2124.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="16572.6" magical="1180.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="46" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6547" max="15290" chance="70" /> <!-- Adena -->
+				<item id="729" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="90013" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone -->
+				<item id="90014" min="1" max="1" chance="0.075" /> <!-- High-grade Life Stone -->
+			</drop>
+			<spoil>
+				<item id="729" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24021" level="77" type="L2Monster" name="Lesser Giant Warrior">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>GIANT</race>
+		<acquire exp="326047" sp="9781" />
+		<equipment rhand="3937" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5827" hpRegen="8.5" mp="2361" mpRegen="3" />
+			<speed>
+				<walk ground="15" />
+				<run ground="180" />
+			</speed>
+			<attack physical="38669.4" magical="2124.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="16572.6" magical="1180.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+		</skillList>
+		<collision>
+			<radius normal="50" />
+			<height normal="44" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="5290" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5291" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="57" min="6573" max="15352" chance="70" /> <!-- Adena -->
+				<item id="1865" min="7" max="21" chance="26.63" /> <!-- Varnish -->
+				<item id="1869" min="24" max="72" chance="7.977" /> <!-- Iron Ore -->
+				<item id="1880" min="3" max="9" chance="5.475" /> <!-- Steel -->
+				<item id="5497" min="1" max="1" chance="5.321" /> <!-- Sealed Tallum Boot Lining -->
+				<item id="5496" min="1" max="1" chance="5.291" /> <!-- Sealed Dark Crystal Boot Lining -->
+				<item id="5508" min="1" max="1" chance="5.193" /> <!-- Sealed Dark Crystal Glove Design -->
+				<item id="5509" min="1" max="3" chance="2.612" /> <!-- Sealed Tallum Glove Design -->
+			</drop>
+			<spoil>
+				<item id="1865" min="1" max="39" chance="89.17" /> <!-- Varnish -->
+				<item id="5368" min="1" max="1" chance="8.135" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
+				<item id="5394" min="1" max="1" chance="8.128" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
+				<item id="5370" min="1" max="1" chance="8.108" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
+				<item id="5392" min="1" max="1" chance="8.013" /> <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24022" level="77" type="L2Monster" name="Lesser Giant Wizard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>GIANT</race>
+		<acquire exp="257609" sp="7728" />
+		<equipment rhand="3938" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5827" hpRegen="8.5" mp="2361" mpRegen="3" />
+			<speed>
+				<walk ground="15" />
+				<run ground="180" />
+			</speed>
+			<attack physical="25779.6" magical="2124.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="11048.4" magical="1180.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="50" />
+			<height normal="44" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="5319" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Boots -->
+				<item id="57" min="5301" max="12380" chance="70" /> <!-- Adena -->
+				<item id="1865" min="7" max="21" chance="19.8" /> <!-- Varnish -->
+				<item id="1869" min="24" max="72" chance="6.415" /> <!-- Iron Ore -->
+				<item id="1880" min="3" max="9" chance="4.467" /> <!-- Steel -->
+				<item id="5515" min="1" max="1" chance="3.727" /> <!-- Sealed Majestic Gauntlet Design -->
+				<item id="5514" min="1" max="1" chance="3.723" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5502" min="1" max="1" chance="3.704" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="5503" min="1" max="1" chance="3.593" /> <!-- Sealed Majestic Boot Lining -->
+			</drop>
+			<spoil>
+				<item id="1865" min="1" max="31" chance="92.98" /> <!-- Varnish -->
+				<item id="5404" min="1" max="1" chance="4.328" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
+				<item id="5382" min="1" max="1" chance="4.304" /> <!-- Recipe: Sealed Majestic Boots (60%) -->
+				<item id="5406" min="1" max="1" chance="4.301" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
+				<item id="5380" min="1" max="1" chance="4.279" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24023" level="80" type="L2Npc" name="Hunter Destroyer" title="Lesser Giant Marauder">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2361" mpRegen="3.6" />
+			<speed>
+				<walk ground="27" />
+				<run ground="150" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="24024" level="80" type="L2Npc" name="Hunter" title="Ancient Marauder">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2261" mpRegen="3.6" />
+			<speed>
+				<walk ground="27" />
+				<run ground="150" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="24025" level="70" type="L2Monster" name="Bloody Purple">
+		<parameters>
+			<param name="MoveAroundSocial" value="70" />
+			<param name="MoveAroundSocial1" value="70" />
+			<param name="MoveAroundSocial2" value="70" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DeBuff" id="4035" level="3" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="77020" sp="2310" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="5157" hpRegen="7.5" mp="2018" mpRegen="2.7" />
+			<attack physical="11407.9" magical="1816.2" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4889.1" magical="1009" />
+			<speed>
+				<walk ground="10" />
+				<run ground="180" />
+			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>UNDEAD</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15.6" />
+			<height normal="28.2" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="91" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe -->
+				<item id="92" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff -->
+				<item id="57" min="1096" max="2558" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="15.29" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="13.67" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="11.95" /> <!-- Stem -->
+				<item id="1878" min="2" max="6" chance="3.864" /> <!-- Durable Braid -->
+				<item id="4105" min="1" max="1" chance="0.75" /> <!-- Heavy War Axe Head -->
+				<item id="4106" min="1" max="1" chance="0.75" /> <!-- Spirit's Staff Head -->
+			</drop>
+			<spoil>
+				<item id="4965" min="1" max="1" chance="0.75" /> <!-- Recipe: Spirit's Staff (60%) -->
+				<item id="5000" min="1" max="1" chance="0.3" /> <!-- Recipe: Damascus Sword (60%) -->
+				<item id="5004" min="1" max="1" chance="0.3" /> <!-- Recipe: Staff of Evil Spirits (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24026" level="71" type="L2Monster" name="Clipher">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="79766" sp="2392" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5258" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="11631.2" magical="1859.4" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4984.8" magical="1033" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+		</skillList>
+		<collision>
+			<radius normal="17" />
+			<height normal="26.8" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="78" min="1" max="1" chance="0.003" /> <!-- Great Sword -->
+				<item id="142" min="1" max="1" chance="0.003" /> <!-- Keshanberk -->
+				<item id="57" min="1145" max="2673" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="17.47" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="13.72" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="12.78" /> <!-- Stem -->
+				<item id="1878" min="2" max="6" chance="3.969" /> <!-- Durable Braid -->
+				<item id="4104" min="1" max="1" chance="1" /> <!-- Great Sword Blade -->
+				<item id="4107" min="1" max="1" chance="0.75" /> <!-- Keshanberk Blade -->
+			</drop>
+			<spoil>
+				<item id="1870" min="1" max="11" chance="92.14" /> <!-- Coal -->
+				<item id="1875" min="1" max="1" chance="36.62" /> <!-- Stone of Purity -->
+				<item id="1874" min="1" max="1" chance="35.66" /> <!-- Oriharukon Ore -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24027" level="72" type="L2Monster" name="Sairon">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="86040" sp="2581" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5358" hpRegen="8.5" mp="2115" mpRegen="3" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<attack physical="11852.4" magical="1903.5" critical="4" attackSpeed="253" range="40" />
+			<defence physical="5079.6" magical="1057.5" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+		</skillList>
+		<collision>
+			<radius normal="10.4" />
+			<height normal="23.4" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="266" min="1" max="1" chance="0.003" /> <!-- Great Pata -->
+				<item id="267" min="1" max="1" chance="0.003" /> <!-- Arthro Nail -->
+				<item id="300" min="1" max="1" chance="0.003" /> <!-- Great Axe -->
+				<item id="57" min="1293" max="3017" chance="70" /> <!-- Adena -->
+				<item id="1895" min="1" max="1" chance="15.87" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="13.8" /> <!-- Stem -->
+				<item id="1878" min="2" max="6" chance="4.567" /> <!-- Durable Braid -->
+				<item id="1865" min="9" max="27" chance="3.183" /> <!-- Varnish -->
+				<item id="2120" min="1" max="1" chance="0.75" /> <!-- Great Pata Blade -->
+				<item id="4111" min="1" max="1" chance="0.75" /> <!-- Arthro Nail Blade -->
+				<item id="4113" min="1" max="1" chance="0.75" /> <!-- Great Axe Head -->
+			</drop>
+			<spoil>
+				<item id="1870" min="1" max="13" chance="89.5" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="41.89" /> <!-- Oriharukon Ore -->
+				<item id="1875" min="1" max="1" chance="41.51" /> <!-- Stone of Purity -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24028" level="73" type="L2Monster" name="Demon Warrior">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="89303" sp="2679" />
+		<equipment rhand="234" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5457" hpRegen="8.5" mp="2163" mpRegen="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="12071.5" magical="1946.7" critical="4" attackSpeed="253" range="40" />
+			<defence physical="5173.5" magical="1081.5" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+		</skillList>
+		<collision>
+			<radius normal="13" />
+			<height normal="33.4" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="175" min="1" max="1" chance="0.003" /> <!-- Art of Battle Axe -->
+				<item id="210" min="1" max="1" chance="0.003" /> <!-- Staff of Evil Spirits -->
+				<item id="57" min="1357" max="3166" chance="70" /> <!-- Adena -->
+				<item id="1895" min="1" max="1" chance="17.04" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="14.93" /> <!-- Stem -->
+				<item id="1878" min="2" max="6" chance="4.697" /> <!-- Durable Braid -->
+				<item id="1865" min="9" max="27" chance="3.306" /> <!-- Varnish -->
+				<item id="4117" min="1" max="1" chance="0.75" /> <!-- Art of Battle Axe Blade -->
+				<item id="4118" min="1" max="1" chance="0.75" /> <!-- Evil Spirit Head -->
+			</drop>
+			<spoil>
+				<item id="1870" min="1" max="13" chance="91.215" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="43.4" /> <!-- Oriharukon Ore -->
+				<item id="1875" min="1" max="1" chance="42.44" /> <!-- Stone of Purity -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24029" level="74" type="L2Monster" name="Veil Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>DEMONIC</race>
+		<acquire exp="90904" sp="2727" />
+		<equipment rhand="78" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5553" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="12283.6" magical="1990.8" critical="4" attackSpeed="253" range="40" />
+			<defence physical="5264.4" magical="1106" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="33.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
+				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
+				<item id="57" min="1372" max="3205" chance="70" /> <!-- Adena -->
+				<item id="1895" min="1" max="1" chance="11.11" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="8.019" /> <!-- Mithril Ore -->
+				<item id="1866" min="2" max="6" chance="6.628" /> <!-- Suede -->
+				<item id="1879" min="1" max="1" chance="6.623" /> <!-- Cokes -->
+				<item id="1870" min="5" max="15" chance="3.946" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="2.235" /> <!-- Charcoal -->
+				<item id="4114" min="1" max="1" chance="0.75" /> <!-- Damascus Sword Blade -->
+				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
+			</drop>
+			<spoil>
+				<item id="948" min="1" max="1" chance="2.453" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24030" level="74" type="L2Monster" name="Stone Vanul">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="129198" sp="3875" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5553" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="18426.1" magical="1990.8" critical="4" attackSpeed="253" range="40" />
+			<defence physical="7896.9" magical="1106" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+		</skillList>
+		<collision>
+			<radius normal="16.5" />
+			<height normal="29.45" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="97" min="1" max="1" chance="0.0075" /> <!-- Lance -->
+				<item id="268" min="1" max="1" chance="0.0075" /> <!-- Bellion Cestus -->
+				<item id="57" min="2433" max="5685" chance="70" /> <!-- Adena -->
+				<item id="1866" min="2" max="6" chance="12.09" /> <!-- Suede -->
+				<item id="1879" min="1" max="1" chance="11.33" /> <!-- Cokes -->
+				<item id="1870" min="5" max="15" chance="7.156" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="3.93" /> <!-- Charcoal -->
+				<item id="1895" min="3" max="9" chance="2.955" /> <!-- Metallic Fiber -->
+				<item id="1876" min="4" max="12" chance="1.809" /> <!-- Mithril Ore -->
+				<item id="4115" min="1" max="1" chance="1.673" /> <!-- Lance Blade -->
+				<item id="4120" min="1" max="1" chance="1.612" /> <!-- Bellion Cestus Edge -->
+			</drop>
+			<spoil>
+				<item id="948" min="1" max="1" chance="4.386" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24031" level="75" type="L2Monster" name="Death Flyer">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>DEMONIC</race>
+		<acquire exp="94263" sp="2827" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5646" hpRegen="8.5" mp="2261" mpRegen="3" />
+			<speed>
+				<walk ground="70" />
+				<run ground="180" />
+			</speed>
+			<attack physical="12489.4" magical="2034.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="5352.6" magical="1130.5" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+		</skillList>
+		<collision>
+			<radius normal="13.2" />
+			<height normal="44.3" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="234" min="1" max="1" chance="0.003" /> <!-- Demon's Dagger -->
+				<item id="287" min="1" max="1" chance="0.003" /> <!-- Bow of Peril -->
+				<item id="57" min="1438" max="3358" chance="70" /> <!-- Adena -->
+				<item id="1895" min="1" max="1" chance="12.31" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="8.416" /> <!-- Mithril Ore -->
+				<item id="1866" min="2" max="6" chance="7.041" /> <!-- Suede -->
+				<item id="1879" min="1" max="1" chance="6.981" /> <!-- Cokes -->
+				<item id="1870" min="5" max="15" chance="4.149" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="2.292" /> <!-- Charcoal -->
+				<item id="4119" min="1" max="1" chance="0.75" /> <!-- Demon's Dagger Edge -->
+				<item id="4121" min="1" max="1" chance="0.75" /> <!-- Bow of Peril Shaft -->
+			</drop>
+			<spoil>
+				<item id="4186" min="1" max="1" chance="0.75" /> <!-- Recipe: Sword of Valhalla -->
+				<item id="4192" min="1" max="1" chance="0.75" /> <!-- Recipe: Damascus Sword -->
+				<item id="4199" min="1" max="1" chance="0.75" /> <!-- Recipe: Bow of Peril -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24032" level="70" type="L2Monster" name="Seer">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="77020" sp="2310" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5157" hpRegen="7.5" mp="2018" mpRegen="2.7" />
+			<speed>
+				<walk ground="68" />
+				<run ground="180" />
+			</speed>
+			<attack physical="11407.9" magical="1816.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4889.1" magical="1009" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="34" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="91" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe -->
+				<item id="92" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff -->
+				<item id="57" min="1096" max="2558" chance="70" /> <!-- Adena -->
+				<item id="1871" min="1" max="3" chance="10.26" /> <!-- Charcoal -->
+				<item id="1895" min="1" max="1" chance="9.201" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="6.335" /> <!-- Mithril Ore -->
+				<item id="1879" min="1" max="1" chance="5.335" /> <!-- Cokes -->
+				<item id="1866" min="2" max="6" chance="5.299" /> <!-- Suede -->
+				<item id="1870" min="5" max="15" chance="3.233" /> <!-- Coal -->
+				<item id="4105" min="1" max="1" chance="0.75" /> <!-- Heavy War Axe Head -->
+				<item id="4106" min="1" max="1" chance="0.75" /> <!-- Spirit's Staff Head -->
+			</drop>
+			<spoil>
+				<item id="4965" min="1" max="1" chance="0.75" /> <!-- Recipe: Spirit's Staff (60%) -->
+				<item id="5000" min="1" max="1" chance="0.3" /> <!-- Recipe: Damascus Sword (60%) -->
+				<item id="5004" min="1" max="1" chance="0.3" /> <!-- Recipe: Staff of Evil Spirits (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24033" level="71" type="L2Monster" name="Guardian Spirit">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>DEMONIC</race>
+		<acquire exp="79766" sp="2392" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5258" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="180" />
+			</speed>
+			<attack physical="11631.2" magical="1859.4" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4984.8" magical="1033" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="78" min="1" max="1" chance="0.003" /> <!-- Great Sword -->
+				<item id="142" min="1" max="1" chance="0.003" /> <!-- Keshanberk -->
+				<item id="57" min="1145" max="2673" chance="70" /> <!-- Adena -->
+				<item id="1870" min="3" max="9" chance="16.74" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="6.706" /> <!-- Oriharukon Ore -->
+				<item id="4104" min="1" max="1" chance="1.043" /> <!-- Great Sword Blade -->
+				<item id="4107" min="1" max="1" chance="0.75" /> <!-- Keshanberk Blade -->
+			</drop>
+			<spoil>
+				<item id="1870" min="1" max="11" chance="91.865" /> <!-- Coal -->
+				<item id="1875" min="1" max="1" chance="37.01" /> <!-- Stone of Purity -->
+				<item id="1874" min="1" max="1" chance="34.76" /> <!-- Oriharukon Ore -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24034" level="72" type="L2Monster" name="Midnight Sairon">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>DEMONIC</race>
+		<acquire exp="86040" sp="2581" />
+		<equipment rhand="5129" lhand="5129" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5358" hpRegen="8.5" mp="2115" mpRegen="3" />
+			<speed>
+				<walk ground="22" />
+				<run ground="180" />
+			</speed>
+			<attack physical="11852.4" magical="1903.5" critical="4" attackSpeed="253" range="40" />
+			<defence physical="5079.6" magical="1057.5" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+		</skillList>
+		<collision>
+			<radius normal="10.2" />
+			<height normal="22.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="266" min="1" max="1" chance="0.003" /> <!-- Great Pata -->
+				<item id="267" min="1" max="1" chance="0.003" /> <!-- Arthro Nail -->
+				<item id="300" min="1" max="1" chance="0.003" /> <!-- Great Axe -->
+				<item id="57" min="1293" max="3017" chance="70" /> <!-- Adena -->
+				<item id="1870" min="3" max="9" chance="18.48" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="7.587" /> <!-- Oriharukon Ore -->
+				<item id="2120" min="1" max="1" chance="0.75" /> <!-- Great Pata Blade -->
+				<item id="4111" min="1" max="1" chance="0.75" /> <!-- Arthro Nail Blade -->
+				<item id="4113" min="1" max="1" chance="0.75" /> <!-- Great Axe Head -->
+			</drop>
+			<spoil>
+				<item id="1870" min="1" max="13" chance="90.5" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="40.93" /> <!-- Oriharukon Ore -->
+				<item id="1875" min="1" max="1" chance="40.28" /> <!-- Stone of Purity -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24035" level="73" type="L2Monster" name="Daymen">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="89303" sp="2679" />
+		<equipment rhand="84" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5457" hpRegen="8.5" mp="2163" mpRegen="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="12071.5" magical="1946.7" critical="4" attackSpeed="253" range="40" />
+			<defence physical="5173.5" magical="1081.5" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+		</skillList>
+		<collision>
+			<radius normal="13" />
+			<height normal="33.4" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="175" min="1" max="1" chance="0.003" /> <!-- Art of Battle Axe -->
+				<item id="210" min="1" max="1" chance="0.003" /> <!-- Staff of Evil Spirits -->
+				<item id="57" min="1357" max="3166" chance="70" /> <!-- Adena -->
+				<item id="1870" min="3" max="9" chance="19.19" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="7.894" /> <!-- Oriharukon Ore -->
+				<item id="4117" min="1" max="1" chance="0.75" /> <!-- Art of Battle Axe Blade -->
+				<item id="4118" min="1" max="1" chance="0.75" /> <!-- Evil Spirit Head -->
+			</drop>
+			<spoil>
+				<item id="1870" min="1" max="13" chance="92.505" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="42.74" /> <!-- Oriharukon Ore -->
+				<item id="1875" min="1" max="1" chance="41.9" /> <!-- Stone of Purity -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24036" level="74" type="L2Monster" name="Dolores">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>DEMONIC</race>
+		<acquire exp="90904" sp="2727" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5553" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<speed>
+				<walk ground="70" />
+				<run ground="180" />
+			</speed>
+			<attack physical="12283.6" magical="1990.8" critical="4" attackSpeed="253" range="40" />
+			<defence physical="5264.4" magical="1106" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+		</skillList>
+		<collision>
+			<radius normal="13.2" />
+			<height normal="44.3" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
+				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
+				<item id="57" min="1372" max="3205" chance="70" /> <!-- Adena -->
+				<item id="1887" min="1" max="1" chance="5.875" /> <!-- Varnish of Purity -->
+				<item id="4114" min="1" max="1" chance="0.75" /> <!-- Damascus Sword Blade -->
+				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
+			</drop>
+			<spoil>
+				<item id="948" min="1" max="1" chance="2.493" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24037" level="74" type="L2Monster" name="Maiden Doll">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>DEMONIC</race>
+		<acquire exp="129198" sp="3875" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5553" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<speed>
+				<walk ground="70" />
+				<run ground="180" />
+			</speed>
+			<attack physical="18426.1" magical="1990.8" critical="4" attackSpeed="253" range="40" />
+			<defence physical="7896.9" magical="1106" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+		</skillList>
+		<collision>
+			<radius normal="17" />
+			<height normal="55" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="97" min="1" max="1" chance="0.0075" /> <!-- Lance -->
+				<item id="268" min="1" max="1" chance="0.0075" /> <!-- Bellion Cestus -->
+				<item id="57" min="2433" max="5685" chance="70" /> <!-- Adena -->
+				<item id="1887" min="1" max="1" chance="10.68" /> <!-- Varnish of Purity -->
+				<item id="4120" min="1" max="1" chance="1.603" /> <!-- Bellion Cestus Edge -->
+				<item id="4115" min="1" max="1" chance="1.574" /> <!-- Lance Blade -->
+			</drop>
+			<spoil>
+				<item id="948" min="1" max="1" chance="4.296" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24038" level="75" type="L2Monster" name="Tor Scorpion">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>BUG</race>
+		<acquire exp="94263" sp="2827" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5646" hpRegen="8.5" mp="2261" mpRegen="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="180" />
+			</speed>
+			<attack physical="12489.4" magical="2034.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="5352.6" magical="1130.5" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+		</skillList>
+		<collision>
+			<radius normal="22.4" />
+			<height normal="52.2" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="234" min="1" max="1" chance="0.003" /> <!-- Demon's Dagger -->
+				<item id="287" min="1" max="1" chance="0.003" /> <!-- Bow of Peril -->
+				<item id="57" min="1438" max="3358" chance="70" /> <!-- Adena -->
+				<item id="1887" min="1" max="1" chance="6.164" /> <!-- Varnish of Purity -->
+				<item id="4119" min="1" max="1" chance="0.75" /> <!-- Demon's Dagger Edge -->
+				<item id="4121" min="1" max="1" chance="0.75" /> <!-- Bow of Peril Shaft -->
+			</drop>
+			<spoil>
+				<item id="4186" min="1" max="1" chance="0.75" /> <!-- Recipe: Sword of Valhalla -->
+				<item id="4192" min="1" max="1" chance="0.75" /> <!-- Recipe: Damascus Sword -->
+				<item id="4199" min="1" max="1" chance="0.75" /> <!-- Recipe: Bow of Peril -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24039" level="75" type="L2Monster" name="Pearl Horror" title="Cursed Soul">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="181912" sp="5457" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5646" hpRegen="8.5" mp="2261" mpRegen="3" />
+			<speed>
+				<walk ground="100" />
+				<run ground="180" />
+			</speed>
+			<attack physical="18734.1" magical="2034.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="8028.9" magical="1130.5" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="35" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="7895" max="18441" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="4.633" /> <!-- Gemstone (A-grade) -->
+				<item id="90012" min="1" max="1" chance="2.481" /> <!-- Common Life Stone -->
+				<item id="90013" min="1" max="1" chance="0.75" /> <!-- Mid-grade Life Stone -->
+			</drop>
+			<spoil>
+				<item id="1887" min="1" max="3" chance="69.24" /> <!-- Varnish of Purity -->
+				<item id="948" min="1" max="1" chance="13.5" /> <!-- Scroll: Enchant Armor (B-grade) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24040" level="75" type="L2Monster" name="Midnight Nightmare" title="Zaken's Minion">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>DEMONIC</race>
+		<acquire exp="185062" sp="5551" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5646" hpRegen="8.5" mp="2261" mpRegen="3" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<attack physical="18734.1" magical="2034.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="8028.9" magical="1130.5" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+		</skillList>
+		<collision>
+			<radius normal="23" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="20427" max="47712" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="11.81" /> <!-- Gemstone (A-grade) -->
+				<item id="90045" min="1" max="1" chance="8.292" /> <!-- Magical Tablet -->
+			</drop>
+			<spoil>
+				<item id="1887" min="1" max="7" chance="90.325" /> <!-- Varnish of Purity -->
+				<item id="729" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24041" level="71" type="L2Monster" name="Bloody Mourner">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>BEAST</race>
+		<acquire exp="0" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6232" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<speed>
+				<walk ground="25" />
+				<run ground="180" />
+			</speed>
+			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1869.6" magical="1033" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="24042" level="71" type="L2Monster" name="Clumsy Wimp">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="0" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6232" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1869.6" magical="1033" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="24043" level="80" type="L2Npc" name="Mysterious Creature">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2066" mpRegen="3.6" />
+			<speed>
+				<walk ground="25" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="37" />
+		</collision>
+	</npc>
+	<npc id="24044" level="74" type="L2Monster" name="Zaken's Treasure Chest">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="0" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="32899" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<attack physical="23029.3" magical="1990.8" critical="4" attackSpeed="253" range="40" />
+			<defence physical="9869.7" magical="1106" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="24045" level="80" type="L2Npc" name="Zaken's Treasure Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2212" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="8" />
+		</collision>
+	</npc>
+	<npc id="24046" level="70" type="L2Monster" name="Floating Eye Seer">
+		<!-- Source: www.l2wiki.com -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="14700" sp="441" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6111" hpRegen="7.5" mp="2018" mpRegen="2.7" />
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<attack physical="4277.7" magical="1816.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1833.3" magical="1009" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="864" min="1" max="1" chance="0.03" /> <!-- Black Ore Earring -->
+				<item id="895" min="1" max="1" chance="0.03" /> <!-- Black Ore Ring -->
+				<item id="57" min="620" max="1447" chance="70" /> <!-- Adena -->
+				<item id="1878" min="1" max="1" chance="11.32" /> <!-- Durable Braid -->
+				<item id="1865" min="1" max="3" chance="9.007" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="7.748" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="6.725" /> <!-- Stem -->
+				<item id="4053" min="1" max="1" chance="4.056" /> <!-- Black Ore Ring Gemstone -->
+				<item id="4052" min="1" max="1" chance="3.426" /> <!-- Black Ore Earring Piece -->
+			</drop>
+			<spoil>
+				<item id="4974" min="1" max="1" chance="7.219" /> <!-- Recipe: Black Ore Ring (70%) -->
+				<item id="4973" min="1" max="1" chance="4.789" /> <!-- Recipe: Black Ore Earring (70%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24047" level="71" type="L2Monster" name="Floating Eye Seer" title="Shadow Curse">
+		<!-- Source: www.l2wiki.com -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="15123" sp="453" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6232" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1869.6" magical="1033" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="110" min="1" max="1" chance="0.03" /> <!-- Doom Shield -->
+				<item id="284" min="1" max="1" chance="0.003" /> <!-- Dark Elven Longbow -->
+				<item id="57" min="640" max="1492" chance="70" /> <!-- Adena -->
+				<item id="1866" min="1" max="1" chance="12.05" /> <!-- Suede -->
+				<item id="1870" min="1" max="3" chance="9.275" /> <!-- Coal -->
+				<item id="1871" min="1" max="3" chance="6.183" /> <!-- Charcoal -->
+				<item id="1895" min="1" max="1" chance="5.285" /> <!-- Metallic Fiber -->
+				<item id="4077" min="1" max="1" chance="4.356" /> <!-- Doom Shield Fragment -->
+				<item id="1876" min="1" max="1" chance="3.771" /> <!-- Mithril Ore -->
+				<item id="1879" min="1" max="1" chance="3.073" /> <!-- Cokes -->
+				<item id="4112" min="1" max="1" chance="0.75" /> <!-- Dark Elven Longbow Shaft -->
+			</drop>
+			<spoil>
+				<item id="4971" min="1" max="1" chance="0.988" /> <!-- Recipe: Dark Elven Longbow (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24048" level="71" type="L2Monster" name="Immortal Spirit">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>HUMAN</race>
+		<acquire exp="15123" sp="453" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6232" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1869.6" magical="1033" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="7" />
+			<height normal="22" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="926" min="1" max="1" chance="0.03" /> <!-- Black Ore Necklace -->
+				<item id="57" min="640" max="1492" chance="70" /> <!-- Adena -->
+				<item id="1878" min="1" max="1" chance="10.77" /> <!-- Durable Braid -->
+				<item id="1865" min="1" max="3" chance="9.294" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="7.979" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="6.976" /> <!-- Stem -->
+				<item id="4054" min="1" max="1" chance="3.832" /> <!-- Black Ore Necklace Beads -->
+			</drop>
+			<spoil>
+				<item id="4975" min="1" max="1" chance="7.391" /> <!-- Recipe: Black Ore Necklace (70%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24049" level="72" type="L2Monster" name="Immortal Spirit" title="Shadow Curse">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMAN</race>
+		<acquire exp="15549" sp="466" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6351" hpRegen="8.5" mp="2115" mpRegen="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="4445.7" magical="1903.5" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1905.3" magical="1057.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="7" />
+			<height normal="22" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="2391" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Leather Armor -->
+				<item id="57" min="659" max="1538" chance="70" /> <!-- Adena -->
+				<item id="1870" min="1" max="3" chance="27.53" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="3.843" /> <!-- Oriharukon Ore -->
+				<item id="4082" min="1" max="1" chance="2.338" /> <!-- Blue Wolf Leather Armor Texture -->
+			</drop>
+			<spoil>
+				<item id="4984" min="1" max="1" chance="2.708" /> <!-- Recipe: Blue Wolf Leather Armor (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24050" level="71" type="L2Monster" name="Starving Spirit">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>DIVINE</race>
+		<acquire exp="15123" sp="453" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6232" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<speed>
+				<walk ground="70" />
+				<run ground="180" />
+			</speed>
+			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1869.6" magical="1033" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angel -->
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="25.4" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="110" min="1" max="1" chance="0.03" /> <!-- Doom Shield -->
+				<item id="2388" min="1" max="1" chance="0.03" /> <!-- Zubei's Leather Gaiters -->
+				<item id="2384" min="1" max="1" chance="0.0075" /> <!-- Zubei's Leather Shirt -->
+				<item id="2390" min="1" max="1" chance="0.003" /> <!-- Avadon Leather Armor -->
+				<item id="57" min="640" max="1492" chance="70" /> <!-- Adena -->
+				<item id="1866" min="1" max="1" chance="11.95" /> <!-- Suede -->
+				<item id="1870" min="1" max="3" chance="9.354" /> <!-- Coal -->
+				<item id="1871" min="1" max="3" chance="6.246" /> <!-- Charcoal -->
+				<item id="1895" min="1" max="1" chance="5.337" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="3.722" /> <!-- Mithril Ore -->
+				<item id="1879" min="1" max="1" chance="3.171" /> <!-- Cokes -->
+				<item id="4077" min="1" max="1" chance="2.147" /> <!-- Doom Shield Fragment -->
+				<item id="4067" min="1" max="1" chance="1.745" /> <!-- Zubei's Leather Gaiter Texture -->
+				<item id="4066" min="1" max="1" chance="1.163" /> <!-- Zubei's Leather Shirt Fabric -->
+				<item id="4068" min="1" max="1" chance="0.75" /> <!-- Avadon Leather Armor Lining -->
+			</drop>
+			<spoil>
+				<item id="4953" min="1" max="1" chance="4.45" /> <!-- Recipe: Sealed Avadon Gloves (60%) -->
+				<item id="4960" min="1" max="1" chance="4.424" /> <!-- Recipe: Sealed Zubei's Gauntlets (60%) -->
+				<item id="4959" min="1" max="1" chance="4.385" /> <!-- Recipe: Sealed Avadon Boots (60%) -->
+				<item id="4958" min="1" max="1" chance="4.313" /> <!-- Recipe: Sealed Zubei's Boots (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24051" level="72" type="L2Monster" name="Starving Spirit" title="Shadow Curse">
+		<!-- Source: www.l2wiki.com -->
+		<race>UNDEAD</race>
+		<acquire exp="15549" sp="466" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6351" hpRegen="8.5" mp="2115" mpRegen="3" />
+			<speed>
+				<walk ground="39" />
+				<run ground="180" />
+			</speed>
+			<attack physical="4445.7" magical="1903.5" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1905.3" magical="1057.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="26" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="2380" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Gaiters -->
+				<item id="358" min="1" max="1" chance="0.0075" /> <!-- Blue Wolf Breastplate -->
+				<item id="57" min="659" max="1538" chance="70" /> <!-- Adena -->
+				<item id="1870" min="1" max="3" chance="27.68" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="3.816" /> <!-- Oriharukon Ore -->
+				<item id="4080" min="1" max="1" chance="2.105" /> <!-- Blue Wolf Gaiter Material -->
+				<item id="4078" min="1" max="1" chance="1.493" /> <!-- Blue Wolf Breastplate Part -->
+			</drop>
+			<spoil>
+				<item id="4982" min="1" max="1" chance="2.363" /> <!-- Recipe: Blue Wolf Gaiters (60%) -->
+				<item id="4981" min="1" max="1" chance="1.422" /> <!-- Recipe: Blue Wolf Breastplate (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24052" level="72" type="L2Monster" name="Starving Soldier">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>DIVINE</race>
+		<acquire exp="15549" sp="466" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6351" hpRegen="8.5" mp="2115" mpRegen="3" />
+			<speed>
+				<walk ground="61" />
+				<run ground="180" />
+			</speed>
+			<attack physical="4445.7" magical="1903.5" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1905.3" magical="1057.5" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angel -->
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="23.4" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="229" min="1" max="1" chance="0.003" /> <!-- Kris -->
+				<item id="243" min="1" max="1" chance="0.003" /> <!-- Twilight Knife -->
+				<item id="2392" min="1" max="1" chance="0.003" /> <!-- Leather Armor of Doom -->
+				<item id="57" min="659" max="1538" chance="70" /> <!-- Adena -->
+				<item id="1866" min="1" max="1" chance="13.27" /> <!-- Suede -->
+				<item id="1870" min="1" max="3" chance="9.574" /> <!-- Coal -->
+				<item id="1871" min="1" max="3" chance="6.343" /> <!-- Charcoal -->
+				<item id="1895" min="1" max="1" chance="5.521" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="3.883" /> <!-- Mithril Ore -->
+				<item id="1879" min="1" max="1" chance="3.193" /> <!-- Cokes -->
+				<item id="4083" min="1" max="1" chance="0.75" /> <!-- Leather Armor of Doom Design -->
+				<item id="4109" min="1" max="1" chance="0.3" /> <!-- Kris Edge -->
+				<item id="4110" min="1" max="1" chance="0.3" /> <!-- Twilight Knife Edge -->
+			</drop>
+			<spoil>
+				<item id="4989" min="1" max="1" chance="3.092" /> <!-- Recipe: Stockings of Doom (60%) -->
+				<item id="4969" min="1" max="1" chance="0.75" /> <!-- Recipe: Twilight Knife (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24053" level="73" type="L2Monster" name="Starving Soldier" title="Shadow Curse">
+		<!-- Source: www.l2wiki.com -->
+		<race>UNDEAD</race>
+		<acquire exp="15987" sp="479" />
+		<equipment rhand="47716" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6466" hpRegen="8.5" mp="2163" mpRegen="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="4526.2" magical="1946.7" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1939.8" magical="1081.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="16" />
+			<height normal="28.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="2403" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Stockings -->
+				<item id="2398" min="1" max="1" chance="0.0075" /> <!-- Blue Wolf Tunic -->
+				<item id="57" min="680" max="1586" chance="70" /> <!-- Adena -->
+				<item id="1870" min="1" max="3" chance="28.57" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="3.928" /> <!-- Oriharukon Ore -->
+				<item id="4086" min="1" max="1" chance="2.454" /> <!-- Blue Wolf Stocking Pattern -->
+				<item id="4084" min="1" max="1" chance="1.864" /> <!-- Blue Wolf Tunic Fabric -->
+			</drop>
+			<spoil>
+				<item id="4988" min="1" max="1" chance="3.263" /> <!-- Recipe: Blue Wolf Stockings (60%) -->
+				<item id="4986" min="1" max="1" chance="2.007" /> <!-- Recipe: Blue Wolf Tunic (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24054" level="73" type="L2Monster" name="Starving Warrior">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>HUMAN</race>
+		<acquire exp="15987" sp="479" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6466" hpRegen="8.5" mp="2163" mpRegen="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="4526.2" magical="1946.7" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1939.8" magical="1081.5" />
+			<hitTime>840</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="15" />
+			<height normal="30" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="234" min="1" max="1" chance="0.003" /> <!-- Demon's Dagger -->
+				<item id="57" min="680" max="1586" chance="70" /> <!-- Adena -->
+				<item id="1866" min="1" max="1" chance="13.22" /> <!-- Suede -->
+				<item id="1870" min="1" max="3" chance="9.969" /> <!-- Coal -->
+				<item id="1871" min="1" max="3" chance="6.599" /> <!-- Charcoal -->
+				<item id="1895" min="1" max="1" chance="5.626" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="3.987" /> <!-- Mithril Ore -->
+				<item id="1879" min="1" max="1" chance="3.274" /> <!-- Cokes -->
+				<item id="4119" min="1" max="1" chance="0.75" /> <!-- Demon's Dagger Edge -->
+			</drop>
+			<spoil>
+				<item id="4989" min="1" max="1" chance="1.63" /> <!-- Recipe: Stockings of Doom (60%) -->
+				<item id="4966" min="1" max="1" chance="0.3" /> <!-- Recipe: Keshanberk (60%) -->
+				<item id="4968" min="1" max="1" chance="0.3" /> <!-- Recipe: Kris (60%) -->
+				<item id="4969" min="1" max="1" chance="0.3" /> <!-- Recipe: Twilight Knife (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24055" level="74" type="L2Monster" name="Starving Warrior" title="Shadow Curse">
+		<!-- Source: www.l2wiki.com -->
+		<race>UNDEAD</race>
+		<acquire exp="16428" sp="492" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6580" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<speed>
+				<walk ground="39" />
+				<run ground="180" />
+			</speed>
+			<attack physical="4606" magical="1990.8" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1974" magical="1106" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="28.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="2416" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Helmet -->
+				<item id="2417" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Helmet -->
+				<item id="57" min="699" max="1634" chance="70" /> <!-- Adena -->
+				<item id="4089" min="1" max="1" chance="4.091" /> <!-- Sealed Doom Helmet Design -->
+				<item id="4088" min="1" max="1" chance="4.071" /> <!-- Sealed Blue Wolf Helmet Design -->
+				<item id="1887" min="1" max="1" chance="2.991" /> <!-- Varnish of Purity -->
+			</drop>
+			<spoil>
+				<item id="4962" min="1" max="1" chance="4.326" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
+				<item id="4991" min="1" max="1" chance="2.727" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
+				<item id="4990" min="1" max="1" chance="2.681" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24056" level="80" type="L2Npc" name="Luxurious Small Jar">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="24057" level="80" type="L2Npc" name="Fiend's Radiant Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="24058" level="80" type="L2Npc" name="Radiant Treasure Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="9" />
+		</collision>
+	</npc>
+	<npc id="24059" level="80" type="L2Npc" name="Radiant Jewel Box">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="9.5" />
+		</collision>
+	</npc>
+	<npc id="24060" level="80" type="L2Npc" name="Strong Large Wooden Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="18" />
+			<height normal="14" />
+		</collision>
+	</npc>
+	<npc id="24061" level="80" type="L2Npc" name="Fiend's Strong Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="24062" level="80" type="L2Npc" name="Strong Iron Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="24063" level="80" type="L2Npc" name="Strong Treasure Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="24064" level="80" type="L2Npc" name="Simple Large Wooden Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="18" />
+			<height normal="14" />
+		</collision>
+	</npc>
+	<npc id="24065" level="80" type="L2Npc" name="Simple Big Jar">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="1" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="24066" level="80" type="L2Npc" name="Simple Iron Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="24067" level="80" type="L2Npc" name="Simple Treasure Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="24068" level="80" type="L2Npc" name="Ancient Large Wooden Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="18" />
+			<height normal="14" />
+		</collision>
+	</npc>
+	<npc id="24069" level="80" type="L2Npc" name="Old Big Jar">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="1" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="24070" level="80" type="L2Npc" name="Ancient Iron Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="9.5" />
+		</collision>
+	</npc>
+	<npc id="24071" level="80" type="L2Npc" name="Ancient Jewel Box">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="9.5" />
+		</collision>
+	</npc>
+	<npc id="24072" level="80" type="L2Npc" name="Small Jar of Luck">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="24073" level="80" type="L2Npc" name="Small Jar of Hope">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="24074" level="80" type="L2Npc" name="Small Jar of Fate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="24075" level="80" type="L2Npc" name="Large Jar of Luck">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="1" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="24076" level="80" type="L2Npc" name="Large Jar of Hope">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="1" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="24077" level="80" type="L2Npc" name="Large Jar of Fate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="1" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="24078" level="80" type="L2Npc" name="Large Treasure Chest of Luck">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="8" />
+		</collision>
+	</npc>
+	<npc id="24079" level="80" type="L2Npc" name="Large Treasure Chest of Hope">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="8" />
+		</collision>
+	</npc>
+	<npc id="24080" level="80" type="L2Npc" name="Large Treasure Chest of Fate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="8" />
+		</collision>
+	</npc>
+	<npc id="24081" level="80" type="L2Npc" name="Small Treasure Chest of Luck">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="24082" level="80" type="L2Npc" name="Small Treasure Chest of Hope">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="24083" level="80" type="L2Npc" name="Small Treasure Chest of Fate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="24084" level="80" type="L2Npc" name="Keeper of Skeleton's Treasure">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="24085" level="80" type="L2Npc" name="Sairon's Doll">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5358" hpRegen="10.5" mp="2115" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="6.5" />
+			<height normal="13.5" />
+		</collision>
+	</npc>
+	<npc id="24086" level="80" type="L2Npc" name="Sairon's Doll">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="5129" lhand="5129" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5358" hpRegen="10.5" mp="2115" mpRegen="3.6" />
+			<speed>
+				<walk ground="22" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7.2" />
+			<height normal="15" />
+		</collision>
+	</npc>
+</list>

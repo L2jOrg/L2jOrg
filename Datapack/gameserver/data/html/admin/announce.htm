@@ -1,0 +1,15 @@
+<html><body>
+<table width=270><tr>
+<td width=45><button value="Main" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Announcements Menu</center></td>
+<td width=45><button value="Back" action="bypass -h admin_admin7" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+</table><br><br>
+<center>New announcement:</center>
+<center><multiedit var="new_announcement" width=260 height=80></center><br>
+<center><table><tr>
+<td><button value="Add" action="bypass -h admin_add_announcement $new_announcement" width=90 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Reload" action="bypass -h admin_announce_announcements" width=90 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Critical Menu" action="bypass -h admin_list_critannouncements" width=90 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table></center>
+%announces%
+</body></html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="35465"> <!-- Millicent -->
+		<teleport name="tel1" type="OTHER">
+			<location npcStringId="1010024" x="147728" y="-56331" z="-2776" /> <!-- Village Square -->
+			<location npcStringId="1010025" x="147731" y="-58930" z="-2976" /> <!-- North Gate Entrance -->
+			<location npcStringId="1010026" x="150561" y="-57489" z="-2976" /> <!-- East Gate Entrance -->
+			<location npcStringId="1010027" x="144866" y="-57464" z="-2976" /> <!-- West Gate Entrance -->
+		</teleport>
+		<teleport name="tel2" type="OTHER">
+			<location npcStringId="1010024" x="147728" y="-56331" z="-2776" /> <!-- Village Square -->
+			<location npcStringId="1010025" x="147731" y="-58930" z="-2976" /> <!-- North Gate Entrance -->
+			<location npcStringId="1010026" x="150561" y="-57489" z="-2976" /> <!-- East Gate Entrance -->
+			<location npcStringId="1010027" x="144866" y="-57464" z="-2976" /> <!-- West Gate Entrance -->
+			<location npcStringId="1010491" x="125740" y="-40864" z="-3736" feeCount="2000" /> <!-- Varka Silenos Barracks (Lv. 76) -->
+			<location npcStringId="1010492" x="146990" y="-67128" z="-3640" feeCount="2000" /> <!-- Ketra Orc Outpost (Lv. 76) -->
+			<location npcStringId="1010530" x="169018" y="-116303" z="-2432" feeCount="2000" /> <!-- Entrance to the Forge of the Gods (Lv. 78) -->
+			<location npcStringId="1010568" x="165054" y="-47861" z="-3560" feeCount="2000" /> <!-- Wall of Argos (Lv. 71) -->
+			<location npcStringId="1010609" x="144880" y="-113468" z="-2560" feeCount="2000" /> <!-- Hot Springs (Lv. 73) -->
+		</teleport>
+	</npc>
+</list>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="14804" toLevel="10" name="Damage Reflect Attack Resistance">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="14826" toLevel="9" name="Intense Slash">
+		<!-- Glory Days confirmed -->
+		<!-- Uses aligned power to attack nearby targets with 831 power. -->
+		<icon>icon.skill_transform_s_attack</icon>
+		<operateType>A1</operateType>
+		<hitTime>2500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-183</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<affectRange>150</affectRange>
+		<affectLimit>6-12</affectLimit>
+		<reuseDelay>5000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">831</value>
+					<value level="2">8287</value>
+					<value level="3">400</value>
+					<value level="4">831</value>
+					<value level="5">1532</value>
+					<value level="6">2575</value>
+					<value level="7">4430</value>
+					<value level="8">6656</value>
+					<value level="9">8287</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="14828" toLevel="9" name="Purity Blast">
+		<!-- Glory Days confirmed -->
+		<!-- Uses pure magic to attack enemies near the target with 50 power. -->
+		<icon>icon.skill_transform_s_attack</icon>
+		<operateType>A1</operateType>
+		<castRange>500</castRange>
+		<hitTime>2500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>-183</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1000</effectRange>
+		<affectRange>200</affectRange>
+		<affectLimit>5-12</affectLimit>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">50</value>
+					<value level="2">120</value>
+					<value level="3">39</value>
+					<value level="4">50</value>
+					<value level="5">66</value>
+					<value level="6">82</value>
+					<value level="7">94</value>
+					<value level="8">108</value>
+					<value level="9">120</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="14830" toLevel="9" name="Grey Explosion">
+		<!-- Glory Days confirmed -->
+		<!-- Attacks nearby targets with a reverent heart with 985 power. -->
+		<icon>icon.skill_transform_s_attack</icon>
+		<operateType>A1</operateType>
+		<hitTime>2500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-183</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<affectRange>150</affectRange>
+		<affectLimit>6-12</affectLimit>
+		<reuseDelay>5000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">985</value>
+					<value level="2">9861</value>
+					<value level="3">473</value>
+					<value level="4">985</value>
+					<value level="5">1814</value>
+					<value level="6">3048</value>
+					<value level="7">5269</value>
+					<value level="8">7904</value>
+					<value level="9">9861</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="14832" toLevel="9" name="Platonic Blizzard">
+		<!-- Glory Days confirmed -->
+		<!-- Uses magic to attack enemies near the target using all focus with 55 power. -->
+		<icon>icon.skill_transform_s_attack</icon>
+		<operateType>A1</operateType>
+		<castRange>500</castRange>
+		<hitTime>2500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>-183</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1000</effectRange>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">85</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">80</value>
+			<value level="9">85</value>
+		</magicLvl>
+		<affectRange>200</affectRange>
+		<affectLimit>5-12</affectLimit>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">55</value>
+					<value level="2">133</value>
+					<value level="3">43</value>
+					<value level="4">55</value>
+					<value level="5">72</value>
+					<value level="6">91</value>
+					<value level="7">104</value>
+					<value level="8">120</value>
+					<value level="9">133</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+</list>

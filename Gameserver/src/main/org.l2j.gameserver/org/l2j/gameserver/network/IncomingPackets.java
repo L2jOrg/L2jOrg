@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network;
 
-import org.l2j.gameserver.mobius.gameserver.network.clientpackets.friend.*;
 import org.l2j.gameserver.network.clientpackets.*;
 import org.l2j.gameserver.network.clientpackets.friend.*;
 

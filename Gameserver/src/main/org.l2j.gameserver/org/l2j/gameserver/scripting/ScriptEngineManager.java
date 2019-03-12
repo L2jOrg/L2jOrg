@@ -1,7 +1,6 @@
 package org.l2j.gameserver.scripting;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.scripting.java.JavaScriptingEngine;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.w3c.dom.Document;
 
@@ -22,11 +21,11 @@ import java.util.logging.Logger;
  */
 public final class ScriptEngineManager implements IGameXmlReader {
     public static final Path SCRIPT_FOLDER = Paths.get(Config.DATAPACK_ROOT.getAbsolutePath(), "data", "scripts");
-    public static final Path MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "MasterHandler.java");
-    public static final Path EFFECT_MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "EffectMasterHandler.java");
-    public static final Path SKILL_CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "SkillConditionMasterHandler.java");
-    public static final Path CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "ConditionMasterHandler.java");
-    public static final Path ONE_DAY_REWARD_MASTER_HANDLER = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "DailyMissionMasterHandler.java");
+    public static final Path MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "MasterHandler.java");
+    public static final Path EFFECT_MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "EffectMasterHandler.java");
+    public static final Path SKILL_CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "SkillConditionMasterHandler.java");
+    public static final Path CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "ConditionMasterHandler.java");
+    public static final Path ONE_DAY_REWARD_MASTER_HANDLER = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "DailyMissionMasterHandler.java");
     static final List<String> _exclusions = new ArrayList<>();
     private static final Logger LOGGER = Logger.getLogger(ScriptEngineManager.class.getName());
     private final Map<String, IExecutionContext> _extEngines = new HashMap<>();
@@ -34,9 +33,6 @@ public final class ScriptEngineManager implements IGameXmlReader {
 
     protected ScriptEngineManager() {
         final Properties props = loadProperties();
-
-        // Default java engine implementation
-        registerEngine(new JavaScriptingEngine(), props);
 
         // Load external script engines
         ServiceLoader.load(IScriptingEngine.class).forEach(engine -> registerEngine(engine, props));

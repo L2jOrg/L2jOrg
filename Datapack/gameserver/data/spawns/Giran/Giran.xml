@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="Giran">
+		<group>
+			<npc id="30878" x="47984" y="186832" z="-3445" heading="42000" respawnTime="60sec" />
+			<npc id="31031" x="82272" y="147072" z="-3514" heading="16384" respawnTime="5sec" />
+			<npc id="35188" x="107386" y="145807" z="-3300" heading="32768" respawnTime="60sec" />
+			<npc id="35180" x="112661" y="144757" z="-2817" heading="32768" respawnTime="10800sec" />
+			<npc id="35180" x="113009" y="144703" z="-2817" heading="49152" respawnTime="10800sec" />
+			<npc id="35181" x="115220" y="144930" z="-2527" heading="32768" respawnTime="10800sec" />
+			<npc id="35181" x="115575" y="144864" z="-2567" heading="49152" respawnTime="10800sec" />
+			<npc id="35179" x="116535" y="146677" z="-1851" heading="49152" respawnTime="60sec" />
+			<npc id="35186" x="116984" y="145278" z="-2555" heading="32768" respawnTime="60sec" />
+			<npc id="30640" x="106345" y="135523" z="-3415" heading="0" respawnTime="60sec" />
+			<npc id="35185" x="117780" y="145257" z="-2099" heading="49000" respawnTime="60sec" />
+			<npc id="35182" x="116494" y="145516" z="-2723" heading="58824" respawnTime="60sec" />
+			<npc id="35183" x="115910" y="145101" z="-2723" heading="1353" respawnTime="60sec" />
+			<npc id="30755" x="131176" y="114676" z="-3718" heading="40960" respawnTime="60sec" />
+			<npc id="13001" x="154695" y="121097" z="-3757" heading="0" respawnTime="60sec" />
+			<npc id="35147" x="117950" y="145096" z="-2544" heading="32768" respawnTime="60sec" />
+			<npc id="30015" x="105285" y="162607" z="-3600" heading="40961" respawnTime="60sec" /> 
+			<npc id="30016" x="102247" y="155354" z="-3688" heading="7774" respawnTime="60sec" />
+			<npc id="32478" x="82652" y="146755" z="-3464" heading="33000" respawnTime="60sec" />
+		    <npc id="30097" x="79599" y="145522" z="-3496" heading="0" respawnTime="60sec" />
+		    <npc id="30098" x="79599" y="145457" z="-3496" heading="0" respawnTime="60sec" />
+		    <npc id="30624" x="79253" y="147049" z="-3528" heading="0" respawnTime="60sec" />
+		    <npc id="30614" x="87509" y="149655" z="-3400" heading="0" respawnTime="60sec" />
+		    <npc id="30090" x="80511" y="149183" z="-3504" heading="32768" respawnTime="60sec" />
+		    <npc id="30091" x="80510" y="149250" z="-3504" heading="32768" respawnTime="60sec" />
+		    <npc id="30474" x="79059" y="149457" z="-3592" heading="47548" respawnTime="60sec" />
+		    <npc id="30475" x="78766" y="149239" z="-3592" heading="16384" respawnTime="60sec" />
+		    <npc id="30476" x="78928" y="149041" z="-3592" heading="0" respawnTime="60sec" />
+		    <npc id="30118" x="86485" y="148384" z="-3400" heading="16384" respawnTime="60sec" />
+		    <npc id="30117" x="86472" y="148848" z="-3400" heading="49152" respawnTime="60sec" />
+		    <npc id="30473" x="85829" y="148365" z="-3400" heading="16384" respawnTime="60sec" />
+		    <npc id="30119" x="85828" y="148894" z="-3400" heading="49152" respawnTime="60sec" />
+		    <npc id="30108" x="85055" y="146560" z="-3400" heading="32768" respawnTime="60sec" />
+		    <npc id="30109" x="85655" y="146471" z="-3400" heading="32441" respawnTime="60sec" />
+		    <npc id="30105" x="85505" y="146208" z="-3400" heading="16384" respawnTime="60sec" />
+		    <npc id="30107" x="85502" y="146752" z="-3400" heading="49152" respawnTime="60sec" />
+		    <npc id="30106" x="85234" y="146634" z="-3400" heading="0" respawnTime="60sec" />
+		    <npc id="30472" x="85231" y="146328" z="-3400" heading="0" respawnTime="60sec" />
+	        <npc id="30645" x="84274" y="143740" z="-3400" heading="32768" respawnTime="60sec" />
+		    <npc id="30128" x="90498" y="147535" z="-3512" heading="0" respawnTime="60sec" />
+		    <npc id="30478" x="90501" y="147180" z="-3528" heading="0" respawnTime="60sec" />
+		    <npc id="30126" x="84064" y="141438" z="-3520" heading="49152" respawnTime="60sec" />
+		    <npc id="30125" x="83705" y="141439" z="-3528" heading="49152" respawnTime="60sec" />
+		    <npc id="30756" x="84521" y="146372" z="-3400" heading="16384" respawnTime="60sec" />
+		    <npc id="30093" x="83305" y="150521" z="-3512" heading="32768" respawnTime="60sec" />
+		    <npc id="30094" x="83317" y="150821" z="-3512" heading="32768" respawnTime="60sec" />
+		    <npc id="30511" x="83263" y="146667" z="-3464" heading="32768" respawnTime="60sec" />
+	        <npc id="30103" x="83264" y="146602" z="-3464" heading="32768" respawnTime="60sec" />
+		    <npc id="30104" x="83263" y="146736" z="-3464" heading="32768" respawnTime="60sec" />
+		    <npc id="30512" x="77659" y="148089" z="-3592" heading="24115" respawnTime="60sec" />
+		    <npc id="30300" x="77458" y="148169" z="-3592" heading="0" respawnTime="60sec" />
+		    <npc id="30471" x="77712" y="148288" z="-3592" heading="28672" respawnTime="60sec" />
+		    <npc id="30115" x="85823" y="153248" z="-3496" heading="50317" respawnTime="60sec" />
+		    <npc id="30110" x="85289" y="153341" z="-3496" heading="57344" respawnTime="60sec" />
+		    <npc id="30111" x="86359" y="152970" z="-3496" heading="24576" respawnTime="60sec" />
+		    <npc id="30112" x="86362" y="153337" z="-3496" heading="40960" respawnTime="60sec" />
+		    <npc id="30113" x="85253" y="153153" z="-3496" heading="0" respawnTime="60sec" />
+		    <npc id="30114" x="85297" y="152963" z="-3496" heading="8192" respawnTime="60sec" />
+		    <npc id="30081" x="80518" y="147922" z="-3504" heading="32768" respawnTime="60sec" />
+		    <npc id="30082" x="80518" y="147873" z="-3504" heading="32768" respawnTime="60sec" />
+		    <npc id="30084" x="79747" y="146492" z="-3520" heading="16384" respawnTime="60sec" />
+		    <npc id="30085" x="79801" y="146493" z="-3520" heading="16384" respawnTime="60sec" />
+		    <npc id="30087" x="79711" y="150788" z="-3520" heading="49152" respawnTime="60sec" />
+		    <npc id="30088" x="79654" y="150788" z="-3520" heading="49152" respawnTime="60sec" />
+		    <npc id="30120" x="87058" y="148634" z="-3400" heading="32767" respawnTime="60sec" />
+		    <npc id="30116" x="86912" y="148802" z="-3400" heading="40960" respawnTime="60sec" />
+		    <npc id="35451" x="78652" y="148280" z="-3576" heading="48000" respawnTime="60sec" />
+		    <npc id="30086" x="80752" y="146400" z="-3528" heading="16384" respawnTime="60sec" />
+		    <npc id="30092" x="79248" y="149552" z="-3528" heading="0" respawnTime="60sec" />
+		    <npc id="30095" x="82405" y="149905" z="-3528" heading="16384" respawnTime="60sec" />
+		    <npc id="30080" x="83396" y="147904" z="-3400" heading="16384" respawnTime="60sec" />
+		    <npc id="30123" x="81424" y="143472" z="-3528" heading="49152" respawnTime="60sec" />
+		    <npc id="30124" x="81616" y="143472" z="-3528" heading="49152" respawnTime="60sec" />
+		    <npc id="30452" x="77026" y="148813" z="-3600" heading="13863" respawnTime="60sec" />
+		    <npc id="30477" x="77029" y="148447" z="-3592" heading="32768" respawnTime="60sec" />
+		    <npc id="30121" x="81436" y="152950" z="-3528" heading="16384" respawnTime="60sec" />
+		    <npc id="30122" x="81642" y="152955" z="-3528" heading="16384" respawnTime="60sec" />
+		    <npc id="30083" x="80329" y="145482" z="-3504" heading="0" respawnTime="60sec" />
+		    <npc id="31049" x="83264" y="150176" z="-3512" heading="24576" respawnTime="60sec" />
+		    <npc id="33359" x="81388" y="149728" z="-3464" heading="47941" respawnTime="60sec" />
+		    <npc id="30020" x="80297" y="145262" z="-3528" heading="998" respawnTime="60sec" />
+		    <npc id="30936" x="80280" y="145713" z="-3528" heading="2058" respawnTime="60sec" />
+		    <npc id="31690" x="82118" y="147524" z="-3464" heading="16500" respawnTime="60sec" />
+		    <npc id="31688" x="82053" y="147526" z="-3464" heading="16500" respawnTime="60sec" />
+			<npc id="34017" x="85682" y="146265" z="-3401" heading="25072" respawnTime="60sec" /> <!-- Eilis Ein -->
+		    <npc id="34276" x="77477" y="148068" z="-3592" heading="64278" respawnTime="60sec" />
+		    <npc id="34275" x="77503" y="148013" z="-3592" heading="14903" respawnTime="60sec" />
+		    <npc id="30021" x="80289" y="145273" z="-3528" heading="998" respawnTime="60sec" />
+		    <npc id="30767" x="81424" y="149728" z="-3464" heading="49000" respawnTime="60sec" >
+				<parameters>
+					<param name="fnAgitMap" value="giran" />
+				</parameters>
+		    </npc>
+		    <npc id="30513" x="80420" y="144499" z="-3536" heading="1443" respawnTime="60sec" />
+		    <npc id="30514" x="80511" y="144377" z="-3528" heading="1014" respawnTime="60sec" />
+		    <npc id="30515" x="80511" y="144593" z="-3528" heading="1014" respawnTime="60sec" />
+		    <npc id="35452" x="78448" y="148400" z="-3592" heading="16000" respawnTime="60sec" />
+		    <npc id="35453" x="81876" y="145392" z="-3512" heading="0" respawnTime="60sec" />
+		    <npc id="35454" x="81776" y="145200" z="-3512" heading="32000" respawnTime="60sec" />
+		    <npc id="35455" x="83568" y="145264" z="-3384" heading="32000" respawnTime="60sec" />
+		    <npc id="35456" x="83680" y="145456" z="-3400" heading="0" respawnTime="60sec" />
+		    <npc id="35457" x="81133" y="151537" z="-3512" heading="32000" respawnTime="60sec" />
+		    <npc id="35458" x="81264" y="151728" z="-3528" heading="0" respawnTime="60sec" />
+		    <npc id="35459" x="81920" y="151968" z="-3512" heading="0" respawnTime="60sec" />
+		    <npc id="35460" x="81808" y="151776" z="-3528" heading="32000" respawnTime="60sec" />
+		</group>
+	</spawn>
+</list>

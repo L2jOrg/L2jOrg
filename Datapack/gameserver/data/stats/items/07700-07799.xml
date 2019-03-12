@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="7701" name="Stick of Faith" additionalName="Empower" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
+		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="916" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1160" />
+		<set name="price" val="2290000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3014" level="1" /> <!-- Special Ability: Mana Up -->
+		</skills>
+		<stats>
+			<stat type="pAtk">85</stat>
+			<stat type="mAtk">81</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7702" name="Stick of Faith" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="916" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1160" />
+		<set name="price" val="2290000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="1201" level="16" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
+		</skills>
+		<stats>
+			<stat type="pAtk">85</stat>
+			<stat type="mAtk">81</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7703" name="Stick of Faith" additionalName="Magic Regeneration" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="916" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1160" />
+		<set name="price" val="2290000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="1035" level="2" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
+		</skills>
+		<stats>
+			<stat type="pAtk">85</stat>
+			<stat type="mAtk">81</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7704" name="Stick of Eternity" additionalName="Empower" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
+		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1130" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3076" level="3" /> <!-- Special Ability: Empower -->
+		</skills>
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7705" name="Stick of Eternity" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1130" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3030" level="3" /> <!-- Special Ability: Rsk. Evasion -->
+		</skills>
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7706" name="Stick of Eternity" additionalName="Magic Regeneration" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1130" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="1045" level="3" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Blessed Body -->
+		</skills>
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7707" name="Nirvana Axe" additionalName="Empower" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
+		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1150" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3077" level="3" /> <!-- Special Ability: M. Atk. -->
+		</skills>
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7708" name="Nirvana Axe" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1150" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="1168" level="6" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse Poison -->
+		</skills>
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7709" name="Nirvana Axe" additionalName="Magic Regeneration" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1150" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="1164" level="9" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse Weakness -->
+		</skills>
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7710" name="Club of Nature" additionalName="Empower" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
+		<set name="icon" val="icon.weapon_club_of_nature_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1100" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Ability: Acumen -->
+		</skills>
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7711" name="Club of Nature" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+		<set name="icon" val="icon.weapon_club_of_nature_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1100" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="1035" level="3" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
+		</skills>
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7712" name="Club of Nature" additionalName="Magic Regeneration" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+		<set name="icon" val="icon.weapon_club_of_nature_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1100" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="1201" level="21" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
+		</skills>
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7713" name="Mace of Underworld" additionalName="Empower" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
+		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1090" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3014" level="1" /> <!-- Special Ability: Mana Up -->
+		</skills>
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7714" name="Mace of Underworld" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1090" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3078" level="3" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
+		</skills>
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7715" name="Mace of Underworld" additionalName="Magic Regeneration" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1090" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3048" level="1" /> <!-- Special Ability: Conversion -->
+		</skills>
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7716" name="Inferno Staff" additionalName="Empower" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1000" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Ability: Acumen -->
+		</skills>
+		<stats>
+			<stat type="pAtk">135</stat>
+			<stat type="mAtk">111</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7717" name="Inferno Staff" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1000" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3078" level="3" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
+		</skills>
+		<stats>
+			<stat type="pAtk">135</stat>
+			<stat type="mAtk">111</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7718" name="Inferno Staff" additionalName="Magic Regeneration" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1000" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3079" level="3" type_chance="5" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Paralyze -->
+		</skills>
+		<stats>
+			<stat type="pAtk">135</stat>
+			<stat type="mAtk">111</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7719" name="Poleaxe" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
+		<set name="icon" val="icon.weapon_poleaxe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="3016" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Stun -->
+		</skills>
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="7720" name="Poleaxe" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_poleaxe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;80;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="7721" name="Poleaxe" additionalName="Critical Stun" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has about a 25% chance of casting Stun on the target during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_poleaxe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;180" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="7722" name="Sword of Valhalla" additionalName="Empower" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 96. -->
+		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1157" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="900" />
+		<set name="price" val="8680000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Ability: Acumen -->
+		</skills>
+		<stats>
+			<stat type="pAtk">140</stat>
+			<stat type="mAtk">122</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7723" name="Sword of Valhalla" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1157" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="900" />
+		<set name="price" val="8680000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="1164" level="11" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse Weakness -->
+		</skills>
+		<stats>
+			<stat type="pAtk">140</stat>
+			<stat type="mAtk">122</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7724" name="Sword of Valhalla" additionalName="Magic Regeneration" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 14%. -->
+		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1157" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="900" />
+		<set name="price" val="8680000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="1044" level="3" type_chance="30" type="ON_MAGIC_SKILL" /> <!-- Regeneration -->
+		</skills>
+		<stats>
+			<stat type="pAtk">140</stat>
+			<stat type="mAtk">122</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+</list>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/castleData.xsd">
+	<castle id="4"> <!-- Oren Castle -->
+		<spawns>
+			<!-- Light -->
+			<npc id="35226" castleSide="LIGHT" x="83171" y="37092" z="-2266" heading="32768" /> <!-- Chamberlain of Light -->
+			<npc id="36612" castleSide="LIGHT" x="83020" y="53263" z="-1496" heading="31000" /> <!-- Proclaimer -->
+			<!-- Dark -->
+			<npc id="36656" castleSide="DARK" x="83171" y="37092" z="-2266" heading="32768" /> <!-- Chamberlain of Darkness -->
+		</spawns>
+		<siegeGuards>
+			<guard itemId="6077" type="SWORD" stationary="true" npcId="35030" npcMaxAmount="2" /> <!-- Greater Mercenary Posting Ticket (Sword/Stationary) -->
+			<guard itemId="6078" type="POLE" stationary="true" npcId="35031" npcMaxAmount="2" /> <!-- Greater Mercenary Posting Ticket (Spear/Stationary) -->
+			<guard itemId="6079" type="BOW" stationary="true" npcId="35032" npcMaxAmount="5" /> <!-- Greater Mercenary Posting Ticket (Bow/Stationary) -->
+			<guard itemId="6080" type="CLERIC" stationary="true" npcId="35033" npcMaxAmount="1" /> <!-- Greater Mercenary Posting Ticket (Cleric/Stationary) -->
+			<guard itemId="6081" type="WIZARD" stationary="true" npcId="35034" npcMaxAmount="1" /> <!-- Greater Mercenary Posting Ticket (Wizard/Stationary) -->
+			<guard itemId="6082" type="SWORD" stationary="false" npcId="35035" npcMaxAmount="2" /> <!-- Greater Mercenary Posting Ticket (Sword/Mobile) -->
+			<guard itemId="6083" type="POLE" stationary="false" npcId="35036" npcMaxAmount="2" /> <!-- Greater Mercenary Posting Ticket (Spear/Mobile) -->
+			<guard itemId="6084" type="BOW" stationary="false" npcId="35037" npcMaxAmount="5" /> <!-- Greater Mercenary Posting Ticket (Bow/Mobile) -->
+			<guard itemId="6085" type="CLERIC" stationary="false" npcId="35038" npcMaxAmount="1" /> <!-- Greater Mercenary Posting Ticket (Cleric/Mobile) -->
+			<guard itemId="6086" type="WIZARD" stationary="false" npcId="35039" npcMaxAmount="1" /> <!-- Greater Mercenary Posting Ticket (Wizard/Mobile) -->
+			<guard itemId="6145" type="SWORD" stationary="true" npcId="35020" npcMaxAmount="5" /> <!-- Dawn Mercenary Posting Ticket (Sword/Stationary) -->
+			<guard itemId="6146" type="POLE" stationary="true" npcId="35021" npcMaxAmount="2" /> <!-- Dawn Mercenary Posting Ticket (Spear/Stationary) -->
+			<guard itemId="6147" type="BOW" stationary="true" npcId="35022" npcMaxAmount="10" /> <!-- Dawn Mercenary Posting Ticket (Bow/Stationary) -->
+			<guard itemId="6148" type="CLERIC" stationary="true" npcId="35023" npcMaxAmount="2" /> <!-- Dawn Mercenary Posting Ticket (Cleric/Stationary) -->
+			<guard itemId="6149" type="WIZARD" stationary="true" npcId="35024" npcMaxAmount="2" /> <!-- Dawn Mercenary Posting Ticket (Wizard/Stationary) -->
+			<guard itemId="6150" type="SWORD" stationary="false" npcId="35025" npcMaxAmount="5" /> <!-- Dawn Mercenary Posting Ticket (Sword/Mobile) -->
+			<guard itemId="6151" type="POLE" stationary="false" npcId="35026" npcMaxAmount="2" /> <!-- Dawn Mercenary Posting Ticket (Spear/Mobile) -->
+			<guard itemId="6152" type="BOW" stationary="false" npcId="35027" npcMaxAmount="10" /> <!-- Dawn Mercenary Posting Ticket (Bow/Mobile) -->
+			<guard itemId="6153" type="CLERIC" stationary="false" npcId="35028" npcMaxAmount="2" /> <!-- Dawn Mercenary Posting Ticket (Cleric/Mobile) -->
+			<guard itemId="6154" type="WIZARD" stationary="false" npcId="35029" npcMaxAmount="2" /> <!-- Dawn Mercenary Posting Ticket (Wizard/Mobile) -->
+			<guard itemId="6205" type="SWORD" stationary="true" npcId="35040" npcMaxAmount="2" /> <!-- Greater Recruit Posting Ticket (Sword/Stationary) -->
+			<guard itemId="6206" type="POLE" stationary="true" npcId="35041" npcMaxAmount="2" /> <!-- Greater Recruit Posting Ticket (Spear/Stationary) -->
+			<guard itemId="6207" type="BOW" stationary="true" npcId="35042" npcMaxAmount="5" /> <!-- Greater Recruit Posting Ticket (Bow/Stationary) -->
+			<guard itemId="6208" type="CLERIC" stationary="true" npcId="35043" npcMaxAmount="1" /> <!-- Greater Recruit Posting Ticket (Cleric/Stationary) -->
+			<guard itemId="6209" type="WIZARD" stationary="true" npcId="35044" npcMaxAmount="1" /> <!-- Greater Recruit Posting Ticket (Wizard/Stationary) -->
+			<guard itemId="6210" type="SWORD" stationary="false" npcId="35045" npcMaxAmount="2" /> <!-- Greater Recruit Posting Ticket (Sword/Mobile) -->
+			<guard itemId="6211" type="POLE" stationary="false" npcId="35046" npcMaxAmount="2" /> <!-- Greater Recruit Posting Ticket (Spear/Mobile) -->
+			<guard itemId="6212" type="BOW" stationary="false" npcId="35047" npcMaxAmount="5" /> <!-- Greater Recruit Posting Ticket (Bow/Mobile) -->
+			<guard itemId="6213" type="CLERIC" stationary="false" npcId="35048" npcMaxAmount="1" /> <!-- Greater Recruit Posting Ticket (Cleric/Mobile) -->
+			<guard itemId="6214" type="WIZARD" stationary="false" npcId="35049" npcMaxAmount="1" /> <!-- Greater Recruit Posting Ticket (Wizard/Mobile) -->
+			<guard itemId="6265" type="SWORD" stationary="true" npcId="35050" npcMaxAmount="5" /> <!-- Recruit Posting Ticket (Sword/Stationary) -->
+			<guard itemId="6266" type="POLE" stationary="true" npcId="35051" npcMaxAmount="3" /> <!-- Recruit Posting Ticket (Spear/Stationary) -->
+			<guard itemId="6267" type="BOW" stationary="true" npcId="35052" npcMaxAmount="10" /> <!-- Recruit Posting Ticket (Bow/Stationary) -->
+			<guard itemId="6268" type="CLERIC" stationary="true" npcId="35053" npcMaxAmount="2" /> <!-- Recruit Posting Ticket (Cleric/Stationary) -->
+			<guard itemId="6269" type="WIZARD" stationary="true" npcId="35054" npcMaxAmount="2" /> <!-- Recruit Posting Ticket (Wizard/Stationary) -->
+			<guard itemId="6270" type="SWORD" stationary="false" npcId="35055" npcMaxAmount="5" /> <!-- Recruit Posting Ticket (Sword/Mobile) -->
+			<guard itemId="6271" type="POLE" stationary="false" npcId="35056" npcMaxAmount="3" /> <!-- Recruit Posting Ticket (Spear/Mobile) -->
+			<guard itemId="6272" type="BOW" stationary="false" npcId="35057" npcMaxAmount="10" /> <!-- Recruit Posting Ticket (Bow/Mobile) -->
+			<guard itemId="6273" type="CLERIC" stationary="false" npcId="35058" npcMaxAmount="2" /> <!-- Recruit Posting Ticket (Cleric/Mobile) -->
+			<guard itemId="6274" type="WIZARD" stationary="false" npcId="35059" npcMaxAmount="2" /> <!-- Recruit Posting Ticket (Wizard/Mobile) -->
+			<guard itemId="6301" type="SWORD" stationary="false" npcId="35060" npcMaxAmount="1" /> <!-- Nephilim Warrior Posting Ticket -->
+			<guard itemId="6302" type="WIZARD" stationary="false" npcId="35061" npcMaxAmount="1" /> <!-- Nephilim Shaman Posting Ticket -->
+			<guard itemId="3999" type="SWORD" stationary="true" npcId="35010" npcMaxAmount="5" /> <!-- Mercenary Posting Ticket (Sword/Stationary) -->
+			<guard itemId="4000" type="POLE" stationary="true" npcId="35011" npcMaxAmount="3" /> <!-- Mercenary Posting Ticket (Spear/Stationary) -->
+			<guard itemId="4001" type="BOW" stationary="true" npcId="35012" npcMaxAmount="10" /> <!-- Mercenary Posting Ticket (Bow/Stationary) -->
+			<guard itemId="4002" type="CLERIC" stationary="true" npcId="35013" npcMaxAmount="2" /> <!-- Mercenary Posting Ticket (Cleric/Stationary) -->
+			<guard itemId="4003" type="WIZARD" stationary="true" npcId="35014" npcMaxAmount="2" /> <!-- Mercenary Posting Ticket (Wizard/Stationary) -->
+			<guard itemId="4004" type="SWORD" stationary="false" npcId="35015" npcMaxAmount="5" /> <!-- Mercenary Posting Ticket (Sword/Mobile) -->
+			<guard itemId="4005" type="POLE" stationary="false" npcId="35016" npcMaxAmount="3" /> <!-- Mercenary Posting Ticket (Spear/Mobile) -->
+			<guard itemId="4006" type="BOW" stationary="false" npcId="35017" npcMaxAmount="10" /> <!-- Mercenary Posting Ticket (Bow/Mobile) -->
+			<guard itemId="4007" type="CLERIC" stationary="false" npcId="35018" npcMaxAmount="2" /> <!-- Mercenary Posting Ticket (Cleric/Mobile) -->
+			<guard itemId="4008" type="WIZARD" stationary="false" npcId="35019" npcMaxAmount="2" /> <!-- Mercenary Posting Ticket (Wizard/Mobile) -->
+			<guard itemId="4009" type="TELEPORTER" stationary="true" npcId="35218" npcMaxAmount="1" /> <!-- Mercenary Posting Ticket (Teleporter1) -->
+			<guard itemId="4010" type="TELEPORTER" stationary="true" npcId="35219" npcMaxAmount="1" /> <!-- Mercenary Posting Ticket (Teleporter2) -->
+			<guard itemId="4011" type="TELEPORTER" stationary="true" npcId="35220" npcMaxAmount="1" /> <!-- Mercenary Posting Ticket (Teleporter3) -->
+		</siegeGuards>
+	</castle>
+</list>

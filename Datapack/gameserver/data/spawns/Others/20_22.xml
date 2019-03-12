@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="20_22">
+		<group>
+			<npc id="33359" x="18890" y="145933" z="-3072" heading="48351" respawnTime="60sec" /> <!-- Kerry -->
+			<npc id="31597" x="19605" y="143308" z="-3024" heading="52981" respawnTime="60sec" /> <!-- Tobald -->
+			<npc id="34272" x="19550" y="143088" z="-3024" heading="10052" respawnTime="60sec" /> <!-- Mihai -->
+			<npc id="32478" x="20560" y="144788" z="-3080" heading="33127" respawnTime="60sec" /> <!-- Dimensional Merchant -->
+			<npc id="30767" x="16721" y="154985" z="-3624" heading="625" respawnTime="60sec" > <!-- Auctioneer -->
+				<parameters>
+					<param name="fnAgitMap" value="dion01"/>
+				</parameters>
+			</npc>
+			<npc id="36730" x="16314" y="155714" z="-3632" heading="48583" respawnTime="60sec" /> <!-- Faolin -->
+			<npc id="36736" x="16043" y="154636" z="-3632" heading="65365" respawnTime="60sec" /> <!-- Lenning -->
+			<npc id="36732" x="15345" y="155887" z="-3624" heading="48698" respawnTime="60sec" /> <!-- Coren -->
+			<npc id="36734" x="14666" y="155348" z="-3504" heading="65224" respawnTime="60sec" /> <!-- Muren -->
+			<npc id="36729" x="16277" y="155810" z="-3616" heading="17605" respawnTime="60sec" /> <!-- Bremen -->
+			<npc id="36735" x="15910" y="154561" z="-3616" heading="30708" respawnTime="60sec" /> <!-- Yuven -->
+			<npc id="36731" x="15314" y="156000" z="-3616" heading="13606" respawnTime="60sec" /> <!-- Kalein -->
+			<npc id="36733" x="14581" y="155317" z="-3496" heading="34066" respawnTime="60sec" /> <!-- Winsnun -->
+			<npc id="30012" x="19539" y="145987" z="-3064" heading="33316" respawnTime="60sec" /> <!-- Fishing Guild Member -->
+		</group>
+	</spawn>
+</list>

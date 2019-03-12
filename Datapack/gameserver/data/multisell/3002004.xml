@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30020</npc> <!-- Baggins -->
+	</npcs>
+	<item>
+		<ingredient count="1" id="49682" /> <!-- Baium's Soul -->
+		<ingredient count="1" id="49681" /> <!-- Talisman of Insolence VI -->
+		<production count="1" id="49683" /> <!-- Talisman of Baium -->
+	</item>
+</list>

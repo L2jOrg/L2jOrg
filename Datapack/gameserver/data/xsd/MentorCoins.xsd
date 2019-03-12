@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="mentee" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:attribute type="xs:byte" name="level" use="optional" />
+						<xs:attribute type="xs:short" name="coins" use="optional" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

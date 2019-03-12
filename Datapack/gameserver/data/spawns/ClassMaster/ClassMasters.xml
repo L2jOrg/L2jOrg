@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="ClassMasters" ai="ClassMaster">
+		<group spawnByDefault="false">
+			<!-- Aden -->
+			<npc id="31756" x="147728" y="27408" z="-2198" heading="16500" respawnTime="60sec" /> <!-- Mr. Cat -->
+			<npc id="31757" x="147761" y="27408" z="-2198" heading="16500" respawnTime="60sec" /> <!-- Queen of Hearts -->
+			<!-- Dion -->
+			<npc id="31756" x="15584" y="142784" z="-2699" heading="16500" respawnTime="60sec" /> <!-- Mr. Cat -->
+			<npc id="31757" x="15631" y="142778" z="-2699" heading="16500" respawnTime="60sec" /> <!-- Queen of Hearts -->
+			<!-- Giran -->
+			<npc id="31756" x="83076" y="147912" z="-3467" heading="32000" respawnTime="60sec" /> <!-- Mr. Cat -->
+			<npc id="31757" x="83082" y="147845" z="-3467" heading="32000" respawnTime="60sec" /> <!-- Queen of Hearts -->
+			<!-- Gludin -->
+			<npc id="31756" x="-82032" y="150160" z="-3122" heading="16500" respawnTime="60sec" /> <!-- Mr. Cat -->
+			<npc id="31757" x="-81967" y="150160" z="-3122" heading="16500" respawnTime="60sec" /> <!-- Queen of Hearts -->
+			<!-- Goddard -->
+			<npc id="31756" x="148560" y="-57952" z="-2974" heading="53000" respawnTime="60sec" /> <!-- Mr. Cat -->
+			<npc id="31756" x="147888" y="-58048" z="-2979" heading="49000" respawnTime="60sec" /> <!-- Mr. Cat -->
+			<npc id="31756" x="147262" y="-56450" z="-2776" heading="33000" respawnTime="60sec" /> <!-- Mr. Cat -->
+			<npc id="31757" x="148514" y="-57972" z="-2974" heading="53000" respawnTime="60sec" /> <!-- Queen of Hearts -->
+			<npc id="31757" x="147924" y="-58052" z="-2979" heading="49000" respawnTime="60sec" /> <!-- Queen of Hearts -->
+			<npc id="31757" x="147285" y="-56461" z="-2776" heading="11500" respawnTime="60sec" /> <!-- Queen of Hearts -->
+			<!-- Hunters' Village -->
+			<npc id="31756" x="117200" y="75824" z="-2725" heading="25000" respawnTime="60sec" /> <!-- Mr. Cat -->
+			<npc id="31757" x="117160" y="75784" z="-2725" heading="25000" respawnTime="60sec" /> <!-- Queen of Hearts -->
+			<!-- 19_21 -->
+			<npc id="31756" x="-14048" y="123184" z="-3115" heading="32000" respawnTime="60sec" /> <!-- Mr. Cat -->
+			<npc id="31757" x="-14050" y="123229" z="-3115" heading="32000" respawnTime="60sec" /> <!-- Queen of Hearts -->
+			<!-- 20_23 -->
+			<npc id="31756" x="17956" y="170536" z="-3499" heading="48000" respawnTime="60sec" /> <!-- Mr. Cat -->
+			<npc id="31757" x="17913" y="170536" z="-3499" heading="48000" respawnTime="60sec" /> <!-- Queen of Hearts -->
+			<!-- 23_24 -->
+			<npc id="31756" x="110592" y="220400" z="-3667" respawnTime="60sec" /> <!-- Mr. Cat -->
+			<npc id="31757" x="110592" y="220443" z="-3667" respawnTime="60sec" /> <!-- Queen of Hearts -->
+			<!-- Oren -->
+			<npc id="31756" x="81136" y="54576" z="-1517" heading="32000" respawnTime="60sec" /> <!-- Mr. Cat -->
+			<npc id="31757" x="81126" y="54519" z="-1517" heading="32000" respawnTime="60sec" /> <!-- Queen of Hearts -->
+		</group>
+	</spawn>
+</list>

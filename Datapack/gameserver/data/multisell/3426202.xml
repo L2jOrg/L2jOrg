@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>34262</npc> <!-- Sibi Manager -->
+	</npcs>
+	<item>
+		<!-- Sibi's Coin -->
+		<ingredient id="49783" count="50" /> <!-- Sibi's Coin -->
+		<production id="49580" count="1" chance="1" /> <!-- Baium Ring -->
+		<production id="49785" count="1" chance="1" /> <!-- Weapon Supply Box A-grade -->
+		<production id="90014" count="1" chance="1" /> <!-- High Grade Life Stone -->
+		<production id="6662" count="1" chance="1" /> <!-- Ring of Core -->
+		<production id="6661" count="1" chance="1" /> <!-- Orfen's Earring  -->
+		<production id="49682" count="1" chance="1" /> <!-- Baium Soul  -->
+		<production id="49756" count="1" chance="1" /> <!-- Cloth Piece  -->
+		<production id="70007" count="1" chance="1" /> <!-- Sealed Rune Lv.8  -->
+		<production id="49681" count="1" chance="1" /> <!-- Talisman of Insolence VI -->
+		<production id="49789" count="1" chance="1" /> <!-- +8 Enchanted Weapon Supply Box B-grade -->
+		<production id="49790" count="1" chance="1" /> <!-- +16 Enchanted Weapon Supply Box C-grade -->
+		<production id="49783" count="50" chance="10" /> <!-- Sibi's Coin -->
+		<production id="49783" count="30" chance="15" /> <!-- Sibi's Coin -->
+		<production id="49783" count="20" chance="25" /> <!-- Sibi's Coin -->
+		<production id="49783" count="5" chance="39" /> <!-- Sibi's Coin -->
+	</item>
+</list>

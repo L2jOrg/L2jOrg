@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="35386"> <!-- Boyer -->
+		<teleport name="tel1" type="OTHER">
+			<location npcStringId="1010024" x="-14393" y="123671" z="-3144" /> <!-- Village Square -->
+			<location npcStringId="1010026" x="-11817" y="123652" z="-3079" /> <!-- East Gate Entrance -->
+			<location npcStringId="1010027" x="-16796" y="124108" z="-3127" /> <!-- West Gate Entrance -->
+			<location npcStringId="1010028" x="-14207" y="126547" z="-3151" /> <!-- South Gate Entrance -->
+			<location npcStringId="1010025" x="-14591" y="121024" z="-2990" /> <!-- North Gate Entrance -->
+		</teleport>
+		<teleport name="tel2" type="OTHER">
+			<location npcStringId="1010024" x="-14393" y="123671" z="-3144" /> <!-- Village Square -->
+			<location npcStringId="1010026" x="-11817" y="123652" z="-3079" /> <!-- East Gate Entrance -->
+			<location npcStringId="1010027" x="-16796" y="124108" z="-3127" /> <!-- West Gate Entrance -->
+			<location npcStringId="1010028" x="-14207" y="126547" z="-3151" /> <!-- South Gate Entrance -->
+			<location npcStringId="1010025" x="-14591" y="121024" z="-2990" /> <!-- North Gate Entrance -->
+			<location npcStringId="1010097" x="-41248" y="122848" z="-2912" feeCount="2000" /> <!-- Ruins of Agony (Lv. 25) -->
+			<location npcStringId="1010101" x="-19359" y="136846" z="-3760" feeCount="2000" /> <!-- Ruins of Despair (Lv. 30) -->
+			<location npcStringId="1010566" x="-9959" y="176184" z="-4160" feeCount="2000" /> <!-- Ant Nest (Lv. 29) -->
+			<location npcStringId="1010102" x="-28327" y="155125" z="-3496" feeCount="2000" castleId="1" /> <!-- Windawood Manor (Lv. 22) -->
+		</teleport>
+	</npc>
+</list>

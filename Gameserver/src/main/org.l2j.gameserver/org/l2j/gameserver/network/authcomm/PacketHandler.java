@@ -1,7 +1,6 @@
 package org.l2j.gameserver.network.authcomm;
 
 import io.github.joealisson.mmocore.ReadablePacket;
-import org.l2j.gameserver.mobius.gameserver.network.authcomm.as2gs.*;
 import org.l2j.gameserver.network.authcomm.as2gs.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +34,7 @@ public class PacketHandler implements io.github.joealisson.mmocore.PacketHandler
 				packet = new GetAccountInfo();
 				break;
 			case 0x06:
-				packet = new ChangePasswordResponse();
+				// packet = new ChangePasswordResponse();
 				break;
 			case 0xff:
 				packet = new PingRequest();

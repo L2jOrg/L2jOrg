@@ -1,0 +1,1840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<zone name="monster_race_0" type="RespawnZone" shape="NPoly" minZ="-3596" maxZ="-3396">
+		<node X="11712" Y="181566" />
+		<node X="14407" Y="181566" />
+		<node X="14407" Y="182676" />
+		<node X="11712" Y="182676" />
+		<race name="HUMAN" point="monster_race" />
+		<race name="DARK_ELF" point="monster_race" />
+		<race name="ORC" point="monster_race" />
+		<race name="DWARF" point="monster_race" />
+		<race name="ELF" point="monster_race" />
+		<race name="KAMAEL" point="monster_race" />
+	</zone>
+	<zone name="monster_race_1" type="RespawnZone" shape="NPoly" minZ="-3615" maxZ="-3415">
+		<node X="13308" Y="181324" />
+		<node X="14058" Y="181324" />
+		<node X="14059" Y="181567" />
+		<node X="13308" Y="181567" />
+		<race name="HUMAN" point="monster_race" />
+		<race name="DARK_ELF" point="monster_race" />
+		<race name="ORC" point="monster_race" />
+		<race name="DWARF" point="monster_race" />
+		<race name="ELF" point="monster_race" />
+		<race name="KAMAEL" point="monster_race" />
+	</zone>
+	<zone name="monster_race_2" type="RespawnZone" shape="NPoly" minZ="-3610" maxZ="-3410">
+		<node X="13560" Y="182677" />
+		<node X="14071" Y="182677" />
+		<node X="14071" Y="182918" />
+		<node X="13561" Y="182917" />
+		<race name="HUMAN" point="monster_race" />
+		<race name="DARK_ELF" point="monster_race" />
+		<race name="ORC" point="monster_race" />
+		<race name="DWARF" point="monster_race" />
+		<race name="ELF" point="monster_race" />
+		<race name="KAMAEL" point="monster_race" />
+	</zone>
+	<zone name="monster_race_PVP" type="RespawnZone" shape="NPoly" minZ="-3612" maxZ="-3412">
+		<node X="11699" Y="182677" />
+		<node X="13197" Y="182677" />
+		<node X="13197" Y="184265" />
+		<node X="11694" Y="184265" />
+		<race name="HUMAN" point="monster_race_PVP" />
+		<race name="DARK_ELF" point="monster_race_PVP" />
+		<race name="ORC" point="monster_race_PVP" />
+		<race name="DWARF" point="monster_race_PVP" />
+		<race name="ELF" point="monster_race_PVP" />
+		<race name="KAMAEL" point="monster_race_PVP" />
+	</zone>
+	<zone name="oracle_of_dawn" type="RespawnZone" shape="NPoly" minZ="-5709" maxZ="-4009">
+		<node X="-80523" Y="108356" />
+		<node X="-72583" Y="108389" />
+		<node X="-72539" Y="115049" />
+		<node X="-80511" Y="114878" />
+		<race name="HUMAN" point="oracle_of_dawn" />
+		<race name="DARK_ELF" point="oracle_of_dawn" />
+		<race name="ORC" point="oracle_of_dawn" />
+		<race name="DWARF" point="oracle_of_dawn" />
+		<race name="ELF" point="oracle_of_dawn" />
+		<race name="KAMAEL" point="oracle_of_dawn" />
+	</zone>
+	<zone name="oracle_of_dusk" type="RespawnZone" shape="NPoly" minZ="-5835" maxZ="-4135">
+		<node X="-81548" Y="83569" />
+		<node X="-73649" Y="83619" />
+		<node X="-73685" Y="90050" />
+		<node X="-81556" Y="90016" />
+		<race name="HUMAN" point="oracle_of_dusk" />
+		<race name="DARK_ELF" point="oracle_of_dusk" />
+		<race name="ORC" point="oracle_of_dusk" />
+		<race name="DWARF" point="oracle_of_dusk" />
+		<race name="ELF" point="oracle_of_dusk" />
+		<race name="KAMAEL" point="oracle_of_dusk" />
+	</zone>
+	<zone name="gm_room_solo1" type="RespawnZone" shape="NPoly" minZ="-3049" maxZ="-2849">
+		<node X="-116299" Y="-251426" />
+		<node X="-115745" Y="-251426" />
+		<node X="-115745" Y="-250840" />
+		<node X="-116296" Y="-250840" />
+		<race name="HUMAN" point="gm_room_solo1" />
+		<race name="DARK_ELF" point="gm_room_solo1" />
+		<race name="ORC" point="gm_room_solo1" />
+		<race name="DWARF" point="gm_room_solo1" />
+		<race name="ELF" point="gm_room_solo1" />
+		<race name="KAMAEL" point="gm_room_solo1" />
+	</zone>
+	<zone name="gm_room_solo2" type="RespawnZone" shape="NPoly" minZ="-3053" maxZ="-2853">
+		<node X="-113350" Y="-251408" />
+		<node X="-112797" Y="-251407" />
+		<node X="-112798" Y="-250855" />
+		<node X="-113353" Y="-250857" />
+		<race name="HUMAN" point="gm_room_solo2" />
+		<race name="DARK_ELF" point="gm_room_solo2" />
+		<race name="ORC" point="gm_room_solo2" />
+		<race name="DWARF" point="gm_room_solo2" />
+		<race name="ELF" point="gm_room_solo2" />
+		<race name="KAMAEL" point="gm_room_solo2" />
+	</zone>
+	<zone name="gm_room" type="RespawnZone" shape="NPoly" minZ="-3050" maxZ="-2850">
+		<node X="-115727" Y="-251652" />
+		<node X="-113365" Y="-251655" />
+		<node X="-113365" Y="-248191" />
+		<node X="-115727" Y="-248194" />
+		<race name="HUMAN" point="gm_room" />
+		<race name="DARK_ELF" point="gm_room" />
+		<race name="ORC" point="gm_room" />
+		<race name="DWARF" point="gm_room" />
+		<race name="ELF" point="gm_room" />
+		<race name="KAMAEL" point="gm_room" />
+	</zone>
+	<zone name="aden_town_23_17" type="RespawnZone" shape="NPoly" minZ="-4500" maxZ="-597">
+		<node X="116830" Y="-12269" />
+		<node X="131272" Y="-19475" />
+		<node X="131238" Y="195" />
+		<node X="104496" Y="195" />
+		<node X="106432" Y="-2933" />
+		<race name="HUMAN" point="aden_town" />
+		<race name="DARK_ELF" point="aden_town" />
+		<race name="ORC" point="aden_town" />
+		<race name="DWARF" point="aden_town" />
+		<race name="ELF" point="aden_town" />
+		<race name="KAMAEL" point="aden_town" />
+	</zone>
+	<zone name="oren_castle_town_23_18_2" type="RespawnZone" shape="NPoly" minZ="-3908" maxZ="-2408">
+		<node X="98126" Y="18787" />
+		<node X="102283" Y="18620" />
+		<node X="105152" Y="24613" />
+		<node X="104326" Y="30622" />
+		<node X="98088" Y="30664" />
+		<race name="HUMAN" point="oren_castle_town" />
+		<race name="DARK_ELF" point="oren_castle_town" />
+		<race name="ORC" point="oren_castle_town" />
+		<race name="DWARF" point="oren_castle_town" />
+		<race name="ELF" point="oren_castle_town" />
+		<race name="KAMAEL" point="oren_castle_town" />
+	</zone>
+	<zone name="oren_castle_town_23_18_1" type="RespawnZone" shape="NPoly" minZ="-4099" maxZ="-2599">
+		<node X="98122" Y="-125" />
+		<node X="104157" Y="-125" />
+		<node X="104780" Y="5964" />
+		<node X="104829" Y="14388" />
+		<node X="102556" Y="19146" />
+		<node X="98122" Y="19207" />
+		<race name="HUMAN" point="oren_castle_town" />
+		<race name="DARK_ELF" point="oren_castle_town" />
+		<race name="ORC" point="oren_castle_town" />
+		<race name="DWARF" point="oren_castle_town" />
+		<race name="ELF" point="oren_castle_town" />
+		<race name="KAMAEL" point="oren_castle_town" />
+	</zone>
+	<zone name="giran_castle_town_22_20_4" type="RespawnZone" shape="NPoly" minZ="-3966" maxZ="-2466">
+		<node X="65560" Y="72724" />
+		<node X="66998" Y="75856" />
+		<node X="67000" Y="91140" />
+		<node X="65546" Y="91138" />
+		<race name="HUMAN" point="giran_castle_town" />
+		<race name="DARK_ELF" point="giran_castle_town" />
+		<race name="ORC" point="giran_castle_town" />
+		<race name="DWARF" point="giran_castle_town" />
+		<race name="ELF" point="giran_castle_town" />
+		<race name="KAMAEL" point="giran_castle_town" />
+	</zone>
+	<zone name="giran_castle_town_22_20_3" type="RespawnZone" shape="NPoly" minZ="-3979" maxZ="-2479">
+		<node X="65541" Y="89966" />
+		<node X="72218" Y="92923" />
+		<node X="81223" Y="98341" />
+		<node X="65537" Y="98341" />
+		<race name="HUMAN" point="giran_castle_town" />
+		<race name="DARK_ELF" point="giran_castle_town" />
+		<race name="ORC" point="giran_castle_town" />
+		<race name="DWARF" point="giran_castle_town" />
+		<race name="ELF" point="giran_castle_town" />
+		<race name="KAMAEL" point="giran_castle_town" />
+	</zone>
+	<zone name="giran_castle_town_22_20_2" type="RespawnZone" shape="NPoly" minZ="-3953" maxZ="-2453">
+		<node X="73291" Y="96517" />
+		<node X="81049" Y="95737" />
+		<node X="90505" Y="98448" />
+		<node X="73307" Y="98389" />
+		<race name="HUMAN" point="giran_castle_town" />
+		<race name="DARK_ELF" point="giran_castle_town" />
+		<race name="ORC" point="giran_castle_town" />
+		<race name="DWARF" point="giran_castle_town" />
+		<race name="ELF" point="giran_castle_town" />
+		<race name="KAMAEL" point="giran_castle_town" />
+	</zone>
+	<zone name="giran_castle_town_22_20_1" type="RespawnZone" shape="NPoly" minZ="-3976" maxZ="-2476">
+		<node X="91486" Y="94741" />
+		<node X="98321" Y="96310" />
+		<node X="98342" Y="98409" />
+		<node X="83284" Y="98399" />
+		<race name="HUMAN" point="giran_castle_town" />
+		<race name="DARK_ELF" point="giran_castle_town" />
+		<race name="ORC" point="giran_castle_town" />
+		<race name="DWARF" point="giran_castle_town" />
+		<race name="ELF" point="giran_castle_town" />
+		<race name="KAMAEL" point="giran_castle_town" />
+	</zone>
+	<zone name="aden_town_23_19_3" type="RespawnZone" shape="NPoly" minZ="-3671" maxZ="3829">
+		<node X="127915" Y="59088" />
+		<node X="128711" Y="55378" />
+		<node X="131199" Y="51613" />
+		<node X="131220" Y="64225" />
+		<node X="128354" Y="62776" />
+		<race name="HUMAN" point="aden_town" />
+		<race name="DARK_ELF" point="aden_town" />
+		<race name="ORC" point="aden_town" />
+		<race name="DWARF" point="aden_town" />
+		<race name="ELF" point="aden_town" />
+		<race name="KAMAEL" point="aden_town" />
+	</zone>
+	<zone name="aden_town_23_19_2" type="RespawnZone" shape="NPoly" minZ="-3826" maxZ="-1326">
+		<node X="127605" Y="32531" />
+		<node X="131035" Y="32562" />
+		<node X="131199" Y="54562" />
+		<node X="129347" Y="49354" />
+		<race name="HUMAN" point="aden_town" />
+		<race name="DARK_ELF" point="aden_town" />
+		<race name="ORC" point="aden_town" />
+		<race name="DWARF" point="aden_town" />
+		<race name="ELF" point="aden_town" />
+		<race name="KAMAEL" point="aden_town" />
+	</zone>
+	<zone name="aden_town_23_19_1" type="RespawnZone" shape="NPoly" minZ="-4089" maxZ="-1589">
+		<node X="98303" Y="32680" />
+		<node X="130873" Y="32701" />
+		<node X="130135" Y="34492" />
+		<node X="98304" Y="34726" />
+		<race name="HUMAN" point="aden_town" />
+		<race name="DARK_ELF" point="aden_town" />
+		<race name="ORC" point="aden_town" />
+		<race name="DWARF" point="aden_town" />
+		<race name="ELF" point="aden_town" />
+		<race name="KAMAEL" point="aden_town" />
+	</zone>
+	<zone name="oren_castle_town_23_20_4" type="RespawnZone" shape="NPoly" minZ="-3758" maxZ="1242">
+		<node X="98169" Y="65360" />
+		<node X="104540" Y="74468" />
+		<node X="100546" Y="88083" />
+		<node X="98164" Y="88355" />
+		<race name="HUMAN" point="oren_castle_town" />
+		<race name="DARK_ELF" point="oren_castle_town" />
+		<race name="ORC" point="oren_castle_town" />
+		<race name="DWARF" point="oren_castle_town" />
+		<race name="ELF" point="oren_castle_town" />
+		<race name="KAMAEL" point="oren_castle_town" />
+	</zone>
+	<zone name="oren_castle_town_23_20_3" type="RespawnZone" shape="NPoly" minZ="-3744" maxZ="1256">
+		<node X="101128" Y="88045" />
+		<node X="103560" Y="91109" />
+		<node X="104597" Y="95332" />
+		<node X="98191" Y="96184" />
+		<node X="98183" Y="86478" />
+		<race name="HUMAN" point="oren_castle_town" />
+		<race name="DARK_ELF" point="oren_castle_town" />
+		<race name="ORC" point="oren_castle_town" />
+		<race name="DWARF" point="oren_castle_town" />
+		<race name="ELF" point="oren_castle_town" />
+		<race name="KAMAEL" point="oren_castle_town" />
+	</zone>
+	<zone name="giran_castle_town_23_20_2" type="RespawnZone" shape="NPoly" minZ="-4053" maxZ="1947">
+		<node X="115811" Y="95756" />
+		<node X="119344" Y="97057" />
+		<node X="119684" Y="98434" />
+		<node X="98172" Y="98417" />
+		<node X="98178" Y="96262" />
+		<node X="108757" Y="95049" />
+		<race name="HUMAN" point="giran_castle_town" />
+		<race name="DARK_ELF" point="giran_castle_town" />
+		<race name="ORC" point="giran_castle_town" />
+		<race name="DWARF" point="giran_castle_town" />
+		<race name="ELF" point="giran_castle_town" />
+		<race name="KAMAEL" point="giran_castle_town" />
+	</zone>
+	<zone name="heiness_town_23_22_2" type="RespawnZone" shape="NPoly" minZ="-4572" maxZ="-2072">
+		<node X="123367" Y="145103" />
+		<node X="131151" Y="141459" />
+		<node X="131237" Y="164129" />
+		<node X="119229" Y="164122" />
+		<node X="119264" Y="151714" />
+		<race name="HUMAN" point="heiness_town" />
+		<race name="DARK_ELF" point="heiness_town" />
+		<race name="ORC" point="heiness_town" />
+		<race name="DWARF" point="heiness_town" />
+		<race name="ELF" point="heiness_town" />
+		<race name="KAMAEL" point="heiness_town" />
+	</zone>
+	<zone name="heiness_town_23_22_1" type="RespawnZone" shape="NPoly" minZ="-4578" maxZ="-2078">
+		<node X="108429" Y="151108" />
+		<node X="119577" Y="151332" />
+		<node X="119582" Y="164120" />
+		<node X="98099" Y="164101" />
+		<node X="98071" Y="157216" />
+		<node X="100683" Y="154025" />
+		<race name="HUMAN" point="heiness_town" />
+		<race name="DARK_ELF" point="heiness_town" />
+		<race name="ORC" point="heiness_town" />
+		<race name="DWARF" point="heiness_town" />
+		<race name="ELF" point="heiness_town" />
+		<race name="KAMAEL" point="heiness_town" />
+	</zone>
+	<zone name="heiness_town_22_22" type="RespawnZone" shape="NPoly" minZ="-4331" maxZ="-1831">
+		<node X="93549" Y="155049" />
+		<node X="98410" Y="156923" />
+		<node X="98436" Y="163903" />
+		<node X="82360" Y="163905" />
+		<node X="82360" Y="160215" />
+		<race name="HUMAN" point="heiness_town" />
+		<race name="DARK_ELF" point="heiness_town" />
+		<race name="ORC" point="heiness_town" />
+		<race name="DWARF" point="heiness_town" />
+		<race name="ELF" point="heiness_town" />
+		<race name="KAMAEL" point="heiness_town" />
+	</zone>
+	<zone name="giran_castle_town_21_24" type="RespawnZone" shape="NPoly" minZ="-5068" maxZ="2932">
+		<node X="56950" Y="199547" />
+		<node X="60975" Y="202588" />
+		<node X="62108" Y="216922" />
+		<node X="60328" Y="223350" />
+		<node X="54144" Y="226379" />
+		<node X="54144" Y="226379" />
+		<node X="38239" Y="225325" />
+		<node X="35730" Y="217296" />
+		<node X="37613" Y="199255" />
+		<node X="42442" Y="196987" />
+		<race name="HUMAN" point="giran_castle_town" />
+		<race name="DARK_ELF" point="giran_castle_town" />
+		<race name="ORC" point="giran_castle_town" />
+		<race name="DWARF" point="giran_castle_town" />
+		<race name="ELF" point="giran_castle_town" />
+		<race name="KAMAEL" point="giran_castle_town" />
+	</zone>
+	<zone name="dion_castle_town_21_23_3" type="RespawnZone" shape="NPoly" minZ="-3779" maxZ="-1279">
+		<node X="43888" Y="163713" />
+		<node X="59933" Y="163750" />
+		<node X="46300" Y="169538" />
+		<node X="43883" Y="167601" />
+		<race name="HUMAN" point="dion_castle_town" />
+		<race name="DARK_ELF" point="dion_castle_town" />
+		<race name="ORC" point="dion_castle_town" />
+		<race name="DWARF" point="dion_castle_town" />
+		<race name="ELF" point="dion_castle_town" />
+		<race name="KAMAEL" point="dion_castle_town" />
+	</zone>
+	<zone name="dion_castle_town_21_23_2" type="RespawnZone" shape="NPoly" minZ="-3807" maxZ="-1807">
+		<node X="32568" Y="171064" />
+		<node X="32537" Y="163466" />
+		<node X="37814" Y="167482" />
+		<race name="HUMAN" point="dion_castle_town" />
+		<race name="DARK_ELF" point="dion_castle_town" />
+		<race name="ORC" point="dion_castle_town" />
+		<race name="DWARF" point="dion_castle_town" />
+		<race name="ELF" point="dion_castle_town" />
+		<race name="KAMAEL" point="dion_castle_town" />
+	</zone>
+	<zone name="dion_castle_town_21_23_1" type="RespawnZone" shape="NPoly" minZ="-3774" maxZ="-1274">
+		<node X="32803" Y="163712" />
+		<node X="43975" Y="163696" />
+		<node X="43957" Y="167583" />
+		<node X="36639" Y="167546" />
+		<race name="HUMAN" point="dion_castle_town" />
+		<race name="DARK_ELF" point="dion_castle_town" />
+		<race name="ORC" point="dion_castle_town" />
+		<race name="DWARF" point="dion_castle_town" />
+		<race name="ELF" point="dion_castle_town" />
+		<race name="KAMAEL" point="dion_castle_town" />
+	</zone>
+	<zone name="gludio_castle_town_20_22_2" type="RespawnZone" shape="NPoly" minZ="-4656" maxZ="-2656">
+		<node X="-65" Y="158365" />
+		<node X="2775" Y="158666" />
+		<node X="5097" Y="163843" />
+		<node X="-76" Y="163842" />
+		<race name="HUMAN" point="gludio_castle_town" />
+		<race name="DARK_ELF" point="gludio_castle_town" />
+		<race name="ORC" point="gludio_castle_town" />
+		<race name="DWARF" point="gludio_castle_town" />
+		<race name="ELF" point="gludio_castle_town" />
+		<race name="KAMAEL" point="gludio_castle_town" />
+	</zone>
+	<zone name="gludio_castle_town_20_22_1" type="RespawnZone" shape="NPoly" minZ="-5924" maxZ="-924">
+		<node X="-232" Y="159206" />
+		<node X="-214" Y="129294" />
+		<node X="2312" Y="130658" />
+		<node X="4612" Y="138037" />
+		<node X="4754" Y="145375" />
+		<node X="4754" Y="145375" />
+		<node X="3137" Y="146195" />
+		<node X="3154" Y="160227" />
+		<race name="HUMAN" point="gludio_castle_town" />
+		<race name="DARK_ELF" point="gludio_castle_town" />
+		<race name="ORC" point="gludio_castle_town" />
+		<race name="DWARF" point="gludio_castle_town" />
+		<race name="ELF" point="gludio_castle_town" />
+		<race name="KAMAEL" point="gludio_castle_town" />
+	</zone>
+	<zone name="dion_castle_town_19_21" type="RespawnZone" shape="NPoly" minZ="-4255" maxZ="-2755">
+		<node X="-3165" Y="119934" />
+		<node X="-14" Y="116025" />
+		<node X="-32" Y="129912" />
+		<node X="-5069" Y="126852" />
+		<race name="HUMAN" point="dion_castle_town" />
+		<race name="DARK_ELF" point="dion_castle_town" />
+		<race name="ORC" point="dion_castle_town" />
+		<race name="DWARF" point="dion_castle_town" />
+		<race name="ELF" point="dion_castle_town" />
+		<race name="KAMAEL" point="dion_castle_town" />
+	</zone>
+	<zone name="dion_castle_town_20_20" type="RespawnZone" shape="NPoly" minZ="-4782" maxZ="218">
+		<node X="2167" Y="97060" />
+		<node X="32848" Y="96719" />
+		<node X="32854" Y="98489" />
+		<node X="2161" Y="98395" />
+		<race name="HUMAN" point="dion_castle_town" />
+		<race name="DARK_ELF" point="dion_castle_town" />
+		<race name="ORC" point="dion_castle_town" />
+		<race name="DWARF" point="dion_castle_town" />
+		<race name="ELF" point="dion_castle_town" />
+		<race name="KAMAEL" point="dion_castle_town" />
+	</zone>
+	<zone name="gludio_castle_town_19_24" type="RespawnZone" shape="NPoly" minZ="-4677" maxZ="-3077">
+		<node X="-17049" Y="204942" />
+		<node X="-5035" Y="196530" />
+		<node X="-31401" Y="196507" />
+		<node X="-26564" Y="204707" />
+		<race name="HUMAN" point="gludio_castle_town" />
+		<race name="DARK_ELF" point="gludio_castle_town" />
+		<race name="ORC" point="gludio_castle_town" />
+		<race name="DWARF" point="gludio_castle_town" />
+		<race name="ELF" point="gludio_castle_town" />
+		<race name="KAMAEL" point="gludio_castle_town" />
+	</zone>
+	<zone name="gludio_castle_town_18_23_2_2" type="RespawnZone" shape="NPoly" minZ="-4399" maxZ="-2899">
+		<node X="-41226" Y="187772" />
+		<node X="-32594" Y="182909" />
+		<node X="-32931" Y="194798" />
+		<node X="-38750" Y="192188" />
+		<race name="HUMAN" point="gludio_castle_town" />
+		<race name="DARK_ELF" point="gludio_castle_town" />
+		<race name="ORC" point="gludio_castle_town" />
+		<race name="DWARF" point="gludio_castle_town" />
+		<race name="ELF" point="gludio_castle_town" />
+		<race name="KAMAEL" point="gludio_castle_town" />
+	</zone>
+	<zone name="gludio_castle_town_18_23_2_1" type="RespawnZone" shape="NPoly" minZ="-4458" maxZ="-2958">
+		<node X="-40885" Y="176647" />
+		<node X="-32588" Y="179213" />
+		<node X="-32722" Y="183489" />
+		<node X="-43651" Y="189094" />
+		<node X="-46942" Y="180696" />
+		<race name="HUMAN" point="gludio_castle_town" />
+		<race name="DARK_ELF" point="gludio_castle_town" />
+		<race name="ORC" point="gludio_castle_town" />
+		<race name="DWARF" point="gludio_castle_town" />
+		<race name="ELF" point="gludio_castle_town" />
+		<race name="KAMAEL" point="gludio_castle_town" />
+	</zone>
+	<zone name="gludio_castle_town_18_23_1_2" type="RespawnZone" shape="NPoly" minZ="-4570" maxZ="-3070">
+		<node X="-38529" Y="173004" />
+		<node X="-32775" Y="176283" />
+		<node X="-32819" Y="179383" />
+		<node X="-40960" Y="176773" />
+		<race name="HUMAN" point="gludio_castle_town" />
+		<race name="DARK_ELF" point="gludio_castle_town" />
+		<race name="ORC" point="gludio_castle_town" />
+		<race name="DWARF" point="gludio_castle_town" />
+		<race name="ELF" point="gludio_castle_town" />
+		<race name="KAMAEL" point="gludio_castle_town" />
+	</zone>
+	<zone name="gludio_castle_town_18_23_1_1" type="RespawnZone" shape="NPoly" minZ="-4566" maxZ="-3066">
+		<node X="-38501" Y="173045" />
+		<node X="-37525" Y="168739" />
+		<node X="-32679" Y="166859" />
+		<node X="-32794" Y="176644" />
+		<race name="HUMAN" point="gludio_castle_town" />
+		<race name="DARK_ELF" point="gludio_castle_town" />
+		<race name="ORC" point="gludio_castle_town" />
+		<race name="DWARF" point="gludio_castle_town" />
+		<race name="ELF" point="gludio_castle_town" />
+		<race name="KAMAEL" point="gludio_castle_town" />
+	</zone>
+	<zone name="gludio_castle_town_18_22" type="RespawnZone" shape="NPoly" minZ="-5552" maxZ="-552">
+		<node X="-42492" Y="158681" />
+		<node X="-37596" Y="130952" />
+		<node X="-32467" Y="130795" />
+		<node X="-32467" Y="164210" />
+		<race name="HUMAN" point="gludio_castle_town" />
+		<race name="DARK_ELF" point="gludio_castle_town" />
+		<race name="ORC" point="gludio_castle_town" />
+		<race name="DWARF" point="gludio_castle_town" />
+		<race name="ELF" point="gludio_castle_town" />
+		<race name="KAMAEL" point="gludio_castle_town" />
+	</zone>
+	<zone name="gludin_town_18_21_3" type="RespawnZone" shape="NPoly" minZ="-3376" maxZ="-576">
+		<node X="-41822" Y="125676" />
+		<node X="-37841" Y="127845" />
+		<node X="-38261" Y="131102" />
+		<node X="-47575" Y="131097" />
+		<node X="-47581" Y="129088" />
+		<node X="-44709" Y="126972" />
+		<race name="HUMAN" point="gludin_town" />
+		<race name="DARK_ELF" point="gludin_town" />
+		<race name="ORC" point="gludin_town" />
+		<race name="DWARF" point="gludin_town" />
+		<race name="ELF" point="gludin_town" />
+		<race name="KAMAEL" point="gludin_town" />
+	</zone>
+	<zone name="gludin_town_18_21_2" type="RespawnZone" shape="NPoly" minZ="-3253" maxZ="-1753">
+		<node X="-49822" Y="129200" />
+		<node X="-47530" Y="129044" />
+		<node X="-47537" Y="131070" />
+		<node X="-51845" Y="131056" />
+		<node X="-51562" Y="130324" />
+		<node X="-50890" Y="129719" />
+		<race name="HUMAN" point="gludin_town" />
+		<race name="DARK_ELF" point="gludin_town" />
+		<race name="ORC" point="gludin_town" />
+		<race name="DWARF" point="gludin_town" />
+		<race name="ELF" point="gludin_town" />
+		<race name="KAMAEL" point="gludin_town" />
+	</zone>
+	<zone name="gludin_town_18_21_1" type="RespawnZone" shape="NPoly" minZ="-4184" maxZ="-1184">
+		<node X="-65686" Y="115819" />
+		<node X="-62217" Y="116733" />
+		<node X="-57806" Y="131186" />
+		<node X="-65721" Y="131145" />
+		<race name="HUMAN" point="gludin_town" />
+		<race name="DARK_ELF" point="gludin_town" />
+		<race name="ORC" point="gludin_town" />
+		<race name="DWARF" point="gludin_town" />
+		<race name="ELF" point="gludin_town" />
+		<race name="KAMAEL" point="gludin_town" />
+	</zone>
+	<zone name="darkelf_town" type="RespawnZone" shape="NPoly" minZ="-3777" maxZ="-1277">
+		<node X="-33804" Y="86223" />
+		<node X="-26832" Y="88453" />
+		<node X="-32248" Y="88884" />
+		<race name="HUMAN" point="darkelf_town" />
+		<race name="DARK_ELF" point="darkelf_town" />
+		<race name="ORC" point="darkelf_town" />
+		<race name="DWARF" point="darkelf_town" />
+		<race name="KAMAEL" point="darkelf_town" />
+		<race name="ELF" point="elf_town" />
+	</zone>
+	<zone name="gludio_castle_town_18_20" type="RespawnZone" shape="NPoly" minZ="-3772" maxZ="-1272">
+		<node X="-66100" Y="96130" />
+		<node X="-65743" Y="93025" />
+		<node X="-61912" Y="93677" />
+		<race name="HUMAN" point="gludio_castle_town" />
+		<race name="DARK_ELF" point="gludio_castle_town" />
+		<race name="ORC" point="gludio_castle_town" />
+		<race name="DWARF" point="gludio_castle_town" />
+		<race name="ELF" point="gludio_castle_town" />
+		<race name="KAMAEL" point="gludio_castle_town" />
+	</zone>
+	<zone name="darkelf_town_20_19" type="RespawnZone" shape="NPoly" minZ="-3680" maxZ="1320">
+		<node X="-200" Y="32455" />
+		<node X="7581" Y="32533" />
+		<node X="5808" Y="44237" />
+		<node X="-326" Y="53864" />
+		<race name="HUMAN" point="darkelf_town" />
+		<race name="DARK_ELF" point="darkelf_town" />
+		<race name="ORC" point="darkelf_town" />
+		<race name="DWARF" point="darkelf_town" />
+		<race name="KAMAEL" point="darkelf_town" />
+		<race name="ELF" point="elf_town" />
+	</zone>
+	<zone name="elf_town_21_18" type="RespawnZone" shape="NPoly" minZ="-3698" maxZ="302">
+		<node X="34867" Y="29737" />
+		<node X="49579" Y="29983" />
+		<node X="51919" Y="32784" />
+		<node X="32566" Y="32799" />
+		<node X="32568" Y="31367" />
+		<race name="ELF" point="elf_town" />
+		<race name="HUMAN" point="elf_town" />
+		<race name="ORC" point="elf_town" />
+		<race name="DWARF" point="elf_town" />
+		<race name="KAMAEL" point="elf_town" />
+		<race name="DARK_ELF" point="darkelf_town" />
+	</zone>
+	<zone name="darkelf_town_21_18_1" type="RespawnZone" shape="NPoly" minZ="-4871" maxZ="129">
+		<node X="35073" Y="22896" />
+		<node X="42560" Y="12837" />
+		<node X="45060" Y="6876" />
+		<node X="46205" Y="165" />
+		<node X="32511" Y="42" />
+		<node X="31632" Y="23982" />
+		<race name="HUMAN" point="darkelf_town" />
+		<race name="DARK_ELF" point="darkelf_town" />
+		<race name="ORC" point="darkelf_town" />
+		<race name="DWARF" point="darkelf_town" />
+		<race name="KAMAEL" point="darkelf_town" />
+		<race name="ELF" point="elf_town" />
+	</zone>
+	<zone name="darkelf_town_21_18_2" type="RespawnZone" shape="NPoly" minZ="-4866" maxZ="134">
+		<node X="45334" Y="-134" />
+		<node X="65470" Y="-112" />
+		<node X="62362" Y="5017" />
+		<node X="53921" Y="10445" />
+		<node X="42419" Y="13662" />
+		<race name="HUMAN" point="darkelf_town" />
+		<race name="DARK_ELF" point="darkelf_town" />
+		<race name="ORC" point="darkelf_town" />
+		<race name="DWARF" point="darkelf_town" />
+		<race name="KAMAEL" point="darkelf_town" />
+		<race name="ELF" point="elf_town" />
+	</zone>
+	<zone name="dion_castle_town_21_20" type="RespawnZone" shape="NPoly" minZ="-5137" maxZ="-137">
+		<node X="32716" Y="96377" />
+		<node X="63495" Y="96374" />
+		<node X="63469" Y="98620" />
+		<node X="32690" Y="98678" />
+		<race name="ELF" point="dion_castle_town" />
+		<race name="DARK_ELF" point="dion_castle_town" />
+		<race name="HUMAN" point="dion_castle_town" />
+		<race name="ORC" point="dion_castle_town" />
+		<race name="DWARF" point="dion_castle_town" />
+		<race name="KAMAEL" point="dion_castle_town" />
+	</zone>
+	<zone name="oren_castle_town_21_19_1" type="RespawnZone" shape="NPoly" minZ="-4376" maxZ="124">
+		<node X="49993" Y="31658" />
+		<node X="66788" Y="31695" />
+		<node X="66820" Y="36162" />
+		<node X="59411" Y="36539" />
+		<race name="ELF" point="oren_castle_town" />
+		<race name="DARK_ELF" point="oren_castle_town" />
+		<race name="HUMAN" point="oren_castle_town" />
+		<race name="ORC" point="oren_castle_town" />
+		<race name="DWARF" point="oren_castle_town" />
+		<race name="KAMAEL" point="oren_castle_town" />
+	</zone>
+	<zone name="oren_castle_town_21_19_2" type="RespawnZone" shape="NPoly" minZ="-4384" maxZ="116">
+		<node X="62307" Y="35180" />
+		<node X="66552" Y="35203" />
+		<node X="66663" Y="52754" />
+		<node X="63106" Y="52710" />
+		<node X="59696" Y="47037" />
+		<race name="ELF" point="oren_castle_town" />
+		<race name="DARK_ELF" point="oren_castle_town" />
+		<race name="HUMAN" point="oren_castle_town" />
+		<race name="ORC" point="oren_castle_town" />
+		<race name="DWARF" point="oren_castle_town" />
+		<race name="KAMAEL" point="oren_castle_town" />
+	</zone>
+	<zone name="oren_castle_town_21_19_3" type="RespawnZone" shape="NPoly" minZ="-4325" maxZ="175">
+		<node X="61496" Y="52325" />
+		<node X="66528" Y="52406" />
+		<node X="66707" Y="65500" />
+		<node X="60825" Y="65468" />
+		<race name="ELF" point="oren_castle_town" />
+		<race name="DARK_ELF" point="oren_castle_town" />
+		<race name="HUMAN" point="oren_castle_town" />
+		<race name="ORC" point="oren_castle_town" />
+		<race name="DWARF" point="oren_castle_town" />
+		<race name="KAMAEL" point="oren_castle_town" />
+	</zone>
+	<zone name="oren_castle_town_21_20" type="RespawnZone" shape="NPoly" minZ="-4000" maxZ="-2000">
+		<node X="63480" Y="64066" />
+		<node X="66572" Y="64059" />
+		<node X="66572" Y="74028" />
+		<node X="63480" Y="74028" />
+		<race name="ELF" point="oren_castle_town" />
+		<race name="DARK_ELF" point="oren_castle_town" />
+		<race name="HUMAN" point="oren_castle_town" />
+		<race name="ORC" point="oren_castle_town" />
+		<race name="DWARF" point="oren_castle_town" />
+		<race name="KAMAEL" point="oren_castle_town" />
+	</zone>
+	<zone name="giran_castle_town_21_20" type="RespawnZone" shape="NPoly" minZ="-4000" maxZ="-2000">
+		<node X="63480" Y="74029" />
+		<node X="66572" Y="74029" />
+		<node X="66572" Y="98294" />
+		<node X="63480" Y="98294" />
+		<race name="ELF" point="giran_castle_town" />
+		<race name="HUMAN" point="giran_castle_town" />
+		<race name="ORC" point="giran_castle_town" />
+		<race name="DWARF" point="giran_castle_town" />
+		<race name="DARK_ELF" point="giran_castle_town" />
+		<race name="KAMAEL" point="giran_castle_town" />
+	</zone>
+	<zone name="giran_castle_town_21_21_1" type="RespawnZone" shape="NPoly" minZ="-3931" maxZ="-1931">
+		<node X="63477" Y="98288" />
+		<node X="66559" Y="98305" />
+		<node X="66558" Y="101836" />
+		<node X="63478" Y="101088" />
+		<race name="ELF" point="giran_castle_town" />
+		<race name="HUMAN" point="giran_castle_town" />
+		<race name="ORC" point="giran_castle_town" />
+		<race name="DWARF" point="giran_castle_town" />
+		<race name="DARK_ELF" point="giran_castle_town" />
+		<race name="KAMAEL" point="giran_castle_town" />
+	</zone>
+	<zone name="giran_castle_town_21_21_2" type="RespawnZone" shape="NPoly" minZ="-4188" maxZ="-1588">
+		<node X="62610" Y="100826" />
+		<node X="66262" Y="101390" />
+		<node X="66577" Y="131029" />
+		<node X="63717" Y="131034" />
+		<node X="59876" Y="103714" />
+		<race name="ELF" point="giran_castle_town" />
+		<race name="HUMAN" point="giran_castle_town" />
+		<race name="ORC" point="giran_castle_town" />
+		<race name="DWARF" point="giran_castle_town" />
+		<race name="DARK_ELF" point="giran_castle_town" />
+		<race name="KAMAEL" point="giran_castle_town" />
+	</zone>
+	<zone name="giran_habor_21_23" type="RespawnZone" shape="NPoly" minZ="-4735" maxZ="-3235">
+		<node X="42947" Y="190296" />
+		<node X="59746" Y="181026" />
+		<node X="65984" Y="186045" />
+		<node X="65968" Y="196973" />
+		<node X="32484" Y="197014" />
+		<race name="ELF" point="giran_habor" />
+		<race name="DARK_ELF" point="giran_habor" />
+		<race name="HUMAN" point="giran_habor" />
+		<race name="ORC" point="giran_habor" />
+		<race name="DWARF" point="giran_habor" />
+		<race name="KAMAEL" point="giran_habor" />
+	</zone>
+	<zone name="colosseum_24_19" type="RespawnZone" shape="NPoly" minZ="-3498" maxZ="-3298">
+		<node X="151252" Y="45918" />
+		<node X="151253" Y="47550" />
+		<node X="150767" Y="48129" />
+		<node X="148252" Y="48132" />
+		<node X="147751" Y="47545" />
+		<node X="147744" Y="45916" />
+		<node X="148238" Y="45301" />
+		<node X="150781" Y="45307" />
+		<race name="ELF" point="colosseum" />
+		<race name="DARK_ELF" point="colosseum" />
+		<race name="HUMAN" point="colosseum" />
+		<race name="ORC" point="colosseum" />
+		<race name="DWARF" point="colosseum" />
+		<race name="KAMAEL" point="colosseum" />
+	</zone>
+	<zone name="colosseum_24_19" type="RespawnZone" shape="NPoly" minZ="-3468" maxZ="-3268">
+		<node X="147779" Y="46196" />
+		<node X="148045" Y="46481" />
+		<node X="148047" Y="46958" />
+		<node X="147772" Y="47256" />
+		<node X="147078" Y="47258" />
+		<node X="147095" Y="46203" />
+		<race name="ELF" point="colosseum" />
+		<race name="DARK_ELF" point="colosseum" />
+		<race name="HUMAN" point="colosseum" />
+		<race name="ORC" point="colosseum" />
+		<race name="DWARF" point="colosseum" />
+		<race name="KAMAEL" point="colosseum" />
+	</zone>
+	<zone name="colosseum_24_19" type="RespawnZone" shape="NPoly" minZ="-3472" maxZ="-3272">
+		<node X="151221" Y="46184" />
+		<node X="151928" Y="46183" />
+		<node X="151925" Y="47248" />
+		<node X="151222" Y="47262" />
+		<node X="150952" Y="46956" />
+		<node X="150954" Y="46486" />
+		<race name="ELF" point="colosseum" />
+		<race name="DARK_ELF" point="colosseum" />
+		<race name="HUMAN" point="colosseum" />
+		<race name="ORC" point="colosseum" />
+		<race name="DWARF" point="colosseum" />
+		<race name="KAMAEL" point="colosseum" />
+	</zone>
+	<zone name="darkelf_town_17_20_1" type="RespawnZone" shape="NPoly" minZ="-4088" maxZ="-2088">
+		<node X="-71038" Y="69341" />
+		<node X="-64952" Y="69392" />
+		<node X="-64988" Y="88249" />
+		<node X="-77802" Y="87398" />
+		<node X="-80067" Y="79054" />
+		<race name="HUMAN" point="darkelf_town" />
+		<race name="DARK_ELF" point="darkelf_town" />
+		<race name="ORC" point="darkelf_town" />
+		<race name="DWARF" point="darkelf_town" />
+		<race name="KAMAEL" point="darkelf_town" />
+		<race name="ELF" point="elf_town" />
+	</zone>
+	<zone name="darkelf_town_17_20_2" type="RespawnZone" shape="NPoly" minZ="-3992" maxZ="-1992">
+		<node X="-72378" Y="87505" />
+		<node X="-65145" Y="87772" />
+		<node X="-65156" Y="93195" />
+		<node X="-67987" Y="92410" />
+		<race name="HUMAN" point="darkelf_town" />
+		<race name="DARK_ELF" point="darkelf_town" />
+		<race name="ORC" point="darkelf_town" />
+		<race name="DWARF" point="darkelf_town" />
+		<race name="KAMAEL" point="darkelf_town" />
+		<race name="ELF" point="elf_town" />
+	</zone>
+	<zone name="darkelf_town_17_20_3" type="RespawnZone" shape="NPoly" minZ="-3968" maxZ="-1968">
+		<node X="-76789" Y="65422" />
+		<node X="-64977" Y="65400" />
+		<node X="-64998" Y="73322" />
+		<node X="-76668" Y="75810" />
+		<race name="HUMAN" point="darkelf_town" />
+		<race name="DARK_ELF" point="darkelf_town" />
+		<race name="ORC" point="darkelf_town" />
+		<race name="DWARF" point="darkelf_town" />
+		<race name="KAMAEL" point="darkelf_town" />
+		<race name="ELF" point="elf_town" />
+	</zone>
+	<zone name="gludio_castle_town_18_20_1" type="RespawnZone" shape="NPoly" minZ="-4079" maxZ="921">
+		<node X="-38557" Y="94125" />
+		<node X="-32413" Y="88346" />
+		<node X="-32414" Y="98751" />
+		<node X="-66106" Y="98654" />
+		<node X="-66101" Y="96123" />
+		<node X="-62724" Y="94343" />
+		<race name="HUMAN" point="gludio_castle_town" />
+		<race name="DARK_ELF" point="gludio_castle_town" />
+		<race name="ORC" point="gludio_castle_town" />
+		<race name="DWARF" point="gludio_castle_town" />
+		<race name="ELF" point="gludio_castle_town" />
+		<race name="KAMAEL" point="gludio_castle_town" />
+	</zone>
+	<zone name="darkelf_town_19_20_1" type="RespawnZone" shape="NPoly" minZ="-4100" maxZ="-3100">
+		<node X="-33765" Y="83315" />
+		<node X="-21239" Y="78502" />
+		<node X="-21864" Y="90121" />
+		<node X="-33788" Y="86463" />
+		<race name="HUMAN" point="darkelf_town" />
+		<race name="DARK_ELF" point="darkelf_town" />
+		<race name="ORC" point="darkelf_town" />
+		<race name="DWARF" point="darkelf_town" />
+		<race name="KAMAEL" point="darkelf_town" />
+		<race name="ELF" point="elf_town" />
+	</zone>
+	<zone name="darkelf_town_19_20_2" type="RespawnZone" shape="NPoly" minZ="-4235" maxZ="-3235">
+		<node X="-33767" Y="72902" />
+		<node X="-17495" Y="73285" />
+		<node X="-22631" Y="81481" />
+		<node X="-33788" Y="83737" />
+		<race name="HUMAN" point="darkelf_town" />
+		<race name="DARK_ELF" point="darkelf_town" />
+		<race name="ORC" point="darkelf_town" />
+		<race name="DWARF" point="darkelf_town" />
+		<race name="KAMAEL" point="darkelf_town" />
+		<race name="ELF" point="elf_town" />
+	</zone>
+	<zone name="darkelf_town_19_20_3" type="RespawnZone" shape="NPoly" minZ="-3932" maxZ="-2932">
+		<node X="-33367" Y="73183" />
+		<node X="-12563" Y="70545" />
+		<node X="-19250" Y="74975" />
+		<race name="HUMAN" point="darkelf_town" />
+		<race name="DARK_ELF" point="darkelf_town" />
+		<race name="ORC" point="darkelf_town" />
+		<race name="DWARF" point="darkelf_town" />
+		<race name="KAMAEL" point="darkelf_town" />
+		<race name="ELF" point="elf_town" />
+	</zone>
+	<zone name="darkelf_town_19_20_4" type="RespawnZone" shape="NPoly" minZ="-4017" maxZ="-3017">
+		<node X="-33647" Y="65118" />
+		<node X="-10654" Y="65187" />
+		<node X="-10651" Y="70698" />
+		<node X="-33667" Y="73395" />
+		<race name="HUMAN" point="darkelf_town" />
+		<race name="DARK_ELF" point="darkelf_town" />
+		<race name="ORC" point="darkelf_town" />
+		<race name="DWARF" point="darkelf_town" />
+		<race name="KAMAEL" point="darkelf_town" />
+		<race name="ELF" point="elf_town" />
+	</zone>
+	<zone name="elf_town_19_20_1" type="RespawnZone" shape="NPoly" minZ="-4281" maxZ="-3281">
+		<node X="-10631" Y="65484" />
+		<node X="147" Y="65487" />
+		<node X="153" Y="75746" />
+		<node X="-10630" Y="70580" />
+		<race name="ELF" point="elf_town" />
+		<race name="HUMAN" point="elf_town" />
+		<race name="ORC" point="elf_town" />
+		<race name="DWARF" point="elf_town" />
+		<race name="KAMAEL" point="elf_town" />
+		<race name="DARK_ELF" point="darkelf_town" />
+	</zone>
+	<zone name="elf_town_19_20_2" type="RespawnZone" shape="NPoly" minZ="-4215" maxZ="-3215">
+		<node X="-6043" Y="72650" />
+		<node X="172" Y="73048" />
+		<node X="153" Y="79538" />
+		<race name="ELF" point="elf_town" />
+		<race name="HUMAN" point="elf_town" />
+		<race name="ORC" point="elf_town" />
+		<race name="DWARF" point="elf_town" />
+		<race name="KAMAEL" point="elf_town" />
+		<race name="DARK_ELF" point="darkelf_town" />
+	</zone>
+	<zone name="DMZ_20_20" type="RespawnZone" shape="NPoly" minZ="-4245" maxZ="-3245">
+		<node X="1367" Y="79808" />
+		<node X="2153" Y="88057" />
+		<node X="2111" Y="98621" />
+		<node X="-453" Y="98621" />
+		<node X="-458" Y="78212" />
+		<race name="ELF" point="neutral_zone" />
+		<race name="HUMAN" point="neutral_zone" />
+		<race name="ORC" point="neutral_zone" />
+		<race name="DWARF" point="neutral_zone" />
+		<race name="DARK_ELF" point="neutral_zone" />
+		<race name="KAMAEL" point="neutral_zone" />
+	</zone>
+	<zone name="giran_castle_town_22_23_1" type="RespawnZone" shape="NPoly" minZ="-4483" maxZ="-2483">
+		<node X="65089" Y="177671" />
+		<node X="72528" Y="175700" />
+		<node X="69292" Y="181077" />
+		<node X="66188" Y="185068" />
+		<node X="65085" Y="185040" />
+		<race name="ELF" point="giran_castle_town" />
+		<race name="HUMAN" point="giran_castle_town" />
+		<race name="ORC" point="giran_castle_town" />
+		<race name="DWARF" point="giran_castle_town" />
+		<race name="DARK_ELF" point="giran_castle_town" />
+		<race name="KAMAEL" point="giran_castle_town" />
+	</zone>
+	<zone name="giran_castle_town_22_23_2" type="RespawnZone" shape="NPoly" minZ="-4390" maxZ="-2000">
+		<node X="65066" Y="163463" />
+		<node X="80879" Y="163501" />
+		<node X="76230" Y="172053" />
+		<node X="70568" Y="177842" />
+		<node X="65088" Y="177785" />
+		<race name="ELF" point="giran_castle_town" />
+		<race name="HUMAN" point="giran_castle_town" />
+		<race name="ORC" point="giran_castle_town" />
+		<race name="DWARF" point="giran_castle_town" />
+		<race name="DARK_ELF" point="giran_castle_town" />
+		<race name="KAMAEL" point="giran_castle_town" />
+	</zone>
+	<zone name="talking_island_town_21_25" type="RespawnZone" shape="NPoly" minZ="-6874" maxZ="-4874">
+		<node X="41090" Y="242210" />
+		<node X="49934" Y="242210" />
+		<node X="49985" Y="250489" />
+		<node X="41141" Y="250489" />
+		<race name="ELF" point="talking_island_town" />
+		<race name="HUMAN" point="talking_island_town" />
+		<race name="ORC" point="talking_island_town" />
+		<race name="DWARF" point="talking_island_town" />
+		<race name="DARK_ELF" point="talking_island_town" />
+		<race name="KAMAEL" point="talking_island_town" />
+	</zone>
+	<zone name="Cedric's_Training_Hall_17_25" type="RespawnZone" shape="NPoly" minZ="-3148" maxZ="-2948">
+		<node X="-71944" Y="258332" />
+		<node X="-71316" Y="257772" />
+		<node X="-70728" Y="258468" />
+		<node X="-71364" Y="259000" />
+		<race name="HUMAN" point="Cedric's_Training_Hall" />
+		<race name="DARK_ELF" point="Cedric's_Training_Hall" />
+		<race name="ORC" point="Cedric's_Training_Hall" />
+		<race name="DWARF" point="Cedric's_Training_Hall" />
+		<race name="ELF" point="Cedric's_Training_Hall" />
+		<race name="KAMAEL" point="Cedric's_Training_Hall" />
+	</zone>
+	<zone name="Einhovant's_School_of_Magic_17_25" type="RespawnZone" shape="NPoly" minZ="-3606" maxZ="-3406">
+		<node X="-90831" Y="247813" />
+		<node X="-90011" Y="248306" />
+		<node X="-90341" Y="248870" />
+		<node X="-91170" Y="248248" />
+		<race name="HUMAN" point="Einhovant's_School_of_Magic" />
+		<race name="DARK_ELF" point="Einhovant's_School_of_Magic" />
+		<race name="ORC" point="Einhovant's_School_of_Magic" />
+		<race name="DWARF" point="Einhovant's_School_of_Magic" />
+		<race name="ELF" point="Einhovant's_School_of_Magic" />
+		<race name="KAMAEL" point="Einhovant's_School_of_Magic" />
+	</zone>
+	<zone name="Mothertree_Glade_21_19" type="RespawnZone" shape="NPoly" minZ="-3555" maxZ="-3355">
+		<node X="44096" Y="40595" />
+		<node X="47903" Y="41035" />
+		<node X="46459" Y="42066" />
+		<node X="45948" Y="42089" />
+		<race name="HUMAN" point="Mothertree_Glade" />
+		<race name="DARK_ELF" point="Temple_of_Shilen" />
+		<race name="ORC" point="Mothertree_Glade" />
+		<race name="DWARF" point="Mothertree_Glade" />
+		<race name="ELF" point="Mothertree_Glade" />
+		<race name="KAMAEL" point="Mothertree_Glade" />
+	</zone>
+	<zone name="Temple_of_Shilen_20_18" type="RespawnZone" shape="NPoly" minZ="-4276" maxZ="-4076">
+		<node X="27704" Y="10253" />
+		<node X="29165" Y="10298" />
+		<node X="29165" Y="11811" />
+		<node X="27748" Y="11837" />
+		<race name="HUMAN" point="Temple_of_Shilen" />
+		<race name="DARK_ELF" point="Temple_of_Shilen" />
+		<race name="ORC" point="Temple_of_Shilen" />
+		<race name="DWARF" point="Temple_of_Shilen" />
+		<race name="KAMAEL" point="Temple_of_Shilen" />
+		<race name="ELF" point="Mothertree_Glade" />
+	</zone>
+	<zone name="Temple_of_Paagrio_18_14" type="RespawnZone" shape="NPoly" minZ="-718" maxZ="-518">
+		<node X="-56890" Y="-114033" />
+		<node X="-55620" Y="-114048" />
+		<node X="-55632" Y="-113165" />
+		<node X="-56882" Y="-113175" />
+		<race name="HUMAN" point="Temple_of_Paagrio" />
+		<race name="DARK_ELF" point="Temple_of_Paagrio" />
+		<race name="ORC" point="Temple_of_Paagrio" />
+		<race name="DWARF" point="Temple_of_Paagrio" />
+		<race name="ELF" point="Temple_of_Paagrio" />
+		<race name="KAMAEL" point="Temple_of_Paagrio" />
+	</zone>
+	<zone name="Quarry_23_12" type="RespawnZone" shape="NPoly" minZ="-623" maxZ="-423">
+		<node X="108734" Y="-175480" />
+		<node X="109960" Y="-174283" />
+		<node X="108767" Y="-172526" />
+		<node X="107348" Y="-173244" />
+		<race name="HUMAN" point="Quarry" />
+		<race name="DARK_ELF" point="Quarry" />
+		<race name="ORC" point="Quarry" />
+		<race name="DWARF" point="Quarry" />
+		<race name="ELF" point="Quarry" />
+		<race name="KAMAEL" point="Quarry" />
+	</zone>
+	<zone name="spirit_cave_16_19" type="RespawnZone" shape="NPoly" minZ="-552" maxZ="5448">
+		<node X="-126634" Y="36733" />
+		<node X="-114999" Y="36218" />
+		<node X="-115417" Y="39345" />
+		<node X="-121430" Y="41980" />
+		<node X="-123839" Y="47818" />
+		<node X="-126097" Y="46563" />
+		<node X="-127017" Y="43453" />
+		<race name="HUMAN" point="spirit_cave" />
+		<race name="DARK_ELF" point="spirit_cave" />
+		<race name="ORC" point="spirit_cave" />
+		<race name="DWARF" point="spirit_cave" />
+		<race name="ELF" point="spirit_cave" />
+		<race name="KAMAEL" point="spirit_cave" />
+	</zone>
+	<zone name="godard_town_23_17_1" type="RespawnZone" shape="NPoly" minZ="-6540" maxZ="3460">
+		<node X="97820" Y="-33007" />
+		<node X="130940" Y="-33101" />
+		<node X="131029" Y="-19205" />
+		<node X="114978" Y="-17466" />
+		<node X="107239" Y="-17497" />
+		<node X="106786" Y="-20636" />
+		<node X="98021" Y="-24647" />
+		<race name="HUMAN" point="godard_town" />
+		<race name="DARK_ELF" point="godard_town" />
+		<race name="ORC" point="godard_town" />
+		<race name="DWARF" point="godard_town" />
+		<race name="ELF" point="godard_town" />
+		<race name="KAMAEL" point="godard_town" />
+	</zone>
+	<zone name="godard_town_24_17_2" type="RespawnZone" shape="NPoly" minZ="-3272" maxZ="2272">
+		<node X="152215" Y="-33320" />
+		<node X="164125" Y="-33133" />
+		<node X="163975" Y="-26899" />
+		<node X="154963" Y="-24228" />
+		<race name="HUMAN" point="godard_town" />
+		<race name="DARK_ELF" point="godard_town" />
+		<race name="ORC" point="godard_town" />
+		<race name="DWARF" point="godard_town" />
+		<race name="ELF" point="godard_town" />
+		<race name="KAMAEL" point="godard_town" />
+	</zone>
+	<zone name="godard_town_23_15_3" type="RespawnZone" shape="NPoly" minZ="-3600" maxZ="1900">
+		<node X="126132" Y="-77416" />
+		<node X="131337" Y="-73320" />
+		<node X="131831" Y="-64941" />
+		<node X="116047" Y="-64957" />
+		<node X="116275" Y="-72919" />
+		<node X="119114" Y="-77974" />
+		<race name="HUMAN" point="godard_town" />
+		<race name="DARK_ELF" point="godard_town" />
+		<race name="ORC" point="godard_town" />
+		<race name="DWARF" point="godard_town" />
+		<race name="ELF" point="godard_town" />
+		<race name="KAMAEL" point="godard_town" />
+	</zone>
+	<zone name="godard_town_23_15_4" type="RespawnZone" shape="NPoly" minZ="-3500" maxZ="2508">
+		<node X="103811" Y="-71203" />
+		<node X="116328" Y="-72794" />
+		<node X="116273" Y="-64852" />
+		<node X="97888" Y="-65039" />
+		<node X="97992" Y="-72803" />
+		<race name="HUMAN" point="godard_town" />
+		<race name="DARK_ELF" point="godard_town" />
+		<race name="ORC" point="godard_town" />
+		<race name="DWARF" point="godard_town" />
+		<race name="ELF" point="godard_town" />
+		<race name="KAMAEL" point="godard_town" />
+	</zone>
+	<zone name="the_royal_family's_catacomb_25_15_1" type="RespawnZone" shape="NPoly" minZ="-7263" maxZ="-7063">
+		<node X="181198" Y="-86516" />
+		<node X="192394" Y="-86521" />
+		<node X="192391" Y="-84626" />
+		<node X="181193" Y="-84622" />
+		<race name="HUMAN" point="the_royal_family's_catacomb" />
+		<race name="DARK_ELF" point="the_royal_family's_catacomb" />
+		<race name="ORC" point="the_royal_family's_catacomb" />
+		<race name="DWARF" point="the_royal_family's_catacomb" />
+		<race name="ELF" point="the_royal_family's_catacomb" />
+		<race name="KAMAEL" point="the_royal_family's_catacomb" />
+	</zone>
+	<zone name="the_royal_family's_catacomb_25_15_2" type="RespawnZone" shape="NPoly" minZ="-7263" maxZ="-7063">
+		<node X="179511" Y="-89903" />
+		<node X="190707" Y="-89908" />
+		<node X="190704" Y="-88013" />
+		<node X="179506" Y="-88009" />
+		<race name="HUMAN" point="the_royal_family's_catacomb" />
+		<race name="DARK_ELF" point="the_royal_family's_catacomb" />
+		<race name="ORC" point="the_royal_family's_catacomb" />
+		<race name="DWARF" point="the_royal_family's_catacomb" />
+		<race name="ELF" point="the_royal_family's_catacomb" />
+		<race name="KAMAEL" point="the_royal_family's_catacomb" />
+	</zone>
+	<zone name="the_royal_family's_catacomb_25_15_3" type="RespawnZone" shape="NPoly" minZ="-7263" maxZ="-7063">
+		<node X="174498" Y="-82751" />
+		<node X="176622" Y="-82751" />
+		<node X="176616" Y="-71304" />
+		<node X="174489" Y="-71303" />
+		<race name="HUMAN" point="the_royal_family's_catacomb" />
+		<race name="DARK_ELF" point="the_royal_family's_catacomb" />
+		<race name="ORC" point="the_royal_family's_catacomb" />
+		<race name="DWARF" point="the_royal_family's_catacomb" />
+		<race name="ELF" point="the_royal_family's_catacomb" />
+		<race name="KAMAEL" point="the_royal_family's_catacomb" />
+	</zone>
+	<zone name="the_royal_family's_catacomb_25_15_4" type="RespawnZone" shape="NPoly" minZ="-7263" maxZ="-7063">
+		<node X="172183" Y="-86660" />
+		<node X="174307" Y="-86661" />
+		<node X="174301" Y="-75214" />
+		<node X="172174" Y="-75213" />
+		<race name="HUMAN" point="the_royal_family's_catacomb" />
+		<race name="DARK_ELF" point="the_royal_family's_catacomb" />
+		<race name="ORC" point="the_royal_family's_catacomb" />
+		<race name="DWARF" point="the_royal_family's_catacomb" />
+		<race name="ELF" point="the_royal_family's_catacomb" />
+		<race name="KAMAEL" point="the_royal_family's_catacomb" />
+	</zone>
+	<zone name="town_of_schuttgart_23_12" type="RespawnZone" shape="NPoly" minZ="-5008" maxZ="7992">
+		<node X="122877" Y="-169906" />
+		<node X="131127" Y="-168425" />
+		<node X="131152" Y="-164018" />
+		<node X="97964" Y="-164012" />
+		<node X="98250" Y="-176523" />
+		<node X="109847" Y="-167607" />
+		<race name="HUMAN" point="town_of_schuttgart" />
+		<race name="DARK_ELF" point="town_of_schuttgart" />
+		<race name="ORC" point="town_of_schuttgart" />
+		<race name="DWARF" point="town_of_schuttgart" />
+		<race name="ELF" point="town_of_schuttgart" />
+		<race name="KAMAEL" point="town_of_schuttgart" />
+	</zone>
+	<zone name="rune_town_20_17" type="RespawnZone" shape="NPoly" minZ="-7776" maxZ="2224">
+		<node X="-215" Y="-33011" />
+		<node X="32869" Y="-33040" />
+		<node X="32799" Y="-28250" />
+		<node X="-74" Y="-28250" />
+		<race name="HUMAN" point="rune_town" />
+		<race name="DARK_ELF" point="rune_town" />
+		<race name="ORC" point="rune_town" />
+		<race name="DWARF" point="rune_town" />
+		<race name="ELF" point="rune_town" />
+		<race name="KAMAEL" point="rune_town" />
+	</zone>
+	<zone name="heiness_town_24_22" type="RespawnZone" shape="NPoly" minZ="-23970" maxZ="36029">
+		<node X="135252" Y="147334" />
+		<node X="148970" Y="141187" />
+		<node X="163230" Y="148425" />
+		<node X="163566" Y="164342" />
+		<node X="131584" Y="164349" />
+		<race name="HUMAN" point="heiness_town" />
+		<race name="DARK_ELF" point="heiness_town" />
+		<race name="ORC" point="heiness_town" />
+		<race name="DWARF" point="heiness_town" />
+		<race name="ELF" point="heiness_town" />
+		<race name="KAMAEL" point="heiness_town" />
+	</zone>
+	<zone name="ironcastle_inner_oasis_20_25" type="RespawnZone" shape="NPoly" minZ="-30000" maxZ="30000">
+		<node X="28066" Y="258031" />
+		<node X="26122" Y="258764" />
+		<node X="23369" Y="257219" />
+		<node X="21379" Y="257982" />
+		<node X="13514" Y="257522" />
+		<node X="13514" Y="257522" />
+		<node X="11847" Y="254675" />
+		<node X="12678" Y="250563" />
+		<node X="16062" Y="248161" />
+		<node X="21804" Y="247918" />
+		<node X="27185" Y="240706" />
+		<node X="30457" Y="241223" />
+		<node X="30878" Y="247473" />
+		<node X="27032" Y="251619" />
+		<node X="28267" Y="256418" />
+		<race name="HUMAN" point="ironcastle_inner_oasis" />
+		<race name="DARK_ELF" point="ironcastle_inner_oasis" />
+		<race name="ORC" point="ironcastle_inner_oasis" />
+		<race name="DWARF" point="ironcastle_inner_oasis" />
+		<race name="ELF" point="ironcastle_inner_oasis" />
+		<race name="KAMAEL" point="ironcastle_inner_oasis" />
+	</zone>
+	<zone name="ironcastle_inner_oasis_20_26" type="RespawnZone" shape="NPoly" minZ="-10736" maxZ="-5736">
+		<node X="12080" Y="274633" />
+		<node X="20523" Y="274633" />
+		<node X="20553" Y="284567" />
+		<node X="11947" Y="284600" />
+		<race name="HUMAN" point="ironcastle_inner_oasis" />
+		<race name="DARK_ELF" point="ironcastle_inner_oasis" />
+		<race name="ORC" point="ironcastle_inner_oasis" />
+		<race name="DWARF" point="ironcastle_inner_oasis" />
+		<race name="ELF" point="ironcastle_inner_oasis" />
+		<race name="KAMAEL" point="ironcastle_inner_oasis" />
+	</zone>
+	<zone name="ironcastle_inner_oasis_19_26" type="RespawnZone" shape="NPoly" minZ="-15364" maxZ="-6864">
+		<node X="-23324" Y="276243" />
+		<node X="-17912" Y="276243" />
+		<node X="-17912" Y="280871" />
+		<node X="-23324" Y="280871" />
+		<race name="HUMAN" point="ironcastle_inner_oasis" />
+		<race name="DARK_ELF" point="ironcastle_inner_oasis" />
+		<race name="ORC" point="ironcastle_inner_oasis" />
+		<race name="DWARF" point="ironcastle_inner_oasis" />
+		<race name="ELF" point="ironcastle_inner_oasis" />
+		<race name="KAMAEL" point="ironcastle_inner_oasis" />
+	</zone>
+	<zone name="ironcastle_inner_oasis_19_26" type="RespawnZone" shape="NPoly" minZ="-15504" maxZ="-7904">
+		<node X="-15081" Y="271397" />
+		<node X="-9858" Y="271401" />
+		<node X="-9809" Y="282115" />
+		<node X="-15085" Y="282131" />
+		<race name="HUMAN" point="ironcastle_inner_oasis" />
+		<race name="DARK_ELF" point="ironcastle_inner_oasis" />
+		<race name="ORC" point="ironcastle_inner_oasis" />
+		<race name="DWARF" point="ironcastle_inner_oasis" />
+		<race name="ELF" point="ironcastle_inner_oasis" />
+		<race name="KAMAEL" point="ironcastle_inner_oasis" />
+	</zone>
+	<zone name="ironcastle_inner_oasis_18_25" type="RespawnZone" shape="NPoly" minZ="-16148" maxZ="-5000">
+		<node X="-58700" Y="238125" />
+		<node X="-39128" Y="238125" />
+		<node X="-39128" Y="253515" />
+		<node X="-58700" Y="253515" />
+		<race name="HUMAN" point="ironcastle_inner_oasis" />
+		<race name="DARK_ELF" point="ironcastle_inner_oasis" />
+		<race name="ORC" point="ironcastle_inner_oasis" />
+		<race name="DWARF" point="ironcastle_inner_oasis" />
+		<race name="ELF" point="ironcastle_inner_oasis" />
+		<race name="KAMAEL" point="ironcastle_inner_oasis" />
+	</zone>
+	<zone name="southern_wasteland_20_24" type="RespawnZone" shape="NPoly" minZ="-10412" maxZ="-5112">
+		<node X="11214" Y="205578" />
+		<node X="20607" Y="205578" />
+		<node X="20648" Y="220271" />
+		<node X="11172" Y="220271" />
+		<race name="HUMAN" point="southern_wasteland" />
+		<race name="DARK_ELF" point="southern_wasteland" />
+		<race name="ORC" point="southern_wasteland" />
+		<race name="DWARF" point="southern_wasteland" />
+		<race name="ELF" point="southern_wasteland" />
+		<race name="KAMAEL" point="southern_wasteland" />
+	</zone>
+	<zone name="ironcastle_inner_oasis_20_25" type="RespawnZone" shape="NPoly" minZ="9500" maxZ="13000">
+		<node X="14989" Y="234586" />
+		<node X="13398" Y="247981" />
+		<node X="26587" Y="245429" />
+		<race name="HUMAN" point="ironcastle_inner_oasis" />
+		<race name="DARK_ELF" point="ironcastle_inner_oasis" />
+		<race name="ORC" point="ironcastle_inner_oasis" />
+		<race name="DWARF" point="ironcastle_inner_oasis" />
+		<race name="ELF" point="ironcastle_inner_oasis" />
+		<race name="KAMAEL" point="ironcastle_inner_oasis" />
+	</zone>
+	<zone name="kamaroka_23" type="RespawnZone" shape="NPoly" minZ="-7913" maxZ="-7713">
+		<node X="-90004" Y="-221088" />
+		<node X="-87991" Y="-221088" />
+		<node X="-87992" Y="-219072" />
+		<node X="-90005" Y="-219072" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_26" type="RespawnZone" shape="NPoly" minZ="-7945" maxZ="-7745">
+		<node X="-82900" Y="-221087" />
+		<node X="-80887" Y="-221087" />
+		<node X="-80888" Y="-219071" />
+		<node X="-82901" Y="-219071" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_33" type="RespawnZone" shape="NPoly" minZ="-8165" maxZ="-7965">
+		<node X="-90063" Y="-214409" />
+		<node X="-88315" Y="-214409" />
+		<node X="-88313" Y="-212697" />
+		<node X="-90063" Y="-212697" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_36" type="RespawnZone" shape="NPoly" minZ="-8165" maxZ="-7965">
+		<node X="-82814" Y="-214410" />
+		<node X="-81066" Y="-214410" />
+		<node X="-81064" Y="-212698" />
+		<node X="-82814" Y="-212698" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_43" type="RespawnZone" shape="NPoly" minZ="-8157" maxZ="-7957">
+		<node X="-90046" Y="-207400" />
+		<node X="-88038" Y="-207395" />
+		<node X="-88040" Y="-204852" />
+		<node X="-90052" Y="-204849" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_46" type="RespawnZone" shape="NPoly" minZ="-8157" maxZ="-7957">
+		<node X="-82817" Y="-206918" />
+		<node X="-81069" Y="-206918" />
+		<node X="-81067" Y="-205206" />
+		<node X="-82817" Y="-205206" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_53" type="RespawnZone" shape="NPoly" minZ="-8128" maxZ="-7928">
+		<node X="-57226" Y="-220991" />
+		<node X="-55331" Y="-220987" />
+		<node X="-55311" Y="-218665" />
+		<node X="-57229" Y="-218660" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_56" type="RespawnZone" shape="NPoly" minZ="-8131" maxZ="-7931">
+		<node X="-50165" Y="-221075" />
+		<node X="-48517" Y="-221072" />
+		<node X="-48513" Y="-219443" />
+		<node X="-50162" Y="-219449" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_63_1" type="RespawnZone" shape="NPoly" minZ="-8099" maxZ="-7899">
+		<node X="-57250" Y="-213751" />
+		<node X="-55602" Y="-213748" />
+		<node X="-55599" Y="-212119" />
+		<node X="-57248" Y="-212125" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_63_2" type="RespawnZone" shape="NPoly" minZ="-8121" maxZ="-7921">
+		<node X="-50167" Y="-213759" />
+		<node X="-48519" Y="-213756" />
+		<node X="-48515" Y="-212128" />
+		<node X="-50164" Y="-212133" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_66_1" type="RespawnZone" shape="NPoly" minZ="-8179" maxZ="-7979">
+		<node X="-42960" Y="-214310" />
+		<node X="-41064" Y="-214305" />
+		<node X="-41045" Y="-211983" />
+		<node X="-42962" Y="-211978" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_66_2" type="RespawnZone" shape="NPoly" minZ="-8192" maxZ="-7992">
+		<node X="-57224" Y="-207301" />
+		<node X="-55328" Y="-207297" />
+		<node X="-55309" Y="-204975" />
+		<node X="-57227" Y="-204970" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_73_1" type="RespawnZone" shape="NPoly" minZ="-8165" maxZ="-7965">
+		<node X="-42971" Y="-207297" />
+		<node X="-41075" Y="-207293" />
+		<node X="-41056" Y="-204971" />
+		<node X="-42974" Y="-204966" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_73_2" type="RespawnZone" shape="NPoly" minZ="-8120" maxZ="-7920">
+		<node X="-24429" Y="-221005" />
+		<node X="-22539" Y="-221005" />
+		<node X="-22539" Y="-218711" />
+		<node X="-24427" Y="-218711" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="near_kamaroka_26" type="RespawnZone" shape="NPoly" minZ="-7917" maxZ="-7717">
+		<node X="-75846" Y="-221087" />
+		<node X="-73833" Y="-221087" />
+		<node X="-73834" Y="-219071" />
+		<node X="-75847" Y="-219071" />
+		<race name="HUMAN" point="near_kamaroka" />
+		<race name="DARK_ELF" point="near_kamaroka" />
+		<race name="ORC" point="near_kamaroka" />
+		<race name="DWARF" point="near_kamaroka" />
+		<race name="ELF" point="near_kamaroka" />
+		<race name="KAMAEL" point="near_kamaroka" />
+	</zone>
+	<zone name="near_kamaroka_36" type="RespawnZone" shape="NPoly" minZ="-7965" maxZ="-7765">
+		<node X="-75845" Y="-214539" />
+		<node X="-73832" Y="-214539" />
+		<node X="-73832" Y="-212523" />
+		<node X="-75845" Y="-212523" />
+		<race name="HUMAN" point="near_kamaroka" />
+		<race name="DARK_ELF" point="near_kamaroka" />
+		<race name="ORC" point="near_kamaroka" />
+		<race name="DWARF" point="near_kamaroka" />
+		<race name="ELF" point="near_kamaroka" />
+		<race name="KAMAEL" point="near_kamaroka" />
+	</zone>
+	<zone name="near_kamaroka_46" type="RespawnZone" shape="NPoly" minZ="-8165" maxZ="-7965">
+		<node X="-75540" Y="-206923" />
+		<node X="-73792" Y="-206923" />
+		<node X="-73790" Y="-205211" />
+		<node X="-75540" Y="-205211" />
+		<race name="HUMAN" point="near_kamaroka" />
+		<race name="DARK_ELF" point="near_kamaroka" />
+		<race name="ORC" point="near_kamaroka" />
+		<race name="DWARF" point="near_kamaroka" />
+		<race name="ELF" point="near_kamaroka" />
+		<race name="KAMAEL" point="near_kamaroka" />
+	</zone>
+	<zone name="near_kamaroka_56" type="RespawnZone" shape="NPoly" minZ="-8179" maxZ="-7979">
+		<node X="-42970" Y="-221013" />
+		<node X="-41074" Y="-221008" />
+		<node X="-41055" Y="-218686" />
+		<node X="-42972" Y="-218681" />
+		<race name="HUMAN" point="near_kamaroka" />
+		<race name="DARK_ELF" point="near_kamaroka" />
+		<race name="ORC" point="near_kamaroka" />
+		<race name="DWARF" point="near_kamaroka" />
+		<race name="ELF" point="near_kamaroka" />
+		<race name="KAMAEL" point="near_kamaroka" />
+	</zone>
+	<zone name="near_kamaroka_66" type="RespawnZone" shape="NPoly" minZ="-8182" maxZ="-7982">
+		<node X="-50022" Y="-207305" />
+		<node X="-48126" Y="-207300" />
+		<node X="-48107" Y="-204978" />
+		<node X="-50024" Y="-204973" />
+		<race name="HUMAN" point="near_kamaroka" />
+		<race name="DARK_ELF" point="near_kamaroka" />
+		<race name="ORC" point="near_kamaroka" />
+		<race name="DWARF" point="near_kamaroka" />
+		<race name="ELF" point="near_kamaroka" />
+		<race name="KAMAEL" point="near_kamaroka" />
+	</zone>
+	<zone name="rim_kamaroka_25" type="RespawnZone" shape="NPoly" minZ="-8068" maxZ="-6868">
+		<node X="8308" Y="-221019" />
+		<node X="10237" Y="-221027" />
+		<node X="10204" Y="-218664" />
+		<node X="8300" Y="-218664" />
+		<race name="HUMAN" point="rim_kamaroka" />
+		<race name="DARK_ELF" point="rim_kamaroka" />
+		<race name="ORC" point="rim_kamaroka" />
+		<race name="DWARF" point="rim_kamaroka" />
+		<race name="ELF" point="rim_kamaroka" />
+		<race name="KAMAEL" point="rim_kamaroka" />
+	</zone>
+	<zone name="rim_kamaroka_30" type="RespawnZone" shape="NPoly" minZ="-8072" maxZ="-6872">
+		<node X="15509" Y="-220979" />
+		<node X="17385" Y="-220989" />
+		<node X="17369" Y="-218644" />
+		<node X="15479" Y="-218667" />
+		<race name="HUMAN" point="rim_kamaroka" />
+		<race name="DARK_ELF" point="rim_kamaroka" />
+		<race name="ORC" point="rim_kamaroka" />
+		<race name="DWARF" point="rim_kamaroka" />
+		<race name="ELF" point="rim_kamaroka" />
+		<race name="KAMAEL" point="rim_kamaroka" />
+	</zone>
+	<zone name="rim_kamaroka_35" type="RespawnZone" shape="NPoly" minZ="-7968" maxZ="-6568">
+		<node X="22437" Y="-221137" />
+		<node X="24530" Y="-221137" />
+		<node X="24523" Y="-219029" />
+		<node X="22430" Y="-219029" />
+		<race name="HUMAN" point="rim_kamaroka" />
+		<race name="DARK_ELF" point="rim_kamaroka" />
+		<race name="ORC" point="rim_kamaroka" />
+		<race name="DWARF" point="rim_kamaroka" />
+		<race name="ELF" point="rim_kamaroka" />
+		<race name="KAMAEL" point="rim_kamaroka" />
+	</zone>
+	<zone name="rim_kamaroka_40" type="RespawnZone" shape="NPoly" minZ="-7848" maxZ="-6448">
+		<node X="8254" Y="-214031" />
+		<node X="10351" Y="-214036" />
+		<node X="10337" Y="-211945" />
+		<node X="8247" Y="-211945" />
+		<race name="HUMAN" point="rim_kamaroka" />
+		<race name="DARK_ELF" point="rim_kamaroka" />
+		<race name="ORC" point="rim_kamaroka" />
+		<race name="DWARF" point="rim_kamaroka" />
+		<race name="ELF" point="rim_kamaroka" />
+		<race name="KAMAEL" point="rim_kamaroka" />
+	</zone>
+	<zone name="rim_kamaroka_45" type="RespawnZone" shape="NPoly" minZ="-7844" maxZ="-6444">
+		<node X="15555" Y="-214044" />
+		<node X="17646" Y="-214052" />
+		<node X="17622" Y="-211947" />
+		<node X="15540" Y="-211939" />
+		<race name="HUMAN" point="rim_kamaroka" />
+		<race name="DARK_ELF" point="rim_kamaroka" />
+		<race name="ORC" point="rim_kamaroka" />
+		<race name="DWARF" point="rim_kamaroka" />
+		<race name="ELF" point="rim_kamaroka" />
+		<race name="KAMAEL" point="rim_kamaroka" />
+	</zone>
+	<zone name="rim_kamaroka_50" type="RespawnZone" shape="NPoly" minZ="-8049" maxZ="-6649">
+		<node X="22837" Y="-213868" />
+		<node X="24474" Y="-213861" />
+		<node X="24474" Y="-212231" />
+		<node X="22837" Y="-212231" />
+		<race name="HUMAN" point="rim_kamaroka" />
+		<race name="DARK_ELF" point="rim_kamaroka" />
+		<race name="ORC" point="rim_kamaroka" />
+		<race name="DWARF" point="rim_kamaroka" />
+		<race name="ELF" point="rim_kamaroka" />
+		<race name="KAMAEL" point="rim_kamaroka" />
+	</zone>
+	<zone name="rim_kamaroka_55" type="RespawnZone" shape="NPoly" minZ="-8048" maxZ="-6648">
+		<node X="8324" Y="-206546" />
+		<node X="9948" Y="-206546" />
+		<node X="9954" Y="-204909" />
+		<node X="8317" Y="-204909" />
+		<race name="HUMAN" point="rim_kamaroka" />
+		<race name="DARK_ELF" point="rim_kamaroka" />
+		<race name="ORC" point="rim_kamaroka" />
+		<race name="DWARF" point="rim_kamaroka" />
+		<race name="ELF" point="rim_kamaroka" />
+		<race name="KAMAEL" point="rim_kamaroka" />
+	</zone>
+	<zone name="rim_kamaroka_60" type="RespawnZone" shape="NPoly" minZ="-8052" maxZ="-6652">
+		<node X="15702" Y="-206549" />
+		<node X="17331" Y="-206548" />
+		<node X="17338" Y="-204939" />
+		<node X="15702" Y="-204913" />
+		<race name="HUMAN" point="rim_kamaroka" />
+		<race name="DARK_ELF" point="rim_kamaroka" />
+		<race name="ORC" point="rim_kamaroka" />
+		<race name="DWARF" point="rim_kamaroka" />
+		<race name="ELF" point="rim_kamaroka" />
+		<race name="KAMAEL" point="rim_kamaroka" />
+	</zone>
+	<zone name="rim_kamaroka_65" type="RespawnZone" shape="NPoly" minZ="-8044" maxZ="-6644">
+		<node X="22082" Y="-207504" />
+		<node X="24400" Y="-207535" />
+		<node X="24377" Y="-205047" />
+		<node X="22082" Y="-205039" />
+		<race name="HUMAN" point="rim_kamaroka" />
+		<race name="DARK_ELF" point="rim_kamaroka" />
+		<race name="ORC" point="rim_kamaroka" />
+		<race name="DWARF" point="rim_kamaroka" />
+		<race name="ELF" point="rim_kamaroka" />
+		<race name="KAMAEL" point="rim_kamaroka" />
+	</zone>
+	<zone name="rim_kamaroka_70" type="RespawnZone" shape="NPoly" minZ="-8792" maxZ="-8292">
+		<node X="41268" Y="-220980" />
+		<node X="43568" Y="-220980" />
+		<node X="43568" Y="-218517" />
+		<node X="41268" Y="-218506" />
+		<race name="HUMAN" point="rim_kamaroka" />
+		<race name="DARK_ELF" point="rim_kamaroka" />
+		<race name="ORC" point="rim_kamaroka" />
+		<race name="DWARF" point="rim_kamaroka" />
+		<race name="ELF" point="rim_kamaroka" />
+		<race name="KAMAEL" point="rim_kamaroka" />
+	</zone>
+	<zone name="rim_kamaroka_75" type="RespawnZone" shape="NPoly" minZ="-8812" maxZ="-8612">
+		<node X="47897" Y="-221000" />
+		<node X="50197" Y="-221000" />
+		<node X="50197" Y="-218536" />
+		<node X="47897" Y="-218526" />
+		<race name="HUMAN" point="rim_kamaroka" />
+		<race name="DARK_ELF" point="rim_kamaroka" />
+		<race name="ORC" point="rim_kamaroka" />
+		<race name="DWARF" point="rim_kamaroka" />
+		<race name="ELF" point="rim_kamaroka" />
+		<race name="KAMAEL" point="rim_kamaroka" />
+	</zone>
+	<zone name="crate01_17_17" type="RespawnZone" shape="NPoly" minZ="-8375" maxZ="-8095">
+		<node X="-86726" Y="-21076" />
+		<node X="-77193" Y="-21079" />
+		<node X="-77321" Y="-11710" />
+		<node X="-86670" Y="-11714" />
+		<race name="HUMAN" point="crate01" />
+		<race name="DARK_ELF" point="crate01" />
+		<race name="ORC" point="crate01" />
+		<race name="DWARF" point="crate01" />
+		<race name="ELF" point="crate01" />
+		<race name="KAMAEL" point="crate01" />
+	</zone>
+	<zone name="crate02_17_15" type="RespawnZone" shape="NPoly" minZ="-8483" maxZ="-8233">
+		<node X="-86608" Y="-86506" />
+		<node X="-77222" Y="-86479" />
+		<node X="-77064" Y="-76900" />
+		<node X="-86576" Y="-76829" />
+		<race name="HUMAN" point="crate02" />
+		<race name="DARK_ELF" point="crate02" />
+		<race name="ORC" point="crate02" />
+		<race name="DWARF" point="crate02" />
+		<race name="ELF" point="crate02" />
+		<race name="KAMAEL" point="crate02" />
+	</zone>
+	<zone name="crate03_18_15" type="RespawnZone" shape="NPoly" minZ="-8471" maxZ="-8221">
+		<node X="-53365" Y="-87679" />
+		<node X="-43940" Y="-87683" />
+		<node X="-43926" Y="-78026" />
+		<node X="-53311" Y="-77966" />
+		<race name="HUMAN" point="crate03" />
+		<race name="DARK_ELF" point="crate03" />
+		<race name="ORC" point="crate03" />
+		<race name="DWARF" point="crate03" />
+		<race name="ELF" point="crate03" />
+		<race name="KAMAEL" point="crate03" />
+	</zone>
+	<zone name="giran_castle_town_22_11" type="RespawnZone" shape="NPoly" minZ="-5152" maxZ="3848">
+		<node X="65788" Y="-229302" />
+		<node X="98153" Y="-229274" />
+		<node X="98153" Y="-196678" />
+		<node X="65758" Y="-196655" />
+		<race name="HUMAN" point="giran_castle_town" />
+		<race name="DARK_ELF" point="giran_castle_town" />
+		<race name="ORC" point="giran_castle_town" />
+		<race name="DWARF" point="giran_castle_town" />
+		<race name="ELF" point="giran_castle_town" />
+		<race name="KAMAEL" point="giran_castle_town" />
+	</zone>
+	<zone name="kamaroka_17_12" type="RespawnZone" shape="NPoly" minZ="-15788" maxZ="-5288">
+		<node X="-90385" Y="-188637" />
+		<node X="-73551" Y="-188638" />
+		<node X="-73535" Y="-172014" />
+		<node X="-90409" Y="-172002" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_18_12" type="RespawnZone" shape="NPoly" minZ="-15784" maxZ="-5284">
+		<node X="-57520" Y="-188639" />
+		<node X="-40787" Y="-188652" />
+		<node X="-40781" Y="-171824" />
+		<node X="-57534" Y="-171808" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_19_12" type="RespawnZone" shape="NPoly" minZ="-15720" maxZ="-5220">
+		<node X="-24701" Y="-188524" />
+		<node X="-7960" Y="-188519" />
+		<node X="-7960" Y="-171933" />
+		<node X="-24678" Y="-171867" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="kamaroka_20_12" type="RespawnZone" shape="NPoly" minZ="-15688" maxZ="-5188">
+		<node X="7991" Y="-188661" />
+		<node X="24694" Y="-188661" />
+		<node X="24688" Y="-171910" />
+		<node X="8044" Y="-171895" />
+		<race name="HUMAN" point="kamaroka" />
+		<race name="DARK_ELF" point="kamaroka" />
+		<race name="ORC" point="kamaroka" />
+		<race name="DWARF" point="kamaroka" />
+		<race name="ELF" point="kamaroka" />
+		<race name="KAMAEL" point="kamaroka" />
+	</zone>
+	<zone name="inner_undying01" type="RespawnZone" shape="NPoly" minZ="-16233" maxZ="-6233">
+		<node X="-182265" Y="204880" />
+		<node X="-171874" Y="204865" />
+		<node X="-171884" Y="220348" />
+		<node X="-188714" Y="220333" />
+		<node X="-188581" Y="204678" />
+		<node X="-184537" Y="204665" />
+		<node X="-184536" Y="206967" />
+		<node X="-182259" Y="206962" />
+		<race name="HUMAN" point="inner_undying01" />
+		<race name="DARK_ELF" point="inner_undying01" />
+		<race name="ORC" point="inner_undying01" />
+		<race name="DWARF" point="inner_undying01" />
+		<race name="ELF" point="inner_undying01" />
+		<race name="KAMAEL" point="inner_undying01" />
+	</zone>
+	<zone name="inner_destruction01" type="RespawnZone" shape="NPoly" minZ="-13600" maxZ="-5600">
+		<node X="-253983" Y="204764" />
+		<node X="-237481" Y="204721" />
+		<node X="-237521" Y="221261" />
+		<node X="-253986" Y="221221" />
+		<race name="HUMAN" point="inner_destruction01" />
+		<race name="DARK_ELF" point="inner_destruction01" />
+		<race name="ORC" point="inner_destruction01" />
+		<race name="DWARF" point="inner_destruction01" />
+		<race name="ELF" point="inner_destruction01" />
+		<race name="KAMAEL" point="inner_destruction01" />
+	</zone>
+	<zone name="cleft" type="RespawnZone" shape="NPoly" minZ="-4274" maxZ="16336">
+		<node X="-217859" Y="235707" />
+		<node X="-210156" Y="235711" />
+		<node X="-204861" Y="241147" />
+		<node X="-204813" Y="248783" />
+		<node X="-210251" Y="254208" />
+		<node X="-218100" Y="254098" />
+		<node X="-223303" Y="248801" />
+		<node X="-223298" Y="241116" />
+		<race name="HUMAN" point="cleft" />
+		<race name="DARK_ELF" point="cleft" />
+		<race name="ORC" point="cleft" />
+		<race name="DWARF" point="cleft" />
+		<race name="ELF" point="cleft" />
+		<race name="KAMAEL" point="cleft" />
+	</zone>
+	<zone name="border_of_nightmare_16_11" type="RespawnZone" shape="NPoly" minZ="-6963" maxZ="-5963">
+		<node X="-123207" Y="-221278" />
+		<node X="-106397" Y="-221284" />
+		<node X="-106380" Y="-204496" />
+		<node X="-123215" Y="-204520" />
+		<race name="HUMAN" point="border_of_nightmare" />
+		<race name="DARK_ELF" point="border_of_nightmare" />
+		<race name="ORC" point="border_of_nightmare" />
+		<race name="DWARF" point="border_of_nightmare" />
+		<race name="ELF" point="border_of_nightmare" />
+		<race name="KAMAEL" point="border_of_nightmare" />
+	</zone>
+	<zone name="border_of_nightmare_16_13" type="RespawnZone" shape="NPoly" minZ="-6869" maxZ="-5869">
+		<node X="-123102" Y="-155752" />
+		<node X="-106354" Y="-155752" />
+		<node X="-106354" Y="-149923" />
+		<node X="-123102" Y="-149919" />
+		<race name="HUMAN" point="border_of_nightmare" />
+		<race name="DARK_ELF" point="border_of_nightmare" />
+		<race name="ORC" point="border_of_nightmare" />
+		<race name="DWARF" point="border_of_nightmare" />
+		<race name="ELF" point="border_of_nightmare" />
+		<race name="KAMAEL" point="border_of_nightmare" />
+	</zone>
+	<zone name="inner_annihilation01" type="RespawnZone" shape="NPoly" minZ="-17000" maxZ="-7000">
+		<node X="-189927" Y="170995" />
+		<node X="-169927" Y="170995" />
+		<node X="-169927" Y="190995" />
+		<node X="-189927" Y="190995" />
+		<race name="HUMAN" point="inner_annihilation01" />
+		<race name="DARK_ELF" point="inner_annihilation01" />
+		<race name="ORC" point="inner_annihilation01" />
+		<race name="DWARF" point="inner_annihilation01" />
+		<race name="ELF" point="inner_annihilation01" />
+		<race name="KAMAEL" point="inner_annihilation01" />
+	</zone>
+	<zone name="inner_annihilation02" type="RespawnZone" shape="NPoly" minZ="-15000" maxZ="-7000">
+		<node X="-220965" Y="172057" />
+		<node X="-204965" Y="172057" />
+		<node X="-204965" Y="188057" />
+		<node X="-220965" Y="188057" />
+		<race name="HUMAN" point="inner_annihilation02" />
+		<race name="DARK_ELF" point="inner_annihilation02" />
+		<race name="ORC" point="inner_annihilation02" />
+		<race name="DWARF" point="inner_annihilation02" />
+		<race name="ELF" point="inner_annihilation02" />
+		<race name="KAMAEL" point="inner_annihilation02" />
+	</zone>
+	<zone name="olympiad_stadium02_15_10" type="RespawnZone" shape="NPoly" minZ="-5000" maxZ="32767">
+		<node X="-155585" Y="-253925" />
+		<node X="-139294" Y="-253916" />
+		<node X="-139298" Y="-237620" />
+		<node X="-155615" Y="-237611" />
+		<race name="HUMAN" point="olympiad_stadium02" />
+		<race name="DARK_ELF" point="olympiad_stadium02" />
+		<race name="ORC" point="olympiad_stadium02" />
+		<race name="DWARF" point="olympiad_stadium02" />
+		<race name="ELF" point="olympiad_stadium02" />
+		<race name="KAMAEL" point="olympiad_stadium02" />
+	</zone>
+	<zone name="olympiad_stadium03_15_11" type="RespawnZone" shape="NPoly" minZ="-4968" maxZ="32767">
+		<node X="-155584" Y="-221153" />
+		<node X="-139293" Y="-221144" />
+		<node X="-139297" Y="-204849" />
+		<node X="-155614" Y="-204839" />
+		<race name="HUMAN" point="olympiad_stadium03" />
+		<race name="DARK_ELF" point="olympiad_stadium03" />
+		<race name="ORC" point="olympiad_stadium03" />
+		<race name="DWARF" point="olympiad_stadium03" />
+		<race name="ELF" point="olympiad_stadium03" />
+		<race name="KAMAEL" point="olympiad_stadium03" />
+	</zone>
+	<zone name="olympiad_stadium04_15_12" type="RespawnZone" shape="NPoly" minZ="-4936" maxZ="32767">
+		<node X="-155577" Y="-188340" />
+		<node X="-139287" Y="-188331" />
+		<node X="-139291" Y="-172035" />
+		<node X="-155608" Y="-172026" />
+		<race name="HUMAN" point="olympiad_stadium04" />
+		<race name="DARK_ELF" point="olympiad_stadium04" />
+		<race name="ORC" point="olympiad_stadium04" />
+		<race name="DWARF" point="olympiad_stadium04" />
+		<race name="ELF" point="olympiad_stadium04" />
+		<race name="KAMAEL" point="olympiad_stadium04" />
+	</zone>
+</list>

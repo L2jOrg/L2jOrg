@@ -1,0 +1,20 @@
+<html><body>
+<table width=270><tr>
+<td width=45><button value="Main" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Ip Menu</center></td>
+<td width=45><button value="Back" action="bypass -h admin_find_dualbox" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table><br>
+Characters logged from <font color="LEVEL">%ip%</font>:<br>
+<table width=270>		
+<tr><td width=80>Name</td><td width=110>Class</td><td width=40>Level</td></tr>
+%results%
+</table>
+<br>
+<center>
+<table><tr>
+<td width=100>IP Number:</td>
+<td><edit var="ip_number" width=100></td>
+<td><button value="Find" action="bypass -h admin_find_ip $ip_number" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table></center>
+<br>Found %number% character%end%
+</body></html>

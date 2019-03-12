@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:group name="mapSequenceGroup">
+		<xs:sequence>
+			<xs:element name="loc" maxOccurs="unbounded" minOccurs="0" type="locationType" />
+			<xs:element name="selector" minOccurs="0" type="selectorType" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="locationType">
+		<xs:attributeGroup ref="locationAttrGroup" />
+	</xs:complexType>
+
+	<xs:complexType name="selectorType">
+		<xs:sequence>
+			<xs:element name="choice" maxOccurs="unbounded" minOccurs="0">
+				<xs:complexType>
+					<xs:group ref="mapSequenceGroup" />
+					<xs:attributeGroup ref="locationAttrGroup" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="locationAttrGroup" />
+	</xs:complexType>
+
+	<xs:attributeGroup name="locationAttrGroup">
+		<xs:attribute type="xs:byte" name="id" use="required" />
+		<xs:attribute type="xs:int" name="x" use="required" />
+		<xs:attribute type="xs:int" name="y" use="required" />
+		<xs:attribute type="xs:int" name="z" use="required" />
+	</xs:attributeGroup>
+
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="map" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:group ref="mapSequenceGroup" />
+						<xs:attribute type="xs:byte" name="id" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,1803 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="49100" name="Teleport: Floran" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to Floran. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49101" name="Teleport: Giran" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to Giran. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49102" name="Teleport: Oren" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to Oren. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49103" name="Teleport: Ivory Tower" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to Ivory Tower. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49104" name="Teleport: Hunter's Village" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to Hunter's Village. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49105" name="Teleport: Entrance to Cruma Tower" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to the Entrance to Cruma Tower. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49106" name="Teleport: Entrance to Dragon Valley" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to Dragon Valley. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49107" name="Teleport: Dragon Valley Bridge" type="EtcItem">
+		<!-- Magic stone, used to teleport the character to Dragon Valley Bridge. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49108" name="Beauty Chest" type="EtcItem">
+		<!-- Double-click the chest to get one of the next items: Dye Potion Pack / Facelifting Potion Pack / Mystic Potion. -->
+		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49109" name="Buff Scrolls Chest" type="EtcItem">
+		<!-- Double-click the chest to get one of the next items: Scroll: Empower / Scroll: Might / Scroll: Defence. -->
+		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49110" name="High-Quality Dye Chest" type="EtcItem">
+		<!-- Double-click the chest to get one of the next items: Greater Dye of STR / Greater Dye of CON / Greater Dye of DEX / Greater Dye of INT / Greater Dye of WIT / Greater Dye of MEN. -->
+		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="32012" level="1"/>
+		</skills>
+	</item>
+	<item id="49111" name="Dye Chest" type="EtcItem">
+		<!-- Double-click the chest to get one of the next items: Dye of STR / Dye of CON / Dye of DEX / Dye of INT / Dye of WIT / Dye of MEN. -->
+		<set name="icon" val="icon.etc_box_of_adventure_5_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="32013" level="1"/>
+		</skills>
+	</item>
+	<item id="49112" name="Staff Chest" additionalName="Grade C" type="EtcItem">
+		<!-- Double-click the chest to get one of the next items: Cursed Staff / Crystal Staff / Sage's Staff / Demon's Staff. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49113" name="Fist Weapon Chest" additionalName="Grade C" type="EtcItem">
+		<!-- Double-click the chest to get one of the next items: Knuckle Duster / Chakram / Fisted Blade / Great Pata. -->
+		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49114" name="Spear Chest" additionalName="Grade C" type="EtcItem">
+		<!-- Double-click the chest to get one of the next items: Bec de Corbin / Orcish Glaive / Poleaxe / Orcish Poleaxe. -->
+		<set name="icon" val="icon.etc_treasure_box_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49115" name="Blunt Weapon Chest" additionalName="Grade C" type="EtcItem">
+		<!-- Double-click the chest to get one of the next items: Dwarven War Hammer / Heavy Doom Hammer / War Axe / Yaksa Mace. -->
+		<set name="icon" val="icon.etc_treasure_box_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49116" name="Dagger Chest" additionalName="Grade C" type="EtcItem">
+		<!-- Double-click the chest to get one of the next items: Stiletto / Cursed Dagger / Dark Screamer / Crystal Dagger. -->
+		<set name="icon" val="icon.etc_treasure_box_i06" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49117" name="One-Handed Sword Chest" additionalName="Grade C" type="EtcItem">
+		<!-- Double-click the chest to get one of the next items: Katana / StormBringer / Sword of Delusion / Samurai Long Sword. -->
+		<set name="icon" val="icon.etc_treasure_box_i07" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49118" name="Bow Chest" additionalName="Grade C" type="EtcItem">
+		<!-- Double-click the chest to get one of the next items: Elemental Bow / Crystallized Ice Bow / Akat Longbow / Eminence Bow. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49119" name="Halloween Suit (15-day)" type="Armor">
+		<!-- 15-day item. If equipped, cannot wear armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Weapons and Magic Equipment will not be removed. Hair Accessory will not be removed, but will not display. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.ev_wp_halloween" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="49120" name="Halloween Suit" type="Armor">
+		<!-- If equipped, cannot wear armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Weapons and Magic Equipment will not be removed. Hair Accessory will not be removed, but will not display. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.ev_wp_halloween" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="is_dropable" val="false" />
+	</item>
+	<item id="49121" name="Party Mask" type="Armor">
+		<!-- 15-day item. Fashionable accessory which can make the wearer especially elegant. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_party_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="49122" name="Ring of Macken (15-day)" type="Armor">
+		<!-- 15-day item. When equipped, increases HP by 20, M. Atk. by 3, P. Atk. by 5. The effect does not stack, if two identical rings are equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.ev_11th_rare_acc_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<stats>
+			<stat type="mDef">20</stat>
+		</stats>
+	</item>
+	<item id="49123" name="Ring of Macken" type="Armor">
+		<!-- When equipped, increases HP by 20, M. Atk. by 3, P. Atk. by 5. The effect does not stack, if two identical rings are equipped. -->
+		<set name="icon" val="icon.ev_11th_rare_acc_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<stats>
+			<stat type="mDef">20</stat>
+		</stats>
+	</item>
+	<item id="49124" name="Earring of Macken (15-day)" type="Armor">
+		<!-- 15-day item. When equipped, increases MP recovery rate by 0.2, Healing received by 2%. The effect does not stack, if two identical earrings are equipped. MP +10. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.ev_11th_rare_acc_earing" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<stats>
+			<stat type="mDef">30</stat>
+			<stat type="maxMp">10</stat>
+		</stats>
+	</item>
+	<item id="49125" name="Earring of Macken" type="Armor">
+		<!-- When equipped, increases MP recovery rate by +0.2, Healing received by 2%. The effect does not stack, if two identical earrings are equipped. Additionally increases MP by 10. -->
+		<set name="icon" val="icon.ev_11th_rare_acc_earing" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<stats>
+			<stat type="mDef">30</stat>
+			<stat type="maxMp">10</stat>
+		</stats>
+	</item>
+	<item id="49126" name="Necklace of Macken (15-day)" type="Armor">
+		<!-- 15-day item. When equipped, increases MP by 20, M. Def. by 3, P. Def. by 5. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.ev_11th_rare_acc_necklace" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="maxMp">20</stat>
+		</stats>
+	</item>
+	<item id="49127" name="Necklace of Macken" type="Armor">
+		<!-- When equipped, increases MP by 20, M. Def. by 3, P. Def. by 5. -->
+		<set name="icon" val="icon.ev_11th_rare_acc_necklace" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="maxMp">20</stat>
+		</stats>
+	</item>
+	<item id="49128" name="Souvenir Box" type="EtcItem">
+		<!-- Reward for participation in the even. Double-click the chest to receive one of the following items: High-Quality Dye Chest, Dye Chest, Beauty Chest, Buff Scrolls Chest, Major Healing Potion. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<set name="icon" val="icon.new_user_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49129" name="11th Anniversary Coin" type="EtcItem">
+		<!-- Coin used to exchange special items during the 11th Sale. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<set name="icon" val="icon.etc_11th_token" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49130" name="Summon Scroll: Byo" type="EtcItem">
+		<!-- Double-click the item to summon Byo. Summoned Byo names a random number from 1 to 6. If your number is bigger than Byo's, you can receive the Adena. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<set name="icon" val="icon.etc_11th_event_solo" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="49131" name="Magic Number Cube" type="EtcItem">
+		<!-- Double-click the item to choose a random number from 1 to 6. All characters who own a Cube can participate in this event. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<set name="icon" val="icon.etc_11th_event_group" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="49132" name="Membership Card" additionalName="11th Sale" type="EtcItem">
+		<!-- Membership Card given to VIP members of the 11th Sale. When in inventory, you can receive the 11th Anniversary buffs and coins from the 11th NPC. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<set name="icon" val="icon.ev_buff_11th" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="49133" name="Venetian Fleece - Low Level" additionalName="15-day" type="EtcItem">
+		<!-- A 15-day item. When in inventory, your XP and SP gain is increased by 22%. Can be used only by characters whose level is less than 40. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be removed after the event is over. -->
+		<set name="icon" val="icon.skill19226" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="time" val="21600" />
+	</item>
+	<item id="49134" name="Dual Candle Sword (15-day)" type="Weapon">
+		<!-- 15-day item. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.ev_11th_candle" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2530" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<stats>
+			<stat type="pAtk">73</stat>
+			<stat type="mAtk">37</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49135" name="Dual Candle Sword" type="Weapon">
+		<!-- 11th Anniversary item. -->
+		<set name="icon" val="icon.ev_11th_candle" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2530" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">8</stat>
+			<stat type="mAtk">6</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49136" name="Venetian Fleece - High Level" additionalName="15-day" type="EtcItem">
+		<!-- 15-day item. When in inventory, your XP and SP gain is increased by 11%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<set name="icon" val="icon.skill19226" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="time" val="21600" />
+	</item>
+	<item id="49137" name="Venetian Fleece Chest (Low Level)" type="EtcItem">
+		<!-- Double-click the chest to receive 1 15-day Venetian Fleece (Low Level). The Fleece can be used only by characters whose level is less than 40. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. This item will be removed after the event is over. -->
+		<set name="icon" val="icon.etc_pi_box_belief_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49138" name="Venetian Fleece Chest (High Level)" type="EtcItem">
+		<!-- Double-click the chest to receive 15-day Venetian Fleece Chest (High Level, 1 pc.). Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<set name="icon" val="icon.etc_pi_box_love_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49139" name="Dual Sword Gift Chest" type="EtcItem">
+		<!-- Double-click the chest to receive 15-day Dual Candle Sword.  Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<set name="icon" val="icon.etc_pi_box_joy_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="49140" name="Horn of Glory" additionalName="Empower" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
+		<set name="icon" val="icon.weapon_horn_of_glory_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="540" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">98</stat>
+			<stat type="mAtk">91</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49141" name="Horn of Glory" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+		<set name="icon" val="icon.weapon_horn_of_glory_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="540" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">98</stat>
+			<stat type="mAtk">91</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49142" name="Horn of Glory" additionalName="Magic Regeneration" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+		<set name="icon" val="icon.weapon_horn_of_glory_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="540" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">98</stat>
+			<stat type="mAtk">91</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49143" name="Pata" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 32. -->
+		<set name="icon" val="icon.weapon_chakram_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1440" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">204</stat>
+			<stat type="mAtk">89</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49144" name="Pata" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+		<set name="icon" val="icon.weapon_chakram_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1440" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">204</stat>
+			<stat type="mAtk">89</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49145" name="Pata" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 260 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_chakram_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1440" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">204</stat>
+			<stat type="mAtk">89</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49146" name="Bastard Sword" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_bastard_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1510" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49147" name="Bastard Sword" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_bastard_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1510" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49148" name="Bastard Sword" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_bastard_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1510" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49149" name="Saber" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_saber_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49150" name="Saber" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_saber_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49151" name="Saber" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_saber_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49152" name="Spinebone Sword" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_spinebone_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1510" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49153" name="Spinebone Sword" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_spinebone_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1510" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49154" name="Spinebone Sword" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_spinebone_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1510" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49155" name="Artisan's Sword" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_artisans_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49156" name="Artisan's Sword" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_artisans_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49157" name="Artisan's Sword" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_artisans_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49158" name="Crimson Sword" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_crimson_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1490" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">64</stat>
+			<stat type="mAtk">39</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49159" name="Crimson Sword" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_crimson_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1490" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">64</stat>
+			<stat type="mAtk">39</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49160" name="Crimson Sword" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_crimson_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1490" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">64</stat>
+			<stat type="mAtk">39</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49161" name="Knight's Sword" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_knights_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49162" name="Knight's Sword" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_knights_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49163" name="Knight's Sword" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_knights_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49164" name="Sword of Revolution" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_sword_of_revolution_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1450" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">79</stat>
+			<stat type="mAtk">47</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49165" name="Sword of Revolution" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_sword_of_revolution_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1450" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">79</stat>
+			<stat type="mAtk">47</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49166" name="Sword of Revolution" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_sword_of_revolution_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1450" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">79</stat>
+			<stat type="mAtk">47</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49167" name="Elven Sword" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_elven_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1470" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">64</stat>
+			<stat type="mAtk">39</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49168" name="Elven Sword" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_elven_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1470" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">64</stat>
+			<stat type="mAtk">39</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49169" name="Elven Sword" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_elven_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1470" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">64</stat>
+			<stat type="mAtk">39</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49170" name="Elven Long Sword" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_elven_long_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1440" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49171" name="Elven Long Sword" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_elven_long_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1440" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49172" name="Elven Long Sword" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_elven_long_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1440" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49173" name="Tomahawk" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_tomahawk_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1780" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49174" name="Tomahawk" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_tomahawk_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1780" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49175" name="Tomahawk" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_tomahawk_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1780" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49176" name="Morning Star" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_morning_star_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1720" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">79</stat>
+			<stat type="mAtk">47</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49177" name="Morning Star" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_morning_star_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1720" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">79</stat>
+			<stat type="mAtk">47</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49178" name="Morning Star" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_morning_star_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1720" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">79</stat>
+			<stat type="mAtk">47</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49179" name="Hand Axe" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_hand_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1820" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49180" name="Hand Axe" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_hand_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1820" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49181" name="Hand Axe" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_hand_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1820" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49182" name="Spiked Club" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_spike_club_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1750" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">64</stat>
+			<stat type="mAtk">39</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49183" name="Spiked Club" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_spike_club_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1750" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">64</stat>
+			<stat type="mAtk">39</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49184" name="Spiked Club" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_spike_club_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1750" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">64</stat>
+			<stat type="mAtk">39</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49185" name="Tarbar" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_tarbar_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1730" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">79</stat>
+			<stat type="mAtk">47</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49186" name="Tarbar" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_tarbar_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1730" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">79</stat>
+			<stat type="mAtk">47</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49187" name="Tarbar" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_tarbar_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1730" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">79</stat>
+			<stat type="mAtk">47</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49188" name="Bonebreaker" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_bonebreaker_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1720" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49189" name="Bonebreaker" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_bonebreaker_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1720" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49190" name="Bonebreaker" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_bonebreaker_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1720" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49191" name="Heavy Mace" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_heavy_mace_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1800" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49192" name="Heavy Mace" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_heavy_mace_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1800" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49193" name="Heavy Mace" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_heavy_mace_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1800" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49194" name="Scalpel" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_scalpel_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1810" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49195" name="Scalpel" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_scalpel_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1810" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49196" name="Scalpel" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_scalpel_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1810" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49197" name="Work Hammer" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
+		<set name="icon" val="icon.weapon_work_hammer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1790" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49198" name="Work Hammer" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+		<set name="icon" val="icon.weapon_work_hammer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1790" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="49199" name="Work Hammer" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_work_hammer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1790" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+</list>

@@ -1,0 +1,668 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="5900" name="Coin Collecting Album" type="EtcItem">
+		<!-- High-quality coin collecting album made of leather. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
+		<set name="icon" val="icon.etc_magic_book_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5901" name="Blood Offering" type="EtcItem">
+		<!-- Blood that can be obtained by killing a Monster of Offering. The number of this item will determine your score. -->
+		<set name="icon" val="icon.etc_dragon_blood_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5902" name="Scroll of Ancient Magic" type="EtcItem">
+		<!-- Scroll that contains ancient magic. Take it to Gatekeeper Ziggurat. -->
+		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5903" name="Ancient Ash Urn" type="EtcItem">
+		<!-- Ancient urn that was found in the Tower of Insolence. Take it to Seer Reva of Town of Aden. -->
+		<set name="icon" val="icon.etc_oil_pot_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5916" name="Spellbook Page" type="EtcItem">
+		<!-- Torn piece of paper that seems to have been ripped out of a spellbook. If you Double-click it, you can examine it closely. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="80" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2171" level="1" /> <!-- Spellbook Paper -->
+		</skills>
+	</item>
+	<item id="5917" name="Kranvel's Spellbook: Chapter of Fire" type="EtcItem">
+		<!-- A Chapter of Great Magus Kranvel's Spellbook. Collect the Chapters on Fire, Water, Wind and Earth and take all of them to Elder Casian. -->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="80" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5918" name="Kranvel's Spellbook: Chapter of Water" type="EtcItem">
+		<!-- A Chapter of Great Magus Kranvel's Spellbook. Collect the Chapters on Fire, Water, Wind and Earth and take all of them to Elder Casian. -->
+		<set name="icon" val="icon.etc_paper_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="80" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5919" name="Kranvel's Spellbook: Chapter of Wind" type="EtcItem">
+		<!-- A Chapter of Great Magus Kranvel's Spellbook. Collect the Chapters on Fire, Water, Wind and Earth and take all of them to Elder Casian. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="80" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5920" name="Kranvel's Spellbook: Chapter of Earth" type="EtcItem">
+		<!-- A Chapter of Great Magus Kranvel's Spellbook. Collect the Chapters on Fire, Water, Wind and Earth and take all of them to Elder Casian. -->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="80" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5921" name="Worthless Piece of Paper" type="EtcItem">
+		<!-- Paper piece that has useless scribbles written on it. -->
+		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="80" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5922" name="Blueprint: Giants Golem 1" type="EtcItem">
+		<!-- Part of the golem blueprints from the Lesser Giant era. The first page out of five pages. -->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5923" name="Blueprint: Giants Golem 2" type="EtcItem">
+		<!-- Part of the golem blueprints from the Lesser Giant era. The second page out of five pages. -->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5924" name="Blueprint: Giants Golem 3" type="EtcItem">
+		<!-- Part of the golem blueprints from the Lesser Giant era. The third page out of five pages. -->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5925" name="Blueprint: Giants Golem 4" type="EtcItem">
+		<!-- Part of the golem blueprints from the Lesser Giant era. The fourth page out of five pages. -->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5926" name="Blueprint: Giants Golem 5" type="EtcItem">
+		<!-- Part of the golem blueprints from the Lesser Giant era. The fifth page out of five pages. -->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5927" name="Book: Basics of Giants Magic, Chapter 1" type="EtcItem">
+		<!-- Book on the magic of the giants from the Lesser Giant era, 1st chapter. -->
+		<set name="icon" val="icon.etc_paper_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5928" name="Book: Basics of Giants Magic, Chapter 2" type="EtcItem">
+		<!-- Book on the magic of the giants from the Lesser Giant era, 2nd chapter. -->
+		<set name="icon" val="icon.etc_paper_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5929" name="Book: Basics of Giants Magic, Chapter 3" type="EtcItem">
+		<!-- Book on the magic of the giants from the Lesser Giant era, 3rd chapter. -->
+		<set name="icon" val="icon.etc_paper_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5930" name="Book: Basics of Giants Magic, Chapter 4" type="EtcItem">
+		<!-- Book on the magic of the giants from the Lesser Giant era, 4th chapter. -->
+		<set name="icon" val="icon.etc_paper_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5931" name="Book: Basics of Giants Magic, Chapter 5" type="EtcItem">
+		<!-- Book on the magic of the giants from the Lesser Giant era, 5th chapter. -->
+		<set name="icon" val="icon.etc_paper_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5932" name="Handbook: Giants Architecture, Chapter 1" type="EtcItem">
+		<!-- Architectural handbook of the giants from the Lesser Giant era, 1st chapter. -->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5933" name="Handbook: Giants Architecture, Chapter 2" type="EtcItem">
+		<!-- Architectural handbook of the giants from the Lesser Giant era, 2nd chapter. -->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5934" name="Handbook: Giants Architecture, Chapter 3" type="EtcItem">
+		<!-- Architectural handbook of the giants from the Lesser Giant era, 3rd chapter. -->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5935" name="Handbook: Giants Architecture, Chapter 4" type="EtcItem">
+		<!-- Architectural handbook of the giants from the Lesser Giant era, 4th chapter. -->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5936" name="Handbook: Giants Architecture, Chapter 5" type="EtcItem">
+		<!-- Architectural handbook of the giants from the Lesser Giant era, 5th chapter. -->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5937" name="Book: Giants Medical Science, Chapter 1" type="EtcItem">
+		<!-- Medical book of the giants from the Lesser Giant era, 1st chapter. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5938" name="Book: Giants Medical Science, Chapter 2" type="EtcItem">
+		<!-- Medical book of the giants from the Lesser Giant era, 2nd chapter. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5939" name="Book: Giants Medical Science, Chapter 3" type="EtcItem">
+		<!-- Medical book of the giants from the Lesser Giant era, 3rd chapter. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5940" name="Book: Giants Medical Science, Chapter 4" type="EtcItem">
+		<!-- Medical book of the giants from the Lesser Giant era, 4th chapter. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5941" name="Book: Giants Medical Science, Chapter 5" type="EtcItem">
+		<!-- Medical book of the giants from the Lesser Giant era, 5th chapter. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5942" name="Giant's Love Letter" type="EtcItem">
+		<!-- It seems like even the giants used to have a love life. -->
+		<set name="icon" val="icon.etc_piece_of_report_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5943" name="Giants' Doodle" type="EtcItem">
+		<!-- Crude picture drawn by a would-be painter giant. -->
+		<set name="icon" val="icon.etc_painting_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5944" name="Ancient Parchment" type="EtcItem">
+		<!-- Piece of parchment from the Lesser Giant era. If you Double-click it, you can read the contents. -->
+		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2172" level="1" /> <!-- Scroll of Giants -->
+		</skills>
+	</item>
+	<item id="5945" name="Book: Giants Science and Technology, Chapter 1" type="EtcItem">
+		<!-- Part of the theory book that describes the science and technology of the Lesser Giant era. The 1st of five chapters. -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5946" name="Book: Giants Science and Technology, Chapter 2" type="EtcItem">
+		<!-- Part of the theory book that describes the science and technology of the Lesser Giant era. The 2nd of five chapters. -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5947" name="Book: Giants Science and Technology, Chapter 3" type="EtcItem">
+		<!-- Part of the theory book that describes the science and technology of the Lesser Giant era. The 3rd of five chapters. -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5948" name="Book: Giants Science and Technology, Chapter 4" type="EtcItem">
+		<!-- Part of the theory book that describes the science and technology of the Lesser Giant era. The 4th of five chapters. -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5949" name="Book: Giants Science and Technology, Chapter 5" type="EtcItem">
+		<!-- Part of the theory book that describes the science and technology of the Lesser Giant era. The 5th of five chapters. -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5950" name="Almanac: Lesser Giant Culture, Chapter 1" type="EtcItem">
+		<!-- Part of the almanac that contains information about the culture of the Lesser Giant era. The 1st of five chapters. -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5951" name="Almanac: Lesser Giant Culture, Chapter 2" type="EtcItem">
+		<!-- Part of the almanac that contains information about the culture of the Lesser Giant era. The 2nd of five chapters. -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5952" name="Almanac: Lesser Giant Culture, Chapter 3" type="EtcItem">
+		<!-- Part of the almanac that contains information about the culture of the Lesser Giant era. The 3rd of five chapters. -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5953" name="Almanac: Lesser Giant Culture, Chapter 4" type="EtcItem">
+		<!-- Part of the almanac that contains information about the culture of the Lesser Giant era. The 4th of five chapters. -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5954" name="Almanac: Lesser Giant Culture, Chapter 5" type="EtcItem">
+		<!-- Part of the almanac that contains information about the culture of the Lesser Giant era. The 5th of five chapters. -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5955" name="Ancient Lesser Giant Book" type="EtcItem">
+		<!-- Book from the Lesser Giant era. If you Double-click it, you can examine its contents. -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2173" level="1" /> <!-- Book of Giants -->
+		</skills>
+	</item>
+	<item id="5956" name="15-year-old Wine" type="EtcItem">
+		<!-- Gift from Harlan as a token of gratitude. It is aged 15 years. Average quality wine. -->
+		<set name="icon" val="icon.etc_luxury_wine_a_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="20" />
+		<set name="price" val="5900" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5957" name="30-year-old Wine" type="EtcItem">
+		<!-- Gift from Harlan as a token of gratitude. It is aged 30 years. High quality wine. -->
+		<set name="icon" val="icon.etc_luxury_wine_b_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="20" />
+		<set name="price" val="7900" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5958" name="60-year-old Wine" type="EtcItem">
+		<!-- Gift from Harlan as a token of gratitude. It is aged 60 years. Excellent quality wine. -->
+		<set name="icon" val="icon.etc_luxury_wine_c_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="20" />
+		<set name="price" val="30900" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5959" name="Ritron's Dessert Recipe" type="EtcItem">
+		<!-- Secret recipe for making dessert by using ritron fruit as its ingredient. It can to sold at a store. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="price" val="40000" />
+	</item>
+	<item id="5960" name="Ritron Jelly" type="EtcItem">
+		<!-- Delicious jelly made from ritron fruit. It can be sold at a store. -->
+		<set name="icon" val="icon.etc_cobol_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="price" val="920" />
+	</item>
+	<item id="5961" name="Kail's Silver Basilisk" type="EtcItem">
+		<!-- Royal-grade Coin -->
+		<set name="icon" val="icon.etc_kyles_silver_basilisk_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="1000" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5962" name="Kail's Gold Golem" type="EtcItem">
+		<!-- Royal-grade Coin -->
+		<set name="icon" val="icon.etc_kyles_gold_golem_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="1000" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5963" name="Kail's Blood Dragon" type="EtcItem">
+		<!-- Royal-grade Coin -->
+		<set name="icon" val="icon.etc_kyles_blood_dragon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="1000" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5964" name="Warehouse Keeper's Medal" type="EtcItem">
+		<!-- Medal that is issued by the Iron Gate Guild to Warehouse Keepers according to their productivity. If you collect them, you can use them to play bingo. -->
+		<set name="icon" val="icon.etc_irongate_medal_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="100" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5971" name="Joke Book of Ancient Times" type="EtcItem">
+		<!-- Collection of jokes of Galfredo Romer, a Royal Clown. -->
+		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5972" name="Revelation of the Seals: Chapter of Avarice" type="EtcItem">
+		<!-- Ancient record regarding the Seven Seals. The first of seven chapters. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5973" name="Revelation of the Seals: Chapter of Gnosis" type="EtcItem">
+		<!-- Ancient record regarding the Seven Seals. The second of seven chapters. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5974" name="Revelation of the Seals: Chapter of Strife" type="EtcItem">
+		<!-- Ancient record regarding the Seven Seals. The third of seven chapters. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5975" name="Revelation of the Seals: Chapter of Punishment" type="EtcItem">
+		<!-- Ancient record regarding the Seven Seals. The fourth of seven chapters. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5976" name="Revelation of the Seals: Chapter of Awakening" type="EtcItem">
+		<!-- Ancient record regarding the Seven Seals. The fifth of seven chapters. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5977" name="Revelation of the Seals: Chapter of Calamity" type="EtcItem">
+		<!-- Ancient record regarding the Seven Seals. The sixth of seven chapters. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5978" name="Revelation of the Seals: Chapter of Descent" type="EtcItem">
+		<!-- Ancient record regarding the Seven Seals. The seventh of seven chapters. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5979" name="Ancient Epic, Chapter 1" type="EtcItem">
+		<!-- Story of heroes written by ancient troubadours. The first of five chapters. -->
+		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5980" name="Ancient Epic, Chapter 2" type="EtcItem">
+		<!-- Story of heroes written by ancient troubadours. The second of five chapters. -->
+		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5981" name="Ancient Epic, Chapter 3" type="EtcItem">
+		<!-- Story of heroes written by ancient troubadours. The third of five chapters. -->
+		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5982" name="Ancient Epic, Chapter 4" type="EtcItem">
+		<!-- Story of heroes written by ancient troubadours. The fourth of five chapters. -->
+		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5983" name="Ancient Epic, Chapter 5" type="EtcItem">
+		<!-- Story of heroes written by ancient troubadours. The fifth of five chapters. -->
+		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5984" name="Imperial Genealogy 1" type="EtcItem">
+		<!-- The genealogy of the Elmoreden royal family. The first of five chapters. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5985" name="Imperial Genealogy 2" type="EtcItem">
+		<!-- The genealogy of the Elmoreden royal family. The second of five chapters. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5986" name="Imperial Genealogy 3" type="EtcItem">
+		<!-- The genealogy of the Elmoreden royal family. The third of five chapters. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5987" name="Imperial Genealogy 4" type="EtcItem">
+		<!-- The genealogy of the Elmoreden royal family. The fourth of five chapters. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5988" name="Imperial Genealogy 5" type="EtcItem">
+		<!-- The genealogy of the Elmoreden royal family. The fifth of five chapters. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

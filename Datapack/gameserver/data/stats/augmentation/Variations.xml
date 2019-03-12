@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/Variations.xsd">
+	<variations>
+		<!-- Common Life Stone -->
+		<variation mineralId="90012">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="40000" to="40072" chance="1.37" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="55.0">
+					<optionRange from="15095" to="15111" chance="5.89" />
+				</optionCategory>
+				<optionCategory chance="35.0">
+					<optionRange from="15112" to="15218" chance="0.94" />
+				</optionCategory>
+				<optionCategory chance="10.0">
+					<optionRange from="15219" to="15272" chance="10.0" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="mage" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="40000" to="40072" chance="1.37" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="mage" order="1">
+				<optionCategory chance="55.0">
+					<optionRange from="15095" to="15111" chance="5.89" />
+				</optionCategory>
+				<optionCategory chance="35.0">
+					<optionRange from="15112" to="15218" chance="0.94" />
+				</optionCategory>
+				<optionCategory chance="10.0">
+					<optionRange from="15219" to="15272" chance="10.0" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- Mid-grade Life Stone -->
+		<variation mineralId="90013">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="40073" to="40145" chance="1.37" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="55.0">
+					<optionRange from="15807" to="15823" chance="5.89" />
+				</optionCategory>
+				<optionCategory chance="35.0">
+					<optionRange from="15824" to="15930" chance="0.94" />
+				</optionCategory>
+				<optionCategory chance="10.0">
+					<optionRange from="15931" to="15984" chance="1.85" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="mage" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="40073" to="40145" chance="1.37" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="mage" order="1">
+				<optionCategory chance="55.0">
+					<optionRange from="15807" to="15823" chance="5.89" />
+				</optionCategory>
+				<optionCategory chance="35.0">
+					<optionRange from="15824" to="15930" chance="0.94" />
+				</optionCategory>
+				<optionCategory chance="10.0">
+					<optionRange from="15931" to="15984" chance="1.85" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- High-grade Life Stone -->
+		<variation mineralId="90014">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="40146" to="40218" chance="1.37" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="55.0">
+					<optionRange from="16163" to="16179" chance="5.89" />
+				</optionCategory>
+				<optionCategory chance="35.0">
+					<optionRange from="16180" to="16286" chance="0.94" />
+				</optionCategory>
+				<optionCategory chance="10.0">
+					<optionRange from="16287" to="16340" chance="1.73" />
+					<optionRange from="16377" to="16380" chance="1.72" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="mage" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="40146" to="40218" chance="1.37" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="mage" order="1">
+				<optionCategory chance="55.0">
+					<optionRange from="16163" to="16179" chance="5.88" />
+				</optionCategory>
+				<optionCategory chance="35.0">
+					<optionRange from="16180" to="16286" chance="0.94" />
+				</optionCategory>
+				<optionCategory chance="10.0">
+					<optionRange from="16287" to="16340" chance="1.73" />
+					<optionRange from="16377" to="16380" chance="1.72" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+	</variations>
+	<itemGroups>
+		<!-- Weapon D-Grade -->
+		<itemGroup id="1">
+			<item id="69" /> <!-- Bastard Sword -->
+			<item id="83" /> <!-- Sword of Magic -->
+			<item id="123" /> <!-- Saber -->
+			<item id="125" /> <!-- Spinebone Sword -->
+			<item id="126" /> <!-- Artisan's Sword -->
+			<item id="127" /> <!-- Crimson Sword -->
+			<item id="128" /> <!-- Knight's Sword -->
+			<item id="129" /> <!-- Sword of Revolution -->
+			<item id="130" /> <!-- Elven Sword -->
+			<item id="143" /> <!-- Sword of Mystic -->
+			<item id="144" /> <!-- Sword of Occult -->
+			<item id="2499" /> <!-- Elven Long Sword -->
+			<item id="70" /> <!-- Claymore -->
+			<item id="124" /> <!-- Two-Handed Sword -->
+			<item id="5285" /> <!-- Heavy Sword -->
+			<item id="2516" /> <!-- Saber*Saber -->
+			<item id="2517" /> <!-- Saber*Bastard Sword -->
+			<item id="2518" /> <!-- Saber*Spinebone Sword -->
+			<item id="2519" /> <!-- Saber*Artisan's Sword -->
+			<item id="2520" /> <!-- Saber*Knight's Sword -->
+			<item id="2521" /> <!-- Saber*Crimson Sword -->
+			<item id="2522" /> <!-- Saber*Elven Sword -->
+			<item id="2525" /> <!-- Bastard Sword*Bastard Sword -->
+			<item id="2526" /> <!-- Bastard Sword*Spinebone Sword -->
+			<item id="2527" /> <!-- Bastard Sword*Artisan's Sword -->
+			<item id="2528" /> <!-- Bastard Sword*Knight's Sword -->
+			<item id="2529" /> <!-- Bastard Sword*Crimson Sword -->
+			<item id="2530" /> <!-- Bastard Sword*Elven Sword -->
+			<item id="2533" /> <!-- Spinebone Sword*Spinebone Sword -->
+			<item id="2534" /> <!-- Spinebone Sword*Artisan's Sword -->
+			<item id="2535" /> <!-- Spinebone Sword*Knight's Sword -->
+			<item id="2536" /> <!-- Spinebone Sword*Crimson Sword -->
+			<item id="2537" /> <!-- Spinebone Sword*Elven Sword -->
+			<item id="2540" /> <!-- Artisan's Sword*Artisan's Sword -->
+			<item id="2541" /> <!-- Artisan's Sword*Knight's Sword -->
+			<item id="2542" /> <!-- Artisan's Sword*Crimson Sword -->
+			<item id="2543" /> <!-- Artisan's Sword*Elven Sword -->
+			<item id="2546" /> <!-- Knight's Sword*Knight's Sword -->
+			<item id="2547" /> <!-- Knight's Sword*Crimson Sword -->
+			<item id="2548" /> <!-- Knight's Sword*Elven Sword -->
+			<item id="220" /> <!-- Crafted Dagger -->
+			<item id="221" /> <!-- Assassin Knife -->
+			<item id="222" /> <!-- Poniard Dagger -->
+			<item id="223" /> <!-- Kukuri -->
+			<item id="224" /> <!-- Maingauche -->
+			<item id="225" /> <!-- Mithril Dagger -->
+			<item id="238" /> <!-- Dagger of Mana -->
+			<item id="239" /> <!-- Mystic Knife -->
+			<item id="240" /> <!-- Conjurer's Knife -->
+			<item id="241" /> <!-- Shilen Knife -->
+			<item id="1660" /> <!-- Cursed Maingauche -->
+			<item id="2507" /> <!-- Lizardspear -->
+			<item id="274" /> <!-- Reinforced Bow -->
+			<item id="275" /> <!-- Long Bow -->
+			<item id="276" /> <!-- Elven Bow -->
+			<item id="277" /> <!-- Dark Elven Bow -->
+			<item id="278" /> <!-- Gastraphetes -->
+			<item id="279" /> <!-- Reinforced Long Bow -->
+			<item id="280" /> <!-- Light Crossbow -->
+			<item id="258" /> <!-- Bagh-Nakh -->
+			<item id="259" /> <!-- Single-Edged Jamadhr -->
+			<item id="260" /> <!-- Triple-Edged Jamadhr -->
+			<item id="261" /> <!-- Bich'Hwa -->
+			<item id="262" /> <!-- Scallop Jamadhr -->
+			<item id="93" /> <!-- Winged Spear -->
+			<item id="291" /> <!-- Trident -->
+			<item id="292" /> <!-- Pike -->
+			<item id="293" /> <!-- War Hammer -->
+			<item id="294" /> <!-- War Pick -->
+			<item id="295" /> <!-- Dwarven Trident -->
+			<item id="296" /> <!-- Dwarven Pike -->
+			<item id="297" /> <!-- Glaive -->
+			<item id="1376" /> <!-- Guard Spear -->
+			<item id="86" /> <!-- Tomahawk -->
+			<item id="88" /> <!-- Morning Star -->
+			<item id="156" /> <!-- Hand Axe -->
+			<item id="157" /> <!-- Spiked Club -->
+			<item id="158" /> <!-- Tarbar -->
+			<item id="159" /> <!-- Bonebreaker -->
+			<item id="166" /> <!-- Heavy Mace -->
+			<item id="167" /> <!-- Scalpel -->
+			<item id="168" /> <!-- Work Hammer -->
+			<item id="169" /> <!-- Skull Breaker -->
+			<item id="172" /> <!-- Heavy Bone Club -->
+			<item id="179" /> <!-- Mace of Prayer -->
+			<item id="180" /> <!-- Mace of Judgment -->
+			<item id="181" /> <!-- Mace of Miracle -->
+			<item id="182" /> <!-- Doom Hammer -->
+			<item id="189" /> <!-- Staff of Life -->
+			<item id="90" /> <!-- Goat Head Staff -->
+			<item id="178" /> <!-- Bone Staff -->
+			<item id="183" /> <!-- Mystic Staff -->
+			<item id="184" /> <!-- Conjuror's Staff -->
+			<item id="185" /> <!-- Staff of Mana -->
+			<item id="186" /> <!-- Staff of Magic -->
+			<item id="187" /> <!-- Atuba Hammer -->
+			<item id="188" /> <!-- Ghost Staff -->
+			<item id="190" /> <!-- Atuba Mace -->
+		</itemGroup>
+		<!-- Weapon C-Grade -->
+		<itemGroup id="2">
+			<item id="242" /> <!-- Soulfire Dirk -->
+			<item id="226" /> <!-- Cursed Dagger -->
+			<item id="232" /> <!-- Dark Elven Dagger -->
+			<item id="230" /> <!-- Needle Wolverine -->
+			<item id="227" /> <!-- Stiletto -->
+			<item id="233" /> <!-- Dark Screamer -->
+			<item id="231" /> <!-- Grace Dagger -->
+			<item id="228" /> <!-- Crystal Dagger -->
+			<item id="7887" /> <!-- Mysterious Sword -->
+			<item id="325" /> <!-- Horn of Glory -->
+			<item id="72" /> <!-- Stormbringer -->
+			<item id="84" /> <!-- Homunkulus's Sword -->
+			<item id="145" /> <!-- Sword of Whispering Death -->
+			<item id="74" /> <!-- Katana -->
+			<item id="133" /> <!-- Raid Sword -->
+			<item id="73" /> <!-- Shamshir -->
+			<item id="131" /> <!-- Spirit Sword -->
+			<item id="7888" /> <!-- Ecliptic Sword -->
+			<item id="75" /> <!-- Caliburs -->
+			<item id="76" /> <!-- Sword of Delusion -->
+			<item id="134" /> <!-- Sword of Nightmare -->
+			<item id="77" /> <!-- Tsurugi -->
+			<item id="132" /> <!-- Ultimate Sword -->
+			<item id="135" /> <!-- Samurai Longsword -->
+			<item id="71" /> <!-- Flamberge -->
+			<item id="7882" /> <!-- Pa'agrian Sword -->
+			<item id="5286" /> <!-- Berserker Blade -->
+			<item id="281" /> <!-- Crystallized Ice Bow -->
+			<item id="285" /> <!-- Noble Elven Bow -->
+			<item id="282" /> <!-- Elemental Bow -->
+			<item id="283" /> <!-- Akat Long Bow -->
+			<item id="286" /> <!-- Eminence Bow -->
+			<item id="193" /> <!-- Stick of Faith -->
+			<item id="160" /> <!-- Battle Axe -->
+			<item id="89" /> <!-- Big Hammer -->
+			<item id="161" /> <!-- Silver Axe -->
+			<item id="173" /> <!-- Skull Graver -->
+			<item id="201" /> <!-- Club of Nature -->
+			<item id="202" /> <!-- Mace of Underworld -->
+			<item id="174" /> <!-- Nirvana Axe -->
+			<item id="196" /> <!-- Stick of Eternity -->
+			<item id="2502" /> <!-- Dwarven War Hammer -->
+			<item id="7891" /> <!-- Ecliptic Axe -->
+			<item id="162" /> <!-- War Axe -->
+			<item id="2503" /> <!-- Yaksa Mace -->
+			<item id="192" /> <!-- Crystal Staff -->
+			<item id="194" /> <!-- Heavy Doom Axe -->
+			<item id="191" /> <!-- Heavy Doom Hammer -->
+			<item id="195" /> <!-- Cursed Staff -->
+			<item id="198" /> <!-- Inferno Staff -->
+			<item id="199" /> <!-- Pa'agrio Hammer -->
+			<item id="197" /> <!-- Paradia Staff -->
+			<item id="200" /> <!-- Sage's Staff -->
+			<item id="203" /> <!-- Pa'agrio Axe -->
+			<item id="204" /> <!-- Deadman's Staff -->
+			<item id="206" /> <!-- Demon's Staff -->
+			<item id="205" /> <!-- Ghoul's Staff -->
+			<item id="7898" /> <!-- Karik Horn -->
+			<item id="7897" /> <!-- Dwarven Hammer -->
+			<item id="302" /> <!-- Body Slasher -->
+			<item id="298" /> <!-- Orcish Glaive -->
+			<item id="96" /> <!-- Scythe -->
+			<item id="94" /> <!-- Bec de Corbin -->
+			<item id="95" /> <!-- Poleaxe -->
+			<item id="301" /> <!-- Scorpion -->
+			<item id="303" /> <!-- Widow Maker -->
+			<item id="299" /> <!-- Orcish Poleaxe -->
+			<item id="263" /> <!-- Chakram -->
+			<item id="4233" /> <!-- Fist -->
+			<item id="265" /> <!-- Fisted Blade -->
+			<item id="266" /> <!-- Great Pata -->
+			<item id="2551" /> <!-- Crimson Sword*Crimson Sword -->
+			<item id="2552" /> <!-- Crimson Sword*Elven Sword -->
+			<item id="2555" /> <!-- Elven Sword*Elven Sword -->
+			<item id="2523" /> <!-- Saber*Sword of Revolution -->
+			<item id="2544" /> <!-- Artisan's Sword*Sword of Revolution -->
+			<item id="2531" /> <!-- Bastard Sword*Sword of Revolution -->
+			<item id="2549" /> <!-- Knight's Sword*Sword of Revolution -->
+			<item id="2538" /> <!-- Spinebone Sword*Sword of Revolution -->
+			<item id="2524" /> <!-- Saber*Elven Long Sword -->
+			<item id="2545" /> <!-- Artisan's Sword*Elven Long Sword -->
+			<item id="2532" /> <!-- Bastard Sword*Elven Long Sword -->
+			<item id="2553" /> <!-- Crimson Sword*Sword of Revolution -->
+			<item id="2556" /> <!-- Elven Sword*Sword of Revolution -->
+			<item id="2550" /> <!-- Knight's Sword*Elven Long Sword -->
+			<item id="2539" /> <!-- Spinebone Sword*Elven Long Sword -->
+			<item id="2554" /> <!-- Crimson Sword*Elven Long Sword -->
+			<item id="2557" /> <!-- Elven Sword*Elven Long Sword -->
+			<item id="2558" /> <!-- Sword of Revolution*Sword of Revolution -->
+			<item id="2559" /> <!-- Sword of Revolution*Elven Long Sword -->
+			<item id="2560" /> <!-- Elven Long Sword*Elven Long Sword -->
+			<item id="2561" /> <!-- Stormbringer*Stormbringer -->
+			<item id="2563" /> <!-- Stormbringer*Katana -->
+			<item id="2565" /> <!-- Stormbringer*Raid Sword -->
+			<item id="2562" /> <!-- Stormbringer*Shamshir -->
+			<item id="2564" /> <!-- Stormbringer*Spirit Sword -->
+			<item id="2582" /> <!-- Katana*Katana -->
+			<item id="2584" /> <!-- Katana*Raid Sword -->
+			<item id="2583" /> <!-- Katana*Spirit Sword -->
+			<item id="2599" /> <!-- Raid Sword*Raid Sword -->
+			<item id="2573" /> <!-- Shamshir*Katana -->
+			<item id="2575" /> <!-- Shamshir*Raid Sword -->
+			<item id="2572" /> <!-- Shamshir*Shamshir -->
+			<item id="2574" /> <!-- Shamshir*Spirit Sword -->
+			<item id="2592" /> <!-- Spirit Sword*Raid Sword -->
+			<item id="2591" /> <!-- Spirit Sword*Spirit Sword -->
+		</itemGroup>
+		<!-- Weapon B-Grade -->
+		<itemGroup id="3">
+			<item id="243" /> <!-- Twilight Knife -->
+			<item id="229" /> <!-- Kris -->
+			<item id="234" /> <!-- Demon's Dagger -->
+			<item id="148" /> <!-- Sword of Valhalla -->
+			<item id="7889" /> <!-- Wizard's Tear -->
+			<item id="142" /> <!-- Keshanberk -->
+			<item id="79" /> <!-- Damascus -->
+			<item id="78" /> <!-- Great Sword -->
+			<item id="7883" /> <!-- Guardian's Sword -->
+			<item id="284" /> <!-- Dark Elven Long Bow -->
+			<item id="287" /> <!-- Bow of Peril -->
+			<item id="7892" /> <!-- Spell Breaker -->
+			<item id="7893" /> <!-- Kaim Vanul's Bones -->
+			<item id="91" /> <!-- Heavy War Axe -->
+			<item id="175" /> <!-- Art of Battle Axe -->
+			<item id="171" /> <!-- Deadman's Glory -->
+			<item id="92" /> <!-- Spirit's Staff -->
+			<item id="210" /> <!-- Staff of Evil Spirits -->
+			<item id="7900" /> <!-- Ice Storm Hammer -->
+			<item id="7901" /> <!-- Star Buster -->
+			<item id="300" /> <!-- Great Axe -->
+			<item id="97" /> <!-- Lance -->
+			<item id="264" /> <!-- Pata -->
+			<item id="267" /> <!-- Arthro Nail -->
+			<item id="268" /> <!-- Bellion Cestus -->
+			<item id="2566" /> <!-- Stormbringer*Caliburs -->
+			<item id="2567" /> <!-- Stormbringer*Ultimate Sword -->
+			<item id="2568" /> <!-- Stormbringer*Sword of Delusion -->
+			<item id="2569" /> <!-- Stormbringer*Sword of Nightmare -->
+			<item id="2570" /> <!-- Stormbringer*Tsurugi -->
+			<item id="2571" /> <!-- Stormbringer*Samurai Long sword -->
+			<item id="2576" /> <!-- Shamshir*Caliburs -->
+			<item id="2577" /> <!-- Shamshir*Ultimate Sword -->
+			<item id="2578" /> <!-- Shamshir*Sword of Delusion -->
+			<item id="2579" /> <!-- Shamshir*Sword of Nightmare -->
+			<item id="2580" /> <!-- Shamshir*Tsurugi -->
+			<item id="2581" /> <!-- Shamshir*Samurai Long Sword -->
+			<item id="2585" /> <!-- Katana*Caliburs -->
+			<item id="2586" /> <!-- Katana*Ultimate Sword -->
+			<item id="2587" /> <!-- Katana*Sword of Delusion -->
+			<item id="2588" /> <!-- Katana*Sword of Nightmare -->
+			<item id="2589" /> <!-- Katana*Tsurugi -->
+			<item id="2590" /> <!-- Katana*Samurai Long Sword -->
+			<item id="2593" /> <!-- Spirit Sword*Caliburs -->
+			<item id="2594" /> <!-- Spirit Sword*Ultimate Sword -->
+			<item id="2595" /> <!-- Spirit Sword*Sword of Delusion -->
+			<item id="2596" /> <!-- Spirit Sword*Sword of Nightmare -->
+			<item id="2597" /> <!-- Spirit Sword*Tsurugi -->
+			<item id="2598" /> <!-- Spirit Sword*Samurai Long Sword -->
+			<item id="2600" /> <!-- Raid Sword*Caliburs -->
+			<item id="2601" /> <!-- Raid Sword*Ultimate Sword -->
+			<item id="2602" /> <!-- Raid Sword*Sword of Delusion -->
+			<item id="2603" /> <!-- Raid Sword*Sword of Nightmare -->
+			<item id="2604" /> <!-- Raid Sword*Tsurugi -->
+			<item id="2605" /> <!-- Raid Sword*Samurai Long Sword -->
+			<item id="2606" /> <!-- Caliburs*Caliburs -->
+			<item id="2607" /> <!-- Caliburs*Ultimate Sword -->
+			<item id="2608" /> <!-- Caliburs*Sword of Delusion -->
+			<item id="2609" /> <!-- Caliburs*Sword of Nightmare -->
+			<item id="2610" /> <!-- Caliburs*Tsurugi -->
+			<item id="2611" /> <!-- Caliburs*Samurai Long Sword -->
+			<item id="2612" /> <!-- Ultimate Sword*Ultimate Sword -->
+			<item id="2613" /> <!-- Ultimate Sword*Sword of Delusion -->
+			<item id="2614" /> <!-- Ultimate Sword*Sword of Nightmare -->
+			<item id="2615" /> <!-- Ultimate Sword*Tsurugi -->
+			<item id="2616" /> <!-- Ultimate Sword*Samurai Long Sword -->
+			<item id="2617" /> <!-- Sword of Delusion*Sword of Delusion -->
+			<item id="2618" /> <!-- Sword of Delusion*Sword of Nightmare -->
+			<item id="2619" /> <!-- Sword of Delusion*Tsurugi -->
+			<item id="2620" /> <!-- Sword of Delusion*Samurai Long Sword -->
+			<item id="2621" /> <!-- Sword of Nightmare*Sword of Nightmare -->
+			<item id="2622" /> <!-- Sword of Nightmare*Tsurugi -->
+			<item id="2623" /> <!-- Sword of Nightmare*Samurai Long Sword -->
+			<item id="2624" /> <!-- Tsurugi*Tsurugi -->
+			<item id="2625" /> <!-- Tsurugi*Samurai Long Sword -->
+			<item id="2626" /> <!-- Samurai Long Sword*Samurai Long Sword -->
+		</itemGroup>
+		<!-- Weapon A-Grade -->
+		<itemGroup id="4">
+			<item id="235" /> <!-- Bloody Orchid -->
+			<item id="236" /> <!-- Soul Separator -->
+			<item id="8682" /> <!-- Naga Storm -->
+			<item id="150" /> <!-- Elemental Sword -->
+			<item id="151" /> <!-- Sword of Miracles -->
+			<item id="8686" /> <!-- Themis' Tongue -->
+			<item id="80" /> <!-- Tallum Blade -->
+			<item id="2500" /> <!-- Dark Legion's Edge -->
+			<item id="8678" /> <!-- Sirra's Blade -->
+			<item id="7884" /> <!-- Infernal Master -->
+			<item id="81" /> <!-- Dragon Slayer -->
+			<item id="8679" /> <!-- Sword of Ipos -->
+			<item id="288" /> <!-- Carnage Bow -->
+			<item id="289" /> <!-- Soul Bow -->
+			<item id="8684" /> <!-- Shyeed's Bow -->
+			<item id="7894" /> <!-- Spiritual Eye -->
+			<item id="7895" /> <!-- Flaming Dragon Skull -->
+			<item id="8687" /> <!-- Cabrio's Hand -->
+			<item id="2504" /> <!-- Meteor Shower -->
+			<item id="164" /> <!-- Elysian -->
+			<item id="8680" /> <!-- Barakiel's Axe -->
+			<item id="212" /> <!-- Dasparion's Staff -->
+			<item id="213" /> <!-- Branch of the Mother Tree -->
+			<item id="8688" /> <!-- Daimon Crystal -->
+			<item id="7899" /> <!-- Destroyer Hammer -->
+			<item id="7902" /> <!-- Doom Crusher -->
+			<item id="8681" /> <!-- Behemoth's Tuning Fork -->
+			<item id="98" /> <!-- Halberd -->
+			<item id="305" /> <!-- Tallum Glaive -->
+			<item id="8683" /> <!-- Tiphon's Spear -->
+			<item id="269" /> <!-- Blood Tornado -->
+			<item id="270" /> <!-- Dragon Grinder -->
+			<item id="8685" /> <!-- Sobekk's Hurricane -->
+			<item id="5233" /> <!-- Keshanberk*Keshanberk -->
+			<item id="5705" /> <!-- Keshanberk*Damascus -->
+			<item id="5706" /> <!-- Damascus*Damascus -->
+			<item id="8938" /> <!-- Tallum Blade*Damascus -->
+		</itemGroup>
+	</itemGroups>
+	<fees>
+		<!-- Gemstone (D-grade) Weapon D-grade -->
+		<fee itemGroup="1" itemId="2130" itemCount="200" cancelFee="80000">
+			<mineral id="90012" /> <!-- Common Life Stone-->
+		</fee>
+		<!-- Gemstone (D-grade) Weapon C-grade -->
+		<fee itemGroup="2" itemId="2130" itemCount="200" cancelFee="80000">
+			<mineral id="90012" /> <!-- Common Life Stone-->
+		</fee>
+		<!-- Gemstone (D-grade) Weapon B-grade-->
+		<fee itemGroup="3" itemId="2130" itemCount="200" cancelFee="80000">
+			<mineral id="90012" /> <!-- Common Life Stone-->
+		</fee>
+		<!-- Gemstone (D-grade) Weapon A-grade-->
+		<fee itemGroup="4" itemId="2130" itemCount="200" cancelFee="80000">
+			<mineral id="90012" /> <!-- Common Life Stone-->
+		</fee>
+		<!-- Gemstone (C-grade) Weapon D-grade -->
+		<fee itemGroup="1" itemId="2131" itemCount="300" cancelFee="240000">
+			<mineral id="90013" /> <!-- Mid-Grade Life Stone-->
+		</fee>
+		<!-- Gemstone (C-grade) Weapon C-grade -->
+		<fee itemGroup="2" itemId="2131" itemCount="300" cancelFee="240000">
+			<mineral id="90013" /> <!-- Mid-Grade Life Stone-->
+		</fee>
+		<!-- Gemstone (C-grade) Weapon B-grade-->
+		<fee itemGroup="3" itemId="2131" itemCount="300" cancelFee="240000">
+			<mineral id="90013" /> <!-- Mid-Grade Life Stone-->
+		</fee>
+		<!-- Gemstone (C-grade) Weapon A-grade-->
+		<fee itemGroup="4" itemId="2131" itemCount="300" cancelFee="240000">
+			<mineral id="90013" /> <!-- Mid-Grade Life Stone-->
+		</fee>
+		<!-- Gemstone (B-grade) Weapon D-grade -->
+		<fee itemGroup="1" itemId="2132" itemCount="400" cancelFee="720000">
+			<mineral id="90014" /> <!-- High-Grade Life Stone-->
+		</fee>
+		<!-- Gemstone (B-grade) Weapon C-grade -->
+		<fee itemGroup="2" itemId="2132" itemCount="400" cancelFee="720000">
+			<mineral id="90014" /> <!-- High-Grade Life Stone-->
+		</fee>
+		<!-- Gemstone (B-grade) Weapon B-grade-->
+		<fee itemGroup="3" itemId="2132" itemCount="400" cancelFee="720000">
+			<mineral id="90014" /> <!-- High-Grade Life Stone-->
+		</fee>
+		<!-- Gemstone (B-grade) Weapon A-grade-->
+		<fee itemGroup="4" itemId="2132" itemCount="400" cancelFee="720000">
+			<mineral id="90014" /> <!-- High-Grade Life Stone-->
+		</fee>
+	</fees>
+</list>

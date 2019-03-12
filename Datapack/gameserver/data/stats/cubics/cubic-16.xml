@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/cubics.xsd">
+	<cubic id="16" level="1" slot="12" duration="900" delay="13" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<skills>
+			<skill id="10056" level="1" canUseOnStaticObjects="true" target="MASTER"> <!-- Cubic Protection -->
+				<conditions>
+					<hp type="GREATER" percent="30" />
+					<range value="1000" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="16" level="2" slot="12" duration="900" delay="13" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<skills>
+			<skill id="10056" level="2" canUseOnStaticObjects="true" target="MASTER"> <!-- Cubic Protection -->
+				<conditions>
+					<hp type="GREATER" percent="30" />
+					<range value="1000" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="16" level="3" slot="12" duration="900" delay="13" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<skills>
+			<skill id="10056" level="3" canUseOnStaticObjects="true" target="MASTER"> <!-- Cubic Protection -->
+				<conditions>
+					<hp type="GREATER" percent="30" />
+					<range value="1000" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="16" level="4" slot="12" duration="900" delay="13" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<skills>
+			<skill id="10056" level="4" canUseOnStaticObjects="true" target="MASTER"> <!-- Cubic Protection -->
+				<conditions>
+					<hp type="GREATER" percent="30" />
+					<range value="1000" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="16" level="5" slot="12" duration="900" delay="13" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<skills>
+			<skill id="10056" level="5" canUseOnStaticObjects="true" target="MASTER"> <!-- Cubic Protection -->
+				<conditions>
+					<hp type="GREATER" percent="30" />
+					<range value="1000" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="16" level="6" slot="12" duration="900" delay="13" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<skills>
+			<skill id="10056" level="6" canUseOnStaticObjects="true" target="MASTER"> <!-- Cubic Protection -->
+				<conditions>
+					<hp type="GREATER" percent="30" />
+					<range value="1000" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="16" level="7" slot="12" duration="900" delay="13" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<skills>
+			<skill id="10056" level="7" canUseOnStaticObjects="true" target="MASTER"> <!-- Cubic Protection -->
+				<conditions>
+					<hp type="GREATER" percent="30" />
+					<range value="1000" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="16" level="8" slot="12" duration="900" delay="13" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<skills>
+			<skill id="10056" level="8" canUseOnStaticObjects="true" target="MASTER"> <!-- Cubic Protection -->
+				<conditions>
+					<hp type="GREATER" percent="30" />
+					<range value="1000" />
+				</conditions>
+			</skill>
+		</skills>
+	</cubic>
+</list>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="22_19">
+		<group>
+			<npc id="32478" x="81788" y="55387" z="-1520" heading="16383" respawnTime="60sec" /> <!-- Dimensional Merchant -->
+			<npc id="30012" x="79774" y="54746" z="-1544" heading="16383" respawnTime="60sec" /> <!-- Fishing Guild Member -->
+			<npc id="31594" x="81402" y="54619" z="-1504" heading="16383" respawnTime="60sec" /> <!-- Mond -->
+			<npc id="30676" x="81655" y="54736" z="-1504" heading="16384" respawnTime="60sec" /> <!-- Croop -->
+		</group>
+	</spawn>
+</list>

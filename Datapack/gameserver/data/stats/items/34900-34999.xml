@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="34925" name="Cloak of Light" type="Armor">
+		<!-- Max. HP/MP/CP +5%, P. Def. +3%, M. Def. +5%, any Weapon Resistance +3%, P./M. Critical Rate +10, Reflect Damage +3%. Cannot be exchanged, dropped, or sold. Can be stored in private warehouse. -->
+		<set name="icon" val="icon.amor_goodness_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<cond addName="1" msgId="113">
+			<player chaotic="false" />
+		</cond>
+		<skills>
+			<skill id="19039" level="1"/>	<!--Cloak of Light-->
+		</skills>
+	</item>
+	<item id="34926" name="Cloak of Darkness" type="Armor">
+		<!-- Max. HP/MP/CP +5%, P. Def. +3%, M. Def. +5%, any Weapon Resistance +3%, P./M. Critical Rate +10, Reflect Damage +3%. Cannot be exchanged, dropped, or sold. Can be stored in private warehouse. -->
+		<set name="icon" val="icon.amor_evilness_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<cond addName="1" msgId="113">
+			<player chaotic="false" />
+		</cond>
+		<skills>
+			<skill id="19040" level="1"/>	<!--Cloak of Darkness-->
+		</skills>
+	</item>
+	<item id="34956" name="Letter M" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_m_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

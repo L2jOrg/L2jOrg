@@ -1,0 +1,91 @@
+<html><title>Transformation</title><body>
+<center>
+<table width=270>
+<tr>
+<td width=45><button value="Main" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Transformation Menu</center></td>
+<td width=45><button value="Back" action="bypass -h admin_admin3" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+<table width="270">
+<tr>
+<td><button value="Page 1" action="bypass -h admin_html transform.htm" width="50" height="18" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Page 2" action="bypass -h admin_html transform2.htm" width="50" height="18" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Page 3" action="bypass -h admin_html transform3.htm" width="50" height="18" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Page 4" action="bypass -h admin_html transform4.htm" width="50" height="18" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Page 5" action="bypass -h admin_html transform5.htm" width="50" height="18" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+<table width="270">
+<tr>
+<td>Values:</td>
+<td><edit var="qbox" width="200" height="15" /></td>
+</tr>
+</table>
+<br>
+<table width="270">
+<tr>
+<td><button value="Send" action="bypass -h admin_transform_menu $qbox" width="40" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" /></td>
+<td><button value="Help" action="bypass -h admin_html help/transform.htm" width="40" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" /></td>
+<td><button value="Untransform" action="bypass -h admin_untransform" width="90" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" /></td>
+</tr>
+</table>
+<br>
+Event Transformations:<br1>
+<table width=260>
+<tr>
+<td><button value="Ghost" action="bypass -h admin_transform_menu 108 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Snow King" action="bypass -h admin_transform_menu 114 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Scarecrow" action="bypass -h admin_transform_menu 115 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td><button value="Tin Golem" action="bypass -h admin_transform_menu 116 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Gatekeeper1" action="bypass -h admin_transform_menu 107 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Gatekeeper2" action="bypass -h admin_transform_menu 319 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td><button value="Red Elf" action="bypass -h admin_transform_menu 121 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Blue Elf" action="bypass -h admin_transform_menu 122 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Big Blue Elf" action="bypass -h admin_transform_menu 127 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td><button value="Purple Tow" action="bypass -h admin_transform_menu 117 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Yellow Tow" action="bypass -h admin_transform_menu 120 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Pink Tow" action="bypass -h admin_transform_menu 118 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td><button value="Grey Tow" action="bypass -h admin_transform_menu 119 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Child" action="bypass -h admin_transform_menu 112 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Native Dawn" action="bypass -h admin_transform_menu 124 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td><button value="Kadomas" action="bypass -h admin_transform_menu 20000 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Aqua Elf" action="bypass -h admin_transform_menu 125 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Game Man." action="bypass -h admin_transform_menu 22 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td><button value="DM Lee" action="bypass -h admin_transform_menu 20005 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="DM Karin" action="bypass -h admin_transform_menu 20006 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+Mounts Transformations:<br1>
+<table width=260>
+<tr>
+<td><button value="Purple Horse" action="bypass -h admin_transform_menu 106 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Tawny Lion" action="bypass -h admin_transform_menu 109 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Steam Sledge" action="bypass -h admin_transform_menu 110 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td><button value="Guard Strider" action="bypass -h admin_transform_menu 123 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Jet Bike" action="bypass -h admin_transform_menu 20001 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="S. Plataform" action="bypass -h admin_transform_menu 20004 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td><button value="Wood Horse" action="bypass -h admin_transform_menu 20007 $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+</center>
+</body></html>

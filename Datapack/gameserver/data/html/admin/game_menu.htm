@@ -1,0 +1,81 @@
+<html><title>Game Panel</title><body>
+<center>
+<table width=270 border=0 bgcolor="444444">
+<tr>
+<td><button value="Main" action="bypass -h admin_admin" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Char" action="bypass -h admin_admin6" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Game" action="bypass -h admin_admin2" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="GM" action="bypass -h admin_admin7" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table><br>
+<table width=240>
+<tr>
+<td>QuickBox:</td>
+<td><edit var="qbox" width=120 height=15></td>
+<td><button value="Help" action="bypass -h admin_html help/game_menu.htm" width=45 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+Clan Related:<br1>
+<table width=240>
+<tr>
+<td><button value="Create" action="bypass -h admin_pledge create $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Info" action="bypass -h admin_pledge info" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Set Level" action="bypass -h admin_pledge setlevel $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td><button value="Delete" action="bypass -h admin_pledge dismiss $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Reputation" action="bypass -h admin_pledge rep $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Pen. leaders" action="bypass -h admin_clan_show_pending" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+War Related:<br1>
+<table width=240>
+<tr>
+<td><button value="ClanHall" action="bypass -h admin_clanhall" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Castle" action="bypass -h admin_castlemanage" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Fortress" action="bypass -h admin_fortsiege" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+Cursed Weapons:<br1>
+<table width=240>
+<tr>
+<td><button value="Info" action="bypass -h admin_cw_info_menu $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Add" action="bypass -h admin_cw_add $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Remove" action="bypass -h admin_cw_remove $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+Manor:<br1>
+<table width="125">
+<tr>
+<td><button value="Manor info" action="bypass -h admin_manor" width="125" height="20" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+Grand Boss:<br1>
+<table width="125">
+<tr>
+<td><button value="Grand Boss Info" action="bypass -h admin_grandboss" width="125" height="20" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+Olympiad:<br1>
+<table width="125">
+<tr>
+<td><button value="Save Olympiad" action="bypass -h admin_saveolymp" width="125" height="20" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+Heroes:<br1>
+<table width="250">
+<tr>
+<td><button value="Set Hero" action="bypass -h admin_sethero" width="100" height="20" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Give unclaimed Hero" action="bypass -h admin_givehero" width="150" height="20" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+</center>
+</body></html>

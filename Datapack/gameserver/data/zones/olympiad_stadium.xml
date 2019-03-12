@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Olympiad Stadium Zones -->
+	<zone name="olimpiad_stadium_h5_1" id="311" type="OlympiadStadiumZone" shape="Cuboid" minZ="-3500" maxZ="-2000">
+		<stat name="instanceId" val="147" />
+		<node X="-90200" Y="-251085" />
+		<node X="-85825" Y="-254465" />
+		<!-- point1 -->
+		<spawn X="-89597" Y="-252841" Z="-3320" />
+		<spawn X="-89578" Y="-252826" Z="-3320" />
+		<spawn X="-89558" Y="-252858" Z="-3320" />
+		<!-- point2 -->
+		<spawn X="-86544" Y="-252846" Z="-3320" />
+		<spawn X="-86565" Y="-252863" Z="-3320" />
+		<spawn X="-86580" Y="-252824" Z="-3320" />
+		<!-- Observer -->
+		<spawn X="-88077" Y="-252849" Z="-3020" type="spectatorSpawn" />
+	</zone>
+
+	<zone name="olimpiad_stadium_h5_2" id="312" type="OlympiadStadiumZone" shape="Cuboid" minZ="-8000" maxZ="-6500">
+		<stat name="instanceId" val="148" />
+		<node X="-77302" Y="-250871" />
+		<node X="-73770" Y="-253917" />
+		<!-- point1 -->
+		<spawn X="-76949" Y="-252459" Z="-7720" />
+		<spawn X="-76930" Y="-252476" Z="-7720" />
+		<spawn X="-76887" Y="-252497" Z="-7720" />
+		<!-- point2 -->
+		<spawn X="-73995" Y="-252460" Z="-7720" />
+		<spawn X="-74019" Y="-252479" Z="-7720" />
+		<spawn X="-74011" Y="-252440" Z="-7720" />
+		<!-- Observer -->
+		<spawn X="-75503" Y="-252463" Z="-7400" type="spectatorSpawn" />
+	</zone>
+
+	<zone name="olimpiad_stadium_h5_3" id="313" type="OlympiadStadiumZone" shape="Cuboid" minZ="-8600" maxZ="-7300">
+		<stat name="instanceId" val="149" />
+		<node X="-89727" Y="-237729" />
+		<node X="-86464" Y="-240971" />
+		<!-- point1 -->
+		<spawn X="-89480" Y="-239358" Z="-8450" />
+		<spawn X="-89451" Y="-239343" Z="-8450" />
+		<spawn X="-89411" Y="-239372" Z="-8450" />
+		<!-- point2 -->
+		<spawn X="-86729" Y="-239349" Z="-8450" />
+		<spawn X="-86758" Y="-239366" Z="-8450" />
+		<spawn X="-86781" Y="-239337" Z="-8450" />
+		<!-- Observer -->
+		<spawn X="-88099" Y="-239359" Z="-8150" type="spectatorSpawn" />
+	</zone>
+
+	<zone name="olimpiad_stadium_h5_4" id="314" type="OlympiadStadiumZone" shape="Cuboid" minZ="-8400" maxZ="-7100">
+		<stat name="instanceId" val="150" />
+		<node X="-77066" Y="-237599" />
+		<node X="-73837" Y="-240764" />
+		<!-- point1 -->
+		<spawn X="-76817" Y="-239184" Z="-8192" />
+		<spawn X="-76793" Y="-239205" Z="-8192" />
+		<spawn X="-76795" Y="-239168" Z="-8192" />
+		<!-- point2 -->
+		<spawn X="-74086" Y="-239183" Z="-8192" />
+		<spawn X="-74104" Y="-239200" Z="-8192" />
+		<spawn X="-74116" Y="-239156" Z="-8192" />
+		<!-- Observer -->
+		<spawn X="-75455" Y="-239607" Z="-7850" type="spectatorSpawn" />
+	</zone>
+</list>

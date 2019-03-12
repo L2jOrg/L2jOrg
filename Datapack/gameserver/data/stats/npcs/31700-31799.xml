@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="31713" level="80" type="L2Npc" name="Fellow" title="Balthus Knight">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1674" mpRegen="3.6" />
+			<speed>
+				<walk ground="35" />
+				<run ground="130" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="31714" level="75" type="L2Npc" name="Ateld" title="Balthus Knight">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="3038" hpRegen="9.5" mp="1674" mpRegen="3.3" />
+			<speed>
+				<walk ground="32" />
+				<run ground="120" />
+			</speed>
+			<attack physical="0" magical="0" critical="4" attackSpeed="253" range="40" />
+			<defence physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="31715" level="80" type="L2Npc" name="Paulia" title="Balthus Knight">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1674" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="31716" level="80" type="L2Npc" name="Rash" title="Support Troop Lieutenant">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="80" lhand="641" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1674" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.75" />
+		</collision>
+	</npc>
+	<npc id="31773" level="70" type="L2Warehouse" name="Sonin" title="Warehouse Keeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="74" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="7" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="31774" level="70" type="L2Npc" name="Magrit" title="Soul Tracker">
+		<!-- AUTO GENERATED NPC TODO:FIX IT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="118" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="8" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="31775" level="70" type="L2Npc" name="Ingrit" title="Soul Tracker">
+		<!-- AUTO GENERATED NPC TODO:FIX IT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="118" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="7" />
+			<height normal="21.2" />
+		</collision>
+	</npc>
+	<npc id="31776" level="70" type="L2Npc" name="Iris" title="Soul Tracker">
+		<!-- AUTO GENERATED NPC TODO:FIX IT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="118" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="8" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="31777" level="70" type="L2Npc" name="Rosammy" title="Soul Tracker">
+		<!-- AUTO GENERATED NPC TODO:FIX IT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="118" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="36" />
+				<run ground="160" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="31778" level="70" type="L2Npc" name="Tores" title="Dungeon of Abyss Officer">
+		<!-- AUTO GENERATED NPC TODO:FIX IT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="118" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+</list>

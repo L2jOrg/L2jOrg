@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.AttributeType;
-import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.Elementals;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -16,7 +15,6 @@ import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.util.Util;
-import org.l2j.gameserver.model.items.type.CrystalType;
 
 import java.nio.ByteBuffer;
 
@@ -86,8 +84,8 @@ public class RequestExEnchantItemAttribute extends IClientIncomingPacket {
         }
 
         switch (item.getItemLocation()) {
-            case ItemLocation.INVENTORY:
-            case ItemLocation.PAPERDOLL: {
+            case INVENTORY:
+            case PAPERDOLL: {
                 if (item.getOwnerId() != player.getObjectId()) {
                     player.removeRequest(request.getClass());
                     return;
@@ -239,12 +237,12 @@ public class RequestExEnchantItemAttribute extends IClientIncomingPacket {
 
         boolean success = false;
         switch (stone.getItem().getCrystalType()) {
-            case CrystalType.R: {
+            case R: {
                 success = Rnd.get(100) < 80;
                 break;
             }
-            case CrystalType.R95:
-            case CrystalType.R99: {
+            case R95:
+            case R99: {
                 success = true;
                 break;
             }

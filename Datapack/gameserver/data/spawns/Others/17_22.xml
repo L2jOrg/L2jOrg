@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="17_22">
+		<group>
+			<npc id="30012" x="-79369" y="153318" z="-3160" heading="25270" respawnTime="60sec" /> <!-- Fishing Guild Member -->
+			<npc id="30939" x="-81825" y="155266" z="-3168" heading="48909" respawnTime="60sec" /> <!-- Jones -->
+		</group>
+	</spawn>
+</list>

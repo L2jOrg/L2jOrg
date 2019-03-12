@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="17107" toLevel="1" name="Snowman's Buff">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Snowman's gift. Cannot receive again until it's expired. -->
+		<icon>icon.weapon_snowman_stick_i00</icon>
+		<operateType>A2</operateType>
+		<isMagic>1</isMagic>
+		<effectPoint>-2</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="17108" toLevel="1" name="Christmas Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Vitality is replenished in peace zones. -->
+		<icon>icon.weapon_snowman_stick_i00</icon>
+		<operateType>A2</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="17109" toLevel="1" name="-">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="17110" toLevel="1" name="Snowy Squash Nectar">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>200</castRange>
+		<effectPoint>-150</effectPoint>
+		<reuseDelay>2000</reuseDelay>
+		<effectRange>300</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37543</itemConsumeId> <!-- Snowy Squash Nectar -->
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>OTHERS</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+			<condition name="OpTargetNpc">
+				<npcIds>
+					<item>13399</item>
+					<item>13400</item>
+					<item>13401</item>
+					<item>13402</item>
+					<item>13403</item>
+					<item>13404</item>
+					<item>13405</item>
+					<item>13406</item>
+				</npcIds>
+			</condition>
+		</conditions>
+	</skill>
+	<skill id="17111" toLevel="1" name="Snowy Squash Seed">
+		<icon>icon.skill17111</icon>
+		<operateType>A1</operateType>
+		<hitTime>1500</hitTime>
+		<reuseDelay>10000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38923</itemConsumeId> <!-- Snowy Squash Seed -->
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>13399</npcId>
+				<npcCount>1</npcCount>
+				<despawnDelay>180000</despawnDelay>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="17112" toLevel="1" name="Large Snowy Squash Seed">
+		<icon>icon.skill17112</icon>
+		<operateType>A1</operateType>
+		<hitTime>1500</hitTime>
+		<reuseDelay>10000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38924</itemConsumeId> <!-- Snowy Large Squash Seed -->
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>13403</npcId>
+				<npcCount>1</npcCount>
+				<despawnDelay>180000</despawnDelay>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="17113" toLevel="1" name="Christmas Buff Set 2015">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="17154" toLevel="1" name="Love Potion">
+		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing... For 2 minutes, P. Atk. / M. Atk. / Atk. Spd. / Casting Spd. x 2. Effect disappears upon logout. -->
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>RHAPSODY</abnormalType>
+		<abnormalVisualEffect>CHANGE_VALENTINE</abnormalVisualEffect>
+		<icon>icon.etc_whiteday_herb</icon>
+		<operateType>A2</operateType>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
+		<reuseDelay>2000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<deleteAbnormalOnLeave>true</deleteAbnormalOnLeave>
+		<effects>
+			<effect name="PAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="17192" toLevel="1" name="Change Hair Accessory">
+		<!-- Change hair accessories. -->
+		<icon>icon.skill0810</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<reuseDelay>180000</reuseDelay> <!-- 3 minutes -->
+		<effectPoint>1</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HairAccessorySet" />
+		</effects>
+	</skill>
+</list>

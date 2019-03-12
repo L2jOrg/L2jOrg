@@ -20,14 +20,14 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
-import org.l2j.gameserver.mobius.gameserver.model.L2Object;
-import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2MonsterInstance;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.model.quest.LongTimeEvent;
-import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.CreatureSay;
+import org.l2j.gameserver.enums.ChatType;
+import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.quest.LongTimeEvent;
+import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.network.serverpackets.CreatureSay;
 
 /**
  * @URL https://eu.4gameforum.com/threads/653089/

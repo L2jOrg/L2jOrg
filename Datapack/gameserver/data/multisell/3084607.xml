@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list maintainEnchantment="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30298</npc> <!-- Pinter -->
+		<npc>30317</npc> <!-- Kluto -->
+		<npc>30458</npc> <!-- Poitan -->
+		<npc>30471</npc> <!-- Rupio -->
+		<npc>30846</npc> <!-- Wilbert -->
+		<npc>30678</npc> <!-- Helton -->
+		<npc>30688</npc> <!-- Duning -->
+		<npc>31271</npc> <!-- Hilda -->
+		<npc>31583</npc> <!-- Feynn -->
+	</npcs>
+	<item>
+		<ingredient count="150" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="5233" /> <!-- Keshanberk*Keshanberk -->
+	</item>
+</list>

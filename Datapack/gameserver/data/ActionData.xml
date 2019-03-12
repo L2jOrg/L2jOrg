@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/ActionData.xsd">
+	<action id="0" handler="SitStand" />
+	<action id="1" handler="RunWalk" />
+	<action id="10" handler="PrivateStore" option="1" /> <!-- Private Store Sell -->
+	<action id="12" handler="SocialAction" option="2" /> <!-- Greeting -->
+	<action id="13" handler="SocialAction" option="3" /> <!-- Victory -->
+	<action id="14" handler="SocialAction" option="4" /> <!-- Advance -->
+	<action id="15" handler="PetHold" /> <!-- Change Movement Mode -->
+	<action id="16" handler="PetAttack" /> <!-- Attack -->
+	<action id="17" handler="PetStop" /> <!-- Stop -->
+	<action id="19" handler="UnsummonPet" />
+	<action id="21" handler="ServitorHold" /> <!-- Change Movement Mode -->
+	<action id="22" handler="ServitorAttack" /> <!-- Attack -->
+	<action id="23" handler="ServitorStop" /> <!-- Stop -->
+	<action id="24" handler="SocialAction" option="6" /> <!-- Yes -->
+	<action id="25" handler="SocialAction" option="5" /> <!-- No -->
+	<action id="26" handler="SocialAction" option="7" /> <!-- Bow -->
+	<action id="28" handler="PrivateStore" option="3" /> <!-- Private Store Buy -->
+	<action id="29" handler="SocialAction" option="8" /> <!-- Unaware -->
+	<action id="30" handler="SocialAction" option="9" /> <!-- Social Waiting -->
+	<action id="31" handler="SocialAction" option="10" /> <!-- Laugh -->
+	<action id="32" handler="ServitorSkillUse" option="4230" /> <!-- Wild Hog Cannon - Wild Cannon -->
+	<action id="33" handler="SocialAction" option="11" /> <!-- Applaud -->
+	<action id="34" handler="SocialAction" option="12" /> <!-- Dance -->
+	<action id="35" handler="SocialAction" option="13" /> <!-- Sorrow -->
+	<action id="36" handler="ServitorSkillUse" option="4259" /> <!-- Soulless - Toxic Smoke -->
+	<action id="37" handler="PrivateStore" option="5" /> <!-- Dwarven Manufacture -->
+	<action id="38" handler="Ride" /> <!-- Mount/Dismount -->
+	<action id="39" handler="ServitorSkillUse" option="4138" /> <!-- Soulless - Parasite Burst -->
+	<action id="41" handler="ServitorSkillUse" option="4230" /> <!-- Wild Hog Cannon - Attack -->
+	<action id="42" handler="ServitorSkillUse" option="4378" /> <!-- Kai the Cat - Self Damage Shield -->
+	<action id="43" handler="ServitorSkillUse" option="4137" /> <!-- Unicorn Merrow - Hydro Screw -->
+	<action id="44" handler="ServitorSkillUse" option="4139" /> <!-- Big Boom - Boom Attack -->
+	<action id="45" handler="ServitorSkillUse" option="4025" /> <!-- Unicorn Boxer - Master Recharge -->
+	<action id="46" handler="ServitorSkillUse" option="4261" /> <!-- Mew the Cat - Mega Storm Strike -->
+	<action id="47" handler="ServitorSkillUse" option="4260" /> <!-- Silhouette - Steal Blood -->
+	<action id="48" handler="ServitorSkillUse" option="4068" /> <!-- Mechanic Golem - Mech. Cannon -->
+	<action id="52" handler="UnsummonServitor" />
+	<action id="53" handler="ServitorMove" /> <!-- Move to target -->
+	<action id="54" handler="PetMove" /> <!-- Move to target -->
+	<action id="61" handler="PrivateStore" option="8" /> <!-- Private Store Package Sell -->
+	<action id="62" handler="SocialAction" option="14" /> <!-- Charm -->
+	<action id="64" handler="TeleportBookmark" />
+	<action id="65" handler="BotReport" />
+	<action id="66" handler="SocialAction" option="15" /> <!-- Shyness -->
+	<action id="67" handler="AirshipAction" option="1" /> <!-- Steer -->
+	<action id="68" handler="AirshipAction" option="2" /> <!-- Cancel Control -->
+	<action id="69" handler="AirshipAction" option="3" /> <!-- Destination Map -->
+	<action id="70" handler="AirshipAction" option="4" /> <!-- Exit Airship -->
+	<action id="71" handler="SocialAction" option="16" /> <!-- Exchange Bows -->
+	<action id="72" handler="SocialAction" option="17" /> <!-- High Five -->
+	<action id="73" handler="SocialAction" option="18" /> <!-- Couple Dance -->
+	<action id="78" handler="TacticalSignUse" option="1" /> <!-- Token 1: Star -->
+	<action id="79" handler="TacticalSignUse" option="2" /> <!-- Token 2: Heart -->
+	<action id="80" handler="TacticalSignUse" option="3" /> <!-- Token 3: Moon -->
+	<action id="81" handler="TacticalSignUse" option="4" /> <!-- Token 4: Cross -->
+	<action id="82" handler="TacticalSignTarget" option="1" /> <!-- Token 1: Star -->
+	<action id="83" handler="TacticalSignTarget" option="2" /> <!-- Token 2: Heart -->
+	<action id="84" handler="TacticalSignTarget" option="3" /> <!-- Token 3: Moon -->
+	<action id="85" handler="TacticalSignTarget" option="4" /> <!-- Token 4: Cross -->
+	<action id="87" handler="SocialAction" option="28" /> <!-- Propose -->
+	<action id="88" handler="SocialAction" option="29" /> <!-- Provoke -->
+	<action id="89" handler="SocialAction" option="30" /> <!-- Beauty Shop -->
+	<action id="90" handler="InstanceZoneInfo" />
+	<action id="1000" handler="ServitorSkillUse" option="4079" /> <!-- Siege Golem - Siege Hammer -->
+	<action id="1003" handler="PetSkillUse" option="4710" /> <!-- Wind Hatchling/Strider - Wild Stun -->
+	<action id="1004" handler="PetSkillUse" option="4711" /> <!-- Wind Hatchling/Strider - Wild Defense -->
+	<action id="1005" handler="PetSkillUse" option="4712" /> <!-- Star Hatchling/Strider - Bright Burst -->
+	<action id="1006" handler="PetSkillUse" option="4713" /> <!-- Star Hatchling/Strider - Bright Heal -->
+	<action id="1007" handler="ServitorSkillUse" option="4699" /> <!-- Cat Queen - Blessing of Queen -->
+	<action id="1008" handler="ServitorSkillUse" option="4700" /> <!-- Cat Queen - Gift of Queen -->
+	<action id="1009" handler="ServitorSkillUse" option="4701" /> <!-- Cat Queen - Cure of Queen -->
+	<action id="1010" handler="ServitorSkillUse" option="4702" /> <!-- Unicorn Seraphim - Blessing of Seraphim -->
+	<action id="1011" handler="ServitorSkillUse" option="4703" /> <!-- Unicorn Seraphim - Gift of Seraphim -->
+	<action id="1012" handler="ServitorSkillUse" option="4704" /> <!-- Unicorn Seraphim - Cure of Seraphim -->
+	<action id="1013" handler="ServitorSkillUse" option="4705" /> <!-- Nightshade - Curse of Shade -->
+	<action id="1014" handler="ServitorSkillUse" option="4706" /> <!-- Nightshade - Mass Curse of Shade -->
+	<action id="1015" handler="ServitorSkillUse" option="4707" /> <!-- Nightshade - Shade Sacrifice -->
+	<action id="1016" handler="ServitorSkillUse" option="4709" /> <!-- Cursed Man - Cursed Blow -->
+	<action id="1017" handler="ServitorSkillUse" option="4708" /> <!-- Cursed Man - Cursed Strike/Stun -->
+	<action id="1031" handler="ServitorSkillUse" option="5135" /> <!-- Feline King - Slash -->
+	<action id="1032" handler="ServitorSkillUse" option="5136" /> <!-- Feline King - Spinning Slash -->
+	<action id="1033" handler="ServitorSkillUse" option="5137" /> <!-- Feline King - Grip of the Cat -->
+	<action id="1034" handler="ServitorSkillUse" option="5138" /> <!-- Magnus the Unicorn - Whiplash -->
+	<action id="1035" handler="ServitorSkillUse" option="5139" /> <!-- Magnus the Unicorn - Tridal Wave -->
+	<action id="1036" handler="ServitorSkillUse" option="5142" /> <!-- Spectral Lord - Corpse Kaboom -->
+	<action id="1037" handler="ServitorSkillUse" option="5141" /> <!-- Spectral Lord - Dicing Death -->
+	<action id="1038" handler="ServitorSkillUse" option="5140" /> <!-- Spectral Lord - Force Curse -->
+	<action id="1039" handler="ServitorSkillUse" option="5110" /> <!-- Swoop Cannon - Cannon Fodder -->
+	<action id="1040" handler="ServitorSkillUse" option="5111" /> <!-- Swoop Cannon - Big Bang -->
+	<action id="1041" handler="PetSkillUse" option="5442" /> <!-- Great Wolf - Bite Attack -->
+	<action id="1042" handler="PetSkillUse" option="5444" /> <!-- Great Wolf - Maul -->
+	<action id="1043" handler="PetSkillUse" option="5443" /> <!-- Great Wolf - Cry of the Wolf -->
+	<action id="1044" handler="PetSkillUse" option="5445" /> <!-- Great Wolf - Awakening -->
+	<action id="1045" handler="PetSkillUse" option="5584" /> <!-- Great Wolf - Howl -->
+	<action id="1046" handler="PetSkillUse" option="5585" /> <!-- Strider - Roar -->
+	<action id="1047" handler="ServitorSkillUse" option="5580" /> <!-- Divine Beast - Bite -->
+	<action id="1048" handler="ServitorSkillUse" option="5581" /> <!-- Divine Beast - Stun Attack -->
+	<action id="1049" handler="ServitorSkillUse" option="5582" /> <!-- Divine Beast - Fire Breath -->
+	<action id="1050" handler="ServitorSkillUse" option="5583" /> <!-- Divine Beast - Roar -->
+	<action id="1051" handler="ServitorSkillUse" option="5638" /> <!-- Feline Queen - Bless The Body -->
+	<action id="1052" handler="ServitorSkillUse" option="5639" /> <!-- Feline Queen - Bless The Soul -->
+	<action id="1053" handler="ServitorSkillUse" option="5640" /> <!-- Feline Queen - Haste -->
+	<action id="1054" handler="ServitorSkillUse" option="5643" /> <!-- Unicorn Seraphim - Acumen -->
+	<action id="1055" handler="ServitorSkillUse" option="5647" /> <!-- Unicorn Seraphim - Clarity -->
+	<action id="1056" handler="ServitorSkillUse" option="5648" /> <!-- Unicorn Seraphim - Empower -->
+	<action id="1057" handler="ServitorSkillUse" option="5646" /> <!-- Unicorn Seraphim - Wild Magic -->
+	<action id="1058" handler="ServitorSkillUse" option="5652" /> <!-- Nightshade - Death Whisper -->
+	<action id="1059" handler="ServitorSkillUse" option="5653" /> <!-- Nightshade - Focus -->
+	<action id="1060" handler="ServitorSkillUse" option="5654" /> <!-- Nightshade - Guidance -->
+	<action id="1061" handler="PetSkillUse" option="5745" /> <!-- Wild Beast Fighter, White Weasel - Death blow -->
+	<action id="1062" handler="PetSkillUse" option="5746" /> <!-- Wild Beast Fighter - Double attack -->
+	<action id="1063" handler="PetSkillUse" option="5747" /> <!-- Wild Beast Fighter - Spin attack -->
+	<action id="1064" handler="PetSkillUse" option="5748" /> <!-- Wild Beast Fighter - Meteor Shower -->
+	<action id="1065" handler="PetSkillUse" option="5753" /> <!-- Fox Shaman, Wild Beast Fighter, White Weasel, Fairy Princess - Awakening -->
+	<action id="1066" handler="PetSkillUse" option="5749" /> <!-- Fox Shaman, Spirit Shaman - Thunder Bolt -->
+	<action id="1067" handler="PetSkillUse" option="5750" /> <!-- Fox Shaman, Spirit Shaman - Flash -->
+	<action id="1068" handler="PetSkillUse" option="5751" /> <!-- Fox Shaman, Spirit Shaman - Lightning Wave -->
+	<action id="1069" handler="PetSkillUse" option="5752" /> <!-- Fox Shaman, Fairy Princess - Flare -->
+	<action id="1070" handler="PetSkillUse" option="5771" /> <!-- White Weasel, Fairy Princess, Improved Baby Buffalo, Improved Baby Kookaburra, Improved Baby Cougar, Spirit Shaman, Toy Knight, Turtle Ascetic - Buff control -->
+	<action id="1071" handler="ServitorSkillUse" option="5761" /> <!-- Tigress - Power Strike -->
+	<action id="1072" handler="PetSkillUse" option="6046" /> <!-- Toy Knight - Piercing attack -->
+	<action id="1073" handler="PetSkillUse" option="6047" /> <!-- Toy Knight - Whirlwind -->
+	<action id="1074" handler="PetSkillUse" option="6048" /> <!-- Toy Knight - Lance Smash -->
+	<action id="1075" handler="PetSkillUse" option="6049" /> <!-- Toy Knight - Battle Cry -->
+	<action id="1076" handler="PetSkillUse" option="6050" /> <!-- Turtle Ascetic - Power Smash -->
+	<action id="1077" handler="PetSkillUse" option="6051" /> <!-- Turtle Ascetic - Energy Burst -->
+	<action id="1078" handler="PetSkillUse" option="6052" /> <!-- Turtle Ascetic - Shockwave -->
+	<action id="1079" handler="PetSkillUse" option="6053" /> <!-- Turtle Ascetic - Howl -->
+	<action id="1080" handler="ServitorSkillUse" option="6041" /> <!-- Phoenix Rush -->
+	<action id="1081" handler="ServitorSkillUse" option="6042" /> <!-- Phoenix Cleanse -->
+	<action id="1082" handler="ServitorSkillUse" option="6043" /> <!-- Phoenix Flame Feather -->
+	<action id="1083" handler="ServitorSkillUse" option="6044" /> <!-- Phoenix Flame Beak -->
+	<action id="1084" handler="PetSkillUse" option="6054" /> <!-- Switch State -->
+	<action id="1086" handler="ServitorSkillUse" option="6094" /> <!-- Panther Cancel -->
+	<action id="1087" handler="ServitorSkillUse" option="6095" /> <!-- Panther Dark Claw -->
+	<action id="1088" handler="ServitorSkillUse" option="6096" /> <!-- Panther Fatal Claw -->
+	<action id="1089" handler="PetSkillUse" option="6199" /> <!-- Deinonychus - Tail Strike -->
+	<action id="1090" handler="PetSkillUse" option="6205" /> <!-- Guardian's Strider - Strider Bite -->
+	<action id="1091" handler="PetSkillUse" option="6206" /> <!-- Guardian's Strider - Strider Fear -->
+	<action id="1092" handler="PetSkillUse" option="6207" /> <!-- Guardian's Strider - Strider Dash -->
+	<action id="1093" handler="PetSkillUse" option="6618" /> <!-- Maguen - Maguen Strike -->
+	<action id="1094" handler="PetSkillUse" option="6681" /> <!-- Maguen - Maguen Wind Walk -->
+	<action id="1095" handler="PetSkillUse" option="6619" /> <!-- Elite Maguen - Maguen Power Strike -->
+	<action id="1096" handler="PetSkillUse" option="6682" /> <!-- Elite Maguen - Elite Maguen Wind Walk -->
+	<action id="1097" handler="PetSkillUse" option="6683" /> <!-- Maguen - Maguen Return -->
+	<action id="1098" handler="PetSkillUse" option="6684" /> <!-- Elite Maguen - Maguen Party Return -->
+	<action id="1099" handler="ServitorAttack" /> <!-- All Attack -->
+	<action id="1100" handler="ServitorMove" /> <!-- All Move to target -->
+	<action id="1101" handler="ServitorStop" /> <!-- All Stop -->
+	<action id="1102" handler="UnsummonServitor" />
+	<action id="1103" handler="ServitorMode" option="1" /> <!-- All Passive mode -->
+	<action id="1104" handler="ServitorMode" option="2" /> <!-- All Defending mode -->
+	<action id="1106" handler="ServitorSkillUse" option="11278" /> <!-- Cute Bear - Bear Claw -->
+	<action id="1107" handler="ServitorSkillUse" option="11279" /> <!-- Cute Bear - Bear Tumbling -->
+	<action id="1108" handler="ServitorSkillUse" option="11280" /> <!-- Saber Tooth Cougar- Cougar Bite -->
+	<action id="1109" handler="ServitorSkillUse" option="11281" /> <!-- Saber Tooth Cougar - Cougar Pounce -->
+	<action id="1110" handler="ServitorSkillUse" option="11282" /> <!-- Grim Reaper - Reaper Touch -->
+	<action id="1111" handler="ServitorSkillUse" option="11283" /> <!-- Grim Reaper - Reaper Power -->
+	<action id="1113" handler="ServitorSkillUse" option="10051" /> <!-- Golden Lion - Lion Roar -->
+	<action id="1114" handler="ServitorSkillUse" option="10052" /> <!-- Golden Lion - Lion Claw -->
+	<action id="1115" handler="ServitorSkillUse" option="10053" /> <!-- Golden Lion - Lion Dash -->
+	<action id="1116" handler="ServitorSkillUse" option="10054" /> <!-- Golden Lion - Lion Flame -->
+	<action id="1117" handler="ServitorSkillUse" option="10794" /> <!-- Thunder Hawk - Thunder Flight -->
+	<action id="1118" handler="ServitorSkillUse" option="10795" /> <!-- Thunder Hawk - Thunder Purity -->
+	<action id="1120" handler="ServitorSkillUse" option="10797" /> <!-- Thunder Hawk - Thunder Feather Blast -->
+	<action id="1121" handler="ServitorSkillUse" option="10798" /> <!-- Thunder Hawk - Thunder Sharp Claw -->
+	<action id="1122" handler="ServitorSkillUse" option="11806" /> <!-- Tree of Life - Blessing of Tree -->
+	<action id="1124" handler="ServitorSkillUse" option="11323" /> <!-- Wynn Kai the Cat - Feline Aggression -->
+	<action id="1125" handler="ServitorSkillUse" option="11324" /> <!-- Wynn Kai the Cat - Feline Stun -->
+	<action id="1126" handler="ServitorSkillUse" option="11325" /> <!-- Wynn Feline King - Feline Bite -->
+	<action id="1127" handler="ServitorSkillUse" option="11326" /> <!-- Wynn Feline King - Feline Pounce -->
+	<action id="1128" handler="ServitorSkillUse" option="11327" /> <!-- Wynn Feline Queen - Feline Touch -->
+	<action id="1129" handler="ServitorSkillUse" option="11328" /> <!-- Wynn Feline Queen - Feline Power -->
+	<action id="1130" handler="ServitorSkillUse" option="11332" /> <!-- Wynn Merrow - Unicorn's Aggression -->
+	<action id="1131" handler="ServitorSkillUse" option="11333" /> <!-- Wynn Merrow - Unicorn's Stun -->
+	<action id="1132" handler="ServitorSkillUse" option="11334" /> <!-- Wynn Magnus - Unicorn's Bite -->
+	<action id="1133" handler="ServitorSkillUse" option="11335" /> <!-- Wynn Magnus - Unicorn's Pounce -->
+	<action id="1134" handler="ServitorSkillUse" option="11336" /> <!-- Wynn Seraphim - Unicorn's Touch -->
+	<action id="1135" handler="ServitorSkillUse" option="11337" /> <!-- Wynn Seraphim - Unicorn's Power -->
+	<action id="1136" handler="ServitorSkillUse" option="11341" /> <!-- Wynn Nightshade - Phantom Aggression -->
+	<action id="1137" handler="ServitorSkillUse" option="11342" /> <!-- Wynn Nightshade - Phantom Stun -->
+	<action id="1138" handler="ServitorSkillUse" option="11343" /> <!-- Wynn Spectral Lord - Phantom Bite -->
+	<action id="1139" handler="ServitorSkillUse" option="11344" /> <!-- Wynn Spectral Lord - Phantom Pounce -->
+	<action id="1140" handler="ServitorSkillUse" option="11345" /> <!-- Wynn Soulless - Phantom Touch -->
+	<action id="1141" handler="ServitorSkillUse" option="11346" /> <!-- Wynn Soulless - Phantom Power -->
+	<action id="1142" handler="ServitorSkillUse" option="10087" /> <!-- Blood Panther - Panther Roar -->
+	<action id="1143" handler="ServitorSkillUse" option="10088" /> <!-- Blood Panther - Panther Rush -->
+	<action id="1144" handler="ServitorSkillUse" option="11375" /> <!-- Commando Cat - Commando Jumping Attack -->
+	<action id="1145" handler="ServitorSkillUse" option="11376" /> <!-- Commando Cat - Commando Double Slash -->
+	<action id="1146" handler="ServitorSkillUse" option="11378" /> <!-- Witch Cat - Elemental Slam -->
+	<action id="1147" handler="ServitorSkillUse" option="11377" /> <!-- Witch Cat - Witch Cat Power -->
+	<action id="1148" handler="ServitorSkillUse" option="11379" /> <!-- Unicorn Lancer - Lancer Rush -->
+	<action id="1149" handler="ServitorSkillUse" option="11380" /> <!-- Unicorn Lancer - Power Stamp -->
+	<action id="1150" handler="ServitorSkillUse" option="11382" /> <!-- Unicorn Cherub - Multiple Icicles -->
+	<action id="1151" handler="ServitorSkillUse" option="11381" /> <!-- Unicorn Cherub - Cherub Power -->
+	<action id="1152" handler="ServitorSkillUse" option="11383" /> <!-- Dark Crusader - Phantom Sword Attack -->
+	<action id="1153" handler="ServitorSkillUse" option="11384" /> <!-- Dark Crusader - Phantom Blow -->
+	<action id="1154" handler="ServitorSkillUse" option="11385" /> <!-- Banshee Queen - Phantom Spike -->
+	<action id="1155" handler="ServitorSkillUse" option="11386" /> <!-- Banshee Queen - Phantom Crash -->
+	<action id="5000" handler="PetSkillUse" option="23155" /> <!-- Baby Rudolph - Reindeer Scratch -->
+	<action id="5001" handler="PetSkillUse" option="23167" /> <!-- Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Rosy Seduction -->
+	<action id="5002" handler="PetSkillUse" option="23168" /> <!-- Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Critical Seduction -->
+	<action id="5003" handler="PetSkillUse" option="5749" /> <!-- Hyum, Lapham, Hyum, Lapham - Thunder Bolt -->
+	<action id="5004" handler="PetSkillUse" option="5750" /> <!-- Hyum, Lapham, Hyum, Lapham - Flash -->
+	<action id="5005" handler="PetSkillUse" option="5751" /> <!-- Hyum, Lapham, Hyum, Lapham - Lightning Wave -->
+	<action id="5006" handler="PetSkillUse" option="5771" /> <!-- Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum, Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Buff Control -->
+	<action id="5007" handler="PetSkillUse" option="6046" /> <!-- Deseloph, Lilias, Deseloph, Lilias - Piercing Attack -->
+	<action id="5008" handler="PetSkillUse" option="6047" /> <!-- Deseloph, Lilias, Deseloph, Lilias - Spin Attack -->
+	<action id="5009" handler="PetSkillUse" option="6048" /> <!-- Deseloph, Lilias, Deseloph, Lilias - Smash -->
+	<action id="5010" handler="PetSkillUse" option="6049" /> <!-- Deseloph, Lilias, Deseloph, Lilias - Ignite -->
+	<action id="5011" handler="PetSkillUse" option="6050" /> <!-- Rekang, Mafum, Rekang, Mafum - Power Smash -->
+	<action id="5012" handler="PetSkillUse" option="6051" /> <!-- Rekang, Mafum, Rekang, Mafum - Energy Burst -->
+	<action id="5013" handler="PetSkillUse" option="6052" /> <!-- Rekang, Mafum, Rekang, Mafum - Shockwave -->
+	<action id="5014" handler="PetSkillUse" option="6053" /> <!-- Rekang, Mafum, Rekang, Mafum - Ignite -->
+	<action id="5015" handler="PetSkillUse" option="6054" /> <!-- Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum, Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Switch Stance -->
+</list>

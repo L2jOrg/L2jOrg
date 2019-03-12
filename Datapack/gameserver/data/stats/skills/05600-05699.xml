@@ -1,0 +1,3763 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="5600" toLevel="1" name="Betrayal Mark">
+		<!-- Confirmed CT2.5 -->
+		<!-- set name="castRange" val="900" / -->
+		<!-- set name="effectRange" val="1400" / -->
+		<affectRange>1000</affectRange>
+		<effectPoint>-100</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>81</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1400</effectRange>
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>47</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5601" toLevel="12" name="Melee Attack Resistance">
+		<!-- Confirmed CT2.5 -->
+		<icon>icon.skill5601</icon>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<BLUNT>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+					<value level="7">35</value>
+					<value level="8">40</value>
+					<value level="9">45</value>
+					<value level="10">55</value>
+					<value level="11">70</value>
+					<value level="12">100</value>
+				</BLUNT>
+				<SWORD>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+					<value level="7">35</value>
+					<value level="8">40</value>
+					<value level="9">45</value>
+					<value level="10">55</value>
+					<value level="11">70</value>
+					<value level="12">100</value>
+				</SWORD>
+				<DUAL>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+					<value level="7">35</value>
+					<value level="8">40</value>
+					<value level="9">45</value>
+					<value level="10">55</value>
+					<value level="11">70</value>
+					<value level="12">100</value>
+				</DUAL>
+				<ANCIENTSWORD>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+					<value level="7">35</value>
+					<value level="8">40</value>
+					<value level="9">45</value>
+					<value level="10">55</value>
+					<value level="11">70</value>
+					<value level="12">100</value>
+				</ANCIENTSWORD>
+				<DAGGER>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+					<value level="7">35</value>
+					<value level="8">40</value>
+					<value level="9">45</value>
+					<value level="10">55</value>
+					<value level="11">70</value>
+					<value level="12">100</value>
+				</DAGGER>
+				<RAPIER>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+					<value level="7">35</value>
+					<value level="8">40</value>
+					<value level="9">45</value>
+					<value level="10">55</value>
+					<value level="11">70</value>
+					<value level="12">100</value>
+				</RAPIER>
+				<DUALFIST>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+					<value level="7">35</value>
+					<value level="8">40</value>
+					<value level="9">45</value>
+					<value level="10">55</value>
+					<value level="11">70</value>
+					<value level="12">100</value>
+				</DUALFIST>
+				<DUALDAGGER>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+					<value level="7">35</value>
+					<value level="8">40</value>
+					<value level="9">45</value>
+					<value level="10">55</value>
+					<value level="11">70</value>
+					<value level="12">100</value>
+				</DUALDAGGER>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5602" toLevel="1" name="Transform Sacrifice">
+		<!-- Glory Days Confirmed -->
+		<abnormalLvl>10</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>TRANSFORM_SCRIFICE_P</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<icon>icon.skill4036</icon>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Hp">
+				<amount>-99</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="LimitHp">
+				<amount>-90</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5603" toLevel="1" name="Dagger Mastery">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>WEAPON_MASTERY</abnormalType>
+		<icon>icon.skill0209</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>40</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="FatalBlowRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-60</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5604" toLevel="1" name="Sword/Blunt Weapon Mastery">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>WEAPON_MASTERY</abnormalType>
+		<icon>icon.skill0217</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>40</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>20</SHOCK>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-60</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5605" toLevel="2" name="Power of Apella">
+		<!-- Confirmed CT2.5 -->
+		<!-- Apella Heavy -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>APELLA</abnormalType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>
+			<value level="1">64</value>
+			<value level="2">67</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">30</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>-30</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5607" toLevel="2" name="Power of Apella">
+		<!-- Confirmed CT2.5 -->
+		<!-- Apella Light -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>APELLA</abnormalType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>
+			<value level="1">64</value>
+			<value level="2">67</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">2.5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-86</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5608" toLevel="2" name="Power of Apella">
+		<!-- Confirmed CT2.5 -->
+		<!-- Apella Robe -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>APELLA</abnormalType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>
+			<value level="1">64</value>
+			<value level="2">67</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">6.25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5609" toLevel="1" name="Sound 1">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5610" toLevel="1" name="Sound 2">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5611" toLevel="1" name="Sound 3">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5612" toLevel="1" name="Sound 4">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5613" toLevel="4" name="Vampiric Rage">
+		<!-- This skill only has one level, 4. -->
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
+		<icon>icon.skill1268</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<basicProperty>NONE</basicProperty>
+		<magicLvl>72</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5614" toLevel="1" name="Raid Boss (Lv. 87)">
+		<!-- Confirmed CT2.5 -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="5615" toLevel="1" name="Raid Boss (Lv. 87)">
+		<!-- Confirmed CT2.5 -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="5616" toLevel="1" name="Raid Boss (Lv. 87)">
+		<!-- Confirmed CT2.5 -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="5617" toLevel="1" name="Raid Boss (Lv. 87)">
+		<!-- Confirmed CT2.5 -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="5618" toLevel="1" name="Raid Boss (Lv. 87)">
+		<!-- Confirmed CT2.5 -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="5619" toLevel="1" name="Presentation - Super Giant Mutated Animal Union">
+		<hitTime>5800</hitTime>
+		<magicLvl>76</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5620" toLevel="12" name="Melee Attack Vulnerability">
+		<!-- Confirmed CT2.5 -->
+		<icon>icon.skill5620</icon>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<BLUNT>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-15</value>
+					<value level="4">-20</value>
+					<value level="5">-25</value>
+					<value level="6">-30</value>
+					<value level="7">-35</value>
+					<value level="8">-40</value>
+					<value level="9">-45</value>
+					<value level="10">-55</value>
+					<value level="11">-70</value>
+					<value level="12">-100</value>
+				</BLUNT>
+				<SWORD>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-15</value>
+					<value level="4">-20</value>
+					<value level="5">-25</value>
+					<value level="6">-30</value>
+					<value level="7">-35</value>
+					<value level="8">-40</value>
+					<value level="9">-45</value>
+					<value level="10">-55</value>
+					<value level="11">-70</value>
+					<value level="12">-100</value>
+				</SWORD>
+				<DUAL>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-15</value>
+					<value level="4">-20</value>
+					<value level="5">-25</value>
+					<value level="6">-30</value>
+					<value level="7">-35</value>
+					<value level="8">-40</value>
+					<value level="9">-45</value>
+					<value level="10">-55</value>
+					<value level="11">-70</value>
+					<value level="12">-100</value>
+				</DUAL>
+				<RAPIER>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-15</value>
+					<value level="4">-20</value>
+					<value level="5">-25</value>
+					<value level="6">-30</value>
+					<value level="7">-35</value>
+					<value level="8">-40</value>
+					<value level="9">-45</value>
+					<value level="10">-55</value>
+					<value level="11">-70</value>
+					<value level="12">-100</value>
+				</RAPIER>
+				<DAGGER>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-15</value>
+					<value level="4">-20</value>
+					<value level="5">-25</value>
+					<value level="6">-30</value>
+					<value level="7">-35</value>
+					<value level="8">-40</value>
+					<value level="9">-45</value>
+					<value level="10">-55</value>
+					<value level="11">-70</value>
+					<value level="12">-100</value>
+				</DAGGER>
+				<ANCIENTSWORD>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-15</value>
+					<value level="4">-20</value>
+					<value level="5">-25</value>
+					<value level="6">-30</value>
+					<value level="7">-35</value>
+					<value level="8">-40</value>
+					<value level="9">-45</value>
+					<value level="10">-55</value>
+					<value level="11">-70</value>
+					<value level="12">-100</value>
+				</ANCIENTSWORD>
+				<DUALFIST>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-15</value>
+					<value level="4">-20</value>
+					<value level="5">-25</value>
+					<value level="6">-30</value>
+					<value level="7">-35</value>
+					<value level="8">-40</value>
+					<value level="9">-45</value>
+					<value level="10">-55</value>
+					<value level="11">-70</value>
+					<value level="12">-100</value>
+				</DUALFIST>
+				<DUALDAGGER>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-15</value>
+					<value level="4">-20</value>
+					<value level="5">-25</value>
+					<value level="6">-30</value>
+					<value level="7">-35</value>
+					<value level="8">-40</value>
+					<value level="9">-45</value>
+					<value level="10">-55</value>
+					<value level="11">-70</value>
+					<value level="12">-100</value>
+				</DUALDAGGER>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5621" toLevel="12" name="Aerial Recharge">
+		<!-- Confirmed CT2.5 -->
+		<!-- Zone Skill -->
+		<effectPoint>100</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mp">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">10</value>
+					<value level="3">13</value>
+					<value level="4">18</value>
+					<value level="5">23</value>
+					<value level="6">28</value>
+					<value level="7">33</value>
+					<value level="8">35</value>
+					<value level="9">36</value>
+					<value level="10">38</value>
+					<value level="11">39</value>
+					<value level="12">39</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5622" toLevel="7" name="Double Attack">
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="5623" toLevel="1" name="Weakened Magic Circle">
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1500</hitTime>
+		<icon>icon.skill0122</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<castRange>200</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5624" toLevel="1" name="Soul Confinement">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>INVINCIBILITY</abnormalType>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<effectPoint>-707</effectPoint>
+		<hitTime>2000</hitTime>
+		<icon>icon.skill1201</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>51</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>900</effectRange>
+		<isDebuff>true</isDebuff>
+		<castRange>400</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5625" toLevel="1" name="Soul Confinement">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>INVINCIBILITY</abnormalType>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<effectPoint>-707</effectPoint>
+		<hitTime>2000</hitTime>
+		<icon>icon.skill1201</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>95</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>900</effectRange>
+		<isDebuff>true</isDebuff>
+		<castRange>400</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5626" toLevel="1" name="Raid Boss">
+		<!-- Confirmed CT2.5 -->
+		<icon>icon.skillraid</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+	</skill>
+	<skill id="5627" toLevel="1" name="Adventurer's Wind Walk">
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SPEED_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1204</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5628" toLevel="1" name="Adventurer's Shield">
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1040</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5629" toLevel="1" name="Adventurer's Blessed Body">
+		<abnormalLvl>7</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MAX_HP_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1045</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5630" toLevel="1" name="Adventurer's Vampiric Rage">
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1268</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>80</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5631" toLevel="1" name="Adventurer's Regeneration">
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>HP_REGEN_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1044</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5632" toLevel="1" name="Adventurer's Haste">
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1086</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>33</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5633" toLevel="1" name="Adventurer's Blessed Soul">
+		<abnormalLvl>7</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MAX_MP_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1048</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxMp">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5634" toLevel="1" name="Adventurer's Acumen">
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CASTING_TIME_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1085</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5635" toLevel="1" name="Adventurer's Concentration">
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1078</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ReduceCancel">
+				<amount>-18</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5636" toLevel="1" name="Adventurer's Empower">
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MA_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1059</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>55</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5637" toLevel="1" name="Adventurer's Magic Barrier">
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MD_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1036</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5638" toLevel="4" name="Feline Queen - Blessed Body">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">6</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MAX_HP_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">495</value>
+			<value level="2">532</value>
+			<value level="3">597</value>
+			<value level="4">646</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1045</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">52</value>
+			<value level="2">56</value>
+			<value level="3">64</value>
+			<value level="4">72</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">38</value>
+			<value level="2">41</value>
+			<value level="3">48</value>
+			<value level="4">53</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">10</value>
+			<value level="2">11</value>
+			<value level="3">12</value>
+			<value level="4">14</value>
+		</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY_NOT</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">25</value>
+					<value level="3">30</value>
+					<value level="4">35</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5639" toLevel="4" name="Feline Queen - Blessed Soul">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">6</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MAX_MP_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">495</value>
+			<value level="2">532</value>
+			<value level="3">582</value>
+			<value level="4">635</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1048</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">52</value>
+			<value level="2">56</value>
+			<value level="3">62</value>
+			<value level="4">70</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">38</value>
+			<value level="2">41</value>
+			<value level="3">46</value>
+			<value level="4">52</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">10</value>
+			<value level="2">11</value>
+			<value level="3">12</value>
+			<value level="4">13</value>
+		</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">25</value>
+					<value level="3">30</value>
+					<value level="4">35</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5640" toLevel="2" name="Feline Queen - Haste">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">418</value>
+			<value level="2">495</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1086</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">44</value>
+			<value level="2">52</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">31</value>
+			<value level="2">38</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">8</value>
+			<value level="2">10</value>
+		</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">33</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5641" toLevel="1" name="not_used">
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<effectPoint>418</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1086</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>44</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<effectRange>900</effectRange>
+		<reuseDelay>6000</reuseDelay>
+		<castRange>400</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5642" toLevel="4" name="not_used">
+		<abnormalLvl>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">6</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SHIELD_PROB_UP</abnormalType>
+		<effectPoint>
+			<value level="1">532</value>
+			<value level="2">582</value>
+			<value level="3">611</value>
+			<value level="4">635</value>
+		</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1243</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">56</value>
+			<value level="2">62</value>
+			<value level="3">66</value>
+			<value level="4">70</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<effectRange>900</effectRange>
+		<reuseDelay>6000</reuseDelay>
+		<castRange>400</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5643" toLevel="1" name="Seraphim the Unicorn - Acumen">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CASTING_TIME_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>495</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1085</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>48</magicLvl>
+		<mpConsume>35</mpConsume>
+		<mpInitialConsume>9</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5644" toLevel="1" name="not_used">
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SPEED_UP</abnormalType>
+		<effectPoint>285</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1204</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>30</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<effectRange>900</effectRange>
+		<reuseDelay>6000</reuseDelay>
+		<castRange>400</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5645" toLevel="3" name="not_used">
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>RESIST_DERANGEMENT</abnormalType>
+		<effectPoint>
+			<value level="1">379</value>
+			<value level="2">457</value>
+			<value level="3">532</value>
+		</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1035</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">48</value>
+			<value level="3">56</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<effectRange>900</effectRange>
+		<reuseDelay>6000</reuseDelay>
+		<castRange>400</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<HOLD>
+					<value level="1">30</value>
+					<value level="2">40</value>
+					<value level="3">50</value>
+				</HOLD>
+				<DERANGEMENT>
+					<value level="1">30</value>
+					<value level="2">40</value>
+					<value level="3">50</value>
+				</DERANGEMENT>
+				<SLEEP>
+					<value level="1">30</value>
+					<value level="2">40</value>
+					<value level="3">50</value>
+				</SLEEP>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5646" toLevel="3" name="Seraphim the Unicorn - Wild Magic">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<!-- Guessed -->
+		<!-- Guessed -->
+		<!-- Guessed -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>
+			<value level="1">MAGIC_CRITICAL_UP</value>
+			<value level="2">MAGIC_CRITICAL_UP</value>
+			<value level="3">HIT_UP</value>
+		</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">582</value>
+			<value level="2">635</value>
+			<value level="3">532</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<icon>
+			<value level="1">icon.skill1303</value>
+			<value level="2">icon.skill1303</value>
+			<value level="3">icon.skill1240</value>
+		</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">64</value>
+			<value level="2">72</value>
+			<value level="3">56</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">46</value>
+			<value level="2">52</value>
+			<value level="3">42</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">12</value>
+			<value level="2">13</value>
+			<value level="3">10</value>
+		</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5647" toLevel="3" name="Seraphim the Unicorn - Clarity">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CHEAP_MAGIC</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">549</value>
+			<value level="2">611</value>
+			<value level="3">655</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1397</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId>
+		<magicLvl>
+			<value level="1">58</value>
+			<value level="2">66</value>
+			<value level="3">74</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">43</value>
+			<value level="2">49</value>
+			<value level="3">55</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">11</value>
+			<value level="2">13</value>
+			<value level="3">14</value>
+		</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-15</value>
+					<value level="3">-20</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-4</value>
+					<value level="2">-7</value>
+					<value level="3">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-4</value>
+					<value level="2">-7</value>
+					<value level="3">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5648" toLevel="2" name="Seraphim the Unicorn - Empower">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MA_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">418</value>
+			<value level="2">495</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1059</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">44</value>
+			<value level="2">52</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">31</value>
+			<value level="2">38</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">8</value>
+			<value level="2">10</value>
+		</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">65</value>
+					<value level="2">75</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5649" toLevel="2" name="not_used">
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>AVOID_UP</abnormalType>
+		<effectPoint>
+			<value level="1">418</value>
+			<value level="2">495</value>
+		</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1087</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">44</value>
+			<value level="2">52</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>900</effectRange>
+		<reuseDelay>6000</reuseDelay>
+		<castRange>400</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5650" toLevel="3" name="not_used">
+		<abnormalLvl>
+			<value level="1">4</value>
+			<value level="2">5</value>
+			<value level="3">6</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
+		<effectPoint>
+			<value level="1">495</value>
+			<value level="2">566</value>
+			<value level="3">624</value>
+		</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1078</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">52</value>
+			<value level="2">60</value>
+			<value level="3">68</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>900</effectRange>
+		<reuseDelay>6000</reuseDelay>
+		<castRange>400</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5651" toLevel="1" name="not_used">
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<effectPoint>379</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1068</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>40</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>900</effectRange>
+		<reuseDelay>6000</reuseDelay>
+		<castRange>400</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5652" toLevel="3" name="Nightshade - Death Whisper">
+		<!-- Confirmed CT2.5 -->
+		<!-- Summon Nightshade Skill -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CRITICAL_DMG_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">379</value>
+			<value level="2">457</value>
+			<value level="3">532</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1242</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">48</value>
+			<value level="3">56</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">28</value>
+			<value level="2">35</value>
+			<value level="3">41</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">7</value>
+			<value level="2">9</value>
+			<value level="3">11</value>
+		</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">25</value>
+					<value level="2">30</value>
+					<value level="3">35</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5653" toLevel="2" name="Nightshade - Focus">
+		<!-- Confirmed CT2.5 -->
+		<!-- Summon Nightshade Skill -->
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CRITICAL_PROB_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">418</value>
+			<value level="2">495</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1077</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">44</value>
+			<value level="2">52</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">31</value>
+			<value level="2">38</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">8</value>
+			<value level="2">10</value>
+		</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">25</value>
+					<value level="2">30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5654" toLevel="3" name="Nightshade - Guidance">
+		<!-- Confirmed CT2.5 -->
+		<!-- Summon Nightshade Skill -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>HIT_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">379</value>
+			<value level="2">457</value>
+			<value level="3">532</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1240</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">56</value>
+			<value level="2">62</value>
+			<value level="3">64</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">28</value>
+			<value level="2">35</value>
+			<value level="3">41</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">7</value>
+			<value level="2">9</value>
+			<value level="3">11</value>
+		</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5657" toLevel="85" name="Gatekeeper Prominence">
+		<castRange>900</castRange>
+		<effectPoint>
+			<value level="1">-92</value>
+			<value level="2">-97</value>
+			<value level="3">-101</value>
+			<value level="4">-106</value>
+			<value level="5">-111</value>
+			<value level="6">-116</value>
+			<value level="7">-121</value>
+			<value level="8">-126</value>
+			<value level="9">-132</value>
+			<value level="10">-138</value>
+			<value level="11">-143</value>
+			<value level="12">-149</value>
+			<value level="13">-156</value>
+			<value level="14">-162</value>
+			<value level="15">-168</value>
+			<value level="16">-175</value>
+			<value level="17">-182</value>
+			<value level="18">-189</value>
+			<value level="19">-196</value>
+			<value level="20">-204</value>
+			<value level="21">-211</value>
+			<value level="22">-219</value>
+			<value level="23">-227</value>
+			<value level="24">-235</value>
+			<value level="25">-243</value>
+			<value level="26">-251</value>
+			<value level="27">-259</value>
+			<value level="28">-268</value>
+			<value level="29">-277</value>
+			<value level="30">-285</value>
+			<value level="31">-294</value>
+			<value level="32">-303</value>
+			<value level="33">-313</value>
+			<value level="34">-322</value>
+			<value level="35">-331</value>
+			<value level="36">-341</value>
+			<value level="37">-350</value>
+			<value level="38">-360</value>
+			<value level="39">-369</value>
+			<value level="40">-379</value>
+			<value level="41">-389</value>
+			<value level="42">-399</value>
+			<value level="43">-408</value>
+			<value level="44">-418</value>
+			<value level="45">-428</value>
+			<value level="46">-438</value>
+			<value level="47">-448</value>
+			<value level="48">-457</value>
+			<value level="49">-467</value>
+			<value level="50">-477</value>
+			<value level="51">-486</value>
+			<value level="52">-495</value>
+			<value level="53">-505</value>
+			<value level="54">-514</value>
+			<value level="55">-523</value>
+			<value level="56">-532</value>
+			<value level="57">-541</value>
+			<value level="58">-549</value>
+			<value level="59">-558</value>
+			<value level="60">-566</value>
+			<value level="61">-574</value>
+			<value level="62">-582</value>
+			<value level="63">-590</value>
+			<value level="64">-597</value>
+			<value level="65">-604</value>
+			<value level="66">-611</value>
+			<value level="67">-617</value>
+			<value level="68">-624</value>
+			<value level="69">-630</value>
+			<value level="70">-635</value>
+			<value level="71">-641</value>
+			<value level="72">-646</value>
+			<value level="73">-650</value>
+			<value level="74">-655</value>
+			<value level="75">-659</value>
+			<value level="76">-662</value>
+			<value level="77">-666</value>
+			<value level="78">-669</value>
+			<value level="79">-673</value>
+			<value level="80">-676</value>
+			<value level="81">-679</value>
+			<value level="82">-681</value>
+			<value level="83">-684</value>
+			<value level="84">-687</value>
+			<value level="85">-689</value>
+		</effectPoint>
+		<effectRange>1400</effectRange>
+		<hitTime>1500</hitTime>
+		<icon>icon.skill1230</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
+			<value level="11">11</value>
+			<value level="12">12</value>
+			<value level="13">13</value>
+			<value level="14">14</value>
+			<value level="15">15</value>
+			<value level="16">16</value>
+			<value level="17">17</value>
+			<value level="18">18</value>
+			<value level="19">19</value>
+			<value level="20">20</value>
+			<value level="21">21</value>
+			<value level="22">22</value>
+			<value level="23">23</value>
+			<value level="24">24</value>
+			<value level="25">25</value>
+			<value level="26">26</value>
+			<value level="27">27</value>
+			<value level="28">28</value>
+			<value level="29">29</value>
+			<value level="30">30</value>
+			<value level="31">31</value>
+			<value level="32">32</value>
+			<value level="33">33</value>
+			<value level="34">34</value>
+			<value level="35">35</value>
+			<value level="36">36</value>
+			<value level="37">37</value>
+			<value level="38">38</value>
+			<value level="39">39</value>
+			<value level="40">40</value>
+			<value level="41">41</value>
+			<value level="42">42</value>
+			<value level="43">43</value>
+			<value level="44">44</value>
+			<value level="45">45</value>
+			<value level="46">46</value>
+			<value level="47">47</value>
+			<value level="48">48</value>
+			<value level="49">49</value>
+			<value level="50">50</value>
+			<value level="51">51</value>
+			<value level="52">52</value>
+			<value level="53">53</value>
+			<value level="54">54</value>
+			<value level="55">55</value>
+			<value level="56">56</value>
+			<value level="57">57</value>
+			<value level="58">58</value>
+			<value level="59">59</value>
+			<value level="60">60</value>
+			<value level="61">61</value>
+			<value level="62">62</value>
+			<value level="63">63</value>
+			<value level="64">64</value>
+			<value level="65">65</value>
+			<value level="66">66</value>
+			<value level="67">67</value>
+			<value level="68">68</value>
+			<value level="69">69</value>
+			<value level="70">70</value>
+			<value level="71">71</value>
+			<value level="72">72</value>
+			<value level="73">73</value>
+			<value level="74">74</value>
+			<value level="75">75</value>
+			<value level="76">76</value>
+			<value level="77">77</value>
+			<value level="78">78</value>
+			<value level="79">79</value>
+			<value level="80">80</value>
+			<value level="81">81</value>
+			<value level="82">82</value>
+			<value level="83">83</value>
+			<value level="84">84</value>
+			<value level="85">85</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">9</value>
+			<value level="2">9</value>
+			<value level="3">9</value>
+			<value level="4">9</value>
+			<value level="5">10</value>
+			<value level="6">10</value>
+			<value level="7">10</value>
+			<value level="8">12</value>
+			<value level="9">12</value>
+			<value level="10">13</value>
+			<value level="11">14</value>
+			<value level="12">15</value>
+			<value level="13">15</value>
+			<value level="14">15</value>
+			<value level="15">17</value>
+			<value level="16">17</value>
+			<value level="17">18</value>
+			<value level="18">19</value>
+			<value level="19">19</value>
+			<value level="20">20</value>
+			<value level="21">20</value>
+			<value level="22">20</value>
+			<value level="23">22</value>
+			<value level="24">22</value>
+			<value level="25">23</value>
+			<value level="26">24</value>
+			<value level="27">24</value>
+			<value level="28">25</value>
+			<value level="29">27</value>
+			<value level="30">27</value>
+			<value level="31">28</value>
+			<value level="32">28</value>
+			<value level="33">29</value>
+			<value level="34">30</value>
+			<value level="35">30</value>
+			<value level="36">32</value>
+			<value level="37">33</value>
+			<value level="38">34</value>
+			<value level="39">34</value>
+			<value level="40">35</value>
+			<value level="41">37</value>
+			<value level="42">38</value>
+			<value level="43">38</value>
+			<value level="44">39</value>
+			<value level="45">40</value>
+			<value level="46">42</value>
+			<value level="47">43</value>
+			<value level="48">44</value>
+			<value level="49">44</value>
+			<value level="50">45</value>
+			<value level="51">47</value>
+			<value level="52">48</value>
+			<value level="53">49</value>
+			<value level="54">49</value>
+			<value level="55">50</value>
+			<value level="56">52</value>
+			<value level="57">53</value>
+			<value level="58">54</value>
+			<value level="59">55</value>
+			<value level="60">55</value>
+			<value level="61">57</value>
+			<value level="62">58</value>
+			<value level="63">59</value>
+			<value level="64">60</value>
+			<value level="65">60</value>
+			<value level="66">62</value>
+			<value level="67">63</value>
+			<value level="68">64</value>
+			<value level="69">64</value>
+			<value level="70">65</value>
+			<value level="71">67</value>
+			<value level="72">67</value>
+			<value level="73">68</value>
+			<value level="74">69</value>
+			<value level="75">69</value>
+			<value level="76">70</value>
+			<value level="77">70</value>
+			<value level="78">72</value>
+			<value level="79">73</value>
+			<value level="80">73</value>
+			<value level="81">73</value>
+			<value level="82">74</value>
+			<value level="83">74</value>
+			<value level="84">75</value>
+			<value level="85">75</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>2000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<pveEffects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">75</value>
+					<value level="2">80</value>
+					<value level="3">85</value>
+					<value level="4">91</value>
+					<value level="5">97</value>
+					<value level="6">103</value>
+					<value level="7">109</value>
+					<value level="8">116</value>
+					<value level="9">123</value>
+					<value level="10">130</value>
+					<value level="11">137</value>
+					<value level="12">145</value>
+					<value level="13">153</value>
+					<value level="14">161</value>
+					<value level="15">169</value>
+					<value level="16">178</value>
+					<value level="17">187</value>
+					<value level="18">196</value>
+					<value level="19">206</value>
+					<value level="20">216</value>
+					<value level="21">226</value>
+					<value level="22">236</value>
+					<value level="23">247</value>
+					<value level="24">257</value>
+					<value level="25">269</value>
+					<value level="26">280</value>
+					<value level="27">292</value>
+					<value level="28">304</value>
+					<value level="29">316</value>
+					<value level="30">328</value>
+					<value level="31">341</value>
+					<value level="32">354</value>
+					<value level="33">367</value>
+					<value level="34">381</value>
+					<value level="35">394</value>
+					<value level="36">408</value>
+					<value level="37">423</value>
+					<value level="38">437</value>
+					<value level="39">451</value>
+					<value level="40">466</value>
+					<value level="41">481</value>
+					<value level="42">496</value>
+					<value level="43">512</value>
+					<value level="44">527</value>
+					<value level="45">543</value>
+					<value level="46">559</value>
+					<value level="47">575</value>
+					<value level="48">591</value>
+					<value level="49">607</value>
+					<value level="50">624</value>
+					<value level="51">640</value>
+					<value level="52">657</value>
+					<value level="53">673</value>
+					<value level="54">690</value>
+					<value level="55">707</value>
+					<value level="56">723</value>
+					<value level="57">740</value>
+					<value level="58">757</value>
+					<value level="59">773</value>
+					<value level="60">790</value>
+					<value level="61">806</value>
+					<value level="62">823</value>
+					<value level="63">839</value>
+					<value level="64">856</value>
+					<value level="65">872</value>
+					<value level="66">888</value>
+					<value level="67">903</value>
+					<value level="68">919</value>
+					<value level="69">935</value>
+					<value level="70">950</value>
+					<value level="71">965</value>
+					<value level="72">979</value>
+					<value level="73">994</value>
+					<value level="74">1008</value>
+					<value level="75">1022</value>
+					<value level="76">1037</value>
+					<value level="77">1056</value>
+					<value level="78">1077</value>
+					<value level="79">1104</value>
+					<value level="80">1132</value>
+					<value level="81">1161</value>
+					<value level="82">1190</value>
+					<value level="83">1220</value>
+					<value level="84">1251</value>
+					<value level="85">1279</value>
+				</power>
+			</effect>
+		</pveEffects>
+		<pvpEffects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">60</value>
+					<value level="2">64</value>
+					<value level="3">68</value>
+					<value level="4">73</value>
+					<value level="5">77</value>
+					<value level="6">82</value>
+					<value level="7">87</value>
+					<value level="8">93</value>
+					<value level="9">98</value>
+					<value level="10">104</value>
+					<value level="11">110</value>
+					<value level="12">116</value>
+					<value level="13">112</value>
+					<value level="14">129</value>
+					<value level="15">136</value>
+					<value level="16">142</value>
+					<value level="17">150</value>
+					<value level="18">157</value>
+					<value level="19">165</value>
+					<value level="20">173</value>
+					<value level="21">181</value>
+					<value level="22">189</value>
+					<value level="23">197</value>
+					<value level="24">206</value>
+					<value level="25">215</value>
+					<value level="26">224</value>
+					<value level="27">233</value>
+					<value level="28">243</value>
+					<value level="29">253</value>
+					<value level="30">263</value>
+					<value level="31">273</value>
+					<value level="32">283</value>
+					<value level="33">294</value>
+					<value level="34">305</value>
+					<value level="35">316</value>
+					<value level="36">327</value>
+					<value level="37">338</value>
+					<value level="38">350</value>
+					<value level="39">361</value>
+					<value level="40">373</value>
+					<value level="41">385</value>
+					<value level="42">397</value>
+					<value level="43">410</value>
+					<value level="44">422</value>
+					<value level="45">435</value>
+					<value level="46">447</value>
+					<value level="47">460</value>
+					<value level="48">473</value>
+					<value level="49">486</value>
+					<value level="50">499</value>
+					<value level="51">512</value>
+					<value level="52">525</value>
+					<value level="53">539</value>
+					<value level="54">552</value>
+					<value level="55">565</value>
+					<value level="56">579</value>
+					<value level="57">592</value>
+					<value level="58">605</value>
+					<value level="59">619</value>
+					<value level="60">632</value>
+					<value level="61">645</value>
+					<value level="62">658</value>
+					<value level="63">672</value>
+					<value level="64">685</value>
+					<value level="65">697</value>
+					<value level="66">710</value>
+					<value level="67">723</value>
+					<value level="68">735</value>
+					<value level="69">748</value>
+					<value level="70">760</value>
+					<value level="71">772</value>
+					<value level="72">784</value>
+					<value level="73">795</value>
+					<value level="74">806</value>
+					<value level="75">817</value>
+					<value level="76">830</value>
+					<value level="77">845</value>
+					<value level="78">862</value>
+					<value level="79">884</value>
+					<value level="80">906</value>
+					<value level="81">929</value>
+					<value level="82">952</value>
+					<value level="83">976</value>
+					<value level="84">1001</value>
+					<value level="85">1024</value>
+				</power>
+			</effect>
+		</pvpEffects>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5658" toLevel="85" name="Gatekeeper Flame Strike">
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<castRange>500</castRange>
+		<effectPoint>
+			<value level="1">-92</value>
+			<value level="2">-97</value>
+			<value level="3">-101</value>
+			<value level="4">-106</value>
+			<value level="5">-111</value>
+			<value level="6">-116</value>
+			<value level="7">-121</value>
+			<value level="8">-126</value>
+			<value level="9">-132</value>
+			<value level="10">-138</value>
+			<value level="11">-143</value>
+			<value level="12">-149</value>
+			<value level="13">-156</value>
+			<value level="14">-162</value>
+			<value level="15">-168</value>
+			<value level="16">-175</value>
+			<value level="17">-182</value>
+			<value level="18">-189</value>
+			<value level="19">-196</value>
+			<value level="20">-204</value>
+			<value level="21">-211</value>
+			<value level="22">-219</value>
+			<value level="23">-227</value>
+			<value level="24">-235</value>
+			<value level="25">-243</value>
+			<value level="26">-251</value>
+			<value level="27">-259</value>
+			<value level="28">-268</value>
+			<value level="29">-277</value>
+			<value level="30">-285</value>
+			<value level="31">-294</value>
+			<value level="32">-303</value>
+			<value level="33">-313</value>
+			<value level="34">-322</value>
+			<value level="35">-331</value>
+			<value level="36">-341</value>
+			<value level="37">-350</value>
+			<value level="38">-360</value>
+			<value level="39">-369</value>
+			<value level="40">-379</value>
+			<value level="41">-389</value>
+			<value level="42">-399</value>
+			<value level="43">-408</value>
+			<value level="44">-418</value>
+			<value level="45">-428</value>
+			<value level="46">-438</value>
+			<value level="47">-448</value>
+			<value level="48">-457</value>
+			<value level="49">-467</value>
+			<value level="50">-477</value>
+			<value level="51">-486</value>
+			<value level="52">-495</value>
+			<value level="53">-505</value>
+			<value level="54">-514</value>
+			<value level="55">-523</value>
+			<value level="56">-532</value>
+			<value level="57">-541</value>
+			<value level="58">-549</value>
+			<value level="59">-558</value>
+			<value level="60">-566</value>
+			<value level="61">-574</value>
+			<value level="62">-582</value>
+			<value level="63">-590</value>
+			<value level="64">-597</value>
+			<value level="65">-604</value>
+			<value level="66">-611</value>
+			<value level="67">-617</value>
+			<value level="68">-624</value>
+			<value level="69">-630</value>
+			<value level="70">-635</value>
+			<value level="71">-641</value>
+			<value level="72">-646</value>
+			<value level="73">-650</value>
+			<value level="74">-655</value>
+			<value level="75">-659</value>
+			<value level="76">-662</value>
+			<value level="77">-666</value>
+			<value level="78">-669</value>
+			<value level="79">-673</value>
+			<value level="80">-676</value>
+			<value level="81">-679</value>
+			<value level="82">-681</value>
+			<value level="83">-684</value>
+			<value level="84">-687</value>
+			<value level="85">-689</value>
+		</effectPoint>
+		<effectRange>1000</effectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill1181</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
+			<value level="11">11</value>
+			<value level="12">12</value>
+			<value level="13">13</value>
+			<value level="14">14</value>
+			<value level="15">15</value>
+			<value level="16">16</value>
+			<value level="17">17</value>
+			<value level="18">18</value>
+			<value level="19">19</value>
+			<value level="20">20</value>
+			<value level="21">21</value>
+			<value level="22">22</value>
+			<value level="23">23</value>
+			<value level="24">24</value>
+			<value level="25">25</value>
+			<value level="26">26</value>
+			<value level="27">27</value>
+			<value level="28">28</value>
+			<value level="29">29</value>
+			<value level="30">30</value>
+			<value level="31">31</value>
+			<value level="32">32</value>
+			<value level="33">33</value>
+			<value level="34">34</value>
+			<value level="35">35</value>
+			<value level="36">36</value>
+			<value level="37">37</value>
+			<value level="38">38</value>
+			<value level="39">39</value>
+			<value level="40">40</value>
+			<value level="41">41</value>
+			<value level="42">42</value>
+			<value level="43">43</value>
+			<value level="44">44</value>
+			<value level="45">45</value>
+			<value level="46">46</value>
+			<value level="47">47</value>
+			<value level="48">48</value>
+			<value level="49">49</value>
+			<value level="50">50</value>
+			<value level="51">51</value>
+			<value level="52">52</value>
+			<value level="53">53</value>
+			<value level="54">54</value>
+			<value level="55">55</value>
+			<value level="56">56</value>
+			<value level="57">57</value>
+			<value level="58">58</value>
+			<value level="59">59</value>
+			<value level="60">60</value>
+			<value level="61">61</value>
+			<value level="62">62</value>
+			<value level="63">63</value>
+			<value level="64">64</value>
+			<value level="65">65</value>
+			<value level="66">66</value>
+			<value level="67">67</value>
+			<value level="68">68</value>
+			<value level="69">69</value>
+			<value level="70">70</value>
+			<value level="71">71</value>
+			<value level="72">72</value>
+			<value level="73">73</value>
+			<value level="74">74</value>
+			<value level="75">75</value>
+			<value level="76">76</value>
+			<value level="77">77</value>
+			<value level="78">78</value>
+			<value level="79">79</value>
+			<value level="80">80</value>
+			<value level="81">81</value>
+			<value level="82">82</value>
+			<value level="83">83</value>
+			<value level="84">84</value>
+			<value level="85">85</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">13</value>
+			<value level="3">13</value>
+			<value level="4">14</value>
+			<value level="5">14</value>
+			<value level="6">15</value>
+			<value level="7">15</value>
+			<value level="8">17</value>
+			<value level="9">17</value>
+			<value level="10">18</value>
+			<value level="11">20</value>
+			<value level="12">22</value>
+			<value level="13">23</value>
+			<value level="14">23</value>
+			<value level="15">24</value>
+			<value level="16">25</value>
+			<value level="17">27</value>
+			<value level="18">28</value>
+			<value level="19">28</value>
+			<value level="20">29</value>
+			<value level="21">29</value>
+			<value level="22">30</value>
+			<value level="23">32</value>
+			<value level="24">33</value>
+			<value level="25">34</value>
+			<value level="26">35</value>
+			<value level="27">37</value>
+			<value level="28">38</value>
+			<value level="29">39</value>
+			<value level="30">40</value>
+			<value level="31">40</value>
+			<value level="32">42</value>
+			<value level="33">43</value>
+			<value level="34">44</value>
+			<value level="35">45</value>
+			<value level="36">47</value>
+			<value level="37">49</value>
+			<value level="38">50</value>
+			<value level="39">52</value>
+			<value level="40">53</value>
+			<value level="41">54</value>
+			<value level="42">55</value>
+			<value level="43">57</value>
+			<value level="44">59</value>
+			<value level="45">60</value>
+			<value level="46">62</value>
+			<value level="47">63</value>
+			<value level="48">65</value>
+			<value level="49">67</value>
+			<value level="50">68</value>
+			<value level="51">69</value>
+			<value level="52">70</value>
+			<value level="53">73</value>
+			<value level="54">74</value>
+			<value level="55">75</value>
+			<value level="56">77</value>
+			<value level="57">79</value>
+			<value level="58">80</value>
+			<value level="59">82</value>
+			<value level="60">83</value>
+			<value level="61">85</value>
+			<value level="62">87</value>
+			<value level="63">88</value>
+			<value level="64">89</value>
+			<value level="65">90</value>
+			<value level="66">93</value>
+			<value level="67">94</value>
+			<value level="68">95</value>
+			<value level="69">97</value>
+			<value level="70">98</value>
+			<value level="71">99</value>
+			<value level="72">100</value>
+			<value level="73">102</value>
+			<value level="74">103</value>
+			<value level="75">104</value>
+			<value level="76">105</value>
+			<value level="77">105</value>
+			<value level="78">107</value>
+			<value level="79">108</value>
+			<value level="80">109</value>
+			<value level="81">109</value>
+			<value level="82">110</value>
+			<value level="83">112</value>
+			<value level="84">112</value>
+			<value level="85">113</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>7000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<pveEffects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">38</value>
+					<value level="2">40</value>
+					<value level="3">43</value>
+					<value level="4">46</value>
+					<value level="5">49</value>
+					<value level="6">52</value>
+					<value level="7">55</value>
+					<value level="8">58</value>
+					<value level="9">62</value>
+					<value level="10">65</value>
+					<value level="11">69</value>
+					<value level="12">73</value>
+					<value level="13">77</value>
+					<value level="14">81</value>
+					<value level="15">85</value>
+					<value level="16">89</value>
+					<value level="17">94</value>
+					<value level="18">98</value>
+					<value level="19">103</value>
+					<value level="20">108</value>
+					<value level="21">113</value>
+					<value level="22">118</value>
+					<value level="23">124</value>
+					<value level="24">129</value>
+					<value level="25">135</value>
+					<value level="26">140</value>
+					<value level="27">146</value>
+					<value level="28">152</value>
+					<value level="29">158</value>
+					<value level="30">164</value>
+					<value level="31">171</value>
+					<value level="32">177</value>
+					<value level="33">184</value>
+					<value level="34">191</value>
+					<value level="35">197</value>
+					<value level="36">204</value>
+					<value level="37">212</value>
+					<value level="38">219</value>
+					<value level="39">226</value>
+					<value level="40">233</value>
+					<value level="41">241</value>
+					<value level="42">248</value>
+					<value level="43">256</value>
+					<value level="44">264</value>
+					<value level="45">272</value>
+					<value level="46">280</value>
+					<value level="47">288</value>
+					<value level="48">296</value>
+					<value level="49">304</value>
+					<value level="50">312</value>
+					<value level="51">320</value>
+					<value level="52">329</value>
+					<value level="53">337</value>
+					<value level="54">345</value>
+					<value level="55">354</value>
+					<value level="56">362</value>
+					<value level="57">370</value>
+					<value level="58">379</value>
+					<value level="59">387</value>
+					<value level="60">395</value>
+					<value level="61">403</value>
+					<value level="62">412</value>
+					<value level="63">420</value>
+					<value level="64">428</value>
+					<value level="65">436</value>
+					<value level="66">444</value>
+					<value level="67">452</value>
+					<value level="68">460</value>
+					<value level="69">468</value>
+					<value level="70">475</value>
+					<value level="71">483</value>
+					<value level="72">490</value>
+					<value level="73">497</value>
+					<value level="74">504</value>
+					<value level="75">511</value>
+					<value level="76">519</value>
+					<value level="77">528</value>
+					<value level="78">539</value>
+					<value level="79">552</value>
+					<value level="80">566</value>
+					<value level="81">581</value>
+					<value level="82">595</value>
+					<value level="83">610</value>
+					<value level="84">626</value>
+					<value level="85">640</value>
+				</power>
+			</effect>
+		</pveEffects>
+		<pvpEffects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">30</value>
+					<value level="2">32</value>
+					<value level="3">34</value>
+					<value level="4">37</value>
+					<value level="5">39</value>
+					<value level="6">41</value>
+					<value level="7">44</value>
+					<value level="8">47</value>
+					<value level="9">49</value>
+					<value level="10">52</value>
+					<value level="11">55</value>
+					<value level="12">58</value>
+					<value level="13">61</value>
+					<value level="14">65</value>
+					<value level="15">68</value>
+					<value level="16">71</value>
+					<value level="17">75</value>
+					<value level="18">79</value>
+					<value level="19">83</value>
+					<value level="20">87</value>
+					<value level="21">91</value>
+					<value level="22">95</value>
+					<value level="23">99</value>
+					<value level="24">103</value>
+					<value level="25">108</value>
+					<value level="26">112</value>
+					<value level="27">117</value>
+					<value level="28">122</value>
+					<value level="29">127</value>
+					<value level="30">132</value>
+					<value level="31">137</value>
+					<value level="32">142</value>
+					<value level="33">147</value>
+					<value level="34">153</value>
+					<value level="35">158</value>
+					<value level="36">164</value>
+					<value level="37">169</value>
+					<value level="38">175</value>
+					<value level="39">181</value>
+					<value level="40">187</value>
+					<value level="41">193</value>
+					<value level="42">199</value>
+					<value level="43">205</value>
+					<value level="44">211</value>
+					<value level="45">218</value>
+					<value level="46">224</value>
+					<value level="47">230</value>
+					<value level="48">237</value>
+					<value level="49">243</value>
+					<value level="50">250</value>
+					<value level="51">256</value>
+					<value level="52">263</value>
+					<value level="53">270</value>
+					<value level="54">276</value>
+					<value level="55">283</value>
+					<value level="56">290</value>
+					<value level="57">296</value>
+					<value level="58">303</value>
+					<value level="59">310</value>
+					<value level="60">316</value>
+					<value level="61">323</value>
+					<value level="62">329</value>
+					<value level="63">336</value>
+					<value level="64">343</value>
+					<value level="65">349</value>
+					<value level="66">355</value>
+					<value level="67">362</value>
+					<value level="68">368</value>
+					<value level="69">374</value>
+					<value level="70">380</value>
+					<value level="71">386</value>
+					<value level="72">392</value>
+					<value level="73">398</value>
+					<value level="74">403</value>
+					<value level="75">409</value>
+					<value level="76">415</value>
+					<value level="77">423</value>
+					<value level="78">431</value>
+					<value level="79">442</value>
+					<value level="80">453</value>
+					<value level="81">465</value>
+					<value level="82">476</value>
+					<value level="83">488</value>
+					<value level="84">501</value>
+					<value level="85">512</value>
+				</power>
+			</effect>
+		</pvpEffects>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="5659" toLevel="2" name="Gatekeeper Berserker Spirit">
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BERSERKER</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">331</value>
+			<value level="2">486</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1062</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">35</value>
+			<value level="2">52</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">24</value>
+			<value level="2">38</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">6</value>
+			<value level="2">10</value>
+		</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">16</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-16</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5660" toLevel="5" name="Battleground Death Syndrome">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>180</abnormalTime>
+		<abnormalType>DEATH_PENALTY</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<icon>icon.skill5076_a</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>-2</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-19</value>
+					<value level="3">-27</value>
+					<value level="4">-34</value>
+					<value level="5">-40</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-19</value>
+					<value level="3">-27</value>
+					<value level="4">-34</value>
+					<value level="5">-40</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-9</value>
+					<value level="3">-13</value>
+					<value level="4">-17</value>
+					<value level="5">-21</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-9</value>
+					<value level="3">-13</value>
+					<value level="4">-17</value>
+					<value level="5">-21</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-19</value>
+					<value level="3">-27</value>
+					<value level="4">-34</value>
+					<value level="5">-40</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-19</value>
+					<value level="3">-27</value>
+					<value level="4">-34</value>
+					<value level="5">-40</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5661" toLevel="1" name="Match Participation">
+		<abnormalLvl>0</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>ENTRY_FOR_GAME</abnormalType>
+		<icon>icon.skill5661</icon>
+		<magicLvl>-2</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5662" toLevel="1" name="Presentation - Resurrection Possible">
+		<effectPoint>100</effectPoint>
+		<hitTime>1000</hitTime>
+		<icon>icon.skill5662</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<castRange>600</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5663" toLevel="5" name="Ancient Sword Resistance">
+		<!-- Confirmed CT2.5 -->
+		<icon>icon.skill5663</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<ANCIENTSWORD>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</ANCIENTSWORD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5664" toLevel="5" name="Ancient Sword Resistance">
+		<!-- Confirmed CT2.5 -->
+		<icon>icon.skill5664</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<ANCIENTSWORD>
+					<value level="1">-11</value>
+					<value level="2">-25</value>
+					<value level="3">-43</value>
+					<value level="4">-67</value>
+					<value level="5">-100</value>
+				</ANCIENTSWORD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5665" toLevel="1" name="Stun">
+		<!-- Masterwork Sword of Stun (3829) -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<icon>icon.skill0100</icon>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>70</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>200</effectRange>
+		<castRange>40</castRange>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="5666" toLevel="1" name="Stun">
+		<!-- Masterwork Rapier of Stun (3834) -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<icon>icon.skill0100</icon>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>70</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>200</effectRange>
+		<castRange>40</castRange>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="5667" toLevel="1" name="Stun">
+		<!-- Masterwork Dual-Blade of Stun (3839) -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<icon>icon.skill0100</icon>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>70</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>200</effectRange>
+		<castRange>40</castRange>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="5668" toLevel="1" name="Poison">
+		<!-- Masterwork Dagger of Poison (3861) -->
+		<abnormalLvl>8</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>70</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<icon>icon.skill4035</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>70</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>200</effectRange>
+		<castRange>40</castRange>
+		<trait>POISON</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>63</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5669" toLevel="1" name="Stun">
+		<!-- Masterwork Pole of Stun (3876) -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<icon>icon.skill0100</icon>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>70</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>200</effectRange>
+		<castRange>40</castRange>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="5670" toLevel="1" name="Stun">
+		<!-- Masterwork Fist of Stun (3882) -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<icon>icon.skill0100</icon>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>70</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>200</effectRange>
+		<castRange>40</castRange>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="5671" toLevel="1" name="Stun">
+		<!-- Masterwork Blunt of Stun (3885-1) -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<icon>icon.skill0100</icon>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>61</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>200</effectRange>
+		<castRange>40</castRange>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="5672" toLevel="1" name="Stun">
+		<!-- Masterwork Blunt of Stun (3885-2) -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<icon>icon.skill0100</icon>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>80</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>200</effectRange>
+		<castRange>40</castRange>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="5673" toLevel="1" name="Evasion Counter">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>40</castRange>
+		<effectPoint>-1351</effectPoint>
+		<effectRange>400</effectRange>
+		<icon>icon.skill0818</icon>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>80</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="5674" toLevel="1" name="Evasion Chance">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>EVASION_BUFF</abnormalType>
+		<effectPoint>549</effectPoint>
+		<icon>icon.skill0819</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>74</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="FatalBlowRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5675" toLevel="1" name="Evasion Haste">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>EVASION_BUFF</abnormalType>
+		<effectPoint>549</effectPoint>
+		<icon>icon.skill0820</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>74</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5676" toLevel="1" name="Mana Drain">
+		<!-- Confirmed CT2.5 -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>46</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mp">
+				<amount>41</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5677" toLevel="1" name="Mana Drain">
+		<!-- Confirmed CT2.5 -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>56</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mp">
+				<amount>51</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5678" toLevel="1" name="Mana Drain">
+		<!-- Confirmed CT2.5 -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>64</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mp">
+				<amount>59</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5679" toLevel="3" name="Oblivion Trap">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>MIRAGE_TRAP</abnormalType>
+		<activateRate>80</activateRate>
+		<affectRange>200</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<hitTime>500</hitTime>
+		<icon>icon.skill0836</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>
+			<value level="1">64</value>
+			<value level="2">68</value>
+			<value level="3">72</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<castRange>600</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<!-- Oblivion Trap -->
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>60</chance>
+				<targetType>SELF</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>5680</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5680" toLevel="1" name="Oblivion Trap">
+		<castRange>900</castRange>
+		<effectRange>1400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>79</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="TargetCancel" />
+		</effects>
+	</skill>
+	<skill id="5681" toLevel="1" name="PvP Weapon - CP Drain">
+		<!-- Confirmed CT2.5 -->
+		<!-- set name="castRange" val="600" / -->
+		<!-- set name="effectRange" val="1100" / -->
+		<effectPoint>1</effectPoint>
+		<hitTime>100</hitTime>
+		<icon>icon.skill1306</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>80</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<castRange>600</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Cp">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5682" toLevel="1" name="PvP Weapon - Cancel">
+		<!-- Confirmed CT2.5 -->
+		<castRange>600</castRange>
+		<effectPoint>-1</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>100</hitTime>
+		<icon>icon.skill1056</icon>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>80</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelByCategory">
+				<slot>BUFF</slot>
+				<rate>25</rate>
+				<max>3</max>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5683" toLevel="1" name="PvP Weapon - Ignore Shield Defense">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>PVP_WEAPON_DEBUFF</abnormalType>
+		<castRange>600</castRange>
+		<effectPoint>-1</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>100</hitTime>
+		<icon>icon.skill1304</icon>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>80</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ShieldDefence">
+				<amount>-100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5684" toLevel="1" name="PvP Weapon - Attack Rate">
+		<!-- Confirmed CT2.5 -->
+		<castRange>600</castRange>
+		<effectPoint>-1</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>100</hitTime>
+		<icon>icon.skill0005</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>80</magicLvl>
+		<nextAction>ATTACK</nextAction>
+		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5685" toLevel="1" name="PvP Weapon - Casting">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>PVP_WEAPON_BUFF</abnormalType>
+		<activateRate>0</activateRate>
+		<effectPoint>1</effectPoint>
+		<hitTime>100</hitTime>
+		<icon>icon.skill0228</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>80</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5686" toLevel="1" name="PvP Weapon - Rapid Fire">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>PVP_WEAPON_BUFF</abnormalType>
+		<effectPoint>1</effectPoint>
+		<hitTime>100</hitTime>
+		<icon>icon.skill0413</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>80</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5687" toLevel="1" name="PvP Weapon - Decrease Range">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>PVP_WEAPON_DEBUFF</abnormalType>
+		<castRange>600</castRange>
+		<effectPoint>-1</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>100</hitTime>
+		<icon>icon.skill0486</icon>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>80</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackRange">
+				<amount>-200</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+				</weaponType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5688" toLevel="1" name="PvP Weapon - Decrease Resist">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>PVP_WEAPON_DEBUFF</abnormalType>
+		<castRange>600</castRange>
+		<effectPoint>-1</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>100</hitTime>
+		<icon>icon.skill0756</icon>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>80</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>-30</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-30</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-30</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-30</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-30</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5689" toLevel="1" name="PvP Shield - Reflect Damage">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>PVP_WEAPON_BUFF</abnormalType>
+		<effectPoint>1</effectPoint>
+		<hitTime>100</hitTime>
+		<icon>icon.skill0086</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>80</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamageShield">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5695" toLevel="1" name="Talisman - Increase Momentum">
+		<!-- Confirmed CT2.5 -->
+		<effectPoint>1</effectPoint>
+		<hitTime>100</hitTime>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEnergyMax">
+				<amount>5</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="FocusMomentum">
+				<maxCharges>5</maxCharges>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5696" toLevel="1" name="Dizziness">
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>INVINCIBILITY</abnormalType>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skill0837</icon>
+		<magicLvl>74</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5697" toLevel="4" name="Seal">
+		<!-- Imbue Seed of Destruction end effect. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>SILENCE_ALL</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<activateRate>99</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<icon>icon.skill0835</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>
+			<value level="1">68</value>
+			<value level="2">70</value>
+			<value level="3">72</value>
+			<value level="4">74</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>DERANGEMENT</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mute" />
+			<effect name="PhysicalMute" />
+		</effects>
+	</skill>
+	<skill id="5698" toLevel="37" name="Blessed Blood">
+		<!-- Confirmed CT2.5 -->
+		<icon>icon.skill3080</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">48</value>
+			<value level="3">56</value>
+			<value level="4">60</value>
+			<value level="5">64</value>
+			<value level="6">68</value>
+			<value level="7">72</value>
+			<value level="8">76</value>
+			<value level="9">76</value>
+			<value level="10">76</value>
+			<value level="11">77</value>
+			<value level="12">77</value>
+			<value level="13">77</value>
+			<value level="14">78</value>
+			<value level="15">78</value>
+			<value level="16">78</value>
+			<value level="17">79</value>
+			<value level="18">79</value>
+			<value level="19">79</value>
+			<value level="20">80</value>
+			<value level="21">80</value>
+			<value level="22">80</value>
+			<value level="23">81</value>
+			<value level="24">81</value>
+			<value level="25">81</value>
+			<value level="26">82</value>
+			<value level="27">82</value>
+			<value level="28">82</value>
+			<value level="29">83</value>
+			<value level="30">83</value>
+			<value level="31">83</value>
+			<value level="32">84</value>
+			<value level="33">84</value>
+			<value level="34">84</value>
+			<value level="35">85</value>
+			<value level="36">85</value>
+			<value level="37">85</value>
+		</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>4000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Hp">
+				<amount>
+					<value level="1">217</value>
+					<value level="2">281</value>
+					<value level="3">346</value>
+					<value level="4">377</value>
+					<value level="5">406</value>
+					<value level="6">434</value>
+					<value level="7">458</value>
+					<value level="8">470</value>
+					<value level="9">477</value>
+					<value level="10">485</value>
+					<value level="11">492</value>
+					<value level="12">500</value>
+					<value level="13">507</value>
+					<value level="14">515</value>
+					<value level="15">522</value>
+					<value level="16">530</value>
+					<value level="17">537</value>
+					<value level="18">545</value>
+					<value level="19">552</value>
+					<value level="20">560</value>
+					<value level="21">567</value>
+					<value level="22">575</value>
+					<value level="23">582</value>
+					<value level="24">590</value>
+					<value level="25">597</value>
+					<value level="26">605</value>
+					<value level="27">612</value>
+					<value level="28">620</value>
+					<value level="29">627</value>
+					<value level="30">635</value>
+					<value level="31">642</value>
+					<value level="32">650</value>
+					<value level="33">657</value>
+					<value level="34">665</value>
+					<value level="35">672</value>
+					<value level="36">680</value>
+					<value level="37">687</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5699" toLevel="7" name="Decrease P. Def.">
+		<!-- Lvl 1 - Kamaloka (Labyrinth of the Abyss) 29 -->
+		<!-- Lvl 2 - Kamaloka (Labyrinth of the Abyss) 39 -->
+		<!-- Lvl 3 - Kamaloka (Labyrinth of the Abyss) 49 -->
+		<!-- Lvl 4 - Kamaloka (Labyrinth of the Abyss) 59 -->
+		<!-- Lvl 5 - Kamaloka (Labyrinth of the Abyss) 69 -->
+		<!-- Lvl 6 - Kamaloka (Labyrinth of the Abyss) 78 -->
+		<!-- Lvl 7 - Kamaloka (Labyrinth of the Abyss) 81 -->
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<icon>icon.skill0122</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>29</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>-66</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+</list>

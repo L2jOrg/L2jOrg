@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Castle Teleport Zones -->
+	<zone name="gludio_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-1840" maxZ="-1540">
+		<stat name="residenceId" val="1" />
+		<!-- owner_restart_territory -->
+		<node X="-17242" Y="109135" />
+		<node X="-16215" Y="109135" />
+		<node X="-16217" Y="109588" />
+		<node X="-17246" Y="109587" />
+		<!-- gk_teleport_points -->
+		<spawn X="-18099" Y="109297" Z="-2475" />
+	</zone>
+	<zone name="dion_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-2034" maxZ="-1734">
+		<stat name="residenceId" val="2" />
+		<!-- owner_restart_territory -->
+		<node X="20177" Y="160155" />
+		<node X="21205" Y="160155" />
+		<node X="21203" Y="160608" />
+		<node X="20175" Y="160607" />
+		<!-- gk_teleport_points -->
+		<spawn X="22070" Y="160524" Z="-2669" />
+	</zone>
+	<zone name="giran_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-1940" maxZ="-1640">
+		<stat name="residenceId" val="3" />
+		<!-- owner_restart_territory -->
+		<node X="116345" Y="145985" />
+		<node X="116777" Y="145982" />
+		<node X="116771" Y="146975" />
+		<node X="116353" Y="146975" />
+		<!-- gk_teleport_points -->
+		<spawn X="116629" Y="145055" Z="-2544" />
+	</zone>
+	<zone name="oren_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-1630" maxZ="-1330">
+		<stat name="residenceId" val="4" />
+		<!-- owner_restart_territory -->
+		<node X="82421" Y="38078" />
+		<node X="82853" Y="38076" />
+		<node X="82847" Y="39069" />
+		<node X="82429" Y="39069" />
+		<!-- gk_teleport_points -->
+		<spawn X="82707" Y="37203" Z="-2265" />
+	</zone>
+	<zone name="aden_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-2844" maxZ="-2444">
+		<stat name="residenceId" val="5" />
+		<!-- owner_restart_territory -->
+		<node X="146867" Y="4019" />
+		<node X="148033" Y="4018" />
+		<node X="148033" Y="5174" />
+		<node X="146869" Y="5174" />
+		<!-- gk_teleport_points -->
+		<spawn X="147452" Y="4842" Z="-341" />
+	</zone>
+	<zone name="innadrile_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-150" maxZ="150">
+		<stat name="residenceId" val="6" />
+		<!-- owner_restart_territory -->
+		<node X="114153" Y="248974" />
+		<node X="115131" Y="248973" />
+		<node X="115130" Y="249360" />
+		<node X="114152" Y="249362" />
+		<!-- gk_teleport_points -->
+		<spawn X="116010" Y="249232" Z="-765" />
+	</zone>
+	<zone name="godad_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-1050" maxZ="-850">
+		<stat name="residenceId" val="7" />
+		<!-- owner_restart_territory -->
+		<node X="147223" Y="-47258" />
+		<node X="147710" Y="-47258" />
+		<node X="147711" Y="-46224" />
+		<node X="147224" Y="-46224" />
+		<!-- gk_teleport_points -->
+		<spawn X="147458" Y="-48500" Z="-2272" />
+	</zone>
+	<zone name="rune_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="3750" maxZ="4250">
+		<stat name="residenceId" val="8" />
+		<!-- owner_restart_territory -->
+		<node X="9073" Y="-49855" />
+		<node X="11506" Y="-49386" />
+		<node X="11516" Y="-48965" />
+		<node X="9074" Y="-48437" />
+		<!-- gk_teleport_points -->
+		<spawn X="11493" Y="-49153" Z="-536" />
+	</zone>
+	<zone name="schuttgart_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="668" maxZ="968">
+		<stat name="residenceId" val="9" />
+		<!-- owner_restart_territory -->
+		<node X="77313" Y="-151322" />
+		<node X="77800" Y="-151322" />
+		<node X="77801" Y="-150287" />
+		<node X="77314" Y="-150287" />
+		<!-- gk_teleport_points -->
+		<spawn X="77552" Y="-152557" Z="-536" />
+	</zone>
+</list>

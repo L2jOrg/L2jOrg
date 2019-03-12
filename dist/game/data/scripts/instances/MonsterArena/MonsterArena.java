@@ -20,13 +20,13 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2j.commons.concurrent.ThreadPool;
-import org.l2j.gameserver.mobius.gameserver.enums.ChatType;
-import org.l2j.gameserver.mobius.gameserver.instancemanager.GlobalVariablesManager;
-import org.l2j.gameserver.mobius.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.mobius.gameserver.network.NpcStringId;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.ExSendUIEvent;
+import org.l2j.gameserver.enums.ChatType;
+import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
+import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.network.NpcStringId;
+import org.l2j.gameserver.network.serverpackets.ExSendUIEvent;
 
 import instances.AbstractInstance;
 

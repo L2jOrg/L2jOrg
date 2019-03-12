@@ -1,0 +1,937 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="5800" name="Nephilim Lord" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1380" />
+		<set name="price" val="1226000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">156</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5801" name="Dusk" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1380" />
+		<set name="price" val="1226000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">156</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5802" name="Dawn" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1380" />
+		<set name="price" val="1226000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">156</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5803" name="Lucky Charm (D-grade)" type="EtcItem">
+		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self, by characters level 20 - 39. -->
+		<set name="icon" val="icon.etc_charm_of_luck_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="330" />
+		<set name="reuse_delay" val="10000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2168" level="2" /> <!-- Lucky Charm -->
+		</skills>
+	</item>
+	<item id="5804" name="Lucky Charm (C-grade)" type="EtcItem">
+		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by characters level 40 - 51. -->
+		<set name="icon" val="icon.etc_charm_of_luck_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="660" />
+		<set name="reuse_delay" val="10000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2168" level="3" /> <!-- Lucky Charm -->
+		</skills>
+	</item>
+	<item id="5805" name="Lucky Charm (B-grade)" type="EtcItem">
+		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by characters level 52 - 60. -->
+		<set name="icon" val="icon.etc_charm_of_luck_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="1300" />
+		<set name="reuse_delay" val="10000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2168" level="4" /> <!-- Lucky Charm -->
+		</skills>
+	</item>
+	<item id="5808" name="Party Mask" type="Armor">
+		<!-- A fashion item used to display a unique appearance. -->
+		<set name="icon" val="icon.etc_party_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="1300" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+	</item>
+	<item id="5809" name="Spellbook: Aqua Splash" type="EtcItem">
+		<!-- Spellbook needed to learn Aqua Splash. Used by Spellsingers. Required level: 58 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="6750" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5810" name="Spellbook: Rain of Fire" type="EtcItem">
+		<!-- Spellbook needed to learn Rain of Fire. Used by Sorcerers and Spellsingers. Required level: 58 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="6750" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5811" name="Spellbook: Mass Slow" type="EtcItem">
+		<!-- Spellbook needed to learn Mass Slow. Used by Necromancers. Required level: 61 -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="200000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5812" name="Spellbook: Servitor Empowerment" type="EtcItem">
+		<!-- Spellbook needed to learn Servitor Empowerment. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 52 -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="5400" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5813" name="Spellbook: Servitor Cure" type="EtcItem">
+		<!-- Spellbook needed to learn Servitor Cure. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40 -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5814" name="Spellbook: Servitor Blessing" type="EtcItem">
+		<!-- Spellbook needed to learn Servitor Blessing. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 62 -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7700" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5815" name="Spellbook: Wild Magic" type="EtcItem">
+		<!-- Spellbook needed to learn Wild. Used by Elven Elders and Shillien Elders. Required level: 62 -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="200000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5816" name="Spellbook: Advanced Block" type="EtcItem">
+		<!-- Spellbook needed to learn Advanced Block. Used by Elven Elders. Required level: 42 -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="50000" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5817" name="Chrono Campana" type="Weapon">
+		<!-- Chronicle III Souvenir! Cannot be dropped. -->
+		<set name="icon" val="icon.weapon_chrono_campana_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="5858" name="Blessed Scroll of Escape: Clan Hall" type="EtcItem">
+		<!-- Magical scroll that transports you to your clan hall. If you don't belong to a clan that possesses a clan hall, this scroll will have no effect. -->
+		<set name="icon" val="icon.etc_scroll_of_return_agit_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2177" level="1" /> <!-- Blessed Scroll of Escape: Clan Hall -->
+		</skills>
+	</item>
+	<item id="5859" name="Blessed Scroll of Escape: Castle" type="EtcItem">
+		<!-- Magical scroll that transports you to your castle. If you don't belong to a clan that controls a castle, this scroll will have no effect. -->
+		<set name="icon" val="icon.etc_scroll_of_return_castle_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="80000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2178" level="1" /> <!-- Blessed Scroll of Escape: Castle -->
+		</skills>
+	</item>
+	<item id="5860" name="Lienrik Egg" type="EtcItem">
+		<!-- Lienrik's egg. It's the item that Pet Manager Rood of Heine asked you to find for him. -->
+		<set name="icon" val="icon.etc_dragon_egg_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5861" name="Lienrik Egg" type="EtcItem">
+		<!-- Lienrik's shiny red egg. Pet Manager Rood of Heine asked you to find it for him, but...? -->
+		<set name="icon" val="icon.etc_dragon_egg_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5862" name="Stone of Contract" type="EtcItem">
+		<!-- In order to obtain the power of darkness, you will first need to secure this item. Take it to Trader Galman in Dragon Valley. -->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5863" name="Alligator Tooth" type="EtcItem">
+		<!-- Sharp tooth of the Alligator. Take it to Morita on the shore of Alligator Island. -->
+		<set name="icon" val="icon.etc_fang_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5864" name="Mysterious Map Piece" type="EtcItem">
+		<!-- Faded piece of paper. Possibly part of a map. -->
+		<set name="icon" val="icon.etc_map_piece_ivory_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5865" name="Zoogenous Spores" type="EtcItem">
+		<!-- Spore sample collected from a Spore Zombie from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5866" name="Phytogenic Spores" type="EtcItem">
+		<!-- Spore sample collected from a rotting tree from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5867" name="Jade Crystal" type="EtcItem">
+		<!-- Jade crystal collected from the Enchanted Valley. Take it to Warehouse Freightman Silva of Hunter's Village. -->
+		<set name="icon" val="icon.etc_gem_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5868" name="Snake Scale" type="EtcItem">
+		<!-- Snake scale from the bodies of Palibati and Trives. Take it to Priest Ruvard in Aden. -->
+		<set name="icon" val="icon.etc_scale_of_medusa_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5869" name="Remains of Aden Residents" type="EtcItem">
+		<!-- Remains of residents of Aden Castle who were killed during the Aden-Elmore war. Collect 60 of them and take them to High Priest Orven. -->
+		<set name="icon" val="icon.etc_ashes_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5870" name="Supply Receipt" type="EtcItem">
+		<!-- Document made from collected mysterious document pieces. Take it to Guard Coleman. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5871" name="Suspicious Document Piece" type="EtcItem">
+		<!-- Piece of document that seems to contain some suspicious contents. If you collect 5 of them, you may be able to decipher the information the document conveys. -->
+		<set name="icon" val="icon.etc_piece_of_report_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5872" name="Supplies" type="EtcItem">
+		<!-- Supply items of Taik Orcs. Take them to Priest Ruvard and he will reward you. -->
+		<set name="icon" val="icon.etc_squares_wood_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5873" name="Pirate's Treasure Chest" type="EtcItem">
+		<!-- Treasure chest that was obtained by slaying Zaken's followers. Take it to Warehouse Keeper Randolf of Town of Giran. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5874" name="Sairon's Silver Hair" type="EtcItem">
+		<!-- Sairon's hair. Take it to Magister Dieter of Town of Giran. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5875" name="Lesser Giant's Lamp" type="EtcItem">
+		<!-- It is called a Lesser Giant's Lamp. It is not lit. -->
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5876" name="Lesser Giant's Lamp" type="EtcItem">
+		<!-- It is called a Lesser Giant's Lamp. It is burning dimly. -->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5877" name="Lesser Giant's Lamp" type="EtcItem">
+		<!-- It is called a Lesser Giant's Lamp. It is lit. -->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5878" name="Lesser Giant's Lamp" type="EtcItem">
+		<!-- It is called a Lesser Giant's Lamp. It is lit. -->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5879" name="Lesser Giant's Lamp" type="EtcItem">
+		<!-- It is called a Lesser Giant's Lamp. It is shining brightly. -->
+		<set name="icon" val="icon.etc_bead_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5880" name="Broken Lesser Giant's Lamp" type="EtcItem">
+		<!-- Broken Lesser Giant's Lamp. Take it to Lorain. -->
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5881" name="Blade Stakato Fang" type="EtcItem">
+		<!-- Fang that was obtained from killing a blade stakato. Take it to Eva's Priestess Restina in Heine. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5882" name="Fire Crystal" type="EtcItem">
+		<!-- Flare shard obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
+		<set name="icon" val="icon.etc_echo_crystal_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5883" name="Ice Shard" type="EtcItem">
+		<!-- Water Crystal obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
+		<set name="icon" val="icon.etc_echo_crystal_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5884" name="Cave Beast Tooth" type="EtcItem">
+		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
+		<set name="icon" val="icon.etc_fang_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5885" name="Death Wave Light" type="EtcItem">
+		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
+		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5886" name="Sealed Mysterious Stone" type="EtcItem">
+		<!-- Pebble that radiates a strange aura. It sends out a dim light. -->
+		<set name="icon" val="icon.etc_dragon_egg_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5887" name="Mysterious Stone" type="EtcItem">
+		<!-- Pebble that radiates a strange aura. It is shining brightly. -->
+		<set name="icon" val="icon.etc_dragon_egg_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5888" name="Karik Horn" type="EtcItem">
+		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
+		<set name="icon" val="icon.etc_horn_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5889" name="Limal Karinness Blood" type="EtcItem">
+		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
+		<set name="icon" val="icon.etc_reagent_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5890" name="Mysterious Book" type="EtcItem">
+		<!-- Book obtained from the Giant's Cave. Written in an ancient language, its contents cannot be deciphered. -->
+		<set name="icon" val="icon.etc_spellbook_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5891" name="Ancient Language Dictionary: Basic Level" type="EtcItem">
+		<!-- Simple dictionary published by scholars of ancient times. By using this, you can interpret some of the texts of the Lesser Giants. -->
+		<set name="icon" val="icon.etc_spellbook_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5892" name="Ancient Language Dictionary: Intermediate Level" type="EtcItem">
+		<!-- Dictionary published by scholars of ancient times. By using this, you can interpret the entire texts of the Lesser Giants. -->
+		<set name="icon" val="icon.etc_spellbook_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5893" name="Leaf of Eucalyptus" type="EtcItem">
+		<!-- One of the ingredients used to make wine. Collect 80 of them and take them to Guard Harlan located in the Town of Dion. -->
+		<set name="icon" val="icon.etc_herb_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5894" name="Stone of Icy Air" type="EtcItem">
+		<!-- Magical stone used by Enku Orc Shamans when they cast ice magic. Collect 100 of these and take them to Guard Harlan located in the Town of Dion. -->
+		<set name="icon" val="icon.etc_crystal_ball_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5895" name="Ritron's Fruit" type="EtcItem">
+		<!-- Fruit with a tough, hard outer skin and a fragrant smell. Collect 4 of these and take them to Magister Rollant in the Town of Dion. -->
+		<set name="icon" val="icon.etc_cobol_i05" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5896" name="Moon Face Flower" type="EtcItem">
+		<!-- Flower that is said to bloom only under moonlight. Collect 20 of these and take them to Magister Rollant in the Town of Dion. -->
+		<set name="icon" val="icon.etc_flower_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5897" name="Leech Fluids" type="EtcItem">
+		<!-- The bodily fluids of a Leech that can be obtained from the Cruma Marshlands. Collect 10 of these and take them to Magister Rollant in the Town of Dion. -->
+		<set name="icon" val="icon.etc_reagent_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5898" name="Royal Membership" type="EtcItem">
+		<!-- It's a coin collectors' dream! Take it to Head Blacksmith Vergara. -->
+		<set name="icon" val="icon.etc_royal_membership_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5899" name="Kail's Coin" type="EtcItem">
+		<!-- Coin owned by Sorcerer Kail who used to be an aid of Beleth. Take it to Warehouse Keeper Sorint. -->
+		<set name="icon" val="icon.etc_magic_coin_blood_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+</list>

@@ -18,7 +18,6 @@ import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
-import org.l2j.gameserver.mobius.gameserver.model.items.type.*;
 import org.l2j.gameserver.model.items.type.*;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.stats.functions.FuncAdd;

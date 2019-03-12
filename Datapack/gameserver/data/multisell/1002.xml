@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30678</npc> <!-- Helton -->
+		<npc>30688</npc> <!-- Duning -->
+		<npc>31271</npc> <!-- Hilda -->
+		<npc>31583</npc> <!-- Feynn -->
+		<npc>30846</npc> <!-- Wilbert -->
+	</npcs>
+	<item>
+		<ingredient count="1" id="73" /> <!-- Shamshir -->
+		<ingredient count="1" id="75" /> <!-- Caliburs -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2576" /> <!-- Shamshir*Caliburs -->
+	</item>
+	<item>
+		<ingredient count="1" id="73" /> <!-- Shamshir -->
+		<ingredient count="1" id="134" /> <!-- Sword of Nightmare -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2609" /> <!-- Shamshir*Sword of Nightmare -->
+	</item>
+	<item>
+		<ingredient count="1" id="73" /> <!-- Shamshir -->
+		<ingredient count="1" id="77" /> <!-- Tsurugi -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2580" /> <!-- Shamshir*Tsurugi -->
+	</item>
+	<item>
+		<ingredient count="1" id="74" /> <!-- Katana -->
+		<ingredient count="1" id="75" /> <!-- Caliburs -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2585" /> <!-- Katana*Caliburs -->
+	</item>
+	<item>
+		<ingredient count="1" id="74" /> <!-- Katana -->
+		<ingredient count="1" id="134" /> <!-- Sword of Nightmare -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2588" /> <!-- Katana*Sword of Nightmare -->
+	</item>
+	<item>
+		<ingredient count="1" id="74" /> <!-- Katana -->
+		<ingredient count="1" id="77" /> <!-- Tsurugi -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2589" /> <!-- Tsurugi -->
+	</item>
+	<item>
+		<ingredient count="1" id="131" /> <!-- Spirit Sword -->
+		<ingredient count="1" id="75" /> <!-- Caliburs -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2593" /> <!-- Spirit Sword*Caliburs -->
+	</item>
+	<item>
+		<ingredient count="1" id="131" /> <!-- Spirit Sword -->
+		<ingredient count="1" id="134" /> <!-- Sword of Nightmare -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2596" /> <!-- Spirit Sword*Sword of Nightmare -->
+	</item>
+	<item>
+		<ingredient count="1" id="131" /> <!-- Spirit Sword -->
+		<ingredient count="1" id="77" /> <!-- Tsurugi -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2597" /> <!-- Spirit Sword*Tsurugi -->
+	</item>
+	<item>
+		<ingredient count="1" id="133" /> <!-- Raid Sword -->
+		<ingredient count="1" id="75" /> <!-- Caliburs -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2600" /> <!-- Raid Sword*Caliburs -->
+	</item>
+	<item>
+		<ingredient count="1" id="133" /> <!-- Raid Sword -->
+		<ingredient count="1" id="134" /> <!-- Sword of Nightmare -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2603" /> <!-- Raid Sword*Sword of Nightmare -->
+	</item>
+	<item>
+		<ingredient count="1" id="133" /> <!-- Raid Sword -->
+		<ingredient count="1" id="77" /> <!-- Tsurugi -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2604" /> <!-- Raid Sword*Tsurugi -->
+	</item>
+	<item>
+		<ingredient count="1" id="73" /> <!-- Shamshir -->
+		<ingredient count="1" id="132" /> <!-- Ultimate Sword -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2577" /> <!-- Shamshir*Ultimate Sword -->
+	</item>
+	<item>
+		<ingredient count="1" id="74" /> <!-- Katana -->
+		<ingredient count="1" id="132" /> <!-- Ultimate Sword -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2586" /> <!-- Katana*Ultimate Sword -->
+	</item>
+	<item>
+		<ingredient count="1" id="131" /> <!-- Spirit Sword -->
+		<ingredient count="1" id="132" /> <!-- Ultimate Sword -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2594" /> <!-- Spirit Sword*Ultimate Sword -->
+	</item>
+	<item>
+		<ingredient count="1" id="133" /> <!-- Raid Sword -->
+		<ingredient count="1" id="132" /> <!-- Ultimate Sword -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="70" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="200" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2601" /> <!-- Raid Sword*Ultimate Sword -->
+	</item>
+	<item>
+		<ingredient count="1" id="75" /> <!-- Caliburs -->
+		<ingredient count="1" id="75" /> <!-- Caliburs -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="75" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="215" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2606" /> <!-- Caliburs*Caliburs -->
+	</item>
+	<item>
+		<ingredient count="1" id="75" /> <!-- Caliburs -->
+		<ingredient count="1" id="134" /> <!-- Sword of Nightmare -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="75" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="215" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2609" /> <!-- Caliburs*Sword of Nightmare -->
+	</item>
+	<item>
+		<ingredient count="1" id="75" /> <!-- Caliburs -->
+		<ingredient count="1" id="77" /> <!-- Tsurugi -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="75" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="215" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2610" /> <!-- Caliburs*Tsurugi -->
+	</item>
+	<item>
+		<ingredient count="1" id="134" /> <!-- Sword of Nightmare -->
+		<ingredient count="1" id="134" /> <!-- Sword of Nightmare -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="75" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="215" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2618" /> <!-- Sword of Nightmare*Sword of Nightmare -->
+	</item>
+	<item>
+		<ingredient count="1" id="77" /> <!-- Tsurugi -->
+		<ingredient count="1" id="77" /> <!-- Tsurugi -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="75" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="215" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2624" /> <!-- Tsurugi*Tsurugi -->
+	</item>
+	<item>
+		<ingredient count="1" id="75" /> <!-- Caliburs -->
+		<ingredient count="1" id="132" /> <!-- Ultimate Sword -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="75" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="215" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2607" /> <!-- Caliburs*Ultimate Sword -->
+	</item>
+	<item>
+		<ingredient count="1" id="132" /> <!-- Ultimate Sword -->
+		<ingredient count="1" id="132" /> <!-- Ultimate Sword -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="75" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="215" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2612" /> <!-- Ultimate Sword*Ultimate Sword -->
+	</item>
+	<item>
+		<ingredient count="1" id="132" /> <!-- Ultimate Sword -->
+		<ingredient count="1" id="134" /> <!-- Sword of Nightmare -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="75" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="215" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2614" /> <!-- Ultimate Sword*Sword of Nightmare -->
+	</item>
+	<item>
+		<ingredient count="1" id="132" /> <!-- Ultimate Sword -->
+		<ingredient count="1" id="77" /> <!-- Tsurugi -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="75" id="1875" /> <!-- Stone of Purity -->		
+		<ingredient count="215" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2615" /> <!-- Ultimate Sword*Tsurugi -->
+	</item>
+	<item>
+		<ingredient count="1" id="73" /> <!-- Shamshir -->
+		<ingredient count="1" id="135" /> <!-- Samurai Long Sword -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="75" id="1875" /> <!-- Stone of Purity -->
+		<ingredient count="220" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2581" /> <!-- Shamshir*Samurai Long Sword -->
+	</item>
+	<item>
+		<ingredient count="1" id="74" /> <!-- Katana -->
+		<ingredient count="1" id="135" /> <!-- Samurai Long Sword -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="75" id="1875" /> <!-- Stone of Purity -->
+		<ingredient count="220" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2590" /> <!-- Katana*Samurai Long Sword -->
+	</item>
+	<item>
+		<ingredient count="1" id="131" /> <!-- Spirit Sword -->
+		<ingredient count="1" id="135" /> <!-- Samurai Long Sword -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="75" id="1875" /> <!-- Stone of Purity -->
+		<ingredient count="220" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2598" /> <!-- Spirit Sword*Samurai Long Sword -->
+	</item>
+	<item>
+		<ingredient count="1" id="133" /> <!-- Raid Sword -->
+		<ingredient count="1" id="135" /> <!-- Samurai Long Sword -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="75" id="1875" /> <!-- Stone of Purity -->
+		<ingredient count="220" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2605" /> <!-- Raid Sword*Samurai Long Sword -->
+	</item>
+	<item>
+		<ingredient count="1" id="75" /> <!-- Caliburs -->
+		<ingredient count="1" id="135" /> <!-- Samurai Long Sword -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="81" id="1875" /> <!-- Stone of Purity -->
+		<ingredient count="307" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2611" /> <!-- Caliburs*Samurai Long Sword -->
+	</item>
+	<item>
+		<ingredient count="1" id="134" /> <!-- Sword of Nightmare -->
+		<ingredient count="1" id="135" /> <!-- Samurai Long Sword -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="81" id="1875" /> <!-- Stone of Purity -->
+		<ingredient count="307" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2623" /> <!-- Sword of Nightmare*Samurai Long Sword -->
+	</item>
+	<item>
+		<ingredient count="1" id="77" /> <!-- Tsurugi -->
+		<ingredient count="1" id="135" /> <!-- Samurai Long Sword -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="81" id="1875" /> <!-- Stone of Purity -->
+		<ingredient count="307" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2625" /> <!-- Tsurugi*Samurai Long Sword -->
+	</item>
+	<item>
+		<ingredient count="1" id="135" /> <!-- Samurai Long Sword -->
+		<ingredient count="1" id="135" /> <!-- Samurai Long Sword -->
+		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
+		<ingredient count="45" id="1875" /> <!-- Stone of Purity -->
+		<ingredient count="500" id="1459" /> <!-- Crystal (C-Grade) -->
+		<production count="1" id="2626" /> <!-- Samurai Long Sword*Samurai Long Sword -->
+	</item>
+</list>

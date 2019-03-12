@@ -16,8 +16,8 @@
  */
 package handlers.telnethandlers.server;
 
-import org.l2j.gameserver.mobius.gameserver.Shutdown;
-import org.l2j.gameserver.mobius.gameserver.network.telnet.ITelnetCommand;
+import org.l2j.gameserver.Shutdown;
+import org.l2j.gameserver.network.telnet.ITelnetCommand;
 
 import io.netty.channel.ChannelHandlerContext;
 

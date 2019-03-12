@@ -1,0 +1,1440 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="1500" name="Totem of Hestui" type="EtcItem">
+		<!-- The totem of the Hestui. Can be sold in any shop for a high price. -->
+		<set name="icon" val="icon.etc_totem_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="11000" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1501" name="Maraku Werewolf Totem" type="EtcItem">
+		<!-- Maraku Wolfmen Totem. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_totem_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="1200" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1502" name="Grandma's Pearl" type="EtcItem">
+		<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
+		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="10000" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1503" name="Grandma's Mirror" type="EtcItem">
+		<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
+		<set name="icon" val="icon.etc_mirror_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="1000" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1504" name="Grandma's Necklace" type="EtcItem">
+		<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
+		<set name="icon" val="icon.accessary_aquastone_necklace_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="600" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1505" name="Grandma's Hairpin" type="EtcItem">
+		<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
+		<set name="icon" val="icon.etc_jewel_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="200" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1506" name="Necklace of Courage" type="Armor">
+		<!-- Necklace that is given to young Orcs who have proven their courage. -->
+		<set name="icon" val="icon.accessary_necklace_of_courage_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<set name="price" val="66" />
+		<stats>
+			<stat type="mDef">15</stat>
+		</stats>
+	</item>
+	<item id="1507" name="Necklace of Valor" type="Armor">
+		<!-- Necklace that is given to young Orcs who have proven their valor. -->
+		<set name="icon" val="icon.accessary_necklace_of_valor_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<set name="price" val="4680" />
+		<stats>
+			<stat type="mDef">21</stat>
+		</stats>
+	</item>
+	<item id="1508" name="Ring of Raccoon" type="Armor">
+		<!-- Ring given to apprentices of the Bronze Key Guild. -->
+		<set name="icon" val="icon.accessary_ring_of_raccoon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="commissionItemType" val="RING" />
+		<set name="price" val="2340" />
+		<stats>
+			<stat type="mDef">11</stat>
+		</stats>
+	</item>
+	<item id="1509" name="Ring of Firefly" type="Armor">
+		<!-- Ring given to apprentices of the Black Anvil Guild. -->
+		<set name="icon" val="icon.accessary_ring_of_firefly_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="commissionItemType" val="RING" />
+		<set name="price" val="2340" />
+		<stats>
+			<stat type="mDef">11</stat>
+		</stats>
+	</item>
+	<item id="1510" name="Butcher's Sword" type="Weapon">
+		<!-- Sword granted to young Orc Fighters who distinguished themselves at war. -->
+		<set name="icon" val="icon.weapon_orcish_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1450" />
+		<set name="price" val="25500" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">13</stat>
+			<stat type="mAtk">10</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="1511" name="Silversmith Hammer" type="Weapon">
+		<!-- Hammer silversmiths of the ancient Elmoreden used. -->
+		<set name="icon" val="icon.weapon_iron_hammer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1860" />
+		<set name="price" val="25500" />
+		<set name="soulshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">13</stat>
+			<stat type="mAtk">10</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="1512" name="Spellbook: Confusion" type="EtcItem">
+		<!-- Spellbook needed to learn Confusion. Used by Palace Knights and Assassins. Lv. acquired: Palace Knight 24, Assassin 24 -->
+		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="1150" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1513" name="Spellbook: Charm" type="EtcItem">
+		<!-- Spellbook needed to learn Charm. Used by Elven Knights and Elven Scouts. Required level: 20 -->
+		<set name="icon" val="icon.etc_spell_books_efighter_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="800" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1514" name="Spellbook: Resurrection" type="EtcItem">
+		<!-- Spellbook needed to learn Resurrection. Used by Clerics, Elven Oracles, and Shillien Oracles. Required level: 20 -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7461" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1515" name="Spellbook: Eva's Kiss" type="EtcItem">
+		<!-- Spellbook needed to learn Eva's Kiss. Used by Clerics, Elven Oracles and Shillien Oracles. Required level: 20 -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="800" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1516" name="Spellbook: Corpse Life Drain" type="EtcItem">
+		<!-- Spellbook needed to learn Corpse Life Drain. Used by Human Wizards and Dark Wizards. Required level: 30 -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="1800" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1517" name="Spellbook: Body To Mind" type="EtcItem">
+		<!-- Spellbook needed to learn Body To Mind. Used by Human Wizards and Dark Wizards. Required level: 25 -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="15048" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1518" name="Amulet: Chant of Flame" type="EtcItem">
+		<!-- Amulet required for the Chant of Flame spell. Used by Orc Shamans. Required level: 30 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="26593" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1519" name="Amulet: Pa'agrio's Gift" type="EtcItem">
+		<!-- Amulet required for the Pa'agrio's Gift spell. Used by Orc Shamans. Required level: 30 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="26593" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1520" name="Amulet: Pa'agrio's Blessing" type="EtcItem">
+		<!-- Amulet required for the Pa'agrio's Blessing spell. Used by Orc Shamans. Required level: 35 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="2450" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1521" name="Amulet: Chant of Fire" type="EtcItem">
+		<!-- Amulet required for the Chant of Fire spell. Used by Orc Shamans. Required level: 20 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7461" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1522" name="Amulet: Chant of Battle" type="EtcItem">
+		<!-- Amulet required for the Chant of Battle spell. Used by Orc Mystics. Required level: 14 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1523" name="Amulet: Chant of Shielding" type="EtcItem">
+		<!-- Amulet required for the Chant of Shielding spell. Used by Orc Shamans. Required level: 20 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7461" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1524" name="Amulet: Soul Shield" type="EtcItem">
+		<!-- Amulet required for the Soul Shield spell. Used by Orc Mystics. Required level: 7 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1525" name="Amulet: Life Drain" type="EtcItem">
+		<!-- Amulet required for the Life Drain spell. Used by Orc Mystics. Required level: 7 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1526" name="Amulet: Fear" type="EtcItem">
+		<!-- Amulet required for the Fear spell. Used by Orc Mystics. Required level: 14 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1527" name="Amulet: Venom" type="EtcItem">
+		<!-- Amulet required for the Venom spell. Used by Orc Mystics. Required level: 7 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1528" name="Amulet: Seal of Chaos" type="EtcItem">
+		<!-- Amulet required for the Seal of Chaos spell. Used by Orc Shamans. Required level: 30 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="1800" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1529" name="Amulet: Dreaming Spirit" type="EtcItem">
+		<!-- Amulet required for the Spirit Dream spell. Used by Orc Mystics. Required level: 7 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1530" name="Amulet: Seal of Slow" type="EtcItem">
+		<!-- Amulet required for the Seal of Slow spell. Used by Orc Shamans. Required level: 35 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="43681" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1531" name="Amulet: Chill Flame" type="EtcItem">
+		<!-- Amulet required for the Chill Flame spell. Used by Orc Mystics. Required level: 7 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1532" name="Amulet: Burning Flame" type="EtcItem">
+		<!-- Amulet required for the Burning Flame spell. Used by Orc Shamans. Required level: 25 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="1250" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1533" name="Amulet: Aura Sink" type="EtcItem">
+		<!-- Amulet required for the Aura Sink spell. Used by Orc Shamans. Required level: 25 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="1250" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1534" name="Amulet: Madness" type="EtcItem">
+		<!-- Amulet required for the Madness spell. Used by Orc Shamans. Required level: 20 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="800" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1535" name="Amulet: Frost Flame" type="EtcItem">
+		<!-- Amulet required for the Frost Flame spell. Used by Orc Shamans. Required level: 20 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="800" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1536" name="Amulet: Seal of Binding" type="EtcItem">
+		<!-- Amulet required for the Seal of Binding spell. Used by Orc Shamans. Required level: 25 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="15048" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1537" name="Amulet: Seal of Poison" type="EtcItem">
+		<!-- Amulet required for the Seal of Poison spell. Used by Orc Shamans. Required level: 20 -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="800" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1538" name="Blessed Scroll of Escape" type="EtcItem">
+		<!-- Magical scroll that relocates you to the nearest village. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="2036" level="1" /> <!-- Blessed Scroll of Escape -->
+		</skills>
+	</item>
+	<item id="1539" name="Major Healing Potion" type="EtcItem">
+		<!-- Magical potion that quickly restores HP. Its effect lasts for 15 seconds. -->
+		<set name="icon" val="icon.etc_reagent_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="price" val="900" />
+		<set name="reuse_delay" val="10000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2037" level="1" /> <!-- Major Healing Potion -->
+		</skills>
+	</item>
+	<item id="1540" name="Quick Healing Potion" type="EtcItem">
+		<!-- Magic potion that instantly restores HP. Instant effect with no cooldown. Cannot be used when HP is full. -->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="180" />
+		<set name="price" val="10000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2038" level="1" /> <!-- Quick Healing Potion -->
+		</skills>
+	</item>
+	<item id="1541" name="Honey Khandar" type="EtcItem">
+		<!-- Miraculous medicine made of the mixture of honey and khandar extract. Take this to Centurion Nakusin. -->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1542" name="Bear Fur Cloak" type="EtcItem">
+		<!-- Cloak made of grizzly bear's fur. Excellent for keeping warm. Take this to Centurion Nakusin. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1543" name="Bloody Axe" type="EtcItem">
+		<!-- Axe that holds the blood of wild animals. It is said to strengthen its owner's life force. Take this to Centurion Nakusin. -->
+		<set name="icon" val="icon.weapon_tomahawk_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1544" name="Ancestor Skull" type="EtcItem">
+		<!-- Skull of an ancestor of Urutus. It is said to strengthen its owner's life force. Take this to Centurion Nakusin. -->
+		<set name="icon" val="icon.etc_skull_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1545" name="Spider Dust" type="EtcItem">
+		<!-- Grain of powder made of dried legs of poisonous spiders. Smelling it will make you feel refreshed. Take this to Centurion Nakusin. -->
+		<set name="icon" val="icon.etc_powder_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1546" name="Deep Sea Orb" type="EtcItem">
+		<!-- Pearl brought out of a deep sea. It is said to help predict the future. Take this to Centurion Nakusin. -->
+		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1547" name="Bolter's List" type="EtcItem">
+		<!-- The list of things that Bolter wants you to bring from the village. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1548" name="Mining Boots" type="EtcItem">
+		<!-- Pair of mining boots you got from Trader Garita. Take this to Miner Bolter. -->
+		<set name="icon" val="icon.armor_apprentices_shoes_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1549" name="Miner's Pick" type="EtcItem">
+		<!-- Miner's pick you got from Blacksmith Brunon. Take this to Miner Bolter. -->
+		<set name="icon" val="icon.weapon_guard_spear_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1550" name="Boomboom Powder" type="EtcItem">
+		<!-- Sack of boomboom powder you got from Trader Shari. Take this to Miner Bolter. -->
+		<set name="icon" val="icon.etc_powder_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1551" name="Redstone Beer" type="EtcItem">
+		<!-- Delicious beer you got from Warehouse Chief Reed. Take this to Miner Bolter. -->
+		<set name="icon" val="icon.etc_potion_scarlet_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1552" name="Bolter's Smelly Socks" type="EtcItem">
+		<!-- Pair of socks that Miner Bolter gave you. For what...? -->
+		<set name="icon" val="icon.armor_cotton_shoes_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1553" name="Hatos' 1st Order" type="EtcItem">
+		<!-- An order to kill Varangka's Messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1554" name="Hatos' 1st Order" type="EtcItem">
+		<!-- An order to kill Varangka's Messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
+		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1555" name="Hatos' 1st Order" type="EtcItem">
+		<!-- An order to kill Varangka's Messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
+		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1556" name="Secret Letter to Dark Elves" type="EtcItem">
+		<!-- A secret letter that Varangka sent to Dark Elven Magister. Take the letter to Urutu Chief Hatos. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1557" name="Secret Letter to Humans" type="EtcItem">
+		<!-- A secret letter that Varangka sent to Duke Van Halter. Take the letter to Urutu Chief Hatos. -->
+		<set name="icon" val="icon.etc_letter_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1558" name="Secret Letter to Elves" type="EtcItem">
+		<!-- A secret letter that Varangka sent to Elven Master Laria. Take the letter to Urutu Chief Hatos. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1559" name="Gouph's Contract" type="EtcItem">
+		<!-- Collector Gouph drew up this contract when buying the star diamond from Trader Reep. Take this to Trader Reep. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1560" name="Reep's Contract" type="EtcItem">
+		<!-- Trader Reep drew up this contract when he requested the delivery of the star diamond. Take this to Carrier Torocco. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1561" name="Elven Wine" type="EtcItem">
+		<!-- Carrier Torocco bought this high quality wine to give it to his old friend, Maron, as a present. Take this to Miner Maron. -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1562" name="Brunon's Dice" type="EtcItem">
+		<!-- These dice were specially made for gambling. Take these to Blacksmith Brunon. -->
+		<set name="icon" val="icon.etc_squares_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1563" name="Brunon's Contract" type="EtcItem">
+		<!-- This contract says if Brunon gets the 20 stolen jewels back from goblins, he can get the star diamond back. -->
+		<set name="icon" val="icon.etc_letter_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1564" name="Aquamarine" type="EtcItem">
+		<!-- This jewel is obtained by the Goblin Brigand Leader. Take 10 Aquamarines and 10 Chrysoberyls to Blacksmith Brunon. -->
+		<set name="icon" val="icon.etc_jewel_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1565" name="Chrysoberyl" type="EtcItem">
+		<!-- This jewel is obtained by the Goblin Brigand Leader. Take 10 Aquamarines and 10 Chrysoberyls to Blacksmith Brunon. -->
+		<set name="icon" val="icon.etc_jewel_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1566" name="Diamond Box" type="EtcItem">
+		<!-- Blacksmith Brunon gives this Jewel Box. Take it to Collector Gouph. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1567" name="Coal Piece" type="EtcItem">
+		<!-- This coal piece is in the Jewel Box. Take this to Blacksmith Brunon. -->
+		<set name="icon" val="icon.etc_plate_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1568" name="Brunon's Letter" type="EtcItem">
+		<!-- Blacksmith Brunon sends this letter to Warehouse Keeper Murdoc asking for the right box. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1569" name="Berry Tart" type="EtcItem">
+		<!-- Sweet strawberry-flavored tart. Warehouse Keeper Murdoc sends this to Warehouse Keeper Airy as a present of apology. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1570" name="Bat Diagram" type="EtcItem">
+		<!-- This diagram shows the blade bat in details. Take this and go hunt blade bats to obtain the star diamond. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1571" name="Star Diamond" type="EtcItem">
+		<!-- Everyone is looking for this diamond. Take this to the real owner. -->
+		<set name="icon" val="icon.etc_jewel_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1572" name="Star Stone" type="EtcItem">
+		<!-- Mineral collected from the destroyed greystone golem. Collect 20 of these and take them to Gatekeeper Tamil. -->
+		<set name="icon" val="icon.etc_crystal_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1573" name="Star Stone" type="EtcItem">
+		<!-- Mineral obtained by defeated whinstone golems. Collect twenty and take them to Gatekeeper Wirphy. -->
+		<set name="icon" val="icon.etc_crystal_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1574" name="Mirien's Review" type="EtcItem">
+		<!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this and go to Jonas. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1575" name="Mirien's Review" type="EtcItem">
+		<!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this and go to Jonas. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1576" name="Mirien's Review" type="EtcItem">
+		<!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this and go to Jonas. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1577" name="Mirien's Review" type="EtcItem">
+		<!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this and go to Jonas. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1578" name="Green Blood" type="EtcItem">
+		<!-- Goblin's blood. If you have enough of this item, the Kuruka Ratman Leader appears. -->
+		<set name="icon" val="icon.etc_reagent_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1579" name="Goblin Dwelling Map" type="EtcItem">
+		<!-- Map showing goblins' dwelling. Take this and find the goblin tribes and destroy them. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1580" name="Kuruka Ratman Fang" type="EtcItem">
+		<!-- Fang obtained after killing Kuruka Ratman Leader. Collect ten of these to take to Prefect Karukia. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1581" name="Betrayer's Report" type="EtcItem">
+		<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1582" name="Betrayer's Report" type="EtcItem">
+		<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1583" name="Betrayer's Report" type="EtcItem">
+		<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1584" name="Betrayer's Report" type="EtcItem">
+		<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1585" name="Betrayer's Report" type="EtcItem">
+		<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1586" name="Betrayer's Report" type="EtcItem">
+		<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1587" name="Betrayer's Report" type="EtcItem">
+		<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1588" name="Betrayer's Report" type="EtcItem">
+		<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1589" name="Betrayer's Report" type="EtcItem">
+		<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1590" name="Betrayer's Report" type="EtcItem">
+		<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1591" name="Head of Betrayer" type="EtcItem">
+		<!-- The head of a traitor orc. Collect 2 and take them to Prefect Kasman in Gludin Village. -->
+		<set name="icon" val="icon.etc_skull_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1592" name="Badge of Raider" type="EtcItem">
+		<!-- Earring given to an Orc who has earned the qualification to become an Orc Raider. Take this to the High Prefect to change your class to an Orc Raider. -->
+		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1593" name="Pomegranate" type="EtcItem">
+		<!-- Red pomegranate fruit given by Gantaki Zu Urutu. Take this and go to Khavatari Rosheek. -->
+		<set name="icon" val="icon.etc_fruit_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1594" name="Leather Pouch" type="EtcItem">
+		<!-- Leather pouch given by Khavatari Rosheek. Take this and hunt Kasha Bears to collect 5 of their claws. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1595" name="Leather Pouch" type="EtcItem">
+		<!-- Leather pouch given by Khavatari Rosheek. Hunt Kasha Blade Spiders with this and collect 5 talons. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1596" name="Leather Pouch" type="EtcItem">
+		<!-- Leather pouch Khavatari Rosheek gave you. Take this while hunting Scarlet Salamanders to obtain 5 of their scales. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1597" name="Leather Pouch (full)" type="EtcItem">
+		<!-- Pouch that contains 5 Kasha Bear Claws. Take this to Khavatari Rosheek. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1598" name="Leather Pouch (full)" type="EtcItem">
+		<!-- Pouch that contains 5 pincers of Kasha Blade Spider Talon. Take this to Khavatari Rosheek. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1599" name="Leather Pouch (full)" type="EtcItem">
+		<!-- Pouch that contains 5 Scarlet Salamander Scales. Take this to Khavatari Rosheek. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+</list>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30576"> <!-- Tamil -->
+		<teleport type="NORMAL">
+			<!-- feeCount from Interlude, unconfirmed from retail classic -->
+			<location npcStringId="1010004" x="-80684" y="149834" z="-3040" feeCount="23000" /> <!-- The Village of Gludin -->
+			<location npcStringId="1010556" x="-10983" y="-117484" z="-2464" feeCount="960" /> <!-- Immortal Plateau, Northern Region (Lv. 8) -->
+			<location npcStringId="1010046" x="-4190" y="-80040" z="-2696" feeCount="2000" /> <!-- Immortal Plateau, Southern Region (Lv. 18) -->
+			<location npcStringId="1010048" x="8652" y="-139941" z="-1144" feeCount="1600" /> <!-- Frozen Waterfalls (Lv. 15) -->
+			<location npcStringId="1010485" x="9340" y="-112509" z="-2536" feeCount="1500" /> <!-- Entrance to the Cave of Trials -->
+		</teleport>
+	</npc>
+</list>

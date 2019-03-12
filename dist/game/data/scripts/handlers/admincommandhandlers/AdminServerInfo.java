@@ -23,15 +23,15 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import com.l2jmobius.Config;
-import org.l2j.gameserver.mobius.gameserver.GameServer;
-import org.l2j.gameserver.mobius.gameserver.GameTimeController;
-import org.l2j.gameserver.mobius.gameserver.cache.HtmCache;
-import org.l2j.gameserver.mobius.gameserver.data.xml.impl.AdminData;
-import org.l2j.gameserver.mobius.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.mobius.gameserver.model.L2World;
-import org.l2j.gameserver.mobius.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.mobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.GameServer;
+import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.data.xml.impl.AdminData;
+import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * @author St3eT

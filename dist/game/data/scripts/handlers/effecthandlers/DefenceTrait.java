@@ -20,12 +20,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.l2j.gameserver.mobius.gameserver.model.StatsSet;
-import org.l2j.gameserver.mobius.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.mobius.gameserver.model.actor.stat.CharStat;
-import org.l2j.gameserver.mobius.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.mobius.gameserver.model.skills.Skill;
-import org.l2j.gameserver.mobius.gameserver.model.stats.TraitType;
+import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.stat.CharStat;
+import org.l2j.gameserver.model.effects.AbstractEffect;
+import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.model.stats.TraitType;
 
 /**
  * Defence Trait effect implementation.

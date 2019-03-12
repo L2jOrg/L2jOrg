@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="54" parentClassId="53">
+		<!-- Confirmed CT2.5 -->
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="205" skillLvl="1" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="1" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="1" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="2" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="1" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="2" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Shock Attack" skillId="100" skillLvl="1" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Shock Attack" skillId="100" skillLvl="2" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Shock Attack" skillId="100" skillLvl="3" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Wild Sweep" skillId="245" skillLvl="1" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Wild Sweep" skillId="245" skillLvl="2" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Wild Sweep" skillId="245" skillLvl="3" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Boost HP" skillId="211" skillLvl="1" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Bandage" skillId="34" skillLvl="1" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Spoil" skillId="254" skillLvl="2" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="1" getLevel="20" levelUpSp="1000" />
+		
+		<skill skillName="Shock Attack" skillId="100" skillLvl="4" getLevel="22" levelUpSp="2800" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="3" getLevel="22" levelUpSp="2800" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="3" getLevel="22" levelUpSp="2800" />
+		<skill skillName="Wild Sweep" skillId="245" skillLvl="4" getLevel="22" levelUpSp="2800" />
+		
+		<skill skillName="Shock Attack" skillId="100" skillLvl="5" getLevel="23" levelUpSp="2800" />
+		<skill skillName="Wild Sweep" skillId="245" skillLvl="5" getLevel="23" levelUpSp="2800" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="205" skillLvl="2" getLevel="24" levelUpSp="2800" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="2" getLevel="24" levelUpSp="2800" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="4" getLevel="24" levelUpSp="2800" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="4" getLevel="24" levelUpSp="2800" />
+		<skill skillName="Shock Attack" skillId="100" skillLvl="6" getLevel="24" levelUpSp="2800" />
+		<skill skillName="Wild Sweep" skillId="245" skillLvl="6" getLevel="24" levelUpSp="2800" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="1" getLevel="24" levelUpSp="2800" />
+		<skill skillName="Vital Force" skillId="148" skillLvl="1" getLevel="24" levelUpSp="2800" />
+		<skill skillName="Weight Limit" skillId="150" skillLvl="2" getLevel="24" levelUpSp="2800" />
+		
+		<skill skillName="Shock Attack" skillId="100" skillLvl="7" getLevel="26" levelUpSp="5700" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="3" getLevel="26" levelUpSp="5700" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="5" getLevel="26" levelUpSp="5700" />
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="205" skillLvl="3" getLevel="26" levelUpSp="5700" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="5" getLevel="26" levelUpSp="5700" />
+		<skill skillName="Wild Sweep" skillId="245" skillLvl="7" getLevel="26" levelUpSp="5700" />
+		
+		<skill skillName="Shock Attack" skillId="100" skillLvl="8" getLevel="27" levelUpSp="5700" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="6" getLevel="27" levelUpSp="5700" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="6" getLevel="27" levelUpSp="5700" />
+		<skill skillName="Wild Sweep" skillId="245" skillLvl="8" getLevel="27" levelUpSp="5700" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="205" skillLvl="4" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="4" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="7" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="7" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Shock Attack" skillId="100" skillLvl="9" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Wild Sweep" skillId="245" skillLvl="9" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Boost HP" skillId="211" skillLvl="2" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Spoil" skillId="254" skillLvl="3" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Spoil Festival" skillId="302" skillLvl="1" getLevel="28" levelUpSp="5700" />
+		<skill skillName="Sweeper Festival" skillId="444" skillLvl="1" getLevel="28" levelUpSp="5700" />
+		
+		<skill skillName="Shock Attack" skillId="100" skillLvl="10" getLevel="30" levelUpSp="11000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="5" getLevel="30" levelUpSp="11000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="8" getLevel="30" levelUpSp="11000" />
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="205" skillLvl="5" getLevel="30" levelUpSp="11000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="8" getLevel="30" levelUpSp="11000" />
+		<skill skillName="Wild Sweep" skillId="245" skillLvl="10" getLevel="30" levelUpSp="11000" />
+		
+		<skill skillName="Shock Attack" skillId="100" skillLvl="11" getLevel="31" levelUpSp="11000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="9" getLevel="31" levelUpSp="11000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="9" getLevel="31" levelUpSp="11000" />
+		<skill skillName="Wild Sweep" skillId="245" skillLvl="11" getLevel="31" levelUpSp="11000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="205" skillLvl="6" getLevel="32" levelUpSp="11000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="6" getLevel="32" levelUpSp="11000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="10" getLevel="32" levelUpSp="11000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="10" getLevel="32" levelUpSp="11000" />
+		<skill skillName="Shock Attack" skillId="100" skillLvl="12" getLevel="32" levelUpSp="11000" />
+		<skill skillName="Wild Sweep" skillId="245" skillLvl="12" getLevel="32" levelUpSp="11000" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="2" getLevel="32" levelUpSp="11000" />
+		<skill skillName="Vital Force" skillId="148" skillLvl="2" getLevel="32" levelUpSp="11000" />
+		
+		<skill skillName="Shock Attack" skillId="100" skillLvl="13" getLevel="34" levelUpSp="20000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="7" getLevel="34" levelUpSp="20000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="11" getLevel="34" levelUpSp="20000" />
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="205" skillLvl="7" getLevel="34" levelUpSp="20000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="11" getLevel="34" levelUpSp="20000" />
+		<skill skillName="Wild Sweep" skillId="245" skillLvl="13" getLevel="34" levelUpSp="20000" />
+		
+		<skill skillName="Shock Attack" skillId="100" skillLvl="14" getLevel="35" levelUpSp="20000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="12" getLevel="35" levelUpSp="20000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="12" getLevel="35" levelUpSp="20000" />
+		<skill skillName="Wild Sweep" skillId="245" skillLvl="14" getLevel="35" levelUpSp="20000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="205" skillLvl="8" getLevel="36" levelUpSp="20000" />
+		<skill skillName="Polearm Mastery" skillId="216" skillLvl="8" getLevel="36" levelUpSp="20000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="13" getLevel="36" levelUpSp="20000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="13" getLevel="36" levelUpSp="20000" />
+		<skill skillName="Shock Attack" skillId="100" skillLvl="15" getLevel="36" levelUpSp="20000" />
+		<skill skillName="Wild Sweep" skillId="245" skillLvl="15" getLevel="36" levelUpSp="20000" />
+		<skill skillName="Boost HP" skillId="211" skillLvl="3" getLevel="36" levelUpSp="20000" />
+		<skill skillName="Spoil" skillId="254" skillLvl="4" getLevel="36" levelUpSp="20000" />
+		<skill skillName="Spoil Festival" skillId="302" skillLvl="2" getLevel="36" levelUpSp="20000" />
+	</skillTree>
+</list>

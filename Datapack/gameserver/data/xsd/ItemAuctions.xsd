@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="instance" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="item" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence minOccurs="1" maxOccurs="1">
+										<xs:element name="extra" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="augmentation_id" type="xs:positiveInteger" use="required" />
+												<xs:attribute name="augmentation_skill_id" type="xs:positiveInteger" use="required" />
+												<xs:attribute name="augmentation_skill_lvl" type="xs:positiveInteger" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="auctionInitBid" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="auctionItemId" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="auctionLenght" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="itemCount" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="itemId" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="day_of_week" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="7" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="hour_of_day" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:minInclusive value="0" />
+									<xs:maxInclusive value="23" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="minute_of_hour">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:minInclusive value="0" />
+									<xs:maxInclusive value="59" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

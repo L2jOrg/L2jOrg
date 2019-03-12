@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
+	<!-- Spectral Dancer -->
+	<npc id="80000" level="78" type="L2Npc" name="Evi" >
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="103" int="40" dex="53" wit="37" con="84" men="39">
+			<vitals hp="18857" hpRegen="10.8" mp="3863" mpRegen="3.0" />
+			<attack physical="10198" magical="1305" random="30" critical="132" accuracy="177" attackSpeed="588" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3388" magical="2450" />
+			<attribute>
+				<defence fire="200" water="250" wind="250" earth="250" holy="250" dark="250" />
+				<attack type="WATER" value="330" />
+			</attribute>
+			<speed>
+				<walk ground="85" />
+				<run ground="139" />
+			</speed>
+		</stats>
+		<status fakePlayer="true" talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="24" />
+		</collision>
+	</npc>
+</list>

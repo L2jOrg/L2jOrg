@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="4315" name="Gandi Tribe's Relic" type="EtcItem">
+		<!-- The sacred object of the Gandi Tribe that has been recovered from Bugbears. Take it to Gandi Chief Chianta in the Town of Dion. -->
+		<set name="icon" val="icon.etc_royal_seal_of_lord_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4316" name="Swan's Flute" type="EtcItem">
+		<!-- Flute that Troubadour Swan had obtained as a gift for Musician Nanarin. -->
+		<set name="icon" val="icon.etc_dragon_flute_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4317" name="Swan's Letter" type="EtcItem">
+		<!-- Love letter that Troubadour Swan wants to send to Musician Nanarin along with the flute. Take them to Musician Nanarin. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4318" name="Event Clothes" type="EtcItem">
+		<!-- Gift that Musician Nanarin is sending to Musician Barbado. Take it to Barbado. -->
+		<set name="icon" val="icon.etc_ladys_dress_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4319" name="Nanarin's Flute" type="EtcItem">
+		<!-- Gift that Musician Nanarin is sending to Musician Barbado. Take it to Barbado. -->
+		<set name="icon" val="icon.etc_dragon_flute_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4320" name="Sabrin's Black Beer" type="EtcItem">
+		<!-- Gift that Musician Nanarin is sending to Musician Barbado. Take it to Barbado. -->
+		<set name="icon" val="icon.etc_oil_pot_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4321" name="Stolen Black Beer" type="EtcItem">
+		<!-- Black beer that was stolen from Jonas. Take it to Trader Sabrin. -->
+		<set name="icon" val="icon.etc_oil_pot_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4322" name="Stolen Event Clothes" type="EtcItem">
+		<!-- Event clothes that were stolen from Trader Sonia. Take them to Guard Xaber. -->
+		<set name="icon" val="icon.etc_ladys_dress_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4323" name="Clothes Chest Key" type="EtcItem">
+		<!-- The key given by Bard Swan. Use this key to open the clothes chest and retrieve the event clothes. -->
+		<set name="icon" val="icon.etc_old_key_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4324" name="Beer Chest Key" type="EtcItem">
+		<!-- The key given by Bard Swan. Use this key to open the beer chest and get the black beer out of it. -->
+		<set name="icon" val="icon.etc_old_key_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4325" name="Fairy Leaf" type="EtcItem">
+		<!-- Leaf given by Fairy Mimyu to put on the fairy's neck wound that was inflicted by a Hatchling. -->
+		<set name="icon" val="icon.etc_leaf_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4326" name="Ratman Scavenger's Skull" type="EtcItem">
+		<!-- Heads of Ratman Scavengers that you hunted after receiving a request from Katari. Collect 10 of them and take them to Katari. -->
+		<set name="icon" val="icon.etc_pet_arms_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4327" name="Turek War Hound's Tail" type="EtcItem">
+		<!-- The tails of Turek war Hounds that Piotur asks you to catch. Collect 10 of them and take them to Piotur. -->
+		<set name="icon" val="icon.etc_mane_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4328" name="Tyrant Kingpin's Heart" type="EtcItem">
+		<!-- Tyrant Kingpin's Heart. Take it to Elder Casian. -->
+		<set name="icon" val="icon.etc_heart_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4329" name="Trisalim Tarantula's Venom Sac" type="EtcItem">
+		<!-- The venom sacs of Trisalim Tarantulas that Magister Joan asked you to hunt. Collect three and take them to Magister Joan. -->
+		<set name="icon" val="icon.etc_poison_pouch_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4332" name="Tarlk Amulet" type="EtcItem">
+		<!-- Mark that can be obtained by catching a Tarlk Bugbear or a Tarlk Basilisk. Collect 30 and take them to a Clan Hall Herald. -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4333" name="Contest Certificate" type="EtcItem">
+		<!-- Certificate that one can present to participate in the hunt for Tarlk Basilisks, a preliminary contest for a Clan Hall Siege War. -->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4334" name="Ant Fluids" type="EtcItem">
+		<!-- Bodily fluids extracted from ants or Ant Captains. Collect 20 and take them to Elder Casian. -->
+		<set name="icon" val="icon.etc_reagent_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4335" name="Noble Ant's Nerve Tissue" type="EtcItem">
+		<!-- The nerve tissue harvested from a Noble Ant's head. Take it to Elder Casian along with the Ant Fluids. -->
+		<set name="icon" val="icon.etc_bodypart_brain_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4336" name="Casian's Enzyme" type="EtcItem">
+		<!-- Enzyme created by Elder Casian. Find the Ant Larvae Sleeping within the Ant Nest Dungeon and administer the enzyme to them. -->
+		<set name="icon" val="icon.etc_spell_shot_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4342" name="Water Crystal" type="EtcItem">
+		<!-- Lump of crystal that contains the energy of water. You should find the Stone Statue of Water and dedicate it to the statue. -->
+		<set name="icon" val="icon.etc_gem_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4343" name="Fire Crystal" type="EtcItem">
+		<!-- Lump of crystal that contains the energy of fire. You should find the Stone Statue of Fire and dedicate it to the statue. -->
+		<set name="icon" val="icon.etc_gem_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4344" name="Wind Crystal" type="EtcItem">
+		<!-- Lump of crystal that contains the energy of wind. You should find the Stone Statue of Wind and dedicate it to the statue. -->
+		<set name="icon" val="icon.etc_gem_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4345" name="Earth Crystal" type="EtcItem">
+		<!-- Lump of crystal that contains the energy of earth. You should find the Stone Statue of Earth and dedicate it to the statue. -->
+		<set name="icon" val="icon.etc_gem_yellow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4346" name="Dark Crystal" type="EtcItem">
+		<!-- Lump of crystal that contains the energy of darkness. You should find the Stone Statue of Darkness and dedicate it to the statue. -->
+		<set name="icon" val="icon.etc_gem_clear_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4347" name="Crystal of Light" type="EtcItem">
+		<!-- Lump of crystal that contains the energy of light. You should find the Stone Statue of Light and dedicate it to the statue. -->
+		<set name="icon" val="icon.etc_gem_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4348" name="Jade Crystal" type="EtcItem">
+		<!-- Jade crystals that had been gathered from the Enchanted Valley. Collect them and take them to Bentley of Hunter's Village. -->
+		<set name="icon" val="icon.etc_gem_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4349" name="Ancient Bust" type="EtcItem">
+		<!-- Statue of a goddess that was created by the ancient sculptor Berona in ancient times. -->
+		<set name="icon" val="icon.etc_holy_statue_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="5" />
+		<set name="price" val="50" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4350" name="Ancient Goddess Statue" type="EtcItem">
+		<!-- Statue created by the ancient sculptor Berona. It Has not been evaluated by antique experts yet. -->
+		<set name="icon" val="icon.etc_statue_of_einhasad_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="5" />
+		<set name="price" val="10" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4351" name="Ancient Goddess Statue: Prototype" type="EtcItem">
+		<!-- Statue created by Berona, an ancient sculptor. - Prototype -->
+		<set name="icon" val="icon.etc_statue_of_einhasad_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="5" />
+		<set name="price" val="2000" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4352" name="Ancient Goddess Statue: Original" type="EtcItem">
+		<!-- Statue created by Berona, a sculptor in ancient times. - Original -->
+		<set name="icon" val="icon.etc_statue_of_einhasad_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="5" />
+		<set name="price" val="200" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4353" name="Ancient Goddess Statue: Replica" type="EtcItem">
+		<!-- Replicated statues that have been created by present day sculptors who imitated Berona's works. -->
+		<set name="icon" val="icon.etc_statue_of_einhasad_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="5" />
+		<set name="price" val="150" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4354" name="Ancient Goddess Statue: Forgery" type="EtcItem">
+		<!-- Forgeries that have been created in imitation of the ancient sculptor Berona's works. -->
+		<set name="icon" val="icon.etc_statue_of_einhasad_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="5" />
+		<set name="price" val="100" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4355" name="Blue Eva" type="EtcItem">
+		<!-- Special Coin -->
+		<set name="icon" val="icon.etc_magic_coin_blue_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4356" name="Gold Einhasad" type="EtcItem">
+		<!-- Special Coin -->
+		<set name="icon" val="icon.etc_magic_coin_gold_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4357" name="Silver Shilen" type="EtcItem">
+		<!-- Special Coin -->
+		<set name="icon" val="icon.etc_magic_coin_silver_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4358" name="Bloody Pa'agrio" type="EtcItem">
+		<!-- Special Coin -->
+		<set name="icon" val="icon.etc_magic_coin_blood_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4359" name="Barrel of Liquor" type="EtcItem">
+		<!-- Barrel that is filled to the brim with delicious and fragrant liquor. The barrel is very heavy. -->
+		<set name="icon" val="icon.etc_wine_barrel_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="2000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="price" val="4000" />
+	</item>
+	<item id="4360" name="Precious Scarab" type="EtcItem">
+		<!-- Scarab that is transparent and shines like a precious stone. Among hustlers it is traded at a high price. -->
+		<set name="icon" val="icon.etc_beetle_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="price" val="15000" />
+	</item>
+	<item id="4361" name="Simbelmyne" type="EtcItem">
+		<!-- Type of flower that is believed to have the power to heal sickness. It is a favorite of elves. -->
+		<set name="icon" val="icon.etc_flower_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="price" val="2000" />
+	</item>
+	<item id="4362" name="Odd Doll" type="EtcItem">
+		<!-- It is a strange looking statue of a living creature that looks like an imp. It is an orc's favorite item. -->
+		<set name="icon" val="icon.etc_totem_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="price" val="8000" />
+	</item>
+	<item id="4363" name="Scarlet Dress" type="EtcItem">
+		<!-- Very attractive scarlet Aden-style dress designed for a virtuous lady. -->
+		<set name="icon" val="icon.etc_ladys_dress_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="20" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="price" val="30000" />
+	</item>
+	<item id="4364" name="Nebulite Orb" type="EtcItem">
+		<!-- It is made by cutting Nebulite into a spherical shape. Take this to Magic Trader Cema in Hardin's Academy. -->
+		<set name="icon" val="icon.etc_crystal_ball_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="2" />
+		<set name="price" val="10" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4365" name="Ectoplasm Liqueur" type="EtcItem">
+		<!-- Exotic tasting liqueur made from ectoplasm. Very popular among connoisseurs. -->
+		<set name="icon" val="icon.etc_dragon_blood_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="10" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="price" val="200" />
+	</item>
+	<item id="4366" name="Prince's Trophy" type="EtcItem">
+		<!-- The winning trophy that Prince Malcom won in a dance competition. You can sell it at a store or keep it as a souvenir. -->
+		<set name="icon" val="icon.etc_trophy_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="20" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4367" name="Prince's Autobiography" type="EtcItem">
+		<!-- The autobiography of Prince Malcom that bears his hand-written signature. Sell it at a store. -->
+		<set name="icon" val="icon.etc_spellbook_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4368" name="Prince's Bust" type="EtcItem">
+		<!-- Statue of Prince Malcom made of pure gold. Although quite ugly, it will fetch a handsome price. -->
+		<set name="icon" val="icon.etc_holy_statue_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="20" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4369" name="Silk Handkerchief" type="EtcItem">
+		<!-- Beautiful and elaborate handkerchief decorated with a flower pattern and lace. Its design could attract the attention of princes and princesses. -->
+		<set name="icon" val="icon.etc_kerchief_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="5" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4370" name="Luxurious Goblet" type="EtcItem">
+		<!-- Luxuriously designed goblet. It seems to be an object made during the period of the Elmo Aden Empire. -->
+		<set name="icon" val="icon.etc_holy_grail_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4371" name="Scepter of Darkness" type="EtcItem">
+		<!-- Staff that gives off dark M. Atk. On its handle, the words Great Demon King are engraved.\0 -->
+		<set name="icon" val="icon.etc_imperial_scepter_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4372" name="Succubus Perfume" type="EtcItem">
+		<!-- Perfume used by Succubus noblewomen. Very strong fragrance, not popular among Elves and Humans. -->
+		<set name="icon" val="icon.etc_dragons_blood_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4373" name="Succubus Mirror" type="EtcItem">
+		<!-- Mirror used by Succubus noblewomen when they put on cosmetics. It is also said to be used occasionally by blood queens. -->
+		<set name="icon" val="icon.etc_mirror_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4374" name="Heart of Darkness" type="EtcItem">
+		<!-- Heart-shaped stone piece that gives off the aura of dark M. Atk. On its reverse, the words I love you Merkenis! are engraved.\0 -->
+		<set name="icon" val="icon.etc_heart_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="30" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4375" name="Royal Orc Totem" type="EtcItem">
+		<!-- Totem made by carving out a whole lump of red granite. -->
+		<set name="icon" val="icon.etc_totem_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="30" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4376" name="Pearl Trodden/Trampled By A Wild Hog" type="EtcItem">
+		<!-- Walnut sized bead that is smeared with dirt. Perhaps, it is a pearl. -->
+		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="5" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4377" name="Boar's Tusk" type="EtcItem">
+		<!-- The tusk of a boar that looks somewhat similar to the ivory of an elephant. -->
+		<set name="icon" val="icon.etc_horn_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="10" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4378" name="Sweet Potato" type="EtcItem">
+		<!-- Large sized sweet potato that was just plucked out of the soil. You s it or roast it. It will make a delicious treat. -->
+		<set name="icon" val="icon.etc_seed_yellow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="5" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4379" name="Beast's Claws" type="EtcItem">
+		<!-- White lion's sharp claws. It is rumored that it is being traded among collectors at a high price. -->
+		<set name="icon" val="icon.etc_fang_ivory_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="5" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4380" name="Beast's Mane" type="EtcItem">
+		<!-- White lion's luxuriant mane. It is rumored to be sold at a high price among collectors. -->
+		<set name="icon" val="icon.etc_metallic_fiber_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="10" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4381" name="Ginseng Root" type="EtcItem">
+		<!-- Rare medicine imported from the Orient. -->
+		<set name="icon" val="icon.etc_ginseng_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="5" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4382" name="Honey Jar" type="EtcItem">
+		<!-- Jar containing sweet honey. -->
+		<set name="icon" val="icon.etc_oil_pot_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4383" name="Bear's Gall" type="EtcItem">
+		<!-- The gall of a bear that is known to be highly effective in promoting one's health and well-being as well as having mysterious healing properties. -->
+		<set name="icon" val="icon.etc_bodypart_liver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4384" name="Fresh Samon" type="EtcItem">
+		<!-- Fresh salmon that seems to have been just caught from a river. -->
+		<set name="icon" val="icon.etc_fish_seawater_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="5" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4385" name="Sushi Riceball" type="EtcItem">
+		<!-- The Schuttgart type sushi rice ball. The delicious seasoning of well minced meat gets absorbed into a the rice and produces a wonderful taste. -->
+		<set name="icon" val="icon.etc_meat_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4386" name="Avellan Spice" type="EtcItem">
+		<!-- Exotic spice that has been imported from Avella of the Orient. -->
+		<set name="icon" val="icon.etc_powder_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4387" name="Lucky Rabbit Weed" type="EtcItem">
+		<!-- Rabbit weed that is supposed to bring luck. It is the favorite food of rabbits and elpys. -->
+		<set name="icon" val="icon.etc_herb_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="5" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4388" name="Malcom's Check" type="EtcItem">
+		<!-- Check of tremendous face value signed by Prince Malcom. It can be cashed at a warehouse in Town of Giran. -->
+		<set name="icon" val="icon.etc_paper_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4389" name="Deposit Box Key" type="EtcItem">
+		<!-- Key for a private deposit box located in a warehouse in Town of Giran. -->
+		<set name="icon" val="icon.etc_old_key_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4390" name="Dwarven Royal Seal" type="EtcItem">
+		<!-- Royal seal made of carved jade. It is engraved with the seal of the Dwarven royal family. -->
+		<set name="icon" val="icon.etc_royal_seal_of_lord_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="20" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4391" name="Dwarven Royal Crown" type="EtcItem">
+		<!-- King's crown made of gold. It is engraved with the seal of the Dwarven royal family. -->
+		<set name="icon" val="icon.etc_ancient_crown_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="20" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4392" name="Dwarven Dance Manual" type="EtcItem">
+		<!-- Dance manual that details ballroom dancing techniques. This book will make you a dancing hero! -->
+		<set name="icon" val="icon.etc_spellbook_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4393" name="Go Get the Calculator" type="EtcItem">
+		<!-- Allows one to perform a simple calculation. -->
+		<set name="icon" val="icon.etc_calculator_i00" />
+		<set name="default_action" val="CALC" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="20" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="Calculator" />
+	</item>
+	<item id="4397" name="Book of Saint" type="EtcItem">
+		<!-- Holy Writ of Solina, which looks like an ordinary book. Take it to Magister Hanellin. -->
+		<set name="icon" val="icon.etc_spellbook_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+	</item>
+</list>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30256"> <!-- Bella -->
+		<teleport type="NORMAL">
+			<!-- feeCount from Interlude, unconfirmed from retail classic -->
+			<location npcStringId="1010002" x="46890" y="51531" z="-2976" feeCount="9200" /> <!-- Elven Village -->
+			<location npcStringId="1010003" x="9716" y="15502" z="-4552" feeCount="10000" /> <!-- The Dark Elf Village -->
+			<location npcStringId="1010008" x="-45186" y="-112459" z="-240" feeCount="23000" /> <!-- Orc Village -->
+			<location npcStringId="1010009" x="115120" y="-178112" z="-888" feeCount="32000" /> <!-- Dwarven Village -->
+			<location npcStringId="1010004" x="-80684" y="149834" z="-3040" feeCount="7300" /> <!-- The Village of Gludin -->
+			<location npcStringId="1010006" x="15744" y="142928" z="-2696" feeCount="3400" /> <!-- Town of Dion -->
+			<location npcStringId="1010102" x="-23789" y="169683" z="-3424" feeCount="1400" /> <!-- Windawood Manor (Lv. 22) -->
+			<location npcStringId="1010562" x="-91080" y="149860" z="-3624" feeCount="2600" /> <!-- Gludin Harbor -->
+			<location npcStringId="1010012" x="-16730" y="209417" z="-3664" feeCount="3400" /> <!-- Southern Entrance to the Wasteland -->
+			<location npcStringId="1010086" x="-9970" y="175793" z="-4128" feeCount="2100" /> <!-- Entrance to the Ant Nest -->
+		</teleport>
+	</npc>
+</list>
