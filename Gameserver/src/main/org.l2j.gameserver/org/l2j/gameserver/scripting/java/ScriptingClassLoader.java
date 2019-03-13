@@ -24,9 +24,9 @@ import java.util.logging.Logger;
 public final class ScriptingClassLoader extends ClassLoader {
     public static final Logger LOGGER = Logger.getLogger(ScriptingClassLoader.class.getName());
 
-    private Iterable<ScriptingOutputFileObject> _compiledClasses;
+    private Iterable<ScriptingFileInfo> _compiledClasses;
 
-    ScriptingClassLoader(ClassLoader parent, Iterable<ScriptingOutputFileObject> compiledClasses) {
+    ScriptingClassLoader(ClassLoader parent, Iterable<ScriptingFileInfo> compiledClasses) {
         super(parent);
         _compiledClasses = compiledClasses;
     }

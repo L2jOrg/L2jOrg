@@ -5,4 +5,6 @@ module org.l2j.scripts {
     requires java.sql;
     requires java.desktop;
 
+    exports handlers;
+
 }

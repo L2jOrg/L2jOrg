@@ -1,14 +1,21 @@
 package org.l2j.gameserver.scripting.java;
 
+import org.l2j.commons.util.filter.JavaFilter;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.scripting.AbstractExecutionContext;
 import org.l2j.gameserver.scripting.annotations.Disabled;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.tools.*;
+import javax.tools.Diagnostic;
+import javax.tools.DiagnosticListener;
+import javax.tools.JavaFileObject;
+import javax.tools.StandardLocation;
 import java.io.File;
+import java.io.IOException;
 import java.io.StringWriter;
+import java.lang.module.Configuration;
+import java.lang.module.ModuleFinder;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.nio.charset.StandardCharsets;
@@ -16,158 +23,146 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
 import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
-/**
- * @author HorridoJoho
- */
 public final class JavaExecutionContext extends AbstractExecutionContext<JavaScriptingEngine> {
-    private static final Logger LOGGER = LoggerFactory.getLogger(JavaExecutionContext.class.getName());
 
-    private final List<String> options = new LinkedList<>();
+    private static final Logger LOGGER = LoggerFactory.getLogger(JavaExecutionContext.class.getName());
+    private final Path destination = Path.of("compiledScripts");
     private final DiagnosticListener<JavaFileObject> listener = new DefaultDiagnosticListener();
-    private StandardJavaFileManager fileManager;
+    private final Path sourcePath;
+
     private ScriptingFileManager scriptingFileManager;
+    private ModuleLayer layer;
 
     JavaExecutionContext(JavaScriptingEngine engine) {
         super(engine);
 
-        addOptionIfNotNull(options, System.getProperty("jdk.module.path"), "--module-path");
-        addOptionIfNotNull(options, new File(Config.DATAPACK_ROOT, getProperty("sourcepath")).getAbsolutePath(), "--module-source-path");
-        // Set options.
-        addOptionIfNotNull(options, getProperty("g"), "-g:");
+        sourcePath = Path.of(Config.DATAPACK_ROOT.getAbsolutePath(), getProperty("source.path"));
+        try {
+            compileScripts();
+        } catch (Exception e) {
+            LOGGER.error("Could not compile Java Scripts", e);
+        }
+    }
 
-        // We always set the target JVM to the current running version.
-        final String targetVersion = System.getProperty("java.specification.version");
-        if (!targetVersion.contains(".")) {
-            options.add("-target");
-            options.add(targetVersion);
-        } else {
-            final String[] versionSplit = targetVersion.split("\\.");
-            if (versionSplit.length > 1) {
-                options.add("-target");
-                options.add(versionSplit[0] + '.' + versionSplit[1]);
-            } else {
-                throw new JavaCompilerException("Could not determine target version!");
-            }
+    private void compileScripts() throws Exception {
+        Files.createDirectories(destination);
+        initializeScriptingFileManager();
+        var paths = Files.walk(sourcePath).filter(path -> path.toString().endsWith("module-info.java")).collect(Collectors.toList());
+        for (Path path : paths) {
+            compile(path);
+        }
+    }
+
+    private void compile(Path sourcePath) throws JavaCompilerException, IOException {
+        var sources = Files.walk(sourcePath).filter(JavaFilter::accept).collect(Collectors.toList());
+        var options = parseOptions(sourcePath);
+        var writer = new StringWriter();
+        final boolean compilationSuccess = getScriptingEngine().getCompiler().getTask(writer, scriptingFileManager, listener, options, null, scriptingFileManager.getJavaFileObjectsFromPaths(sources)).call();
+        if (!compilationSuccess) {
+            throw new JavaCompilerException(writer.toString());
+        }
+        tryConfigureModuleLayer();
+    }
+
+    private void tryConfigureModuleLayer() {
+        var moduleNames = scriptingFileManager.getModuleNames();
+        if(moduleNames.isEmpty()) {
+            return;
         }
 
-        fileManager = getScriptingEngine().getCompiler().getStandardFileManager(listener, null, StandardCharsets.UTF_8);
+        try {
+            Configuration configuration = ModuleLayer.boot().configuration().resolve(ModuleFinder.of(destination), ModuleFinder.of(), moduleNames);
+            layer = ModuleLayer.boot().defineModulesWithOneLoader(configuration, ClassLoader.getSystemClassLoader());
+        } catch (Exception e) {
+            LOGGER.warn("Couldn't configure module layer of modules {} : {}", moduleNames, e.getMessage());
+        }
+    }
+
+
+    private void initializeScriptingFileManager() throws IOException {
+        var fileManager = getScriptingEngine().getCompiler().getStandardFileManager(listener, null, StandardCharsets.UTF_8);
+        fileManager.setLocation(StandardLocation.CLASS_PATH, Collections.emptyList());
+        fileManager.setLocationFromPaths(StandardLocation.CLASS_OUTPUT, Collections.singletonList(destination));
         scriptingFileManager = new ScriptingFileManager(fileManager);
     }
 
-    private boolean addOptionIfNotNull(List<String> list, String nullChecked, String before) {
-        if (nullChecked == null) {
-            return false;
-        }
-
-        if (before.endsWith(":")) {
-            list.add(before + nullChecked);
+    private List<String> parseOptions(Path sourcePath) {
+        String moduleSourcePath;
+        if(sourcePath.equals(this.sourcePath)) {
+            moduleSourcePath = sourcePath.toString();
         } else {
-            list.add(before);
-            list.add(nullChecked);
+            moduleSourcePath =  this.sourcePath.toString() + File.pathSeparatorChar +  sourcePath.toString();
         }
-
-        return true;
+        return List.of("--module-path", System.getProperty("jdk.module.path"),  "--module-source-path", moduleSourcePath,
+                "-g:"  + getProperty("g"), "-target", System.getProperty("java.specification.version"), "-implicit:class"
+        );
     }
 
-    private ClassLoader determineScriptParentClassloader() {
-        final String classloader = getProperty("classloader");
-        if (classloader == null) {
-            return ClassLoader.getSystemClassLoader();
-        }
+    @Override
+    public Map<Path, Throwable> executeScripts(Iterable<Path> sourcePaths)  {
+        final Map<Path, Throwable> executionFailures = new LinkedHashMap<>();
 
-        switch (classloader) {
-            case "ThreadContext": {
-                return Thread.currentThread().getContextClassLoader();
-            }
-            case "System": {
-                return ClassLoader.getSystemClassLoader();
-            }
-            default: {
+        for (Path sourcePath : sourcePaths) {
+            var scriptFileInfo = scriptingFileManager.getScriptInfo(sourcePath);
+
+            if(isNull(scriptFileInfo)) {
                 try {
-                    return Class.forName(classloader).getClassLoader();
-                } catch (ClassNotFoundException e) {
-                    return ClassLoader.getSystemClassLoader();
+                    compile(sourcePath);
+                    scriptFileInfo = scriptingFileManager.getScriptInfo(sourcePath);
+                } catch (JavaCompilerException | IOException e) {
+                    LOGGER.error(e.getMessage(), e);
+                    continue;
                 }
             }
+
+            if(isNull(scriptFileInfo)) {
+                LOGGER.error("Compilation successfull, but class coresponding to " + sourcePath.toString() + " not found!");
+            }
+
+            var javaName = scriptFileInfo.getJavaName();
+
+            if(javaName.contains("$") || javaName.equals("module-info")) {
+                continue;
+            }
+
+            setCurrentExecutingScript(sourcePath);
+            try {
+                var classLoader = getClassLoaderOfScript(scriptFileInfo);
+                final Class<?> javaClass = classLoader.loadClass(scriptFileInfo.getJavaName());
+                Method mainMethod = javaClass.getMethod("main", String[].class);
+
+                if ((mainMethod != null) && Modifier.isStatic(mainMethod.getModifiers()) && !javaClass.isAnnotationPresent(Disabled.class)) {
+                    mainMethod.invoke(null, (Object) new String[] { scriptFileInfo.getSourcePath().toString() });
+                }
+
+            } catch (Exception e) {
+                executionFailures.put(sourcePath, e);
+            } finally {
+                setCurrentExecutingScript(null);
+            }
         }
+        return executionFailures;
+    }
+
+    private ClassLoader getClassLoaderOfScript(ScriptingFileInfo scriptFileInfo) {
+        if(nonNull(layer)) {
+            try{
+                return layer.findLoader(scriptFileInfo.getModuleName());
+            } catch (Exception e) {
+                LOGGER.warn("Could not find class loader of module", e);
+            }
+        }
+        return scriptingFileManager.getClassLoader(scriptFileInfo.getLocation());
     }
 
     @Override
-    public Map<Path, Throwable> executeScripts(Iterable<Path> sourcePaths) throws Exception {
-        try (var writer = new StringWriter()) {
-
-            var destination = Path.of("compiledScripts");
-            Files.createDirectories(destination);
-            fileManager.setLocation(StandardLocation.CLASS_PATH, Collections.emptyList());
-            fileManager.setLocationFromPaths(StandardLocation.CLASS_OUTPUT,  Collections.singletonList(destination));
-
-            final boolean compilationSuccess = getScriptingEngine().getCompiler().getTask(writer, scriptingFileManager, listener, options, null, fileManager.getJavaFileObjectsFromPaths(sourcePaths)).call();
-            if (!compilationSuccess) {
-                throw new JavaCompilerException(writer.toString());
-            }
-
-            final ClassLoader parentClassLoader = determineScriptParentClassloader();
-
-            final Map<Path, Throwable> executionFailures = new LinkedHashMap<>();
-            final Iterable<ScriptingOutputFileObject> compiledClasses = scriptingFileManager.getCompiledClasses();
-
-
-            for (Path sourcePath : sourcePaths) {
-                boolean found = false;
-                String lastModuleName = "";
-                for (ScriptingOutputFileObject compiledClass : compiledClasses) {
-                    final Path compiledSourcePath = compiledClass.getSourcePath();
-                    // sourePath can be relative, so we have to use endsWith
-                    if ((compiledSourcePath != null) && (compiledSourcePath.equals(sourcePath) || compiledSourcePath.endsWith(sourcePath))) {
-                        final String javaName = compiledClass.getJavaName();
-                        if (javaName.indexOf('$') != -1) {
-                            continue;
-                        }
-
-                        found = true;
-                        setCurrentExecutingScript(compiledSourcePath);
-                        try {
-
-                            final ScriptingClassLoader loader = new ScriptingClassLoader(parentClassLoader, compiledClasses);
-                            final Class<?> javaClass = loader.loadClass(javaName);
-                            Method mainMethod = null;
-                            for (Method m : javaClass.getMethods()) {
-                                if (m.getName().equals("main") && Modifier.isStatic(m.getModifiers()) && (m.getParameterCount() == 1) && (m.getParameterTypes()[0] == String[].class)) {
-                                    mainMethod = m;
-                                    break;
-                                }
-                            }
-                            if ((mainMethod != null) && !javaClass.isAnnotationPresent(Disabled.class)) {
-                                mainMethod.invoke(null, (Object) new String[]
-                                        {
-                                                compiledSourcePath.toString()
-                                        });
-                            }
-                        } catch (Exception e) {
-                            executionFailures.put(compiledSourcePath, e);
-                        } finally {
-                            setCurrentExecutingScript(null);
-                        }
-
-                        break;
-                    }
-                }
-
-                if (!found) {
-                    LOGGER.error("Compilation successfull, but class coresponding to " + sourcePath.toString() + " not found!");
-                }
-            }
-
-            return executionFailures;
-        }
-    }
-
-    @Override
-    public Entry<Path, Throwable> executeScript(Path sourcePath) throws Exception {
-        final Map<Path, Throwable> executionFailures = executeScripts(Arrays.asList(sourcePath));
+    public Entry<Path, Throwable> executeScript(Path sourcePath)  {
+        final Map<Path, Throwable> executionFailures = executeScripts(Collections.singletonList(sourcePath));
         if (!executionFailures.isEmpty()) {
             return executionFailures.entrySet().iterator().next();
         }

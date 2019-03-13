@@ -1,20 +1,20 @@
 package org.l2j.gameserver.scripting.java;
 
+import org.l2j.commons.util.Util;
+
 import javax.tools.*;
 import javax.tools.JavaFileObject.Kind;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.LinkedList;
+import java.nio.file.Path;
+import java.util.*;
 
-/**
- * @author HorridoJoho
- */
-final class ScriptingFileManager extends ForwardingJavaFileManager<JavaFileManager> {
+final class ScriptingFileManager extends ForwardingJavaFileManager<StandardJavaFileManager> {
 
-    private final LinkedList<ScriptingOutputFileObject> _classOutputs = new LinkedList<>();
+    private final Map<Path, ScriptingFileInfo> scriptsFileInfo = new HashMap<>();
+    private final Set<String> moduleNames = new HashSet<>();
 
-    public ScriptingFileManager(JavaFileManager wrapped) {
-        super(wrapped);
+    public ScriptingFileManager(StandardJavaFileManager fileManager) {
+        super(fileManager);
     }
 
     @Override
@@ -26,14 +26,27 @@ final class ScriptingFileManager extends ForwardingJavaFileManager<JavaFileManag
                 className = className.replace('/', '.');
             }
 
-            var scriptFileInfo = new ScriptingOutputFileObject(sibling, className, this.inferModuleName(location));
-            _classOutputs.add(scriptFileInfo);
+            var scriptPath = Path.of(sibling.getName());
+            var moduleName = inferModuleName(location);
+            var scriptFileInfo = new ScriptingFileInfo(scriptPath, className, moduleName, location);
+
+            scriptsFileInfo.put(scriptPath, scriptFileInfo);
+            if(!Util.isNullOrEmpty(moduleName)) {
+                moduleNames.add(moduleName);
+            }
         }
         return javaFileObject;
     }
 
+    public Set<String> getModuleNames() {
+        return moduleNames;
+    }
 
-    Iterable<ScriptingOutputFileObject> getCompiledClasses() {
-        return Collections.unmodifiableCollection(_classOutputs);
+    public ScriptingFileInfo getScriptInfo(Path scriptPath) {
+        return scriptsFileInfo.get(scriptPath);
+    }
+
+    public Iterable<? extends JavaFileObject> getJavaFileObjectsFromPaths(Iterable<Path> paths) {
+        return fileManager.getJavaFileObjectsFromPaths(paths);
     }
 }

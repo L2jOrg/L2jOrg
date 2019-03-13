@@ -1,20 +1,19 @@
 package org.l2j.gameserver.scripting.java;
 
-import javax.tools.FileObject;
+import javax.tools.JavaFileManager.Location;
 import java.nio.file.Path;
 
-/**
- * @author HorridoJoho
- */
-final class ScriptingOutputFileObject  {
+final class ScriptingFileInfo {
     private final Path _sourcePath;
     private final String _javaName;
     private final String moduleName;
+    private final Location location;
 
-    public ScriptingOutputFileObject(FileObject sibling, String javaName, String moduleName) {
-        _sourcePath = sibling != null ? Path.of(sibling.getName()) : null;
+    public ScriptingFileInfo(Path scriptPath, String javaName, String moduleName, Location location) {
+        _sourcePath = scriptPath;
         _javaName = javaName;
         this.moduleName = moduleName;
+        this.location = location;
     }
 
     public Path getSourcePath() {
@@ -27,5 +26,9 @@ final class ScriptingOutputFileObject  {
 
     public String getModuleName() {
         return moduleName;
+    }
+
+    public Location getLocation() {
+        return location;
     }
 }
