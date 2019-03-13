@@ -48,7 +48,7 @@ public final class ScriptEngineManager implements IGameXmlReader {
     @Override
     public void load() {
         _exclusions.clear();
-        parseDatapackFile("config/Scripts.xml");
+        parseFile(new File("config/Scripts.xml"));
         LOGGER.info("Loaded " + _exclusions.size() + " files to exclude.");
     }
 

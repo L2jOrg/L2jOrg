@@ -40,7 +40,7 @@ public class ClanRewardData implements IGameXmlReader {
 
     @Override
     public void load() {
-        parseDatapackFile("config/ClanReward.xml");
+        parseFile(new File("config/ClanReward.xml"));
         for (ClanRewardType type : ClanRewardType.values()) {
             LOGGER.info(getClass().getSimpleName() + ": Loaded: " + (_clanRewards.containsKey(type) ? _clanRewards.get(type).size() : 0) + " rewards for " + type);
         }

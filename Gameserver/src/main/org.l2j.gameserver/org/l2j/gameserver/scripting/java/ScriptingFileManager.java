@@ -1,10 +1,7 @@
 package org.l2j.gameserver.scripting.java;
 
-import javax.tools.FileObject;
-import javax.tools.ForwardingJavaFileManager;
-import javax.tools.JavaFileObject;
+import javax.tools.*;
 import javax.tools.JavaFileObject.Kind;
-import javax.tools.StandardJavaFileManager;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -12,11 +9,11 @@ import java.util.LinkedList;
 /**
  * @author HorridoJoho
  */
-final class ScriptingFileManager extends ForwardingJavaFileManager<StandardJavaFileManager> {
+final class ScriptingFileManager extends ForwardingJavaFileManager<JavaFileManager> {
 
     private final LinkedList<ScriptingOutputFileObject> _classOutputs = new LinkedList<>();
 
-    public ScriptingFileManager(StandardJavaFileManager wrapped) {
+    public ScriptingFileManager(JavaFileManager wrapped) {
         super(wrapped);
     }
 
@@ -34,6 +31,7 @@ final class ScriptingFileManager extends ForwardingJavaFileManager<StandardJavaF
         }
         return javaFileObject;
     }
+
 
     Iterable<ScriptingOutputFileObject> getCompiledClasses() {
         return Collections.unmodifiableCollection(_classOutputs);

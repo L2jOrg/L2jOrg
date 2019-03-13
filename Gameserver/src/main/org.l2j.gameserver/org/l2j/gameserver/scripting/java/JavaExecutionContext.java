@@ -6,10 +6,7 @@ import org.l2j.gameserver.scripting.annotations.Disabled;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.tools.Diagnostic;
-import javax.tools.DiagnosticListener;
-import javax.tools.JavaFileObject;
-import javax.tools.StandardLocation;
+import javax.tools.*;
 import java.io.File;
 import java.io.StringWriter;
 import java.lang.reflect.Method;
@@ -28,31 +25,36 @@ import static java.util.Objects.nonNull;
 public final class JavaExecutionContext extends AbstractExecutionContext<JavaScriptingEngine> {
     private static final Logger LOGGER = LoggerFactory.getLogger(JavaExecutionContext.class.getName());
 
-    private static final List<String> _options = new LinkedList<>();
-    private static final DiagnosticListener<JavaFileObject> listener = new DefaultDiagnosticListener();
+    private final List<String> options = new LinkedList<>();
+    private final DiagnosticListener<JavaFileObject> listener = new DefaultDiagnosticListener();
+    private StandardJavaFileManager fileManager;
+    private ScriptingFileManager scriptingFileManager;
 
     JavaExecutionContext(JavaScriptingEngine engine) {
         super(engine);
 
-        addOptionIfNotNull(_options, System.getProperty("jdk.module.path"), "--module-path");
-        addOptionIfNotNull(_options, new File(Config.DATAPACK_ROOT, getProperty("sourcepath")).getAbsolutePath(), "--module-source-path");
+        addOptionIfNotNull(options, System.getProperty("jdk.module.path"), "--module-path");
+        addOptionIfNotNull(options, new File(Config.DATAPACK_ROOT, getProperty("sourcepath")).getAbsolutePath(), "--module-source-path");
         // Set options.
-        addOptionIfNotNull(_options, getProperty("g"), "-g:");
+        addOptionIfNotNull(options, getProperty("g"), "-g:");
 
         // We always set the target JVM to the current running version.
         final String targetVersion = System.getProperty("java.specification.version");
         if (!targetVersion.contains(".")) {
-            _options.add("-target");
-            _options.add(targetVersion);
+            options.add("-target");
+            options.add(targetVersion);
         } else {
             final String[] versionSplit = targetVersion.split("\\.");
             if (versionSplit.length > 1) {
-                _options.add("-target");
-                _options.add(versionSplit[0] + '.' + versionSplit[1]);
+                options.add("-target");
+                options.add(versionSplit[0] + '.' + versionSplit[1]);
             } else {
                 throw new JavaCompilerException("Could not determine target version!");
             }
         }
+
+        fileManager = getScriptingEngine().getCompiler().getStandardFileManager(listener, null, StandardCharsets.UTF_8);
+        scriptingFileManager = new ScriptingFileManager(fileManager);
     }
 
     private boolean addOptionIfNotNull(List<String> list, String nullChecked, String before) {
@@ -95,28 +97,27 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 
     @Override
     public Map<Path, Throwable> executeScripts(Iterable<Path> sourcePaths) throws Exception {
-
-        try (var fileManager = getScriptingEngine().getCompiler().getStandardFileManager(listener, null, StandardCharsets.UTF_8);
-             ScriptingFileManager scriptingFileManager = new ScriptingFileManager(fileManager);
-             StringWriter strOut = new StringWriter()) {
+        try (var writer = new StringWriter()) {
 
             var destination = Path.of("compiledScripts");
             Files.createDirectories(destination);
             fileManager.setLocation(StandardLocation.CLASS_PATH, Collections.emptyList());
             fileManager.setLocationFromPaths(StandardLocation.CLASS_OUTPUT,  Collections.singletonList(destination));
 
-            final boolean compilationSuccess = getScriptingEngine().getCompiler().getTask(strOut, scriptingFileManager, listener, _options, null, fileManager.getJavaFileObjectsFromPaths(sourcePaths)).call();
+            final boolean compilationSuccess = getScriptingEngine().getCompiler().getTask(writer, scriptingFileManager, listener, options, null, fileManager.getJavaFileObjectsFromPaths(sourcePaths)).call();
             if (!compilationSuccess) {
-                throw new JavaCompilerException(strOut.toString());
+                throw new JavaCompilerException(writer.toString());
             }
 
             final ClassLoader parentClassLoader = determineScriptParentClassloader();
 
             final Map<Path, Throwable> executionFailures = new LinkedHashMap<>();
             final Iterable<ScriptingOutputFileObject> compiledClasses = scriptingFileManager.getCompiledClasses();
+
+
             for (Path sourcePath : sourcePaths) {
                 boolean found = false;
-
+                String lastModuleName = "";
                 for (ScriptingOutputFileObject compiledClass : compiledClasses) {
                     final Path compiledSourcePath = compiledClass.getSourcePath();
                     // sourePath can be relative, so we have to use endsWith
@@ -129,6 +130,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
                         found = true;
                         setCurrentExecutingScript(compiledSourcePath);
                         try {
+
                             final ScriptingClassLoader loader = new ScriptingClassLoader(parentClassLoader, compiledClasses);
                             final Class<?> javaClass = loader.loadClass(javaName);
                             Method mainMethod = null;
