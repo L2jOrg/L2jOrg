@@ -117,9 +117,8 @@ public class HappyHours extends LongTimeEvent
 		cancelQuestTimers("REWARD_SIBI_COINS");
 		startQuestTimer("REWARD_SIBI_COINS", REWARD_INTERVAL + 1000, null, null, true);
 	}
-	
-	public static void main(String[] args)
-	{
+
+	public static void init() {
 		new HappyHours();
 	}
 }

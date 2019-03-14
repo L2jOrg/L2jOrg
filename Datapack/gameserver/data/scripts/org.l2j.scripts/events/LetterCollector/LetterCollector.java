@@ -353,9 +353,8 @@ public final class LetterCollector extends LongTimeEvent
 	{
 		return npc.getId() + "-1.htm";
 	}
-	
-	public static void main(String[] args)
-	{
+
+	public static void init() {
 		new LetterCollector();
 	}
 }

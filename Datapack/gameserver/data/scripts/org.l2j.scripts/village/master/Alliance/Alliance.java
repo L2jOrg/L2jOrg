@@ -14,63 +14,53 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package events.TotalRecall;
+package village.master.Alliance;
 
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.model.holders.SkillHolder;
-import org.l2j.gameserver.model.quest.LongTimeEvent;
-import org.l2j.gameserver.model.skills.SkillCaster;
+
+import ai.AbstractNpcAI;
 
 /**
- * Total Recall Event
- * @URL https://eu.4gameforum.com/threads/578395/
- * @author QuangNguyen
+ * @author UnAfraid
  */
-public final class TotalRecall extends LongTimeEvent
+public final class Alliance extends AbstractNpcAI
 {
-	// NPC
-	private static final int FROG = 9013;
-	// Skill
-	private static final SkillHolder FROG_KISS = new SkillHolder(55314, 1);
-	
-	private TotalRecall()
+	// @formatter:off
+	private static final int[] NPCS =
 	{
-		addStartNpc(FROG);
-		addFirstTalkId(FROG);
-		addTalkId(FROG);
+		30026,30031,30037,30066,30070,30109,30115,30120,30154,30174,
+		30175,30176,30187,30191,30195,30288,30289,30290,30297,30358,
+		30373,30462,30474,30498,30499,30500,30503,30504,30505,30508,
+		30511,30512,30513,30520,30525,30565,30594,30595,30676,30677,
+		30681,30685,30687,30689,30694,30699,30704,30845,30847,30849,
+		30854,30857,30862,30865,30894,30897,30900,30905,30910,30913,
+	};
+	// @formatter:on
+	
+	private Alliance()
+	{
+		addStartNpc(NPCS);
+		addTalkId(NPCS);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = null;
-		switch (event)
+		if (!"9001-01.htm".equals(event) && (player.getClan() == null))
 		{
-			case "9013-1.htm":
-			case "9013-2.htm":
-			case "9013-3.htm":
-			{
-				htmltext = event;
-				break;
-			}
-			case "frog_buff":
-			{
-				SkillCaster.triggerCast(npc, player, FROG_KISS.getSkill());
-				htmltext = "9013-4.htm";
-				break;
-			}
+			return "9001-04.htm";
 		}
-		return htmltext;
+		return event;
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		return "9013-1.htm";
+		return "9001-01.htm";
 	}
-
+	
 	public static void init() {
-		new TotalRecall();
+		new Alliance();
 	}
 }

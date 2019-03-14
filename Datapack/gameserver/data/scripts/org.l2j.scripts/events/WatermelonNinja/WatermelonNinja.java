@@ -485,7 +485,7 @@ public class WatermelonNinja extends LongTimeEvent
 	};
 	//@formatter:on
 	
-	public WatermelonNinja()
+	private WatermelonNinja()
 	{
 		addAttackId(SQUASH_LIST);
 		addKillId(SQUASH_LIST);
@@ -648,7 +648,7 @@ public class WatermelonNinja extends LongTimeEvent
 		npc.deleteMe();
 	}
 	
-	public static void main(String[] args)
+	public static void init()
 	{
 		new WatermelonNinja();
 	}

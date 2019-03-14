@@ -487,7 +487,7 @@ public class SquashEvent extends LongTimeEvent
 	};
 	//@formatter:on
 	
-	public SquashEvent()
+	private SquashEvent()
 	{
 		addAttackId(SQUASH_LIST);
 		addKillId(SQUASH_LIST);
@@ -649,9 +649,8 @@ public class SquashEvent extends LongTimeEvent
 		addSpawn(npcId, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 60000);
 		npc.deleteMe();
 	}
-	
-	public static void main(String[] args)
-	{
+
+	public static void init() {
 		new SquashEvent();
 	}
 }

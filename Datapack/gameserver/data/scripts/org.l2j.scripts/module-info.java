@@ -6,5 +6,8 @@ module org.l2j.scripts {
     requires java.desktop;
 
     exports handlers;
+    exports quests;
+    exports events;
+    exports village.master;
 
 }

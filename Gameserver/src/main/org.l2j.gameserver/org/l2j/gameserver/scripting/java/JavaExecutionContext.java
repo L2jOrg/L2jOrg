@@ -25,8 +25,7 @@ import java.util.*;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
-import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
+import static java.util.Objects.*;
 
 public final class JavaExecutionContext extends AbstractExecutionContext<JavaScriptingEngine> {
 
@@ -41,7 +40,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
     JavaExecutionContext(JavaScriptingEngine engine) {
         super(engine);
 
-        sourcePath = Path.of(Config.DATAPACK_ROOT.getAbsolutePath(), getProperty("source.path"));
+        sourcePath = Path.of(Config.DATAPACK_ROOT.getAbsolutePath(), requireNonNullElse(getProperty("source.path"), "data/Scripts"));
         try {
             compileScripts();
         } catch (Exception e) {
@@ -52,10 +51,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
     private void compileScripts() throws Exception {
         Files.createDirectories(destination);
         initializeScriptingFileManager();
-        var paths = Files.walk(sourcePath).filter(path -> path.toString().endsWith("module-info.java")).collect(Collectors.toList());
-        for (Path path : paths) {
-            compile(path);
-        }
+        compile(sourcePath);
     }
 
     private void compile(Path sourcePath) throws JavaCompilerException, IOException {
@@ -82,7 +78,6 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
             LOGGER.warn("Couldn't configure module layer of modules {} : {}", moduleNames, e.getMessage());
         }
     }
-
 
     private void initializeScriptingFileManager() throws IOException {
         var fileManager = getScriptingEngine().getCompiler().getStandardFileManager(listener, null, StandardCharsets.UTF_8);
@@ -126,7 +121,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 
             var javaName = scriptFileInfo.getJavaName();
 
-            if(javaName.contains("$") || javaName.equals("module-info")) {
+            if(javaName.contains("$") || javaName.equals("module-info") || javaName.equals("package-info")) {
                 continue;
             }
 
@@ -140,6 +135,8 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
                     mainMethod.invoke(null, (Object) new String[] { scriptFileInfo.getSourcePath().toString() });
                 }
 
+            } catch (NoSuchMethodException e) {
+                // the script doesn't have a main method. just ignore it.
             } catch (Exception e) {
                 executionFailures.put(sourcePath, e);
             } finally {

@@ -67,7 +67,7 @@ public class SchemeBufferTable {
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc = db.parse(new File("./data/SchemeBufferSkills.xml"));
+            Document doc = db.parse(new File(Config.DATAPACK_ROOT,"   data/SchemeBufferSkills.xml"));
 
             final Node n = doc.getFirstChild();
 

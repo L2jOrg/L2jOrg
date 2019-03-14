@@ -14,36 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package events.ChefMonkeyEvent;
-
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.model.quest.LongTimeEvent;
-
 /**
- * Chef Monkey Event
- * @URL https://eu.4gameforum.com/threads/603119/
+ * Scripts defined in the village_master folder control the AI for the dialogs of village masters.<br>
+ * In particular, changing occupations, creating/disolving a clan,<br>
+ * and many more options given by village masters often require additional checks.<br>
+ * All such checks are implemented here.
  * @author Mobius
  */
-public final class ChefMonkeyEvent extends LongTimeEvent
-{
-	// NPC
-	private static final int CHEF_MONKEY = 34292;
-	
-	private ChefMonkeyEvent()
-	{
-		addStartNpc(CHEF_MONKEY);
-		addFirstTalkId(CHEF_MONKEY);
-		addTalkId(CHEF_MONKEY);
-	}
-	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		return "34292-01.htm";
-	}
-
-	public static void init() {
-		new ChefMonkeyEvent();
-	}
-}
+package village.master;

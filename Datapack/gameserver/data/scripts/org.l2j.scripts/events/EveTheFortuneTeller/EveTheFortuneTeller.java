@@ -74,9 +74,8 @@ public final class EveTheFortuneTeller extends LongTimeEvent
 	{
 		return "31855.htm";
 	}
-	
-	public static void main(String[] args)
-	{
+
+	public static void init() {
 		new EveTheFortuneTeller();
 	}
 }
