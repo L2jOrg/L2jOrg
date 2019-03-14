@@ -29,8 +29,7 @@ public final class EffectMasterHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(EffectMasterHandler.class.getName());
 	
-	public static void main(String[] args)
-	{
+	public static void init() {
 		EffectHandler.getInstance().registerHandler("AbnormalShield", AbnormalShield::new);
 		EffectHandler.getInstance().registerHandler("AbnormalTimeChange", AbnormalTimeChange::new);
 		EffectHandler.getInstance().registerHandler("AbsorbDamage", AbsorbDamage::new);

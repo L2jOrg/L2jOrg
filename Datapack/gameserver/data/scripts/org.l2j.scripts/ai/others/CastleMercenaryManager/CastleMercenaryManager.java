@@ -117,8 +117,8 @@ public final class CastleMercenaryManager extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new CastleMercenaryManager();
+		return new CastleMercenaryManager();
 	}
 }

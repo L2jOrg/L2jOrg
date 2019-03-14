@@ -25,7 +25,7 @@ import handlers.skillconditionhandlers.*;
  */
 public class SkillConditionMasterHandler
 {
-	public static void main(String[] args)
+	public static void init()
 	{
 		SkillConditionHandler.getInstance().registerHandler("EquipWeapon", EquipWeaponSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("EquipArmor", EquipArmorSkillCondition::new);

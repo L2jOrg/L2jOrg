@@ -176,8 +176,7 @@ public class ListenerTest extends AbstractNpcAI
 		return null;
 	}
 	
-	public static void main(String[] args)
-	{
-		new ListenerTest();
+	public static AbstractNpcAI provider() {
+		return new ListenerTest();
 	}
 }

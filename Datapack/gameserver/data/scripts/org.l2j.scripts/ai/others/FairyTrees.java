@@ -80,8 +80,8 @@ public class FairyTrees extends AbstractNpcAI
 		return super.onSpawn(npc);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new FairyTrees();
+		return new FairyTrees();
 	}
 }

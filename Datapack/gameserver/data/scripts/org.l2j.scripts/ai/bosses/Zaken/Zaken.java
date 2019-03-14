@@ -102,8 +102,8 @@ public class Zaken extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new Zaken();
+		return new Zaken();
 	}
 }

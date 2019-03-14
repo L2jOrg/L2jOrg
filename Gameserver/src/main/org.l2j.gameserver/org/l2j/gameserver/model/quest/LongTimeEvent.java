@@ -95,7 +95,7 @@ public class LongTimeEvent extends Quest {
         new IGameXmlReader() {
             @Override
             public void load() {
-                parseDatapackFile("data/scripts/events/" + getScriptName() + "/config.xml");
+                parseDatapackFile("data/scripts/org.l2j.scripts/events/" + getScriptName() + "/config.xml");
             }
 
             @Override

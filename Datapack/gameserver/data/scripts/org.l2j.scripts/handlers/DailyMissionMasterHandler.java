@@ -12,7 +12,7 @@ public class DailyMissionMasterHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(DailyMissionMasterHandler.class.getName());
 	
-	public static void main(String[] args)
+	public static void init()
 	{
 		DailyMissionHandler.getInstance().registerHandler("level", LevelDailyMissionHandler::new);
 		// DailyMissionHandler.getInstance().registerHandler("loginAllWeek", LoginAllWeekDailyMissionHandler::new);

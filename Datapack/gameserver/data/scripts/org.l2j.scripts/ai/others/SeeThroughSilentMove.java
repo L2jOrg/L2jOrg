@@ -49,8 +49,8 @@ public class SeeThroughSilentMove extends AbstractNpcAI
 		return super.onSpawn(npc);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new SeeThroughSilentMove();
+		return new SeeThroughSilentMove();
 	}
 }

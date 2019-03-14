@@ -16,6 +16,7 @@
  */
 package events.EveTheFortuneTeller;
 
+import events.ScriptEvent;
 import org.l2j.gameserver.enums.LuckyGameType;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -27,7 +28,7 @@ import org.l2j.gameserver.network.serverpackets.luckygame.ExStartLuckyGame;
  * Info - http://www.lineage2.com/en/news/events/11182015-eve-the-fortune-teller-returns.php
  * @author Mobius
  */
-public final class EveTheFortuneTeller extends LongTimeEvent
+public final class EveTheFortuneTeller extends LongTimeEvent implements ScriptEvent
 {
 	// NPCs
 	private static final int EVE = 31855;
@@ -75,7 +76,7 @@ public final class EveTheFortuneTeller extends LongTimeEvent
 		return "31855.htm";
 	}
 
-	public static void init() {
-		new EveTheFortuneTeller();
+	public static ScriptEvent provider() {
+		return new EveTheFortuneTeller();
 	}
 }

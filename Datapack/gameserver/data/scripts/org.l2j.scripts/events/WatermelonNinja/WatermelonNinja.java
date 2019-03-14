@@ -16,6 +16,7 @@
  */
 package events.WatermelonNinja;
 
+import events.ScriptEvent;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.L2Object;
@@ -33,7 +34,7 @@ import java.util.List;
  * @URL https://eu.4gameforum.com/threads/653089/
  * @author vGodFather
  */
-public class WatermelonNinja extends LongTimeEvent
+public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 {
 	private static final int MANAGER = 31860;
 	private static final int NECTAR_SKILL = 2005;
@@ -648,8 +649,8 @@ public class WatermelonNinja extends LongTimeEvent
 		npc.deleteMe();
 	}
 	
-	public static void init()
+	public static ScriptEvent provider()
 	{
-		new WatermelonNinja();
+		return new WatermelonNinja();
 	}
 }

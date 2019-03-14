@@ -228,8 +228,8 @@ public final class Core extends AbstractNpcAI
 		return super.onSpawn(npc);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new Core();
+		return new Core();
 	}
 }

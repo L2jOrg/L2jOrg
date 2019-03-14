@@ -16,9 +16,7 @@
  */
 package quests;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
+import org.l2j.gameserver.model.quest.Quest;
 import quests.Q00070_SagaOfThePhoenixKnight.Q00070_SagaOfThePhoenixKnight;
 import quests.Q00071_SagaOfEvasTemplar.Q00071_SagaOfEvasTemplar;
 import quests.Q00072_SagaOfTheSwordMuse.Q00072_SagaOfTheSwordMuse;
@@ -180,12 +178,16 @@ import quests.Q11021_RedGemNecklace1.Q11021_RedGemNecklace1;
 import quests.Q11022_RedGemNecklace2.Q11022_RedGemNecklace2;
 import quests.Q11023_RedGemNecklace3.Q11023_RedGemNecklace3;
 
+import java.util.ServiceLoader;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * @author NosBit
  */
-public class QuestMasterHandler
+public class Init
 {
-	private static final Logger LOGGER = Logger.getLogger(QuestMasterHandler.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Init.class.getName());
 	
 	private static final Class<?>[] QUESTS =
 	{
@@ -351,8 +353,8 @@ public class QuestMasterHandler
 		Q11023_RedGemNecklace3.class,
 	};
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
+		ServiceLoader.load(Quest.class);
 		for (Class<?> quest : QUESTS)
 		{
 			try
@@ -361,7 +363,7 @@ public class QuestMasterHandler
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.SEVERE, QuestMasterHandler.class.getSimpleName() + ": Failed loading " + quest.getSimpleName() + ":", e);
+				LOGGER.log(Level.SEVERE, Init.class.getSimpleName() + ": Failed loading " + quest.getSimpleName() + ":", e);
 			}
 		}
 	}

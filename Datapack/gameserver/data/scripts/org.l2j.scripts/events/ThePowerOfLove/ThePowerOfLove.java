@@ -16,6 +16,7 @@
  */
 package events.ThePowerOfLove;
 
+import events.ScriptEvent;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -27,7 +28,7 @@ import org.l2j.gameserver.model.skills.SkillCaster;
  * @URL http://www.lineage2.com/en/news/events/02102016-the-power-of-love-part-iii.php
  * @author hlwrave
  */
-public final class ThePowerOfLove extends LongTimeEvent
+public final class ThePowerOfLove extends LongTimeEvent implements ScriptEvent
 {
 	// NPC
 	private static final int COCO = 33893;
@@ -94,8 +95,8 @@ public final class ThePowerOfLove extends LongTimeEvent
 		return npc.getId() + "-1.htm";
 	}
 
-	public static void init()
+	public static ScriptEvent provider()
 	{
-		new ThePowerOfLove();
+		return new ThePowerOfLove();
 	}
 }

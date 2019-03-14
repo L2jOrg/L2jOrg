@@ -126,8 +126,8 @@ public final class EilhalderVonHellmann extends AbstractNpcAI
 		}
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new EilhalderVonHellmann();
+		return new EilhalderVonHellmann();
 	}
 }

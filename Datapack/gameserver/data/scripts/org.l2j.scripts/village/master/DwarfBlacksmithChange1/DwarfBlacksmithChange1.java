@@ -145,8 +145,8 @@ public final class DwarfBlacksmithChange1 extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static void init()
+	public static DwarfBlacksmithChange1 provider()
 	{
-		new DwarfBlacksmithChange1();
+		return new DwarfBlacksmithChange1();
 	}
 }

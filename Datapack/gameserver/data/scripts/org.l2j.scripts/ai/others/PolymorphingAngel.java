@@ -54,8 +54,8 @@ public final class PolymorphingAngel extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new PolymorphingAngel();
+		return new PolymorphingAngel();
 	}
 }

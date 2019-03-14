@@ -50,8 +50,8 @@ public final class Pytan extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new Pytan();
+		return new Pytan();
 	}
 }

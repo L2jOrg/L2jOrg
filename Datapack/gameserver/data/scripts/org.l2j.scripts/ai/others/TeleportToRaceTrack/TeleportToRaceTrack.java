@@ -104,8 +104,8 @@ public final class TeleportToRaceTrack extends AbstractNpcAI
 		return super.onTalk(npc, player);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new TeleportToRaceTrack();
+		return new TeleportToRaceTrack();
 	}
 }

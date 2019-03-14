@@ -178,8 +178,8 @@ public final class FactionSystem extends AbstractNpcAI
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new FactionSystem();
+		return new FactionSystem();
 	}
 }

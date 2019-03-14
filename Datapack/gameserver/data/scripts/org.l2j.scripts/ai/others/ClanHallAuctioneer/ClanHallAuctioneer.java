@@ -430,8 +430,8 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 		}
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new ClanHallAuctioneer();
+		return new ClanHallAuctioneer();
 	}
 }

@@ -784,8 +784,8 @@ public final class Baium extends AbstractNpcAI
 		}
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new Baium();
+		return new Baium();
 	}
 }

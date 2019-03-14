@@ -16,8 +16,6 @@
  */
 package custom.SellBuff;
 
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.handler.BypassHandler;
@@ -34,6 +32,8 @@ import org.l2j.gameserver.model.holders.SellBuffHolder;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.util.Util;
+
+import java.util.StringTokenizer;
 
 /**
  * Sell Buffs voice command
@@ -60,7 +60,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 		"sellbuffstop",
 	};
 	
-	private SellBuff()
+	public SellBuff()
 	{
 		if (Config.SELLBUFF_ENABLED)
 		{
@@ -439,10 +439,5 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 	public String[] getBypassList()
 	{
 		return BYPASS_COMMANDS;
-	}
-	
-	public static void main(String[] args)
-	{
-		new SellBuff();
 	}
 }

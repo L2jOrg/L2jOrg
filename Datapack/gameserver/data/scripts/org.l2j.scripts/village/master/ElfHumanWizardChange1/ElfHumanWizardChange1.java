@@ -301,8 +301,8 @@ public final class ElfHumanWizardChange1 extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static void init()
+	public static ElfHumanWizardChange1 provider()
 	{
-		new ElfHumanWizardChange1();
+		return new ElfHumanWizardChange1();
 	}
 }

@@ -16,16 +16,15 @@
  */
 package village.master.FirstClassTransferTalk;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import ai.AbstractNpcAI;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.instance.L2VillageMasterFighterInstance;
 import org.l2j.gameserver.model.actor.instance.L2VillageMasterPriestInstance;
 
-import ai.AbstractNpcAI;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * This script manages the dialogs of the headmasters of all newbie villages.<br>
@@ -154,8 +153,8 @@ public final class FirstClassTransferTalk extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static void init()
+	public static FirstClassTransferTalk provider()
 	{
-		new FirstClassTransferTalk();
+		return new FirstClassTransferTalk();
 	}
 }

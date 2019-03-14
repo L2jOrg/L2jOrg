@@ -102,8 +102,8 @@ public class Iris extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new Iris();
+		return new Iris();
 	}
 }

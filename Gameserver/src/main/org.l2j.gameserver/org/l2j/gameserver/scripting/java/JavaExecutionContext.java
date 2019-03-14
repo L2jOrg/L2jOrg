@@ -52,6 +52,11 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
         Files.createDirectories(destination);
         initializeScriptingFileManager();
         compile(sourcePath);
+        executeOnInitScripts();
+    }
+
+    private void executeOnInitScripts() {
+
     }
 
     private void compile(Path sourcePath) throws JavaCompilerException, IOException {

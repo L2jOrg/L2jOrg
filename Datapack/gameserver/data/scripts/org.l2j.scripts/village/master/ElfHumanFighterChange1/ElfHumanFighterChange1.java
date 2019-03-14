@@ -330,8 +330,8 @@ public final class ElfHumanFighterChange1 extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static void init()
+	public static ElfHumanFighterChange1 provider()
 	{
-		new ElfHumanFighterChange1();
+		return new ElfHumanFighterChange1();
 	}
 }

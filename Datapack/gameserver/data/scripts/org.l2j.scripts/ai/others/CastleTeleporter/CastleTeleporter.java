@@ -251,8 +251,8 @@ public final class CastleTeleporter extends AbstractNpcAI
 		return player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId()) && player.isClanLeader());
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new CastleTeleporter();
+		return new CastleTeleporter();
 	}
 }

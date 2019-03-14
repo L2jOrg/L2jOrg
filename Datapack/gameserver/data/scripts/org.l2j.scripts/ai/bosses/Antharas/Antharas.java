@@ -16,12 +16,9 @@
  */
 package ai.bosses.Antharas;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.l2j.gameserver.Config;
+import ai.AbstractNpcAI;
 import org.l2j.commons.util.CommonUtil;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
@@ -40,14 +37,12 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.zone.type.L2NoRestartZone;
 import org.l2j.gameserver.network.NpcStringId;
-import org.l2j.gameserver.network.serverpackets.Earthquake;
-import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2j.gameserver.network.serverpackets.PlaySound;
-import org.l2j.gameserver.network.serverpackets.SocialAction;
-import org.l2j.gameserver.network.serverpackets.SpecialCamera;
+import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.Broadcast;
 
-import ai.AbstractNpcAI;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Antharas AI.
@@ -1040,8 +1035,8 @@ public final class Antharas extends AbstractNpcAI
 		}
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new Antharas();
+		return new Antharas();
 	}
 }

@@ -60,7 +60,7 @@ public final class Alliance extends AbstractNpcAI
 		return "9001-01.htm";
 	}
 	
-	public static void init() {
-		new Alliance();
+	public static Alliance provider() {
+		return new Alliance();
 	}
 }

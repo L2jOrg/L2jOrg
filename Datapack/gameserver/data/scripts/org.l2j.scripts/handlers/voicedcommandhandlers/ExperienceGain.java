@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package handlers.usercommandhandlers;
+package handlers.voicedcommandhandlers;
 
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
 import org.l2j.gameserver.model.actor.L2Playable;
@@ -72,5 +72,9 @@ public final class ExperienceGain implements IVoicedCommandHandler
 	public String[] getVoicedCommandList()
 	{
 		return COMMANDS;
+	}
+
+	public static IVoicedCommandHandler provider() {
+		return new ExperienceGain();
 	}
 }

@@ -101,8 +101,8 @@ public final class Proclaimer extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new Proclaimer();
+		return new Proclaimer();
 	}
 }

@@ -64,8 +64,8 @@ public class Ateld extends AbstractNpcAI
 		return "31714.html";
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new Ateld();
+		return new Ateld();
 	}
 }

@@ -490,8 +490,8 @@ public final class ClanHallManager extends AbstractNpcAI
 		return ((npc.getClanHall().getOwnerId() == player.getClanId()) && (player.getClanId() != 0));
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new ClanHallManager();
+		return new ClanHallManager();
 	}
 }

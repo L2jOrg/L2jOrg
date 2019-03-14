@@ -144,8 +144,8 @@ public final class DarkElfChange1 extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static void init()
+	public static DarkElfChange1 provider()
 	{
-		new DarkElfChange1();
+		return new DarkElfChange1();
 	}
 }

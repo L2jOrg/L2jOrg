@@ -16,6 +16,7 @@
  */
 package events.HappyHours;
 
+import events.ScriptEvent;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -27,7 +28,7 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author Mobius
  */
-public class HappyHours extends LongTimeEvent
+public class HappyHours extends LongTimeEvent implements ScriptEvent
 {
 	// NPC
 	private static final int SIBI = 34262;
@@ -118,7 +119,7 @@ public class HappyHours extends LongTimeEvent
 		startQuestTimer("REWARD_SIBI_COINS", REWARD_INTERVAL + 1000, null, null, true);
 	}
 
-	public static void init() {
-		new HappyHours();
+	public static ScriptEvent provider() {
+		return new HappyHours();
 	}
 }

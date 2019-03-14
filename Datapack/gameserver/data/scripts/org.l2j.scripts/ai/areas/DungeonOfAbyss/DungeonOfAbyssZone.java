@@ -113,8 +113,8 @@ public class DungeonOfAbyssZone extends AbstractNpcAI
 		return super.onEnterZone(creature, zone);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new DungeonOfAbyssZone();
+		return new DungeonOfAbyssZone();
 	}
 }

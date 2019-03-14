@@ -145,8 +145,8 @@ public final class DwarfWarehouseChange1 extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static void init()
+	public static DwarfWarehouseChange1 provider()
 	{
-		new DwarfWarehouseChange1();
+		return new DwarfWarehouseChange1();
 	}
 }

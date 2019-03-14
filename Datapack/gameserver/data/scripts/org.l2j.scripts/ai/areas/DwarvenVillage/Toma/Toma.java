@@ -62,8 +62,8 @@ public class Toma extends AbstractNpcAI
 		return "30556.htm";
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new Toma();
+		return new Toma();
 	}
 }

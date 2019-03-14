@@ -69,8 +69,8 @@ public class RandomWalkingGuards extends AbstractNpcAI
 		return super.onSpawn(npc);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new RandomWalkingGuards();
+		return new RandomWalkingGuards();
 	}
 }

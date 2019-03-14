@@ -77,8 +77,8 @@ public final class CastleSiegeManager extends AbstractNpcAI
 		return npc.getCastle().getSiege().isInProgress();
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new CastleSiegeManager();
+		return new CastleSiegeManager();
 	}
 }

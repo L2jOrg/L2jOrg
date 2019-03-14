@@ -55,8 +55,8 @@ public final class Roxxy extends AbstractNpcAI
 		return super.onSpawn(npc);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new Roxxy();
+		return new Roxxy();
 	}
 }

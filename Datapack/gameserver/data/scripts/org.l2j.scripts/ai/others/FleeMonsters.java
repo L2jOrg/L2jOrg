@@ -65,8 +65,8 @@ public final class FleeMonsters extends AbstractNpcAI
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new FleeMonsters();
+		return new FleeMonsters();
 	}
 }

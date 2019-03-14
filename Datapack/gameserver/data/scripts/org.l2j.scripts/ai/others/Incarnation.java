@@ -72,8 +72,8 @@ public final class Incarnation extends AbstractNpcAI
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new Incarnation();
+		return new Incarnation();
 	}
 }

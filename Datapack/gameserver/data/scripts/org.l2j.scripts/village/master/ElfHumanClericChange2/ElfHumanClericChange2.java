@@ -213,8 +213,8 @@ public final class ElfHumanClericChange2 extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static void init()
+	public static ElfHumanClericChange2 provider()
 	{
-		new ElfHumanClericChange2();
+		return new ElfHumanClericChange2();
 	}
 }

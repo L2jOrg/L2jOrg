@@ -27,8 +27,7 @@ import handlers.conditions.PlayerLevelCondition;
  */
 public class ConditionMasterHandler
 {
-	public static void main(String[] args)
-	{
+	public static void init() {
 		ConditionHandler.getInstance().registerHandler("CategoryType", CategoryTypeCondition::new);
 		ConditionHandler.getInstance().registerHandler("NpcLevel", NpcLevelCondition::new);
 		ConditionHandler.getInstance().registerHandler("PlayerLevel", PlayerLevelCondition::new);

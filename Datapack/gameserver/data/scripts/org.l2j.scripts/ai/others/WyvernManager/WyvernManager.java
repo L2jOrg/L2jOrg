@@ -266,8 +266,8 @@ public final class WyvernManager extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new WyvernManager();
+		return new WyvernManager();
 	}
 }

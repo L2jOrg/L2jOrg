@@ -119,8 +119,8 @@ public class NewbieGuide extends AbstractNpcAI
 		player.sendPacket(new PlaySound(2, voice, 0, 0, player.getX(), player.getY(), player.getZ()));
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new NewbieGuide();
+		return new NewbieGuide();
 	}
 }

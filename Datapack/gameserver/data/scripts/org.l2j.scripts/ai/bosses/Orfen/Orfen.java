@@ -343,8 +343,8 @@ public final class Orfen extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new Orfen();
+		return new Orfen();
 	}
 }

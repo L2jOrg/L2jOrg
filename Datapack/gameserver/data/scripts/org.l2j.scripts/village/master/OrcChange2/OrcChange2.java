@@ -253,8 +253,8 @@ public final class OrcChange2 extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static void init()
+	public static OrcChange2 provider()
 	{
-		new OrcChange2();
+		return new OrcChange2();
 	}
 }

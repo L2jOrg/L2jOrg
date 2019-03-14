@@ -16,6 +16,7 @@
  */
 package events.ChefMonkeyEvent;
 
+import events.ScriptEvent;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
@@ -25,7 +26,7 @@ import org.l2j.gameserver.model.quest.LongTimeEvent;
  * @URL https://eu.4gameforum.com/threads/603119/
  * @author Mobius
  */
-public final class ChefMonkeyEvent extends LongTimeEvent
+public final class ChefMonkeyEvent extends LongTimeEvent implements ScriptEvent
 {
 	// NPC
 	private static final int CHEF_MONKEY = 34292;
@@ -43,7 +44,7 @@ public final class ChefMonkeyEvent extends LongTimeEvent
 		return "34292-01.htm";
 	}
 
-	public static void init() {
-		new ChefMonkeyEvent();
+	public static ScriptEvent provider() {
+		return new ChefMonkeyEvent();
 	}
 }

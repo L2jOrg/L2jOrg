@@ -92,8 +92,8 @@ public final class DayNightSpawns extends AbstractNpcAI
 		});
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new DayNightSpawns();
+		return new DayNightSpawns();
 	}
 }

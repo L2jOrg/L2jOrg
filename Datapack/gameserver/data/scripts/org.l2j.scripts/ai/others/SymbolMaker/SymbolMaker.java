@@ -84,8 +84,8 @@ public final class SymbolMaker extends AbstractNpcAI
 		return "symbol_maker.htm";
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new SymbolMaker();
+		return new SymbolMaker();
 	}
 }

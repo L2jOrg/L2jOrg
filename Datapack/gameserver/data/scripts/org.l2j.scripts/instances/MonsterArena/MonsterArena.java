@@ -59,7 +59,7 @@ public class MonsterArena extends AbstractInstance
 	private static final String MONSTER_ARENA_VARIABLE = "MA_C";
 	private static final int TEMPLATE_ID = 192;
 	
-	public MonsterArena()
+	private MonsterArena()
 	{
 		super(TEMPLATE_ID);
 		addStartNpc(LEO, MACHINE, SUPPLIES);
@@ -298,8 +298,7 @@ public class MonsterArena extends AbstractInstance
 		return npc.getId() + "-01.htm";
 	}
 	
-	public static void main(String[] args)
-	{
-		new MonsterArena();
+	public static AbstractInstance provider() {
+		return new MonsterArena();
 	}
 }

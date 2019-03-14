@@ -16,9 +16,7 @@
  */
 package village.master.Clan;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import ai.AbstractNpcAI;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -26,14 +24,11 @@ import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.RegisterEvent;
 import org.l2j.gameserver.model.events.annotations.RegisterType;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanJoin;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanLeft;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
+import org.l2j.gameserver.model.events.impl.character.player.*;
 import org.l2j.gameserver.model.skills.CommonSkill;
 
-import ai.AbstractNpcAI;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author UnAfraid
@@ -165,7 +160,7 @@ public final class Clan extends AbstractNpcAI
 		event.getActiveChar().getPlayerInstance().getEffectList().stopSkillEffects(true, CommonSkill.CLAN_ADVENT.getId());
 	}
 	
-	public static void init() {
-		new Clan();
+	public static Clan provider() {
+		return new Clan();
 	}
 }

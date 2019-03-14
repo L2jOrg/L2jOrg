@@ -73,8 +73,8 @@ public class PvpFlaggingStopTask extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new PvpFlaggingStopTask();
+		return new PvpFlaggingStopTask();
 	}
 }

@@ -16,6 +16,7 @@
  */
 package custom.events.Race;
 
+import events.ScriptEvent;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.SkillData;
@@ -38,7 +39,7 @@ import java.util.concurrent.ScheduledFuture;
 /**
  * @author Gnacik
  */
-public final class Race extends Event
+public final class Race extends Event implements ScriptEvent
 {
 	// Event NPCs list
 	private List<L2Npc> _npclist;
@@ -404,8 +405,8 @@ public final class Race extends Event
 		eventStop();
 	}
 	
-	public static void main(String[] args)
+	public static ScriptEvent provider()
 	{
-		new Race();
+		return new Race();
 	}
 }

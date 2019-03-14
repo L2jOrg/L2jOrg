@@ -16,9 +16,7 @@
  */
 package events.SquashEvent;
 
-import java.util.Arrays;
-import java.util.List;
-
+import events.ScriptEvent;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.ChatType;
@@ -31,10 +29,13 @@ import org.l2j.gameserver.model.quest.LongTimeEvent;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * @author vGodFather
  */
-public class SquashEvent extends LongTimeEvent
+public class SquashEvent extends LongTimeEvent implements ScriptEvent
 {
 	private static final int MANAGER = 31860;
 	private static final int NECTAR_SKILL = 2005;
@@ -650,7 +651,7 @@ public class SquashEvent extends LongTimeEvent
 		npc.deleteMe();
 	}
 
-	public static void init() {
-		new SquashEvent();
+	public static ScriptEvent provider() {
+		 return new SquashEvent();
 	}
 }

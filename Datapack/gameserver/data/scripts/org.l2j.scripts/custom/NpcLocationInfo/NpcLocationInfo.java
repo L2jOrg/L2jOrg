@@ -16,16 +16,15 @@
  */
 package custom.NpcLocationInfo;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import ai.AbstractNpcAI;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.util.Util;
 
-import ai.AbstractNpcAI;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Npc Location Info AI.
@@ -255,8 +254,7 @@ public class NpcLocationInfo extends AbstractNpcAI
 		addTalkId(NPC);
 	}
 	
-	public static void main(String args[])
-	{
-		new NpcLocationInfo();
+	public static AbstractNpcAI provider() {
+		return new NpcLocationInfo();
 	}
 }

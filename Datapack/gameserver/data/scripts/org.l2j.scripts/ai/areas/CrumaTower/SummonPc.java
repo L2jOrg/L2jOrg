@@ -96,8 +96,8 @@ public final class SummonPc extends AbstractNpcAI
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new SummonPc();
+		return new SummonPc();
 	}
 }

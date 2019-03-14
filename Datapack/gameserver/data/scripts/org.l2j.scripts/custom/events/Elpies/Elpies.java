@@ -16,6 +16,7 @@
  */
 package custom.events.Elpies;
 
+import events.ScriptEvent;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.datatables.SpawnTable;
@@ -28,7 +29,7 @@ import org.l2j.gameserver.util.Broadcast;
 
 import java.util.concurrent.ScheduledFuture;
 
-public final class Elpies extends Event
+public final class Elpies extends Event implements ScriptEvent
 {
 	// NPC
 	private static final int ELPY = 900100;
@@ -237,8 +238,8 @@ public final class Elpies extends Event
 		}
 	}
 	
-	public static void main(String[] args)
+	public static ScriptEvent provider()
 	{
-		new Elpies();
+		return new Elpies();
 	}
 }

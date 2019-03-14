@@ -168,8 +168,8 @@ public final class SinEater extends AbstractNpcAI
 		summon.broadcastPacket(new NpcSay(summon.getObjectId(), ChatType.NPC_GENERAL, summon.getId(), npcstringId));
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new SinEater();
+		return new SinEater();
 	}
 }

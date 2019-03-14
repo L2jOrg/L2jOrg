@@ -152,8 +152,8 @@ public final class CastleDoorManager extends AbstractNpcAI
 		return player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((npc.getCastle().getOwnerId() == player.getClanId()) && (player.getClanId() != 0));
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new CastleDoorManager();
+		return new CastleDoorManager();
 	}
 }

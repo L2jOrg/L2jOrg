@@ -350,8 +350,8 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 		return BYPASSES;
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new OlyManager();
+		return new OlyManager();
 	}
 }

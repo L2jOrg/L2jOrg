@@ -16,12 +16,7 @@
  */
 package custom.events.TeamVsTeam;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
+import events.ScriptEvent;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.InstanceManager;
@@ -57,11 +52,17 @@ import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.Util;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * Team vs Team event.
  * @author Mobius
  */
-public class TvT extends Event
+public class TvT extends Event implements ScriptEvent
 {
 	// NPC
 	private static final int MANAGER = 70010;
@@ -877,8 +878,8 @@ public class TvT extends Event
 		return false;
 	}
 	
-	public static void main(String[] args)
+	public static ScriptEvent provider()
 	{
-		new TvT();
+		return new TvT();
 	}
 }

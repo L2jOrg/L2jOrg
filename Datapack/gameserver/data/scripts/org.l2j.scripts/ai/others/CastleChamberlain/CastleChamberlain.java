@@ -1240,8 +1240,8 @@ public final class CastleChamberlain extends AbstractNpcAI
 		}
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new CastleChamberlain();
+		return new CastleChamberlain();
 	}
 }

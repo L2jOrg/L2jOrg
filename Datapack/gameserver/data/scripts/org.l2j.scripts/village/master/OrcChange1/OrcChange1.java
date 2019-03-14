@@ -16,13 +16,12 @@
  */
 package village.master.OrcChange1;
 
+import ai.AbstractNpcAI;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.base.ClassId;
-
-import ai.AbstractNpcAI;
 
 /**
  * Orc class transfer AI.
@@ -227,8 +226,8 @@ public final class OrcChange1 extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static void init()
+	public static OrcChange1 provider()
 	{
-		new OrcChange1();
+		return new OrcChange1();
 	}
 }

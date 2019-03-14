@@ -79,8 +79,8 @@ public final class TeleportWithCharm extends AbstractNpcAI
 		return super.onTalk(npc, player);
 	}
 	
-	public static void main(String[] args)
+	public static AbstractNpcAI provider()
 	{
-		new TeleportWithCharm();
+		return new TeleportWithCharm();
 	}
 }
