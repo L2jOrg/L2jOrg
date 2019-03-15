@@ -36,8 +36,8 @@ import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.net.InetSocketAddress;
 import java.time.Duration;
-import java.util.Calendar;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
@@ -46,7 +46,7 @@ public class GameServer {
 
     public static final String UPDATE_NAME = "Classic: Saviors (Seven Signs)";
     private static final String LOG4J_CONFIGURATION_FILE = "log4j.configurationFile";
-    public static Calendar dateTimeServerStarted;
+
     private static Logger LOGGER;
     private static String version;
     private static GameServer INSTANCE;
@@ -206,8 +206,8 @@ public class GameServer {
 
         try {
             LOGGER.info(getClass().getSimpleName() + ": Loading server scripts:");
-            ScriptEngineManager.getInstance().executeMasterHandler();
-            ScriptEngineManager.getInstance().executeScriptList();
+            //ScriptEngineManager.getInstance().executeMasterHandler();
+            ScriptEngineManager.getInstance().executeScriptInitList();
         } catch (Exception e) {
             LOGGER.warn("Failed to execute script list!", e);
         }
@@ -293,7 +293,6 @@ public class GameServer {
         Config.load();
         INSTANCE = new GameServer();
         ThreadPoolManager.execute(AuthServerCommunication.getInstance());
-        dateTimeServerStarted = Calendar.getInstance();
 
     }
 
@@ -352,18 +351,12 @@ public class GameServer {
         return connectionHandler;
     }
 
-    public long getStartedTime() {
-        return ManagementFactory.getRuntimeMXBean().getStartTime();
-    }
-
     public String getUptime() {
-        final long uptime = ManagementFactory.getRuntimeMXBean().getUptime() / 1000;
-        final long hours = uptime / 3600;
-        final long mins = (uptime - (hours * 3600)) / 60;
-        final long secs = ((uptime - (hours * 3600)) - (mins * 60));
-        if (hours > 0) {
-            return hours + "hrs " + mins + "mins " + secs + "secs";
-        }
-        return mins + "mins " + secs + "secs";
+        long uptime = ManagementFactory.getRuntimeMXBean().getUptime() / 1000;
+        final long days = TimeUnit.MILLISECONDS.toDays(uptime);
+        uptime -= TimeUnit.DAYS.toMillis(days);
+        final long hours = TimeUnit.MILLISECONDS.toHours(uptime);
+        uptime -= TimeUnit.HOURS.toMillis(hours);
+        return String.format("%d Days, %d Hours, %d Minutes", days, hours, TimeUnit.MILLISECONDS.toMinutes(uptime));
     }
 }

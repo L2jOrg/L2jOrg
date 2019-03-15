@@ -55,40 +55,9 @@ public class GameServerInfo {
         this.client = client;
     }
 
-    public void setHosts(String externalHost, String internalHost) {
-        String oldInternal = getInternalHost();
-        String oldExternal = getExternalHost();
-
-        setExternalHost(externalHost);
-        setInternalHost(internalHost);
-
-        if (!externalHost.equals("*")) {
-            try {
-                setExternalIp(InetAddress.getByName(externalHost).getHostAddress());
-            } catch (UnknownHostException e) {
-                logger.warn("Couldn't resolve hostname {}", externalHost);
-            }
-        } else {
-            setExternalIp(client.getHostAddress());
-        }
-
-        if (!internalHost.equals("*")) {
-            try {
-                setInternalHost(InetAddress.getByName(internalHost).getHostAddress());
-            } catch (UnknownHostException e) {
-                logger.warn("Couldn't resolve hostname {}", internalHost);
-            }
-        } else {
-            setInternalHost(client.getHostAddress());
-        }
-
+    public void setHosts(String[] hosts) {
         logger.info("Updated Gameserver [{}] {} IP's:", _id, GameServerManager.getInstance().getServerNameById(_id));
-        if ((oldInternal == null) || !oldInternal.equalsIgnoreCase(internalHost)) {
-            logger.info("InternalIP: {}", internalHost);
-        }
-        if ((oldExternal == null) || !oldExternal.equalsIgnoreCase(externalHost)) {
-            logger.info("ExternalIP: {}", externalHost);
-        }
+
     }
 
     public int getOnlinePlayersCount() {
@@ -233,5 +202,55 @@ public class GameServerInfo {
 
     public byte getAgeLimit() {
         return ageLimit;
+    }
+
+
+    static class IPAddress {
+
+        private final byte[] mask;
+        private String address;
+        private byte[] subnet;
+
+        IPAddress(String address, String subnet) {
+            this.address = address;
+            final var index = subnet.indexOf("/");
+
+            if (index > 0) {
+                this.subnet = InetAddress.getByName(subnet.substring(0, index)).getAddress();
+                mask = getMask(Integer.parseInt(input.substring(idx + 1)), _addr.length);
+                _isIPv4 = _addr.length == 4;
+
+                if (!applyMask(_addr))
+                {
+                    throw new UnknownHostException(input);
+                }
+            } else {
+                _addr = InetAddress.getByName(input).getAddress();
+                mask = getMask(_addr.length << 3, _addr.length); // host, no need to check mask
+                _isIPv4 = _addr.length == 4;
+            }
+        }
+
+        private static byte[] getMask(int n, int maxLength) throws UnknownHostException
+        {
+            if ((n > (maxLength << 3)) || (n < 0))
+            {
+                throw new UnknownHostException("Invalid netmask: " + n);
+            }
+
+            final byte[] result = new byte[maxLength];
+            for (int i = 0; i < maxLength; i++)
+            {
+                result[i] = (byte) 0xFF;
+            }
+
+            for (int i = (maxLength << 3) - 1; i >= n; i--)
+            {
+                result[i >> 3] = (byte) (result[i >> 3] << 1);
+            }
+
+            return result;
+        }
+
     }
 }

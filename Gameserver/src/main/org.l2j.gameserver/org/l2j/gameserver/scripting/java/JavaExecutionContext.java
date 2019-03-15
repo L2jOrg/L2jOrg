@@ -52,11 +52,6 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
         Files.createDirectories(destination);
         initializeScriptingFileManager();
         compile(sourcePath);
-        executeOnInitScripts();
-    }
-
-    private void executeOnInitScripts() {
-
     }
 
     private void compile(Path sourcePath) throws JavaCompilerException, IOException {
@@ -141,6 +136,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
                 }
 
             } catch (NoSuchMethodException e) {
+                LOGGER.warn("There is no main method on script {}", sourcePath);
                 // the script doesn't have a main method. just ignore it.
             } catch (Exception e) {
                 executionFailures.put(sourcePath, e);

@@ -19,27 +19,30 @@ public class AuthRequest extends GameserverReadablePacket {
     private  boolean acceptAlternativeId;
 	private  int maxPlayers;
 	private  int port;
-	private  String externalHost;
-	private  String internalHost;
+	private  String[] hosts;
 	private  int serverType;
     private byte ageLimit;
-    private boolean gmOnly;
     private boolean showBrackets;
     private boolean isPvp;
 
     @Override
 	protected void readImpl(ByteBuffer buffer) {
+
 		desiredId = buffer.get();
         acceptAlternativeId = buffer.get() == 0x01;
-        internalHost = readString(buffer);
-        externalHost = readString(buffer);
-        port = buffer.getShort();
         serverType = buffer.getInt();
+        maxPlayers = buffer.getInt();
         ageLimit = buffer.get();
-        gmOnly = buffer.get() == 0x01;
         showBrackets = buffer.get() == 0x01;
         isPvp = buffer.get() == 0x01;
-        maxPlayers = buffer.getInt();
+
+        hosts = new String[buffer.getShort() * 2];
+        for (int i = 0; i < hosts.length; i+=2) {
+            hosts[i] =  readString(buffer);
+            hosts[i+1] = readString(buffer);
+        }
+
+        port = buffer.getShort();
     }
 
 	@Override
@@ -87,7 +90,7 @@ public class AuthRequest extends GameserverReadablePacket {
         client.setState(ServerClientState.AUTHED);
         gsi.setClient(client);
         gsi.setPort(port);
-        gsi.setHosts(externalHost, internalHost);
+        gsi.setHosts(hosts);
         gsi.setMaxPlayers(maxPlayers);
         gsi.setAuthed(true);
         gsi.setServerType(serverType);
@@ -95,6 +98,6 @@ public class AuthRequest extends GameserverReadablePacket {
         gsi.setAgeLimit(ageLimit);
         gsi.setShowingBrackets(showBrackets);
         gsi.setIsPvp(isPvp);
-        gsi.setStatus(gmOnly ? ServerStatus.STATUS_GM_ONLY : ServerStatus.STATUS_AUTO);
+        gsi.setStatus(ServerStatus.STATUS_AUTO);
     }
 }

@@ -8,12 +8,10 @@ import java.util.logging.Logger;
 /**
  * @author UnAfraid
  */
-public class DailyMissionMasterHandler
-{
+public class DailyMissionMasterHandler {
 	private static final Logger LOGGER = Logger.getLogger(DailyMissionMasterHandler.class.getName());
 	
-	public static void init()
-	{
+	public static void main(String[] args) {
 		DailyMissionHandler.getInstance().registerHandler("level", LevelDailyMissionHandler::new);
 		// DailyMissionHandler.getInstance().registerHandler("loginAllWeek", LoginAllWeekDailyMissionHandler::new);
 		// DailyMissionHandler.getInstance().registerHandler("loginAllMonth", LoginAllWeekDailyMissionHandler::new);

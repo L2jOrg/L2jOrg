@@ -2767,7 +2767,7 @@ public final class Config {
         }
 
         protected void autoIpConfig() {
-            String externalIp = "127.0.0.1";
+            String externalIp;
             try {
                 final URL autoIp = new URL("https://api.ipify.org/");
                 try (BufferedReader in = new BufferedReader(new InputStreamReader(autoIp.openStream()))) {
@@ -2824,14 +2824,14 @@ public final class Config {
 
         protected List<String> getSubnets() {
             if (_subnets.isEmpty()) {
-                return Arrays.asList("0.0.0.0/0");
+                return Collections.singletonList("0.0.0.0/0");
             }
             return _subnets;
         }
 
         protected List<String> getHosts() {
             if (_hosts.isEmpty()) {
-                return Arrays.asList("127.0.0.1");
+                return Collections.singletonList("127.0.0.1");
             }
             return _hosts;
         }

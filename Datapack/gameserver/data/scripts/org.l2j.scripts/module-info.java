@@ -10,6 +10,7 @@ module org.l2j.scripts {
     exports quests;
     exports events;
     exports instances;
+    exports ai;
 
     uses instances.AbstractInstance;
     uses events.ScriptEvent;

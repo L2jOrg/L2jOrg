@@ -23,10 +23,5 @@ public class Init {
         ServiceLoader.load(IAffectScopeHandler.class).forEach(handler -> AffectScopeHandler.getInstance().registerHandler(handler));
         ServiceLoader.load(IPlayerActionHandler.class).forEach(handler -> PlayerActionHandler.getInstance().registerHandler(handler));
 
-        ConditionMasterHandler.init();
-        DailyMissionMasterHandler.init();
-        EffectMasterHandler.init();
-        SkillConditionMasterHandler.init();
-
     }
 }

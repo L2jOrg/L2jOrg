@@ -10,6 +10,11 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class ServerSettings implements Settings {
 
+    private int serverId;
+    private boolean acceptAlternativeId;
+    private String authServerAddress;
+    private int authServerPort;
+
     private byte ageLimit;
     private boolean gmOnly;
     private boolean showBrackets;
@@ -65,31 +70,32 @@ public class ServerSettings implements Settings {
     private float rateRaidAttack;
     private float rateEpicDefense;
     private float rateEpicAttack;
-    private int serverId;
     private String internalAddress;
     private String externalAddress;
     private short port;
-    private String authServerAddress;
-    private int authServerPort;
     private int maximumOnlineUsers;
     private Path dataPackRootPath;
 
     @Override
     public void load(SettingsFile settingsFile) {
-        serverId = settingsFile.getInteger("ServerId", 1);
-        internalAddress = settingsFile.getString("InternalAddress", "127.0.0.1");
-        externalAddress = settingsFile.getString("ExternalAddress", "127.0.0.1");
-        port = settingsFile.getShort("Port", (short) 7777);
-        authServerAddress = settingsFile.getString("AuthServerAddress", "127.0.0.1");
-        authServerPort = settingsFile.getInteger("AuthServerPort", 9014);
+        serverId = settingsFile.getInteger("RequestServerID", 1);
+        acceptAlternativeId = settingsFile.getBoolean("AcceptAlternateID", true);
 
-        ageLimit = settingsFile.getByte("AgeLimit", (byte) 0);
-        gmOnly = settingsFile.getBoolean("GMOnly", false);
-        showBrackets = settingsFile.getBoolean("ShowBrackets", false);
-        isPvP = settingsFile.getBoolean("PvPServer", false);
+        authServerAddress = settingsFile.getString("LoginHost", "127.0.0.1");
+        authServerPort = settingsFile.getInteger("LoginPort", 9014);
+
+        port = settingsFile.getShort("Port", (short) 7777);
+
         parseServerType(settingsFile);
 
-        maximumOnlineUsers = Math.max(1, settingsFile.getInteger("MaximumOnlineUsers", 10));
+        maximumOnlineUsers = Math.max(1, settingsFile.getInteger("MaximumOnlineUsers", 20));
+        ageLimit = settingsFile.getByte("ServerListAge", (byte) 0);
+        showBrackets = settingsFile.getBoolean("ServerListBrackets", false);
+        isPvP = settingsFile.getBoolean("PvPServer", false);
+
+
+        internalAddress = settingsFile.getString("InternalAddress", "127.0.0.1");
+        externalAddress = settingsFile.getString("ExternalAddress", "127.0.0.1");
 
         everyBodyIsAdmin = settingsFile.getBoolean("EverybodyHasAdminRights", false);
         hideGMStatus = settingsFile.getBoolean("HideGMStatus", true);
@@ -156,7 +162,7 @@ public class ServerSettings implements Settings {
 
     private void parseServerType(SettingsFile settingsFile) {
         type = 0;
-        var types = settingsFile.getStringArray("ServerType");
+        var types = settingsFile.getStringArray("ServerListType");
 
         for (String t : types) {
             if(isNullOrEmpty(t)){
@@ -423,4 +429,7 @@ public class ServerSettings implements Settings {
         return rateEpicAttack;
     }
 
+    public boolean acceptAlternativeId() {
+        return acceptAlternativeId;
+    }
 }

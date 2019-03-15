@@ -680,9 +680,10 @@ public class CharStat {
             // Calculate the difference between old and new stats
             final Set<Stats> changed = new HashSet<>();
             for (Stats stat : Stats.values()) {
-                if (!_statsAdd.getOrDefault(stat, stat.getResetAddValue()).equals(adds.getOrDefault(stat, stat.getResetAddValue()))) {
+                Double value;
+                if ( ( value = _statsAdd.getOrDefault(stat, stat.getResetAddValue()) ) != null && !value.equals(adds.getOrDefault(stat, stat.getResetAddValue()))) {
                     changed.add(stat);
-                } else if (!_statsMul.getOrDefault(stat, stat.getResetMulValue()).equals(muls.getOrDefault(stat, stat.getResetMulValue()))) {
+                } else if ( (value = _statsMul.getOrDefault(stat, stat.getResetMulValue())) != null && !value.equals(muls.getOrDefault(stat, stat.getResetMulValue()))) {
                     changed.add(stat);
                 }
             }

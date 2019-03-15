@@ -31,7 +31,6 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author St3eT
@@ -62,7 +61,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			html.replace("%dayNight%", GameTimeController.getInstance().isNight() ? "Night" : "Day");
 			html.replace("%geodata%", Config.PATHFINDING ? "Enabled" : "Disabled");
 			html.replace("%serverTime%", fmt.format(new Date(System.currentTimeMillis())));
-			html.replace("%serverUpTime%", getServerUpTime());
+			html.replace("%serverUpTime%", GameServer.getInstance().getUptime());
 			html.replace("%onlineAll%", getPlayersCount("ALL"));
 			html.replace("%offlineTrade%", getPlayersCount("OFF_TRADE"));
 			html.replace("%onlineGM%", getPlayersCount("GM"));
@@ -74,18 +73,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 		}
 		return true;
 	}
-	
-	private String getServerUpTime()
-	{
-		long time = System.currentTimeMillis() - GameServer.dateTimeServerStarted.getTimeInMillis();
-		
-		final long days = TimeUnit.MILLISECONDS.toDays(time);
-		time -= TimeUnit.DAYS.toMillis(days);
-		final long hours = TimeUnit.MILLISECONDS.toHours(time);
-		time -= TimeUnit.HOURS.toMillis(hours);
-		return days + " Days, " + hours + " Hours, " + TimeUnit.MILLISECONDS.toMinutes(time) + " Minutes";
-	}
-	
+
 	private int getPlayersCount(String type)
 	{
 		switch (type)

@@ -1,10 +1,7 @@
 package org.l2j.gameserver.scripting;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.util.IGameXmlReader;
-import org.w3c.dom.Document;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.*;
@@ -19,15 +16,17 @@ import java.util.logging.Logger;
  *
  * @author KenM, HorridoJoho
  */
-public final class ScriptEngineManager implements IGameXmlReader {
-    public static final Path SCRIPT_FOLDER = Paths.get(Config.DATAPACK_ROOT.getAbsolutePath(), "data", "scripts");
-    public static final Path MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "MasterHandler.java");
-    public static final Path EFFECT_MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "EffectMasterHandler.java");
-    public static final Path SKILL_CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "SkillConditionMasterHandler.java");
-    public static final Path CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "ConditionMasterHandler.java");
-    public static final Path ONE_DAY_REWARD_MASTER_HANDLER = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "DailyMissionMasterHandler.java");
-    static final List<String> _exclusions = new ArrayList<>();
+public final class ScriptEngineManager  {
+
     private static final Logger LOGGER = Logger.getLogger(ScriptEngineManager.class.getName());
+
+    public static final Path SCRIPT_FOLDER = Paths.get(Config.DATAPACK_ROOT.getAbsolutePath(), "data", "scripts");
+    private static final Path MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "MasterHandler.java");
+    private static final Path EFFECT_MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "EffectMasterHandler.java");
+    private static final Path SKILL_CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "SkillConditionMasterHandler.java");
+    private static final Path CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "ConditionMasterHandler.java");
+    private static final Path ONE_DAY_REWARD_MASTER_HANDLER = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "DailyMissionMasterHandler.java");
+
     private final Map<String, IExecutionContext> _extEngines = new HashMap<>();
     private IExecutionContext _currentExecutionContext = null;
 
@@ -36,73 +35,14 @@ public final class ScriptEngineManager implements IGameXmlReader {
 
         // Load external script engines
         ServiceLoader.load(IScriptingEngine.class).forEach(engine -> registerEngine(engine, props));
-
-        // Load Scripts.xml
-        load();
     }
 
     public static ScriptEngineManager getInstance() {
         return SingletonHolder._instance;
     }
 
-    @Override
-    public void load() {
-        _exclusions.clear();
-        parseFile(new File("config/Scripts.xml"));
-        LOGGER.info("Loaded " + _exclusions.size() + " files to exclude.");
-    }
-
-    @Override
-    public void parseDocument(Document doc, File f) {
-        try {
-            final Map<String, List<String>> excludePaths = new HashMap<>();
-            forEach(doc, "list", listNode -> forEach(listNode, "exclude", excludeNode ->
-            {
-                final String excludeFile = parseString(excludeNode.getAttributes(), "file");
-                excludePaths.putIfAbsent(excludeFile, new ArrayList<>());
-
-                forEach(excludeNode, "include", includeNode -> excludePaths.get(excludeFile).add(parseString(includeNode.getAttributes(), "file")));
-            }));
-
-            final int nameCount = SCRIPT_FOLDER.getNameCount();
-            Files.walkFileTree(SCRIPT_FOLDER, new SimpleFileVisitor<Path>() {
-                @Override
-                public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-                    final String fileName = file.getFileName().toString();
-                    if (fileName.endsWith(".java")) {
-                        final Iterator<Path> relativePath = file.subpath(nameCount, file.getNameCount()).iterator();
-                        while (relativePath.hasNext()) {
-                            final String nextPart = relativePath.next().toString();
-                            if (excludePaths.containsKey(nextPart)) {
-                                boolean excludeScript = true;
-
-                                final List<String> includePath = excludePaths.get(nextPart);
-                                if (includePath != null) {
-                                    while (relativePath.hasNext()) {
-                                        if (includePath.contains(relativePath.next().toString())) {
-                                            excludeScript = false;
-                                            break;
-                                        }
-                                    }
-                                }
-                                if (excludeScript) {
-                                    _exclusions.add(fileName);
-                                    break;
-                                }
-                            }
-                        }
-                    }
-
-                    return super.visitFile(file, attrs);
-                }
-            });
-        } catch (final IOException e) {
-            LOGGER.log(Level.WARNING, "Couldn't load script exclusions.", e);
-        }
-    }
-
     private Properties loadProperties() {
-        Properties props = null;
+        Properties props;
         try (FileInputStream fis = new FileInputStream("config/ScriptEngine.ini")) {
             props = new Properties();
             props.load(fis);
@@ -162,11 +102,11 @@ public final class ScriptEngineManager implements IGameXmlReader {
         return extension;
     }
 
-    private void checkExistingFile(String messagePre, Path filePath) throws Exception {
+    private void checkExistingFile(Path filePath) throws Exception {
         if (!Files.exists(filePath)) {
-            throw new Exception(messagePre + ": " + filePath + " does not exists!");
+            throw new Exception("ScriptFile: " + filePath + " does not exists!");
         } else if (!Files.isRegularFile(filePath)) {
-            throw new Exception(messagePre + ": " + filePath + " is not a file!");
+            throw new Exception("ScriptFile: " + filePath + " is not a file!");
         }
     }
 
@@ -190,18 +130,15 @@ public final class ScriptEngineManager implements IGameXmlReader {
         executeScript(ONE_DAY_REWARD_MASTER_HANDLER);
     }
 
-    public void executeScriptList() throws Exception {
+    public void executeScriptInitList() throws Exception {
         if (Config.ALT_DEV_NO_QUESTS) {
             return;
         }
 
-        final Map<IExecutionContext, List<Path>> files = new LinkedHashMap<>();
-        processDirectory(SCRIPT_FOLDER.toFile(), files);
-
-        for (Entry<IExecutionContext, List<Path>> entry : files.entrySet()) {
+        for (Entry<IExecutionContext, List<Path>> entry : parseScriptDirectory().entrySet()) {
             _currentExecutionContext = entry.getKey();
             try {
-                final Map<Path, Throwable> invokationErrors = entry.getKey().executeScripts(entry.getValue());
+                final Map<Path, Throwable> invokationErrors = _currentExecutionContext.executeScripts(entry.getValue());
                 for (Entry<Path, Throwable> entry2 : invokationErrors.entrySet()) {
                     LOGGER.log(Level.WARNING, "ScriptEngine: " + entry2.getKey() + " failed execution!", entry2.getValue());
                 }
@@ -211,42 +148,36 @@ public final class ScriptEngineManager implements IGameXmlReader {
         }
     }
 
-    private void processDirectory(File dir, Map<IExecutionContext, List<Path>> files) {
-        for (File file : dir.listFiles()) {
-            if (file.isDirectory()) {
-                processDirectory(file, files);
-            } else {
-                processFile(file, files);
+    private Map<IExecutionContext, List<Path>> parseScriptDirectory() throws IOException {
+        Map<IExecutionContext, List<Path>> files = new HashMap<>();
+
+        Files.walkFileTree(SCRIPT_FOLDER, new SimpleFileVisitor<>() {
+
+            @Override
+            public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
+                var fileName = file.getFileName().toString();
+
+                if(attrs.isRegularFile() && fileName.startsWith("Init")) {
+                    var sourceFile = file.toAbsolutePath();
+                    var ext = fileName.substring(fileName.lastIndexOf(".") +1);
+
+                    if(ext.equals(fileName)) {
+                        LOGGER.warning("ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
+                        return FileVisitResult.CONTINUE;
+                    }
+
+                    var engine = getEngineByExtension(ext);
+                    if(engine == null) {
+                        return FileVisitResult.CONTINUE;
+                    }
+
+                    files.computeIfAbsent(engine, k -> new LinkedList<>()).add(sourceFile);
+                }
+                return FileVisitResult.CONTINUE;
             }
-        }
-    }
+        });
 
-    private void processFile(File file, Map<IExecutionContext, List<Path>> files) {
-        if (_exclusions.contains(file.getName())) {
-            return;
-        }
-
-        Path sourceFile = file.toPath();
-        try {
-            checkExistingFile("ScriptFile", sourceFile);
-        } catch (Exception e) {
-            LOGGER.warning(e.getMessage());
-            return;
-        }
-
-        sourceFile = sourceFile.toAbsolutePath();
-        final String ext = getFileExtension(sourceFile);
-        if (ext == null) {
-            LOGGER.warning("ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
-            return;
-        }
-
-        final IExecutionContext engine = getEngineByExtension(ext);
-        if (engine == null) {
-            return;
-        }
-
-        files.computeIfAbsent(engine, k -> new LinkedList<>()).add(sourceFile);
+        return files;
     }
 
     public void executeScript(Path sourceFile) throws Exception {
@@ -257,7 +188,7 @@ public final class ScriptEngineManager implements IGameXmlReader {
         }
 
         // throws exception if not exists or not file
-        checkExistingFile("ScriptFile", sourceFile);
+        checkExistingFile(sourceFile);
 
         sourceFile = sourceFile.toAbsolutePath();
         final String ext = getFileExtension(sourceFile);

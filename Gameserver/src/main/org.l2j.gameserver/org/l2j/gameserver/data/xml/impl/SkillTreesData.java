@@ -147,7 +147,7 @@ public final class SkillTreesData implements IGameXmlReader {
     public void parseDocument(Document doc, File f) {
         NamedNodeMap attrs;
         Node attr;
-        String type = null;
+        String type;
         Race race = null;
         SubclassType subType = null;
         int cId = -1;

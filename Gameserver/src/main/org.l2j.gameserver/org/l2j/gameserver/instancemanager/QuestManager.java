@@ -69,7 +69,7 @@ public final class QuestManager {
 
         LOGGER.info("Reloading all server scripts.");
         try {
-            ScriptEngineManager.getInstance().executeScriptList();
+            ScriptEngineManager.getInstance().executeScriptInitList();
         } catch (Exception e) {
             LOGGER.log(Level.SEVERE, "Failed executing script list!", e);
         }
