@@ -83,7 +83,7 @@ public final class GrandBossManager implements IStorable {
                     final int status = rs.getInt("status");
                     _bossStatus.put(bossId, status);
                     _storedInfo.put(bossId, info);
-                    LOGGER.info(getClass().getSimpleName() + ": " + NpcData.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status is " + status);
+                    LOGGER.info(getClass().getSimpleName() + ": " + NpcData.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status is " + (status == 0 ? "Alive" : "Dead"));
                     if (status > 0) {
                         LOGGER.info(getClass().getSimpleName() + ": Next spawn date of " + NpcData.getInstance().getTemplate(bossId).getName() + " is " + new Date(info.getLong("respawn_time")));
                     }

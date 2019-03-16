@@ -111,7 +111,7 @@ public class GameServerManager {
     }
 
     public void registerServerOnDB(GameServerInfo gsi) {
-        registerServerOnDB(gsi.getId(), gsi.getExternalHost(), gsi.getServerType());
+        registerServerOnDB(gsi.getId(), gsi.getServerHost(), gsi.getServerType());
     }
 
     public void registerServerOnDB(int id, String externalHost, int serverType) {

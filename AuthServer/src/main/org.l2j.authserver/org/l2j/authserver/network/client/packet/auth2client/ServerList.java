@@ -49,23 +49,9 @@ public final class ServerList extends L2LoginServerPacket {
         for (var server : servers.values()) {
             buffer.put((byte)server.getId());
 
-            var host = client.usesInternalIP() ? server.getInternalHost() : server.getExternalHost();
+            byte[] address = server.getAddressFor(client.getHostAddress());
 
-            try {
-                var ip = InetAddress.getByName(host);
-                var address = ip.getAddress();
-                buffer.put((byte)Byte.toUnsignedInt(address[0]));
-                buffer.put((byte)Byte.toUnsignedInt(address[1]));
-                buffer.put((byte)Byte.toUnsignedInt(address[2]));
-                buffer.put((byte)Byte.toUnsignedInt(address[3]));
-            } catch (UnknownHostException e) {
-                e.printStackTrace();
-                buffer.put((byte)127);
-                buffer.put((byte)0);
-                buffer.put((byte)0);
-                buffer.put((byte)1);
-            }
-
+            buffer.put(address);
             buffer.putInt(server.getPort());
             buffer.put(server.getAgeLimit()); // minimum age
             buffer.put((byte) (server.isPvp() ? 0x01 : 0x00)) ;
