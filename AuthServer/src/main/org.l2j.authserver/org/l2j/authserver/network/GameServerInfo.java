@@ -13,6 +13,8 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.*;
 
+import static java.util.Objects.nonNull;
+
 public class GameServerInfo {
 
     private static final Logger logger = LoggerFactory.getLogger(GameServerInfo.class);
@@ -192,9 +194,11 @@ public class GameServerInfo {
     }
 
     public byte[] getAddressFor(String hostAddress)  {
-        for (IPAddress host : hosts) {
-            if(host.isInSameSubnet(hostAddress)) {
-                return host.address;
+        if(nonNull(hosts)) {
+            for (IPAddress host : hosts) {
+                if (host.isInSameSubnet(hostAddress)) {
+                    return host.address;
+                }
             }
         }
         return LOCALHOST;
@@ -219,7 +223,7 @@ public class GameServerInfo {
             }
 
             this.subnet = InetAddress.getByName(subnet).getAddress();
-            this.mask = getMask(bitLength > 0 ? bitLength : this.subnet.length << 3, this.subnet.length);
+            this.mask = getMask(index > 0 ? bitLength : this.subnet.length << 3, this.subnet.length);
             _isIPv4 = this.subnet.length == 4;
 
             if(bitLength > 0 && !applyMask(this.subnet)) {

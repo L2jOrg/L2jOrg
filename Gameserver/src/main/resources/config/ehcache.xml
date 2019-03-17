@@ -16,39 +16,4 @@
 		<heap>5000</heap>
 	</cache-template>
 
-	<!-- HtmCache -->
-	<cache alias="org.l2j.gameserver.data.htm.HtmCache.KOREAN" uses-template="baseCache"/>
-	<cache alias="org.l2j.gameserver.data.htm.HtmCache.ENGLISH" uses-template="baseCache"/>
-	<cache alias="org.l2j.gameserver.data.htm.HtmCache.CHINESE" uses-template="baseCache"/>
-	<cache alias="org.l2j.gameserver.data.htm.HtmCache.THAI" uses-template="baseCache"/>
-	<cache alias="org.l2j.gameserver.data.htm.HtmCache.RUSSIAN" uses-template="baseCache"/>
-	<cache alias="org.l2j.gameserver.data.htm.HtmCache.ENGLISH_EU" uses-template="baseCache"/>
-	<cache alias="org.l2j.gameserver.data.htm.HtmCache.PORTUGUESE" uses-template="baseCache"/>
-	<cache alias="org.l2j.gameserver.data.htm.HtmCache.SPANISH" uses-template="baseCache"/>
-	<cache alias="org.l2j.gameserver.data.htm.HtmCache.ARABIC" uses-template="baseCache"/>
-	<cache alias="org.l2j.gameserver.data.htm.HtmCache.GREEK" uses-template="baseCache"/>
-	<cache alias="org.l2j.gameserver.data.htm.HtmCache.GEORGIAN" uses-template="baseCache"/>
-	<cache alias="org.l2j.gameserver.data.htm.HtmCache.HUNGARIAN" uses-template="baseCache"/>
-	<cache alias="org.l2j.gameserver.data.htm.HtmCache.FINNISH" uses-template="baseCache"/>
-	<cache alias="org.l2j.gameserver.data.htm.HtmCache.UKRAINIAN" uses-template="baseCache"/>
-	<cache alias="org.l2j.gameserver.data.htm.HtmCache.VIETNAMESE"  uses-template="baseCache"/>
-
-	<!-- ItemInfoCache -->
-	<cache alias="org.l2j.gameserver.cache.ItemInfoCache" uses-template="baseCache">
-		<key-type>java.lang.Integer</key-type>
-		<value-type>org.l2j.gameserver.model.items.ItemInfo</value-type>
-		<heap>10000</heap>
-	</cache>
-
-	<cache alias="org.l2j.gameserver.model.items.ItemInstance" uses-template="baseCache">
-		<key-type>java.lang.Integer</key-type>
-		<value-type>org.l2j.gameserver.model.items.ItemInstance</value-type>
-		<heap>200000</heap>
-	</cache>
-
-	<cache alias="org.l2j.gameserver.model.mail.Mail" uses-template="baseCache">
-		<key-type>java.lang.Integer</key-type>
-		<value-type>org.l2j.gameserver.model.mail.Mail</value-type>
-	</cache>
-
 </config>

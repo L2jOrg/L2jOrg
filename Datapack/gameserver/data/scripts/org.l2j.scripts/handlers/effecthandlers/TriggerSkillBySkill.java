@@ -16,8 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import java.util.logging.Level;
-
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.handler.TargetHandler;
@@ -33,6 +31,8 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.targets.TargetType;
+
+import java.util.logging.Level;
 
 /**
  * Trigger Skill By Skill effect implementation.

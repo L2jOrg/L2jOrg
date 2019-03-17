@@ -59,7 +59,6 @@ public final class Config {
     private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
     private static final String RATES_CONFIG_FILE = "./config/Rates.ini";
     private static final String SERVER_CONFIG_FILE = "./config/Server.ini";
-    private static final String TELNET_CONFIG_FILE = "./config/Telnet.ini";
     private static final String TRAINING_CAMP_CONFIG_FILE = "./config/TrainingCamp.ini";
     private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
     private static final String HEXID_FILE = "./config/hexid.txt";
@@ -1106,18 +1105,6 @@ public final class Config {
         REQUEST_ID = serverSettings.getInt("RequestServerID", 0);
         ACCEPT_ALTERNATE_ID = serverSettings.getBoolean("AcceptAlternateID", true);
 
-        DATABASE_DRIVER = serverSettings.getString("Driver", "org.mariadb.jdbc.Driver");
-        DATABASE_URL = serverSettings.getString("URL", "jdbc:mariadb://localhost/l2jgs");
-        DATABASE_LOGIN = serverSettings.getString("Login", "root");
-        DATABASE_PASSWORD = serverSettings.getString("Password", "");
-        DATABASE_MAX_CONNECTIONS = serverSettings.getInt("MaximumDbConnections", 10);
-        DATABASE_MAX_IDLE_TIME = serverSettings.getInt("MaximumDbIdleTime", 0);
-
-        BACKUP_DATABASE = serverSettings.getBoolean("BackupDatabase", false);
-        MYSQL_BIN_PATH = serverSettings.getString("MySqlBinLocation", "C:/xampp/mysql/bin/");
-        BACKUP_PATH = serverSettings.getString("BackupPath", "../backup/");
-        BACKUP_DAYS = serverSettings.getInt("BackupDays", 30);
-
         try {
             DATAPACK_ROOT = new File(serverSettings.getString("DatapackRoot", ".").replaceAll("\\\\", "/")).getCanonicalFile();
         } catch (IOException e) {
@@ -1534,15 +1521,6 @@ public final class Config {
         PLAYER_MOVEMENT_BLOCK_TIME = Character.getInt("NpcTalkBlockingTime", 0) * 1000;
         ABILITY_MAX_POINTS = Character.getInt("AbilityMaxPoints", 16);
         ABILITY_POINTS_RESET_ADENA = Character.getLong("AbilityPointsResetAdena", 10_000_000);
-
-        // Load Telnet config file (if exists)
-        final PropertiesParser telnetSettings = new PropertiesParser(TELNET_CONFIG_FILE);
-
-        TELNET_ENABLED = telnetSettings.getBoolean("EnableTelnet", false);
-        TELNET_PORT = telnetSettings.getInt("Port", 12345);
-        TELNET_HOSTNAME = telnetSettings.getString("BindAddress", "127.0.0.1");
-        TELNET_PASSWORD = telnetSettings.getString("Password", "");
-        TELNET_HOSTS = Arrays.asList(telnetSettings.getString("ListOfHosts", "127.0.0.1,::1").split(","));
 
         // Load Training Camp config file (if exists)
         final PropertiesParser trainingCampSettings = new PropertiesParser(TRAINING_CAMP_CONFIG_FILE);

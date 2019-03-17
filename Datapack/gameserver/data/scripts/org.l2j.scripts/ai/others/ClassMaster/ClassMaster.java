@@ -63,7 +63,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 	public void load()
 	{
 		_classChangeData.clear();
-		parseDatapackFile("config/ClassMaster.xml");
+		parseFile(new File("config/ClassMaster.xml"));
 		
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _classChangeData.size() + " class change options.");
 	}

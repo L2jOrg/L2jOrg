@@ -26,17 +26,11 @@ public class AuthServerClient extends Client<Connection<AuthServerClient>> {
 
     @Override
     protected void onDisconnection() {
-        System.out.println("On Disconnection AuthServer");
         AuthServerCommunication.getInstance().restart();
     }
 
     @Override
     public void onConnected() {
         writePacket(new AuthRequest());
-    }
-
-    @Override
-    public boolean isConnected() {
-        return super.isConnected();
     }
 }

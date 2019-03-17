@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayableExpChange
 import org.l2j.gameserver.model.events.listeners.FunctionEventListener;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 
+import java.util.Observer;
+
 /**
  * @author xban1x
  */

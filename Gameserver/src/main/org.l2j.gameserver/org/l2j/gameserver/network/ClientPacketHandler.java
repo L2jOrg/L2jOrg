@@ -44,7 +44,7 @@ public class ClientPacketHandler implements PacketHandler<L2GameClient> {
     }
 
     private void unknownPacket(ByteBuffer buffer, int opcode) {
-        LOGGER.warn("Unknown packet: {} - {}", toHexString(opcode), Util.printData(buffer.array()));
+        LOGGER.warn("Unknown packet: {} - {}", toHexString(opcode), Util.printData(buffer.array(), buffer.limit()));
     }
 
     private PacketFactory getPacketFactory(int opcode, ByteBuffer buffer) {

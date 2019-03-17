@@ -34,7 +34,7 @@ public class SiegeScheduleData implements IGameXmlReader {
     @Override
     public synchronized void load() {
         _scheduleData.clear();
-        parseDatapackFile("config/SiegeSchedule.xml");
+        parseFile(new File("config/SiegeSchedule.xml"));
         LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _scheduleData.size() + " siege schedulers.");
         if (_scheduleData.isEmpty()) {
             _scheduleData.add(new SiegeScheduleDate(new StatsSet()));

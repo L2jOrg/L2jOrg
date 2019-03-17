@@ -110,26 +110,22 @@ public class ThreadPoolManager
 		StringBuilder list = new StringBuilder();
 
 		list.append("ScheduledThreadPool\n");
-		list.append("=================================================\n");
-		list.append("\tgetActiveCount: ...... ").append(_scheduledExecutor.getActiveCount()).append("\n");
-		list.append("\tgetCorePoolSize: ..... ").append(_scheduledExecutor.getCorePoolSize()).append("\n");
-		list.append("\tgetPoolSize: ......... ").append(_scheduledExecutor.getPoolSize()).append("\n");
-		list.append("\tgetLargestPoolSize: .. ").append(_scheduledExecutor.getLargestPoolSize()).append("\n");
-		list.append("\tgetMaximumPoolSize: .. ").append(_scheduledExecutor.getMaximumPoolSize()).append("\n");
-		list.append("\tgetCompletedTaskCount: ").append(_scheduledExecutor.getCompletedTaskCount()).append("\n");
-		list.append("\tgetQueuedTaskCount: .. ").append(_scheduledExecutor.getQueue().size()).append("\n");
-		list.append("\tgetTaskCount: ........ ").append(_scheduledExecutor.getTaskCount()).append("\n");
+		treadPoolStats(list, _scheduledExecutor);
 		list.append("ThreadPoolExecutor\n");
-		list.append("=================================================\n");
-		list.append("\tgetActiveCount: ...... ").append(_executor.getActiveCount()).append("\n");
-		list.append("\tgetCorePoolSize: ..... ").append(_executor.getCorePoolSize()).append("\n");
-		list.append("\tgetPoolSize: ......... ").append(_executor.getPoolSize()).append("\n");
-		list.append("\tgetLargestPoolSize: .. ").append(_executor.getLargestPoolSize()).append("\n");
-		list.append("\tgetMaximumPoolSize: .. ").append(_executor.getMaximumPoolSize()).append("\n");
-		list.append("\tgetCompletedTaskCount: ").append(_executor.getCompletedTaskCount()).append("\n");
-		list.append("\tgetQueuedTaskCount: .. ").append(_executor.getQueue().size()).append("\n");
-		list.append("\tgetTaskCount: ........ ").append(_executor.getTaskCount()).append("\n");
+		treadPoolStats(list, _executor);
 
 		return list;
+	}
+
+	private void treadPoolStats(StringBuilder list, ThreadPoolExecutor scheduledExecutor) {
+		list.append("=================================================\n");
+		list.append("\tgetActiveCount: ...... ").append(scheduledExecutor.getActiveCount()).append("\n");
+		list.append("\tgetCorePoolSize: ..... ").append(scheduledExecutor.getCorePoolSize()).append("\n");
+		list.append("\tgetPoolSize: ......... ").append(scheduledExecutor.getPoolSize()).append("\n");
+		list.append("\tgetLargestPoolSize: .. ").append(scheduledExecutor.getLargestPoolSize()).append("\n");
+		list.append("\tgetMaximumPoolSize: .. ").append(scheduledExecutor.getMaximumPoolSize()).append("\n");
+		list.append("\tgetCompletedTaskCount: ").append(scheduledExecutor.getCompletedTaskCount()).append("\n");
+		list.append("\tgetQueuedTaskCount: .. ").append(scheduledExecutor.getQueue().size()).append("\n");
+		list.append("\tgetTaskCount: ........ ").append(scheduledExecutor.getTaskCount()).append("\n");
 	}
 }

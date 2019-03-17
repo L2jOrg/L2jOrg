@@ -22,6 +22,7 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.events.returns.AbstractEventReturn;
 
 import java.lang.reflect.Method;
+import java.util.Observer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

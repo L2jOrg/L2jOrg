@@ -44,7 +44,7 @@ public class Crypt {
     }
 
     public boolean decrypt(byte[] data, int offset, int size) {
-        if(_isEnabled) {
+        if(!_isEnabled) {
             onPacketReceive(data);
             return true;
         }

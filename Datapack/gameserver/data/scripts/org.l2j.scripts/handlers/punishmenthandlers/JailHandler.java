@@ -35,6 +35,8 @@ import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
+import java.util.Observer;
+
 /**
  * This class handles jail punishment.
  * @author UnAfraid

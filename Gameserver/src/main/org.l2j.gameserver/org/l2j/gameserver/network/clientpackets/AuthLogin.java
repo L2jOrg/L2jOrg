@@ -41,13 +41,14 @@ public final class AuthLogin extends IClientIncomingPacket {
             return;
         }
 
-        final SessionKey key = new SessionKey(_loginKey1, _loginKey2, _playKey1, _playKey2);
 
         // avoid potential exploits
         if (client.getAccountName() == null) {
             // Preventing duplicate login in case client login server socket was disconnected or this packet was not sent yet
 
             client.setAccountName(_loginName);
+            final SessionKey key = new SessionKey(_loginKey1, _loginKey2, _playKey1, _playKey2);
+            client.setSessionId(key);
 
             L2GameClient oldClient = AuthServerCommunication.getInstance().addWaitingClient(client);
             if(oldClient != null)

@@ -2444,11 +2444,11 @@ public class Quest extends AbstractScript implements IIdentifiable {
      */
     public String getHtm(L2PcInstance player, String fileName) {
         final HtmCache hc = HtmCache.getInstance();
-        String content = hc.getHtm(player, fileName.startsWith("data/") ? fileName : "data/scripts/" + getPath() + "/" + fileName);
+        String content = hc.getHtm(player, fileName.startsWith("data/") ? fileName : "data/scripts/org.l2j.scripts/" + getPath() + "/" + fileName);
         if (content == null) {
-            content = hc.getHtm(player, "data/scripts/" + getPath() + "/" + fileName);
+            content = hc.getHtm(player, "data/scripts/org.l2j.scripts" + getPath() + "/" + fileName);
             if (content == null) {
-                content = hc.getHtmForce(player, "data/scripts/quests/" + getName() + "/" + fileName);
+                content = hc.getHtmForce(player, "data/scripts/quests/org.l2j.scripts" + getName() + "/" + fileName);
             }
         }
         return content;

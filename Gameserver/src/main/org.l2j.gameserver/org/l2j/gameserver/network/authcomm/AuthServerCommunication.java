@@ -195,6 +195,10 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 	}
 
 	public void restart() {
+		if(nonNull(client)) {
+			client.close(null);
+		}
+		client = null;
 		ThreadPoolManager.execute(this);
 	}
 

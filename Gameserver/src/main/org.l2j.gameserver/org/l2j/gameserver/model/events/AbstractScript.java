@@ -1,16 +1,16 @@
 package org.l2j.gameserver.model.events;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.data.xml.impl.DoorData;
-import org.l2j.gameserver.enums.Movie;
-import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.AttributeType;
+import org.l2j.gameserver.enums.Movie;
 import org.l2j.gameserver.enums.QuestSound;
+import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.Location;
@@ -29,6 +29,7 @@ import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.events.annotations.*;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.events.impl.character.*;
+import org.l2j.gameserver.model.events.impl.character.npc.*;
 import org.l2j.gameserver.model.events.impl.character.player.*;
 import org.l2j.gameserver.model.events.impl.instance.*;
 import org.l2j.gameserver.model.events.impl.item.OnItemBypassEvent;
@@ -66,7 +67,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.scripting.ManagedScript;
 import org.l2j.gameserver.util.MinionList;
-import org.l2j.gameserver.model.events.impl.character.npc.*;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -2500,92 +2500,50 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         final List<AbstractEventListener> listeners = new ArrayList<>(ids.length > 0 ? ids.length : 1);
         if (ids.length > 0) {
             for (int id : ids) {
-                switch (registerType) {
-                    case NPC: {
-                        final L2NpcTemplate template = NpcData.getInstance().getTemplate(id);
-                        if (template != null) {
-                            listeners.add(template.addListener(action.apply(template)));
-                        }
-                        break;
-                    }
-                    case ZONE: {
-                        final L2ZoneType template = ZoneManager.getInstance().getZoneById(id);
-                        if (template != null) {
-                            listeners.add(template.addListener(action.apply(template)));
-                        }
-                        break;
-                    }
-                    case ITEM: {
-                        final L2Item template = ItemTable.getInstance().getTemplate(id);
-                        if (template != null) {
-                            listeners.add(template.addListener(action.apply(template)));
-                        }
-                        break;
-                    }
-                    case CASTLE: {
-                        final Castle template = CastleManager.getInstance().getCastleById(id);
-                        if (template != null) {
-                            listeners.add(template.addListener(action.apply(template)));
-                        }
-                        break;
-                    }
-                    case FORTRESS: {
-                        final Fort template = FortManager.getInstance().getFortById(id);
-                        if (template != null) {
-                            listeners.add(template.addListener(action.apply(template)));
-                        }
-                        break;
-                    }
-                    case INSTANCE: {
-                        final InstanceTemplate template = InstanceManager.getInstance().getInstanceTemplate(id);
-                        if (template != null) {
-                            listeners.add(template.addListener(action.apply(template)));
-                        }
-                        break;
-                    }
-                    default: {
-                        LOGGER.warning(getClass().getSimpleName() + ": Unhandled register type: " + registerType);
-                    }
-                }
+                registerListenrWithId(action, registerType, listeners, id);
 
                 _registeredIds.computeIfAbsent(registerType, k -> ConcurrentHashMap.newKeySet()).add(id);
             }
         } else {
-            switch (registerType) {
-                case OLYMPIAD: {
-                    final Olympiad template = Olympiad.getInstance();
-                    listeners.add(template.addListener(action.apply(template)));
-                    break;
-                }
-                case GLOBAL: // Global Listener
-                {
-                    final ListenersContainer template = Containers.Global();
-                    listeners.add(template.addListener(action.apply(template)));
-                    break;
-                }
-                case GLOBAL_NPCS: // Global Npcs Listener
-                {
-                    final ListenersContainer template = Containers.Npcs();
-                    listeners.add(template.addListener(action.apply(template)));
-                    break;
-                }
-                case GLOBAL_MONSTERS: // Global Monsters Listener
-                {
-                    final ListenersContainer template = Containers.Monsters();
-                    listeners.add(template.addListener(action.apply(template)));
-                    break;
-                }
-                case GLOBAL_PLAYERS: // Global Players Listener
-                {
-                    final ListenersContainer template = Containers.Players();
-                    listeners.add(template.addListener(action.apply(template)));
-                    break;
-                }
-            }
+            registerListenerWithoutId(action, registerType, listeners);
         }
 
         _listeners.addAll(listeners);
         return listeners;
+    }
+
+    private void registerListenerWithoutId(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, List<AbstractEventListener> listeners) {
+        switch (registerType) {
+            case OLYMPIAD: {
+                final Olympiad template = Olympiad.getInstance();
+                listeners.add(template.addListener(action.apply(template)));
+                break;
+            }
+            case GLOBAL: // Global Listener
+            {
+                final ListenersContainer template = Containers.Global();
+                listeners.add(template.addListener(action.apply(template)));
+                break;
+            }
+            case GLOBAL_NPCS: // Global Npcs Listener
+            {
+                final ListenersContainer template = Containers.Npcs();
+                listeners.add(template.addListener(action.apply(template)));
+                break;
+            }
+            case GLOBAL_MONSTERS: // Global Monsters Listener
+            {
+                final ListenersContainer template = Containers.Monsters();
+                listeners.add(template.addListener(action.apply(template)));
+                break;
+            }
+            case GLOBAL_PLAYERS: // Global Players Listener
+            {
+                final ListenersContainer template = Containers.Players();
+                listeners.add(template.addListener(action.apply(template)));
+                break;
+            }
+        }
     }
 
     /**
@@ -2600,91 +2558,65 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         final List<AbstractEventListener> listeners = new ArrayList<>(!ids.isEmpty() ? ids.size() : 1);
         if (!ids.isEmpty()) {
             for (int id : ids) {
-                switch (registerType) {
-                    case NPC: {
-                        final L2NpcTemplate template = NpcData.getInstance().getTemplate(id);
-                        if (template != null) {
-                            listeners.add(template.addListener(action.apply(template)));
-                        }
-                        break;
-                    }
-                    case ZONE: {
-                        final L2ZoneType template = ZoneManager.getInstance().getZoneById(id);
-                        if (template != null) {
-                            listeners.add(template.addListener(action.apply(template)));
-                        }
-                        break;
-                    }
-                    case ITEM: {
-                        final L2Item template = ItemTable.getInstance().getTemplate(id);
-                        if (template != null) {
-                            listeners.add(template.addListener(action.apply(template)));
-                        }
-                        break;
-                    }
-                    case CASTLE: {
-                        final Castle template = CastleManager.getInstance().getCastleById(id);
-                        if (template != null) {
-                            listeners.add(template.addListener(action.apply(template)));
-                        }
-                        break;
-                    }
-                    case FORTRESS: {
-                        final Fort template = FortManager.getInstance().getFortById(id);
-                        if (template != null) {
-                            listeners.add(template.addListener(action.apply(template)));
-                        }
-                        break;
-                    }
-                    case INSTANCE: {
-                        final InstanceTemplate template = InstanceManager.getInstance().getInstanceTemplate(id);
-                        if (template != null) {
-                            listeners.add(template.addListener(action.apply(template)));
-                        }
-                        break;
-                    }
-                    default: {
-                        LOGGER.warning(getClass().getSimpleName() + ": Unhandled register type: " + registerType);
-                    }
-                }
+                registerListenrWithId(action, registerType, listeners, id);
             }
 
             _registeredIds.computeIfAbsent(registerType, k -> ConcurrentHashMap.newKeySet()).addAll(ids);
         } else {
-            switch (registerType) {
-                case OLYMPIAD: {
-                    final Olympiad template = Olympiad.getInstance();
-                    listeners.add(template.addListener(action.apply(template)));
-                    break;
-                }
-                case GLOBAL: // Global Listener
-                {
-                    final ListenersContainer template = Containers.Global();
-                    listeners.add(template.addListener(action.apply(template)));
-                    break;
-                }
-                case GLOBAL_NPCS: // Global Npcs Listener
-                {
-                    final ListenersContainer template = Containers.Npcs();
-                    listeners.add(template.addListener(action.apply(template)));
-                    break;
-                }
-                case GLOBAL_MONSTERS: // Global Monsters Listener
-                {
-                    final ListenersContainer template = Containers.Monsters();
-                    listeners.add(template.addListener(action.apply(template)));
-                    break;
-                }
-                case GLOBAL_PLAYERS: // Global Players Listener
-                {
-                    final ListenersContainer template = Containers.Players();
-                    listeners.add(template.addListener(action.apply(template)));
-                    break;
-                }
-            }
+            registerListenerWithoutId(action, registerType, listeners);
         }
         _listeners.addAll(listeners);
         return listeners;
+    }
+
+    private void registerListenrWithId(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, List<AbstractEventListener> listeners, int id) {
+        switch (registerType) {
+            case NPC: {
+                final L2NpcTemplate template = NpcData.getInstance().getTemplate(id);
+                if (template != null) {
+                    listeners.add(template.addListener(action.apply(template)));
+                }
+                break;
+            }
+            case ZONE: {
+                final L2ZoneType template = ZoneManager.getInstance().getZoneById(id);
+                if (template != null) {
+                    listeners.add(template.addListener(action.apply(template)));
+                }
+                break;
+            }
+            case ITEM: {
+                final L2Item template = ItemTable.getInstance().getTemplate(id);
+                if (template != null) {
+                    listeners.add(template.addListener(action.apply(template)));
+                }
+                break;
+            }
+            case CASTLE: {
+                final Castle template = CastleManager.getInstance().getCastleById(id);
+                if (template != null) {
+                    listeners.add(template.addListener(action.apply(template)));
+                }
+                break;
+            }
+            case FORTRESS: {
+                final Fort template = FortManager.getInstance().getFortById(id);
+                if (template != null) {
+                    listeners.add(template.addListener(action.apply(template)));
+                }
+                break;
+            }
+            case INSTANCE: {
+                final InstanceTemplate template = InstanceManager.getInstance().getInstanceTemplate(id);
+                if (template != null) {
+                    listeners.add(template.addListener(action.apply(template)));
+                }
+                break;
+            }
+            default: {
+                LOGGER.warning(getClass().getSimpleName() + ": Unhandled register type: " + registerType);
+            }
+        }
     }
 
     public Set<Integer> getRegisteredIds(ListenerRegisterType type) {

@@ -11,5 +11,4 @@ CREATE TABLE IF NOT EXISTS `announcements` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO announcements (`type`, `author`, `content`) VALUES 
-(0, 'L2jMobius', 'Thanks for using L2jMobius!'),
-(0, 'L2jMobius', '[=http://www.l2jmobius.com/=]');
+(0, 'L2j', 'Thanks for using L2j Org!');

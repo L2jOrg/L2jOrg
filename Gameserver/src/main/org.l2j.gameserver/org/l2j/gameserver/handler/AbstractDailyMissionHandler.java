@@ -35,7 +35,7 @@ import java.util.logging.Logger;
 /**
  * @author Sdw
  */
-public abstract class AbstractDailyMissionHandler extends ListenersContainer {
+public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
     private final Map<Integer, DailyMissionPlayerEntry> _entries = new ConcurrentHashMap<>();
     private final DailyMissionDataHolder _holder;
     protected Logger LOGGER = Logger.getLogger(getClass().getName());

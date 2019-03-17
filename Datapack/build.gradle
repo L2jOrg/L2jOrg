@@ -10,6 +10,8 @@ ext.moduleName = 'org.l2j.scripts'
 dependencies {
     compile project(':Commons')
     compile project(":Gameserver")
+
+    compile 'org.slf4j:slf4j-api:1.8.0-beta2'
 }
 
 sourceSets {
