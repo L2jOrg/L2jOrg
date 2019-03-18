@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver;
 
 import org.l2j.gameserver.model.actor.L2Character;
@@ -21,12 +5,13 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.OnDayNightChange;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.util.Constants.SkillsConstant;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Calendar;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Game Time controller class.
@@ -34,20 +19,20 @@ import java.util.logging.Logger;
  * @author Forsaiken
  */
 public final class GameTimeController extends Thread {
+    
+    private static final Logger LOGGER = LoggerFactory.getLogger(GameTimeController.class);
+
     public static final int TICKS_PER_SECOND = 10; // not able to change this without checking through code
     public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
-    public static final int IG_DAYS_PER_DAY = 6;
-    public static final int MILLIS_PER_IG_DAY = (3600000 * 24) / IG_DAYS_PER_DAY;
-    public static final int SECONDS_PER_IG_DAY = MILLIS_PER_IG_DAY / 1000;
-    public static final int TICKS_PER_IG_DAY = SECONDS_PER_IG_DAY * TICKS_PER_SECOND;
-    private static final Logger LOGGER = Logger.getLogger(GameTimeController.class.getName());
-    private final static int SHADOW_SENSE_ID = 294;
-
-    private static GameTimeController _instance;
+    public static final int IN_GAME_DAYS_PER_DAY = 6;
+    public static final int MILLIS_PER_IN_GAME_DAY = (3600000 * 24) / IN_GAME_DAYS_PER_DAY;
+    public static final int SECONDS_PER_IN_GAME_DAY = MILLIS_PER_IN_GAME_DAY / 1000;
+    public static final int TICKS_PER_IN_GAME_DAY = SECONDS_PER_IN_GAME_DAY * TICKS_PER_SECOND;
 
     private final Set<L2Character> _movingObjects = ConcurrentHashMap.newKeySet();
     private final Set<L2Character> _shadowSenseCharacters = ConcurrentHashMap.newKeySet();
     private final long _referenceTime;
+    private volatile boolean shutdown = false;
 
     private GameTimeController() {
         super("GameTimeController");
@@ -60,20 +45,14 @@ public final class GameTimeController extends Thread {
         c.set(Calendar.SECOND, 0);
         c.set(Calendar.MILLISECOND, 0);
         _referenceTime = c.getTimeInMillis();
-
-        super.start();
     }
 
     public static void init() {
-        _instance = new GameTimeController();
-    }
-
-    public static GameTimeController getInstance() {
-        return _instance;
+        getInstance().start();
     }
 
     public final int getGameTime() {
-        return (getGameTicks() % TICKS_PER_IG_DAY) / MILLIS_IN_TICK;
+        return (getGameTicks() % TICKS_PER_IN_GAME_DAY) / MILLIS_IN_TICK;
     }
 
     public final int getGameHour() {
@@ -126,27 +105,24 @@ public final class GameTimeController extends Thread {
     }
 
     public final void stopTimer() {
-        super.interrupt();
-        LOGGER.info(getClass().getSimpleName() + ": Stopped.");
+        shutdown = true;
     }
 
     @Override
     public final void run() {
-        LOGGER.info(getClass().getSimpleName() + ": Started.");
-
         long nextTickTime;
         long sleepTime;
         boolean isNight = isNight();
 
-        EventDispatcher.getInstance().notifyEventAsync(new OnDayNightChange(isNight));
+        EventDispatcher.getInstance().notifyEventAsync(OnDayNightChange.of(isNight));
 
-        while (true) {
+        while (!shutdown) {
             nextTickTime = ((System.currentTimeMillis() / MILLIS_IN_TICK) * MILLIS_IN_TICK) + 100;
 
             try {
                 moveObjects();
             } catch (Throwable e) {
-                LOGGER.log(Level.WARNING, getClass().getSimpleName(), e);
+                LOGGER.warn(e.getLocalizedMessage(), e);
             }
 
             sleepTime = nextTickTime - System.currentTimeMillis();
@@ -154,12 +130,13 @@ public final class GameTimeController extends Thread {
                 try {
                     Thread.sleep(sleepTime);
                 } catch (InterruptedException e) {
+                    // ignore
                 }
             }
 
             if (isNight() != isNight) {
                 isNight = !isNight;
-                EventDispatcher.getInstance().notifyEventAsync(new OnDayNightChange(isNight));
+                EventDispatcher.getInstance().notifyEventAsync(OnDayNightChange.of(isNight));
                 notifyShadowSense();
             }
         }
@@ -170,7 +147,7 @@ public final class GameTimeController extends Thread {
             _shadowSenseCharacters.add(character);
             if (isNight()) {
                 final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT);
-                msg.addSkillName(SHADOW_SENSE_ID);
+                msg.addSkillName(SkillsConstant.SHADOW_SENSE_ID);
                 character.sendPacket(msg);
             }
         }
@@ -182,10 +159,18 @@ public final class GameTimeController extends Thread {
 
     private void notifyShadowSense() {
         final SystemMessage msg = SystemMessage.getSystemMessage(isNight() ? SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT : SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR);
-        msg.addSkillName(SHADOW_SENSE_ID);
+        msg.addSkillName(SkillsConstant.SHADOW_SENSE_ID);
         for (L2Character character : _shadowSenseCharacters) {
             character.getStat().recalculateStats(true);
             character.sendPacket(msg);
         }
+    }
+
+    public static GameTimeController getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final GameTimeController INSTANCE = new GameTimeController();
     }
 }

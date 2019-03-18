@@ -1,10 +1,10 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.util.CommonUtil;
-import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.instancemanager.PlayerCountManager;
 import org.l2j.gameserver.model.actor.L2Character;
@@ -16,6 +16,8 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcCreatureSee;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.serverpackets.DeleteObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,9 +27,11 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
-import java.util.logging.Logger;
 
 public final class L2World {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(L2World.class);
+
     /**
      * Gracia border Flying objects not allowed to the east of it.
      */
@@ -57,7 +61,6 @@ public final class L2World {
      */
     public static final int OFFSET_X = Math.abs(MAP_MIN_X >> SHIFT_BY);
     public static final int OFFSET_Y = Math.abs(MAP_MIN_Y >> SHIFT_BY);
-    private static final Logger LOGGER = Logger.getLogger(L2World.class.getName());
     /**
      * Number of regions.
      */
@@ -89,11 +92,7 @@ public final class L2World {
 
     private final L2WorldRegion[][] _worldRegions = new L2WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
 
-    /**
-     * Constructor of L2World.
-     */
-    protected L2World() {
-        // Initialize regions.
+    private L2World() {
         for (int x = 0; x <= REGIONS_X; x++) {
             for (int y = 0; y <= REGIONS_Y; y++) {
                 _worldRegions[x][y] = new L2WorldRegion(x, y);
@@ -117,7 +116,7 @@ public final class L2World {
             }
         }
 
-        LOGGER.info(getClass().getSimpleName() + ": (" + REGIONS_X + " by " + REGIONS_Y + ") World Region Grid set up.");
+        LOGGER.info("World Region Grid set up: {} by {}", REGIONS_X, REGIONS_Y);
     }
 
     public static void addFactionPlayerToWorld(L2PcInstance player) {
@@ -128,26 +127,9 @@ public final class L2World {
         }
     }
 
-    /**
-     * @return the current instance of L2World
-     */
-    public static L2World getInstance() {
-        return SingletonHolder._instance;
-    }
-
-    /**
-     * Adds an object to the world.<br>
-     * <B><U>Example of use</U>:</B>
-     * <ul>
-     * <li>Withdraw an item from the warehouse, create an item</li>
-     * <li>Spawn a L2Character (PC, NPC, Pet)</li>
-     * </ul>
-     *
-     * @param object
-     */
     public void addObject(L2Object object) {
         if (_allObjects.putIfAbsent(object.getObjectId(), object) != null) {
-            LOGGER.warning(getClass().getSimpleName() + ": Object " + object + " already exists in the world. Stack Trace: " + CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
+            LOGGER.warn("Object {}  already exists in the world. Stack Trace: {}", object, CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
         }
 
         if (object.isPlayer()) {
@@ -163,7 +145,7 @@ public final class L2World {
             if (existingPlayer != null) {
                 Disconnection.of(existingPlayer).defaultSequence(false);
                 Disconnection.of(newPlayer).defaultSequence(false);
-                LOGGER.warning(getClass().getSimpleName() + ": Duplicate character!? Disconnected both characters (" + newPlayer.getName() + ")");
+                LOGGER.warn(getClass().getSimpleName() + ": Duplicate character!? Disconnected both characters (" + newPlayer.getName() + ")");
             } else if (Config.FACTION_SYSTEM_ENABLED) {
                 addFactionPlayerToWorld(newPlayer);
             }
@@ -218,15 +200,6 @@ public final class L2World {
 
     public Collection<L2Object> getVisibleObjects() {
         return _allObjects.values();
-    }
-
-    /**
-     * Get the count of all visible objects in world.
-     *
-     * @return count off all L2World objects
-     */
-    public int getVisibleObjectsCount() {
-        return _allObjects.size();
     }
 
     public Collection<L2PcInstance> getPlayers() {
@@ -309,46 +282,38 @@ public final class L2World {
             return;
         }
 
-        forEachVisibleObject(object, L2Object.class, wo ->
-        {
-            if (object.isPlayer() && wo.isVisibleFor((L2PcInstance) object)) {
-                wo.sendInfo((L2PcInstance) object);
-                if (wo.isCharacter()) {
-                    final L2CharacterAI ai = ((L2Character) wo).getAI();
-                    if (ai != null) {
-                        ai.describeStateToPlayer((L2PcInstance) object);
-                        if (wo.isMonster()) {
-                            if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE) {
-                                ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-                            }
+        forEachVisibleObject(object, L2Object.class, wo -> beAwereOfObject(object, wo));
+    }
+
+    private void beAwereOfObject(L2Object object, L2Object wo) {
+        describeObjectToOther(object, wo);
+
+        describeObjectToOther(wo, object);
+
+        if (wo.isNpc() && object.isCharacter()) {
+            EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((L2Npc) wo, (L2Character) object, object.isSummon()), (L2Npc) wo);
+        }
+
+        if (object.isNpc() && wo.isCharacter()) {
+            EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((L2Npc) object, (L2Character) wo, wo.isSummon()), (L2Npc) object);
+        }
+    }
+
+    private void describeObjectToOther(L2Object object, L2Object wo) {
+        if (object.isPlayer() && wo.isVisibleFor((L2PcInstance) object)) {
+            wo.sendInfo((L2PcInstance) object);
+            if (wo.isCharacter()) {
+                final L2CharacterAI ai = ((L2Character) wo).getAI();
+                if (ai != null) {
+                    ai.describeStateToPlayer((L2PcInstance) object);
+                    if (wo.isMonster()) {
+                        if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE) {
+                            ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
                         }
                     }
                 }
             }
-
-            if (wo.isPlayer() && object.isVisibleFor((L2PcInstance) wo)) {
-                object.sendInfo((L2PcInstance) wo);
-                if (object.isCharacter()) {
-                    final L2CharacterAI ai = ((L2Character) object).getAI();
-                    if (ai != null) {
-                        ai.describeStateToPlayer((L2PcInstance) wo);
-                        if (object.isMonster()) {
-                            if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE) {
-                                ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-                            }
-                        }
-                    }
-                }
-            }
-
-            if (wo.isNpc() && object.isCharacter()) {
-                EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((L2Npc) wo, (L2Character) object, object.isSummon()), (L2Npc) wo);
-            }
-
-            if (object.isNpc() && wo.isCharacter()) {
-                EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((L2Npc) object, (L2Character) wo, wo.isSummon()), (L2Npc) object);
-            }
-        });
+        }
     }
 
     /**
@@ -377,43 +342,7 @@ public final class L2World {
             // Go through all surrounding L2WorldRegion L2Characters
             oldRegion.forEachSurroundingRegion(w ->
             {
-                for (L2Object wo : w.getVisibleObjects().values()) {
-                    if (wo == object) {
-                        continue;
-                    }
-
-                    if (object.isCharacter()) {
-                        final L2Character objectCreature = (L2Character) object;
-                        final L2CharacterAI ai = objectCreature.getAI();
-                        if (ai != null) {
-                            ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, wo);
-                        }
-
-                        if (objectCreature.getTarget() == wo) {
-                            objectCreature.setTarget(null);
-                        }
-
-                        if (object.isPlayer()) {
-                            object.sendPacket(new DeleteObject(wo));
-                        }
-                    }
-
-                    if (wo.isCharacter()) {
-                        final L2Character woCreature = (L2Character) wo;
-                        final L2CharacterAI ai = woCreature.getAI();
-                        if (ai != null) {
-                            ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, object);
-                        }
-
-                        if (woCreature.getTarget() == object) {
-                            woCreature.setTarget(null);
-                        }
-
-                        if (wo.isPlayer()) {
-                            wo.sendPacket(new DeleteObject(object));
-                        }
-                    }
-                }
+                forgetObjectsInRegion(object, w);
                 return true;
             });
         }
@@ -428,43 +357,7 @@ public final class L2World {
         oldRegion.forEachSurroundingRegion(w ->
         {
             if (!newRegion.isSurroundingRegion(w)) {
-                for (L2Object wo : w.getVisibleObjects().values()) {
-                    if (wo == object) {
-                        continue;
-                    }
-
-                    if (object.isCharacter()) {
-                        final L2Character objectCreature = (L2Character) object;
-                        final L2CharacterAI ai = objectCreature.getAI();
-                        if (ai != null) {
-                            ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, wo);
-                        }
-
-                        if (objectCreature.getTarget() == wo) {
-                            objectCreature.setTarget(null);
-                        }
-
-                        if (object.isPlayer()) {
-                            object.sendPacket(new DeleteObject(wo));
-                        }
-                    }
-
-                    if (wo.isCharacter()) {
-                        final L2Character woCreature = (L2Character) wo;
-                        final L2CharacterAI ai = woCreature.getAI();
-                        if (ai != null) {
-                            ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, object);
-                        }
-
-                        if (woCreature.getTarget() == object) {
-                            woCreature.setTarget(null);
-                        }
-
-                        if (wo.isPlayer()) {
-                            wo.sendPacket(new DeleteObject(object));
-                        }
-                    }
-                }
+                forgetObjectsInRegion(object, w);
             }
             return true;
         });
@@ -477,47 +370,41 @@ public final class L2World {
                         continue;
                     }
 
-                    if (object.isPlayer() && wo.isVisibleFor((L2PcInstance) object)) {
-                        wo.sendInfo((L2PcInstance) object);
-                        if (wo.isCharacter()) {
-                            final L2CharacterAI ai = ((L2Character) wo).getAI();
-                            if (ai != null) {
-                                ai.describeStateToPlayer((L2PcInstance) object);
-                                if (wo.isMonster()) {
-                                    if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE) {
-                                        ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    if (wo.isPlayer() && object.isVisibleFor((L2PcInstance) wo)) {
-                        object.sendInfo((L2PcInstance) wo);
-                        if (object.isCharacter()) {
-                            final L2CharacterAI ai = ((L2Character) object).getAI();
-                            if (ai != null) {
-                                ai.describeStateToPlayer((L2PcInstance) wo);
-                                if (object.isMonster()) {
-                                    if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE) {
-                                        ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    if (wo.isNpc() && object.isCharacter()) {
-                        EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((L2Npc) wo, (L2Character) object, object.isSummon()), (L2Npc) wo);
-                    }
-
-                    if (object.isNpc() && wo.isCharacter()) {
-                        EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((L2Npc) object, (L2Character) wo, wo.isSummon()), (L2Npc) object);
-                    }
+                    beAwereOfObject(object, wo);
                 }
             }
             return true;
         });
+    }
+
+    private void forgetObjectsInRegion(L2Object object, L2WorldRegion w) {
+        for (L2Object wo : w.getVisibleObjects().values()) {
+            if (wo == object) {
+                continue;
+            }
+
+            forgetObject(object, wo);
+
+            forgetObject(wo, object);
+        }
+    }
+
+    private void forgetObject(L2Object object, L2Object wo) {
+        if (object.isCharacter()) {
+            final L2Character objectCreature = (L2Character) object;
+            final L2CharacterAI ai = objectCreature.getAI();
+            if (ai != null) {
+                ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, wo);
+            }
+
+            if (objectCreature.getTarget() == wo) {
+                objectCreature.setTarget(null);
+            }
+
+            if (object.isPlayer()) {
+                object.sendPacket(new DeleteObject(wo));
+            }
+        }
     }
 
     public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz) {
@@ -628,18 +515,9 @@ public final class L2World {
         try {
             return _worldRegions[(x >> SHIFT_BY) + OFFSET_X][(y >> SHIFT_BY) + OFFSET_Y];
         } catch (ArrayIndexOutOfBoundsException e) {
-            LOGGER.warning(getClass().getSimpleName() + ": Incorrect world region X: " + ((x >> SHIFT_BY) + OFFSET_X) + " Y: " + ((y >> SHIFT_BY) + OFFSET_Y));
+            LOGGER.warn(getClass().getSimpleName() + ": Incorrect world region X: " + ((x >> SHIFT_BY) + OFFSET_X) + " Y: " + ((y >> SHIFT_BY) + OFFSET_Y));
             return null;
         }
-    }
-
-    /**
-     * Returns the whole 3d array containing the world regions used by ZoneData.java to setup zones inside the world regions
-     *
-     * @return
-     */
-    public L2WorldRegion[][] getWorldRegions() {
-        return _worldRegions;
     }
 
     public synchronized void disposeOutOfBoundsObject(L2Object object) {
@@ -651,15 +529,15 @@ public final class L2World {
         } else if (_allObjects.remove(object.getObjectId()) != null) {
             if (object.isNpc()) {
                 final L2Npc npc = (L2Npc) object;
-                LOGGER.warning("Deleting npc " + object.getName() + " NPCID[" + npc.getId() + "] from invalid location X:" + object.getX() + " Y:" + object.getY() + " Z:" + object.getZ());
+                LOGGER.warn("Deleting npc " + object.getName() + " NPCID[" + npc.getId() + "] from invalid location X:" + object.getX() + " Y:" + object.getY() + " Z:" + object.getZ());
                 npc.deleteMe();
 
                 final L2Spawn spawn = npc.getSpawn();
                 if (spawn != null) {
-                    LOGGER.warning("Spawn location X:" + spawn.getX() + " Y:" + spawn.getY() + " Z:" + spawn.getZ() + " Heading:" + spawn.getHeading());
+                    LOGGER.warn("Spawn location X:" + spawn.getX() + " Y:" + spawn.getY() + " Z:" + spawn.getZ() + " Heading:" + spawn.getHeading());
                 }
             } else if (object.isCharacter()) {
-                LOGGER.warning("Deleting object " + object.getName() + " OID[" + object.getObjectId() + "] from invalid location X:" + object.getX() + " Y:" + object.getY() + " Z:" + object.getZ());
+                LOGGER.warn("Deleting object " + object.getName() + " OID[" + object.getObjectId() + "] from invalid location X:" + object.getX() + " Y:" + object.getY() + " Z:" + object.getZ());
                 ((L2Character) object).deleteMe();
             }
 
@@ -693,7 +571,12 @@ public final class L2World {
         return _memberInPartyNumber.get();
     }
 
-    private static class SingletonHolder {
-        protected static final L2World _instance = new L2World();
+
+    public static L2World getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final L2World INSTANCE = new L2World();
     }
 }

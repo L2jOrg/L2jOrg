@@ -36,6 +36,8 @@ import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.net.InetSocketAddress;
 import java.time.Duration;
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -54,23 +56,20 @@ public class GameServer {
     private final ConnectionHandler<L2GameClient> connectionHandler;
 
     public GameServer() throws Exception {
+        final var serverLoadStart = Instant.now();
 
-        final long serverLoadStart = System.currentTimeMillis();
-
-        printSection("IdFactory");
+        printSection("Identify Factory");
         if (!IdFactory.getInstance().isInitialized()) {
             LOGGER.error("Could not read object IDs from database. Please check your configuration.");
             throw new Exception("Could not initialize the ID factory!");
         }
 
-        // load script engines
         printSection("Scripting Engine");
         EventDispatcher.getInstance();
         ScriptEngineManager.getInstance();
 
-        printSection("World");
-        // start game time control early
-        GameTimeController.init();
+        printSection("Lineage II World");
+        GameTimeController.init(); // start game time control early
         L2World.getInstance();
         MapRegionManager.getInstance();
         ZoneManager.getInstance();
@@ -79,7 +78,7 @@ public class GameServer {
         AnnouncementsTable.getInstance();
         GlobalVariablesManager.getInstance();
 
-        printSection("Data");
+        printSection("Server Data");
         ActionData.getInstance();
         CategoryData.getInstance();
         SecondaryAuthData.getInstance();
@@ -277,10 +276,10 @@ public class GameServer {
         }
         System.gc();
         final long totalMem = Runtime.getRuntime().maxMemory() / 1048576;
-        LOGGER.info(getClass().getSimpleName() + ": Started, using " + getUsedMemoryMB() + " of " + totalMem + " MB total memory.");
-        LOGGER.info(getClass().getSimpleName() + ": Geodata use " + geodataMemory + " MB of memory.");
-        LOGGER.info(getClass().getSimpleName() + ": Maximum number of connected players is " + Config.MAXIMUM_ONLINE_USERS + ".");
-        LOGGER.info(getClass().getSimpleName() + ": Server loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
+        LOGGER.info("Started, using {} of {} MB total memory", getUsedMemoryMB(), totalMem);
+        LOGGER.info("Geodata use {} MB of memory", geodataMemory);
+        LOGGER.info("Maximum number of connected players is {}", Config.MAXIMUM_ONLINE_USERS);
+        LOGGER.info("Server loaded in {} seconds", serverLoadStart.until(Instant.now(), ChronoUnit.SECONDS));
 
         connectionHandler = ConnectionBuilder.create(new InetSocketAddress(Config.PORT_GAME), L2GameClient::new, new ClientPacketHandler(), ThreadPoolManager::execute).bufferLargeSize(24 * 1024).build();
         connectionHandler.start();
@@ -290,7 +289,9 @@ public class GameServer {
         configureLogger();
         logVersionInfo();
         configureDatabase();
+        printSection("Server Configuration");
         Config.load();
+        ThreadPoolManager.getInstance().schedulePurge();
         INSTANCE = new GameServer();
         ThreadPoolManager.execute(AuthServerCommunication.getInstance());
 
@@ -301,10 +302,11 @@ public class GameServer {
         if (isNullOrEmpty(logConfigurationFile)) {
             System.setProperty(LOG4J_CONFIGURATION_FILE, "log4j.xml");
         }
-        LOGGER = LoggerFactory.getLogger(org.l2j.gameserver.GameServer.class);
+        LOGGER = LoggerFactory.getLogger(GameServer.class);
     }
 
     private static void configureDatabase() throws Exception {
+        printSection("Database Connection");
         System.setProperty("hikaricp.configurationFile", "config/database.properties");
         if (!DatabaseAccess.initialize()) {
             throw new Exception("Database Access could not be initialized");
@@ -313,18 +315,19 @@ public class GameServer {
 
     private static void logVersionInfo() {
         try {
-            var versionProperties = new Properties();
             var versionFile = ClassLoader.getSystemResourceAsStream("version.properties");
             if (nonNull(versionFile)) {
+
+                var versionProperties = new Properties();
                 versionProperties.load(versionFile);
                 version = versionProperties.getProperty("version");
-                LOGGER.info("======================================================================");
+
+                printSection("Server Info Version");
+                LOGGER.info("Update: .................. {}", UPDATE_NAME);
                 LOGGER.info("Build Version: ........... {}", version);
                 LOGGER.info("Build Revision: .......... {}", versionProperties.getProperty("revision"));
-                LOGGER.info("Update: .................. {}", UPDATE_NAME);
                 LOGGER.info("Build date: .............. {}", versionProperties.getProperty("buildDate"));
                 LOGGER.info("Compiler JDK version: .... {}", versionProperties.getProperty("compilerVersion"));
-                LOGGER.info("======================================================================");
             }
         } catch (IOException e) {
             LOGGER.warn(e.getLocalizedMessage(), e);
@@ -332,11 +335,9 @@ public class GameServer {
     }
 
     private static void printSection(String s) {
-        s = "=[ " + s + " ]";
-        while (s.length() < 61) {
-            s = "-" + s;
-        }
-        LOGGER.info(s);
+        String format = "{}=[ {} ]";
+        var len = s.length();
+        LOGGER.info(format, "-".repeat(64 - len), s);
     }
 
     public static GameServer getInstance() {

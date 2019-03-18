@@ -7,6 +7,8 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.L2FenceInstance;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
@@ -17,36 +19,31 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
-import java.util.logging.Logger;
 
 /**
  * @author HoridoJoho / FBIagent
  */
 public final class FenceData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(FenceData.class.getSimpleName());
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(FenceData.class);
 
     private static final int MAX_Z_DIFF = 100;
 
     private final Map<L2WorldRegion, List<L2FenceInstance>> _regions = new ConcurrentHashMap<>();
     private final Map<Integer, L2FenceInstance> _fences = new ConcurrentHashMap<>();
 
-    protected FenceData() {
+    private FenceData() {
         load();
-    }
-
-    public static FenceData getInstance() {
-        return SingletonHolder.INSTANCE;
     }
 
     @Override
     public void load() {
         if (!_fences.isEmpty()) {
-            // Remove old fences when reloading
             _fences.values().forEach(this::removeFence);
         }
 
         parseDatapackFile("data/FenceData.xml");
-        LOGGER.info("Loaded " + _fences.size() + " Fences.");
+        LOGGER.info("Loaded {} Fences", _fences.size());
     }
 
     @Override
@@ -146,7 +143,7 @@ public final class FenceData implements IGameXmlReader {
         };
 
         final L2WorldRegion region = L2World.getInstance().getRegion(x, y); // Should never be null.
-        return region == null ? false : _regions.getOrDefault(region, Collections.emptyList()).stream().anyMatch(filter);
+        return region != null && _regions.getOrDefault(region, Collections.emptyList()).stream().anyMatch(filter);
     }
 
     private boolean crossLinePart(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4, double xMin, double yMin, double xMax, double yMax) {
@@ -183,7 +180,11 @@ public final class FenceData implements IGameXmlReader {
                 };
     }
 
-    private static class SingletonHolder {
-        protected static final FenceData INSTANCE = new FenceData();
+    public static FenceData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final FenceData INSTANCE = new FenceData();
     }
 }

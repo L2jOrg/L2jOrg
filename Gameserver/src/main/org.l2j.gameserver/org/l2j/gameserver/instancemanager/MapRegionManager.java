@@ -16,6 +16,8 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.zone.type.L2RespawnZone;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -24,7 +26,6 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import java.util.logging.Logger;
 
 /**
  * Map Region Manager.
@@ -32,29 +33,20 @@ import java.util.logging.Logger;
  * @author Nyaran
  */
 public final class MapRegionManager implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(MapRegionManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(MapRegionManager.class);
 
     private final Map<String, L2MapRegion> _regions = new HashMap<>();
     private final String defaultRespawn = "talking_island_town";
 
-    protected MapRegionManager() {
+    private MapRegionManager() {
         load();
-    }
-
-    /**
-     * Gets the single instance of {@code MapRegionManager}.
-     *
-     * @return single instance of {@code MapRegionManager}
-     */
-    public static MapRegionManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
     public void load() {
         _regions.clear();
         parseDatapackDirectory("data/mapregion", false);
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _regions.size() + " map regions.");
+        LOGGER.info("Loaded {}  map regions.", _regions.size());
     }
 
     @Override
@@ -109,11 +101,6 @@ public final class MapRegionManager implements IGameXmlReader {
         }
     }
 
-    /**
-     * @param locX
-     * @param locY
-     * @return
-     */
     public final L2MapRegion getMapRegion(int locX, int locY) {
         for (L2MapRegion region : _regions.values()) {
             if (region.isZoneInRegion(getMapRegionX(locX), getMapRegionY(locY))) {
@@ -123,11 +110,7 @@ public final class MapRegionManager implements IGameXmlReader {
         return null;
     }
 
-    /**
-     * @param locX
-     * @param locY
-     * @return
-     */
+
     public final int getMapRegionLocId(int locX, int locY) {
         final L2MapRegion region = getMapRegion(locX, locY);
         if (region != null) {
@@ -359,7 +342,12 @@ public final class MapRegionManager implements IGameXmlReader {
         return region != null ? region.getBbs() : _regions.get(defaultRespawn).getBbs();
     }
 
-    private static class SingletonHolder {
-        protected static final MapRegionManager _instance = new MapRegionManager();
+
+    public static MapRegionManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final MapRegionManager INSTANCE = new MapRegionManager();
     }
 }

@@ -4,22 +4,18 @@ import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.events.returns.AbstractEventReturn;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Queue;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @author UnAfraid
  */
 public final class EventDispatcher {
-    private static final Logger LOGGER = Logger.getLogger(EventDispatcher.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(EventDispatcher.class);
 
-    protected EventDispatcher() {
-    }
-
-    public static EventDispatcher getInstance() {
-        return SingletonHolder._instance;
+    private EventDispatcher() {
     }
 
     /**
@@ -62,7 +58,7 @@ public final class EventDispatcher {
         try {
             return Containers.Global().hasListener(event.getType()) || ((container != null) && container.hasListener(event.getType())) ? notifyEventImpl(event, container, callbackClass) : null;
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't notify event " + event.getClass().getSimpleName(), e);
+            LOGGER.warn(getClass().getSimpleName() + ": Couldn't notify event " + event.getClass().getSimpleName(), e);
         }
         return null;
     }
@@ -136,7 +132,7 @@ public final class EventDispatcher {
 
             return callback;
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't notify event " + event.getClass().getSimpleName(), e);
+            LOGGER.warn(getClass().getSimpleName() + ": Couldn't notify event " + event.getClass().getSimpleName(), e);
         }
         return null;
     }
@@ -189,14 +185,19 @@ public final class EventDispatcher {
                     break;
                 }
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception during notification of event: " + event.getClass().getSimpleName() + " listener: " + listener.getClass().getSimpleName(), e);
+                LOGGER.warn("Exception during notification of event: {} listener {} : {}", event.getClass().getSimpleName(),listener.getClass().getSimpleName(), e.getCause());
+
             }
         }
 
         return callback;
     }
 
-    private static class SingletonHolder {
-        protected static final EventDispatcher _instance = new EventDispatcher();
+    public static EventDispatcher getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final EventDispatcher INSTANCE = new EventDispatcher();
     }
 }

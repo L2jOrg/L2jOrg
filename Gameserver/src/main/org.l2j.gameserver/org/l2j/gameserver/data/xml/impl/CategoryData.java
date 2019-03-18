@@ -2,6 +2,8 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -11,7 +13,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.logging.Logger;
 
 /**
  * Loads the category data with Class or NPC IDs.
@@ -19,16 +20,12 @@ import java.util.logging.Logger;
  * @author NosBit, xban1x
  */
 public final class CategoryData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(CategoryData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(CategoryData.class);
 
     private final Map<CategoryType, Set<Integer>> _categories = new HashMap<>();
 
-    protected CategoryData() {
+    private CategoryData() {
         load();
-    }
-
-    public static CategoryData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -47,7 +44,7 @@ public final class CategoryData implements IGameXmlReader {
                         final NamedNodeMap attrs = list_node.getAttributes();
                         final CategoryType categoryType = CategoryType.findByName(attrs.getNamedItem("name").getNodeValue());
                         if (categoryType == null) {
-                            LOGGER.warning(getClass().getSimpleName() + ": Can't find category by name: " + attrs.getNamedItem("name").getNodeValue());
+                            LOGGER.warn("Can't find category by name: {}", attrs.getNamedItem("name").getNodeValue());
                             continue;
                         }
 
@@ -74,7 +71,7 @@ public final class CategoryData implements IGameXmlReader {
     public boolean isInCategory(CategoryType type, int id) {
         final Set<Integer> category = getCategoryByType(type);
         if (category == null) {
-            LOGGER.warning(getClass().getSimpleName() + ": Can't find category type: " + type);
+            LOGGER.warn(getClass().getSimpleName() + ": Can't find category type: " + type);
             return false;
         }
         return category.contains(id);
@@ -90,7 +87,11 @@ public final class CategoryData implements IGameXmlReader {
         return _categories.get(type);
     }
 
-    private static class SingletonHolder {
-        protected static final CategoryData _instance = new CategoryData();
+    public static CategoryData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final CategoryData INSTANCE = new CategoryData();
     }
 }

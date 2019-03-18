@@ -8,6 +8,8 @@ import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.templates.L2DoorTemplate;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -15,7 +17,6 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.logging.Logger;
 
 /**
  * This class loads and hold info about doors.
@@ -23,7 +24,7 @@ import java.util.logging.Logger;
  * @author JIV, GodKratos, UnAfraid
  */
 public final class DoorData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(DoorData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(DoorData.class);
 
     // Info holders
     private final Map<String, Set<Integer>> _groups = new HashMap<>();
@@ -31,12 +32,8 @@ public final class DoorData implements IGameXmlReader {
     private final Map<Integer, StatsSet> _templates = new HashMap<>();
     private final Map<Integer, List<L2DoorInstance>> _regions = new HashMap<>();
 
-    protected DoorData() {
+    private DoorData() {
         load();
-    }
-
-    public static DoorData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -84,9 +81,6 @@ public final class DoorData implements IGameXmlReader {
         return params;
     }
 
-    /**
-     * @param set
-     */
     private void applyCollisions(StatsSet set) {
         // Insert Collision data
         if (set.contains("nodeX_0") && set.contains("nodeY_0") && set.contains("nodeX_1") && set.contains("nodeX_1")) {
@@ -106,12 +100,6 @@ public final class DoorData implements IGameXmlReader {
         }
     }
 
-    /**
-     * Spawns the door, adds the group name and registers it to templates, regions and doors also inserts collisions data
-     *
-     * @param set
-     * @return
-     */
     public L2DoorInstance spawnDoor(StatsSet set) {
         // Create door template + door instance
         final L2DoorTemplate template = new L2DoorTemplate(set);
@@ -177,15 +165,6 @@ public final class DoorData implements IGameXmlReader {
     /**
      * GodKratos: TODO: remove GeoData checks from door table and convert door nodes to Geo zones
      *
-     * @param x
-     * @param y
-     * @param z
-     * @param tx
-     * @param ty
-     * @param tz
-     * @param instance
-     * @param doubleFaceCheck
-     * @return {@code boolean}
      */
     public boolean checkIfDoorsBetween(int x, int y, int z, int tx, int ty, int tz, Instance instance, boolean doubleFaceCheck) {
         final Collection<L2DoorInstance> allDoors = (instance != null) ? instance.getDoors() : _regions.get(MapRegionManager.getInstance().getMapRegionLocId(x, y));
@@ -226,7 +205,11 @@ public final class DoorData implements IGameXmlReader {
         return false;
     }
 
-    private static class SingletonHolder {
-        protected static final DoorData _instance = new DoorData();
+    public static DoorData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        protected static final DoorData INSTANCE = new DoorData();
     }
 }

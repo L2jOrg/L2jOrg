@@ -8,38 +8,34 @@ import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
 import java.util.Arrays;
 
+import static java.util.Objects.isNull;
+
 /**
  * @author HorridoJoho, Mobius
  */
 public final class JavaScriptingEngine extends AbstractScriptingEngine {
-    private volatile JavaCompiler _compiler;
+    private volatile JavaCompiler compiler;
 
     public JavaScriptingEngine() {
         super("Java Engine", "11", "java");
     }
 
     private void determineCompilerOrThrow() {
-        if (_compiler == null) {
-            _compiler = ToolProvider.getSystemJavaCompiler();
-        }
+        compiler = ToolProvider.getSystemJavaCompiler();
 
-        if (_compiler == null) {
+        if (isNull(compiler)) {
             throw new IllegalStateException("No JavaCompiler service installed!");
         }
     }
 
-    private void ensureCompilerOrThrow() {
-        if (_compiler == null) {
-            synchronized (this) {
-                if (_compiler == null) {
-                    determineCompilerOrThrow();
-                }
-            }
+    private synchronized void ensureCompilerOrThrow() {
+        if (isNull(compiler)) {
+            determineCompilerOrThrow();
         }
     }
 
     JavaCompiler getCompiler() {
-        return _compiler;
+        return compiler;
     }
 
     @Override
@@ -56,6 +52,6 @@ public final class JavaScriptingEngine extends AbstractScriptingEngine {
     @Override
     public String getLanguageVersion() {
         ensureCompilerOrThrow();
-        return Arrays.deepToString(_compiler.getSourceVersions().toArray(new SourceVersion[0])).replace("RELEASE_", "");
+        return Arrays.deepToString(compiler.getSourceVersions().toArray(SourceVersion[]::new)).replace("RELEASE_", "");
     }
 }

@@ -1,6 +1,8 @@
 package org.l2j.gameserver.scripting;
 
 import org.l2j.gameserver.Config;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -8,8 +10,8 @@ import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.*;
 import java.util.Map.Entry;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+import static java.util.Objects.isNull;
 
 /**
  * Caches script engines and provides functionality for executing and managing scripts.
@@ -18,7 +20,7 @@ import java.util.logging.Logger;
  */
 public final class ScriptEngineManager  {
 
-    private static final Logger LOGGER = Logger.getLogger(ScriptEngineManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ScriptEngineManager.class);
 
     public static final Path SCRIPT_FOLDER = Paths.get(Config.DATAPACK_ROOT.getAbsolutePath(), "data", "scripts");
     private static final Path MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "MasterHandler.java");
@@ -30,25 +32,23 @@ public final class ScriptEngineManager  {
     private final Map<String, IExecutionContext> _extEngines = new HashMap<>();
     private IExecutionContext _currentExecutionContext = null;
 
-    protected ScriptEngineManager() {
+    private ScriptEngineManager() {
         final Properties props = loadProperties();
 
-        // Load external script engines
         ServiceLoader.load(IScriptingEngine.class).forEach(engine -> registerEngine(engine, props));
     }
 
     public static ScriptEngineManager getInstance() {
-        return SingletonHolder._instance;
+        return Singleton.INSTANCE;
     }
 
     private Properties loadProperties() {
-        Properties props;
+        var props = new Properties();
         try (FileInputStream fis = new FileInputStream("config/ScriptEngine.ini")) {
-            props = new Properties();
             props.load(fis);
+            return props;
         } catch (Exception e) {
-            props = null;
-            LOGGER.warning("Couldn't load ScriptEngine.ini: " + e.getMessage());
+            LOGGER.warn("Couldn't load ScriptEngine.ini", e);
         }
         return props;
     }
@@ -60,11 +60,11 @@ public final class ScriptEngineManager  {
             _extEngines.put(commonExtension, context);
         }
 
-        LOGGER.info("ScriptEngine: " + engine.getEngineName() + " " + engine.getEngineVersion() + " (" + engine.getLanguageName() + " " + engine.getLanguageVersion() + ")");
+        LOGGER.info("{} {} ({} {})", engine.getEngineName(), engine.getEngineVersion(), engine.getLanguageName(), engine.getLanguageVersion());
     }
 
     private void maybeSetProperties(String propPrefix, Properties props, IScriptingEngine engine) {
-        if (props == null) {
+        if (isNull(props)) {
             return;
         }
 
@@ -140,7 +140,7 @@ public final class ScriptEngineManager  {
             try {
                 final Map<Path, Throwable> invokationErrors = _currentExecutionContext.executeScripts(entry.getValue());
                 for (Entry<Path, Throwable> entry2 : invokationErrors.entrySet()) {
-                    LOGGER.log(Level.WARNING, "ScriptEngine: " + entry2.getKey() + " failed execution!", entry2.getValue());
+                    LOGGER.warn("{} failed execution! {}", entry2.getKey(), entry2.getValue());
                 }
             } finally {
                 _currentExecutionContext = null;
@@ -162,7 +162,7 @@ public final class ScriptEngineManager  {
                     var ext = fileName.substring(fileName.lastIndexOf(".") +1);
 
                     if(ext.equals(fileName)) {
-                        LOGGER.warning("ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
+                        LOGGER.warn("ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
                         return FileVisitResult.CONTINUE;
                     }
 
@@ -212,7 +212,7 @@ public final class ScriptEngineManager  {
         return _currentExecutionContext != null ? _currentExecutionContext.getCurrentExecutingScript() : null;
     }
 
-    private static class SingletonHolder {
-        protected static final ScriptEngineManager _instance = new ScriptEngineManager();
+    private static class Singleton {
+        protected static final ScriptEngineManager INSTANCE = new ScriptEngineManager();
     }
 }

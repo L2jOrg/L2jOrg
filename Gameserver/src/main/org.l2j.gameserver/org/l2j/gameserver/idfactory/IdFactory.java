@@ -1,40 +1,22 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.idfactory;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import static java.util.Objects.isNull;
 
-/**
- * This class ...
- *
- * @version $Revision: 1.3.2.1.2.7 $ $Date: 2005/04/11 10:06:12 $
- */
 public abstract class IdFactory {
-    public static final int FIRST_OID = 0x10000000;
+
+    protected final Logger LOGGER = LoggerFactory.getLogger(getClass().getName());
+    
+    public static final int FIRST_OID = 0x0000001;
     public static final int LAST_OID = 0x7FFFFFFF;
     public static final int FREE_OBJECT_ID_SIZE = LAST_OID - FIRST_OID;
     //@formatter:on
@@ -80,7 +62,7 @@ public abstract class IdFactory {
                     "DELETE FROM character_skills_save WHERE restore_type = 1 AND systime <= ?"
             };
     protected static IdFactory _instance;
-    protected final Logger LOGGER = Logger.getLogger(getClass().getName());
+    
     protected boolean _initialized;
 
     protected IdFactory() {
@@ -107,7 +89,7 @@ public abstract class IdFactory {
             s.executeUpdate("UPDATE characters SET online = 0");
             LOGGER.info("Updated characters online status.");
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "Could not update characters online status: " + e.getMessage(), e);
+            LOGGER.warn("Could not update characters online status: " + e.getMessage(), e);
         }
     }
 
@@ -214,7 +196,7 @@ public abstract class IdFactory {
 
             LOGGER.info("Cleaned " + cleanCount + " elements from database in " + ((System.currentTimeMillis() - cleanupStart) / 1000) + " s");
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "Could not clean up database: " + e.getMessage(), e);
+            LOGGER.warn("Could not clean up database: " + e.getMessage(), e);
         }
     }
 

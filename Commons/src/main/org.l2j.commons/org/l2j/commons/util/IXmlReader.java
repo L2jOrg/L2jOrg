@@ -1,6 +1,8 @@
 package org.l2j.commons.util;
 
 import org.l2j.commons.util.filter.XMLFilter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -16,8 +18,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Interface for XML parsers.
@@ -25,7 +25,7 @@ import java.util.logging.Logger;
  */
 public interface IXmlReader
 {
-	Logger LOGGER = Logger.getLogger(IXmlReader.class.getName());
+	Logger LOGGER = LoggerFactory.getLogger(IXmlReader.class.getName());
 	
 	String JAXP_SCHEMA_LANGUAGE = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
 	String W3C_XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
@@ -48,7 +48,7 @@ public interface IXmlReader
 	{
 		if (!getCurrentFileFilter().accept(f))
 		{
-			LOGGER.warning("Could not parse " + f.getName() + " is not a file or it doesn't exist!");
+			LOGGER.warn("Could not parse " + f.getName() + " is not a file or it doesn't exist!");
 			return;
 		}
 		
@@ -65,12 +65,12 @@ public interface IXmlReader
 		}
 		catch (SAXParseException e)
 		{
-			LOGGER.log(Level.WARNING, "Could not parse file: " + f.getName() + " at line: " + e.getLineNumber() + ", column: " + e.getColumnNumber() + " :", e);
+			LOGGER.warn("Could not parse file: " + f.getName() + " at line: " + e.getLineNumber() + ", column: " + e.getColumnNumber() + " :", e);
 			return;
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Could not parse file: " + f.getName(), e);
+			LOGGER.warn("Could not parse file: " + f.getName(), e);
 			return;
 		}
 	}
@@ -113,7 +113,7 @@ public interface IXmlReader
 	{
 		if (!dir.exists())
 		{
-			LOGGER.warning("Folder " + dir.getAbsolutePath() + " doesn't exist!");
+			LOGGER.warn("Folder " + dir.getAbsolutePath() + " doesn't exist!");
 			return false;
 		}
 		
@@ -534,7 +534,7 @@ public interface IXmlReader
 		}
 		catch (IllegalArgumentException e)
 		{
-			LOGGER.warning("Invalid value specified for node: " + node.getNodeName() + " specified value: " + node.getNodeValue() + " should be enum value of \"" + clazz.getSimpleName() + "\" using default value: " + defaultValue);
+			LOGGER.warn("Invalid value specified for node: " + node.getNodeName() + " specified value: " + node.getNodeValue() + " should be enum value of \"" + clazz.getSimpleName() + "\" using default value: " + defaultValue);
 			return defaultValue;
 		}
 	}

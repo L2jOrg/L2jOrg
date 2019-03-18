@@ -2,13 +2,15 @@ package org.l2j.gameserver;
 
 import org.l2j.commons.util.PropertiesParser;
 import org.l2j.commons.util.StringUtil;
-import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.enums.ChatType;
+import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.util.FloodProtectorConfig;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -21,8 +23,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 import java.util.stream.Collectors;
@@ -36,7 +36,7 @@ import java.util.stream.IntStream;
 public final class Config {
     // --------------------------------------------------
     // Constants
-    private static final Logger LOGGER = Logger.getLogger(Config.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Config.class.getName());
     // --------------------------------------------------
     public static final String EOL = System.lineSeparator();
     // --------------------------------------------------
@@ -1108,7 +1108,7 @@ public final class Config {
         try {
             DATAPACK_ROOT = new File(serverSettings.getString("DatapackRoot", ".").replaceAll("\\\\", "/")).getCanonicalFile();
         } catch (IOException e) {
-            LOGGER.log(Level.WARNING, "Error setting datapack root!", e);
+            LOGGER.warn("Error setting datapack root!", e);
             DATAPACK_ROOT = new File(".");
         }
 
@@ -1117,7 +1117,7 @@ public final class Config {
         try {
             charNamePattern = Pattern.compile(serverSettings.getString("CnameTemplate", ".*"));
         } catch (PatternSyntaxException e) {
-            LOGGER.log(Level.WARNING, "Character name pattern is invalid!", e);
+            LOGGER.warn("Character name pattern is invalid!", e);
             charNamePattern = Pattern.compile(".*");
         }
 
@@ -1138,7 +1138,7 @@ public final class Config {
             try {
                 PROTOCOL_LIST.add(Integer.parseInt(protocol.trim()));
             } catch (NumberFormatException e) {
-                LOGGER.warning("Wrong config protocol version: " + protocol + ". Skipped.");
+                LOGGER.warn("Wrong config protocol version: " + protocol + ". Skipped.");
             }
         }
         SERVER_LIST_TYPE = getServerTypeId(serverSettings.getString("ServerListType", "Free").split(","));
@@ -1295,13 +1295,13 @@ public final class Config {
             for (String skill : propertySplit) {
                 final String[] skillSplit = skill.split(",");
                 if (skillSplit.length != 2) {
-                    LOGGER.warning("[SkillDurationList]: invalid config property -> SkillDurationList " + skill);
+                    LOGGER.warn("[SkillDurationList]: invalid config property -> SkillDurationList " + skill);
                 } else {
                     try {
                         SKILL_DURATION_LIST.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
                     } catch (NumberFormatException nfe) {
                         if (!skill.isEmpty()) {
-                            LOGGER.warning(StringUtil.concat("[SkillDurationList]: invalid config property -> SkillList \"", skillSplit[0], "\"", skillSplit[1]));
+                            LOGGER.warn(StringUtil.concat("[SkillDurationList]: invalid config property -> SkillList \"", skillSplit[0], "\"", skillSplit[1]));
                         }
                     }
                 }
@@ -1315,13 +1315,13 @@ public final class Config {
             for (String skill : propertySplit) {
                 final String[] skillSplit = skill.split(",");
                 if (skillSplit.length != 2) {
-                    LOGGER.warning(StringUtil.concat("[SkillReuseList]: invalid config property -> SkillReuseList \"", skill, "\""));
+                    LOGGER.warn(StringUtil.concat("[SkillReuseList]: invalid config property -> SkillReuseList \"", skill, "\""));
                 } else {
                     try {
                         SKILL_REUSE_LIST.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
                     } catch (NumberFormatException nfe) {
                         if (!skill.isEmpty()) {
-                            LOGGER.warning(StringUtil.concat("[SkillReuseList]: invalid config property -> SkillList \"", skillSplit[0], "\"", skillSplit[1]));
+                            LOGGER.warn(StringUtil.concat("[SkillReuseList]: invalid config property -> SkillList \"", skillSplit[0], "\"", skillSplit[1]));
                         }
                     }
                 }
@@ -1473,8 +1473,8 @@ public final class Config {
             try {
                 itm = Integer.parseInt(item);
             } catch (NumberFormatException nfe) {
-                LOGGER.warning("Auto loot item ids: Wrong ItemId passed: " + item);
-                LOGGER.warning(nfe.getMessage());
+                LOGGER.warn("Auto loot item ids: Wrong ItemId passed: " + item);
+                LOGGER.warn(nfe.getMessage());
             }
             if (itm != 0) {
                 AUTO_LOOT_ITEM_IDS.add(itm);
@@ -1643,7 +1643,7 @@ public final class Config {
                 BAN_CHAT_CHANNELS.add(Enum.valueOf(ChatType.class, chatId));
             }
         } catch (NumberFormatException nfe) {
-            LOGGER.log(Level.WARNING, "There was an error while parsing ban chat channels: ", nfe);
+            LOGGER.warn("There was an error while parsing ban chat channels: ", nfe);
         }
         WORLD_CHAT_MIN_LEVEL = General.getInt("WorldChatMinLevel", 95);
         WORLD_CHAT_POINTS_PER_DAY = General.getInt("WorldChatPointsPerDay", 10);
@@ -1728,14 +1728,14 @@ public final class Config {
         for (String prop : propertySplit) {
             final String[] propSplit = prop.split(",");
             if (propSplit.length != 2) {
-                LOGGER.warning(StringUtil.concat("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"", prop, "\""));
+                LOGGER.warn(StringUtil.concat("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"", prop, "\""));
             }
 
             try {
                 MINIONS_RESPAWN_TIME.put(Integer.valueOf(propSplit[0]), Integer.valueOf(propSplit[1]));
             } catch (NumberFormatException nfe) {
                 if (!prop.isEmpty()) {
-                    LOGGER.warning(StringUtil.concat("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"", propSplit[0], "\"", propSplit[1]));
+                    LOGGER.warn(StringUtil.concat("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"", propSplit[0], "\"", propSplit[1]));
                 }
             }
         }
@@ -1830,13 +1830,13 @@ public final class Config {
             for (String item : dropAmountMultiplier) {
                 final String[] itemSplit = item.split(",");
                 if (itemSplit.length != 2) {
-                    LOGGER.warning(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
+                    LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
                 } else {
                     try {
                         RATE_DROP_AMOUNT_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
                     } catch (NumberFormatException nfe) {
                         if (!item.isEmpty()) {
-                            LOGGER.warning(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
+                            LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
                         }
                     }
                 }
@@ -1849,13 +1849,13 @@ public final class Config {
             for (String item : dropChanceMultiplier) {
                 final String[] itemSplit = item.split(",");
                 if (itemSplit.length != 2) {
-                    LOGGER.warning(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
+                    LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
                 } else {
                     try {
                         RATE_DROP_CHANCE_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
                     } catch (NumberFormatException nfe) {
                         if (!item.isEmpty()) {
-                            LOGGER.warning(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
+                            LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
                         }
                     }
                 }
@@ -1969,13 +1969,13 @@ public final class Config {
                 try {
                     HEX_ID = new BigInteger(hexId.getString("HexID", null), 16).toByteArray();
                 } catch (Exception e) {
-                    LOGGER.warning("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
+                    LOGGER.warn("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
                 }
             }
         }
 
         if (HEX_ID == null) {
-            LOGGER.warning("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
+            LOGGER.warn("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
         }
 
         // Grand bosses
@@ -2015,7 +2015,7 @@ public final class Config {
             //@formatter:on
             LOGGER.info("Loaded " + FILTER_LIST.size() + " Filter Words.");
         } catch (IOException e) {
-            LOGGER.log(Level.WARNING, "Error while loading chat filter words!", e);
+            LOGGER.warn("Error while loading chat filter words!", e);
         }
 
         final PropertiesParser geoData = new PropertiesParser(GEOENGINE_CONFIG_FILE);
@@ -2186,16 +2186,16 @@ public final class Config {
         for (String entry : dualboxCheckWhiteList) {
             final String[] entrySplit = entry.split(",");
             if (entrySplit.length != 2) {
-                LOGGER.warning(StringUtil.concat("DualboxCheck[Config.load()]: invalid config property -> DualboxCheckWhitelist \"", entry, "\""));
+                LOGGER.warn(StringUtil.concat("DualboxCheck[Config.load()]: invalid config property -> DualboxCheckWhitelist \"", entry, "\""));
             } else {
                 try {
                     int num = Integer.parseInt(entrySplit[1]);
                     num = num == 0 ? -1 : num;
                     DUALBOX_CHECK_WHITELIST.put(InetAddress.getByName(entrySplit[0]).hashCode(), num);
                 } catch (UnknownHostException e) {
-                    LOGGER.warning(StringUtil.concat("DualboxCheck[Config.load()]: invalid address -> DualboxCheckWhitelist \"", entrySplit[0], "\""));
+                    LOGGER.warn(StringUtil.concat("DualboxCheck[Config.load()]: invalid address -> DualboxCheckWhitelist \"", entrySplit[0], "\""));
                 } catch (NumberFormatException e) {
-                    LOGGER.warning(StringUtil.concat("DualboxCheck[Config.load()]: invalid number -> DualboxCheckWhitelist \"", entrySplit[1], "\""));
+                    LOGGER.warn(StringUtil.concat("DualboxCheck[Config.load()]: invalid number -> DualboxCheckWhitelist \"", entrySplit[1], "\""));
                 }
             }
         }
@@ -2255,7 +2255,7 @@ public final class Config {
             MULTILANG_ALLOWED.add(lang);
         }
         if (!MULTILANG_ALLOWED.contains(MULTILANG_DEFAULT)) {
-            LOGGER.warning("MultiLang[Config.load()]: default language: " + MULTILANG_DEFAULT + " is not in allowed list !");
+            LOGGER.warn("MultiLang[Config.load()]: default language: " + MULTILANG_DEFAULT + " is not in allowed list !");
         }
         MULTILANG_VOICED_ALLOW = MultilingualSupport.getBoolean("MultiLangVoiceCommand", true);
 
@@ -2323,13 +2323,13 @@ public final class Config {
             for (String item : premiumDropChanceMultiplier) {
                 final String[] itemSplit = item.split(",");
                 if (itemSplit.length != 2) {
-                    LOGGER.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"", item, "\""));
+                    LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"", item, "\""));
                 } else {
                     try {
                         PREMIUM_RATE_DROP_CHANCE_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
                     } catch (NumberFormatException nfe) {
                         if (!item.isEmpty()) {
-                            LOGGER.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"", item, "\""));
+                            LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"", item, "\""));
                         }
                     }
                 }
@@ -2341,13 +2341,13 @@ public final class Config {
             for (String item : premiumDropAmountMultiplier) {
                 final String[] itemSplit = item.split(",");
                 if (itemSplit.length != 2) {
-                    LOGGER.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"", item, "\""));
+                    LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"", item, "\""));
                 } else {
                     try {
                         PREMIUM_RATE_DROP_AMOUNT_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
                     } catch (NumberFormatException nfe) {
                         if (!item.isEmpty()) {
-                            LOGGER.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"", item, "\""));
+                            LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"", item, "\""));
                         }
                     }
                 }
@@ -2531,12 +2531,12 @@ public final class Config {
                     hexSetting.setProperty("ServerID", String.valueOf(serverId));
                     hexSetting.setProperty("HexID", hexId);
                     hexSetting.store(out, "The HexId to Auth into LoginServer");
-                    LOGGER.log(Level.INFO, "Gameserver: Generated new HexID file for server id " + serverId + ".");
+                    LOGGER.info("Gameserver: Generated new HexID file for server id " + serverId + ".");
                 }
             }
         } catch (Exception e) {
-            LOGGER.warning(StringUtil.concat("Failed to save hex id to ", fileName, " File."));
-            LOGGER.warning("Config: " + e.getMessage());
+            LOGGER.warn(StringUtil.concat("Failed to save hex id to ", fileName, " File."));
+            LOGGER.warn("Config: " + e.getMessage());
         }
     }
 
@@ -2662,7 +2662,7 @@ public final class Config {
         for (String value : propertySplit) {
             valueSplit = value.split(",");
             if (valueSplit.length != 2) {
-                LOGGER.warning("parseItemsList[Config.load()]: invalid entry -> " + valueSplit[0] + ", should be itemId,itemNumber. Skipping to the next entry in the list.");
+                LOGGER.warn("parseItemsList[Config.load()]: invalid entry -> " + valueSplit[0] + ", should be itemId,itemNumber. Skipping to the next entry in the list.");
                 continue;
             }
 
@@ -2670,14 +2670,14 @@ public final class Config {
             try {
                 itemId = Integer.parseInt(valueSplit[0]);
             } catch (NumberFormatException e) {
-                LOGGER.warning("parseItemsList[Config.load()]: invalid itemId -> " + valueSplit[0] + ", value must be an integer. Skipping to the next entry in the list.");
+                LOGGER.warn("parseItemsList[Config.load()]: invalid itemId -> " + valueSplit[0] + ", value must be an integer. Skipping to the next entry in the list.");
                 continue;
             }
             int count = -1;
             try {
                 count = Integer.parseInt(valueSplit[1]);
             } catch (NumberFormatException e) {
-                LOGGER.warning("parseItemsList[Config.load()]: invalid item number -> " + valueSplit[1] + ", value must be an integer. Skipping to the next entry in the list.");
+                LOGGER.warn("parseItemsList[Config.load()]: invalid item number -> " + valueSplit[1] + ", value must be an integer. Skipping to the next entry in the list.");
                 continue;
             }
             if ((itemId > 0) && (count > 0)) {
@@ -2727,14 +2727,14 @@ public final class Config {
                             _hosts.add(attrs.getNamedItem("address").getNodeValue());
 
                             if (_hosts.size() != _subnets.size()) {
-                                LOGGER.warning("Failed to Load " + IPCONFIG_FILE + " File - subnets does not match server addresses.");
+                                LOGGER.warn("Failed to Load " + IPCONFIG_FILE + " File - subnets does not match server addresses.");
                             }
                         }
                     }
 
                     final Node att = n.getAttributes().getNamedItem("address");
                     if (att == null) {
-                        LOGGER.warning("Failed to load " + IPCONFIG_FILE + " file - default server address is missing.");
+                        LOGGER.warn("Failed to load " + IPCONFIG_FILE + " file - default server address is missing.");
                         _hosts.add("127.0.0.1");
                     } else {
                         _hosts.add(att.getNodeValue());
@@ -2752,7 +2752,7 @@ public final class Config {
                     externalIp = in.readLine();
                 }
             } catch (IOException e) {
-                LOGGER.log(Level.INFO, "Failed to connect to api.ipify.org please check your internet connection using 127.0.0.1!");
+                LOGGER.info("Failed to connect to api.ipify.org please check your internet connection using 127.0.0.1!");
                 externalIp = "127.0.0.1";
             }
 
@@ -2795,7 +2795,7 @@ public final class Config {
                 _subnets.add("0.0.0.0/0");
                 LOGGER.info("Network Config: Adding new subnet: 0.0.0.0/0 address: " + externalIp);
             } catch (SocketException e) {
-                LOGGER.log(Level.INFO, "Network Config: Configuration failed please configure manually using ipconfig.xml", e);
+                LOGGER.info("Network Config: Configuration failed please configure manually using ipconfig.xml", e);
                 System.exit(0);
             }
         }

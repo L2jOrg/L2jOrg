@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Note: If file is named "ipconfig.xml" this data will be used as network configuration, otherwise server will configure it automatically! -->
-<!-- Externalhost here (Internet IP) or Localhost IP for local test -->
-<gameserver address="192.168.1.105" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/ipconfig.xsd">
-	<!-- Localhost here -->
-	<define subnet="0.0.0.0/0" address="10.0.2.2" />
-</gameserver>

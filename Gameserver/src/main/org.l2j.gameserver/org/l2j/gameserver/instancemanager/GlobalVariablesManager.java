@@ -1,28 +1,12 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.model.variables.AbstractVariables;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.Map.Entry;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Global Variables Manager.
@@ -30,28 +14,20 @@ import java.util.logging.Logger;
  * @author xban1x
  */
 public final class GlobalVariablesManager extends AbstractVariables {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(GlobalVariablesManager.class);
     // Public variable names
     public static final String COC_TOP_MARKS = "COC_TOP_MARKS";
     public static final String COC_TOP_MEMBER = "COC_TOP_MEMBER";
     public static final String COC_TRUE_HERO = "COC_TRUE_HERO";
     public static final String COC_TRUE_HERO_REWARDED = "COC_TRUE_HERO_REWARDED";
-    private static final Logger LOGGER = Logger.getLogger(GlobalVariablesManager.class.getName());
     // SQL Queries.
     private static final String SELECT_QUERY = "SELECT * FROM global_variables";
     private static final String DELETE_QUERY = "DELETE FROM global_variables";
     private static final String INSERT_QUERY = "INSERT INTO global_variables (var, value) VALUES (?, ?)";
 
-    protected GlobalVariablesManager() {
+    private GlobalVariablesManager() {
         restoreMe();
-    }
-
-    /**
-     * Gets the single instance of {@code GlobalVariablesManager}.
-     *
-     * @return single instance of {@code GlobalVariablesManager}
-     */
-    public static GlobalVariablesManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -64,12 +40,12 @@ public final class GlobalVariablesManager extends AbstractVariables {
                 set(rset.getString("var"), rset.getString("value"));
             }
         } catch (SQLException e) {
-            LOGGER.warning(getClass().getSimpleName() + ": Couldn't restore global variables");
+            LOGGER.warn("Couldn't restore global variables");
             return false;
         } finally {
             compareAndSetChanges(true, false);
         }
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + getSet().size() + " variables.");
+        LOGGER.info("Loaded {} variables", getSet().size());
         return true;
     }
 
@@ -94,12 +70,12 @@ public final class GlobalVariablesManager extends AbstractVariables {
             }
             st.executeBatch();
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't save global variables to database.", e);
+            LOGGER.warn("Couldn't save global variables to database.", e);
             return false;
         } finally {
             compareAndSetChanges(true, false);
         }
-        LOGGER.info(getClass().getSimpleName() + ": Stored " + getSet().size() + " variables.");
+        LOGGER.info("Stored {} variables", getSet().size());
         return true;
     }
 
@@ -109,13 +85,17 @@ public final class GlobalVariablesManager extends AbstractVariables {
              Statement del = con.createStatement()) {
             del.execute(DELETE_QUERY);
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete global variables to database.", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Couldn't delete global variables to database.", e);
             return false;
         }
         return true;
     }
 
-    private static class SingletonHolder {
-        protected static final GlobalVariablesManager _instance = new GlobalVariablesManager();
+    public static GlobalVariablesManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final GlobalVariablesManager INSTANCE = new GlobalVariablesManager();
     }
 }

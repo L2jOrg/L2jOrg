@@ -147,23 +147,23 @@ public class LongTimeEvent extends Quest {
                                         }
 
                                         if (ItemTable.getInstance().getTemplate(itemId) == null) {
-                                            LOGGER.warning(getScriptName() + " event: " + itemId + " is wrong item id, item was not added in droplist");
+                                            LOGGER.warn(getScriptName() + " event: " + itemId + " is wrong item id, item was not added in droplist");
                                             continue;
                                         }
 
                                         if (minCount > maxCount) {
-                                            LOGGER.warning(getScriptName() + " event: item " + itemId + " - min greater than max, item was not added in droplist");
+                                            LOGGER.warn(getScriptName() + " event: item " + itemId + " - min greater than max, item was not added in droplist");
                                             continue;
                                         }
 
                                         if ((finalChance < 10000) || (finalChance > 1000000)) {
-                                            LOGGER.warning(getScriptName() + " event: item " + itemId + " - incorrect drop chance, item was not added in droplist");
+                                            LOGGER.warn(getScriptName() + " event: item " + itemId + " - incorrect drop chance, item was not added in droplist");
                                             continue;
                                         }
 
                                         _dropList.add(new DropHolder(null, itemId, minCount, maxCount, finalChance));
                                     } catch (NumberFormatException nfe) {
-                                        LOGGER.warning("Wrong number format in config.xml droplist block for " + getScriptName() + " event");
+                                        LOGGER.warn("Wrong number format in config.xml droplist block for " + getScriptName() + " event");
                                     }
                                 }
                             }
@@ -179,13 +179,13 @@ public class LongTimeEvent extends Quest {
                                         final int heading = d.getAttributes().getNamedItem("heading").getNodeValue() != null ? Integer.parseInt(d.getAttributes().getNamedItem("heading").getNodeValue()) : 0;
 
                                         if (NpcData.getInstance().getTemplate(npcId) == null) {
-                                            LOGGER.warning(getScriptName() + " event: " + npcId + " is wrong NPC id, NPC was not added in spawnlist");
+                                            LOGGER.warn(getScriptName() + " event: " + npcId + " is wrong NPC id, NPC was not added in spawnlist");
                                             continue;
                                         }
 
                                         _spawnList.add(new NpcSpawn(npcId, new Location(xPos, yPos, zPos, heading)));
                                     } catch (NumberFormatException nfe) {
-                                        LOGGER.warning("Wrong number format in config.xml spawnlist block for " + getScriptName() + " event");
+                                        LOGGER.warn("Wrong number format in config.xml spawnlist block for " + getScriptName() + " event");
                                     }
                                 }
                             }
@@ -217,12 +217,12 @@ public class LongTimeEvent extends Quest {
                                 try {
                                     final int itemId = Integer.parseInt(d.getAttributes().getNamedItem("id").getNodeValue());
                                     if (ItemTable.getInstance().getTemplate(itemId) == null) {
-                                        LOGGER.warning(getScriptName() + " event: Item " + itemId + " does not exist.");
+                                        LOGGER.warn(getScriptName() + " event: Item " + itemId + " does not exist.");
                                         continue;
                                     }
                                     _destoyItemsOnEnd.add(itemId);
                                 } catch (NumberFormatException nfe) {
-                                    LOGGER.warning("Wrong number format in config.xml destoyItemsOnEnd block for " + getScriptName() + " event");
+                                    LOGGER.warn("Wrong number format in config.xml destoyItemsOnEnd block for " + getScriptName() + " event");
                                 }
                             }
                         }
