@@ -62,7 +62,7 @@ public final class L2EtcItem extends L2Item {
         _extractableCountMin = set.getInt("extractableCountMin", 0);
         _extractableCountMax = set.getInt("extractableCountMax", 0);
         if (_extractableCountMin > _extractableCountMax) {
-            LOGGER.warning("Item " + this + " extractableCountMin is bigger than extractableCountMax!");
+            LOGGER.warn("Item " + this + " extractableCountMin is bigger than extractableCountMax!");
         }
 
         _isInfinite = set.getBoolean("is_infinite", false);

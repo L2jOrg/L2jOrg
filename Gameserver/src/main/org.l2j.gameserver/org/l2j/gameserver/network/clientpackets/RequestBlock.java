@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.xml.impl.FakePlayerData;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.xml.impl.FakePlayerData;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;

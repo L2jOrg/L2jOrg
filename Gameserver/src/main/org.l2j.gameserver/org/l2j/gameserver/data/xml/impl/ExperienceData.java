@@ -2,6 +2,8 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -9,7 +11,7 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
+
 
 /**
  * This class holds the Experience points for each level for players and pets.
@@ -17,7 +19,7 @@ import java.util.logging.Logger;
  * @author mrTJO
  */
 public final class ExperienceData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(ExperienceData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ExperienceData.class);
 
     private final Map<Integer, Long> _expTable = new HashMap<>();
     private final Map<Integer, Double> _traningRateTable = new HashMap<>();

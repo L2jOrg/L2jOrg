@@ -22,16 +22,18 @@ import org.l2j.gameserver.model.clanhallauction.ClanHallAuction;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
 import org.l2j.gameserver.model.eventengine.ScheduleTarget;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
+
 
 /**
  * @author Sdw
  */
 public class ClanHallAuctionManager extends AbstractEventManager<AbstractEvent<?>> {
-    private static final Logger LOGGER = Logger.getLogger(ClanHallAuctionManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ClanHallAuctionManager.class);
 
     private static final Map<Integer, ClanHallAuction> AUCTIONS = new HashMap<>();
 

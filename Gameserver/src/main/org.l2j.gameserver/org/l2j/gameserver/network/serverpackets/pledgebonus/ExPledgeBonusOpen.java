@@ -9,15 +9,17 @@ import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.nio.ByteBuffer;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public class ExPledgeBonusOpen extends IClientOutgoingPacket {
-    private static final Logger LOGGER = Logger.getLogger(ExPledgeBonusOpen.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ExPledgeBonusOpen.class);
 
     private final L2PcInstance _player;
 
@@ -29,7 +31,7 @@ public class ExPledgeBonusOpen extends IClientOutgoingPacket {
     public void writeImpl(L2GameClient client, ByteBuffer packet) throws InvalidDataPacketException {
         final L2Clan clan = _player.getClan();
         if (clan == null) {
-            LOGGER.warning("Player: " + _player + " attempting to write to a null clan!");
+            LOGGER.warn("Player: " + _player + " attempting to write to a null clan!");
             throw new InvalidDataPacketException();
         }
 
@@ -38,16 +40,16 @@ public class ExPledgeBonusOpen extends IClientOutgoingPacket {
         final ClanRewardBonus membersOnlineBonus = ClanRewardType.MEMBERS_ONLINE.getAvailableBonus(clan);
         final ClanRewardBonus huntingBonus = ClanRewardType.HUNTING_MONSTERS.getAvailableBonus(clan);
         if (highestMembersOnlineBonus == null) {
-            LOGGER.warning("Couldn't find highest available clan members online bonus!!");
+            LOGGER.warn("Couldn't find highest available clan members online bonus!!");
             throw new InvalidDataPacketException();
         } else if (highestHuntingBonus == null) {
-            LOGGER.warning("Couldn't find highest available clan hunting bonus!!");
+            LOGGER.warn("Couldn't find highest available clan hunting bonus!!");
             throw new InvalidDataPacketException();
         } else if (highestMembersOnlineBonus.getSkillReward() == null) {
-            LOGGER.warning("Couldn't find skill reward for highest available members online bonus!!");
+            LOGGER.warn("Couldn't find skill reward for highest available members online bonus!!");
             throw new InvalidDataPacketException();
         } else if (highestHuntingBonus.getItemReward() == null) {
-            LOGGER.warning("Couldn't find item reward for highest available hunting bonus!!");
+            LOGGER.warn("Couldn't find item reward for highest available hunting bonus!!");
             throw new InvalidDataPacketException();
         }
 

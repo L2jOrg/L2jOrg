@@ -10,34 +10,26 @@ import org.l2j.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
 import java.util.*;
-import java.util.logging.Logger;
 
 /**
  * @author UnAfraid
  */
 public final class ItemCrystallizationData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(ItemCrystallizationData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ItemCrystallizationData.class);
 
     private final Map<CrystalType, Map<CrystallizationType, List<ItemChanceHolder>>> _crystallizationTemplates = new EnumMap<>(CrystalType.class);
     private final Map<Integer, CrystallizationDataHolder> _items = new HashMap<>();
 
-    protected ItemCrystallizationData() {
+    private ItemCrystallizationData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of ItemCrystalizationData.
-     *
-     * @return single instance of ItemCrystalizationData
-     */
-    public static ItemCrystallizationData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -48,8 +40,8 @@ public final class ItemCrystallizationData implements IGameXmlReader {
         }
         _items.clear();
         parseDatapackFile("data/CrystallizableItems.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _crystallizationTemplates.size() + " crystallization templates.");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _items.size() + " pre-defined crystallizable items.");
+        LOGGER.info("Loaded {} crystallization templates.", _crystallizationTemplates.size());
+        LOGGER.info("Loaded {} pre-defined crystallizable items.", _items.size());
 
         // Generate remaining data.
         generateCrystallizationData();
@@ -180,7 +172,11 @@ public final class ItemCrystallizationData implements IGameXmlReader {
         return result;
     }
 
-    private static class SingletonHolder {
-        protected static final ItemCrystallizationData _instance = new ItemCrystallizationData();
+    public static ItemCrystallizationData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ItemCrystallizationData INSTANCE = new ItemCrystallizationData();
     }
 }

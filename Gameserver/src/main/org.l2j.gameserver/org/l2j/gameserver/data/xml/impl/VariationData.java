@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.datatables.ItemTable;
@@ -21,27 +5,24 @@ import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.options.*;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 import java.io.File;
 import java.util.*;
-import java.util.logging.Logger;
 
 /**
  * @author Pere
  */
 public class VariationData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(VariationData.class.getSimpleName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(VariationData.class.getSimpleName());
 
     private final Map<Integer, Variation> _variations = new HashMap<>();
     private final Map<Integer, Map<Integer, VariationFee>> _fees = new HashMap<>();
 
-    protected VariationData() {
+    private VariationData() {
         load();
-    }
-
-    public static VariationData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -49,8 +30,8 @@ public class VariationData implements IGameXmlReader {
         _variations.clear();
         _fees.clear();
         parseDatapackFile("data/stats/augmentation/Variations.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _variations.size() + " Variations.");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _fees.size() + " Fees.");
+        LOGGER.info("Loaded {} Variations.", _variations.size() );
+        LOGGER.info("Loaded {} Fees.", _fees.size());
     }
 
     @Override
@@ -63,7 +44,7 @@ public class VariationData implements IGameXmlReader {
                 {
                     final int mineralId = parseInteger(variationNode.getAttributes(), "mineralId");
                     if (ItemTable.getInstance().getTemplate(mineralId) == null) {
-                        LOGGER.warning(getClass().getSimpleName() + ": Mineral with item id " + mineralId + " was not found.");
+                        LOGGER.warn("Mineral with item id {}  was not found.", mineralId);
                     }
                     final Variation variation = new Variation(mineralId);
 
@@ -84,7 +65,7 @@ public class VariationData implements IGameXmlReader {
                                 final int optionId = parseInteger(optionNode.getAttributes(), "id");
                                 final Options opt = OptionData.getInstance().getOptions(optionId);
                                 if (opt == null) {
-                                    LOGGER.warning(getClass().getSimpleName() + ": Null option for id " + optionId);
+                                    LOGGER.warn(": Null option for id " + optionId);
                                     return;
                                 }
                                 options.put(opt, optionChance);
@@ -97,7 +78,7 @@ public class VariationData implements IGameXmlReader {
                                 for (int id = fromId; id <= toId; id++) {
                                     final Options op = OptionData.getInstance().getOptions(id);
                                     if (op == null) {
-                                        LOGGER.warning(getClass().getSimpleName() + ": Null option for id " + id);
+                                        LOGGER.warn(": Null option for id " + id);
                                         return;
                                     }
                                     options.put(op, optionChance);
@@ -125,7 +106,7 @@ public class VariationData implements IGameXmlReader {
                     {
                         final int itemId = parseInteger(itemNode.getAttributes(), "id");
                         if (ItemTable.getInstance().getTemplate(itemId) == null) {
-                            LOGGER.warning(getClass().getSimpleName() + ": Item with id " + itemId + " was not found.");
+                            LOGGER.warn(": Item with id " + itemId + " was not found.");
                         }
                         items.add(itemId);
                     });
@@ -144,7 +125,7 @@ public class VariationData implements IGameXmlReader {
                     final int itemCount = parseInteger(feeNode.getAttributes(), "itemCount");
                     final int cancelFee = parseInteger(feeNode.getAttributes(), "cancelFee");
                     if (ItemTable.getInstance().getTemplate(itemId) == null) {
-                        LOGGER.warning(getClass().getSimpleName() + ": Item with id " + itemId + " was not found.");
+                        LOGGER.warn(": Item with id " + itemId + " was not found.");
                     }
 
                     final VariationFee fee = new VariationFee(itemId, itemCount, cancelFee);
@@ -215,7 +196,7 @@ public class VariationData implements IGameXmlReader {
         VariationFee fee = fees.get(mineralId);
         if (fee == null) {
             // FIXME This will happen when the data is pre-rework or when augments were manually given, but still that's a cheap solution
-            LOGGER.warning(getClass().getSimpleName() + ": Cancellation fee not found for item [" + itemId + "] and mineral [" + mineralId + "]");
+            LOGGER.warn(": Cancellation fee not found for item [" + itemId + "] and mineral [" + mineralId + "]");
             fee = fees.values().iterator().next();
             if (fee == null) {
                 return -1;
@@ -230,7 +211,11 @@ public class VariationData implements IGameXmlReader {
         return (itemFees != null) && !itemFees.isEmpty();
     }
 
-    private static class SingletonHolder {
-        protected static final VariationData _instance = new VariationData();
+    public static VariationData getInstance() {
+        return Singleton.INSTANCE;
+    }
+    
+    private static class Singleton {
+        protected static final VariationData INSTANCE = new VariationData();
     }
 }

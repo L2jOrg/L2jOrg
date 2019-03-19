@@ -18,6 +18,8 @@ import org.l2j.gameserver.model.interfaces.ISkillsHolder;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -26,7 +28,6 @@ import java.io.File;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
@@ -52,7 +53,7 @@ import java.util.stream.Collectors;
  * @author Zoey76
  */
 public final class SkillTreesData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(SkillTreesData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(SkillTreesData.class.getName());
 
     // ClassId, Map of Skill Hash Code, L2SkillLearn
     private static final Map<ClassId, Map<Long, L2SkillLearn>> _classSkillTrees = new HashMap<>();
@@ -91,17 +92,8 @@ public final class SkillTreesData implements IGameXmlReader {
     /**
      * Instantiates a new skill trees data.
      */
-    protected SkillTreesData() {
+    private SkillTreesData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of SkillTreesData.
-     *
-     * @return the only instance of this class
-     */
-    public static SkillTreesData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -314,7 +306,7 @@ public final class SkillTreesData implements IGameXmlReader {
                                         break;
                                     }
                                     default: {
-                                        LOGGER.warning(getClass().getSimpleName() + ": Unknown Skill Tree type: " + type + "!");
+                                        LOGGER.warn(": Unknown Skill Tree type: " + type + "!");
                                     }
                                 }
                             }
@@ -566,7 +558,7 @@ public final class SkillTreesData implements IGameXmlReader {
 
         if (skills.isEmpty()) {
             // The Skill Tree for this class is undefined.
-            LOGGER.warning(getClass().getSimpleName() + ": Skilltree for class " + classId + " is not defined!");
+            LOGGER.warn(": Skilltree for class " + classId + " is not defined!");
             return result;
         }
 
@@ -585,7 +577,7 @@ public final class SkillTreesData implements IGameXmlReader {
 
             if (player.getLevel() >= skill.getGetLevel()) {
                 if (skill.getSkillLevel() > SkillData.getInstance().getMaxLevel(skill.getSkillId())) {
-                    LOGGER.severe(getClass().getSimpleName() + ": SkillTreesData found learnable skill " + skill.getSkillId() + " with level higher than max skill level!");
+                    LOGGER.error(": SkillTreesData found learnable skill " + skill.getSkillId() + " with level higher than max skill level!");
                     continue;
                 }
 
@@ -660,7 +652,7 @@ public final class SkillTreesData implements IGameXmlReader {
         final Map<Long, L2SkillLearn> skills = getCompleteClassSkillTree(player.getClassId());
         if (skills.isEmpty()) {
             // The Skill Tree for this class is undefined, so we return an empty list.
-            LOGGER.warning(getClass().getSimpleName() + ": Skill Tree for this class Id(" + player.getClassId() + ") is not defined!");
+            LOGGER.warn(": Skill Tree for this class Id(" + player.getClassId() + ") is not defined!");
             return result;
         }
 
@@ -1203,7 +1195,7 @@ public final class SkillTreesData implements IGameXmlReader {
     public int getMinLevelForNewSkill(L2PcInstance player, Map<Long, L2SkillLearn> skillTree) {
         int minLevel = 0;
         if (skillTree.isEmpty()) {
-            LOGGER.warning(getClass().getSimpleName() + ": SkillTree is not defined for getMinLevelForNewSkill!");
+            LOGGER.warn(": SkillTree is not defined for getMinLevelForNewSkill!");
         } else {
             for (L2SkillLearn s : skillTree.values()) {
                 if (player.getLevel() < s.getGetLevel()) {
@@ -1525,10 +1517,11 @@ public final class SkillTreesData implements IGameXmlReader {
         }
     }
 
-    /**
-     * Singleton holder for the SkillTreesData class.
-     */
-    private static class SingletonHolder {
-        protected static final SkillTreesData _instance = new SkillTreesData();
+    public static SkillTreesData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        protected static final SkillTreesData INSTANCE = new SkillTreesData();
     }
 }

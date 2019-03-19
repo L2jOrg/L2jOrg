@@ -2,11 +2,17 @@ package org.l2j.gameserver.scripting.java;
 
 import org.l2j.commons.util.Util;
 
-import javax.tools.*;
+import javax.tools.FileObject;
+import javax.tools.ForwardingJavaFileManager;
+import javax.tools.JavaFileObject;
 import javax.tools.JavaFileObject.Kind;
+import javax.tools.StandardJavaFileManager;
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 final class ScriptingFileManager extends ForwardingJavaFileManager<StandardJavaFileManager> {
 

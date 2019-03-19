@@ -17,13 +17,15 @@
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
 import java.util.Arrays;
-import java.util.logging.Logger;
+
 
 /**
  * This class holds the Player Xp Percent Lost Data for each level for players.
@@ -31,7 +33,7 @@ import java.util.logging.Logger;
  * @author Zealar
  */
 public final class PlayerXpPercentLostData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(PlayerXpPercentLostData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(PlayerXpPercentLostData.class);
 
     private final int _maxlevel = ExperienceData.getInstance().getMaxLevel();
     private final double[] _playerXpPercentLost = new double[_maxlevel + 1];
@@ -75,7 +77,7 @@ public final class PlayerXpPercentLostData implements IGameXmlReader {
 
     public double getXpPercent(int level) {
         if (level > _maxlevel) {
-            LOGGER.warning("Require to high level inside PlayerXpPercentLostData (" + level + ")");
+            LOGGER.warn("Require to high level inside PlayerXpPercentLostData (" + level + ")");
             return _playerXpPercentLost[_maxlevel];
         }
         return _playerXpPercentLost[level];

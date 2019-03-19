@@ -16,13 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.util.NoSuchElementException;
-import java.util.StringTokenizer;
-import java.util.logging.Logger;
-
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.NpcData;
@@ -44,6 +37,14 @@ import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.NoSuchElementException;
+import java.util.StringTokenizer;
 
 /**
  * This class handles following admin commands: - show_moves - show_teleport - teleport_to_character - move_to - teleport_character
@@ -51,7 +52,7 @@ import org.l2j.gameserver.util.BuilderUtil;
  */
 public class AdminTeleport implements IAdminCommandHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(AdminTeleport.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminTeleport.class);
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -528,7 +529,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			if (template1 == null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Incorrect monster template.");
-				LOGGER.warning("ERROR: NPC " + target.getObjectId() + " has a 'null' template.");
+				LOGGER.warn("ERROR: NPC " + target.getObjectId() + " has a 'null' template.");
 				return;
 			}
 			
@@ -536,7 +537,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			if (spawn == null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Incorrect monster spawn.");
-				LOGGER.warning("ERROR: NPC " + target.getObjectId() + " has a 'null' spawn.");
+				LOGGER.warn("ERROR: NPC " + target.getObjectId() + " has a 'null' spawn.");
 				return;
 			}
 			final int respawnTime = spawn.getRespawnDelay() / 1000;
@@ -576,7 +577,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			if (spawn == null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Incorrect raid spawn.");
-				LOGGER.warning("ERROR: NPC Id" + target.getId() + " has a 'null' spawn.");
+				LOGGER.warn("ERROR: NPC Id" + target.getId() + " has a 'null' spawn.");
 				return;
 			}
 			DBSpawnManager.getInstance().deleteSpawn(spawn, true);

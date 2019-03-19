@@ -1,13 +1,14 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.entity.Message;
+import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -16,7 +17,6 @@ import org.l2j.gameserver.network.serverpackets.ExChangePostState;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.Util;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 
 import java.nio.ByteBuffer;
 

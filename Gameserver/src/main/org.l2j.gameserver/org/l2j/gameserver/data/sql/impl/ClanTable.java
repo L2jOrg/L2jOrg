@@ -1,16 +1,16 @@
 package org.l2j.gameserver.data.sql.impl;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.idfactory.IdFactory;
-import org.l2j.gameserver.instancemanager.ClanEntryManager;
-import org.l2j.gameserver.instancemanager.FortManager;
-import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.enums.UserInfoType;
+import org.l2j.gameserver.idfactory.IdFactory;
+import org.l2j.gameserver.instancemanager.ClanEntryManager;
+import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
+import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.L2Clan;
@@ -31,6 +31,8 @@ import org.l2j.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.EnumIntBitmask;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -41,14 +43,13 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * This class loads the clan related data.
  */
 public class ClanTable {
-    private static final Logger LOGGER = Logger.getLogger(ClanTable.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ClanTable.class);
     private final Map<Integer, L2Clan> _clans = new ConcurrentHashMap<>();
 
     protected ClanTable() {
@@ -66,7 +67,7 @@ public class ClanTable {
                 cids.add(rs.getInt("clan_id"));
             }
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error restoring ClanTable.", e);
+            LOGGER.error("Error restoring ClanTable.", e);
         }
 
         // Create clans.
@@ -273,7 +274,7 @@ public class ClanTable {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error removing clan from DB.", e);
+            LOGGER.error(getClass().getSimpleName() + ": Error removing clan from DB.", e);
         }
 
         // Notify to scripts
@@ -314,7 +315,7 @@ public class ClanTable {
             ps.setInt(8, war.getState().ordinal());
             ps.execute();
         } catch (Exception e) {
-            LOGGER.severe("Error storing clan wars data: " + e);
+            LOGGER.error("Error storing clan wars data: " + e);
         }
     }
 
@@ -335,7 +336,7 @@ public class ClanTable {
             ps.setInt(2, clanId2);
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error removing clan wars data.", e);
+            LOGGER.error(getClass().getSimpleName() + ": Error removing clan wars data.", e);
         }
     }
 
@@ -353,11 +354,11 @@ public class ClanTable {
                     attacker.addWar(attacked.getId(), clanWar);
                     attacked.addWar(attacker.getId(), clanWar);
                 } else {
-                    LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Restorewars one of clans is null attacker:" + attacker + " attacked:" + attacked);
+                    LOGGER.warn(getClass().getSimpleName() + ": Restorewars one of clans is null attacker:" + attacker + " attacked:" + attacked);
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error restoring clan wars data.", e);
+            LOGGER.error(getClass().getSimpleName() + ": Error restoring clan wars data.", e);
         }
     }
 

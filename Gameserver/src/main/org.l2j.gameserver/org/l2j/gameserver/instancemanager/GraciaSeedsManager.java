@@ -20,12 +20,14 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.instancemanager.tasks.UpdateSoDStateTask;
 import org.l2j.gameserver.model.quest.Quest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Calendar;
-import java.util.logging.Logger;
+
 
 public final class GraciaSeedsManager {
-    private static final Logger LOGGER = Logger.getLogger(GraciaSeedsManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(GraciaSeedsManager.class);
     private static final byte SOITYPE = 2;
     private static final byte SOATYPE = 3;
     // Seed of Destruction
@@ -68,7 +70,7 @@ public final class GraciaSeedsManager {
                 break;
             }
             default: {
-                LOGGER.warning(getClass().getSimpleName() + ": Unknown SeedType in SaveData: " + seedType);
+                LOGGER.warn(": Unknown SeedType in SaveData: " + seedType);
                 break;
             }
         }
@@ -109,7 +111,7 @@ public final class GraciaSeedsManager {
                 break;
             }
             default: {
-                LOGGER.warning(getClass().getSimpleName() + ": Unknown Seed of Destruction state(" + _SoDState + ")! ");
+                LOGGER.warn(": Unknown Seed of Destruction state(" + _SoDState + ")! ");
             }
         }
     }
@@ -117,7 +119,7 @@ public final class GraciaSeedsManager {
     public void updateSodState() {
         final Quest quest = QuestManager.getInstance().getQuest(ENERGY_SEEDS);
         if (quest == null) {
-            LOGGER.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
+            LOGGER.warn(": missing EnergySeeds Quest!");
         } else {
             quest.notifyEvent("StopSoDAi", null, null);
         }
@@ -132,7 +134,7 @@ public final class GraciaSeedsManager {
             saveData(SODTYPE);
             final Quest esQuest = QuestManager.getInstance().getQuest(ENERGY_SEEDS);
             if (esQuest == null) {
-                LOGGER.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
+                LOGGER.warn(": missing EnergySeeds Quest!");
             } else {
                 esQuest.notifyEvent("StartSoDAi", null, null);
             }

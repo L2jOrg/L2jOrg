@@ -1,14 +1,16 @@
 package org.l2j.gameserver.model.residences;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.base.SocialClass;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.model.zone.type.L2ResidenceZone;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,14 +20,13 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author xban1x
  */
 public abstract class AbstractResidence extends ListenersContainer implements INamable {
-    private final Logger LOGGER = Logger.getLogger(getClass().getName());
+    private final Logger LOGGER = LoggerFactory.getLogger(getClass().getName());
     private final int _residenceId;
     private final Map<Integer, ResidenceFunction> _functions = new ConcurrentHashMap<>();
     private String _name;
@@ -110,7 +111,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Failed to initialize functions for residence: " + _residenceId, e);
+            LOGGER.warn("Failed to initialize functions for residence: " + _residenceId, e);
         }
     }
 
@@ -135,7 +136,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
             ps.setLong(6, func.getExpiration());
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Failed to add function: " + func.getId() + " for residence: " + _residenceId, e);
+            LOGGER.warn("Failed to add function: " + func.getId() + " for residence: " + _residenceId, e);
         } finally {
             if (_functions.containsKey(func.getId())) {
                 removeFunction(_functions.get(func.getId()));
@@ -156,7 +157,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
             ps.setInt(2, func.getId());
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Failed to remove function: " + func.getId() + " residence: " + _residenceId, e);
+            LOGGER.warn("Failed to remove function: " + func.getId() + " residence: " + _residenceId, e);
         } finally {
             func.cancelExpiration();
             _functions.remove(func.getId());
@@ -172,7 +173,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
             ps.setInt(1, _residenceId);
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Failed to remove functions for residence: " + _residenceId, e);
+            LOGGER.warn("Failed to remove functions for residence: " + _residenceId, e);
         } finally {
             _functions.values().forEach(ResidenceFunction::cancelExpiration);
             _functions.clear();

@@ -6,34 +6,31 @@ import org.l2j.gameserver.model.items.combination.CombinationItem;
 import org.l2j.gameserver.model.items.combination.CombinationItemReward;
 import org.l2j.gameserver.model.items.combination.CombinationItemType;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
  * @author UnAfraid
  */
 public class CombinationItemsData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(CombinationItemsData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(CombinationItemsData.class);
     private final List<CombinationItem> _items = new ArrayList<>();
 
-    protected CombinationItemsData() {
+    private CombinationItemsData() {
         load();
-    }
-
-    public static final CombinationItemsData getInstance() {
-        return SingletonHolder.INSTANCE;
     }
 
     @Override
     public synchronized void load() {
         _items.clear();
         parseDatapackFile("data/CombinationItems.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _items.size() + " combinations.");
+        LOGGER.info("Loaded {} combinations", _items.size());
     }
 
     @Override
@@ -56,10 +53,6 @@ public class CombinationItemsData implements IGameXmlReader {
         }));
     }
 
-    public int getLoadedElementsCount() {
-        return _items.size();
-    }
-
     public List<CombinationItem> getItems() {
         return _items;
     }
@@ -72,11 +65,11 @@ public class CombinationItemsData implements IGameXmlReader {
         return _items.stream().filter(item -> item.getItemOne() == id).collect(Collectors.toList());
     }
 
-    public List<CombinationItem> getItemsBySecondSlot(int id) {
-        return _items.stream().filter(item -> item.getItemTwo() == id).collect(Collectors.toList());
+    public static CombinationItemsData getInstance() {
+        return Singleton.INSTANCE;
     }
 
-    private static class SingletonHolder {
-        protected static final CombinationItemsData INSTANCE = new CombinationItemsData();
+    private static class Singleton {
+        private static final CombinationItemsData INSTANCE = new CombinationItemsData();
     }
 }

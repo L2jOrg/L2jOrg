@@ -20,19 +20,20 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
 import org.l2j.gameserver.model.eventengine.EventScheduler;
 import org.l2j.gameserver.model.eventengine.IConditionalEventScheduler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public class HaventRunConditionalScheduler implements IConditionalEventScheduler {
-    private static final Logger LOGGER = Logger.getLogger(HaventRunConditionalScheduler.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(HaventRunConditionalScheduler.class);
     private final AbstractEventManager<?> _eventManager;
     private final String _name;
 
@@ -60,7 +61,7 @@ public class HaventRunConditionalScheduler implements IConditionalEventScheduler
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "Failed to retreive information for scheduled task event manager: " + _eventManager.getClass().getSimpleName() + " scheduler: " + _name, e);
+            LOGGER.warn("Failed to retreive information for scheduled task event manager: " + _eventManager.getClass().getSimpleName() + " scheduler: " + _name, e);
         }
         return false;
     }

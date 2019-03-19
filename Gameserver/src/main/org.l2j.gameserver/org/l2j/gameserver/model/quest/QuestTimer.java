@@ -3,13 +3,14 @@ package org.l2j.gameserver.model.quest;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class QuestTimer {
-    protected static final Logger LOGGER = Logger.getLogger(QuestTimer.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(QuestTimer.class);
     final String _name;
     final Quest _quest;
     final L2Npc _npc;
@@ -113,7 +114,7 @@ public class QuestTimer {
                 }
                 _quest.notifyEvent(_name, _npc, _player);
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, "", e);
+                LOGGER.error("", e);
             }
         }
     }

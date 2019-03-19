@@ -16,12 +16,12 @@
  */
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.enums.Sex;
-import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.enums.Race;
+import org.l2j.gameserver.enums.Sex;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.beautyshop.BeautyData;
 import org.l2j.gameserver.model.beautyshop.BeautyItem;
+import org.l2j.gameserver.util.IGameXmlReader;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;

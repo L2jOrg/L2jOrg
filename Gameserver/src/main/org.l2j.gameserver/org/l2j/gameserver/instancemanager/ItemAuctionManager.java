@@ -16,10 +16,12 @@
  */
 package org.l2j.gameserver.instancemanager;
 
-import org.l2j.gameserver.Config;
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.itemauction.ItemAuctionInstance;
+import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -29,14 +31,13 @@ import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author Forsaiken
  */
 public final class ItemAuctionManager implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(ItemAuctionManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ItemAuctionManager.class);
 
     private final Map<Integer, ItemAuctionInstance> _managerInstances = new HashMap<>();
     private final AtomicInteger _auctionIds = new AtomicInteger(1);
@@ -54,7 +55,7 @@ public final class ItemAuctionManager implements IGameXmlReader {
                 _auctionIds.set(rset.getInt(1) + 1);
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.SEVERE, "Failed loading auctions.", e);
+            LOGGER.error("Failed loading auctions.", e);
         }
 
         load();
@@ -72,7 +73,7 @@ public final class ItemAuctionManager implements IGameXmlReader {
                 statement.execute();
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.SEVERE, "L2ItemAuctionManagerInstance: Failed deleting auction: " + auctionId, e);
+            LOGGER.error("L2ItemAuctionManagerInstance: Failed deleting auction: " + auctionId, e);
         }
     }
 
@@ -113,7 +114,7 @@ public final class ItemAuctionManager implements IGameXmlReader {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Failed loading auctions from xml.", e);
+            LOGGER.error(getClass().getSimpleName() + ": Failed loading auctions from xml.", e);
         }
     }
 

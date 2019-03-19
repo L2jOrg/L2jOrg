@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="error" monitorInterval="300">
     <properties>
-        <Property name="pattern">[%-5p][%d{yyyy-MM-dd HH:mm:ss}][%c{1}:%M:%L]: %msg%n</Property>
+        <Property name="pattern">[%-5p][%d{yyyy-MM-dd HH:mm:ss}][%c{1}:%M:%L]: %msg%n%throwable</Property>
     </properties>
     <Appenders>
         <Console name="console" target="SYSTEM_OUT">
-            <PatternLayout pattern="${pattern}"/>
+            <PatternLayout pattern="%highlight{${pattern}}{Bright}"/>
             <ThresholdFilter level="INFO"/>
         </Console>
 
         <RollingFile name="game" filename="logs/game.log" filepattern="logs/game.log.%i" append="true" >
-            <PatternLayout pattern="${pattern}" />
+            <PatternLayout pattern="${pattern}"  />
             <Policies>
                 <SizeBasedTriggeringPolicy size="50 MB" />
             </Policies>

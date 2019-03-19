@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.BlockListPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,12 +16,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class BlockList {
     private static final Map<Integer, List<Integer>> OFFLINE_LIST = new ConcurrentHashMap<>();
-    private static Logger LOGGER = Logger.getLogger(BlockList.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(BlockList.class);
     private final L2PcInstance _owner;
     private List<Integer> _blockList;
 
@@ -47,7 +48,7 @@ public class BlockList {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Error found in " + ObjId + " FriendList while loading BlockList: " + e.getMessage(), e);
+            LOGGER.warn("Error found in " + ObjId + " FriendList while loading BlockList: " + e.getMessage(), e);
         }
         return list;
     }
@@ -177,7 +178,7 @@ public class BlockList {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not add block player: " + e.getMessage(), e);
+            LOGGER.warn("Could not add block player: " + e.getMessage(), e);
         }
     }
 

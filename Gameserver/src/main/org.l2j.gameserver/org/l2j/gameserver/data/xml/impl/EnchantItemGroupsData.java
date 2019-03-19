@@ -1,29 +1,15 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.datatables.ItemTable;
-import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.model.holders.RangeChanceHolder;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.enchant.EnchantItemGroup;
 import org.l2j.gameserver.model.items.enchant.EnchantRateItem;
 import org.l2j.gameserver.model.items.enchant.EnchantScrollGroup;
+import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -31,23 +17,19 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
 
 /**
  * @author UnAfraid
  */
 public final class EnchantItemGroupsData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(EnchantItemGroupsData.class.getName());
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemGroupsData.class);
 
     private final Map<String, EnchantItemGroup> _itemGroups = new HashMap<>();
     private final Map<Integer, EnchantScrollGroup> _scrollGroups = new HashMap<>();
 
-    protected EnchantItemGroupsData() {
+    private EnchantItemGroupsData() {
         load();
-    }
-
-    public static EnchantItemGroupsData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -55,8 +37,8 @@ public final class EnchantItemGroupsData implements IGameXmlReader {
         _itemGroups.clear();
         _scrollGroups.clear();
         parseDatapackFile("data/EnchantItemGroups.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _itemGroups.size() + " item group templates.");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _scrollGroups.size() + " scroll group templates.");
+        LOGGER.info("Loaded: {} item group templates.", _itemGroups.size());
+        LOGGER.info("Loaded: {} scroll group templates.", _scrollGroups.size());
     }
 
     @Override
@@ -133,7 +115,11 @@ public final class EnchantItemGroupsData implements IGameXmlReader {
         return _scrollGroups.get(id);
     }
 
-    private static class SingletonHolder {
-        protected static final EnchantItemGroupsData _instance = new EnchantItemGroupsData();
+    public static EnchantItemGroupsData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final EnchantItemGroupsData INSTANCE = new EnchantItemGroupsData();
     }
 }

@@ -39,7 +39,7 @@ public final class AttackTrait extends AbstractEffect
 	{
 		if (params.isEmpty())
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": this effect must have parameters!");
+			LOGGER.warn(": this effect must have parameters!");
 			return;
 		}
 		

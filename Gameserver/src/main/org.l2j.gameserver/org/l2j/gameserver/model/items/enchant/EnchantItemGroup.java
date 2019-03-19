@@ -17,17 +17,18 @@
 package org.l2j.gameserver.model.items.enchant;
 
 import org.l2j.gameserver.model.holders.RangeChanceHolder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public final class EnchantItemGroup {
-    private static final Logger LOGGER = Logger.getLogger(EnchantItemGroup.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemGroup.class);
     private final List<RangeChanceHolder> _chances = new ArrayList<>();
     private final String _name;
 
@@ -60,10 +61,10 @@ public final class EnchantItemGroup {
                     return holder.getChance();
                 }
             }
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't match proper chance for item group: " + _name, new IllegalStateException());
+            LOGGER.warn(getClass().getSimpleName() + ": Couldn't match proper chance for item group: " + _name, new IllegalStateException());
             return _chances.get(_chances.size() - 1).getChance();
         }
-        LOGGER.warning(getClass().getSimpleName() + ": item group: " + _name + " doesn't have any chances!");
+        LOGGER.warn(": item group: " + _name + " doesn't have any chances!");
         return -1;
     }
 }

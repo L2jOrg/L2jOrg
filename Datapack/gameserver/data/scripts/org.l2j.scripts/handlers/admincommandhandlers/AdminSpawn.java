@@ -38,11 +38,12 @@ import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
-import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -52,7 +53,7 @@ import java.util.regex.Pattern;
  */
 public class AdminSpawn implements IAdminCommandHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(AdminSpawn.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminSpawn.class);
 	
 	private static final String[] ADMIN_COMMANDS =
 	{

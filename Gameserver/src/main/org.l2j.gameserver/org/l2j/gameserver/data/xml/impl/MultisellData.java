@@ -11,28 +11,24 @@ import org.l2j.gameserver.model.holders.*;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.network.serverpackets.MultiSellList;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import java.io.File;
 import java.io.FileFilter;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public final class MultisellData implements IGameXmlReader {
     public static final int PAGE_SIZE = 40;
-    private static final Logger LOGGER = Logger.getLogger(MultisellData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(MultisellData.class);
     private static final FileFilter NUMERIC_FILTER = new NumericNameFilter();
 
     private final Map<Integer, MultisellListHolder> _multisells = new HashMap<>();
 
-    protected MultisellData() {
+    private MultisellData() {
         load();
-    }
-
-    public static MultisellData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -73,8 +69,7 @@ public final class MultisellData implements IGameXmlReader {
                                 if (itemExists(ingredient)) {
                                     ingredients.add(ingredient);
                                 } else {
-                                    LOGGER.warning("Invalid ingredient id or count for itemId: " + ingredient.getId() + ", count: " + ingredient.getCount() + " in list: " + listId);
-                                    continue;
+                                    LOGGER.warn("Invalid ingredient id or count for itemId: " + ingredient.getId() + ", count: " + ingredient.getCount() + " in list: " + listId);
                                 }
                             } else if ("production".equalsIgnoreCase(d.getNodeName())) {
                                 final int id = parseInteger(d.getAttributes(), "id");
@@ -86,21 +81,20 @@ public final class MultisellData implements IGameXmlReader {
                                 if (itemExists(product)) {
                                     // Check chance only of items that have set chance. Items without chance (NaN) are used for displaying purposes.
                                     if ((!Double.isNaN(chance) && (chance < 0)) || (chance > 100)) {
-                                        LOGGER.warning("Invalid chance for itemId: " + product.getId() + ", count: " + product.getCount() + ", chance: " + chance + " in list: " + listId);
+                                        LOGGER.warn("Invalid chance for itemId: " + product.getId() + ", count: " + product.getCount() + ", chance: " + chance + " in list: " + listId);
                                         continue;
                                     }
 
                                     products.add(product);
                                 } else {
-                                    LOGGER.warning("Invalid product id or count for itemId: " + product.getId() + ", count: " + product.getCount() + " in list: " + listId);
-                                    continue;
+                                    LOGGER.warn("Invalid product id or count for itemId: " + product.getId() + ", count: " + product.getCount() + " in list: " + listId);
                                 }
                             }
                         }
 
                         final double totalChance = products.stream().filter(i -> !Double.isNaN(i.getChance())).mapToDouble(ItemChanceHolder::getChance).sum();
                         if (totalChance > 100) {
-                            LOGGER.warning("Products' total chance of " + totalChance + "% exceeds 100% for list: " + listId + " at entry " + entries.size() + 1 + ".");
+                            LOGGER.warn("Products' total chance of " + totalChance + "% exceeds 100% for list: " + listId + " at entry " + entries.size() + 1 + ".");
                         }
 
                         entries.add(entry);
@@ -120,7 +114,7 @@ public final class MultisellData implements IGameXmlReader {
                 _multisells.put(listId, new MultisellListHolder(set));
             });
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error in file " + f, e);
+            LOGGER.error("Error in file " + f, e);
         }
     }
 
@@ -162,7 +156,7 @@ public final class MultisellData implements IGameXmlReader {
     public final void separateAndSend(int listId, L2PcInstance player, L2Npc npc, boolean inventoryOnly, double ingredientMultiplier, double productMultiplier) {
         final MultisellListHolder template = _multisells.get(listId);
         if (template == null) {
-            LOGGER.warning("Can't find list id: " + listId + " requested by player: " + player.getName() + ", npcId: " + (npc != null ? npc.getId() : 0));
+            LOGGER.warn("Can't find list id: " + listId + " requested by player: " + player.getName() + ", npcId: " + (npc != null ? npc.getId() : 0));
             return;
         }
 
@@ -170,7 +164,7 @@ public final class MultisellData implements IGameXmlReader {
             if (player.isGM()) {
                 player.sendMessage("Multisell " + listId + " is restricted. Under current conditions cannot be used. Only GMs are allowed to use it.");
             } else {
-                LOGGER.warning(getClass().getSimpleName() + ": Player " + player + " attempted to open multisell " + listId + " from npc " + npc + " which is not allowed!");
+                LOGGER.warn(getClass().getSimpleName() + ": Player " + player + " attempted to open multisell " + listId + " from npc " + npc + " which is not allowed!");
                 return;
             }
         }
@@ -195,7 +189,7 @@ public final class MultisellData implements IGameXmlReader {
         separateAndSend(listId, player, npc, inventoryOnly, Double.NaN, Double.NaN);
     }
 
-    private final boolean itemExists(ItemHolder holder) {
+    private boolean itemExists(ItemHolder holder) {
         final SpecialItemType specialItem = SpecialItemType.getByClientId(holder.getId());
         if (specialItem != null) {
             return true;
@@ -205,7 +199,11 @@ public final class MultisellData implements IGameXmlReader {
         return (template != null) && (template.isStackable() ? (holder.getCount() >= 1) : (holder.getCount() == 1));
     }
 
-    private static class SingletonHolder {
-        protected static final MultisellData _instance = new MultisellData();
+    public static MultisellData getInstance() {
+        return Singleton.INSTANCE;
+    }
+    
+    private static class Singleton {
+        private static final MultisellData INSTANCE = new MultisellData();
     }
 }

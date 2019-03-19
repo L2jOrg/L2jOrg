@@ -16,6 +16,8 @@
  */
 package org.l2j.gameserver.script;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
@@ -24,14 +26,13 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
  */
 public class ScriptDocument {
-    private static final Logger LOGGER = Logger.getLogger(ScriptDocument.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ScriptDocument.class);
     private final String _name;
     private Document _document;
 
@@ -49,13 +50,13 @@ public class ScriptDocument {
             if (sxe.getException() != null) {
                 x = sxe.getException();
             }
-            LOGGER.warning(getClass().getSimpleName() + ": " + x.getMessage());
+            LOGGER.warn(": " + x.getMessage());
         } catch (ParserConfigurationException pce) {
             // Parser with specified options can't be built
-            LOGGER.log(Level.WARNING, "", pce);
+            LOGGER.warn("", pce);
         } catch (IOException ioe) {
             // I/O error
-            LOGGER.log(Level.WARNING, "", ioe);
+            LOGGER.warn("", ioe);
         }
     }
 

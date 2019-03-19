@@ -67,6 +67,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.scripting.ManagedScript;
 import org.l2j.gameserver.util.MinionList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -75,14 +77,13 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.PriorityBlockingQueue;
 import java.util.function.Consumer;
 import java.util.function.Function;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public abstract class AbstractScript extends ManagedScript implements IEventTimerEvent<String>, IEventTimerCancel<String> {
-    protected static final Logger LOGGER = Logger.getLogger(AbstractScript.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(AbstractScript.class);
     private final Map<ListenerRegisterType, Set<Integer>> _registeredIds = new ConcurrentHashMap<>();
     private final Queue<AbstractEventListener> _listeners = new PriorityBlockingQueue<>();
     private volatile TimerExecutor<String> _timerExecutor;
@@ -352,7 +353,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             final L2Spawn spawn = new L2Spawn(npcId);
 
             if ((x == 0) && (y == 0)) {
-                LOGGER.severe("addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");
+                LOGGER.error("addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");
                 return null;
             }
 
@@ -385,7 +386,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             }
             return npc;
         } catch (Exception e) {
-            LOGGER.warning("Could not spawn NPC #" + npcId + "; error: " + e.getMessage());
+            LOGGER.warn("Could not spawn NPC #" + npcId + "; error: " + e.getMessage());
         }
 
         return null;
@@ -1161,7 +1162,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     // ---------------------------------------------------------------------------------------------------------------------------
 
     public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player) {
-        LOGGER.warning("[" + getClass().getSimpleName() + "]: Timer event arrived at non overriden onTimerEvent method event: " + event + " npc: " + npc + " player: " + player);
+        LOGGER.warn("[" + getClass().getSimpleName() + "]: Timer event arrived at non overriden onTimerEvent method event: " + event + " npc: " + npc + " player: " + player);
     }
 
     public void onTimerCancel(String event, StatsSet params, L2Npc npc, L2PcInstance player) {
@@ -1199,13 +1200,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                 final ListenerRegisterType type = regType.value();
                 final EventType eventType = listener.value();
                 if (method.getParameterCount() != 1) {
-                    LOGGER.warning(getClass().getSimpleName() + ": Non properly defined annotation listener on method: " + method.getName() + " expected parameter count is 1 but found: " + method.getParameterCount());
+                    LOGGER.warn(": Non properly defined annotation listener on method: " + method.getName() + " expected parameter count is 1 but found: " + method.getParameterCount());
                     continue;
                 } else if (!eventType.isEventClass(method.getParameterTypes()[0])) {
-                    LOGGER.warning(getClass().getSimpleName() + ": Non properly defined annotation listener on method: " + method.getName() + " expected parameter to be type of: " + eventType.getEventClass().getSimpleName() + " but found: " + method.getParameterTypes()[0].getSimpleName());
+                    LOGGER.warn(": Non properly defined annotation listener on method: " + method.getName() + " expected parameter to be type of: " + eventType.getEventClass().getSimpleName() + " but found: " + method.getParameterTypes()[0].getSimpleName());
                     continue;
                 } else if (!eventType.isReturnClass(method.getReturnType())) {
-                    LOGGER.warning(getClass().getSimpleName() + ": Non properly defined annotation listener on method: " + method.getName() + " expected return type to be one of: " + Arrays.toString(eventType.getReturnClasses()) + " but found: " + method.getReturnType().getSimpleName());
+                    LOGGER.warn(": Non properly defined annotation listener on method: " + method.getName() + " expected return type to be one of: " + Arrays.toString(eventType.getReturnClasses()) + " but found: " + method.getReturnType().getSimpleName());
                     continue;
                 }
 
@@ -1231,7 +1232,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                     } else if (annotation instanceof Range) {
                         final Range range = (Range) annotation;
                         if (range.from() > range.to()) {
-                            LOGGER.warning(getClass().getSimpleName() + ": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
+                            LOGGER.warn(": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
                             continue;
                         }
 
@@ -1242,7 +1243,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                         final Ranges ranges = (Ranges) annotation;
                         for (Range range : ranges.value()) {
                             if (range.from() > range.to()) {
-                                LOGGER.warning(getClass().getSimpleName() + ": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
+                                LOGGER.warn(": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
                                 continue;
                             }
 
@@ -1253,10 +1254,10 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                     } else if (annotation instanceof NpcLevelRange) {
                         final NpcLevelRange range = (NpcLevelRange) annotation;
                         if (range.from() > range.to()) {
-                            LOGGER.warning(getClass().getSimpleName() + ": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
+                            LOGGER.warn(": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
                             continue;
                         } else if (type != ListenerRegisterType.NPC) {
-                            LOGGER.warning(getClass().getSimpleName() + ": ListenerRegisterType " + type + " for " + annotation.getClass().getSimpleName() + " NPC is expected!");
+                            LOGGER.warn(": ListenerRegisterType " + type + " for " + annotation.getClass().getSimpleName() + " NPC is expected!");
                             continue;
                         }
 
@@ -1269,10 +1270,10 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                         final NpcLevelRanges ranges = (NpcLevelRanges) annotation;
                         for (NpcLevelRange range : ranges.value()) {
                             if (range.from() > range.to()) {
-                                LOGGER.warning(getClass().getSimpleName() + ": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
+                                LOGGER.warn(": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
                                 continue;
                             } else if (type != ListenerRegisterType.NPC) {
-                                LOGGER.warning(getClass().getSimpleName() + ": ListenerRegisterType " + type + " for " + annotation.getClass().getSimpleName() + " NPC is expected!");
+                                LOGGER.warn(": ListenerRegisterType " + type + " for " + annotation.getClass().getSimpleName() + " NPC is expected!");
                                 continue;
                             }
 
@@ -1321,7 +1322,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setAttackableKillId(Consumer<OnAttackableKill> callback, int... npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addKillId for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addKillId for non existing NPC: " + id + "!");
             }
         }
         return registerConsumer(callback, EventType.ON_ATTACKABLE_KILL, ListenerRegisterType.NPC, npcIds);
@@ -1339,7 +1340,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setAttackableKillId(Consumer<OnAttackableKill> callback, Collection<Integer> npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addKillId for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addKillId for non existing NPC: " + id + "!");
             }
         }
         return registerConsumer(callback, EventType.ON_ATTACKABLE_KILL, ListenerRegisterType.NPC, npcIds);
@@ -1429,7 +1430,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setNpcFirstTalkId(Consumer<OnNpcFirstTalk> callback, int... npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addFirstTalkId for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addFirstTalkId for non existing NPC: " + id + "!");
             }
         }
         return registerConsumer(callback, EventType.ON_NPC_FIRST_TALK, ListenerRegisterType.NPC, npcIds);
@@ -1445,7 +1446,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setNpcFirstTalkId(Consumer<OnNpcFirstTalk> callback, Collection<Integer> npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addFirstTalkId for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addFirstTalkId for non existing NPC: " + id + "!");
             }
         }
         return registerConsumer(callback, EventType.ON_NPC_FIRST_TALK, ListenerRegisterType.NPC, npcIds);
@@ -1462,7 +1463,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setNpcTalkId(Collection<Integer> npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addTalkId for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addTalkId for non existing NPC: " + id + "!");
             }
         }
         return registerDummy(EventType.ON_NPC_TALK, ListenerRegisterType.NPC, npcIds);
@@ -1477,7 +1478,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setNpcTalkId(int... npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addTalkId for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addTalkId for non existing NPC: " + id + "!");
             }
         }
         return registerDummy(EventType.ON_NPC_TALK, ListenerRegisterType.NPC, npcIds);
@@ -1518,7 +1519,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setNpcQuestStartId(int... npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addStartNpc for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addStartNpc for non existing NPC: " + id + "!");
             }
         }
         return registerDummy(EventType.ON_NPC_QUEST_START, ListenerRegisterType.NPC, npcIds);
@@ -1535,7 +1536,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setNpcQuestStartId(Collection<Integer> npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addStartNpc for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addStartNpc for non existing NPC: " + id + "!");
             }
         }
         return registerDummy(EventType.ON_NPC_QUEST_START, ListenerRegisterType.NPC, npcIds);
@@ -1551,7 +1552,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setNpcSkillSeeId(Consumer<OnNpcSkillSee> callback, int... npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addSkillSeeId for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addSkillSeeId for non existing NPC: " + id + "!");
             }
         }
         return registerConsumer(callback, EventType.ON_NPC_SKILL_SEE, ListenerRegisterType.NPC, npcIds);
@@ -1569,7 +1570,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setNpcSkillSeeId(Consumer<OnNpcSkillSee> callback, Collection<Integer> npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addSkillSeeId for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addSkillSeeId for non existing NPC: " + id + "!");
             }
         }
         return registerConsumer(callback, EventType.ON_NPC_SKILL_SEE, ListenerRegisterType.NPC, npcIds);
@@ -1585,7 +1586,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setNpcSkillFinishedId(Consumer<OnNpcSkillFinished> callback, int... npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addSpellFinishedId for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addSpellFinishedId for non existing NPC: " + id + "!");
             }
         }
         return registerConsumer(callback, EventType.ON_NPC_SKILL_FINISHED, ListenerRegisterType.NPC, npcIds);
@@ -1603,7 +1604,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setNpcSkillFinishedId(Consumer<OnNpcSkillFinished> callback, Collection<Integer> npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addSpellFinishedId for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addSpellFinishedId for non existing NPC: " + id + "!");
             }
         }
         return registerConsumer(callback, EventType.ON_NPC_SKILL_FINISHED, ListenerRegisterType.NPC, npcIds);
@@ -1619,7 +1620,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setNpcSpawnId(Consumer<OnNpcSpawn> callback, int... npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addSpawnId for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addSpawnId for non existing NPC: " + id + "!");
             }
         }
         return registerConsumer(callback, EventType.ON_NPC_SPAWN, ListenerRegisterType.NPC, npcIds);
@@ -1635,7 +1636,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setNpcSpawnId(Consumer<OnNpcSpawn> callback, Collection<Integer> npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addSpawnId for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addSpawnId for non existing NPC: " + id + "!");
             }
         }
         return registerConsumer(callback, EventType.ON_NPC_SPAWN, ListenerRegisterType.NPC, npcIds);
@@ -1900,7 +1901,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setAttackableAttackId(Consumer<OnAttackableAttack> callback, int... npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addAttackId for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addAttackId for non existing NPC: " + id + "!");
             }
         }
         return registerConsumer(callback, EventType.ON_ATTACKABLE_ATTACK, ListenerRegisterType.NPC, npcIds);
@@ -1916,7 +1917,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setAttackableAttackId(Consumer<OnAttackableAttack> callback, Collection<Integer> npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.severe(super.getClass().getSimpleName() + ": Found addAttackId for non existing NPC: " + id + "!");
+                LOGGER.error(super.getClass().getSimpleName() + ": Found addAttackId for non existing NPC: " + id + "!");
             }
         }
         return registerConsumer(callback, EventType.ON_ATTACKABLE_ATTACK, ListenerRegisterType.NPC, npcIds);
@@ -2614,7 +2615,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                 break;
             }
             default: {
-                LOGGER.warning(getClass().getSimpleName() + ": Unhandled register type: " + registerType);
+                LOGGER.warn(": Unhandled register type: " + registerType);
             }
         }
     }
@@ -2810,7 +2811,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     public void openDoor(int doorId, int instanceId) {
         final L2DoorInstance door = getDoor(doorId, instanceId);
         if (door == null) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": called openDoor(" + doorId + ", " + instanceId + "); but door wasnt found!", new NullPointerException());
+            LOGGER.warn(getClass().getSimpleName() + ": called openDoor(" + doorId + ", " + instanceId + "); but door wasnt found!", new NullPointerException());
         } else if (!door.isOpen()) {
             door.openMe();
         }
@@ -2825,7 +2826,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     public void closeDoor(int doorId, int instanceId) {
         final L2DoorInstance door = getDoor(doorId, instanceId);
         if (door == null) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": called closeDoor(" + doorId + ", " + instanceId + "); but door wasnt found!", new NullPointerException());
+            LOGGER.warn(getClass().getSimpleName() + ": called closeDoor(" + doorId + ", " + instanceId + "); but door wasnt found!", new NullPointerException());
         } else if (door.isOpen()) {
             door.closeMe();
         }

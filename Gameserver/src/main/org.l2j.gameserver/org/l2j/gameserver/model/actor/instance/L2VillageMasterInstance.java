@@ -1,15 +1,15 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.data.xml.impl.SkillTreesData;
-import org.l2j.gameserver.instancemanager.FortManager;
-import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
+import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
+import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Clan.SubPledge;
 import org.l2j.gameserver.model.L2ClanMember;
@@ -27,11 +27,12 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
@@ -41,7 +42,7 @@ import java.util.regex.PatternSyntaxException;
  * @version $Revision: 1.4.2.3.2.8 $ $Date: 2005/03/29 23:15:15 $
  */
 public class L2VillageMasterInstance extends L2NpcInstance {
-    private static Logger LOGGER = Logger.getLogger(L2VillageMasterInstance.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(L2VillageMasterInstance.class);
 
     /**
      * Creates a village master.
@@ -317,7 +318,7 @@ public class L2VillageMasterInstance extends L2NpcInstance {
         try {
             pattern = Pattern.compile(Config.CLAN_NAME_TEMPLATE);
         } catch (PatternSyntaxException e) {
-            LOGGER.warning("ERROR: Wrong pattern for clan name!");
+            LOGGER.warn("ERROR: Wrong pattern for clan name!");
             pattern = Pattern.compile(".*");
         }
         return pattern.matcher(name).matches();
@@ -534,7 +535,7 @@ public class L2VillageMasterInstance extends L2NpcInstance {
                     }
                 }
             } catch (Exception NumberFormatException) {
-                LOGGER.warning(L2VillageMasterInstance.class.getName() + ": Wrong numeric values for command " + command);
+                LOGGER.warn(L2VillageMasterInstance.class.getName() + ": Wrong numeric values for command " + command);
             }
 
             Set<PlayerClass> subsAvailable = null;
@@ -640,7 +641,7 @@ public class L2VillageMasterInstance extends L2NpcInstance {
                      * If the character is less than level 75 on any of their previously chosen classes then disallow them to change to their most recently added sub-class choice.
                      */
                     if (!player.getFloodProtectors().getSubclass().tryPerformAction("add subclass")) {
-                        LOGGER.warning(L2VillageMasterInstance.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
+                        LOGGER.warn(L2VillageMasterInstance.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
                         return;
                     }
 
@@ -694,7 +695,7 @@ public class L2VillageMasterInstance extends L2NpcInstance {
                      * If the character is less than level 75 on any of their previously chosen classes then disallow them to change to their most recently added sub-class choice. Note: paramOne = classIndex
                      */
                     if (!player.getFloodProtectors().getSubclass().tryPerformAction("change class")) {
-                        LOGGER.warning(L2VillageMasterInstance.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
+                        LOGGER.warn(L2VillageMasterInstance.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
                         return;
                     }
 
@@ -760,7 +761,7 @@ public class L2VillageMasterInstance extends L2NpcInstance {
                      * Warning: the information about this subclass will be removed from the subclass list even if false!
                      */
                     if (!player.getFloodProtectors().getSubclass().tryPerformAction("change class")) {
-                        LOGGER.warning(L2VillageMasterInstance.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
+                        LOGGER.warn(L2VillageMasterInstance.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
                         return;
                     }
 

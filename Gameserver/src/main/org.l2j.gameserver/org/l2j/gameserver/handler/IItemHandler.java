@@ -2,14 +2,15 @@ package org.l2j.gameserver.handler;
 
 import org.l2j.gameserver.model.actor.L2Playable;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Logger;
 
 /**
  * Mother class of all Item Handlers.
  */
 public interface IItemHandler {
-    Logger LOGGER = Logger.getLogger(IItemHandler.class.getName());
+    Logger LOGGER = LoggerFactory.getLogger(IItemHandler.class.getName());
 
     /**
      * Launch task associated to the item.

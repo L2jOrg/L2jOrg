@@ -1,10 +1,10 @@
 package org.l2j.gameserver.util;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.enums.HtmlActionScope;
+import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
@@ -14,19 +14,20 @@ import org.l2j.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.serverpackets.AbstractHtmlPacket;
 import org.l2j.gameserver.network.serverpackets.ShowBoard;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.nio.charset.Charset;
 import java.text.*;
 import java.util.*;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
  * General Utility functions related to game server.
  */
 public final class Util {
-    private static final Logger LOGGER = Logger.getLogger(Util.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Util.class);
     private static final NumberFormat ADENA_FORMATTER = NumberFormat.getIntegerInstance(Locale.ENGLISH);
 
     public static void handleIllegalPlayerAction(L2PcInstance actor, String message, IllegalActionPunishmentType punishment) {
@@ -365,12 +366,12 @@ public final class Util {
 
             final String htmlLink = html.substring(linkStartEnd, linkEnd).trim();
             if (htmlLink.isEmpty()) {
-                LOGGER.warning("Html link path is empty!");
+                LOGGER.warn("Html link path is empty!");
                 continue;
             }
 
             if (htmlLink.contains("..")) {
-                LOGGER.warning("Html link path is invalid: " + htmlLink);
+                LOGGER.warn("Html link path is invalid: " + htmlLink);
                 continue;
             }
 

@@ -83,7 +83,7 @@ public class FavoriteBoard implements IParseBoardHandler
 			}
 			catch (Exception e)
 			{
-				LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't load favorite links for player " + activeChar.getName());
+				LOG.warn(FavoriteBoard.class.getSimpleName() + ": Couldn't load favorite links for player " + activeChar.getName());
 			}
 		}
 		else if (command.startsWith("bbs_add_fav"))
@@ -94,7 +94,7 @@ public class FavoriteBoard implements IParseBoardHandler
 				final String[] parts = bypass.split("&", 2);
 				if (parts.length != 2)
 				{
-					LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't add favorite link, " + bypass + " it's not a valid bypass!");
+					LOG.warn(FavoriteBoard.class.getSimpleName() + ": Couldn't add favorite link, " + bypass + " it's not a valid bypass!");
 					return false;
 				}
 				
@@ -110,7 +110,7 @@ public class FavoriteBoard implements IParseBoardHandler
 				}
 				catch (Exception e)
 				{
-					LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't add favorite link " + bypass + " for player " + activeChar.getName());
+					LOG.warn(FavoriteBoard.class.getSimpleName() + ": Couldn't add favorite link " + bypass + " for player " + activeChar.getName());
 				}
 			}
 		}
@@ -119,7 +119,7 @@ public class FavoriteBoard implements IParseBoardHandler
 			final String favId = command.replaceAll("_bbsdelfav_", "");
 			if (!Util.isDigit(favId))
 			{
-				LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't delete favorite link, " + favId + " it's not a valid ID!");
+				LOG.warn(FavoriteBoard.class.getSimpleName() + ": Couldn't delete favorite link, " + favId + " it's not a valid ID!");
 				return false;
 			}
 			
@@ -134,7 +134,7 @@ public class FavoriteBoard implements IParseBoardHandler
 			}
 			catch (Exception e)
 			{
-				LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't delete favorite link ID " + favId + " for player " + activeChar.getName());
+				LOG.warn(FavoriteBoard.class.getSimpleName() + ": Couldn't delete favorite link ID " + favId + " for player " + activeChar.getName());
 			}
 		}
 		return true;

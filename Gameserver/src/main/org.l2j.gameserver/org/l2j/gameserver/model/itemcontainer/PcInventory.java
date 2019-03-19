@@ -1,11 +1,11 @@
 package org.l2j.gameserver.model.itemcontainer;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.InventoryBlockType;
+import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -20,17 +20,17 @@ import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.model.variables.ItemVariables;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class PcInventory extends Inventory {
-    private static final Logger LOGGER = Logger.getLogger(PcInventory.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(PcInventory.class);
 
     private final L2PcInstance _owner;
     private L2ItemInstance _adena;
@@ -65,7 +65,7 @@ public class PcInventory extends Inventory {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not restore inventory: " + e.getMessage(), e);
+            LOGGER.warn("Could not restore inventory: " + e.getMessage(), e);
         }
         return paperdoll;
     }
@@ -843,7 +843,7 @@ public class PcInventory extends Inventory {
     @Override
     public void reduceArrowCount(EtcItemType type) {
         if ((type != EtcItemType.ARROW) && (type != EtcItemType.BOLT)) {
-            LOGGER.log(Level.WARNING, type.toString(), " which is not arrow type passed to PlayerInstance.reduceArrowCount()");
+            LOGGER.warn(type.toString(), " which is not arrow type passed to PlayerInstance.reduceArrowCount()");
             return;
         }
 

@@ -20,9 +20,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.datatables.ItemTable;
-import org.l2j.gameserver.handler.CommunityBoardHandler;
-import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.SellBuffHolder;
 import org.l2j.gameserver.model.items.L2Item;
@@ -31,7 +30,10 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import org.l2j.gameserver.util.HtmlUtil;
+import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -39,7 +41,7 @@ import org.w3c.dom.NodeList;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
+
 
 /**
  * Sell Buffs Manager
@@ -47,7 +49,7 @@ import java.util.logging.Logger;
  * @author St3eT
  */
 public final class SellBuffsManager implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(SellBuffsManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(SellBuffsManager.class);
     private static final List<Integer> ALLOWED_BUFFS = new ArrayList<>();
     private static final String htmlFolder = "data/html/mods/SellBuffs/";
 

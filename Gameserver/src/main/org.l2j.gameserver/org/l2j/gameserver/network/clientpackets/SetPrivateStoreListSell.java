@@ -4,6 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -13,7 +14,6 @@ import org.l2j.gameserver.network.serverpackets.PrivateStoreManageListSell;
 import org.l2j.gameserver.network.serverpackets.PrivateStoreMsgSell;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.Util;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 
 import java.nio.ByteBuffer;
 

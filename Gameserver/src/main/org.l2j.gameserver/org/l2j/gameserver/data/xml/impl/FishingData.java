@@ -2,6 +2,8 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.model.FishingBaitData;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -9,7 +11,6 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
 
 /**
  * This class holds the Fishing information.
@@ -17,7 +18,7 @@ import java.util.logging.Logger;
  * @author bit
  */
 public final class FishingData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(FishingData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(FishingData.class);
     private final Map<Integer, FishingBaitData> _baitData = new HashMap<>();
     private int _baitDistanceMin;
     private int _baitDistanceMax;

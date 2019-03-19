@@ -49,8 +49,7 @@ public class ListenerTest extends AbstractNpcAI
 {
 	private static final int[] ELPIES =
 	{
-		20432,
-		22228
+		20432
 	};
 	
 	private ListenerTest()
@@ -68,7 +67,7 @@ public class ListenerTest extends AbstractNpcAI
 	}
 	
 	/**
-	 * This method will be invoked as soon as an L2Attackable (Rabbits 20432 and 22228) is being attacked from L2PcInstance (a player)
+	 * This method will be invoked as soon as an L2Attackable (Rabbits 20432) is being attacked from L2PcInstance (a player)
 	 * @param event
 	 */
 	private void onAttackableAttack(OnAttackableAttack event)
@@ -77,7 +76,7 @@ public class ListenerTest extends AbstractNpcAI
 	}
 	
 	/**
-	 * This method will be invoked as soon as L2Attackable (Rabbits 20432 and 22228) are being killed by L2PcInstance (a player)<br>
+	 * This method will be invoked as soon as L2Attackable (Rabbits 20432) are being killed by L2PcInstance (a player)<br>
 	 * This listener is registered into individual npcs container.
 	 * @param event
 	 */
@@ -85,7 +84,6 @@ public class ListenerTest extends AbstractNpcAI
 	@RegisterEvent(EventType.ON_CREATURE_DEATH)
 	@RegisterType(ListenerRegisterType.NPC)
 	@Id(20432)
-	@Id(22228)
 	private void onCreatureKill(OnCreatureDeath event)
 	{
 		LOGGER.info(getClass().getSimpleName() + ": " + event.getClass().getSimpleName() + " invoked attacker: " + event.getAttacker() + " target: " + event.getTarget());

@@ -13,6 +13,8 @@ import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -21,7 +23,6 @@ import java.io.File;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.function.Predicate;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
@@ -30,7 +31,7 @@ import java.util.stream.Collectors;
  * @author NosBit
  */
 public class NpcData implements IGameXmlReader {
-    protected static final Logger LOGGER = Logger.getLogger(NpcData.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(NpcData.class);
     private static final List<Integer> _masterMonsterIDs = new ArrayList<>();
     private final Map<Integer, L2NpcTemplate> _npcs = new HashMap<>();
     private final Map<String, Integer> _clans = new HashMap<>();
@@ -277,7 +278,7 @@ public class NpcData implements IGameXmlReader {
                                             if (skill != null) {
                                                 skills.put(skill.getId(), skill);
                                             } else {
-                                                LOGGER.warning("[" + f.getName() + "] skill not found. NPC ID: " + npcId + " Skill ID: " + skillId + " Skill Level: " + skillLevel);
+                                                LOGGER.warn("[" + f.getName() + "] skill not found. NPC ID: " + npcId + " Skill ID: " + skillId + " Skill Level: " + skillLevel);
                                             }
                                         }
                                     }
@@ -368,7 +369,7 @@ public class NpcData implements IGameXmlReader {
                                                     final double chance = parseDouble(drop_attrs, "chance");
                                                     final DropHolder dropItem = new DropHolder(dropType, parseInteger(drop_attrs, "id"), parseLong(drop_attrs, "min"), parseLong(drop_attrs, "max"), dropType == DropType.LUCKY ? chance / 100 : chance);
                                                     if (ItemTable.getInstance().getTemplate(parseInteger(drop_attrs, "id")) == null) {
-                                                        LOGGER.warning("DropListItem: Could not find item with id " + parseInteger(drop_attrs, "id") + ".");
+                                                        LOGGER.warn("DropListItem: Could not find item with id " + parseInteger(drop_attrs, "id") + ".");
                                                     } else {
                                                         dropLists.add(dropItem);
                                                     }

@@ -10,6 +10,8 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,15 +21,13 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
  * @author Advi
  */
 public abstract class ItemContainer {
-    protected static final Logger LOGGER = Logger.getLogger(ItemContainer.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(ItemContainer.class);
 
     protected final Map<Integer, L2ItemInstance> _items = new ConcurrentHashMap<>();
 
@@ -242,7 +242,7 @@ public abstract class ItemContainer {
             for (int i = 0; i < count; i++) {
                 final L2Item template = ItemTable.getInstance().getTemplate(itemId);
                 if (template == null) {
-                    LOGGER.log(Level.WARNING, (actor != null ? "[" + actor.getName() + "] " : "") + "Invalid ItemId requested: ", itemId);
+                    LOGGER.warn((actor != null ? "[" + actor.getName() + "] " : "") + "Invalid ItemId requested: ", itemId);
                     return null;
                 }
 
@@ -604,7 +604,7 @@ public abstract class ItemContainer {
             }
             refreshWeight();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "could not restore container:", e);
+            LOGGER.warn("could not restore container:", e);
         }
     }
 

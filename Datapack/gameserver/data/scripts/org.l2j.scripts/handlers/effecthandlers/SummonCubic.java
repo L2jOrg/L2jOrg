@@ -28,8 +28,9 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoCubic;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Logger;
 
 /**
  * Summon Cubic effect implementation.
@@ -37,7 +38,7 @@ import java.util.logging.Logger;
  */
 public final class SummonCubic extends AbstractEffect
 {
-	private static final Logger LOGGER = Logger.getLogger(SummonCubic.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(SummonCubic.class);
 	
 	private final int _cubicId;
 	private final int _cubicLvl;
@@ -64,7 +65,7 @@ public final class SummonCubic extends AbstractEffect
 		
 		if (_cubicId < 0)
 		{
-			LOGGER.warning(SummonCubic.class.getSimpleName() + ": Invalid Cubic ID:" + _cubicId + " in skill ID: " + skill.getId());
+			LOGGER.warn(SummonCubic.class.getSimpleName() + ": Invalid Cubic ID:" + _cubicId + " in skill ID: " + skill.getId());
 			return;
 		}
 		
@@ -104,7 +105,7 @@ public final class SummonCubic extends AbstractEffect
 		final L2CubicTemplate template = CubicData.getInstance().getCubicTemplate(_cubicId, _cubicLvl);
 		if (template == null)
 		{
-			LOGGER.warning("Attempting to summon cubic without existing template id: " + _cubicId + " level: " + _cubicLvl);
+			LOGGER.warn("Attempting to summon cubic without existing template id: " + _cubicId + " level: " + _cubicLvl);
 			return;
 		}
 		

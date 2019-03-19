@@ -1,33 +1,18 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.network;
 
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public final class NpcStringId {
     public static final NpcStringId[] EMPTY_ARRAY = new NpcStringId[0];
-    private static final Logger LOGGER = Logger.getLogger(NpcStringId.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(NpcStringId.class);
     @ClientString(id = 1, message = "Hello! I am $s1. You are $s2, right? Hehehe")
     public static NpcStringId HELLO_I_AM_S1_YOU_ARE_S2_RIGHT_HEHEHE;
     @ClientString(id = 2, message = "$s1--$s2--$s3--$s4//$s5 Hehehe")
@@ -23722,7 +23707,7 @@ public final class NpcStringId {
                     field.set(null, nsId);
                     VALUES.put(nsId.getId(), nsId);
                 } catch (Exception e) {
-                    LOGGER.log(Level.WARNING, "NpcStringId: Failed field access for '" + field.getName() + "'", e);
+                    LOGGER.warn("NpcStringId: Failed field access for '" + field.getName() + "'", e);
                 }
             }
         }

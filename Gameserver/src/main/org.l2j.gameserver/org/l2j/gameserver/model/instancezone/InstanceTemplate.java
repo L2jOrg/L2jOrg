@@ -1,9 +1,9 @@
 package org.l2j.gameserver.model.instancezone;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.enums.InstanceReenterType;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.GroupType;
+import org.l2j.gameserver.enums.InstanceReenterType;
 import org.l2j.gameserver.enums.InstanceRemoveBuffType;
 import org.l2j.gameserver.enums.InstanceTeleportType;
 import org.l2j.gameserver.instancemanager.InstanceManager;

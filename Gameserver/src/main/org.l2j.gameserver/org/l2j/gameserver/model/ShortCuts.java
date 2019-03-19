@@ -25,18 +25,19 @@ import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2j.gameserver.network.serverpackets.ShortCutInit;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Map;
 import java.util.TreeMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class ShortCuts implements IRestorable {
     private static final int MAX_SHORTCUTS_PER_BAR = 12;
-    private static Logger LOGGER = Logger.getLogger(ShortCuts.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ShortCuts.class);
     private final L2PcInstance _owner;
     private final Map<Integer, Shortcut> _shortCuts = new TreeMap<>();
 
@@ -87,7 +88,7 @@ public class ShortCuts implements IRestorable {
             statement.setInt(8, _owner.getClassIndex());
             statement.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not store character shortcut: " + e.getMessage(), e);
+            LOGGER.warn("Could not store character shortcut: " + e.getMessage(), e);
         }
     }
 
@@ -139,7 +140,7 @@ public class ShortCuts implements IRestorable {
             statement.setInt(4, _owner.getClassIndex());
             statement.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not delete character shortcut: " + e.getMessage(), e);
+            LOGGER.warn("Could not delete character shortcut: " + e.getMessage(), e);
         }
     }
 
@@ -163,7 +164,7 @@ public class ShortCuts implements IRestorable {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not restore character shortcuts: " + e.getMessage(), e);
+            LOGGER.warn("Could not restore character shortcuts: " + e.getMessage(), e);
             return false;
         }
 

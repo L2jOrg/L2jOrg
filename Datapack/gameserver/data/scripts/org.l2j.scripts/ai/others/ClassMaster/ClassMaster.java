@@ -24,13 +24,15 @@ import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.TutorialCloseHtml;
 import org.l2j.gameserver.network.serverpackets.TutorialShowQuestionMark;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
 import java.util.*;
-import java.util.logging.Logger;
+
 
 /**
  * Class Master AI.
@@ -48,7 +50,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 	private boolean _isEnabled;
 	private boolean _spawnClassMasters;
 	private boolean _showPopupWindow;
-	private static final Logger LOGGER = Logger.getLogger(ClassMaster.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(ClassMaster.class);
 	private final List<ClassChangeData> _classChangeData = new LinkedList<>();
 	
 	public ClassMaster()
@@ -120,7 +122,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 												final CategoryType category = CategoryType.findByName(r.getTextContent().trim());
 												if (category == null)
 												{
-													LOGGER.severe(getClass().getSimpleName() + ": Incorrect category type: " + r.getNodeValue());
+													LOGGER.error(": Incorrect category type: " + r.getNodeValue());
 													continue;
 												}
 												
@@ -168,7 +170,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 								
 								if (appliedCategories.isEmpty())
 								{
-									LOGGER.warning(getClass().getSimpleName() + ": Class change option: " + optionName + " has no categories to be applied on. Skipping!");
+									LOGGER.warn(": Class change option: " + optionName + " has no categories to be applied on. Skipping!");
 									continue;
 								}
 								
@@ -728,12 +730,12 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		
 		if (newClass == null)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": No new classId found for player " + player);
+			LOGGER.warn(": No new classId found for player " + player);
 			return false;
 		}
 		else if (newClass == player.getClassId())
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": New classId found for player " + player + " is exactly the same as the one he currently is!");
+			LOGGER.warn(": New classId found for player " + player + " is exactly the same as the one he currently is!");
 			return false;
 		}
 		else if (checkIfClassChangeHasOptions(player))

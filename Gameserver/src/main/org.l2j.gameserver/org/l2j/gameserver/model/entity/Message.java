@@ -18,8 +18,8 @@ package org.l2j.gameserver.model.entity;
 
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.enums.AttributeType;
-import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.enums.MailType;
+import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.model.itemcontainer.Mail;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;

@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Summon;

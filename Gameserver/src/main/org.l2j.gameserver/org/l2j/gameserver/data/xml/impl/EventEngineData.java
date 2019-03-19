@@ -29,6 +29,8 @@ import org.l2j.gameserver.model.eventengine.drop.*;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -37,14 +39,13 @@ import java.io.File;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public final class EventEngineData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(EventEngineData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(EventEngineData.class);
 
     protected EventEngineData() {
         load();
@@ -107,7 +108,7 @@ public final class EventEngineData implements IGameXmlReader {
                 throw new NoSuchMethodError("Couldn't method that gives instance of AbstractEventManager!");
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't locate event manager instance for event: " + eventName + " !", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Couldn't locate event manager instance for event: " + eventName + " !", e);
             return;
         }
 
@@ -193,7 +194,7 @@ public final class EventEngineData implements IGameXmlReader {
                         try {
                             scheduler.addEventNotification(new EventMethodNotification(eventManager, methodName, args));
                         } catch (Exception e) {
-                            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't add event notification for " + eventManager.getClass().getSimpleName(), e);
+                            LOGGER.warn(getClass().getSimpleName() + ": Couldn't add event notification for " + eventManager.getClass().getSimpleName(), e);
                         }
                     }
                 }
@@ -219,7 +220,7 @@ public final class EventEngineData implements IGameXmlReader {
                                     }
                                 }
                                 if (names.size() != 2) {
-                                    LOGGER.warning(getClass().getSimpleName() + ": Event: " + eventManager.getClass().getSimpleName() + " has incorrect amount of scheduler names: " + names + " expected: 2 found: " + names.size());
+                                    LOGGER.warn(": Event: " + eventManager.getClass().getSimpleName() + " has incorrect amount of scheduler names: " + names + " expected: 2 found: " + names.size());
                                 } else {
                                     conditionalSchedulers.add(new BetweenConditionalScheduler(eventManager, name, names.get(0), names.get(1)));
                                 }
@@ -383,7 +384,7 @@ public final class EventEngineData implements IGameXmlReader {
                     break;
                 }
                 default: {
-                    LOGGER.warning(getClass().getSimpleName() + ": Unhandled map case: " + name + " " + stringNode.getNodeName() + " for event: " + eventManager.getClass().getSimpleName());
+                    LOGGER.warn(": Unhandled map case: " + name + " " + stringNode.getNodeName() + " for event: " + eventManager.getClass().getSimpleName());
                 }
             }
         });
@@ -423,7 +424,7 @@ public final class EventEngineData implements IGameXmlReader {
                 return Location.class;
             }
             default: {
-                LOGGER.warning(getClass().getSimpleName() + ": Unhandled class case: " + name + " for event: " + eventManager.getClass().getSimpleName());
+                LOGGER.warn(": Unhandled class case: " + name + " for event: " + eventManager.getClass().getSimpleName());
                 return Object.class;
             }
         }
@@ -453,7 +454,7 @@ public final class EventEngineData implements IGameXmlReader {
                 return value;
             }
             default: {
-                LOGGER.warning(getClass().getSimpleName() + ": Unhandled object case: " + type + " for event: " + eventManager.getClass().getSimpleName());
+                LOGGER.warn(": Unhandled object case: " + type + " for event: " + eventManager.getClass().getSimpleName());
                 return null;
             }
         }

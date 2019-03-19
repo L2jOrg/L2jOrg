@@ -16,7 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.logging.Logger;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
@@ -26,6 +25,8 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class handles following admin commands: - heal = restores HP/MP/CP on target, name or radius
@@ -33,7 +34,7 @@ import org.l2j.gameserver.util.BuilderUtil;
  */
 public class AdminHeal implements IAdminCommandHandler
 {
-	private static Logger LOGGER = Logger.getLogger(AdminRes.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminRes.class);
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_heal"
@@ -58,7 +59,7 @@ public class AdminHeal implements IAdminCommandHandler
 			{
 				if (Config.DEVELOPER)
 				{
-					LOGGER.warning("Heal error: " + e);
+					LOGGER.warn("Heal error: " + e);
 				}
 				BuilderUtil.sendSysMessage(activeChar, "Incorrect target/radius specified.");
 			}

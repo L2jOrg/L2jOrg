@@ -16,6 +16,8 @@ import org.l2j.gameserver.model.skills.EffectScope;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.stats.functions.FuncTemplate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -23,14 +25,12 @@ import org.w3c.dom.Node;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @author mkizub
  */
 public abstract class DocumentBase {
-    protected final Logger LOGGER = Logger.getLogger(getClass().getName());
+    protected final Logger LOGGER = LoggerFactory.getLogger(getClass().getName());
     protected final Map<String, String[]> _tables = new HashMap<>();
     private final File _file;
 
@@ -47,7 +47,7 @@ public abstract class DocumentBase {
             doc = factory.newDocumentBuilder().parse(_file);
             parseDocument(doc);
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error loading file " + _file, e);
+            LOGGER.error("Error loading file " + _file, e);
         }
         return doc;
     }
@@ -184,7 +184,7 @@ public abstract class DocumentBase {
             }
         }
         if ((cond.conditions == null) || (cond.conditions.length == 0)) {
-            LOGGER.severe("Empty <and> condition in " + _file);
+            LOGGER.error("Empty <and> condition in " + _file);
         }
         return cond;
     }
@@ -197,7 +197,7 @@ public abstract class DocumentBase {
             }
         }
         if ((cond.conditions == null) || (cond.conditions.length == 0)) {
-            LOGGER.severe("Empty <or> condition in " + _file);
+            LOGGER.error("Empty <or> condition in " + _file);
         }
         return cond;
     }
@@ -208,7 +208,7 @@ public abstract class DocumentBase {
                 return new ConditionLogicNot(parseCondition(n, template));
             }
         }
-        LOGGER.severe("Empty <not> condition in " + _file);
+        LOGGER.error("Empty <not> condition in " + _file);
         return null;
     }
 
@@ -644,7 +644,7 @@ public abstract class DocumentBase {
         }
 
         if (cond == null) {
-            LOGGER.severe("Unrecognized <player> condition in " + _file);
+            LOGGER.error("Unrecognized <player> condition in " + _file);
         }
         return cond;
     }
@@ -804,7 +804,7 @@ public abstract class DocumentBase {
         }
 
         if (cond == null) {
-            LOGGER.severe("Unrecognized <target> condition in " + _file);
+            LOGGER.error("Unrecognized <target> condition in " + _file);
         }
         return cond;
     }
@@ -882,7 +882,7 @@ public abstract class DocumentBase {
         }
 
         if (cond == null) {
-            LOGGER.severe("Unrecognized <using> condition in " + _file);
+            LOGGER.error("Unrecognized <using> condition in " + _file);
         }
         return cond;
     }
@@ -906,7 +906,7 @@ public abstract class DocumentBase {
             }
         }
         if (cond == null) {
-            LOGGER.severe("Unrecognized <game> condition in " + _file);
+            LOGGER.error("Unrecognized <game> condition in " + _file);
         }
         return cond;
     }

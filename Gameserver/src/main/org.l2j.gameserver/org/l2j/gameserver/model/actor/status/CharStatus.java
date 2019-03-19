@@ -8,14 +8,16 @@ import org.l2j.gameserver.model.events.impl.character.OnCreatureHpChange;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stats;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
-import java.util.logging.Logger;
+
 
 public class CharStatus {
-    protected static final Logger LOGGER = Logger.getLogger(CharStatus.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(CharStatus.class);
     protected static final byte REGEN_FLAG_CP = 4;
     private static final byte REGEN_FLAG_HP = 1;
     private static final byte REGEN_FLAG_MP = 2;

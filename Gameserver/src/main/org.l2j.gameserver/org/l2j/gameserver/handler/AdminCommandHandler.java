@@ -1,7 +1,7 @@
 package org.l2j.gameserver.handler;
 
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.PlayerAction;
 import org.l2j.gameserver.model.L2Object;
@@ -10,16 +10,18 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2j.gameserver.util.GMAudit;
 import org.l2j.gameserver.util.TimeAmountInterpreter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public class AdminCommandHandler implements IHandler<IAdminCommandHandler, String> {
-    private static final Logger LOGGER = Logger.getLogger(AdminCommandHandler.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(AdminCommandHandler.class);
 
     private final Map<String, IAdminCommandHandler> _datatable;
 
@@ -66,13 +68,13 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
             if (player.isGM()) {
                 player.sendMessage("The command '" + commandNoPrefix + "' does not exist!");
             }
-            LOGGER.warning("No handler registered for admin command '" + command + "'");
+            LOGGER.warn("No handler registered for admin command '" + command + "'");
             return;
         }
 
         if (!AdminData.getInstance().hasAccess(command, player.getAccessLevel())) {
             player.sendMessage("You don't have the access rights to use this command!");
-            LOGGER.warning("Player " + player.getName() + " tried to use admin command '" + command + "', without proper access level!");
+            LOGGER.warn("Player " + player.getName() + " tried to use admin command '" + command + "', without proper access level!");
             return;
         }
 
@@ -96,7 +98,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
                     handler.useAdminCommand(fullCommand, player);
                 } catch (RuntimeException e) {
                     player.sendMessage("Exception during execution of  '" + fullCommand + "': " + e.toString());
-                    LOGGER.warning("Exception during execution of " + fullCommand + " " + e);
+                    LOGGER.warn("Exception during execution of " + fullCommand + " " + e);
                 } finally {
                     final long runtime = System.currentTimeMillis() - begin;
                     player.sendMessage("The execution of '" + fullCommand + "' took " + TimeAmountInterpreter.consolidateMillis(runtime) + ".");

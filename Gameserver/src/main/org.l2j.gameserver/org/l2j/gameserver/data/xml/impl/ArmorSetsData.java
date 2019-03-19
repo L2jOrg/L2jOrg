@@ -6,13 +6,14 @@ import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
 import java.util.*;
-import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 /**
@@ -21,29 +22,20 @@ import java.util.stream.Stream;
  * @author godson, Luno, UnAfraid
  */
 public final class ArmorSetsData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(ArmorSetsData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ArmorSetsData.class);
 
     private final Map<Integer, L2ArmorSet> _armorSets = new HashMap<>();
     private final Map<Integer, List<L2ArmorSet>> _armorSetItems = new HashMap<>();
 
-    protected ArmorSetsData() {
+    private ArmorSetsData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of ArmorSetsData
-     *
-     * @return single instance of ArmorSetsData
-     */
-    public static ArmorSetsData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
     public void load() {
         _armorSets.clear();
         parseDatapackDirectory("data/stats/armorsets", false);
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _armorSets.size() + " Armor sets.");
+        LOGGER.info("Loaded {} Armor sets.", _armorSets.size());
     }
 
     @Override
@@ -57,7 +49,7 @@ public final class ArmorSetsData implements IGameXmlReader {
                         final boolean isVisual = parseBoolean(setNode.getAttributes(), "visual", false);
                         final L2ArmorSet set = new L2ArmorSet(id, minimumPieces, isVisual);
                         if (_armorSets.putIfAbsent(id, set) != null) {
-                            LOGGER.warning("Duplicate set entry with id: " + id + " in file: " + f.getName());
+                            LOGGER.warn("Duplicate set entry with id: " + id + " in file: " + f.getName());
                         }
                         for (Node innerSetNode = setNode.getFirstChild(); innerSetNode != null; innerSetNode = innerSetNode.getNextSibling()) {
                             switch (innerSetNode.getNodeName()) {
@@ -68,9 +60,9 @@ public final class ArmorSetsData implements IGameXmlReader {
                                         final int itemId = parseInteger(attrs, "id");
                                         final L2Item item = ItemTable.getInstance().getTemplate(itemId);
                                         if (item == null) {
-                                            LOGGER.warning("Attempting to register non existing required item: " + itemId + " to a set: " + f.getName());
+                                            LOGGER.warn("Attempting to register non existing required item: " + itemId + " to a set: " + f.getName());
                                         } else if (!set.addRequiredItem(itemId)) {
-                                            LOGGER.warning("Attempting to register duplicate required item " + item + " to a set: " + f.getName());
+                                            LOGGER.warn("Attempting to register duplicate required item " + item + " to a set: " + f.getName());
                                         }
                                     });
                                     break;
@@ -82,9 +74,9 @@ public final class ArmorSetsData implements IGameXmlReader {
                                         final int itemId = parseInteger(attrs, "id");
                                         final L2Item item = ItemTable.getInstance().getTemplate(itemId);
                                         if (item == null) {
-                                            LOGGER.warning("Attempting to register non existing optional item: " + itemId + " to a set: " + f.getName());
+                                            LOGGER.warn("Attempting to register non existing optional item: " + itemId + " to a set: " + f.getName());
                                         } else if (!set.addOptionalItem(itemId)) {
-                                            LOGGER.warning("Attempting to register duplicate optional item " + item + " to a set: " + f.getName());
+                                            LOGGER.warn("Attempting to register duplicate optional item " + item + " to a set: " + f.getName());
                                         }
                                     });
                                     break;
@@ -138,7 +130,11 @@ public final class ArmorSetsData implements IGameXmlReader {
         return _armorSetItems.getOrDefault(itemId, Collections.emptyList());
     }
 
-    private static class SingletonHolder {
-        protected static final ArmorSetsData _instance = new ArmorSetsData();
+    public static ArmorSetsData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        protected static final ArmorSetsData INSTANCE = new ArmorSetsData();
     }
 }

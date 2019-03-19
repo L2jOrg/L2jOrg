@@ -1,32 +1,17 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.network;
 
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public final class SystemMessageId {
-    private static final Logger LOGGER = Logger.getLogger(SystemMessageId.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(SystemMessageId.class);
     @ClientString(id = 0, message = "You have been disconnected from the server.")
     public static SystemMessageId YOU_HAVE_BEEN_DISCONNECTED_FROM_THE_SERVER;
     @ClientString(id = 1, message = "The server will be coming down in $s1 second(s). Please find a safe place to log out.")
@@ -11439,7 +11424,7 @@ public final class SystemMessageId {
                     field.set(null, smId);
                     VALUES.put(smId.getId(), smId);
                 } catch (Exception e) {
-                    LOGGER.log(Level.WARNING, "SystemMessageId: Failed field access for '" + field.getName() + "'", e);
+                    LOGGER.warn("SystemMessageId: Failed field access for '" + field.getName() + "'", e);
                 }
             }
         }

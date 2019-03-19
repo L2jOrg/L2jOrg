@@ -60,7 +60,7 @@ public class Hopzone extends VoteSystem {
             isr.close();
         } catch (Exception e) {
             e.printStackTrace();
-            LOGGER.warning("VoteSystem: Error while getting server vote count from " + getSiteName() + ".");
+            LOGGER.warn("VoteSystem: Error while getting server vote count from " + getSiteName() + ".");
         }
 
         return -1;

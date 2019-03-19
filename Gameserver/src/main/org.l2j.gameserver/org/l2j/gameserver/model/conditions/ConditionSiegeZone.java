@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.model.conditions;
 
-import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.entity.Castle;

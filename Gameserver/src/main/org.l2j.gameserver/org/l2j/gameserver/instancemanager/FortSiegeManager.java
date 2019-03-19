@@ -13,6 +13,8 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,11 +28,10 @@ import java.util.Properties;
 import java.util.StringTokenizer;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public final class FortSiegeManager {
-    private static final Logger LOGGER = Logger.getLogger(FortSiegeManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(FortSiegeManager.class);
 
     private int _attackerMaxClans = 500; // Max number of clans
 
@@ -79,7 +80,7 @@ public final class FortSiegeManager {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Exception: checkIsRegistered(): " + e.getMessage(), e);
+            LOGGER.warn("Exception: checkIsRegistered(): " + e.getMessage(), e);
         }
         return register;
     }
@@ -95,7 +96,7 @@ public final class FortSiegeManager {
         try (InputStream is = new FileInputStream(file)) {
             siegeSettings.load(is);
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Error while loading Fort Siege Manager settings!", e);
+            LOGGER.warn("Error while loading Fort Siege Manager settings!", e);
         }
 
         // Siege setting
@@ -130,7 +131,7 @@ public final class FortSiegeManager {
 
                     _commanderSpawns.add(new FortSiegeSpawn(fort.getResidenceId(), x, y, z, heading, npc_id, i));
                 } catch (Exception e) {
-                    LOGGER.warning("Error while loading commander(s) for " + fort.getName() + " fort.");
+                    LOGGER.warn("Error while loading commander(s) for " + fort.getName() + " fort.");
                 }
             }
 
@@ -151,7 +152,7 @@ public final class FortSiegeManager {
 
                     _flagSpawns.add(new CombatFlag(fort.getResidenceId(), x, y, z, 0, flag_id));
                 } catch (Exception e) {
-                    LOGGER.warning("Error while loading flag(s) for " + fort.getName() + " fort.");
+                    LOGGER.warn("Error while loading flag(s) for " + fort.getName() + " fort.");
                 }
             }
             _flagList.put(fort.getResidenceId(), _flagSpawns);

@@ -4,9 +4,9 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.FakePlayerData;
-import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.enums.ChatType;
+import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Npc;
@@ -14,12 +14,14 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.FakePlayerChatHolder;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
+
 
 /**
  * @author Mobius
@@ -27,7 +29,7 @@ import java.util.logging.Logger;
 public final class FakePlayerChatManager implements IGameXmlReader {
     private static final int MIN_DELAY = 5000;
     private static final int MAX_DELAY = 15000;
-    private static Logger LOGGER = Logger.getLogger(FakePlayerChatManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(FakePlayerChatManager.class);
     final List<FakePlayerChatHolder> MESSAGES = new ArrayList<>();
 
     protected FakePlayerChatManager() {

@@ -22,9 +22,9 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Message deletion task.
@@ -32,7 +32,7 @@ import java.util.logging.Logger;
  * @author xban1x
  */
 public final class MessageDeletionTask implements Runnable {
-    private static final Logger LOGGER = Logger.getLogger(MessageDeletionTask.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(MessageDeletionTask.class);
 
     final int _msgId;
 
@@ -65,7 +65,7 @@ public final class MessageDeletionTask implements Runnable {
                     receiver.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MAIL_WAS_RETURNED_DUE_TO_THE_EXCEEDED_WAITING_TIME));
                 }
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error returning items:" + e.getMessage(), e);
+                LOGGER.warn(getClass().getSimpleName() + ": Error returning items:" + e.getMessage(), e);
             }
         }
         MailManager.getInstance().deleteMessageInDb(msg.getId());

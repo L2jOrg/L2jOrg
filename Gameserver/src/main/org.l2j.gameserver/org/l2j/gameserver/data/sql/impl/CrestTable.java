@@ -19,6 +19,8 @@ package org.l2j.gameserver.data.sql.impl;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Crest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.HashSet;
@@ -26,8 +28,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Loads and saves crests from database.
@@ -35,7 +36,7 @@ import java.util.logging.Logger;
  * @author NosBit
  */
 public final class CrestTable {
-    private static final Logger LOGGER = Logger.getLogger(CrestTable.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(CrestTable.class);
 
     private final Map<Integer, L2Crest> _crests = new ConcurrentHashMap<>();
     private final AtomicInteger _nextId = new AtomicInteger(1);
@@ -87,11 +88,11 @@ public final class CrestTable {
                 if (crestType != null) {
                     _crests.put(id, new L2Crest(id, data, crestType));
                 } else {
-                    LOGGER.warning("Unknown crest type found in database. Type:" + rs.getInt("type"));
+                    LOGGER.warn("Unknown crest type found in database. Type:" + rs.getInt("type"));
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "There was an error while loading crests from database:", e);
+            LOGGER.warn("There was an error while loading crests from database:", e);
         }
 
         LOGGER.info(getClass().getSimpleName() + ": Loaded " + _crests.size() + " Crests.");
@@ -143,7 +144,7 @@ public final class CrestTable {
             _crests.put(crest.getId(), crest);
             return crest;
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "There was an error while saving crest in database:", e);
+            LOGGER.warn("There was an error while saving crest in database:", e);
         }
         return null;
     }
@@ -167,7 +168,7 @@ public final class CrestTable {
             statement.setInt(1, crestId);
             statement.executeUpdate();
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "There was an error while deleting crest from database:", e);
+            LOGGER.warn("There was an error while deleting crest from database:", e);
         }
     }
 

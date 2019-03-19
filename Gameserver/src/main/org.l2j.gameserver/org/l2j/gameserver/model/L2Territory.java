@@ -17,17 +17,19 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.util.Rnd;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.logging.Logger;
+
 
 /**
  * @author Balancer
  * @version 0.1, 2005-03-12
  */
 public class L2Territory {
-    private static Logger LOGGER = Logger.getLogger(L2Territory.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(L2Territory.class);
     private final List<Point> _points = new CopyOnWriteArrayList<>();
     private final int _terr;
     private int _xMin;
@@ -137,7 +139,7 @@ public class L2Territory {
                 return new Location(x, y, Rnd.get(zmin, _zMax));
             }
         }
-        LOGGER.warning("Can't make point for territory " + _terr);
+        LOGGER.warn("Can't make point for territory " + _terr);
         return null;
     }
 

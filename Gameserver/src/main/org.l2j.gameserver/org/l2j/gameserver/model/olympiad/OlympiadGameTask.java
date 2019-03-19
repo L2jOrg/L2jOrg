@@ -4,15 +4,15 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @author DS
  */
 public final class OlympiadGameTask implements Runnable {
-    protected static final Logger LOGGER = Logger.getLogger(OlympiadGameTask.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(OlympiadGameTask.class);
 
     private static final int[] TELEPORT_TO_ARENA_TIMES =
             {
@@ -120,7 +120,7 @@ public final class OlympiadGameTask implements Runnable {
 
     public final void attachGame(AbstractOlympiadGame game) {
         if ((game != null) && (_state != GameState.IDLE)) {
-            LOGGER.warning("Attempt to overwrite non-finished game in state " + _state);
+            LOGGER.warn("Attempt to overwrite non-finished game in state " + _state);
             return;
         }
 
@@ -276,14 +276,14 @@ public final class OlympiadGameTask implements Runnable {
                 case TELEPORT_TO_TOWN:
                 case CLEANUP:
                 case IDLE: {
-                    LOGGER.warning("Unable to return players back in town, exception: " + e.getMessage());
+                    LOGGER.warn("Unable to return players back in town, exception: " + e.getMessage());
                     _state = GameState.IDLE;
                     _game = null;
                     return;
                 }
             }
 
-            LOGGER.log(Level.WARNING, "Exception in " + _state + ", trying to port players back: " + e.getMessage(), e);
+            LOGGER.warn("Exception in " + _state + ", trying to port players back: " + e.getMessage(), e);
             _state = GameState.GAME_STOPPED;
             ThreadPoolManager.getInstance().schedule(this, 1000);
         }
@@ -332,7 +332,7 @@ public final class OlympiadGameTask implements Runnable {
             OlympiadGameManager.getInstance().startBattle(); // inform manager
             return true;
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
         return false;
     }
@@ -356,7 +356,7 @@ public final class OlympiadGameTask implements Runnable {
                 return true;
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
         return false;
     }
@@ -370,7 +370,7 @@ public final class OlympiadGameTask implements Runnable {
         try {
             return _game.haveWinner();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
 
         return true;
@@ -383,25 +383,25 @@ public final class OlympiadGameTask implements Runnable {
         try {
             _game.validateWinner(_stadium);
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
 
         try {
             _game.cleanEffects();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
 
         try {
             _game.makePlayersInvul();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
 
         try {
             _stadium.updateZoneStatusForCharactersInside();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
     }
 
@@ -412,31 +412,31 @@ public final class OlympiadGameTask implements Runnable {
         try {
             _game.removePlayersInvul();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
 
         try {
             _game.playersStatusBack();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
 
         try {
             _game.portPlayersBack();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
 
         try {
             _game.clearPlayers();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
 
         try {
             _stadium.closeDoors();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
     }
 

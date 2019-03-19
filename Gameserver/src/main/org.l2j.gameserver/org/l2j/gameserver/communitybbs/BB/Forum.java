@@ -17,8 +17,10 @@
 package org.l2j.gameserver.communitybbs.BB;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.communitybbs.Manager.TopicBBSManager;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
+import org.l2j.gameserver.communitybbs.Manager.TopicBBSManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -27,8 +29,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class Forum {
     // type
@@ -42,7 +43,7 @@ public class Forum {
     public static final int ALL = 1;
     public static final int CLANMEMBERONLY = 2;
     public static final int OWNERONLY = 3;
-    private static final Logger LOGGER = Logger.getLogger(Forum.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Forum.class);
     private final List<Forum> _children;
     private final Map<Integer, Topic> _topic = new ConcurrentHashMap<>();
     private final int _forumId;
@@ -101,7 +102,7 @@ public class Forum {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Data error on Forum " + _forumId + " : " + e.getMessage(), e);
+            LOGGER.warn("Data error on Forum " + _forumId + " : " + e.getMessage(), e);
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -117,7 +118,7 @@ public class Forum {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Data error on Forum " + _forumId + " : " + e.getMessage(), e);
+            LOGGER.warn("Data error on Forum " + _forumId + " : " + e.getMessage(), e);
         }
     }
 
@@ -133,7 +134,7 @@ public class Forum {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Data error on Forum (children): " + e.getMessage(), e);
+            LOGGER.warn("Data error on Forum (children): " + e.getMessage(), e);
         }
     }
 
@@ -197,7 +198,7 @@ public class Forum {
             ps.setInt(7, _ownerID);
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Error while saving new Forum to db " + e.getMessage(), e);
+            LOGGER.warn("Error while saving new Forum to db " + e.getMessage(), e);
         }
     }
 

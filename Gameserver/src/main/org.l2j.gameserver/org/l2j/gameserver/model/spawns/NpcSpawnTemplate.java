@@ -17,6 +17,8 @@ import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IParameterized;
 import org.l2j.gameserver.model.zone.type.L2SpawnTerritory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -24,14 +26,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
-    private static final Logger LOGGER = Logger.getLogger(SpawnTemplate.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(SpawnTemplate.class);
 
     private final int _id;
     private final int _count;
@@ -214,7 +215,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
                     return loc;
                 }
             }
-            LOGGER.warning("Couldn't match location by chance turning first..");
+            LOGGER.warn("Couldn't match location by chance turning first..");
             return null;
         } else if (_zone != null) {
             final Location loc = _zone.getRandomPoint();
@@ -248,12 +249,12 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
         try {
             final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_id);
             if (npcTemplate == null) {
-                LOGGER.warning("Attempting to spawn unexisting npc id: " + _id + " file: " + _spawnTemplate.getFile().getName() + " spawn: " + _spawnTemplate.getName() + " group: " + _group.getName());
+                LOGGER.warn("Attempting to spawn unexisting npc id: " + _id + " file: " + _spawnTemplate.getFile().getName() + " spawn: " + _spawnTemplate.getName() + " group: " + _group.getName());
                 return;
             }
 
             if (npcTemplate.isType("L2Defender")) {
-                LOGGER.warning("Attempting to spawn npc id: " + _id + " type: " + npcTemplate.getType() + " file: " + _spawnTemplate.getFile().getName() + " spawn: " + _spawnTemplate.getName() + " group: " + _group.getName());
+                LOGGER.warn("Attempting to spawn npc id: " + _id + " type: " + npcTemplate.getType() + " file: " + _spawnTemplate.getFile().getName() + " spawn: " + _spawnTemplate.getName() + " group: " + _group.getName());
                 return;
             }
 
@@ -261,7 +262,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
                 spawnNpc(npcTemplate, instance);
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Couldn't spawn npc " + _id, e);
+            LOGGER.warn("Couldn't spawn npc " + _id, e);
         }
     }
 
@@ -277,7 +278,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
         final L2Spawn spawn = new L2Spawn(npcTemplate);
         final Location loc = getSpawnLocation();
         if (loc == null) {
-            LOGGER.warning("Couldn't initialize new spawn, no location found!");
+            LOGGER.warn("Couldn't initialize new spawn, no location found!");
             return;
         }
 

@@ -110,7 +110,7 @@ public final class Synergy extends AbstractEffect
 			}
 			else
 			{
-				LOGGER.warning("Skill not found effect called from " + skill);
+				LOGGER.warn("Skill not found effect called from " + skill);
 			}
 		}
 		

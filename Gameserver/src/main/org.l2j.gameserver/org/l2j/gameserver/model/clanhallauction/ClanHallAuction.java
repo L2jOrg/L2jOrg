@@ -23,6 +23,8 @@ import org.l2j.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -34,14 +36,13 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author Sdw
  */
 public class ClanHallAuction {
-    private static final Logger LOGGER = Logger.getLogger(ClanHallAuction.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ClanHallAuction.class);
     private static final String LOAD_CLANHALL_BIDDERS = "SELECT * FROM clanhall_auctions_bidders WHERE clanHallId=?";
     private static final String DELETE_CLANHALL_BIDDERS = "DELETE FROM clanhall_auctions_bidders WHERE clanHallId=?";
     private static final String INSERT_CLANHALL_BIDDER = "REPLACE INTO clanhall_auctions_bidders (clanHallId, clanId, bid, bidTime) VALUES (?,?,?,?)";
@@ -65,7 +66,7 @@ public class ClanHallAuction {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "Failed loading clan hall auctions bidder for clan hall " + _clanHallId + ".", e);
+            LOGGER.warn("Failed loading clan hall auctions bidder for clan hall " + _clanHallId + ".", e);
         }
     }
 
@@ -95,7 +96,7 @@ public class ClanHallAuction {
             ps.execute();
             _bidders.put(clan.getId(), new Bidder(clan, bid, bidTime));
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "Failed insert clan hall auctions bidder " + clan.getName() + " for clan hall " + _clanHallId + ".", e);
+            LOGGER.warn("Failed insert clan hall auctions bidder " + clan.getName() + " for clan hall " + _clanHallId + ".", e);
         }
     }
 
@@ -106,7 +107,7 @@ public class ClanHallAuction {
             ps.setInt(1, clan.getId());
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Failed clearing bidder " + clan.getName() + " for clan hall " + _clanHallId + ": ", e);
+            LOGGER.error("Failed clearing bidder " + clan.getName() + " for clan hall " + _clanHallId + ": ", e);
         }
     }
 
@@ -145,7 +146,7 @@ public class ClanHallAuction {
                 ps.setInt(1, _clanHallId);
                 ps.execute();
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, "Failed clearing bidder for clan hall " + _clanHallId + ": ", e);
+                LOGGER.error("Failed clearing bidder for clan hall " + _clanHallId + ": ", e);
             }
         }
     }

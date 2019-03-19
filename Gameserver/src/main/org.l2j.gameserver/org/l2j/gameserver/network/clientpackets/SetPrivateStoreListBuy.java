@@ -9,6 +9,7 @@ import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
+import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.InvalidDataPacketException;
@@ -18,7 +19,6 @@ import org.l2j.gameserver.network.serverpackets.PrivateStoreManageListBuy;
 import org.l2j.gameserver.network.serverpackets.PrivateStoreMsgBuy;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.Util;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 
 import java.nio.ByteBuffer;
 import java.util.Arrays;

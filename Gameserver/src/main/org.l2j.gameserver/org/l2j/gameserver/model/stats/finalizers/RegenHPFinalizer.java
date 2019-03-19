@@ -1,10 +1,10 @@
 package org.l2j.gameserver.model.stats.finalizers;
 
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2SiegeClan;
 import org.l2j.gameserver.model.actor.L2Character;

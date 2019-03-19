@@ -26,13 +26,14 @@ import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2j.gameserver.model.skills.*;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Predicate;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -47,7 +48,7 @@ import java.util.stream.Stream;
  * @author Zoey76
  */
 public final class CharEffectList {
-    private static final Logger LOGGER = Logger.getLogger(CharEffectList.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(CharEffectList.class);
     /**
      * Count of specific types of buffs.
      */
@@ -803,7 +804,7 @@ public final class CharEffectList {
 
         // Passive effects don't need stack type!
         if (!skill.getAbnormalType().isNone()) {
-            LOGGER.warning("Passive " + skill + " with abnormal type: " + skill.getAbnormalType() + "!");
+            LOGGER.warn("Passive " + skill + " with abnormal type: " + skill.getAbnormalType() + "!");
         }
 
         // Check for passive skill conditions.

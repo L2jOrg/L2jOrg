@@ -4,15 +4,14 @@ import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.instance.L2ShuttleInstance;
-
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author UnAfraid
  */
 public class L2ShuttleEngine implements Runnable {
-    private static final Logger LOGGER = Logger.getLogger(L2ShuttleEngine.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(L2ShuttleEngine.class);
 
     private static final int DELAY = 15 * 1000;
 
@@ -86,7 +85,7 @@ public class L2ShuttleEngine implements Runnable {
                 _cycle = 0;
             }
         } catch (Exception e) {
-            LOGGER.log(Level.INFO, e.getMessage(), e);
+            LOGGER.info(e.getMessage(), e);
         }
     }
 }

@@ -1,9 +1,9 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.data.xml.impl.CastleData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2DefenderInstance;
@@ -13,6 +13,8 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.holders.SiegeGuardHolder;
 import org.l2j.gameserver.model.interfaces.IPositionable;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,8 +22,7 @@ import java.sql.ResultSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Siege Guard Manager.
@@ -29,7 +30,7 @@ import java.util.logging.Logger;
  * @author St3eT
  */
 public final class SiegeGuardManager {
-    private static final Logger LOGGER = Logger.getLogger(SiegeGuardManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(SiegeGuardManager.class);
     private static final Set<L2ItemInstance> _droppedTickets = ConcurrentHashMap.newKeySet();
     private static final Map<Integer, Set<L2Spawn>> _siegeGuardSpawn = new ConcurrentHashMap<>();
 
@@ -58,7 +59,7 @@ public final class SiegeGuardManager {
 
                 final Castle castle = CastleManager.getInstance().getCastle(x, y, z);
                 if (castle == null) {
-                    LOGGER.warning("Siege guard ticket cannot be placed! Castle is null at X: " + x + ", Y: " + y + ", Z: " + z);
+                    LOGGER.warn("Siege guard ticket cannot be placed! Castle is null at X: " + x + ", Y: " + y + ", Z: " + z);
                     continue;
                 }
 
@@ -73,7 +74,7 @@ public final class SiegeGuardManager {
             }
             LOGGER.info(getClass().getSimpleName() + ": Loaded " + _droppedTickets.size() + " siege guards tickets.");
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
     }
 
@@ -152,7 +153,7 @@ public final class SiegeGuardManager {
                 statement.setInt(8, 1);
                 statement.execute();
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, "Error adding siege guard for castle " + castle.getName() + ": " + e.getMessage(), e);
+                LOGGER.warn("Error adding siege guard for castle " + castle.getName() + ": " + e.getMessage(), e);
             }
 
             spawnMercenary(player, holder);
@@ -241,7 +242,7 @@ public final class SiegeGuardManager {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Error loading siege guard for castle " + castle.getName() + ": " + e.getMessage(), e);
+            LOGGER.warn("Error loading siege guard for castle " + castle.getName() + ": " + e.getMessage(), e);
         }
     }
 
@@ -260,7 +261,7 @@ public final class SiegeGuardManager {
             ps.setInt(4, pos.getZ());
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Error deleting hired siege guard at " + pos + " : " + e.getMessage(), e);
+            LOGGER.warn("Error deleting hired siege guard at " + pos + " : " + e.getMessage(), e);
         }
     }
 
@@ -275,7 +276,7 @@ public final class SiegeGuardManager {
             ps.setInt(1, castle.getResidenceId());
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Error deleting hired siege guard for castle " + castle.getName() + ": " + e.getMessage(), e);
+            LOGGER.warn("Error deleting hired siege guard for castle " + castle.getName() + ": " + e.getMessage(), e);
         }
     }
 
@@ -305,7 +306,7 @@ public final class SiegeGuardManager {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error spawning siege guards for castle " + castle.getName(), e);
+            LOGGER.error("Error spawning siege guards for castle " + castle.getName(), e);
         }
     }
 

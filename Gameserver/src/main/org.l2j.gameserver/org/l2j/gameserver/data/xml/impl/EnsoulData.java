@@ -1,64 +1,40 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.commons.util.IXmlReader;
 import org.l2j.gameserver.model.ensoul.EnsoulFee;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.ensoul.EnsoulStone;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.type.CrystalType;
+import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
 import java.util.*;
-import java.util.logging.Logger;
 
 /**
  * @author UnAfraid
  */
 public class EnsoulData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(EnsoulData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(EnsoulData.class.getName());
     private final Map<CrystalType, EnsoulFee> _ensoulFees = new EnumMap<>(CrystalType.class);
     private final Map<Integer, EnsoulOption> _ensoulOptions = new HashMap<>();
     private final Map<Integer, EnsoulStone> _ensoulStones = new HashMap<>();
 
-    protected EnsoulData() {
+    private EnsoulData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of EnsoulData.
-     *
-     * @return single instance of EnsoulData
-     */
-    public static EnsoulData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
     public void load() {
         parseDatapackDirectory("data/stats/ensoul", true);
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _ensoulFees.size() + " fees");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _ensoulOptions.size() + " options");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _ensoulStones.size() + " stones");
+        LOGGER.info("Loaded: {} fees", _ensoulFees.size());
+        LOGGER.info("Loaded: {} options", _ensoulOptions.size());
+        LOGGER.info("Loaded: {} stones", _ensoulStones.size());
     }
 
     @Override
@@ -198,7 +174,11 @@ public class EnsoulData implements IGameXmlReader {
         return 0;
     }
 
-    private static class SingletonHolder {
-        protected static final EnsoulData _instance = new EnsoulData();
+    public static EnsoulData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final EnsoulData INSTANCE = new EnsoulData();
     }
 }

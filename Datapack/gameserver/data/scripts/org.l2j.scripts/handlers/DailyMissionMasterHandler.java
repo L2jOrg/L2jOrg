@@ -2,14 +2,14 @@ package handlers;
 
 import handlers.dailymissionhandlers.*;
 import org.l2j.gameserver.handler.DailyMissionHandler;
-
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author UnAfraid
  */
 public class DailyMissionMasterHandler {
-	private static final Logger LOGGER = Logger.getLogger(DailyMissionMasterHandler.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(DailyMissionMasterHandler.class);
 	
 	public static void main(String[] args) {
 		DailyMissionHandler.getInstance().registerHandler("level", LevelDailyMissionHandler::new);
@@ -21,6 +21,6 @@ public class DailyMissionMasterHandler {
 		DailyMissionHandler.getInstance().registerHandler("ceremonyofchaos", CeremonyOfChaosDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("boss", BossDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("fishing", FishingDailyMissionHandler::new);
-		LOGGER.info(DailyMissionMasterHandler.class.getSimpleName() + ":  Loaded " + DailyMissionHandler.getInstance().size() + " handlers.");
+		LOGGER.info("Loaded {} handlers.", DailyMissionHandler.getInstance().size());
 	}
 }

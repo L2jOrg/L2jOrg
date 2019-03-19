@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.announce.AnnouncementType;
 import org.l2j.gameserver.model.announce.AutoAnnouncement;
 import org.l2j.gameserver.model.announce.IAnnouncement;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -31,8 +33,7 @@ import java.sql.Statement;
 import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentSkipListMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Loads announcements from database.
@@ -40,7 +41,7 @@ import java.util.logging.Logger;
  * @author UnAfraid
  */
 public final class AnnouncementsTable {
-    private static Logger LOGGER = Logger.getLogger(AnnouncementsTable.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(AnnouncementsTable.class);
 
     private final Map<Integer, IAnnouncement> _announcements = new ConcurrentSkipListMap<>();
 
@@ -81,7 +82,7 @@ public final class AnnouncementsTable {
                 _announcements.put(announce.getId(), announce);
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading announcements:", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Failed loading announcements:", e);
         }
     }
 

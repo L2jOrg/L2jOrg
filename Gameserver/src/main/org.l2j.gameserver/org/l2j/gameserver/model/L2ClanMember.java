@@ -6,19 +6,20 @@ import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.variables.PlayerVariables;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * This class holds the clan members data.
  */
 public class L2ClanMember {
-    private static final Logger LOGGER = Logger.getLogger(L2ClanMember.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(L2ClanMember.class);
 
     private final L2Clan _clan;
     private int _objectId;
@@ -532,7 +533,7 @@ public class L2ClanMember {
             ps.setInt(2, getObjectId());
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not update pledge type: " + e.getMessage(), e);
+            LOGGER.warn("Could not update pledge type: " + e.getMessage(), e);
         }
     }
 
@@ -570,7 +571,7 @@ public class L2ClanMember {
             ps.setInt(2, getObjectId());
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not update power _grade: " + e.getMessage(), e);
+            LOGGER.warn("Could not update power _grade: " + e.getMessage(), e);
         }
     }
 
@@ -672,7 +673,7 @@ public class L2ClanMember {
             ps.setInt(3, getObjectId());
             ps.execute();
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "Could not save apprentice/sponsor: " + e.getMessage(), e);
+            LOGGER.warn("Could not save apprentice/sponsor: " + e.getMessage(), e);
         }
     }
 

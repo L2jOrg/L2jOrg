@@ -15,11 +15,13 @@ import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.logging.Logger;
+
 
 /**
  * Teleport holder
@@ -27,7 +29,7 @@ import java.util.logging.Logger;
  * @author UnAfraid
  */
 public final class TeleportHolder {
-    private static final Logger LOGGER = Logger.getLogger(TeleportHolder.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(TeleportHolder.class);
 
     private final String _name;
     private final TeleportType _type;
@@ -118,7 +120,7 @@ public final class TeleportHolder {
      */
     public void showTeleportList(L2PcInstance player, L2Npc npc, String bypass) {
         if (isNoblesse() && !player.isNoble()) {
-            LOGGER.warning("Player " + player.getObjectId() + " requested noblesse teleport without being noble!");
+            LOGGER.warn("Player " + player.getObjectId() + " requested noblesse teleport without being noble!");
             return;
         }
 
@@ -169,13 +171,13 @@ public final class TeleportHolder {
      */
     public void doTeleport(L2PcInstance player, L2Npc npc, int locId) {
         if (isNoblesse() && !player.isNoble()) {
-            LOGGER.warning("Player " + player.getObjectId() + " requested noblesse teleport without being noble!");
+            LOGGER.warn("Player " + player.getObjectId() + " requested noblesse teleport without being noble!");
             return;
         }
 
         final TeleportLocation loc = getLocation(locId);
         if (loc == null) {
-            LOGGER.warning("Player " + player.getObjectId() + " requested unknown teleport location " + locId + " within list " + _name + "!");
+            LOGGER.warn("Player " + player.getObjectId() + " requested unknown teleport location " + locId + " within list " + _name + "!");
             return;
         }
 

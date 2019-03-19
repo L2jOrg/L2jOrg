@@ -9,7 +9,7 @@ import java.nio.ByteBuffer;
  * @author Nos
  */
 public class ExPacket extends IClientIncomingPacket {
-    // private static final Logger LOGGER = Logger.getLogger(ExPacket.class.getName());
+    // private static final Logger LOGGER = LoggerFactory.getLogger(ExPacket.class);
 
     private
     ExIncomingPackets _exIncomingPacket;

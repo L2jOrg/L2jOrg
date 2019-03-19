@@ -2,8 +2,8 @@ package org.l2j.gameserver.model.actor.status;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.instancemanager.DuelManager;
 import org.l2j.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.instancemanager.DuelManager;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;

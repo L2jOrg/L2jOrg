@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.instancemanager;
 
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.data.xml.impl.DailyMissionData;
 import org.l2j.gameserver.model.DailyMissionDataHolder;
 import org.l2j.gameserver.model.L2Clan;
@@ -35,19 +35,20 @@ import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
-    private static final Logger LOGGER = Logger.getLogger(DailyTaskManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(DailyTaskManager.class);
 
     protected DailyTaskManager() {
     }
@@ -121,7 +122,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
                 st.execute();
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Error while updating vitality", e);
+            LOGGER.warn("Error while updating vitality", e);
         }
         LOGGER.info("Vitality resetted");
     }
@@ -138,7 +139,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
             ps.setString(1, PlayerVariables.EXTEND_DROP);
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Could not reset extend drop : ", e);
+            LOGGER.error("Could not reset extend drop : ", e);
         }
 
         // Update data for online players.
@@ -161,7 +162,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Could not reset daily skill reuse: ", e);
+            LOGGER.error("Could not reset daily skill reuse: ", e);
         }
         LOGGER.info("Daily skill reuse cleaned.");
     }
@@ -178,7 +179,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
             ps.setString(2, PlayerVariables.WORLD_CHAT_VARIABLE_NAME);
             ps.executeUpdate();
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Could not reset daily world chat points: ", e);
+            LOGGER.error("Could not reset daily world chat points: ", e);
         }
 
         // Update data for online players.
@@ -204,7 +205,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
                 ps.execute();
             }
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Could not reset Recommendations System: ", e);
+            LOGGER.error("Could not reset Recommendations System: ", e);
         }
 
         L2World.getInstance().getPlayers().stream().forEach(player ->
@@ -224,7 +225,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
                 ps.setString(1, "TRAINING_CAMP_DURATION");
                 ps.executeUpdate();
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, "Could not reset Training Camp: ", e);
+                LOGGER.error("Could not reset Training Camp: ", e);
             }
 
             // Update data for online players.

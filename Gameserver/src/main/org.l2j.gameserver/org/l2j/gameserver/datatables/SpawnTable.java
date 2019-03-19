@@ -4,6 +4,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.util.Collections;
@@ -11,7 +13,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
-import java.util.logging.Logger;
+
 
 /**
  * Spawn data retriever.
@@ -19,7 +21,7 @@ import java.util.logging.Logger;
  * @author Zoey76, Mobius
  */
 public final class SpawnTable {
-    private static final Logger LOGGER = Logger.getLogger(SpawnTable.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(SpawnTable.class);
     private static final Map<Integer, Set<L2Spawn>> _spawnTable = new ConcurrentHashMap<>();
     private static final String OTHER_XML_FOLDER = "data/spawns/Others";
 
@@ -124,7 +126,7 @@ public final class SpawnTable {
                     spawnFile.delete();
                     tempFile.renameTo(spawnFile);
                 } catch (Exception e) {
-                    LOGGER.warning(getClass().getSimpleName() + ": Could not store spawn in the spawn XML files: " + e);
+                    LOGGER.warn(": Could not store spawn in the spawn XML files: " + e);
                 }
             } else // new file
             {
@@ -141,7 +143,7 @@ public final class SpawnTable {
                     writer.close();
                     LOGGER.info(getClass().getSimpleName() + ": Created file: " + OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
                 } catch (Exception e) {
-                    LOGGER.warning(getClass().getSimpleName() + ": Spawn " + spawn + " could not be added to the spawn XML files: " + e);
+                    LOGGER.warn(": Spawn " + spawn + " could not be added to the spawn XML files: " + e);
                 }
             }
         }
@@ -210,7 +212,7 @@ public final class SpawnTable {
                     spawnFile.delete();
                 }
             } catch (Exception e) {
-                LOGGER.warning(getClass().getSimpleName() + ": Spawn " + spawn + " could not be removed from the spawn XML files: " + e);
+                LOGGER.warn(": Spawn " + spawn + " could not be removed from the spawn XML files: " + e);
             }
         }
     }

@@ -29,16 +29,17 @@ import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.scripting.ScriptEngineManager;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class AdminQuest implements IAdminCommandHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(AdminQuest.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminQuest.class);
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -109,7 +110,7 @@ public class AdminQuest implements IAdminCommandHandler
 			catch (Exception e)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Failed to load script!");
-				LOGGER.log(Level.WARNING, "Failed to load script " + script + "!", e);
+				LOGGER.warn("Failed to load script " + script + "!", e);
 			}
 		}
 		else if (command.startsWith("admin_script_unload"))

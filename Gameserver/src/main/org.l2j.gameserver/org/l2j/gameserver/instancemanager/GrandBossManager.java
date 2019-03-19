@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
@@ -23,6 +7,8 @@ import org.l2j.gameserver.instancemanager.tasks.GrandBossManagerStoreTask;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
 import org.l2j.gameserver.model.interfaces.IStorable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.Date;
@@ -30,8 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Grand Boss manager.
@@ -43,7 +28,7 @@ public final class GrandBossManager implements IStorable {
     private static final String UPDATE_GRAND_BOSS_DATA = "UPDATE grandboss_data set loc_x = ?, loc_y = ?, loc_z = ?, heading = ?, respawn_time = ?, currentHP = ?, currentMP = ?, status = ? where boss_id = ?";
     private static final String UPDATE_GRAND_BOSS_DATA2 = "UPDATE grandboss_data set status = ? where boss_id = ?";
 
-    protected static Logger LOGGER = Logger.getLogger(GrandBossManager.class.getName());
+    protected static Logger LOGGER = LoggerFactory.getLogger(GrandBossManager.class.getName());
 
     protected static Map<Integer, L2GrandBossInstance> _bosses = new ConcurrentHashMap<>();
 
@@ -88,14 +73,14 @@ public final class GrandBossManager implements IStorable {
                         LOGGER.info(getClass().getSimpleName() + ": Next spawn date of " + NpcData.getInstance().getTemplate(bossId).getName() + " is " + new Date(info.getLong("respawn_time")));
                     }
                 } else {
-                    LOGGER.warning(getClass().getSimpleName() + ": Could not find GrandBoss NPC template for " + bossId);
+                    LOGGER.warn(": Could not find GrandBoss NPC template for " + bossId);
                 }
             }
             LOGGER.info(getClass().getSimpleName() + ": Loaded " + _storedInfo.size() + " Instances.");
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not load grandboss_data table: " + e.getMessage(), e);
+            LOGGER.warn(getClass().getSimpleName() + ": Could not load grandboss_data table: " + e.getMessage(), e);
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while initializing GrandBossManager: " + e.getMessage(), e);
+            LOGGER.warn(getClass().getSimpleName() + ": Error while initializing GrandBossManager: " + e.getMessage(), e);
         }
         ThreadPoolManager.getInstance().scheduleAtFixedRate(new GrandBossManagerStoreTask(), 5 * 60 * 1000, 5 * 60 * 1000);
     }
@@ -173,7 +158,7 @@ public final class GrandBossManager implements IStorable {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "Couldn't store grandbosses to database: " + e.getMessage(), e);
+            LOGGER.warn("Couldn't store grandbosses to database: " + e.getMessage(), e);
             return false;
         }
         return true;
@@ -211,7 +196,7 @@ public final class GrandBossManager implements IStorable {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "Couldn't update grandbosses to database:" + e.getMessage(), e);
+            LOGGER.warn("Couldn't update grandbosses to database:" + e.getMessage(), e);
         }
     }
 

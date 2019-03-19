@@ -1,19 +1,20 @@
 package org.l2j.gameserver.model.quest;
 
-import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.enums.QuestType;
+import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerQuestComplete;
 import org.l2j.gameserver.network.serverpackets.ExShowQuestMark;
 import org.l2j.gameserver.network.serverpackets.QuestList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Quest state class.
@@ -21,7 +22,7 @@ import java.util.logging.Logger;
  * @author Luis Arias
  */
 public final class QuestState {
-    protected static final Logger LOGGER = Logger.getLogger(QuestState.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(QuestState.class);
 
     /**
      * The name of the quest of this QuestState
@@ -238,7 +239,7 @@ public final class QuestState {
                 setCond(Integer.parseInt(val), previousVal);
                 getQuest().sendNpcLogList(getPlayer());
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, _player.getName() + ", " + _questName + " cond [" + val + "] is not an integer.  Value stored, but no packet was sent: " + e.getMessage(), e);
+                LOGGER.warn(_player.getName() + ", " + _questName + " cond [" + val + "] is not an integer.  Value stored, but no packet was sent: " + e.getMessage(), e);
             }
         }
 
@@ -386,7 +387,7 @@ public final class QuestState {
         try {
             varint = Integer.parseInt(variable);
         } catch (NumberFormatException nfe) {
-            LOGGER.log(Level.INFO, "Quest " + _questName + ", method getInt(" + var + "), tried to parse a non-integer value (" + variable + "). Char Id: " + _player.getObjectId(), nfe);
+            LOGGER.info("Quest " + _questName + ", method getInt(" + var + "), tried to parse a non-integer value (" + variable + "). Char Id: " + _player.getObjectId(), nfe);
         }
 
         return varint;

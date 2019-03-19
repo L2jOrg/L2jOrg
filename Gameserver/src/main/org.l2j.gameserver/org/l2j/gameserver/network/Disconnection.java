@@ -7,14 +7,15 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
 import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Logger;
 
 /**
  * @author NB4L1
  */
 public final class Disconnection {
-    private static final Logger LOGGER = Logger.getLogger(Disconnection.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Disconnection.class);
     private final L2GameClient _client;
     private final L2PcInstance _activeChar;
 
@@ -83,7 +84,7 @@ public final class Disconnection {
                 _activeChar.storeMe();
             }
         } catch (RuntimeException e) {
-            LOGGER.warning(e.getMessage());
+            LOGGER.warn(e.getMessage());
         }
 
         return this;
@@ -96,7 +97,7 @@ public final class Disconnection {
                 _activeChar.deleteMe();
             }
         } catch (RuntimeException e) {
-            LOGGER.warning(e.getMessage());
+            LOGGER.warn(e.getMessage());
         }
 
         return this;

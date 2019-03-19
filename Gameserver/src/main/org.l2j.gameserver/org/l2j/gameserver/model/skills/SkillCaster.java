@@ -1,17 +1,17 @@
 package org.l2j.gameserver.model.skills;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.data.xml.impl.ActionData;
-import org.l2j.gameserver.enums.ItemSkillType;
-import org.l2j.gameserver.enums.NextActionType;
-import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.data.xml.impl.ActionData;
 import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.enums.ItemSkillType;
+import org.l2j.gameserver.enums.NextActionType;
 import org.l2j.gameserver.enums.StatusUpdateType;
 import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
@@ -36,8 +36,10 @@ import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.util.Util;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.ref.WeakReference;
 import java.util.Collection;
@@ -45,8 +47,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 
@@ -54,7 +54,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
  * @author Nik
  */
 public class SkillCaster implements Runnable {
-    private static final Logger LOGGER = Logger.getLogger(SkillCaster.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(SkillCaster.class);
 
     private final WeakReference<L2Character> _caster;
     private final WeakReference<L2Object> _target;
@@ -274,7 +274,7 @@ public class SkillCaster implements Runnable {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, caster + " callSkill() failed.", e);
+            LOGGER.warn(caster + " callSkill() failed.", e);
         }
     }
 
@@ -314,7 +314,7 @@ public class SkillCaster implements Runnable {
                 skill.activateSkill(activeChar, item, targets);
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Failed simultaneous cast: ", e);
+            LOGGER.warn("Failed simultaneous cast: ", e);
         }
     }
 

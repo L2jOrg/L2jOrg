@@ -16,25 +16,27 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
+import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TeleportType;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
-import java.util.logging.Logger;
+
 
 /**
  * @author NightMarez
  */
 public final class L2TeleporterInstance extends L2Npc {
-    private static final Logger LOGGER = Logger.getLogger(L2TeleporterInstance.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(L2TeleporterInstance.class);
 
     public L2TeleporterInstance(L2NpcTemplate template) {
         super(template);
@@ -59,7 +61,7 @@ public final class L2TeleporterInstance extends L2Npc {
                 final String listName = (st.hasMoreTokens()) ? st.nextToken() : TeleportType.NORMAL.name();
                 final TeleportHolder holder = TeleportersData.getInstance().getHolder(getId(), listName);
                 if (holder == null) {
-                    LOGGER.warning("Player " + player.getObjectId() + " requested show teleports for list with name " + listName + " at NPC " + getId() + "!");
+                    LOGGER.warn("Player " + player.getObjectId() + " requested show teleports for list with name " + listName + " at NPC " + getId() + "!");
                     return;
                 }
                 holder.showTeleportList(player, this);
@@ -68,14 +70,14 @@ public final class L2TeleporterInstance extends L2Npc {
             case "teleport": {
                 // Check for required count of params.
                 if (st.countTokens() != 2) {
-                    LOGGER.warning("Player " + player.getObjectId() + " send unhandled teleport command: " + command);
+                    LOGGER.warn("Player " + player.getObjectId() + " send unhandled teleport command: " + command);
                     return;
                 }
 
                 final String listName = st.nextToken();
                 final TeleportHolder holder = TeleportersData.getInstance().getHolder(getId(), listName);
                 if (holder == null) {
-                    LOGGER.warning("Player " + player.getObjectId() + " requested unknown teleport list: " + listName + " for npc: " + getId() + "!");
+                    LOGGER.warn("Player " + player.getObjectId() + " requested unknown teleport list: " + listName + " for npc: " + getId() + "!");
                     return;
                 }
                 holder.doTeleport(player, this, parseNextInt(st, -1));

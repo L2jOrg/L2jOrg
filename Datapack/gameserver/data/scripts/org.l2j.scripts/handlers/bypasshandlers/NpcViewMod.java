@@ -62,7 +62,7 @@ public class NpcViewMod implements IBypassHandler
 		
 		if (!st.hasMoreTokens())
 		{
-			LOGGER.warning("Bypass[NpcViewMod] used without enough parameters.");
+			LOGGER.warn("Bypass[NpcViewMod] used without enough parameters.");
 			return false;
 		}
 		
@@ -101,7 +101,7 @@ public class NpcViewMod implements IBypassHandler
 			{
 				if (st.countTokens() < 2)
 				{
-					LOGGER.warning("Bypass[NpcViewMod] used without enough parameters.");
+					LOGGER.warn("Bypass[NpcViewMod] used without enough parameters.");
 					return false;
 				}
 				
@@ -124,7 +124,7 @@ public class NpcViewMod implements IBypassHandler
 				}
 				catch (IllegalArgumentException e)
 				{
-					LOGGER.warning("Bypass[NpcViewMod] unknown drop list scope: " + dropListTypeString);
+					LOGGER.warn("Bypass[NpcViewMod] unknown drop list scope: " + dropListTypeString);
 					return false;
 				}
 				break;
@@ -571,7 +571,7 @@ public class NpcViewMod implements IBypassHandler
 		String html = HtmCache.getInstance().getHtm(activeChar, "data/html/mods/NpcView/DropList.htm");
 		if (html == null)
 		{
-			LOGGER.warning(NpcViewMod.class.getSimpleName() + ": The html file data/html/mods/NpcView/DropList.htm could not be found.");
+			LOGGER.warn(NpcViewMod.class.getSimpleName() + ": The html file data/html/mods/NpcView/DropList.htm could not be found.");
 			return;
 		}
 		html = html.replaceAll("%name%", npc.getName());

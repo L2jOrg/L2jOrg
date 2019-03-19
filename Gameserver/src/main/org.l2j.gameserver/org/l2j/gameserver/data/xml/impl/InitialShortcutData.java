@@ -26,6 +26,8 @@ import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -35,7 +37,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
+
 
 /**
  * This class holds the Initial Shortcuts information.<br>
@@ -44,7 +46,7 @@ import java.util.logging.Logger;
  * @author Zoey76
  */
 public final class InitialShortcutData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(InitialShortcutData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(InitialShortcutData.class);
 
     private final Map<ClassId, List<Shortcut>> _initialShortcutData = new HashMap<>();
     private final List<Shortcut> _initialGlobalShortcutList = new ArrayList<>();

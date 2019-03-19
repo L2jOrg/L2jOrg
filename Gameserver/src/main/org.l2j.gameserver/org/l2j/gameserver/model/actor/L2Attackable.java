@@ -1,12 +1,12 @@
 package org.l2j.gameserver.model.actor;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.L2AttackableAI;
+import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.data.xml.impl.ExtendDropData;
 import org.l2j.gameserver.datatables.EventDroplist;
 import org.l2j.gameserver.datatables.EventDroplist.DateDrop;
@@ -514,7 +514,7 @@ public class L2Attackable extends L2Npc {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "", e);
+            LOGGER.error("", e);
         }
     }
 
@@ -562,7 +562,7 @@ public class L2Attackable extends L2Npc {
                     EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAttack(player, this, damage, skill, attacker.isSummon()), this);
                 }
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, "", e);
+                LOGGER.error("", e);
             }
         }
     }

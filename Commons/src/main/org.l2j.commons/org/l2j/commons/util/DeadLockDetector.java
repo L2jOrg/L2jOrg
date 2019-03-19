@@ -1,25 +1,10 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.commons.util;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.management.*;
 import java.time.Duration;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Thread to check for deadlocked threads.
@@ -27,7 +12,7 @@ import java.util.logging.Logger;
  */
 public class DeadLockDetector extends Thread
 {
-	private static Logger LOGGER = Logger.getLogger(DeadLockDetector.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(DeadLockDetector.class);
 	
 	private final Duration _checkInterval;
 	private final Runnable _deadLockCallback;
@@ -95,7 +80,7 @@ public class DeadLockDetector extends Thread
 						}
 					}
 					
-					LOGGER.warning(info.toString());
+					LOGGER.warn(info.toString());
 					
 					if (_deadLockCallback != null)
 					{
@@ -106,7 +91,7 @@ public class DeadLockDetector extends Thread
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, "DeadLockDetector: ", e);
+				LOGGER.warn("DeadLockDetector: ", e);
 			}
 		}
 	}

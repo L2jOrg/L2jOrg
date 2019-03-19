@@ -6,15 +6,17 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Vehicle;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.function.Predicate;
-import java.util.logging.Logger;
+
 
 public final class L2WorldRegion {
-    private static final Logger LOGGER = Logger.getLogger(L2WorldRegion.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(L2WorldRegion.class);
     private final int _regionX;
     private final int _regionY;
     /**
@@ -69,7 +71,7 @@ public final class L2WorldRegion {
                     c++;
                 }
             }
-            LOGGER.finer(c + " mobs were turned off");
+            LOGGER.debug(c + " mobs were turned off");
         } else {
             for (L2Object o : _visibleObjects.values()) {
                 if (o.isAttackable()) {
@@ -80,7 +82,7 @@ public final class L2WorldRegion {
                     ((L2Npc) o).startRandomAnimationTask();
                 }
             }
-            LOGGER.finer(c + " mobs were turned on");
+            LOGGER.debug(c + " mobs were turned on");
         }
     }
 
@@ -103,7 +105,7 @@ public final class L2WorldRegion {
         // Turn the AI on or off to match the region's activation.
         switchAI(value);
 
-        LOGGER.finer((value ? "Starting" : "Stopping") + " Grid " + this);
+        LOGGER.debug((value ? "Starting" : "Stopping") + " Grid " + this);
     }
 
     public boolean areNeighborsEmpty() {

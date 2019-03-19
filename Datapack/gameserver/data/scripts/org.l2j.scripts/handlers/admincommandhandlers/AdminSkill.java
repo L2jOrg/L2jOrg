@@ -16,11 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.Map;
-import java.util.StringTokenizer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
@@ -37,6 +32,11 @@ import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.PledgeSkillList;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Map;
+import java.util.StringTokenizer;
 
 /**
  * This class handles following admin commands:
@@ -60,7 +60,7 @@ import org.l2j.gameserver.util.BuilderUtil;
  */
 public class AdminSkill implements IAdminCommandHandler
 {
-	private static Logger LOGGER = Logger.getLogger(AdminSkill.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminSkill.class);
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -527,7 +527,7 @@ public class AdminSkill implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, "", e);
+				LOGGER.warn("", e);
 			}
 			if (skill != null)
 			{

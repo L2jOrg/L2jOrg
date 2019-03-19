@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.geoengine.pathfinding;
 
-import org.l2j.gameserver.geoengine.geodata.GeoStructure;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.geoengine.geodata.GeoStructure;
 
 import java.util.concurrent.locks.ReentrantLock;
 

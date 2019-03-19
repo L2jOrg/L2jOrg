@@ -1,12 +1,14 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.handler.SkillConditionHandler;
 import org.l2j.gameserver.handler.EffectHandler;
+import org.l2j.gameserver.handler.SkillConditionHandler;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.*;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.util.exp4j.ExpressionBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -15,8 +17,6 @@ import java.io.File;
 import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.Function;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 /**
@@ -25,12 +25,12 @@ import java.util.stream.Stream;
  * @author NosBit
  */
 public class SkillData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(SkillData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(SkillData.class.getName());
 
     private final Map<Long, Skill> _skills = new HashMap<>();
     private final Map<Integer, Integer> _skillsMaxLevel = new HashMap<>();
 
-    protected SkillData() {
+    private SkillData() {
         load();
     }
 
@@ -67,10 +67,6 @@ public class SkillData implements IGameXmlReader {
         return subSkillLevel > 0 ? ((skillId * 4294967296L) + (subSkillLevel * 65536) + skillLevel) : (skillId * 65536) + skillLevel;
     }
 
-    public static SkillData getInstance() {
-        return SingletonHolder._instance;
-    }
-
     public Skill getSkill(int skillId, int level) {
         return getSkill(skillId, level, 0);
     }
@@ -85,11 +81,11 @@ public class SkillData implements IGameXmlReader {
         final int maxLvl = getMaxLevel(skillId);
         // requested level too high
         if ((maxLvl > 0) && (level > maxLvl)) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Call to unexisting skill level id: " + skillId + " requested level: " + level + " max level: " + maxLvl + ".", new Throwable());
+            LOGGER.warn(": Call to unexisting skill level id: " + skillId + " requested level: " + level + " max level: " + maxLvl + ".", new Throwable());
             return _skills.get(getSkillHashCode(skillId, maxLvl));
         }
 
-        LOGGER.warning(getClass().getSimpleName() + ": No skill info found for skill id " + skillId + " and skill level " + level);
+        LOGGER.warn(": No skill info found for skill id " + skillId + " and skill level " + level);
         return null;
     }
 
@@ -272,10 +268,10 @@ public class SkillData implements IGameXmlReader {
                                         if (effectFunction != null) {
                                             skill.addEffect(effectScope, effectFunction.apply(params));
                                         } else {
-                                            LOGGER.warning(getClass().getSimpleName() + ": Missing effect for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + effectScope + "] Effect Name[" + effectName + "]");
+                                            LOGGER.warn(": Missing effect for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + effectScope + "] Effect Name[" + effectName + "]");
                                         }
                                     } catch (Exception e) {
-                                        LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading effect for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + effectScope + "] Effect Name[" + effectName + "]", e);
+                                        LOGGER.warn(": Failed loading effect for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + effectScope + "] Effect Name[" + effectName + "]", e);
                                     }
                                 }));
 
@@ -288,10 +284,10 @@ public class SkillData implements IGameXmlReader {
                                         if (conditionFunction != null) {
                                             skill.addCondition(skillConditionScope, conditionFunction.apply(params));
                                         } else {
-                                            LOGGER.warning(getClass().getSimpleName() + ": Missing condition for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + skillConditionScope + "] Effect Name[" + conditionName + "]");
+                                            LOGGER.warn(": Missing condition for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + skillConditionScope + "] Effect Name[" + conditionName + "]");
                                         }
                                     } catch (Exception e) {
-                                        LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading condition for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Condition Scope[" + skillConditionScope + "] Condition Name[" + conditionName + "]", e);
+                                        LOGGER.warn(": Failed loading condition for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Condition Scope[" + skillConditionScope + "] Condition Name[" + conditionName + "]", e);
                                     }
                                 }));
 
@@ -499,11 +495,16 @@ public class SkillData implements IGameXmlReader {
         return value;
     }
 
-    private static class SingletonHolder {
-        protected static final SkillData _instance = new SkillData();
+    public static SkillData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final SkillData INSTANCE = new SkillData();
     }
 
     private class NamedParamInfo {
+
         private final String _name;
         private final Integer _fromLevel;
         private final Integer _toLevel;
@@ -511,7 +512,7 @@ public class SkillData implements IGameXmlReader {
         private final Integer _toSubLevel;
         private final Map<Integer, Map<Integer, StatsSet>> _info;
 
-        public NamedParamInfo(String name, Integer fromLevel, Integer toLevel, Integer fromSubLevel, Integer toSubLevel, Map<Integer, Map<Integer, StatsSet>> info) {
+        NamedParamInfo(String name, Integer fromLevel, Integer toLevel, Integer fromSubLevel, Integer toSubLevel, Map<Integer, Map<Integer, StatsSet>> info) {
             _name = name;
             _fromLevel = fromLevel;
             _toLevel = toLevel;

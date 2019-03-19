@@ -5,6 +5,8 @@ import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.util.cron4j.PastPredictor;
 import org.l2j.gameserver.util.cron4j.Predictor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,14 +15,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public class EventScheduler {
-    private static final Logger LOGGER = Logger.getLogger(EventScheduler.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(EventScheduler.class);
     private final AbstractEventManager<?> _eventManager;
     private final String _name;
     private final String _pattern;
@@ -84,7 +85,7 @@ public class EventScheduler {
         final long nextSchedule = predictor.nextMatchingTime();
         final long timeSchedule = nextSchedule - System.currentTimeMillis();
         if (timeSchedule <= (30 * 1000)) {
-            LOGGER.warning("Wrong reschedule for " + _eventManager.getClass().getSimpleName() + " end up run in " + (timeSchedule / 1000) + " seconds!");
+            LOGGER.warn("Wrong reschedule for " + _eventManager.getClass().getSimpleName() + " end up run in " + (timeSchedule / 1000) + " seconds!");
             ThreadPoolManager.getInstance().schedule(this::startScheduler, timeSchedule + 1000);
             return;
         }
@@ -116,7 +117,7 @@ public class EventScheduler {
             ps.execute();
             return true;
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Failed to insert/update information for scheduled task manager: " + _eventManager.getClass().getSimpleName() + " scheduler: " + _name, e);
+            LOGGER.warn("Failed to insert/update information for scheduled task manager: " + _eventManager.getClass().getSimpleName() + " scheduler: " + _name, e);
         }
         return false;
     }
@@ -137,7 +138,7 @@ public class EventScheduler {
             try {
                 notification.execute();
             } catch (Exception e) {
-                LOGGER.warning("Failed to notify to event manager: " + notification.getManager().getClass().getSimpleName() + " method: " + notification.getMethod().getName());
+                LOGGER.warn("Failed to notify to event manager: " + notification.getManager().getClass().getSimpleName() + " method: " + notification.getMethod().getName());
             }
         }
     }

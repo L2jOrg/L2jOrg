@@ -13,6 +13,8 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
@@ -25,11 +27,10 @@ import java.util.*;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public final class ItemAuctionInstance {
-    protected static final Logger LOGGER = Logger.getLogger(ItemAuctionInstance.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(ItemAuctionInstance.class);
     private static final long START_TIME_SPACE = TimeUnit.MILLISECONDS.convert(1, TimeUnit.MINUTES);
     private static final long FINISH_TIME_SPACE = TimeUnit.MILLISECONDS.convert(10, TimeUnit.MINUTES);
     // SQL queries
@@ -109,7 +110,7 @@ public final class ItemAuctionInstance {
                     }
                 }
             } catch (IllegalArgumentException e) {
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading auction item", e);
+                LOGGER.warn(getClass().getSimpleName() + ": Failed loading auction item", e);
             }
         }
 
@@ -131,12 +132,12 @@ public final class ItemAuctionInstance {
                             ItemAuctionManager.deleteAuction(auctionId);
                         }
                     } catch (SQLException e) {
-                        LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading auction: " + auctionId, e);
+                        LOGGER.warn(getClass().getSimpleName() + ": Failed loading auction: " + auctionId, e);
                     }
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Failed loading auctions.", e);
+            LOGGER.error(getClass().getSimpleName() + ": Failed loading auctions.", e);
             return;
         }
 
@@ -336,7 +337,7 @@ public final class ItemAuctionInstance {
                 ps.setInt(1, auctionId);
                 try (ResultSet rset = ps.executeQuery()) {
                     if (!rset.next()) {
-                        LOGGER.warning(getClass().getSimpleName() + ": Auction data not found for auction: " + auctionId);
+                        LOGGER.warn(": Auction data not found for auction: " + auctionId);
                         return null;
                     }
                     auctionItemId = rset.getInt(1);
@@ -347,19 +348,19 @@ public final class ItemAuctionInstance {
             }
 
             if (startingTime >= endingTime) {
-                LOGGER.warning(getClass().getSimpleName() + ": Invalid starting/ending paramaters for auction: " + auctionId);
+                LOGGER.warn(": Invalid starting/ending paramaters for auction: " + auctionId);
                 return null;
             }
 
             final AuctionItem auctionItem = getAuctionItem(auctionItemId);
             if (auctionItem == null) {
-                LOGGER.warning(getClass().getSimpleName() + ": AuctionItem: " + auctionItemId + ", not found for auction: " + auctionId);
+                LOGGER.warn(": AuctionItem: " + auctionItemId + ", not found for auction: " + auctionId);
                 return null;
             }
 
             final ItemAuctionState auctionState = ItemAuctionState.stateForStateId(auctionStateId);
             if (auctionState == null) {
-                LOGGER.warning(getClass().getSimpleName() + ": Invalid auctionStateId: " + auctionStateId + ", for auction: " + auctionId);
+                LOGGER.warn(": Invalid auctionStateId: " + auctionStateId + ", for auction: " + auctionId);
                 return null;
             }
 
@@ -405,7 +406,7 @@ public final class ItemAuctionInstance {
             try {
                 runImpl();
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Failed scheduling auction " + _auction.getAuctionId(), e);
+                LOGGER.error(getClass().getSimpleName() + ": Failed scheduling auction " + _auction.getAuctionId(), e);
             }
         }
 

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.ceremonyofchaos;
 
-import org.l2j.gameserver.instancemanager.CeremonyOfChaosManager;
 import org.l2j.gameserver.enums.CeremonyOfChaosResult;
+import org.l2j.gameserver.instancemanager.CeremonyOfChaosManager;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;

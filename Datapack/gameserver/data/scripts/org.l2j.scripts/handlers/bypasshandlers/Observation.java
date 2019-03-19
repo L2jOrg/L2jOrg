@@ -113,7 +113,7 @@ public class Observation implements IBypassHandler
 		}
 		catch (NumberFormatException nfe)
 		{
-			LOGGER.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), nfe);
+			LOGGER.warn("Exception in " + getClass().getSimpleName(), nfe);
 			return false;
 		}
 		

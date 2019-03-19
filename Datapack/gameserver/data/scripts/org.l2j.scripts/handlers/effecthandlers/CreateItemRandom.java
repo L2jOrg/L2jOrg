@@ -16,7 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import java.util.logging.Logger;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.StatsSet;
@@ -27,13 +26,15 @@ import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author UnAfraid
  */
 public class CreateItemRandom extends AbstractEffect
 {
-	private static final Logger LOGGER = Logger.getLogger(CreateItemRandom.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(CreateItemRandom.class);
 	
 	public CreateItemRandom(StatsSet params)
 	{
@@ -55,12 +56,12 @@ public class CreateItemRandom extends AbstractEffect
 		}
 		else if (item == null)
 		{
-			LOGGER.warning("" + player + " Attempting to cast skill: " + skill + " without item defined!");
+			LOGGER.warn("" + player + " Attempting to cast skill: " + skill + " without item defined!");
 			return;
 		}
 		else if (item.getItem().getCreateItems().isEmpty())
 		{
-			LOGGER.warning("" + player + " Attempting to cast skill: " + skill + " with item " + item + " without createItems defined!");
+			LOGGER.warn("" + player + " Attempting to cast skill: " + skill + " with item " + item + " without createItems defined!");
 			return;
 		}
 		

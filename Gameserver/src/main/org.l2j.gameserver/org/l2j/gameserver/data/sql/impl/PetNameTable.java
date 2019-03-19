@@ -3,19 +3,19 @@ package org.l2j.gameserver.data.sql.impl;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 public class PetNameTable {
-    private static Logger LOGGER = Logger.getLogger(PetNameTable.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(PetNameTable.class);
 
     public static PetNameTable getInstance() {
         return SingletonHolder._instance;
@@ -37,7 +37,7 @@ public class PetNameTable {
                 result = rs.next();
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not check existing petname:" + e.getMessage(), e);
+            LOGGER.warn(getClass().getSimpleName() + ": Could not check existing petname:" + e.getMessage(), e);
         }
         return result;
     }
@@ -54,7 +54,7 @@ public class PetNameTable {
             pattern = Pattern.compile(Config.PET_NAME_TEMPLATE);
         } catch (PatternSyntaxException e) // case of illegal pattern
         {
-            LOGGER.warning(getClass().getSimpleName() + ": Pet name pattern of config is wrong!");
+            LOGGER.warn(": Pet name pattern of config is wrong!");
             pattern = Pattern.compile(".*");
         }
         final Matcher regexp = pattern.matcher(name);

@@ -16,10 +16,10 @@
  */
 package org.l2j.gameserver.communitybbs.Manager;
 
-import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.BB.Post;
 import org.l2j.gameserver.communitybbs.BB.Topic;
+import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 

@@ -9,6 +9,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -16,7 +17,6 @@ import org.l2j.gameserver.network.serverpackets.ExBuySellList;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.Util;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

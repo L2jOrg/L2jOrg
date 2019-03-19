@@ -1,9 +1,9 @@
 package org.l2j.gameserver.network.clientpackets.sayune;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.xml.impl.SayuneData;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.data.xml.impl.SayuneData;
 import org.l2j.gameserver.model.SayuneEntry;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.request.SayuneRequest;

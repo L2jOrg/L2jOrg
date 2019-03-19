@@ -1,48 +1,27 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.model.holders.SkillHolder;
+import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
 
 /**
  * @author Mobius
  */
 public class PetSkillData implements IGameXmlReader {
-    private static Logger LOGGER = Logger.getLogger(PetSkillData.class.getName());
+    private static Logger LOGGER = LoggerFactory.getLogger(PetSkillData.class);
     private final Map<Integer, Map<Long, SkillHolder>> _skillTrees = new HashMap<>();
 
-    protected PetSkillData() {
+    private PetSkillData() {
         load();
-    }
-
-    public static PetSkillData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -64,16 +43,12 @@ public class PetSkillData implements IGameXmlReader {
                         final int skillId = parseInteger(attrs, "skillId");
                         final int skillLvl = parseInteger(attrs, "skillLvl");
 
-                        Map<Long, SkillHolder> skillTree = _skillTrees.get(npcId);
-                        if (skillTree == null) {
-                            skillTree = new HashMap<>();
-                            _skillTrees.put(npcId, skillTree);
-                        }
+                        Map<Long, SkillHolder> skillTree = _skillTrees.computeIfAbsent(npcId, k -> new HashMap<>());
 
                         if (SkillData.getInstance().getSkill(skillId, skillLvl == 0 ? 1 : skillLvl) != null) {
                             skillTree.put(SkillData.getSkillHashCode(skillId, skillLvl + 1), new SkillHolder(skillId, skillLvl));
                         } else {
-                            LOGGER.info(getClass().getSimpleName() + ": Could not find skill with id " + skillId + ", level " + skillLvl + " for NPC " + npcId + ".");
+                            LOGGER.info("Could not find skill with id {}, level {} for NPC  {}", skillId, skillLvl, npcId);
                         }
                     }
                 }
@@ -84,7 +59,7 @@ public class PetSkillData implements IGameXmlReader {
     public int getAvailableLevel(L2Summon pet, int skillId) {
         int lvl = 0;
         if (!_skillTrees.containsKey(pet.getId())) {
-            LOGGER.warning(getClass().getSimpleName() + ": Pet id " + pet.getId() + " does not have any skills assigned.");
+            LOGGER.warn("Pet id {} does not have any skills assigned.", pet.getId());
             return lvl;
         }
 
@@ -118,24 +93,11 @@ public class PetSkillData implements IGameXmlReader {
         return lvl;
     }
 
-    public List<Integer> getAvailableSkills(L2Summon pet) {
-        final List<Integer> skillIds = new ArrayList<>();
-        if (!_skillTrees.containsKey(pet.getId())) {
-            LOGGER.warning(getClass().getSimpleName() + ": Pet id " + pet.getId() + " does not have any skills assigned.");
-            return skillIds;
-        }
-
-        for (SkillHolder skillHolder : _skillTrees.get(pet.getId()).values()) {
-            if (skillIds.contains(skillHolder.getSkillId())) {
-                continue;
-            }
-            skillIds.add(skillHolder.getSkillId());
-        }
-
-        return skillIds;
+    public static PetSkillData getInstance() {
+        return Singleton.INSTANCE;
     }
 
-    private static class SingletonHolder {
-        protected static final PetSkillData _instance = new PetSkillData();
+    private static class Singleton {
+        private static final PetSkillData INSTANCE = new PetSkillData();
     }
 }

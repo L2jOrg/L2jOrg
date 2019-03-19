@@ -7,11 +7,12 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 import java.io.File;
 import java.util.*;
-import java.util.logging.Logger;
 
 /**
  * This class holds the Enchant Groups information.
@@ -19,20 +20,13 @@ import java.util.logging.Logger;
  * @author Micr0
  */
 public class EnchantSkillGroupsData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(EnchantSkillGroupsData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(EnchantSkillGroupsData.class);
     public static int MAX_ENCHANT_LEVEL;
     private final Map<Integer, EnchantSkillHolder> _enchantSkillHolders = new LinkedHashMap<>();
     private final Map<SkillHolder, Set<Integer>> _enchantSkillTrees = new HashMap<>();
 
-    /**
-     * Instantiates a new enchant groups table.
-     */
-    protected EnchantSkillGroupsData() {
+    private EnchantSkillGroupsData() {
         load();
-    }
-
-    public static EnchantSkillGroupsData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -40,7 +34,7 @@ public class EnchantSkillGroupsData implements IGameXmlReader {
         _enchantSkillHolders.clear();
         parseDatapackFile("data/EnchantSkillGroups.xml");
         MAX_ENCHANT_LEVEL = _enchantSkillHolders.size();
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _enchantSkillHolders.size() + " enchant routes, max enchant set to " + MAX_ENCHANT_LEVEL + ".");
+        LOGGER.info("Loaded {}  enchant routes, max enchant set to {}", _enchantSkillHolders.size(), MAX_ENCHANT_LEVEL);
     }
 
     @Override
@@ -100,7 +94,11 @@ public class EnchantSkillGroupsData implements IGameXmlReader {
         return _enchantSkillHolders.getOrDefault(level, null);
     }
 
-    private static class SingletonHolder {
-        protected static final EnchantSkillGroupsData _instance = new EnchantSkillGroupsData();
+    public static EnchantSkillGroupsData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final EnchantSkillGroupsData INSTANCE = new EnchantSkillGroupsData();
     }
 }

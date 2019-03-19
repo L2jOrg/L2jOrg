@@ -989,7 +989,7 @@ public class L2Npc extends L2Character {
         try {
             onDecay();
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Failed decayMe().", e);
+            LOGGER.error("Failed decayMe().", e);
         }
 
         if (isChannelized()) {
@@ -1309,7 +1309,7 @@ public class L2Npc extends L2Character {
             final int newZ = getZ() + 20;
 
             if (ItemTable.getInstance().getTemplate(itemId) == null) {
-                LOGGER.severe("Item doesn't exist so cannot be dropped. Item ID: " + itemId + " Quest: " + getName());
+                LOGGER.error("Item doesn't exist so cannot be dropped. Item ID: " + itemId + " Quest: " + getName());
                 return null;
             }
 

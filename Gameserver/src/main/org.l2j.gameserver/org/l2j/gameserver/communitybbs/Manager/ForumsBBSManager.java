@@ -19,17 +19,18 @@ package org.l2j.gameserver.communitybbs.Manager;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class ForumsBBSManager extends BaseBBSManager {
-    private static Logger LOGGER = Logger.getLogger(ForumsBBSManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ForumsBBSManager.class);
     private final List<Forum> _table;
     private int _lastid = 1;
 
@@ -45,7 +46,7 @@ public class ForumsBBSManager extends BaseBBSManager {
                 addForum(new Forum(rs.getInt("forum_id"), null));
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Data error on Forum (root): " + e.getMessage(), e);
+            LOGGER.warn(getClass().getSimpleName() + ": Data error on Forum (root): " + e.getMessage(), e);
         }
     }
 

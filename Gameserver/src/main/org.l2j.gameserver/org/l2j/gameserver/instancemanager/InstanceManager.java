@@ -18,6 +18,8 @@ import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.model.instancezone.conditions.Condition;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -32,8 +34,7 @@ import java.time.DayOfWeek;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Instance manager.
@@ -41,7 +42,7 @@ import java.util.logging.Logger;
  * @author evill33t, GodKratos, malyelfik
  */
 public final class InstanceManager implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(InstanceManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(InstanceManager.class);
     // Database query
     private static final String DELETE_INSTANCE_TIME = "DELETE FROM character_instance_time WHERE charId=? AND instanceId=?";
 
@@ -132,7 +133,7 @@ public final class InstanceManager implements IGameXmlReader {
         // Parse "instance" node
         final int id = parseInteger(instanceNode.getAttributes(), "id");
         if (_instanceTemplates.containsKey(id)) {
-            LOGGER.warning(getClass().getSimpleName() + ": Instance template with ID " + id + " already exists");
+            LOGGER.warn(": Instance template with ID " + id + " already exists");
             return;
         }
 
@@ -187,7 +188,7 @@ public final class InstanceManager implements IGameXmlReader {
                                     final List<Location> locations = new ArrayList<>();
                                     forEach(locationsNode, "location", locationNode -> locations.add(parseLocation(locationNode)));
                                     if (locations.isEmpty()) {
-                                        LOGGER.warning(getClass().getSimpleName() + ": Missing exit location data for instance " + template.getName() + " (" + template.getId() + ")!");
+                                        LOGGER.warn(": Missing exit location data for instance " + template.getName() + " (" + template.getId() + ")!");
                                     } else {
                                         template.setExitLocation(type, locations);
                                     }
@@ -214,14 +215,14 @@ public final class InstanceManager implements IGameXmlReader {
                             if (templateSet != null) {
                                 mergedSet.merge(templateSet);
                             } else {
-                                LOGGER.warning(getClass().getSimpleName() + ": Cannot find template for door: " + doorId + ", instance: " + template.getName() + " (" + template.getId() + ")");
+                                LOGGER.warn(": Cannot find template for door: " + doorId + ", instance: " + template.getName() + " (" + template.getId() + ")");
                             }
                             mergedSet.merge(parsedSet);
 
                             try {
                                 template.addDoor(doorId, new L2DoorTemplate(mergedSet));
                             } catch (Exception e) {
-                                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Cannot initialize template for door: " + doorId + ", instance: " + template.getName() + " (" + template.getId() + ")", e);
+                                LOGGER.warn(getClass().getSimpleName() + ": Cannot initialize template for door: " + doorId + ", instance: " + template.getName() + " (" + template.getId() + ")", e);
                             }
                         }
                     }
@@ -293,7 +294,7 @@ public final class InstanceManager implements IGameXmlReader {
                                 final Constructor<?> constructor = clazz.getConstructor(InstanceTemplate.class, StatsSet.class, boolean.class, boolean.class);
                                 conditions.add((Condition) constructor.newInstance(template, params, onlyLeader, showMessageAndHtml));
                             } catch (Exception ex) {
-                                LOGGER.warning(getClass().getSimpleName() + ": Unknown condition type " + type + " for instance " + template.getName() + " (" + id + ")!");
+                                LOGGER.warn(": Unknown condition type " + type + " for instance " + template.getName() + " (" + id + ")!");
                             }
                         }
                     }
@@ -337,7 +338,7 @@ public final class InstanceManager implements IGameXmlReader {
      */
     public Instance createInstance(int id, L2PcInstance player) {
         if (!_instanceTemplates.containsKey(id)) {
-            LOGGER.warning(getClass().getSimpleName() + ": Missing template for instance with id " + id + "!");
+            LOGGER.warn(": Missing template for instance with id " + id + "!");
             return null;
         }
         return new Instance(getNewInstanceId(), _instanceTemplates.get(id), player);
@@ -442,7 +443,7 @@ public final class InstanceManager implements IGameXmlReader {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Cannot restore players instance reenter data: ", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Cannot restore players instance reenter data: ", e);
         }
     }
 
@@ -480,7 +481,7 @@ public final class InstanceManager implements IGameXmlReader {
                 ps.executeBatch();
                 invalidPenalty.forEach(instanceTimes::remove);
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Cannot delete instance character reenter data: ", e);
+                LOGGER.warn(getClass().getSimpleName() + ": Cannot delete instance character reenter data: ", e);
             }
         }
         return instanceTimes;
@@ -538,7 +539,7 @@ public final class InstanceManager implements IGameXmlReader {
                 _playerInstanceTimes.get(player.getObjectId()).remove(id);
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not delete character instance reenter data: ", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Could not delete character instance reenter data: ", e);
         }
     }
 

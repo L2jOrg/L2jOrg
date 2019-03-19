@@ -18,12 +18,13 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Contains objectId and factionId for all players.
@@ -31,7 +32,7 @@ import java.util.logging.Logger;
  * @author Mobius
  */
 public class FactionManager {
-    private static Logger LOGGER = Logger.getLogger(FactionManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(FactionManager.class);
     private final Map<Integer, Integer> _playerFactions = new ConcurrentHashMap<>();
 
     protected FactionManager() {
@@ -51,7 +52,7 @@ public class FactionManager {
                 _playerFactions.put(rs.getInt(1), rs.getInt(2));
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not load character faction information: " + e.getMessage(), e);
+            LOGGER.warn(getClass().getSimpleName() + ": Could not load character faction information: " + e.getMessage(), e);
         }
         LOGGER.info(getClass().getSimpleName() + ": Loaded " + _playerFactions.size() + " character faction values.");
     }
@@ -77,7 +78,7 @@ public class FactionManager {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not check existing char id: " + e.getMessage(), e);
+            LOGGER.warn(getClass().getSimpleName() + ": Could not check existing char id: " + e.getMessage(), e);
         }
 
         return 0; // not found

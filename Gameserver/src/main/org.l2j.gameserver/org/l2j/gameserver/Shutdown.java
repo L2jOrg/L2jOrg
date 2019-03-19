@@ -12,13 +12,13 @@ import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.OnlineStatus;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.util.Broadcast;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * This class provides the functions for shutting down and restarting the server.<br>
@@ -27,7 +27,7 @@ import java.util.logging.Logger;
  * @version $Revision: 1.2.4.5 $ $Date: 2005/03/27 15:29:09 $
  */
 public class Shutdown extends Thread {
-    private static final Logger LOGGER = Logger.getLogger(Shutdown.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Shutdown.class);
     private static final int SIGTERM = 0;
     private static final int GM_SHUTDOWN = 1;
     private static final int GM_RESTART = 2;
@@ -102,7 +102,7 @@ public class Shutdown extends Thread {
                     LOGGER.info("Offline Traders Table: Offline shops stored(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
                 }
             } catch (Throwable t) {
-                LOGGER.log(Level.WARNING, "Error saving offline shops.", t);
+                LOGGER.warn("Error saving offline shops.", t);
             }
 
             try {
@@ -166,7 +166,7 @@ public class Shutdown extends Thread {
             // gm shutdown: send warnings and then call exit to start shutdown sequence
             countdown();
             // last point where logging is operational :(
-            LOGGER.warning("GM shutdown countdown is over. " + MODE_TEXT[_shutdownMode] + " NOW!");
+            LOGGER.warn("GM shutdown countdown is over. " + MODE_TEXT[_shutdownMode] + " NOW!");
             switch (_shutdownMode) {
                 case GM_SHUTDOWN: {
                     getInstance().setMode(GM_SHUTDOWN);
@@ -197,9 +197,9 @@ public class Shutdown extends Thread {
         _shutdownMode = restart ? GM_RESTART : GM_SHUTDOWN;
 
         if (activeChar != null) {
-            LOGGER.warning("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
+            LOGGER.warn("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
         } else {
-            LOGGER.warning("Server scheduled restart issued shutdown command. Restart in " + seconds + " seconds!");
+            LOGGER.warn("Server scheduled restart issued shutdown command. Restart in " + seconds + " seconds!");
         }
 
         if (_shutdownMode > 0) {
@@ -243,7 +243,7 @@ public class Shutdown extends Thread {
      * @param activeChar GM who issued the abort command
      */
     public void abort(L2PcInstance activeChar) {
-        LOGGER.warning("GM: " + (activeChar != null ? activeChar.getName() + "(" + activeChar.getObjectId() + ") " : "") + "issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
+        LOGGER.warn("GM: " + (activeChar != null ? activeChar.getName() + "(" + activeChar.getObjectId() + ") " : "") + "issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
         if (_counterInstance != null) {
             _counterInstance._abort();
             Broadcast.toAllOnlinePlayers("Server aborts " + MODE_TEXT[_shutdownMode] + " and continues normal operation!", false);

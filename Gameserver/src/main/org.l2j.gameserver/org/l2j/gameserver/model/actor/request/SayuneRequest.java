@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.model.actor.request;
 
-import org.l2j.gameserver.enums.SayuneType;
 import org.l2j.gameserver.data.xml.impl.SayuneData;
+import org.l2j.gameserver.enums.SayuneType;
 import org.l2j.gameserver.model.SayuneEntry;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.sayune.ExFlyMove;

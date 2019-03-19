@@ -1,18 +1,20 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.Shutdown;
+import org.l2j.gameserver.ThreadPoolManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.logging.Logger;
+
 
 /**
  * @author Gigi
  */
 public class ServerRestartManager {
-    static final Logger LOGGER = Logger.getLogger(ServerRestartManager.class.getName());
+    static final Logger LOGGER = LoggerFactory.getLogger(ServerRestartManager.class.getName());
 
     private String nextRestartTime = "unknown";
 
@@ -28,7 +30,7 @@ public class ServerRestartManager {
                 final String[] splitTime = scheduledTime.trim().split(":");
                 restartTime.set(Calendar.HOUR_OF_DAY, Integer.parseInt(splitTime[0]));
                 restartTime.set(Calendar.MINUTE, Integer.parseInt(splitTime[1]));
-                restartTime.set(Calendar.SECOND, 00);
+                restartTime.set(Calendar.SECOND, 0);
 
                 if (restartTime.getTimeInMillis() < currentTime.getTimeInMillis()) {
                     restartTime.add(Calendar.DAY_OF_MONTH, 1);

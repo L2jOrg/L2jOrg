@@ -4,9 +4,9 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.enums.ClanHallGrade;
 import org.l2j.gameserver.enums.ClanHallType;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.enums.ClanHallGrade;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
@@ -19,6 +19,8 @@ import org.l2j.gameserver.model.zone.type.L2ClanHallZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -29,8 +31,6 @@ import java.time.Instant;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
@@ -41,7 +41,7 @@ public final class ClanHall extends AbstractResidence {
     private static final String INSERT_CLANHALL = "INSERT INTO clanhall (id, ownerId, paidUntil) VALUES (?,?,?)";
     private static final String LOAD_CLANHALL = "SELECT * FROM clanhall WHERE id=?";
     private static final String UPDATE_CLANHALL = "UPDATE clanhall SET ownerId=?,paidUntil=? WHERE id=?";
-    private static final Logger LOGGER = Logger.getLogger(ClanHallData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ClanHallData.class);
     final int _lease;
     // Static parameters
     private final ClanHallGrade _grade;
@@ -100,7 +100,7 @@ public final class ClanHall extends AbstractResidence {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.INFO, "Failed loading clan hall", e);
+            LOGGER.info("Failed loading clan hall", e);
         }
     }
 

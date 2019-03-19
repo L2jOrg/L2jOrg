@@ -63,7 +63,7 @@ public final class CallSkill extends AbstractEffect
 				}
 				else
 				{
-					LOGGER.warning("Player " + effector + " called unknown skill " + _skill + " triggered by " + skill + " CallSkill.");
+					LOGGER.warn("Player " + effector + " called unknown skill " + _skill + " triggered by " + skill + " CallSkill.");
 				}
 			}
 			else
@@ -90,7 +90,7 @@ public final class CallSkill extends AbstractEffect
 		}
 		else
 		{
-			LOGGER.warning("Skill not found effect called from " + skill);
+			LOGGER.warn("Skill not found effect called from " + skill);
 		}
 	}
 }

@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.items.L2Henna;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -14,7 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
+
 
 /**
  * This class holds the henna related information.<br>
@@ -25,7 +27,7 @@ import java.util.logging.Logger;
  * @author Zoey76, Mobius
  */
 public final class HennaData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(HennaData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(HennaData.class);
 
     private final Map<Integer, L2Henna> _hennaList = new HashMap<>();
 

@@ -44,7 +44,7 @@ public class PcRefund extends ItemContainer {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "addItem()", e);
+            LOGGER.error("addItem()", e);
         }
     }
 
@@ -60,7 +60,7 @@ public class PcRefund extends ItemContainer {
                 item.updateDatabase(true);
             }
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "deleteMe()", e);
+            LOGGER.error("deleteMe()", e);
         }
         _items.clear();
     }

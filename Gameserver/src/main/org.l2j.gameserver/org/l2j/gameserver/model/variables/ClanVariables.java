@@ -1,36 +1,21 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model.variables;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Map.Entry;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public class ClanVariables extends AbstractVariables {
-    private static final Logger LOGGER = Logger.getLogger(ClanVariables.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ClanVariables.class);
 
     // SQL Queries.
     private static final String SELECT_QUERY = "SELECT * FROM clan_variables WHERE clanId = ?";
@@ -56,7 +41,7 @@ public class ClanVariables extends AbstractVariables {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore variables for: " + _objectId, e);
+            LOGGER.warn(getClass().getSimpleName() + ": Couldn't restore variables for: " + _objectId, e);
             return false;
         } finally {
             compareAndSetChanges(true, false);
@@ -89,7 +74,7 @@ public class ClanVariables extends AbstractVariables {
                 st.executeBatch();
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update variables for: " + _objectId, e);
+            LOGGER.warn(getClass().getSimpleName() + ": Couldn't update variables for: " + _objectId, e);
             return false;
         } finally {
             compareAndSetChanges(true, false);
@@ -109,7 +94,7 @@ public class ClanVariables extends AbstractVariables {
             // Clear all entries
             getSet().clear();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + _objectId, e);
+            LOGGER.warn(getClass().getSimpleName() + ": Couldn't delete variables for: " + _objectId, e);
             return false;
         }
         return true;

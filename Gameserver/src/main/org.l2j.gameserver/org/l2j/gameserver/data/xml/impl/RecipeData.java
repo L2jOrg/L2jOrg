@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.L2RecipeStatInstance;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -15,7 +17,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
 
 /**
  * The Class RecipeData.
@@ -23,31 +24,19 @@ import java.util.logging.Logger;
  * @author Zoey76
  */
 public class RecipeData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(RecipeData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(RecipeData.class);
 
     private final Map<Integer, L2RecipeList> _recipes = new HashMap<>();
 
-    /**
-     * Instantiates a new recipe data.
-     */
-    protected RecipeData() {
+    private RecipeData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of RecipeData.
-     *
-     * @return single instance of RecipeData
-     */
-    public static RecipeData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
     public void load() {
         _recipes.clear();
         parseDatapackFile("data/Recipes.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _recipes.size() + " recipes.");
+        LOGGER.info("Loaded {} recipes.", _recipes.size());
     }
 
     @Override
@@ -72,7 +61,7 @@ public class RecipeData implements IGameXmlReader {
 
                         att = attrs.getNamedItem("id");
                         if (att == null) {
-                            LOGGER.severe(getClass().getSimpleName() + ": Missing id for recipe item, skipping");
+                            LOGGER.error(": Missing id for recipe item, skipping");
                             continue;
                         }
                         id = Integer.parseInt(att.getNodeValue());
@@ -80,35 +69,35 @@ public class RecipeData implements IGameXmlReader {
 
                         att = attrs.getNamedItem("recipeId");
                         if (att == null) {
-                            LOGGER.severe(getClass().getSimpleName() + ": Missing recipeId for recipe item id: " + id + ", skipping");
+                            LOGGER.error(": Missing recipeId for recipe item id: " + id + ", skipping");
                             continue;
                         }
                         set.set("recipeId", Integer.parseInt(att.getNodeValue()));
 
                         att = attrs.getNamedItem("name");
                         if (att == null) {
-                            LOGGER.severe(getClass().getSimpleName() + ": Missing name for recipe item id: " + id + ", skipping");
+                            LOGGER.error(": Missing name for recipe item id: " + id + ", skipping");
                             continue;
                         }
                         set.set("recipeName", att.getNodeValue());
 
                         att = attrs.getNamedItem("craftLevel");
                         if (att == null) {
-                            LOGGER.severe(getClass().getSimpleName() + ": Missing level for recipe item id: " + id + ", skipping");
+                            LOGGER.error(": Missing level for recipe item id: " + id + ", skipping");
                             continue;
                         }
                         set.set("craftLevel", Integer.parseInt(att.getNodeValue()));
 
                         att = attrs.getNamedItem("type");
                         if (att == null) {
-                            LOGGER.severe(getClass().getSimpleName() + ": Missing type for recipe item id: " + id + ", skipping");
+                            LOGGER.error(": Missing type for recipe item id: " + id + ", skipping");
                             continue;
                         }
                         set.set("isDwarvenRecipe", att.getNodeValue().equalsIgnoreCase("dwarven"));
 
                         att = attrs.getNamedItem("successRate");
                         if (att == null) {
-                            LOGGER.severe(getClass().getSimpleName() + ": Missing successRate for recipe item id: " + id + ", skipping");
+                            LOGGER.error(": Missing successRate for recipe item id: " + id + ", skipping");
                             continue;
                         }
                         set.set("successRate", Integer.parseInt(att.getNodeValue()));
@@ -120,7 +109,7 @@ public class RecipeData implements IGameXmlReader {
                                 try {
                                     recipeStatUseList.add(new L2RecipeStatInstance(statName, value));
                                 } catch (Exception e) {
-                                    LOGGER.severe(getClass().getSimpleName() + ": Error in StatUse parameter for recipe item id: " + id + ", skipping");
+                                    LOGGER.error(": Error in StatUse parameter for recipe item id: " + id + ", skipping");
                                     continue RECIPES_FILE;
                                 }
                             } else if ("altStatChange".equalsIgnoreCase(c.getNodeName())) {
@@ -129,7 +118,7 @@ public class RecipeData implements IGameXmlReader {
                                 try {
                                     recipeAltStatChangeList.add(new L2RecipeStatInstance(statName, value));
                                 } catch (Exception e) {
-                                    LOGGER.severe(getClass().getSimpleName() + ": Error in AltStatChange parameter for recipe item id: " + id + ", skipping");
+                                    LOGGER.error(": Error in AltStatChange parameter for recipe item id: " + id + ", skipping");
                                     continue RECIPES_FILE;
                                 }
                             } else if ("ingredient".equalsIgnoreCase(c.getNodeName())) {
@@ -221,10 +210,11 @@ public class RecipeData implements IGameXmlReader {
         return recipeList;
     }
 
-    /**
-     * The Class SingletonHolder.
-     */
-    private static class SingletonHolder {
-        protected static final RecipeData _instance = new RecipeData();
+    public static RecipeData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final RecipeData INSTANCE = new RecipeData();
     }
 }

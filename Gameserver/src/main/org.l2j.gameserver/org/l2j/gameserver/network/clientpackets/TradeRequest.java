@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.FakePlayerData;
 import org.l2j.gameserver.datatables.BotReportTable;
 import org.l2j.gameserver.enums.PrivateStoreType;

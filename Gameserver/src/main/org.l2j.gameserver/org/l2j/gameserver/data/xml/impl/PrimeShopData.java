@@ -16,7 +16,6 @@
  */
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -24,6 +23,9 @@ import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.primeshop.PrimeShopGroup;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.network.serverpackets.primeshop.ExBRProductInfo;
+import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -33,13 +35,13 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
+
 
 /**
  * @author Gnacik, UnAfraid
  */
 public class PrimeShopData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(PrimeShopData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(PrimeShopData.class);
 
     private final Map<Integer, PrimeShopGroup> _primeItems = new LinkedHashMap<>();
 
@@ -90,7 +92,7 @@ public class PrimeShopData implements IGameXmlReader {
 
                                     final L2Item item = ItemTable.getInstance().getTemplate(itemId);
                                     if (item == null) {
-                                        LOGGER.severe(getClass().getSimpleName() + ": Item template null for itemId: " + itemId + " brId: " + set.getInt("id"));
+                                        LOGGER.error(": Item template null for itemId: " + itemId + " brId: " + set.getInt("id"));
                                         return;
                                     }
 

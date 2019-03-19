@@ -7,13 +7,13 @@ import org.l2j.gameserver.model.ItemRequest;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.TradeList;
+import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.util.Util;
-import org.l2j.gameserver.model.actor.L2Npc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

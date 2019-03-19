@@ -16,15 +16,15 @@
  */
 package handlers.admincommandhandlers;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  * This class handles following admin commands: - delete = deletes target
@@ -32,7 +32,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
  */
 public class AdminRepairChar implements IAdminCommandHandler
 {
-	private static Logger LOGGER = Logger.getLogger(AdminRepairChar.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminRepairChar.class);
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -101,7 +101,7 @@ public class AdminRepairChar implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "could not repair char:", e);
+			LOGGER.warn("could not repair char:", e);
 		}
 	}
 }

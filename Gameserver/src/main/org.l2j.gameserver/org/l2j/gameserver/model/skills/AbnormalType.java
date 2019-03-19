@@ -16,7 +16,9 @@
  */
 package org.l2j.gameserver.model.skills;
 
-import java.util.logging.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Abnormal type enumerate.
@@ -522,7 +524,7 @@ public enum AbnormalType {
     HERB_SPEED(-1),
     HERB_ACCURANCY(-1);
 
-    protected static final Logger LOGGER = Logger.getLogger(AbnormalType.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(AbnormalType.class);
     private int _clientId;
 
     AbnormalType(int clientId) {
@@ -539,7 +541,7 @@ public enum AbnormalType {
         try {
             return Enum.valueOf(AbnormalType.class, type);
         } catch (Exception e) {
-            LOGGER.warning("Unknown AbnormalType requested : " + type);
+            LOGGER.warn("Unknown AbnormalType requested : " + type);
             return NONE;
         }
     }

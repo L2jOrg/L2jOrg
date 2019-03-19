@@ -17,15 +17,17 @@
 package org.l2j.gameserver.taskmanager;
 
 import org.l2j.gameserver.taskmanager.TaskManager.ExecutedTask;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Logger;
+
 
 /**
  * @author Layane
  */
 public abstract class Task {
-    protected final Logger LOGGER = Logger.getLogger(getClass().getName());
+    protected final Logger LOGGER = LoggerFactory.getLogger(getClass().getName());
 
     public void initializate() {
     }

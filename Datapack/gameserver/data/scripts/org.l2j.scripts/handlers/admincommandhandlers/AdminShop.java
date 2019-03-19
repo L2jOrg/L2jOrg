@@ -16,7 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.logging.Logger;
 
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.data.xml.impl.MultisellData;
@@ -27,6 +26,8 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.BuyList;
 import org.l2j.gameserver.network.serverpackets.ExBuySellList;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class handles following admin commands:
@@ -37,7 +38,7 @@ import org.l2j.gameserver.util.BuilderUtil;
  */
 public class AdminShop implements IAdminCommandHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(AdminShop.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminShop.class);
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -107,7 +108,7 @@ public class AdminShop implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("admin buylist failed:" + command);
+			LOGGER.warn("admin buylist failed:" + command);
 		}
 		
 		final ProductList buyList = BuyListData.getInstance().getBuyList(val);
@@ -118,7 +119,7 @@ public class AdminShop implements IAdminCommandHandler
 		}
 		else
 		{
-			LOGGER.warning("no buylist with id:" + val);
+			LOGGER.warn("no buylist with id:" + val);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}

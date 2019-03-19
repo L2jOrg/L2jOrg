@@ -3,13 +3,13 @@ package org.l2j.gameserver.model.skills;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnchantSkillGroupsData;
+import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.AffectScopeHandler;
-import org.l2j.gameserver.handler.TargetHandler;
-import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.handler.ITargetTypeHandler;
+import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.StatsSet;
@@ -30,15 +30,15 @@ import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.TraitType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.function.Consumer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public final class Skill implements IIdentifiable {
-    private static final Logger LOGGER = Logger.getLogger(Skill.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Skill.class);
 
     /**
      * Skill ID.
@@ -282,7 +282,7 @@ public final class Skill implements IIdentifiable {
                     try {
                         _rideState.add(MountType.valueOf(s));
                     } catch (Exception e) {
-                        LOGGER.log(Level.WARNING, "Bad data in rideState for skill " + this + "!", e);
+                        LOGGER.warn("Bad data in rideState for skill " + this + "!", e);
                     }
                 }
             }
@@ -394,7 +394,7 @@ public final class Skill implements IIdentifiable {
                     try {
                         _abnormalResists.add(AbnormalType.valueOf(s));
                     } catch (Exception e) {
-                        LOGGER.log(Level.WARNING, "Skill ID[" + _id + "] Expected AbnormalType for abnormalResists but found " + s, e);
+                        LOGGER.warn("Skill ID[" + _id + "] Expected AbnormalType for abnormalResists but found " + s, e);
                     }
                 }
             } else {
@@ -1028,7 +1028,7 @@ public final class Skill implements IIdentifiable {
             try {
                 return handler.getTarget(activeChar, seletedTarget, this, forceUse, dontMove, sendMessage);
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, "Exception in Skill.getTarget(): " + e.getMessage(), e);
+                LOGGER.warn("Exception in Skill.getTarget(): " + e.getMessage(), e);
             }
         }
         activeChar.sendMessage("Target type of skill " + this + " is not currently handled.");
@@ -1051,7 +1051,7 @@ public final class Skill implements IIdentifiable {
                 handler.forEachAffected(activeChar, target, this, o -> result.add(o));
                 return result;
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, "Exception in Skill.getTargetsAffected(): " + e.getMessage(), e);
+                LOGGER.warn("Exception in Skill.getTargetsAffected(): " + e.getMessage(), e);
             }
         }
         activeChar.sendMessage("Target affect scope of skill " + this + " is not currently handled.");
@@ -1073,7 +1073,7 @@ public final class Skill implements IIdentifiable {
             try {
                 handler.forEachAffected(activeChar, target, this, action);
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, "Exception in Skill.forEachTargetAffected(): " + e.getMessage(), e);
+                LOGGER.warn("Exception in Skill.forEachTargetAffected(): " + e.getMessage(), e);
             }
         } else {
             activeChar.sendMessage("Target affect scope of skill " + this + " is not currently handled.");
@@ -1445,7 +1445,7 @@ public final class Skill implements IIdentifiable {
                 if (ave != null) {
                     aves.add(ave);
                 } else {
-                    LOGGER.warning("Invalid AbnormalVisualEffect(" + this + ") found for Skill(" + aveString + ")");
+                    LOGGER.warn("Invalid AbnormalVisualEffect(" + this + ") found for Skill(" + aveString + ")");
                 }
             }
 

@@ -16,7 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.logging.Logger;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
@@ -26,6 +25,8 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class handles following admin commands: - enchant_armor
@@ -33,7 +34,7 @@ import org.l2j.gameserver.util.BuilderUtil;
  */
 public class AdminEnchant implements IAdminCommandHandler
 {
-	private static Logger LOGGER = Logger.getLogger(AdminEnchant.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminEnchant.class);
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -147,7 +148,7 @@ public class AdminEnchant implements IAdminCommandHandler
 				{
 					if (Config.DEVELOPER)
 					{
-						LOGGER.warning("Set enchant error: " + e);
+						LOGGER.warn("Set enchant error: " + e);
 					}
 					BuilderUtil.sendSysMessage(activeChar, "Please specify a new enchant value.");
 				}
@@ -155,7 +156,7 @@ public class AdminEnchant implements IAdminCommandHandler
 				{
 					if (Config.DEVELOPER)
 					{
-						LOGGER.warning("Set enchant error: " + e);
+						LOGGER.warn("Set enchant error: " + e);
 					}
 					BuilderUtil.sendSysMessage(activeChar, "Please specify a valid new enchant value.");
 				}

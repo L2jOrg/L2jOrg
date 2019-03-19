@@ -16,26 +16,28 @@
  */
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.handler.ConditionHandler;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.conditions.ICondition;
 import org.l2j.gameserver.model.holders.ExtendDropDataHolder;
 import org.l2j.gameserver.model.holders.ExtendDropItemHolder;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import java.io.File;
 import java.util.*;
 import java.util.function.Function;
-import java.util.logging.Logger;
+
 
 /**
  * @author Sdw
  */
 public class ExtendDropData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(ExtendDropData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ExtendDropData.class);
     private final Map<Integer, ExtendDropDataHolder> _extendDrop = new HashMap<>();
 
     protected ExtendDropData() {
@@ -80,7 +82,7 @@ public class ExtendDropData implements IGameXmlReader {
                 if (conditionFunction != null) {
                     conditions.add(conditionFunction.apply(params));
                 } else {
-                    LOGGER.warning(getClass().getSimpleName() + ": Missing condition for ExtendDrop Id[" + set.getInt("id") + "] Condition Name[" + conditionName + "]");
+                    LOGGER.warn(": Missing condition for ExtendDrop Id[" + set.getInt("id") + "] Condition Name[" + conditionName + "]");
                 }
 
             }));

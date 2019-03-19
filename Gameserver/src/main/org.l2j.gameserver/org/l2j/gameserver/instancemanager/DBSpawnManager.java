@@ -2,8 +2,8 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
 import org.l2j.gameserver.datatables.SpawnTable;
@@ -13,6 +13,8 @@ import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -23,8 +25,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Database spawn manager.
@@ -32,7 +33,7 @@ import java.util.logging.Logger;
  * @author godson, UnAfraid
  */
 public class DBSpawnManager {
-    private static final Logger LOGGER = Logger.getLogger(DBSpawnManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(DBSpawnManager.class);
 
     protected final Map<Integer, L2Npc> _npcs = new ConcurrentHashMap<>();
     protected final Map<Integer, L2Spawn> _spawns = new ConcurrentHashMap<>();
@@ -81,11 +82,11 @@ public class DBSpawnManager {
 
                     final List<NpcSpawnTemplate> spawns = SpawnsData.getInstance().getNpcSpawns(npc -> (npc.getId() == template.getId()) && npc.hasDBSave());
                     if (spawns.isEmpty()) {
-                        LOGGER.warning(getClass().getSimpleName() + ": Couldn't find spawn declaration for npc: " + template.getId() + " - " + template.getName());
+                        LOGGER.warn(": Couldn't find spawn declaration for npc: " + template.getId() + " - " + template.getName());
                         deleteSpawn(spawn, true);
                         continue;
                     } else if (spawns.size() > 1) {
-                        LOGGER.warning(getClass().getSimpleName() + ": Found multiple database spawns for npc: " + template.getId() + " - " + template.getName() + " " + spawns);
+                        LOGGER.warn(": Found multiple database spawns for npc: " + template.getId() + " - " + template.getName() + " " + spawns);
                         continue;
                     }
 
@@ -105,22 +106,22 @@ public class DBSpawnManager {
                         spawn.setRespawnDelay(respawn, respawnRandom);
                         spawn.startRespawn();
                     } else {
-                        LOGGER.warning(getClass().getSimpleName() + ": Found database spawns without respawn for npc: " + template.getId() + " - " + template.getName() + " " + spawnTemplate);
+                        LOGGER.warn(": Found database spawns without respawn for npc: " + template.getId() + " - " + template.getName() + " " + spawnTemplate);
                         continue;
                     }
 
                     addNewSpawn(spawn, rset.getLong("respawnTime"), rset.getDouble("currentHp"), rset.getDouble("currentMp"), false);
                 } else {
-                    LOGGER.warning(getClass().getSimpleName() + ": Could not load npc #" + rset.getInt("id") + " from DB");
+                    LOGGER.warn(": Could not load npc #" + rset.getInt("id") + " from DB");
                 }
             }
 
             LOGGER.info(getClass().getSimpleName() + ": Loaded " + _npcs.size() + " Instances");
             LOGGER.info(getClass().getSimpleName() + ": Scheduled " + _schedules.size() + " Instances");
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldnt load npc_respawns table", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Couldnt load npc_respawns table", e);
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while initializing DBSpawnManager: ", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Error while initializing DBSpawnManager: ", e);
         }
     }
 
@@ -241,7 +242,7 @@ public class DBSpawnManager {
                 statement.execute();
             } catch (Exception e) {
                 // problem with storing spawn
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not store npc #" + npcId + " in the DB: ", e);
+                LOGGER.warn(getClass().getSimpleName() + ": Could not store npc #" + npcId + " in the DB: ", e);
             }
         }
     }
@@ -289,7 +290,7 @@ public class DBSpawnManager {
                 statement.execute();
             } catch (Exception e) {
                 // problem with storing spawn
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not store npc #" + npcId + " in the DB: ", e);
+                LOGGER.warn(getClass().getSimpleName() + ": Could not store npc #" + npcId + " in the DB: ", e);
             }
         }
 
@@ -325,7 +326,7 @@ public class DBSpawnManager {
                 ps.execute();
             } catch (Exception e) {
                 // problem with deleting spawn
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not remove npc #" + npcId + " from DB: ", e);
+                LOGGER.warn(getClass().getSimpleName() + ": Could not remove npc #" + npcId + " from DB: ", e);
             }
         }
 
@@ -365,11 +366,11 @@ public class DBSpawnManager {
                     statement.executeUpdate();
                     statement.clearParameters();
                 } catch (SQLException e) {
-                    LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldnt update npc_respawns table ", e);
+                    LOGGER.warn(getClass().getSimpleName() + ": Couldnt update npc_respawns table ", e);
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": SQL error while updating database spawn to database: ", e);
+            LOGGER.warn(getClass().getSimpleName() + ": SQL error while updating database spawn to database: ", e);
         }
     }
 

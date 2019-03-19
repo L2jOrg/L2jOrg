@@ -39,7 +39,7 @@ public final class DefenceTrait extends AbstractEffect
 	{
 		if (params.isEmpty())
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": must have parameters.");
+			LOGGER.warn(": must have parameters.");
 			return;
 		}
 		
@@ -57,11 +57,11 @@ public final class DefenceTrait extends AbstractEffect
 			}
 			catch (NumberFormatException e)
 			{
-				LOGGER.warning(getClass().getSimpleName() + ": value of " + param.getKey() + " must be float value " + param.getValue() + " found.");
+				LOGGER.warn(": value of " + param.getKey() + " must be float value " + param.getValue() + " found.");
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning(getClass().getSimpleName() + ": value of L2TraitType enum required but found: " + param.getKey());
+				LOGGER.warn(": value of L2TraitType enum required but found: " + param.getKey());
 			}
 		}
 	}

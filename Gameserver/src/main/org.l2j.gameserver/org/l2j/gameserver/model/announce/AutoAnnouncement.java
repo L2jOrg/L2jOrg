@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.announce;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.util.Broadcast;
 
 import java.sql.*;
@@ -79,7 +79,7 @@ public final class AutoAnnouncement extends Announcement implements Runnable {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't store announcement: ", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Couldn't store announcement: ", e);
             return false;
         }
         return true;
@@ -98,7 +98,7 @@ public final class AutoAnnouncement extends Announcement implements Runnable {
             st.setLong(7, getId());
             st.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update announcement: ", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Couldn't update announcement: ", e);
             return false;
         }
         return true;

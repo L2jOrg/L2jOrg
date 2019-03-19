@@ -17,10 +17,10 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.ai.L2CharacterAI;
-import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.DoppelgangerAI;
+import org.l2j.gameserver.ai.L2CharacterAI;
+import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
@@ -31,14 +31,15 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Logger;
 
 /**
  * @author Nik
  */
 public class DoppelgangerInstance extends L2Npc {
-    protected static final Logger log = Logger.getLogger(DoppelgangerInstance.class.getName());
+    protected static final Logger log = LoggerFactory.getLogger(DoppelgangerInstance.class.getName());
 
     private boolean _copySummonerEffects = true;
 

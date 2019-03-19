@@ -1,12 +1,11 @@
 package org.l2j.gameserver.model.actor.tasks.npc;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.L2Npc;
-
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
@@ -14,7 +13,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
  * @author Nik
  */
 public class RandomAnimationTask implements Runnable {
-    private static final Logger LOGGER = Logger.getLogger(RandomAnimationTask.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(RandomAnimationTask.class);
     private final L2Npc _npc;
     private boolean _stopTask;
 
@@ -44,7 +43,7 @@ public class RandomAnimationTask implements Runnable {
 
             startRandomAnimationTimer();
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Execution of RandomAnimationTask has failed.", e);
+            LOGGER.error("Execution of RandomAnimationTask has failed.", e);
         }
     }
 

@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.DailyMissionDataHolder;
 import org.l2j.gameserver.model.DailyMissionPlayerEntry;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.ListenersContainer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -29,8 +31,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author Sdw
@@ -38,7 +39,7 @@ import java.util.logging.Logger;
 public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
     private final Map<Integer, DailyMissionPlayerEntry> _entries = new ConcurrentHashMap<>();
     private final DailyMissionDataHolder _holder;
-    protected Logger LOGGER = Logger.getLogger(getClass().getName());
+    protected Logger LOGGER = LoggerFactory.getLogger(getClass().getName());
 
     protected AbstractDailyMissionHandler(DailyMissionDataHolder holder) {
         _holder = holder;
@@ -75,7 +76,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
             ps.setInt(2, DailyMissionStatus.COMPLETED.getClientId());
             ps.execute();
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "Error while clearing data for: " + getClass().getSimpleName(), e);
+            LOGGER.warn("Error while clearing data for: " + getClass().getSimpleName(), e);
         } finally {
             _entries.clear();
         }
@@ -113,7 +114,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
             // Cache if not exists
             _entries.computeIfAbsent(entry.getObjectId(), id -> entry);
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Error while saving reward " + entry.getRewardId() + " for player: " + entry.getObjectId() + " in database: ", e);
+            LOGGER.warn("Error while saving reward " + entry.getRewardId() + " for player: " + entry.getObjectId() + " in database: ", e);
         }
     }
 
@@ -134,7 +135,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Error while loading reward " + _holder.getId() + " for player: " + objectId + " in database: ", e);
+            LOGGER.warn("Error while loading reward " + _holder.getId() + " for player: " + objectId + " in database: ", e);
         }
 
         if (createIfNone) {

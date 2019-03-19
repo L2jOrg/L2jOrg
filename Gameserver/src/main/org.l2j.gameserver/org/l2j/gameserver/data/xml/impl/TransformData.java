@@ -9,6 +9,8 @@ import org.l2j.gameserver.model.holders.AdditionalSkillHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -16,7 +18,7 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
+
 
 /**
  * Transformation data.
@@ -24,7 +26,7 @@ import java.util.logging.Logger;
  * @author UnAfraid
  */
 public final class TransformData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(TransformData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(TransformData.class);
 
     private final Map<Integer, Transform> _transformData = new HashMap<>();
 

@@ -24,14 +24,15 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.L2GameClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Logger;
 
 /**
  * @author lord_rex
  */
 public final class OfflineTradeUtil {
-    protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
+    protected static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 
     private OfflineTradeUtil() {
         // utility class

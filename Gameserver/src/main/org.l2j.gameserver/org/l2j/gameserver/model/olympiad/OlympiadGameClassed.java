@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.model.olympiad;
 
-import org.l2j.gameserver.Config;
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.holders.ItemHolder;
 
 import java.util.List;

@@ -1,9 +1,9 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.instancemanager.PetitionManager;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.ChatType;
+import org.l2j.gameserver.instancemanager.PetitionManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;

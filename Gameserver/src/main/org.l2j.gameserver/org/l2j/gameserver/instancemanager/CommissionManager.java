@@ -32,6 +32,8 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.commission.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionList.CommissionListReplyType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.time.Duration;
@@ -42,15 +44,13 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.function.Predicate;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
  * @author NosBit
  */
 public final class CommissionManager {
-    private static final Logger LOGGER = Logger.getLogger(CommissionManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(CommissionManager.class);
 
     private static final int INTERACTION_DISTANCE = 250;
     private static final int ITEMS_LIMIT_PER_REQUEST = 999;
@@ -85,7 +85,7 @@ public final class CommissionManager {
                     final long commissionId = rs.getLong("commission_id");
                     final L2ItemInstance itemInstance = itemInstances.get(rs.getInt("item_object_id"));
                     if (itemInstance == null) {
-                        LOGGER.warning(getClass().getSimpleName() + ": Failed loading commission item with commission id " + commissionId + " because item instance does not exist or failed to load.");
+                        LOGGER.warn(": Failed loading commission item with commission id " + commissionId + " because item instance does not exist or failed to load.");
                         continue;
                     }
                     final CommissionItem commissionItem = new CommissionItem(commissionId, itemInstance, rs.getLong("price_per_unit"), rs.getTimestamp("start_time").toInstant(), rs.getByte("duration_in_days"));
@@ -98,7 +98,7 @@ public final class CommissionManager {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading commission items.", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Failed loading commission items.", e);
         }
     }
 
@@ -252,7 +252,7 @@ public final class CommissionManager {
                     }
                 }
             } catch (SQLException e) {
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed inserting commission item. ItemInstance: " + itemInstance, e);
+                LOGGER.warn(getClass().getSimpleName() + ": Failed inserting commission item. ItemInstance: " + itemInstance, e);
                 player.sendPacket(SystemMessageId.THE_ITEM_HAS_FAILED_TO_BE_REGISTERED);
                 player.sendPacket(ExResponseCommissionRegister.FAILED);
             }
@@ -372,7 +372,7 @@ public final class CommissionManager {
                 return true;
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed deleting commission item. Commission ID: " + commissionId, e);
+            LOGGER.warn(getClass().getSimpleName() + ": Failed deleting commission item. Commission ID: " + commissionId, e);
         }
         return false;
     }

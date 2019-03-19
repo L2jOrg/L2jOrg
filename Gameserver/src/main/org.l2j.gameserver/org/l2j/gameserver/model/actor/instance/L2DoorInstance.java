@@ -4,13 +4,13 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.ai.L2CharacterAI;
+import org.l2j.gameserver.ai.L2DoorAI;
 import org.l2j.gameserver.data.xml.impl.DoorData;
+import org.l2j.gameserver.enums.DoorOpenType;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortManager;
-import org.l2j.gameserver.ai.L2DoorAI;
-import org.l2j.gameserver.enums.DoorOpenType;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
@@ -177,7 +177,7 @@ public final class L2DoorInstance extends L2Character {
             if (sibling != null) {
                 sibling.notifyChildEvent(open);
             } else {
-                LOGGER.warning(getClass().getSimpleName() + ": cannot find child id: " + getChildId());
+                LOGGER.warn(": cannot find child id: " + getChildId());
             }
         }
     }

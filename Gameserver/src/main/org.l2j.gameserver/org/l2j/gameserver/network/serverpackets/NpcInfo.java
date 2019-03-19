@@ -1,9 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.NpcInfoType;
 import org.l2j.gameserver.enums.Team;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2GuardInstance;

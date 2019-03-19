@@ -2,9 +2,9 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.network.SessionKey;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.serverpackets.ServerClose;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerAuthRequest;
+import org.l2j.gameserver.network.serverpackets.ServerClose;
 
 import java.nio.ByteBuffer;
 

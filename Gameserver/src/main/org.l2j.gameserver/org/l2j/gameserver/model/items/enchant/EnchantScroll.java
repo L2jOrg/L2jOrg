@@ -121,13 +121,13 @@ public final class EnchantScroll extends AbstractEnchantItem {
      */
     public double getChance(L2PcInstance player, L2ItemInstance enchantItem) {
         if (EnchantItemGroupsData.getInstance().getScrollGroup(_scrollGroupId) == null) {
-            LOGGER.warning(getClass().getSimpleName() + ": Unexistent enchant scroll group specified for enchant scroll: " + getId());
+            LOGGER.warn(": Unexistent enchant scroll group specified for enchant scroll: " + getId());
             return -1;
         }
 
         final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup(enchantItem.getItem(), _scrollGroupId);
         if (group == null) {
-            LOGGER.warning(getClass().getSimpleName() + ": Couldn't find enchant item group for scroll: " + getId() + " requested by: " + player);
+            LOGGER.warn(": Couldn't find enchant item group for scroll: " + getId() + " requested by: " + player);
             return -1;
         }
         return group.getChance(enchantItem.getEnchantLevel());

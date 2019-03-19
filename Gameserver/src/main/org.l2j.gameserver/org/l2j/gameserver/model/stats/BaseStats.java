@@ -3,12 +3,14 @@ package org.l2j.gameserver.model.stats;
 import org.l2j.commons.util.IXmlReader;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 
 import java.io.File;
 import java.util.NoSuchElementException;
-import java.util.logging.Logger;
+
 
 /**
  * @author DS, Sdw, UnAfraid
@@ -25,7 +27,7 @@ public enum BaseStats {
 
     static {
         new IGameXmlReader() {
-            final Logger LOGGER = Logger.getLogger(BaseStats.class.getName());
+            final Logger LOGGER = LoggerFactory.getLogger(BaseStats.class.getName());
 
             @Override
             public void load() {
@@ -40,7 +42,7 @@ public enum BaseStats {
                     try {
                         baseStat = valueOf(statNode.getNodeName());
                     } catch (Exception e) {
-                        LOGGER.severe("Invalid base stats type: " + statNode.getNodeValue() + ", skipping");
+                        LOGGER.error("Invalid base stats type: " + statNode.getNodeValue() + ", skipping");
                         return;
                     }
 

@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.geoengine;
 
-import org.l2j.gameserver.geoengine.geodata.GeoLocation;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.geoengine.geodata.GeoLocation;
 import org.l2j.gameserver.geoengine.pathfinding.Node;
 import org.l2j.gameserver.geoengine.pathfinding.NodeBuffer;
 import org.l2j.gameserver.model.Location;
@@ -51,7 +51,7 @@ final class GeoEnginePathfinding extends GeoEngine {
                 count += size;
                 _buffers[i] = new BufferHolder(Integer.parseInt(args[0]), size);
             } catch (Exception e) {
-                LOGGER.warning("GeoEnginePathfinding: Can not load buffer setting: " + buf);
+                LOGGER.warn("GeoEnginePathfinding: Can not load buffer setting: " + buf);
             }
         }
 
@@ -137,7 +137,7 @@ final class GeoEnginePathfinding extends GeoEngine {
 
             path = constructPath(result);
         } catch (Exception e) {
-            LOGGER.warning(e.getMessage());
+            LOGGER.warn(e.getMessage());
             return null;
         } finally {
             buffer.free();

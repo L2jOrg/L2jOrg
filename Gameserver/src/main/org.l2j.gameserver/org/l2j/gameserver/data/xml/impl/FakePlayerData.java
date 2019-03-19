@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.holders.FakePlayerHolder;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 import java.io.File;
@@ -13,13 +15,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
+
 
 /**
  * @author Mobius
  */
 public class FakePlayerData implements IGameXmlReader {
-    private static Logger LOGGER = Logger.getLogger(FakePlayerData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(FakePlayerData.class);
 
     private final Map<Integer, FakePlayerHolder> _fakePlayerInfos = new HashMap<>();
     private final Map<String, String> _fakePlayerNames = new HashMap<>();

@@ -21,7 +21,9 @@ import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
 
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * A Function object is a component of a Calculator created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...).<br>
@@ -36,7 +38,7 @@ public abstract class AbstractFunction {
     /**
      * Logger.
      */
-    protected static final Logger LOG = Logger.getLogger(AbstractFunction.class.getName());
+    protected static final Logger LOG = LoggerFactory.getLogger(AbstractFunction.class.getName());
     /**
      * Statistics, that is affected by this function (See L2Character.CALCULATOR_XXX constants)
      */

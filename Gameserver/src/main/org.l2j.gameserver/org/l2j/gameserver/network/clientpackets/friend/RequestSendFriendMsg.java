@@ -6,9 +6,11 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2j.gameserver.network.serverpackets.L2FriendSay;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.nio.ByteBuffer;
-import java.util.logging.Logger;
+
 
 /**
  * Recieve Private (Friend) Message - 0xCC Format: c SS S: Message S: Receiving Player
@@ -16,7 +18,7 @@ import java.util.logging.Logger;
  * @author Tempy
  */
 public final class RequestSendFriendMsg extends IClientIncomingPacket {
-    private static Logger LOGGER_CHAT = Logger.getLogger("chat");
+    private static Logger LOGGER_CHAT = LoggerFactory.getLogger("chat");
 
     private String _message;
     private String _reciever;

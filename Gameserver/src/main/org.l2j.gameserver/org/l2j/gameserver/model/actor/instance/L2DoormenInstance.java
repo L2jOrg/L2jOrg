@@ -17,9 +17,9 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.data.xml.impl.DoorData;
-import org.l2j.gameserver.enums.TeleportType;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.InstanceType;
+import org.l2j.gameserver.enums.TeleportType;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;

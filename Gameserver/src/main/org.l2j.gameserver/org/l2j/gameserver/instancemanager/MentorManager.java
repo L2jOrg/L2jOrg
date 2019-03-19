@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.variables.PlayerVariables;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -34,14 +36,13 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public class MentorManager {
-    private static final Logger LOGGER = Logger.getLogger(MentorManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(MentorManager.class);
 
     private final Map<Integer, Map<Integer, L2Mentee>> _menteeData = new ConcurrentHashMap<>();
     private final Map<Integer, L2Mentee> _mentors = new ConcurrentHashMap<>();
@@ -62,7 +63,7 @@ public class MentorManager {
                 addMentor(rset.getInt("mentorId"), rset.getInt("charId"));
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
     }
 
@@ -79,7 +80,7 @@ public class MentorManager {
             statement.setInt(2, menteeId);
             statement.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
     }
 
@@ -94,7 +95,7 @@ public class MentorManager {
             statement.setInt(2, menteeId);
             statement.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         } finally {
             removeMentor(mentorId, menteeId);
         }

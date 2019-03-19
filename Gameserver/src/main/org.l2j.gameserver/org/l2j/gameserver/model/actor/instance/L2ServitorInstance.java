@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable;
@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SetSummonRemainTime;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -32,14 +34,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @author UnAfraid
  */
 public class L2ServitorInstance extends L2Summon implements Runnable {
-    protected static final Logger log = Logger.getLogger(L2ServitorInstance.class.getName());
+    protected static final Logger log = LoggerFactory.getLogger(L2ServitorInstance.class);
 
     private static final String ADD_SKILL_SAVE = "INSERT INTO character_summon_skills_save (ownerId,ownerClassIndex,summonSkillId,skill_id,skill_level,remaining_time,buff_index) VALUES (?,?,?,?,?,?,?)";
     private static final String RESTORE_SKILL_SAVE = "SELECT skill_id,skill_level,remaining_time,buff_index FROM character_summon_skills_save WHERE ownerId=? AND ownerClassIndex=? AND summonSkillId=? ORDER BY buff_index ASC";
@@ -63,7 +63,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable {
     public void onSpawn() {
         super.onSpawn();
         if ((_lifeTime > 0) && (_summonLifeTask == null)) {
-            _summonLifeTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(this, 0, 5000);
+            _summonLifeTask = ThreadPoolManager.scheduleAtFixedRate(this, 0, 5000);
         }
     }
 
@@ -304,7 +304,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not store summon effect data: ", e);
+            LOGGER.warn("Could not store summon effect data: ", e);
         }
     }
 
@@ -355,7 +355,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable {
                 statement.executeUpdate();
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not restore " + this + " active effect data: " + e.getMessage(), e);
+            LOGGER.warn("Could not restore " + this + " active effect data: " + e.getMessage(), e);
         } finally {
             if (!SummonEffectsTable.getInstance().getServitorEffectsOwner().containsKey(getOwner().getObjectId()) || !SummonEffectsTable.getInstance().getServitorEffectsOwner().get(getOwner().getObjectId()).containsKey(getOwner().getClassIndex()) || !SummonEffectsTable.getInstance().getServitorEffects(getOwner()).containsKey(getReferenceSkill())) {
                 return;

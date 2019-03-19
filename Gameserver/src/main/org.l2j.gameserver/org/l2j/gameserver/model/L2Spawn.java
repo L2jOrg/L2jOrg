@@ -2,8 +2,8 @@ package org.l2j.gameserver.model;
 
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.actor.L2Npc;
@@ -13,13 +13,14 @@ import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.zone.ZoneId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Constructor;
 import java.util.Deque;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * This class manages the spawn and respawn of a group of L2NpcInstance that are in the same are and have the same type.<br>
@@ -30,7 +31,7 @@ import java.util.logging.Logger;
  * @author Nightmare
  */
 public class L2Spawn extends Location implements IIdentifiable, INamable {
-    protected static final Logger LOGGER = Logger.getLogger(L2Spawn.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(L2Spawn.class);
     private final Deque<L2Npc> _spawnedNpcs = new ConcurrentLinkedDeque<>();
     /**
      * The current number of SpawnTask in progress or stand by of this L2Spawn
@@ -334,7 +335,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
 
             return initializeNpcInstance(npc);
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Error while spawning " + _template.getId(), e);
+            LOGGER.warn("Error while spawning " + _template.getId(), e);
         }
         return null;
     }
@@ -357,7 +358,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
             newlocz = loc.getZ();
             setLocation(loc);
         } else if ((getX() == 0) && (getY() == 0)) {
-            LOGGER.warning("NPC " + npc + " doesn't have spawn location!");
+            LOGGER.warn("NPC " + npc + " doesn't have spawn location!");
             return null;
         } else {
             // The L2NpcInstance is spawned at the exact position (Lox, Locy, Locz)
@@ -430,7 +431,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
     public void setRespawnDelay(int delay, int randomInterval) {
         if (delay != 0) {
             if (delay < 0) {
-                LOGGER.warning("respawn delay is negative for spawn:" + this);
+                LOGGER.warn("respawn delay is negative for spawn:" + this);
             }
 
             final int minDelay = delay - randomInterval;
@@ -517,7 +518,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
             try {
                 doSpawn();
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, "", e);
+                LOGGER.warn("", e);
             }
 
             _scheduledCount--;

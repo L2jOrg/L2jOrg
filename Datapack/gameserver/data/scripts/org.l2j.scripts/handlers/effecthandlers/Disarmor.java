@@ -48,7 +48,7 @@ public final class Disarmor extends AbstractEffect
 		_slot = ItemTable.SLOTS.getOrDefault(slot, (long) L2Item.SLOT_NONE);
 		if (_slot == L2Item.SLOT_NONE)
 		{
-			LOGGER.severe("Unknown bodypart slot for effect: " + slot);
+			LOGGER.error("Unknown bodypart slot for effect: " + slot);
 		}
 	}
 	

@@ -21,17 +21,18 @@ import org.l2j.gameserver.handler.IVoicedCommandHandler;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author Nik
  */
 public class ChangePassword implements IVoicedCommandHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(ChangePassword.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(ChangePassword.class);
 	
 	private static final String[] _voicedCommands =
 	{
@@ -91,7 +92,7 @@ public class ChangePassword implements IVoicedCommandHandler
 			catch (Exception e)
 			{
 				activeChar.sendMessage("A problem occured while changing password!");
-				LOGGER.log(Level.WARNING, "", e);
+				LOGGER.warn("", e);
 			}
 		}
 		else

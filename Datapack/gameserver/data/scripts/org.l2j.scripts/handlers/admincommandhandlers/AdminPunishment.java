@@ -31,20 +31,22 @@ import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GMAudit;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.StringTokenizer;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public class AdminPunishment implements IAdminCommandHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(AdminPunishment.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminPunishment.class);
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -87,7 +89,7 @@ public class AdminPunishment implements IAdminCommandHandler
 					}
 					else
 					{
-						LOGGER.warning(getClass().getSimpleName() + ": data/html/admin/punishment.htm is missing");
+						LOGGER.warn(": data/html/admin/punishment.htm is missing");
 					}
 				}
 				else
@@ -150,7 +152,7 @@ public class AdminPunishment implements IAdminCommandHandler
 							}
 							else
 							{
-								LOGGER.warning(getClass().getSimpleName() + ": data/html/admin/punishment-info.htm is missing");
+								LOGGER.warn(": data/html/admin/punishment-info.htm is missing");
 							}
 							break;
 						}
@@ -187,7 +189,7 @@ public class AdminPunishment implements IAdminCommandHandler
 							}
 							else
 							{
-								LOGGER.warning(getClass().getSimpleName() + ": data/html/admin/punishment-player.htm is missing");
+								LOGGER.warn(": data/html/admin/punishment-player.htm is missing");
 							}
 							break;
 						}

@@ -2,20 +2,21 @@ package org.l2j.gameserver.util;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Audits Game Master's actions.
  */
 public class GMAudit {
-    private static final Logger LOGGER = Logger.getLogger(GMAudit.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(GMAudit.class);
 
     static {
         new File("log/GMAudit").mkdirs();
@@ -41,7 +42,7 @@ public class GMAudit {
         try (FileWriter save = new FileWriter(file, true)) {
             save.write(date + ">" + gmName + ">" + action + ">" + target + ">" + params + Config.EOL);
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "GMAudit for GM " + gmName + " could not be saved: ", e);
+            LOGGER.error("GMAudit for GM " + gmName + " could not be saved: ", e);
         }
     }
 

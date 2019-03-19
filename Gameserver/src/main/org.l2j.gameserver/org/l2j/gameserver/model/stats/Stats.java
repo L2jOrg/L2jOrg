@@ -2,13 +2,13 @@ package org.l2j.gameserver.model.stats;
 
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.model.stats.finalizers.*;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.function.BiFunction;
-import java.util.logging.Logger;
+
 
 /**
  * Enum of basic stats.
@@ -241,7 +241,6 @@ public enum Stats {
     ATTACK_DAMAGE("attackDamage");
 
     public static final int NUM_STATS = values().length;
-    static final Logger LOGGER = Logger.getLogger(Stats.class.getName());
     private final String _value;
     private final IStatsFunction _valueFinalizer;
     private final BiFunction<Double, Double, Double> _addFunction;
@@ -307,7 +306,7 @@ public enum Stats {
         try {
             return _valueFinalizer.calc(creature, baseValue, this);
         } catch (Exception e) {
-            // LOGGER.log(Level.WARNING, "Exception during finalization for : " + creature + " stat: " + toString() + " : ", e);
+            // LOGGER.warn("Exception during finalization for : " + creature + " stat: " + toString() + " : ", e);
             return defaultValue(creature, baseValue, this);
         }
     }

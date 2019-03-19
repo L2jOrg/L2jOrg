@@ -51,7 +51,7 @@ public class L2ControlTowerInstance extends L2Tower {
                         spawn.stopRespawn();
                         // spawn.getLastSpawn().doDie(spawn.getLastSpawn());
                     } catch (Exception e) {
-                        LOGGER.log(Level.WARNING, "Error at L2ControlTowerInstance", e);
+                        LOGGER.warn("Error at L2ControlTowerInstance", e);
                     }
                 }
                 _guards.clear();

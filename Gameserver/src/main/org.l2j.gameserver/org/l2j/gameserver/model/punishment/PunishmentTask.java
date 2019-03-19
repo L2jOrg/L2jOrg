@@ -3,22 +3,23 @@ package org.l2j.gameserver.model.punishment;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.handler.IPunishmentHandler;
-import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.handler.PunishmentHandler;
+import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public class PunishmentTask implements Runnable {
-    protected static final Logger LOGGER = Logger.getLogger(PunishmentTask.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(PunishmentTask.class);
 
     private static final String INSERT_QUERY = "INSERT INTO punishments (`key`, `affect`, `type`, `expiration`, `reason`, `punishedBy`) VALUES (?, ?, ?, ?, ?, ?)";
     private static final String UPDATE_QUERY = "UPDATE punishments SET expiration = ? WHERE id = ?";
@@ -161,7 +162,7 @@ public class PunishmentTask implements Runnable {
                 }
                 _isStored = true;
             } catch (SQLException e) {
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't store punishment task for: " + _affect + " " + _key, e);
+                LOGGER.warn(getClass().getSimpleName() + ": Couldn't store punishment task for: " + _affect + " " + _key, e);
             }
         }
 
@@ -182,7 +183,7 @@ public class PunishmentTask implements Runnable {
                 st.setLong(2, _id);
                 st.execute();
             } catch (SQLException e) {
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update punishment task for: " + _affect + " " + _key + " id: " + _id, e);
+                LOGGER.warn(getClass().getSimpleName() + ": Couldn't update punishment task for: " + _affect + " " + _key + " id: " + _id, e);
             }
         }
 

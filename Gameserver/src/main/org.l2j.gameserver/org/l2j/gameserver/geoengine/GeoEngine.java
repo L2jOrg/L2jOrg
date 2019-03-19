@@ -11,6 +11,8 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.util.MathUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.RandomAccessFile;
@@ -18,13 +20,13 @@ import java.nio.ByteOrder;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.util.List;
-import java.util.logging.Logger;
+
 
 /**
  * @author Hasha
  */
 public class GeoEngine {
-    protected static final Logger LOGGER = Logger.getLogger(GeoEngine.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(GeoEngine.class);
 
     private final ABlock[][] _blocks;
     private final BlockNull _nullBlock;
@@ -204,15 +206,15 @@ public class GeoEngine {
 
             // check data consistency
             if (buffer.remaining() > 0) {
-                LOGGER.warning("GeoEngine: Region file " + filename + " can be corrupted, remaining " + buffer.remaining() + " bytes to read.");
+                LOGGER.warn("GeoEngine: Region file " + filename + " can be corrupted, remaining " + buffer.remaining() + " bytes to read.");
             }
 
             // loading was successful
             return true;
         } catch (Exception e) {
             // an error occured while loading, load null blocks
-            LOGGER.warning("GeoEngine: Error while loading " + filename + " region file.");
-            LOGGER.warning(e.getMessage());
+            LOGGER.warn("GeoEngine: Error while loading " + filename + " region file.");
+            LOGGER.warn(e.getMessage());
             e.printStackTrace();
 
             // replace whole region file with null blocks
@@ -272,7 +274,7 @@ public class GeoEngine {
         if (block == null) // null block check
         {
             // TODO: Find when this can be null. (Bad geodata? Check L2World getRegion method.)
-            // LOGGER.warning("Could not find geodata block at " + getWorldX(geoX) + ", " + getWorldY(geoY) + ".");
+            // LOGGER.warn("Could not find geodata block at " + getWorldX(geoX) + ", " + getWorldY(geoY) + ".");
             return false;
         }
         return block.hasGeoPos();

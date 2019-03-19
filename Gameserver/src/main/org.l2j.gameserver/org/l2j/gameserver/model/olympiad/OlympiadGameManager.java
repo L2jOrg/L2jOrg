@@ -6,18 +6,20 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.zone.type.L2OlympiadStadiumZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
-import java.util.logging.Logger;
+
 
 /**
  * @author GodKratos, DS
  */
 public class OlympiadGameManager implements Runnable {
-    private static final Logger LOGGER = Logger.getLogger(OlympiadGameManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(OlympiadGameManager.class);
     private static final int STADIUM_COUNT = 80; // TODO dynamic
     private final List<OlympiadStadium> _tasks;
     private volatile boolean _battleStarted = false;

@@ -2,10 +2,10 @@ package org.l2j.gameserver.model.itemcontainer;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.CommonUtil;
-import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
 import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.L2ArmorSet;
@@ -21,6 +21,8 @@ import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -30,8 +32,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Function;
 import java.util.function.Predicate;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
@@ -110,7 +110,7 @@ public abstract class Inventory extends ItemContainer {
     public static final int PAPERDOLL_TOTALSLOTS = 59;
     // Speed percentage mods
     public static final double MAX_ARMOR_WEIGHT = 12000;
-    protected static final Logger LOGGER = Logger.getLogger(Inventory.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(Inventory.class);
     private final L2ItemInstance[] _paperdoll;
     private final List<PaperdollListener> _paperdollListeners;
     // protected to be accessed from child classes only
@@ -888,7 +888,7 @@ public abstract class Inventory extends ItemContainer {
         } else if (targetSlot == L2Item.SLOT_ARTIFACT) {
             equipArtifact(item);
         } else {
-            LOGGER.warning("Unknown body slot " + targetSlot + " for Item ID: " + item.getId());
+            LOGGER.warn("Unknown body slot " + targetSlot + " for Item ID: " + item.getId());
         }
     }
 
@@ -991,7 +991,7 @@ public abstract class Inventory extends ItemContainer {
             }
             refreshWeight();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not restore inventory: " + e.getMessage(), e);
+            LOGGER.warn("Could not restore inventory: " + e.getMessage(), e);
         }
     }
 
@@ -1516,7 +1516,7 @@ public abstract class Inventory extends ItemContainer {
                     player.removeSkill(Skill, false, Skill.isPassive());
                     update.compareAndSet(false, true);
                 } else {
-                    LOGGER.warning("Inventory.ItemSkillsListener.Weapon: Incorrect skill: " + holder);
+                    LOGGER.warn("Inventory.ItemSkillsListener.Weapon: Incorrect skill: " + holder);
                 }
             });
 
@@ -1624,7 +1624,7 @@ public abstract class Inventory extends ItemContainer {
                     }
                     update.compareAndSet(false, true);
                 } else {
-                    LOGGER.warning("Inventory.ItemSkillsListener.Weapon: Incorrect skill: " + holder);
+                    LOGGER.warn("Inventory.ItemSkillsListener.Weapon: Incorrect skill: " + holder);
                 }
             });
 
@@ -1657,7 +1657,7 @@ public abstract class Inventory extends ItemContainer {
                     if (holder.validateConditions(player, armorSet, idProvider)) {
                         final Skill itemSkill = holder.getSkill();
                         if (itemSkill == null) {
-                            LOGGER.warning("Inventory.ArmorSetListener.addSkills: Incorrect skill: " + holder);
+                            LOGGER.warn("Inventory.ArmorSetListener.addSkills: Incorrect skill: " + holder);
                             continue;
                         }
 
@@ -1703,7 +1703,7 @@ public abstract class Inventory extends ItemContainer {
                     if (!holder.validateConditions(player, armorSet, idProvider)) {
                         final Skill itemSkill = holder.getSkill();
                         if (itemSkill == null) {
-                            LOGGER.warning("Inventory.ArmorSetListener.removeSkills: Incorrect skill: " + holder);
+                            LOGGER.warn("Inventory.ArmorSetListener.removeSkills: Incorrect skill: " + holder);
                             continue;
                         }
 

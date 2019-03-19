@@ -21,7 +21,9 @@ import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.ServerClose;
 
 import java.nio.ByteBuffer;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * This class ...
@@ -29,7 +31,7 @@ import java.util.logging.Logger;
  * @version $Revision: 1.5.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $
  */
 public class CharacterSelect extends IClientIncomingPacket {
-    protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
+    protected static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 
     // cd
     private int _charSlot;

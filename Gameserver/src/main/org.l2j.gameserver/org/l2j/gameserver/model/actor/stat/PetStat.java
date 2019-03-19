@@ -78,7 +78,7 @@ public class PetStat extends SummonStat {
             return PetDataTable.getInstance().getPetLevelData(getActiveChar().getId(), level).getPetMaxExp();
         } catch (NullPointerException e) {
             if (getActiveChar() != null) {
-                LOGGER.warning("Pet objectId:" + getActiveChar().getObjectId() + ", NpcId:" + getActiveChar().getId() + ", level:" + level + " is missing data from pets_stats table!");
+                LOGGER.warn("Pet objectId:" + getActiveChar().getObjectId() + ", NpcId:" + getActiveChar().getId() + ", level:" + level + " is missing data from pets_stats table!");
             }
             throw e;
         }

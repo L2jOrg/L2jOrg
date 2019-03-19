@@ -114,7 +114,7 @@ public class Mail extends ItemContainer {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "could not restore container:", e);
+            LOGGER.warn("could not restore container:", e);
         }
     }
 

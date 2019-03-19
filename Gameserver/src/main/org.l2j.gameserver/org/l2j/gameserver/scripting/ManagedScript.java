@@ -1,8 +1,10 @@
 package org.l2j.gameserver.scripting;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.nio.file.Path;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Abstract class for classes that are meant to be implemented by scripts.<BR>
@@ -10,7 +12,7 @@ import java.util.logging.Logger;
  * @author KenM
  */
 public abstract class ManagedScript {
-    private static final Logger LOGGER = Logger.getLogger(ManagedScript.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ManagedScript.class);
 
     private final Path _scriptFile;
     private long _lastLoadTime;
@@ -34,7 +36,7 @@ public abstract class ManagedScript {
             ScriptEngineManager.getInstance().executeScript(getScriptFile());
             return true;
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Failed to reload script!", e);
+            LOGGER.warn("Failed to reload script!", e);
             return false;
         }
     }

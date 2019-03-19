@@ -66,7 +66,7 @@ public class SummonHallucination extends AbstractEffect
 		
 		if ((_npcId <= 0) || (_npcCount <= 0))
 		{
-			LOGGER.warning(SummonNpc.class.getSimpleName() + ": Invalid NPC ID or count skill ID: " + skill.getId());
+			LOGGER.warn(SummonNpc.class.getSimpleName() + ": Invalid NPC ID or count skill ID: " + skill.getId());
 			return;
 		}
 		
@@ -79,7 +79,7 @@ public class SummonHallucination extends AbstractEffect
 		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_npcId);
 		if (npcTemplate == null)
 		{
-			LOGGER.warning(SummonNpc.class.getSimpleName() + ": Spawn of the nonexisting NPC ID: " + _npcId + ", skill ID:" + skill.getId());
+			LOGGER.warn(SummonNpc.class.getSimpleName() + ": Spawn of the nonexisting NPC ID: " + _npcId + ", skill ID:" + skill.getId());
 			return;
 		}
 		

@@ -2,6 +2,8 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -9,13 +11,13 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public class KarmaData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(KarmaData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(KarmaData.class);
 
     private final Map<Integer, Double> _karmaTable = new HashMap<>();
 

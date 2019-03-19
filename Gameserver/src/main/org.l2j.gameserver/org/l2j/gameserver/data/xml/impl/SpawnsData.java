@@ -15,21 +15,21 @@ import org.l2j.gameserver.model.zone.form.ZoneNPoly;
 import org.l2j.gameserver.model.zone.type.L2BannedSpawnTerritory;
 import org.l2j.gameserver.model.zone.type.L2SpawnTerritory;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import java.io.File;
 import java.util.*;
 import java.util.function.Predicate;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
  * @author UnAfraid
  */
 public class SpawnsData implements IGameXmlReader {
-    protected static final Logger LOGGER = Logger.getLogger(SpawnsData.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(SpawnsData.class);
 
     private final List<SpawnTemplate> _spawns = new LinkedList<>();
 
@@ -59,7 +59,7 @@ public class SpawnsData implements IGameXmlReader {
             try {
                 parseSpawn(spawnNode, f, _spawns);
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while processing spawn in file: " + f.getAbsolutePath(), e);
+                LOGGER.warn(getClass().getSimpleName() + ": Error while processing spawn in file: " + f.getAbsolutePath(), e);
             }
         }));
     }
@@ -193,12 +193,12 @@ public class SpawnsData implements IGameXmlReader {
         final NpcSpawnTemplate npcTemplate = new NpcSpawnTemplate(spawnTemplate, group, new StatsSet(parseAttributes(n)));
         final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcTemplate.getId());
         if (template == null) {
-            LOGGER.warning(getClass().getSimpleName() + ": Requested spawn for non existing npc: " + npcTemplate.getId() + " in file: " + spawnTemplate.getFile().getName());
+            LOGGER.warn(": Requested spawn for non existing npc: " + npcTemplate.getId() + " in file: " + spawnTemplate.getFile().getName());
             return;
         }
 
         if (template.isType("L2Servitor") || template.isType("L2Pet")) {
-            LOGGER.warning(getClass().getSimpleName() + ": Requested spawn for " + template.getType() + " " + template.getName() + "(" + template.getId() + ") file: " + spawnTemplate.getFile().getName());
+            LOGGER.warn(": Requested spawn for " + template.getType() + " " + template.getName() + "(" + template.getId() + ") file: " + spawnTemplate.getFile().getName());
             return;
         }
 

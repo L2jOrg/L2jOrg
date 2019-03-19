@@ -17,6 +17,8 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.model.zone.type.L2OlympiadStadiumZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Calendar;
 import java.util.List;
@@ -24,7 +26,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class Duel {
     public static final int DUELSTATE_NODUEL = 0;
@@ -32,7 +34,7 @@ public class Duel {
     public static final int DUELSTATE_DEAD = 2;
     public static final int DUELSTATE_WINNER = 3;
     public static final int DUELSTATE_INTERRUPTED = 4;
-    protected static final Logger LOGGER = Logger.getLogger(Duel.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(Duel.class);
     private static final PlaySound B04_S01 = new PlaySound(1, "B04_S01", 0, 0, 0, 0, 0);
 
     private static final int PARTY_DUEL_DURATION = 300;
@@ -678,7 +680,7 @@ public class Duel {
             }
         } else {
             if ((player != _playerA) && (player != _playerB)) {
-                LOGGER.warning("Error in onPlayerDefeat(): player is not part of this 1vs1 duel");
+                LOGGER.warn("Error in onPlayerDefeat(): player is not part of this 1vs1 duel");
             }
 
             if (_playerA == player) {
@@ -824,7 +826,7 @@ public class Duel {
                     _duel.startDuel();
                 }
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, "There has been a problem while runing a duel start task!", e);
+                LOGGER.error("There has been a problem while runing a duel start task!", e);
             }
         }
     }
@@ -843,7 +845,7 @@ public class Duel {
             try {
                 _duel.endDuel(_result);
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, "There has been a problem while runing a duel end task!", e);
+                LOGGER.error("There has been a problem while runing a duel end task!", e);
             }
         }
     }
@@ -880,7 +882,7 @@ public class Duel {
                     }
                 }
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, "There has been a problem while runing a duel task!", e);
+                LOGGER.error("There has been a problem while runing a duel task!", e);
             }
         }
     }

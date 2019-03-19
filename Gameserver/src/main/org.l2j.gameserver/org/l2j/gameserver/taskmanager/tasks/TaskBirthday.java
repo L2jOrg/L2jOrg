@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.taskmanager.tasks;
 
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
-import org.l2j.gameserver.Config;
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.model.entity.Message;
@@ -103,7 +103,7 @@ public class TaskBirthday extends Task {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "Error checking birthdays. ", e);
+            LOGGER.warn("Error checking birthdays. ", e);
         }
 
         // If character birthday is 29-Feb and year isn't leap, send gift on 28-feb

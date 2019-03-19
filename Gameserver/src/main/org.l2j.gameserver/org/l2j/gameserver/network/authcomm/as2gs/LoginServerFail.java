@@ -2,7 +2,6 @@ package org.l2j.gameserver.network.authcomm.as2gs;
 
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

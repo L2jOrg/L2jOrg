@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.Config;
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.Race;
 
 import java.util.ArrayList;

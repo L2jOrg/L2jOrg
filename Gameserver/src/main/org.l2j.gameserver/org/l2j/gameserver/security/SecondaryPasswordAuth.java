@@ -8,6 +8,8 @@ import org.l2j.gameserver.network.serverpackets.Ex2ndPasswordAck;
 import org.l2j.gameserver.network.serverpackets.Ex2ndPasswordCheck;
 import org.l2j.gameserver.network.serverpackets.Ex2ndPasswordVerify;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
@@ -16,8 +18,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Base64;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @author mrTJO
@@ -29,7 +29,7 @@ public class SecondaryPasswordAuth {
     private static final String INSERT_PASSWORD = "INSERT INTO account_gsdata VALUES (?, ?, ?)";
     private static final String UPDATE_PASSWORD = "UPDATE account_gsdata SET value=? WHERE account_name=? AND var=?";
     private static final String INSERT_ATTEMPT = "INSERT INTO account_gsdata VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE value=?";
-    private final Logger LOGGER = Logger.getLogger(SecondaryPasswordAuth.class.getName());
+    private final Logger LOGGER = LoggerFactory.getLogger(SecondaryPasswordAuth.class.getName());
     private final L2GameClient _activeClient;
     private String _password;
     private int _wrongAttempts;
@@ -65,13 +65,13 @@ public class SecondaryPasswordAuth {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error while reading password.", e);
+            LOGGER.error("Error while reading password.", e);
         }
     }
 
     public boolean savePassword(String password) {
         if (passwordExist()) {
-            LOGGER.warning("[SecondaryPasswordAuth]" + _activeClient.getAccountName() + " forced savePassword");
+            LOGGER.warn("[SecondaryPasswordAuth]" + _activeClient.getAccountName() + " forced savePassword");
             Disconnection.of(_activeClient).defaultSequence(false);
             return false;
         }
@@ -90,7 +90,7 @@ public class SecondaryPasswordAuth {
             statement.setString(3, password);
             statement.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error while writing password.", e);
+            LOGGER.error("Error while writing password.", e);
             return false;
         }
         _password = password;
@@ -106,7 +106,7 @@ public class SecondaryPasswordAuth {
             statement.setString(4, Integer.toString(attempts));
             statement.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error while writing wrong attempts.", e);
+            LOGGER.error("Error while writing wrong attempts.", e);
             return false;
         }
         return true;
@@ -114,7 +114,7 @@ public class SecondaryPasswordAuth {
 
     public boolean changePassword(String oldPassword, String newPassword) {
         if (!passwordExist()) {
-            LOGGER.warning("[SecondaryPasswordAuth]" + _activeClient.getAccountName() + " forced changePassword");
+            LOGGER.warn("[SecondaryPasswordAuth]" + _activeClient.getAccountName() + " forced changePassword");
             Disconnection.of(_activeClient).defaultSequence(false);
             return false;
         }
@@ -137,7 +137,7 @@ public class SecondaryPasswordAuth {
             statement.setString(3, VAR_PWD);
             statement.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error while reading password.", e);
+            LOGGER.error("Error while reading password.", e);
             return false;
         }
 
@@ -157,7 +157,7 @@ public class SecondaryPasswordAuth {
             } else {
                 //AuthServerCommunication.getInstance().sendTempBan(_activeClient.getAccountName(), _activeClient.getHostAddress(), SecondaryAuthData.getInstance().getBanTime());
                 //AuthServerCommunication.getInstance().sendMail(_activeClient.getAccountName(), "SATempBan", _activeClient.getHostAddress(), Integer.toString(SecondaryAuthData.getInstance().getMaxAttempts()), Long.toString(SecondaryAuthData.getInstance().getBanTime()), SecondaryAuthData.getInstance().getRecoveryLink());
-                LOGGER.warning(_activeClient.getAccountName() + " - (" + _activeClient.getHostAddress() + ") has inputted the wrong password " + _wrongAttempts + " times in row.");
+                LOGGER.warn(_activeClient.getAccountName() + " - (" + _activeClient.getHostAddress() + ") has inputted the wrong password " + _wrongAttempts + " times in row.");
                 insertWrongAttempt(0);
                 _activeClient.close(new Ex2ndPasswordVerify(Ex2ndPasswordVerify.PASSWORD_BAN, SecondaryAuthData.getInstance().getMaxAttempts()));
             }
@@ -194,9 +194,9 @@ public class SecondaryPasswordAuth {
             final byte[] hash = md.digest(raw);
             return Base64.getEncoder().encodeToString(hash);
         } catch (NoSuchAlgorithmException e) {
-            LOGGER.severe("[SecondaryPasswordAuth]Unsupported Algorythm");
+            LOGGER.error("[SecondaryPasswordAuth]Unsupported Algorythm");
         } catch (UnsupportedEncodingException e) {
-            LOGGER.severe("[SecondaryPasswordAuth]Unsupported Encoding");
+            LOGGER.error("[SecondaryPasswordAuth]Unsupported Encoding");
         }
         return null;
     }

@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -16,33 +18,24 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Logger;
 
 /**
  * @author UnAfraid
  */
 public class ClanRewardData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(ClanRewardData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ClanRewardData.class);
+
     private final Map<ClanRewardType, List<ClanRewardBonus>> _clanRewards = new ConcurrentHashMap<>();
 
-    protected ClanRewardData() {
+    private ClanRewardData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of ClanRewardData.
-     *
-     * @return single instance of ClanRewardData
-     */
-    public static ClanRewardData getInstance() {
-        return SingletonHolder.INSTANCE;
     }
 
     @Override
     public void load() {
         parseFile(new File("config/ClanReward.xml"));
         for (ClanRewardType type : ClanRewardType.values()) {
-            LOGGER.info(getClass().getSimpleName() + ": Loaded: " + (_clanRewards.containsKey(type) ? _clanRewards.get(type).size() : 0) + " rewards for " + type);
+            LOGGER.info("Loaded: {} rewards for {}", (_clanRewards.containsKey(type) ? _clanRewards.get(type).size() : 0), type);
         }
     }
 
@@ -125,7 +118,11 @@ public class ClanRewardData implements IGameXmlReader {
         return _clanRewards.values();
     }
 
-    private static class SingletonHolder {
-        protected static final ClanRewardData INSTANCE = new ClanRewardData();
+    public static ClanRewardData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ClanRewardData INSTANCE = new ClanRewardData();
     }
 }

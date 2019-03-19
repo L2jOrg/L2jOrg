@@ -17,11 +17,12 @@
 package org.l2j.gameserver.handler;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Logger;
 
 public interface IUserCommandHandler {
-    Logger LOGGER = Logger.getLogger(IUserCommandHandler.class.getName());
+    Logger LOGGER = LoggerFactory.getLogger(IUserCommandHandler.class.getName());
 
     /**
      * this is the worker method that is called when someone uses an admin command.

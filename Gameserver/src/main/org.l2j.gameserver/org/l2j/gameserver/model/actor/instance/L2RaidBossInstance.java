@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;

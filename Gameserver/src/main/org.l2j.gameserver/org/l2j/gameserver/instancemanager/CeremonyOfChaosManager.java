@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
@@ -46,12 +30,13 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.ceremonyofchaos.ExCuriousHouseState;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Comparator;
 import java.util.List;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
@@ -64,7 +49,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
     public static final String MAX_ARENAS_KEY = "max_arenas";
     public static final String INSTANCE_TEMPLATES_KEY = "instance_templates";
     public static final String END_BUFFS_KEYH = "end_buffs";
-    protected static final Logger LOGGER = Logger.getLogger(CeremonyOfChaosManager.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(CeremonyOfChaosManager.class);
 
     protected CeremonyOfChaosManager() {
     }
@@ -94,7 +79,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
             ps.setString(1, PlayerVariables.CEREMONY_OF_CHAOS_MARKS);
             ps.execute();
         } catch (Exception e) {
-            LOGGER.severe(getClass().getSimpleName() + ": Could not reset Ceremony Of Chaos victories: " + e);
+            LOGGER.error(": Could not reset Ceremony Of Chaos victories: " + e);
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -102,7 +87,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
             ps.setString(1, PlayerVariables.CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES);
             ps.execute();
         } catch (Exception e) {
-            LOGGER.severe(getClass().getSimpleName() + ": Could not reset Ceremony Of Chaos penalties: " + e);
+            LOGGER.error(": Could not reset Ceremony Of Chaos penalties: " + e);
         }
 
         // Update data for online players.

@@ -16,14 +16,14 @@
  */
 package org.l2j.gameserver.model.entity;
 
+import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
-import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
@@ -34,6 +34,8 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.text.SimpleDateFormat;
@@ -41,7 +43,7 @@ import java.util.Date;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Logger;
+
 
 /**
  * Hero entity.
@@ -59,7 +61,7 @@ public class Hero {
     public static final int ACTION_RAID_KILLED = 1;
     public static final int ACTION_HERO_GAINED = 2;
     public static final int ACTION_CASTLE_TAKEN = 3;
-    private static final Logger LOGGER = Logger.getLogger(Hero.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Hero.class);
     private static final String GET_HEROES = "SELECT heroes.charId, characters.char_name, heroes.class_id, heroes.count, heroes.played, heroes.claimed FROM heroes, characters WHERE characters.charId = heroes.charId AND heroes.played = 1";
     private static final String GET_ALL_HEROES = "SELECT heroes.charId, characters.char_name, heroes.class_id, heroes.count, heroes.played, heroes.claimed FROM heroes, characters WHERE characters.charId = heroes.charId";
     private static final String UPDATE_ALL = "UPDATE heroes SET played = 0";
@@ -129,7 +131,7 @@ public class Hero {
                 COMPLETE_HEROS.put(charId, hero);
             }
         } catch (SQLException e) {
-            LOGGER.warning("Hero System: Couldnt load Heroes: " + e.getMessage());
+            LOGGER.warn("Hero System: Couldnt load Heroes: " + e.getMessage());
         }
 
         LOGGER.info("Hero System: Loaded " + HEROES.size() + " Heroes.");
@@ -184,7 +186,7 @@ public class Hero {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.warning("Hero System: Couldnt load Hero Message for CharId: " + charId + ": " + e.getMessage());
+            LOGGER.warn("Hero System: Couldnt load Hero Message for CharId: " + charId + ": " + e.getMessage());
         }
     }
 
@@ -226,7 +228,7 @@ public class Hero {
 
             LOGGER.info("Hero System: Loaded " + diaryentries + " diary entries for Hero: " + CharNameTable.getInstance().getNameById(charId));
         } catch (SQLException e) {
-            LOGGER.warning("Hero System: Couldnt load Hero Diary for CharId: " + charId + ": " + e.getMessage());
+            LOGGER.warn("Hero System: Couldnt load Hero Diary for CharId: " + charId + ": " + e.getMessage());
         }
     }
 
@@ -338,7 +340,7 @@ public class Hero {
 
             LOGGER.info("Hero System: Loaded " + numberoffights + " fights for Hero: " + CharNameTable.getInstance().getNameById(charId));
         } catch (SQLException e) {
-            LOGGER.warning("Hero System: Couldnt load Hero fights history for CharId: " + charId + ": " + e);
+            LOGGER.warn("Hero System: Couldnt load Hero fights history for CharId: " + charId + ": " + e);
         }
     }
 
@@ -633,7 +635,7 @@ public class Hero {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.warning("Hero System: Couldnt update Heroes: " + e.getMessage());
+            LOGGER.warn("Hero System: Couldnt update Heroes: " + e.getMessage());
         }
     }
 
@@ -684,7 +686,7 @@ public class Hero {
             ps.setInt(4, param);
             ps.execute();
         } catch (SQLException e) {
-            LOGGER.severe("SQL exception while saving DiaryData: " + e.getMessage());
+            LOGGER.error("SQL exception while saving DiaryData: " + e.getMessage());
         }
     }
 
@@ -714,7 +716,7 @@ public class Hero {
             ps.setInt(2, charId);
             ps.execute();
         } catch (SQLException e) {
-            LOGGER.severe("SQL exception while saving HeroMessage:" + e.getMessage());
+            LOGGER.error("SQL exception while saving HeroMessage:" + e.getMessage());
         }
     }
 
@@ -723,7 +725,7 @@ public class Hero {
              Statement s = con.createStatement()) {
             s.executeUpdate(DELETE_ITEMS);
         } catch (SQLException e) {
-            LOGGER.warning("Heroes: " + e.getMessage());
+            LOGGER.warn("Heroes: " + e.getMessage());
         }
     }
 

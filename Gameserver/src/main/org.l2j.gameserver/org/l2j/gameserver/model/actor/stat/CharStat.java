@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.actor.stat;
 
-import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.AttributeType;
+import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.model.CharEffectList;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;

@@ -5,13 +5,13 @@ import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.interfaces.IParserAdvUtils;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Supplier;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
@@ -25,7 +25,7 @@ public class StatsSet implements IParserAdvUtils {
      * Static empty immutable map, used to avoid multiple null checks over the source.
      */
     public static final StatsSet EMPTY_STATSET = new StatsSet(Collections.emptyMap());
-    private static final Logger LOGGER = Logger.getLogger(StatsSet.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(StatsSet.class);
     private final Map<String, Object> _set;
 
     public StatsSet() {
@@ -621,7 +621,7 @@ public class StatsSet implements IParserAdvUtils {
             // Attempt to convert the list
             final List<T> convertedList = convertList(originalList, clazz);
             if (convertedList == null) {
-                LOGGER.log(Level.WARNING, "getList(\"" + key + "\", " + clazz.getSimpleName() + ") requested with wrong generic type: " + obj.getClass().getGenericInterfaces()[0] + "!", new ClassNotFoundException());
+                LOGGER.warn("getList(\"" + key + "\", " + clazz.getSimpleName() + ") requested with wrong generic type: " + obj.getClass().getGenericInterfaces()[0] + "!", new ClassNotFoundException());
                 return null;
             }
 
@@ -688,7 +688,7 @@ public class StatsSet implements IParserAdvUtils {
         final Map<?, ?> originalList = (Map<?, ?>) obj;
         if (!originalList.isEmpty()) {
             if ((!originalList.keySet().stream().allMatch(keyClass::isInstance)) || (!originalList.values().stream().allMatch(valueClass::isInstance))) {
-                LOGGER.log(Level.WARNING, "getMap(\"" + key + "\", " + keyClass.getSimpleName() + ", " + valueClass.getSimpleName() + ") requested with wrong generic type: " + obj.getClass().getGenericInterfaces()[0] + "!", new ClassNotFoundException());
+                LOGGER.warn("getMap(\"" + key + "\", " + keyClass.getSimpleName() + ", " + valueClass.getSimpleName() + ") requested with wrong generic type: " + obj.getClass().getGenericInterfaces()[0] + "!", new ClassNotFoundException());
             }
         }
         return (Map<K, V>) obj;

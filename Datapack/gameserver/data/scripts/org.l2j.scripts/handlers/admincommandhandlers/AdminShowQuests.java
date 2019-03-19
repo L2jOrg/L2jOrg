@@ -16,11 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.logging.Logger;
-
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.enums.QuestType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
@@ -35,6 +30,12 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExShowQuestMark;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.QuestList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  * TODO: Rework and cleanup.
@@ -42,7 +43,7 @@ import org.l2j.gameserver.network.serverpackets.QuestList;
  */
 public class AdminShowQuests implements IAdminCommandHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(AdminShowQuests.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminShowQuests.class);
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -313,7 +314,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 		catch (Exception e)
 		{
 			actor.sendMessage("There was an error.");
-			LOGGER.warning(AdminShowQuests.class.getSimpleName() + ": " + e.getMessage());
+			LOGGER.warn(AdminShowQuests.class.getSimpleName() + ": " + e.getMessage());
 		}
 	}
 	

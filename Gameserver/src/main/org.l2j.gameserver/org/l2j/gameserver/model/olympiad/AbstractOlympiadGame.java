@@ -17,17 +17,18 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author godson, GodKratos, Pere, DS
  */
 public abstract class AbstractOlympiadGame {
-    protected static final Logger LOGGER = Logger.getLogger(AbstractOlympiadGame.class.getName());
-    protected static final Logger LOGGER_OLYMPIAD = Logger.getLogger("olympiad");
+    protected static final Logger LOGGER = LoggerFactory.getLogger(AbstractOlympiadGame.class);
+    protected static final Logger LOGGER_OLYMPIAD = LoggerFactory.getLogger("olympiad");
 
     protected static final String POINTS = "olympiad_points";
     protected static final String COMP_DONE = "competitions_done";
@@ -116,7 +117,7 @@ public abstract class AbstractOlympiadGame {
             player.teleToLocation(loc, instance);
             player.sendPacket(new ExOlympiadMode(2));
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
             return false;
         }
         return true;
@@ -202,7 +203,7 @@ public abstract class AbstractOlympiadGame {
             player.sendSkillList();
             player.sendPacket(new SkillCoolTime(player));
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
     }
 
@@ -248,7 +249,7 @@ public abstract class AbstractOlympiadGame {
             player.setCurrentMp(player.getMaxMp());
             player.getStatus().startHpMpRegeneration();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
     }
 
@@ -286,7 +287,7 @@ public abstract class AbstractOlympiadGame {
                 AntiFeedManager.getInstance().removePlayer(AntiFeedManager.OLYMPIAD_ID, player);
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "playerStatusBack()", e);
+            LOGGER.warn("playerStatusBack()", e);
         }
     }
 
@@ -324,7 +325,7 @@ public abstract class AbstractOlympiadGame {
             });
             player.sendInventoryUpdate(iu);
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
     }
 

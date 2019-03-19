@@ -28,19 +28,20 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Future;
-import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 /**
  * This class manages AI of L2Attackable.
  */
 public class L2AttackableAI extends L2CharacterAI {
-    private static final Logger LOGGER = Logger.getLogger(L2AttackableAI.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(L2AttackableAI.class);
 
     private static final int RANDOM_WALK_RATE = 30; // confirmed
     // private static final int MAX_DRIFT_RANGE = 300;
@@ -234,7 +235,7 @@ public class L2AttackableAI extends L2CharacterAI {
                 if (target != null) {
                     setTarget(target);
                     _actor.doCast(buff);
-                    LOGGER.finer(this + " used buff skill " + buff + " on " + _actor);
+                    LOGGER.debug(this + " used buff skill " + buff + " on " + _actor);
                     break;
                 }
             }
@@ -572,7 +573,7 @@ public class L2AttackableAI extends L2CharacterAI {
                     }
                 });
             } catch (NullPointerException e) {
-                LOGGER.warning(getClass().getSimpleName() + ": thinkAttack() faction call failed: " + e.getMessage());
+                LOGGER.warn(": thinkAttack() faction call failed: " + e.getMessage());
             }
         }
 
@@ -587,7 +588,7 @@ public class L2AttackableAI extends L2CharacterAI {
             final Skill skill = aiSuicideSkills.get(Rnd.get(aiSuicideSkills.size()));
             if (SkillCaster.checkUseConditions(npc, skill) && checkSkillTarget(skill, target)) {
                 npc.doCast(skill);
-                LOGGER.finer(this + " used suicide skill " + skill);
+                LOGGER.debug(this + " used suicide skill " + skill);
                 return;
             }
         }
@@ -697,7 +698,7 @@ public class L2AttackableAI extends L2CharacterAI {
                         if ((Rnd.get(100) < healChance) && checkSkillTarget(healSkill, healTarget)) {
                             setTarget(healTarget);
                             npc.doCast(healSkill);
-                            LOGGER.finer(this + " used heal skill " + healSkill + " with target " + getTarget());
+                            LOGGER.debug(this + " used heal skill " + healSkill + " with target " + getTarget());
                             return;
                         }
                     }
@@ -712,7 +713,7 @@ public class L2AttackableAI extends L2CharacterAI {
                     if (checkSkillTarget(buffSkill, buffTarget)) {
                         setTarget(buffTarget);
                         npc.doCast(buffSkill);
-                        LOGGER.finer(this + " used buff skill " + buffSkill + " with target " + getTarget());
+                        LOGGER.debug(this + " used buff skill " + buffSkill + " with target " + getTarget());
                         return;
                     }
                 }
@@ -723,7 +724,7 @@ public class L2AttackableAI extends L2CharacterAI {
                 final Skill immobolizeSkill = npc.getTemplate().getAISkills(AISkillScope.IMMOBILIZE).get(Rnd.get(npc.getTemplate().getAISkills(AISkillScope.IMMOBILIZE).size()));
                 if (SkillCaster.checkUseConditions(npc, immobolizeSkill) && checkSkillTarget(immobolizeSkill, target)) {
                     npc.doCast(immobolizeSkill);
-                    LOGGER.finer(this + " used immobolize skill " + immobolizeSkill + " with target " + getTarget());
+                    LOGGER.debug(this + " used immobolize skill " + immobolizeSkill + " with target " + getTarget());
                     return;
                 }
             }
@@ -733,7 +734,7 @@ public class L2AttackableAI extends L2CharacterAI {
                 final Skill muteSkill = npc.getTemplate().getAISkills(AISkillScope.COT).get(Rnd.get(npc.getTemplate().getAISkills(AISkillScope.COT).size()));
                 if (SkillCaster.checkUseConditions(npc, muteSkill) && checkSkillTarget(muteSkill, target)) {
                     npc.doCast(muteSkill);
-                    LOGGER.finer(this + " used mute skill " + muteSkill + " with target " + getTarget());
+                    LOGGER.debug(this + " used mute skill " + muteSkill + " with target " + getTarget());
                     return;
                 }
             }
@@ -743,7 +744,7 @@ public class L2AttackableAI extends L2CharacterAI {
                 final Skill shortRangeSkill = npc.getShortRangeSkills().get(Rnd.get(npc.getShortRangeSkills().size()));
                 if (SkillCaster.checkUseConditions(npc, shortRangeSkill) && checkSkillTarget(shortRangeSkill, target)) {
                     npc.doCast(shortRangeSkill);
-                    LOGGER.finer(this + " used short range skill " + shortRangeSkill + " with target " + getTarget());
+                    LOGGER.debug(this + " used short range skill " + shortRangeSkill + " with target " + getTarget());
                     return;
                 }
             }
@@ -753,7 +754,7 @@ public class L2AttackableAI extends L2CharacterAI {
                 final Skill longRangeSkill = npc.getLongRangeSkills().get(Rnd.get(npc.getLongRangeSkills().size()));
                 if (SkillCaster.checkUseConditions(npc, longRangeSkill) && checkSkillTarget(longRangeSkill, target)) {
                     npc.doCast(longRangeSkill);
-                    LOGGER.finer(this + " used long range skill " + longRangeSkill + " with target " + getTarget());
+                    LOGGER.debug(this + " used long range skill " + longRangeSkill + " with target " + getTarget());
                     return;
                 }
             }
@@ -763,7 +764,7 @@ public class L2AttackableAI extends L2CharacterAI {
                 final Skill generalSkill = npc.getTemplate().getAISkills(AISkillScope.GENERAL).get(Rnd.get(npc.getTemplate().getAISkills(AISkillScope.GENERAL).size()));
                 if (SkillCaster.checkUseConditions(npc, generalSkill) && checkSkillTarget(generalSkill, target)) {
                     npc.doCast(generalSkill);
-                    LOGGER.finer(this + " used general skill " + generalSkill + " with target " + getTarget());
+                    LOGGER.debug(this + " used general skill " + generalSkill + " with target " + getTarget());
                     return;
                 }
             }
@@ -956,7 +957,7 @@ public class L2AttackableAI extends L2CharacterAI {
                 }
             }
         } catch (Exception e) {
-            // LOGGER.warning(getClass().getSimpleName() + ": " + this.getActor().getName() + " - onEvtThink() failed!");
+            // LOGGER.warn(": " + this.getActor().getName() + " - onEvtThink() failed!");
         } finally {
             // Stop thinking action
             _thinking = false;

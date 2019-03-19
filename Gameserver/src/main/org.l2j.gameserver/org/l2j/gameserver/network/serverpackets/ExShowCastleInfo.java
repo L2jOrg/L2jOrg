@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.enums.TaxType;
+import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;

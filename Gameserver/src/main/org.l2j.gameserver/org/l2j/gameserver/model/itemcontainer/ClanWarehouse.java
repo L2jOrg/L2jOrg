@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.itemcontainer;
 
-import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;

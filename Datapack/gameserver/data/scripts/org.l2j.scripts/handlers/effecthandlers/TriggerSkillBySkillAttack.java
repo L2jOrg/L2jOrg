@@ -97,7 +97,7 @@ public final class TriggerSkillBySkillAttack extends AbstractEffect
 		final ITargetTypeHandler targetHandler = TargetHandler.getInstance().getHandler(_targetType);
 		if (targetHandler == null)
 		{
-			LOGGER.warning("Handler for target type: " + _targetType + " does not exist.");
+			LOGGER.warn("Handler for target type: " + _targetType + " does not exist.");
 			return;
 		}
 		
@@ -124,7 +124,7 @@ public final class TriggerSkillBySkillAttack extends AbstractEffect
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
+			LOGGER.warn("Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
 		}
 		
 		if ((target != null) && target.isCharacter())

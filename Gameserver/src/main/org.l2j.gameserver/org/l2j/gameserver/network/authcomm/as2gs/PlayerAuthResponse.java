@@ -1,16 +1,16 @@
 package org.l2j.gameserver.network.authcomm.as2gs;
 
 import org.l2j.commons.network.SessionKey;
-import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.authcomm.gs2as.PlayerInGame;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
+import org.l2j.gameserver.network.authcomm.gs2as.PlayerInGame;
 import org.l2j.gameserver.network.serverpackets.*;
 
 import java.nio.ByteBuffer;

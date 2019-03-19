@@ -5,8 +5,6 @@ import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.events.returns.AbstractEventReturn;
 
-import java.util.Observer;
-
 /**
  * @author UnAfraid
  */

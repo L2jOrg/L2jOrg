@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.model.olympiad;
 
-import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.datatables.SpawnTable;
+import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.network.NpcStringId;

@@ -4,17 +4,19 @@ import org.l2j.commons.util.filter.XMLFilter;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engines.items.DocumentItem;
 import org.l2j.gameserver.model.items.L2Item;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.logging.Logger;
+
 
 /**
  * @author mkizub
  */
 public class DocumentEngine {
-    private static final Logger LOGGER = Logger.getLogger(DocumentEngine.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(DocumentEngine.class);
 
     private final List<File> _itemFiles = new LinkedList<>();
 
@@ -32,7 +34,7 @@ public class DocumentEngine {
     private void hashFiles(String dirname, List<File> hash) {
         final File dir = new File(Config.DATAPACK_ROOT, dirname);
         if (!dir.exists()) {
-            LOGGER.warning("Dir " + dir.getAbsolutePath() + " not exists");
+            LOGGER.warn("Dir " + dir.getAbsolutePath() + " not exists");
             return;
         }
         final File[] files = dir.listFiles(new XMLFilter());

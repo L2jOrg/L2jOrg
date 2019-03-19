@@ -1,8 +1,8 @@
 package org.l2j.gameserver.util;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.model.L2PetData;
@@ -17,17 +17,18 @@ import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.MagicSkillLaunched;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * UnAfraid: TODO: MOVE IT TO DP AI
  */
 public final class Evolve {
-    protected static final Logger LOGGER = Logger.getLogger(Evolve.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(Evolve.class);
 
     public static boolean doEvolve(L2PcInstance player, L2Npc npc, int itemIdtake, int itemIdgive, int petminlvl) {
         if ((itemIdtake == 0) || (itemIdgive == 0) || (petminlvl == 0)) {
@@ -234,7 +235,7 @@ public final class Evolve {
                     _petSummon.startFeed();
                 }
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, "", e);
+                LOGGER.warn("", e);
             }
         }
     }
@@ -255,7 +256,7 @@ public final class Evolve {
                 _petSummon.setFollowStatus(true);
                 _petSummon.setShowSummonAnimation(false);
             } catch (Throwable e) {
-                LOGGER.log(Level.WARNING, "", e);
+                LOGGER.warn("", e);
             }
         }
     }

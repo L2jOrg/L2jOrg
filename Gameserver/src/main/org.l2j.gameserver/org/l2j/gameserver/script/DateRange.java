@@ -1,32 +1,18 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.script;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author Luis Arias
  */
 public class DateRange {
-    protected static final Logger LOGGER = Logger.getLogger(DateRange.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(DateRange.class);
     private final Date _startDate;
     private final Date _endDate;
 
@@ -41,7 +27,7 @@ public class DateRange {
             try {
                 return new DateRange(format.parse(date[0]), format.parse(date[1]));
             } catch (ParseException e) {
-                LOGGER.log(Level.WARNING, "Invalid Date Format.", e);
+                LOGGER.warn("Invalid Date Format.", e);
             }
         }
         return new DateRange(null, null);

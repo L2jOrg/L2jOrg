@@ -19,16 +19,17 @@ import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.util.Util;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * This class serves as a container for player parties.
@@ -36,7 +37,7 @@ import java.util.logging.Logger;
  * @author nuocnam
  */
 public class L2Party extends AbstractPlayerGroup {
-    private static final Logger LOGGER = Logger.getLogger(L2Party.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(L2Party.class);
 
     // @formatter:off
     private static final double[] BONUS_EXP_SP =
@@ -430,7 +431,7 @@ public class L2Party extends AbstractPlayerGroup {
                     player.getSkillChannelized().abortChannelization();
                 }
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, "", e);
+                LOGGER.warn("", e);
             }
 
             SystemMessage msg;

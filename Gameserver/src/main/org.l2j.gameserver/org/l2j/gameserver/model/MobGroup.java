@@ -17,8 +17,8 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.ai.L2ControllableMobAI;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.ai.L2ControllableMobAI;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2ControllableMobInstance;

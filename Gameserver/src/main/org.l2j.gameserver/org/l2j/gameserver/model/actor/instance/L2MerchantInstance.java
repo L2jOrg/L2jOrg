@@ -64,13 +64,13 @@ public class L2MerchantInstance extends L2NpcInstance {
     public final void showBuyWindow(L2PcInstance player, int val, boolean applyCastleTax) {
         final ProductList buyList = BuyListData.getInstance().getBuyList(val);
         if (buyList == null) {
-            L2Character.LOGGER.warning("BuyList not found! BuyListId:" + val);
+            L2Character.LOGGER.warn("BuyList not found! BuyListId:" + val);
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         if (!buyList.isNpcAllowed(getId())) {
-            L2Character.LOGGER.warning("Npc not allowed in BuyList! BuyListId:" + val + " NpcId:" + getId());
+            L2Character.LOGGER.warn("Npc not allowed in BuyList! BuyListId:" + val + " NpcId:" + getId());
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

@@ -13,18 +13,19 @@ import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.PetItemList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Logger;
 
 /**
  * @author Nyaran
  */
 public class CharSummonTable {
-    private static final Logger LOGGER = Logger.getLogger(CharSummonTable.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(CharSummonTable.class);
     private static final Map<Integer, Integer> _pets = new ConcurrentHashMap<>();
     private static final Map<Integer, Set<Integer>> _servitors = new ConcurrentHashMap<>();
 
@@ -56,7 +57,7 @@ public class CharSummonTable {
                     _servitors.computeIfAbsent(rs.getInt("ownerId"), k -> ConcurrentHashMap.newKeySet()).add(rs.getInt("summonId"));
                 }
             } catch (Exception e) {
-                LOGGER.warning(getClass().getSimpleName() + ": Error while loading saved servitor: " + e);
+                LOGGER.warn(": Error while loading saved servitor: " + e);
             }
         }
 
@@ -68,7 +69,7 @@ public class CharSummonTable {
                     _pets.put(rs.getInt("ownerId"), rs.getInt("item_obj_id"));
                 }
             } catch (Exception e) {
-                LOGGER.warning(getClass().getSimpleName() + ": Error while loading saved pet: " + e);
+                LOGGER.warn(": Error while loading saved pet: " + e);
             }
         }
     }
@@ -86,30 +87,30 @@ public class CharSummonTable {
             ps.setInt(2, summonObjectId);
             ps.execute();
         } catch (SQLException e) {
-            LOGGER.warning(getClass().getSimpleName() + ": Summon cannot be removed: " + e);
+            LOGGER.warn(": Summon cannot be removed: " + e);
         }
     }
 
     public void restorePet(L2PcInstance activeChar) {
         final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_pets.get(activeChar.getObjectId()));
         if (item == null) {
-            LOGGER.warning(getClass().getSimpleName() + ": Null pet summoning item for: " + activeChar);
+            LOGGER.warn(": Null pet summoning item for: " + activeChar);
             return;
         }
         final L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getId());
         if (petData == null) {
-            LOGGER.warning(getClass().getSimpleName() + ": Null pet data for: " + activeChar + " and summoning item: " + item);
+            LOGGER.warn(": Null pet data for: " + activeChar + " and summoning item: " + item);
             return;
         }
         final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
         if (npcTemplate == null) {
-            LOGGER.warning(getClass().getSimpleName() + ": Null pet NPC template for: " + activeChar + " and pet Id:" + petData.getNpcId());
+            LOGGER.warn(": Null pet NPC template for: " + activeChar + " and pet Id:" + petData.getNpcId());
             return;
         }
 
         final L2PetInstance pet = L2PetInstance.spawnPet(npcTemplate, activeChar, item);
         if (pet == null) {
-            LOGGER.warning(getClass().getSimpleName() + ": Null pet instance for: " + activeChar + " and pet NPC template:" + npcTemplate);
+            LOGGER.warn(": Null pet instance for: " + activeChar + " and pet NPC template:" + npcTemplate);
             return;
         }
 
@@ -167,7 +168,7 @@ public class CharSummonTable {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.warning(getClass().getSimpleName() + ": Servitor cannot be restored: " + e);
+            LOGGER.warn(": Servitor cannot be restored: " + e);
         }
     }
 
@@ -188,7 +189,7 @@ public class CharSummonTable {
             ps.setInt(6, summon.getLifeTimeRemaining());
             ps.execute();
         } catch (Exception e) {
-            LOGGER.warning(getClass().getSimpleName() + ": Failed to store summon: " + summon + " from " + summon.getOwner() + ", error: " + e);
+            LOGGER.warn(": Failed to store summon: " + summon + " from " + summon.getOwner() + ", error: " + e);
         }
     }
 

@@ -19,8 +19,9 @@ package org.l2j.gameserver.model.conditions;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Logger;
 
 /**
  * The Class ConditionPlayerGrade.
@@ -37,7 +38,7 @@ public final class ConditionPlayerGrade extends Condition {
     public static final int COND_S_GRADE = 0x0020;
     public static final int COND_S80_GRADE = 0x0040;
     public static final int COND_S84_GRADE = 0x0080;
-    protected static final Logger LOGGER = Logger.getLogger(ConditionPlayerGrade.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(ConditionPlayerGrade.class);
     private final int _value;
 
     /**

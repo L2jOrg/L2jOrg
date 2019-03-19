@@ -5,8 +5,9 @@ import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.quest.Quest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Logger;
 
 /**
  * Abstract NPC AI class for datapack based AIs.
@@ -14,7 +15,7 @@ import java.util.logging.Logger;
  */
 public abstract class AbstractNpcAI extends Quest
 {
-	protected final Logger LOGGER = Logger.getLogger(getClass().getName());
+	protected final Logger LOGGER = LoggerFactory.getLogger(getClass().getName());
 	
 	public AbstractNpcAI()
 	{

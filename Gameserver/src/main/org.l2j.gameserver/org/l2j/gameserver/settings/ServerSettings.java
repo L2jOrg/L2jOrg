@@ -4,8 +4,6 @@ import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 import org.l2j.gameserver.ServerType;
 
-import java.nio.file.Path;
-
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class ServerSettings implements Settings {

@@ -16,12 +16,9 @@
  */
 package ai.others.OlyManager;
 
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import org.l2j.gameserver.Config;
+import ai.AbstractNpcAI;
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.MultisellData;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.handler.BypassHandler;
@@ -31,15 +28,13 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.entity.Hero;
-import org.l2j.gameserver.model.olympiad.CompetitionType;
-import org.l2j.gameserver.model.olympiad.Olympiad;
-import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
-import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
-import org.l2j.gameserver.model.olympiad.OlympiadManager;
+import org.l2j.gameserver.model.olympiad.*;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExOlympiadMatchList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import ai.AbstractNpcAI;
+import java.util.List;
 
 /**
  * Olympiad Manager AI.
@@ -57,7 +52,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 		"watchmatch",
 		"arenachange"
 	};
-	private static final Logger LOGGER = Logger.getLogger(OlyManager.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(OlyManager.class);
 	
 	private OlyManager()
 	{
@@ -328,7 +323,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 					final List<Location> spectatorSpawns = nextArena.getStadium().getZone().getSpectatorSpawns();
 					if (spectatorSpawns.isEmpty())
 					{
-						LOGGER.warning(getClass().getSimpleName() + ": Zone: " + nextArena.getStadium().getZone() + " doesn't have specatator spawns defined!");
+						LOGGER.warn(": Zone: " + nextArena.getStadium().getZone() + " doesn't have specatator spawns defined!");
 						return false;
 					}
 					final Location loc = spectatorSpawns.get(Rnd.get(spectatorSpawns.size()));
@@ -339,7 +334,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
+			LOGGER.warn("Exception in " + getClass().getSimpleName(), e);
 		}
 		return false;
 	}

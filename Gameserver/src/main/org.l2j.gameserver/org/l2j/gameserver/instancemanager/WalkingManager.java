@@ -15,6 +15,8 @@ import org.l2j.gameserver.model.actor.tasks.npc.walker.ArrivedTask;
 import org.l2j.gameserver.model.holders.NpcRoutesHolder;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -24,7 +26,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
+
 
 /**
  * This class manages walking monsters.
@@ -43,7 +45,7 @@ public final class WalkingManager implements IGameXmlReader {
     public static final byte REPEAT_GO_FIRST = 1;
     public static final byte REPEAT_TELE_FIRST = 2;
     public static final byte REPEAT_RANDOM = 3;
-    private static final Logger LOGGER = Logger.getLogger(WalkingManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(WalkingManager.class);
     private final Map<String, L2WalkRoute> _routes = new HashMap<>(); // all available routes
     private final Map<Integer, WalkInfo> _activeRoutes = new HashMap<>(); // each record represents NPC, moving by predefined route from _routes, and moving progress
     private final Map<Integer, NpcRoutesHolder> _routesToAttach = new HashMap<>(); // each record represents NPC and all available routes for it
@@ -115,7 +117,7 @@ public final class WalkingManager implements IGameXmlReader {
                             if (node != null) {
                                 npcString = NpcStringId.getNpcStringId(node.getNodeValue());
                                 if (npcString == null) {
-                                    LOGGER.warning(getClass().getSimpleName() + ": Unknown npcString '" + node.getNodeValue() + "' for route '" + routeName + "'");
+                                    LOGGER.warn(": Unknown npcString '" + node.getNodeValue() + "' for route '" + routeName + "'");
                                     continue;
                                 }
                             } else {
@@ -123,7 +125,7 @@ public final class WalkingManager implements IGameXmlReader {
                                 if (node != null) {
                                     npcString = NpcStringId.getNpcStringId(Integer.parseInt(node.getNodeValue()));
                                     if (npcString == null) {
-                                        LOGGER.warning(getClass().getSimpleName() + ": Unknown npcString '" + node.getNodeValue() + "' for route '" + routeName + "'");
+                                        LOGGER.warn(": Unknown npcString '" + node.getNodeValue() + "' for route '" + routeName + "'");
                                         continue;
                                     }
                                 }
@@ -143,10 +145,10 @@ public final class WalkingManager implements IGameXmlReader {
                                 holder.addRoute(routeName, new Location(x, y, z));
                                 _routesToAttach.put(npcId, holder);
                             } else {
-                                LOGGER.warning(getClass().getSimpleName() + ": NPC with id " + npcId + " for route '" + routeName + "' does not exist.");
+                                LOGGER.warn(": NPC with id " + npcId + " for route '" + routeName + "' does not exist.");
                             }
                         } catch (Exception e) {
-                            LOGGER.warning(getClass().getSimpleName() + ": Error in target definition for route '" + routeName + "'");
+                            LOGGER.warn(": Error in target definition for route '" + routeName + "'");
                         }
                     }
                 }
@@ -224,7 +226,7 @@ public final class WalkingManager implements IGameXmlReader {
                     }
 
                     if (!npc.isInsideRadius3D(node, 3000)) {
-                        LOGGER.warning("Route '" + routeName + "': NPC (id=" + npc.getId() + ", x=" + npc.getX() + ", y=" + npc.getY() + ", z=" + npc.getZ() + ") is too far from starting point (node x=" + node.getX() + ", y=" + node.getY() + ", z=" + node.getZ() + ", range=" + npc.calculateDistance3D(node) + "). Teleporting to proper location.");
+                        LOGGER.warn("Route '" + routeName + "': NPC (id=" + npc.getId() + ", x=" + npc.getX() + ", y=" + npc.getY() + ", z=" + npc.getZ() + ") is too far from starting point (node x=" + node.getX() + ", y=" + node.getY() + ", z=" + node.getZ() + ", range=" + npc.calculateDistance3D(node) + "). Teleporting to proper location.");
                         npc.teleToLocation(node);
                     }
 

@@ -21,6 +21,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.nio.charset.StandardCharsets;
@@ -28,8 +30,6 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -37,7 +37,7 @@ import java.util.regex.Pattern;
  * @author Layane
  */
 public class HtmCache {
-    private static final Logger LOGGER = Logger.getLogger(HtmCache.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(HtmCache.class);
 
     private static final HTMLFilter HTML_FILTER = new HTMLFilter();
     private static final Pattern EXTEND_PATTERN = Pattern.compile("<extend template=\"([a-zA-Z0-9-_./\\ ]*)\">(.*?)</extend>", Pattern.DOTALL);
@@ -116,7 +116,7 @@ public class HtmCache {
                 }
                 return content;
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, "Problem with htm file:", e);
+                LOGGER.warn("Problem with htm file:", e);
             }
         }
         return null;
@@ -126,7 +126,7 @@ public class HtmCache {
         String content = getHtm(player, path);
         if (content == null) {
             content = "<html><body>My text is missing:<br>" + path + "</body></html>";
-            LOGGER.warning("Cache[HTML]: Missing HTML page: " + path);
+            LOGGER.warn("Cache[HTML]: Missing HTML page: " + path);
         }
         return content;
     }
@@ -204,7 +204,7 @@ public class HtmCache {
                 while (blockMatcher.find()) {
                     final String name = blockMatcher.group(1);
                     if (!blockMap.containsKey(name)) {
-                        LOGGER.warning(getClass().getSimpleName() + ": Abstract block definition [" + name + "] is not implemented!");
+                        LOGGER.warn(": Abstract block definition [" + name + "] is not implemented!");
                         continue;
                     }
 
@@ -215,7 +215,7 @@ public class HtmCache {
                 // Replace the entire extend block
                 result = result.replace(extendMatcher.group(0), template);
             } else {
-                LOGGER.warning(getClass().getSimpleName() + ": Missing template: " + templateName + "-template.htm !");
+                LOGGER.warn(": Missing template: " + templateName + "-template.htm !");
             }
         }
 

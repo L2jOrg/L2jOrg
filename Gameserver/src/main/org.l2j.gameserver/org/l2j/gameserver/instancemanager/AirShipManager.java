@@ -25,15 +25,16 @@ import org.l2j.gameserver.model.actor.instance.L2ControllableAirShipInstance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
 import org.l2j.gameserver.network.serverpackets.ExAirShipTeleportList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class AirShipManager {
-    private static final Logger LOGGER = Logger.getLogger(AirShipManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(AirShipManager.class);
 
     private static final String LOAD_DB = "SELECT * FROM airships";
     private static final String ADD_DB = "INSERT INTO airships (owner_id,fuel) VALUES (?,?)";
@@ -160,9 +161,9 @@ public class AirShipManager {
                 ps.setInt(2, info.getInt("fuel"));
                 ps.executeUpdate();
             } catch (SQLException e) {
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not add new airship license: ", e);
+                LOGGER.warn(getClass().getSimpleName() + ": Could not add new airship license: ", e);
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while initializing: ", e);
+                LOGGER.warn(getClass().getSimpleName() + ": Error while initializing: ", e);
             }
         }
     }
@@ -240,9 +241,9 @@ public class AirShipManager {
                 _airShipsInfo.put(rs.getInt("owner_id"), info);
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not load airships table: ", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Could not load airships table: ", e);
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while initializing: ", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Error while initializing: ", e);
         }
         LOGGER.info(getClass().getSimpleName() + ": Loaded " + _airShipsInfo.size() + " private airships");
     }
@@ -259,9 +260,9 @@ public class AirShipManager {
             ps.setInt(2, ownerId);
             ps.executeUpdate();
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not update airships table: ", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Could not update airships table: ", e);
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while save: ", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Error while save: ", e);
         }
     }
 

@@ -2,8 +2,8 @@ package handlers;
 
 import handlers.effecthandlers.*;
 import org.l2j.gameserver.handler.EffectHandler;
-
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Effect Master handler.
@@ -11,7 +11,7 @@ import java.util.logging.Logger;
  */
 public final class EffectMasterHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(EffectMasterHandler.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(EffectMasterHandler.class.getName());
 	
 	public static void main(String[] args) {
 		EffectHandler.getInstance().registerHandler("AbnormalShield", AbnormalShield::new);
@@ -346,6 +346,6 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("WeightLimit", WeightLimit::new);
 		EffectHandler.getInstance().registerHandler("WeightPenalty", WeightPenalty::new);
 		EffectHandler.getInstance().registerHandler("WorldChatPoints", WorldChatPoints::new);
-		LOGGER.info(EffectMasterHandler.class.getSimpleName() + ": Loaded " + EffectHandler.getInstance().size() + " effect handlers.");
+		LOGGER.info("Loaded {} effect handlers.", EffectHandler.getInstance().size());
 	}
 }

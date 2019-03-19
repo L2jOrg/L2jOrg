@@ -11,6 +11,8 @@ import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.stats.functions.FuncTemplate;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
@@ -19,15 +21,14 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author mkizub, JIV
  */
 public final class DocumentItem extends DocumentBase implements IGameXmlReader {
     private final List<L2Item> _itemsInFile = new LinkedList<>();
-    Logger LOGGER = Logger.getLogger(DocumentItem.class.getName());
+    Logger LOGGER = LoggerFactory.getLogger(DocumentItem.class.getName());
     private Item _currentItem = null;
 
     /**
@@ -64,7 +65,7 @@ public final class DocumentItem extends DocumentBase implements IGameXmlReader {
                             _itemsInFile.add(_currentItem.item);
                             resetTable();
                         } catch (Exception e) {
-                            LOGGER.log(Level.WARNING, "Cannot create item " + _currentItem.id, e);
+                            LOGGER.warn("Cannot create item " + _currentItem.id, e);
                         }
                     }
                 }

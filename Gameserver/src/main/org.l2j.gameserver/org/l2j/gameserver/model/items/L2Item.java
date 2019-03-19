@@ -25,11 +25,12 @@ import org.l2j.gameserver.model.stats.functions.FuncSet;
 import org.l2j.gameserver.model.stats.functions.FuncTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
@@ -89,7 +90,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
     public static final int SLOT_BABYPET = -103;
     public static final int SLOT_GREATWOLF = -104;
     public static final int SLOT_MULTI_ALLWEAPON = SLOT_LR_HAND | SLOT_R_HAND;
-    protected static final Logger LOGGER = Logger.getLogger(L2Item.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(L2Item.class);
     protected int _type1; // needed for item list (inventory)
     protected int _type2; // different lists for armor, weapon, etc
     protected List<FuncTemplate> _funcTemplates;

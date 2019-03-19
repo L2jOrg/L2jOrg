@@ -32,7 +32,7 @@ public final class CategoryData implements IGameXmlReader {
     public void load() {
         _categories.clear();
         parseDatapackFile("data/CategoryData.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _categories.size() + " Categories.");
+        LOGGER.info("Loaded {} Categories", _categories.size());
     }
 
     @Override

@@ -22,11 +22,12 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.AutoAttackStop;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
 
 import static org.l2j.gameserver.ai.CtrlIntention.*;
 
@@ -42,7 +43,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.*;
  * </ul>
  */
 public class L2CharacterAI extends AbstractAI {
-    private static final Logger LOGGER = Logger.getLogger(L2CharacterAI.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(L2CharacterAI.class);
 
     public L2CharacterAI(L2Character creature) {
         super(creature);
@@ -360,7 +361,7 @@ public class L2CharacterAI extends AbstractAI {
         setTarget(object);
         if ((object.getX() == 0) && (object.getY() == 0)) // TODO: Find the drop&spawn bug
         {
-            LOGGER.warning("Object in coords 0,0 - using a temporary fix");
+            LOGGER.warn("Object in coords 0,0 - using a temporary fix");
             object.setXYZ(getActor().getX(), getActor().getY(), getActor().getZ() + 5);
         }
 
@@ -721,7 +722,7 @@ public class L2CharacterAI extends AbstractAI {
 
     protected boolean maybeMoveToPosition(ILocational worldPosition, int offset) {
         if (worldPosition == null) {
-            LOGGER.warning("maybeMoveToPosition: worldPosition == NULL!");
+            LOGGER.warn("maybeMoveToPosition: worldPosition == NULL!");
             return false;
         }
 
@@ -787,7 +788,7 @@ public class L2CharacterAI extends AbstractAI {
     protected boolean maybeMoveToPawn(L2Object target, int offset) {
         // Get the distance between the current position of the L2Character and the target (x,y)
         if (target == null) {
-            LOGGER.warning("maybeMoveToPawn: target == NULL!");
+            LOGGER.warn("maybeMoveToPawn: target == NULL!");
             return false;
         }
         if (offset < 0) {

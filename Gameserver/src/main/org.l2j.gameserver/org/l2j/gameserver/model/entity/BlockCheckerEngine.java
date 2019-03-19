@@ -19,20 +19,21 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author BiggBoss
  */
 public final class BlockCheckerEngine {
-    protected static final Logger LOGGER = Logger.getLogger(BlockCheckerEngine.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(BlockCheckerEngine.class);
     // The needed arena coordinates
     // Arena X: team1X, team1Y, team2X, team2Y, ArenaCenterX, ArenaCenterY
     protected static final int[][] _arenaCoordinates =
@@ -265,7 +266,7 @@ public final class BlockCheckerEngine {
                 ThreadPoolManager.getInstance().execute(new EndEvent());
             }
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Couldnt end Block Checker event at " + _arena, e);
+            LOGGER.error("Couldnt end Block Checker event at " + _arena, e);
         }
     }
 
@@ -361,7 +362,7 @@ public final class BlockCheckerEngine {
         public void run() {
             // Wrong arena passed, stop event
             if (_arena == -1) {
-                LOGGER.severe("Couldnt set up the arena Id for the Block Checker event, cancelling event...");
+                LOGGER.error("Couldnt set up the arena Id for the Block Checker event, cancelling event...");
                 return;
             }
             _isStarted = true;
@@ -438,7 +439,7 @@ public final class BlockCheckerEngine {
                     random++;
                 }
             } catch (Exception e) {
-                LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
+                LOGGER.warn(": " + e.getMessage());
             }
 
             // Spawn the block carrying girl
@@ -454,8 +455,8 @@ public final class BlockCheckerEngine {
                     // Schedule his deletion after 9 secs of spawn
                     ThreadPoolManager.getInstance().schedule(new CarryingGirlUnspawn(girlSpawn), 9000);
                 } catch (Exception e) {
-                    LOGGER.warning("Couldnt Spawn Block Checker NPCs! Wrong instance type at npc table?");
-                    LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
+                    LOGGER.warn("Couldnt Spawn Block Checker NPCs! Wrong instance type at npc table?");
+                    LOGGER.warn(": " + e.getMessage());
                 }
             }
 
@@ -478,7 +479,7 @@ public final class BlockCheckerEngine {
         @Override
         public void run() {
             if (_spawn == null) {
-                LOGGER.warning("HBCE: Block Carrying Girl is null");
+                LOGGER.warn("HBCE: Block Carrying Girl is null");
                 return;
             }
             SpawnTable.getInstance().deleteSpawn(_spawn, false);

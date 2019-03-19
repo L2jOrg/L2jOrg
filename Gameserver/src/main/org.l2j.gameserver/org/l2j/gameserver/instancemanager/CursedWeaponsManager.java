@@ -11,6 +11,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -21,8 +23,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * UnAfraid: TODO: Rewrite with DocumentParser
@@ -30,7 +31,7 @@ import java.util.logging.Logger;
  * @author Micht
  */
 public final class CursedWeaponsManager implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(CursedWeaponsManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(CursedWeaponsManager.class);
 
     private final Map<Integer, CursedWeapon> _cursedWeapons = new HashMap<>();
 
@@ -48,7 +49,7 @@ public final class CursedWeaponsManager implements IGameXmlReader {
             ps.setInt(1, itemId);
             ps.executeUpdate();
         } catch (SQLException e) {
-            LOGGER.log(Level.SEVERE, "Failed to remove data: " + e.getMessage(), e);
+            LOGGER.error("Failed to remove data: " + e.getMessage(), e);
         }
     }
 
@@ -130,7 +131,7 @@ public final class CursedWeaponsManager implements IGameXmlReader {
                 cw.reActivate();
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not restore CursedWeapons data: ", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Could not restore CursedWeapons data: ", e);
         }
     }
 
@@ -162,7 +163,7 @@ public final class CursedWeaponsManager implements IGameXmlReader {
                             delete.setInt(1, playerId);
                             delete.setInt(2, itemId);
                             if (delete.executeUpdate() != 1) {
-                                LOGGER.warning("Error while deleting cursed weapon " + itemId + " from userId " + playerId);
+                                LOGGER.warn("Error while deleting cursed weapon " + itemId + " from userId " + playerId);
                             }
                         }
 
@@ -172,7 +173,7 @@ public final class CursedWeaponsManager implements IGameXmlReader {
                             update.setInt(2, cw.getPlayerPkKills());
                             update.setInt(3, playerId);
                             if (update.executeUpdate() != 1) {
-                                LOGGER.warning("Error while updating karma & pkkills for userId " + cw.getPlayerId());
+                                LOGGER.warn("Error while updating karma & pkkills for userId " + cw.getPlayerId());
                             }
                         }
                         // clean up the cursed weapons table.
@@ -181,7 +182,7 @@ public final class CursedWeaponsManager implements IGameXmlReader {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not check CursedWeapons data: ", e);
+            LOGGER.warn("Could not check CursedWeapons data: ", e);
         }
     }
 

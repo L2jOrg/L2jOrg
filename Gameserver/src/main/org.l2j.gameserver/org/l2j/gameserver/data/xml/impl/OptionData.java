@@ -8,40 +8,32 @@ import org.l2j.gameserver.model.options.Options;
 import org.l2j.gameserver.model.options.OptionsSkillHolder;
 import org.l2j.gameserver.model.options.OptionsSkillType;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 import java.io.File;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
 
 /**
  * @author UnAfraid
  */
 public class OptionData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(OptionData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(OptionData.class.getName());
 
     private final Map<Integer, Options> _optionData = new HashMap<>();
 
-    protected OptionData() {
+    private OptionData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of OptionsData.
-     *
-     * @return single instance of OptionsData
-     */
-    public static OptionData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
     public synchronized void load() {
         _optionData.clear();
         parseDatapackDirectory("data/stats/augmentation/options", false);
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _optionData.size() + " Options.");
+        LOGGER.info("Loaded: {} Options.", _optionData.size());
     }
 
     @Override
@@ -97,7 +89,11 @@ public class OptionData implements IGameXmlReader {
         return _optionData.get(id);
     }
 
-    private static class SingletonHolder {
-        protected static final OptionData _instance = new OptionData();
+    public static OptionData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final OptionData INSTANCE = new OptionData();
     }
 }

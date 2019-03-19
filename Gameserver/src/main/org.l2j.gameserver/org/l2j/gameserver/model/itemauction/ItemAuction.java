@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.itemauction;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.instancemanager.ItemAuctionManager;
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.L2World;
@@ -11,20 +11,21 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author Forsaiken
  */
 public final class ItemAuction {
-    private static final Logger LOGGER = Logger.getLogger(ItemAuctionManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ItemAuctionManager.class);
     private static final long ENDING_TIME_EXTEND_5 = TimeUnit.MILLISECONDS.convert(5, TimeUnit.MINUTES);
     private static final long ENDING_TIME_EXTEND_3 = TimeUnit.MILLISECONDS.convert(3, TimeUnit.MINUTES);
     // SQL
@@ -157,7 +158,7 @@ public final class ItemAuction {
             statement.setByte(7, _auctionState.getStateId());
             statement.execute();
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "", e);
+            LOGGER.warn("", e);
         }
     }
 
@@ -184,7 +185,7 @@ public final class ItemAuction {
             }
             ps.execute();
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "", e);
+            LOGGER.warn("", e);
         }
     }
 

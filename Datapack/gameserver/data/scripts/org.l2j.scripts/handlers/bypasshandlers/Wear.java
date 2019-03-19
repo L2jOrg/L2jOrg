@@ -63,7 +63,7 @@ public class Wear implements IBypassHandler
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
+			LOGGER.warn("Exception in " + getClass().getSimpleName(), e);
 		}
 		return false;
 	}
@@ -73,7 +73,7 @@ public class Wear implements IBypassHandler
 		final ProductList buyList = BuyListData.getInstance().getBuyList(val);
 		if (buyList == null)
 		{
-			LOGGER.warning("BuyList not found! BuyListId:" + val);
+			LOGGER.warn("BuyList not found! BuyListId:" + val);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

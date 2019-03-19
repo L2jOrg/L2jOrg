@@ -17,17 +17,18 @@ import org.l2j.gameserver.network.serverpackets.ExEnchantSkillInfo;
 import org.l2j.gameserver.network.serverpackets.ExEnchantSkillInfoDetail;
 import org.l2j.gameserver.network.serverpackets.ExEnchantSkillResult;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.nio.ByteBuffer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author -Wooden-
  */
 public final class RequestExEnchantSkill extends IClientIncomingPacket {
-    private static final Logger LOGGER = Logger.getLogger(RequestExEnchantSkill.class.getName());
-    private static final Logger LOGGER_ENCHANT = Logger.getLogger("enchant.skills");
+    private static final Logger LOGGER = LoggerFactory.getLogger(RequestExEnchantSkill.class);
+    private static final Logger LOGGER_ENCHANT = LoggerFactory.getLogger("enchant.skills");
 
     private SkillEnchantType _type;
     private int _skillId;
@@ -38,7 +39,7 @@ public final class RequestExEnchantSkill extends IClientIncomingPacket {
     public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
         final int type = packet.getInt();
         if ((type < 0) || (type >= SkillEnchantType.values().length)) {
-            LOGGER.log(Level.WARNING, "Client: " + client + " send incorrect type " + type + " on packet: " + getClass().getSimpleName());
+            LOGGER.warn("Client: " + client + " send incorrect type " + type + " on packet: " + getClass().getSimpleName());
             throw new InvalidDataPacketException();
         }
 
@@ -97,11 +98,11 @@ public final class RequestExEnchantSkill extends IClientIncomingPacket {
                 final int group1 = (_skillSubLvl % 1000);
                 final int group2 = (skill.getSubLevel() % 1000);
                 if (group1 != group2) {
-                    LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Client: " + client + " send incorrect sub level group: " + group1 + " expected: " + group2);
+                    LOGGER.warn(getClass().getSimpleName() + ": Client: " + client + " send incorrect sub level group: " + group1 + " expected: " + group2);
                     return;
                 }
             } else if ((skill.getSubLevel() + 1) != _skillSubLvl) {
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Client: " + client + " send incorrect sub level: " + _skillSubLvl + " expected: " + skill.getSubLevel() + 1);
+                LOGGER.warn(getClass().getSimpleName() + ": Client: " + client + " send incorrect sub level: " + _skillSubLvl + " expected: " + skill.getSubLevel() + 1);
                 return;
             }
         }
@@ -137,7 +138,7 @@ public final class RequestExEnchantSkill extends IClientIncomingPacket {
                 if (Rnd.get(100) <= enchantSkillHolder.getChance(_type)) {
                     final Skill enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLvl, _skillSubLvl);
                     if (Config.LOG_SKILL_ENCHANTS) {
-                        LOGGER_ENCHANT.log(Level.INFO, "Success, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + enchantedSkill.getLevel() + " " + enchantedSkill.getSubLevel() + " - " + enchantedSkill.getName() + " (" + enchantedSkill.getId() + "), " + enchantSkillHolder.getChance(_type));
+                        LOGGER.info("Success, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + enchantedSkill.getLevel() + " " + enchantedSkill.getSubLevel() + " - " + enchantedSkill.getName() + " (" + enchantedSkill.getId() + "), " + enchantSkillHolder.getChance(_type));
                     }
                     player.addSkill(enchantedSkill, true);
 
@@ -158,7 +159,7 @@ public final class RequestExEnchantSkill extends IClientIncomingPacket {
                     player.sendPacket(ExEnchantSkillResult.STATIC_PACKET_FALSE);
 
                     if (Config.LOG_SKILL_ENCHANTS) {
-                        LOGGER_ENCHANT.log(Level.INFO, "Failed, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + enchantedSkill.getLevel() + " " + enchantedSkill.getSubLevel() + " - " + enchantedSkill.getName() + " (" + enchantedSkill.getId() + "), " + enchantSkillHolder.getChance(_type));
+                        LOGGER.info("Failed, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + enchantedSkill.getLevel() + " " + enchantedSkill.getSubLevel() + " - " + enchantedSkill.getName() + " (" + enchantedSkill.getId() + "), " + enchantSkillHolder.getChance(_type));
                     }
                 }
                 break;
@@ -183,7 +184,7 @@ public final class RequestExEnchantSkill extends IClientIncomingPacket {
                     player.sendPacket(ExEnchantSkillResult.STATIC_PACKET_FALSE);
 
                     if (Config.LOG_SKILL_ENCHANTS) {
-                        LOGGER_ENCHANT.log(Level.INFO, "Failed, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + enchantedSkill.getLevel() + " " + enchantedSkill.getSubLevel() + " - " + enchantedSkill.getName() + " (" + enchantedSkill.getId() + "), " + enchantSkillHolder.getChance(_type));
+                        LOGGER.info("Failed, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + enchantedSkill.getLevel() + " " + enchantedSkill.getSubLevel() + " - " + enchantedSkill.getName() + " (" + enchantedSkill.getId() + "), " + enchantSkillHolder.getChance(_type));
                     }
                 }
                 break;

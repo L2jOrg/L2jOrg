@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.FishingData;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.geoengine.GeoEngine;
@@ -28,16 +28,17 @@ import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndT
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingStart;
 import org.l2j.gameserver.network.serverpackets.fishing.ExUserInfoFishing;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author bit
  */
 public class Fishing {
-    protected static final Logger LOGGER = Logger.getLogger(Fishing.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(Fishing.class);
     private final L2PcInstance _player;
     private volatile ILocational _baitLocation = new Location(0, 0, 0);
     private ScheduledFuture<?> _reelInTask;
@@ -233,7 +234,7 @@ public class Fishing {
         final FishingBaitData baitData = getCurrentBaitData();
         if (baitData == null) {
             reelIn(FishingEndReason.LOSE, false);
-            LOGGER.warning("Player " + _player + " is fishing with unhandled bait: " + _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND));
+            LOGGER.warn("Player " + _player + " is fishing with unhandled bait: " + _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND));
             return;
         }
 
@@ -278,7 +279,7 @@ public class Fishing {
                     msg.addItemName(fishId);
                     _player.sendPacket(msg);
                 } else {
-                    LOGGER.log(Level.WARNING, "Could not find fishing rewards for bait ", bait.getId());
+                    LOGGER.warn("Could not find fishing rewards for bait ", bait.getId());
                 }
             } else if (reason == FishingEndReason.LOSE) {
                 _player.sendPacket(SystemMessageId.THE_BAIT_HAS_BEEN_LOST_BECAUSE_THE_FISH_GOT_AWAY);

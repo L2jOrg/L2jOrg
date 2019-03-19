@@ -19,9 +19,9 @@ package org.l2j.gameserver;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Class managing periodical events with castle
@@ -29,7 +29,7 @@ import java.util.logging.Logger;
  * @author Vice - 2008
  */
 public class FortUpdater implements Runnable {
-    private static Logger LOGGER = Logger.getLogger(FortUpdater.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(FortUpdater.class);
     private final L2Clan _clan;
     private final Fort _fort;
     private final UpdaterType _updaterType;
@@ -78,7 +78,7 @@ public class FortUpdater implements Runnable {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "", e);
+            LOGGER.warn("", e);
         }
     }
 

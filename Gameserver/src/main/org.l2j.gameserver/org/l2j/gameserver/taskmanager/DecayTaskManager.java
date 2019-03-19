@@ -5,6 +5,8 @@ import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 import java.util.Map.Entry;
@@ -12,13 +14,13 @@ import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
+
 
 /**
  * @author NosBit
  */
 public final class DecayTaskManager {
-    protected static final Logger LOGGER = Logger.getLogger(DecayTaskManager.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(DecayTaskManager.class);
 
     protected final Map<L2Character, ScheduledFuture<?>> _decayTasks = new ConcurrentHashMap<>();
 
@@ -55,7 +57,7 @@ public final class DecayTaskManager {
         try {
             _decayTasks.putIfAbsent(character, ThreadPoolManager.getInstance().schedule(new DecayTask(character), delay * 1000));
         } catch (Exception e) {
-            LOGGER.warning("DecayTaskManager add " + character + " caused [" + e.getMessage() + "] exception.");
+            LOGGER.warn("DecayTaskManager add " + character + " caused [" + e.getMessage() + "] exception.");
         }
     }
 

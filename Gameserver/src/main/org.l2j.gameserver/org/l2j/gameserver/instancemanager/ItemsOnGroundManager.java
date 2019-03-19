@@ -1,17 +1,18 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * This class manage all items on ground.
@@ -19,13 +20,13 @@ import java.util.logging.Logger;
  * @author Enforcer
  */
 public final class ItemsOnGroundManager implements Runnable {
-    private static final Logger LOGGER = Logger.getLogger(ItemsOnGroundManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ItemsOnGroundManager.class);
 
     private final Set<L2ItemInstance> _items = ConcurrentHashMap.newKeySet();
 
     protected ItemsOnGroundManager() {
         if (Config.SAVE_DROPPED_ITEM_INTERVAL > 0) {
-            ThreadPoolManager.getInstance().scheduleAtFixedRate(this, Config.SAVE_DROPPED_ITEM_INTERVAL, Config.SAVE_DROPPED_ITEM_INTERVAL);
+            ThreadPoolManager.scheduleAtFixedRate(this, Config.SAVE_DROPPED_ITEM_INTERVAL, Config.SAVE_DROPPED_ITEM_INTERVAL);
         }
         load();
     }
@@ -65,7 +66,7 @@ public final class ItemsOnGroundManager implements Runnable {
                 ps.setLong(1, System.currentTimeMillis());
                 ps.execute();
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error while updating table ItemsOnGround " + e.getMessage(), e);
+                LOGGER.error(getClass().getSimpleName() + ": Error while updating table ItemsOnGround " + e.getMessage(), e);
             }
         }
 
@@ -108,7 +109,7 @@ public final class ItemsOnGroundManager implements Runnable {
             }
             LOGGER.info(getClass().getSimpleName() + ": Loaded " + count + " items.");
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error while loading ItemsOnGround " + e.getMessage(), e);
+            LOGGER.error(getClass().getSimpleName() + ": Error while loading ItemsOnGround " + e.getMessage(), e);
         }
 
         if (Config.EMPTY_DROPPED_ITEM_TABLE_AFTER_LOAD) {
@@ -141,7 +142,7 @@ public final class ItemsOnGroundManager implements Runnable {
              Statement s = con.createStatement()) {
             s.executeUpdate("DELETE FROM itemsonground");
         } catch (Exception e1) {
-            LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error while cleaning table ItemsOnGround " + e1.getMessage(), e1);
+            LOGGER.error(getClass().getSimpleName() + ": Error while cleaning table ItemsOnGround " + e1.getMessage(), e1);
         }
     }
 
@@ -181,11 +182,11 @@ public final class ItemsOnGroundManager implements Runnable {
                     statement.execute();
                     statement.clearParameters();
                 } catch (Exception e) {
-                    LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error while inserting into table ItemsOnGround: " + e.getMessage(), e);
+                    LOGGER.error(getClass().getSimpleName() + ": Error while inserting into table ItemsOnGround: " + e.getMessage(), e);
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": SQL error while storing items on ground: " + e.getMessage(), e);
+            LOGGER.error(getClass().getSimpleName() + ": SQL error while storing items on ground: " + e.getMessage(), e);
         }
     }
 

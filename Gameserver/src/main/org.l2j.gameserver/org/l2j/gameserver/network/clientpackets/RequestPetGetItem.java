@@ -1,9 +1,9 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.instancemanager.SiegeGuardManager;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
+import org.l2j.gameserver.instancemanager.SiegeGuardManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.entity.Castle;

@@ -4,9 +4,9 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ServerClose;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
+import org.l2j.gameserver.network.serverpackets.ServerClose;
 
 import java.nio.ByteBuffer;
 

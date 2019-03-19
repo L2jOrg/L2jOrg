@@ -30,15 +30,17 @@ import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.util.Util;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Logger;
+
 
 public class RecipeController {
     protected static final Map<Integer, RecipeItemMaker> _activeMakers = new ConcurrentHashMap<>();
@@ -138,7 +140,7 @@ public class RecipeController {
     }
 
     private static class RecipeItemMaker implements Runnable {
-        private static final Logger LOGGER = Logger.getLogger(RecipeItemMaker.class.getName());
+        private static final Logger LOGGER = LoggerFactory.getLogger(RecipeItemMaker.class);
         protected final L2RecipeList _recipeList;
         protected final L2PcInstance _player; // "crafter"
         protected final L2PcInstance _target; // "customer"
@@ -258,13 +260,13 @@ public class RecipeController {
             }
 
             if ((_player == null) || (_target == null)) {
-                LOGGER.warning("player or target == null (disconnected?), aborting" + _target + _player);
+                LOGGER.warn("player or target == null (disconnected?), aborting" + _target + _player);
                 abort();
                 return;
             }
 
             if (!_player.isOnline() || !_target.isOnline()) {
-                LOGGER.warning("player or target is not online, aborting " + _target + _player);
+                LOGGER.warn("player or target is not online, aborting " + _target + _player);
                 abort();
                 return;
             }

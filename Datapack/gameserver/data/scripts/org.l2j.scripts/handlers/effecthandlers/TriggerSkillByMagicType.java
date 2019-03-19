@@ -102,7 +102,7 @@ public final class TriggerSkillByMagicType extends AbstractEffect
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
+			LOGGER.warn("Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
 		}
 		
 		if ((target != null) && target.isCharacter())

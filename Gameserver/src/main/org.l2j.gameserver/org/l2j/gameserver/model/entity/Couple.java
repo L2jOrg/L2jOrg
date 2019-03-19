@@ -19,19 +19,20 @@ package org.l2j.gameserver.model.entity;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Calendar;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author evill33t
  */
 public class Couple {
-    private static final Logger LOGGER = Logger.getLogger(Couple.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Couple.class);
 
     private int _Id = 0;
     private int _player1Id = 0;
@@ -60,7 +61,7 @@ public class Couple {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Exception: Couple.load(): " + e.getMessage(), e);
+            LOGGER.error("Exception: Couple.load(): " + e.getMessage(), e);
         }
     }
 
@@ -88,7 +89,7 @@ public class Couple {
             ps.setLong(6, _weddingDate.getTimeInMillis());
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Could not create couple: " + e.getMessage(), e);
+            LOGGER.error("Could not create couple: " + e.getMessage(), e);
         }
     }
 
@@ -102,7 +103,7 @@ public class Couple {
             ps.execute();
             _maried = true;
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Could not marry: " + e.getMessage(), e);
+            LOGGER.error("Could not marry: " + e.getMessage(), e);
         }
     }
 
@@ -112,7 +113,7 @@ public class Couple {
             ps.setInt(1, _Id);
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Exception: Couple.divorce(): " + e.getMessage(), e);
+            LOGGER.error("Exception: Couple.divorce(): " + e.getMessage(), e);
         }
     }
 

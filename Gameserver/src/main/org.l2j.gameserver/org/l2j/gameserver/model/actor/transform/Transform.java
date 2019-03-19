@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.actor.transform;
 
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
-import org.l2j.gameserver.enums.Sex;
 import org.l2j.gameserver.enums.InventoryBlockType;
+import org.l2j.gameserver.enums.Sex;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;

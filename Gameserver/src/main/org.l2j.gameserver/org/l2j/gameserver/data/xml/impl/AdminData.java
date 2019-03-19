@@ -8,6 +8,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -19,7 +21,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Logger;
+
 
 /**
  * Loads administrator access levels and commands.
@@ -27,7 +29,7 @@ import java.util.logging.Logger;
  * @author UnAfraid
  */
 public final class AdminData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(AdminData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(AdminData.class);
 
     private final Map<Integer, L2AccessLevel> _accessLevels = new HashMap<>();
     private final Map<String, L2AdminCommandAccessRight> _adminCommandAccessRights = new HashMap<>();

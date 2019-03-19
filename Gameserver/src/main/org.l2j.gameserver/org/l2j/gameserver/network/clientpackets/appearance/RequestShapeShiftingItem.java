@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.clientpackets.appearance;
 
+import org.l2j.gameserver.data.xml.impl.AppearanceItemData;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemLocation;
-import org.l2j.gameserver.data.xml.impl.AppearanceItemData;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.request.ShapeShiftingItemRequest;
 import org.l2j.gameserver.model.holders.AppearanceHolder;

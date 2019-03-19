@@ -9,6 +9,8 @@ import org.l2j.gameserver.model.shuttle.L2ShuttleData;
 import org.l2j.gameserver.model.shuttle.L2ShuttleEngine;
 import org.l2j.gameserver.model.shuttle.L2ShuttleStop;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -18,13 +20,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public final class ShuttleData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(ShuttleData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ShuttleData.class);
 
     private final Map<Integer, L2ShuttleData> _shuttles = new HashMap<>();
     private final Map<Integer, L2ShuttleInstance> _shuttleInstances = new HashMap<>();

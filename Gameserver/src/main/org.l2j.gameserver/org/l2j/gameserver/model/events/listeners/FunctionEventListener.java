@@ -20,10 +20,11 @@ import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.events.returns.AbstractEventReturn;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.function.Function;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Function event listener provides callback operation with return object possibility.
@@ -31,7 +32,7 @@ import java.util.logging.Logger;
  * @author UnAfraid
  */
 public class FunctionEventListener extends AbstractEventListener {
-    private static final Logger LOGGER = Logger.getLogger(FunctionEventListener.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(FunctionEventListener.class);
     private final Function<IBaseEvent, ? extends AbstractEventReturn> _callback;
 
     @SuppressWarnings("unchecked")
@@ -45,7 +46,7 @@ public class FunctionEventListener extends AbstractEventListener {
         try {
             return returnBackClass.cast(_callback.apply(event));
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while invoking " + event + " on " + getOwner(), e);
+            LOGGER.warn(getClass().getSimpleName() + ": Error while invoking " + event + " on " + getOwner(), e);
         }
         return null;
     }

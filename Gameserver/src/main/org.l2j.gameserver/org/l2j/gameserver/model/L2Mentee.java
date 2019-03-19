@@ -19,18 +19,19 @@ package org.l2j.gameserver.model;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public class L2Mentee {
-    private static final Logger LOGGER = Logger.getLogger(L2Mentee.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(L2Mentee.class);
 
     private final int _objectId;
     private String _name;
@@ -57,7 +58,7 @@ public class L2Mentee {
                     }
                 }
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, e.getMessage(), e);
+                LOGGER.warn(e.getMessage(), e);
             }
         } else {
             _name = player.getName();

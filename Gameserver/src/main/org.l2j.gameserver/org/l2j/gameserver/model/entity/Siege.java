@@ -5,11 +5,12 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.SiegeScheduleData;
+import org.l2j.gameserver.enums.SiegeClanType;
 import org.l2j.gameserver.enums.SiegeTeleportWhoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.SiegeGuardManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
-import org.l2j.gameserver.enums.SiegeClanType;
+import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.model.actor.instance.L2ControlTowerInstance;
@@ -25,7 +26,8 @@ import org.l2j.gameserver.network.serverpackets.SiegeInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.util.Broadcast;
-import org.l2j.gameserver.model.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -33,8 +35,6 @@ import java.sql.ResultSet;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class Siege implements Siegable {
@@ -43,7 +43,7 @@ public class Siege implements Siegable {
     public static final byte DEFENDER = 0;
     public static final byte ATTACKER = 1;
     public static final byte DEFENDER_NOT_APPROVED = 2;
-    protected static final Logger LOGGER = Logger.getLogger(Siege.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(Siege.class);
     final Castle _castle;
     // must support Concurrent Modifications
     private final List<L2SiegeClan> _attackerClans = new CopyOnWriteArrayList<>();
@@ -520,7 +520,7 @@ public class Siege implements Siegable {
             getDefenderClans().clear();
             _defenderWaitingClans.clear();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: clearSiegeClan(): " + e.getMessage(), e);
+            LOGGER.warn(getClass().getSimpleName() + ": Exception: clearSiegeClan(): " + e.getMessage(), e);
         }
     }
 
@@ -535,7 +535,7 @@ public class Siege implements Siegable {
 
             _defenderWaitingClans.clear();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: clearSiegeWaitingClan(): " + e.getMessage(), e);
+            LOGGER.warn(getClass().getSimpleName() + ": Exception: clearSiegeWaitingClan(): " + e.getMessage(), e);
         }
     }
 
@@ -697,7 +697,7 @@ public class Siege implements Siegable {
 
             loadSiegeClan();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: removeSiegeClan(): " + e.getMessage(), e);
+            LOGGER.warn(getClass().getSimpleName() + ": Exception: removeSiegeClan(): " + e.getMessage(), e);
         }
     }
 
@@ -936,7 +936,7 @@ public class Siege implements Siegable {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: loadSiegeClan(): " + e.getMessage(), e);
+            LOGGER.warn(getClass().getSimpleName() + ": Exception: loadSiegeClan(): " + e.getMessage(), e);
         }
     }
 
@@ -1014,7 +1014,7 @@ public class Siege implements Siegable {
             statement.setInt(4, _castle.getResidenceId());
             statement.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: saveSiegeDate(): " + e.getMessage(), e);
+            LOGGER.warn(getClass().getSimpleName() + ": Exception: saveSiegeDate(): " + e.getMessage(), e);
         }
     }
 
@@ -1064,7 +1064,7 @@ public class Siege implements Siegable {
                 addDefenderWaiting(clan.getId());
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: saveSiegeClan(L2Clan clan, int typeId, boolean isUpdateRegistration): " + e.getMessage(), e);
+            LOGGER.warn(getClass().getSimpleName() + ": Exception: saveSiegeClan(L2Clan clan, int typeId, boolean isUpdateRegistration): " + e.getMessage(), e);
         }
     }
 
@@ -1110,7 +1110,7 @@ public class Siege implements Siegable {
                 _controlTowers.add((L2ControlTowerInstance) spawn.doSpawn());
             }
         } catch (Exception e) {
-            LOGGER.warning(getClass().getSimpleName() + ": Cannot spawn control tower! " + e);
+            LOGGER.warn(": Cannot spawn control tower! " + e);
         }
         _controlTowerCount = _controlTowers.size();
     }
@@ -1129,7 +1129,7 @@ public class Siege implements Siegable {
                 _flameTowers.add(tower);
             }
         } catch (Exception e) {
-            LOGGER.warning(getClass().getSimpleName() + ": Cannot spawn flame tower! " + e);
+            LOGGER.warn(": Cannot spawn flame tower! " + e);
         }
     }
 
@@ -1359,7 +1359,7 @@ public class Siege implements Siegable {
                     _castleInst.getSiege().endSiege();
                 }
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": ", e);
+                LOGGER.error(getClass().getSimpleName() + ": ", e);
             }
         }
     }
@@ -1410,7 +1410,7 @@ public class Siege implements Siegable {
                     _castleInst.getSiege().startSiege();
                 }
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": ", e);
+                LOGGER.error(getClass().getSimpleName() + ": ", e);
             }
         }
     }

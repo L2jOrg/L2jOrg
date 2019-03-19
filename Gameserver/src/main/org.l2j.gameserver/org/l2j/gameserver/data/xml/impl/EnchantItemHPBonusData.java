@@ -1,25 +1,11 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.items.type.CrystalType;
+import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
@@ -28,7 +14,6 @@ import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
 
 /**
  * This class holds the Enchant HP Bonus Data.
@@ -36,24 +21,15 @@ import java.util.logging.Logger;
  * @author MrPoke, Zoey76
  */
 public class EnchantItemHPBonusData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(EnchantItemHPBonusData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemHPBonusData.class);
     private static final float FULL_ARMOR_MODIFIER = 1.5f; // TODO: Move it to config!
     private final Map<CrystalType, List<Integer>> _armorHPBonuses = new EnumMap<>(CrystalType.class);
 
     /**
      * Instantiates a new enchant hp bonus data.
      */
-    protected EnchantItemHPBonusData() {
+    private EnchantItemHPBonusData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of EnchantHPBonusData.
-     *
-     * @return single instance of EnchantHPBonusData
-     */
-    public static EnchantItemHPBonusData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -101,7 +77,11 @@ public class EnchantItemHPBonusData implements IGameXmlReader {
         return bonus;
     }
 
-    private static class SingletonHolder {
-        protected static final EnchantItemHPBonusData _instance = new EnchantItemHPBonusData();
+    public static EnchantItemHPBonusData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        protected static final EnchantItemHPBonusData INSTANCE = new EnchantItemHPBonusData();
     }
 }

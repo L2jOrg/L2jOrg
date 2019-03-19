@@ -42,18 +42,20 @@ import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.*;
-import java.util.logging.Logger;
+
 
 /**
  * EditChar admin command implementation.
  */
 public class AdminEditChar implements IAdminCommandHandler
 {
-	private static Logger LOGGER = Logger.getLogger(AdminEditChar.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminEditChar.class);
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -204,7 +206,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				if (Config.DEVELOPER)
 				{
-					LOGGER.warning("Set reputation error: " + e);
+					LOGGER.warn("Set reputation error: " + e);
 				}
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //setreputation <new_reputation_value>");
 			}
@@ -247,7 +249,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				if (Config.DEVELOPER)
 				{
-					LOGGER.warning("Set pk error: " + e);
+					LOGGER.warn("Set pk error: " + e);
 				}
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //setpk <pk_count>");
 			}
@@ -278,7 +280,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				if (Config.DEVELOPER)
 				{
-					LOGGER.warning("Set pvp error: " + e);
+					LOGGER.warn("Set pvp error: " + e);
 				}
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //setpvp <pvp_count>");
 			}
@@ -308,7 +310,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				if (Config.DEVELOPER)
 				{
-					LOGGER.warning("Set Fame error: " + e);
+					LOGGER.warn("Set Fame error: " + e);
 				}
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //setfame <new_fame_value>");
 			}

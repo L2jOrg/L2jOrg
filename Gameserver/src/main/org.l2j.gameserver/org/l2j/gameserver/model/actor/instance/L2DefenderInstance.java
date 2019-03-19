@@ -1,10 +1,10 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
@@ -92,7 +92,7 @@ public class L2DefenderInstance extends L2Attackable {
         _castle = CastleManager.getInstance().getCastle(getX(), getY(), getZ());
 
         if ((_fort == null) && (_castle == null)) {
-            LOGGER.warning("L2DefenderInstance spawned outside of Fortress or Castle zone!" + this);
+            LOGGER.warn("L2DefenderInstance spawned outside of Fortress or Castle zone!" + this);
         }
     }
 

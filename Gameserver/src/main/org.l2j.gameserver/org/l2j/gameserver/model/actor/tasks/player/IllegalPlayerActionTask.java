@@ -9,13 +9,15 @@ import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.network.Disconnection;
 
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * Task that handles illegal player actions.
  */
 public final class IllegalPlayerActionTask implements Runnable {
-    private static final Logger LOGGER = Logger.getLogger("audit");
+    private static final Logger LOGGER = LoggerFactory.getLogger("audit");
 
     private final String _message;
     private final IllegalActionPunishmentType _punishment;

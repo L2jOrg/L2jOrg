@@ -16,18 +16,19 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.util.Broadcast;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class CursedWeapon implements INamable {
-    private static final Logger LOGGER = Logger.getLogger(CursedWeapon.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(CursedWeapon.class);
 
     // _name is the name of the cursed weapon associated with its ID.
     private final String _name;
@@ -106,7 +107,7 @@ public class CursedWeapon implements INamable {
                     del.setInt(1, _playerId);
                     del.setInt(2, _itemId);
                     if (del.executeUpdate() != 1) {
-                        LOGGER.warning("Error while deleting itemId " + _itemId + " from userId " + _playerId);
+                        LOGGER.warn("Error while deleting itemId " + _itemId + " from userId " + _playerId);
                     }
 
                     // Restore the reputation
@@ -114,10 +115,10 @@ public class CursedWeapon implements INamable {
                     ps.setInt(2, _playerPkKills);
                     ps.setInt(3, _playerId);
                     if (ps.executeUpdate() != 1) {
-                        LOGGER.warning("Error while updating karma & pkkills for userId " + _playerId);
+                        LOGGER.warn("Error while updating karma & pkkills for userId " + _playerId);
                     }
                 } catch (Exception e) {
-                    LOGGER.log(Level.WARNING, "Could not delete : " + e.getMessage(), e);
+                    LOGGER.warn("Could not delete : " + e.getMessage(), e);
                 }
             }
         } else {
@@ -384,7 +385,7 @@ public class CursedWeapon implements INamable {
                 ps.executeUpdate();
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.SEVERE, "CursedWeapon: Failed to save data.", e);
+            LOGGER.error("CursedWeapon: Failed to save data.", e);
         }
     }
 

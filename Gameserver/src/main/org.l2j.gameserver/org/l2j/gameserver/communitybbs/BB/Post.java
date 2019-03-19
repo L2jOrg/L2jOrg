@@ -18,20 +18,21 @@ package org.l2j.gameserver.communitybbs.BB;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.communitybbs.Manager.PostBBSManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author Maktakien
  */
 public class Post {
-    private static Logger LOGGER = Logger.getLogger(Post.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Post.class);
     private final List<CPost> _post;
 
     /**
@@ -73,7 +74,7 @@ public class Post {
             ps.setString(7, cp.postTxt);
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Error while saving new Post to db " + e.getMessage(), e);
+            LOGGER.warn("Error while saving new Post to db " + e.getMessage(), e);
         }
     }
 
@@ -95,7 +96,7 @@ public class Post {
             ps.setInt(2, t.getID());
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Error while deleting post: " + e.getMessage(), e);
+            LOGGER.warn("Error while deleting post: " + e.getMessage(), e);
         }
     }
 
@@ -121,7 +122,7 @@ public class Post {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Data error on Post " + t.getForumID() + "/" + t.getID() + " : " + e.getMessage(), e);
+            LOGGER.warn("Data error on Post " + t.getForumID() + "/" + t.getID() + " : " + e.getMessage(), e);
         }
     }
 
@@ -138,7 +139,7 @@ public class Post {
             ps.setInt(4, cp.postForumId);
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Error while saving new Post to db " + e.getMessage(), e);
+            LOGGER.warn("Error while saving new Post to db " + e.getMessage(), e);
         }
     }
 

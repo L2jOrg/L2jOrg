@@ -19,15 +19,17 @@ package org.l2j.gameserver.model.eventengine.conditions;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
 import org.l2j.gameserver.model.eventengine.EventScheduler;
 import org.l2j.gameserver.model.eventengine.IConditionalEventScheduler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Objects;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public class BetweenConditionalScheduler implements IConditionalEventScheduler {
-    private static final Logger LOGGER = Logger.getLogger(BetweenConditionalScheduler.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(BetweenConditionalScheduler.class);
     private final AbstractEventManager<?> _eventManager;
     private final String _name;
     private final String _scheduler1;

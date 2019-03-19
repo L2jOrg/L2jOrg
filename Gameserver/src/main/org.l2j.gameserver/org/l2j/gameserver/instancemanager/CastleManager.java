@@ -8,6 +8,8 @@ import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -17,11 +19,10 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public final class CastleManager implements InstanceListManager {
-    private static final Logger LOGGER = Logger.getLogger(CastleManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(CastleManager.class);
     private static final int _castleCirclets[] =
             {
                     0,
@@ -156,7 +157,7 @@ public final class CastleManager implements InstanceListManager {
                 ps.setInt(2, circletId);
                 ps.execute();
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed to remove castle circlets offline for player " + member.getName() + ": ", e);
+                LOGGER.warn(getClass().getSimpleName() + ": Failed to remove castle circlets offline for player " + member.getName() + ": ", e);
             }
         }
     }
@@ -172,7 +173,7 @@ public final class CastleManager implements InstanceListManager {
             }
             LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _castles.values().size() + " castles.");
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: loadCastleData():", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Exception: loadCastleData():", e);
         }
     }
 

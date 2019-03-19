@@ -59,7 +59,7 @@ public final class Restoration extends AbstractEffect
 		if ((_itemId <= 0) || (_itemCount <= 0))
 		{
 			effected.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
-			LOGGER.warning(Restoration.class.getSimpleName() + " effect with wrong item Id/count: " + _itemId + "/" + _itemCount + "!");
+			LOGGER.warn(Restoration.class.getSimpleName() + " effect with wrong item Id/count: " + _itemId + "/" + _itemCount + "!");
 			return;
 		}
 		

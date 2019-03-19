@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.enums.PartyMatchingRoomLevelType;
+import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.L2CommandChannel;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;

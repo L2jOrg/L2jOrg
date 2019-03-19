@@ -10,12 +10,14 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
+
 
 /**
  * Petition Manager
@@ -23,7 +25,7 @@ import java.util.logging.Logger;
  * @author Tempy
  */
 public final class PetitionManager {
-    protected static final Logger LOGGER = Logger.getLogger(PetitionManager.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(PetitionManager.class);
 
     private final Map<Integer, Petition> _pendingPetitions;
     private final Map<Integer, Petition> _completedPetitions;

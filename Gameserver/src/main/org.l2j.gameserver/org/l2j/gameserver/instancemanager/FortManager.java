@@ -5,6 +5,8 @@ import org.l2j.gameserver.InstanceListManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.entity.Fort;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -12,11 +14,10 @@ import java.sql.Statement;
 import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentSkipListMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public final class FortManager implements InstanceListManager {
-    private static final Logger LOGGER = Logger.getLogger(FortManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(FortManager.class);
 
     private final Map<Integer, Fort> _forts = new ConcurrentSkipListMap<>();
 
@@ -101,7 +102,7 @@ public final class FortManager implements InstanceListManager {
                 fort.getSiege().loadSiegeGuard();
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Exception: loadFortData(): " + e.getMessage(), e);
+            LOGGER.warn("Exception: loadFortData(): " + e.getMessage(), e);
         }
     }
 

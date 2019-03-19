@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.templates.L2PcTemplate;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -15,7 +17,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
+
 
 /**
  * Loads player's base stats.
@@ -23,7 +25,7 @@ import java.util.logging.Logger;
  * @author Forsaiken, Zoey76, GKR
  */
 public final class PlayerTemplateData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(PlayerTemplateData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(PlayerTemplateData.class);
 
     private final Map<ClassId, L2PcTemplate> _playerTemplates = new HashMap<>();
 

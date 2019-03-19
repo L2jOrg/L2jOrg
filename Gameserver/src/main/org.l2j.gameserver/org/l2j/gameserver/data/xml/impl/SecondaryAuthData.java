@@ -1,56 +1,36 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import java.io.File;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @author NosBit
  */
 public class SecondaryAuthData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(SecondaryAuthData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(SecondaryAuthData.class.getName());
 
-    private final Set<String> _forbiddenPasswords = new HashSet<>();
+    private final Set<String> forbiddenPasswords = new HashSet<>();
     private boolean _enabled = false;
     private int _maxAttempts = 5;
     private int _banTime = 480;
     private String _recoveryLink = "";
 
-    protected SecondaryAuthData() {
+    private SecondaryAuthData() {
         load();
-    }
-
-    public static SecondaryAuthData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
     public synchronized void load() {
-        _forbiddenPasswords.clear();
+        forbiddenPasswords.clear();
         parseFile(new File("config/SecondaryAuth.xml"));
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _forbiddenPasswords.size() + " forbidden passwords.");
+        LOGGER.info("Loaded {}forbidden passwords.", forbiddenPasswords.size() );
     }
 
     @Override
@@ -70,7 +50,7 @@ public class SecondaryAuthData implements IGameXmlReader {
                         } else if ("forbiddenPasswords".equalsIgnoreCase(list_node.getNodeName())) {
                             for (Node forbiddenPasswords_node = list_node.getFirstChild(); forbiddenPasswords_node != null; forbiddenPasswords_node = forbiddenPasswords_node.getNextSibling()) {
                                 if ("password".equalsIgnoreCase(forbiddenPasswords_node.getNodeName())) {
-                                    _forbiddenPasswords.add(forbiddenPasswords_node.getTextContent());
+                                    forbiddenPasswords.add(forbiddenPasswords_node.getTextContent());
                                 }
                             }
                         }
@@ -78,7 +58,7 @@ public class SecondaryAuthData implements IGameXmlReader {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Failed to load secondary auth data from xml.", e);
+            LOGGER.warn("Failed to load secondary auth data from xml.", e);
         }
     }
 
@@ -90,23 +70,15 @@ public class SecondaryAuthData implements IGameXmlReader {
         return _maxAttempts;
     }
 
-    public int getBanTime() {
-        return _banTime;
-    }
-
-    public String getRecoveryLink() {
-        return _recoveryLink;
-    }
-
-    public Set<String> getForbiddenPasswords() {
-        return _forbiddenPasswords;
-    }
-
     public boolean isForbiddenPassword(String password) {
-        return _forbiddenPasswords.contains(password);
+        return forbiddenPasswords.contains(password);
     }
 
-    private static class SingletonHolder {
-        protected static final SecondaryAuthData _instance = new SecondaryAuthData();
+    public static SecondaryAuthData getInstance() {
+        return Singleton.INSTANCE;
+    }
+    
+    private static class Singleton {
+        private static final SecondaryAuthData INSTANCE = new SecondaryAuthData();
     }
 }

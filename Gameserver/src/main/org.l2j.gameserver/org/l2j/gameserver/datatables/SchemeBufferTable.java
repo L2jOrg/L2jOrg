@@ -3,6 +3,8 @@ package org.l2j.gameserver.datatables;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.holders.BuffSkillHolder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -15,13 +17,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Logger;
+
 
 /**
  * This class loads available skills and stores players' buff schemes into _schemesTable.
  */
 public class SchemeBufferTable {
-    private static final Logger LOGGER = Logger.getLogger(SchemeBufferTable.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(SchemeBufferTable.class);
 
     private static final String LOAD_SCHEMES = "SELECT * FROM buffer_schemes";
     private static final String DELETE_SCHEMES = "TRUNCATE TABLE buffer_schemes";
@@ -61,7 +63,7 @@ public class SchemeBufferTable {
             rs.close();
             st.close();
         } catch (Exception e) {
-            LOGGER.warning("SchemeBufferTable: Failed to load buff schemes : " + e);
+            LOGGER.warn("SchemeBufferTable: Failed to load buff schemes : " + e);
         }
 
         try {
@@ -90,7 +92,7 @@ public class SchemeBufferTable {
                 }
             }
         } catch (Exception e) {
-            LOGGER.warning("SchemeBufferTable: Failed to load buff info : " + e);
+            LOGGER.warn("SchemeBufferTable: Failed to load buff info : " + e);
         }
         LOGGER.info("SchemeBufferTable: Loaded " + count + " players schemes and " + _availableBuffs.size() + " available buffs.");
     }
@@ -131,7 +133,7 @@ public class SchemeBufferTable {
             st.executeBatch();
             st.close();
         } catch (Exception e) {
-            LOGGER.warning("BufferTableScheme: Error while saving schemes : " + e);
+            LOGGER.warn("BufferTableScheme: Error while saving schemes : " + e);
         }
     }
 

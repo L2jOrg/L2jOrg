@@ -27,6 +27,8 @@ import org.l2j.gameserver.model.interfaces.IStorable;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -37,8 +39,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
@@ -47,7 +47,7 @@ import java.util.stream.Collectors;
  * @author malyelfik
  */
 public final class CastleManorManager implements IGameXmlReader, IStorable {
-    private static final Logger LOGGER = Logger.getLogger(CastleManorManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(CastleManorManager.class);
 
     // SQL queries
     private static final String INSERT_PRODUCT = "INSERT INTO castle_manor_production VALUES (?, ?, ?, ?, ?, ?)";
@@ -163,7 +163,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
                                 pCurrent.add(sp);
                             }
                         } else {
-                            LOGGER.warning(getClass().getSimpleName() + ": Unknown seed id: " + seedId + "!");
+                            LOGGER.warn(": Unknown seed id: " + seedId + "!");
                         }
                     }
                 }
@@ -187,7 +187,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
                                 current.add(cp);
                             }
                         } else {
-                            LOGGER.warning(getClass().getSimpleName() + ": Unknown crop id: " + cropId + "!");
+                            LOGGER.warn(": Unknown crop id: " + cropId + "!");
                         }
                     }
                 }
@@ -196,7 +196,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
             }
             LOGGER.info(getClass().getSimpleName() + ": Manor data loaded.");
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Unable to load manor data! ", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Unable to load manor data! ", e);
         }
     }
 
@@ -376,7 +376,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
                     ips.executeBatch();
                 }
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Unable to store manor data!", e);
+                LOGGER.error(getClass().getSimpleName() + ": Unable to store manor data!", e);
             }
         }
     }
@@ -406,7 +406,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
                     ips.executeBatch();
                 }
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Unable to store manor data!", e);
+                LOGGER.error(getClass().getSimpleName() + ": Unable to store manor data!", e);
             }
         }
     }
@@ -422,7 +422,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
             }
             ps.executeBatch();
         } catch (Exception e) {
-            LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Unable to store manor data!", e);
+            LOGGER.info(getClass().getSimpleName() + ": Unable to store manor data!", e);
         }
     }
 
@@ -437,7 +437,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
             }
             ps.executeBatch();
         } catch (Exception e) {
-            LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Unable to store manor data!", e);
+            LOGGER.info(getClass().getSimpleName() + ": Unable to store manor data!", e);
         }
     }
 
@@ -557,7 +557,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
 
             return true;
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Unable to store manor data! ", e);
+            LOGGER.error(getClass().getSimpleName() + ": Unable to store manor data! ", e);
             return false;
         }
     }
@@ -580,7 +580,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
                 dc.setInt(1, castleId);
                 dc.executeUpdate();
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Unable to store manor data!", e);
+                LOGGER.error(getClass().getSimpleName() + ": Unable to store manor data!", e);
             }
         }
     }

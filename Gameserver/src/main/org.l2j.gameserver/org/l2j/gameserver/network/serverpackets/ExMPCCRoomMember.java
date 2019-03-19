@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.enums.MatchingMemberType;
+import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.matching.CommandChannelMatchingRoom;
 import org.l2j.gameserver.network.L2GameClient;

@@ -23,10 +23,12 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.Util;
 
 import java.nio.ByteBuffer;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 public final class RequestEnchantItem extends IClientIncomingPacket {
-    protected static final Logger LOGGER_ENCHANT = Logger.getLogger("enchant.items");
+    protected static final Logger LOGGER_ENCHANT = LoggerFactory.getLogger("enchant.items");
 
     private int _objectId;
     private int _supportId;

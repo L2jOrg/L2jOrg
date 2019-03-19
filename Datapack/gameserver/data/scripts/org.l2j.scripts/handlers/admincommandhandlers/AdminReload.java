@@ -16,53 +16,31 @@
  */
 package handlers.admincommandhandlers;
 
-import java.io.File;
-import java.util.StringTokenizer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
-import org.l2j.gameserver.data.xml.impl.AdminData;
-import org.l2j.gameserver.data.xml.impl.AppearanceItemData;
-import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
-import org.l2j.gameserver.data.xml.impl.AttendanceRewardData;
-import org.l2j.gameserver.data.xml.impl.BuyListData;
-import org.l2j.gameserver.data.xml.impl.DoorData;
-import org.l2j.gameserver.data.xml.impl.EnchantItemData;
-import org.l2j.gameserver.data.xml.impl.EnchantItemGroupsData;
-import org.l2j.gameserver.data.xml.impl.FakePlayerData;
-import org.l2j.gameserver.data.xml.impl.FishingData;
-import org.l2j.gameserver.data.xml.impl.ItemCrystallizationData;
-import org.l2j.gameserver.data.xml.impl.MultisellData;
-import org.l2j.gameserver.data.xml.impl.NpcData;
-import org.l2j.gameserver.data.xml.impl.OptionData;
-import org.l2j.gameserver.data.xml.impl.PrimeShopData;
-import org.l2j.gameserver.data.xml.impl.SayuneData;
-import org.l2j.gameserver.data.xml.impl.SkillData;
-import org.l2j.gameserver.data.xml.impl.TeleportersData;
-import org.l2j.gameserver.data.xml.impl.TransformData;
+import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
-import org.l2j.gameserver.instancemanager.FakePlayerChatManager;
-import org.l2j.gameserver.instancemanager.QuestManager;
-import org.l2j.gameserver.instancemanager.WalkingManager;
-import org.l2j.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.scripting.ScriptEngineManager;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.File;
+import java.util.StringTokenizer;
 
 /**
  * @author NosBit
  */
 public class AdminReload implements IAdminCommandHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(AdminReload.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminReload.class);
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -226,7 +204,7 @@ public class AdminReload implements IAdminCommandHandler
 					}
 					catch (Exception e)
 					{
-						LOGGER.log(Level.WARNING, "Failed executing effect master handler!", e);
+						LOGGER.warn("Failed executing effect master handler!", e);
 						BuilderUtil.sendSysMessage(activeChar, "Error reloading effect master handler!");
 					}
 					break;
@@ -240,7 +218,7 @@ public class AdminReload implements IAdminCommandHandler
 					}
 					catch (Exception e)
 					{
-						LOGGER.log(Level.WARNING, "Failed executing master handler!", e);
+						LOGGER.warn("Failed executing master handler!", e);
 						BuilderUtil.sendSysMessage(activeChar, "Error reloading master handler!");
 					}
 					break;

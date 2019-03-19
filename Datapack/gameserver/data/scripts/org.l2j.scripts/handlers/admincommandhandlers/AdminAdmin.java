@@ -31,9 +31,11 @@ import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
-import java.util.logging.Logger;
+
 
 /**
  * This class handles following admin commands: - admin|admin1/admin2/admin3/admin4/admin5 = slots for the 5 starting admin menus - gmliston/gmlistoff = includes/excludes active character from /gmlist results - silence = toggles private messages acceptance mode - diet = toggles weight penalty mode -
@@ -42,7 +44,7 @@ import java.util.logging.Logger;
  */
 public class AdminAdmin implements IAdminCommandHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(AdminAdmin.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminAdmin.class);
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -122,7 +124,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning("An error occured while ending olympiad: " + e);
+				LOGGER.warn("An error occured while ending olympiad: " + e);
 			}
 			BuilderUtil.sendSysMessage(activeChar, "Heroes formed.");
 		}

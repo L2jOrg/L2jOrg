@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.model.itemcontainer;
 
-import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;

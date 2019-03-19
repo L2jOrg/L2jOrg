@@ -96,7 +96,7 @@ public class EnterWorld extends IClientIncomingPacket {
 
         // if (L2World.getInstance().findObject(activeChar.getObjectId()) != null)
         // {
-        // LOGGER.warning("User already exists in Object ID map! User " + activeChar.getName() + " is a character clone.");
+        // LOGGER.warn("User already exists in Object ID map! User " + activeChar.getName() + " is a character clone.");
         // }
 
         activeChar.updatePvpTitleAndColor(false);

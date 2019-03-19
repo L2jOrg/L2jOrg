@@ -5,6 +5,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.type.EtcItemType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,14 +14,13 @@ import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author NosBit
  */
 public final class Product {
-    private static final Logger LOGGER = Logger.getLogger(Product.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Product.class);
 
     private final int _buyListId;
     private final L2Item _item;
@@ -133,7 +134,7 @@ public final class Product {
             }
             statement.executeUpdate();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Failed to save Product buylist_id:" + _buyListId + " item_id:" + _item.getId(), e);
+            LOGGER.warn("Failed to save Product buylist_id:" + _buyListId + " item_id:" + _item.getId(), e);
         }
     }
 }

@@ -23,16 +23,17 @@ import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.interfaces.IRestorable;
 import org.l2j.gameserver.network.serverpackets.SendMacroList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class MacroList implements IRestorable {
-    private static final Logger LOGGER = Logger.getLogger(MacroList.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(MacroList.class);
 
     private final L2PcInstance _owner;
     private final Map<Integer, Macro> _macroses = Collections.synchronizedMap(new LinkedHashMap<>());
@@ -122,7 +123,7 @@ public class MacroList implements IRestorable {
             ps.setString(7, sb.toString());
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "could not store macro:", e);
+            LOGGER.warn("could not store macro:", e);
         }
     }
 
@@ -133,7 +134,7 @@ public class MacroList implements IRestorable {
             ps.setInt(2, macro.getId());
             ps.execute();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "could not delete macro:", e);
+            LOGGER.warn("could not delete macro:", e);
         }
     }
 
@@ -170,7 +171,7 @@ public class MacroList implements IRestorable {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "could not store shortcuts:", e);
+            LOGGER.warn("could not store shortcuts:", e);
             return false;
         }
         return true;

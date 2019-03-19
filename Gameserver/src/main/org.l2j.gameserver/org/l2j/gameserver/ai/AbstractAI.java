@@ -13,9 +13,10 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.Future;
-import java.util.logging.Logger;
 
 import static org.l2j.gameserver.ai.CtrlIntention.*;
 
@@ -25,7 +26,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.*;
  * <li>L2CharacterAI</li>
  */
 public abstract class AbstractAI implements Ctrl {
-    private static final Logger LOGGER = Logger.getLogger(AbstractAI.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(AbstractAI.class);
     private static final int FOLLOW_INTERVAL = 1000;
     private static final int ATTACK_FOLLOW_INTERVAL = 500;
     /**
@@ -652,7 +653,7 @@ public abstract class AbstractAI implements Ctrl {
                     moveToPawn(followTarget, followRange);
                 }
             } catch (Exception e) {
-                LOGGER.warning("Error: " + e.getMessage());
+                LOGGER.warn("Error: " + e.getMessage());
             }
         }, 5, range == -1 ? FOLLOW_INTERVAL : ATTACK_FOLLOW_INTERVAL);
     }

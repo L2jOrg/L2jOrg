@@ -13,10 +13,12 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.network.serverpackets.RecipeShopManageList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.nio.ByteBuffer;
 import java.util.Arrays;
-import java.util.logging.Logger;
+
 
 /**
  * This class manages the action use request packet.
@@ -24,7 +26,7 @@ import java.util.logging.Logger;
  * @author Zoey76
  */
 public final class RequestActionUse extends IClientIncomingPacket {
-    private static final Logger LOGGER = Logger.getLogger(RequestActionUse.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(RequestActionUse.class);
 
     private int _actionId;
     private boolean _ctrlPressed;
@@ -66,7 +68,7 @@ public final class RequestActionUse extends IClientIncomingPacket {
             final int[] allowedActions = activeChar.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
             if (!(Arrays.binarySearch(allowedActions, _actionId) >= 0)) {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
-                LOGGER.warning("Player " + activeChar + " used action which he does not have! Id = " + _actionId + " transform: " + activeChar.getTransformation().orElse(null));
+                LOGGER.warn("Player " + activeChar + " used action which he does not have! Id = " + _actionId + " transform: " + activeChar.getTransformation().orElse(null));
                 return;
             }
         }
@@ -78,7 +80,7 @@ public final class RequestActionUse extends IClientIncomingPacket {
                 actionHandler.useAction(activeChar, actionHolder, _ctrlPressed, _shiftPressed);
                 return;
             }
-            LOGGER.warning("Couldnt find handler with name: " + actionHolder.getHandler());
+            LOGGER.warn("Couldnt find handler with name: " + actionHolder.getHandler());
             return;
         }
 
@@ -108,7 +110,7 @@ public final class RequestActionUse extends IClientIncomingPacket {
                 break;
             }
             default: {
-                LOGGER.warning(activeChar.getName() + ": unhandled action type " + _actionId);
+                LOGGER.warn(activeChar.getName() + ": unhandled action type " + _actionId);
                 break;
             }
         }

@@ -1,9 +1,9 @@
 package org.l2j.gameserver.model.actor.stat;
 
-import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
+import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.model.actor.L2Playable;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
@@ -12,11 +12,12 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayableExpChange
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Logger;
 
 public class PlayableStat extends CharStat {
-    protected static final Logger LOGGER = Logger.getLogger(PlayableStat.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(PlayableStat.class);
 
     public PlayableStat(L2Playable activeChar) {
         super(activeChar);
@@ -147,7 +148,7 @@ public class PlayableStat extends CharStat {
 
     public boolean addSp(long value) {
         if (value < 0) {
-            LOGGER.warning("wrong usage");
+            LOGGER.warn("wrong usage");
             return false;
         }
         final long currentSp = getSp();

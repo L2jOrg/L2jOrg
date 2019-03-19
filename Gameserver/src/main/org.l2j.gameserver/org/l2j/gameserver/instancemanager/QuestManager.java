@@ -4,11 +4,12 @@ import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.scripting.ScriptEngineManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Quests and scripts manager.
@@ -16,7 +17,7 @@ import java.util.logging.Logger;
  * @author Zoey76
  */
 public final class QuestManager {
-    private static final Logger LOGGER = Logger.getLogger(QuestManager.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(QuestManager.class);
 
     /**
      * Map containing all the quests.
@@ -71,7 +72,7 @@ public final class QuestManager {
         try {
             ScriptEngineManager.getInstance().executeScriptInitList();
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Failed executing script list!", e);
+            LOGGER.error("Failed executing script list!", e);
         }
 
         getInstance().report();

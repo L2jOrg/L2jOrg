@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.base.SocialClass;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;

@@ -28,10 +28,11 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * This class handles following admin commands: - handles every admin menu command
@@ -39,7 +40,7 @@ import java.util.logging.Logger;
  */
 public class AdminMenu implements IAdminCommandHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(AdminMenu.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminMenu.class);
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -112,7 +113,7 @@ public class AdminMenu implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, "", e);
+				LOGGER.warn("", e);
 			}
 		}
 		else if (command.startsWith("admin_recall_clan_menu"))
@@ -141,7 +142,7 @@ public class AdminMenu implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, "", e);
+				LOGGER.warn("", e);
 			}
 		}
 		else if (command.startsWith("admin_goto_char_menu"))

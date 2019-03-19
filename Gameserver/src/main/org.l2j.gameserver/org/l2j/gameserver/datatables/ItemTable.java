@@ -4,9 +4,9 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.EnchantItemHPBonusData;
+import org.l2j.gameserver.engines.DocumentEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
-import org.l2j.gameserver.engines.DocumentEngine;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Attackable;
@@ -15,31 +15,30 @@ import org.l2j.gameserver.model.actor.instance.L2EventMonsterInstance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
+import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.L2Armor;
 import org.l2j.gameserver.model.items.L2EtcItem;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.util.GMAudit;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * This class serves as a container for all item templates in the game.
  */
 public class ItemTable {
+    private static Logger LOGGER = LoggerFactory.getLogger(ItemTable.class);
+    private static Logger LOGGER_ITEMS = LoggerFactory.getLogger("item");
+
     public static final Map<String, Long> SLOTS = new HashMap<>();
-    private static Logger LOGGER = Logger.getLogger(ItemTable.class.getName());
-    private static Logger LOGGER_ITEMS = Logger.getLogger("item");
 
     static {
         SLOTS.put("shirt", (long) L2Item.SLOT_UNDERWEAR);
@@ -90,15 +89,8 @@ public class ItemTable {
     private final Map<Integer, L2Weapon> _weapons = new HashMap<>();
     private L2Item[] _allTemplates;
 
-    protected ItemTable() {
+    private ItemTable() {
         load();
-    }
-
-    /**
-     * @return a reference to this ItemTable object
-     */
-    public static ItemTable getInstance() {
-        return SingletonHolder._instance;
     }
 
     private void load() {
@@ -119,10 +111,10 @@ public class ItemTable {
             }
         }
         buildFastLookupTable(highest);
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _etcItems.size() + " Etc Items");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _armors.size() + " Armor Items");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _weapons.size() + " Weapon Items");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + (_etcItems.size() + _armors.size() + _weapons.size()) + " Items in total.");
+        LOGGER.info("Loaded: {} Etc Items", _etcItems.size());
+        LOGGER.info("Loaded: {}  Armor Items", _armors.size() );
+        LOGGER.info("Loaded: {} Weapon Items", _weapons.size());
+        LOGGER.info("Loaded: {} Items in total.", _etcItems.size() + _armors.size() + _weapons.size());
     }
 
     /**
@@ -334,7 +326,7 @@ public class ItemTable {
                     statement.setInt(1, item.getObjectId());
                     statement.execute();
                 } catch (Exception e) {
-                    LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not delete pet objectid:", e);
+                    LOGGER.warn("Could not delete pet objectid:", e);
                 }
             }
         }
@@ -345,41 +337,13 @@ public class ItemTable {
         EnchantItemHPBonusData.getInstance().load();
     }
 
-    public Set<Integer> getAllArmorsId() {
-        return _armors.keySet();
-    }
-
-    public Collection<L2Armor> getAllArmors() {
-        return _armors.values();
-    }
-
-    public Set<Integer> getAllWeaponsId() {
-        return _weapons.keySet();
-    }
-
-    public Collection<L2Weapon> getAllWeapons() {
-        return _weapons.values();
-    }
-
-    public Set<Integer> getAllEtcItemsId() {
-        return _etcItems.keySet();
-    }
-
-    public Collection<L2EtcItem> getAllEtcItems() {
-        return _etcItems.values();
-    }
-
     public L2Item[] getAllItems() {
         return _allTemplates;
     }
 
-    public int getArraySize() {
-        return _allTemplates.length;
-    }
-
     protected static class ResetOwner implements Runnable {
-        L2ItemInstance _item;
 
+        L2ItemInstance _item;
         public ResetOwner(L2ItemInstance item) {
             _item = item;
         }
@@ -389,9 +353,14 @@ public class ItemTable {
             _item.setOwnerId(0);
             _item.setItemLootShedule(null);
         }
+
     }
 
-    private static class SingletonHolder {
-        protected static final ItemTable _instance = new ItemTable();
+    public static ItemTable getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ItemTable INSTANCE = new ItemTable();
     }
 }

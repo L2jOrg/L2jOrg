@@ -2,10 +2,10 @@ package org.l2j.gameserver.model.instancezone;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.CommonUtil;
-import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.enums.InstanceReenterType;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.DoorData;
+import org.l2j.gameserver.enums.InstanceReenterType;
 import org.l2j.gameserver.enums.InstanceTeleportType;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.L2Object;
@@ -28,6 +28,8 @@ import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -36,8 +38,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Predicate;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -47,7 +47,7 @@ import java.util.stream.Stream;
  * @author malyelfik
  */
 public final class Instance implements IIdentifiable, INamable {
-    private static final Logger LOGGER = Logger.getLogger(Instance.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Instance.class);
 
     // Basic instance parameters
     private final int _id;
@@ -434,7 +434,7 @@ public final class Instance implements IIdentifiable, INamable {
     public List<L2Npc> spawnGroup(String name) {
         final List<SpawnGroup> spawns = getSpawnGroup(name);
         if (spawns == null) {
-            LOGGER.warning("Spawn group " + name + " doesn't exist for instance " + _template.getName() + " (" + _id + ")!");
+            LOGGER.warn("Spawn group " + name + " doesn't exist for instance " + _template.getName() + " (" + _id + ")!");
             return Collections.emptyList();
         }
 
@@ -445,7 +445,7 @@ public final class Instance implements IIdentifiable, INamable {
                 holder.getSpawns().forEach(spawn -> npcs.addAll(spawn.getSpawnedNpcs()));
             }
         } catch (Exception e) {
-            LOGGER.warning("Unable to spawn group " + name + " inside instance " + _template.getName() + " (" + _id + ")");
+            LOGGER.warn("Unable to spawn group " + name + " inside instance " + _template.getName() + " (" + _id + ")");
         }
         return npcs;
     }
@@ -458,14 +458,14 @@ public final class Instance implements IIdentifiable, INamable {
     public void despawnGroup(String name) {
         final List<SpawnGroup> spawns = getSpawnGroup(name);
         if (spawns == null) {
-            LOGGER.warning("Spawn group " + name + " doesn't exist for instance " + _template.getName() + " (" + _id + ")!");
+            LOGGER.warn("Spawn group " + name + " doesn't exist for instance " + _template.getName() + " (" + _id + ")!");
             return;
         }
 
         try {
             spawns.forEach(SpawnGroup::despawnAll);
         } catch (Exception e) {
-            LOGGER.warning("Unable to spawn group " + name + " inside instance " + _template.getName() + " (" + _id + ")");
+            LOGGER.warn("Unable to spawn group " + name + " inside instance " + _template.getName() + " (" + _id + ")");
         }
     }
 
@@ -761,7 +761,7 @@ public final class Instance implements IIdentifiable, INamable {
                 }
             });
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not insert character instance reenter data: ", e);
+            LOGGER.warn("Could not insert character instance reenter data: ", e);
         }
     }
 

@@ -59,6 +59,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.ref.WeakReference;
 import java.util.*;
@@ -66,7 +68,6 @@ import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.StampedLock;
 import java.util.function.Predicate;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
@@ -93,7 +94,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
  * @version $Revision: 1.53.2.45.2.34 $ $Date: 2005/04/11 10:06:08 $
  */
 public abstract class L2Character extends L2Object implements ISkillsHolder, IDeletable {
-    public static final Logger LOGGER = Logger.getLogger(L2Character.class.getName());
+    public static final Logger LOGGER = LoggerFactory.getLogger(L2Character.class.getName());
     public static final double MAX_HP_BAR_PX = 352.0;
     /**
      * Map containing all skills of this character.
@@ -2481,7 +2482,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             distFraction = distPassed / delta;
         }
 
-        // if (Config.DEVELOPER) LOGGER.warning("Move Ticks:" + (gameTicks - m._moveTimestamp) + ", distPassed:" + distPassed + ", distFraction:" + distFraction);
+        // if (Config.DEVELOPER) LOGGER.warn("Move Ticks:" + (gameTicks - m._moveTimestamp) + ", distPassed:" + distPassed + ", distFraction:" + distFraction);
 
         if (distFraction > 1) {
             // Set the position of the L2Character to the destination

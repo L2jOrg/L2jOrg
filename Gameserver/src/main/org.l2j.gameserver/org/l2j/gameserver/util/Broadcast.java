@@ -6,9 +6,9 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * This class ...
@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
 public final class Broadcast {
-    private static Logger LOGGER = Logger.getLogger(Broadcast.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Broadcast.class);
 
     /**
      * Send a packet to all L2PcInstance in the _KnownPlayers of the L2Character that have the Character targeted.<BR>
@@ -72,7 +72,7 @@ public final class Broadcast {
                     }
                 }
             } catch (NullPointerException e) {
-                LOGGER.log(Level.WARNING, e.getMessage(), e);
+                LOGGER.warn(e.getMessage(), e);
             }
         });
     }

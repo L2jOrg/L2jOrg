@@ -17,8 +17,8 @@
 package org.l2j.gameserver.datatables;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Object;
@@ -29,6 +29,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -44,8 +46,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author BiggBoss
@@ -57,7 +58,7 @@ public final class BotReportTable {
     public static final int ACTION_BLOCK_ID = -4;
     public static final int CHAT_BLOCK_ID = -5;
     // Zoey76: TODO: Split XML parsing from SQL operations, use IGameXmlReader instead of SAXParser.
-    private static final Logger LOGGER = Logger.getLogger(BotReportTable.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(BotReportTable.class);
     private static final int COLUMN_BOT_ID = 1;
     private static final int COLUMN_REPORTER_ID = 2;
     private static final int COLUMN_REPORT_TIME = 3;
@@ -86,7 +87,7 @@ public final class BotReportTable {
                 final SAXParser parser = SAXParserFactory.newInstance().newSAXParser();
                 parser.parse(punishments, new PunishmentsLoader());
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not load punishments from /config/BotReportPunishments.xml", e);
+                LOGGER.warn(getClass().getSimpleName() + ": Could not load punishments from /config/BotReportPunishments.xml", e);
             }
 
             loadReportedCharData();
@@ -178,7 +179,7 @@ public final class BotReportTable {
 
             LOGGER.info(getClass().getSimpleName() + ": Loaded " + _reports.size() + " bot reports");
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not load reported char data!", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Could not load reported char data!", e);
         }
     }
 
@@ -201,7 +202,7 @@ public final class BotReportTable {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not update reported char data in database!", e);
+            LOGGER.error(getClass().getSimpleName() + ": Could not update reported char data in database!", e);
         }
     }
 
@@ -369,7 +370,7 @@ public final class BotReportTable {
         if (sk != null) {
             _punishments.put(neededReports, new PunishHolder(sk, sysMsg));
         } else {
-            LOGGER.warning(getClass().getSimpleName() + ": Could not add punishment for " + neededReports + " report(s): Skill " + skillId + "-" + skillLevel + " does not exist!");
+            LOGGER.warn(": Could not add punishment for " + neededReports + " report(s): Skill " + skillId + "-" + skillLevel + " does not exist!");
         }
     }
 
@@ -397,7 +398,7 @@ public final class BotReportTable {
             ThreadPoolManager.getInstance().schedule(new ResetPointTask(), c.getTimeInMillis() - System.currentTimeMillis());
         } catch (Exception e) {
             ThreadPoolManager.getInstance().schedule(new ResetPointTask(), 24 * 3600 * 1000);
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not properly schedule bot report points reset task. Scheduled in 24 hours.", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Could not properly schedule bot report points reset task. Scheduled in 24 hours.", e);
         }
     }
 

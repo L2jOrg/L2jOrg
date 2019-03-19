@@ -15,6 +15,8 @@ import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.nio.ByteBuffer;
 import java.sql.Connection;
@@ -22,8 +24,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class CharSelectionInfo extends IClientOutgoingPacket {
     private static final int[] PAPERDOLL_ORDER = new int[]
@@ -101,7 +102,7 @@ public class CharSelectionInfo extends IClientOutgoingPacket {
                     Inventory.PAPERDOLL_HAIR,
                     Inventory.PAPERDOLL_HAIR2,
             };
-    private static Logger LOGGER = Logger.getLogger(CharSelectionInfo.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(CharSelectionInfo.class);
     private final String _loginName;
     private final int _sessionId;
     private final CharSelectInfoPackage[] _characterPackages;
@@ -151,7 +152,7 @@ public class CharSelectionInfo extends IClientOutgoingPacket {
             }
             return characterList.toArray(new CharSelectInfoPackage[characterList.size()]);
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not restore char info: " + e.getMessage(), e);
+            LOGGER.warn("Could not restore char info: " + e.getMessage(), e);
         }
         return new CharSelectInfoPackage[0];
     }
@@ -170,7 +171,7 @@ public class CharSelectionInfo extends IClientOutgoingPacket {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not restore char subclass info: " + e.getMessage(), e);
+            LOGGER.warn("Could not restore char subclass info: " + e.getMessage(), e);
         }
     }
 
@@ -265,7 +266,7 @@ public class CharSelectionInfo extends IClientOutgoingPacket {
                     }
                 }
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, "Could not restore augmentation info: " + e.getMessage(), e);
+                LOGGER.warn("Could not restore augmentation info: " + e.getMessage(), e);
             }
         }
 

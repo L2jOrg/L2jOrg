@@ -16,6 +16,8 @@ import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.Broadcast;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -27,8 +29,6 @@ import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @author godson
@@ -48,8 +48,8 @@ public class Olympiad extends ListenersContainer {
     public static final String COMP_DONE_WEEK_CLASSED = "competitions_done_week_classed";
     public static final String COMP_DONE_WEEK_NON_CLASSED = "competitions_done_week_non_classed";
     public static final String COMP_DONE_WEEK_TEAM = "competitions_done_week_team";
-    protected static final Logger LOGGER = Logger.getLogger(Olympiad.class.getName());
-    protected static final Logger LOGGER_OLYMPIAD = Logger.getLogger("olympiad");
+    protected static final Logger LOGGER = LoggerFactory.getLogger(Olympiad.class);
+    protected static final Logger LOGGER_OLYMPIAD = LoggerFactory.getLogger("olympiad");
     protected static final long WEEKLY_PERIOD = Config.ALT_OLY_WPERIOD; // 1 week
     protected static final long VALIDATION_PERIOD = Config.ALT_OLY_VPERIOD; // 24 hours
     protected static final int WEEKLY_POINTS = Config.ALT_OLY_WEEKLY_POINTS;
@@ -140,7 +140,7 @@ public class Olympiad extends ListenersContainer {
                 loaded = true;
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error loading olympiad data from database: ", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Error loading olympiad data from database: ", e);
         }
 
         if (!loaded) {
@@ -151,7 +151,7 @@ public class Olympiad extends ListenersContainer {
 
                 OlympiadProperties.load(is);
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error loading olympiad properties: ", e);
+                LOGGER.error(getClass().getSimpleName() + ": Error loading olympiad properties: ", e);
                 return;
             }
 
@@ -184,7 +184,7 @@ public class Olympiad extends ListenersContainer {
                 break;
             }
             default: {
-                LOGGER.warning(getClass().getSimpleName() + ": Omg something went wrong in loading!! Period = " + _period);
+                LOGGER.warn(": Omg something went wrong in loading!! Period = " + _period);
                 return;
             }
         }
@@ -211,7 +211,7 @@ public class Olympiad extends ListenersContainer {
                 addNobleStats(rset.getInt(CHAR_ID), statData);
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error loading noblesse data from database: ", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Error loading noblesse data from database: ", e);
         }
 
         synchronized (this) {
@@ -257,7 +257,7 @@ public class Olympiad extends ListenersContainer {
                 tmpPlace.put(rset.getInt(CHAR_ID), place++);
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error loading noblesse data from database for Ranking: ", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Error loading noblesse data from database for Ranking: ", e);
         }
 
         int rank1 = (int) Math.round(tmpPlace.size() * 0.01);
@@ -463,7 +463,7 @@ public class Olympiad extends ListenersContainer {
                     } else if (Config.ALT_OLY_PERIOD_MULTIPLIER >= 7) {
                         _nextWeeklyChange = nextChange.getTimeInMillis() + (WEEKLY_PERIOD / 2);
                     } else {
-                        LOGGER.warning("Invalid config value for Config.ALT_OLY_PERIOD_MULTIPLIER, must be >= 7");
+                        LOGGER.warn("Invalid config value for Config.ALT_OLY_PERIOD_MULTIPLIER, must be >= 7");
                     }
                     break;
                 }
@@ -670,7 +670,7 @@ public class Olympiad extends ListenersContainer {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Failed to save noblesse data to database: ", e);
+            LOGGER.error(getClass().getSimpleName() + ": Failed to save noblesse data to database: ", e);
         }
     }
 
@@ -694,7 +694,7 @@ public class Olympiad extends ListenersContainer {
             statement.setLong(10, _nextWeeklyChange);
             statement.execute();
         } catch (SQLException e) {
-            LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Failed to save olympiad data to database: ", e);
+            LOGGER.error(getClass().getSimpleName() + ": Failed to save olympiad data to database: ", e);
         }
         //@formatter:off
 		/*
@@ -710,7 +710,7 @@ public class Olympiad extends ListenersContainer {
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Unable to save olympiad properties to file: ", e);
+			LOGGER.warn(": Unable to save olympiad properties to file: ", e);
 		}
 		*/
         //@formatter:on
@@ -723,7 +723,7 @@ public class Olympiad extends ListenersContainer {
             ps1.execute();
             ps2.execute();
         } catch (SQLException e) {
-            LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Failed to update monthly noblese data: ", e);
+            LOGGER.error(getClass().getSimpleName() + ": Failed to update monthly noblese data: ", e);
         }
     }
 
@@ -775,7 +775,7 @@ public class Olympiad extends ListenersContainer {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.warning(getClass().getSimpleName() + ": Couldnt load heros from DB");
+            LOGGER.warn(": Couldnt load heros from DB");
         }
 
         return heroesToBe;
@@ -793,7 +793,7 @@ public class Olympiad extends ListenersContainer {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.warning(getClass().getSimpleName() + ": Couldn't load olympiad leaders from DB!");
+            LOGGER.warn(": Couldn't load olympiad leaders from DB!");
         }
         return names;
     }
@@ -883,7 +883,7 @@ public class Olympiad extends ListenersContainer {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not load last olympiad points:", e);
+            LOGGER.warn(getClass().getSimpleName() + ": Could not load last olympiad points:", e);
         }
         return result;
     }
@@ -1006,7 +1006,7 @@ public class Olympiad extends ListenersContainer {
              PreparedStatement statement = con.prepareStatement(OLYMPIAD_DELETE_ALL)) {
             statement.execute();
         } catch (SQLException e) {
-            LOGGER.warning(getClass().getSimpleName() + ": Couldn't delete nobles from DB!");
+            LOGGER.warn(": Couldn't delete nobles from DB!");
         }
         _nobles.clear();
     }

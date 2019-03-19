@@ -30,18 +30,19 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.appearance.ExCuriousHouseMemberUpdate;
 import org.l2j.gameserver.network.serverpackets.ceremonyofchaos.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
  * @author UnAfraid
  */
 public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
-    private static final Logger LOGGER = Logger.getLogger(CeremonyOfChaosEvent.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(CeremonyOfChaosEvent.class);
 
     private final int _id;
     private final Instance _instance;
@@ -52,7 +53,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
         _id = id;
         _instance = InstanceManager.getInstance().createInstance(template, null);
         if (_instance.getEnterLocations().size() < CeremonyOfChaosManager.getInstance().getMaxPlayersInArena()) {
-            LOGGER.warning("There are more member slots: " + _instance.getEnterLocations().size() + " then instance entrance positions: " + CeremonyOfChaosManager.getInstance().getMaxPlayersInArena() + "!");
+            LOGGER.warn("There are more member slots: " + _instance.getEnterLocations().size() + " then instance entrance positions: " + CeremonyOfChaosManager.getInstance().getMaxPlayersInArena() + "!");
         }
     }
 

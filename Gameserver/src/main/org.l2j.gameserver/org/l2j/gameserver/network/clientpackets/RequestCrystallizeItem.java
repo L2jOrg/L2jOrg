@@ -1,10 +1,10 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ItemCrystallizationData;
 import org.l2j.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;

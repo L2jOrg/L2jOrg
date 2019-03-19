@@ -1,26 +1,12 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.enchant.EnchantScroll;
 import org.l2j.gameserver.model.items.enchant.EnchantSupportItem;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -28,7 +14,6 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
 
 /**
  * Loads item enchant data.
@@ -36,25 +21,13 @@ import java.util.logging.Logger;
  * @author UnAfraid
  */
 public class EnchantItemData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(EnchantItemData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemData.class);
 
     private final Map<Integer, EnchantScroll> _scrolls = new HashMap<>();
     private final Map<Integer, EnchantSupportItem> _supports = new HashMap<>();
 
-    /**
-     * Instantiates a new enchant item data.
-     */
-    public EnchantItemData() {
+    private EnchantItemData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of EnchantItemData.
-     *
-     * @return single instance of EnchantItemData
-     */
-    public static EnchantItemData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -62,8 +35,8 @@ public class EnchantItemData implements IGameXmlReader {
         _scrolls.clear();
         _supports.clear();
         parseDatapackFile("data/EnchantItemData.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _scrolls.size() + " Enchant Scrolls.");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _supports.size() + " Support Items.");
+        LOGGER.info("Loaded {} Enchant Scrolls.", _scrolls.size());
+        LOGGER.info("Loaded {} Support Items.", _supports.size() );
     }
 
     @Override
@@ -91,9 +64,9 @@ public class EnchantItemData implements IGameXmlReader {
                             }
                             _scrolls.put(item.getId(), item);
                         } catch (NullPointerException e) {
-                            LOGGER.warning(getClass().getSimpleName() + ": Unexistent enchant scroll: " + set.getString("id") + " defined in enchant data!");
+                            LOGGER.warn("Unexistent enchant scroll: {} defined in enchant data!", set.getString("id") );
                         } catch (IllegalAccessError e) {
-                            LOGGER.warning(getClass().getSimpleName() + ": Wrong enchant scroll item type: " + set.getString("id") + " defined in enchant data!");
+                            LOGGER.warn("Wrong enchant scroll item type: {}  defined in enchant data!", set.getString("id"));
                         }
                     } else if ("support".equalsIgnoreCase(d.getNodeName())) {
                         attrs = d.getAttributes();
@@ -107,9 +80,9 @@ public class EnchantItemData implements IGameXmlReader {
                             final EnchantSupportItem item = new EnchantSupportItem(set);
                             _supports.put(item.getId(), item);
                         } catch (NullPointerException e) {
-                            LOGGER.warning(getClass().getSimpleName() + ": Unexistent enchant support item: " + set.getString("id") + " defined in enchant data!");
+                            LOGGER.warn(": Unexistent enchant support item: " + set.getString("id") + " defined in enchant data!");
                         } catch (IllegalAccessError e) {
-                            LOGGER.warning(getClass().getSimpleName() + ": Wrong enchant support item type: " + set.getString("id") + " defined in enchant data!");
+                            LOGGER.warn(": Wrong enchant support item type: " + set.getString("id") + " defined in enchant data!");
                         }
                     }
                 }
@@ -137,7 +110,11 @@ public class EnchantItemData implements IGameXmlReader {
         return _supports.get(item.getId());
     }
 
-    private static class SingletonHolder {
-        protected static final EnchantItemData _instance = new EnchantItemData();
+    public static EnchantItemData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        protected static final EnchantItemData INSTANCE = new EnchantItemData();
     }
 }

@@ -4,13 +4,14 @@ import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.network.serverpackets.AutoAttackStop;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Attack stance task manager.
@@ -19,14 +20,14 @@ import java.util.logging.Logger;
  */
 public class AttackStanceTaskManager {
     public static final long COMBAT_TIME = 15_000;
-    protected static final Logger LOGGER = Logger.getLogger(AttackStanceTaskManager.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(AttackStanceTaskManager.class);
     protected static final Map<L2Character, Long> _attackStanceTasks = new ConcurrentHashMap<>();
 
     /**
      * Instantiates a new attack stance task manager.
      */
     protected AttackStanceTaskManager() {
-        ThreadPoolManager.getInstance().scheduleAtFixedRate(new FightModeScheduler(), 0, 1000);
+        ThreadPoolManager.scheduleAtFixedRate(new FightModeScheduler(), 0, 1000);
     }
 
     /**
@@ -111,7 +112,7 @@ public class AttackStanceTaskManager {
                 }
             } catch (Exception e) {
                 // Unless caught here, players remain in attack positions.
-                LOGGER.log(Level.WARNING, "Error in FightModeScheduler: " + e.getMessage(), e);
+                LOGGER.warn("Error in FightModeScheduler: " + e.getMessage(), e);
             }
         }
     }

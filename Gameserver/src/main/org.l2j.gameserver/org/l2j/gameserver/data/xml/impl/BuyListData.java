@@ -8,6 +8,8 @@ import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 
@@ -18,8 +20,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Loads buy lists for NPCs.
@@ -27,16 +27,12 @@ import java.util.logging.Logger;
  * @author NosBit
  */
 public final class BuyListData implements IGameXmlReader {
-    private static final Logger LOGGER = Logger.getLogger(BuyListData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(BuyListData.class.getName());
     private static final FileFilter NUMERIC_FILTER = new NumericNameFilter();
     private final Map<Integer, ProductList> _buyLists = new HashMap<>();
 
-    protected BuyListData() {
+    private BuyListData() {
         load();
-    }
-
-    public static BuyListData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -59,12 +55,12 @@ public final class BuyListData implements IGameXmlReader {
                 final long nextRestockTime = rs.getLong("next_restock_time");
                 final ProductList buyList = getBuyList(buyListId);
                 if (buyList == null) {
-                    LOGGER.warning("BuyList found in database but not loaded from xml! BuyListId: " + buyListId);
+                    LOGGER.warn("BuyList found in database but not loaded from xml! BuyListId: " + buyListId);
                     continue;
                 }
                 final Product product = buyList.getProductByItemId(itemId);
                 if (product == null) {
-                    LOGGER.warning("ItemId found in database but not loaded from xml! BuyListId: " + buyListId + " ItemId: " + itemId);
+                    LOGGER.warn("ItemId found in database but not loaded from xml! BuyListId: " + buyListId + " ItemId: " + itemId);
                     continue;
                 }
                 if (count < product.getMaxCount()) {
@@ -73,7 +69,7 @@ public final class BuyListData implements IGameXmlReader {
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Failed to load buyList data from database.", e);
+            LOGGER.warn("Failed to load buyList data from database.", e);
         }
     }
 
@@ -101,7 +97,7 @@ public final class BuyListData implements IGameXmlReader {
 
                                 buyList.addProduct(new Product(buyListId, item, price, restockDelay, count, baseTax));
                             } else {
-                                LOGGER.warning("Item not found. BuyList:" + buyListId + " ItemID:" + itemId + " File:" + f);
+                                LOGGER.warn("Item not found. BuyList:" + buyListId + " ItemID:" + itemId + " File:" + f);
                             }
                             break;
                         }
@@ -114,7 +110,7 @@ public final class BuyListData implements IGameXmlReader {
                 _buyLists.put(buyListId, buyList);
             });
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Failed to load buyList data from xml File:" + f.getName(), e);
+            LOGGER.warn("Failed to load buyList data from xml File:" + f.getName(), e);
         }
     }
 
@@ -127,7 +123,11 @@ public final class BuyListData implements IGameXmlReader {
         return _buyLists.get(listId);
     }
 
-    private static class SingletonHolder {
-        protected static final BuyListData _instance = new BuyListData();
+    public static BuyListData getInstance() {
+        return Singleton._instance;
+    }
+
+    private static class Singleton {
+        private static final BuyListData _instance = new BuyListData();
     }
 }

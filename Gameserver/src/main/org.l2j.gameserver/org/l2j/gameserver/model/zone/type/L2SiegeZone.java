@@ -1,9 +1,9 @@
 package org.l2j.gameserver.model.zone.type;
 
-import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.MountType;
+import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.TeleportWhereType;

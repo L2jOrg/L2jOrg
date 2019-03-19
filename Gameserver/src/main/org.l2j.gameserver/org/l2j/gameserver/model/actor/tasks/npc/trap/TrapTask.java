@@ -2,8 +2,9 @@ package org.l2j.gameserver.model.actor.tasks.npc.trap;
 
 import org.l2j.gameserver.model.actor.instance.L2TrapInstance;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Logger;
 
 /**
  * Trap task.
@@ -11,7 +12,7 @@ import java.util.logging.Logger;
  * @author Zoey76
  */
 public class TrapTask implements Runnable {
-    private static final Logger LOGGER = Logger.getLogger(TrapTask.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(TrapTask.class);
     private static final int TICK = 1000; // 1s
     private final L2TrapInstance _trap;
 
@@ -39,7 +40,7 @@ public class TrapTask implements Runnable {
                 }
             }
         } catch (Exception e) {
-            LOGGER.severe(TrapTask.class.getSimpleName() + ": " + e.getMessage());
+            LOGGER.error(TrapTask.class.getSimpleName() + ": " + e.getMessage());
             _trap.unSummon();
         }
     }

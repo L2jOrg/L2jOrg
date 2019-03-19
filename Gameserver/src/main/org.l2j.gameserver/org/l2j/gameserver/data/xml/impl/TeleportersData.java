@@ -4,6 +4,8 @@ import org.l2j.gameserver.enums.TeleportType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 
@@ -11,14 +13,14 @@ import java.io.File;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
  */
 public class TeleportersData implements IGameXmlReader {
     // Logger instance
-    private static final Logger LOGGER = Logger.getLogger(TeleportersData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(TeleportersData.class);
     // Teleporter data
     private final Map<Integer, Map<String, TeleportHolder>> _teleporters = new HashMap<>();
 
@@ -64,7 +66,7 @@ public class TeleportersData implements IGameXmlReader {
                             forEach(node, "location", (location) -> holder.registerLocation(new StatsSet(parseAttributes(location))));
                             // Register holder
                             if (teleList.putIfAbsent(name, holder) != null) {
-                                LOGGER.warning("Duplicate teleport list (" + name + ") has been found for NPC: " + npcId);
+                                LOGGER.warn("Duplicate teleport list (" + name + ") has been found for NPC: " + npcId);
                             }
                             break;
                         }

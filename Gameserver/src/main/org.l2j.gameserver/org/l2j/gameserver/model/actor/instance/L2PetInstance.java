@@ -2,10 +2,8 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.enums.ItemLocation;
-import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable;
@@ -15,11 +13,13 @@ import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.InstanceType;
+import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
+import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2PetData;
 import org.l2j.gameserver.model.L2PetLevelData;
@@ -41,6 +41,8 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -51,11 +53,10 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class L2PetInstance extends L2Summon {
-    protected static final Logger LOGGER_PET = Logger.getLogger(L2PetInstance.class.getName());
+    protected static final Logger LOGGER_PET = LoggerFactory.getLogger(L2PetInstance.class.getName());
 
     private static final String ADD_SKILL_SAVE = "INSERT INTO character_pet_skills_save (petObjItemId,skill_id,skill_level,skill_sub_level,remaining_time,buff_index) VALUES (?,?,?,?,?,?)";
     private static final String RESTORE_SKILL_SAVE = "SELECT petObjItemId,skill_id,skill_level,skill_sub_level,remaining_time,buff_index FROM character_pet_skills_save WHERE petObjItemId=? ORDER BY buff_index ASC";
@@ -169,7 +170,7 @@ public class L2PetInstance extends L2Summon {
             }
             return pet;
         } catch (Exception e) {
-            LOGGER_PET.log(Level.WARNING, "Could not restore pet data for owner: " + owner + " - " + e.getMessage(), e);
+            LOGGER.warn("Could not restore pet data for owner: " + owner + " - " + e.getMessage(), e);
         }
         return null;
     }
@@ -371,7 +372,7 @@ public class L2PetInstance extends L2Summon {
 
         if (!object.isItem()) {
             // dont try to pickup anything that is not an item :)
-            LOGGER_PET.warning(this + " trying to pickup wrong target." + object);
+            LOGGER_PET.warn(this + " trying to pickup wrong target." + object);
             sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -445,7 +446,7 @@ public class L2PetInstance extends L2Summon {
         if (target.getItem().hasExImmediateEffect()) {
             final IItemHandler handler = ItemHandler.getInstance().getHandler(target.getEtcItem());
             if (handler == null) {
-                LOGGER.warning("No item handler registered for item ID: " + target.getId() + ".");
+                LOGGER.warn("No item handler registered for item ID: " + target.getId() + ".");
             } else {
                 handler.useItem(this, target, false);
             }
@@ -605,7 +606,7 @@ public class L2PetInstance extends L2Summon {
             }
 
             if (removedItem == null) {
-                LOGGER.warning("Couldn't destroy pet control item for " + owner + " pet: " + this + " evolve: " + evolve);
+                LOGGER.warn("Couldn't destroy pet control item for " + owner + " pet: " + this + " evolve: " + evolve);
             } else {
                 final InventoryUpdate iu = new InventoryUpdate();
                 iu.addRemovedItem(removedItem);
@@ -614,7 +615,7 @@ public class L2PetInstance extends L2Summon {
                 owner.broadcastUserInfo();
             }
         } catch (Exception e) {
-            LOGGER_PET.log(Level.WARNING, "Error while destroying control item: " + e.getMessage(), e);
+            LOGGER.warn("Error while destroying control item: " + e.getMessage(), e);
         }
 
         // pet control item no longer exists, delete the pet from the db
@@ -623,7 +624,7 @@ public class L2PetInstance extends L2Summon {
             statement.setInt(1, _controlObjectId);
             statement.execute();
         } catch (Exception e) {
-            LOGGER_PET.log(Level.SEVERE, "Failed to delete Pet [ObjectId: " + getObjectId() + "]", e);
+            LOGGER_PET.error("Failed to delete Pet [ObjectId: " + getObjectId() + "]", e);
         }
     }
 
@@ -633,7 +634,7 @@ public class L2PetInstance extends L2Summon {
                 dropItemHere(item);
             }
         } catch (Exception e) {
-            LOGGER_PET.log(Level.WARNING, "Pet Drop Error: " + e.getMessage(), e);
+            LOGGER.warn("Pet Drop Error: " + e.getMessage(), e);
         }
     }
 
@@ -644,7 +645,7 @@ public class L2PetInstance extends L2Summon {
             if (protect) {
                 dropit.getDropProtection().protect(getOwner());
             }
-            LOGGER_PET.finer("Item id to drop: " + dropit.getId() + " amount: " + dropit.getCount());
+            LOGGER_PET.debug("Item id to drop: " + dropit.getId() + " amount: " + dropit.getCount());
             dropit.dropMe(this, getX(), getY(), getZ() + 100);
         }
     }
@@ -719,7 +720,7 @@ public class L2PetInstance extends L2Summon {
                 CharSummonTable.getInstance().getPets().remove(getOwner().getObjectId());
             }
         } catch (Exception e) {
-            LOGGER_PET.log(Level.SEVERE, "Failed to store Pet [ObjectId: " + getObjectId() + "] data", e);
+            LOGGER_PET.error("Failed to store Pet [ObjectId: " + getObjectId() + "] data", e);
         }
 
         final L2ItemInstance itemInst = getControlItem();
@@ -795,7 +796,7 @@ public class L2PetInstance extends L2Summon {
                 ps2.executeBatch();
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not store pet effect data: ", e);
+            LOGGER.warn("Could not store pet effect data: ", e);
         }
     }
 
@@ -825,7 +826,7 @@ public class L2PetInstance extends L2Summon {
             ps2.setInt(1, _controlObjectId);
             ps2.executeUpdate();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Could not restore " + this + " active effect data: " + e.getMessage(), e);
+            LOGGER.warn("Could not restore " + this + " active effect data: " + e.getMessage(), e);
         } finally {
             if (SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId()) == null) {
                 return;
@@ -1071,7 +1072,7 @@ public class L2PetInstance extends L2Summon {
                 sendInventoryUpdate(iu);
             }
         } else {
-            LOGGER.warning("Pet control item null, for pet: " + toString());
+            LOGGER.warn("Pet control item null, for pet: " + toString());
         }
         super.setName(name);
     }
@@ -1167,7 +1168,7 @@ public class L2PetInstance extends L2Summon {
                     sendPacket(SystemMessageId.YOUR_PET_IS_STARVING_AND_WILL_NOT_OBEY_UNTIL_IT_GETS_IT_S_FOOD_FEED_YOUR_PET);
                 }
             } catch (Exception e) {
-                LOGGER_PET.log(Level.SEVERE, "Pet [ObjectId: " + getObjectId() + "] a feed task error has occurred", e);
+                LOGGER_PET.error("Pet [ObjectId: " + getObjectId() + "] a feed task error has occurred", e);
             }
         }
 

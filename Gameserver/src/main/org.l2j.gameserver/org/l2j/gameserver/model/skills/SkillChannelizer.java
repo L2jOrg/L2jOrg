@@ -10,12 +10,13 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillLaunched;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Skill Channelizer implementation.
@@ -23,7 +24,7 @@ import java.util.logging.Logger;
  * @author UnAfraid
  */
 public class SkillChannelizer implements Runnable {
-    private static final Logger LOGGER = Logger.getLogger(SkillChannelizer.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(SkillChannelizer.class);
 
     private final L2Character _channelizer;
     private List<L2Character> _channelized;
@@ -50,7 +51,7 @@ public class SkillChannelizer implements Runnable {
     public void startChanneling(Skill skill) {
         // Verify for same status.
         if (isChanneling()) {
-            LOGGER.warning("Character: " + toString() + " is attempting to channel skill but he already does!");
+            LOGGER.warn("Character: " + toString() + " is attempting to channel skill but he already does!");
             return;
         }
 
@@ -62,7 +63,7 @@ public class SkillChannelizer implements Runnable {
     public void stopChanneling() {
         // Verify for same status.
         if (!isChanneling()) {
-            LOGGER.warning("Character: " + toString() + " is attempting to stop channel skill but he does not!");
+            LOGGER.warn("Character: " + toString() + " is attempting to stop channel skill but he does not!");
             return;
         }
 
@@ -147,7 +148,7 @@ public class SkillChannelizer implements Runnable {
                     if ((info == null) || (info.getSkill().getLevel() < skillLevel)) {
                         final Skill channeledSkill = SkillData.getInstance().getSkill(skill.getChannelingSkillId(), skillLevel);
                         if (channeledSkill == null) {
-                            LOGGER.warning(getClass().getSimpleName() + ": Non existent channeling skill requested: " + skill);
+                            LOGGER.warn(": Non existent channeling skill requested: " + skill);
                             _channelizer.abortCast();
                             return;
                         }
@@ -178,7 +179,7 @@ public class SkillChannelizer implements Runnable {
                 _channelizer.rechargeShots(skill.useSoulShot(), skill.useSpiritShot(), false);
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Error while channelizing skill: " + skill + " channelizer: " + _channelizer + " channelized: " + channelized, e);
+            LOGGER.warn("Error while channelizing skill: " + skill + " channelizer: " + _channelizer + " channelized: " + channelized, e);
         }
     }
 }

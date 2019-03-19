@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;

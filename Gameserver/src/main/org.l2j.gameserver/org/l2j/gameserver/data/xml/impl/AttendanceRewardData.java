@@ -5,18 +5,20 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
+
 
 /**
  * @author Mobius
  */
 public class AttendanceRewardData implements IGameXmlReader {
-    private static Logger LOGGER = Logger.getLogger(AttendanceRewardData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(AttendanceRewardData.class);
     private final List<ItemHolder> _rewards = new ArrayList<>();
     private int _rewardsCount = 0;
 

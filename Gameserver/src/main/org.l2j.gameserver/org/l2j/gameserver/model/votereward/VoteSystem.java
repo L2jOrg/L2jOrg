@@ -1,21 +1,23 @@
 package org.l2j.gameserver.model.votereward;
 
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.util.Broadcast;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
-import java.util.logging.Logger;
+
 
 /**
  * @author Anarchy
  */
 public abstract class VoteSystem implements Runnable {
-    protected static final Logger LOGGER = Logger.getLogger(VoteSystem.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(VoteSystem.class);
 
     private static List<VoteSystem> voteSystems = new ArrayList<>();
 
@@ -32,7 +34,7 @@ public abstract class VoteSystem implements Runnable {
         this.boxes = boxes;
         this.rewards = rewards;
 
-        ThreadPoolManager.getInstance().scheduleAtFixedRate(this, checkMins * 1000 * 60, checkMins * 1000 * 60);
+        ThreadPoolManager.scheduleAtFixedRate(this, checkMins * 1000 * 60, checkMins * 1000 * 60);
     }
 
     public static void initialize() {

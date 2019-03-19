@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.model.entity;
 
-import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
@@ -28,14 +28,15 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.PlayerEventHolder;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author Nik
@@ -45,7 +46,7 @@ public class L2Event {
     public static final Map<Integer, String> _teamNames = new ConcurrentHashMap<>();
     public static final Set<L2PcInstance> _registeredPlayers = ConcurrentHashMap.newKeySet();
     public static final Map<Integer, Set<L2PcInstance>> _teams = new ConcurrentHashMap<>();
-    protected static final Logger LOGGER = Logger.getLogger(L2Event.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(L2Event.class);
     private static final Map<L2PcInstance, PlayerEventHolder> _connectionLossData = new ConcurrentHashMap<>();
     public static EventState eventState = EventState.OFF;
     public static String _eventName = "";
@@ -117,7 +118,7 @@ public class L2Event {
                 html.replace("%eventInfo%", _eventInfo);
                 player.sendPacket(html);
             } catch (Exception e) {
-                LOGGER.log(Level.WARNING, "Exception on showEventHtml(): " + e.getMessage(), e);
+                LOGGER.warn("Exception on showEventHtml(): " + e.getMessage(), e);
             }
         }
     }
@@ -148,7 +149,7 @@ public class L2Event {
 
             // _npcs.add(spawn.getLastSpawn());
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Exception on spawn(): " + e.getMessage(), e);
+            LOGGER.warn("Exception on spawn(): " + e.getMessage(), e);
         }
     }
 
@@ -247,7 +248,7 @@ public class L2Event {
                 _teams.get(teamId).remove(player);
             }
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "Error at unregisterAndResetPlayer in the event:" + e.getMessage(), e);
+            LOGGER.warn("Error at unregisterAndResetPlayer in the event:" + e.getMessage(), e);
         }
     }
 
@@ -326,7 +327,7 @@ public class L2Event {
                 L2World.getInstance().forEachVisibleObjectInRange(player, L2PcInstance.class, 1000, temp::add);
             }
         } catch (Exception e) {
-            LOGGER.warning("L2Event: " + e.getMessage());
+            LOGGER.warn("L2Event: " + e.getMessage());
             return "Cannot start event participation, an error has occured.";
         }
 
@@ -390,7 +391,7 @@ public class L2Event {
                 i = (i + 1) % _teamsNumber;
             }
         } catch (Exception e) {
-            LOGGER.warning("L2Event: " + e.getMessage());
+            LOGGER.warn("L2Event: " + e.getMessage());
             return "Cannot start event, an error has occured.";
         }
 

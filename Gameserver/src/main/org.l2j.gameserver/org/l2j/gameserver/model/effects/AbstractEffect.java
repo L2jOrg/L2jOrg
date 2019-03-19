@@ -4,8 +4,9 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Logger;
 
 /**
  * Abstract effect implementation.<br>
@@ -16,7 +17,7 @@ import java.util.logging.Logger;
  * @author Zoey76
  */
 public abstract class AbstractEffect {
-    protected static final Logger LOGGER = Logger.getLogger(AbstractEffect.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(AbstractEffect.class);
 
     private int _ticks;
 

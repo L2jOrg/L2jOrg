@@ -16,7 +16,6 @@
  */
 package handlers.playeractions;
 
-import java.util.logging.Logger;
 
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
@@ -28,6 +27,8 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.PrivateStoreManageListBuy;
 import org.l2j.gameserver.network.serverpackets.PrivateStoreManageListSell;
 import org.l2j.gameserver.network.serverpackets.RecipeShopManageList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Open/Close private store player action handler.
@@ -35,7 +36,7 @@ import org.l2j.gameserver.network.serverpackets.RecipeShopManageList;
  */
 public final class PrivateStore implements IPlayerActionHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(PrivateStore.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(PrivateStore.class);
 	
 	@Override
 	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
@@ -43,7 +44,7 @@ public final class PrivateStore implements IPlayerActionHandler
 		final PrivateStoreType type = PrivateStoreType.findById(data.getOptionId());
 		if (type == null)
 		{
-			LOGGER.warning("Incorrect private store type: " + data.getOptionId());
+			LOGGER.warn("Incorrect private store type: " + data.getOptionId());
 			return;
 		}
 		

@@ -17,14 +17,15 @@
 package org.l2j.gameserver.model.variables;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Map.Entry;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * @author UnAfraid
@@ -34,7 +35,7 @@ public class ItemVariables extends AbstractVariables {
     public static final String VISUAL_ID = "visualId";
     public static final String VISUAL_APPEARANCE_STONE_ID = "visualAppearanceStoneId";
     public static final String VISUAL_APPEARANCE_LIFE_TIME = "visualAppearanceLifetime";
-    private static final Logger LOGGER = Logger.getLogger(ItemVariables.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ItemVariables.class);
     // SQL Queries.
     private static final String SELECT_QUERY = "SELECT * FROM item_variables WHERE id = ?";
     private static final String SELECT_COUNT = "SELECT COUNT(*) FROM item_variables WHERE id = ?";
@@ -58,7 +59,7 @@ public class ItemVariables extends AbstractVariables {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, ItemVariables.class.getSimpleName() + ": Couldn't select variables count for: " + objectId, e);
+            LOGGER.warn(ItemVariables.class.getSimpleName() + ": Couldn't select variables count for: " + objectId, e);
             return false;
         }
         return true;
@@ -76,7 +77,7 @@ public class ItemVariables extends AbstractVariables {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore variables for: " + _objectId, e);
+            LOGGER.warn(getClass().getSimpleName() + ": Couldn't restore variables for: " + _objectId, e);
             return false;
         } finally {
             compareAndSetChanges(true, false);
@@ -109,7 +110,7 @@ public class ItemVariables extends AbstractVariables {
                 st.executeBatch();
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update variables for: " + _objectId, e);
+            LOGGER.warn(getClass().getSimpleName() + ": Couldn't update variables for: " + _objectId, e);
             return false;
         } finally {
             compareAndSetChanges(true, false);
@@ -129,7 +130,7 @@ public class ItemVariables extends AbstractVariables {
             // Clear all entries
             getSet().clear();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + _objectId, e);
+            LOGGER.warn(getClass().getSimpleName() + ": Couldn't delete variables for: " + _objectId, e);
             return false;
         }
         return true;
