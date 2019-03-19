@@ -4,7 +4,6 @@ module org.l2j.gameserver {
     requires java.sql;
     requires java.desktop;
     requires org.slf4j;
-    requires dom4j;
     requires io.github.joealisson.mmocore;
     requires primitive;
     requires cache.api;
@@ -14,6 +13,7 @@ module org.l2j.gameserver {
     requires java.compiler;
 
     opens org.l2j.gameserver.settings to org.l2j.commons;
+
     exports org.l2j.gameserver.model.actor;
     exports org.l2j.gameserver.model.actor.appearance;
     exports org.l2j.gameserver.model.actor.instance;

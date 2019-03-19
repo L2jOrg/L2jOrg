@@ -31,7 +31,7 @@ public class GeoEngine {
     private final ABlock[][] _blocks;
     private final BlockNull _nullBlock;
 
-    private GeoEngine() {
+    GeoEngine() {
         LOGGER.info("GeoEngine: Initializing...");
 
         // initialize block container

@@ -5,7 +5,6 @@ module org.l2j.commons {
     requires transitive java.xml.bind;
     requires java.management;
     requires java.compiler;
-    requires dom4j;
     requires cache.api;
     requires java.desktop;
     requires primitive;
