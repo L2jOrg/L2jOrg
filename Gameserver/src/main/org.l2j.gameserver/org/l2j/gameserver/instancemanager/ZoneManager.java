@@ -49,7 +49,7 @@ public final class ZoneManager implements IGameXmlReader {
                 _zoneRegions[x][y] = new ZoneRegion(x, y);
             }
         }
-        LOGGER.info(getClass().getSimpleName() + " " + _zoneRegions.length + " by " + _zoneRegions[0].length + " Zone Region Grid set up.");
+        LOGGER.info("Zone Region Grid set up: {} by {}", _zoneRegions.length, _zoneRegions[0].length);
 
         load();
     }
@@ -64,14 +64,6 @@ public final class ZoneManager implements IGameXmlReader {
         return SETTINGS.get(name);
     }
 
-    /**
-     * Gets the single instance of ZoneManager.
-     *
-     * @return single instance of ZoneManager
-     */
-    public static ZoneManager getInstance() {
-        return Singleton.INSTANCE;
-    }
 
     /**
      * Reload.
@@ -324,10 +316,10 @@ public final class ZoneManager implements IGameXmlReader {
         _spawnTerritories.clear();
         parseDatapackDirectory("data/zones", false);
         parseDatapackDirectory("data/zones/spawnZones", false);
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _classZones.size() + " zone classes and " + getSize() + " zones.");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _spawnTerritories.size() + " NPC spawn territoriers.");
+        LOGGER.info("Loaded {} zone classes and {} zones.", _classZones.size(), getSize());
+        LOGGER.info("Loaded {}  NPC spawn territoriers.", _spawnTerritories.size());
         final OptionalInt maxId = _classZones.values().stream().flatMap(map -> map.keySet().stream()).mapToInt(Integer.class::cast).filter(value -> value < 300000).max();
-        LOGGER.info(getClass().getSimpleName() + ": Last static id: " + maxId.getAsInt());
+        LOGGER.info("Last static id: {}", maxId.getAsInt());
     }
 
     /**
@@ -599,6 +591,10 @@ public final class ZoneManager implements IGameXmlReader {
 
     public ZoneRegion getRegion(ILocational point) {
         return getRegion(point.getX(), point.getY());
+    }
+
+    public static ZoneManager getInstance() {
+        return Singleton.INSTANCE;
     }
 
     private static class Singleton {

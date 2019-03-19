@@ -8,7 +8,6 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.*;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.BotReportTable;
-import org.l2j.gameserver.datatables.EventDroplist;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.geoengine.GeoEngine;
@@ -20,7 +19,6 @@ import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.entity.Hero;
-import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.votereward.VoteSystem;
 import org.l2j.gameserver.network.ClientPacketHandler;
@@ -65,7 +63,6 @@ public class GameServer {
         }
 
         printSection("Scripting Engine");
-        EventDispatcher.getInstance();
         ScriptEngineManager.getInstance();
 
         printSection("Lineage II World");
@@ -114,7 +111,6 @@ public class GameServer {
         FishingData.getInstance();
         HennaData.getInstance();
         PrimeShopData.getInstance();
-        PcCafePointsManager.getInstance();
         AppearanceItemData.getInstance();
         CommissionManager.getInstance();
         LuckyGameData.getInstance();
@@ -173,7 +169,6 @@ public class GameServer {
         CastleManager.getInstance().loadInstances();
         SchemeBufferTable.getInstance();
         GrandBossManager.getInstance();
-        EventDroplist.getInstance();
 
         printSection("Instance");
         InstanceManager.getInstance();
@@ -187,8 +182,6 @@ public class GameServer {
         HtmCache.getInstance();
         CrestTable.getInstance();
         TeleportersData.getInstance();
-        MatchingRoomManager.getInstance();
-        PetitionManager.getInstance();
         CursedWeaponsManager.getInstance();
         TransformData.getInstance();
         BotReportTable.getInstance();
@@ -197,15 +190,12 @@ public class GameServer {
         }
 
         printSection("Scripts");
-        QuestManager.getInstance();
-        BoatManager.getInstance();
         AirShipManager.getInstance();
         ShuttleData.getInstance();
         GraciaSeedsManager.getInstance();
 
         try {
             LOGGER.info(getClass().getSimpleName() + ": Loading server scripts:");
-            //ScriptEngineManager.getInstance().executeMasterHandler();
             ScriptEngineManager.getInstance().executeScriptInitList();
         } catch (Exception e) {
             LOGGER.warn("Failed to execute script list!", e);
