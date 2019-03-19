@@ -23,17 +23,8 @@ public final class PunishmentManager {
 
     private final Map<PunishmentAffect, PunishmentHolder> _tasks = new ConcurrentHashMap<>();
 
-    protected PunishmentManager() {
+    private PunishmentManager() {
         load();
-    }
-
-    /**
-     * Gets the single instance of {@code PunishmentManager}.
-     *
-     * @return single instance of {@code PunishmentManager}
-     */
-    public static PunishmentManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     private void load() {
@@ -106,7 +97,11 @@ public final class PunishmentManager {
         return _tasks.get(affect).getPunishment(String.valueOf(key), type);
     }
 
-    private static class SingletonHolder {
-        protected static final PunishmentManager _instance = new PunishmentManager();
+    public static PunishmentManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final PunishmentManager INSTANCE = new PunishmentManager();
     }
 }

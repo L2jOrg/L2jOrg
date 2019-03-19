@@ -25,9 +25,8 @@ public final class SpawnTable {
     private static final Map<Integer, Set<L2Spawn>> _spawnTable = new ConcurrentHashMap<>();
     private static final String OTHER_XML_FOLDER = "data/spawns/Others";
 
-    public static SpawnTable getInstance() {
-        return SingletonHolder._instance;
-    }
+    private SpawnTable() {}
+
 
     /**
      * Gets the spawn data.
@@ -270,7 +269,11 @@ public final class SpawnTable {
         return true;
     }
 
-    private static class SingletonHolder {
-        protected static final SpawnTable _instance = new SpawnTable();
+    public static SpawnTable getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final SpawnTable INSTANCE = new SpawnTable();
     }
 }

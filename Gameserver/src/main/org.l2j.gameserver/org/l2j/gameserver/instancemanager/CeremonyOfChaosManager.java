@@ -51,11 +51,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
     public static final String END_BUFFS_KEYH = "end_buffs";
     protected static final Logger LOGGER = LoggerFactory.getLogger(CeremonyOfChaosManager.class);
 
-    protected CeremonyOfChaosManager() {
-    }
-
-    public static CeremonyOfChaosManager getInstance() {
-        return SingletonHolder._instance;
+    private CeremonyOfChaosManager() {
     }
 
     @Override
@@ -331,16 +327,13 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
     }
 
     // player leave clan
-
     @Override
     @RegisterEvent(EventType.ON_PLAYER_LOGOUT)
     @RegisterType(ListenerRegisterType.GLOBAL)
     public void OnPlayerLogout(OnPlayerLogout event) {
         if (getState() == CeremonyOfChaosState.REGISTRATION) {
             final L2PcInstance player = event.getActiveChar();
-            if (getRegisteredPlayers().contains(player)) {
-                getRegisteredPlayers().remove(player);
-            }
+            getRegisteredPlayers().remove(player);
         }
     }
 
@@ -348,7 +341,11 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
         return getVariables().getInt(MAX_PLAYERS_KEY, 18);
     }
 
-    private static class SingletonHolder {
-        protected static final CeremonyOfChaosManager _instance = new CeremonyOfChaosManager();
+    public static CeremonyOfChaosManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final CeremonyOfChaosManager INSTANCE = new CeremonyOfChaosManager();
     }
 }

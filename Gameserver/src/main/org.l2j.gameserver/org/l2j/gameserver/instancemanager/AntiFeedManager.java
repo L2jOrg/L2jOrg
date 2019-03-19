@@ -19,11 +19,7 @@ public final class AntiFeedManager {
     private final Map<Integer, Long> _lastDeathTimes = new ConcurrentHashMap<>();
     private final Map<Integer, Map<Integer, AtomicInteger>> _eventIPs = new ConcurrentHashMap<>();
 
-    protected AntiFeedManager() {
-    }
-
-    public static AntiFeedManager getInstance() {
-        return SingletonHolder._instance;
+    private AntiFeedManager() {
     }
 
     /**
@@ -243,7 +239,11 @@ public final class AntiFeedManager {
         return limit;
     }
 
-    private static class SingletonHolder {
-        protected static final AntiFeedManager _instance = new AntiFeedManager();
+    public static AntiFeedManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final AntiFeedManager INSTANCE = new AntiFeedManager();
     }
 }

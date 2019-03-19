@@ -11,12 +11,8 @@ import java.util.Map;
 public class ActionShiftHandler implements IHandler<IActionShiftHandler, InstanceType> {
     private final Map<InstanceType, IActionShiftHandler> _actionsShift;
 
-    protected ActionShiftHandler() {
+    private ActionShiftHandler() {
         _actionsShift = new HashMap<>();
-    }
-
-    public static ActionShiftHandler getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -46,7 +42,11 @@ public class ActionShiftHandler implements IHandler<IActionShiftHandler, Instanc
         return _actionsShift.size();
     }
 
-    private static class SingletonHolder {
-        protected static final ActionShiftHandler _instance = new ActionShiftHandler();
+    public static ActionShiftHandler getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ActionShiftHandler INSTANCE = new ActionShiftHandler();
     }
 }

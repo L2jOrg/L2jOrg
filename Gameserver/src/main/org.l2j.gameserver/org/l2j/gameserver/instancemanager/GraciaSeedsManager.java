@@ -37,19 +37,10 @@ public final class GraciaSeedsManager {
     private int _SoDTiatKilled = 0;
     private int _SoDState = 1;
 
-    protected GraciaSeedsManager() {
+    private GraciaSeedsManager() {
         _SoDLastStateChangeDate = Calendar.getInstance();
         loadData();
         handleSodStages();
-    }
-
-    /**
-     * Gets the single instance of {@code GraciaSeedsManager}.
-     *
-     * @return single instance of {@code GraciaSeedsManager}
-     */
-    public static GraciaSeedsManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     public void saveData(byte seedType) {
@@ -188,7 +179,11 @@ public final class GraciaSeedsManager {
         return _SoDState;
     }
 
-    private static class SingletonHolder {
-        protected static final GraciaSeedsManager _instance = new GraciaSeedsManager();
+    public static GraciaSeedsManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        protected static final GraciaSeedsManager INSTANCE = new GraciaSeedsManager();
     }
 }

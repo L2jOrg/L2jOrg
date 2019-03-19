@@ -50,12 +50,8 @@ public final class WalkingManager implements IGameXmlReader {
     private final Map<Integer, WalkInfo> _activeRoutes = new HashMap<>(); // each record represents NPC, moving by predefined route from _routes, and moving progress
     private final Map<Integer, NpcRoutesHolder> _routesToAttach = new HashMap<>(); // each record represents NPC and all available routes for it
 
-    protected WalkingManager() {
+    private WalkingManager() {
         load();
-    }
-
-    public static WalkingManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -384,7 +380,11 @@ public final class WalkingManager implements IGameXmlReader {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final WalkingManager _instance = new WalkingManager();
+    public static WalkingManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final WalkingManager INSTANCE = new WalkingManager();
     }
 }

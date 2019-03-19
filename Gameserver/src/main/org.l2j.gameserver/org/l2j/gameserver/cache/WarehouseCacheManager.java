@@ -11,15 +11,11 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author -Nemesiss-
  */
 public class WarehouseCacheManager {
-    final Map<L2PcInstance, Long> _cachedWh = new ConcurrentHashMap<>();
-    final long _cacheTime = Config.WAREHOUSE_CACHE_TIME * 60000;
+    private final Map<L2PcInstance, Long> _cachedWh = new ConcurrentHashMap<>();
+    private final long _cacheTime = Config.WAREHOUSE_CACHE_TIME * 60000;
 
-    protected WarehouseCacheManager() {
-        ThreadPoolManager.getInstance().scheduleAtFixedRate(new CacheScheduler(), 120000, 60000);
-    }
-
-    public static WarehouseCacheManager getInstance() {
-        return SingletonHolder._instance;
+    private WarehouseCacheManager() {
+        ThreadPoolManager.scheduleAtFixedRate(new CacheScheduler(), 120000, 60000);
     }
 
     public void addCacheTask(L2PcInstance pc) {
@@ -30,8 +26,13 @@ public class WarehouseCacheManager {
         _cachedWh.remove(pc);
     }
 
-    private static class SingletonHolder {
-        protected static final WarehouseCacheManager _instance = new WarehouseCacheManager();
+    public static WarehouseCacheManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+
+        private static final WarehouseCacheManager INSTANCE = new WarehouseCacheManager();
     }
 
     private class CacheScheduler implements Runnable {

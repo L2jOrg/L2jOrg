@@ -35,12 +35,8 @@ public class FactionManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(FactionManager.class);
     private final Map<Integer, Integer> _playerFactions = new ConcurrentHashMap<>();
 
-    protected FactionManager() {
+    private FactionManager() {
         loadAll();
-    }
-
-    public static FactionManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     private void loadAll() {
@@ -89,7 +85,11 @@ public class FactionManager {
         return (player1.isGood() && player2.isGood()) || (player1.isEvil() && player2.isEvil());
     }
 
-    private static class SingletonHolder {
-        protected static final FactionManager _instance = new FactionManager();
+    public static FactionManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final FactionManager INSTANCE = new FactionManager();
     }
 }

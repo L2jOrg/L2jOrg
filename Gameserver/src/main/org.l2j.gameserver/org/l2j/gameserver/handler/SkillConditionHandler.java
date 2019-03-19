@@ -14,8 +14,7 @@ import java.util.function.Function;
 public final class SkillConditionHandler {
     private final Map<String, Function<StatsSet, ISkillCondition>> _skillConditionHandlerFactories = new HashMap<>();
 
-    public static SkillConditionHandler getInstance() {
-        return SingletonHolder._instance;
+    private SkillConditionHandler() {
     }
 
     public void registerHandler(String name, Function<StatsSet, ISkillCondition> handlerFactory) {
@@ -38,7 +37,11 @@ public final class SkillConditionHandler {
         }
     }
 
-    private static final class SingletonHolder {
-        protected static final SkillConditionHandler _instance = new SkillConditionHandler();
+    public static SkillConditionHandler getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static final class Singleton {
+        private static final SkillConditionHandler INSTANCE = new SkillConditionHandler();
     }
 }

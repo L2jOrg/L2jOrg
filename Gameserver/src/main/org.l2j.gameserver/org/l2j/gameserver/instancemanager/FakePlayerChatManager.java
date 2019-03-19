@@ -32,12 +32,8 @@ public final class FakePlayerChatManager implements IGameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(FakePlayerChatManager.class);
     final List<FakePlayerChatHolder> MESSAGES = new ArrayList<>();
 
-    protected FakePlayerChatManager() {
+    private FakePlayerChatManager() {
         load();
-    }
-
-    public static FakePlayerChatManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -139,7 +135,11 @@ public final class FakePlayerChatManager implements IGameXmlReader {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final FakePlayerChatManager _instance = new FakePlayerChatManager();
+    public static FakePlayerChatManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final FakePlayerChatManager INSTANCE = new FakePlayerChatManager();
     }
 }

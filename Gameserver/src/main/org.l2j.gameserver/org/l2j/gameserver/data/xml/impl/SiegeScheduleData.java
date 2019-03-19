@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-
 /**
  * @author UnAfraid
  */
@@ -24,12 +23,8 @@ public class SiegeScheduleData implements IGameXmlReader {
 
     private final List<SiegeScheduleDate> _scheduleData = new ArrayList<>();
 
-    protected SiegeScheduleData() {
+    private SiegeScheduleData() {
         load();
-    }
-
-    public static SiegeScheduleData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -85,8 +80,11 @@ public class SiegeScheduleData implements IGameXmlReader {
         return _scheduleData;
     }
 
-    private static class SingletonHolder {
-        protected static final SiegeScheduleData _instance = new SiegeScheduleData();
+    public static SiegeScheduleData getInstance() {
+        return Singleton.INSTANCE;
     }
 
+    private static class Singleton {
+        private static final SiegeScheduleData INSTANCE = new SiegeScheduleData();
+    }
 }

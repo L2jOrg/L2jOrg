@@ -52,7 +52,7 @@ public class ClanTable {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClanTable.class);
     private final Map<Integer, L2Clan> _clans = new ConcurrentHashMap<>();
 
-    protected ClanTable() {
+    private ClanTable() {
         // forums has to be loaded before clan data, because of last forum id used should have also memo included
         if (Config.ENABLE_COMMUNITY_BOARD) {
             ForumsBBSManager.getInstance().initRoot();
@@ -82,10 +82,6 @@ public class ClanTable {
         LOGGER.info(getClass().getSimpleName() + ": Restored " + cids.size() + " clans from the database.");
         allianceCheck();
         restorewars();
-    }
-
-    public static ClanTable getInstance() {
-        return SingletonHolder._instance;
     }
 
     /**
@@ -396,7 +392,11 @@ public class ClanTable {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final ClanTable _instance = new ClanTable();
+    public static ClanTable getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ClanTable INSTANCE = new ClanTable();
     }
 }

@@ -19,12 +19,8 @@ public class LuckyGameData implements IGameXmlReader {
     private final Map<Integer, LuckyGameDataHolder> _luckyGame = new HashMap<>();
     private final AtomicInteger _serverPlay = new AtomicInteger();
 
-    protected LuckyGameData() {
+    private LuckyGameData() {
         load();
-    }
-
-    public static LuckyGameData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -66,10 +62,6 @@ public class LuckyGameData implements IGameXmlReader {
         }));
     }
 
-    public int getLuckyGameCount() {
-        return _luckyGame.size();
-    }
-
     public LuckyGameDataHolder getLuckyGameDataByIndex(int index) {
         return _luckyGame.get(index);
     }
@@ -78,11 +70,12 @@ public class LuckyGameData implements IGameXmlReader {
         return _serverPlay.incrementAndGet();
     }
 
-    public int getServerPlay() {
-        return _serverPlay.get();
+    public static LuckyGameData getInstance() {
+        return Singleton.INSTANCE;
     }
 
-    private static class SingletonHolder {
-        protected static final LuckyGameData _instance = new LuckyGameData();
+    private static class Singleton {
+
+        protected static final LuckyGameData INSTANCE = new LuckyGameData();
     }
 }

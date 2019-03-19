@@ -11,12 +11,8 @@ import java.util.List;
 public final class ItemsAutoDestroy {
     private final List<L2ItemInstance> _items = new LinkedList<>();
 
-    protected ItemsAutoDestroy() {
-        ThreadPoolManager.getInstance().scheduleAtFixedRate(this::removeItems, 5000, 5000);
-    }
-
-    public static ItemsAutoDestroy getInstance() {
-        return SingletonHolder._instance;
+    private ItemsAutoDestroy() {
+        ThreadPoolManager.scheduleAtFixedRate(this::removeItems, 5000, 5000);
     }
 
     public synchronized void addItem(L2ItemInstance item) {
@@ -56,7 +52,11 @@ public final class ItemsAutoDestroy {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final ItemsAutoDestroy _instance = new ItemsAutoDestroy();
+    public static ItemsAutoDestroy getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ItemsAutoDestroy INSTANCE = new ItemsAutoDestroy();
     }
 }

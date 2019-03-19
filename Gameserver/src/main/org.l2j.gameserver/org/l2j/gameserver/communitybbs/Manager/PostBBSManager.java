@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.communitybbs.Manager;
 
 import org.l2j.gameserver.communitybbs.BB.Forum;
@@ -32,8 +16,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class PostBBSManager extends BaseBBSManager {
     private final Map<Topic, Post> _postByTopic = new ConcurrentHashMap<>();
 
-    public static PostBBSManager getInstance() {
-        return SingletonHolder._instance;
+    private PostBBSManager() {
     }
 
     public Post getGPosttByTopic(Topic t) {
@@ -50,9 +33,7 @@ public class PostBBSManager extends BaseBBSManager {
     }
 
     public void addPostByTopic(Post p, Topic t) {
-        if (_postByTopic.get(t) == null) {
-            _postByTopic.put(t, p);
-        }
+        _postByTopic.putIfAbsent(t, p);
     }
 
     @Override
@@ -145,7 +126,11 @@ public class PostBBSManager extends BaseBBSManager {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final PostBBSManager _instance = new PostBBSManager();
+    public static PostBBSManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final PostBBSManager INSTANCE = new PostBBSManager();
     }
 }

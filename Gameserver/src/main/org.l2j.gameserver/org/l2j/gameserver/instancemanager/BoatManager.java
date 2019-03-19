@@ -19,14 +19,10 @@ public class BoatManager {
     private final Map<Integer, L2BoatInstance> _boats = new HashMap<>();
     private final boolean[] _docksBusy = new boolean[3];
 
-    protected BoatManager() {
+    private BoatManager() {
         for (int i = 0; i < _docksBusy.length; i++) {
             _docksBusy[i] = false;
         }
-    }
-
-    public static BoatManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     public L2BoatInstance getNewBoat(int boatId, int x, int y, int z, int heading) {
@@ -157,7 +153,11 @@ public class BoatManager {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final BoatManager _instance = new BoatManager();
+    public static BoatManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final BoatManager INSTANCE = new BoatManager();
     }
 }

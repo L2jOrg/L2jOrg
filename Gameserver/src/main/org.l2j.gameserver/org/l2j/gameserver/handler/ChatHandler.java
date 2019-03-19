@@ -29,14 +29,7 @@ import java.util.Map;
 public class ChatHandler implements IHandler<IChatHandler, ChatType> {
     private final Map<ChatType, IChatHandler> _datatable = new EnumMap<>(ChatType.class);
 
-    /**
-     * Singleton constructor
-     */
-    protected ChatHandler() {
-    }
-
-    public static ChatHandler getInstance() {
-        return SingletonHolder._instance;
+    private ChatHandler() {
     }
 
     /**
@@ -79,7 +72,11 @@ public class ChatHandler implements IHandler<IChatHandler, ChatType> {
         return _datatable.size();
     }
 
-    private static class SingletonHolder {
-        protected static final ChatHandler _instance = new ChatHandler();
+    public static ChatHandler getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ChatHandler INSTANCE = new ChatHandler();
     }
 }

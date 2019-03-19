@@ -37,11 +37,7 @@ public class ClanHallAuctionManager extends AbstractEventManager<AbstractEvent<?
 
     private static final Map<Integer, ClanHallAuction> AUCTIONS = new HashMap<>();
 
-    protected ClanHallAuctionManager() {
-    }
-
-    public static ClanHallAuctionManager getInstance() {
-        return SingletonHolder.INSTANCE;
+    private ClanHallAuctionManager() {
     }
 
     @ScheduleTarget
@@ -87,7 +83,11 @@ public class ClanHallAuctionManager extends AbstractEventManager<AbstractEvent<?
         //@formatter:on
     }
 
-    private static class SingletonHolder {
-        protected static final ClanHallAuctionManager INSTANCE = new ClanHallAuctionManager();
+    public static ClanHallAuctionManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ClanHallAuctionManager INSTANCE = new ClanHallAuctionManager();
     }
 }

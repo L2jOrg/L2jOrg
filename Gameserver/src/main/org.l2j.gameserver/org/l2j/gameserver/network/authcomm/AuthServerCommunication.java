@@ -30,7 +30,6 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 public class AuthServerCommunication implements Runnable, PacketExecutor<AuthServerClient> {
 
 	private static final Logger logger = LoggerFactory.getLogger(AuthServerCommunication.class);
-	private static final AuthServerCommunication instance = new AuthServerCommunication();
 
 	private final Map<String, L2GameClient> waitingClients = new HashMap<>();
 	private final Map<String, L2GameClient> authedClients = new HashMap<>();
@@ -43,10 +42,6 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 	private volatile boolean shutdown = false;
 
 	private AuthServerCommunication() { }
-
-	public static AuthServerCommunication getInstance() {
-		return instance;
-	}
 
 	public void connect() throws IOException, ExecutionException, InterruptedException {
 		var serverSettings = getSettings(ServerSettings.class);
@@ -166,7 +161,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 	public String[] getAccounts() {
 		readLock.lock();
 		try {
-			return authedClients.keySet().toArray(new String[authedClients.size()]);
+			return authedClients.keySet().toArray(String[]::new);
 		} finally {
 			readLock.unlock();
 		}
@@ -174,7 +169,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 
 	@Override
 	public void execute(ReadablePacket<AuthServerClient> packet) {
-		ThreadPoolManager.getInstance().execute(packet);
+		ThreadPoolManager.execute(packet);
 	}
 
 	public void shutdown() {
@@ -204,5 +199,14 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 
 	public void sendChangePassword(String accountName, String oldPass, String curpass) {
 		sendPacket(new ChangePassword(accountName, oldPass, curpass, ""));
+	}
+
+	public static AuthServerCommunication getInstance() {
+		return Singleton.INSTANCE;
+	}
+
+	private static class Singleton {
+
+		private static final AuthServerCommunication INSTANCE = new AuthServerCommunication();
 	}
 }

@@ -45,17 +45,8 @@ public class CubicData implements IGameXmlReader {
 
     private final Map<Integer, Map<Integer, L2CubicTemplate>> _cubics = new HashMap<>();
 
-    protected CubicData() {
+    private CubicData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of CubicData.
-     *
-     * @return single instance of CubicData
-     */
-    public static CubicData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -150,7 +141,12 @@ public class CubicData implements IGameXmlReader {
         return _cubics.getOrDefault(id, Collections.emptyMap()).get(level);
     }
 
-    private static class SingletonHolder {
-        protected static final CubicData _instance = new CubicData();
+    public static CubicData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+
+        private static final CubicData INSTANCE = new CubicData();
     }
 }

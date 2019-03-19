@@ -17,8 +17,8 @@ import java.util.regex.PatternSyntaxException;
 public class PetNameTable {
     private static final Logger LOGGER = LoggerFactory.getLogger(PetNameTable.class);
 
-    public static PetNameTable getInstance() {
-        return SingletonHolder._instance;
+    private PetNameTable() {
+
     }
 
     public boolean doesPetNameExist(String name, int petNpcId) {
@@ -76,7 +76,11 @@ public class PetNameTable {
         return result;
     }
 
-    private static class SingletonHolder {
-        protected static final PetNameTable _instance = new PetNameTable();
+    public static PetNameTable getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final PetNameTable INSTANCE = new PetNameTable();
     }
 }

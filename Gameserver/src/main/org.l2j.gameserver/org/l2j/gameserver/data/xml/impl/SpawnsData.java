@@ -33,17 +33,8 @@ public class SpawnsData implements IGameXmlReader {
 
     private final List<SpawnTemplate> _spawns = new LinkedList<>();
 
-    protected SpawnsData() {
+    private SpawnsData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of SpawnsData.
-     *
-     * @return single instance of SpawnsData
-     */
-    public static SpawnsData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -235,19 +226,11 @@ public class SpawnsData implements IGameXmlReader {
         }
     }
 
-    /**
-     * @param n
-     * @param npcTemplate
-     */
     private void parseParameters(Node n, IParameterized<StatsSet> npcTemplate) {
         final Map<String, Object> params = parseParameters(n);
         npcTemplate.setParameters(!params.isEmpty() ? new StatsSet(Collections.unmodifiableMap(params)) : StatsSet.EMPTY_STATSET);
     }
 
-    /**
-     * @param n
-     * @param npcTemplate
-     */
     private void parseMinions(Node n, NpcSpawnTemplate npcTemplate) {
         forEach(n, "minion", minionNode ->
         {
@@ -255,7 +238,11 @@ public class SpawnsData implements IGameXmlReader {
         });
     }
 
-    private static class SingletonHolder {
-        protected static final SpawnsData _instance = new SpawnsData();
+    public static SpawnsData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final SpawnsData INSTANCE = new SpawnsData();
     }
 }

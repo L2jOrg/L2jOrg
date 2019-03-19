@@ -40,20 +40,8 @@ public final class ClassListData implements IGameXmlReader {
 
     private final Map<ClassId, ClassInfo> _classData = new HashMap<>();
 
-    /**
-     * Instantiates a new class list data.
-     */
-    protected ClassListData() {
+    private ClassListData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of ClassListData.
-     *
-     * @return single instance of ClassListData
-     */
-    public static ClassListData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -118,7 +106,11 @@ public final class ClassListData implements IGameXmlReader {
         return (id != null) ? _classData.get(id) : null;
     }
 
-    private static class SingletonHolder {
-        protected static final ClassListData _instance = new ClassListData();
+    public static ClassListData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ClassListData INSTANCE = new ClassListData();
     }
 }

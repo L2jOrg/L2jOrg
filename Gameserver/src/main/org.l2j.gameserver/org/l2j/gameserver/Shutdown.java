@@ -46,7 +46,7 @@ public class Shutdown extends Thread {
     /**
      * Default constructor is only used internal to create the shutdown-hook instance
      */
-    protected Shutdown() {
+    private Shutdown() {
         _secondsShut = -1;
         _shutdownMode = SIGTERM;
     }
@@ -56,6 +56,8 @@ public class Shutdown extends Thread {
      *
      * @param seconds how many seconds until shutdown
      * @param restart true is the server shall restart after shutdown
+     *
+     * TODO Remove this Constructor. Should be only one Shutdown Instance on Runtime
      */
     public Shutdown(int seconds, boolean restart) {
         if (seconds < 0) {
@@ -71,7 +73,7 @@ public class Shutdown extends Thread {
      * @return instance of Shutdown, to be used as shutdown hook
      */
     public static Shutdown getInstance() {
-        return SingletonHolder._instance;
+        return Singleton.INSTANCE;
     }
 
     /**
@@ -474,7 +476,7 @@ public class Shutdown extends Thread {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final Shutdown _instance = new Shutdown();
+    private static class Singleton {
+        private static final Shutdown INSTANCE = new Shutdown();
     }
 }

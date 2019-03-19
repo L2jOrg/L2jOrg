@@ -31,12 +31,8 @@ public final class PlayerTemplateData implements IGameXmlReader {
 
     private int _dataCount = 0;
 
-    protected PlayerTemplateData() {
+    private PlayerTemplateData() {
         load();
-    }
-
-    public static PlayerTemplateData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -133,7 +129,11 @@ public final class PlayerTemplateData implements IGameXmlReader {
         return _playerTemplates.get(ClassId.getClassId(classId));
     }
 
-    private static class SingletonHolder {
-        protected static final PlayerTemplateData _instance = new PlayerTemplateData();
+    public static PlayerTemplateData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final PlayerTemplateData INSTANCE = new PlayerTemplateData();
     }
 }

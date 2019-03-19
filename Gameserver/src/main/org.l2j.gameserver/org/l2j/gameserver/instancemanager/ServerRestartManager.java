@@ -18,7 +18,7 @@ public class ServerRestartManager {
 
     private String nextRestartTime = "unknown";
 
-    protected ServerRestartManager() {
+    private ServerRestartManager() {
         try {
             final Calendar currentTime = Calendar.getInstance();
             final Calendar restartTime = Calendar.getInstance();
@@ -57,16 +57,16 @@ public class ServerRestartManager {
         }
     }
 
-    public static ServerRestartManager getInstance() {
-        return SingletonHolder._instance;
-    }
-
     public String getNextRestartTime() {
         return nextRestartTime;
     }
 
-    private static class SingletonHolder {
-        protected static final ServerRestartManager _instance = new ServerRestartManager();
+    public static ServerRestartManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ServerRestartManager INSTANCE = new ServerRestartManager();
     }
 
     class ServerRestartTask implements Runnable {

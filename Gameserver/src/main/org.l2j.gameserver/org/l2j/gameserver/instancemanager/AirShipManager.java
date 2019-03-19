@@ -44,7 +44,7 @@ public class AirShipManager {
     private final Map<Integer, AirShipTeleportList> _teleports = new HashMap<>();
     private L2CharTemplate _airShipTemplate = null;
 
-    protected AirShipManager() {
+    private AirShipManager() {
         final StatsSet npcDat = new StatsSet();
         npcDat.set("npcId", 9);
         npcDat.set("level", 0);
@@ -91,10 +91,6 @@ public class AirShipManager {
         _airShipTemplate = new L2CharTemplate(npcDat);
 
         load();
-    }
-
-    public static AirShipManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     public L2AirShipInstance getNewAirShip(int x, int y, int z, int heading) {
@@ -266,7 +262,11 @@ public class AirShipManager {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final AirShipManager _instance = new AirShipManager();
+    public static AirShipManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        protected static final AirShipManager INSTANCE = new AirShipManager();
     }
 }

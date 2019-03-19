@@ -31,20 +31,8 @@ public final class HennaData implements IGameXmlReader {
 
     private final Map<Integer, L2Henna> _hennaList = new HashMap<>();
 
-    /**
-     * Instantiates a new henna data.
-     */
-    protected HennaData() {
+    private HennaData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of HennaData.
-     *
-     * @return single instance of HennaData
-     */
-    public static HennaData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -155,7 +143,11 @@ public final class HennaData implements IGameXmlReader {
         return list;
     }
 
-    private static class SingletonHolder {
-        protected static final HennaData _instance = new HennaData();
+    public static HennaData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final HennaData INSTANCE = new HennaData();
     }
 }

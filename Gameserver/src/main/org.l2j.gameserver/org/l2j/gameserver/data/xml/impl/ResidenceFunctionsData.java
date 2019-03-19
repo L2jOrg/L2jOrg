@@ -38,12 +38,8 @@ public final class ResidenceFunctionsData implements IGameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ResidenceFunctionsData.class);
     private final Map<Integer, List<ResidenceFunctionTemplate>> _functions = new HashMap<>();
 
-    protected ResidenceFunctionsData() {
+    private ResidenceFunctionsData() {
         load();
-    }
-
-    public static ResidenceFunctionsData getInstance() {
-        return SingletonHolder.INSTANCE;
     }
 
     @Override
@@ -95,7 +91,11 @@ public final class ResidenceFunctionsData implements IGameXmlReader {
         return _functions.get(id);
     }
 
-    private static class SingletonHolder {
-        protected static final ResidenceFunctionsData INSTANCE = new ResidenceFunctionsData();
+    public static ResidenceFunctionsData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ResidenceFunctionsData INSTANCE = new ResidenceFunctionsData();
     }
 }

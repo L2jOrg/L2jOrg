@@ -41,12 +41,8 @@ public final class CrestTable {
     private final Map<Integer, L2Crest> _crests = new ConcurrentHashMap<>();
     private final AtomicInteger _nextId = new AtomicInteger(1);
 
-    protected CrestTable() {
+    private CrestTable() {
         load();
-    }
-
-    public static CrestTable getInstance() {
-        return SingletonHolder._instance;
     }
 
     public synchronized void load() {
@@ -179,7 +175,11 @@ public final class CrestTable {
         return _nextId.getAndIncrement();
     }
 
-    private static class SingletonHolder {
-        protected static final CrestTable _instance = new CrestTable();
+    public static CrestTable getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final CrestTable INSTANCE = new CrestTable();
     }
 }

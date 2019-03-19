@@ -70,7 +70,7 @@ public final class ZoneManager implements IGameXmlReader {
      * @return single instance of ZoneManager
      */
     public static ZoneManager getInstance() {
-        return SingletonHolder._instance;
+        return Singleton.INSTANCE;
     }
 
     /**
@@ -601,7 +601,7 @@ public final class ZoneManager implements IGameXmlReader {
         return getRegion(point.getX(), point.getY());
     }
 
-    private static class SingletonHolder {
-        protected static final ZoneManager _instance = new ZoneManager();
+    private static class Singleton {
+        private static final ZoneManager INSTANCE = new ZoneManager();
     }
 }

@@ -36,17 +36,8 @@ public final class AdminData implements IGameXmlReader {
     private final Map<L2PcInstance, Boolean> _gmList = new ConcurrentHashMap<>();
     private int _highestLevel = 0;
 
-    protected AdminData() {
+    private AdminData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of AdminTable.
-     *
-     * @return AccessLevels: the one and only instance of this class<br>
-     */
-    public static AdminData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -299,7 +290,11 @@ public final class AdminData implements IGameXmlReader {
         return message;
     }
 
-    private static class SingletonHolder {
-        protected static final AdminData _instance = new AdminData();
+    public static AdminData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final AdminData INSTANCE = new AdminData();
     }
 }

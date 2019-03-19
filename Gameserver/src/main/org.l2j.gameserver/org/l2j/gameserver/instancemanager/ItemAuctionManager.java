@@ -42,7 +42,7 @@ public final class ItemAuctionManager implements IGameXmlReader {
     private final Map<Integer, ItemAuctionInstance> _managerInstances = new HashMap<>();
     private final AtomicInteger _auctionIds = new AtomicInteger(1);
 
-    protected ItemAuctionManager() {
+    private ItemAuctionManager() {
         if (!Config.ALT_ITEM_AUCTION_ENABLED) {
             LOGGER.info("Disabled by config.");
             return;
@@ -75,15 +75,6 @@ public final class ItemAuctionManager implements IGameXmlReader {
         } catch (SQLException e) {
             LOGGER.error("L2ItemAuctionManagerInstance: Failed deleting auction: " + auctionId, e);
         }
-    }
-
-    /**
-     * Gets the single instance of {@code ItemAuctionManager}.
-     *
-     * @return single instance of {@code ItemAuctionManager}
-     */
-    public static ItemAuctionManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -132,7 +123,11 @@ public final class ItemAuctionManager implements IGameXmlReader {
         return _auctionIds.getAndIncrement();
     }
 
-    private static class SingletonHolder {
-        protected static final ItemAuctionManager _instance = new ItemAuctionManager();
+    public static ItemAuctionManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ItemAuctionManager INSTANCE = new ItemAuctionManager();
     }
 }

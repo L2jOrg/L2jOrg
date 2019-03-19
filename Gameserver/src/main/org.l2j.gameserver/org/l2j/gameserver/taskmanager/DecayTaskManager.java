@@ -24,8 +24,7 @@ public final class DecayTaskManager {
 
     protected final Map<L2Character, ScheduledFuture<?>> _decayTasks = new ConcurrentHashMap<>();
 
-    public static DecayTaskManager getInstance() {
-        return SingletonHolder._instance;
+    private DecayTaskManager() {
     }
 
     /**
@@ -112,11 +111,16 @@ public final class DecayTaskManager {
         return ret.toString();
     }
 
-    private static class SingletonHolder {
-        protected static final DecayTaskManager _instance = new DecayTaskManager();
+    public static DecayTaskManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final DecayTaskManager INSTANCE = new DecayTaskManager();
     }
 
     private class DecayTask implements Runnable {
+
         private final L2Character _character;
 
         protected DecayTask(L2Character character) {

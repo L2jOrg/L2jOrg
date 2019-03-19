@@ -37,11 +37,7 @@ public final class DuelManager {
     private final Map<Integer, Duel> _duels = new ConcurrentHashMap<>();
     private final AtomicInteger _currentDuelId = new AtomicInteger();
 
-    protected DuelManager() {
-    }
-
-    public static DuelManager getInstance() {
-        return SingletonHolder._instance;
+    private DuelManager() {
     }
 
     public Duel getDuel(int duelId) {
@@ -188,7 +184,11 @@ public final class DuelManager {
         return ARENAS[Rnd.get(ARENAS.length)];
     }
 
-    private static class SingletonHolder {
-        protected static final DuelManager _instance = new DuelManager();
+    public static DuelManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final DuelManager INSTANCE = new DuelManager();
     }
 }

@@ -66,7 +66,7 @@ public final class CommissionManager {
 
     private final Map<Long, CommissionItem> _commissionItems = new ConcurrentSkipListMap<>();
 
-    protected CommissionManager() {
+    private CommissionManager() {
         final Map<Integer, L2ItemInstance> itemInstances = new HashMap<>();
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
             try (PreparedStatement ps = con.prepareStatement(SELECT_ALL_ITEMS)) {
@@ -114,15 +114,6 @@ public final class CommissionManager {
             return npc.calculateDistance3D(player) <= INTERACTION_DISTANCE;
         }
         return false;
-    }
-
-    /**
-     * Gets the single instance.
-     *
-     * @return the single instance
-     */
-    public static CommissionManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     /**
@@ -407,7 +398,11 @@ public final class CommissionManager {
         return _commissionItems.values().stream().anyMatch(item -> item.getItemInstance().getObjectId() == objectId);
     }
 
-    private static class SingletonHolder {
-        protected static final CommissionManager _instance = new CommissionManager();
+    public static CommissionManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final CommissionManager INSTANCE = new CommissionManager();
     }
 }

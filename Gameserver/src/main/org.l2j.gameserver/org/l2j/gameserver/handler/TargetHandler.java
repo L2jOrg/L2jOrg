@@ -11,12 +11,8 @@ import java.util.Map;
 public class TargetHandler implements IHandler<ITargetTypeHandler, Enum<TargetType>> {
     private final Map<Enum<TargetType>, ITargetTypeHandler> _datatable;
 
-    protected TargetHandler() {
+    private TargetHandler() {
         _datatable = new HashMap<>();
-    }
-
-    public static TargetHandler getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -39,7 +35,12 @@ public class TargetHandler implements IHandler<ITargetTypeHandler, Enum<TargetTy
         return _datatable.size();
     }
 
-    private static class SingletonHolder {
-        protected static final TargetHandler _instance = new TargetHandler();
+    public static TargetHandler getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+
+        protected static final TargetHandler INSTANCE = new TargetHandler();
     }
 }

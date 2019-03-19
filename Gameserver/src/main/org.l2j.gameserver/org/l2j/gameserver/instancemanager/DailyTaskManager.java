@@ -50,11 +50,7 @@ import java.util.List;
 public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
     private static final Logger LOGGER = LoggerFactory.getLogger(DailyTaskManager.class);
 
-    protected DailyTaskManager() {
-    }
-
-    public static DailyTaskManager getInstance() {
-        return SingletonHolder.INSTANCE;
+    private DailyTaskManager() {
     }
 
     @Override
@@ -243,7 +239,11 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
         DailyMissionData.getInstance().getDailyMissionData().forEach(DailyMissionDataHolder::reset);
     }
 
-    private static class SingletonHolder {
-        protected static final DailyTaskManager INSTANCE = new DailyTaskManager();
+    public static DailyTaskManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final DailyTaskManager INSTANCE = new DailyTaskManager();
     }
 }

@@ -30,12 +30,8 @@ public final class TransformData implements IGameXmlReader {
 
     private final Map<Integer, Transform> _transformData = new HashMap<>();
 
-    protected TransformData() {
+    private TransformData() {
         load();
-    }
-
-    public static TransformData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -176,7 +172,11 @@ public final class TransformData implements IGameXmlReader {
         return _transformData.get(id);
     }
 
-    private static class SingletonHolder {
-        protected static final TransformData _instance = new TransformData();
+    public static TransformData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final TransformData INSTANCE = new TransformData();
     }
 }

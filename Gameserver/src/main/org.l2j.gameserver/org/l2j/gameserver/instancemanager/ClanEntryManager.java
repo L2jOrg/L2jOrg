@@ -62,7 +62,7 @@ public class ClanEntryManager {
 
     private static final long LOCK_TIME = TimeUnit.MINUTES.toMillis(5);
 
-    protected ClanEntryManager() {
+    private ClanEntryManager() {
         load();
     }
 
@@ -78,10 +78,6 @@ public class ClanEntryManager {
         {
             _clanLocked.remove(clanId);
         }, LOCK_TIME));
-    }
-
-    public static ClanEntryManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     private void load() {
@@ -299,7 +295,7 @@ public class ClanEntryManager {
     }
 
     public List<PledgeRecruitInfo> getUnSortedClanList() {
-        return _clanList.values().stream().collect(Collectors.toList());
+        return new ArrayList<>(_clanList.values());
     }
 
     public List<PledgeRecruitInfo> getSortedClanList(int clanLevel, int karma, int sortBy, boolean descending) {
@@ -320,7 +316,11 @@ public class ClanEntryManager {
         return _clanLocked.get(playerId) == null ? 0 : _clanLocked.get(playerId).getDelay(TimeUnit.MINUTES);
     }
 
-    private static class SingletonHolder {
-        protected static final ClanEntryManager _instance = new ClanEntryManager();
+    public static ClanEntryManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ClanEntryManager INSTANCE = new ClanEntryManager();
     }
 }

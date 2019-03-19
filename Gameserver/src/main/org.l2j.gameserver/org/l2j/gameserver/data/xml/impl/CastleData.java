@@ -20,17 +20,8 @@ public final class CastleData implements IGameXmlReader {
     private static final Map<Integer, List<SiegeGuardHolder>> _siegeGuards = new HashMap<>();
     private final Map<Integer, List<CastleSpawnHolder>> _spawns = new HashMap<>();
 
-    protected CastleData() {
+    private CastleData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of CastleData.
-     *
-     * @return single instance of CastleData
-     */
-    public static CastleData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -97,11 +88,11 @@ public final class CastleData implements IGameXmlReader {
         return _siegeGuards.getOrDefault(castleId, Collections.emptyList());
     }
 
-    public final Map<Integer, List<SiegeGuardHolder>> getSiegeGuards() {
-        return _siegeGuards;
+    public static CastleData getInstance() {
+        return Singleton.INSTANCE;
     }
 
-    private static class SingletonHolder {
-        protected static final CastleData _instance = new CastleData();
+    private static class Singleton {
+        protected static final CastleData INSTANCE = new CastleData();
     }
 }

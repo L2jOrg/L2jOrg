@@ -77,12 +77,8 @@ public class Hero {
     private static final Map<Integer, List<StatsSet>> HERO_DIARY = new ConcurrentHashMap<>();
     private static final Map<Integer, String> HERO_MESSAGE = new ConcurrentHashMap<>();
 
-    protected Hero() {
+    private Hero() {
         init();
-    }
-
-    public static Hero getInstance() {
-        return SingletonHolder.INSTANCE;
     }
 
     private void init() {
@@ -795,7 +791,11 @@ public class Hero {
         updateHeroes(false);
     }
 
-    private static class SingletonHolder {
-        protected static final Hero INSTANCE = new Hero();
+    public static Hero getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final Hero INSTANCE = new Hero();
     }
 }

@@ -56,21 +56,8 @@ public final class InstanceManager implements IGameXmlReader {
     // Created instance worlds
     private int _currentInstanceId = 0;
 
-    protected InstanceManager() {
+    private InstanceManager() {
         load();
-    }
-
-    // --------------------------------------------------------------------
-    // Instance data loader
-    // --------------------------------------------------------------------
-
-    /**
-     * Gets the single instance of {@code InstanceManager}.
-     *
-     * @return single instance of {@code InstanceManager}
-     */
-    public static InstanceManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -119,10 +106,10 @@ public final class InstanceManager implements IGameXmlReader {
         });
     }
 
+
     // --------------------------------------------------------------------
     // Instance data loader - END
     // --------------------------------------------------------------------
-
     /**
      * Parse instance template from XML file.
      *
@@ -572,7 +559,11 @@ public final class InstanceManager implements IGameXmlReader {
         return _instanceWorlds.values().stream().filter(i -> i.getTemplateId() == templateId).count();
     }
 
-    private static class SingletonHolder {
-        protected static final InstanceManager _instance = new InstanceManager();
+    public static InstanceManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final InstanceManager INSTANCE = new InstanceManager();
     }
 }

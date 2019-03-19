@@ -20,10 +20,9 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 
-
 public final class CastleManager implements InstanceListManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(CastleManager.class);
-    private static final int _castleCirclets[] =
+    private static final int[] _castleCirclets =
             {
                     0,
                     6838,
@@ -39,8 +38,7 @@ public final class CastleManager implements InstanceListManager {
     private final Map<Integer, Castle> _castles = new ConcurrentSkipListMap<>();
     private final Map<Integer, Long> _castleSiegeDate = new ConcurrentHashMap<>();
 
-    public static CastleManager getInstance() {
-        return SingletonHolder._instance;
+    private CastleManager() {
     }
 
     public final Castle findNearestCastle(L2Object obj) {
@@ -121,12 +119,12 @@ public final class CastleManager implements InstanceListManager {
     }
 
     // remove this castle's circlets from the clan
+
     public void removeCirclet(L2Clan clan, int castleId) {
         for (L2ClanMember member : clan.getMembers()) {
             removeCirclet(member, castleId);
         }
     }
-
     public void removeCirclet(L2ClanMember member, int castleId) {
         if (member == null) {
             return;
@@ -202,7 +200,11 @@ public final class CastleManager implements InstanceListManager {
         return count;
     }
 
-    private static class SingletonHolder {
-        protected static final CastleManager _instance = new CastleManager();
+    public static CastleManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final CastleManager INSTANCE = new CastleManager();
     }
 }

@@ -49,12 +49,8 @@ public class HtmCache {
     private int _loadedFiles;
     private long _bytesBuffLen;
 
-    protected HtmCache() {
+    private HtmCache() {
         reload();
-    }
-
-    public static HtmCache getInstance() {
-        return SingletonHolder._instance;
     }
 
     public void reload() {
@@ -233,7 +229,11 @@ public class HtmCache {
         return blockMap;
     }
 
-    private static class SingletonHolder {
-        protected static final HtmCache _instance = new HtmCache();
+    public static HtmCache getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final HtmCache INSTANCE = new HtmCache();
     }
 }

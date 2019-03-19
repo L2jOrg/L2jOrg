@@ -71,7 +71,7 @@ public final class BotReportTable {
     private Map<Integer, ReportedCharData> _reports;
     private Map<Integer, PunishHolder> _punishments;
 
-    protected BotReportTable() {
+    private BotReportTable() {
         if (Config.BOTREPORT_ENABLE) {
             _ipRegistry = new HashMap<>();
             _charRegistry = new ConcurrentHashMap<>();
@@ -93,10 +93,6 @@ public final class BotReportTable {
             loadReportedCharData();
             scheduleResetPointTask();
         }
-    }
-
-    public static BotReportTable getInstance() {
-        return SingletonHolder.INSTANCE;
     }
 
     /**
@@ -402,14 +398,18 @@ public final class BotReportTable {
         }
     }
 
-    private static final class SingletonHolder {
-        static final BotReportTable INSTANCE = new BotReportTable();
+    public static BotReportTable getInstance() {
+        return Singleton.INSTANCE;
     }
 
+    private static final class Singleton {
+        private static final BotReportTable INSTANCE = new BotReportTable();
+    }
     /**
      * Represents the info about a reporter
      */
     private final class ReporterCharData {
+
         private long _lastReport;
         private byte _reportPoints;
 
@@ -435,11 +435,11 @@ public final class BotReportTable {
             _reportPoints = (byte) points;
         }
     }
-
     /**
      * Represents the info about a reported character
      */
     private final class ReportedCharData {
+
         Map<Integer, Long> _reporters;
 
         ReportedCharData() {
@@ -472,11 +472,8 @@ public final class BotReportTable {
             return false;
         }
     }
-
-    /**
-     * SAX loader to parse /config/BotReportPunishments.xml file
-     */
     private final class PunishmentsLoader extends DefaultHandler {
+
         PunishmentsLoader() {
         }
 
@@ -507,8 +504,8 @@ public final class BotReportTable {
             }
         }
     }
-
     private class PunishHolder {
+
         final Skill _punish;
         final int _systemMessageId;
 
@@ -517,8 +514,8 @@ public final class BotReportTable {
             _systemMessageId = sysMsg;
         }
     }
-
     private class ResetPointTask implements Runnable {
+
         public ResetPointTask() {
         }
 

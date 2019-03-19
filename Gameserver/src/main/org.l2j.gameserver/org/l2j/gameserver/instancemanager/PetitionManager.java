@@ -30,18 +30,9 @@ public final class PetitionManager {
     private final Map<Integer, Petition> _pendingPetitions;
     private final Map<Integer, Petition> _completedPetitions;
 
-    protected PetitionManager() {
+    private PetitionManager() {
         _pendingPetitions = new HashMap<>();
         _completedPetitions = new HashMap<>();
-    }
-
-    /**
-     * Gets the single instance of {@code PetitionManager}.
-     *
-     * @return single instance of {@code PetitionManager}
-     */
-    public static PetitionManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     public void clearCompletedPetitions() {
@@ -377,7 +368,11 @@ public final class PetitionManager {
         activeChar.sendPacket(html);
     }
 
-    private static class SingletonHolder {
-        protected static final PetitionManager _instance = new PetitionManager();
+    public static PetitionManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final PetitionManager INSTANCE = new PetitionManager();
     }
 }

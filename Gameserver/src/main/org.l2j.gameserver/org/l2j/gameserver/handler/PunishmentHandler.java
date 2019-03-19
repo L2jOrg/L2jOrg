@@ -13,11 +13,7 @@ import java.util.Map;
 public class PunishmentHandler implements IHandler<IPunishmentHandler, PunishmentType> {
     private final Map<PunishmentType, IPunishmentHandler> _handlers = new HashMap<>();
 
-    protected PunishmentHandler() {
-    }
-
-    public static PunishmentHandler getInstance() {
-        return SingletonHolder._instance;
+    private PunishmentHandler() {
     }
 
     @Override
@@ -40,7 +36,11 @@ public class PunishmentHandler implements IHandler<IPunishmentHandler, Punishmen
         return _handlers.size();
     }
 
-    private static class SingletonHolder {
-        protected static final PunishmentHandler _instance = new PunishmentHandler();
+    public static PunishmentHandler getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final PunishmentHandler INSTANCE = new PunishmentHandler();
     }
 }

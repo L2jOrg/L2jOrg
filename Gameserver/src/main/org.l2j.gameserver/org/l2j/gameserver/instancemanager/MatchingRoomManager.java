@@ -38,8 +38,8 @@ public class MatchingRoomManager {
     private final AtomicInteger _id = new AtomicInteger(0);
     private volatile Set<L2PcInstance> _waitingList;
 
-    public static MatchingRoomManager getInstance() {
-        return SingletonHolder._instance;
+    private MatchingRoomManager() {
+
     }
 
     public void addToWaitingList(L2PcInstance player) {
@@ -131,7 +131,11 @@ public class MatchingRoomManager {
         return _rooms.getOrDefault(MatchingRoomType.PARTY, Collections.emptyMap()).get(roomId);
     }
 
-    private static class SingletonHolder {
-        protected static final MatchingRoomManager _instance = new MatchingRoomManager();
+    public static MatchingRoomManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final MatchingRoomManager INSTANCE = new MatchingRoomManager();
     }
 }

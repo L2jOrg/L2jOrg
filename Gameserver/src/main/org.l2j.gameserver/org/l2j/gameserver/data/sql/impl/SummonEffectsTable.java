@@ -40,8 +40,7 @@ public class SummonEffectsTable {
      **/
     private final Map<Integer, List<SummonEffect>> _petEffects = new HashMap<>(); // key: petItemObjectId, value: Effects list
 
-    public static SummonEffectsTable getInstance() {
-        return SingletonHolder._instance;
+    private SummonEffectsTable() {
     }
 
     public Map<Integer, Map<Integer, Map<Integer, List<SummonEffect>>>> getServitorEffectsOwner() {
@@ -61,9 +60,9 @@ public class SummonEffectsTable {
     }
 
     public static class SummonEffect {
+
         private final Skill _skill;
         private final int _effectCurTime;
-
         public SummonEffect(Skill skill, int effectCurTime) {
             _skill = skill;
             _effectCurTime = effectCurTime;
@@ -76,9 +75,14 @@ public class SummonEffectsTable {
         public int getEffectCurTime() {
             return _effectCurTime;
         }
+
     }
 
-    private static class SingletonHolder {
-        protected static final SummonEffectsTable _instance = new SummonEffectsTable();
+    public static SummonEffectsTable getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final SummonEffectsTable INSTANCE = new SummonEffectsTable();
     }
 }

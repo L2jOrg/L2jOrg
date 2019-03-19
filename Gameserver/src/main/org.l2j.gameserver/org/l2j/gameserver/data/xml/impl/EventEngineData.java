@@ -47,7 +47,7 @@ import java.util.*;
 public final class EventEngineData implements IGameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(EventEngineData.class);
 
-    protected EventEngineData() {
+    private EventEngineData() {
         load();
     }
 
@@ -57,15 +57,6 @@ public final class EventEngineData implements IGameXmlReader {
 
     private static <K, V> Map<K, V> newMap(Class<K> keyClass, Class<V> valueClass) {
         return new LinkedHashMap<>();
-    }
-
-    /**
-     * Gets the single instance of EventEngineData.
-     *
-     * @return single instance of EventEngineData
-     */
-    public static EventEngineData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -460,7 +451,11 @@ public final class EventEngineData implements IGameXmlReader {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final EventEngineData _instance = new EventEngineData();
+    public static EventEngineData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final EventEngineData INSTANCE = new EventEngineData();
     }
 }

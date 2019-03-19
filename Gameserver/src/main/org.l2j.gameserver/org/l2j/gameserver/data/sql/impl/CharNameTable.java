@@ -11,7 +11,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
-
 /**
  * Loads name and access level for all players.
  *
@@ -23,14 +22,10 @@ public class CharNameTable {
     private final Map<Integer, String> _chars = new ConcurrentHashMap<>();
     private final Map<Integer, Integer> _accessLevels = new ConcurrentHashMap<>();
 
-    protected CharNameTable() {
+    private CharNameTable() {
         if (Config.CACHE_CHAR_NAMES) {
             loadAll();
         }
-    }
-
-    public static CharNameTable getInstance() {
-        return SingletonHolder._instance;
     }
 
     public final void addName(L2PcInstance player) {
@@ -40,7 +35,7 @@ public class CharNameTable {
         }
     }
 
-    private final void addName(int objectId, String name) {
+    private void addName(int objectId, String name) {
         if (name != null) {
             if (!name.equals(_chars.get(objectId))) {
                 _chars.put(objectId, name);
@@ -220,7 +215,11 @@ public class CharNameTable {
         LOGGER.info(getClass().getSimpleName() + ": Loaded " + _chars.size() + " char names.");
     }
 
-    private static class SingletonHolder {
-        protected static final CharNameTable _instance = new CharNameTable();
+    public static CharNameTable getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final CharNameTable INSTANCE = new CharNameTable();
     }
 }

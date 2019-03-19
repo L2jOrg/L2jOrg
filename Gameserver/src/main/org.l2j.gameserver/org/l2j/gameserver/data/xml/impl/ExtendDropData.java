@@ -40,12 +40,8 @@ public class ExtendDropData implements IGameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ExtendDropData.class);
     private final Map<Integer, ExtendDropDataHolder> _extendDrop = new HashMap<>();
 
-    protected ExtendDropData() {
+    private ExtendDropData() {
         load();
-    }
-
-    public static ExtendDropData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -165,7 +161,11 @@ public class ExtendDropData implements IGameXmlReader {
         return _extendDrop.getOrDefault(id, null);
     }
 
-    private static class SingletonHolder {
-        protected static final ExtendDropData _instance = new ExtendDropData();
+    public static ExtendDropData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ExtendDropData INSTANCE = new ExtendDropData();
     }
 }

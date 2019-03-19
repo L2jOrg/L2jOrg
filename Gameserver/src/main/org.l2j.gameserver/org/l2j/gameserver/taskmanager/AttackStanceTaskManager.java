@@ -26,17 +26,8 @@ public class AttackStanceTaskManager {
     /**
      * Instantiates a new attack stance task manager.
      */
-    protected AttackStanceTaskManager() {
+    private AttackStanceTaskManager() {
         ThreadPoolManager.scheduleAtFixedRate(new FightModeScheduler(), 0, 1000);
-    }
-
-    /**
-     * Gets the single instance of AttackStanceTaskManager.
-     *
-     * @return single instance of AttackStanceTaskManager
-     */
-    public static AttackStanceTaskManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     /**
@@ -80,8 +71,12 @@ public class AttackStanceTaskManager {
         return false;
     }
 
-    private static class SingletonHolder {
-        protected static final AttackStanceTaskManager _instance = new AttackStanceTaskManager();
+    public static AttackStanceTaskManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final AttackStanceTaskManager INSTANCE = new AttackStanceTaskManager();
     }
 
     protected class FightModeScheduler implements Runnable {

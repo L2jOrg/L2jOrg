@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver;
 
 import org.l2j.commons.util.Rnd;
@@ -43,15 +27,9 @@ import java.util.concurrent.ConcurrentHashMap;
 
 
 public class RecipeController {
-    protected static final Map<Integer, RecipeItemMaker> _activeMakers = new ConcurrentHashMap<>();
+    private static final Map<Integer, RecipeItemMaker> _activeMakers = new ConcurrentHashMap<>();
 
-    protected RecipeController() {
-        // Prevent external initialization.
-    }
-
-    public static RecipeController getInstance() {
-        return SingletonHolder._instance;
-    }
+    private RecipeController() { }
 
     public void requestBookOpen(L2PcInstance player, boolean isDwarvenCraft) {
         // Check if player is trying to alter recipe book while engaged in manufacturing.
@@ -141,6 +119,7 @@ public class RecipeController {
 
     private static class RecipeItemMaker implements Runnable {
         private static final Logger LOGGER = LoggerFactory.getLogger(RecipeItemMaker.class);
+
         protected final L2RecipeList _recipeList;
         protected final L2PcInstance _player; // "crafter"
         protected final L2PcInstance _target; // "customer"
@@ -156,7 +135,6 @@ public class RecipeController {
         protected long _price;
         protected int _totalItems;
         protected int _delay;
-
         public RecipeItemMaker(L2PcInstance pPlayer, L2RecipeList pRecipeList, L2PcInstance pTarget) {
             _player = pPlayer;
             _target = pTarget;
@@ -417,6 +395,7 @@ public class RecipeController {
         }
 
         // AltStatChange parameters make their effect here
+
         private void calculateAltStatChange() {
             _itemGrab = _skillLevel;
 
@@ -435,8 +414,8 @@ public class RecipeController {
                 _creationPasses = 1;
             }
         }
-
         // StatUse
+
         private boolean calculateStatUse(boolean isWait, boolean isReduce) {
             boolean ret = true;
             for (L2RecipeStatInstance statUse : _recipeList.getStatUse()) {
@@ -479,7 +458,6 @@ public class RecipeController {
             }
             return ret;
         }
-
         private List<TempItem> listItems(boolean remove) {
             final L2RecipeInstance[] recipes = _recipeList.getRecipes();
             final Inventory inv = _target.getInventory();
@@ -624,9 +602,14 @@ public class RecipeController {
             }
             updateMakeInfo(true); // success
         }
+
     }
 
-    private static class SingletonHolder {
-        protected static final RecipeController _instance = new RecipeController();
+    public static RecipeController getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final RecipeController INSTANCE = new RecipeController();
     }
 }

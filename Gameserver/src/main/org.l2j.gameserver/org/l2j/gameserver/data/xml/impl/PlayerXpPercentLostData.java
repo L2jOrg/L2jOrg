@@ -38,18 +38,9 @@ public final class PlayerXpPercentLostData implements IGameXmlReader {
     private final int _maxlevel = ExperienceData.getInstance().getMaxLevel();
     private final double[] _playerXpPercentLost = new double[_maxlevel + 1];
 
-    protected PlayerXpPercentLostData() {
+    private PlayerXpPercentLostData() {
         Arrays.fill(_playerXpPercentLost, 1.);
         load();
-    }
-
-    /**
-     * Gets the single instance of PlayerXpPercentLostData.
-     *
-     * @return single instance of PlayerXpPercentLostData.
-     */
-    public static PlayerXpPercentLostData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -83,7 +74,11 @@ public final class PlayerXpPercentLostData implements IGameXmlReader {
         return _playerXpPercentLost[level];
     }
 
-    private static class SingletonHolder {
-        protected static final PlayerXpPercentLostData _instance = new PlayerXpPercentLostData();
+    public static PlayerXpPercentLostData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final PlayerXpPercentLostData INSTANCE = new PlayerXpPercentLostData();
     }
 }

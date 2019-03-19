@@ -34,18 +34,9 @@ public final class SiegeGuardManager {
     private static final Set<L2ItemInstance> _droppedTickets = ConcurrentHashMap.newKeySet();
     private static final Map<Integer, Set<L2Spawn>> _siegeGuardSpawn = new ConcurrentHashMap<>();
 
-    protected SiegeGuardManager() {
+    private SiegeGuardManager() {
         _droppedTickets.clear();
         load();
-    }
-
-    /**
-     * Gets the single instance of {@code MercTicketManager}.
-     *
-     * @return single instance of {@code MercTicketManager}
-     */
-    public static SiegeGuardManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     private void load() {
@@ -329,7 +320,11 @@ public final class SiegeGuardManager {
         return _siegeGuardSpawn.computeIfAbsent(castleId, key -> ConcurrentHashMap.newKeySet());
     }
 
-    private static class SingletonHolder {
-        protected static final SiegeGuardManager _instance = new SiegeGuardManager();
+    public static SiegeGuardManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        protected static final SiegeGuardManager INSTANCE = new SiegeGuardManager();
     }
 }

@@ -56,13 +56,9 @@ public class PremiumManager {
         stopExpireTask(player);
     };
 
-    protected PremiumManager() {
+    private PremiumManager() {
         listenerContainer.addListener(new ConsumerEventListener(listenerContainer, EventType.ON_PLAYER_LOGIN, playerLoginEvent, this));
         listenerContainer.addListener(new ConsumerEventListener(listenerContainer, EventType.ON_PLAYER_LOGOUT, playerLogoutEvent, this));
-    }
-
-    public static PremiumManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     /**
@@ -157,11 +153,15 @@ public class PremiumManager {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final PremiumManager _instance = new PremiumManager();
+    public static PremiumManager getInstance() {
+        return Singleton.INSTANCE;
     }
 
+    private static class Singleton {
+        private static final PremiumManager INSTANCE = new PremiumManager();
+    }
     class PremiumExpireTask implements Runnable {
+
         final L2PcInstance player;
 
         PremiumExpireTask(L2PcInstance player) {

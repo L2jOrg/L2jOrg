@@ -34,10 +34,7 @@ public class ForumsBBSManager extends BaseBBSManager {
     private final List<Forum> _table;
     private int _lastid = 1;
 
-    /**
-     * Instantiates a new forums bbs manager.
-     */
-    protected ForumsBBSManager() {
+    private ForumsBBSManager() {
         _table = new CopyOnWriteArrayList<>();
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              Statement s = con.createStatement();
@@ -51,19 +48,10 @@ public class ForumsBBSManager extends BaseBBSManager {
     }
 
     /**
-     * Gets the single instance of ForumsBBSManager.
-     *
-     * @return single instance of ForumsBBSManager
-     */
-    public static ForumsBBSManager getInstance() {
-        return SingletonHolder._instance;
-    }
-
-    /**
      * Inits the root.
      */
     public void initRoot() {
-        _table.forEach(f -> f.vload());
+        _table.forEach(Forum::vload);
         LOGGER.info(getClass().getSimpleName() + ": Loaded " + _table.size() + " forums. Last forum id used: " + _lastid);
     }
 
@@ -147,7 +135,11 @@ public class ForumsBBSManager extends BaseBBSManager {
     public void parsewrite(String ar1, String ar2, String ar3, String ar4, String ar5, L2PcInstance activeChar) {
     }
 
-    private static class SingletonHolder {
-        protected static final ForumsBBSManager _instance = new ForumsBBSManager();
+    public static ForumsBBSManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ForumsBBSManager INSTANCE = new ForumsBBSManager();
     }
 }

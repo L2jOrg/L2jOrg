@@ -24,17 +24,8 @@ public class TeleportersData implements IGameXmlReader {
     // Teleporter data
     private final Map<Integer, Map<String, TeleportHolder>> _teleporters = new HashMap<>();
 
-    protected TeleportersData() {
+    private TeleportersData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of TeleportersData.
-     *
-     * @return single instance of TeleportersData
-     */
-    public static TeleportersData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -110,7 +101,11 @@ public class TeleportersData implements IGameXmlReader {
         return _teleporters.getOrDefault(npcId, Collections.emptyMap()).get(listName);
     }
 
-    private static class SingletonHolder {
-        protected static final TeleportersData _instance = new TeleportersData();
+    public static TeleportersData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final TeleportersData INSTANCE = new TeleportersData();
     }
 }

@@ -95,7 +95,7 @@ public class Olympiad extends ListenersContainer {
     private long _compEnd;
     private Calendar _compStart;
 
-    protected Olympiad() {
+    private Olympiad() {
         load();
         AntiFeedManager.getInstance().registerEvent(AntiFeedManager.OLYMPIAD_ID);
 
@@ -119,10 +119,6 @@ public class Olympiad extends ListenersContainer {
      */
     public static StatsSet addNobleStats(int charId, StatsSet data) {
         return _nobles.put(Integer.valueOf(charId), data);
-    }
-
-    public static Olympiad getInstance() {
-        return SingletonHolder._instance;
     }
 
     private void load() {
@@ -557,7 +553,7 @@ public class Olympiad extends ListenersContainer {
     }
 
     private void scheduleWeeklyChange() {
-        _scheduledWeeklyTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(() ->
+        _scheduledWeeklyTask = ThreadPoolManager.scheduleAtFixedRate(() ->
         {
             addWeeklyPoints();
             LOGGER.info(getClass().getSimpleName() + ": Added weekly points to nobles");
@@ -568,6 +564,7 @@ public class Olympiad extends ListenersContainer {
             _nextWeeklyChange = nextChange.getTimeInMillis() + WEEKLY_PERIOD;
         }, getMillisToWeekChange(), WEEKLY_PERIOD);
     }
+
 
     protected synchronized void addWeeklyPoints() {
         if (_period == 1) {
@@ -1011,8 +1008,12 @@ public class Olympiad extends ListenersContainer {
         _nobles.clear();
     }
 
-    private static class SingletonHolder {
-        protected static final Olympiad _instance = new Olympiad();
+    public static Olympiad getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final Olympiad INSTANCE = new Olympiad();
     }
 
     protected class OlympiadEndTask implements Runnable {

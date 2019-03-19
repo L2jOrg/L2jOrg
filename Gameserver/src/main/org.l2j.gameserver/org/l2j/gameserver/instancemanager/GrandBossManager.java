@@ -36,17 +36,8 @@ public final class GrandBossManager implements IStorable {
 
     private final Map<Integer, Integer> _bossStatus = new HashMap<>();
 
-    protected GrandBossManager() {
+    private GrandBossManager() {
         init();
-    }
-
-    /**
-     * Gets the single instance of {@code GrandBossManager}.
-     *
-     * @return single instance of {@code GrandBossManager}
-     */
-    public static GrandBossManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     private void init() {
@@ -211,7 +202,11 @@ public final class GrandBossManager implements IStorable {
         _bossStatus.clear();
     }
 
-    private static class SingletonHolder {
-        protected static final GrandBossManager _instance = new GrandBossManager();
+    public static GrandBossManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final GrandBossManager INSTANCE = new GrandBossManager();
     }
 }

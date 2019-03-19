@@ -25,9 +25,9 @@ public class OlympiadGameManager implements Runnable {
     private volatile boolean _battleStarted = false;
     private int _delay = 0;
 
-    protected OlympiadGameManager() {
+    private OlympiadGameManager() {
         final Collection<L2OlympiadStadiumZone> zones = ZoneManager.getInstance().getAllZones(L2OlympiadStadiumZone.class);
-        if ((zones == null) || zones.isEmpty()) {
+        if (zones.isEmpty()) {
             throw new Error("No olympiad stadium zones defined !");
         }
 
@@ -42,10 +42,6 @@ public class OlympiadGameManager implements Runnable {
         }
 
         LOGGER.info("Olympiad System: Loaded " + _tasks.size() + " stadiums.");
-    }
-
-    public static OlympiadGameManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     protected final boolean isBattleStarted() {
@@ -193,7 +189,11 @@ public class OlympiadGameManager implements Runnable {
         return _tasks;
     }
 
-    private static class SingletonHolder {
-        protected static final OlympiadGameManager _instance = new OlympiadGameManager();
+    public static OlympiadGameManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final OlympiadGameManager INSTANCE = new OlympiadGameManager();
     }
 }

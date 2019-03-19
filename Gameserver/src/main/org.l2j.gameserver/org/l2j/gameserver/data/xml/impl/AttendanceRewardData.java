@@ -22,12 +22,8 @@ public class AttendanceRewardData implements IGameXmlReader {
     private final List<ItemHolder> _rewards = new ArrayList<>();
     private int _rewardsCount = 0;
 
-    protected AttendanceRewardData() {
+    private AttendanceRewardData() {
         load();
-    }
-
-    public static AttendanceRewardData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -65,7 +61,11 @@ public class AttendanceRewardData implements IGameXmlReader {
         return _rewardsCount;
     }
 
-    private static class SingletonHolder {
-        protected static final AttendanceRewardData _instance = new AttendanceRewardData();
+    public static AttendanceRewardData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final AttendanceRewardData INSTANCE = new AttendanceRewardData();
     }
 }

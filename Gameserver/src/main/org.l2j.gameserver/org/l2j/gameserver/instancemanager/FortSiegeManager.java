@@ -29,7 +29,6 @@ import java.util.StringTokenizer;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-
 public final class FortSiegeManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(FortSiegeManager.class);
 
@@ -48,10 +47,6 @@ public final class FortSiegeManager {
 
     protected FortSiegeManager() {
         load();
-    }
-
-    public static FortSiegeManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     public final void addSiegeSkills(L2PcInstance character) {
@@ -278,7 +273,11 @@ public final class FortSiegeManager {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final FortSiegeManager _instance = new FortSiegeManager();
+    public static FortSiegeManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final FortSiegeManager INSTANCE = new FortSiegeManager();
     }
 }

@@ -27,10 +27,7 @@ public final class PetDataTable implements IGameXmlReader {
 
     private final Map<Integer, L2PetData> _pets = new HashMap<>();
 
-    /**
-     * Instantiates a new pet data table.
-     */
-    protected PetDataTable() {
+    private PetDataTable() {
         load();
     }
 
@@ -44,14 +41,6 @@ public final class PetDataTable implements IGameXmlReader {
         return MountType.findByNpcId(npcId) != MountType.NONE;
     }
 
-    /**
-     * Gets the single instance of PetDataTable.
-     *
-     * @return this class unique instance.
-     */
-    public static PetDataTable getInstance() {
-        return SingletonHolder._instance;
-    }
 
     @Override
     public void load() {
@@ -191,7 +180,11 @@ public final class PetDataTable implements IGameXmlReader {
         return _pets.get(npcId).getItemId();
     }
 
-    private static class SingletonHolder {
-        protected static final PetDataTable _instance = new PetDataTable();
+    public static PetDataTable getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final PetDataTable INSTANCE = new PetDataTable();
     }
 }

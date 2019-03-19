@@ -29,11 +29,7 @@ public class MobGroupTable {
     public static final int RANDOM_RANGE = 300;
     private final Map<Integer, MobGroup> _groupMap = new ConcurrentHashMap<>();
 
-    protected MobGroupTable() {
-    }
-
-    public static MobGroupTable getInstance() {
-        return SingletonHolder._instance;
+    private MobGroupTable() {
     }
 
     public void addGroup(int groupKey, MobGroup group) {
@@ -66,7 +62,11 @@ public class MobGroupTable {
         return _groupMap.remove(groupKey) != null;
     }
 
-    private static class SingletonHolder {
-        protected static final MobGroupTable _instance = new MobGroupTable();
+    public static MobGroupTable getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        protected static final MobGroupTable INSTANCE = new MobGroupTable();
     }
 }

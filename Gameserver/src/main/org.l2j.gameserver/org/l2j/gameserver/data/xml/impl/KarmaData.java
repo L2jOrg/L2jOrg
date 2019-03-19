@@ -21,17 +21,8 @@ public class KarmaData implements IGameXmlReader {
 
     private final Map<Integer, Double> _karmaTable = new HashMap<>();
 
-    public KarmaData() {
+    private KarmaData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of KarmaData.
-     *
-     * @return single instance of KarmaData
-     */
-    public static KarmaData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -67,7 +58,11 @@ public class KarmaData implements IGameXmlReader {
         return _karmaTable.get(level);
     }
 
-    private static class SingletonHolder {
-        protected static final KarmaData _instance = new KarmaData();
+    public static KarmaData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final KarmaData INSTANCE = new KarmaData();
     }
 }

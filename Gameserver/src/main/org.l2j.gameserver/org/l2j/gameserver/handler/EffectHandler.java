@@ -12,10 +12,11 @@ import java.util.function.Function;
  * @author BiggBoss, UnAfraid
  */
 public final class EffectHandler {
+
     private final Map<String, Function<StatsSet, AbstractEffect>> _effectHandlerFactories = new HashMap<>();
 
-    public static EffectHandler getInstance() {
-        return SingletonHolder._instance;
+    private EffectHandler() {
+
     }
 
     public void registerHandler(String name, Function<StatsSet, AbstractEffect> handlerFactory) {
@@ -38,7 +39,11 @@ public final class EffectHandler {
         }
     }
 
-    private static final class SingletonHolder {
-        protected static final EffectHandler _instance = new EffectHandler();
+    public static EffectHandler getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static final class Singleton {
+        protected static final EffectHandler INSTANCE = new EffectHandler();
     }
 }

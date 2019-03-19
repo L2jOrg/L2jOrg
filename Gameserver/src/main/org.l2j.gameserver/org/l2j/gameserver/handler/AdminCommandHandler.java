@@ -16,7 +16,6 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 import java.util.Map;
 
-
 /**
  * @author UnAfraid
  */
@@ -25,12 +24,8 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 
     private final Map<String, IAdminCommandHandler> _datatable;
 
-    protected AdminCommandHandler() {
+    private AdminCommandHandler() {
         _datatable = new HashMap<>();
-    }
-
-    public static AdminCommandHandler getInstance() {
-        return SingletonHolder.INSTANCE;
     }
 
     @Override
@@ -112,7 +107,11 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
         return _datatable.size();
     }
 
-    private static class SingletonHolder {
-        protected static final AdminCommandHandler INSTANCE = new AdminCommandHandler();
+    public static AdminCommandHandler getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final AdminCommandHandler INSTANCE = new AdminCommandHandler();
     }
 }

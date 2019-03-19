@@ -24,20 +24,11 @@ public final class ItemsOnGroundManager implements Runnable {
 
     private final Set<L2ItemInstance> _items = ConcurrentHashMap.newKeySet();
 
-    protected ItemsOnGroundManager() {
+    private ItemsOnGroundManager() {
         if (Config.SAVE_DROPPED_ITEM_INTERVAL > 0) {
             ThreadPoolManager.scheduleAtFixedRate(this, Config.SAVE_DROPPED_ITEM_INTERVAL, Config.SAVE_DROPPED_ITEM_INTERVAL);
         }
         load();
-    }
-
-    /**
-     * Gets the single instance of {@code ItemsOnGroundManager}.
-     *
-     * @return single instance of {@code ItemsOnGroundManager}
-     */
-    public static ItemsOnGroundManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     private void load() {
@@ -190,7 +181,11 @@ public final class ItemsOnGroundManager implements Runnable {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final ItemsOnGroundManager _instance = new ItemsOnGroundManager();
+    public static ItemsOnGroundManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ItemsOnGroundManager INSTANCE = new ItemsOnGroundManager();
     }
 }

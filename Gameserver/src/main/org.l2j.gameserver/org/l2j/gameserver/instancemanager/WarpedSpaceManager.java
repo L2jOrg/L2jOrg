@@ -14,8 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class WarpedSpaceManager {
     private volatile ConcurrentHashMap<L2Character, WarpedSpaceHolder> _warpedSpace = null;
 
-    public static WarpedSpaceManager getInstance() {
-        return SingletonHolder._instance;
+    private WarpedSpaceManager() {
     }
 
     public void addWarpedSpace(L2Character creature, int radius) {
@@ -43,13 +42,17 @@ public class WarpedSpaceManager {
                 final int radius = creature.getTemplate().getCollisionRadius();
                 final boolean originInRange = Util.calculateDistance(creature, origin, false, false) <= (holder.getRange() + radius);
                 final boolean destinationInRange = Util.calculateDistance(creature, destination, false, false) <= (holder.getRange() + radius);
-                return destinationInRange ? !originInRange : originInRange;
+                return destinationInRange != originInRange;
             }
         }
         return false;
     }
 
-    private static class SingletonHolder {
-        protected static final WarpedSpaceManager _instance = new WarpedSpaceManager();
+    public static WarpedSpaceManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final WarpedSpaceManager INSTANCE = new WarpedSpaceManager();
     }
 }

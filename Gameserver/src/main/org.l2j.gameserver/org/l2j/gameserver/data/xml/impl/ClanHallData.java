@@ -26,17 +26,8 @@ public final class ClanHallData implements IGameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClanHallData.class);
     private static final Map<Integer, ClanHall> _clanHalls = new HashMap<>();
 
-    protected ClanHallData() {
+    private ClanHallData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of ClanHallData.
-     *
-     * @return single instance of ClanHallData
-     */
-    public static ClanHallData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -155,7 +146,11 @@ public final class ClanHallData implements IGameXmlReader {
         return _clanHalls.values().stream().filter(ch -> (ch.getType() == ClanHallType.AUCTIONABLE) && (ch.getOwner() == null)).sorted(Comparator.comparingInt(ClanHall::getResidenceId)).collect(Collectors.toList());
     }
 
-    private static class SingletonHolder {
-        protected static final ClanHallData _instance = new ClanHallData();
+    public static ClanHallData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ClanHallData INSTANCE = new ClanHallData();
     }
 }

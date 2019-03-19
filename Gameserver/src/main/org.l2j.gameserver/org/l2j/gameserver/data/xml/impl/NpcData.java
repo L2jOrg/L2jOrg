@@ -36,7 +36,7 @@ public class NpcData implements IGameXmlReader {
     private final Map<Integer, L2NpcTemplate> _npcs = new HashMap<>();
     private final Map<String, Integer> _clans = new HashMap<>();
 
-    protected NpcData() {
+    private NpcData() {
         load();
     }
 
@@ -45,15 +45,6 @@ public class NpcData implements IGameXmlReader {
      */
     public static List<Integer> getMasterMonsterIDs() {
         return _masterMonsterIDs;
-    }
-
-    /**
-     * Gets the single instance of NpcData.
-     *
-     * @return single instance of NpcData
-     */
-    public static NpcData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -643,7 +634,11 @@ public class NpcData implements IGameXmlReader {
         return getTemplates(template -> CommonUtil.contains(classTypes, template.getType(), true));
     }
 
-    private static class SingletonHolder {
-        protected static final NpcData _instance = new NpcData();
+    public static NpcData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final NpcData INSTANCE = new NpcData();
     }
 }

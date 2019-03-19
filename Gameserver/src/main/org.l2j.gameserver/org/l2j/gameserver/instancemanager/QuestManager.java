@@ -28,16 +28,7 @@ public final class QuestManager {
      */
     private final Map<String, Quest> _scripts = new ConcurrentHashMap<>();
 
-    protected QuestManager() {
-    }
-
-    /**
-     * Gets the single instance of {@code QuestManager}.
-     *
-     * @return single instance of {@code QuestManager}
-     */
-    public static QuestManager getInstance() {
-        return SingletonHolder._instance;
+    private QuestManager() {
     }
 
     public boolean reload(String questFolder) {
@@ -235,7 +226,11 @@ public final class QuestManager {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final QuestManager _instance = new QuestManager();
+    public static QuestManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final QuestManager INSTANCE = new QuestManager();
     }
 }

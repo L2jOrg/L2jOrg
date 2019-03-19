@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.handler;
 
 import org.l2j.gameserver.model.DailyMissionDataHolder;
@@ -29,8 +13,7 @@ import java.util.function.Function;
 public class DailyMissionHandler {
     private final Map<String, Function<DailyMissionDataHolder, AbstractDailyMissionHandler>> _handlerFactories = new HashMap<>();
 
-    public static DailyMissionHandler getInstance() {
-        return SingletonHolder._instance;
+    private DailyMissionHandler() {
     }
 
     public void registerHandler(String name, Function<DailyMissionDataHolder, AbstractDailyMissionHandler> handlerFactory) {
@@ -53,7 +36,11 @@ public class DailyMissionHandler {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final DailyMissionHandler _instance = new DailyMissionHandler();
+    public static DailyMissionHandler getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final DailyMissionHandler INSTANCE = new DailyMissionHandler();
     }
 }

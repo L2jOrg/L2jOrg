@@ -31,12 +31,8 @@ public final class ShuttleData implements IGameXmlReader {
     private final Map<Integer, L2ShuttleData> _shuttles = new HashMap<>();
     private final Map<Integer, L2ShuttleInstance> _shuttleInstances = new HashMap<>();
 
-    protected ShuttleData() {
+    private ShuttleData() {
         load();
-    }
-
-    public static ShuttleData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -146,7 +142,11 @@ public final class ShuttleData implements IGameXmlReader {
         return null;
     }
 
-    private static class SingletonHolder {
-        protected static final ShuttleData _instance = new ShuttleData();
+    public static ShuttleData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ShuttleData INSTANCE = new ShuttleData();
     }
 }

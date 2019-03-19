@@ -28,12 +28,8 @@ public class FakePlayerData implements IGameXmlReader {
     private final Map<String, Integer> _fakePlayerIds = new HashMap<>();
     private final List<String> _talkableFakePlayerNames = new ArrayList<>();
 
-    protected FakePlayerData() {
+    private FakePlayerData() {
         load();
-    }
-
-    public static FakePlayerData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -87,7 +83,11 @@ public class FakePlayerData implements IGameXmlReader {
         return _fakePlayerInfos.get(npcId);
     }
 
-    private static class SingletonHolder {
-        protected static final FakePlayerData _instance = new FakePlayerData();
+    public static FakePlayerData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final FakePlayerData INSTANCE = new FakePlayerData();
     }
 }

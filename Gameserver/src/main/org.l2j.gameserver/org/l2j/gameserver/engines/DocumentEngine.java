@@ -20,15 +20,11 @@ public class DocumentEngine {
 
     private final List<File> _itemFiles = new LinkedList<>();
 
-    protected DocumentEngine() {
+    private DocumentEngine() {
         hashFiles("data/stats/items", _itemFiles);
         if (Config.CUSTOM_ITEMS_LOAD) {
             hashFiles("data/stats/items/custom", _itemFiles);
         }
-    }
-
-    public static DocumentEngine getInstance() {
-        return SingletonHolder._instance;
     }
 
     private void hashFiles(String dirname, List<File> hash) {
@@ -58,7 +54,11 @@ public class DocumentEngine {
         return list;
     }
 
-    private static class SingletonHolder {
-        protected static final DocumentEngine _instance = new DocumentEngine();
+    public static DocumentEngine getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final DocumentEngine INSTANCE = new DocumentEngine();
     }
 }

@@ -27,20 +27,8 @@ public final class FishingData implements IGameXmlReader {
     private double _spRateMin;
     private double _spRateMax;
 
-    /**
-     * Instantiates a new fishing data.
-     */
-    protected FishingData() {
+    private FishingData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of FishingData.
-     *
-     * @return single instance of FishingData
-     */
-    public static FishingData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -135,7 +123,12 @@ public final class FishingData implements IGameXmlReader {
         return _spRateMax;
     }
 
-    private static class SingletonHolder {
-        protected static final FishingData _instance = new FishingData();
+
+    public static FishingData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final FishingData INSTANCE = new FishingData();
     }
 }

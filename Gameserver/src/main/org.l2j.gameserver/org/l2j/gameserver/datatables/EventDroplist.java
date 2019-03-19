@@ -36,9 +36,7 @@ public class EventDroplist {
      */
     private static final List<DateDrop> ALL_NPC_DATE_DROPS = new CopyOnWriteArrayList<>();
 
-    public static EventDroplist getInstance() {
-        return SingletonHolder._instance;
-    }
+    private EventDroplist() {}
 
     /**
      * Create and Init a new DateDrop then add it to the allNpcDateDrops of EventDroplist .
@@ -88,9 +86,9 @@ public class EventDroplist {
     }
 
     public static class DateDrop {
+
         protected final DateRange _dateRange;
         private final EventDrop _eventDrop;
-
         public DateDrop(DateRange dateRange, EventDrop eventDrop) {
             _dateRange = dateRange;
             _eventDrop = eventDrop;
@@ -109,9 +107,14 @@ public class EventDroplist {
         public DateRange getDateRange() {
             return _dateRange;
         }
+
     }
 
-    private static class SingletonHolder {
-        protected static final EventDroplist _instance = new EventDroplist();
+    public static EventDroplist getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final EventDroplist INSTANCE = new EventDroplist();
     }
 }

@@ -30,20 +30,8 @@ public final class InitialEquipmentData implements IGameXmlReader {
     private static final String EVENT = "data/stats/initialEquipmentEvent.xml";
     private final Map<ClassId, List<PcItemTemplate>> _initialEquipmentList = new HashMap<>();
 
-    /**
-     * Instantiates a new initial equipment data.
-     */
-    protected InitialEquipmentData() {
+    private InitialEquipmentData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of InitialEquipmentData.
-     *
-     * @return single instance of InitialEquipmentData
-     */
-    public static InitialEquipmentData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -109,7 +97,10 @@ public final class InitialEquipmentData implements IGameXmlReader {
         return _initialEquipmentList.get(ClassId.getClassId(cId));
     }
 
-    private static class SingletonHolder {
-        protected static final InitialEquipmentData _instance = new InitialEquipmentData();
+    public static InitialEquipmentData getInstance() {
+        return Singleton.INSTANCE;
+    }
+    private static class Singleton {
+        protected static final InitialEquipmentData INSTANCE = new InitialEquipmentData();
     }
 }

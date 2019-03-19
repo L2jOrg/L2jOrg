@@ -39,7 +39,7 @@ public final class TaskManager {
     final List<ExecutedTask> _currentTasks = new CopyOnWriteArrayList<>();
     private final Map<Integer, Task> _tasks = new ConcurrentHashMap<>();
 
-    protected TaskManager() {
+    private TaskManager() {
         initializate();
         startAllTasks();
         LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _tasks.size() + " Tasks.");
@@ -92,10 +92,6 @@ public final class TaskManager {
             LOGGER.warn(TaskManager.class.getSimpleName() + ": Cannot add the task:  " + e.getMessage(), e);
         }
         return false;
-    }
-
-    public static TaskManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     private void initializate() {
@@ -204,7 +200,7 @@ public final class TaskManager {
                 if (check.after(min) || (delay < 0)) {
                     delay += interval;
                 }
-                task.scheduled = ThreadPoolManager.getInstance().scheduleAtFixedRate(task, delay, interval);
+                task.scheduled = ThreadPoolManager.scheduleAtFixedRate(task, delay, interval);
                 return true;
             }
             default: {
@@ -214,8 +210,12 @@ public final class TaskManager {
         return false;
     }
 
-    private static class SingletonHolder {
-        protected static final TaskManager _instance = new TaskManager();
+    public static TaskManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final TaskManager INSTANCE = new TaskManager();
     }
 
     public class ExecutedTask implements Runnable {

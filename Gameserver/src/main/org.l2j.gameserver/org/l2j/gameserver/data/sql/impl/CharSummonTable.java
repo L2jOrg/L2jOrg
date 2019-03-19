@@ -36,8 +36,7 @@ public class CharSummonTable {
     private static final String REMOVE_SUMMON = "DELETE FROM character_summons WHERE ownerId = ? and summonId = ?";
     private static final String SAVE_SUMMON = "REPLACE INTO character_summons (ownerId,summonId,summonSkillId,curHp,curMp,time) VALUES (?,?,?,?,?,?)";
 
-    public static CharSummonTable getInstance() {
-        return SingletonHolder._instance;
+    private CharSummonTable(){
     }
 
     public Map<Integer, Integer> getPets() {
@@ -193,7 +192,11 @@ public class CharSummonTable {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final CharSummonTable _instance = new CharSummonTable();
+    public static CharSummonTable getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final CharSummonTable INSTANCE = new CharSummonTable();
     }
 }

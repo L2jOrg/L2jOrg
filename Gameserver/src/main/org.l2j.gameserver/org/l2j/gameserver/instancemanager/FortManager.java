@@ -17,12 +17,13 @@ import java.util.concurrent.ConcurrentSkipListMap;
 
 
 public final class FortManager implements InstanceListManager {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(FortManager.class);
 
     private final Map<Integer, Fort> _forts = new ConcurrentSkipListMap<>();
 
-    public static FortManager getInstance() {
-        return SingletonHolder._instance;
+    private FortManager() {
+
     }
 
     public final Fort findNearestFort(L2Object obj) {
@@ -117,7 +118,11 @@ public final class FortManager implements InstanceListManager {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final FortManager _instance = new FortManager();
+    public static FortManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final FortManager INSTANCE = new FortManager();
     }
 }

@@ -64,7 +64,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
     // Temporary date
     private Calendar _nextModeChange = null;
 
-    public CastleManorManager() {
+    private CastleManorManager() {
         if (Config.ALLOW_MANOR) {
             load(); // Load seed data (XML)
             loadDb(); // Load castle manor data (DB)
@@ -86,19 +86,12 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
 
             // Schedule autosave
             if (!Config.ALT_MANOR_SAVE_ALL_ACTIONS) {
-                ThreadPoolManager.getInstance().scheduleAtFixedRate(this::storeMe, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000);
+                ThreadPoolManager.scheduleAtFixedRate(this::storeMe, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000);
             }
         } else {
             _mode = ManorMode.DISABLED;
             LOGGER.info(getClass().getSimpleName() + ": Manor system is deactivated.");
         }
-    }
-
-    // -------------------------------------------------------
-    // Static methods
-    // -------------------------------------------------------
-    public static CastleManorManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -203,6 +196,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
     // -------------------------------------------------------
     // Manor methods
     // -------------------------------------------------------
+
     private void scheduleModeChange() {
         // Calculate next mode change
         _nextModeChange = Calendar.getInstance();
@@ -230,7 +224,6 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
         // Schedule mode change
         ThreadPoolManager.getInstance().schedule(this::changeMode, (_nextModeChange.getTimeInMillis() - System.currentTimeMillis()));
     }
-
     public final void changeMode() {
         switch (_mode) {
             case APPROVED: {
@@ -608,6 +601,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
     // -------------------------------------------------------
     // Seed methods
     // -------------------------------------------------------
+
     public final List<L2Seed> getCrops() {
         final List<L2Seed> seeds = new ArrayList<>();
         final List<Integer> cropIds = new ArrayList<>();
@@ -620,7 +614,6 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
         cropIds.clear();
         return seeds;
     }
-
     public final Set<L2Seed> getSeedsForCastle(int castleId) {
         return _seeds.values().stream().filter(s -> s.getCastleId() == castleId).collect(Collectors.toSet());
     }
@@ -655,7 +648,11 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
         return null;
     }
 
-    private static class SingletonHolder {
-        protected static final CastleManorManager _instance = new CastleManorManager();
+    public static CastleManorManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final CastleManorManager INSTANCE = new CastleManorManager();
     }
 }

@@ -40,20 +40,8 @@ public class DBSpawnManager {
     protected final Map<Integer, StatsSet> _storedInfo = new ConcurrentHashMap<>();
     protected final Map<Integer, ScheduledFuture<?>> _schedules = new ConcurrentHashMap<>();
 
-    /**
-     * Instantiates a new raid npc spawn manager.
-     */
-    protected DBSpawnManager() {
+    private DBSpawnManager() {
         load();
-    }
-
-    /**
-     * Gets the single instance of DBSpawnManager.
-     *
-     * @return single instance of DBSpawnManager
-     */
-    public static DBSpawnManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     /**
@@ -520,13 +508,18 @@ public class DBSpawnManager {
         _spawns.clear();
     }
 
+
+
     public enum DBStatusType {
         ALIVE,
         DEAD,
         UNDEFINED
     }
 
-    private static class SingletonHolder {
-        protected static final DBSpawnManager _instance = new DBSpawnManager();
+    public static DBSpawnManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+    private static class Singleton {
+        private static final DBSpawnManager INSTANCE = new DBSpawnManager();
     }
 }

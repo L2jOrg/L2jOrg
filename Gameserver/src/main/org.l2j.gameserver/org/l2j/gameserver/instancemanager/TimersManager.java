@@ -31,8 +31,8 @@ import java.util.concurrent.ConcurrentHashMap;
 public class TimersManager {
     private final Map<Integer, List<TimerHolder<?>>> _timers = new ConcurrentHashMap<>();
 
-    public static TimersManager getInstance() {
-        return SingletonHolder._instance;
+    private TimersManager() {
+
     }
 
     public void registerTimer(TimerHolder<?> timer) {
@@ -71,7 +71,11 @@ public class TimersManager {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final TimersManager _instance = new TimersManager();
+    public static TimersManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final TimersManager INSTANCE = new TimersManager();
     }
 }

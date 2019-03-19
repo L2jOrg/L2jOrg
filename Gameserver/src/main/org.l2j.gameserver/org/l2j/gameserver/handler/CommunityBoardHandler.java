@@ -28,8 +28,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
      */
     private final Map<Integer, String> _bypasses = new ConcurrentHashMap<>();
 
-    protected CommunityBoardHandler() {
-        // Prevent external initialization.
+    private CommunityBoardHandler() {
     }
 
     /**
@@ -41,10 +40,6 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
      */
     public static void separateAndSend(String html, L2PcInstance player) {
         Util.sendCBHtml(player, html);
-    }
-
-    public static CommunityBoardHandler getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -192,7 +187,11 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
         return _bypasses.remove(player.getObjectId());
     }
 
-    private static class SingletonHolder {
-        protected static final CommunityBoardHandler _instance = new CommunityBoardHandler();
+    public static CommunityBoardHandler getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final CommunityBoardHandler INSTANCE = new CommunityBoardHandler();
     }
 }

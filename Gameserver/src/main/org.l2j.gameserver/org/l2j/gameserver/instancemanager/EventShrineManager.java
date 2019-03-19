@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.instancemanager;
 
 /**
@@ -22,8 +6,10 @@ package org.l2j.gameserver.instancemanager;
 public final class EventShrineManager {
     private static boolean ENABLE_SHRINES = false;
 
+    private EventShrineManager() { }
+
     public static EventShrineManager getInstance() {
-        return SingletonHolder._instance;
+        return Singleton.INSTANCE;
     }
 
     public boolean areShrinesEnabled() {
@@ -34,7 +20,7 @@ public final class EventShrineManager {
         ENABLE_SHRINES = enabled;
     }
 
-    private static class SingletonHolder {
-        protected static final EventShrineManager _instance = new EventShrineManager();
+    private static class Singleton {
+        private static final EventShrineManager INSTANCE = new EventShrineManager();
     }
 }

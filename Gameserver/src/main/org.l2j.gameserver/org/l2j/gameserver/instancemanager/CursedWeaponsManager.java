@@ -35,7 +35,7 @@ public final class CursedWeaponsManager implements IGameXmlReader {
 
     private final Map<Integer, CursedWeapon> _cursedWeapons = new HashMap<>();
 
-    protected CursedWeaponsManager() {
+    private CursedWeaponsManager() {
         load();
     }
 
@@ -51,10 +51,6 @@ public final class CursedWeaponsManager implements IGameXmlReader {
         } catch (SQLException e) {
             LOGGER.error("Failed to remove data: " + e.getMessage(), e);
         }
-    }
-
-    public static CursedWeaponsManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -301,7 +297,11 @@ public final class CursedWeaponsManager implements IGameXmlReader {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final CursedWeaponsManager _instance = new CursedWeaponsManager();
+    public static CursedWeaponsManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final CursedWeaponsManager INSTANCE = new CursedWeaponsManager();
     }
 }

@@ -11,12 +11,8 @@ import java.util.Map;
 public class ActionHandler implements IHandler<IActionHandler, InstanceType> {
     private final Map<InstanceType, IActionHandler> _actions;
 
-    protected ActionHandler() {
+    private ActionHandler() {
         _actions = new HashMap<>();
-    }
-
-    public static ActionHandler getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -46,7 +42,11 @@ public class ActionHandler implements IHandler<IActionHandler, InstanceType> {
         return _actions.size();
     }
 
-    private static class SingletonHolder {
-        protected static final ActionHandler _instance = new ActionHandler();
+    public static ActionHandler getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ActionHandler INSTANCE = new ActionHandler();
     }
 }

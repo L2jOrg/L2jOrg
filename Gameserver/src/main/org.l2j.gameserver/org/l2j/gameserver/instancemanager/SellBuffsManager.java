@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.gameserver.Config;
@@ -53,17 +37,8 @@ public final class SellBuffsManager implements IGameXmlReader {
     private static final List<Integer> ALLOWED_BUFFS = new ArrayList<>();
     private static final String htmlFolder = "data/html/mods/SellBuffs/";
 
-    protected SellBuffsManager() {
+    private SellBuffsManager() {
         load();
-    }
-
-    /**
-     * Gets the single instance of {@code SellBuffsManager}.
-     *
-     * @return single instance of {@code SellBuffsManager}
-     */
-    public static SellBuffsManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -390,7 +365,11 @@ public final class SellBuffsManager implements IGameXmlReader {
         return true;
     }
 
-    private static class SingletonHolder {
-        protected static final SellBuffsManager _instance = new SellBuffsManager();
+    public static SellBuffsManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final SellBuffsManager INSTANCE = new SellBuffsManager();
     }
 }

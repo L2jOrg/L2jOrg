@@ -32,7 +32,7 @@ public class SchemeBufferTable {
     private final Map<Integer, HashMap<String, ArrayList<Integer>>> _schemesTable = new ConcurrentHashMap<>();
     private final Map<Integer, BuffSkillHolder> _availableBuffs = new LinkedHashMap<>();
 
-    public SchemeBufferTable() {
+    private SchemeBufferTable() {
         int count = 0;
 
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
@@ -95,10 +95,6 @@ public class SchemeBufferTable {
             LOGGER.warn("SchemeBufferTable: Failed to load buff info : " + e);
         }
         LOGGER.info("SchemeBufferTable: Loaded " + count + " players schemes and " + _availableBuffs.size() + " available buffs.");
-    }
-
-    public static SchemeBufferTable getInstance() {
-        return SingletonHolder.INSTANCE;
     }
 
     public void saveSchemes() {
@@ -219,7 +215,11 @@ public class SchemeBufferTable {
         return _availableBuffs.get(skillId);
     }
 
-    private static class SingletonHolder {
-        protected static final SchemeBufferTable INSTANCE = new SchemeBufferTable();
+    public static SchemeBufferTable getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final SchemeBufferTable INSTANCE = new SchemeBufferTable();
     }
 }

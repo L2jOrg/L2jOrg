@@ -13,20 +13,8 @@ import java.util.Map;
 public class ItemHandler implements IHandler<IItemHandler, L2EtcItem> {
     private final Map<String, IItemHandler> _datatable;
 
-    /**
-     * Constructor of ItemHandler
-     */
-    protected ItemHandler() {
+    private ItemHandler() {
         _datatable = new HashMap<>();
-    }
-
-    /**
-     * Create ItemHandler if doesn't exist and returns ItemHandler
-     *
-     * @return ItemHandler
-     */
-    public static ItemHandler getInstance() {
-        return SingletonHolder._instance;
     }
 
     /**
@@ -71,7 +59,11 @@ public class ItemHandler implements IHandler<IItemHandler, L2EtcItem> {
         return _datatable.size();
     }
 
-    private static class SingletonHolder {
-        protected static final ItemHandler _instance = new ItemHandler();
+    public static ItemHandler getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ItemHandler INSTANCE = new ItemHandler();
     }
 }

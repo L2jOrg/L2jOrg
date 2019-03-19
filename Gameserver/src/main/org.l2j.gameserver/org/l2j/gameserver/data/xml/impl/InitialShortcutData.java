@@ -52,20 +52,8 @@ public final class InitialShortcutData implements IGameXmlReader {
     private final List<Shortcut> _initialGlobalShortcutList = new ArrayList<>();
     private final Map<Integer, Macro> _macroPresets = new HashMap<>();
 
-    /**
-     * Instantiates a new initial shortcuts data.
-     */
-    protected InitialShortcutData() {
+    private InitialShortcutData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of InitialEquipmentData.
-     *
-     * @return single instance of InitialEquipmentData
-     */
-    public static InitialShortcutData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -319,7 +307,11 @@ public final class InitialShortcutData implements IGameXmlReader {
         }
     }
 
-    private static class SingletonHolder {
-        protected static final InitialShortcutData _instance = new InitialShortcutData();
+    public static InitialShortcutData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final InitialShortcutData INSTANCE = new InitialShortcutData();
     }
 }

@@ -30,20 +30,8 @@ public final class HitConditionBonusData implements IGameXmlReader {
     @SuppressWarnings("unused")
     private int rainBonus = 0;
 
-    /**
-     * Instantiates a new hit condition bonus.
-     */
-    protected HitConditionBonusData() {
+    private HitConditionBonusData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of HitConditionBonus.
-     *
-     * @return single instance of HitConditionBonus
-     */
-    public static HitConditionBonusData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -132,7 +120,11 @@ public final class HitConditionBonusData implements IGameXmlReader {
         return Math.max(mod / 100, 0);
     }
 
-    private static class SingletonHolder {
-        protected static final HitConditionBonusData _instance = new HitConditionBonusData();
+    public static HitConditionBonusData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        protected static final HitConditionBonusData INSTANCE = new HitConditionBonusData();
     }
 }

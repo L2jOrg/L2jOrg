@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.communitybbs.Manager;
 
 import org.l2j.gameserver.communitybbs.BB.Forum;
@@ -32,12 +16,8 @@ public class TopicBBSManager extends BaseBBSManager {
     private final List<Topic> _table = new CopyOnWriteArrayList<>();
     private final Map<Forum, Integer> _maxId = new ConcurrentHashMap<>();
 
-    protected TopicBBSManager() {
+    private TopicBBSManager() {
         // Prevent external initialization.
-    }
-
-    public static TopicBBSManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     public void addTopic(Topic tt) {
@@ -208,22 +188,26 @@ public class TopicBBSManager extends BaseBBSManager {
         }
         for (int i = 1; i <= nbp; i++) {
             if (i == index) {
-                html.append("<td> " + i + " </td>");
+                html.append("<td> ").append(i).append(" </td>");
             } else {
-                html.append("<td><a action=\"bypass _bbstopics;read;" + forum.getID() + ";" + i + "\"> " + i + " </a></td>");
+                html.append("<td><a action=\"bypass _bbstopics;read;").append(forum.getID()).append(";").append(i).append("\"> ").append(i).append(" </a></td>");
             }
         }
         if (index == nbp) {
             html.append("<td><button action=\"\" back=\"l2ui_ch3.next1_down\" fore=\"l2ui_ch3.next1\" width=16 height=16 ></td>");
         } else {
-            html.append("<td><button action=\"bypass _bbstopics;read;" + forum.getID() + ";" + (index + 1) + "\" back=\"l2ui_ch3.next1_down\" fore=\"l2ui_ch3.next1\" width=16 height=16 ></td>");
+            html.append("<td><button action=\"bypass _bbstopics;read;").append(forum.getID()).append(";").append(index + 1).append("\" back=\"l2ui_ch3.next1_down\" fore=\"l2ui_ch3.next1\" width=16 height=16 ></td>");
         }
 
-        html.append("</tr></table> </td> <td align=right><button value = \"&$421;\" action=\"bypass _bbstopics;crea;" + forum.getID() + "\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\" ></td></tr><tr><td><img src=\"l2ui.mini_logo\" width=5 height=10></td></tr><tr> <td></td><td align=center><table border=0><tr><td></td><td><edit var = \"Search\" width=130 height=11></td><td><button value=\"&$420;\" action=\"Write 5 -2 0 Search _ _\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\"> </td> </tr></table> </td></tr></table><br><br><br></center></body></html>");
+        html.append("</tr></table> </td> <td align=right><button value = \"&$421;\" action=\"bypass _bbstopics;crea;").append(forum.getID()).append("\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\" ></td></tr><tr><td><img src=\"l2ui.mini_logo\" width=5 height=10></td></tr><tr> <td></td><td align=center><table border=0><tr><td></td><td><edit var = \"Search\" width=130 height=11></td><td><button value=\"&$420;\" action=\"Write 5 -2 0 Search _ _\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\"> </td> </tr></table> </td></tr></table><br><br><br></center></body></html>");
         CommunityBoardHandler.separateAndSend(html.toString(), activeChar);
     }
 
-    private static class SingletonHolder {
-        protected static final TopicBBSManager _instance = new TopicBBSManager();
+    public static TopicBBSManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final TopicBBSManager INSTANCE = new TopicBBSManager();
     }
 }

@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.util.Rnd;
@@ -25,13 +9,9 @@ import org.l2j.gameserver.network.serverpackets.ExPCCafePointInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 public final class PcCafePointsManager {
-    /**
-     * Gets the single instance of {@code PcCafePointsManager}.
-     *
-     * @return single instance of {@code PcCafePointsManager}
-     */
-    public static PcCafePointsManager getInstance() {
-        return SingletonHolder._instance;
+
+    private PcCafePointsManager() {
+
     }
 
     public void givePcCafePoint(L2PcInstance player, double exp) {
@@ -64,7 +44,7 @@ public final class PcCafePointsManager {
             return;
         }
 
-        SystemMessage message = null;
+        SystemMessage message;
         if (Config.PC_CAFE_ENABLE_DOUBLE_POINTS && (Rnd.get(100) < Config.PC_CAFE_DOUBLE_POINTS_CHANCE)) {
             points *= 2;
             message = SystemMessage.getSystemMessage(SystemMessageId.DOUBLE_POINTS_YOU_EARNED_S1_PA_POINT_S);
@@ -80,7 +60,11 @@ public final class PcCafePointsManager {
         player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), points, 1));
     }
 
-    private static class SingletonHolder {
-        protected static final PcCafePointsManager _instance = new PcCafePointsManager();
+    public static PcCafePointsManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final PcCafePointsManager INSTANCE = new PcCafePointsManager();
     }
 }

@@ -45,17 +45,8 @@ public final class MailManager {
 
     private final Map<Integer, Message> _messages = new ConcurrentHashMap<>();
 
-    protected MailManager() {
+    private MailManager() {
         load();
-    }
-
-    /**
-     * Gets the single instance of {@code MailManager}.
-     *
-     * @return single instance of {@code MailManager}
-     */
-    public static MailManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     private void load() {
@@ -232,7 +223,11 @@ public final class MailManager {
         IdFactory.getInstance().releaseId(msgId);
     }
 
-    private static class SingletonHolder {
-        protected static final MailManager _instance = new MailManager();
+    public static MailManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final MailManager INSTANCE = new MailManager();
     }
 }

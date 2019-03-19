@@ -31,10 +31,7 @@ public class GeoEngine {
     private final ABlock[][] _blocks;
     private final BlockNull _nullBlock;
 
-    /**
-     * GeoEngine constructor. Loads all geodata files of chosen geodata format.
-     */
-    public GeoEngine() {
+    private GeoEngine() {
         LOGGER.info("GeoEngine: Initializing...");
 
         // initialize block container
@@ -82,15 +79,6 @@ public class GeoEngine {
     }
 
     /**
-     * Returns the instance of the {@link GeoEngine}.
-     *
-     * @return {@link GeoEngine} : The instance.
-     */
-    public static GeoEngine getInstance() {
-        return SingletonHolder._instance;
-    }
-
-    /**
      * Converts world X to geodata X.
      *
      * @param worldX
@@ -110,8 +98,8 @@ public class GeoEngine {
         return (MathUtil.limit(worldY, L2World.MAP_MIN_Y, L2World.MAP_MAX_Y) - L2World.MAP_MIN_Y) >> 4;
     }
 
-    // GEODATA - GENERAL
 
+    // GEODATA - GENERAL
     /**
      * Converts geodata X to world X.
      *
@@ -317,8 +305,8 @@ public class GeoEngine {
         return hasGeoPos(getGeoX(worldX), getGeoY(worldY));
     }
 
-    // PATHFINDING
 
+    // PATHFINDING
     /**
      * Returns closest Z coordinate according to geodata.
      *
@@ -837,7 +825,11 @@ public class GeoEngine {
         return null;
     }
 
-    private static class SingletonHolder {
-        protected static final GeoEngine _instance = Config.PATHFINDING ? new GeoEnginePathfinding() : new GeoEngine();
+    public static GeoEngine getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final GeoEngine INSTANCE = Config.PATHFINDING ? new GeoEnginePathfinding() : new GeoEngine();
     }
 }

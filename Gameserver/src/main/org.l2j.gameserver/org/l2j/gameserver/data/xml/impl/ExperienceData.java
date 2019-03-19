@@ -27,20 +27,8 @@ public final class ExperienceData implements IGameXmlReader {
     private byte MAX_LEVEL;
     private byte MAX_PET_LEVEL;
 
-    /**
-     * Instantiates a new experience table.
-     */
-    protected ExperienceData() {
+    private ExperienceData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of ExperienceTable.
-     *
-     * @return single instance of ExperienceTable
-     */
-    public static ExperienceData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -120,7 +108,11 @@ public final class ExperienceData implements IGameXmlReader {
         return MAX_PET_LEVEL;
     }
 
-    private static class SingletonHolder {
-        protected static final ExperienceData _instance = new ExperienceData();
+    public static ExperienceData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final ExperienceData INSTANCE = new ExperienceData();
     }
 }

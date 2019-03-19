@@ -42,20 +42,8 @@ public final class StaticObjectData implements IGameXmlReader {
 
     private final Map<Integer, L2StaticObjectInstance> _staticObjects = new HashMap<>();
 
-    /**
-     * Instantiates a new static objects.
-     */
-    protected StaticObjectData() {
+    private StaticObjectData() {
         load();
-    }
-
-    /**
-     * Gets the single instance of StaticObjects.
-     *
-     * @return single instance of StaticObjects
-     */
-    public static StaticObjectData getInstance() {
-        return SingletonHolder._instance;
     }
 
     @Override
@@ -107,7 +95,11 @@ public final class StaticObjectData implements IGameXmlReader {
         return _staticObjects.values();
     }
 
-    private static class SingletonHolder {
-        protected static final StaticObjectData _instance = new StaticObjectData();
+    public static StaticObjectData getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final StaticObjectData INSTANCE = new StaticObjectData();
     }
 }

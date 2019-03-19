@@ -52,7 +52,7 @@ public final class HandysBlockCheckerManager {
     // Registration request penalty (10 seconds)
     protected static Set<Integer> _registrationPenalty = Collections.synchronizedSet(new HashSet<>());
 
-    protected HandysBlockCheckerManager() {
+    private HandysBlockCheckerManager() {
         // Initialize arena status
         _arenaStatus.put(0, false);
         _arenaStatus.put(1, false);
@@ -64,15 +64,6 @@ public final class HandysBlockCheckerManager {
         _arenaVotes.put(1, 0);
         _arenaVotes.put(2, 0);
         _arenaVotes.put(3, 0);
-    }
-
-    /**
-     * Gets the single instance of {@code HandysBlockCheckerManager}.
-     *
-     * @return single instance of {@code HandysBlockCheckerManager}
-     */
-    public static HandysBlockCheckerManager getInstance() {
-        return SingletonHolder._instance;
     }
 
     /**
@@ -339,7 +330,11 @@ public final class HandysBlockCheckerManager {
         ThreadPoolManager.getInstance().schedule(new PenaltyRemoveTask(objId), 10000);
     }
 
-    private static class SingletonHolder {
-        protected static final HandysBlockCheckerManager _instance = new HandysBlockCheckerManager();
+    public static HandysBlockCheckerManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final HandysBlockCheckerManager INSTANCE = new HandysBlockCheckerManager();
     }
 }
