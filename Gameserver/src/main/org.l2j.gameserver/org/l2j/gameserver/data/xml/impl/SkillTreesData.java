@@ -55,7 +55,6 @@ public final class SkillTreesData implements IGameXmlReader {
     // ClassId, Map of Skill Hash Code, L2SkillLearn
     private static final Map<ClassId, Map<Long, L2SkillLearn>> _classSkillTrees = new HashMap<>();
     private static final Map<SubclassType, Map<Long, L2SkillLearn>> _revelationSkillTree = new HashMap<>();
-    private static final Map<ClassId, Set<Integer>> _awakeningSaveSkillTree = new HashMap<>();
     // Skill Hash Code, L2SkillLearn
     private static final Map<Long, L2SkillLearn> _fishingSkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _pledgeSkillTree = new HashMap<>();
@@ -101,7 +100,6 @@ public final class SkillTreesData implements IGameXmlReader {
         _gameMasterAuraSkillTree.clear();
         _revelationSkillTree.clear();
         _removeSkillCache.clear();
-        _awakeningSaveSkillTree.clear();
 
         // Load files.
         parseDatapackDirectory("data/skillTrees/", true);
@@ -252,10 +250,6 @@ public final class SkillTreesData implements IGameXmlReader {
                                     }
                                     case "gameMasterAuraSkillTree": {
                                         _gameMasterAuraSkillTree.put(skillHashCode, skillLearn);
-                                        break;
-                                    }
-                                    case "awakeningSaveSkillTree": {
-                                        _awakeningSaveSkillTree.computeIfAbsent(classId, k -> new HashSet<>()).add(skillLearn.getSkillId());
                                         break;
                                     }
                                     default: {
@@ -459,7 +453,7 @@ public final class SkillTreesData implements IGameXmlReader {
                 continue;
             }
 
-            if (isAwaken && !isCurrentClassSkillNoParent(classId, entry.getKey()) && !isAwakenSaveSkill(player.getClassId(), skill.getSkillId())) {
+            if (isAwaken && !isCurrentClassSkillNoParent(classId, entry.getKey())) {
                 continue;
             }
 
@@ -561,7 +555,7 @@ public final class SkillTreesData implements IGameXmlReader {
                     if (oldSkill.getLevel() < skill.getSkillLevel()) {
                         result.add(skill);
                     }
-                } else if (!isAwaken || isCurrentClassSkillNoParent(player.getClassId(), hashCode) || isAwakenSaveSkill(player.getClassId(), skill.getSkillId())) {
+                } else if (!isAwaken || isCurrentClassSkillNoParent(player.getClassId(), hashCode)) {
                     result.add(skill);
                 }
             }
@@ -912,7 +906,7 @@ public final class SkillTreesData implements IGameXmlReader {
             final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getId());
             final long hashCode = SkillData.getSkillHashCode(skill.getId(), maxLvl);
 
-            if (!isCurrentClassSkillNoParent(player.getClassId(), hashCode) && !isRemoveSkill(player.getClassId(), skill.getId()) && !isAwakenSaveSkill(player.getClassId(), skill.getId())) {
+            if (!isCurrentClassSkillNoParent(player.getClassId(), hashCode) && !isRemoveSkill(player.getClassId(), skill.getId())) {
                 player.removeSkill(skill, true, true);
             }
         }
@@ -960,10 +954,6 @@ public final class SkillTreesData implements IGameXmlReader {
 
     public boolean isCurrentClassSkillNoParent(ClassId classId, Long hashCode) {
         return _classSkillTrees.getOrDefault(classId, Collections.emptyMap()).containsKey(hashCode);
-    }
-
-    public boolean isAwakenSaveSkill(ClassId classId, int skillId) {
-        return _awakeningSaveSkillTree.getOrDefault(classId, Collections.emptySet()).contains(skillId);
     }
 
     /**
@@ -1134,7 +1124,6 @@ public final class SkillTreesData implements IGameXmlReader {
         LOGGER.info(className + ": Loaded " + _heroSkillTree.size() + " Hero Skills.");
         LOGGER.info(className + ": Loaded " + _gameMasterSkillTree.size() + " Game Master Skills.");
         LOGGER.info(className + ": Loaded " + _gameMasterAuraSkillTree.size() + " Game Master Aura Skills.");
-        LOGGER.info(className + ": Loaded " + _awakeningSaveSkillTree.size() + " Class Awaken Save Skills.");
         LOGGER.info(className + ": Loaded " + revelationSkillTreeCount + " Revelation Skills.");
 
         final int commonSkills = _commonSkillTree.size();
