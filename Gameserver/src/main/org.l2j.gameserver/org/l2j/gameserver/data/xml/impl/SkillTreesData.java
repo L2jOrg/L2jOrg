@@ -63,7 +63,6 @@ public final class SkillTreesData implements IGameXmlReader {
     private static final Map<Long, L2SkillLearn> _subPledgeSkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _transformSkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _commonSkillTree = new HashMap<>();
-    private static final Map<Long, L2SkillLearn> _abilitySkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _alchemySkillTree = new HashMap<>();
     // Other skill trees
     private static final Map<Long, L2SkillLearn> _nobleSkillTree = new HashMap<>();
@@ -99,7 +98,6 @@ public final class SkillTreesData implements IGameXmlReader {
         _subPledgeSkillTree.clear();
         _transformSkillTree.clear();
         _nobleSkillTree.clear();
-        _abilitySkillTree.clear();
         _alchemySkillTree.clear();
         _heroSkillTree.clear();
         _gameMasterSkillTree.clear();
@@ -138,8 +136,6 @@ public final class SkillTreesData implements IGameXmlReader {
                 for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
                     if ("skillTree".equalsIgnoreCase(d.getNodeName())) {
                         final Map<Long, L2SkillLearn> classSkillTree = new HashMap<>();
-                        final Map<Long, L2SkillLearn> transferSkillTree = new HashMap<>();
-                        final Map<Long, L2SkillLearn> raceSkillTree = new HashMap<>();
                         final Map<Long, L2SkillLearn> revelationSkillTree = new HashMap<>();
 
                         type = d.getAttributes().getNamedItem("type").getNodeValue();
@@ -247,10 +243,6 @@ public final class SkillTreesData implements IGameXmlReader {
                                     }
                                     case "nobleSkillTree": {
                                         _nobleSkillTree.put(skillHashCode, skillLearn);
-                                        break;
-                                    }
-                                    case "abilitySkillTree": {
-                                        _abilitySkillTree.put(skillHashCode, skillLearn);
                                         break;
                                     }
                                     case "alchemySkillTree": {
@@ -364,15 +356,6 @@ public final class SkillTreesData implements IGameXmlReader {
      */
     public Map<Long, L2SkillLearn> getTransformSkillTree() {
         return _transformSkillTree;
-    }
-
-    /**
-     * Gets the ability skill tree.
-     *
-     * @return the complete Ability Skill Tree
-     */
-    public Map<Long, L2SkillLearn> getAbilitySkillTree() {
-        return _abilitySkillTree;
     }
 
     /**
@@ -848,17 +831,6 @@ public final class SkillTreesData implements IGameXmlReader {
     }
 
     /**
-     * Gets the ability skill.
-     *
-     * @param id  the ability skill Id
-     * @param lvl the ability skill level
-     * @return the ability skill from the Ability Skill Tree for a given {@code id} and {@code lvl}
-     */
-    public L2SkillLearn getAbilitySkill(int id, int lvl) {
-        return _abilitySkillTree.get(SkillData.getSkillHashCode(id, lvl));
-    }
-
-    /**
      * Gets the alchemy skill.
      *
      * @param id  the alchemy skill Id
@@ -1135,10 +1107,6 @@ public final class SkillTreesData implements IGameXmlReader {
             }
         }
 
-        for (L2SkillLearn s : _abilitySkillTree.values()) {
-            list.add(SkillData.getSkillHashCode(s.getSkillId(), s.getSkillLevel()));
-        }
-
         for (L2SkillLearn s : _alchemySkillTree.values()) {
             list.add(SkillData.getSkillHashCode(s.getSkillId(), s.getSkillLevel()));
         }
@@ -1229,7 +1197,6 @@ public final class SkillTreesData implements IGameXmlReader {
         LOGGER.info(className + ": Loaded " + _heroSkillTree.size() + " Hero Skills.");
         LOGGER.info(className + ": Loaded " + _gameMasterSkillTree.size() + " Game Master Skills.");
         LOGGER.info(className + ": Loaded " + _gameMasterAuraSkillTree.size() + " Game Master Aura Skills.");
-        LOGGER.info(className + ": Loaded " + _abilitySkillTree.size() + " Ability Skills.");
         LOGGER.info(className + ": Loaded " + _alchemySkillTree.size() + " Alchemy Skills.");
         LOGGER.info(className + ": Loaded " + _awakeningSaveSkillTree.size() + " Class Awaken Save Skills.");
         LOGGER.info(className + ": Loaded " + revelationSkillTreeCount + " Revelation Skills.");
