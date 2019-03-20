@@ -54,7 +54,6 @@ public final class SkillTreesData implements IGameXmlReader {
 
     // ClassId, Map of Skill Hash Code, L2SkillLearn
     private static final Map<ClassId, Map<Long, L2SkillLearn>> _classSkillTrees = new HashMap<>();
-    private static final Map<SubclassType, Map<Long, L2SkillLearn>> _revelationSkillTree = new HashMap<>();
     // Skill Hash Code, L2SkillLearn
     private static final Map<Long, L2SkillLearn> _fishingSkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _pledgeSkillTree = new HashMap<>();
@@ -98,7 +97,6 @@ public final class SkillTreesData implements IGameXmlReader {
         _heroSkillTree.clear();
         _gameMasterSkillTree.clear();
         _gameMasterAuraSkillTree.clear();
-        _revelationSkillTree.clear();
         _removeSkillCache.clear();
 
         // Load files.
@@ -131,7 +129,6 @@ public final class SkillTreesData implements IGameXmlReader {
                 for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
                     if ("skillTree".equalsIgnoreCase(d.getNodeName())) {
                         final Map<Long, L2SkillLearn> classSkillTree = new HashMap<>();
-                        final Map<Long, L2SkillLearn> revelationSkillTree = new HashMap<>();
 
                         type = d.getAttributes().getNamedItem("type").getNodeValue();
                         attr = d.getAttributes().getNamedItem("classId");
@@ -216,10 +213,6 @@ public final class SkillTreesData implements IGameXmlReader {
                                         }
                                         break;
                                     }
-                                    case "revelationSkillTree": {
-                                        revelationSkillTree.put(skillHashCode, skillLearn);
-                                        break;
-                                    }
                                     case "fishingSkillTree": {
                                         _fishingSkillTree.put(skillHashCode, skillLearn);
                                         break;
@@ -265,13 +258,6 @@ public final class SkillTreesData implements IGameXmlReader {
                                 _classSkillTrees.put(classId, classSkillTree);
                             } else {
                                 classSkillTrees.putAll(classSkillTree);
-                            }
-                        }  else if (type.equals("revelationSkillTree") && (subType != null)) {
-                            final Map<Long, L2SkillLearn> revelationSkillTrees = _revelationSkillTree.get(subType);
-                            if (revelationSkillTrees == null) {
-                                _revelationSkillTree.put(subType, revelationSkillTree);
-                            } else {
-                                revelationSkillTrees.putAll(revelationSkillTree);
                             }
                         }
                     }
@@ -593,27 +579,6 @@ public final class SkillTreesData implements IGameXmlReader {
     }
 
     /**
-     * Gets the available revelation skills
-     *
-     * @param player the player requesting the revelation skills
-     * @param type   the player current subclass type
-     * @return all the available revelation skills for a given {@code player}
-     */
-    public List<L2SkillLearn> getAvailableRevelationSkills(L2PcInstance player, SubclassType type) {
-        final List<L2SkillLearn> result = new ArrayList<>();
-        final Map<Long, L2SkillLearn> revelationSkills = _revelationSkillTree.get(type);
-
-        for (L2SkillLearn skill : revelationSkills.values()) {
-            final Skill oldSkill = player.getSkills().get(skill.getSkillId());
-
-            if (oldSkill == null) {
-                result.add(skill);
-            }
-        }
-        return result;
-    }
-
-    /**
      * Some transformations are not available for some races.
      *
      * @param player the transformation skill learning player
@@ -756,14 +721,6 @@ public final class SkillTreesData implements IGameXmlReader {
                 sl = getSubPledgeSkill(id, lvl);
                 break;
             }
-            case REVELATION: {
-                sl = getRevelationSkill(SubclassType.BASECLASS, id, lvl);
-                break;
-            }
-            case REVELATION_DUALCLASS: {
-                sl = getRevelationSkill(SubclassType.DUALCLASS, id, lvl);
-                break;
-            }
         }
         return sl;
     }
@@ -833,18 +790,6 @@ public final class SkillTreesData implements IGameXmlReader {
      */
     public L2SkillLearn getCommonSkill(int id, int lvl) {
         return _commonSkillTree.get(SkillData.getSkillHashCode(id, lvl));
-    }
-
-    /**
-     * Gets the revelation skill.
-     *
-     * @param type the subclass type
-     * @param id   the revelation skill Id
-     * @param lvl  the revelation skill level
-     * @return the revelation skill from the Revelation Skill Tree for a given {@code id} and {@code lvl}
-     */
-    public L2SkillLearn getRevelationSkill(SubclassType type, int id, int lvl) {
-        return _revelationSkillTree.get(type).get(SkillData.getSkillHashCode(id, lvl));
     }
 
     /**
@@ -1095,11 +1040,6 @@ public final class SkillTreesData implements IGameXmlReader {
             classSkillTreeCount += classSkillTree.size();
         }
 
-        int revelationSkillTreeCount = 0;
-        for (Map<Long, L2SkillLearn> revelationSkillTree : _revelationSkillTree.values()) {
-            revelationSkillTreeCount += revelationSkillTree.size();
-        }
-
         int dwarvenOnlyFishingSkillCount = 0;
         for (L2SkillLearn fishSkill : _fishingSkillTree.values()) {
             if (fishSkill.getRaces().contains(Race.DWARF)) {
@@ -1124,7 +1064,6 @@ public final class SkillTreesData implements IGameXmlReader {
         LOGGER.info(className + ": Loaded " + _heroSkillTree.size() + " Hero Skills.");
         LOGGER.info(className + ": Loaded " + _gameMasterSkillTree.size() + " Game Master Skills.");
         LOGGER.info(className + ": Loaded " + _gameMasterAuraSkillTree.size() + " Game Master Aura Skills.");
-        LOGGER.info(className + ": Loaded " + revelationSkillTreeCount + " Revelation Skills.");
 
         final int commonSkills = _commonSkillTree.size();
         if (commonSkills > 0) {

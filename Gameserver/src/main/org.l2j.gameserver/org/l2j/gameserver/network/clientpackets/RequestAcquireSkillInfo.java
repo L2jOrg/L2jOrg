@@ -2,7 +2,6 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
-import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.actor.L2Npc;
@@ -91,20 +90,6 @@ public final class RequestAcquireSkillInfo extends IClientIncomingPacket {
             }
             case SUBPLEDGE: {
                 if (!activeChar.isClanLeader() || !activeChar.hasClanPrivilege(ClanPrivilege.CL_TROOPS_FAME)) {
-                    return;
-                }
-                client.sendPacket(new AcquireSkillInfo(_skillType, s));
-                break;
-            }
-            case REVELATION: {
-                if ((activeChar.getLevel() < 85) || !activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) {
-                    return;
-                }
-                client.sendPacket(new AcquireSkillInfo(_skillType, s));
-                break;
-            }
-            case REVELATION_DUALCLASS: {
-                if (!activeChar.isSubClassActive() || !activeChar.isDualClassActive()) {
                     return;
                 }
                 client.sendPacket(new AcquireSkillInfo(_skillType, s));
