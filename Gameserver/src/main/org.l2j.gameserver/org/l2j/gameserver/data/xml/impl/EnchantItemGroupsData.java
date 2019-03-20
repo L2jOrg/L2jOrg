@@ -37,8 +37,8 @@ public final class EnchantItemGroupsData implements IGameXmlReader {
         _itemGroups.clear();
         _scrollGroups.clear();
         parseDatapackFile("data/EnchantItemGroups.xml");
-        LOGGER.info("Loaded: {} item group templates.", _itemGroups.size());
-        LOGGER.info("Loaded: {} scroll group templates.", _scrollGroups.size());
+        LOGGER.info("Loaded {} item group templates.", _itemGroups.size());
+        LOGGER.info("Loaded {} scroll group templates.", _scrollGroups.size());
     }
 
     @Override

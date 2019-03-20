@@ -32,9 +32,9 @@ public class EnsoulData implements IGameXmlReader {
     @Override
     public void load() {
         parseDatapackDirectory("data/stats/ensoul", true);
-        LOGGER.info("Loaded: {} fees", _ensoulFees.size());
-        LOGGER.info("Loaded: {} options", _ensoulOptions.size());
-        LOGGER.info("Loaded: {} stones", _ensoulStones.size());
+        LOGGER.info("Loaded {} fees", _ensoulFees.size());
+        LOGGER.info("Loaded {} options", _ensoulOptions.size());
+        LOGGER.info("Loaded {} stones", _ensoulStones.size());
     }
 
     @Override

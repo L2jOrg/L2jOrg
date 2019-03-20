@@ -134,7 +134,7 @@ public final class ItemCrystallizationData implements IGameXmlReader {
             }
         }
 
-        LOGGER.info(getClass().getSimpleName() + ": Generated " + (_items.size() - previousCount) + " crystallizable items from templates.");
+        LOGGER.info("Generated {} crystallizable items from templates.", _items.size() - previousCount);
     }
 
     public List<ItemChanceHolder> getCrystallizationTemplate(CrystalType crystalType, CrystallizationType crystallizationType) {

@@ -32,25 +32,7 @@ public class AppearanceItemData implements IGameXmlReader {
     @Override
     public void load() {
         parseDatapackFile("data/AppearanceStones.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _stones.size() + " Stones");
-
-        //@formatter:off
-		/*
-		for (L2Item item : ItemTable.getInstance().getAllItems())
-		{
-			if ((item == null) || !item.getName().contains("Appearance Stone"))
-			{
-				continue;
-			}
-			if (item.getName().contains("Pack") || _stones.containsKey(item.getId()))
-			{
-				continue;
-			}
-
-			System.out.println("Unhandled appearance stone: " + item);
-		}
-		*/
-        //@formatter:on
+        LOGGER.info("Loaded: {} Stones", _stones.size());
     }
 
     @Override

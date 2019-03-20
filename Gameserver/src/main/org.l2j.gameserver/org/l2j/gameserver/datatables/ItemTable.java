@@ -111,10 +111,10 @@ public class ItemTable {
             }
         }
         buildFastLookupTable(highest);
-        LOGGER.info("Loaded: {} Etc Items", _etcItems.size());
-        LOGGER.info("Loaded: {}  Armor Items", _armors.size() );
-        LOGGER.info("Loaded: {} Weapon Items", _weapons.size());
-        LOGGER.info("Loaded: {} Items in total.", _etcItems.size() + _armors.size() + _weapons.size());
+        LOGGER.info("Loaded {} Etc Items", _etcItems.size());
+        LOGGER.info("Loaded {} Armor Items", _armors.size() );
+        LOGGER.info("Loaded {} Weapon Items", _weapons.size());
+        LOGGER.info("Loaded {} Items in total.", _etcItems.size() + _armors.size() + _weapons.size());
     }
 
     /**
@@ -124,7 +124,7 @@ public class ItemTable {
      */
     private void buildFastLookupTable(int size) {
         // Create a FastLookUp Table called _allTemplates of size : value of the highest item ID
-        LOGGER.info(getClass().getSimpleName() + ": Highest item id used: " + size);
+        LOGGER.info("Highest item id used: {}", size);
         _allTemplates = new L2Item[size + 1];
 
         // Insert armor item in Fast Look Up Table

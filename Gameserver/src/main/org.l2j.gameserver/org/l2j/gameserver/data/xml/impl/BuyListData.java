@@ -43,7 +43,7 @@ public final class BuyListData implements IGameXmlReader {
             parseDatapackDirectory("data/buylists/custom", false);
         }
 
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _buyLists.size() + " BuyLists.");
+        LOGGER.info("Loaded {} BuyLists.", _buyLists.size());
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              Statement statement = con.createStatement();

@@ -35,7 +35,7 @@ public class ClanRewardData implements IGameXmlReader {
     public void load() {
         parseFile(new File("config/ClanReward.xml"));
         for (ClanRewardType type : ClanRewardType.values()) {
-            LOGGER.info("Loaded: {} rewards for {}", (_clanRewards.containsKey(type) ? _clanRewards.get(type).size() : 0), type);
+            LOGGER.info("Loaded {} rewards for {}", (_clanRewards.containsKey(type) ? _clanRewards.get(type).size() : 0), type);
         }
     }
 

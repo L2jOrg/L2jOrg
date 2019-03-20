@@ -33,7 +33,7 @@ public class OptionData implements IGameXmlReader {
     public synchronized void load() {
         _optionData.clear();
         parseDatapackDirectory("data/stats/augmentation/options", false);
-        LOGGER.info("Loaded: {} Options.", _optionData.size());
+        LOGGER.info("Loaded {} Options.", _optionData.size());
     }
 
     @Override

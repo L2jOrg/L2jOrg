@@ -39,7 +39,7 @@ public final class HennaData implements IGameXmlReader {
     public void load() {
         _hennaList.clear();
         parseDatapackFile("data/stats/hennaList.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _hennaList.size() + " Henna data.");
+        LOGGER.info("Loaded {} Henna data.", _hennaList.size());
     }
 
     @Override

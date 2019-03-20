@@ -39,9 +39,9 @@ public class PrimeShopData implements IGameXmlReader {
         parseDatapackFile("data/PrimeShop.xml");
 
         if (!_primeItems.isEmpty()) {
-            LOGGER.info(getClass().getSimpleName() + ": Loaded " + _primeItems.size() + " items");
+            LOGGER.info("Loaded {} items", _primeItems.size());
         } else {
-            LOGGER.info(getClass().getSimpleName() + ": System is disabled.");
+            LOGGER.info("System is disabled.");
         }
     }
 

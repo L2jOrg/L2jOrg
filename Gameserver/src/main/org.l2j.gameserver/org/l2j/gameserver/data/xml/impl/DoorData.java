@@ -47,7 +47,7 @@ public final class DoorData implements IGameXmlReader {
     @Override
     public void parseDocument(Document doc, File f) {
         forEach(doc, "list", listNode -> forEach(listNode, "door", doorNode -> spawnDoor(parseDoor(doorNode))));
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _doors.size() + " Door Templates for " + _regions.size() + " regions.");
+        LOGGER.info("Loaded {} Door Templates for {} regions.", _doors.size(), _regions.size());
     }
 
     public StatsSet parseDoor(Node doorNode) {

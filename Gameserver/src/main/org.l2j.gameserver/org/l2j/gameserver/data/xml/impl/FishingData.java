@@ -35,7 +35,7 @@ public final class FishingData implements IGameXmlReader {
     public void load() {
         _baitData.clear();
         parseDatapackFile("data/Fishing.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded Fishing Data.");
+        LOGGER.info("Loaded {} Fishing Data.", _baitData.size());
     }
 
     @Override

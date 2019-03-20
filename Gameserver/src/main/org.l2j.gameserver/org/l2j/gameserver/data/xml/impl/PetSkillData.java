@@ -28,7 +28,7 @@ public class PetSkillData implements IGameXmlReader {
     public void load() {
         _skillTrees.clear();
         parseDatapackFile("data/PetSkillData.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _skillTrees.size() + " skills.");
+        LOGGER.info("Loaded {} skills.", _skillTrees.size());
     }
 
     @Override

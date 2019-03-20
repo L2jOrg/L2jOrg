@@ -39,7 +39,7 @@ public final class MultisellData implements IGameXmlReader {
             parseDatapackDirectory("data/multisell/custom", false);
         }
 
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _multisells.size() + " multisell lists.");
+        LOGGER.info("Loaded {} multisell lists.", _multisells.size());
     }
 
     @Override
