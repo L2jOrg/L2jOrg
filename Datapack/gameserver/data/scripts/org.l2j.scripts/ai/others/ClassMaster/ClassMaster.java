@@ -4,12 +4,10 @@ import ai.AbstractNpcAI;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.CategoryData;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
-import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.Race;
-import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.base.ClassId;
@@ -368,10 +366,6 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 					if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 					{
 						SkillTreesData.getInstance().cleanSkillUponAwakening(player);
-						for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
-						{
-							player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
-						}
 					}
 					if (Config.AUTO_LEARN_SKILLS)
 					{
@@ -799,10 +793,6 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 			if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 			{
 				SkillTreesData.getInstance().cleanSkillUponAwakening(player);
-				for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
-				{
-					player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
-				}
 			}
 			if (Config.AUTO_LEARN_SKILLS)
 			{

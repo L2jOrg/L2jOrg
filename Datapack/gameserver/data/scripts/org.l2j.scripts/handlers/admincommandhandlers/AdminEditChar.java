@@ -20,14 +20,12 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
-import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Playable;
@@ -410,10 +408,6 @@ public class AdminEditChar implements IAdminCommandHandler
 					if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 					{
 						SkillTreesData.getInstance().cleanSkillUponAwakening(player);
-						for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
-						{
-							player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
-						}
 					}
 					player.store(false);
 					player.broadcastUserInfo();
