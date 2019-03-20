@@ -76,7 +76,6 @@ public final class RequestAcquireSkillInfo extends IClientIncomingPacket {
         switch (_skillType) {
             case TRANSFORM:
             case FISHING:
-            case SUBCLASS:
             case COLLECT:
             case TRANSFER:
             case DUALCLASS: {

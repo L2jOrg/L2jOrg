@@ -65,7 +65,6 @@ public final class SkillTreesData implements IGameXmlReader {
     private static final Map<Long, L2SkillLearn> _collectSkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _fishingSkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _pledgeSkillTree = new HashMap<>();
-    private static final Map<Long, L2SkillLearn> _subClassSkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _subPledgeSkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _transformSkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _commonSkillTree = new HashMap<>();
@@ -104,7 +103,6 @@ public final class SkillTreesData implements IGameXmlReader {
         _collectSkillTree.clear();
         _fishingSkillTree.clear();
         _pledgeSkillTree.clear();
-        _subClassSkillTree.clear();
         _subPledgeSkillTree.clear();
         _transferSkillTrees.clear();
         _transformSkillTree.clear();
@@ -261,10 +259,6 @@ public final class SkillTreesData implements IGameXmlReader {
                                         _pledgeSkillTree.put(skillHashCode, skillLearn);
                                         break;
                                     }
-                                    case "subClassSkillTree": {
-                                        _subClassSkillTree.put(skillHashCode, skillLearn);
-                                        break;
-                                    }
                                     case "subPledgeSkillTree": {
                                         _subPledgeSkillTree.put(skillHashCode, skillLearn);
                                         break;
@@ -416,15 +410,6 @@ public final class SkillTreesData implements IGameXmlReader {
      */
     public Map<Long, L2SkillLearn> getPledgeSkillTree() {
         return _pledgeSkillTree;
-    }
-
-    /**
-     * Gets the sub class skill tree.
-     *
-     * @return the complete Sub-Class Skill Tree
-     */
-    public Map<Long, L2SkillLearn> getSubClassSkillTree() {
-        return _subClassSkillTree;
     }
 
     /**
@@ -905,23 +890,6 @@ public final class SkillTreesData implements IGameXmlReader {
     }
 
     /**
-     * Gets the available sub class skills.
-     *
-     * @param player the sub-class skill learning player
-     * @return all the available Sub-Class skills for a given {@code player}
-     */
-    public List<L2SkillLearn> getAvailableSubClassSkills(L2PcInstance player) {
-        final List<L2SkillLearn> result = new ArrayList<>();
-        for (L2SkillLearn skill : _subClassSkillTree.values()) {
-            final Skill oldSkill = player.getSkills().get(skill.getSkillId());
-            if (((oldSkill == null) && (skill.getSkillLevel() == 1)) || ((oldSkill != null) && (oldSkill.getLevel() == (skill.getSkillLevel() - 1)))) {
-                result.add(skill);
-            }
-        }
-        return result;
-    }
-
-    /**
      * Gets the available dual class skills.
      *
      * @param player the dual-class skill learning player
@@ -989,10 +957,6 @@ public final class SkillTreesData implements IGameXmlReader {
             }
             case TRANSFER: {
                 sl = getTransferSkill(id, lvl, player.getClassId());
-                break;
-            }
-            case SUBCLASS: {
-                sl = getSubClassSkill(id, lvl);
                 break;
             }
             case COLLECT: {
@@ -1127,17 +1091,6 @@ public final class SkillTreesData implements IGameXmlReader {
             }
         }
         return null;
-    }
-
-    /**
-     * Gets the sub class skill.
-     *
-     * @param id  the sub-class skill Id
-     * @param lvl the sub-class skill level
-     * @return the sub-class skill from the Sub-Class Skill Tree for a given {@code id} and {@code lvl}
-     */
-    private L2SkillLearn getSubClassSkill(int id, int lvl) {
-        return _subClassSkillTree.get(SkillData.getSkillHashCode(id, lvl));
     }
 
     /**
@@ -1493,7 +1446,6 @@ public final class SkillTreesData implements IGameXmlReader {
 
         final String className = getClass().getSimpleName();
         LOGGER.info(className + ": Loaded " + classSkillTreeCount + " Class Skills for " + _classSkillTrees.size() + " Class Skill Trees.");
-        LOGGER.info(className + ": Loaded " + _subClassSkillTree.size() + " Sub-Class Skills.");
         LOGGER.info(className + ": Loaded " + _dualClassSkillTree.size() + " Dual-Class Skills.");
         LOGGER.info(className + ": Loaded " + transferSkillTreeCount + " Transfer Skills for " + _transferSkillTrees.size() + " Transfer Skill Trees.");
         LOGGER.info(className + ": Loaded " + raceSkillTreeCount + " Race skills for " + _raceSkillTree.size() + " Race Skill Trees.");

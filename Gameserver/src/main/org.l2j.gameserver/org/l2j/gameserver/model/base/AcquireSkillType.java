@@ -28,7 +28,6 @@ public enum AcquireSkillType {
     SUBPLEDGE(3),
     TRANSFORM(4),
     TRANSFER(5),
-    SUBCLASS(6),
     COLLECT(7),
     DUMMY2(8),
     DUMMY3(9),
