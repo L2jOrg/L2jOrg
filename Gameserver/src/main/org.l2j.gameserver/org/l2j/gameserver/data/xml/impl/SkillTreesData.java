@@ -35,11 +35,9 @@ import java.util.stream.Collectors;
  * Here can be found the following skill trees:<br>
  * <ul>
  * <li>Class skill trees: player skill trees for each class.</li>
- * <li>Transfer skill trees: player skill trees for each healer class.</lI>
  * <li>Collect skill tree: player skill tree for Gracia related skills.</li>
  * <li>Fishing skill tree: player skill tree for fishing related skills.</li>
  * <li>Transform skill tree: player skill tree for transformation related skills.</li>
- * <li>Sub-Class skill tree: player skill tree for sub-class related skills.</li>
  * <li>Noble skill tree: player skill tree for noblesse related skills.</li>
  * <li>Hero skill tree: player skill tree for heroes related skills.</li>
  * <li>GM skill tree: player skill tree for Game Master related skills.</li>
@@ -57,7 +55,6 @@ public final class SkillTreesData implements IGameXmlReader {
 
     // ClassId, Map of Skill Hash Code, L2SkillLearn
     private static final Map<ClassId, Map<Long, L2SkillLearn>> _classSkillTrees = new HashMap<>();
-    private static final Map<ClassId, Map<Long, L2SkillLearn>> _transferSkillTrees = new HashMap<>();
     private static final Map<Race, Map<Long, L2SkillLearn>> _raceSkillTree = new HashMap<>();
     private static final Map<SubclassType, Map<Long, L2SkillLearn>> _revelationSkillTree = new HashMap<>();
     private static final Map<ClassId, Set<Integer>> _awakeningSaveSkillTree = new HashMap<>();
@@ -70,7 +67,6 @@ public final class SkillTreesData implements IGameXmlReader {
     private static final Map<Long, L2SkillLearn> _commonSkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _abilitySkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _alchemySkillTree = new HashMap<>();
-    private static final Map<Long, L2SkillLearn> _dualClassSkillTree = new HashMap<>();
     // Other skill trees
     private static final Map<Long, L2SkillLearn> _nobleSkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _heroSkillTree = new HashMap<>();
@@ -104,7 +100,6 @@ public final class SkillTreesData implements IGameXmlReader {
         _fishingSkillTree.clear();
         _pledgeSkillTree.clear();
         _subPledgeSkillTree.clear();
-        _transferSkillTrees.clear();
         _transformSkillTree.clear();
         _nobleSkillTree.clear();
         _abilitySkillTree.clear();
@@ -114,7 +109,6 @@ public final class SkillTreesData implements IGameXmlReader {
         _gameMasterAuraSkillTree.clear();
         _raceSkillTree.clear();
         _revelationSkillTree.clear();
-        _dualClassSkillTree.clear();
         _removeSkillCache.clear();
         _awakeningSaveSkillTree.clear();
 
@@ -291,10 +285,6 @@ public final class SkillTreesData implements IGameXmlReader {
                                         _gameMasterAuraSkillTree.put(skillHashCode, skillLearn);
                                         break;
                                     }
-                                    case "dualClassSkillTree": {
-                                        _dualClassSkillTree.put(skillHashCode, skillLearn);
-                                        break;
-                                    }
                                     case "awakeningSaveSkillTree": {
                                         _awakeningSaveSkillTree.computeIfAbsent(classId, k -> new HashSet<>()).add(skillLearn.getSkillId());
                                         break;
@@ -306,9 +296,7 @@ public final class SkillTreesData implements IGameXmlReader {
                             }
                         }
 
-                        if (type.equals("transferSkillTree")) {
-                            _transferSkillTrees.put(classId, transferSkillTree);
-                        } else if (type.equals("classSkillTree") && (cId > -1)) {
+                        if (type.equals("classSkillTree") && (cId > -1)) {
                             final Map<Long, L2SkillLearn> classSkillTrees = _classSkillTrees.get(classId);
                             if (classSkillTrees == null) {
                                 _classSkillTrees.put(classId, classSkillTree);
@@ -353,17 +341,6 @@ public final class SkillTreesData implements IGameXmlReader {
             classId = _parentClassMap.get(classId);
         }
         return skillTree;
-    }
-
-    /**
-     * Gets the transfer skill tree.<br>
-     * If new classes are implemented over 3rd class, we use a recursive call.
-     *
-     * @param classId the transfer skill tree Id
-     * @return the complete Transfer Skill Tree for a given {@code classId}
-     */
-    public Map<Long, L2SkillLearn> getTransferSkillTree(ClassId classId) {
-        return _transferSkillTrees.get(classId);
     }
 
     /**
@@ -772,29 +749,6 @@ public final class SkillTreesData implements IGameXmlReader {
     }
 
     /**
-     * Gets the available transfer skills.
-     *
-     * @param player the transfer skill learning player
-     * @return all the available Transfer skills for a given {@code player}
-     */
-    public List<L2SkillLearn> getAvailableTransferSkills(L2PcInstance player) {
-        final List<L2SkillLearn> result = new ArrayList<>();
-        final ClassId classId = player.getClassId();
-
-        if (!_transferSkillTrees.containsKey(classId)) {
-            return result;
-        }
-
-        for (L2SkillLearn skill : _transferSkillTrees.get(classId).values()) {
-            // If player doesn't know this transfer skill:
-            if (player.getKnownSkill(skill.getSkillId()) == null) {
-                result.add(skill);
-            }
-        }
-        return result;
-    }
-
-    /**
      * Some transformations are not available for some races.
      *
      * @param player the transformation skill learning player
@@ -890,24 +844,6 @@ public final class SkillTreesData implements IGameXmlReader {
     }
 
     /**
-     * Gets the available dual class skills.
-     *
-     * @param player the dual-class skill learning player
-     * @return all the available Dual-Class skills for a given {@code player} sorted by skill ID
-     */
-    public List<L2SkillLearn> getAvailableDualClassSkills(L2PcInstance player) {
-        final List<L2SkillLearn> result = new ArrayList<>();
-        for (L2SkillLearn skill : _dualClassSkillTree.values()) {
-            final Skill oldSkill = player.getSkills().get(skill.getSkillId());
-            if (((oldSkill == null) && (skill.getSkillLevel() == 1)) || ((oldSkill != null) && (oldSkill.getLevel() == (skill.getSkillLevel() - 1)))) {
-                result.add(skill);
-            }
-        }
-        result.sort(Comparator.comparing(L2SkillLearn::getSkillId));
-        return result;
-    }
-
-    /**
      * Gets the available residential skills.
      *
      * @param residenceId the id of the Castle, Fort, Territory
@@ -955,10 +891,6 @@ public final class SkillTreesData implements IGameXmlReader {
                 sl = getSubPledgeSkill(id, lvl);
                 break;
             }
-            case TRANSFER: {
-                sl = getTransferSkill(id, lvl, player.getClassId());
-                break;
-            }
             case COLLECT: {
                 sl = getCollectSkill(id, lvl);
                 break;
@@ -973,10 +905,6 @@ public final class SkillTreesData implements IGameXmlReader {
             }
             case ALCHEMY: {
                 sl = getAlchemySkill(id, lvl);
-                break;
-            }
-            case DUALCLASS: {
-                sl = getDualClassSkill(id, lvl);
                 break;
             }
         }
@@ -1062,21 +990,6 @@ public final class SkillTreesData implements IGameXmlReader {
     }
 
     /**
-     * Gets the transfer skill.
-     *
-     * @param id      the transfer skill Id
-     * @param lvl     the transfer skill level.
-     * @param classId the transfer skill tree Id
-     * @return the transfer skill from the Transfer Skill Trees for a given {@code classId}, {@code id} and {@code lvl}
-     */
-    private L2SkillLearn getTransferSkill(int id, int lvl, ClassId classId) {
-        if (_transferSkillTrees.get(classId) != null) {
-            return _transferSkillTrees.get(classId).get(SkillData.getSkillHashCode(id, lvl));
-        }
-        return null;
-    }
-
-    /**
      * Gets the race skill.
      *
      * @param id   the race skill Id
@@ -1091,17 +1004,6 @@ public final class SkillTreesData implements IGameXmlReader {
             }
         }
         return null;
-    }
-
-    /**
-     * Gets the dual class skill.
-     *
-     * @param id  the dual-class skill Id
-     * @param lvl the dual-class skill level
-     * @return the dual-class skill from the Dual-Class Skill Tree for a given {@code id} and {@code lvl}
-     */
-    public L2SkillLearn getDualClassSkill(int id, int lvl) {
-        return _dualClassSkillTree.get(SkillData.getSkillHashCode(id, lvl));
     }
 
     /**
@@ -1392,12 +1294,6 @@ public final class SkillTreesData implements IGameXmlReader {
         if (Arrays.binarySearch(_allSkillsHashCodes, hashCode) >= 0) {
             return true;
         }
-
-        // Exclude Transfer Skills from this check.
-        if (getTransferSkill(skill.getId(), Math.min(skill.getLevel(), maxLvl), player.getClassId()) != null) {
-            return true;
-        }
-
         // Exclude Race skills from this check.
         if (getRaceSkill(skill.getId(), Math.min(skill.getLevel(), maxLvl), player.getRace()) != null) {
             return true;
@@ -1413,11 +1309,6 @@ public final class SkillTreesData implements IGameXmlReader {
         int classSkillTreeCount = 0;
         for (Map<Long, L2SkillLearn> classSkillTree : _classSkillTrees.values()) {
             classSkillTreeCount += classSkillTree.size();
-        }
-
-        int transferSkillTreeCount = 0;
-        for (Map<Long, L2SkillLearn> trasferSkillTree : _transferSkillTrees.values()) {
-            transferSkillTreeCount += trasferSkillTree.size();
         }
 
         int raceSkillTreeCount = 0;
@@ -1446,8 +1337,6 @@ public final class SkillTreesData implements IGameXmlReader {
 
         final String className = getClass().getSimpleName();
         LOGGER.info(className + ": Loaded " + classSkillTreeCount + " Class Skills for " + _classSkillTrees.size() + " Class Skill Trees.");
-        LOGGER.info(className + ": Loaded " + _dualClassSkillTree.size() + " Dual-Class Skills.");
-        LOGGER.info(className + ": Loaded " + transferSkillTreeCount + " Transfer Skills for " + _transferSkillTrees.size() + " Transfer Skill Trees.");
         LOGGER.info(className + ": Loaded " + raceSkillTreeCount + " Race skills for " + _raceSkillTree.size() + " Race Skill Trees.");
         LOGGER.info(className + ": Loaded " + _fishingSkillTree.size() + " Fishing Skills, " + dwarvenOnlyFishingSkillCount + " Dwarven only Fishing Skills.");
         LOGGER.info(className + ": Loaded " + _collectSkillTree.size() + " Collect Skills.");

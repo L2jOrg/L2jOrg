@@ -60,7 +60,7 @@ public final class RequestAcquireSkillInfo extends IClientIncomingPacket {
 
         // Hack check. Doesn't apply to all Skill Types
         final int prevSkillLevel = activeChar.getSkillLevel(_id);
-        if ((prevSkillLevel > 0) && !((_skillType == AcquireSkillType.TRANSFER) || (_skillType == AcquireSkillType.SUBPLEDGE))) {
+        if ((prevSkillLevel > 0) && !((_skillType == AcquireSkillType.SUBPLEDGE))) {
             if (prevSkillLevel == _level) {
                 LOGGER.warn(RequestAcquireSkillInfo.class.getSimpleName() + ": Player " + activeChar.getName() + " is requesting info for a skill that already knows, Id: " + _id + " level: " + _level + "!");
             } else if (prevSkillLevel != (_level - 1)) {
@@ -76,9 +76,7 @@ public final class RequestAcquireSkillInfo extends IClientIncomingPacket {
         switch (_skillType) {
             case TRANSFORM:
             case FISHING:
-            case COLLECT:
-            case TRANSFER:
-            case DUALCLASS: {
+            case COLLECT: {
                 client.sendPacket(new AcquireSkillInfo(_skillType, s));
                 break;
             }

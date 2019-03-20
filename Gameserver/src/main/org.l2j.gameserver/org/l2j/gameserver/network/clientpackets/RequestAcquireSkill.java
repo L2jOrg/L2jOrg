@@ -65,15 +65,6 @@ public final class RequestAcquireSkill extends IClientIncomingPacket {
         }
     }
 
-    public static void showDualSkillList(L2PcInstance activeChar) {
-        final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableDualClassSkills(activeChar);
-        if (!skills.isEmpty()) {
-            activeChar.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.DUALCLASS));
-        } else {
-            activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
-        }
-    }
-
     /**
      * Verify if the player can transform.
      *
@@ -125,7 +116,7 @@ public final class RequestAcquireSkill extends IClientIncomingPacket {
 
         // Hack check. Doesn't apply to all Skill Types
         final int prevSkillLevel = activeChar.getSkillLevel(_id);
-        if ((_skillType != AcquireSkillType.TRANSFER) && (_skillType != AcquireSkillType.SUBPLEDGE)) {
+        if ((_skillType != AcquireSkillType.SUBPLEDGE)) {
             if (prevSkillLevel == _level) {
                 LOGGER.warn("Player " + activeChar.getName() + " is trying to learn a skill that already knows, Id: " + _id + " level: " + _level + "!");
                 return;
@@ -260,42 +251,6 @@ public final class RequestAcquireSkill extends IClientIncomingPacket {
                 activeChar.sendPacket(new AcquireSkillDone());
 
                 showSubUnitSkillList(activeChar);
-                break;
-            }
-            case TRANSFER: {
-                if (checkPlayerSkill(activeChar, trainer, s)) {
-                    giveSkill(activeChar, trainer, skill);
-                }
-
-                final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableTransferSkills(activeChar);
-                if (skills.isEmpty()) {
-                    activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
-                } else {
-                    activeChar.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.TRANSFER));
-                }
-                break;
-            }
-            case DUALCLASS: {
-                if (activeChar.isSubClassActive()) {
-                    activeChar.sendPacket(SystemMessageId.THIS_SKILL_CANNOT_BE_LEARNED_WHILE_IN_THE_SUBCLASS_STATE_PLEASE_TRY_AGAIN_AFTER_CHANGING_TO_THE_MAIN_CLASS);
-                    Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " is requesting skill Id: " + _id + " level " + _level + " while Sub-Class is active!", IllegalActionPunishmentType.NONE);
-                    return;
-                }
-
-                if (checkPlayerSkill(activeChar, trainer, s)) {
-                    final PlayerVariables vars = activeChar.getVariables();
-                    String list = vars.getString("DualSkillList", "");
-                    if ((prevSkillLevel > 0) && list.contains(_id + "-" + prevSkillLevel)) {
-                        list = list.replace(_id + "-" + prevSkillLevel, _id + "-" + _level);
-                    } else {
-                        if (!list.isEmpty()) {
-                            list += ";";
-                        }
-                        list += _id + "-" + _level;
-                    }
-                    vars.set("DualSkillList", list);
-                    giveSkill(activeChar, trainer, skill, false);
-                }
                 break;
             }
             case COLLECT: {
@@ -573,9 +528,7 @@ public final class RequestAcquireSkill extends IClientIncomingPacket {
      * @param player  the active character
      */
     private void showSkillList(L2Npc trainer, L2PcInstance player) {
-        if (_skillType == AcquireSkillType.DUALCLASS) {
-            showDualSkillList(player);
-        } else if (trainer instanceof L2FishermanInstance) {
+        if (trainer instanceof L2FishermanInstance) {
             L2FishermanInstance.showFishSkillList(player);
         }
     }
