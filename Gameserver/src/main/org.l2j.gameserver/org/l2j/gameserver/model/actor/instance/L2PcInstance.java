@@ -9583,8 +9583,7 @@ public final class L2PcInstance extends L2Playable {
         return currentSkills.stream()
                 .filter(Objects::nonNull)
                 .filter(s -> !s.isBlockActionUseSkill()) // Skills that are blocked from player use are not shown in skill list.
-                .filter(s -> !SkillTreesData.getInstance().isAlchemySkill(s.getId(), s.getLevel()))
-                .filter(s -> s.isDisplayInList())
+                .filter(Skill::isDisplayInList)
                 .collect(Collectors.toList());
         //@formatter:on
     }

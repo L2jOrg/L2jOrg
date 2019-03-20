@@ -297,7 +297,7 @@ public enum ExIncomingPackets implements PacketFactory {
     REQUEST_NEW_ENCHANT_RETRY_TO_PUT_ITEMS(0xFA, RequestNewEnchantRetryToPutItems::new, ConnectionState.IN_GAME),
     REQUEST_TARGET_ACTION_MENU(0xFE, RequestTargetActionMenu::new, ConnectionState.IN_GAME),
     EX_SEND_SELECTED_QUEST_ZONE_ID(0xFF, ExSendSelectedQuestZoneID::new, ConnectionState.IN_GAME),
-    REQUEST_ALCHEMY_SKILL_LIST(0x100, RequestAlchemySkillList::new, ConnectionState.IN_GAME),
+    REQUEST_ALCHEMY_SKILL_LIST(0x100, null, ConnectionState.IN_GAME), // RequestAlchemySkillList not exists on Classic
     REQUEST_ALCHEMY_TRY_MIX_CUBE(0x101, null, ConnectionState.IN_GAME),
     REQUEST_ALCHEMY_CONVERSION(0x102, null, ConnectionState.IN_GAME),
     SEND_EXECUTED_UI_EVENTS_COUNT(0x103, null, ConnectionState.IN_GAME),

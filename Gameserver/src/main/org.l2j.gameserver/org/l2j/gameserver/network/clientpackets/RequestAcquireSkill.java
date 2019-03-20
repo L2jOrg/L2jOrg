@@ -253,28 +253,6 @@ public final class RequestAcquireSkill extends IClientIncomingPacket {
                 showSubUnitSkillList(activeChar);
                 break;
             }
-            case ALCHEMY: {
-                if (activeChar.getRace() != Race.ERTHEIA) {
-                    return;
-                }
-
-                if (checkPlayerSkill(activeChar, trainer, s)) {
-                    giveSkill(activeChar, trainer, skill);
-
-                    activeChar.sendPacket(new AcquireSkillDone());
-                    activeChar.sendPacket(new ExAlchemySkillList(activeChar));
-
-                    final List<L2SkillLearn> alchemySkills = SkillTreesData.getInstance().getAvailableAlchemySkills(activeChar);
-
-                    if (alchemySkills.isEmpty()) {
-                        activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
-                    } else {
-                        activeChar.sendPacket(new ExAcquirableSkillListByClass(alchemySkills, AcquireSkillType.ALCHEMY));
-                    }
-                }
-
-                break;
-            }
             case REVELATION: {
                 if (activeChar.isSubClassActive()) {
                     activeChar.sendPacket(SystemMessageId.THIS_SKILL_CANNOT_BE_LEARNED_WHILE_IN_THE_SUBCLASS_STATE_PLEASE_TRY_AGAIN_AFTER_CHANGING_TO_THE_MAIN_CLASS);

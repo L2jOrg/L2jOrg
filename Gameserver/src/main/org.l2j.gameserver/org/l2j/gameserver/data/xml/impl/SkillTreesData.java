@@ -35,7 +35,6 @@ import java.util.stream.Collectors;
  * Here can be found the following skill trees:<br>
  * <ul>
  * <li>Class skill trees: player skill trees for each class.</li>
- * <li>Collect skill tree: player skill tree for Gracia related skills.</li>
  * <li>Fishing skill tree: player skill tree for fishing related skills.</li>
  * <li>Transform skill tree: player skill tree for transformation related skills.</li>
  * <li>Noble skill tree: player skill tree for noblesse related skills.</li>
@@ -63,7 +62,6 @@ public final class SkillTreesData implements IGameXmlReader {
     private static final Map<Long, L2SkillLearn> _subPledgeSkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _transformSkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _commonSkillTree = new HashMap<>();
-    private static final Map<Long, L2SkillLearn> _alchemySkillTree = new HashMap<>();
     // Other skill trees
     private static final Map<Long, L2SkillLearn> _nobleSkillTree = new HashMap<>();
     private static final Map<Long, L2SkillLearn> _heroSkillTree = new HashMap<>();
@@ -98,7 +96,6 @@ public final class SkillTreesData implements IGameXmlReader {
         _subPledgeSkillTree.clear();
         _transformSkillTree.clear();
         _nobleSkillTree.clear();
-        _alchemySkillTree.clear();
         _heroSkillTree.clear();
         _gameMasterSkillTree.clear();
         _gameMasterAuraSkillTree.clear();
@@ -245,10 +242,6 @@ public final class SkillTreesData implements IGameXmlReader {
                                         _nobleSkillTree.put(skillHashCode, skillLearn);
                                         break;
                                     }
-                                    case "alchemySkillTree": {
-                                        _alchemySkillTree.put(skillHashCode, skillLearn);
-                                        break;
-                                    }
                                     case "heroSkillTree": {
                                         _heroSkillTree.put(skillHashCode, skillLearn);
                                         break;
@@ -356,15 +349,6 @@ public final class SkillTreesData implements IGameXmlReader {
      */
     public Map<Long, L2SkillLearn> getTransformSkillTree() {
         return _transformSkillTree;
-    }
-
-    /**
-     * Gets the ability skill tree.
-     *
-     * @return the complete Ability Skill Tree
-     */
-    public Map<Long, L2SkillLearn> getAlchemySkillTree() {
-        return _alchemySkillTree;
     }
 
     /**
@@ -636,31 +620,6 @@ public final class SkillTreesData implements IGameXmlReader {
     }
 
     /**
-     * Gets the available alchemy skills, restricted to Ertheia
-     *
-     * @param player the player requesting the alchemy skills
-     * @return all the available alchemy skills for a given {@code player}
-     */
-    public List<L2SkillLearn> getAvailableAlchemySkills(L2PcInstance player) {
-        final List<L2SkillLearn> result = new ArrayList<>();
-
-        for (L2SkillLearn skill : _alchemySkillTree.values()) {
-            if (skill.isLearnedByNpc() && (player.getLevel() >= skill.getGetLevel())) {
-                final Skill oldSkill = player.getSkills().get(skill.getSkillId());
-
-                if (oldSkill != null) {
-                    if (oldSkill.getLevel() == (skill.getSkillLevel() - 1)) {
-                        result.add(skill);
-                    }
-                } else if (skill.getSkillLevel() == 1) {
-                    result.add(skill);
-                }
-            }
-        }
-        return result;
-    }
-
-    /**
      * Some transformations are not available for some races.
      *
      * @param player the transformation skill learning player
@@ -811,10 +770,6 @@ public final class SkillTreesData implements IGameXmlReader {
                 sl = getRevelationSkill(SubclassType.DUALCLASS, id, lvl);
                 break;
             }
-            case ALCHEMY: {
-                sl = getAlchemySkill(id, lvl);
-                break;
-            }
         }
         return sl;
     }
@@ -828,17 +783,6 @@ public final class SkillTreesData implements IGameXmlReader {
      */
     private L2SkillLearn getTransformSkill(int id, int lvl) {
         return _transformSkillTree.get(SkillData.getSkillHashCode(id, lvl));
-    }
-
-    /**
-     * Gets the alchemy skill.
-     *
-     * @param id  the alchemy skill Id
-     * @param lvl the alchemy skill level
-     * @return the alchemy skill from the Alchemy Skill Tree for a given {@code id} and {@code lvl}
-     */
-    private L2SkillLearn getAlchemySkill(int id, int lvl) {
-        return _alchemySkillTree.get(SkillData.getSkillHashCode(id, lvl));
     }
 
     /**
@@ -974,9 +918,6 @@ public final class SkillTreesData implements IGameXmlReader {
         }
     }
 
-    public boolean isAlchemySkill(int skillId, int skillLevel) {
-        return _alchemySkillTree.containsKey(SkillData.getSkillHashCode(skillId, skillLevel));
-    }
 
     /**
      * Checks if is hero skill.
@@ -1107,10 +1048,6 @@ public final class SkillTreesData implements IGameXmlReader {
             }
         }
 
-        for (L2SkillLearn s : _alchemySkillTree.values()) {
-            list.add(SkillData.getSkillHashCode(s.getSkillId(), s.getSkillLevel()));
-        }
-
         _allSkillsHashCodes = new long[list.size()];
         int j = 0;
         for (long hashcode : list) {
@@ -1197,7 +1134,6 @@ public final class SkillTreesData implements IGameXmlReader {
         LOGGER.info(className + ": Loaded " + _heroSkillTree.size() + " Hero Skills.");
         LOGGER.info(className + ": Loaded " + _gameMasterSkillTree.size() + " Game Master Skills.");
         LOGGER.info(className + ": Loaded " + _gameMasterAuraSkillTree.size() + " Game Master Aura Skills.");
-        LOGGER.info(className + ": Loaded " + _alchemySkillTree.size() + " Alchemy Skills.");
         LOGGER.info(className + ": Loaded " + _awakeningSaveSkillTree.size() + " Class Awaken Save Skills.");
         LOGGER.info(className + ": Loaded " + revelationSkillTreeCount + " Revelation Skills.");
 
