@@ -27,7 +27,6 @@ public enum AcquireSkillType {
     PLEDGE(2),
     SUBPLEDGE(3),
     TRANSFORM(4),
-    COLLECT(7),
     DUMMY2(8),
     DUMMY3(9),
     FISHING(10),

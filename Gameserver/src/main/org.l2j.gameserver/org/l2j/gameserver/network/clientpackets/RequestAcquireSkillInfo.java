@@ -75,8 +75,7 @@ public final class RequestAcquireSkillInfo extends IClientIncomingPacket {
 
         switch (_skillType) {
             case TRANSFORM:
-            case FISHING:
-            case COLLECT: {
+            case FISHING: {
                 client.sendPacket(new AcquireSkillInfo(_skillType, s));
                 break;
             }

@@ -253,12 +253,6 @@ public final class RequestAcquireSkill extends IClientIncomingPacket {
                 showSubUnitSkillList(activeChar);
                 break;
             }
-            case COLLECT: {
-                if (checkPlayerSkill(activeChar, trainer, s)) {
-                    giveSkill(activeChar, trainer, skill);
-                }
-                break;
-            }
             case ALCHEMY: {
                 if (activeChar.getRace() != Race.ERTHEIA) {
                     return;

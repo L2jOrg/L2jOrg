@@ -46,27 +46,6 @@ public class L2NpcInstance extends L2Npc {
      * @param classId player's active class id.
      */
     public static void showSkillList(L2PcInstance player, L2Npc npc, ClassId classId) {
-        final int npcId = npc.getTemplate().getId();
-        if (npcId == 32611) // Tolonis (Officer)
-        {
-            final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableCollectSkills(player);
-
-            if (skills.isEmpty()) // No more skills to learn, come back when you level.
-            {
-                final int minLevel = SkillTreesData.getInstance().getMinLevelForNewSkill(player, SkillTreesData.getInstance().getCollectSkillTree());
-                if (minLevel > 0) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
-                    sm.addInt(minLevel);
-                    player.sendPacket(sm);
-                } else {
-                    player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
-                }
-            } else {
-                player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.COLLECT));
-            }
-            return;
-        }
-
         // Normal skills, No LearnedByFS, no AutoGet skills.
         final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableSkills(player, classId, false, false);
         if (skills.isEmpty()) {

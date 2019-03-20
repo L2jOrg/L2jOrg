@@ -1,6 +1,5 @@
 package org.l2j.gameserver.model.actor.transform;
 
-import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.enums.Sex;
 import org.l2j.gameserver.model.StatsSet;
@@ -22,7 +21,6 @@ import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * @author UnAfraid
@@ -232,13 +230,6 @@ public final class Transform implements IIdentifiable {
                             .stream()
                             .filter(h -> player.getLevel() >= h.getMinLevel())
                             .map(SkillHolder::getSkill)
-                            .forEach(player::addTransformSkill);
-
-                    // Add collection skills.
-                    SkillTreesData.getInstance().getCollectSkillTree().values()
-                            .stream()
-                            .map(s -> player.getKnownSkill(s.getSkillId()))
-                            .filter(Objects::nonNull)
                             .forEach(player::addTransformSkill);
                     //@formatter:on
                 }
