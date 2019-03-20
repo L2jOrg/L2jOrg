@@ -3,9 +3,9 @@ package org.l2j.gameserver;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.OnDayNightChange;
+import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.util.Constants.SkillsConstant;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -147,7 +147,7 @@ public final class GameTimeController extends Thread {
             _shadowSenseCharacters.add(character);
             if (isNight()) {
                 final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT);
-                msg.addSkillName(SkillsConstant.SHADOW_SENSE_ID);
+                msg.addSkillName(CommonSkill.SHADOW_SENSE_ID.getId());
                 character.sendPacket(msg);
             }
         }
@@ -159,7 +159,7 @@ public final class GameTimeController extends Thread {
 
     private void notifyShadowSense() {
         final SystemMessage msg = SystemMessage.getSystemMessage(isNight() ? SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT : SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR);
-        msg.addSkillName(SkillsConstant.SHADOW_SENSE_ID);
+        msg.addSkillName(CommonSkill.SHADOW_SENSE_ID.getId());
         for (L2Character character : _shadowSenseCharacters) {
             character.getStat().recalculateStats(true);
             character.sendPacket(msg);

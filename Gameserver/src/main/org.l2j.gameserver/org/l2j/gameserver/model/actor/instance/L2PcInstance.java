@@ -7904,7 +7904,7 @@ public final class L2PcInstance extends L2Playable {
             getSubClasses().put(newClass.getClassIndex(), newClass);
 
             final ClassId subTemplate = ClassId.getClassId(classId);
-            final Map<Long, L2SkillLearn> skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(subTemplate);
+            final var skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(subTemplate);
             final Map<Integer, Skill> prevSkillList = new HashMap<>();
             for (L2SkillLearn skillInfo : skillTree.values()) {
                 if (skillInfo.getGetLevel() <= newClass.getLevel()) {
@@ -10417,7 +10417,7 @@ public final class L2PcInstance extends L2Playable {
 
     private void deacreaseSkillLevel(Skill skill, int lvlDiff) {
         int nextLevel = -1;
-        final Map<Long, L2SkillLearn> skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(getClassId());
+        final var skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(getClassId());
         for (L2SkillLearn sl : skillTree.values()) {
             if ((sl.getSkillId() == skill.getId()) && (nextLevel < sl.getSkillLevel()) && (getLevel() >= (sl.getGetLevel() - lvlDiff))) {
                 nextLevel = sl.getSkillLevel(); // next possible skill level
@@ -10458,9 +10458,6 @@ public final class L2PcInstance extends L2Playable {
         return _bookmarkslot;
     }
 
-    /**
-     * @return
-     */
     public int getQuestInventoryLimit() {
         return Config.INVENTORY_MAXIMUM_QUEST_ITEMS;
     }

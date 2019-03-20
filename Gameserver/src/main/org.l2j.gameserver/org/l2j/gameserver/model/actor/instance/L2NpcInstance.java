@@ -29,7 +29,6 @@ import org.l2j.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.List;
-import java.util.Map;
 
 public class L2NpcInstance extends L2Npc {
     public L2NpcInstance(L2NpcTemplate template) {
@@ -49,7 +48,7 @@ public class L2NpcInstance extends L2Npc {
         // Normal skills, No LearnedByFS, no AutoGet skills.
         final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableSkills(player, classId, false, false);
         if (skills.isEmpty()) {
-            final Map<Long, L2SkillLearn> skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(classId);
+            final var skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(classId);
             final int minLevel = SkillTreesData.getInstance().getMinLevelForNewSkill(player, skillTree);
             if (minLevel > 0) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
