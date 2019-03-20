@@ -30,7 +30,7 @@ public class SecondaryAuthData implements IGameXmlReader {
     public synchronized void load() {
         forbiddenPasswords.clear();
         parseFile(new File("config/SecondaryAuth.xml"));
-        LOGGER.info("Loaded {}forbidden passwords.", forbiddenPasswords.size() );
+        LOGGER.info("Loaded {} forbidden passwords.", forbiddenPasswords.size() );
     }
 
     @Override

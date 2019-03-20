@@ -23171,12 +23171,12 @@ public final class NpcStringId {
     public static NpcStringId USE_THIS_NEW_POWER_WHEN_THE_TIME_IS_RIGHT;
     @ClientString(id = 10363001, message = "Resurrected Soul")
     public static NpcStringId RESURRECTED_SOUL;
-    @ClientString(id = 11021701, message = "We saw people use Sayune other than the Giant's Minions.")
+   /* @ClientString(id = 11021701, message = "We saw people use Sayune other than the Giant's Minions.")
     public static NpcStringId WE_SAW_PEOPLE_USE_SAYUNE_OTHER_THAN_THE_GIANT_S_MINIONS;
     @ClientString(id = 11021702, message = "It's because they have become Awaken… the power of the Giant's.")
     public static NpcStringId IT_S_BECAUSE_THEY_HAVE_BECOME_AWAKEN_THE_POWER_OF_THE_GIANT_S;
     @ClientString(id = 11021703, message = "Duh, you can't use Sayune without powers of Giants in the first place.")
-    public static NpcStringId DUH_YOU_CAN_T_USE_SAYUNE_WITHOUT_POWERS_OF_GIANTS_IN_THE_FIRST_PLACE;
+    public static NpcStringId DUH_YOU_CAN_T_USE_SAYUNE_WITHOUT_POWERS_OF_GIANTS_IN_THE_FIRST_PLACE;*/
     @ClientString(id = 11021704, message = "I think that's why many people come to visit Celphine.")
     public static NpcStringId I_THINK_THAT_S_WHY_MANY_PEOPLE_COME_TO_VISIT_CELPHINE;
     @ClientString(id = 11021705, message = "After Ye Sagira fell there were many sacrifices made.")

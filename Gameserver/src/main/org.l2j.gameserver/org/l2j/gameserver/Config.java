@@ -93,7 +93,6 @@ public final class Config {
     private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
     private static final String CUSTOM_PVP_TITLE_CONFIG_FILE = "./config/Custom/PvpTitleColor.ini";
     private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./config/Custom/RandomSpawns.ini";
-    private static final String CUSTOM_SAYUNE_FOR_ALL_CONFIG_FILE = "./config/Custom/SayuneForAll.ini";
     private static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./config/Custom/ScreenWelcomeMessage.ini";
     private static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "./config/Custom/SellBuffs.ini";
     private static final String CUSTOM_SERVER_TIME_CONFIG_FILE = "./config/Custom/ServerTime.ini";
@@ -977,7 +976,6 @@ public final class Config {
     public static int MOB_MIN_SPAWN_RANGE;
     public static int MOB_MAX_SPAWN_RANGE;
     public static List<Integer> MOBS_LIST_NOT_RANDOM;
-    public static boolean FREE_JUMPS_FOR_ALL;
     public static boolean CUSTOM_CB_ENABLED;
     public static int COMMUNITYBOARD_CURRENCY;
     public static boolean COMMUNITYBOARD_ENABLE_MULTISELLS;
@@ -2415,11 +2413,6 @@ public final class Config {
                 MOBS_LIST_NOT_RANDOM.add(Integer.valueOf(id));
             }
         }
-
-        // Load SayuneForAll config file (if exists)
-        final PropertiesParser SayuneForAll = new PropertiesParser(CUSTOM_SAYUNE_FOR_ALL_CONFIG_FILE);
-
-        FREE_JUMPS_FOR_ALL = SayuneForAll.getBoolean("FreeJumpsForAll", false);
 
         // Load ScreenWelcomeMessage config file (if exists)
         final PropertiesParser ScreenWelcomeMessage = new PropertiesParser(CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE);

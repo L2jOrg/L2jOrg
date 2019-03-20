@@ -44,7 +44,6 @@ public enum ZoneId {
     NO_BOOKMARK,
     NO_ITEM_DROP,
     NO_RESTART,
-    SAYUNE,
     FISHING,
     UNDYING,
     TAX;

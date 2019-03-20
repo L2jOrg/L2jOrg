@@ -314,8 +314,7 @@ public final class ZoneManager implements IGameXmlReader {
     public final void load() {
         _classZones.clear();
         _spawnTerritories.clear();
-        parseDatapackDirectory("data/zones", false);
-        parseDatapackDirectory("data/zones/spawnZones", false);
+        parseDatapackDirectory("data/zones", true);
         LOGGER.info("Loaded {} zone classes and {} zones.", _classZones.size(), getSize());
         LOGGER.info("Loaded {}  NPC spawn territoriers.", _spawnTerritories.size());
         final OptionalInt maxId = _classZones.values().stream().flatMap(map -> map.keySet().stream()).mapToInt(Integer.class::cast).filter(value -> value < 300000).max();

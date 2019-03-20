@@ -34,7 +34,6 @@ import org.l2j.gameserver.model.options.OptionsSkillHolder;
 import org.l2j.gameserver.model.options.OptionsSkillType;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.model.stats.Formulas;
-import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.Util;
@@ -423,11 +422,6 @@ public class SkillCaster implements Runnable {
 
             if (player.isInOlympiadMode() && skill.isBlockedInOlympiad()) {
                 player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_SKILL_IN_A_OLYMPIAD_MATCH);
-                return false;
-            }
-
-            if (player.isInsideZone(ZoneId.SAYUNE)) {
-                player.sendPacket(SystemMessageId.YOU_CANNOT_USE_SKILLS_IN_THE_CORRESPONDING_REGION);
                 return false;
             }
 

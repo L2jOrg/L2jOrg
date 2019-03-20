@@ -254,12 +254,6 @@ public class AdminReload implements IAdminCommandHandler
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded appearance item data.");
 					break;
 				}
-				case "sayune":
-				{
-					SayuneData.getInstance().load();
-					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Sayune data.");
-					break;
-				}
 				case "sets":
 				{
 					ArmorSetsData.getInstance().load();

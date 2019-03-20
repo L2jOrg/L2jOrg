@@ -4,9 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.enums.AdminTeleportType;
-import org.l2j.gameserver.enums.SayuneType;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.SayuneEntry;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerMoveRequest;
@@ -14,12 +12,9 @@ import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
-import org.l2j.gameserver.network.serverpackets.sayune.ExFlyMove;
-import org.l2j.gameserver.network.serverpackets.sayune.ExFlyMoveBroadcast;
 import org.l2j.gameserver.util.Broadcast;
 
 import java.nio.ByteBuffer;
-import java.util.Arrays;
 
 public class MoveBackwardToLocation extends IClientIncomingPacket {
     private int _targetX;
@@ -101,13 +96,6 @@ public class MoveBackwardToLocation extends IClientIncomingPacket {
             case DEMONIC: {
                 activeChar.sendPacket(ActionFailed.STATIC_PACKET);
                 activeChar.teleToLocation(new Location(_targetX, _targetY, _targetZ));
-                activeChar.setTeleMode(AdminTeleportType.NORMAL);
-                break;
-            }
-            case SAYUNE: {
-                activeChar.sendPacket(new ExFlyMove(activeChar, SayuneType.ONE_WAY_LOC, -1, Arrays.asList(new SayuneEntry(false, -1, _targetX, _targetY, _targetZ))));
-                activeChar.setXYZ(_targetX, _targetY, _targetZ);
-                Broadcast.toKnownPlayers(activeChar, new ExFlyMoveBroadcast(activeChar, SayuneType.ONE_WAY_LOC, -1, new Location(_targetX, _targetY, _targetZ)));
                 activeChar.setTeleMode(AdminTeleportType.NORMAL);
                 break;
             }

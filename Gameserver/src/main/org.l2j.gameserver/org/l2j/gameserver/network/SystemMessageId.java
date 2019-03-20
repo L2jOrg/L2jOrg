@@ -6746,8 +6746,10 @@ public final class SystemMessageId {
     public static SystemMessageId TWENTY_FOUR_HZ_IS_ALREADY_RUNNING;
     @ClientString(id = 3509, message = "24hz has ended.")
     public static SystemMessageId TWENTY_FOUR_HZ_HAS_ENDED;
-    @ClientString(id = 3510, message = "You cannot perform the action while using Sayune.")
-    public static SystemMessageId YOU_CANNOT_PERFORM_THE_ACTION_WHILE_USING_SAYUNE;
+
+    /*@ClientString(id = 3510, message = "You cannot perform the action while using Sayune.")
+    public static SystemMessageId YOU_CANNOT_PERFORM_THE_ACTION_WHILE_USING_SAYUNE;*/
+
     @ClientString(id = 3511, message = "A replacement player for $c1 has been found, and an invitation is sent.")
     public static SystemMessageId A_REPLACEMENT_PLAYER_FOR_C1_HAS_BEEN_FOUND_AND_AN_INVITATION_IS_SENT;
     @ClientString(id = 3512, message = "The player who was invited rejected the invitation. Please register again.")
@@ -6976,8 +6978,10 @@ public final class SystemMessageId {
     public static SystemMessageId SUCCESSFULLY_RETRIEVED_THE_ITEM_FROM_THE_CLAN_WAREHOUSE_2;
     @ClientString(id = 3624, message = "Failed to retrieve the item from the clan warehouse.")
     public static SystemMessageId FAILED_TO_RETRIEVE_THE_ITEM_FROM_THE_CLAN_WAREHOUSE;
-    @ClientString(id = 3625, message = "You may not use Sayune while a servitor is around.")
-    public static SystemMessageId YOU_MAY_NOT_USE_SAYUNE_WHILE_A_SERVITOR_IS_AROUND;
+
+    /* @ClientString(id = 3625, message = "You may not use Sayune while a servitor is around.")
+    public static SystemMessageId YOU_MAY_NOT_USE_SAYUNE_WHILE_A_SERVITOR_IS_AROUND; */
+
     @ClientString(id = 3626, message = "I am Hermuncus, leader of the Giants.")
     public static SystemMessageId I_AM_HERMUNCUS_LEADER_OF_THE_GIANTS;
     @ClientString(id = 3627, message = "You are a hero. Your valiant soul resonates with the call of my soul.")
@@ -7034,8 +7038,10 @@ public final class SystemMessageId {
     public static SystemMessageId YOU_CANNOT_AWAKEN_DUE_TO_YOUR_CURRENT_INVENTORY_WEIGHT_PLEASE_ORGANIZE_YOUR_INVENTORY_AND_TRY_AGAIN_DWARVEN_CHARACTERS_MUST_BE_AT_20_OR_BELOW_THE_INVENTORY_MAX_TO_AWAKEN;
     @ClientString(id = 3653, message = "Unable to process this request until your inventory's weight and slot count are less than 70 percent of capacity.")
     public static SystemMessageId UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_70_PERCENT_OF_CAPACITY;
-    @ClientString(id = 3654, message = "You cannot use Sayune while in a chaotic state.")
-    public static SystemMessageId YOU_CANNOT_USE_SAYUNE_WHILE_IN_A_CHAOTIC_STATE;
+
+    /*  @ClientString(id = 3654, message = "You cannot use Sayune while in a chaotic state.")
+    public static SystemMessageId YOU_CANNOT_USE_SAYUNE_WHILE_IN_A_CHAOTIC_STATE; */
+
     @ClientString(id = 3655, message = "You cannot Awaken while you're transformed or riding.")
     public static SystemMessageId YOU_CANNOT_AWAKEN_WHILE_YOU_RE_TRANSFORMED_OR_RIDING;
     @ClientString(id = 3656, message = "You cannot discard an item while an enchantment is in progress.")
@@ -7950,8 +7956,10 @@ public final class SystemMessageId {
     public static SystemMessageId YOU_ARE_NOT_IN_AN_ALLIANCE;
     @ClientString(id = 4204, message = "Only Heroes can enter the Hero channel.")
     public static SystemMessageId ONLY_HEROES_CAN_ENTER_THE_HERO_CHANNEL;
-    @ClientString(id = 4205, message = "Sayune cannot be used while taking other actions.")
-    public static SystemMessageId SAYUNE_CANNOT_BE_USED_WHILE_TAKING_OTHER_ACTIONS;
+
+   /* @ClientString(id = 4205, message = "Sayune cannot be used while taking other actions.")
+    public static SystemMessageId SAYUNE_CANNOT_BE_USED_WHILE_TAKING_OTHER_ACTIONS; */
+
     @ClientString(id = 4206, message = "You gained Ability Points as a bonus!")
     public static SystemMessageId YOU_GAINED_ABILITY_POINTS_AS_A_BONUS;
     @ClientString(id = 4207, message = "Please beware of chat phishing.")
@@ -8448,8 +8456,10 @@ public final class SystemMessageId {
     public static SystemMessageId CURRENT_LOCATION_S1_S2_S3_MESSIAH_CASTLE;
     @ClientString(id = 4453, message = "$c1 cannot perform the Couple Action as the person is using a skill.")
     public static SystemMessageId C1_CANNOT_PERFORM_THE_COUPLE_ACTION_AS_THE_PERSON_IS_USING_A_SKILL;
-    @ClientString(id = 4454, message = "$c1 cannot perform the Couple Action as the person is using Sayunes.")
-    public static SystemMessageId C1_CANNOT_PERFORM_THE_COUPLE_ACTION_AS_THE_PERSON_IS_USING_SAYUNES;
+
+   /* @ClientString(id = 4454, message = "$c1 cannot perform the Couple Action as the person is using Sayunes.")
+    public static SystemMessageId C1_CANNOT_PERFORM_THE_COUPLE_ACTION_AS_THE_PERSON_IS_USING_SAYUNES; */
+
     @ClientString(id = 4455, message = "You cannot attack other players in this area.")
     public static SystemMessageId YOU_CANNOT_ATTACK_OTHER_PLAYERS_IN_THIS_AREA;
     @ClientString(id = 4456, message = "You cannot attack players who are in a non-combat area.")

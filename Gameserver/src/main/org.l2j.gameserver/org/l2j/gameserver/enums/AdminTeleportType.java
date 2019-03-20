@@ -22,6 +22,5 @@ package org.l2j.gameserver.enums;
 public enum AdminTeleportType {
     NORMAL,
     DEMONIC,
-    SAYUNE,
     CHARGE
 }

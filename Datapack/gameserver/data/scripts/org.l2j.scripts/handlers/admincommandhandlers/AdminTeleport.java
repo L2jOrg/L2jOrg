@@ -89,11 +89,6 @@ public class AdminTeleport implements IAdminCommandHandler
 			BuilderUtil.sendSysMessage(activeChar, "Instant move ready. Click where you want to go.");
 			activeChar.setTeleMode(AdminTeleportType.DEMONIC);
 		}
-		else if (command.equals("admin_teleto sayune"))
-		{
-			BuilderUtil.sendSysMessage(activeChar, "Sayune move ready. Click where you want to go.");
-			activeChar.setTeleMode(AdminTeleportType.SAYUNE);
-		}
 		else if (command.equals("admin_teleto charge"))
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Charge move ready. Click where you want to go.");

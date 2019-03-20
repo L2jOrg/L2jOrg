@@ -80,7 +80,6 @@ public class GameServer {
         CategoryData.getInstance();
         SecondaryAuthData.getInstance();
         CombinationItemsData.getInstance();
-        SayuneData.getInstance();
         ClanRewardData.getInstance();
         DailyMissionHandler.getInstance().executeScript();
         DailyMissionData.getInstance();

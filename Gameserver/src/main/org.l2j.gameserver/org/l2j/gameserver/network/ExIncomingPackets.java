@@ -34,8 +34,6 @@ import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusRe
 import org.l2j.gameserver.network.clientpackets.primeshop.*;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidBossSpawnInfo;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerInfo;
-import org.l2j.gameserver.network.clientpackets.sayune.RequestFlyMove;
-import org.l2j.gameserver.network.clientpackets.sayune.RequestFlyMoveStart;
 import org.l2j.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreInShuttle;
 import org.l2j.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
 import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
@@ -198,7 +196,7 @@ public enum ExIncomingPackets implements PacketFactory {
     REQUEST_CRYSTALLIZE_ESTIMATE(0x8E, RequestCrystallizeEstimate::new, ConnectionState.IN_GAME),
     REQUEST_CRYSTALLIZE_ITEM_CANCEL(0x8F, RequestCrystallizeItemCancel::new, ConnectionState.IN_GAME),
     REQUEST_SCENE_EX_ESCAPE_SCENE(0x90, RequestExEscapeScene::new, ConnectionState.IN_GAME),
-    REQUEST_FLY_MOVE(0x91, RequestFlyMove::new, ConnectionState.IN_GAME),
+    REQUEST_FLY_MOVE(0x91, null, ConnectionState.IN_GAME), // RequestFlyMove - Sayune is not available on classic yet
     REQUEST_SURRENDER_PLEDGE_WAR_EX(0x92, null, ConnectionState.IN_GAME),
     REQUEST_DYNAMIC_QUEST_ACTION(0x93, null, ConnectionState.IN_GAME), // TODO: Implement / HANDLE SWITCH
     REQUEST_FRIEND_DETAIL_INFO(0x94, RequestFriendDetailInfo::new, ConnectionState.IN_GAME),
@@ -222,7 +220,7 @@ public enum ExIncomingPackets implements PacketFactory {
     REQUEST_GOODS_INVENTORY_INFO(0xAA, null, ConnectionState.IN_GAME),
     REQUEST_GOODS_INVENTORY_ITEM(0xAB, null, ConnectionState.IN_GAME),
     REQUEST_FIRST_PLAY_START(0xAC, null, ConnectionState.IN_GAME),
-    REQUEST_FLY_MOVE_START(0xAD, RequestFlyMoveStart::new, ConnectionState.IN_GAME),
+    REQUEST_FLY_MOVE_START(0xAD, null, ConnectionState.IN_GAME), // RequestFlyMoveStart - Sayune is not available on classic yet
     REQUEST_HARDWARE_INFO(0xAE, RequestHardWareInfo::new, ConnectionState.values()),
     SEND_CHANGE_ATTRIBUTE_TARGET_ITEM(0xB0, SendChangeAttributeTargetItem::new, ConnectionState.IN_GAME),
     REQUEST_CHANGE_ATTRIBUTE_ITEM(0xB1, RequestChangeAttributeItem::new, ConnectionState.IN_GAME),

@@ -25,7 +25,6 @@ import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.*;
 import org.l2j.gameserver.model.actor.appearance.PcAppearance;
 import org.l2j.gameserver.model.actor.request.AbstractRequest;
-import org.l2j.gameserver.model.actor.request.SayuneRequest;
 import org.l2j.gameserver.model.actor.stat.PcStat;
 import org.l2j.gameserver.model.actor.status.PcStatus;
 import org.l2j.gameserver.model.actor.tasks.player.*;
@@ -8338,15 +8337,6 @@ public final class L2PcInstance extends L2Playable {
         notifyFriends(L2FriendStatus.MODE_ONLINE);
         if (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && Config.DECREASE_SKILL_LEVEL) {
             checkPlayerSkills();
-        }
-
-        try {
-            final SayuneRequest sayune = getRequest(SayuneRequest.class);
-            if (sayune != null) {
-                sayune.onLogout();
-            }
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
         }
 
         try {
