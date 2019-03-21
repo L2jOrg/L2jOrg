@@ -1,6 +1,5 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +10,8 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+
+import static java.lang.Math.min;
 
 
 /**
@@ -36,9 +37,9 @@ public final class ExperienceData implements IGameXmlReader {
         _expTable.clear();
         _traningRateTable.clear();
         parseDatapackFile("data/stats/experience.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _expTable.size() + " levels.");
-        LOGGER.info(getClass().getSimpleName() + ": Max Player Level is: " + (MAX_LEVEL - 1));
-        LOGGER.info(getClass().getSimpleName() + ": Max Pet Level is: " + (MAX_PET_LEVEL - 1));
+        LOGGER.info("Loaded {} levels", _expTable.size());
+        LOGGER.info("Max Player Level is: " + (MAX_LEVEL - 1));
+        LOGGER.info("Max Pet Level is: " + (MAX_PET_LEVEL - 1));
     }
 
     @Override
@@ -49,19 +50,16 @@ public final class ExperienceData implements IGameXmlReader {
         MAX_LEVEL = (byte) (Byte.parseByte(tableAttr.getNamedItem("maxLevel").getNodeValue()) + 1);
         MAX_PET_LEVEL = (byte) (Byte.parseByte(tableAttr.getNamedItem("maxPetLevel").getNodeValue()) + 1);
 
-        if (MAX_LEVEL > Config.PLAYER_MAXIMUM_LEVEL) {
-            MAX_LEVEL = Config.PLAYER_MAXIMUM_LEVEL;
-        }
         if (MAX_PET_LEVEL > MAX_LEVEL) {
             MAX_PET_LEVEL = MAX_LEVEL; // Pet level should not exceed owner level.
         }
 
-        int maxLevel = 0;
+        int maxLevel;
         for (Node n = table.getFirstChild(); n != null; n = n.getNextSibling()) {
             if ("experience".equals(n.getNodeName())) {
                 final NamedNodeMap attrs = n.getAttributes();
                 maxLevel = parseInteger(attrs, "level");
-                if (maxLevel > Config.PLAYER_MAXIMUM_LEVEL) {
+                if (maxLevel > MAX_LEVEL) {
                     break;
                 }
                 _expTable.put(maxLevel, parseLong(attrs, "tolevel"));
@@ -77,17 +75,11 @@ public final class ExperienceData implements IGameXmlReader {
      * @return the experience points required to reach the given level.
      */
     public long getExpForLevel(int level) {
-        if (level > Config.PLAYER_MAXIMUM_LEVEL) {
-            level = Config.PLAYER_MAXIMUM_LEVEL;
-        }
-        return _expTable.get(level);
+        return _expTable.get(min(level, MAX_LEVEL));
     }
 
     public double getTrainingRate(int level) {
-        if (level > Config.PLAYER_MAXIMUM_LEVEL) {
-            level = Config.PLAYER_MAXIMUM_LEVEL;
-        }
-        return _traningRateTable.get(level);
+        return _traningRateTable.get(min(level, MAX_LEVEL));
     }
 
     /**

@@ -1,6 +1,5 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,9 +39,6 @@ public class KarmaData implements IGameXmlReader {
                     if ("increase".equalsIgnoreCase(d.getNodeName())) {
                         final NamedNodeMap attrs = d.getAttributes();
                         final int level = parseInteger(attrs, "lvl");
-                        if (level >= Config.PLAYER_MAXIMUM_LEVEL) {
-                            break;
-                        }
                         _karmaTable.put(level, parseDouble(attrs, "val"));
                     }
                 }
