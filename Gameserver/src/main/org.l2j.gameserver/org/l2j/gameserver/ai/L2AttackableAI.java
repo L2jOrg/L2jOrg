@@ -7,7 +7,6 @@ import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.enums.AISkillScope;
 import org.l2j.gameserver.geoengine.GeoEngine;
-import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2j.gameserver.model.AggroInfo;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
@@ -22,7 +21,6 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableFactionCall;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableHate;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
@@ -282,69 +280,14 @@ public class L2AttackableAI extends L2CharacterAI {
         // Add all autoAttackable L2Character in L2Attackable Aggro Range to its _aggroList with 0 damage and 1 hate
         // A L2Attackable isn't aggressive during 10s after its spawn because _globalAggro is set to -10
         if (_globalAggro >= 0) {
-            if (npc.isFakePlayer() && npc.isAggressive()) {
-                final List<L2ItemInstance> droppedItems = npc.getFakePlayerDrops();
-                if (droppedItems.isEmpty()) {
-                    L2Character nearestTarget = null;
-                    double closestDistance = Double.MAX_VALUE;
-                    for (L2Character t : L2World.getInstance().getVisibleObjectsInRange(npc, L2Character.class, npc.getAggroRange())) {
-                        if ((t == _actor) || (t == null) || t.isDead()) {
-                            continue;
-                        }
-                        if ((Config.FAKE_PLAYER_AGGRO_FPC && t.isFakePlayer()) //
-                                || (Config.FAKE_PLAYER_AGGRO_MONSTERS && t.isMonster() && !t.isFakePlayer()) //
-                                || (Config.FAKE_PLAYER_AGGRO_PLAYERS && t.isPlayer())) {
-                            final int hating = npc.getHating(t);
-                            final double distance = npc.calculateDistance2D(t);
-                            if ((hating == 0) && (closestDistance > distance)) {
-                                nearestTarget = t;
-                                closestDistance = distance;
-                            }
-                        }
-                    }
-                    if (nearestTarget != null) {
-                        npc.addDamageHate(nearestTarget, 0, 1);
-                    }
-                } else if (!npc.isInCombat()) // must pickup items
-                {
-                    final int itemIndex = npc.getFakePlayerDrops().size() - 1; // last item dropped - can also use 0 for first item dropped
-                    final L2ItemInstance droppedItem = npc.getFakePlayerDrops().get(itemIndex);
-                    if ((droppedItem != null) && droppedItem.isSpawned()) {
-                        if (npc.calculateDistance2D(droppedItem) > 50) {
-                            moveTo(droppedItem);
-                        } else {
-                            npc.getFakePlayerDrops().remove(itemIndex);
-                            droppedItem.pickupMe(npc);
-                            if (Config.SAVE_DROPPED_ITEM) {
-                                ItemsOnGroundManager.getInstance().removeObject(droppedItem);
-                            }
-                            if (droppedItem.getItem().hasExImmediateEffect()) {
-                                for (SkillHolder skillHolder : droppedItem.getItem().getAllSkills()) {
-                                    SkillCaster.triggerCast(npc, null, skillHolder.getSkill(), null, false);
-                                }
-                                npc.broadcastInfo(); // ? check if this is necessary
-                            }
-                        }
-                    } else {
-                        npc.getFakePlayerDrops().remove(itemIndex);
-                    }
-                    npc.setRunning();
-                }
-            } else if (npc.isAggressive() || (npc instanceof L2GuardInstance)) {
+            if (npc.isAggressive() || (npc instanceof L2GuardInstance)) {
                 final int range = npc instanceof L2GuardInstance ? 500 : npc.getAggroRange(); // TODO Make sure how guards behave towards players.
                 L2World.getInstance().forEachVisibleObjectInRange(npc, L2Character.class, range, t ->
                 {
                     // For each L2Character check if the target is autoattackable
                     if (isAggressiveTowards(t)) // check aggression
                     {
-                        if (t.isFakePlayer()) {
-                            if (!npc.isFakePlayer() || (npc.isFakePlayer() && Config.FAKE_PLAYER_AGGRO_FPC)) {
-                                final int hating = npc.getHating(t);
-                                if (hating == 0) {
-                                    npc.addDamageHate(t, 0, 1);
-                                }
-                            }
-                        } else if (t.isPlayable()) {
+                        if (t.isPlayable()) {
                             final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnAttackableHate(getActiveChar(), t.getActingPlayer(), t.isSummon()), getActiveChar(), TerminateReturn.class);
                             if ((term != null) && term.terminate()) {
                                 return;
@@ -530,9 +473,7 @@ public class L2AttackableAI extends L2CharacterAI {
             // Set the AI Intention to AI_INTENTION_ACTIVE
             setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 
-            if (!_actor.isFakePlayer()) {
-                npc.setWalking();
-            }
+            npc.setWalking();
 
             // Monster teleport to spawn
             if (npc.isMonster() && (npc.getSpawn() != null) && !npc.isInInstance()) {

@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.xml.impl.AdminData;
-import org.l2j.gameserver.data.xml.impl.FakePlayerData;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.model.BlockList;
@@ -155,13 +154,6 @@ public final class RequestSendPost extends IClientIncomingPacket {
                 activeChar.sendPacket(SystemMessageId.IT_S_A_PAYMENT_REQUEST_TRANSACTION_PLEASE_ATTACH_THE_ITEM);
                 return;
             }
-        }
-
-        if (FakePlayerData.getInstance().isTalkable(_receiver)) {
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1);
-            sm.addString(FakePlayerData.getInstance().getProperName(_receiver));
-            activeChar.sendPacket(sm);
-            return;
         }
 
         final int receiverId = CharNameTable.getInstance().getIdByName(_receiver);

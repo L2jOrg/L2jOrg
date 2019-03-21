@@ -188,7 +188,6 @@ open module org.l2j.scripts {
             handlers.admincommandhandlers.AdminEventEngine,
             handlers.admincommandhandlers.AdminEvents,
             handlers.admincommandhandlers.AdminExpSp,
-            handlers.admincommandhandlers.AdminFakePlayers,
             handlers.admincommandhandlers.AdminFence,
             handlers.admincommandhandlers.AdminFightCalculator,
             handlers.admincommandhandlers.AdminFortSiege,

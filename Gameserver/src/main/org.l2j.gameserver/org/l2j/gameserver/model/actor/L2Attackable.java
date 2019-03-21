@@ -32,7 +32,6 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableAggroRange
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableAttack;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableKill;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.CommonSkill;
@@ -50,7 +49,6 @@ import java.lang.ref.WeakReference;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.logging.Level;
 import java.util.stream.Collectors;
 
 public class L2Attackable extends L2Npc {
@@ -223,7 +221,7 @@ public class L2Attackable extends L2Npc {
     }
 
     public synchronized boolean getMustRewardExpSP() {
-        return _mustGiveExpSp && !isFakePlayer();
+        return _mustGiveExpSp;
     }
 
     /**
@@ -579,11 +577,6 @@ public class L2Attackable extends L2Npc {
             return;
         }
 
-        // Check if fake players should aggro each other.
-        if (isFakePlayer() && !Config.FAKE_PLAYER_AGGRO_FPC && attacker.isFakePlayer()) {
-            return;
-        }
-
         L2PcInstance targetPlayer = attacker.getActingPlayer();
         final L2Character summoner = attacker.getSummoner();
         if (attacker.isNpc() && (summoner != null) && summoner.isPlayer() && !attacker.isTargetable()) {
@@ -642,9 +635,7 @@ public class L2Attackable extends L2Npc {
                 ((L2AttackableAI) getAI()).setGlobalAggro(-25);
                 clearAggroList();
                 getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-                if (!isFakePlayer()) {
-                    setWalking();
-                }
+                setWalking();
             }
             return;
         }
@@ -660,9 +651,7 @@ public class L2Attackable extends L2Npc {
             ((L2AttackableAI) getAI()).setGlobalAggro(-25);
             clearAggroList();
             getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-            if (!isFakePlayer()) {
-                setWalking();
-            }
+            setWalking();
         }
     }
 
@@ -823,29 +812,6 @@ public class L2Attackable extends L2Npc {
 
         // Don't drop anything if the last attacker or owner isn't L2PcInstance
         if (player == null) {
-            // unless its a fake player and they can drop items
-            if (mainDamageDealer.isFakePlayer() && Config.FAKE_PLAYER_CAN_DROP_ITEMS) {
-                final Collection<ItemHolder> deathItems = npcTemplate.calculateDrops(DropType.DROP, this, mainDamageDealer);
-                if (deathItems != null) {
-                    for (ItemHolder drop : deathItems) {
-                        final L2Item item = ItemTable.getInstance().getTemplate(drop.getId());
-                        // Check if the autoLoot mode is active
-                        if (Config.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && Config.AUTO_LOOT) || (_isRaid && Config.AUTO_LOOT_RAIDS)))) {
-                            // do nothing
-                        } else if (Config.AUTO_LOOT_HERBS && item.hasExImmediateEffect()) {
-                            for (SkillHolder skillHolder : item.getAllSkills()) {
-                                SkillCaster.triggerCast(mainDamageDealer, null, skillHolder.getSkill(), null, false);
-                            }
-                            mainDamageDealer.broadcastInfo(); // ? check if this is necessary
-                        } else {
-                            final L2ItemInstance droppedItem = dropItem(mainDamageDealer, drop); // drop the item on the ground
-                            if (Config.FAKE_PLAYER_CAN_PICKUP) {
-                                mainDamageDealer.getFakePlayerDrops().add(droppedItem);
-                            }
-                        }
-                    }
-                }
-            }
             return;
         }
 
@@ -916,7 +882,7 @@ public class L2Attackable extends L2Npc {
      * @param lastAttacker The L2Character that has killed the L2Attackable
      */
     public void doEventDrop(L2Character lastAttacker) {
-        if ((lastAttacker == null) || isFakePlayer()) {
+        if (lastAttacker == null) {
             return;
         }
 
@@ -1195,15 +1161,8 @@ public class L2Attackable extends L2Npc {
         _harvestItem.set(null);
         _sweepItems.set(null);
 
-        // fake players
-        if (isFakePlayer()) {
-            getFakePlayerDrops().clear(); // Clear existing fake player drops
-            setReputation(0); // reset reputation
-            setScriptValue(0); // remove pvp flag
-            setRunning(); // don't walk
-        } else {
-            setWalking();
-        }
+        setWalking();
+
 
         // Clear mod Seeded stat
         _seeded = false;
@@ -1501,9 +1460,7 @@ public class L2Attackable extends L2Npc {
                 if (getAI() instanceof L2AttackableAI) {
                     ((L2AttackableAI) getAI()).setGlobalAggro(-25);
                 }
-                if (!isFakePlayer()) {
-                    setWalking();
-                }
+                setWalking();
                 clearAggroList();
             }
             getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);

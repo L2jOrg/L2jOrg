@@ -80,7 +80,6 @@ public final class Config {
     private static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "./config/Custom/CommunityBoard.ini";
     private static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
     private static final String CUSTOM_FACTION_SYSTEM_CONFIG_FILE = "./config/Custom/FactionSystem.ini";
-    private static final String CUSTOM_FAKE_PLAYERS_CONFIG_FILE = "./config/Custom/FakePlayers.ini";
     private static final String CUSTOM_FIND_PVP_CONFIG_FILE = "./config/Custom/FindPvP.ini";
     private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
     private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
@@ -1010,16 +1009,8 @@ public final class Config {
     public static boolean FACTION_SPECIFIC_CHAT;
     public static boolean FACTION_BALANCE_ONLINE_PLAYERS;
     public static int FACTION_BALANCE_PLAYER_EXCEED_LIMIT;
-    public static boolean FAKE_PLAYERS_ENABLED;
-    public static boolean FAKE_PLAYER_CHAT;
-    public static boolean FAKE_PLAYER_USE_SHOTS;
-    public static boolean FAKE_PLAYER_KILL_PVP;
-    public static boolean FAKE_PLAYER_KILL_KARMA;
-    public static boolean FAKE_PLAYER_AGGRO_MONSTERS;
-    public static boolean FAKE_PLAYER_AGGRO_PLAYERS;
-    public static boolean FAKE_PLAYER_AGGRO_FPC;
-    public static boolean FAKE_PLAYER_CAN_DROP_ITEMS;
-    public static boolean FAKE_PLAYER_CAN_PICKUP;
+
+
     public static boolean ENABLE_FIND_PVP;
     public static boolean PREMIUM_SYSTEM_ENABLED;
     public static float PREMIUM_RATE_XP;
@@ -2221,19 +2212,6 @@ public final class Config {
         FACTION_SPECIFIC_CHAT = FactionSystem.getBoolean("EnableFactionChat", true);
         FACTION_BALANCE_ONLINE_PLAYERS = FactionSystem.getBoolean("BalanceOnlinePlayers", true);
         FACTION_BALANCE_PLAYER_EXCEED_LIMIT = FactionSystem.getInt("BalancePlayerExceedLimit", 20);
-
-        // Load FakePlayers config file (if exists)
-        final PropertiesParser FakePlayers = new PropertiesParser(CUSTOM_FAKE_PLAYERS_CONFIG_FILE);
-        FAKE_PLAYERS_ENABLED = Boolean.valueOf(FakePlayers.getBoolean("EnableFakePlayers", false));
-        FAKE_PLAYER_CHAT = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerChat", false));
-        FAKE_PLAYER_USE_SHOTS = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerUseShots", false));
-        FAKE_PLAYER_KILL_PVP = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerKillsRewardPvP", false));
-        FAKE_PLAYER_KILL_KARMA = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerUnflaggedKillsKarma", false));
-        FAKE_PLAYER_AGGRO_MONSTERS = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerAggroMonsters", false));
-        FAKE_PLAYER_AGGRO_PLAYERS = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerAggroPlayers", false));
-        FAKE_PLAYER_AGGRO_FPC = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerAggroFPC", false));
-        FAKE_PLAYER_CAN_DROP_ITEMS = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerCanDropItems", false));
-        FAKE_PLAYER_CAN_PICKUP = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerCanPickup", false));
 
         // Load FindPvP config file (if exists)
         final PropertiesParser FindPvP = new PropertiesParser(CUSTOM_FIND_PVP_CONFIG_FILE);

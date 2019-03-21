@@ -307,14 +307,6 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
         return false;
     }
 
-    /**
-     * Verify if object is a fake player.
-     *
-     * @return {@code true} if object is a fake player, {@code false} otherwise
-     */
-    public boolean isFakePlayer() {
-        return false;
-    }
 
     /**
      * Verify if object is instance of L2ServitorInstance.

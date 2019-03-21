@@ -23,7 +23,6 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -216,7 +215,7 @@ public final class BotReportTable {
 
         final L2Character bot = ((L2Character) target);
 
-        if ((!bot.isPlayer() && !bot.isFakePlayer()) || (bot.isFakePlayer() && !((L2Npc) bot).getTemplate().isFakePlayerTalkable()) || (target.getObjectId() == reporter.getObjectId())) {
+        if ((!bot.isPlayer()) || (target.getObjectId() == reporter.getObjectId())) {
             return false;
         }
 

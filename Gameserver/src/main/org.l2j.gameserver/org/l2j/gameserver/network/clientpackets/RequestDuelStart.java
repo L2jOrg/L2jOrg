@@ -1,12 +1,8 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.data.xml.impl.FakePlayerData;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExDuelAskStart;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -41,40 +37,6 @@ public final class RequestDuelStart extends IClientIncomingPacket {
     public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
         if (activeChar == null) {
-            return;
-        }
-
-        if (FakePlayerData.getInstance().isTalkable(_player)) {
-            final String name = FakePlayerData.getInstance().getProperName(_player);
-            if (activeChar.isInsideZone(ZoneId.PVP) || activeChar.isInsideZone(ZoneId.PEACE) || activeChar.isInsideZone(ZoneId.SIEGE)) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHERE_DUEL_IS_NOT_ALLOWED_AND_YOU_CANNOT_APPLY_FOR_A_DUEL);
-                sm.addString(name);
-                activeChar.sendPacket(sm);
-                return;
-            }
-            boolean npcInRange = false;
-            for (L2Npc npc : L2World.getInstance().getVisibleObjectsInRange(activeChar, L2Npc.class, 250)) {
-                if (npc.getName().equals(name)) {
-                    npcInRange = true;
-                }
-            }
-            if (!npcInRange) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE);
-                sm.addString(name);
-                activeChar.sendPacket(sm);
-                return;
-            }
-            if (activeChar.isProcessingRequest()) {
-                final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
-                msg.addString(name);
-                activeChar.sendPacket(msg);
-                return;
-            }
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_CHALLENGED_TO_A_DUEL);
-            sm.addString(name);
-            activeChar.sendPacket(sm);
-            ThreadPoolManager.getInstance().schedule(() -> scheduleDeny(activeChar, name), 10000);
-            activeChar.blockRequest();
             return;
         }
 

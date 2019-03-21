@@ -1,14 +1,11 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.data.xml.impl.FakePlayerData;
 import org.l2j.gameserver.datatables.BotReportTable;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -76,30 +73,6 @@ public final class TradeRequest extends IClientIncomingPacket {
         // and the following system message is sent to acting player.
         if (target.getObjectId() == player.getObjectId()) {
             client.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
-            return;
-        }
-
-        if (FakePlayerData.getInstance().isTalkable(target.getName())) {
-            final String name = FakePlayerData.getInstance().getProperName(target.getName());
-            boolean npcInRange = false;
-            for (L2Npc npc : L2World.getInstance().getVisibleObjectsInRange(player, L2Npc.class, 150)) {
-                if (npc.getName().equals(name)) {
-                    npcInRange = true;
-                }
-            }
-            if (!npcInRange) {
-                player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
-                return;
-            }
-            if (!player.isProcessingRequest()) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_TRADE_WITH_C1);
-                sm.addString(name);
-                player.sendPacket(sm);
-                ThreadPoolManager.getInstance().schedule(() -> scheduleDeny(player, name), 10000);
-                player.blockRequest();
-            } else {
-                player.sendPacket(SystemMessageId.YOU_ARE_ALREADY_TRADING_WITH_SOMEONE);
-            }
             return;
         }
 

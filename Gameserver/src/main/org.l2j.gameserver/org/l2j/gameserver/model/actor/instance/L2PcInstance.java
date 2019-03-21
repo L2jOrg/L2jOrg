@@ -3954,9 +3954,6 @@ public final class L2PcInstance extends L2Playable {
     public void doAutoAttack(L2Character target) {
         super.doAutoAttack(target);
         setRecentFakeDeath(false);
-        if (target.isFakePlayer()) {
-            updatePvPStatus();
-        }
     }
 
     @Override
@@ -4232,8 +4229,7 @@ public final class L2PcInstance extends L2Playable {
     public boolean doDie(L2Character killer) {
         if (killer != null) {
             final L2PcInstance pk = killer.getActingPlayer();
-            final boolean fpcKill = killer.isFakePlayer();
-            if ((pk != null) || fpcKill) {
+            if ((pk != null)) {
                 if (pk != null) {
                     EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPKill(pk, this), this);
 
@@ -4256,7 +4252,7 @@ public final class L2PcInstance extends L2Playable {
                 }
 
                 // announce pvp/pk
-                if (Config.ANNOUNCE_PK_PVP && (((pk != null) && !pk.isGM()) || fpcKill)) {
+                if (Config.ANNOUNCE_PK_PVP && (((pk != null) && !pk.isGM()))) {
                     String msg = "";
                     if (_pvpFlag == 0) {
                         msg = Config.ANNOUNCE_PK_MSG.replace("$killer", killer.getName()).replace("$target", getName());
@@ -4277,10 +4273,6 @@ public final class L2PcInstance extends L2Playable {
                             Broadcast.toAllOnlinePlayers(msg, false);
                         }
                     }
-                }
-
-                if (fpcKill && Config.FAKE_PLAYER_KILL_KARMA && (_pvpFlag == 0) && (getReputation() >= 0)) {
-                    killer.setReputation(killer.getReputation() - 150);
                 }
             }
 

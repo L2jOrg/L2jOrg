@@ -16,7 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
@@ -473,12 +472,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			monsterId = monsterId.replace('_', ' ');
 			template1 = NpcData.getInstance().getTemplateByName(monsterId);
 		}
-		
-		if (!Config.FAKE_PLAYERS_ENABLED && template1.isFakePlayer())
-		{
-			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
-			return;
-		}
+
 		
 		try
 		{
@@ -519,12 +513,6 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		
 		final L2NpcTemplate template1 = NpcData.getInstance().getTemplate(id);
-		
-		if (!Config.FAKE_PLAYERS_ENABLED && template1.isFakePlayer())
-		{
-			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
-			return;
-		}
 		
 		try
 		{

@@ -1,8 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.data.xml.impl.FakePlayerData;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.L2Party;
@@ -47,19 +45,6 @@ public final class RequestJoinParty extends IClientIncomingPacket {
     public void runImpl() {
         final L2PcInstance requestor = client.getActiveChar();
         if (requestor == null) {
-            return;
-        }
-
-        if (FakePlayerData.getInstance().isTalkable(_name)) {
-            SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_INVITED_TO_THE_PARTY);
-            sm.addString(FakePlayerData.getInstance().getProperName(_name));
-            requestor.sendPacket(sm);
-            if (!requestor.isProcessingRequest()) {
-                ThreadPoolManager.getInstance().schedule(() -> scheduleDeny(requestor), 10000);
-                requestor.blockRequest();
-            } else {
-                requestor.sendPacket(SystemMessageId.WAITING_FOR_ANOTHER_REPLY);
-            }
             return;
         }
 

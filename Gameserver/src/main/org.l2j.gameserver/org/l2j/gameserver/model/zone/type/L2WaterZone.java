@@ -22,7 +22,6 @@ import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.zone.L2ZoneType;
 import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.network.serverpackets.FakePlayerInfo;
 import org.l2j.gameserver.network.serverpackets.NpcInfo;
 import org.l2j.gameserver.network.serverpackets.ServerObjectInfo;
 
@@ -46,9 +45,7 @@ public class L2WaterZone extends L2ZoneType {
         } else if (character.isNpc()) {
             L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
             {
-                if (character.isFakePlayer()) {
-                    player.sendPacket(new FakePlayerInfo((L2Npc) character));
-                } else if (character.getRunSpeed() == 0) {
+                if (character.getRunSpeed() == 0) {
                     player.sendPacket(new ServerObjectInfo((L2Npc) character, player));
                 } else {
                     player.sendPacket(new NpcInfo((L2Npc) character));
@@ -71,9 +68,7 @@ public class L2WaterZone extends L2ZoneType {
         } else if (character.isNpc()) {
             L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
             {
-                if (character.isFakePlayer()) {
-                    player.sendPacket(new FakePlayerInfo((L2Npc) character));
-                } else if (character.getRunSpeed() == 0) {
+                if (character.getRunSpeed() == 0) {
                     player.sendPacket(new ServerObjectInfo((L2Npc) character, player));
                 } else {
                     player.sendPacket(new NpcInfo((L2Npc) character));

@@ -23,8 +23,6 @@ import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.*;
-import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.scripting.ScriptEngineManager;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -270,25 +268,6 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					AttendanceRewardData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Attendance Reward data.");
-					break;
-				}
-				case "fakeplayers":
-				{
-					FakePlayerData.getInstance().load();
-					for (L2Object obj : L2World.getInstance().getVisibleObjects())
-					{
-						if (obj.isFakePlayer())
-						{
-							obj.broadcastInfo();
-						}
-					}
-					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Fake Player data.");
-					break;
-				}
-				case "fakeplayerchat":
-				{
-					FakePlayerChatManager.getInstance().load();
-					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Fake Player Chat data.");
 					break;
 				}
 				default:

@@ -52,8 +52,6 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
     private boolean _randomWalk;
     private boolean _randomAnimation;
     private boolean _flying;
-    private boolean _fakePlayer;
-    private boolean _fakePlayerTalkable;
     private boolean _canMove;
     private boolean _noSleepMode;
     private boolean _passableDoor;
@@ -167,8 +165,6 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
         _randomWalk = set.getBoolean("randomWalk", !_type.equals("L2Guard"));
         _randomAnimation = set.getBoolean("randomAnimation", true);
         _flying = set.getBoolean("flying", false);
-        _fakePlayer = set.getBoolean("fakePlayer", false);
-        _fakePlayerTalkable = set.getBoolean("fakePlayerTalkable", true);
         _canMove = set.getBoolean("canMove", true);
         _noSleepMode = set.getBoolean("noSleepMode", false);
         _passableDoor = set.getBoolean("passableDoor", false);
@@ -374,14 +370,6 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 
     public boolean isFlying() {
         return _flying;
-    }
-
-    public boolean isFakePlayer() {
-        return _fakePlayer;
-    }
-
-    public boolean isFakePlayerTalkable() {
-        return _fakePlayerTalkable;
     }
 
     public boolean canMove() {

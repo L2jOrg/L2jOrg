@@ -1,7 +1,5 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.data.xml.impl.FakePlayerData;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -44,22 +42,6 @@ public final class RequestJoinPledge extends IClientIncomingPacket {
 
         final L2Clan clan = activeChar.getClan();
         if (clan == null) {
-            return;
-        }
-
-        if ((activeChar.getTarget() != null) && (FakePlayerData.getInstance().isTalkable(activeChar.getTarget().getName()))) {
-            if (FakePlayerData.getInstance().getInfo(activeChar.getTarget().getId()).getClanId() > 0) {
-                activeChar.sendPacket(SystemMessageId.THAT_PLAYER_ALREADY_BELONGS_TO_ANOTHER_CLAN);
-            } else {
-                if (!activeChar.isProcessingRequest()) {
-                    ThreadPoolManager.getInstance().schedule(() -> scheduleDeny(activeChar, activeChar.getTarget().getName()), 10000);
-                    activeChar.blockRequest();
-                } else {
-                    final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
-                    msg.addString(activeChar.getTarget().getName());
-                    activeChar.sendPacket(msg);
-                }
-            }
             return;
         }
 

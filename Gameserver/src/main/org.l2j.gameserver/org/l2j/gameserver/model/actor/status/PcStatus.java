@@ -157,7 +157,7 @@ public class PcStatus extends PlayableStatus {
                         }
                     }
 
-                    if ((attacker.isPlayable() || attacker.isFakePlayer()) && (caster.getCurrentCp() > 0)) {
+                    if ((attacker.isPlayable()) && (caster.getCurrentCp() > 0)) {
                         if (caster.getCurrentCp() > transferDmg) {
                             caster.getStatus().reduceCp(transferDmg);
                         } else {
@@ -174,7 +174,7 @@ public class PcStatus extends PlayableStatus {
                 }
             }
 
-            if (!ignoreCP && (attacker.isPlayable() || attacker.isFakePlayer())) {
+            if (!ignoreCP && attacker.isPlayable()) {
                 if (_currentCp >= value) {
                     setCurrentCp(_currentCp - value); // Set Cp to diff of Cp vs value
                     value = 0; // No need to subtract anything from Hp

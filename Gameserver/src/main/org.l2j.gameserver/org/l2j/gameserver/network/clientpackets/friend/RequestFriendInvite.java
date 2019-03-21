@@ -1,7 +1,5 @@
 package org.l2j.gameserver.network.clientpackets.friend;
 
-import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.data.xml.impl.FakePlayerData;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -32,21 +30,6 @@ public final class RequestFriendInvite extends IClientIncomingPacket {
     public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
         if (activeChar == null) {
-            return;
-        }
-
-        if (FakePlayerData.getInstance().isTalkable(_name)) {
-            if (!activeChar.isProcessingRequest()) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_REQUESTED_C1_TO_BE_ON_YOUR_FRIENDS_LIST);
-                sm.addString(_name);
-                activeChar.sendPacket(sm);
-                ThreadPoolManager.getInstance().schedule(() -> scheduleDeny(activeChar), 10000);
-                activeChar.blockRequest();
-            } else {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
-                sm.addString(_name);
-                activeChar.sendPacket(sm);
-            }
             return;
         }
 

@@ -44,7 +44,7 @@ public class PvpFlaggingStopTask extends AbstractNpcAI
 		if (event.startsWith("FLAG_CHECK"))
 		{
 			final L2Object target = npc.getTarget();
-			if ((target != null) && (target.isPlayable() || target.isFakePlayer()))
+			if (target != null && target.isPlayable())
 			{
 				npc.setScriptValue(1); // in combat
 				cancelQuestTimer("FINISH_FLAG" + npc.getObjectId(), npc, null);

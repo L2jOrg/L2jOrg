@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.xml.impl.FakePlayerData;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -29,20 +28,6 @@ public final class RequestVoteNew extends IClientIncomingPacket {
         if (!(object instanceof L2PcInstance)) {
             if (object == null) {
                 client.sendPacket(SystemMessageId.SELECT_TARGET);
-            } else if (object.isFakePlayer() && FakePlayerData.getInstance().isTalkable(object.getName())) {
-                if (activeChar.getRecomLeft() <= 0) {
-                    client.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_RECOMMENDATIONS_TRY_AGAIN_LATER);
-                    return;
-                }
-
-                SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_RECOMMENDED_C1_YOU_HAVE_S2_RECOMMENDATIONS_LEFT);
-                sm.addString(FakePlayerData.getInstance().getProperName(object.getName()));
-                sm.addInt(activeChar.getRecomLeft());
-                client.sendPacket(sm);
-
-                activeChar.setRecomLeft(activeChar.getRecomLeft() - 1);
-                client.sendPacket(new UserInfo(activeChar));
-                client.sendPacket(new ExVoteSystemInfo(activeChar));
             } else {
                 client.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
             }

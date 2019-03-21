@@ -16,7 +16,6 @@ import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
-import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.instancemanager.TimersManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.*;
@@ -931,15 +930,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                 AttackStanceTaskManager.getInstance().addAttackStanceTask(player);
                 player.updatePvPStatus(target);
             }
-
-            if (isFakePlayer() && (target.isPlayable() || target.isFakePlayer())) {
-                final L2Npc npc = ((L2Npc) this);
-                if (!npc.isScriptValue(1)) {
-                    npc.setScriptValue(1); // in combat
-                    broadcastInfo(); // update flag status
-                    QuestManager.getInstance().getQuest("PvpFlaggingStopTask").notifyEvent("FLAG_CHECK" + npc.getObjectId(), npc, null);
-                }
-            }
         } finally {
             _attackLock.unlockWrite(stamp);
         }
@@ -1714,9 +1704,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                     return;
                 }
 
-                if (isFakePlayer()) {
-                    player.sendPacket(new FakePlayerInfo((L2Npc) this));
-                } else if (_stat.getRunSpeed() == 0) {
+                if (_stat.getRunSpeed() == 0) {
                     player.sendPacket(new ServerObjectInfo((L2Npc) this, player));
                 } else {
                     player.sendPacket(new NpcInfo((L2Npc) this));
@@ -2215,9 +2203,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                             return;
                         }
 
-                        if (isFakePlayer()) {
-                            player.sendPacket(new FakePlayerInfo((L2Npc) this));
-                        } else if (_stat.getRunSpeed() == 0) {
+                        if (_stat.getRunSpeed() == 0) {
                             player.sendPacket(new ServerObjectInfo((L2Npc) this, player));
                         } else {
                             player.sendPacket(new NpcInfo((L2Npc) this));
@@ -3268,7 +3254,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
     public boolean isInsidePeaceZone(L2Object attacker, L2Object target) {
         final Instance instanceWorld = getInstanceWorld();
-        if ((target == null) || !((target.isPlayable() || target.isFakePlayer()) && attacker.isPlayable()) || ((instanceWorld != null) && instanceWorld.isPvP())) {
+        if ((target == null) || !( target.isPlayable() && attacker.isPlayable()) || ((instanceWorld != null) && instanceWorld.isPvP())) {
             return false;
         }
 
@@ -3630,10 +3616,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
     public void doAttack(double damage, L2Character target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
         // Check if fake players should aggro each other.
-        if (isFakePlayer() && !Config.FAKE_PLAYER_AGGRO_FPC && target.isFakePlayer()) {
-            return;
-        }
-
         // Start attack stance and notify being attacked.
         if (target.hasAI()) {
             target.getAI().clientStartAutoAttack();
@@ -4525,10 +4507,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
     public void setCursorKeyMovementActive(boolean value) {
         _cursorKeyMovementActive = value;
-    }
-
-    public List<L2ItemInstance> getFakePlayerDrops() {
-        return _fakePlayerDrops;
     }
 
     /**

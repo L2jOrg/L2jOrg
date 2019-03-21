@@ -969,7 +969,7 @@ public final class Skill implements IIdentifiable {
     }
 
     public boolean checkCondition(L2Character activeChar, L2Object object) {
-        if (activeChar.isFakePlayer() || (activeChar.canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && !Config.GM_SKILL_RESTRICTION)) {
+        if ((activeChar.canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && !Config.GM_SKILL_RESTRICTION)) {
             return true;
         }
 

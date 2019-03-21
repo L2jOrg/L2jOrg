@@ -108,7 +108,7 @@ public final class Action extends IClientIncomingPacket {
                 break;
             }
             case 1: {
-                if (!activeChar.isGM() && (!(obj.isNpc() && Config.ALT_GAME_VIEWNPC) || obj.isFakePlayer())) {
+                if (!activeChar.isGM() && (!(obj.isNpc() && Config.ALT_GAME_VIEWNPC))) {
                     obj.onAction(activeChar, false);
                 } else {
                     obj.onActionShift(activeChar);

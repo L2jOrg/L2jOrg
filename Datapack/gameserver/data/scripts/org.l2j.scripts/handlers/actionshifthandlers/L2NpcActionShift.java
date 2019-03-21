@@ -16,10 +16,9 @@
  */
 package handlers.actionshifthandlers;
 
-import java.util.Set;
-
-import org.l2j.gameserver.Config;
+import handlers.bypasshandlers.NpcViewMod;
 import org.l2j.commons.util.CommonUtil;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.enums.AttributeType;
@@ -37,7 +36,7 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
-import handlers.bypasshandlers.NpcViewMod;
+import java.util.Set;
 
 public class L2NpcActionShift implements IActionShiftHandler
 {
@@ -189,7 +188,7 @@ public class L2NpcActionShift implements IActionShiftHandler
 		}
 		else if (Config.ALT_GAME_VIEWNPC)
 		{
-			if (!target.isNpc() || target.isFakePlayer())
+			if (!target.isNpc())
 			{
 				return false;
 			}

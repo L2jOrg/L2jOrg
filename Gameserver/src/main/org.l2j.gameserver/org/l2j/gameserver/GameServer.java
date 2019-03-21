@@ -157,8 +157,6 @@ public class GameServer {
 
         printSection("NPCs");
         NpcData.getInstance();
-        FakePlayerData.getInstance();
-        FakePlayerChatManager.getInstance();
         ExtendDropData.getInstance();
         SpawnsData.getInstance();
         WalkingManager.getInstance();

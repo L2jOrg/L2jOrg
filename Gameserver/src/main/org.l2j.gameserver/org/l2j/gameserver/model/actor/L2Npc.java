@@ -31,7 +31,6 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
-import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.variables.NpcVariables;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.model.zone.type.L2TaxZone;
@@ -42,7 +41,6 @@ import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.Broadcast;
 
 import java.util.List;
-import java.util.logging.Level;
 
 /**
  * This class represents a Non-Player-Character in the world.<br>
@@ -63,7 +61,6 @@ public class L2Npc extends L2Character {
      */
     private static final int MINIMUM_SOCIAL_INTERVAL = 6000;
     private final boolean _isQuestMonster = getTemplate().isQuestMonster();
-    private final boolean _isFakePlayer = getTemplate().isFakePlayer();
     protected RandomAnimationTask _rAniTask;
     /**
      * The L2Spawn object that manage this L2NpcInstance
@@ -310,9 +307,7 @@ public class L2Npc extends L2Character {
                 return;
             }
 
-            if (_isFakePlayer) {
-                player.sendPacket(new FakePlayerInfo(this));
-            } else if (getRunSpeed() == 0) {
+            if (getRunSpeed() == 0) {
                 player.sendPacket(new ServerObjectInfo(this, player));
             } else {
                 player.sendPacket(new NpcInfoAbnormalVisualEffect(this));
@@ -777,61 +772,6 @@ public class L2Npc extends L2Character {
         final L2Weapon weapon = (killer != null) ? killer.getActiveWeaponItem() : null;
         _killingBlowWeaponId = (weapon != null) ? weapon.getId() : 0;
 
-        if (_isFakePlayer && (killer != null) && killer.isPlayable()) {
-            final L2PcInstance player = killer.getActingPlayer();
-            if (isScriptValue(0) && (getReputation() >= 0)) {
-                if (Config.FAKE_PLAYER_KILL_KARMA) {
-                    player.setReputation(player.getReputation() - Formulas.calculateKarmaGain(player.getPkKills(), killer.isSummon()));
-                    player.setPkKills(player.getPkKills() + 1);
-                    final UserInfo ui = new UserInfo(player, false);
-                    ui.addComponentType(UserInfoType.SOCIAL);
-                    player.sendPacket(ui);
-                    player.checkItemRestriction();
-                    // pk item rewards
-                    if (Config.REWARD_PK_ITEM) {
-                        if (!(Config.DISABLE_REWARDS_IN_INSTANCES && (getInstanceId() != 0)) && //
-                                !(Config.DISABLE_REWARDS_IN_PVP_ZONES && isInsideZone(ZoneId.PVP))) {
-                            player.addItem("PK Item Reward", Config.REWARD_PK_ITEM_ID, Config.REWARD_PK_ITEM_AMOUNT, this, Config.REWARD_PK_ITEM_MESSAGE);
-                        }
-                    }
-                    // announce pk
-                    if (Config.ANNOUNCE_PK_PVP && !player.isGM()) {
-                        final String msg = Config.ANNOUNCE_PK_MSG.replace("$killer", player.getName()).replace("$target", getName());
-                        if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE) {
-                            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_3);
-                            sm.addString(msg);
-                            Broadcast.toAllOnlinePlayers(sm);
-                        } else {
-                            Broadcast.toAllOnlinePlayers(msg, false);
-                        }
-                    }
-                }
-            } else if (Config.FAKE_PLAYER_KILL_PVP) {
-                player.setPvpKills(player.getPvpKills() + 1);
-                final UserInfo ui = new UserInfo(player, false);
-                ui.addComponentType(UserInfoType.SOCIAL);
-                player.sendPacket(ui);
-                // pvp item rewards
-                if (Config.REWARD_PVP_ITEM) {
-                    if (!(Config.DISABLE_REWARDS_IN_INSTANCES && (getInstanceId() != 0)) && //
-                            !(Config.DISABLE_REWARDS_IN_PVP_ZONES && isInsideZone(ZoneId.PVP))) {
-                        player.addItem("PvP Item Reward", Config.REWARD_PVP_ITEM_ID, Config.REWARD_PVP_ITEM_AMOUNT, this, Config.REWARD_PVP_ITEM_MESSAGE);
-                    }
-                }
-                // announce pvp
-                if (Config.ANNOUNCE_PK_PVP && !player.isGM()) {
-                    final String msg = Config.ANNOUNCE_PVP_MSG.replace("$killer", player.getName()).replace("$target", getName());
-                    if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE) {
-                        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_3);
-                        sm.addString(msg);
-                        Broadcast.toAllOnlinePlayers(sm);
-                    } else {
-                        Broadcast.toAllOnlinePlayers(msg, false);
-                    }
-                }
-            }
-        }
-
         DecayTaskManager.getInstance().add(this);
 
         if (_spawn != null) {
@@ -1085,9 +1025,7 @@ public class L2Npc extends L2Character {
     @Override
     public void sendInfo(L2PcInstance activeChar) {
         if (isVisibleFor(activeChar)) {
-            if (_isFakePlayer) {
-                activeChar.sendPacket(new FakePlayerInfo(this));
-            } else if (getRunSpeed() == 0) {
+            if (getRunSpeed() == 0) {
                 activeChar.sendPacket(new ServerObjectInfo(this, activeChar));
             } else {
                 activeChar.sendPacket(new NpcInfo(this));
@@ -1160,33 +1098,23 @@ public class L2Npc extends L2Character {
 
     @Override
     public void rechargeShots(boolean physical, boolean magic, boolean fish) {
-        if (_isFakePlayer && Config.FAKE_PLAYER_USE_SHOTS) {
-            if (physical) {
-                Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2154, 1, 0, 0), 600);
-                chargeShot(ShotType.SOULSHOTS);
+        if (physical && (_soulshotamount > 0)) {
+            if (Rnd.get(100) > getTemplate().getSoulShotChance()) {
+                return;
             }
-            if (magic) {
-                Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2061, 1, 0, 0), 600);
-                chargeShot(ShotType.SPIRITSHOTS);
-            }
-        } else {
-            if (physical && (_soulshotamount > 0)) {
-                if (Rnd.get(100) > getTemplate().getSoulShotChance()) {
-                    return;
-                }
-                _soulshotamount--;
-                Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2154, 1, 0, 0), 600);
-                chargeShot(ShotType.SOULSHOTS);
-            }
-            if (magic && (_spiritshotamount > 0)) {
-                if (Rnd.get(100) > getTemplate().getSpiritShotChance()) {
-                    return;
-                }
-                _spiritshotamount--;
-                Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2061, 1, 0, 0), 600);
-                chargeShot(ShotType.SPIRITSHOTS);
-            }
+            _soulshotamount--;
+            Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2154, 1, 0, 0), 600);
+            chargeShot(ShotType.SOULSHOTS);
         }
+        if (magic && (_spiritshotamount > 0)) {
+            if (Rnd.get(100) > getTemplate().getSpiritShotChance()) {
+                return;
+            }
+            _spiritshotamount--;
+            Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2061, 1, 0, 0), 600);
+            chargeShot(ShotType.SPIRITSHOTS);
+        }
+
     }
 
     /**
@@ -1413,11 +1341,6 @@ public class L2Npc extends L2Character {
     @Override
     public int getMinShopDistance() {
         return Config.SHOP_MIN_RANGE_FROM_NPC;
-    }
-
-    @Override
-    public boolean isFakePlayer() {
-        return _isFakePlayer;
     }
 
     /**

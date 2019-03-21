@@ -136,10 +136,6 @@ public class L2NpcAction implements IActionHandler
 					{
 						activeChar.updateNotMoveUntil();
 					}
-					if (npc.isFakePlayer() && GeoEngine.getInstance().canSeeTarget(activeChar, npc))
-					{
-						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, npc);
-					}
 				}
 			}
 		}

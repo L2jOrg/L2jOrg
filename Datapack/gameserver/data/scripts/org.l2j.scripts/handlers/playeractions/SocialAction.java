@@ -16,11 +16,9 @@
  */
 package handlers.playeractions;
 
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.NextAction;
-import org.l2j.gameserver.data.xml.impl.FakePlayerData;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
 import org.l2j.gameserver.model.L2Object;
@@ -119,19 +117,6 @@ public final class SocialAction implements IPlayerActionHandler
 		if ((target == null))
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
-			return;
-		}
-		
-		if (FakePlayerData.getInstance().isTalkable(target.getName()))
-		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_COUPLE_ACTION_WITH_C1);
-			sm.addString(target.getName());
-			player.sendPacket(sm);
-			if (!player.isProcessingRequest())
-			{
-				ThreadPoolManager.getInstance().schedule(() -> scheduleDeny(player), 10000);
-				player.blockRequest();
-			}
 			return;
 		}
 		

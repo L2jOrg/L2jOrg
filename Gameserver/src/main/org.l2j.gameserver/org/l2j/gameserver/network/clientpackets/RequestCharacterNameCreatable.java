@@ -2,7 +2,6 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
-import org.l2j.gameserver.data.xml.impl.FakePlayerData;
 import org.l2j.gameserver.network.serverpackets.ExIsCharNameCreatable;
 import org.l2j.gameserver.util.Util;
 
@@ -32,8 +31,6 @@ public class RequestCharacterNameCreatable extends IClientIncomingPacket {
         if (!Util.isAlphaNumeric(_name) || !isValidName(_name)) {
             result = INVALID_NAME;
         } else if (charId > 0) {
-            result = NAME_ALREADY_EXISTS;
-        } else if (FakePlayerData.getInstance().getProperName(_name) != null) {
             result = NAME_ALREADY_EXISTS;
         } else if (_name.length() > 16) {
             result = INVALID_LENGTH;
