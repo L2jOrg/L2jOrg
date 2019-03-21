@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
-import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2MerchantInstance;
@@ -11,11 +10,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.L2Armor;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.L2Weapon;
-import org.l2j.gameserver.model.items.type.ArmorType;
-import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -131,22 +126,6 @@ public final class RequestPreviewItem extends IClientIncomingPacket {
             final int slot = Inventory.getPaperdollIndex(template.getBodyPart());
             if (slot < 0) {
                 continue;
-            }
-
-            if (template instanceof L2Weapon) {
-                if (activeChar.getRace() == Race.KAMAEL) {
-                    if (template.getItemType() == WeaponType.NONE) {
-                        continue;
-                    } else if ((template.getItemType() == WeaponType.RAPIER) || (template.getItemType() == WeaponType.CROSSBOW) || (template.getItemType() == WeaponType.ANCIENTSWORD)) {
-                        continue;
-                    }
-                }
-            } else if (template instanceof L2Armor) {
-                if (activeChar.getRace() == Race.KAMAEL) {
-                    if ((template.getItemType() == ArmorType.HEAVY) || (template.getItemType() == ArmorType.MAGIC)) {
-                        continue;
-                    }
-                }
             }
 
             if (itemList.containsKey(slot)) {

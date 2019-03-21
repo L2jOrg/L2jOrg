@@ -1,6 +1,5 @@
 package org.l2j.gameserver.model.base;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
@@ -152,81 +151,9 @@ public enum PlayerClass {
     dummyEntry33(null, null, null),
     dummyEntry34(null, null, null),
 
-    maleSoldier(Race.KAMAEL, ClassType.Fighter, ClassLevel.FIRST),
-    femaleSoldier(Race.KAMAEL, ClassType.Fighter, ClassLevel.FIRST),
-    trooper(Race.KAMAEL, ClassType.Fighter, ClassLevel.SECOND),
-    warder(Race.KAMAEL, ClassType.Fighter, ClassLevel.SECOND),
-    berserker(Race.KAMAEL, ClassType.Fighter, ClassLevel.THIRD),
-    maleSoulbreaker(Race.KAMAEL, ClassType.Fighter, ClassLevel.THIRD),
-    femaleSoulbreaker(Race.KAMAEL, ClassType.Fighter, ClassLevel.THIRD),
-    arbalester(Race.KAMAEL, ClassType.Fighter, ClassLevel.THIRD),
-    doombringer(Race.KAMAEL, ClassType.Fighter, ClassLevel.FOURTH),
-    maleSoulhound(Race.KAMAEL, ClassType.Fighter, ClassLevel.FOURTH),
-    femaleSoulhound(Race.KAMAEL, ClassType.Fighter, ClassLevel.FOURTH),
-    trickster(Race.KAMAEL, ClassType.Fighter, ClassLevel.FOURTH),
-    inspector(Race.KAMAEL, ClassType.Fighter, ClassLevel.THIRD),
-    judicator(Race.KAMAEL, ClassType.Fighter, ClassLevel.FOURTH),
-
     dummyEntry35(null, null, null),
     dummyEntry36(null, null, null),
-
-    sigelKnight(null, ClassType.Fighter, null),
-    tyrWarrior(null, ClassType.Fighter, null),
-    otherRogue(null, ClassType.Fighter, null),
-    yrArcher(null, ClassType.Fighter, null),
-    feohWizard(null, ClassType.Mystic, null),
-    issEnchanter(null, ClassType.Priest, null),
-    wynnSummoner(null, ClassType.Mystic, null),
-    eolhHealer(null, ClassType.Priest, null),
-
-    dummyEntry37(null, null, null),
-
-    sigelPhoenixKnight(Race.HUMAN, ClassType.Fighter, ClassLevel.AWAKEN),
-    sigelHellKnight(Race.HUMAN, ClassType.Fighter, ClassLevel.AWAKEN),
-    sigelEvasTemplar(ELF, ClassType.Fighter, ClassLevel.AWAKEN),
-    sigelShilenTemplar(DARK_ELF, ClassType.Fighter, ClassLevel.AWAKEN),
-    tyrrDuelist(Race.HUMAN, ClassType.Fighter, ClassLevel.AWAKEN),
-    tyrrDreadnought(Race.HUMAN, ClassType.Fighter, ClassLevel.AWAKEN),
-    tyrrTitan(Race.ORC, ClassType.Fighter, ClassLevel.AWAKEN),
-    tyrrGrandKhavatari(Race.ORC, ClassType.Fighter, ClassLevel.AWAKEN),
-    tyrrMaestro(Race.DWARF, ClassType.Fighter, ClassLevel.AWAKEN),
-    tyrrDoombringer(Race.KAMAEL, ClassType.Fighter, ClassLevel.AWAKEN),
-    othellAdventurer(Race.HUMAN, ClassType.Fighter, ClassLevel.AWAKEN),
-    othellWindRider(ELF, ClassType.Fighter, ClassLevel.AWAKEN),
-    othellGhostHunter(DARK_ELF, ClassType.Fighter, ClassLevel.AWAKEN),
-    othellFortuneSeeker(Race.DWARF, ClassType.Fighter, ClassLevel.AWAKEN),
-    yulSagittarius(Race.HUMAN, ClassType.Fighter, ClassLevel.AWAKEN),
-    yulMoonlightSentinel(ELF, ClassType.Fighter, ClassLevel.AWAKEN),
-    yulGhostSentinel(DARK_ELF, ClassType.Fighter, ClassLevel.AWAKEN),
-    yulTrickster(Race.KAMAEL, ClassType.Fighter, ClassLevel.AWAKEN),
-    feohArchmage(Race.HUMAN, ClassType.Mystic, ClassLevel.AWAKEN),
-    feohSoultaker(Race.HUMAN, ClassType.Mystic, ClassLevel.AWAKEN),
-    feohMysticMuse(ELF, ClassType.Mystic, ClassLevel.AWAKEN),
-    feoStormScreamer(DARK_ELF, ClassType.Mystic, ClassLevel.AWAKEN),
-    feohSoulHound(Race.KAMAEL, ClassType.Mystic, ClassLevel.AWAKEN), // fix me
-    issHierophant(Race.HUMAN, ClassType.Priest, ClassLevel.AWAKEN),
-    issSwordMuse(ELF, ClassType.Fighter, ClassLevel.AWAKEN),
-    issSpectralDancer(DARK_ELF, ClassType.Fighter, ClassLevel.AWAKEN),
-    issDominator(Race.ORC, ClassType.Priest, ClassLevel.AWAKEN),
-    issDoomcryer(Race.ORC, ClassType.Priest, ClassLevel.AWAKEN),
-    wynnArcanaLord(Race.HUMAN, ClassType.Mystic, ClassLevel.AWAKEN),
-    wynnElementalMaster(ELF, ClassType.Mystic, ClassLevel.AWAKEN),
-    wynnSpectralMaster(DARK_ELF, ClassType.Mystic, ClassLevel.AWAKEN),
-    aeoreCardinal(Race.HUMAN, ClassType.Priest, ClassLevel.AWAKEN),
-    aeoreEvaSaint(ELF, ClassType.Priest, ClassLevel.AWAKEN),
-    aeoreShillienSaint(DARK_ELF, ClassType.Priest, ClassLevel.AWAKEN),
-
-    ertheiaFighter(Race.ERTHEIA, ClassType.Fighter, ClassLevel.FIRST),
-    ertheiaWizzard(Race.ERTHEIA, ClassType.Mystic, ClassLevel.FIRST),
-
-    marauder(Race.ERTHEIA, ClassType.Fighter, ClassLevel.THIRD),
-    cloudBreaker(Race.ERTHEIA, ClassType.Mystic, ClassLevel.THIRD),
-
-    ripper(Race.ERTHEIA, ClassType.Fighter, ClassLevel.FOURTH),
-    Stratomancer(Race.ERTHEIA, ClassType.Mystic, ClassLevel.FOURTH),
-
-    eviscerator(Race.ERTHEIA, ClassType.Fighter, ClassLevel.AWAKEN),
-    sayhaSeer(Race.ERTHEIA, ClassType.Mystic, ClassLevel.AWAKEN);
+    dummyEntry37(null, null, null),;
 
     private static final Set<PlayerClass> mainSubclassSet;
     private static final Set<PlayerClass> neverSubclassed = EnumSet.of(Overlord, Warsmith);
@@ -293,45 +220,25 @@ public enum PlayerClass {
         Set<PlayerClass> subclasses = null;
 
         if (_level == ClassLevel.THIRD) {
-            if (player.getRace() != Race.KAMAEL) {
-                subclasses = EnumSet.copyOf(mainSubclassSet);
+            subclasses = EnumSet.copyOf(mainSubclassSet);
 
-                subclasses.remove(this);
+            subclasses.remove(this);
 
-                switch (player.getRace()) {
-                    case ELF:
-                        subclasses.removeAll(getSet(DARK_ELF, ClassLevel.THIRD));
-                        break;
-                    case DARK_ELF:
-                        subclasses.removeAll(getSet(ELF, ClassLevel.THIRD));
-                        break;
-                }
-
-                subclasses.removeAll(getSet(Race.KAMAEL, ClassLevel.THIRD));
-
-                final Set<PlayerClass> unavailableClasses = subclassSetMap.get(this);
-
-                if (unavailableClasses != null) {
-                    subclasses.removeAll(unavailableClasses);
-                }
-
-            } else {
-                subclasses = getSet(Race.KAMAEL, ClassLevel.THIRD);
-                subclasses.remove(this);
-                // Check sex, male subclasses female and vice versa
-                // If server owner set MaxSubclass > 3 some kamael's cannot take 4 sub
-                // So, in that situation we must skip sex check
-                if (Config.MAX_SUBCLASS <= 3) {
-                    if (player.getAppearance().getSex()) {
-                        subclasses.removeAll(EnumSet.of(femaleSoulbreaker));
-                    } else {
-                        subclasses.removeAll(EnumSet.of(maleSoulbreaker));
-                    }
-                }
-                if (!player.getSubClasses().containsKey(2) || (player.getSubClasses().get(2).getLevel() < 75)) {
-                    subclasses.removeAll(EnumSet.of(inspector));
-                }
+            switch (player.getRace()) {
+                case ELF:
+                    subclasses.removeAll(getSet(DARK_ELF, ClassLevel.THIRD));
+                    break;
+                case DARK_ELF:
+                    subclasses.removeAll(getSet(ELF, ClassLevel.THIRD));
+                    break;
             }
+
+            final Set<PlayerClass> unavailableClasses = subclassSetMap.get(this);
+
+            if (unavailableClasses != null) {
+                subclasses.removeAll(unavailableClasses);
+            }
+
         }
         return subclasses;
     }

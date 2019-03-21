@@ -7,7 +7,6 @@ import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.CategoryType;
-import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.base.ClassId;
@@ -433,11 +432,8 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		String htmltext = null;
 		if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
 		{
-			if (player.getRace() == Race.ERTHEIA)
-			{
-				htmltext = "test_server_helper027a.html";
-			}
-			else if (player.getLevel() < 20)
+
+			if (player.getLevel() < 20)
 			{
 				htmltext = "test_server_helper027.html";
 			}
@@ -488,16 +484,6 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 					case DWARVEN_FIGHTER:
 					{
 						htmltext = "test_server_helper026i.html";
-						break;
-					}
-					case MALE_SOLDIER:
-					{
-						htmltext = "test_server_helper026j.html";
-						break;
-					}
-					case FEMALE_SOLDIER:
-					{
-						htmltext = "test_server_helper026k.html";
 						break;
 					}
 				}
@@ -666,28 +652,6 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 						htmltext = "test_server_helper020a.html";
 						break;
 					}
-					case MALE_SOLDIER:
-					case TROOPER:
-					{
-						htmltext = "test_server_helper020c.html";
-						break;
-					}
-					case FEMALE_SOLDIER:
-					case WARDER:
-					{
-						htmltext = "test_server_helper020d.html";
-						break;
-					}
-					case ERTHEIA_FIGHTER:
-					{
-						htmltext = "test_server_helper020e.html";
-						break;
-					}
-					case ERTHEIA_WIZARD:
-					{
-						htmltext = "test_server_helper020f.html";
-						break;
-					}
 				}
 			}
 		}
@@ -712,16 +676,8 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 	
 	private boolean changeToNextClass(L2PcInstance player)
 	{
-		ClassId newClass = null;
-		if (player.getClassId() == ClassId.FEMALE_SOUL_HOUND)
-		{
-			newClass = ClassId.FEOH_SOUL_HOUND; // Fix for Female Soulhounds
-		}
-		else
-		{
-			newClass = Arrays.stream(ClassId.values()).filter(cid -> player.getClassId() == cid.getParent()).findAny().orElse(null);
-		}
-		
+		ClassId newClass = Arrays.stream(ClassId.values()).filter(cid -> player.getClassId() == cid.getParent()).findAny().orElse(null);
+
 		if (newClass == null)
 		{
 			LOGGER.warn(": No new classId found for player " + player);

@@ -34,13 +34,10 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 public class FatedSupportBox implements IItemHandler
 {
 	// Items
-	private static final int FATED_BOX_ERTHEIA_WIZARD = 26229;
-	private static final int FATED_BOX_ERTHEIA_FIGHTER = 26230;
 	private static final int FATED_BOX_FIGHTER = 37315;
 	private static final int FATED_BOX_WIZARD = 37316;
 	private static final int FATED_BOX_WARRIOR = 37317;
 	private static final int FATED_BOX_ROGUE = 37318;
-	private static final int FATED_BOX_KAMAEL = 37319;
 	private static final int FATED_BOX_ORC_FIGHTER = 37320;
 	private static final int FATED_BOX_ORC_WIZARD = 37321;
 	
@@ -64,7 +61,7 @@ public class FatedSupportBox implements IItemHandler
 		}
 		
 		// Characters that have gone through their 2nd class transfer/1st liberation will be able to open the Fated Support Box at level 40.
-		if ((player.getLevel() < 40) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP) || ((race != Race.ERTHEIA) && player.isInCategory(CategoryType.SECOND_CLASS_GROUP)))
+		if ((player.getLevel() < 40) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP) || (player.isInCategory(CategoryType.SECOND_CLASS_GROUP)))
 		{
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item));
 			return false;
@@ -114,23 +111,6 @@ public class FatedSupportBox implements IItemHandler
 				else
 				{
 					player.addItem(getClass().getSimpleName(), FATED_BOX_ORC_FIGHTER, 1, player, true);
-				}
-				break;
-			}
-			case KAMAEL:
-			{
-				player.addItem(getClass().getSimpleName(), FATED_BOX_KAMAEL, 1, player, true);
-				break;
-			}
-			case ERTHEIA:
-			{
-				if (player.isMageClass())
-				{
-					player.addItem(getClass().getSimpleName(), FATED_BOX_ERTHEIA_WIZARD, 1, player, true);
-				}
-				else
-				{
-					player.addItem(getClass().getSimpleName(), FATED_BOX_ERTHEIA_FIGHTER, 1, player, true);
 				}
 				break;
 			}

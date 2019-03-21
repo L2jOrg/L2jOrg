@@ -37,7 +37,7 @@ public final class HitConditionBonusData implements IGameXmlReader {
     @Override
     public void load() {
         parseDatapackFile("data/stats/hitConditionBonus.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded Hit Condition bonuses.");
+        LOGGER.info("Loaded Hit Condition bonuses.");
     }
 
     @Override

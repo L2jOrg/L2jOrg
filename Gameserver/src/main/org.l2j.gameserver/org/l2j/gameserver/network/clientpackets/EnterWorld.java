@@ -10,7 +10,6 @@ import org.l2j.gameserver.data.xml.impl.BeautyShopData;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.*;
@@ -341,11 +340,7 @@ public class EnterWorld extends IClientIncomingPacket {
 
         if (Config.SHOW_GOD_VIDEO_INTRO && activeChar.getVariables().getBoolean("intro_god_video", false)) {
             activeChar.getVariables().remove("intro_god_video");
-            if (activeChar.getRace() == Race.ERTHEIA) {
-                activeChar.sendPacket(ExShowUsm.ERTHEIA_INTRO_FOR_ERTHEIA);
-            } else {
-                activeChar.sendPacket(ExShowUsm.ERTHEIA_INTRO_FOR_OTHERS);
-            }
+            activeChar.sendPacket(ExShowUsm.ERTHEIA_INTRO_FOR_OTHERS);
         }
 
         SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/classList.xsd">
+	<!-- Human -->
 	<class classId="0" name="Human Fighter" />
 	<class classId="1" name="Warrior" parentClassId="0" />
 	<class classId="2" name="Gladiator" parentClassId="1" />
@@ -18,6 +19,7 @@
 	<class classId="15" name="Cleric" parentClassId="10" />
 	<class classId="16" name="Bishop" parentClassId="15" />
 	<class classId="17" name="Prophet" parentClassId="15" />
+	<!-- Elf -->
 	<class classId="18" name="Elven Fighter" />
 	<class classId="19" name="Elven Knight" parentClassId="18" />
 	<class classId="20" name="Temple Knight" parentClassId="19" />
@@ -31,6 +33,7 @@
 	<class classId="28" name="Elemental Summoner" parentClassId="26" />
 	<class classId="29" name="Elven Oracle" parentClassId="25" />
 	<class classId="30" name="Elven Elder" parentClassId="29" />
+	<!-- Dark elf -->
 	<class classId="31" name="Dark Fighter" />
 	<class classId="32" name="Palus Knight" parentClassId="31" />
 	<class classId="33" name="Shillien Knight" parentClassId="32" />
@@ -44,6 +47,7 @@
 	<class classId="41" name="Phantom Summoner" parentClassId="39" />
 	<class classId="42" name="Shillien Oracle" parentClassId="38" />
 	<class classId="43" name="Shillien Elder" parentClassId="42" />
+	<!-- Orc -->
 	<class classId="44" name="Orc Fighter" />
 	<class classId="45" name="Orc Raider" parentClassId="44" />
 	<class classId="46" name="Destroyer" parentClassId="45" />
@@ -53,6 +57,7 @@
 	<class classId="50" name="Orc Shaman" parentClassId="49" />
 	<class classId="51" name="Overlord" parentClassId="50" />
 	<class classId="52" name="Warcryer" parentClassId="50" />
+	<!-- Dwarf -->
 	<class classId="53" name="Dwarf Fighter" />
 	<class classId="54" name="Scavenger" parentClassId="53" />
 	<class classId="55" name="Bounty Hunter" parentClassId="54" />
@@ -95,73 +100,4 @@
 	<class classId="120" name="Player Trap" />
 	<class classId="121" name="Double Ghost" />
 	<class classId="122" name="Siege Attacker" />
-	<!-- Third Classes Kamael -->
-	<class classId="123" name="Male Kamael Soldier" />
-	<class classId="124" name="Female Kamael Soldier" />
-	<class classId="125" name="Trooper" parentClassId="123" />
-	<class classId="126" name="Warder" parentClassId="124" />
-	<class classId="127" name="Berserker" parentClassId="125" />
-	<class classId="128" name="Male Soul Breaker" parentClassId="125" />
-	<class classId="129" name="Female Soul Breaker" parentClassId="126" />
-	<class classId="130" name="Arbalester" parentClassId="126" />
-	<class classId="131" name="Doombringer" parentClassId="127" />
-	<class classId="132" name="Male Soul Hound" parentClassId="128" />
-	<class classId="133" name="Female Soul Hound" parentClassId="129" />
-	<class classId="134" name="Trickster" parentClassId="130" />
-	<class classId="135" name="Inspector" parentClassId="126" />
-	<class classId="136" name="Judicator" parentClassId="135" />
-	<!-- Goddess of Destruction -->
-	<!-- Shared 4th profession -->
-	<class classId="139" name="Sigel Knight" />
-	<class classId="140" name="Tyrr Warrior" />
-	<class classId="141" name="Othell Rogue" />
-	<class classId="142" name="Yul Archer" />
-	<class classId="143" name="Feoh Wizard" />
-	<class classId="144" name="Iss Enchanter" />
-	<class classId="145" name="Wynn Summoner" />
-	<class classId="146" name="Aeore Healer" />
-	<!-- Classified 4th profession -->
-	<class classId="148" name="Sigel Phoenix Knight" parentClassId="90" />
-	<class classId="149" name="Sigel Hell Knight" parentClassId="91" />
-	<class classId="150" name="Sigel Eva's Templar" parentClassId="99" />
-	<class classId="151" name="Sigel Shillien Templar" parentClassId="106" />
-	<class classId="152" name="Tyrr Duelist" parentClassId="88" />
-	<class classId="153" name="Tyrr Dreadnought" parentClassId="89" />
-	<class classId="154" name="Tyrr Titan" parentClassId="113" />
-	<class classId="155" name="Tyrr Grand Khavatari" parentClassId="114" />
-	<class classId="156" name="Tyrr Maestro" parentClassId="118" />
-	<class classId="157" name="Tyrr Doombringer" parentClassId="131" />
-	<class classId="158" name="Othell Adventurer" parentClassId="93" />
-	<class classId="159" name="Othell Wind Rider" parentClassId="101" />
-	<class classId="160" name="Othell Ghost Hunter" parentClassId="108" />
-	<class classId="161" name="Othell Fortune Seeker" parentClassId="117" />
-	<class classId="162" name="Yul Sagittarius" parentClassId="92" />
-	<class classId="163" name="Yul Moonlight Sentinel" parentClassId="102" />
-	<class classId="164" name="Yul Ghost Sentinel" parentClassId="109" />
-	<class classId="165" name="Yul Trickster" parentClassId="134" />
-	<class classId="166" name="Feoh Archmage" parentClassId="94" />
-	<class classId="167" name="Feoh Soultaker" parentClassId="95" />
-	<class classId="168" name="Feoh Mystic Muse" parentClassId="103" />
-	<class classId="169" name="Feoh Storm Screamer" parentClassId="110" />
-	<class classId="170" name="Feoh Soulhounds" parentClassId="132" /> <!-- There's also 133 because there are two different soul hounds! -->
-	<class classId="171" name="Iss Hierophant" parentClassId="98" />
-	<class classId="172" name="Iss Sword Muse" parentClassId="100" />
-	<class classId="173" name="Iss Spectral Dancer" parentClassId="107" />
-	<class classId="174" name="Iss Dominator" parentClassId="115" />
-	<class classId="175" name="Iss Doomcryer" parentClassId="116" />
-	<class classId="176" name="Wynn Arcana Lord" parentClassId="96" />
-	<class classId="177" name="Wynn Elemental Master" parentClassId="104" />
-	<class classId="178" name="Wynn Spectral Master" parentClassId="111" />
-	<class classId="179" name="Aeore Cardinal" parentClassId="97" />
-	<class classId="180" name="Aeore Eva's Saint" parentClassId="105" />
-	<class classId="181" name="Aeore Shillien Saint" parentClassId="112" />
-	<!-- Etheria -->
-	<class classId="182" name="Etheria Fighter" />
-	<class classId="183" name="Etheria Wizard" />
-	<class classId="184" name="Marauder" parentClassId="182" />
-	<class classId="185" name="Cloud Breaker" parentClassId="183" />
-	<class classId="186" name="Ripper" parentClassId="184" />
-	<class classId="187" name="Stratomancer" parentClassId="185" />
-	<class classId="188" name="Eviscerator" parentClassId="186" />
-	<class classId="189" name="Sayha's Seer" parentClassId="187" />
 </list>

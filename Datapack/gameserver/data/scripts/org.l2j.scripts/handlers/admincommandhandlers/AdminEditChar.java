@@ -22,7 +22,6 @@ import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.CategoryType;
-import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
@@ -362,46 +361,6 @@ public class AdminEditChar implements IAdminCommandHandler
 					else
 					{
 						player.setBaseClass(player.getActiveClass());
-					}
-					
-					// Sex checks.
-					if (player.getRace() == Race.KAMAEL)
-					{
-						switch (classidval)
-						{
-							case 123: // Soldier (Male)
-							case 125: // Trooper
-							case 127: // Berserker
-							case 128: // Soul Breaker (Male)
-							case 131: // Doombringer
-							case 132: // Soul Hound (Male)
-							case 157: // Tyrr Doombringer
-							{
-								if (player.getAppearance().getSex())
-								{
-									player.getAppearance().setSex(false);
-								}
-								break;
-							}
-							case 124: // Soldier (Female)
-							case 126: // Warder
-							case 129: // Soul Breaker (Female)
-							case 130: // Arbalester
-							case 133: // Soul Hound (Female)
-							case 134: // Trickster
-							case 165: // Yul Trickster
-							{
-								if (!player.getAppearance().getSex())
-								{
-									player.getAppearance().setSex(true);
-								}
-								break;
-							}
-						}
-					}
-					if (player.getRace() == Race.ERTHEIA)
-					{
-						player.getAppearance().setSex(true);
 					}
 					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();

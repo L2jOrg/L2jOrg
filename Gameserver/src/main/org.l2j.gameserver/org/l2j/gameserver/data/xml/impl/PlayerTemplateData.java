@@ -17,7 +17,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 /**
  * Loads player's base stats.
  *
@@ -38,8 +37,8 @@ public final class PlayerTemplateData implements IGameXmlReader {
     public void load() {
         _playerTemplates.clear();
         parseDatapackDirectory("data/stats/chars/baseStats", false);
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _playerTemplates.size() + " character templates.");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _dataCount + " level up gain records.");
+        LOGGER.info("Loaded {} character templates.", _playerTemplates.size());
+        LOGGER.info("Loaded {} level up gain records.", _dataCount );
     }
 
     @Override
@@ -106,7 +105,7 @@ public final class PlayerTemplateData implements IGameXmlReader {
                                 for (Node valNode = lvlNode.getFirstChild(); valNode != null; valNode = valNode.getNextSibling()) {
                                     final String nodeName = valNode.getNodeName();
 
-                                    if ((nodeName.startsWith("hp") || nodeName.startsWith("mp") || nodeName.startsWith("cp")) && _playerTemplates.containsKey(ClassId.getClassId(classId))) {
+                                    if (level < ExperienceData.getInstance().getMaxLevel() && (nodeName.startsWith("hp") || nodeName.startsWith("mp") || nodeName.startsWith("cp")) && _playerTemplates.containsKey(ClassId.getClassId(classId))) {
                                         _playerTemplates.get(ClassId.getClassId(classId)).setUpgainValue(nodeName, level, Double.parseDouble(valNode.getTextContent()));
                                         _dataCount++;
                                     }

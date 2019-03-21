@@ -27,8 +27,6 @@ public enum Race {
     DARK_ELF,
     ORC,
     DWARF,
-    KAMAEL,
-    ERTHEIA,
     ANIMAL,
     BEAST,
     BUG,

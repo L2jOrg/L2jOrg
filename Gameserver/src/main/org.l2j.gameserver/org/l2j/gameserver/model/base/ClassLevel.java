@@ -25,6 +25,5 @@ public enum ClassLevel {
     FIRST,
     SECOND,
     THIRD,
-    FOURTH,
-    AWAKEN
+    FOURTH
 }

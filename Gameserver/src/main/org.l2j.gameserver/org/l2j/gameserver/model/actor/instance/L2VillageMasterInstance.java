@@ -562,9 +562,6 @@ public class L2VillageMasterInstance extends L2NpcInstance {
                         if ((player.getRace() == Race.ELF) || (player.getRace() == Race.DARK_ELF)) {
                             html.setFile(player, "data/html/villagemaster/SubClass_Fail_Elves.htm");
                             player.sendPacket(html);
-                        } else if (player.getRace() == Race.KAMAEL) {
-                            html.setFile(player, "data/html/villagemaster/SubClass_Fail_Kamael.htm");
-                            player.sendPacket(html);
                         } else {
                             // TODO: Retail message
                             player.sendMessage("There are no sub classes available at this time.");
@@ -799,11 +796,7 @@ public class L2VillageMasterInstance extends L2NpcInstance {
     }
 
     protected String getSubClassMenu(Race race) {
-        if (Config.ALT_GAME_SUBCLASS_EVERYWHERE || (race != Race.KAMAEL)) {
-            return "data/html/villagemaster/SubClass.htm";
-        }
-
-        return "data/html/villagemaster/SubClass_NoOther.htm";
+        return "data/html/villagemaster/SubClass.htm";
     }
 
     protected String getSubClassFail() {
@@ -849,10 +842,9 @@ public class L2VillageMasterInstance extends L2NpcInstance {
         }
 
         /**
-         * If the race of your main class is Elf or Dark Elf, you may not select each class as a subclass to the other class. If the race of your main class is Kamael, you may not subclass any other race If the race of your main class is NOT Kamael, you may not subclass any Kamael class You may not
-         * select Overlord and Warsmith class as a subclass. You may not select a similar class as the subclass. The occupations classified as similar classes are as follows: Treasure Hunter, Plainswalker and Abyss Walker Hawkeye, Silver Ranger and Phantom Ranger Paladin, Dark Avenger, Temple Knight
-         * and Shillien Knight Warlocks, Elemental Summoner and Phantom Summoner Elder and Shillien Elder Swordsinger and Bladedancer Sorcerer, Spellsinger and Spellhowler Also, Kamael have a special, hidden 4 subclass, the inspector, which can only be taken if you have already completed the other
-         * two Kamael subclasses
+         * If the race of your main class is Elf or Dark Elf, you may not select each class as a subclass to the other class.
+         * You may not select Overlord and Warsmith class as a subclass. You may not select a similar class as the subclass. The occupations classified as similar classes are as follows: Treasure Hunter, Plainswalker and Abyss Walker Hawkeye, Silver Ranger and Phantom Ranger Paladin, Dark Avenger, Temple Knight
+         * and Shillien Knight Warlocks, Elemental Summoner and Phantom Summoner Elder and Shillien Elder Swordsinger and Bladedancer Sorcerer, Spellsinger and Spellhowler Also,
          */
         final Set<PlayerClass> availSubs = PlayerClass.values()[baseClassId].getAvailableSubclasses(player);
 

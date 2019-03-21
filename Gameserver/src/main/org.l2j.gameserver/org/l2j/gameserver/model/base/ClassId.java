@@ -175,21 +175,6 @@ public enum ClassId implements IIdentifiable {
     DUMMY_ENTRY_33(121, false, null, null),
     DUMMY_ENTRY_34(122, false, null, null),
 
-    MALE_SOLDIER(123, false, Race.KAMAEL, null),
-    FEMALE_SOLDIER(124, false, Race.KAMAEL, null),
-    TROOPER(125, false, Race.KAMAEL, MALE_SOLDIER),
-    WARDER(126, false, Race.KAMAEL, FEMALE_SOLDIER),
-    BERSERKER(127, false, Race.KAMAEL, TROOPER),
-    MALE_SOULBREAKER(128, false, Race.KAMAEL, TROOPER),
-    FEMALE_SOULBREAKER(129, false, Race.KAMAEL, WARDER),
-    ARBALESTER(130, false, Race.KAMAEL, WARDER),
-    DOOMBRINGER(131, false, Race.KAMAEL, BERSERKER),
-    MALE_SOUL_HOUND(132, false, Race.KAMAEL, MALE_SOULBREAKER),
-    FEMALE_SOUL_HOUND(133, false, Race.KAMAEL, FEMALE_SOULBREAKER),
-    TRICKSTER(134, false, Race.KAMAEL, ARBALESTER),
-    INSPECTOR(135, false, Race.KAMAEL, WARDER),
-    JUDICATOR(136, false, Race.KAMAEL, INSPECTOR),
-
     DUMMY_ENTRY_35(137, false, null, null),
     DUMMY_ENTRY_36(138, false, null, null),
 
@@ -213,7 +198,7 @@ public enum ClassId implements IIdentifiable {
     TYRR_TITAN(154, false, Race.ORC, TITAN),
     TYRR_GRAND_KHAVATARI(155, false, Race.ORC, GRAND_KHAVATARI),
     TYRR_MAESTRO(156, false, Race.DWARF, MAESTRO),
-    TYRR_DOOMBRINGER(157, false, Race.KAMAEL, DOOMBRINGER),
+
     OTHELL_ADVENTURER(158, false, Race.HUMAN, ADVENTURER),
     OTHELL_WIND_RIDER(159, false, Race.ELF, WIND_RIDER),
     OTHELL_GHOST_HUNTER(160, false, Race.DARK_ELF, GHOST_HUNTER),
@@ -221,12 +206,12 @@ public enum ClassId implements IIdentifiable {
     YUL_SAGITTARIUS(162, false, Race.HUMAN, SAGITTARIUS),
     YUL_MOONLIGHT_SENTINEL(163, false, Race.ELF, MOONLIGHT_SENTINEL),
     YUL_GHOST_SENTINEL(164, false, Race.DARK_ELF, GHOST_SENTINEL),
-    YUL_TRICKSTER(165, false, Race.KAMAEL, TRICKSTER),
+
     FEOH_ARCHMAGE(166, true, Race.HUMAN, ARCHMAGE),
     FEOH_SOULTAKER(167, true, Race.HUMAN, SOULTAKER),
     FEOH_MYSTIC_MUSE(168, true, Race.ELF, MYSTIC_MUSE),
     FEOH_STORM_SCREAMER(169, true, Race.DARK_ELF, STORM_SCREAMER),
-    FEOH_SOUL_HOUND(170, true, Race.KAMAEL, MALE_SOUL_HOUND), // fix me ?
+
     ISS_HIEROPHANT(171, true, Race.HUMAN, HIEROPHANT),
     ISS_SWORD_MUSE(172, false, Race.ELF, SWORD_MUSE),
     ISS_SPECTRAL_DANCER(173, false, Race.DARK_ELF, SPECTRAL_DANCER),
@@ -237,19 +222,7 @@ public enum ClassId implements IIdentifiable {
     WYNN_SPECTRAL_MASTER(178, true, true, Race.DARK_ELF, SPECTRAL_MASTER),
     AEORE_CARDINAL(179, true, Race.HUMAN, CARDINAL),
     AEORE_EVA_SAINT(180, true, Race.ELF, EVA_SAINT),
-    AEORE_SHILLIEN_SAINT(181, true, Race.DARK_ELF, SHILLIEN_SAINT),
-
-    ERTHEIA_FIGHTER(182, false, Race.ERTHEIA, null),
-    ERTHEIA_WIZARD(183, true, Race.ERTHEIA, null),
-
-    MARAUDER(184, false, Race.ERTHEIA, ERTHEIA_FIGHTER),
-    CLOUD_BREAKER(185, true, Race.ERTHEIA, ERTHEIA_WIZARD),
-
-    RIPPER(186, false, Race.ERTHEIA, MARAUDER),
-    STRATOMANCER(187, true, Race.ERTHEIA, CLOUD_BREAKER),
-
-    EVISCERATOR(188, false, Race.ERTHEIA, RIPPER),
-    SAYHA_SEER(189, true, Race.ERTHEIA, STRATOMANCER);
+    AEORE_SHILLIEN_SAINT(181, true, Race.DARK_ELF, SHILLIEN_SAINT);
 
     /**
      * The Identifier of the Class
