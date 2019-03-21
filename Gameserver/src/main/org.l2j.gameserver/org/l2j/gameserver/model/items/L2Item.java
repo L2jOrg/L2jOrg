@@ -340,9 +340,6 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
             case S84: {
                 return CrystalType.S;
             }
-            case R95: {
-                return CrystalType.R;
-            }
             default: {
                 return _crystalType;
             }

@@ -241,10 +241,6 @@ public class RequestExEnchantItemAttribute extends IClientIncomingPacket {
                 success = Rnd.get(100) < 80;
                 break;
             }
-            case R95: {
-                success = true;
-                break;
-            }
             default: {
                 switch (Elementals.getItemElemental(stone.getId())._type) {
                     case Stone:
