@@ -16,7 +16,6 @@ public enum CrystalType {
     S84(7, 1462, 25, 250),
     R(8, 17371, 30, 500),
     R95(9, 17371, 30, 500),
-    R99(10, 17371, 30, 500),
     EVENT(11, 0, 0, 0);
 
     private final int _id;

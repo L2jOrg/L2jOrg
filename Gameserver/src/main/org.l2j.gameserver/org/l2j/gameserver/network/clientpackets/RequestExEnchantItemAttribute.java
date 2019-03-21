@@ -241,8 +241,7 @@ public class RequestExEnchantItemAttribute extends IClientIncomingPacket {
                 success = Rnd.get(100) < 80;
                 break;
             }
-            case R95:
-            case R99: {
+            case R95: {
                 success = true;
                 break;
             }

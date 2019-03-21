@@ -127,10 +127,6 @@ public class RequestCommissionList extends IClientIncomingPacket {
                 filter = filter.and(i -> i.getCrystalType() == CrystalType.R95);
                 break;
             }
-            case 9: {
-                filter = filter.and(i -> i.getCrystalType() == CrystalType.R99);
-                break;
-            }
         }
 
         filter = filter.and(i -> _query.isEmpty() || i.getName().toLowerCase().contains(_query.toLowerCase()));
