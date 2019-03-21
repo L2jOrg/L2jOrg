@@ -336,8 +336,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
      */
     public final CrystalType getCrystalTypePlus() {
         switch (_crystalType) {
-            case S80:
-            case S84: {
+            case S80:{
                 return CrystalType.S;
             }
             default: {
