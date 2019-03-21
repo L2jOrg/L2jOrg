@@ -94,7 +94,7 @@ public class RequestCrystallizeEstimate extends IClientIncomingPacket {
         // Check if the char can crystallize items and return if false;
         boolean canCrystallize = true;
 
-        switch (item.getItem().getCrystalTypePlus()) {
+        switch (item.getItem().getCrystalType()) {
             case D: {
                 if (skillLevel < 1) {
                     canCrystallize = false;

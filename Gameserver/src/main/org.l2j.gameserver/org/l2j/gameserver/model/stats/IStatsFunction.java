@@ -33,7 +33,7 @@ public interface IStatsFunction {
      * @return
      */
     static double calcEnchantMatkBonus(L2ItemInstance item, double blessedBonus, int enchant) {
-        switch (item.getItem().getCrystalTypePlus()) {
+        switch (item.getItem().getCrystalType()) {
            case S: {
                 // M. Atk. increases by 4 for all weapons.
                 // Starting at +4, M. Atk. bonus double.
@@ -61,7 +61,7 @@ public interface IStatsFunction {
      * @return
      */
     static double calcEnchantedPAtkBonus(L2ItemInstance item, double blessedBonus, int enchant) {
-        switch (item.getItem().getCrystalTypePlus()) {
+        switch (item.getItem().getCrystalType()) {
             case S: {
                 if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND) {
                     if (item.getWeaponItem().getItemType().isRanged()) {

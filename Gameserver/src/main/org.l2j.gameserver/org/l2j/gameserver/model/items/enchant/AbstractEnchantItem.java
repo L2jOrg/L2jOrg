@@ -109,7 +109,7 @@ public abstract class AbstractEnchantItem {
             return false;
         } else if ((_maxEnchantLevel != 0) && (itemToEnchant.getEnchantLevel() >= _maxEnchantLevel)) {
             return false;
-        } else if (_grade != itemToEnchant.getItem().getCrystalTypePlus()) {
+        } else if (_grade != itemToEnchant.getItem().getCrystalType()) {
             return false;
         }
         return true;

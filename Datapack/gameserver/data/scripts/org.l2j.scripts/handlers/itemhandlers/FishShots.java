@@ -16,8 +16,6 @@
  */
 package handlers.itemhandlers;
 
-import java.util.List;
-
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.handler.IItemHandler;
@@ -32,6 +30,8 @@ import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.util.Broadcast;
+
+import java.util.List;
 
 /**
  * @author -Nemesiss-
@@ -62,7 +62,7 @@ public class FishShots implements IItemHandler
 		}
 		
 		final long count = item.getCount();
-		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT) && (weaponInst.getItem().getCrystalTypePlus() == item.getItem().getCrystalTypePlus());
+		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT) && (weaponInst.getItem().getCrystalType() == item.getItem().getCrystalType());
 		
 		if (!gradeCheck)
 		{

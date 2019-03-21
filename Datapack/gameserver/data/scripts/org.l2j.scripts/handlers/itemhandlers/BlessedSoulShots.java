@@ -16,8 +16,6 @@
  */
 package handlers.itemhandlers;
 
-import java.util.List;
-
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.ShotType;
@@ -31,6 +29,8 @@ import org.l2j.gameserver.model.items.type.ActionType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.util.Broadcast;
+
+import java.util.List;
 
 /**
  * @author Mobius
@@ -68,7 +68,7 @@ public class BlessedSoulShots implements IItemHandler
 			return false;
 		}
 		
-		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.SOULSHOT) && (weaponInst.getItem().getCrystalTypePlus() == item.getItem().getCrystalTypePlus());
+		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.SOULSHOT) && (weaponInst.getItem().getCrystalType() == item.getItem().getCrystalType());
 		
 		if (!gradeCheck)
 		{

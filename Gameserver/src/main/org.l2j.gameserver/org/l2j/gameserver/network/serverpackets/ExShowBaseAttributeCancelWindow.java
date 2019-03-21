@@ -43,14 +43,6 @@ public class ExShowBaseAttributeCancelWindow extends IClientOutgoingPacket {
                 }
                 break;
             }
-            case S80: {
-                if (item.isWeapon()) {
-                    _price = 100000;
-                } else {
-                    _price = 80000;
-                }
-                break;
-            }
         }
 
         return _price;

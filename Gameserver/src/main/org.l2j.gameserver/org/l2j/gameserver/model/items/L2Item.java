@@ -330,22 +330,6 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
     }
 
     /**
-     * For grades S80 and S84 return S, R95, and R99 return R
-     *
-     * @return the grade of the item.
-     */
-    public final CrystalType getCrystalTypePlus() {
-        switch (_crystalType) {
-            case S80:{
-                return CrystalType.S;
-            }
-            default: {
-                return _crystalType;
-            }
-        }
-    }
-
-    /**
      * @return the quantity of crystals for crystallization.
      */
     public final int getCrystalCount() {

@@ -917,7 +917,7 @@ public abstract class Inventory extends ItemContainer {
         L2ItemInstance arrow = null;
 
         for (L2ItemInstance item : getItems()) {
-            if (item.isEtcItem() && (item.getItem().getCrystalTypePlus() == bow.getCrystalTypePlus()) && (item.getEtcItem().getItemType() == EtcItemType.ARROW)) {
+            if (item.isEtcItem() && (item.getItem().getCrystalType() == bow.getCrystalType()) && (item.getEtcItem().getItemType() == EtcItemType.ARROW)) {
                 arrow = item;
                 break;
             }
@@ -937,7 +937,7 @@ public abstract class Inventory extends ItemContainer {
         L2ItemInstance bolt = null;
 
         for (L2ItemInstance item : getItems()) {
-            if (item.isEtcItem() && (item.getItem().getCrystalTypePlus() == crossbow.getCrystalTypePlus()) && (item.getEtcItem().getItemType() == EtcItemType.BOLT)) {
+            if (item.isEtcItem() && (item.getItem().getCrystalType() == crossbow.getCrystalType()) && (item.getEtcItem().getItemType() == EtcItemType.BOLT)) {
                 bolt = item;
                 break;
             }

@@ -110,7 +110,7 @@ public final class RequestCrystallizeItem extends IClientIncomingPacket {
         // Check if the char can crystallize items and return if false;
         boolean canCrystallize = true;
 
-        switch (itemToRemove.getItem().getCrystalTypePlus()) {
+        switch (itemToRemove.getItem().getCrystalType()) {
             case D: {
                 if (skillLevel < 1) {
                     canCrystallize = false;

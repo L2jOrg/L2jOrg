@@ -7,7 +7,6 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
-import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stats;
@@ -72,13 +71,6 @@ public final class Heal extends AbstractEffect
 		}
 		else
 		{
-			// no static bonus
-			// grade dynamic bonus
-			final L2ItemInstance weaponInst = effector.getActiveWeaponInstance();
-			if (weaponInst != null)
-			{
-				mAtkMul = weaponInst.getItem().getCrystalType() == CrystalType.S80 ? 2 : 1;
-			}
 			// shot dynamic bonus
 			mAtkMul = bss ? mAtkMul * 4 : mAtkMul + 1;
 		}
