@@ -10,7 +10,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="2120" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="2430" />
 		<stats>
 			<stat type="pDef">21</stat>
@@ -26,7 +26,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="2090" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="20300" />
 		<stats>
 			<stat type="pDef">30</stat>
@@ -43,7 +43,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="2080" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="36900" />
 		<stats>
 			<stat type="pDef">34</stat>
@@ -60,7 +60,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1060" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="1520" />
 		<stats>
 			<stat type="pDef">13</stat>
@@ -77,7 +77,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1040" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="12700" />
 		<stats>
 			<stat type="pDef">19</stat>
@@ -94,7 +94,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1030" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="23000" />
 		<stats>
 			<stat type="pDef">21</stat>
@@ -251,7 +251,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="660" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="607" />
 		<stats>
 			<stat type="pDef">11</stat>
@@ -268,7 +268,7 @@
 		<set name="weight" val="1600" />
 		<set name="price" val="123900" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">34</stat>
@@ -282,7 +282,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1320" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="7" />
 		<stats>
 			<stat type="pDef">8</stat>
@@ -296,7 +296,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1320" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="607" />
 		<stats>
 			<stat type="pDef">11</stat>
@@ -313,7 +313,7 @@
 		<set name="weight" val="1300" />
 		<set name="price" val="33300" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">22</stat>
@@ -330,7 +330,7 @@
 		<set name="weight" val="1250" />
 		<set name="price" val="74700" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">27</stat>
@@ -347,7 +347,7 @@
 		<set name="weight" val="1240" />
 		<set name="price" val="97800" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">29</stat>
@@ -364,7 +364,7 @@
 		<set name="weight" val="1210" />
 		<set name="price" val="161000" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">34</stat>
@@ -381,7 +381,7 @@
 		<set name="weight" val="4000" />
 		<set name="price" val="245000" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">36</stat>
@@ -398,7 +398,7 @@
 		<set name="weight" val="4000" />
 		<set name="price" val="358000" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">39</stat>
@@ -412,7 +412,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1320" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="607" />
 		<stats>
 			<stat type="pDef">11</stat>
@@ -623,7 +623,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">18</stat>
@@ -692,7 +692,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">33</stat>
@@ -714,7 +714,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">20</stat>
@@ -1248,7 +1248,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">45</stat>
@@ -1279,7 +1279,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">19</stat>

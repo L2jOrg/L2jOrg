@@ -33,7 +33,7 @@
 		<set name="price" val="136000" />
 		<set name="soulshots" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">24</stat>
@@ -56,7 +56,7 @@
 		<set name="price" val="12500" />
 		<set name="soulshots" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">11</stat>
@@ -79,7 +79,7 @@
 		<set name="price" val="768" />
 		<set name="soulshots" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">8</stat>
@@ -103,7 +103,7 @@
 		<set name="price" val="12500" />
 		<set name="soulshots" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">11</stat>
@@ -136,7 +136,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">5</stat>
@@ -161,7 +161,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">6</stat>
@@ -186,7 +186,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">11</stat>
@@ -211,7 +211,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">16</stat>
@@ -243,7 +243,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">5</stat>
@@ -267,7 +267,7 @@
 		<set name="price" val="768" />
 		<set name="soulshots" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">7</stat>
@@ -291,7 +291,7 @@
 		<set name="price" val="12500" />
 		<set name="soulshots" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">10</stat>
@@ -317,7 +317,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="1" />
 		<set name="commissionItemType" val="BOW" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="reuse_delay" val="1500" />
 		<stats>
 			<stat type="pAtk">16</stat>
@@ -343,7 +343,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="1" />
 		<set name="commissionItemType" val="BOW" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="reuse_delay" val="1500" />
 		<stats>
 			<stat type="pAtk">23</stat>
@@ -368,7 +368,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -395,7 +395,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -430,7 +430,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1430" />
 		<set name="commissionItemType" val="SHIELD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="39" />
 		<stats>
 			<stat type="rEvas">-8</stat>
@@ -446,7 +446,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="commissionItemType" val="SHIELD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="638" />
 		<stats>
 			<stat type="rEvas">-8</stat>
@@ -462,7 +462,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1410" />
 		<set name="commissionItemType" val="SHIELD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="2780" />
 		<stats>
 			<stat type="rEvas">-8</stat>
@@ -479,7 +479,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="4830" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="147" />
 		<stats>
 			<stat type="pDef">36</stat>
@@ -494,7 +494,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="4830" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="2430" />
 		<stats>
 			<stat type="pDef">43</stat>
@@ -509,7 +509,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="4820" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="7960" />
 		<stats>
 			<stat type="pDef">47</stat>
@@ -524,7 +524,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="4770" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="20300" />
 		<stats>
 			<stat type="pDef">50</stat>
@@ -539,7 +539,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="8970" />
 		<set name="price" val="31800" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<stats>
 			<stat type="pDef">62</stat>
@@ -554,7 +554,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="8920" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="49200" />
 		<stats>
 			<stat type="pDef">68</stat>
@@ -569,7 +569,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="4720" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="36900" />
 		<stats>
 			<stat type="pDef">53</stat>
@@ -584,7 +584,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1740" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="92" />
 		<stats>
 			<stat type="pDef">22</stat>
@@ -599,7 +599,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1730" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="1520" />
 		<stats>
 			<stat type="pDef">27</stat>
@@ -614,7 +614,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1700" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="4970" />
 		<stats>
 			<stat type="pDef">29</stat>
@@ -629,7 +629,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="1680" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="12700" />
 		<stats>
 			<stat type="pDef">32</stat>
@@ -644,7 +644,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="4020" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="19900" />
 		<stats>
 			<stat type="pDef">39</stat>
@@ -659,7 +659,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1610" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="23000" />
 		<stats>
 			<stat type="pDef">33</stat>
@@ -674,7 +674,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="3960" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="30700" />
 		<stats>
 			<stat type="pDef">43</stat>
@@ -688,7 +688,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1320" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="37" />
 		<stats>
 			<stat type="pDef">9</stat>
@@ -702,7 +702,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1320" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="37" />
 		<stats>
 			<stat type="pDef">9</stat>
@@ -716,7 +716,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1320" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="2650" />
 		<stats>
 			<stat type="pDef">13</stat>
@@ -730,7 +730,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1320" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="6770" />
 		<stats>
 			<stat type="pDef">15</stat>
@@ -744,7 +744,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1310" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="12300" />
 		<stats>
 			<stat type="pDef">17</stat>
@@ -761,7 +761,7 @@
 		<set name="weight" val="1300" />
 		<set name="price" val="20900" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">19</stat>
@@ -875,7 +875,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="660" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="37" />
 		<stats>
 			<stat type="pDef">9</stat>
@@ -889,7 +889,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="660" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="2650" />
 		<stats>
 			<stat type="pDef">13</stat>
@@ -903,7 +903,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="650" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="6770" />
 		<stats>
 			<stat type="pDef">15</stat>
@@ -917,7 +917,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="650" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="12300" />
 		<stats>
 			<stat type="pDef">17</stat>
@@ -944,7 +944,7 @@
 		<set name="weight" val="8670" />
 		<set name="price" val="183000" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">95</stat>
@@ -962,7 +962,7 @@
 		<set name="weight" val="3830" />
 		<set name="price" val="127000" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">61</stat>
@@ -981,7 +981,7 @@
 		<set name="weight" val="10980" />
 		<set name="price" val="1440000" />
 		<set name="commissionItemType" val="FULL_BODY" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">224</stat>
@@ -998,7 +998,7 @@
 		<set name="weight" val="630" />
 		<set name="price" val="97800" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">29</stat>
@@ -1015,7 +1015,7 @@
 		<set name="weight" val="1230" />
 		<set name="price" val="126000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">32</stat>
@@ -1032,7 +1032,7 @@
 		<set name="weight" val="640" />
 		<set name="price" val="50800" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">24</stat>
@@ -1049,7 +1049,7 @@
 		<set name="weight" val="1220" />
 		<set name="price" val="245000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">36</stat>
@@ -1067,7 +1067,7 @@
 		<set name="price" val="54100" />
 		<set name="soulshots" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">17</stat>
@@ -1090,7 +1090,7 @@
 		<set name="price" val="54100" />
 		<set name="soulshots" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">17</stat>
@@ -1113,7 +1113,7 @@
 		<set name="price" val="244000" />
 		<set name="soulshots" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">31</stat>
@@ -1140,7 +1140,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">51</stat>
@@ -1167,7 +1167,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">112</stat>
@@ -1195,7 +1195,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">130</stat>
@@ -1223,7 +1223,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">107</stat>
@@ -1251,7 +1251,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">122</stat>
@@ -1279,7 +1279,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">122</stat>
@@ -1307,7 +1307,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">139</stat>
@@ -1335,7 +1335,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">139</stat>
@@ -1363,7 +1363,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">139</stat>
@@ -1391,7 +1391,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">213</stat>
@@ -1419,7 +1419,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">194</stat>
@@ -1447,7 +1447,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">213</stat>
@@ -1475,7 +1475,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">282</stat>
@@ -1502,7 +1502,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">43</stat>
@@ -1530,7 +1530,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<stats>
 			<stat type="pAtk">111</stat>
@@ -1556,7 +1556,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">51</stat>
@@ -1580,7 +1580,7 @@
 		<set name="price" val="244000" />
 		<set name="soulshots" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">31</stat>
@@ -1607,7 +1607,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">79</stat>
@@ -1635,7 +1635,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">107</stat>
@@ -1663,7 +1663,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">77</stat>
@@ -1691,7 +1691,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">175</stat>
@@ -1720,7 +1720,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">170</stat>
@@ -1748,7 +1748,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1779,7 +1779,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1810,7 +1810,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1841,7 +1841,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1871,7 +1871,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="SPEAR" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -1903,7 +1903,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1930,7 +1930,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">9</stat>

@@ -17,7 +17,6 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemTransfe
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.items.type.EtcItemType;
-import org.l2j.gameserver.model.variables.ItemVariables;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.slf4j.Logger;
@@ -46,22 +45,16 @@ public class PcInventory extends Inventory {
     }
 
     public static int[][] restoreVisibleInventory(int objectId) {
-        final int[][] paperdoll = new int[Inventory.PAPERDOLL_TOTALSLOTS][4];
+        final int[][] paperdoll = new int[Inventory.PAPERDOLL_TOTALSLOTS][3];
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement2 = con.prepareStatement("SELECT object_id,item_id,loc_data,enchant_level FROM items WHERE owner_id=? AND loc='PAPERDOLL'")) {
             statement2.setInt(1, objectId);
             try (ResultSet invdata = statement2.executeQuery()) {
                 while (invdata.next()) {
                     final int slot = invdata.getInt("loc_data");
-                    final ItemVariables vars = new ItemVariables(invdata.getInt("object_id"));
                     paperdoll[slot][0] = invdata.getInt("object_id");
                     paperdoll[slot][1] = invdata.getInt("item_id");
                     paperdoll[slot][2] = invdata.getInt("enchant_level");
-                    paperdoll[slot][3] = vars.getInt(ItemVariables.VISUAL_ID, 0);
-                    if (paperdoll[slot][3] > 0) // fix for hair appearance conflicting with original model
-                    {
-                        paperdoll[slot][1] = paperdoll[slot][3];
-                    }
                 }
             }
         } catch (Exception e) {

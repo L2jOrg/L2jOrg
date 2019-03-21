@@ -33,7 +33,6 @@ public class TradeItem {
     private int _elemAtkPower;
     private Collection<EnsoulOption> _soulCrystalOptions;
     private Collection<EnsoulOption> _soulCrystalSpecialOptions;
-    private int _visualId;
     private int _augmentationOption1 = -1;
     private int _augmentationOption2 = -1;
 
@@ -55,7 +54,6 @@ public class TradeItem {
         _enchantOptions = item.getEnchantOptions();
         _soulCrystalOptions = item.getSpecialAbilities();
         _soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
-        _visualId = item.getVisualId();
 
         if (item.getAugmentation() != null) {
             _augmentationOption1 = item.getAugmentation().getOption1Id();
@@ -100,7 +98,6 @@ public class TradeItem {
         _enchantOptions = item.getEnchantOptions();
         _soulCrystalOptions = item.getSoulCrystalOptions();
         _soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
-        _visualId = item.getVisualId();
     }
 
     public int getObjectId() {
@@ -210,13 +207,5 @@ public class TradeItem {
 
     public int getAugmentationOption2() {
         return _augmentationOption2;
-    }
-
-    public int getVisualId() {
-        return _visualId;
-    }
-
-    public void setVisualId(int visualItemId) {
-        _visualId = visualItemId;
     }
 }

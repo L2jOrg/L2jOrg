@@ -73,8 +73,6 @@ public class ItemInfo {
     private int[] _option;
     private Collection<EnsoulOption> _soulCrystalOptions;
     private Collection<EnsoulOption> _soulCrystalSpecialOptions;
-    private int _visualId;
-    private long _visualExpiration;
 
     /**
      * Get all information from L2ItemInstance to generate ItemInfo.
@@ -136,13 +134,11 @@ public class ItemInfo {
         _option = item.getEnchantOptions();
         _soulCrystalOptions = item.getSpecialAbilities();
         _soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
-        _visualId = item.getVisualId();
     }
 
     public ItemInfo(L2ItemInstance item, int change) {
         this(item);
         _change = change;
-        _visualExpiration = item.getVisualLifeTime() > 0 ? (item.getVisualLifeTime() - System.currentTimeMillis()) / 1000 : 0;
     }
 
     public ItemInfo(TradeItem item) {
@@ -192,7 +188,6 @@ public class ItemInfo {
         _option = item.getEnchantOptions();
         _soulCrystalOptions = item.getSoulCrystalOptions();
         _soulCrystalOptions = item.getSoulCrystalSpecialOptions();
-        _visualId = item.getVisualId();
     }
 
     public ItemInfo(Product item) {
@@ -322,7 +317,7 @@ public class ItemInfo {
     }
 
     public int getTime() {
-        return _time > 0 ? _time : _visualExpiration > 0 ? (int) _visualExpiration : -9999;
+        return _time > 0 ? _time : -9999;
     }
 
     public boolean isAvailable() {
@@ -349,20 +344,12 @@ public class ItemInfo {
         return _option;
     }
 
-    public int getVisualId() {
-        return _visualId;
-    }
-
     public Collection<EnsoulOption> getSoulCrystalOptions() {
         return _soulCrystalOptions != null ? _soulCrystalOptions : Collections.emptyList();
     }
 
     public Collection<EnsoulOption> getSoulCrystalSpecialOptions() {
         return _soulCrystalSpecialOptions != null ? _soulCrystalSpecialOptions : Collections.emptyList();
-    }
-
-    public long getVisualExpiration() {
-        return _visualExpiration;
     }
 
     @Override

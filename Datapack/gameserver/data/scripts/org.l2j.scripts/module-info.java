@@ -291,7 +291,6 @@ open module org.l2j.scripts {
     provides org.l2j.gameserver.handler.IItemHandler
         with handlers.itemhandlers.ItemSkillsTemplate,
             handlers.itemhandlers.ItemSkills,
-            handlers.itemhandlers.Appearance,
             handlers.itemhandlers.BeastSoulShot,
             handlers.itemhandlers.BeastSpiritShot,
             handlers.itemhandlers.BlessedSoulShots,

@@ -831,7 +831,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">7</stat>
@@ -862,7 +862,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">6</stat>
@@ -892,7 +892,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">6</stat>
@@ -916,7 +916,7 @@
 		<set name="price" val="25500" />
 		<set name="soulshots" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">16</stat>
@@ -940,7 +940,7 @@
 		<set name="price" val="25500" />
 		<set name="soulshots" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">11</stat>
@@ -965,7 +965,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">13</stat>
@@ -989,7 +989,7 @@
 		<set name="price" val="25500" />
 		<set name="soulshots" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">11</stat>
@@ -1013,7 +1013,7 @@
 		<set name="weight" val="7920" />
 		<set name="price" val="2080000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<stats>
 			<stat type="pDef">157</stat>
@@ -1031,7 +1031,7 @@
 		<set name="weight" val="3870" />
 		<set name="price" val="187000" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">64</stat>
@@ -1049,7 +1049,7 @@
 		<set name="weight" val="3820" />
 		<set name="price" val="187000" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">64</stat>
@@ -1067,7 +1067,7 @@
 		<set name="weight" val="3520" />
 		<set name="price" val="1300000" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">98</stat>
@@ -1085,7 +1085,7 @@
 		<set name="weight" val="3370" />
 		<set name="price" val="2010000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">104</stat>
@@ -1104,7 +1104,7 @@
 		<set name="weight" val="9980" />
 		<set name="price" val="4710000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="FULL_BODY" />
 		<stats>
 			<stat type="pDef">270</stat>
@@ -1123,7 +1123,7 @@
 		<set name="weight" val="9780" />
 		<set name="price" val="5788000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="FULL_BODY" />
 		<stats>
 			<stat type="pDef">278</stat>
@@ -1142,7 +1142,7 @@
 		<set name="weight" val="9200" />
 		<set name="price" val="8804000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="FULL_BODY" />
 		<stats>
 			<stat type="pDef">293</stat>
@@ -1160,7 +1160,7 @@
 		<set name="weight" val="4330" />
 		<set name="price" val="1560000" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">117</stat>
@@ -1178,7 +1178,7 @@
 		<set name="weight" val="4300" />
 		<set name="price" val="2671000" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">128</stat>
@@ -1193,7 +1193,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1670" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="4970" />
 		<stats>
 			<stat type="pDef">29</stat>
@@ -1211,7 +1211,7 @@
 		<set name="weight" val="1530" />
 		<set name="price" val="237000" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">56</stat>
@@ -1229,7 +1229,7 @@
 		<set name="weight" val="1480" />
 		<set name="price" val="973000" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">73</stat>
@@ -1247,7 +1247,7 @@
 		<set name="weight" val="1480" />
 		<set name="price" val="1670000" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">80</stat>
@@ -1266,7 +1266,7 @@
 		<set name="weight" val="5600" />
 		<set name="price" val="2280000" />
 		<set name="commissionItemType" val="FULL_BODY" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">191</stat>
@@ -1285,7 +1285,7 @@
 		<set name="weight" val="5500" />
 		<set name="price" val="3530000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="FULL_BODY" />
 		<stats>
 			<stat type="pDef">202</stat>
@@ -1304,7 +1304,7 @@
 		<set name="weight" val="5500" />
 		<set name="price" val="3530000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="FULL_BODY" />
 		<stats>
 			<stat type="pDef">202</stat>
@@ -1323,7 +1323,7 @@
 		<set name="weight" val="5400" />
 		<set name="price" val="4341000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="FULL_BODY" />
 		<stats>
 			<stat type="pDef">209</stat>
@@ -1342,7 +1342,7 @@
 		<set name="weight" val="5300" />
 		<set name="price" val="6603000" />
 		<set name="commissionItemType" val="FULL_BODY" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">220</stat>
@@ -1361,7 +1361,7 @@
 		<set name="weight" val="5350" />
 		<set name="price" val="6603000" />
 		<set name="commissionItemType" val="FULL_BODY" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">220</stat>
@@ -1379,7 +1379,7 @@
 		<set name="weight" val="720" />
 		<set name="price" val="224000" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">54</stat>
@@ -1398,7 +1398,7 @@
 		<set name="weight" val="1960" />
 		<set name="price" val="1560000" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">78</stat>
@@ -1417,7 +1417,7 @@
 		<set name="weight" val="1920" />
 		<set name="price" val="2410000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<stats>
 			<stat type="pDef">83</stat>
@@ -1436,7 +1436,7 @@
 		<set name="weight" val="1900" />
 		<set name="price" val="2410000" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">83</stat>

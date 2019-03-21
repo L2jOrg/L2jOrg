@@ -362,17 +362,6 @@ public abstract class Inventory extends ItemContainer {
         return (item != null) ? item.getDisplayId() : 0;
     }
 
-    /**
-     * Returns the visual id of the item in the paperdoll slot
-     *
-     * @param slot : int designating the slot
-     * @return int designating the ID of the item
-     */
-    public int getPaperdollItemVisualId(int slot) {
-        final L2ItemInstance item = _paperdoll[slot];
-        return (item != null) ? item.getVisualId() : 0;
-    }
-
     public VariationInstance getPaperdollAugmentation(int slot) {
         final L2ItemInstance item = _paperdoll[slot];
         return (item != null) ? item.getAugmentation() : null;
@@ -1737,11 +1726,6 @@ public abstract class Inventory extends ItemContainer {
                 update = true;
             }
 
-            // Very and apply visual set
-            if (verifyAndApply(player, item, L2ItemInstance::getVisualId)) {
-                update = true;
-            }
-
             if (update) {
                 player.sendSkillList();
             }
@@ -1762,11 +1746,6 @@ public abstract class Inventory extends ItemContainer {
 
             // verify and remove normal set bonus
             if (verifyAndRemove(player, item, L2ItemInstance::getId)) {
-                remove = true;
-            }
-
-            // verify and remove visual set bonus
-            if (verifyAndRemove(player, item, L2ItemInstance::getVisualId)) {
                 remove = true;
             }
 

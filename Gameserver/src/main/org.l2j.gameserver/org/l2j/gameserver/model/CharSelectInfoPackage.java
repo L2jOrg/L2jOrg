@@ -214,10 +214,6 @@ public class CharSelectInfoPackage {
         return _paperdoll[slot][1];
     }
 
-    public int getPaperdollItemVisualId(int slot) {
-        return _paperdoll[slot][3];
-    }
-
     public int getLevel() {
         return _level;
     }

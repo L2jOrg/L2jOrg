@@ -18,7 +18,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3010" level="3" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -49,7 +49,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3013" level="1" /> <!-- Special Ability: Health -->
 		</skills>
@@ -80,7 +80,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3022" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Drain -->
 		</skills>
@@ -111,7 +111,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3022" level="6" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Drain -->
 		</skills>
@@ -141,7 +141,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<skills>
 			<skill id="3013" level="1" /> <!-- Special Ability: Health -->
@@ -173,7 +173,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3055" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Bleed -->
 		</skills>
@@ -204,7 +204,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3068" level="2" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -235,7 +235,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3067" level="1" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -266,7 +266,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3050" level="1" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -297,7 +297,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3047" level="1" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -328,7 +328,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3077" level="1" /> <!-- Special Ability: M. Atk. -->
 		</skills>
@@ -359,7 +359,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="1164" level="7" type_chance="8" type="ON_MAGIC_SKILL" /> <!-- Curse Weakness -->
 		</skills>
@@ -390,7 +390,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3076" level="4" /> <!-- Special Ability: Empower -->
 		</skills>
@@ -421,7 +421,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3077" level="4" /> <!-- Special Ability: M. Atk. -->
 		</skills>
@@ -452,7 +452,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3078" level="4" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
 		</skills>
@@ -482,7 +482,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<skills>
 			<skill id="3047" level="1" /> <!-- Special Ability: Acumen -->
@@ -514,7 +514,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3077" level="6" /> <!-- Special Ability: M. Atk. -->
 		</skills>
@@ -545,7 +545,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3048" level="1" /> <!-- Special Ability: Conversion -->
 		</skills>
@@ -575,7 +575,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3013" level="1" /> <!-- Special Ability: Health -->
 		</skills>
@@ -606,7 +606,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3012" level="4" /> <!-- Special Ability: Anger -->
 		</skills>
@@ -637,7 +637,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3021" level="4" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Bleed -->
 		</skills>
@@ -668,7 +668,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3010" level="3" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -699,7 +699,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3036" level="3" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -730,7 +730,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3039" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Drain -->
 		</skills>
@@ -761,7 +761,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 		</skills>
@@ -792,7 +792,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3068" level="2" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -823,7 +823,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3059" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Drain -->
@@ -855,7 +855,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3010" level="5" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -886,7 +886,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3012" level="5" /> <!-- Special Ability: Anger -->
 		</skills>
@@ -917,7 +917,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3021" level="5" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Bleed -->
 		</skills>
@@ -947,7 +947,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<skills>
 			<skill id="3013" level="1" /> <!-- Special Ability: Health -->
@@ -979,7 +979,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3036" level="6" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -1010,7 +1010,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3027" level="6" /> <!-- Special Ability: Rsk. Focus -->
 		</skills>
@@ -1041,7 +1041,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 		</skills>
@@ -1072,7 +1072,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3057" level="2" /> <!-- Special Ability: Anger -->
 		</skills>
@@ -1103,7 +1103,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3056" level="2" /> <!-- Special Ability: Rsk. Haste -->
 		</skills>
@@ -1135,7 +1135,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3048" level="1" /> <!-- Special Ability: Conversion -->
 		</skills>
@@ -1167,7 +1167,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3077" level="4" /> <!-- Special Ability: M. Atk. -->
 		</skills>
@@ -1199,7 +1199,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="1201" level="23" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
 		</skills>
@@ -1231,7 +1231,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3047" level="1" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -1263,7 +1263,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="1035" level="4" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
 		</skills>
@@ -1295,7 +1295,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="1201" level="25" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
 		</skills>
@@ -1327,7 +1327,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3014" level="1" /> <!-- Special Ability: Mana Up -->
 		</skills>
@@ -1359,7 +1359,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3078" level="6" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
 		</skills>
@@ -1391,7 +1391,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3048" level="1" /> <!-- Special Ability: Conversion -->
 		</skills>
@@ -1423,7 +1423,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3014" level="2" /> <!-- Special Ability: Mana Up -->
 		</skills>
@@ -1455,7 +1455,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="1168" level="6" type_chance="8" type="ON_MAGIC_SKILL" /> <!-- Curse Poison -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -1488,7 +1488,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -1520,7 +1520,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -1552,7 +1552,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3073" level="2" /> <!-- Special Ability: M. Atk. -->
 		</skills>
@@ -1584,7 +1584,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3074" level="2" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -1609,7 +1609,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="20741000" />
 		<set name="enchant_enabled" val="7" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="8186" name="Artisan's Goggles" type="Armor">
@@ -1622,7 +1622,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="20741000" />
 		<set name="enchant_enabled" val="7" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="8187" name="Red Horn of Victory" type="Armor">
@@ -1634,7 +1634,7 @@
 		<set name="material" val="WOOD" />
 		<set name="enchant_enabled" val="7" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="weight" val="10" />
 	</item>
 	<item id="8188" name="Little Angel Wings" type="Armor">
@@ -1647,7 +1647,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="20741000" />
 		<set name="enchant_enabled" val="7" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="8189" name="Fairy Antennae" type="Armor">
@@ -1660,7 +1660,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="20741000" />
 		<set name="enchant_enabled" val="7" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 </list>

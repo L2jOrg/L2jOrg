@@ -121,11 +121,17 @@ public class CharInfo extends IClientOutgoingPacket {
 
         packet.put((byte) _armorEnchant);
 
-        for (int slot : getPaperdollOrderVisualId()) {
-            packet.putInt(_activeChar.getInventory().getPaperdollItemVisualId(slot));
-        }
+        packet.putInt(0x00); // RHAND Visual ID is not used on Classic
+        packet.putInt(0x00); // LHAND Visual ID is not used on Classic
+        packet.putInt(0x00); // RHAND Visual ID is not used on Classic
+        packet.putInt(0x00); // GLOVES Visual ID is not used on Classic
+        packet.putInt(0x00); // CHEST Visual ID is not used on Classic
+        packet.putInt(0x00); // LEGS Visual ID is not used on Classic
+        packet.putInt(0x00); // FEET Visual ID is not used on Classic
+        packet.putInt(0x00); // HAIR Visual ID is not used on Classic
+        packet.putInt(0x00); // HAIR2 Visual ID is not used on Classic
 
-        packet.put((byte) _activeChar.getPvpFlag());
+        packet.put(_activeChar.getPvpFlag());
         packet.putInt(_activeChar.getReputation());
 
         packet.putInt(_mAtkSpd);

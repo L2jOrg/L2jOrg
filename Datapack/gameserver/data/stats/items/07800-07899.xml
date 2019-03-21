@@ -18,7 +18,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3014" level="1" /> <!-- Special Ability: Mana Up -->
 		</skills>
@@ -50,7 +50,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="1201" level="18" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
 		</skills>
@@ -82,7 +82,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3074" level="2" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
 		</skills>
@@ -114,7 +114,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="1044" level="3" type_chance="30" type="ON_MAGIC_SKILL" /> <!-- Regeneration -->
 		</skills>
@@ -146,7 +146,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="1035" level="4" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
 		</skills>
@@ -178,7 +178,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="1164" level="11" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse Weakness -->
 		</skills>
@@ -224,7 +224,7 @@
 		<set name="price" val="50780" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FULL_BODY" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">158</stat>
@@ -243,7 +243,7 @@
 		<set name="price" val="7820" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">24</stat>
@@ -262,7 +262,7 @@
 		<set name="price" val="7820" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">24</stat>
@@ -282,7 +282,7 @@
 		<set name="price" val="38080" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FULL_BODY" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">119</stat>
@@ -301,7 +301,7 @@
 		<set name="price" val="7820" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">24</stat>
@@ -320,7 +320,7 @@
 		<set name="price" val="7820" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">24</stat>
@@ -340,7 +340,7 @@
 		<set name="price" val="38080" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FULL_BODY" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">79</stat>
@@ -360,7 +360,7 @@
 		<set name="price" val="7820" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">24</stat>
@@ -379,7 +379,7 @@
 		<set name="price" val="7820" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">24</stat>
@@ -401,7 +401,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">49</stat>
@@ -428,7 +428,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">96</stat>
@@ -456,7 +456,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">169</stat>
@@ -484,7 +484,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">236</stat>
@@ -512,7 +512,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">259</stat>
@@ -539,7 +539,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">32</stat>
@@ -566,7 +566,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">63</stat>
@@ -594,7 +594,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">85</stat>
@@ -622,7 +622,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<stats>
 			<stat type="pAtk">125</stat>
@@ -650,7 +650,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<stats>
 			<stat type="pAtk">155</stat>
@@ -677,7 +677,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">63</stat>
@@ -706,7 +706,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">125</stat>
@@ -735,7 +735,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">140</stat>
@@ -764,7 +764,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<stats>
 			<stat type="pAtk">155</stat>
@@ -793,7 +793,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">170</stat>
@@ -822,7 +822,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">186</stat>
@@ -849,7 +849,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">96</stat>
@@ -877,7 +877,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">190</stat>
@@ -905,7 +905,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">169</stat>
@@ -933,7 +933,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<stats>
 			<stat type="pAtk">259</stat>

@@ -110,7 +110,6 @@ public class GameServer {
         FishingData.getInstance();
         HennaData.getInstance();
         PrimeShopData.getInstance();
-        AppearanceItemData.getInstance();
         CommissionManager.getInstance();
         LuckyGameData.getInstance();
         AttendanceRewardData.getInstance();

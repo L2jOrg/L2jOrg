@@ -248,12 +248,6 @@ public class AdminReload implements IAdminCommandHandler
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Prime Shop data.");
 					break;
 				}
-				case "appearance":
-				{
-					AppearanceItemData.getInstance().load();
-					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded appearance item data.");
-					break;
-				}
 				case "sets":
 				{
 					ArmorSetsData.getInstance().load();

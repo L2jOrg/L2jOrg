@@ -9,7 +9,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="enchant_enabled" val="7" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="9140" name="Cupid’s Bow" type="Weapon">
@@ -26,7 +26,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="1" />
 		<set name="reuse_delay" val="1500" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="BOW" />
 		<skills>
 			<skill id="3261" level="1" /> <!-- Forgiveness -->

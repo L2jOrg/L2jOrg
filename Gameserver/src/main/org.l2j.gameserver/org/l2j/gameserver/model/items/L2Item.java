@@ -140,8 +140,6 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
     private int _sharedReuseGroup;
 
     private CommissionItemType _commissionItemType;
-
-    private boolean _isAppearanceable;
     private boolean _isBlessed;
 
     /**
@@ -185,7 +183,6 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
         _is_oly_restricted = set.getBoolean("is_oly_restricted", false);
         _is_coc_restricted = set.getBoolean("is_coc_restricted", false);
         _for_npc = set.getBoolean("for_npc", false);
-        _isAppearanceable = set.getBoolean("isAppearanceable", false);
         _isBlessed = set.getBoolean("blessed", false);
 
         _immediate_effect = set.getBoolean("immediate_effect", false);
@@ -763,9 +760,6 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
         return _for_npc;
     }
 
-    public boolean isAppearanceable() {
-        return _isAppearanceable;
-    }
 
     /**
      * @return {@code true} if the item is blessed, {@code false} otherwise.

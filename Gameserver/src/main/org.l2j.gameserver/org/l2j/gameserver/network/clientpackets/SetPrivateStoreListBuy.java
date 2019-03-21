@@ -65,7 +65,7 @@ public final class SetPrivateStoreListBuy extends IClientIncomingPacket {
             final int defenceEarth = packet.getShort();
             final int defenceHoly = packet.getShort();
             final int defenceDark = packet.getShort();
-            final int visualId = packet.getInt();
+            packet.getInt(); // Visual ID is not used on Classic
 
             final EnsoulOption[] soulCrystalOptions = new EnsoulOption[packet.get()];
             for (int k = 0; k < soulCrystalOptions.length; k++) {
@@ -87,7 +87,6 @@ public final class SetPrivateStoreListBuy extends IClientIncomingPacket {
             item.setElementDefAttr(AttributeType.EARTH, defenceEarth);
             item.setElementDefAttr(AttributeType.HOLY, defenceHoly);
             item.setElementDefAttr(AttributeType.DARK, defenceDark);
-            item.setVisualId(visualId);
             item.setSoulCrystalOptions(Arrays.asList(soulCrystalOptions));
             item.setSoulCrystalSpecialOptions(Arrays.asList(soulCrystalSpecialOptions));
             _items[i] = item;

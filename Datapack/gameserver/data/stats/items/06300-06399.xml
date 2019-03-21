@@ -18,7 +18,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3007" level="3" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -49,7 +49,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3022" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Drain -->
 		</skills>
@@ -80,7 +80,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3013" level="1" /> <!-- Special Ability: Health -->
 		</skills>
@@ -111,7 +111,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3076" level="3" /> <!-- Special Ability: Empower -->
 		</skills>
@@ -142,7 +142,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3077" level="3" /> <!-- Special Ability: M. Atk. -->
 		</skills>
@@ -173,7 +173,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3078" level="3" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
 		</skills>
@@ -203,7 +203,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<skills>
 			<skill id="3047" level="1" /> <!-- Special Ability: Acumen -->
@@ -234,7 +234,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<skills>
 			<skill id="3048" level="1" /> <!-- Special Ability: Conversion -->
@@ -266,7 +266,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3079" level="3" type_chance="5" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Paralyze -->
 		</skills>
@@ -714,7 +714,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3010" level="4" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -745,7 +745,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3542" level="4" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -776,7 +776,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3037" level="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -844,7 +844,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3033" level="1" /> <!-- Special Ability: Rsk. Haste -->
 		</skills>
@@ -875,7 +875,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3033" level="2" /> <!-- Special Ability: Rsk. Haste -->
 		</skills>
@@ -905,7 +905,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="DAGGER" />
 		<skills>
 			<skill id="3043" level="4" /> <!-- Special Ability: Critical Damage -->
@@ -936,7 +936,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="DAGGER" />
 		<skills>
 			<skill id="3043" level="6" /> <!-- Special Ability: Critical Damage -->
@@ -1031,7 +1031,7 @@
 		<set name="weight" val="10" />
 		<set name="enchant_enabled" val="7" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="200" />
 	</item>
 	<item id="6395" name="Amulet: Chant of Predator" type="EtcItem">

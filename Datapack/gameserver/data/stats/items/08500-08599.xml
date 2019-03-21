@@ -70,7 +70,7 @@
 		<set name="material" val="WOOD" />
 		<set name="enchant_enabled" val="7" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<player sex="1" />
@@ -86,7 +86,7 @@
 		<set name="weight" val="10" />
 		<set name="enchant_enabled" val="7" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="2000000" />
 	</item>
 	<item id="8561" name="Piggy Hat" type="Armor">
@@ -99,7 +99,7 @@
 		<set name="weight" val="10" />
 		<set name="enchant_enabled" val="7" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="2000000" />
 	</item>
 	<item id="8562" name="Jester Hat" type="Armor">
@@ -112,7 +112,7 @@
 		<set name="weight" val="10" />
 		<set name="enchant_enabled" val="7" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="2000000" />
 	</item>
 	<item id="8563" name="Wizard Hat" type="Armor">
@@ -125,7 +125,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 		<set name="enchant_enabled" val="7" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="8564" name="Dapper Cap" type="Armor">
@@ -138,7 +138,7 @@
 		<set name="weight" val="10" />
 		<set name="enchant_enabled" val="7" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="2000000" />
 	</item>
 	<item id="8569" name="Half Face Mask" type="Armor">
@@ -151,7 +151,7 @@
 		<set name="weight" val="10" />
 		<set name="enchant_enabled" val="7" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="price" val="500000" />
 	</item>
 </list>

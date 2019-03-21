@@ -40,10 +40,6 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
             }
         }
 
-        if (item.getVisualId() > 0) {
-            mask |= ItemListType.VISUAL_ID.getMask();
-        }
-
         if (((item.getSoulCrystalOptions() != null) && !item.getSoulCrystalOptions().isEmpty()) || ((item.getSoulCrystalSpecialOptions() != null) && !item.getSoulCrystalSpecialOptions().isEmpty())) {
             mask |= ItemListType.SOUL_CRYSTAL.getMask();
         }
@@ -104,9 +100,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         if (containsMask(mask, ItemListType.ENCHANT_EFFECT)) {
             writeItemEnchantEffect(packet, item);
         }
-        if (containsMask(mask, ItemListType.VISUAL_ID)) {
-            packet.putInt(item.getVisualId()); // Item remodel visual ID
-        }
+
         if (containsMask(mask, ItemListType.SOUL_CRYSTAL)) {
             writeItemEnsoulOptions(packet, item);
         }
@@ -139,9 +133,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         if (containsMask(mask, ItemListType.ENCHANT_EFFECT)) {
             writeItemEnchantEffect(packet, item);
         }
-        if (containsMask(mask, ItemListType.VISUAL_ID)) {
-            packet.putInt(item.getVisualId()); // Item remodel visual ID
-        }
+
         if (containsMask(mask, ItemListType.SOUL_CRYSTAL)) {
             packet.put((byte) item.getSoulCrystalOptions().size());
             for (EnsoulOption option : item.getSoulCrystalOptions()) {

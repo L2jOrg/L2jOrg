@@ -30,7 +30,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_dropable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
@@ -209,7 +209,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">31</stat>
@@ -240,7 +240,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">27</stat>
@@ -272,7 +272,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">31</stat>
@@ -300,7 +300,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="rEvas">-8</stat>
@@ -324,7 +324,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="rEvas">-8</stat>
@@ -349,7 +349,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">68</stat>
@@ -372,7 +372,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">43</stat>
@@ -394,7 +394,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">17</stat>
@@ -416,7 +416,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">17</stat>
@@ -439,7 +439,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">68</stat>
@@ -462,7 +462,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">43</stat>
@@ -484,7 +484,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">17</stat>
@@ -506,7 +506,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">17</stat>
@@ -540,7 +540,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">148</stat>

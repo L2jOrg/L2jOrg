@@ -89,7 +89,6 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.network.serverpackets.fishing;
     exports org.l2j.gameserver.model.cubic;
     exports org.l2j.gameserver.model.actor.request;
-    exports org.l2j.gameserver.model.items.appearance;
     exports org.l2j.gameserver.network.serverpackets.appearance;
     exports org.l2j.gameserver.network.serverpackets.attributechange;
     exports org.l2j.gameserver.model.actor.tasks.player;

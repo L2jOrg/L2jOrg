@@ -17,7 +17,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3051" level="2" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -48,7 +48,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3066" level="2" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -79,7 +79,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3063" level="1" /> <!-- Special Ability: Back Blow -->
 		</skills>
@@ -110,7 +110,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3070" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Stun -->
@@ -142,7 +142,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
 		</skills>
@@ -174,7 +174,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
 		</skills>
@@ -208,7 +208,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
 		<set name="commissionItemType" val="BOW" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="reduced_mp_consume" val="30,1" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -243,7 +243,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
 		<set name="commissionItemType" val="BOW" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3050" level="2" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -277,7 +277,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="639" />
 		<set name="commissionItemType" val="BOW" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 		</skills>
@@ -308,7 +308,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3056" level="3" /> <!-- Special Ability: Rsk. Haste -->
 		</skills>
@@ -339,7 +339,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3068" level="3" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -370,7 +370,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3039" level="7" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Drain -->
@@ -403,7 +403,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3014" level="3" /> <!-- Special Ability: Mana Up -->
 		</skills>
@@ -434,7 +434,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="1035" level="4" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -466,7 +466,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="1077" level="3" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Focus -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -498,7 +498,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3048" level="3" /> <!-- Special Ability: Conversion -->
 		</skills>
@@ -530,7 +530,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3014" level="3" /> <!-- Special Ability: Mana Up -->
 		</skills>
@@ -562,7 +562,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3074" level="2" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -595,7 +595,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="3014" level="3" /> <!-- Special Ability: Mana Up -->
 		</skills>
@@ -626,7 +626,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<skills>
 			<skill id="3047" level="3" /> <!-- Special Ability: Acumen -->
@@ -659,7 +659,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
+
 		<skills>
 			<skill id="1035" level="4" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->

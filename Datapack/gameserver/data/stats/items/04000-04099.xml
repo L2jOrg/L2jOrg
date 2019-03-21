@@ -305,7 +305,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="material" val="PAPER" />
 		<stats>
 			<stat type="pAtk">8</stat>
@@ -332,7 +332,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
+
 		<set name="for_npc" val="true" />
 		<stats>
 			<stat type="pAtk">5</stat>

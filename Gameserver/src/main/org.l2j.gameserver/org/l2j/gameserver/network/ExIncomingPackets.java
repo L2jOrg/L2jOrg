@@ -4,10 +4,6 @@ import org.l2j.gameserver.network.clientpackets.*;
 import org.l2j.gameserver.network.clientpackets.adenadistribution.RequestDivideAdena;
 import org.l2j.gameserver.network.clientpackets.adenadistribution.RequestDivideAdenaCancel;
 import org.l2j.gameserver.network.clientpackets.adenadistribution.RequestDivideAdenaStart;
-import org.l2j.gameserver.network.clientpackets.appearance.RequestExCancelShape_Shifting_Item;
-import org.l2j.gameserver.network.clientpackets.appearance.RequestExTryToPutShapeShiftingEnchantSupportItem;
-import org.l2j.gameserver.network.clientpackets.appearance.RequestExTryToPutShapeShiftingTargetItem;
-import org.l2j.gameserver.network.clientpackets.appearance.RequestShapeShiftingItem;
 import org.l2j.gameserver.network.clientpackets.attendance.RequestVipAttendanceCheck;
 import org.l2j.gameserver.network.clientpackets.attendance.RequestVipAttendanceItemList;
 import org.l2j.gameserver.network.clientpackets.attributechange.RequestChangeAttributeCancel;
@@ -242,10 +238,10 @@ public enum ExIncomingPackets implements PacketFactory {
     REQUEST_CURIOUS_HOUSE_HTML(0xC1, RequestCuriousHouseHtml::new, ConnectionState.IN_GAME),
     REQUEST_CURIOUS_HOUSE_RECORD(0xC2, null, ConnectionState.IN_GAME),
     EX_SYSSTRING(0xC3, null, ConnectionState.IN_GAME),
-    REQUEST_EX_TRY_TO_PUT_SHAPE_SHIFTING_TARGET_ITEM(0xC4, RequestExTryToPutShapeShiftingTargetItem::new, ConnectionState.IN_GAME),
-    REQUEST_EX_TRY_TO_PUT_SHAPE_SHIFTING_ENCHANT_SUPPORT_ITEM(0xC5, RequestExTryToPutShapeShiftingEnchantSupportItem::new, ConnectionState.IN_GAME),
-    REQUEST_EX_CANCEL_SHAPE_SHIFTING_ITEM(0xC6, RequestExCancelShape_Shifting_Item::new, ConnectionState.IN_GAME),
-    REQUEST_SHAPE_SHIFTING_ITEM(0xC7, RequestShapeShiftingItem::new, ConnectionState.IN_GAME),
+    REQUEST_EX_TRY_TO_PUT_SHAPE_SHIFTING_TARGET_ITEM(0xC4, null, ConnectionState.IN_GAME), // RequestExTryToPutShapeShiftingTargetItem - Appearance Stone not used on classic
+    REQUEST_EX_TRY_TO_PUT_SHAPE_SHIFTING_ENCHANT_SUPPORT_ITEM(0xC5, null, ConnectionState.IN_GAME), // RequestExTryToPutShapeShiftingEnchantSupportItem - Appearance Stone not used on classic
+    REQUEST_EX_CANCEL_SHAPE_SHIFTING_ITEM(0xC6, null, ConnectionState.IN_GAME), // RequestExCancelShape_Shifting_Item - Appearance Stone not used on classic
+    REQUEST_SHAPE_SHIFTING_ITEM(0xC7, null, ConnectionState.IN_GAME), // RequestShapeShiftingItem - Appearance Stone not used on classic
     NC_GUARD_SEND_DATA_TO_SERVER(0xC8, null, ConnectionState.IN_GAME),
     REQUEST_EVENT_KALIE_TOKEN(0xC9, null, ConnectionState.IN_GAME),
     REQUEST_SHOW_BEAUTY_LIST(0xCA, RequestShowBeautyList::new, ConnectionState.IN_GAME),

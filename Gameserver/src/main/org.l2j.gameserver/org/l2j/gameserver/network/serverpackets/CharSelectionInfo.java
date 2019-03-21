@@ -90,18 +90,7 @@ public class CharSelectionInfo extends IClientOutgoingPacket {
                     Inventory.PAPERDOLL_ARTIFACT20, // 152
                     Inventory.PAPERDOLL_ARTIFACT21 // 152
             };
-    private static final int[] PAPERDOLL_ORDER_VISUAL_ID = new int[]
-            {
-                    Inventory.PAPERDOLL_RHAND,
-                    Inventory.PAPERDOLL_LHAND,
-                    Inventory.PAPERDOLL_GLOVES,
-                    Inventory.PAPERDOLL_CHEST,
-                    Inventory.PAPERDOLL_LEGS,
-                    Inventory.PAPERDOLL_FEET,
-                    Inventory.PAPERDOLL_RHAND,
-                    Inventory.PAPERDOLL_HAIR,
-                    Inventory.PAPERDOLL_HAIR2,
-            };
+
     private static final Logger LOGGER = LoggerFactory.getLogger(CharSelectionInfo.class);
     private final String _loginName;
     private final int _sessionId;
@@ -363,9 +352,16 @@ public class CharSelectionInfo extends IClientOutgoingPacket {
                 packet.putInt(charInfoPackage.getPaperdollItemId(slot));
             }
 
-            for (int slot : getPaperdollOrderVisualId()) {
-                packet.putInt(charInfoPackage.getPaperdollItemVisualId(slot));
-            }
+            packet.putInt(0x00); // RHAND Visual ID not Used on Classic
+            packet.putInt(0x00); // LHAND Visual ID not Used on Classic
+            packet.putInt(0x00); // GLOVES Visual ID not Used on Classic
+            packet.putInt(0x00); // CHEST Visual ID not Used on Classic
+            packet.putInt(0x00); // LEGS Visual ID not Used on Classic
+            packet.putInt(0x00); // FEET Visual ID not Used on Classic
+            packet.putInt(0x00); // RHAND Visual ID not Used on Classic
+            packet.putInt(0x00); // HAIR Visual ID not Used on Classic
+            packet.putInt(0x00); // HAIR2 Visual ID not Used on Classic
+
 
             packet.putShort((short) 0x00); // Upper Body enchant level
             packet.putShort((short) 0x00); // Lower Body enchant level
@@ -411,10 +407,5 @@ public class CharSelectionInfo extends IClientOutgoingPacket {
     @Override
     public int[] getPaperdollOrder() {
         return PAPERDOLL_ORDER;
-    }
-
-    @Override
-    public int[] getPaperdollOrderVisualId() {
-        return PAPERDOLL_ORDER_VISUAL_ID;
     }
 }

@@ -84,28 +84,12 @@ public abstract class IClientOutgoingPacket extends WritablePacket<L2GameClient>
         Inventory.PAPERDOLL_RHAND
     };
 
-    int[] PAPERDOLL_ORDER_VISUAL_ID = new int[] {
-        Inventory.PAPERDOLL_RHAND,
-        Inventory.PAPERDOLL_LHAND,
-        Inventory.PAPERDOLL_RHAND,
-        Inventory.PAPERDOLL_GLOVES,
-        Inventory.PAPERDOLL_CHEST,
-        Inventory.PAPERDOLL_LEGS,
-        Inventory.PAPERDOLL_FEET,
-        Inventory.PAPERDOLL_HAIR,
-        Inventory.PAPERDOLL_HAIR2
-    };
-
     public int[] getPaperdollOrder() {
         return PAPERDOLL_ORDER;
     }
 
     public int[] getPaperdollOrderAugument() {
         return PAPERDOLL_ORDER_AUGMENT;
-    }
-
-    public int[] getPaperdollOrderVisualId() {
-        return PAPERDOLL_ORDER_VISUAL_ID;
     }
 
     /**

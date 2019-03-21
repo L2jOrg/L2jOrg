@@ -3,12 +3,14 @@ package org.l2j.gameserver.model.items.instance;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.data.xml.impl.AppearanceItemData;
 import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2j.gameserver.data.xml.impl.EnsoulData;
 import org.l2j.gameserver.data.xml.impl.OptionData;
 import org.l2j.gameserver.datatables.ItemTable;
-import org.l2j.gameserver.enums.*;
+import org.l2j.gameserver.enums.AttributeType;
+import org.l2j.gameserver.enums.InstanceType;
+import org.l2j.gameserver.enums.ItemLocation;
+import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.CastleManager;
@@ -33,14 +35,12 @@ import org.l2j.gameserver.model.items.L2Armor;
 import org.l2j.gameserver.model.items.L2EtcItem;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.L2Weapon;
-import org.l2j.gameserver.model.items.appearance.AppearanceStone;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.model.items.type.ItemType;
 import org.l2j.gameserver.model.options.EnchantOptions;
 import org.l2j.gameserver.model.options.Options;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.model.variables.ItemVariables;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.GMAudit;
@@ -150,7 +150,6 @@ public final class L2ItemInstance extends L2Object {
     private Map<AttributeType, AttributeHolder> _elementals = null;
     private ScheduledFuture<?> itemLootShedule = null;
     private ScheduledFuture<?> _lifeTimeTask;
-    private ScheduledFuture<?> _appearanceLifeTimeTask;
 
     /**
      * Constructor of the L2ItemInstance from the objectId and the itemId.
@@ -1879,82 +1878,6 @@ public final class L2ItemInstance extends L2Object {
         if ((_lifeTimeTask != null) && !_lifeTimeTask.isDone()) {
             _lifeTimeTask.cancel(false);
             _lifeTimeTask = null;
-        }
-
-        if ((_appearanceLifeTimeTask != null) && !_appearanceLifeTimeTask.isDone()) {
-            _appearanceLifeTimeTask.cancel(false);
-            _appearanceLifeTimeTask = null;
-        }
-    }
-
-    public final ItemVariables getVariables() {
-        final ItemVariables vars = getScript(ItemVariables.class);
-        return vars != null ? vars : addScript(new ItemVariables(getObjectId()));
-    }
-
-    public int getVisualId() {
-        final int visualId = getVariables().getInt(ItemVariables.VISUAL_ID, 0);
-        if (visualId > 0) {
-            final int appearanceStoneId = getVariables().getInt(ItemVariables.VISUAL_APPEARANCE_STONE_ID, 0);
-            if (appearanceStoneId > 0) {
-                final AppearanceStone stone = AppearanceItemData.getInstance().getStone(appearanceStoneId);
-                if (stone != null) {
-                    final L2PcInstance player = getActingPlayer();
-                    if (player != null) {
-                        if (!stone.getRaces().isEmpty() && !stone.getRaces().contains(player.getRace())) {
-                            return 0;
-                        }
-                        if (!stone.getRacesNot().isEmpty() && stone.getRacesNot().contains(player.getRace())) {
-                            return 0;
-                        }
-                    }
-                }
-            }
-        }
-        return visualId;
-    }
-
-    public void setVisualId(int visualId) {
-        getVariables().set(ItemVariables.VISUAL_ID, visualId);
-    }
-
-    public long getVisualLifeTime() {
-        return getVariables().getLong(ItemVariables.VISUAL_APPEARANCE_LIFE_TIME, 0);
-    }
-
-    public void scheduleVisualLifeTime() {
-        if (_appearanceLifeTimeTask != null) {
-            _appearanceLifeTimeTask.cancel(false);
-        }
-        if (getVisualLifeTime() > 0) {
-            final long time = getVisualLifeTime() - System.currentTimeMillis();
-            if (time > 0) {
-                _appearanceLifeTimeTask = ThreadPoolManager.getInstance().schedule(this::onVisualLifeTimeEnd, time);
-            } else {
-                ThreadPoolManager.getInstance().execute(this::onVisualLifeTimeEnd);
-            }
-        }
-    }
-
-    private void onVisualLifeTimeEnd() {
-        final ItemVariables vars = getVariables();
-        vars.remove(ItemVariables.VISUAL_ID);
-        vars.remove(ItemVariables.VISUAL_APPEARANCE_STONE_ID);
-        vars.remove(ItemVariables.VISUAL_APPEARANCE_LIFE_TIME);
-        vars.storeMe();
-
-        final L2PcInstance player = getActingPlayer();
-        if (player != null) {
-            final InventoryUpdate iu = new InventoryUpdate();
-            iu.addModifiedItem(this);
-            player.broadcastUserInfo(UserInfoType.APPAREANCE);
-            player.sendInventoryUpdate(iu);
-
-            if (isEnchanted()) {
-                player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_RESTORED_TO_ITS_PREVIOUS_APPEARANCE_AS_ITS_TEMPORARY_MODIFICATION_HAS_EXPIRED).addInt(_enchantLevel).addItemName(this));
-            } else {
-                player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_RESTORED_TO_ITS_PREVIOUS_APPEARANCE_AS_ITS_TEMPORARY_MODIFICATION_HAS_EXPIRED).addItemName(this));
-            }
         }
     }
 

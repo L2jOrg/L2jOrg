@@ -94,10 +94,15 @@ public class FakePlayerInfo extends IClientOutgoingPacket {
 
         packet.put((byte) _fpcHolder.getArmorEnchantLevel());
 
-        for (@SuppressWarnings("unused")
-                int slot : getPaperdollOrderVisualId()) {
-            packet.putInt(0x00);
-        }
+        packet.putInt(0x00); // RHAND visual ID not used on classic
+        packet.putInt(0x00); // LHAND visual ID not used on classic
+        packet.putInt(0x00); // RHAND visual ID not used on classic
+        packet.putInt(0x00); // GLOVES visual ID not used on classic
+        packet.putInt(0x00); // CHEST visual ID not used on classic
+        packet.putInt(0x00); // LEGS visual ID not used on classic
+        packet.putInt(0x00); // FEET visual ID not used on classic
+        packet.putInt(0x00); // HAIR visual ID not used on classic
+        packet.putInt(0x00); // HAIR2 visual ID not used on classic
 
         packet.put((byte) _npc.getScriptValue()); // getPvpFlag()
         packet.putInt(_npc.getReputation());
