@@ -280,7 +280,7 @@
 					<item>SWORD</item>
 					<item>BLUNT</item>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -999,7 +999,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -1122,7 +1122,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DAGGER</item>
-					<item>DUALDAGGER</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -1227,7 +1227,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DAGGER</item>
-					<item>DUALDAGGER</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -2298,7 +2298,7 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>DAGGER</item>
-					<item>DUALDAGGER</item>
+
 				</weaponType>
 			</effect>
 			<effect name="FatalBlowRate">
@@ -2898,7 +2898,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 			<condition name="EnergySaved">
@@ -3669,7 +3669,7 @@
 				<weaponType>
 					<item>SWORD</item>
 					<item>BLUNT</item>
-					<item>RAPIER</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -3713,383 +3713,6 @@
 			<effect name="PhysicalAttackSpeed">
 				<amount>15</amount>
 				<mode>PER</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="472" toLevel="45" name="Ancient Sword Mastery">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.skill0472</icon>
-		<magicLvl>
-			<value level="1">20</value>
-			<value level="2">24</value>
-			<value level="3">26</value>
-			<value level="4">28</value>
-			<value level="5">30</value>
-			<value level="6">32</value>
-			<value level="7">34</value>
-			<value level="8">36</value>
-			<value level="9">38</value>
-			<value level="10">39</value>
-			<value level="11">40</value>
-			<value level="12">41</value>
-			<value level="13">42</value>
-			<value level="14">43</value>
-			<value level="15">44</value>
-			<value level="16">45</value>
-			<value level="17">46</value>
-			<value level="18">47</value>
-			<value level="19">48</value>
-			<value level="20">49</value>
-			<value level="21">50</value>
-			<value level="22">51</value>
-			<value level="23">52</value>
-			<value level="24">53</value>
-			<value level="25">54</value>
-			<value level="26">55</value>
-			<value level="27">56</value>
-			<value level="28">57</value>
-			<value level="29">58</value>
-			<value level="30">59</value>
-			<value level="31">60</value>
-			<value level="32">61</value>
-			<value level="33">62</value>
-			<value level="34">63</value>
-			<value level="35">64</value>
-			<value level="36">65</value>
-			<value level="37">66</value>
-			<value level="38">67</value>
-			<value level="39">68</value>
-			<value level="40">69</value>
-			<value level="41">70</value>
-			<value level="42">71</value>
-			<value level="43">72</value>
-			<value level="44">73</value>
-			<value level="45">74</value>
-		</magicLvl>
-		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<effects>
-			<effect name="PAtk">
-				<amount>
-					<value level="1">5.2</value>
-					<value level="2">8.1</value>
-					<value level="3">9.9</value>
-					<value level="4">11.9</value>
-					<value level="5">14.1</value>
-					<value level="6">16.6</value>
-					<value level="7">19.4</value>
-					<value level="8">22.5</value>
-					<value level="9">25.9</value>
-					<value level="10">27.7</value>
-					<value level="11">29.6</value>
-					<value level="12">31.6</value>
-					<value level="13">33.7</value>
-					<value level="14">35.9</value>
-					<value level="15">38.1</value>
-					<value level="16">40.5</value>
-					<value level="17">42.9</value>
-					<value level="18">45.4</value>
-					<value level="19">48.1</value>
-					<value level="20">50.8</value>
-					<value level="21">53.6</value>
-					<value level="22">56.5</value>
-					<value level="23">59.4</value>
-					<value level="24">62.5</value>
-					<value level="25">65.6</value>
-					<value level="26">68.9</value>
-					<value level="27">72.2</value>
-					<value level="28">75.6</value>
-					<value level="29">79</value>
-					<value level="30">82.5</value>
-					<value level="31">86.1</value>
-					<value level="32">89.8</value>
-					<value level="33">93.5</value>
-					<value level="34">97.3</value>
-					<value level="35">101.1</value>
-					<value level="36">104.9</value>
-					<value level="37">108.8</value>
-					<value level="38">112.7</value>
-					<value level="39">116.7</value>
-					<value level="40">120.6</value>
-					<value level="41">124.6</value>
-					<value level="42">128.5</value>
-					<value level="43">132.5</value>
-					<value level="44">136.4</value>
-					<value level="45">140.3</value>
-				</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-					<item>ANCIENTSWORD</item>
-				</weaponType>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="473" toLevel="45" name="Crossbow Mastery">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.skill0473</icon>
-		<magicLvl>
-			<value level="1">20</value>
-			<value level="2">24</value>
-			<value level="3">26</value>
-			<value level="4">28</value>
-			<value level="5">30</value>
-			<value level="6">32</value>
-			<value level="7">34</value>
-			<value level="8">36</value>
-			<value level="9">38</value>
-			<value level="10">39</value>
-			<value level="11">40</value>
-			<value level="12">41</value>
-			<value level="13">42</value>
-			<value level="14">43</value>
-			<value level="15">44</value>
-			<value level="16">45</value>
-			<value level="17">46</value>
-			<value level="18">47</value>
-			<value level="19">48</value>
-			<value level="20">49</value>
-			<value level="21">50</value>
-			<value level="22">51</value>
-			<value level="23">52</value>
-			<value level="24">53</value>
-			<value level="25">54</value>
-			<value level="26">55</value>
-			<value level="27">56</value>
-			<value level="28">57</value>
-			<value level="29">58</value>
-			<value level="30">59</value>
-			<value level="31">60</value>
-			<value level="32">61</value>
-			<value level="33">62</value>
-			<value level="34">63</value>
-			<value level="35">64</value>
-			<value level="36">65</value>
-			<value level="37">66</value>
-			<value level="38">67</value>
-			<value level="39">68</value>
-			<value level="40">69</value>
-			<value level="41">70</value>
-			<value level="42">71</value>
-			<value level="43">72</value>
-			<value level="44">73</value>
-			<value level="45">74</value>
-		</magicLvl>
-		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<effects>
-			<effect name="PAtk">
-				<amount>
-					<value level="1">12.64</value>
-					<value level="2">18</value>
-					<value level="3">21.28</value>
-					<value level="4">24.88</value>
-					<value level="5">29.04</value>
-					<value level="6">33.6</value>
-					<value level="7">38.72</value>
-					<value level="8">44.32</value>
-					<value level="9">50.56</value>
-					<value level="10">53.92</value>
-					<value level="11">86.72</value>
-					<value level="12">92.16</value>
-					<value level="13">97.84</value>
-					<value level="14">103.76</value>
-					<value level="15">109.92</value>
-					<value level="16">116.32</value>
-					<value level="17">122.96</value>
-					<value level="18">129.84</value>
-					<value level="19">136.96</value>
-					<value level="20">144.4</value>
-					<value level="21">152</value>
-					<value level="22">159.92</value>
-					<value level="23">168</value>
-					<value level="24">176.32</value>
-					<value level="25">184.96</value>
-					<value level="26">193.76</value>
-					<value level="27">202.8</value>
-					<value level="28">212</value>
-					<value level="29">221.44</value>
-					<value level="30">231.04</value>
-					<value level="31">240.88</value>
-					<value level="32">250.8</value>
-					<value level="33">260.96</value>
-					<value level="34">271.2</value>
-					<value level="35">281.6</value>
-					<value level="36">292.16</value>
-					<value level="37">302.72</value>
-					<value level="38">313.44</value>
-					<value level="39">324.16</value>
-					<value level="40">334.96</value>
-					<value level="41">345.76</value>
-					<value level="42">356.56</value>
-					<value level="43">367.28</value>
-					<value level="44">378</value>
-					<value level="45">388.72</value>
-				</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-					<item>CROSSBOW</item>
-				</weaponType>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="474" toLevel="45" name="Rapier Mastery">
-		<!-- Glory Days Confirmed -->
-		<icon>icon.skill0474</icon>
-		<magicLvl>
-			<value level="1">20</value>
-			<value level="2">24</value>
-			<value level="3">26</value>
-			<value level="4">28</value>
-			<value level="5">30</value>
-			<value level="6">32</value>
-			<value level="7">34</value>
-			<value level="8">36</value>
-			<value level="9">38</value>
-			<value level="10">39</value>
-			<value level="11">40</value>
-			<value level="12">41</value>
-			<value level="13">42</value>
-			<value level="14">43</value>
-			<value level="15">44</value>
-			<value level="16">45</value>
-			<value level="17">46</value>
-			<value level="18">47</value>
-			<value level="19">48</value>
-			<value level="20">49</value>
-			<value level="21">50</value>
-			<value level="22">51</value>
-			<value level="23">52</value>
-			<value level="24">53</value>
-			<value level="25">54</value>
-			<value level="26">55</value>
-			<value level="27">56</value>
-			<value level="28">57</value>
-			<value level="29">58</value>
-			<value level="30">59</value>
-			<value level="31">60</value>
-			<value level="32">61</value>
-			<value level="33">62</value>
-			<value level="34">63</value>
-			<value level="35">64</value>
-			<value level="36">65</value>
-			<value level="37">66</value>
-			<value level="38">67</value>
-			<value level="39">68</value>
-			<value level="40">69</value>
-			<value level="41">70</value>
-			<value level="42">71</value>
-			<value level="43">72</value>
-			<value level="44">73</value>
-			<value level="45">74</value>
-		</magicLvl>
-		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<effects>
-			<effect name="PAtk">
-				<amount>
-					<value level="1">3.2</value>
-					<value level="2">5.28</value>
-					<value level="3">6.48</value>
-					<value level="4">7.84</value>
-					<value level="5">9.36</value>
-					<value level="6">11.12</value>
-					<value level="7">13.04</value>
-					<value level="8">15.2</value>
-					<value level="9">17.52</value>
-					<value level="10">18.8</value>
-					<value level="11">20.08</value>
-					<value level="12">21.44</value>
-					<value level="13">22.88</value>
-					<value level="14">24.4</value>
-					<value level="15">25.92</value>
-					<value level="16">27.6</value>
-					<value level="17">29.28</value>
-					<value level="18">30.96</value>
-					<value level="19">32.8</value>
-					<value level="20">34.64</value>
-					<value level="21">36.56</value>
-					<value level="22">38.56</value>
-					<value level="23">40.64</value>
-					<value level="24">42.72</value>
-					<value level="25">44.88</value>
-					<value level="26">47.12</value>
-					<value level="27">49.44</value>
-					<value level="28">51.76</value>
-					<value level="29">54.16</value>
-					<value level="30">56.56</value>
-					<value level="31">59.04</value>
-					<value level="32">61.52</value>
-					<value level="33">64.08</value>
-					<value level="34">66.72</value>
-					<value level="35">69.36</value>
-					<value level="36">72</value>
-					<value level="37">74.64</value>
-					<value level="38">77.36</value>
-					<value level="39">80.08</value>
-					<value level="40">82.8</value>
-					<value level="41">85.52</value>
-					<value level="42">88.24</value>
-					<value level="43">90.96</value>
-					<value level="44">93.68</value>
-					<value level="45">96.4</value>
-				</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-					<item>RAPIER</item>
-				</weaponType>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">0</value>
-					<value level="8">0</value>
-					<value level="9">15</value>
-					<value level="10">15</value>
-					<value level="11">15</value>
-					<value level="12">15</value>
-					<value level="13">15</value>
-					<value level="14">15</value>
-					<value level="15">15</value>
-					<value level="16">15</value>
-					<value level="17">15</value>
-					<value level="18">15</value>
-					<value level="19">15</value>
-					<value level="20">15</value>
-					<value level="21">15</value>
-					<value level="22">15</value>
-					<value level="23">15</value>
-					<value level="24">15</value>
-					<value level="25">15</value>
-					<value level="26">15</value>
-					<value level="27">15</value>
-					<value level="28">15</value>
-					<value level="29">15</value>
-					<value level="30">15</value>
-					<value level="31">15</value>
-					<value level="32">15</value>
-					<value level="33">15</value>
-					<value level="34">15</value>
-					<value level="35">15</value>
-					<value level="36">15</value>
-					<value level="37">15</value>
-					<value level="38">15</value>
-					<value level="39">15</value>
-					<value level="40">15</value>
-					<value level="41">15</value>
-					<value level="42">15</value>
-					<value level="43">15</value>
-					<value level="44">15</value>
-					<value level="45">15</value>
-				</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>RAPIER</item>
-				</weaponType>
 			</effect>
 		</effects>
 	</skill>
@@ -4182,7 +3805,7 @@
 				<weaponType>
 					<item>SWORD</item>
 					<item>BLUNT</item>
-					<item>ANCIENTSWORD</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4344,13 +3967,13 @@
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
-					<item>ANCIENTSWORD</item>
+
 					<item>DUAL</item>
 					<item>POLE</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
 					<item>DUALFIST</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4394,102 +4017,6 @@
 					<value level="35">3453</value>
 					<value level="36">3553</value>
 					<value level="37">3653</value>
-				</power>
-				<overHit>true</overHit>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="478" toLevel="15" name="Double Thrust">
-		<!-- Confirmed CT2.5 -->
-		<castRange>40</castRange>
-		<coolTime>300</coolTime>
-		<effectPoint>
-			<value level="1">-96</value>
-			<value level="2">-100</value>
-			<value level="3">-104</value>
-			<value level="4">-111</value>
-			<value level="5">-115</value>
-			<value level="6">-119</value>
-			<value level="7">-128</value>
-			<value level="8">-132</value>
-			<value level="9">-136</value>
-			<value level="10">-145</value>
-			<value level="11">-150</value>
-			<value level="12">-154</value>
-			<value level="13">-164</value>
-			<value level="14">-169</value>
-			<value level="15">-173</value>
-		</effectPoint>
-		<effectRange>400</effectRange>
-		<hitTime>1500</hitTime>
-		<icon>icon.skill0478</icon>
-		<magicLvl>
-			<value level="1">18</value>
-			<value level="2">19</value>
-			<value level="3">20</value>
-			<value level="4">22</value>
-			<value level="5">23</value>
-			<value level="6">24</value>
-			<value level="7">26</value>
-			<value level="8">27</value>
-			<value level="9">28</value>
-			<value level="10">30</value>
-			<value level="11">31</value>
-			<value level="12">32</value>
-			<value level="13">34</value>
-			<value level="14">35</value>
-			<value level="15">36</value>
-		</magicLvl>
-		<mpConsume>
-			<value level="1">16</value>
-			<value level="2">16</value>
-			<value level="3">16</value>
-			<value level="4">18</value>
-			<value level="5">18</value>
-			<value level="6">19</value>
-			<value level="7">20</value>
-			<value level="8">21</value>
-			<value level="9">21</value>
-			<value level="10">23</value>
-			<value level="11">23</value>
-			<value level="12">24</value>
-			<value level="13">25</value>
-			<value level="14">26</value>
-			<value level="15">27</value>
-		</mpConsume>
-		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
-		<soulMaxConsumeCount>5</soulMaxConsumeCount>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>RAPIER</item>
-				</weaponType>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="PhysicalSoulAttack">
-				<power>
-					<value level="1">108</value>
-					<value level="2">117</value>
-					<value level="3">126</value>
-					<value level="4">147</value>
-					<value level="5">159</value>
-					<value level="6">171</value>
-					<value level="7">198</value>
-					<value level="8">213</value>
-					<value level="9">229</value>
-					<value level="10">263</value>
-					<value level="11">281</value>
-					<value level="12">301</value>
-					<value level="13">344</value>
-					<value level="14">367</value>
-					<value level="15">391</value>
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -4712,8 +4239,8 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>SWORD</item>
-					<item>ANCIENTSWORD</item>
-					<item>RAPIER</item>
+
+
 				</weaponType>
 			</condition>
 			<condition name="OpCheckCastRange">
@@ -4827,202 +4354,6 @@
 					<value fromLevel="15" toLevel="19" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="486" toLevel="2" name="Increase Range">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.skill0486</icon>
-		<magicLvl>
-			<value level="1">24</value>
-			<value level="2">40</value>
-		</magicLvl>
-		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<effects>
-			<effect name="PhysicalAttackRange">
-				<amount>
-					<value level="1">200</value>
-					<value level="2">400</value>
-				</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-					<item>CROSSBOW</item>
-				</weaponType>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="487" toLevel="15" name="Penetrating Shot">
-		<!-- Confirmed CT2.5 -->
-		<castRange>500</castRange>
-		<coolTime>800</coolTime>
-		<effectPoint>
-			<value level="1">-192</value>
-			<value level="2">-199</value>
-			<value level="3">-207</value>
-			<value level="4">-222</value>
-			<value level="5">-230</value>
-			<value level="6">-238</value>
-			<value level="7">-255</value>
-			<value level="8">-264</value>
-			<value level="9">-272</value>
-			<value level="10">-290</value>
-			<value level="11">-299</value>
-			<value level="12">-308</value>
-			<value level="13">-327</value>
-			<value level="14">-337</value>
-			<value level="15">-346</value>
-		</effectPoint>
-		<effectRange>900</effectRange>
-		<hitTime>3200</hitTime>
-		<icon>icon.skill0487</icon>
-		<magicLvl>
-			<value level="1">18</value>
-			<value level="2">19</value>
-			<value level="3">20</value>
-			<value level="4">22</value>
-			<value level="5">23</value>
-			<value level="6">24</value>
-			<value level="7">26</value>
-			<value level="8">27</value>
-			<value level="9">28</value>
-			<value level="10">30</value>
-			<value level="11">31</value>
-			<value level="12">32</value>
-			<value level="13">34</value>
-			<value level="14">35</value>
-			<value level="15">36</value>
-		</magicLvl>
-		<mpConsume>
-			<value level="1">69</value>
-			<value level="2">70</value>
-			<value level="3">71</value>
-			<value level="4">74</value>
-			<value level="5">78</value>
-			<value level="6">81</value>
-			<value level="7">88</value>
-			<value level="8">91</value>
-			<value level="9">95</value>
-			<value level="10">101</value>
-			<value level="11">101</value>
-			<value level="12">104</value>
-			<value level="13">112</value>
-			<value level="14">116</value>
-			<value level="15">120</value>
-		</mpConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
-		<soulMaxConsumeCount>5</soulMaxConsumeCount>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>CROSSBOW</item>
-					<item>TWOHANDCROSSBOW</item>
-				</weaponType>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="PhysicalSoulAttack">
-				<power>
-					<value level="1">179</value>
-					<value level="2">194</value>
-					<value level="3">210</value>
-					<value level="4">245</value>
-					<value level="5">264</value>
-					<value level="6">285</value>
-					<value level="7">330</value>
-					<value level="8">354</value>
-					<value level="9">381</value>
-					<value level="10">438</value>
-					<value level="11">469</value>
-					<value level="12">502</value>
-					<value level="13">573</value>
-					<value level="14">611</value>
-					<value level="15">651</value>
-				</power>
-				<overHit>true</overHit>
-				<criticalChance>20</criticalChance>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="489" toLevel="1" name="Shift Target">
-		<!-- Confirmed CT2.5 -->
-		<affectRange>300</affectRange>
-		<castRange>40</castRange>
-		<effectPoint>-1</effectPoint>
-		<effectRange>200</effectRange>
-		<hitTime>2500</hitTime>
-		<icon>icon.skill0489</icon>
-		<magicLvl>40</magicLvl>
-		<mpConsume>53</mpConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
-		<!-- FIXME: should be AREA -->
-		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
-		<targetType>TARGET</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>CROSSBOW</item>
-				</weaponType>
-			</condition>
-			<condition name="TargetMyParty">
-				<includeMe>false</includeMe>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="TransferHate">
-				<chance>80</chance>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="490" toLevel="2" name="Fast Shot">
-		<!-- Confirmed CT2.5 -->
-		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
-		</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<abnormalType>ATTACK_SPEED_UP_BOW</abnormalType>
-		<effectPoint>
-			<value level="1">303</value>
-			<value level="2">549</value>
-		</effectPoint>
-		<hitTime>2500</hitTime>
-		<icon>icon.skill0490</icon>
-		<magicLvl>
-			<value level="1">32</value>
-			<value level="2">55</value>
-		</magicLvl>
-		<mpConsume>
-			<value level="1">14</value>
-			<value level="2">25</value>
-		</mpConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PhysicalAttackSpeed">
-				<amount>
-					<value level="1">8</value>
-					<value level="2">12</value>
-				</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>CROSSBOW</item>
-				</weaponType>
 			</effect>
 		</effects>
 	</skill>
@@ -5346,13 +4677,13 @@
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
-					<item>ANCIENTSWORD</item>
+
 					<item>DUAL</item>
 					<item>POLE</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
 					<item>DUALFIST</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 			<condition name="OpCheckCastRange">
@@ -5615,13 +4946,13 @@
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
-					<item>ANCIENTSWORD</item>
+
 					<item>DUAL</item>
 					<item>POLE</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
 					<item>DUALFIST</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 			<condition name="OpCheckCastRange">
@@ -5739,7 +5070,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>SWORD</item>
-					<item>ANCIENTSWORD</item>
+
 				</weaponType>
 			</condition>
 			<condition name="OpCheckCastRange">
@@ -5885,13 +5216,13 @@
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
-					<item>ANCIENTSWORD</item>
+
 					<item>DUAL</item>
 					<item>POLE</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
 					<item>DUALFIST</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -6006,13 +5337,13 @@
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
-					<item>ANCIENTSWORD</item>
+
 					<item>DUAL</item>
 					<item>POLE</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
 					<item>DUALFIST</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -6109,7 +5440,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>SWORD</item>
-					<item>ANCIENTSWORD</item>
+
 				</weaponType>
 			</condition>
 		</conditions>

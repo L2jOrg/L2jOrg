@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model.stats;
 
 /**
@@ -52,17 +36,12 @@ public enum TraitType {
     CRITICAL_POISON(3),
     ROOT_PHYSICALLY(3),
     ROOT_MAGICALLY(3),
-    RAPIER(1),
-    CROSSBOW(1),
-    ANCIENTSWORD(1),
     TURN_STONE(3),
     GUST(3),
     PHYSICAL_BLOCKADE(3),
     TARGET(3),
     PHYSICAL_WEAKNESS(3),
     MAGICAL_WEAKNESS(3),
-    DUALDAGGER(1),
-    DUALBLUNT(1),
     KNOCKBACK(3),
     KNOCKDOWN(3),
     PULL(3),
@@ -72,7 +51,6 @@ public enum TraitType {
     DISARM(3),
     DEPORT(3),
     CHANGEBODY(3),
-    TWOHANDCROSSBOW(1),
     ZONE(3),
     PSYCHIC(3);
 

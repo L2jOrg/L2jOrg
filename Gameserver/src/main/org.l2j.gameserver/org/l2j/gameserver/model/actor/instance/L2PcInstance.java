@@ -3941,7 +3941,7 @@ public final class L2PcInstance extends L2Playable {
                     final L2EtcItem etcItem = target.getEtcItem();
                     if (etcItem != null) {
                         final EtcItemType itemType = etcItem.getItemType();
-                        if (((weapon.getItemType() == WeaponType.BOW) && (itemType == EtcItemType.ARROW)) || (((weapon.getItemType() == WeaponType.CROSSBOW) || (weapon.getItemType() == WeaponType.TWOHANDCROSSBOW)) && (itemType == EtcItemType.BOLT))) {
+                        if ( weapon.getItemType() == WeaponType.BOW && itemType == EtcItemType.ARROW) {
                             checkAndEquipAmmunition(itemType);
                         }
                     }

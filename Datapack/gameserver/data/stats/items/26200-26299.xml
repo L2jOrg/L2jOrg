@@ -178,30 +178,6 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="26263" name="Halloween Shooter" type="Weapon">
-		<!-- Halloween weapon. -->
-		<set name="icon" val="icon.ev_wp_halloween" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<stats>
-			<stat type="pAtk">1333</stat>
-			<stat type="mAtk">414</stat>
-			<stat type="rCrit">12</stat>
-			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">500</stat>
-		</stats>
-	</item>
 	<item id="26264" name="Halloween Buster" type="Weapon">
 		<!-- Halloween weapon. -->
 		<set name="icon" val="icon.ev_wp_halloween" />
@@ -291,54 +267,6 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
-	<item id="26268" name="Halloween Dual Dagger" type="Weapon">
-		<!-- Halloween weapon. -->
-		<set name="icon" val="icon.ev_wp_halloween" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<stats>
-			<stat type="pAtk">752</stat>
-			<stat type="mAtk">414</stat>
-			<stat type="rCrit">12</stat>
-			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">433</stat>
-			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
-	<item id="26269" name="Halloween Dual Blunt Weapon" type="Weapon">
-		<!-- Halloween weapon. -->
-		<set name="icon" val="icon.ev_wp_halloween" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALBLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<stats>
-			<stat type="pAtk">916</stat>
-			<stat type="mAtk">414</stat>
-			<stat type="rCrit">6</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">20</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>

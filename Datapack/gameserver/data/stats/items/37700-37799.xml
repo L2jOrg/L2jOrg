@@ -1,55 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="37700" name="Valentine Dual Dagger" type="Weapon">
-		<!-- Modifies the appearance of a weapon. Valentine Dual Dagger form. -->
-		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="500" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<stats>
-			<stat type="pAtk">752</stat>
-			<stat type="mAtk">414</stat>
-			<stat type="rCrit">12</stat>
-			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">433</stat>
-			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
-	<item id="37701" name="Valentine Dual Blunt Weapon" type="Weapon">
-		<!-- Modifies the appearance of a weapon. Valentine Dual Blunt Weapon form. -->
-		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALBLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="500" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<stats>
-			<stat type="pAtk">916</stat>
-			<stat type="mAtk">414</stat>
-			<stat type="rCrit">6</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
 	<item id="37702" name="Valentine Shield" type="Armor">
 		<!-- Modifies the appearance of a weapon. Valentine Shield form. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />

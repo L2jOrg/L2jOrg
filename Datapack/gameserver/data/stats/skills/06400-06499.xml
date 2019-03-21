@@ -353,7 +353,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-					<item>CROSSBOW</item>
+
 				</weaponType>
 			</effect>
 			<effect name="HpRegen">
@@ -542,7 +542,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-					<item>CROSSBOW</item>
+
 				</weaponType>
 			</effect>
 			<effect name="CriticalRate">
@@ -554,7 +554,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-					<item>CROSSBOW</item>
+
 				</weaponType>
 			</effect>
 		</effects>
@@ -588,7 +588,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-					<item>CROSSBOW</item>
+
 				</weaponType>
 			</effect>
 			<effect name="CriticalRate">
@@ -596,7 +596,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-					<item>CROSSBOW</item>
+
 				</weaponType>
 			</effect>
 		</effects>
@@ -682,14 +682,10 @@
 				<BLUNT>95</BLUNT>
 				<SWORD>50</SWORD>
 				<DUAL>50</DUAL>
-				<ANCIENTSWORD>95</ANCIENTSWORD>
 				<BOW>99</BOW>
 				<POLE>95</POLE>
 				<DAGGER>95</DAGGER>
-				<RAPIER>95</RAPIER>
-				<CROSSBOW>99</CROSSBOW>
 				<DUALFIST>95</DUALFIST>
-				<DUALDAGGER>95</DUALDAGGER>
 			</effect>
 		</effects>
 	</skill>
@@ -717,13 +713,9 @@
 				<BLUNT>-5</BLUNT>
 				<SWORD>-5</SWORD>
 				<DUAL>-5</DUAL>
-				<ANCIENTSWORD>-5</ANCIENTSWORD>
 				<POLE>-5</POLE>
-				<CROSSBOW>99</CROSSBOW>
 				<DUALFIST>-5</DUALFIST>
-				<DUALDAGGER>-5</DUALDAGGER>
 				<DAGGER>-5</DAGGER>
-				<RAPIER>-5</RAPIER>
 			</effect>
 		</effects>
 	</skill>
@@ -750,14 +742,10 @@
 				<BLUNT>95</BLUNT>
 				<SWORD>50</SWORD>
 				<DUAL>50</DUAL>
-				<ANCIENTSWORD>95</ANCIENTSWORD>
 				<BOW>-100</BOW>
 				<POLE>95</POLE>
 				<DAGGER>95</DAGGER>
-				<RAPIER>95</RAPIER>
-				<CROSSBOW>-100</CROSSBOW>
 				<DUALFIST>95</DUALFIST>
-				<DUALDAGGER>95</DUALDAGGER>
 			</effect>
 		</effects>
 	</skill>

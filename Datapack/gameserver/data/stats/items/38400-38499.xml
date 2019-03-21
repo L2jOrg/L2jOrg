@@ -168,30 +168,6 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="38431" name="Monster Only: Tiger Dagger" additionalName="Not Available" type="Weapon">
-		<!-- Monster weapon. Dual Dagger -->
-		<set name="icon" val="icon.Deathslayer_a_wp_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="D" />
-		<set name="material" val="STEEL" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
-		<stats>
-			<stat type="pAtk">92</stat>
-			<stat type="mAtk">54</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="pAtkSpd">379</stat>
-			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
 	<item id="38432" name="Monster Only: Tiger Jewel" additionalName="Not Available" type="Weapon">
 		<!-- Monster weapon. One-handed Sword -->
 		<set name="icon" val="icon.Summon_orc_1hs_wp_i00" />

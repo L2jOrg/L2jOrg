@@ -2274,7 +2274,7 @@
 				<chance>3</chance>
 				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
-				<allowWeapons>SWORD,BLUNT,DUAL,DUALFIST,DAGGER,DUALDAGGER,POLE,ANCIENTSWORD,RAPIER</allowWeapons>
+				<allowWeapons>SWORD,BLUNT,DUAL,DUALFIST,DAGGER,POLE</allowWeapons>
 				<skillId>5559</skillId>
 				<skillLevel>1</skillLevel>
 			</effect>
@@ -2287,10 +2287,10 @@
 					<item>DUAL</item>
 					<item>DUALFIST</item>
 					<item>DAGGER</item>
-					<item>DUALDAGGER</item>
+
 					<item>POLE</item>
-					<item>ANCIENTSWORD</item>
-					<item>RAPIER</item>
+
+
 				</weaponType>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
@@ -2302,10 +2302,10 @@
 					<item>DUAL</item>
 					<item>DUALFIST</item>
 					<item>DAGGER</item>
-					<item>DUALDAGGER</item>
+
 					<item>POLE</item>
-					<item>ANCIENTSWORD</item>
-					<item>RAPIER</item>
+
+
 				</weaponType>
 			</effect>
 		</effects>
@@ -2326,7 +2326,7 @@
 				<chance>3</chance>
 				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
-				<allowWeapons>CROSSBOW,BOW</allowWeapons>
+				<allowWeapons>BOW</allowWeapons>
 				<skillId>5559</skillId>
 				<skillLevel>1</skillLevel>
 			</effect>
@@ -2334,7 +2334,7 @@
 				<amount>8</amount>
 				<mode>DIFF</mode>
 				<weaponType>
-					<item>CROSSBOW</item>
+
 					<item>BOW</item>
 				</weaponType>
 			</effect>
@@ -2342,7 +2342,7 @@
 				<amount>50</amount>
 				<mode>DIFF</mode>
 				<weaponType>
-					<item>CROSSBOW</item>
+
 					<item>BOW</item>
 				</weaponType>
 			</effect>
@@ -2538,7 +2538,6 @@
 		<effects>
 			<effect name="DefenceTrait">
 				<BOW>10</BOW>
-				<CROSSBOW>5</CROSSBOW>
 			</effect>
 		</effects>
 	</skill>
@@ -2565,14 +2564,13 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="DefenceTrait">
 				<BOW>45</BOW>
-				<CROSSBOW>25</CROSSBOW>
 			</effect>
 			<effect name="MAtk">
 				<amount>-99</amount>
@@ -2918,7 +2916,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 			<condition name="EnergySaved">
@@ -3465,43 +3463,6 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="790" toLevel="1" name="Wild Shot">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<affectLimit>5-12</affectLimit>
-		<affectRange>900</affectRange>
-		<castRange>900</castRange>
-		<coolTime>1000</coolTime>
-		<effectPoint>-1</effectPoint>
-		<effectRange>1400</effectRange>
-		<fanRange>0;0;900;40</fanRange>
-		<hitTime>3500</hitTime>
-		<icon>icon.skill0790</icon>
-		<magicLvl>81</magicLvl>
-		<mpConsume>120</mpConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>75000</reuseDelay>
-		<rideState>NONE</rideState>
-		<soulMaxConsumeCount>5</soulMaxConsumeCount>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY</targetType>
-		<affectScope>FAN</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>CROSSBOW</item>
-					<item>TWOHANDCROSSBOW</item>
-				</weaponType>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="PhysicalSoulAttack">
-				<power>7475</power>
-				<overHit>true</overHit>
-				<criticalChance>15</criticalChance>
-			</effect>
-		</effects>
-	</skill>
 	<skill id="791" toLevel="8" name="Lightning Shock">
 		<!-- Confirmed CT2.5 and Updated to IO -->
 		<abnormalLvl>1</abnormalLvl>
@@ -3705,13 +3666,11 @@
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
-					<item>ANCIENTSWORD</item>
 					<item>DUAL</item>
 					<item>POLE</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
 					<item>DUALFIST</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 			<condition name="OpCheckCastRange">

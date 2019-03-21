@@ -474,7 +474,7 @@
 				<chance>33</chance>
 				<targetType>SELF</targetType>
 				<isCritical>true</isCritical>
-				<allowWeapons>DAGGER,DUALDAGGER</allowWeapons>
+				<allowWeapons>DAGGER</allowWeapons>
 				<skillId>5603</skillId>
 				<skillLevel>1</skillLevel>
 			</effect>
@@ -537,7 +537,7 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>DAGGER</item>
-					<item>DUALDAGGER</item>
+
 				</weaponType>
 			</effect>
 		</effects>
@@ -1374,8 +1374,8 @@
 					<item>SWORD</item>
 					<item>DAGGER</item>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
-					<item>DUALDAGGER</item>
+
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4623,7 +4623,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5007,7 +5007,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DAGGER</item>
-					<item>DUALDAGGER</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5330,7 +5330,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5367,7 +5367,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5407,7 +5407,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5444,7 +5444,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5478,7 +5478,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5512,7 +5512,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5551,7 +5551,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>

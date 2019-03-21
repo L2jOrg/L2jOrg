@@ -1340,33 +1340,6 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="923" toLevel="1" name="Dual Dagger Mastery">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.skill0923</icon>
-		<magicLvl>81</magicLvl>
-		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<passiveConditions>
-			<condition name="CheckLevel">
-				<minLevel>81</minLevel>
-				<maxLevel>85</maxLevel>
-				<affectType>CASTER</affectType>
-			</condition>
-		</passiveConditions>
-		<effects>
-			<effect name="PAtk">
-				<amount>87.5</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-					<item>DUALDAGGER</item>
-				</weaponType>
-			</effect>
-			<effect name="FatalBlowRate">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
-	</skill>
 	<skill id="924" toLevel="1" name="Seven Arrow">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<castRange>900</castRange>
@@ -1525,8 +1498,8 @@
 					<item>POLE</item>
 					<item>DUALFIST</item>
 					<item>DUAL</item>
-					<item>DUALDAGGER</item>
-					<item>DUALBLUNT</item>
+
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -1569,44 +1542,6 @@
 					<value level="14">66</value>
 				</power>
 				<ticks>1</ticks>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="928" toLevel="1" name="Dual Blow">
-		<!-- High Five Skill -->
-		<castRange>40</castRange>
-		<effectPoint>-337</effectPoint>
-		<effectRange>400</effectRange>
-		<hitTime>1800</hitTime>
-		<icon>icon.skill0928_1</icon>
-		<magicLvl>83</magicLvl>
-		<mpConsume>82</mpConsume>
-		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
-		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<coolTime>720</coolTime>
-		<trait>DEATH</trait>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>DUALDAGGER</item>
-				</weaponType>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="FatalBlow">
-				<power>11234</power>
-				<criticalChance>30</criticalChance>
-				<chanceBoost>600</chanceBoost>
-				<overHit>true</overHit>
-			</effect>
-			<effect name="Lethal">
-				<fullLethal>0.1</fullLethal>
-				<halfLethal>8</halfLethal>
 			</effect>
 		</effects>
 	</skill>
@@ -3399,7 +3334,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4758,8 +4693,8 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>BOW</item>
-					<item>CROSSBOW</item>
-					<item>TWOHANDCROSSBOW</item>
+
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4930,7 +4865,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DAGGER</item>
-					<item>DUALDAGGER</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5127,8 +5062,8 @@
 					<item>POLE</item>
 					<item>DUALFIST</item>
 					<item>DUAL</item>
-					<item>DUALDAGGER</item>
-					<item>DUALBLUNT</item>
+
+
 				</weaponType>
 			</condition>
 			<condition name="OpCheckCastRange">
@@ -5175,8 +5110,8 @@
 					<item>POLE</item>
 					<item>DUALFIST</item>
 					<item>DUAL</item>
-					<item>DUALDAGGER</item>
-					<item>DUALBLUNT</item>
+
+
 				</weaponType>
 			</condition>
 			<condition name="OpCheckCastRange">
@@ -5383,8 +5318,8 @@
 					<item>POLE</item>
 					<item>DUALFIST</item>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
-					<item>DUALDAGGER</item>
+
+
 				</weaponType>
 			</condition>
 			<condition name="OpCheckCastRange">

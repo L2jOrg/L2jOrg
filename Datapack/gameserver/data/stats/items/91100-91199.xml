@@ -582,30 +582,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91154" name="Sibi's Samurai Black Long Sword" type="Weapon">
-		<!-- When successfully enchanted, a reward can be acquired. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Will be deleted after event. -->
-		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="100" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<stats>
-			<stat type="pAtk">155</stat>
-			<stat type="mAtk">70</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
 	<item id="91155" name="Sibi's Weapon Enchant Scroll" type="EtcItem">
 		<!-- Enchant Scroll for Sibi's Samurai Black Long Sword. Starting from +3, P. Atk. +5/ M. Atk. +3. Starting from +4, P./ M. Atk. x2. Can be enchanted up to +23. Will be deleted after event. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
@@ -663,30 +639,6 @@
 		<set name="weight" val="100" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-	</item>
-	<item id="91162" name="Golden Cheer Stamen" additionalName="Event" type="Weapon">
-		<!-- An item commemorating the game's 14th anniversary. Helps materializing your dreams. Allows using the Firecracker skill. Cannot be exchanged, dropped, sold, destroyed. Can be transferred between characters on one account and stored in a private warehouse. -->
-		<set name="icon" val="icon.ev_14th_weapon" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="MITHRIL" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<stats>
-			<stat type="pAtk">12</stat>
-			<stat type="mAtk">12</stat>
-			<stat type="rCrit">6</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">325</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
 	</item>
 	<item id="91163" name="Anakim's Rune - Stage 1" type="EtcItem">
 		<!-- A stone with the power of Anakim. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->

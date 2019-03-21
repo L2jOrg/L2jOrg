@@ -547,7 +547,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -968,7 +968,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -1301,10 +1301,10 @@
 				<weaponType>
 					<item>SWORD</item>
 					<item>DAGGER</item>
-					<item>DUALDAGGER</item>
+
 					<item>POLE</item>
-					<item>RAPIER</item>
-					<item>ANCIENTSWORD</item>
+
+
 					<item>DUAL</item>
 					<item>DUALFIST</item>
 				</weaponType>
@@ -1315,10 +1315,10 @@
 				<weaponType>
 					<item>SWORD</item>
 					<item>DAGGER</item>
-					<item>DUALDAGGER</item>
+
 					<item>POLE</item>
-					<item>RAPIER</item>
-					<item>ANCIENTSWORD</item>
+
+
 					<item>DUAL</item>
 					<item>DUALFIST</item>
 				</weaponType>
@@ -1384,7 +1384,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-					<item>CROSSBOW</item>
+
 				</weaponType>
 			</effect>
 			<effect name="PhysicalAttackRange">
@@ -1392,7 +1392,7 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>BOW</item>
-					<item>CROSSBOW</item>
+
 				</weaponType>
 			</effect>
 		</effects>

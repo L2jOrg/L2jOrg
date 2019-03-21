@@ -2422,47 +2422,6 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1444" toLevel="1" name="Pride of Kamael">
-		<!-- Confirmed CT2.5 -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
-		<abnormalType>KAMAEL_SPECIAL</abnormalType>
-		<castRange>400</castRange>
-		<effectPoint>669</effectPoint>
-		<effectRange>600</effectRange>
-		<hitTime>3000</hitTime>
-		<icon>icon.skill1444</icon>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>49</magicLvl>
-		<mpConsume>35</mpConsume>
-		<mpInitialConsume>9</mpInitialConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PAtk">
-				<amount>10</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>ANCIENTSWORD</item>
-					<item>CROSSBOW</item>
-					<item>RAPIER</item>
-				</weaponType>
-			</effect>
-			<effect name="MAtk">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="FatalBlowRate">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
-	</skill>
 	<skill id="1445" toLevel="18" name="Surrender to Dark">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>

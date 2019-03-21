@@ -681,24 +681,6 @@
 					<value level="6">40</value>
 					<value level="7">45</value>
 				</BOW>
-				<TWOHANDCROSSBOW>
-					<value level="1">10</value>
-					<value level="2">15</value>
-					<value level="3">20</value>
-					<value level="4">30</value>
-					<value level="5">35</value>
-					<value level="6">40</value>
-					<value level="7">45</value>
-				</TWOHANDCROSSBOW>
-				<CROSSBOW>
-					<value level="1">10</value>
-					<value level="2">15</value>
-					<value level="3">20</value>
-					<value level="4">30</value>
-					<value level="5">35</value>
-					<value level="6">40</value>
-					<value level="7">45</value>
-				</CROSSBOW>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
@@ -2651,20 +2633,6 @@
 					<value level="4">-40</value>
 					<value level="5">-48</value>
 				</DUALFIST>
-				<ANCIENTSWORD>
-					<value level="1">-16</value>
-					<value level="2">-24</value>
-					<value level="3">-32</value>
-					<value level="4">-40</value>
-					<value level="5">-48</value>
-				</ANCIENTSWORD>
-				<DUALDAGGER>
-					<value level="1">-16</value>
-					<value level="2">-24</value>
-					<value level="3">-32</value>
-					<value level="4">-40</value>
-					<value level="5">-48</value>
-				</DUALDAGGER>
 				<BLUNT>
 					<value level="1">-16</value>
 					<value level="2">-24</value>
@@ -2686,13 +2654,6 @@
 					<value level="4">-40</value>
 					<value level="5">-48</value>
 				</DUAL>
-				<RAPIER>
-					<value level="1">-16</value>
-					<value level="2">-24</value>
-					<value level="3">-32</value>
-					<value level="4">-40</value>
-					<value level="5">-48</value>
-				</RAPIER>
 			</effect>
 		</effects>
 	</skill>
@@ -3564,7 +3525,7 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>DAGGER</item>
-					<item>DUALDAGGER</item>
+
 				</weaponType>
 			</effect>
 			<effect name="CriticalRate">
@@ -3576,49 +3537,9 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>DAGGER</item>
-					<item>DUALDAGGER</item>
+
 				</weaponType>
 			</effect>
-		</effects>
-	</skill>
-	<skill id="1560" toLevel="1" name="Lucky Blow">
-		<!-- Glory Days confirmed -->
-		<castRange>40</castRange>
-		<coolTime>720</coolTime>
-		<effectPoint>-337</effectPoint>
-		<effectRange>400</effectRange>
-		<halfKillRate>8</halfKillRate>
-		<hitTime>1800</hitTime>
-		<icon>icon.skill1560</icon>
-		<magicLvl>83</magicLvl>
-		<mpConsume>82</mpConsume>
-		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
-		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DEATH</trait>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>DUALDAGGER</item>
-				</weaponType>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="FatalBlow">
-				<power>11234</power>
-				<criticalChance>30</criticalChance>
-				<chanceBoost>600</chanceBoost>
-				<overHit>true</overHit>
-			</effect>
-			<effect name="Lethal">
-				<fullLethal>0.1</fullLethal>
-				<halfLethal>8</halfLethal>
-			</effect>
-			<effect name="Spoil" />
 		</effects>
 	</skill>
 	<skill id="1561" toLevel="5" name="Battle Cry">
@@ -4183,7 +4104,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4267,7 +4188,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4351,7 +4272,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4435,7 +4356,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4519,7 +4440,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4601,7 +4522,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4739,7 +4660,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>

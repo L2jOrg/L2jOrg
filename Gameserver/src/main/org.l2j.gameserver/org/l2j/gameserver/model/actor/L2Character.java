@@ -825,7 +825,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                     // Check for arrows and MP
                     if (isPlayer()) {
                         // Check if there are arrows to use or else cancel the attack.
-                        if (!checkAndEquipAmmunition(weaponItem.getItemType().isCrossbow() ? EtcItemType.BOLT : EtcItemType.ARROW)) {
+                        if (!checkAndEquipAmmunition(EtcItemType.ARROW)) {
                             // Cancel the action because the L2PcInstance have no arrow
                             getAI().setIntention(AI_INTENTION_ACTIVE);
                             sendPacket(ActionFailed.STATIC_PACKET);
@@ -881,27 +881,18 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
             // Get the Attack Reuse Delay of the L2Weapon
             final Attack attack = generateAttackTargetData(target, weaponItem, attackType);
-            boolean crossbow = false;
             switch (attackType) {
-                case CROSSBOW:
-                case TWOHANDCROSSBOW: {
-                    crossbow = true;
-                }
                 case BOW: {
                     final int reuse = Formulas.calculateReuseTime(this, weaponItem);
 
                     // Consume arrows
                     final Inventory inventory = getInventory();
                     if (inventory != null) {
-                        inventory.reduceArrowCount(crossbow ? EtcItemType.BOLT : EtcItemType.ARROW);
+                        inventory.reduceArrowCount(EtcItemType.ARROW);
                     }
 
                     // Check if the L2Character is a L2PcInstance
                     if (isPlayer()) {
-                        if (crossbow) {
-                            sendPacket(SystemMessageId.YOUR_CROSSBOW_IS_PREPARING_TO_FIRE);
-                        }
-
                         sendPacket(new SetupGauge(getObjectId(), SetupGauge.RED, reuse));
                     }
 
@@ -917,9 +908,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                     }
                 }
                 case DUAL:
-                case DUALFIST:
-                case DUALBLUNT:
-                case DUALDAGGER: {
+                case DUALFIST: {
                     final int timeToHit2 = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, true) - timeToHit;
                     _hitTask = ThreadPoolManager.getInstance().schedule(() -> onFirstHitTimeForDual(weaponItem, attack, timeToHit, timeAtk, timeToHit2), timeToHit);
                     break;
@@ -957,7 +946,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     private Attack generateAttackTargetData(L2Character target, L2Weapon weapon, WeaponType weaponType) {
-        final boolean isDual = (WeaponType.DUAL == weaponType) || (WeaponType.DUALBLUNT == weaponType) || (WeaponType.DUALDAGGER == weaponType) || (WeaponType.DUALFIST == weaponType);
+        final boolean isDual = (WeaponType.DUAL == weaponType) || (WeaponType.DUALFIST == weaponType);
         final Attack attack = new Attack(this, target);
         boolean shotConsumed = false;
 

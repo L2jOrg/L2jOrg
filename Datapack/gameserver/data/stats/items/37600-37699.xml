@@ -204,30 +204,6 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="37695" name="Valentine Crossbow" type="Weapon">
-		<!-- Modifies the appearance of a weapon. Valentine Crossbow form. -->
-		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
-		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="weight" val="500" />
-		<stats>
-			<stat type="pAtk">1333</stat>
-			<stat type="mAtk">414</stat>
-			<stat type="pAtkSpd">325</stat>
-			<stat type="rCrit">12</stat>
-			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkRange">400</stat>
-		</stats>
-	</item>
 	<item id="37696" name="Valentine One-handed Magic Sword" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine One-handed Magic Sword form. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />

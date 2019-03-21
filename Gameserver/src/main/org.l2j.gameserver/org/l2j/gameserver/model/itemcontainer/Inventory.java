@@ -786,7 +786,7 @@ public abstract class Inventory extends ItemContainer {
             setPaperdollItem(PAPERDOLL_RHAND, item);
         } else if (targetSlot == L2Item.SLOT_L_HAND) {
             final L2ItemInstance rh = getPaperdollItem(PAPERDOLL_RHAND);
-            if ((rh != null) && (rh.getItem().getBodyPart() == L2Item.SLOT_LR_HAND) && !(((rh.getItemType() == WeaponType.BOW) && (item.getItemType() == EtcItemType.ARROW)) || (((rh.getItemType() == WeaponType.CROSSBOW) || (rh.getItemType() == WeaponType.TWOHANDCROSSBOW)) && (item.getItemType() == EtcItemType.BOLT)) || ((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE)))) {
+            if ((rh != null) && (rh.getItem().getBodyPart() == L2Item.SLOT_LR_HAND) && !(((rh.getItemType() == WeaponType.BOW) && (item.getItemType() == EtcItemType.ARROW)) || ((item.getItemType() == EtcItemType.BOLT)) || ((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE)))) {
                 setPaperdollItem(PAPERDOLL_RHAND, null);
             }
             setPaperdollItem(PAPERDOLL_LHAND, item);
@@ -1405,12 +1405,7 @@ public abstract class Inventory extends ItemContainer {
                 if (arrow != null) {
                     inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
                 }
-            } else if ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.TWOHANDCROSSBOW)) {
-                final L2ItemInstance bolts = inventory.getPaperdollItem(PAPERDOLL_LHAND);
-                if (bolts != null) {
-                    inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
-                }
-            } else if (item.getItemType() == WeaponType.FISHINGROD) {
+            }  else if (item.getItemType() == WeaponType.FISHINGROD) {
                 final L2ItemInstance lure = inventory.getPaperdollItem(PAPERDOLL_LHAND);
                 if (lure != null) {
                     inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
@@ -1428,11 +1423,6 @@ public abstract class Inventory extends ItemContainer {
                 final L2ItemInstance arrow = inventory.findArrowForBow(item.getItem());
                 if (arrow != null) {
                     inventory.setPaperdollItem(PAPERDOLL_LHAND, arrow);
-                }
-            } else if ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.TWOHANDCROSSBOW)) {
-                final L2ItemInstance bolts = inventory.findBoltForCrossBow(item.getItem());
-                if (bolts != null) {
-                    inventory.setPaperdollItem(PAPERDOLL_LHAND, bolts);
                 }
             }
         }

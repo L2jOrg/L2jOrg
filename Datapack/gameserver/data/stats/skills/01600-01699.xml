@@ -734,7 +734,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>BLUNT</item>
-					<item>DUALBLUNT</item>
+
 				</weaponType>
 			</condition>
 		</conditions>
@@ -799,7 +799,6 @@
 				<weaponType>
 					<item>POLE</item>
 					<item>BLUNT</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="TriggerSkillByDamage">
