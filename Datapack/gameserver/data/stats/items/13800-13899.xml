@@ -48,20 +48,4 @@
 			<stat type="pDef">12</stat>
 		</stats>
 	</item>
-	<item id="13897" name="Mithril Belt" type="Armor">
-		<!-- Bestows one of the special functions after using an S-grade Clasp, Pouch, Magical Clasp, or Magic Ornament. -->
-		<set name="icon" val="icon.armor_belt_i03" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="LIGHT" />
-		<set name="bodypart" val="waist" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="CLOTH" />
-		<set name="weight" val="440" />
-		<set name="price" val="1917000" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">14</stat>
-		</stats>
-	</item>
 </list>
