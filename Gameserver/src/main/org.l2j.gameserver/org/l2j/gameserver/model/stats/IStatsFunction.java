@@ -8,7 +8,6 @@ import org.l2j.gameserver.model.actor.transform.TransformType;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
-import org.l2j.gameserver.model.items.type.CrystalType;
 
 import java.util.Optional;
 
@@ -24,14 +23,7 @@ public interface IStatsFunction {
      * @return
      */
     static double calcEnchantDefBonus(L2ItemInstance item, double blessedBonus, int enchant) {
-        switch (item.getItem().getCrystalTypePlus()) {
-            case R: {
-                return ((2 * blessedBonus * enchant) + (6 * blessedBonus * Math.max(0, enchant - 3)));
-            }
-            default: {
-                return enchant + (3 * Math.max(0, enchant - 3));
-            }
-        }
+        return enchant + (3 * Math.max(0, enchant - 3));
     }
 
     /**
@@ -42,10 +34,7 @@ public interface IStatsFunction {
      */
     static double calcEnchantMatkBonus(L2ItemInstance item, double blessedBonus, int enchant) {
         switch (item.getItem().getCrystalTypePlus()) {
-            case R: {
-                return ((5 * blessedBonus * enchant) + (10 * blessedBonus * Math.max(0, enchant - 3)));
-            }
-            case S: {
+           case S: {
                 // M. Atk. increases by 4 for all weapons.
                 // Starting at +4, M. Atk. bonus double.
                 return (4 * enchant) + (8 * Math.max(0, enchant - 3));
@@ -73,15 +62,6 @@ public interface IStatsFunction {
      */
     static double calcEnchantedPAtkBonus(L2ItemInstance item, double blessedBonus, int enchant) {
         switch (item.getItem().getCrystalTypePlus()) {
-            case R: {
-                if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND) {
-                    if (item.getWeaponItem().getItemType().isRanged()) {
-                        return (12 * blessedBonus * enchant) + (24 * blessedBonus * Math.max(0, enchant - 3));
-                    }
-                    return (7 * blessedBonus * enchant) + (14 * blessedBonus * Math.max(0, enchant - 3));
-                }
-                return (6 * blessedBonus * enchant) + (12 * blessedBonus * Math.max(0, enchant - 3));
-            }
             case S: {
                 if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND) {
                     if (item.getWeaponItem().getItemType().isRanged()) {
@@ -151,7 +131,8 @@ public interface IStatsFunction {
         double value = 0;
         for (int slot : slots) {
             final L2ItemInstance item = creature.getInventory().getPaperdollItemByL2ItemId(slot);
-            if ((item != null) && (item.getEnchantLevel() >= 4) && (item.getItem().getCrystalTypePlus() == CrystalType.R)) {
+            // TODO Confirm if the bonus is applied for any Grade
+            if ((item != null) && (item.getEnchantLevel() >= 4)) {
                 value += calcEnchantBodyPartBonus(item.getEnchantLevel(), item.getItem().isBlessed());
             }
         }

@@ -236,31 +236,23 @@ public class RequestExEnchantItemAttribute extends IClientIncomingPacket {
         }
 
         boolean success = false;
-        switch (stone.getItem().getCrystalType()) {
-            case R: {
-                success = Rnd.get(100) < 80;
+        switch (Elementals.getItemElemental(stone.getId())._type) {
+            case Stone:
+            case Roughore: {
+                success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_STONE;
                 break;
             }
-            default: {
-                switch (Elementals.getItemElemental(stone.getId())._type) {
-                    case Stone:
-                    case Roughore: {
-                        success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_STONE;
-                        break;
-                    }
-                    case Crystal: {
-                        success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_CRYSTAL;
-                        break;
-                    }
-                    case Jewel: {
-                        success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_JEWEL;
-                        break;
-                    }
-                    case Energy: {
-                        success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_ENERGY;
-                        break;
-                    }
-                }
+            case Crystal: {
+                success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_CRYSTAL;
+                break;
+            }
+            case Jewel: {
+                success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_JEWEL;
+                break;
+            }
+            case Energy: {
+                success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_ENERGY;
+                break;
             }
         }
 

@@ -125,12 +125,6 @@ public class RequestCrystallizeEstimate extends IClientIncomingPacket {
                 }
                 break;
             }
-            case R: {
-                if (skillLevel < 6) {
-                    canCrystallize = false;
-                }
-                break;
-            }
         }
 
         if (!canCrystallize) {

@@ -36,9 +36,7 @@ public enum ItemGrade {
             case S84: {
                 return S;
             }
-            case R:{
-                return R;
-            }
+
         }
         return null;
     }
