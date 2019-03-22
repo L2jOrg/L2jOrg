@@ -108,10 +108,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     private final AtomicInteger _abnormalShieldBlocks = new AtomicInteger();
     private final Map<Integer, Integer> _knownRelations = new ConcurrentHashMap<>();
     private final Map<StatusUpdateType, Integer> _statusUpdates = new ConcurrentHashMap<>();
-    /**
-     * A list containing the dropped items of this fake player.
-     */
-    private final List<L2ItemInstance> _fakePlayerDrops = new CopyOnWriteArrayList<>();
+
     protected boolean _showSummonAnimation = false;
     protected boolean _isTeleporting = false;
     protected byte _zoneValidateCounter = 4;
@@ -3615,7 +3612,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     public void doAttack(double damage, L2Character target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
-        // Check if fake players should aggro each other.
         // Start attack stance and notify being attacked.
         if (target.hasAI()) {
             target.getAI().clientStartAutoAttack();

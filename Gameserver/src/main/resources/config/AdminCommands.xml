@@ -386,9 +386,6 @@
 	<!-- ADMIN MESSAGES -->
 	<admin command="admin_msg" accessLevel="100" />
 
-	<!-- ADMIN FAKE PLAYERS -->
-	<admin command="admin_fakechat" accessLevel="100" />
-
 	<!-- ADMIN MOB GROUP -->
 	<admin command="admin_mobmenu" accessLevel="100" />
 	<admin command="admin_mobgroup_list" accessLevel="100" />

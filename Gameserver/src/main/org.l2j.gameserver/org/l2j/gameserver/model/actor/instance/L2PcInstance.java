@@ -4780,9 +4780,6 @@ public final class L2PcInstance extends L2Playable {
         return (getActiveRequester() != null) || (_activeTradeList != null) || (_requestExpireTime > GameTimeController.getInstance().getGameTicks());
     }
 
-    /**
-     * Used by fake players to emulate proper behavior.
-     */
     public void blockRequest() {
         _requestExpireTime = GameTimeController.getInstance().getGameTicks() + (REQUEST_TIMEOUT * GameTimeController.TICKS_PER_SECOND);
     }

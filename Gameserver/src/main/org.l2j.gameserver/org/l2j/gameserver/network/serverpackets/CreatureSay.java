@@ -59,7 +59,6 @@ public final class CreatureSay extends IClientOutgoingPacket {
     }
 
     /**
-     * Used by fake players.
      *
      * @param sender
      * @param receiver

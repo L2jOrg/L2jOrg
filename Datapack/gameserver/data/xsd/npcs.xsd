@@ -201,8 +201,6 @@
 									<xs:attribute name="hasSummoner" type="xs:boolean" />
 									<xs:attribute name="canBeSown" type="xs:boolean" />
 									<xs:attribute name="isDeathPenalty" type="xs:boolean" />
-									<xs:attribute name="fakePlayer" type="xs:boolean" />
-									<xs:attribute name="fakePlayerTalkable" type="xs:boolean" />
 								</xs:complexType>
 							</xs:element>
 							<xs:element name="skillList" minOccurs="0" maxOccurs="1">

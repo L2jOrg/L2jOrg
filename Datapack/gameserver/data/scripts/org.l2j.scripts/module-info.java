@@ -127,7 +127,6 @@ open module org.l2j.scripts {
 
             //  custom
             custom.FactionSystem.FactionSystem,
-            custom.FakePlayers.PvpFlaggingStopTask,
             custom.listeners.ListenerTest,
             custom.NpcLocationInfo.NpcLocationInfo;
 
