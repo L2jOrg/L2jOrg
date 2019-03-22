@@ -7,7 +7,7 @@ module org.l2j.commons {
     requires java.compiler;
     requires cache.api;
     requires java.desktop;
-    requires primitive;
+    requires io.github.joealisson.primitive;
 
     exports org.l2j.commons.util;
     exports org.l2j.commons.xml;

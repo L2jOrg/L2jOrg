@@ -5,7 +5,7 @@ module org.l2j.gameserver {
     requires java.desktop;
     requires org.slf4j;
     requires io.github.joealisson.mmocore;
-    requires primitive;
+    requires io.github.joealisson.primitive;
     requires cache.api;
     requires jdk.unsupported;
     requires java.management;

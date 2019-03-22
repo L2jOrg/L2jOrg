@@ -25,7 +25,6 @@ sourceSets {
 dependencies {
     compile project(':Commons')
     compile 'io.github.joealisson:async-mmocore:2.2.1-SNAPSHOT'
-    compile 'io.github.joealisson:primitive:1.0.0-SNAPSHOT'
 
     runtime 'org.ehcache:ehcache:3.7.0'
     runtime 'org.apache.logging.log4j:log4j-slf4j18-impl:2.11.2'

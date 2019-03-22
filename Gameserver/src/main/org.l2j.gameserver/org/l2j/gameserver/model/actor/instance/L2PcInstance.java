@@ -8203,7 +8203,7 @@ public final class L2PcInstance extends L2Playable {
 
     public void startWarnUserTakeBreak() {
         if (_taskWarnUserTakeBreak == null) {
-            _taskWarnUserTakeBreak = ThreadPoolManager.getInstance().scheduleAtFixedRate(new WarnUserTakeBreakTask(this), 3600000, 3600000);
+            _taskWarnUserTakeBreak = ThreadPoolManager.scheduleAtFixedRate(new WarnUserTakeBreakTask(this), 3600000, 3600000);
         }
     }
 

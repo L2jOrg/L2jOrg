@@ -10,6 +10,7 @@ ext.moduleName = 'org.l2j.scripts'
 dependencies {
     compile project(':Commons')
     compile project(":Gameserver")
+    
 }
 
 sourceSets {

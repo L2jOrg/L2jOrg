@@ -6,6 +6,7 @@ open module org.l2j.scripts {
     requires java.sql;
     requires java.desktop;
     requires org.slf4j;
+    requires io.github.joealisson.primitive;
 
     exports handlers;
     exports quests;
