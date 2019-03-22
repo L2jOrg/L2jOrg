@@ -1,7 +1,6 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.util.CommonUtil;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.L2CharacterAI;
@@ -67,14 +66,6 @@ public final class L2World {
     private static final int REGIONS_X = (MAP_MAX_X >> SHIFT_BY) + OFFSET_X;
     private static final int REGIONS_Y = (MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y;
     /**
-     * Map containing all the Good players in game.
-     */
-    private static final Map<Integer, L2PcInstance> _allGoodPlayers = new ConcurrentHashMap<>();
-    /**
-     * Map containing all the Evil players in game.
-     */
-    private static final Map<Integer, L2PcInstance> _allEvilPlayers = new ConcurrentHashMap<>();
-    /**
      * Map containing all the players in game.
      */
     private final Map<Integer, L2PcInstance> _allPlayers = new ConcurrentHashMap<>();
@@ -119,14 +110,6 @@ public final class L2World {
         LOGGER.info("World Region Grid set up: {} by {}", REGIONS_X, REGIONS_Y);
     }
 
-    public static void addFactionPlayerToWorld(L2PcInstance player) {
-        if (player.isGood()) {
-            _allGoodPlayers.put(player.getObjectId(), player);
-        } else if (player.isEvil()) {
-            _allEvilPlayers.put(player.getObjectId(), player);
-        }
-    }
-
     public void addObject(L2Object object) {
         if (_allObjects.putIfAbsent(object.getObjectId(), object) != null) {
             LOGGER.warn("Object {}  already exists in the world. Stack Trace: {}", object, CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
@@ -146,8 +129,6 @@ public final class L2World {
                 Disconnection.of(existingPlayer).defaultSequence(false);
                 Disconnection.of(newPlayer).defaultSequence(false);
                 LOGGER.warn(getClass().getSimpleName() + ": Duplicate character!? Disconnected both characters (" + newPlayer.getName() + ")");
-            } else if (Config.FACTION_SYSTEM_ENABLED) {
-                addFactionPlayerToWorld(newPlayer);
             }
         }
     }
@@ -174,14 +155,6 @@ public final class L2World {
                 return;
             }
             _allPlayers.remove(object.getObjectId());
-
-            if (Config.FACTION_SYSTEM_ENABLED) {
-                if (player.isGood()) {
-                    _allGoodPlayers.remove(player.getObjectId());
-                } else if (player.isEvil()) {
-                    _allEvilPlayers.remove(player.getObjectId());
-                }
-            }
         }
     }
 
@@ -204,14 +177,6 @@ public final class L2World {
 
     public Collection<L2PcInstance> getPlayers() {
         return _allPlayers.values();
-    }
-
-    public Collection<L2PcInstance> getAllGoodPlayers() {
-        return _allGoodPlayers.values();
-    }
-
-    public Collection<L2PcInstance> getAllEvilPlayers() {
-        return _allEvilPlayers.values();
     }
 
     /**

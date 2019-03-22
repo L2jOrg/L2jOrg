@@ -6,7 +6,6 @@ import org.l2j.gameserver.data.xml.impl.SecondaryAuthData;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -19,10 +18,10 @@ import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.serverpackets.CharSelected;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.ServerClose;
-
-import java.nio.ByteBuffer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.nio.ByteBuffer;
 
 
 /**
@@ -96,25 +95,6 @@ public class CharacterSelect extends IClientIncomingPacket {
                         msg.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(client, Config.DUALBOX_CHECK_MAX_PLAYERS_PER_IP)));
                         client.sendPacket(msg);
                         return;
-                    }
-
-                    if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_BALANCE_ONLINE_PLAYERS) {
-                        if (info.isGood() && (L2World.getInstance().getAllGoodPlayers().size() >= (L2World.getInstance().getAllEvilPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))) {
-                            final NpcHtmlMessage msg = new NpcHtmlMessage();
-                            msg.setFile(null, "data/html/mods/Faction/ExceededOnlineLimit.htm");
-                            msg.replace("%more%", Config.FACTION_GOOD_TEAM_NAME);
-                            msg.replace("%less%", Config.FACTION_EVIL_TEAM_NAME);
-                            client.sendPacket(msg);
-                            return;
-                        }
-                        if (info.isEvil() && (L2World.getInstance().getAllEvilPlayers().size() >= (L2World.getInstance().getAllGoodPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))) {
-                            final NpcHtmlMessage msg = new NpcHtmlMessage();
-                            msg.setFile(null, "data/html/mods/Faction/ExceededOnlineLimit.htm");
-                            msg.replace("%more%", Config.FACTION_EVIL_TEAM_NAME);
-                            msg.replace("%less%", Config.FACTION_GOOD_TEAM_NAME);
-                            client.sendPacket(msg);
-                            return;
-                        }
                     }
 
                     // load up character from disk

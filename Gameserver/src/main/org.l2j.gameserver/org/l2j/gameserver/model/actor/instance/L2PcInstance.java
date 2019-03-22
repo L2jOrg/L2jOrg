@@ -119,7 +119,7 @@ public final class L2PcInstance extends L2Playable {
     private static final String DELETE_ITEM_REUSE_SAVE = "DELETE FROM character_item_reuse_save WHERE charId=?";
     // Character Character SQL String Definitions:
     private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,reputation,fame,raidbossPoints,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,online,clan_privs,wantspeace,base_class,nobless,power_grade,vitality_points,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-    private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,reputation=?,fame=?,raidbossPoints=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,online=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,bookmarkslot=?,vitality_points=?,language=?,faction=?,pccafe_points=? WHERE charId=?";
+    private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,reputation=?,fame=?,raidbossPoints=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,online=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,bookmarkslot=?,vitality_points=?,language=?,pccafe_points=? WHERE charId=?";
     private static final String UPDATE_CHARACTER_ACCESS = "UPDATE characters SET accesslevel = ? WHERE charId = ?";
     private static final String RESTORE_CHARACTER = "SELECT * FROM characters WHERE charId=?";
     // Character Teleport Bookmark:
@@ -379,7 +379,6 @@ public final class L2PcInstance extends L2Playable {
      * Faction System
      */
     private boolean _isGood = false;
-    private boolean _isEvil = false;
     /**
      * The L2FolkInstance corresponding to the last Folk which one the player talked.
      */
@@ -697,13 +696,6 @@ public final class L2PcInstance extends L2Playable {
                     player.setOnlineTime(rset.getLong("onlinetime"));
                     player.setNoble(rset.getInt("nobless") == 1);
 
-                    final int factionId = rset.getInt("faction");
-                    if (factionId == 1) {
-                        player.setGood();
-                    }
-                    if (factionId == 2) {
-                        player.setEvil();
-                    }
 
                     player.setClanJoinExpiryTime(rset.getLong("clan_join_expiry_time"));
                     if (player.getClanJoinExpiryTime() < System.currentTimeMillis()) {
@@ -4501,7 +4493,7 @@ public final class L2PcInstance extends L2Playable {
     }
 
     public void updatePvpTitleAndColor(boolean broadcastInfo) {
-        if (Config.PVP_COLOR_SYSTEM_ENABLED && !Config.FACTION_SYSTEM_ENABLED) // Faction system uses title colors.
+        if (Config.PVP_COLOR_SYSTEM_ENABLED)
         {
             if ((_pvpKills >= (Config.PVP_AMOUNT1)) && (_pvpKills < (Config.PVP_AMOUNT2))) {
                 setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT1 + " \u00AE");
@@ -4544,10 +4536,6 @@ public final class L2PcInstance extends L2Playable {
         }
 
         if (this == player_target) {
-            return;
-        }
-
-        if (Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && ((isGood() && player_target.isEvil()) || (isEvil() && player_target.isGood()))) {
             return;
         }
 
@@ -5861,16 +5849,8 @@ public final class L2PcInstance extends L2Playable {
             statement.setInt(45, getStat().getBaseVitalityPoints());
             statement.setString(46, _lang);
 
-            int factionId = 0;
-            if (_isGood) {
-                factionId = 1;
-            }
-            if (_isEvil) {
-                factionId = 2;
-            }
-            statement.setInt(47, factionId);
-            statement.setInt(48, _pcCafePoints);
-            statement.setInt(49, getObjectId());
+            statement.setInt(47, _pcCafePoints);
+            statement.setInt(48, getObjectId());
 
             statement.execute();
         } catch (Exception e) {
@@ -6782,10 +6762,6 @@ public final class L2PcInstance extends L2Playable {
 
             // Now check again if the L2PcInstance is in pvp zone, but this time at siege PvP zone, applying clan/ally checks
             if (isInsideZone(ZoneId.PVP) && attackerPlayer.isInsideZone(ZoneId.PVP) && isInsideZone(ZoneId.SIEGE) && attackerPlayer.isInsideZone(ZoneId.SIEGE)) {
-                return true;
-            }
-
-            if (Config.FACTION_SYSTEM_ENABLED && ((isGood() && attackerPlayer.isEvil()) || (isEvil() && attackerPlayer.isGood()))) {
                 return true;
             }
         }
@@ -10867,24 +10843,6 @@ public final class L2PcInstance extends L2Playable {
     public boolean hasCharmOfCourage() {
         return _hasCharmOfCourage;
 
-    }
-
-    public boolean isGood() {
-        return _isGood;
-    }
-
-    public boolean isEvil() {
-        return _isEvil;
-    }
-
-    public void setGood() {
-        _isGood = true;
-        _isEvil = false;
-    }
-
-    public void setEvil() {
-        _isGood = false;
-        _isEvil = true;
     }
 
     /**

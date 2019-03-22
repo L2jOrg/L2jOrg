@@ -211,13 +211,6 @@ public class CharSelectionInfo extends IClientOutgoingPacket {
         charInfopackage.setY(chardata.getInt("y"));
         charInfopackage.setZ(chardata.getInt("z"));
 
-        final int faction = chardata.getInt("faction");
-        if (faction == 1) {
-            charInfopackage.setGood();
-        }
-        if (faction == 2) {
-            charInfopackage.setEvil();
-        }
 
         if (Config.MULTILANG_ENABLE) {
             String lang = chardata.getString("language");

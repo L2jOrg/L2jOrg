@@ -131,10 +131,6 @@ public class GameServer {
         BeautyShopData.getInstance();
         MentorManager.getInstance();
 
-        if (Config.FACTION_SYSTEM_ENABLED) {
-            FactionManager.getInstance();
-        }
-
         if (Config.PREMIUM_SYSTEM_ENABLED) {
             LOGGER.info("PremiumManager: Premium system is enabled.");
             PremiumManager.getInstance();

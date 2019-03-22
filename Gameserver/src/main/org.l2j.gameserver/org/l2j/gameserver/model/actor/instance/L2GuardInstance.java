@@ -1,6 +1,5 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.L2World;
@@ -116,12 +115,6 @@ public class L2GuardInstance extends L2Attackable {
     public void onAction(L2PcInstance player, boolean interact) {
         if (!canTarget(player)) {
             return;
-        }
-
-        if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && ((player.isGood() && getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME)) || (player.isEvil() && getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME)))) {
-            interact = false;
-            // TODO: Fix normal targeting
-            player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
         }
 
         // Check if the L2PcInstance already target the L2GuardInstance

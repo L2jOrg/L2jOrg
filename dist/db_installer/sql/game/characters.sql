@@ -53,7 +53,6 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `vitality_points` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
   `createDate` date NOT NULL DEFAULT '2015-01-01',
   `language` VARCHAR(2) DEFAULT NULL,
-  `faction` TINYINT UNSIGNED NOT NULL DEFAULT '0',
   `pccafe_points` int(6) NOT NULL DEFAULT '0',
   PRIMARY KEY (`charId`),
   KEY `account_name` (`account_name`),

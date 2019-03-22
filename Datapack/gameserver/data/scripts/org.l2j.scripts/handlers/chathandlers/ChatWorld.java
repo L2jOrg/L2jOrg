@@ -16,11 +16,6 @@
  */
 package handlers.chathandlers;
 
-import java.time.Duration;
-import java.time.Instant;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IChatHandler;
@@ -31,6 +26,11 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+
+import java.time.Duration;
+import java.time.Instant;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * World chat handler.
@@ -95,21 +95,7 @@ public final class ChatWorld implements IChatHandler
 			}
 			
 			final CreatureSay cs = new CreatureSay(activeChar, type, text);
-			if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_SPECIFIC_CHAT)
-			{
-				if (activeChar.isGood())
-				{
-					L2World.getInstance().getAllGoodPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
-				}
-				if (activeChar.isEvil())
-				{
-					L2World.getInstance().getAllEvilPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
-				}
-			}
-			else
-			{
-				L2World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
-			}
+			L2World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
 			
 			activeChar.setWorldChatUsed(activeChar.getWorldChatUsed() + 1);
 			activeChar.sendPacket(new ExWorldChatCnt(activeChar));

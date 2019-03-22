@@ -66,24 +66,7 @@ public final class ChatShout implements IChatHandler
 			{
 				if ((region == MapRegionManager.getInstance().getMapRegionLocId(player)) && !BlockList.isBlocked(player, activeChar) && (player.getInstanceId() == activeChar.getInstanceId()) && !BlockList.isBlocked(player, activeChar))
 				{
-					if (Config.FACTION_SYSTEM_ENABLED)
-					{
-						if (Config.FACTION_SPECIFIC_CHAT)
-						{
-							if ((activeChar.isGood() && player.isGood()) || (activeChar.isEvil() && player.isEvil()))
-							{
-								player.sendPacket(cs);
-							}
-						}
-						else
-						{
-							player.sendPacket(cs);
-						}
-					}
-					else
-					{
-						player.sendPacket(cs);
-					}
+					player.sendPacket(cs);
 				}
 			}
 		}
@@ -97,26 +80,8 @@ public final class ChatShout implements IChatHandler
 			
 			for (L2PcInstance player : L2World.getInstance().getPlayers())
 			{
-				if (!BlockList.isBlocked(player, activeChar))
-				{
-					if (Config.FACTION_SYSTEM_ENABLED)
-					{
-						if (Config.FACTION_SPECIFIC_CHAT)
-						{
-							if ((activeChar.isGood() && player.isGood()) || (activeChar.isEvil() && player.isEvil()))
-							{
-								player.sendPacket(cs);
-							}
-						}
-						else
-						{
-							player.sendPacket(cs);
-						}
-					}
-					else
-					{
-						player.sendPacket(cs);
-					}
+				if (!BlockList.isBlocked(player, activeChar)) {
+					player.sendPacket(cs);
 				}
 			}
 		}

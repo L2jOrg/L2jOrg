@@ -126,7 +126,6 @@ open module org.l2j.scripts {
             village.master.DarkElfChange2.DarkElfChange2,
 
             //  custom
-            custom.FactionSystem.FactionSystem,
             custom.listeners.ListenerTest,
             custom.NpcLocationInfo.NpcLocationInfo;
 

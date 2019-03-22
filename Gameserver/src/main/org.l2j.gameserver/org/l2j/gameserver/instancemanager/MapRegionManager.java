@@ -1,6 +1,5 @@
 package org.l2j.gameserver.instancemanager;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.model.L2MapRegion;
 import org.l2j.gameserver.model.L2Object;
@@ -285,15 +284,6 @@ public final class MapRegionManager implements IGameXmlReader {
                 if (loc != null) {
                     return loc;
                 }
-            }
-        }
-
-        if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_RESPAWN_AT_BASE) {
-            if (activeChar.getActingPlayer().isGood()) {
-                return Config.FACTION_GOOD_BASE_LOCATION;
-            }
-            if (activeChar.getActingPlayer().isEvil()) {
-                return Config.FACTION_EVIL_BASE_LOCATION;
             }
         }
 

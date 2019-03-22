@@ -287,21 +287,6 @@ public class EnterWorld extends IClientIncomingPacket {
             activeChar.sendPacket(new ExUnReadMailCount(activeChar));
         }
 
-        // Faction System
-        if (Config.FACTION_SYSTEM_ENABLED) {
-            if (activeChar.isGood()) {
-                activeChar.getAppearance().setNameColor(Config.FACTION_GOOD_NAME_COLOR);
-                activeChar.getAppearance().setTitleColor(Config.FACTION_GOOD_NAME_COLOR);
-                activeChar.sendMessage("Welcome " + activeChar.getName() + ", you are fighting for the " + Config.FACTION_GOOD_TEAM_NAME + " faction.");
-                activeChar.sendPacket(new ExShowScreenMessage("Welcome " + activeChar.getName() + ", you are fighting for the " + Config.FACTION_GOOD_TEAM_NAME + " faction.", 10000));
-            } else if (activeChar.isEvil()) {
-                activeChar.getAppearance().setNameColor(Config.FACTION_EVIL_NAME_COLOR);
-                activeChar.getAppearance().setTitleColor(Config.FACTION_EVIL_NAME_COLOR);
-                activeChar.sendMessage("Welcome " + activeChar.getName() + ", you are fighting for the " + Config.FACTION_EVIL_TEAM_NAME + " faction.");
-                activeChar.sendPacket(new ExShowScreenMessage("Welcome " + activeChar.getName() + ", you are fighting for the " + Config.FACTION_EVIL_TEAM_NAME + " faction.", 10000));
-            }
-        }
-
         Quest.playerEnter(activeChar);
 
         // Send Quest List

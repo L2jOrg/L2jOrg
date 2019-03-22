@@ -78,11 +78,6 @@ public final class ChatWhisper implements IChatHandler
 				activeChar.sendMessage("Player is in offline mode.");
 				return;
 			}
-			if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_SPECIFIC_CHAT && ((activeChar.isGood() && receiver.isEvil()) || (activeChar.isEvil() && receiver.isGood())))
-			{
-				activeChar.sendMessage("Player belongs to the opposing faction.");
-				return;
-			}
 			if ((activeChar.getLevel() < Config.MINIMUM_CHAT_LEVEL) && !activeChar.getWhisperers().contains(receiver.getObjectId()) && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
 			{
 				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NON_PREMIUM_USERS_LV_S1_OR_LOWER_CAN_RESPOND_TO_A_WHISPER_BUT_CANNOT_INITIATE_IT).addInt(Config.MINIMUM_CHAT_LEVEL));

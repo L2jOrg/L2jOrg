@@ -79,7 +79,6 @@ public final class Config {
     private static final String CUSTOM_CHAT_MODERATION_CONFIG_FILE = "./config/Custom/ChatModeration.ini";
     private static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "./config/Custom/CommunityBoard.ini";
     private static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
-    private static final String CUSTOM_FACTION_SYSTEM_CONFIG_FILE = "./config/Custom/FactionSystem.ini";
     private static final String CUSTOM_FIND_PVP_CONFIG_FILE = "./config/Custom/FindPvP.ini";
     private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
     private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
@@ -991,24 +990,6 @@ public final class Config {
     public static int COMMUNITY_PREMIUM_PRICE_PER_DAY;
     public static List<Integer> COMMUNITY_AVAILABLE_BUFFS;
     public static Map<String, Location> COMMUNITY_AVAILABLE_TELEPORTS;
-    public static boolean FACTION_SYSTEM_ENABLED;
-    public static Location FACTION_STARTING_LOCATION;
-    public static int FACTION_MANAGER_NPCID;
-    public static Location FACTION_MANAGER_LOCATION;
-    public static Location FACTION_GOOD_BASE_LOCATION;
-    public static Location FACTION_EVIL_BASE_LOCATION;
-    public static String FACTION_GOOD_TEAM_NAME;
-    public static String FACTION_EVIL_TEAM_NAME;
-    public static int FACTION_GOOD_NAME_COLOR;
-    public static int FACTION_EVIL_NAME_COLOR;
-    public static boolean FACTION_GUARDS_ENABLED;
-    public static int FACTION_GOOD_GUARD_NPCID;
-    public static int FACTION_EVIL_GUARD_NPCID;
-    public static boolean FACTION_RESPAWN_AT_BASE;
-    public static boolean FACTION_AUTO_NOBLESS;
-    public static boolean FACTION_SPECIFIC_CHAT;
-    public static boolean FACTION_BALANCE_ONLINE_PLAYERS;
-    public static int FACTION_BALANCE_PLAYER_EXCEED_LIMIT;
 
 
     public static boolean ENABLE_FIND_PVP;
@@ -2185,33 +2166,6 @@ public final class Config {
                 }
             }
         }
-
-        // Load FactionSystem config file (if exists)
-        final PropertiesParser FactionSystem = new PropertiesParser(CUSTOM_FACTION_SYSTEM_CONFIG_FILE);
-
-        String[] tempString;
-        FACTION_SYSTEM_ENABLED = Boolean.valueOf(FactionSystem.getBoolean("EnableFactionSystem", false));
-        tempString = FactionSystem.getString("StartingLocation", "85332,16199,-1252").split(",");
-        FACTION_STARTING_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]));
-        FACTION_MANAGER_NPCID = FactionSystem.getInt("FactionManagerNpcId", 500);
-        tempString = FactionSystem.getString("ManagerSpawnLocation", "85712,15974,-1260,26808").split(",");
-        FACTION_MANAGER_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]), tempString[3] != null ? Integer.parseInt(tempString[3]) : 0);
-        tempString = FactionSystem.getString("GoodBaseLocation", "45306,48878,-3058").split(",");
-        FACTION_GOOD_BASE_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]));
-        tempString = FactionSystem.getString("EvilBaseLocation", "-44037,-113283,-237").split(",");
-        FACTION_EVIL_BASE_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]));
-        FACTION_GOOD_TEAM_NAME = FactionSystem.getString("GoodTeamName", "Good");
-        FACTION_EVIL_TEAM_NAME = FactionSystem.getString("EvilTeamName", "Evil");
-        FACTION_GOOD_NAME_COLOR = Integer.decode("0x" + FactionSystem.getString("GoodNameColor", "00FF00"));
-        FACTION_EVIL_NAME_COLOR = Integer.decode("0x" + FactionSystem.getString("EvilNameColor", "0000FF"));
-        FACTION_GUARDS_ENABLED = FactionSystem.getBoolean("EnableFactionGuards", true);
-        FACTION_GOOD_GUARD_NPCID = FactionSystem.getInt("GoodGuardNpcId", 501);
-        FACTION_EVIL_GUARD_NPCID = FactionSystem.getInt("EvilGuardNpcId", 502);
-        FACTION_RESPAWN_AT_BASE = FactionSystem.getBoolean("RespawnAtFactionBase", true);
-        FACTION_AUTO_NOBLESS = FactionSystem.getBoolean("FactionAutoNobless", false);
-        FACTION_SPECIFIC_CHAT = FactionSystem.getBoolean("EnableFactionChat", true);
-        FACTION_BALANCE_ONLINE_PLAYERS = FactionSystem.getBoolean("BalanceOnlinePlayers", true);
-        FACTION_BALANCE_PLAYER_EXCEED_LIMIT = FactionSystem.getInt("BalancePlayerExceedLimit", 20);
 
         // Load FindPvP config file (if exists)
         final PropertiesParser FindPvP = new PropertiesParser(CUSTOM_FIND_PVP_CONFIG_FILE);

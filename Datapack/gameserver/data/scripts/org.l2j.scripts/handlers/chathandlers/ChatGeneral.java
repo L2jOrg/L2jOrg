@@ -16,8 +16,6 @@
  */
 package handlers.chathandlers;
 
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IChatHandler;
@@ -30,6 +28,8 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+
+import java.util.StringTokenizer;
 
 /**
  * General Chat Handler.
@@ -93,28 +93,7 @@ public final class ChatGeneral implements IChatHandler
 			{
 				if ((player != null) && !BlockList.isBlocked(player, activeChar))
 				{
-					if (Config.FACTION_SYSTEM_ENABLED)
-					{
-						if (Config.FACTION_SPECIFIC_CHAT)
-						{
-							if ((activeChar.isGood() && player.isEvil()) || (activeChar.isEvil() && player.isGood()))
-							{
-								player.sendPacket(csRandom);
-							}
-							else
-							{
-								player.sendPacket(cs);
-							}
-						}
-						else
-						{
-							player.sendPacket(cs);
-						}
-					}
-					else
-					{
-						player.sendPacket(cs);
-					}
+					player.sendPacket(cs);
 				}
 			});
 			
