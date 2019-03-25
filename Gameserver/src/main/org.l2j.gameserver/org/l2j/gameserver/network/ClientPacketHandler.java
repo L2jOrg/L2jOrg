@@ -22,16 +22,24 @@ public class ClientPacketHandler implements PacketHandler<L2GameClient> {
         var opcode = toUnsignedInt(buffer.get());
 
         if(opcode >= IncomingPackets.PACKET_ARRAY.length) {
-            unknownPacket(buffer, opcode);
+            unknownPacket(buffer, opcode, null);
             return null;
         }
 
         PacketFactory packetFactory = getPacketFactory(opcode, buffer);
 
+        return MakePacketWithFactory(buffer, client, opcode, packetFactory);
+    }
+
+    private ReadablePacket<L2GameClient> MakePacketWithFactory(ByteBuffer buffer, L2GameClient client, int opcode, PacketFactory packetFactory) {
         ReadablePacket<L2GameClient> packet;
 
         if (isNull(packetFactory) || isNull((packet = packetFactory.newIncomingPacket()))) {
-            unknownPacket(buffer, opcode);
+            unknownPacket(buffer, opcode, packetFactory);
+            return null;
+        }
+
+        if(packet instanceof DiscardPacket) {
             return null;
         }
 
@@ -43,8 +51,8 @@ public class ClientPacketHandler implements PacketHandler<L2GameClient> {
         return packet;
     }
 
-    private void unknownPacket(ByteBuffer buffer, int opcode) {
-        LOGGER.warn("Unknown packet: {} - {}", toHexString(opcode), Util.printData(buffer.array(), buffer.limit()));
+    private void unknownPacket(ByteBuffer buffer, int opcode, PacketFactory packetFactory) {
+        LOGGER.warn("Unknown ({}) packet: {} - {}", packetFactory, toHexString(opcode), Util.printData(buffer.array(), buffer.limit()));
     }
 
     private PacketFactory getPacketFactory(int opcode, ByteBuffer buffer) {

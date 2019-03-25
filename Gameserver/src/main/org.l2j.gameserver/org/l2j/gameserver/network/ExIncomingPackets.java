@@ -242,7 +242,7 @@ public enum ExIncomingPackets implements PacketFactory {
     REQUEST_EX_TRY_TO_PUT_SHAPE_SHIFTING_ENCHANT_SUPPORT_ITEM(0xC5, null, ConnectionState.IN_GAME), // RequestExTryToPutShapeShiftingEnchantSupportItem - Appearance Stone not used on classic
     REQUEST_EX_CANCEL_SHAPE_SHIFTING_ITEM(0xC6, null, ConnectionState.IN_GAME), // RequestExCancelShape_Shifting_Item - Appearance Stone not used on classic
     REQUEST_SHAPE_SHIFTING_ITEM(0xC7, null, ConnectionState.IN_GAME), // RequestShapeShiftingItem - Appearance Stone not used on classic
-    NC_GUARD_SEND_DATA_TO_SERVER(0xC8, null, ConnectionState.IN_GAME),
+    NC_GUARD_SEND_DATA_TO_SERVER(0xC8, DiscardPacket::new, ConnectionState.IN_GAME),
     REQUEST_EVENT_KALIE_TOKEN(0xC9, null, ConnectionState.IN_GAME),
     REQUEST_SHOW_BEAUTY_LIST(0xCA, RequestShowBeautyList::new, ConnectionState.IN_GAME),
     REQUEST_REGIST_BEAUTY(0xCB, RequestRegistBeauty::new, ConnectionState.IN_GAME),
@@ -297,7 +297,7 @@ public enum ExIncomingPackets implements PacketFactory {
     REQUEST_ALCHEMY_TRY_MIX_CUBE(0x101, null, ConnectionState.IN_GAME),
     REQUEST_ALCHEMY_CONVERSION(0x102, null, ConnectionState.IN_GAME),
     SEND_EXECUTED_UI_EVENTS_COUNT(0x103, null, ConnectionState.IN_GAME),
-    EX_SEND_CLIENT_INI(0x104, null, ConnectionState.AUTHENTICATED),
+    EX_SEND_CLIENT_INI(0x104, DiscardPacket::new, ConnectionState.AUTHENTICATED),
     REQUEST_EX_AUTO_FISH(0x105, ExRequestAutoFish::new, ConnectionState.IN_GAME),
     REQUEST_VIP_ATTENDANCE_ITEM_LIST(0x106, RequestVipAttendanceItemList::new, ConnectionState.IN_GAME),
     REQUEST_VIP_ATTENDANCE_CHECK(0x107, RequestVipAttendanceCheck::new, ConnectionState.IN_GAME),

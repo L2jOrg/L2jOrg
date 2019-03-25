@@ -59,7 +59,7 @@ public class Util {
 
     private static int appendCharAtPoint(byte[] data, StringBuilder result, int charpoint) {
         int t1 = data[charpoint++];
-        if ((t1 > 0x1f) && (t1 < (byte) 0x80)) {
+        if ((t1 > 0x1f) && (t1 < 0x80)) {
             result.append((char) t1);
         } else {
             result.append('.');
@@ -68,8 +68,11 @@ public class Util {
     }
 
     private static String fillHex(int data, int digits) {
-        StringBuilder builder = new StringBuilder(Integer.toHexString(data));
-        builder.insert(0, "0".repeat(digits));
+        var builder = new StringBuilder(Integer.toHexString(data));
+        var fill = digits - builder.length();
+        if(fill > 0) {
+            builder.insert(0, "0".repeat(fill));
+        }
         return builder.toString();
     }
 
