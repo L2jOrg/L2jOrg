@@ -13,13 +13,11 @@ public class SetAccountInfo extends SendablePacket
 {
 	private String _account;
 	private int _size;
-	private int[] _deleteChars;
 
-	public SetAccountInfo(String account, int size, int[] deleteChars)
+	public SetAccountInfo(String account, int size)
 	{
 		_account = account;
 		_size = size;
-		_deleteChars = deleteChars;
 	}
 
 	@Override
@@ -27,8 +25,5 @@ public class SetAccountInfo extends SendablePacket
 		buffer.put((byte)0x05);
 		writeString(_account, buffer);
 		buffer.put((byte)_size);
-		buffer.putInt(_deleteChars.length);
-		for(int i : _deleteChars)
-			buffer.putInt(i);
 	}
 }
