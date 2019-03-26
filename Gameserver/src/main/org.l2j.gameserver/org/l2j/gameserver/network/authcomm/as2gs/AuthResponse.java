@@ -3,68 +3,32 @@ package org.l2j.gameserver.network.authcomm.as2gs;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerInGame;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.List;
 
-/**
- * @reworked by Bonux
-**/
-public class AuthResponse extends ReceivablePacket
-{
-	private static class ServerInfo
-	{
-		private final int _id;
-		private final String _name;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
-		public ServerInfo(int id, String name)
-		{
-			_id = id;
-			_name = name;
-		}
+public class AuthResponse extends ReceivablePacket {
 
-		public int getId()
-		{
-			return _id;
-		}
+	private static final Logger LOGGER = LoggerFactory.getLogger(AuthResponse.class);
 
-		public String getName()
-		{
-			return _name;
-		}
-	}
-
-	private static final Logger _log = LoggerFactory.getLogger(AuthResponse.class);
-
-	private List<ServerInfo> _servers;
+	private int serverId;
+	private String serverName;
 
 	@Override
-	protected void readImpl(ByteBuffer buffer)
-	{
-		int serverId = buffer.get();
-		String serverName = readString(buffer);
-		if(buffer.remaining() <= 0) {
-			_servers = new ArrayList<>(1);
-			_servers.add(new ServerInfo(serverId, serverName));
-		} else {
-			int serversCount = buffer.get();
-			_servers = new ArrayList<>(serversCount);
-			for(int i = 0; i < serversCount; i++)
-				_servers.add(new ServerInfo(buffer.get(), readString(buffer)));
-		}
+	protected void readImpl(ByteBuffer buffer) {
+		serverId = buffer.get();
+		serverName = readString(buffer);
 	}
 
 	@Override
-	protected void runImpl()
-	{
-		for(ServerInfo info : _servers)
-			_log.info("Registered on authserver as " + info.getId() + " [" + info.getName() + "]");
-
+	protected void runImpl() {
 		String[] accounts = AuthServerCommunication.getInstance().getAccounts();
-		for(String account : accounts)
-			sendPacket(new PlayerInGame(account));
+		sendPacket(new PlayerInGame(accounts));
+		getSettings(ServerSettings.class).setServerId(serverId);
+		LOGGER.info("Registered on authserver as {} [{}]", serverId, serverName);
 	}
 }

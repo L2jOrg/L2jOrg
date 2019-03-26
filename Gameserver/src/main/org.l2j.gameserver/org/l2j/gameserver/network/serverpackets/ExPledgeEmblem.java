@@ -1,10 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.settings.ServerSettings;
 
 import java.nio.ByteBuffer;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author -Wooden-, Sdw
@@ -27,7 +29,7 @@ public class ExPledgeEmblem extends IClientOutgoingPacket {
     public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.EX_PLEDGE_EMBLEM.writeId(packet);
 
-        packet.putInt(Config.SERVER_ID);
+        packet.putInt(getSettings(ServerSettings.class).serverId());
         packet.putInt(_clanId);
         packet.putInt(_crestId);
         packet.putInt(_chunkId);

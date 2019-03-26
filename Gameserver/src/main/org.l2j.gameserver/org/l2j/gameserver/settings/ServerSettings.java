@@ -59,6 +59,10 @@ public class ServerSettings implements Settings {
         return serverId;
     }
 
+    public void setServerId(int serverId) {
+        this.serverId = serverId;
+    }
+
     public short port() {
         return port;
     }

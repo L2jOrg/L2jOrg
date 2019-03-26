@@ -16,7 +16,6 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.*;
-import java.math.BigInteger;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -61,7 +60,6 @@ public final class Config {
     private static final String SERVER_CONFIG_FILE = "./config/Server.ini";
     private static final String TRAINING_CAMP_CONFIG_FILE = "./config/TrainingCamp.ini";
     private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
-    private static final String HEXID_FILE = "./config/hexid.txt";
     private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
 
     public static final int MAX_ACTIVE_ACCOUNTS_ON_ONE_IP = 0;
@@ -767,7 +765,6 @@ public final class Config {
     public static boolean SHOW_LICENCE;
     public static boolean SHOW_PI_AGREEMENT;
     public static boolean ACCEPT_NEW_GAMESERVER;
-    public static int SERVER_ID;
     public static byte[] HEX_ID;
     public static boolean AUTO_CREATE_ACCOUNTS;
     public static boolean FLOOD_PROTECTION;
@@ -1927,24 +1924,6 @@ public final class Config {
             ALT_OLY_COMPETITION_DAYS.add(Integer.parseInt(s));
         }
 
-        final File hexIdFile = new File(HEXID_FILE);
-        if (hexIdFile.exists()) {
-            final PropertiesParser hexId = new PropertiesParser(hexIdFile);
-
-            if (hexId.containskey("ServerID") && hexId.containskey("HexID")) {
-                SERVER_ID = hexId.getInt("ServerID", 1);
-                try {
-                    HEX_ID = new BigInteger(hexId.getString("HexID", null), 16).toByteArray();
-                } catch (Exception e) {
-                    LOGGER.warn("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
-                }
-            }
-        }
-
-        if (HEX_ID == null) {
-            LOGGER.warn("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
-        }
-
         // Grand bosses
         final PropertiesParser GrandBossSettings = new PropertiesParser(GRANDBOSS_CONFIG_FILE);
 
@@ -2423,43 +2402,6 @@ public final class Config {
         final PropertiesParser WalkerBotProtection = new PropertiesParser(CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE);
 
         L2WALKER_PROTECTION = WalkerBotProtection.getBoolean("L2WalkerProtection", false);
-    }
-
-    /**
-     * Save hexadecimal ID of the server in the config file.<br>
-     * Check {@link #HEXID_FILE}.
-     *
-     * @param serverId the ID of the server whose hexId to save
-     * @param hexId    the hexadecimal ID to store
-     */
-    public static void saveHexid(int serverId, String hexId) {
-        saveHexid(serverId, hexId, HEXID_FILE);
-    }
-
-    /**
-     * Save hexadecimal ID of the server in the config file.
-     *
-     * @param serverId the ID of the server whose hexId to save
-     * @param hexId    the hexadecimal ID to store
-     * @param fileName name of the config file
-     */
-    public static void saveHexid(int serverId, String hexId, String fileName) {
-        try {
-            final Properties hexSetting = new Properties();
-            final File file = new File(fileName);
-            // Create a new empty file only if it doesn't exist
-            if (!file.exists()) {
-                try (OutputStream out = new FileOutputStream(file)) {
-                    hexSetting.setProperty("ServerID", String.valueOf(serverId));
-                    hexSetting.setProperty("HexID", hexId);
-                    hexSetting.store(out, "The HexId to Auth into LoginServer");
-                    LOGGER.info("Gameserver: Generated new HexID file for server id " + serverId + ".");
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.warn(StringUtil.concat("Failed to save hex id to ", fileName, " File."));
-            LOGGER.warn("Config: " + e.getMessage());
-        }
     }
 
     /**
