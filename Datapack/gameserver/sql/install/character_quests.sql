@@ -1,8 +1,9 @@
+DROP TABLE IF EXISTS `character_quests`;
 CREATE TABLE IF NOT EXISTS `character_quests` (
-	`char_id` INT NOT NULL DEFAULT '0',
-	`id` INT NOT NULL,
-	`var` VARCHAR(40) CHARACTER SET UTF8 NOT NULL,
-	`value` VARCHAR(255) CHARACTER SET UTF8,
-	PRIMARY KEY  (`char_id`,`id`,`var`),
-	FOREIGN KEY FK_QUEST_CHARACTER(char_id) REFERENCES characters(obj_Id) ON DELETE CASCADE
-);
+  `charId` INT UNSIGNED NOT NULL DEFAULT 0,
+  `name` VARCHAR(60) NOT NULL DEFAULT '',
+  `var`  VARCHAR(20) NOT NULL DEFAULT '',
+  `value` VARCHAR(255) ,
+  `class_index` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`charId`,`name`,`var`,`class_index`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

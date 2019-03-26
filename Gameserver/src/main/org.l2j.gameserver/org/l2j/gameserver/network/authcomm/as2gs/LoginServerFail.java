@@ -7,38 +7,38 @@ import org.slf4j.LoggerFactory;
 
 import java.nio.ByteBuffer;
 
-public class LoginServerFail extends ReceivablePacket
-{
-	private static final Logger logger = LoggerFactory.getLogger(LoginServerFail.class);
+public class LoginServerFail extends ReceivablePacket {
 
-	private static final String[] REASONS = {
-			"none",
-			"IP banned",
-			"IP reserved",
-			"wrong hexid",
-			"ID reserved",
-			"no free ID",
-			"not authed",
-			"already logged in" };
+    private static final Logger logger = LoggerFactory.getLogger(LoginServerFail.class);
 
-	private String _reason;
-	private boolean _restartConnection = true;
+    private static final String[] REASONS = {
+        "none",
+        "IP banned",
+        "IP reserved",
+        "wrong hexid",
+        "ID reserved",
+        "no free ID",
+        "not authed",
+        "already logged in"
+    };
 
-	@Override
-	protected void readImpl(ByteBuffer buffer) {
-		int reasonId = buffer.get();
-		if(buffer.remaining() <= 0) {
-			_reason = "Authserver registration failed! Reason: " + REASONS[reasonId];
-		} else {
-			_reason = readString(buffer);
-			_restartConnection = buffer.get() > 0;
-		}
-	}
+    private String _reason;
+    private boolean _restartConnection = true;
 
-	protected void runImpl()
-	{
-		logger.warn(_reason);
-		if(_restartConnection)
-			AuthServerCommunication.getInstance().restart();
-	}
+    @Override
+    protected void readImpl(ByteBuffer buffer) {
+        int reasonId = buffer.get();
+        if(buffer.remaining() <= 0) {
+            _reason = "Authserver registration failed! Reason: " + REASONS[reasonId];
+        } else {
+            _reason = readString(buffer);
+            _restartConnection = buffer.get() > 0;
+        }
+    }
+
+    protected void runImpl() {
+        logger.warn(_reason);
+        if(!_restartConnection)
+            AuthServerCommunication.getInstance().shutdown();
+    }
 }

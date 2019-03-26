@@ -1,14 +1,8 @@
+DROP TABLE IF EXISTS `clanhall`;
 CREATE TABLE IF NOT EXISTS `clanhall` (
-  `id` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `name` varchar(40) NOT NULL DEFAULT '',
-  `last_siege_date` INT UNSIGNED NOT NULL,
-  `owner_id` INT NOT NULL DEFAULT '0',
-  `own_date` INT UNSIGNED NOT NULL,
-  `siege_date` INT UNSIGNED NOT NULL,
-  `auction_min_bid` bigint(20) NOT NULL,
-  `auction_length` int(11) NOT NULL,
-  `auction_desc` text,
-  `cycle` int(11) NOT NULL,
-  `paid_cycle` int(11) NOT NULL,
-  PRIMARY KEY (`id`,`name`)
-);
+  `id` int(11) NOT NULL DEFAULT '0',
+  `ownerId` int(11) NOT NULL DEFAULT '0',
+  `paidUntil` bigint(13) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY `id` (`id`),
+  KEY `ownerId` (`ownerId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

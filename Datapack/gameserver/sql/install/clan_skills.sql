@@ -1,7 +1,9 @@
+DROP TABLE IF EXISTS `clan_skills`;
 CREATE TABLE IF NOT EXISTS `clan_skills` (
-	`clan_id` INT NOT NULL DEFAULT '0',
-	`skill_id` SMALLINT UNSIGNED NOT NULL DEFAULT '0',
-	`skill_level` TINYINT UNSIGNED NOT NULL DEFAULT '0',
-	PRIMARY KEY  (`clan_id`,`skill_id`),
-	FOREIGN KEY FK_SKILL_CLAN(clan_id) REFERENCES clan_data(clan_id) ON DELETE CASCADE
-);
+  `clan_id` int(11) NOT NULL DEFAULT 0,
+  `skill_id` int(11) NOT NULL DEFAULT 0,
+  `skill_level` int(5) NOT NULL DEFAULT 0,
+  `skill_name` varchar(26) DEFAULT NULL,
+  `sub_pledge_id` INT NOT NULL DEFAULT '-2',
+  PRIMARY KEY (`clan_id`,`skill_id`,`sub_pledge_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

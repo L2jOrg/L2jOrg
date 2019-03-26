@@ -1,10 +1,14 @@
+DROP TABLE IF EXISTS `character_skills_save`;
 CREATE TABLE IF NOT EXISTS `character_skills_save` (
-	`char_obj_id` INT NOT NULL DEFAULT '0',
-	`skill_id` INT UNSIGNED NOT NULL DEFAULT '0',
-	`skill_level` SMALLINT UNSIGNED NOT NULL DEFAULT '0',
-	`class_index` SMALLINT NOT NULL DEFAULT '0',
-	`end_time` bigint NOT NULL DEFAULT '0',
-	`reuse_delay_org` INT NOT NULL DEFAULT '0',
-	PRIMARY KEY  (`char_obj_id`,`skill_id`,`class_index`),
-	FOREIGN KEY FK_SKILL_SAVE_CHARACTER(char_obj_id) REFERENCES characters(obj_Id) ON DELETE CASCADE
-);
+  `charId` INT NOT NULL DEFAULT 0,
+  `skill_id` INT NOT NULL DEFAULT 0,
+  `skill_level` INT(4) NOT NULL DEFAULT 1,
+  `skill_sub_level` INT(4) NOT NULL DEFAULT '0',
+  `remaining_time` INT NOT NULL DEFAULT 0,
+  `reuse_delay` INT(8) NOT NULL DEFAULT 0,
+  `systime` bigint(13) unsigned NOT NULL DEFAULT '0',
+  `restore_type` INT(1) NOT NULL DEFAULT 0,
+  `class_index` INT(1) NOT NULL DEFAULT 0,
+  `buff_index` INT(2) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`charId`,`skill_id`,`skill_level`,`class_index`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

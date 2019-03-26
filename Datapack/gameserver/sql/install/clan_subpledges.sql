@@ -1,10 +1,9 @@
+DROP TABLE IF EXISTS `clan_subpledges`;
 CREATE TABLE IF NOT EXISTS `clan_subpledges` (
-	`clan_id` INT NOT NULL DEFAULT '0',
-	`type` SMALLINT NOT NULL DEFAULT '0',
-	`name` VARCHAR(45) CHARACTER SET UTF8 NOT NULL DEFAULT '',
-	`leader_id` INT UNSIGNED NOT NULL DEFAULT '0',
-	`upgraded` INT NOT NULL DEFAULT '0',
-	PRIMARY KEY  (`clan_id`,`type`),
-	FOREIGN KEY FK_SUBPLEDGE_CLAN(clan_id) REFERENCES clan_data(clan_id) ON DELETE CASCADE
-
-);
+  `clan_id` INT NOT NULL DEFAULT '0',
+  `sub_pledge_id` INT NOT NULL DEFAULT '0',
+  `name` varchar(45),
+  `leader_id` INT NOT NULL DEFAULT '0',
+  PRIMARY KEY (`clan_id`,`sub_pledge_id`),
+  KEY `leader_id` (`leader_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

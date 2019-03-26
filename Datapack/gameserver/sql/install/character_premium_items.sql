@@ -1,8 +1,11 @@
+DROP TABLE IF EXISTS `character_premium_items`;
 CREATE TABLE IF NOT EXISTS `character_premium_items` (
-	`char_id` INT(11) NOT NULL,
-	`receive_time` INT(11) NOT NULL,
-	`item_id` INT(11) NOT NULL,
-	`item_count` BIGINT(20) UNSIGNED NOT NULL,
-	`sender` VARCHAR(50) CHARACTER SET UTF8 NOT NULL DEFAULT '',
-	PRIMARY KEY  (`char_id`,`receive_time`,`item_id`)
-);
+  `charId` int(11) NOT NULL,
+  `itemNum` int(11) NOT NULL,
+  `itemId` int(11) NOT NULL,
+  `itemCount` bigint(20) unsigned NOT NULL,
+  `itemSender` varchar(50) NOT NULL,
+  KEY `charId` (`charId`),
+  KEY `itemNum` (`itemNum`),
+  KEY `itemId` (`itemId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

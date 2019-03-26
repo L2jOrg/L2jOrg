@@ -5,7 +5,7 @@ if [ ! -f mysql_settings.conf ]; then
     exit
 fi
 
-script_count=$(ls -l install | grep .sql | wc -l)
+script_count=$(ls -l install | grep \\.sql | wc -l)
 count=0
 for sqlfile in install/*.sql
 do

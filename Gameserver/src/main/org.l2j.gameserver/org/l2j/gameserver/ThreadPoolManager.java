@@ -46,13 +46,17 @@ public class ThreadPoolManager {
 		return _shutdown;
 	}
 
-	public ScheduledFuture<?> schedule(Runnable r, long delay)
-	{
-        delay = validate(delay);
-        if(delay == -1)
-            return null;
+	public static ScheduledFuture<?> schedule(Runnable r, long delay){
+		return schedule(r, delay, TimeUnit.MILLISECONDS);
+	}
 
-        return scheduledExecutor.schedule(r, delay, TimeUnit.MILLISECONDS);
+	public static ScheduledFuture<?> schedule(Runnable r, long delay, TimeUnit unit) {
+
+		delay = validate(delay);
+		if(delay == -1)
+			return null;
+
+		return getInstance().scheduledExecutor.schedule(r, delay, unit);
 	}
 
 	public static ScheduledFuture<?> scheduleAtFixedRate(Runnable r, long initial, long delay) {

@@ -139,6 +139,7 @@ public class Q00255_Tutorial extends Quest {
             }
             case "tutorial_02.html":
                 player.sendPacket(new TutorialEnableClientEvent(1));
+                playTutorialVoice(player,"tutorial_voice_003");
             case "tutorial_03.html": {
                 if (qs.isMemoState(1)) {
                     showTutorialHtml(player, event);

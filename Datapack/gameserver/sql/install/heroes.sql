@@ -1,9 +1,10 @@
+DROP TABLE IF EXISTS `heroes`;
 CREATE TABLE IF NOT EXISTS `heroes` (
-	`char_id` INT NOT NULL DEFAULT '0',
-	`count` TINYINT UNSIGNED NOT NULL DEFAULT '0',
-	`played` TINYINT NOT NULL DEFAULT '0',
-	`active` TINYINT NOT NULL DEFAULT '0',
-	`message` varchar(300) NOT NULL default '',
-	PRIMARY KEY  (`char_id`),
-	FOREIGN KEY FK_HERO_CHARACTER(char_id) REFERENCES characters(obj_Id) ON DELETE CASCADE
-);
+  `charId` INT UNSIGNED NOT NULL DEFAULT 0,
+  `class_id` decimal(3,0) NOT NULL DEFAULT 0,
+  `count` decimal(3,0) NOT NULL DEFAULT 0,
+  `played` decimal(1,0) NOT NULL DEFAULT 0,
+  `claimed` ENUM('true','false') NOT NULL DEFAULT 'false',
+  `message` varchar(300) NOT NULL DEFAULT '',
+  PRIMARY KEY (`charId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

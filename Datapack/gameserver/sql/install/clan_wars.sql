@@ -1,14 +1,13 @@
 DROP TABLE IF EXISTS `clan_wars`;
-CREATE TABLE `clan_wars` (
-  `attacker_clan` int(11) NOT NULL,
-  `opposing_clan` int(11) NOT NULL,
-  `period` enum('PREPARATION','MUTUAL','PEACE') NOT NULL DEFAULT 'PREPARATION',
-  `period_start_time` int(11) NOT NULL DEFAULT '0',
-  `last_kill_time` int(11) NOT NULL DEFAULT '0',
-  `attackers_kill_counter` int(11) NOT NULL DEFAULT '0',
-  `opposers_kill_counter` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`attacker_clan`,`opposing_clan`),
-  UNIQUE KEY `opposing_clan` (`opposing_clan`),
-  FOREIGN KEY FK_WAR_CLAN(attacker_clan) REFERENCES clan_data(clan_id) ON DELETE CASCADE,
-  FOREIGN KEY FK_WAR_CLAN_O(opposing_clan) REFERENCES clan_data(clan_id) ON DELETE CASCADE
-);
+CREATE TABLE IF NOT EXISTS `clan_wars` (
+  `clan1` varchar(35) NOT NULL DEFAULT '',
+  `clan2` varchar(35) NOT NULL DEFAULT '',
+  `clan1Kill` int(11) NOT NULL DEFAULT 0,
+  `clan2Kill` int(11) NOT NULL DEFAULT 0,
+  `winnerClan` varchar(35) NOT NULL DEFAULT '0',
+  `startTime` bigint(13) NOT NULL DEFAULT 0,
+  `endTime` bigint(13) NOT NULL DEFAULT 0,
+  `state` tinyint(4) NOT NULL DEFAULT 0,
+  KEY `clan1` (`clan1`),
+  KEY `clan2` (`clan2`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

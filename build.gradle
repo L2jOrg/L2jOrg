@@ -60,6 +60,14 @@ distributions {
             from(["Datapack/gameserver", "${project(':Gameserver').buildDir}/gameserver"]) {
                 into("gameserver")
             }
+
+            from("Datapack/database_installer") {
+                into("gameserver/sql")
+            }
+
+            from("Datapack/database_installer") {
+                into("authserver/sql")
+            }
         }
     }
 }
