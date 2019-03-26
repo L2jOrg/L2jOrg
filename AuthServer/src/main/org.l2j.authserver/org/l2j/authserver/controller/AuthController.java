@@ -158,14 +158,14 @@ public class AuthController {
     }
 
     private boolean verifyAccountInUse(Account account) {
+        var result = false;
         var authedClient = authedClients.get(account.getLogin());
         if(nonNull(authedClient)) {
             authedClient.close(REASON_ACCOUNT_IN_USE);
             authedClients.remove(account.getLogin());
-            return true;
+            result = true;
         }
 
-        var result = false;
         for (GameServerInfo gameServer : GameServerManager.getInstance().getRegisteredGameServers().values()) {
             if(nonNull(gameServer) && gameServer.accountIsConnected(account.getLogin())) {
                 gameServer.sendKickPlayer(account.getLogin());

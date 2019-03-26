@@ -315,6 +315,7 @@ public class Q00255_Tutorial extends Quest {
                         final int classId = event.getActiveChar().getClassId().getId();
                         addRadar(event.getActiveChar(), HELPER_LOCATION.get(classId).getX(), HELPER_LOCATION.get(classId).getY(), HELPER_LOCATION.get(classId).getZ());
                         showTutorialHtml(event.getActiveChar(), "tutorial_04.html");
+                        playTutorialVoice(event.getActiveChar(), "tutorial_voice_007");
                     }
                     break;
                 }
