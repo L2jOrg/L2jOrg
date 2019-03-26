@@ -21,9 +21,9 @@ public class RequestTutorialClientEvent extends IClientIncomingPacket {
         }
 
         // TODO: UNHARDCODE ME!
-        final QuestState qs = player.getQuestState("255_Tutorial");
+        final QuestState qs = player.getQuestState("Q00255_Tutorial");
         if (qs != null) {
-            qs.getQuest().notifyEvent("CE" + _eventId + "", null, player);
+            qs.getQuest().notifyEvent(String.valueOf(_eventId), null, player);
         }
     }
 }
