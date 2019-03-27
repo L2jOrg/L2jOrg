@@ -31,6 +31,8 @@ import java.nio.ByteBuffer;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import static java.util.Objects.isNull;
+
 public final class UseItem extends IClientIncomingPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UseItem.class);
@@ -196,16 +198,14 @@ public final class UseItem extends IClientIncomingPacket {
                 // Create and Bind the next action to the AI
                 activeChar.getAI().setNextAction(new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () -> activeChar.useEquippableItem(item, true)));
             } else if (activeChar.isAttackingNow()) {
-                ThreadPoolManager.schedule(() ->
-                {
-                    // Removed for preventing retail behavior.
-                    // if (activeChar.isAttackingNow()) // If character is still engaged in strike we should not change weapon
-                    // {
-                    // return;
-                    // }
+                ThreadPoolManager.schedule(() -> {
+                    var exitentItem = activeChar.getInventory().getItemByObjectId(_objectId);
 
+                    if(isNull(exitentItem)) {
+                        return;
+                    }
                     // Equip or unEquip
-                    activeChar.useEquippableItem(item, false);
+                    activeChar.useEquippableItem(exitentItem, false);
                 }, activeChar.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
             } else {
                 activeChar.useEquippableItem(item, true);
