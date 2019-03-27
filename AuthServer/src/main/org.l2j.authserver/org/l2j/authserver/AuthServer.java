@@ -70,7 +70,6 @@ public class AuthServer {
         System.setProperty(HIKARICP_CONFIGURATION_FILE, "config/database.properties");
     }
 
-
     private static void configureLogger() {
         var logConfigurationFile = System.getProperty(LOG4J_CONFIGURATION);
         if (isNullOrEmpty(logConfigurationFile)) {

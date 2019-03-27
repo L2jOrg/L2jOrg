@@ -93,8 +93,9 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
         } else {
             moduleSourcePath =  this.sourcePath.toString() + File.pathSeparatorChar +  sourcePath.toString();
         }
+        var javaVersion = System.getProperty("java.specification.version");
         return List.of("--module-path", System.getProperty("jdk.module.path"),  "--module-source-path", moduleSourcePath,
-                "-g:"  + getProperty("g"), "-target", System.getProperty("java.specification.version"), "-implicit:class"
+                "-g:"  + getProperty("g"), "-target", javaVersion, "--source", javaVersion, "--enable-preview", "-implicit:class"
         );
     }
 

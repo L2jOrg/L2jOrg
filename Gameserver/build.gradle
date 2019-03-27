@@ -67,7 +67,7 @@ run {
     inputs.property("moduleName", moduleName)
     doFirst {
         def args = jvmArgs
-        args << "--module-path" << classpath.asPath << '--class-path' << classpath.asPath << '--module' << "$moduleName/$mainClassName".toString()
+        args << "--enable-preview" << "--module-path" << classpath.asPath << '--class-path' << classpath.asPath << '--module' << "$moduleName/$mainClassName".toString()
         jvmArgs = args
     }
 }
@@ -78,7 +78,9 @@ startScripts {
         classpath = files()
         defaultJvmOpts = [
                 '--module-path', 'APP_HOME_LIBS',
-                '--module', "$moduleName/$mainClassName"
+                '--module', "$moduleName/$mainClassName",
+                '--source', sourceCompatibility,
+                '--enable-preview'
         ]
     }
     doLast{
