@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.tasks.npc.trap;
 
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.instance.L2TrapInstance;
 
 /**

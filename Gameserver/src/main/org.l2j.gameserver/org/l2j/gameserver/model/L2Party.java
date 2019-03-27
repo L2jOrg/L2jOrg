@@ -3,7 +3,7 @@ package org.l2j.gameserver.model;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.GameTimeController;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.instancemanager.DuelManager;

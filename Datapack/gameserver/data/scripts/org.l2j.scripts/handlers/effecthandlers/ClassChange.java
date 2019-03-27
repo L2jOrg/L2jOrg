@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.model.StatsSet;

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.ZoneManager;
@@ -17,7 +17,6 @@ import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 
 import java.util.concurrent.Future;
-import java.util.logging.Level;
 
 public class L2DecoyInstance extends L2Character {
     private final L2PcInstance _owner;

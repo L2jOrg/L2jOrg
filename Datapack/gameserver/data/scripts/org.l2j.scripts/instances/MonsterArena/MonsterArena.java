@@ -1,7 +1,7 @@
 package instances.MonsterArena;
 
 import instances.AbstractInstance;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.model.actor.L2Npc;

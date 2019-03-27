@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network;
 
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;

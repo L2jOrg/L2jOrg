@@ -1,6 +1,7 @@
 package org.l2j.gameserver;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
 import org.l2j.gameserver.datatables.BotReportTable;

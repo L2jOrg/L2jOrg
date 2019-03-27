@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.actor;
 
 import org.l2j.gameserver.GameTimeController;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
@@ -25,7 +25,6 @@ import org.l2j.gameserver.util.Util;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
 
 /**
  * @author DS

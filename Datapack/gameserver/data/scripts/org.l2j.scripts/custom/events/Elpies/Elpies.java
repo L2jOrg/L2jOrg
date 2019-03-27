@@ -18,7 +18,7 @@ package custom.events.Elpies;
 
 import events.ScriptEvent;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.L2Npc;

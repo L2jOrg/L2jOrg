@@ -1,7 +1,6 @@
 package org.l2j.authserver.network;
 
 import org.l2j.authserver.controller.AuthController;
-import org.l2j.authserver.controller.ThreadPoolManager;
 import org.l2j.authserver.network.client.AuthClient;
 import io.github.joealisson.mmocore.*;
 

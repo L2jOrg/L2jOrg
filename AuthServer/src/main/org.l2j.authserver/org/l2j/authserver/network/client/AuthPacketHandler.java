@@ -6,6 +6,7 @@ import org.l2j.authserver.network.client.packet.client2auth.AuthGameGuard;
 import org.l2j.authserver.network.client.packet.client2auth.RequestAuthLogin;
 import org.l2j.authserver.network.client.packet.client2auth.RequestServerList;
 import org.l2j.authserver.network.client.packet.client2auth.RequestServerLogin;
+import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -58,6 +59,6 @@ public final class AuthPacketHandler implements PacketHandler<AuthClient> {
     }
 
     private void debugOpcode(int opcode, ByteBuffer data, AuthClientState state) {
-        logger.warn("Unknown Opcode: {} for state {}\n {}", Integer.toHexString(opcode), state, data.array());
+        logger.warn("Unknown Opcode: {} for state {}\n {}", Integer.toHexString(opcode), state, Util.printData(data.array(), data.limit()));
     }
 }

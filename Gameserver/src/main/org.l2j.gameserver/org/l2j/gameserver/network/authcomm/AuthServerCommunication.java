@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.authcomm;
 import io.github.joealisson.mmocore.Connector;
 import io.github.joealisson.mmocore.PacketExecutor;
 import io.github.joealisson.mmocore.ReadablePacket;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.authcomm.gs2as.ChangePassword;

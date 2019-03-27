@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.actor;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.datatables.ItemTable;

@@ -2,12 +2,11 @@ package org.l2j.gameserver.model.announce;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.util.Broadcast;
 
 import java.sql.*;
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
 
 /**
  * @author UnAfraid

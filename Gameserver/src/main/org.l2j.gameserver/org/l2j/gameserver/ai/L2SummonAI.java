@@ -1,7 +1,7 @@
 package org.l2j.gameserver.ai;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;

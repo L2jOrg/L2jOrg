@@ -3,6 +3,7 @@ package org.l2j.gameserver;
 import io.github.joealisson.mmocore.ConnectionBuilder;
 import io.github.joealisson.mmocore.ConnectionHandler;
 import org.l2j.commons.database.DatabaseAccess;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.DeadLockDetector;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.*;

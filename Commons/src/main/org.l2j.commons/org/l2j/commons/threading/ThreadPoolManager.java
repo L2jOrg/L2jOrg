@@ -1,7 +1,4 @@
-package org.l2j.gameserver;
-
-import org.l2j.commons.threading.PriorityThreadFactory;
-import org.l2j.commons.threading.RejectedExecutionHandlerImpl;
+package org.l2j.commons.threading;
 
 import java.util.concurrent.*;
 
@@ -32,10 +29,6 @@ public class ThreadPoolManager {
 	{
         long validatedDelay = Math.max(0, Math.min(ThreadPoolManager.MAX_DELAY, delay));
         if (delay > validatedDelay)
-            return -1;
-
-        long secondsToRestart = Shutdown.getInstance().getSecondsToRestart() * 1000L;
-        if(secondsToRestart > 0 && validatedDelay > secondsToRestart)
             return -1;
 
         return validatedDelay;
@@ -71,7 +64,7 @@ public class ThreadPoolManager {
         return getInstance().scheduledExecutor.scheduleAtFixedRate(r, initial, delay, TimeUnit.MILLISECONDS);
 	}
 
-	public ScheduledFuture<?> scheduleAtFixedDelay(Runnable r, long initial, long delay)
+	public static ScheduledFuture<?> scheduleAtFixedDelay(Runnable r, long initial, long delay)
 	{
         initial = validate(initial);
         if(initial == -1)
@@ -79,9 +72,9 @@ public class ThreadPoolManager {
 
         delay = validate(delay);
         if(delay == -1)
-            return scheduledExecutor.schedule(r, initial, TimeUnit.MILLISECONDS);
+            return getInstance().scheduledExecutor.schedule(r, initial, TimeUnit.MILLISECONDS);
 
-        return scheduledExecutor.scheduleWithFixedDelay(r, initial, delay, TimeUnit.MILLISECONDS);
+        return getInstance().scheduledExecutor.scheduleWithFixedDelay(r, initial, delay, TimeUnit.MILLISECONDS);
 	}
 
 	public static void execute(Runnable r) {

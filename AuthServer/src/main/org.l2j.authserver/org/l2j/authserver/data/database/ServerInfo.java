@@ -2,7 +2,7 @@ package org.l2j.authserver.data.database;
 
 import org.l2j.commons.database.annotation.Column;
 
-public class GameServer {
+public class ServerInfo {
 
     @Column("server_id")
     private int serverId;
@@ -10,7 +10,7 @@ public class GameServer {
     @Column("server_type")
     private int serverType;
 
-    public GameServer() { }
+    public ServerInfo() { }
 
     public int getId() {
         return serverId;

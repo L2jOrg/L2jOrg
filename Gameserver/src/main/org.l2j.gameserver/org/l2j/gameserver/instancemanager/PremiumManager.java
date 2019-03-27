@@ -1,7 +1,7 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.Containers;

@@ -16,7 +16,7 @@
  */
 package handlers.punishmenthandlers;
 
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IPunishmentHandler;
 import org.l2j.gameserver.model.L2World;
@@ -34,8 +34,6 @@ import org.l2j.gameserver.model.zone.type.L2JailZone;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
-
-import java.util.Observer;
 
 /**
  * This class handles jail punishment.

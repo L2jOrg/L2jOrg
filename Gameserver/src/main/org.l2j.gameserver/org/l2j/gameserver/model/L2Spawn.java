@@ -3,7 +3,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.actor.L2Npc;

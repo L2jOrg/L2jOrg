@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.zone.type;
 
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.Location;

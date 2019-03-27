@@ -1,7 +1,7 @@
 package org.l2j.gameserver.taskmanager;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.taskmanager.tasks.TaskBirthday;
 import org.l2j.gameserver.taskmanager.tasks.TaskCleanUp;
 import org.l2j.gameserver.taskmanager.tasks.TaskRestart;

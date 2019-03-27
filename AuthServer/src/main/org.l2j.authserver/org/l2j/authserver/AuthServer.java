@@ -32,8 +32,8 @@ public class AuthServer {
     private final ConnectionHandler<ServerClient>  serverConnectionHandler;
 
     public AuthServer() throws Exception {
-        AuthController.load();
-        GameServerManager.load();
+        AuthController.getInstance();
+        GameServerManager.getInstance();
 
         var bindServerListen = gameServerListenHost().equals("*") ? new InetSocketAddress(gameServerListenPort()) : new InetSocketAddress(gameServerListenHost(), gameServerListenPort());
         var gameserverHandler = new GameServerPacketHandler();

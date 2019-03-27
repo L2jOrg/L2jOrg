@@ -3,8 +3,8 @@ package org.l2j.authserver.network.gameserver;
 import io.github.joealisson.mmocore.PacketExecutor;
 import io.github.joealisson.mmocore.PacketHandler;
 import io.github.joealisson.mmocore.ReadablePacket;
-import org.l2j.authserver.controller.ThreadPoolManager;
 import org.l2j.authserver.network.gameserver.packet.game2auth.*;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -73,12 +73,12 @@ public final class GameServerPacketHandler implements PacketHandler<ServerClient
     }
 
     private void handleUnkownOpcode(ServerClient client, int opcode) {
-        logger.warn("Unknown Opcode ({}) on state {} from GameServer, closing socket.", Integer.toHexString(opcode).toUpperCase(), client.getState());
+        logger.warn("Unknown Opcode ({}) on state {} from ServerInfo, closing socket.", Integer.toHexString(opcode).toUpperCase(), client.getState());
         client.close(NOT_AUTHED);
     }
 
     @Override
     public void execute(ReadablePacket<ServerClient> packet) {
-        ThreadPoolManager.getInstance().execute(packet);
+        ThreadPoolManager.execute(packet);
     }
 }

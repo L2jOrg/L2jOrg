@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.entity;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.DuelResult;
 import org.l2j.gameserver.enums.Team;
@@ -25,7 +25,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
 
 
 public class Duel {

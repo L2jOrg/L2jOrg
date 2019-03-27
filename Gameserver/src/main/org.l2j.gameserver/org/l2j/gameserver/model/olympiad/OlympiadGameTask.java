@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.olympiad;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;

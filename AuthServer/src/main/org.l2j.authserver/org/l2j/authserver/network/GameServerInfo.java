@@ -1,7 +1,7 @@
 package org.l2j.authserver.network;
 
 import org.l2j.authserver.controller.GameServerManager;
-import org.l2j.authserver.data.database.GameServer;
+import org.l2j.authserver.data.database.ServerInfo;
 import org.l2j.authserver.network.gameserver.ServerClient;
 import org.l2j.authserver.network.gameserver.packet.auth2game.KickPlayer;
 import org.l2j.authserver.network.gameserver.packet.auth2game.RequestAccountInfo;
@@ -42,8 +42,8 @@ public class GameServerInfo {
     private byte ageLimit;
 
 
-    public GameServerInfo(GameServer gameServer) {
-        this(gameServer.getId(), null);
+    public GameServerInfo(ServerInfo serverInfo) {
+        this(serverInfo.getId(), null);
     }
 
     public GameServerInfo(int id,  ServerClient client) {

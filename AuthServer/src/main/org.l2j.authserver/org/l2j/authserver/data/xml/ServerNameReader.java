@@ -1,21 +1,21 @@
 package org.l2j.authserver.data.xml;
 
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.commons.xml.XMLReader;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import java.util.HashMap;
-import java.util.Map;
 
 public class ServerNameReader extends XMLReader<ServersList> {
 
-    private final Map<Integer, String> serverNames;
+    private final IntObjectMap<String> serverNames;
 
     public ServerNameReader() throws JAXBException {
-        serverNames = new HashMap<>();
+        serverNames = new HashIntObjectMap<>();
     }
 
-    public Map<Integer, String> getServerNames() {
+    public IntObjectMap<String> getServerNames() {
         return serverNames;
     }
 
@@ -36,6 +36,6 @@ public class ServerNameReader extends XMLReader<ServersList> {
 
     @Override
     protected String[] getXmlFileDirectories() {
-        return new String[] { "."};
+        return new String[] { "." };
     }
 }

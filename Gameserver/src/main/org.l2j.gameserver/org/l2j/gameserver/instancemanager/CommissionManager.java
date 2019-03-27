@@ -17,7 +17,7 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.model.actor.L2Npc;

@@ -2,7 +2,7 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.Shutdown;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

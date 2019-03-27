@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.quest;
 
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.slf4j.Logger;

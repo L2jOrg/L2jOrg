@@ -2,6 +2,7 @@ module org.l2j.authserver {
     requires org.l2j.commons;
     requires org.slf4j;
     requires io.github.joealisson.mmocore;
+    requires io.github.joealisson.primitive;
 
     exports org.l2j.authserver;
     opens org.l2j.authserver.data.xml to java.xml.bind;

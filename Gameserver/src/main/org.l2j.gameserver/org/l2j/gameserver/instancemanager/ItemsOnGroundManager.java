@@ -3,7 +3,7 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.slf4j.Logger;

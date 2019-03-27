@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.olympiad;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.CategoryData;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.enums.CategoryType;

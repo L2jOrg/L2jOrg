@@ -1,7 +1,7 @@
 package org.l2j.gameserver.ai;
 
 
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.instancemanager.WalkingManager;

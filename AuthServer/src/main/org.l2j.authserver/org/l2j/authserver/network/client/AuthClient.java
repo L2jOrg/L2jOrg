@@ -26,11 +26,11 @@ import static java.util.Objects.nonNull;
 import static org.l2j.authserver.network.client.AuthClientState.AUTHED_LOGIN;
 
 /**
- * Represents a client connected into the LoginServer
+ * Represents a client connected into the Auth Server
  */
 public final class AuthClient extends Client<Connection<AuthClient>> {
 
-    private static Logger _log = LoggerFactory.getLogger(AuthClient.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(AuthClient.class);
 
     private final long _connectionStartTime;
     private final Map<Integer,Integer> charactersOnServer = new HashMap<>();
@@ -42,22 +42,14 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
     private SessionKey _sessionKey;
 
     private Account account;
-    private boolean _usesInternalIP;
-    private AuthClientState _state;
+    private AuthClientState state;
     private boolean isJoinedGameSever;
-    private long requestdServersInfo;
+    private long requestedServersInfo;
 
 
     public AuthClient(Connection<AuthClient> con) {
 		super(con);
-		_state = AuthClientState.CONNECTED;
-		String ip = getHostAddress();
-
-		// TODO unhardcode this
-		if (ip.startsWith("192.168") || ip.startsWith("10.0") || ip.startsWith("127.0.0.1")) {
-			_usesInternalIP = true;
-		}
-
+		state = AuthClientState.CONNECTED;
 		_connectionStartTime = System.currentTimeMillis();
 		AuthController.getInstance().registerClient(this);
 	}
@@ -69,13 +61,13 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
             decrypted = _authCrypt.decrypt(data, offset, size);
         }
         catch (IOException e) {
-            _log.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getLocalizedMessage(), e);
             disconnect();
             return false;
         }
 
         if (!decrypted) {
-            _log.warn("Wrong checksum from client: {}", toString());
+            LOGGER.warn("Wrong checksum from client: {}", toString());
             disconnect();
         }
         return decrypted;
@@ -87,7 +79,7 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
 	    try {
 	       encryptedSize = _authCrypt.encrypt(data, offset, size);
         } catch (IOException e) {
-	        _log.error(e.getLocalizedMessage(), e);
+	        LOGGER.error(e.getLocalizedMessage(), e);
 	        return encryptedSize;
         }
         return encryptedSize;
@@ -116,7 +108,7 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
 
 	@Override
 	protected void onDisconnection() {
-        _log.info("DISCONNECTED: {}", toString());
+        LOGGER.debug("DISCONNECTED: {}", toString());
 
         AuthController.getInstance().removeClient(this);
 
@@ -143,11 +135,11 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
 
     AuthClientState getState()
     {
-        return _state;
+        return state;
     }
 
     public void setState(AuthClientState state) {
-        _state = state;
+        this.state = state;
     }
 
     public byte[] getBlowfishKey() {
@@ -191,8 +183,7 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
         return _sessionKey;
     }
 
-    public long getConnectionStartTime()
-    {
+    public long getConnectionStartTime() {
         return _connectionStartTime;
     }
 
@@ -212,22 +203,12 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
         _authCrypt =  crypt;
     }
 
-    public boolean usesInternalIP()
-    {
-        return _usesInternalIP;
-    }
-
     public void setRequestedServerInfo(long count) {
-        this.requestdServersInfo = count;
+        this.requestedServersInfo = count;
     }
 
-    public long getRequestdServersInfo() {
-        return requestdServersInfo;
-    }
-
-    @Override
-    public boolean isConnected() {
-        return super.isConnected();
+    public long getRequestedServersInfo() {
+        return requestedServersInfo;
     }
 
     @Override

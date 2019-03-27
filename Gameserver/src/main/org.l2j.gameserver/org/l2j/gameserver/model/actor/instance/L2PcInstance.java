@@ -1,6 +1,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.*;
 import org.l2j.gameserver.ai.CtrlIntention;

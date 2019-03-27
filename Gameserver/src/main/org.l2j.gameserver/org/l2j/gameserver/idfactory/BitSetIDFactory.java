@@ -1,6 +1,6 @@
 package org.l2j.gameserver.idfactory;
 
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.util.PrimeFinder;
 
 import java.util.BitSet;

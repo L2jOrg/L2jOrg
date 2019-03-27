@@ -2,7 +2,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;

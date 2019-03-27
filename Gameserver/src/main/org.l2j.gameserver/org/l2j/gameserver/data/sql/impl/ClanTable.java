@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.sql.impl;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.enums.UserInfoType;

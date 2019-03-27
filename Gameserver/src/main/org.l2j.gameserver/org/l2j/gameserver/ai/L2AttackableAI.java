@@ -4,7 +4,7 @@ package org.l2j.gameserver.ai;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.GameTimeController;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.AISkillScope;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.AggroInfo;

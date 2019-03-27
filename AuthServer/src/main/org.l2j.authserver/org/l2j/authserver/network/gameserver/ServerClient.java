@@ -117,7 +117,7 @@ public final class ServerClient extends Client<Connection<ServerClient>> {
         if(serverId != -1) {
             serverName = String.format("[%d] %s", serverId, GameServerManager.getInstance().getServerNameById(serverId));
         }
-        _log.info("GameServer {}: Connection Lost", serverName);
+        _log.info("ServerInfo {}: Connection Lost", serverName);
 
         if (AUTHED == state) {
             gameServerInfo.setDown();

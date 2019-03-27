@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.punishment;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.handler.IPunishmentHandler;
 import org.l2j.gameserver.handler.PunishmentHandler;
 import org.l2j.gameserver.instancemanager.PunishmentManager;

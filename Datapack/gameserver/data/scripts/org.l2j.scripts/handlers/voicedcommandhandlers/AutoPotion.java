@@ -17,7 +17,7 @@
 package handlers.voicedcommandhandlers;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.tasks.player.AutoPotionTask;

@@ -17,6 +17,11 @@ sourceSets {
     }
 }
 
+configurations.all {
+    // Check for updates every build
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 dependencies {
     compile 'org.slf4j:slf4j-api:1.8.0-beta4'
     compile 'com.zaxxer:HikariCP:3.3.1'

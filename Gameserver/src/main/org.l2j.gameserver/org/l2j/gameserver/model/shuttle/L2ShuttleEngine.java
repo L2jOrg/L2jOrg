@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.shuttle;
 
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.instance.L2ShuttleInstance;

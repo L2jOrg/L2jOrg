@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.entity;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.FortUpdater;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.data.xml.impl.StaticObjectData;

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.AnnouncementsTable;
 import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;

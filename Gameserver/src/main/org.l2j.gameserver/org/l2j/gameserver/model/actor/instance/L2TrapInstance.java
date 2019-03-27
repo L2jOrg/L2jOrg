@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TrapAction;
 import org.l2j.gameserver.instancemanager.ZoneManager;

@@ -12,23 +12,14 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static java.lang.System.currentTimeMillis;
-import static java.util.Objects.isNull;
 
 class BanManager {
 
     private static final Logger logger = LoggerFactory.getLogger(BanManager.class);
-    private static BanManager instance;
     private final Map<String, Long> bannedAdresses = new ConcurrentHashMap<>();
 
     private BanManager() {
         loadBanFile();
-    }
-
-    static BanManager load() {
-        if (isNull(instance)) {
-            instance = new BanManager();
-        }
-        return instance;
     }
 
     private void loadBanFile() {
@@ -78,5 +69,13 @@ class BanManager {
             }
         }
         return banned;
+    }
+
+    public static BanManager getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final BanManager INSTANCE = new BanManager();
     }
 }

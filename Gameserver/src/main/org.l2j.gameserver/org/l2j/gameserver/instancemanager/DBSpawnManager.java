@@ -3,7 +3,7 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
 import org.l2j.gameserver.datatables.SpawnTable;

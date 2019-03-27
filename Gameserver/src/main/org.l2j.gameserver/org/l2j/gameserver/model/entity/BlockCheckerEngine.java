@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.entity;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.datatables.SpawnTable;

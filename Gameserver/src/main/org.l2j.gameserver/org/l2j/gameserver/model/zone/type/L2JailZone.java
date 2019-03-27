@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.zone.type;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;

@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.itemauction;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.instancemanager.ItemAuctionManager;
