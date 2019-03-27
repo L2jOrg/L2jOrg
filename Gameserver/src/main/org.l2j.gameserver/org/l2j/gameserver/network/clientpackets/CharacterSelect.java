@@ -115,7 +115,7 @@ public class CharacterSelect extends IClientIncomingPacket {
                         return;
                     }
 
-                    client.setConnectionState(ConnectionState.IN_GAME);
+                    client.setConnectionState(ConnectionState.JOINING_GAME);
                     client.sendPacket(new CharSelected(cha, client.getSessionId().getGameServerSessionId()));
                 }
             } finally {

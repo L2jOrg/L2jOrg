@@ -8,5 +8,6 @@ public enum ConnectionState {
     DISCONNECTED,
     CLOSING,
     AUTHENTICATED,
+    JOINING_GAME,
     IN_GAME
 }

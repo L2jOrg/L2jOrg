@@ -51,7 +51,7 @@ public enum ExIncomingPackets implements PacketFactory {
     REQUEST_EX_2ND_PASSWORD_VERIFY(0xA7, RequestEx2ndPasswordVerify::new, ConnectionState.AUTHENTICATED),
     REQUEST_EX_2ND_PASSWORD_REQ(0xA8, RequestEx2ndPasswordReq::new, ConnectionState.AUTHENTICATED),
     REQUEST_CHARACTER_NAME_CREATABLE(0xA9, RequestCharacterNameCreatable::new, ConnectionState.AUTHENTICATED),
-    REQUEST_MANOR_LIST(0x01, RequestManorList::new, ConnectionState.IN_GAME),
+    REQUEST_MANOR_LIST(0x01, RequestManorList::new, ConnectionState.JOINING_GAME),
     REQUEST_PROCEDURE_CROP_LIST(0x02, RequestProcureCropList::new, ConnectionState.IN_GAME),
     REQUEST_SET_SEED(0x03, RequestSetSeed::new, ConnectionState.IN_GAME),
     REQUEST_SET_CROP(0x04, RequestSetCrop::new, ConnectionState.IN_GAME),

@@ -22,6 +22,7 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -71,6 +72,8 @@ public class EnterWorld extends IClientIncomingPacket {
             Disconnection.of(client).defaultSequence(false);
             return;
         }
+
+        client.setConnectionState(ConnectionState.IN_GAME);
 
         final String[] adress = new String[5];
         for (int i = 0; i < 5; i++) {

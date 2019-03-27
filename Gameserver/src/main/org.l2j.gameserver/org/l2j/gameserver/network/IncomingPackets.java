@@ -30,7 +30,7 @@ public enum IncomingPackets implements PacketFactory {
     CHARACTER_DELETE(0x0D, CharacterDelete::new, ConnectionState.AUTHENTICATED),
     PROTOCOL_VERSION(0x0E, ProtocolVersion::new, ConnectionState.CONNECTED),
     MOVE_BACKWARD_TO_LOCATION(0x0F, MoveBackwardToLocation::new, ConnectionState.IN_GAME),
-    ENTER_WORLD(0x11, EnterWorld::new, ConnectionState.IN_GAME),
+    ENTER_WORLD(0x11, EnterWorld::new, ConnectionState.JOINING_GAME),
     CHARACTER_SELECT(0x12, CharacterSelect::new, ConnectionState.AUTHENTICATED),
     NEW_CHARACTER(0x13, NewCharacter::new, ConnectionState.AUTHENTICATED),
     REQUEST_ITEM_LIST(0x14, RequestItemList::new, ConnectionState.IN_GAME),

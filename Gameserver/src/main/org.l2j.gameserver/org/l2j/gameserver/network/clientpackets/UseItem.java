@@ -196,7 +196,7 @@ public final class UseItem extends IClientIncomingPacket {
                 // Create and Bind the next action to the AI
                 activeChar.getAI().setNextAction(new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () -> activeChar.useEquippableItem(item, true)));
             } else if (activeChar.isAttackingNow()) {
-                ThreadPoolManager.getInstance().schedule(() ->
+                ThreadPoolManager.schedule(() ->
                 {
                     // Removed for preventing retail behavior.
                     // if (activeChar.isAttackingNow()) // If character is still engaged in strike we should not change weapon
