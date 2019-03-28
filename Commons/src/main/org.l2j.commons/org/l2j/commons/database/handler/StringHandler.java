@@ -3,6 +3,7 @@ package org.l2j.commons.database.handler;
 import org.l2j.commons.database.QueryDescriptor;
 import org.l2j.commons.util.Util;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -15,7 +16,7 @@ public class StringHandler implements TypeHandler<String> {
 
     @Override
     public String handleResult(QueryDescriptor queryDescriptor) throws SQLException {
-        var resultSet = queryDescriptor.getStatement().getResultSet();
+        var resultSet = queryDescriptor.getResultSet();
         if(resultSet.next()) {
             return handleColumn(resultSet, 1);
         }
@@ -30,6 +31,11 @@ public class StringHandler implements TypeHandler<String> {
     @Override
     public String handleColumn(ResultSet resultSet, int column) throws SQLException {
         return resultSet.getString(column);
+    }
+
+    @Override
+    public void setParameter(PreparedStatement statement, int parameterIndex, String arg) throws SQLException {
+        statement.setString(parameterIndex, arg);
     }
 
     @Override

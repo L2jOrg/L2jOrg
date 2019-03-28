@@ -1,23 +1,22 @@
 package org.l2j.authserver.network;
 
+import io.github.joealisson.mmocore.ConnectionFilter;
+import io.github.joealisson.mmocore.PacketExecutor;
+import io.github.joealisson.mmocore.ReadablePacket;
 import org.l2j.authserver.controller.AuthController;
 import org.l2j.authserver.network.client.AuthClient;
-import io.github.joealisson.mmocore.*;
+import org.l2j.commons.threading.ThreadPoolManager;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.channels.AsynchronousSocketChannel;
 
-/**
- * @author KenM
- */
-public class SelectorHelper implements PacketExecutor<AuthClient>,  ConnectionFilter {
+public class ConnectionHelper implements PacketExecutor<AuthClient>,  ConnectionFilter {
 
     @Override
     public void execute(ReadablePacket<AuthClient> packet) {
-        ThreadPoolManager.getInstance().execute(packet);
+        ThreadPoolManager.execute(packet);
     }
-
 
     @Override
     public boolean accept(AsynchronousSocketChannel channel) {

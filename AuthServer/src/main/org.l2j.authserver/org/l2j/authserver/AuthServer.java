@@ -4,7 +4,7 @@ import io.github.joealisson.mmocore.ConnectionBuilder;
 import io.github.joealisson.mmocore.ConnectionHandler;
 import org.l2j.authserver.controller.AuthController;
 import org.l2j.authserver.controller.GameServerManager;
-import org.l2j.authserver.network.SelectorHelper;
+import org.l2j.authserver.network.ConnectionHelper;
 import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.AuthPacketHandler;
 import org.l2j.authserver.network.gameserver.GameServerPacketHandler;
@@ -44,7 +44,7 @@ public class AuthServer {
 
         var bindAddress = listenHost().equals("*") ? new InetSocketAddress(listenPort()) : new InetSocketAddress(listenHost(), listenPort()) ;
         final AuthPacketHandler lph = new AuthPacketHandler();
-        final SelectorHelper sh = new SelectorHelper();
+        final ConnectionHelper sh = new ConnectionHelper();
         connectionHandler = ConnectionBuilder.create(bindAddress, AuthClient::new, lph, sh).threadPoolSize(4).build();
         connectionHandler.start();
         logger.info("Login Server ready on {}:{}", bindAddress.getHostString(), listenPort());

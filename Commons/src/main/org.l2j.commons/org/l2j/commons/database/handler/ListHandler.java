@@ -3,6 +3,7 @@ package org.l2j.commons.database.handler;
 import org.l2j.commons.database.QueryDescriptor;
 
 import java.lang.reflect.ParameterizedType;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ public class ListHandler implements TypeHandler<List> {
             throw new IllegalStateException("There is no TypeHandler to Type " + genericType);
         }
         List<Object> result = new ArrayList<>();
-        var resultSet = queryDescriptor.getStatement().getResultSet();
+        var resultSet = queryDescriptor.getResultSet();
         while (resultSet.next()) {
             result.add(handler.handleType(resultSet, genericType));
         }
@@ -40,8 +41,13 @@ public class ListHandler implements TypeHandler<List> {
     }
 
     @Override
-    public List handleColumn(ResultSet resultSet, int column) throws SQLException {
+    public List handleColumn(ResultSet resultSet, int column) {
         return new ArrayList();
+    }
+
+    @Override
+    public void setParameter(PreparedStatement statement, int parameterIndex, List arg) throws SQLException {
+        throw new UnsupportedOperationException();
     }
 
     @Override

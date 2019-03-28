@@ -36,9 +36,9 @@ public final class BitSetIDFactory extends IdFactory {
             }
 
             _nextFreeId = new AtomicInteger(freeIds.nextClearBit(0));
-            _initialized = true;
+            initialized = true;
         } catch (Exception e) {
-            _initialized = false;
+            initialized = false;
             LOGGER.error(getClass().getSimpleName() + ": Could not be initialized properly: " + e.getMessage());
         }
     }

@@ -2,6 +2,7 @@ package org.l2j.commons.database.handler;
 
 import org.l2j.commons.database.QueryDescriptor;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
@@ -15,6 +16,7 @@ public interface TypeHandler<T> {
     T handleResult(QueryDescriptor queryDescriptor) throws SQLException;
     T handleType(ResultSet resultSet, Class<?> type) throws SQLException;
     T handleColumn(ResultSet resultSet, int column) throws SQLException;
+    void setParameter(PreparedStatement statement, int parameterIndex, T arg) throws SQLException;
 
     String type();
 }

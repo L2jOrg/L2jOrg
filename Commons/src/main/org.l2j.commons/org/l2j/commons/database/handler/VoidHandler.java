@@ -2,8 +2,8 @@ package org.l2j.commons.database.handler;
 
 import org.l2j.commons.database.QueryDescriptor;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class VoidHandler implements TypeHandler<Void> {
 
@@ -18,13 +18,18 @@ public class VoidHandler implements TypeHandler<Void> {
     }
 
     @Override
-    public Void handleType(ResultSet resultSet, Class<?> type) throws SQLException {
+    public Void handleType(ResultSet resultSet, Class<?> type) {
         return null;
     }
 
     @Override
-    public Void handleColumn(ResultSet resultSet, int column) throws SQLException {
+    public Void handleColumn(ResultSet resultSet, int column) {
         return null;
+    }
+
+    @Override
+    public void setParameter(PreparedStatement statement, int parameterIndex, Void arg) {
+        throw new UnsupportedOperationException();
     }
 
     @Override

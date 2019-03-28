@@ -7,5 +7,7 @@ CREATE TABLE IF NOT EXISTS `character_macroses` (
   `descr` VARCHAR(80) ,
   `acronym` VARCHAR(4) ,
   `commands` VARCHAR(500) ,
-  PRIMARY KEY (`charId`,`id`)
+
+  PRIMARY KEY (`charId`,`id`),
+  FOREIGN KEY FK_FRIENDS_FRIEND (`charId`) REFERENCES characters (`charId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

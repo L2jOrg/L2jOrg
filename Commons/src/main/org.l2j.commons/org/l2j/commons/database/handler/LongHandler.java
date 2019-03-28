@@ -2,6 +2,7 @@ package org.l2j.commons.database.handler;
 
 import org.l2j.commons.database.QueryDescriptor;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -14,9 +15,9 @@ public class LongHandler implements  TypeHandler<Long> {
     @Override
     public Long handleResult(QueryDescriptor queryDescriptor) throws SQLException {
         if(queryDescriptor.isUpdate()) {
-            return (long) queryDescriptor.getStatement().getUpdateCount();
+            return (long) queryDescriptor.getUpdateCount();
         }
-        var resultSet = queryDescriptor.getStatement().getResultSet();
+        var resultSet = queryDescriptor.getResultSet();
         if(resultSet.next()) {
             return handleColumn(resultSet, 1);
         }
@@ -31,6 +32,11 @@ public class LongHandler implements  TypeHandler<Long> {
     @Override
     public Long handleColumn(ResultSet resultSet, int column) throws SQLException {
         return resultSet.getLong(column);
+    }
+
+    @Override
+    public void setParameter(PreparedStatement statement, int parameterIndex, Long arg) throws SQLException {
+        statement.setLong(parameterIndex, arg);
     }
 
     @Override

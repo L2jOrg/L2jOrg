@@ -20,9 +20,9 @@ public class DatabaseAccess {
         if(initialized) {
             return true;
         }
-
         try {
             DatabaseFactory.getInstance();
+            initialized = true;
             return true;
         } catch (SQLException e) {
             LOGGER.error(e.getLocalizedMessage(), e);

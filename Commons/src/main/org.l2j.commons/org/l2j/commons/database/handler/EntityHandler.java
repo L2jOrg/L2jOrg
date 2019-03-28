@@ -5,6 +5,7 @@ import org.l2j.commons.database.annotation.Column;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -19,7 +20,7 @@ public class EntityHandler implements TypeHandler<Object> {
 
     @Override
     public Object handleResult(QueryDescriptor queryDescriptor) throws SQLException {
-        var resultSet = queryDescriptor.getStatement().getResultSet();
+        var resultSet = queryDescriptor.getResultSet();
         if(resultSet.next()) {
             return handleType(resultSet, queryDescriptor.getReturnType());
         }
@@ -70,6 +71,11 @@ public class EntityHandler implements TypeHandler<Object> {
             }
         }
         return  null;
+    }
+
+    @Override
+    public void setParameter(PreparedStatement statement, int parameterIndex, Object arg) {
+        throw new UnsupportedOperationException();
     }
 
     @Override

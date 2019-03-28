@@ -2,6 +2,7 @@ package org.l2j.gameserver.idfactory;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,87 +11,37 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static java.util.Objects.isNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 public abstract class IdFactory {
 
     protected final Logger LOGGER = LoggerFactory.getLogger(getClass().getName());
     
-    public static final int FIRST_OID = 0x0000001;
-    public static final int LAST_OID = 0x7FFFFFFF;
-    public static final int FREE_OBJECT_ID_SIZE = LAST_OID - FIRST_OID;
-    //@formatter:on
-    protected static final String[] ID_CHECKS =
-            {
-                    "SELECT owner_id    FROM items                 WHERE object_id >= ?   AND object_id < ?",
-                    "SELECT object_id   FROM items                 WHERE object_id >= ?   AND object_id < ?",
-                    "SELECT charId     FROM character_quests      WHERE charId >= ?     AND charId < ?",
-                    "SELECT charId     FROM character_contacts    WHERE charId >= ?     AND charId < ?",
-                    "SELECT contactId  FROM character_contacts    WHERE contactId >= ?  AND contactId < ?",
-                    "SELECT charId     FROM character_friends     WHERE charId >= ?     AND charId < ?",
-                    "SELECT charId     FROM character_friends     WHERE friendId >= ?   AND friendId < ?",
-                    "SELECT charId     FROM character_hennas      WHERE charId >= ? AND charId < ?",
-                    "SELECT charId     FROM character_recipebook  WHERE charId >= ?     AND charId < ?",
-                    "SELECT charId     FROM character_recipeshoplist  WHERE charId >= ?     AND charId < ?",
-                    "SELECT charId     FROM character_shortcuts   WHERE charId >= ? AND charId < ?",
-                    "SELECT charId     FROM character_macroses    WHERE charId >= ? AND charId < ?",
-                    "SELECT charId     FROM character_skills      WHERE charId >= ? AND charId < ?",
-                    "SELECT charId     FROM character_skills_save WHERE charId >= ? AND charId < ?",
-                    "SELECT charId     FROM character_subclasses  WHERE charId >= ? AND charId < ?",
-                    "SELECT charId      FROM characters            WHERE charId >= ?      AND charId < ?",
-                    "SELECT clanid      FROM characters            WHERE clanid >= ?      AND clanid < ?",
-                    "SELECT clan_id     FROM clan_data             WHERE clan_id >= ?     AND clan_id < ?",
-                    "SELECT clan_id     FROM siege_clans           WHERE clan_id >= ?     AND clan_id < ?",
-                    "SELECT ally_id     FROM clan_data             WHERE ally_id >= ?     AND ally_id < ?",
-                    "SELECT leader_id   FROM clan_data             WHERE leader_id >= ?   AND leader_id < ?",
-                    "SELECT item_obj_id FROM pets                  WHERE item_obj_id >= ? AND item_obj_id < ?",
-                    "SELECT object_id   FROM itemsonground        WHERE object_id >= ?   AND object_id < ?",
-                    "SELECT summonId	FROM characters_summons	WHERE summonId >= ?	AND summonId < ?"
-            };
-    //@formatter:off
-    private static final String[][] ID_EXTRACTS =
-            {
-                    {"characters", "charId"},
-                    {"items", "object_id"},
-                    {"clan_data", "clan_id"},
-                    {"itemsonground", "object_id"},
-                    {"messages", "messageId"}
-            };
-    private static final String[] TIMESTAMPS_CLEAN =
-            {
-                    "DELETE FROM character_instance_time WHERE time <= ?",
-                    "DELETE FROM character_skills_save WHERE restore_type = 1 AND systime <= ?"
-            };
-    protected static IdFactory _instance;
+    static final int FIRST_OID = 0x0000001;
+    private static final int LAST_OID = 0x7FFFFFFF;
+    static final int FREE_OBJECT_ID_SIZE = LAST_OID - FIRST_OID;
+
+    private static final String[][] ID_EXTRACTS = {
+        {"characters", "charId"},
+        {"items", "object_id"},
+        {"clan_data", "clan_id"},
+        {"itemsonground", "object_id"},
+        {"messages", "messageId"}
+    };
+
+    private static final String[] TIMESTAMPS_CLEAN = {
+        "DELETE FROM character_instance_time WHERE time <= ?",
+        "DELETE FROM character_skills_save WHERE restore_type = 1 AND systime <= ?"
+    };
     
-    protected boolean _initialized;
+    boolean initialized;
 
     protected IdFactory() {
-        setAllCharacterOffline();
+        getDAO(CharacterDAO.class).setAllCharactersOffline();
         if (Config.DATABASE_CLEAN_UP) {
             cleanUpDB();
         }
         cleanUpTimeStamps();
-    }
-
-    public static IdFactory getInstance() {
-        if (isNull(_instance)) {
-            _instance = new BitSetIDFactory();
-        }
-        return _instance;
-    }
-
-    /**
-     * Sets all character offline
-     */
-    private void setAllCharacterOffline() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             Statement s = con.createStatement()) {
-            s.executeUpdate("UPDATE characters SET online = 0");
-            LOGGER.info("Updated characters online status.");
-        } catch (SQLException e) {
-            LOGGER.warn("Could not update characters online status: " + e.getMessage(), e);
-        }
     }
 
     /**
@@ -101,50 +52,15 @@ public abstract class IdFactory {
              Statement stmt = con.createStatement()) {
             final long cleanupStart = System.currentTimeMillis();
             int cleanCount = 0;
-            // Misc/Account Related
-            // Please read the descriptions above each before uncommenting them. If you are still
-            // unsure of what exactly it does, leave it commented out. This is for those who know
-            // what they are doing. :)
-
-            // Deletes only accounts that HAVE been logged into and have no characters associated
-            // with the account.
-            // cleanCount +=
-            // stmt.executeUpdate("DELETE FROM accounts WHERE accounts.lastactive > 0 AND accounts.login NOT IN (SELECT account_name FROM characters);");
-
-            // Deletes any accounts that don't have characters. Whether or not the player has ever
-            // logged into the account.
-            // cleanCount +=
-            // stmt.executeUpdate("DELETE FROM accounts WHERE accounts.login NOT IN (SELECT account_name FROM characters);");
-
-            // Deletes banned accounts that have not been logged into for xx amount of days
-            // (specified at the end of the script, default is set to 90 days). This prevents
-            // accounts from being deleted that were accidentally or temporarily banned.
-            // cleanCount +=
-            // stmt.executeUpdate("DELETE FROM accounts WHERE accounts.accessLevel < 0 AND DATEDIFF(CURRENT_DATE( ) , FROM_UNIXTIME(`lastactive`/1000)) > 90;");
-            // cleanCount +=
-            // stmt.executeUpdate("DELETE FROM characters WHERE characters.account_name NOT IN (SELECT login FROM accounts);");
 
             // If the character does not exist...
             // Characters
             cleanCount += stmt.executeUpdate("DELETE FROM account_gsdata WHERE account_gsdata.account_name NOT IN (SELECT account_name FROM characters);");
-            cleanCount += stmt.executeUpdate("DELETE FROM character_contacts WHERE character_contacts.charId NOT IN (SELECT charId FROM characters);");
-            cleanCount += stmt.executeUpdate("DELETE FROM character_contacts WHERE character_contacts.contactId NOT IN (SELECT charId FROM characters);");
-            cleanCount += stmt.executeUpdate("DELETE FROM character_friends WHERE character_friends.charId NOT IN (SELECT charId FROM characters);");
-            cleanCount += stmt.executeUpdate("DELETE FROM character_friends WHERE character_friends.friendId NOT IN (SELECT charId FROM characters);");
-            cleanCount += stmt.executeUpdate("DELETE FROM character_hennas WHERE character_hennas.charId NOT IN (SELECT charId FROM characters);");
-            cleanCount += stmt.executeUpdate("DELETE FROM character_macroses WHERE character_macroses.charId NOT IN (SELECT charId FROM characters);");
-            cleanCount += stmt.executeUpdate("DELETE FROM character_quests WHERE character_quests.charId NOT IN (SELECT charId FROM characters);");
-            cleanCount += stmt.executeUpdate("DELETE FROM character_recipebook WHERE character_recipebook.charId NOT IN (SELECT charId FROM characters);");
-            cleanCount += stmt.executeUpdate("DELETE FROM character_recipeshoplist WHERE character_recipeshoplist.charId NOT IN (SELECT charId FROM characters);");
-            cleanCount += stmt.executeUpdate("DELETE FROM character_shortcuts WHERE character_shortcuts.charId NOT IN (SELECT charId FROM characters);");
-            cleanCount += stmt.executeUpdate("DELETE FROM character_skills WHERE character_skills.charId NOT IN (SELECT charId FROM characters);");
-            cleanCount += stmt.executeUpdate("DELETE FROM character_skills_save WHERE character_skills_save.charId NOT IN (SELECT charId FROM characters);");
-            cleanCount += stmt.executeUpdate("DELETE FROM character_subclasses WHERE character_subclasses.charId NOT IN (SELECT charId FROM characters);");
-            cleanCount += stmt.executeUpdate("DELETE FROM character_instance_time WHERE character_instance_time.charId NOT IN (SELECT charId FROM characters);");
 
             // Items
             cleanCount += stmt.executeUpdate("DELETE FROM items WHERE items.owner_id NOT IN (SELECT charId FROM characters) AND items.owner_id NOT IN (SELECT clan_id FROM clan_data) AND items.owner_id != -1;");
             cleanCount += stmt.executeUpdate("DELETE FROM items WHERE items.owner_id = -1 AND loc LIKE 'MAIL' AND loc_data NOT IN (SELECT messageId FROM messages WHERE senderId = -1);");
+
             cleanCount += stmt.executeUpdate("DELETE FROM item_auction_bid WHERE item_auction_bid.playerObjId NOT IN (SELECT charId FROM characters);");
             cleanCount += stmt.executeUpdate("DELETE FROM item_variations WHERE item_variations.itemId NOT IN (SELECT object_id FROM items);");
             cleanCount += stmt.executeUpdate("DELETE FROM item_elementals WHERE item_elementals.itemId NOT IN (SELECT object_id FROM items);");
@@ -237,21 +153,26 @@ public abstract class IdFactory {
             }
         }
         Collections.sort(temp);
-        return temp.toArray(new Integer[temp.size()]);
+        return temp.toArray(Integer[]::new);
     }
 
     public boolean isInitialized() {
-        return _initialized;
+        return initialized;
     }
 
     public abstract int getNextId();
 
-    /**
-     * return a used Object ID back to the pool
-     *
-     * @param id
-     */
+
     public abstract void releaseId(int id);
 
     public abstract int size();
+
+
+    public static IdFactory getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final IdFactory INSTANCE = new BitSetIDFactory();
+    }
 }

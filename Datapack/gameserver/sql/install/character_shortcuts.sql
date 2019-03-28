@@ -8,6 +8,8 @@ CREATE TABLE IF NOT EXISTS `character_shortcuts` (
   `level` SMALLINT UNSIGNED ,
   `sub_level` INT(4) NOT NULL DEFAULT '0',
   `class_index` int(1) NOT NULL DEFAULT '0',
+
   PRIMARY KEY (`charId`,`slot`,`page`,`class_index`),
-  KEY `shortcut_id` (`shortcut_id`)
+  KEY `shortcut_id` (`shortcut_id`),
+  FOREIGN KEY FK_FRIENDS_FRIEND (`charId`) REFERENCES characters (`charId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

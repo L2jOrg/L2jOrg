@@ -8,5 +8,7 @@ CREATE TABLE IF NOT EXISTS `character_subclasses` (
   `vitality_points` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
   `class_index` int(1) NOT NULL DEFAULT 0,
   `dual_class` BOOLEAN NOT NULL DEFAULT FALSE,
-  PRIMARY KEY (`charId`,`class_id`)
+  
+  PRIMARY KEY (`charId`,`class_id`),
+  FOREIGN KEY FK_FRIENDS_FRIEND (`charId`) REFERENCES characters (`charId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

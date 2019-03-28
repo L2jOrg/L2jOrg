@@ -17,7 +17,7 @@ public final class JavaScriptingEngine extends AbstractScriptingEngine {
     private volatile JavaCompiler compiler;
 
     public JavaScriptingEngine() {
-        super("Java Engine", "11", "java");
+        super("Java Engine", System.getProperty("java.specification.version"), "java");
     }
 
     private void determineCompilerOrThrow() {

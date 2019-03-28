@@ -5,5 +5,6 @@ CREATE TABLE IF NOT EXISTS `character_skills` (
   `skill_level` INT(4) NOT NULL DEFAULT 1,
   `skill_sub_level` INT(4) NOT NULL DEFAULT '0',
   `class_index` INT(1) NOT NULL DEFAULT 0,
-  PRIMARY KEY (`charId`,`skill_id`,`class_index`)
+  PRIMARY KEY (`charId`,`skill_id`,`class_index`),
+  FOREIGN KEY FK_FRIENDS_FRIEND (`charId`) REFERENCES characters (`charId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

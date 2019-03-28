@@ -10,5 +10,7 @@ CREATE TABLE IF NOT EXISTS `character_skills_save` (
   `restore_type` INT(1) NOT NULL DEFAULT 0,
   `class_index` INT(1) NOT NULL DEFAULT 0,
   `buff_index` INT(2) NOT NULL DEFAULT 0,
-  PRIMARY KEY (`charId`,`skill_id`,`skill_level`,`class_index`)
+
+  PRIMARY KEY (`charId`,`skill_id`,`skill_level`,`class_index`),
+  FOREIGN KEY FK_FRIENDS_FRIEND (`charId`) REFERENCES characters (`charId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
