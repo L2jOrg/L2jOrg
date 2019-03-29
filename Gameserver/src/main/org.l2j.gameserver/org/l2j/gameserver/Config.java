@@ -402,7 +402,6 @@ public final class Config {
     public static int AUTODESTROY_ITEM_AFTER;
     public static int HERB_AUTO_DESTROY_TIME;
     public static List<Integer> LIST_PROTECTED_ITEMS;
-    public static boolean DATABASE_CLEAN_UP;
     public static int CHAR_DATA_STORE_INTERVAL;
     public static int CLAN_VARIABLES_STORE_INTERVAL;
     public static boolean LAZY_ITEMS_UPDATE;
@@ -1546,7 +1545,6 @@ public final class Config {
         for (String id : split) {
             LIST_PROTECTED_ITEMS.add(Integer.parseInt(id));
         }
-        DATABASE_CLEAN_UP = General.getBoolean("DatabaseCleanUp", true);
         CHAR_DATA_STORE_INTERVAL = General.getInt("CharacterDataStoreInterval", 15) * 60 * 1000;
         CLAN_VARIABLES_STORE_INTERVAL = General.getInt("ClanVariablesStoreInterval", 15) * 60 * 1000;
         LAZY_ITEMS_UPDATE = General.getBoolean("LazyItemsUpdate", false);
