@@ -14,7 +14,7 @@ public interface AccountDAO extends DAO {
     void save(String login, String password, long lastAccess, String lastIP);
 
     @Query("UPDATE accounts SET last_access=:lastAccess:, last_ip=:lastIP: WHERE login=:login:")
-    void updateAccess(String login, Long lastAccess, String lastIP);
+    void updateAccess(String login, long lastAccess, String lastIP);
 
     @Query("UPDATE accounts SET access_level=:accessLevel: WHERE login=:login:")
     int updateAccessLevel(String login, short accessLevel);
