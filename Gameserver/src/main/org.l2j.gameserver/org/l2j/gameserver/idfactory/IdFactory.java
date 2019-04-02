@@ -1,8 +1,7 @@
 package org.l2j.gameserver.idfactory;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.data.database.dao.AccountVariableDAO;
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,22 +50,21 @@ public abstract class IdFactory {
             final long cleanupStart = System.currentTimeMillis();
             int cleanCount = 0;
 
-            getDAO(AccountVariableDAO.class).deleteWithoutAccount();
-            // Items
-            cleanCount += stmt.executeUpdate("DELETE FROM items WHERE items.owner_id NOT IN (SELECT charId FROM characters) AND items.owner_id NOT IN (SELECT clan_id FROM clan_data) AND items.owner_id != -1;");
-            cleanCount += stmt.executeUpdate("DELETE FROM items WHERE items.owner_id = -1 AND loc LIKE 'MAIL' AND loc_data NOT IN (SELECT messageId FROM messages WHERE senderId = -1);");
+            cleanCount += getDAO(AccountVariableDAO.class).deleteWithoutAccount();
 
-            // Misc
-            cleanCount += stmt.executeUpdate("DELETE FROM clan_data WHERE clan_data.clan_id NOT IN (SELECT clanid FROM characters);");
+            cleanCount += getDAO(ItemDAO.class).deleteWithoutOwner();
+            cleanCount += getDAO(ItemDAO.class).deleteFromEmailWithoutMessage();
 
-            // Forum Related
-            cleanCount += stmt.executeUpdate("DELETE FROM forums WHERE forums.forum_owner_id NOT IN (SELECT clan_id FROM clan_data) AND forums.forum_parent=2;");
-            cleanCount += stmt.executeUpdate("DELETE FROM forums WHERE forums.forum_owner_id NOT IN (SELECT charId FROM characters) AND forums.forum_parent=3;");
+
+            var clanDao = getDAO(ClanDAO.class);
+            cleanCount += clanDao.deleteWithoutMembers();
+
+            cleanCount += getDAO(ForumDAO.class).deleteWithoutOwner();
 
             // Update needed items after cleaning has taken place.
-            stmt.executeUpdate("UPDATE clan_data SET auction_bid_at = 0 WHERE auction_bid_at NOT IN (SELECT auctionId FROM auction_bid);");
-            stmt.executeUpdate("UPDATE clan_data SET new_leader_id = 0 WHERE new_leader_id <> 0 AND new_leader_id NOT IN (SELECT charId FROM characters);");
-            stmt.executeUpdate("UPDATE clan_subpledges SET leader_id=0 WHERE clan_subpledges.leader_id NOT IN (SELECT charId FROM characters) AND leader_id > 0;");
+            clanDao.resetAuctionBidWithoutAction();
+            clanDao.resetNewLeaderWithoutCharacter();
+            clanDao.resetSubpledgeLeaderWithoutCharacter();
             stmt.executeUpdate("UPDATE castle SET side='NEUTRAL' WHERE castle.id NOT IN (SELECT hasCastle FROM clan_data);");
             stmt.executeUpdate("UPDATE characters SET clanid=0, clan_privs=0, wantspeace=0, subpledge=0, lvl_joined_academy=0, apprentice=0, sponsor=0, clan_join_expiry_time=0, clan_create_expiry_time=0 WHERE characters.clanid > 0 AND characters.clanid NOT IN (SELECT clan_id FROM clan_data);");
             stmt.executeUpdate("UPDATE fort SET owner=0 WHERE owner NOT IN (SELECT clan_id FROM clan_data);");
