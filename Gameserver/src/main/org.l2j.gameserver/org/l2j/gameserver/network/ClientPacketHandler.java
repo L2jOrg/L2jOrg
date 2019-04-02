@@ -45,7 +45,8 @@ public class ClientPacketHandler implements PacketHandler<L2GameClient> {
 
         final ConnectionState connectionState = client.getConnectionState();
         if (!packetFactory.canHandleState(client.getConnectionState())) {
-            LOGGER.warn("Client {} sent packet {} at invalid state {} Required States: {}", client, toHexString(opcode),  connectionState, packetFactory.getConnectionStates());
+            LOGGER.warn("Client {} sent packet at invalid state {} Required States: {} - [{}]: {}",
+                    client,  connectionState, packetFactory.getConnectionStates(), toHexString(opcode), Util.printData(buffer.array(), buffer.limit()));
             return null;
         }
         return packet;
