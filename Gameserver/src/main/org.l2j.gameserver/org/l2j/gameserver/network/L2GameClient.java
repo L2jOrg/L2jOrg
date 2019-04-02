@@ -449,20 +449,11 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         try {
             final String address = getHostAddress();
             final ConnectionState state = getConnectionState();
-            switch (state) {
-                case CONNECTED: {
-                    return "[IP: " + (address == null ? "disconnected" : address) + "]";
-                }
-                case AUTHENTICATED: {
-                    return "[Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
-                }
-                case IN_GAME: {
-                    return "[Character: " + (_activeChar == null ? "disconnected" : _activeChar.getName() + "[" + _activeChar.getObjectId() + "]") + " - Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
-                }
-                default: {
-                    throw new IllegalStateException("Missing state on switch");
-                }
-            }
+            return switch (state) {
+                case CONNECTED, CLOSING, DISCONNECTED  -> "[IP: " + (address == null ? "disconnected" : address) + "]";
+                case AUTHENTICATED -> "[Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
+                case IN_GAME, JOINING_GAME -> "[Character: " + (_activeChar == null ? "disconnected" : _activeChar.getName() + "[" + _activeChar.getObjectId() + "]") + " - Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
+            };
         } catch (NullPointerException e) {
             return "[Character read failed due to disconnect]";
         }
