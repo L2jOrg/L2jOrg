@@ -30,7 +30,7 @@ import java.util.Set;
  *
  * @author Micht
  */
-public final class CursedWeaponsManager implements IGameXmlReader {
+public final class CursedWeaponsManager extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(CursedWeaponsManager.class);
 
     private final Map<Integer, CursedWeapon> _cursedWeapons = new HashMap<>();

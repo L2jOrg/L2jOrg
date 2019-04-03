@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.commons.util.IXmlReader;
+import org.l2j.commons.util.XmlReader;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.ChanceLocation;
 import org.l2j.gameserver.model.StatsSet;
@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 /**
  * @author UnAfraid
  */
-public class SpawnsData implements IGameXmlReader {
+public class SpawnsData extends IGameXmlReader{
     protected static final Logger LOGGER = LoggerFactory.getLogger(SpawnsData.class);
 
     private final List<SpawnTemplate> _spawns = new LinkedList<>();
@@ -128,7 +128,7 @@ public class SpawnsData implements IGameXmlReader {
      * @param spawnTemplate
      */
     private void parseTerritories(Node innerNode, File file, ITerritorized spawnTemplate) {
-        forEach(innerNode, IXmlReader::isNode, territoryNode ->
+        forEach(innerNode, XmlReader::isNode, territoryNode ->
         {
             final String name = parseString(territoryNode.getAttributes(), "name", file.getName() + "_" + (spawnTemplate.getTerritories().size() + 1));
             final int minZ = parseInteger(territoryNode.getAttributes(), "minZ");
@@ -159,7 +159,7 @@ public class SpawnsData implements IGameXmlReader {
 
     private void parseGroup(Node n, SpawnTemplate spawnTemplate) {
         final SpawnGroup group = new SpawnGroup(new StatsSet(parseAttributes(n)));
-        forEach(n, IXmlReader::isNode, npcNode ->
+        forEach(n, XmlReader::isNode, npcNode ->
         {
             switch (npcNode.getNodeName()) {
                 case "territories": {

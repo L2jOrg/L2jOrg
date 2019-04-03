@@ -13,7 +13,7 @@ import java.util.Set;
 /**
  * @author NosBit
  */
-public class SecondaryAuthData implements IGameXmlReader {
+public class SecondaryAuthData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(SecondaryAuthData.class.getName());
 
     private final Set<String> forbiddenPasswords = new HashSet<>();

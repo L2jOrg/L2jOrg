@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
  *
  * @author NosBit
  */
-public class NpcData implements IGameXmlReader {
+public class NpcData extends IGameXmlReader{
     protected static final Logger LOGGER = LoggerFactory.getLogger(NpcData.class);
     private static final List<Integer> _masterMonsterIDs = new ArrayList<>();
     private final Map<Integer, L2NpcTemplate> _npcs = new HashMap<>();

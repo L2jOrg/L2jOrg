@@ -22,7 +22,7 @@ import java.util.*;
 /**
  * @author UnAfraid
  */
-public final class ItemCrystallizationData implements IGameXmlReader {
+public final class ItemCrystallizationData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(ItemCrystallizationData.class);
 
     private final Map<CrystalType, Map<CrystallizationType, List<ItemChanceHolder>>> _crystallizationTemplates = new EnumMap<>(CrystalType.class);

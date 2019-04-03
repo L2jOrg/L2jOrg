@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * @author mkizub, JIV
  */
-public final class DocumentItem extends DocumentBase implements IGameXmlReader {
+public final class DocumentItem extends DocumentBase extends IGameXmlReader{
     private final List<L2Item> _itemsInFile = new LinkedList<>();
     Logger LOGGER = LoggerFactory.getLogger(DocumentItem.class.getName());
     private Item _currentItem = null;

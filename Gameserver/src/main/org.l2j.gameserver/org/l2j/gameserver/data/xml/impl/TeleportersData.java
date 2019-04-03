@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * @author UnAfraid
  */
-public class TeleportersData implements IGameXmlReader {
+public class TeleportersData extends IGameXmlReader{
     // Logger instance
     private static final Logger LOGGER = LoggerFactory.getLogger(TeleportersData.class);
     // Teleporter data

@@ -26,7 +26,7 @@ import java.util.Map;
  *
  * @author Zoey76, Mobius
  */
-public final class HennaData implements IGameXmlReader {
+public final class HennaData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(HennaData.class);
 
     private final Map<Integer, L2Henna> _hennaList = new HashMap<>();

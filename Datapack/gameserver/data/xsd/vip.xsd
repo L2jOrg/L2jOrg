@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://la2j.org"
+           xmlns="http://la2j.org"
+           elementFormDefault="qualified">
+
+    <xs:element name="list">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vip" type="TierInfo" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
+
+    <xs:complexType name="TierInfo">
+        <xs:sequence>
+            <xs:element name="bonus" type="TierBonusInfo" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="level" type="xs:int" use="required"/>
+        <xs:attribute name="points_required" type="xs:int" use="required"/>
+        <xs:attribute name="points_depreciated" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="TierBonusInfo">
+        <xs:attribute name="xp_sp" type="xs:float" default="1"/>
+        <xs:attribute name="item_drop" type="xs:float" default="1"/>
+        <xs:attribute name="world_chat" type="xs:int" default="0"/>
+        <xs:attribute name="death_penalty_reduction" type="xs:float" default="1"/>
+        <xs:attribute name="fishing_xp" type="xs:float" default="1"/>
+        <xs:attribute name="pve_damage" type="xs:float" default="1"/>
+        <xs:attribute name="pvp_damage" type="xs:float" default="1"/>
+        <xs:attribute name="silver_coin_acquisition" type="xs:float" default="0"/>
+        <xs:attribute name="rusty_coin_acquisition" type="xs:float" default="0"/>
+        <xs:attribute name="daily_vip_box" type="xs:boolean" default="true"/>
+        <xs:attribute name="combat_attribute" type="xs:int" default="0"/>
+    </xs:complexType>
+</xs:schema>

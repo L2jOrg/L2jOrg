@@ -1,7 +1,7 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.util.IXmlReader;
+import org.l2j.commons.util.XmlReader;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
@@ -41,7 +41,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  * @author evill33t, GodKratos, malyelfik
  */
-public final class InstanceManager implements IGameXmlReader {
+public final class InstanceManager extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(InstanceManager.class);
     // Database query
     private static final String DELETE_INSTANCE_TIME = "DELETE FROM character_instance_time WHERE charId=? AND instanceId=?";
@@ -78,7 +78,7 @@ public final class InstanceManager implements IGameXmlReader {
 
     @Override
     public void parseDocument(Document doc, File f) {
-        forEach(doc, IXmlReader::isNode, listNode ->
+        forEach(doc, XmlReader::isNode, listNode ->
         {
             switch (listNode.getNodeName()) {
                 case "list": {
@@ -132,7 +132,7 @@ public final class InstanceManager implements IGameXmlReader {
         }
 
         // Parse "instance" node children
-        forEach(instanceNode, IXmlReader::isNode, innerNode ->
+        forEach(instanceNode, XmlReader::isNode, innerNode ->
         {
             switch (innerNode.getNodeName()) {
                 case "time": {
@@ -157,7 +157,7 @@ public final class InstanceManager implements IGameXmlReader {
                     break;
                 }
                 case "locations": {
-                    forEach(innerNode, IXmlReader::isNode, locationsNode ->
+                    forEach(innerNode, XmlReader::isNode, locationsNode ->
                     {
                         switch (locationsNode.getNodeName()) {
                             case "enter": {

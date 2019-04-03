@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.commons.util.IXmlReader;
+import org.l2j.commons.util.XmlReader;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
@@ -44,7 +44,7 @@ import java.util.*;
 /**
  * @author UnAfraid
  */
-public final class EventEngineData implements IGameXmlReader {
+public final class EventEngineData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(EventEngineData.class);
 
     private EventEngineData() {
@@ -236,7 +236,7 @@ public final class EventEngineData implements IGameXmlReader {
      */
     private void parseRewards(AbstractEventManager<?> eventManager, Node innerNode) {
         final Map<String, IEventDrop> rewards = new LinkedHashMap<>();
-        forEach(innerNode, IXmlReader::isNode, rewardsNode ->
+        forEach(innerNode, XmlReader::isNode, rewardsNode ->
         {
             if ("reward".equalsIgnoreCase(rewardsNode.getNodeName())) {
                 final String name = parseString(rewardsNode.getAttributes(), "name");
@@ -351,7 +351,7 @@ public final class EventEngineData implements IGameXmlReader {
         final Class<?> keyClass = getClassByName(eventManager, keyType);
         final Class<?> valueClass = getClassByName(eventManager, valueType);
         final Map<?, ?> map = newMap(keyClass, valueClass);
-        forEach(variableNode, IXmlReader::isNode, stringNode ->
+        forEach(variableNode, XmlReader::isNode, stringNode ->
         {
             switch (stringNode.getNodeName()) {
                 case "entry": {

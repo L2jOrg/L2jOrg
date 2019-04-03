@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.stats;
 
-import org.l2j.commons.util.IXmlReader;
+import org.l2j.commons.util.XmlReader;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
@@ -36,7 +36,7 @@ public enum BaseStats {
 
             @Override
             public void parseDocument(Document doc, File f) {
-                forEach(doc, "list", listNode -> forEach(listNode, IXmlReader::isNode, statNode ->
+                forEach(doc, "list", listNode -> forEach(listNode, XmlReader::isNode, statNode ->
                 {
                     final BaseStats baseStat;
                     try {

@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * @author Sdw
  */
-public final class BeautyShopData implements IGameXmlReader {
+public final class BeautyShopData extends IGameXmlReader{
     private final Map<Race, Map<Sex, BeautyData>> _beautyList = new HashMap<>();
     private final Map<Sex, BeautyData> _beautyData = new HashMap<>();
 

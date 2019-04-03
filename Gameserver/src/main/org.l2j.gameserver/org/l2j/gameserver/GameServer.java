@@ -57,6 +57,8 @@ public class GameServer {
     public GameServer() throws Exception {
         final var serverLoadStart = Instant.now();
 
+        VipData.getInstance();
+
         printSection("Identify Factory");
         if (!IdFactory.getInstance().isInitialized()) {
             LOGGER.error("Could not read object IDs from database. Please check your configuration.");

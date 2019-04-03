@@ -35,7 +35,7 @@ import java.util.Map;
  *
  * @author Zoey76
  */
-public final class ClassListData implements IGameXmlReader {
+public final class ClassListData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(ClassListData.class);
 
     private final Map<ClassId, ClassInfo> _classData = new HashMap<>();

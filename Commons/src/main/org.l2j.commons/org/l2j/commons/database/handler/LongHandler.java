@@ -41,6 +41,6 @@ public class LongHandler implements  TypeHandler<Long> {
 
     @Override
     public String type() {
-        return Long.TYPE.toString();
+        return Long.TYPE.getName();
     }
 }

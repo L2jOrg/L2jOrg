@@ -25,7 +25,7 @@ import java.util.Map;
 /**
  * @author UnAfraid
  */
-public final class ShuttleData implements IGameXmlReader {
+public final class ShuttleData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(ShuttleData.class);
 
     private final Map<Integer, L2ShuttleData> _shuttles = new HashMap<>();

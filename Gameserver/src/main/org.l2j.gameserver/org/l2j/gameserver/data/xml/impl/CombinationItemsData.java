@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 /**
  * @author UnAfraid
  */
-public class CombinationItemsData implements IGameXmlReader {
+public class CombinationItemsData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(CombinationItemsData.class);
     private final List<CombinationItem> _items = new ArrayList<>();
 

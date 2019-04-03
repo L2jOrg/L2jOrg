@@ -21,8 +21,7 @@ package org.l2j.commons.util.filter;
  * Accepts files ending with ".xml" only.
  * @author mrTJO
  */
-public class XMLFilter extends ExtFilter
-{
+public class XMLFilter extends ExtFilter {
 	public XMLFilter()
 	{
 		super(".xml");

@@ -24,7 +24,7 @@ import java.util.Map;
  *
  * @author Zoey76
  */
-public final class InitialEquipmentData implements IGameXmlReader {
+public final class InitialEquipmentData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(InitialEquipmentData.class);
     private static final String NORMAL = "data/stats/initialEquipment.xml";
     private static final String EVENT = "data/stats/initialEquipmentEvent.xml";

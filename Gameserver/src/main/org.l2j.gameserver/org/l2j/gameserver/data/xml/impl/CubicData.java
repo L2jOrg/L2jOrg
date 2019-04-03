@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.commons.util.IXmlReader;
+import org.l2j.commons.util.XmlReader;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.templates.L2CubicTemplate;
 import org.l2j.gameserver.model.cubic.CubicSkill;
@@ -40,7 +40,7 @@ import java.util.Map;
 /**
  * @author UnAfraid
  */
-public class CubicData implements IGameXmlReader {
+public class CubicData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(CubicData.class);
 
     private final Map<Integer, Map<Integer, L2CubicTemplate>> _cubics = new HashMap<>();
@@ -69,7 +69,7 @@ public class CubicData implements IGameXmlReader {
      * @param template
      */
     private void parseTemplate(Node cubicNode, L2CubicTemplate template) {
-        forEach(cubicNode, IXmlReader::isNode, innerNode ->
+        forEach(cubicNode, XmlReader::isNode, innerNode ->
         {
             switch (innerNode.getNodeName()) {
                 case "conditions": {
@@ -91,7 +91,7 @@ public class CubicData implements IGameXmlReader {
      * @param holder
      */
     private void parseConditions(Node cubicNode, L2CubicTemplate template, ICubicConditionHolder holder) {
-        forEach(cubicNode, IXmlReader::isNode, conditionNode ->
+        forEach(cubicNode, XmlReader::isNode, conditionNode ->
         {
             switch (conditionNode.getNodeName()) {
                 case "hp": {

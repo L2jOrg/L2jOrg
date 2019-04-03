@@ -31,7 +31,7 @@ import java.util.Set;
  *
  * @author Nyaran
  */
-public final class MapRegionManager implements IGameXmlReader {
+public final class MapRegionManager extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(MapRegionManager.class);
 
     private final Map<String, L2MapRegion> _regions = new HashMap<>();

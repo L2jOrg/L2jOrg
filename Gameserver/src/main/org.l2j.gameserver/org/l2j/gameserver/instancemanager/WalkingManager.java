@@ -33,7 +33,7 @@ import java.util.Map;
  *
  * @author GKR
  */
-public final class WalkingManager implements IGameXmlReader {
+public final class WalkingManager extends IGameXmlReader{
     // Repeat style:
     // -1 - no repeat
     // 0 - go back

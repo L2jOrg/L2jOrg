@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * @author UnAfraid
  */
-public class SiegeScheduleData implements IGameXmlReader {
+public class SiegeScheduleData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(SiegeScheduleData.class);
 
     private final List<SiegeScheduleDate> _scheduleData = new ArrayList<>();

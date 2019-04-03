@@ -28,7 +28,7 @@ import java.util.*;
  *
  * @author durgus
  */
-public final class ZoneManager implements IGameXmlReader {
+public final class ZoneManager extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(ZoneManager.class);
 
     private static final Map<String, AbstractZoneSettings> SETTINGS = new HashMap<>();

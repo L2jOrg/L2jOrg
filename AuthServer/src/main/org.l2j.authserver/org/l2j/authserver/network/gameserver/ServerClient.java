@@ -75,7 +75,7 @@ public final class ServerClient extends Client<Connection<ServerClient>> {
             }
             return  decrypted;
         } catch (IOException e) {
-            logger.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getLocalizedMessage(), e);
             disconnect();
             return false;
         }*/
@@ -87,7 +87,7 @@ public final class ServerClient extends Client<Connection<ServerClient>> {
         /*try {
             return  crypt.encrypt(data, offset, size);
         } catch (IOException e) {
-            logger.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getLocalizedMessage(), e);
             return -1;
         }*/
         return size;

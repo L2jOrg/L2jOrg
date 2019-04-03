@@ -36,7 +36,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * @author Forsaiken
  */
-public final class ItemAuctionManager implements IGameXmlReader {
+public final class ItemAuctionManager extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(ItemAuctionManager.class);
 
     private final Map<Integer, ItemAuctionInstance> _managerInstances = new HashMap<>();

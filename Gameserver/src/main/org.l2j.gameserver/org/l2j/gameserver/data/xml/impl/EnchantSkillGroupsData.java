@@ -19,7 +19,7 @@ import java.util.*;
  *
  * @author Micr0
  */
-public class EnchantSkillGroupsData implements IGameXmlReader {
+public class EnchantSkillGroupsData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(EnchantSkillGroupsData.class);
     public static int MAX_ENCHANT_LEVEL;
     private final Map<Integer, EnchantSkillHolder> _enchantSkillHolders = new LinkedHashMap<>();

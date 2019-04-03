@@ -36,7 +36,7 @@ import java.util.function.Function;
 /**
  * @author Sdw
  */
-public class ExtendDropData implements IGameXmlReader {
+public class ExtendDropData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(ExtendDropData.class);
     private final Map<Integer, ExtendDropDataHolder> _extendDrop = new HashMap<>();
 

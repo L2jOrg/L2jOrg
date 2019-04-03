@@ -24,7 +24,7 @@ import java.util.stream.Stream;
  *
  * @author NosBit
  */
-public class SkillData implements IGameXmlReader {
+public class SkillData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(SkillData.class.getName());
 
     private final Map<Long, Skill> _skills = new HashMap<>();

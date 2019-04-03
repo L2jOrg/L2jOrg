@@ -23,7 +23,7 @@ import java.util.function.Predicate;
 /**
  * @author HoridoJoho / FBIagent
  */
-public final class FenceData implements IGameXmlReader {
+public final class FenceData extends IGameXmlReader {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FenceData.class);
 
@@ -34,6 +34,11 @@ public final class FenceData implements IGameXmlReader {
 
     private FenceData() {
         load();
+    }
+
+    @Override
+    protected String getSchemaFilePath() {
+        return "";
     }
 
     @Override

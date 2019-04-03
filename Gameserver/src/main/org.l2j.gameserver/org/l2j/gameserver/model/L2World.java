@@ -46,14 +46,14 @@ public final class L2World {
      * Map dimensions.
      */
     public static final int TILE_X_MIN = 11;
-    public static final int TILE_Y_MIN = 10;
     public static final int TILE_X_MAX = 28;
+    public static final int TILE_Y_MIN = 10;
     public static final int TILE_Y_MAX = 26;
     public static final int TILE_ZERO_COORD_X = 20;
     public static final int TILE_ZERO_COORD_Y = 18;
     public static final int MAP_MIN_X = (TILE_X_MIN - TILE_ZERO_COORD_X) * TILE_SIZE;
-    public static final int MAP_MIN_Y = (TILE_Y_MIN - TILE_ZERO_COORD_Y) * TILE_SIZE;
     public static final int MAP_MAX_X = ((TILE_X_MAX - TILE_ZERO_COORD_X) + 1) * TILE_SIZE;
+    public static final int MAP_MIN_Y = (TILE_Y_MIN - TILE_ZERO_COORD_Y) * TILE_SIZE;
     public static final int MAP_MAX_Y = ((TILE_Y_MAX - TILE_ZERO_COORD_Y) + 1) * TILE_SIZE;
     /**
      * Calculated offset used so top left region is 0,0
@@ -96,6 +96,7 @@ public final class L2World {
                 final List<L2WorldRegion> surroundingRegions = new ArrayList<>();
                 for (int sx = rx - 1; sx <= (rx + 1); sx++) {
                     for (int sy = ry - 1; sy <= (ry + 1); sy++) {
+
                         if (((sx >= 0) && (sx <= REGIONS_X) && (sy >= 0) && (sy <= REGIONS_Y))) {
                             surroundingRegions.add(_worldRegions[sx][sy]);
                         }

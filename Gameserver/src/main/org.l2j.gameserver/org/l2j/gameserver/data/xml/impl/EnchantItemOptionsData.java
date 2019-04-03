@@ -16,7 +16,7 @@ import java.util.Map;
 /**
  * @author UnAfraid
  */
-public class EnchantItemOptionsData implements IGameXmlReader {
+public class EnchantItemOptionsData extends IGameXmlReader{
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemOptionsData.class);
 

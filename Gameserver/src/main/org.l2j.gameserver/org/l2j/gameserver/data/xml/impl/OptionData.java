@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.commons.util.IXmlReader;
+import org.l2j.commons.util.XmlReader;
 import org.l2j.gameserver.handler.EffectHandler;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -20,7 +20,7 @@ import java.util.Map;
 /**
  * @author UnAfraid
  */
-public class OptionData implements IGameXmlReader {
+public class OptionData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(OptionData.class.getName());
 
     private final Map<Integer, Options> _optionData = new HashMap<>();
@@ -43,7 +43,7 @@ public class OptionData implements IGameXmlReader {
             final int id = parseInteger(optionNode.getAttributes(), "id");
             final Options option = new Options(id);
 
-            forEach(optionNode, IXmlReader::isNode, innerNode ->
+            forEach(optionNode, XmlReader::isNode, innerNode ->
             {
                 switch (innerNode.getNodeName()) {
                     case "effects": {
@@ -51,7 +51,7 @@ public class OptionData implements IGameXmlReader {
                         {
                             final String name = parseString(effectNode.getAttributes(), "name");
                             final StatsSet params = new StatsSet();
-                            forEach(effectNode, IXmlReader::isNode, paramNode ->
+                            forEach(effectNode, XmlReader::isNode, paramNode ->
                             {
                                 params.set(paramNode.getNodeName(), SkillData.getInstance().parseValue(paramNode, true, false, Collections.emptyMap()));
                             });

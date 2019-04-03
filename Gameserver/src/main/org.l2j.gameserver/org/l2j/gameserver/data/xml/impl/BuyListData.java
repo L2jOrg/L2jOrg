@@ -26,7 +26,7 @@ import java.util.Map;
  *
  * @author NosBit
  */
-public final class BuyListData implements IGameXmlReader {
+public final class BuyListData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(BuyListData.class.getName());
     private static final FileFilter NUMERIC_FILTER = new NumericNameFilter();
     private final Map<Integer, ProductList> _buyLists = new HashMap<>();

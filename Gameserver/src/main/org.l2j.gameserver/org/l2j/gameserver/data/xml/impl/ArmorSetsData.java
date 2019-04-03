@@ -21,7 +21,7 @@ import java.util.stream.Stream;
  *
  * @author godson, Luno, UnAfraid
  */
-public final class ArmorSetsData implements IGameXmlReader {
+public final class ArmorSetsData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(ArmorSetsData.class);
 
     private final Map<Integer, L2ArmorSet> _armorSets = new HashMap<>();

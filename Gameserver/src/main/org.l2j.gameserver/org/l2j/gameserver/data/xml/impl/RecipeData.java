@@ -23,7 +23,7 @@ import java.util.Map;
  *
  * @author Zoey76
  */
-public class RecipeData implements IGameXmlReader {
+public class RecipeData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(RecipeData.class);
 
     private final Map<Integer, L2RecipeList> _recipes = new HashMap<>();

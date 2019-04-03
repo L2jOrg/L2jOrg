@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 /**
  * @author St3eT
  */
-public final class CastleData implements IGameXmlReader {
+public final class CastleData extends IGameXmlReader{
     private static final Map<Integer, List<SiegeGuardHolder>> _siegeGuards = new HashMap<>();
     private final Map<Integer, List<CastleSpawnHolder>> _spawns = new HashMap<>();
 

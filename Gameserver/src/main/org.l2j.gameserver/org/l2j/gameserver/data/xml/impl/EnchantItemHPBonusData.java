@@ -20,7 +20,7 @@ import java.util.Map;
  *
  * @author MrPoke, Zoey76
  */
-public class EnchantItemHPBonusData implements IGameXmlReader {
+public class EnchantItemHPBonusData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemHPBonusData.class);
     private static final float FULL_ARMOR_MODIFIER = 1.5f; // TODO: Move it to config!
     private final Map<CrystalType, List<Integer>> _armorHPBonuses = new EnumMap<>(CrystalType.class);

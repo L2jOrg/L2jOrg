@@ -15,7 +15,7 @@ import java.util.*;
 /**
  * @author Pere
  */
-public class VariationData implements IGameXmlReader {
+public class VariationData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(VariationData.class.getSimpleName());
 
     private final Map<Integer, Variation> _variations = new HashMap<>();

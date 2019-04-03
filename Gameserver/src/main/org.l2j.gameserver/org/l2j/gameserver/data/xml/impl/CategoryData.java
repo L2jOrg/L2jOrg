@@ -19,7 +19,7 @@ import java.util.Set;
  *
  * @author NosBit, xban1x
  */
-public final class CategoryData implements IGameXmlReader {
+public final class CategoryData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(CategoryData.class);
 
     private final Map<CategoryType, Set<Integer>> _categories = new HashMap<>();

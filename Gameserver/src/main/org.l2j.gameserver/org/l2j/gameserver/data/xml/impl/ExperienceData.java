@@ -19,7 +19,7 @@ import static java.lang.Math.min;
  *
  * @author mrTJO
  */
-public final class ExperienceData implements IGameXmlReader {
+public final class ExperienceData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(ExperienceData.class);
 
     private final Map<Integer, Long> _expTable = new HashMap<>();

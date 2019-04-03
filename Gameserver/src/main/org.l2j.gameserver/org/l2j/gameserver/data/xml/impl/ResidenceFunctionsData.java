@@ -34,7 +34,7 @@ import java.util.*;
  *
  * @author UnAfraid
  */
-public final class ResidenceFunctionsData implements IGameXmlReader {
+public final class ResidenceFunctionsData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(ResidenceFunctionsData.class);
     private final Map<Integer, List<ResidenceFunctionTemplate>> _functions = new HashMap<>();
 

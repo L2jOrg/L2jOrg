@@ -20,7 +20,7 @@ import java.util.Map;
  *
  * @author UnAfraid
  */
-public class EnchantItemData implements IGameXmlReader {
+public class EnchantItemData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemData.class);
 
     private final Map<Integer, EnchantScroll> _scrolls = new HashMap<>();

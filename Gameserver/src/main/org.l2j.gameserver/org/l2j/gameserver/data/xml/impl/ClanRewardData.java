@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.commons.util.IXmlReader;
+import org.l2j.commons.util.XmlReader;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * @author UnAfraid
  */
-public class ClanRewardData implements IGameXmlReader {
+public class ClanRewardData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(ClanRewardData.class);
 
     private final Map<ClanRewardType, List<ClanRewardBonus>> _clanRewards = new ConcurrentHashMap<>();
@@ -41,7 +41,7 @@ public class ClanRewardData implements IGameXmlReader {
 
     @Override
     public void parseDocument(Document doc, File f) {
-        forEach(doc.getFirstChild(), IXmlReader::isNode, listNode ->
+        forEach(doc.getFirstChild(), XmlReader::isNode, listNode ->
         {
             switch (listNode.getNodeName()) {
                 case "membersOnline": {
@@ -57,14 +57,14 @@ public class ClanRewardData implements IGameXmlReader {
     }
 
     private void parseMembersOnline(Node node) {
-        forEach(node, IXmlReader::isNode, memberNode ->
+        forEach(node, XmlReader::isNode, memberNode ->
         {
             if ("players".equalsIgnoreCase(memberNode.getNodeName())) {
                 final NamedNodeMap attrs = memberNode.getAttributes();
                 final int requiredAmount = parseInteger(attrs, "size");
                 final int level = parseInteger(attrs, "level");
                 final ClanRewardBonus bonus = new ClanRewardBonus(ClanRewardType.MEMBERS_ONLINE, level, requiredAmount);
-                forEach(memberNode, IXmlReader::isNode, skillNode ->
+                forEach(memberNode, XmlReader::isNode, skillNode ->
                 {
                     if ("skill".equalsIgnoreCase(skillNode.getNodeName())) {
                         final NamedNodeMap skillAttr = skillNode.getAttributes();
@@ -79,14 +79,14 @@ public class ClanRewardData implements IGameXmlReader {
     }
 
     private void parseHuntingBonus(Node node) {
-        forEach(node, IXmlReader::isNode, memberNode ->
+        forEach(node, XmlReader::isNode, memberNode ->
         {
             if ("hunting".equalsIgnoreCase(memberNode.getNodeName())) {
                 final NamedNodeMap attrs = memberNode.getAttributes();
                 final int requiredAmount = parseInteger(attrs, "points");
                 final int level = parseInteger(attrs, "level");
                 final ClanRewardBonus bonus = new ClanRewardBonus(ClanRewardType.HUNTING_MONSTERS, level, requiredAmount);
-                forEach(memberNode, IXmlReader::isNode, itemsNode ->
+                forEach(memberNode, XmlReader::isNode, itemsNode ->
                 {
                     if ("item".equalsIgnoreCase(itemsNode.getNodeName())) {
                         final NamedNodeMap itemsAttr = itemsNode.getAttributes();

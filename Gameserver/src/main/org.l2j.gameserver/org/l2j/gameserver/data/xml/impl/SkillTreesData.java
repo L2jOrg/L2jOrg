@@ -57,7 +57,7 @@ import static java.util.Objects.isNull;
  *
  * @author Zoey76
  */
-public final class SkillTreesData implements IGameXmlReader {
+public final class SkillTreesData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(SkillTreesData.class.getName());
 
     // ClassId, Map of Skill Hash Code, L2SkillLearn

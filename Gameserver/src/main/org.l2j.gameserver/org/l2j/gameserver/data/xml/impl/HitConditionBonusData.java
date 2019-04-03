@@ -18,7 +18,7 @@ import java.io.File;
  *
  * @author Nik
  */
-public final class HitConditionBonusData implements IGameXmlReader {
+public final class HitConditionBonusData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(HitConditionBonusData.class);
 
     private int frontBonus = 0;

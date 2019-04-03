@@ -24,7 +24,7 @@ import java.util.Map;
 /**
  * @author Gnacik, UnAfraid
  */
-public class PrimeShopData implements IGameXmlReader {
+public class PrimeShopData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(PrimeShopData.class);
 
     private final Map<Integer, PrimeShopGroup> _primeItems = new LinkedHashMap<>();

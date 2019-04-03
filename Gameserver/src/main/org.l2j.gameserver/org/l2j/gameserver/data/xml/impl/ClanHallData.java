@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 /**
  * @author St3eT
  */
-public final class ClanHallData implements IGameXmlReader {
+public final class ClanHallData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(ClanHallData.class);
     private static final Map<Integer, ClanHall> _clanHalls = new HashMap<>();
 

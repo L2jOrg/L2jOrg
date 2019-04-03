@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 /**
  * @author Sdw
  */
-public class DailyMissionData implements IGameXmlReader {
+public class DailyMissionData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(DailyMissionData.class);
     private final Map<Integer, List<DailyMissionDataHolder>> _dailyMissionRewards = new LinkedHashMap<>();
     private boolean _isAvailable;

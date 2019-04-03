@@ -17,7 +17,7 @@ import java.util.Map;
  *
  * @author bit
  */
-public final class FishingData implements IGameXmlReader {
+public final class FishingData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(FishingData.class);
     private final Map<Integer, FishingBaitData> _baitData = new HashMap<>();
     private int _baitDistanceMin;

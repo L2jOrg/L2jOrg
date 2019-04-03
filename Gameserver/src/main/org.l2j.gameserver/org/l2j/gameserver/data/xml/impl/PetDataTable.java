@@ -22,7 +22,7 @@ import java.util.Map;
  *
  * @author Zoey76 (rework)
  */
-public final class PetDataTable implements IGameXmlReader {
+public final class PetDataTable extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(PetDataTable.class);
 
     private final Map<Integer, L2PetData> _pets = new HashMap<>();

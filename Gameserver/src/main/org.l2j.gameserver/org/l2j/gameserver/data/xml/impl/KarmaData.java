@@ -15,7 +15,7 @@ import java.util.Map;
 /**
  * @author UnAfraid
  */
-public class KarmaData implements IGameXmlReader {
+public class KarmaData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(KarmaData.class);
 
     private final Map<Integer, Double> _karmaTable = new HashMap<>();

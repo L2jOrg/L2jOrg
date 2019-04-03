@@ -45,7 +45,7 @@ import java.util.Map;
  *
  * @author Zoey76
  */
-public final class InitialShortcutData implements IGameXmlReader {
+public final class InitialShortcutData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(InitialShortcutData.class);
 
     private final Map<ClassId, List<Shortcut>> _initialShortcutData = new HashMap<>();

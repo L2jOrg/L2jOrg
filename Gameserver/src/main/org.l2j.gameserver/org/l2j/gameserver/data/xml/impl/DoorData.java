@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.commons.util.IXmlReader;
+import org.l2j.commons.util.XmlReader;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
@@ -23,7 +23,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  *
  * @author JIV, GodKratos, UnAfraid
  */
-public final class DoorData implements IGameXmlReader {
+public final class DoorData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(DoorData.class);
 
     // Info holders
@@ -54,14 +54,14 @@ public final class DoorData implements IGameXmlReader {
         final StatsSet params = new StatsSet(parseAttributes(doorNode));
         params.set("baseHpMax", 1); // Avoid doors without HP value created dead due to default value 0 in L2CharTemplate
 
-        forEach(doorNode, IXmlReader::isNode, innerDoorNode ->
+        forEach(doorNode, XmlReader::isNode, innerDoorNode ->
         {
             final NamedNodeMap attrs = innerDoorNode.getAttributes();
             if (innerDoorNode.getNodeName().equals("nodes")) {
                 params.set("nodeZ", parseInteger(attrs, "nodeZ"));
 
                 final AtomicInteger count = new AtomicInteger();
-                forEach(innerDoorNode, IXmlReader::isNode, nodes ->
+                forEach(innerDoorNode, XmlReader::isNode, nodes ->
                 {
                     final NamedNodeMap nodeAttrs = nodes.getAttributes();
                     if ("node".equals(nodes.getNodeName())) {

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.util;
 
-import org.l2j.commons.util.IXmlReader;
+import org.l2j.commons.util.XmlReader;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.holders.MinionHolder;
@@ -19,13 +19,14 @@ import java.util.Map;
  *
  * @author Zoey76
  */
-public interface IGameXmlReader extends IXmlReader {
+public abstract class IGameXmlReader extends XmlReader {
+
     /**
      * Wrapper for {@link #parseFile(File)} method.
      *
      * @param path the relative path to the datapack root of the XML file to parse.
      */
-    default void parseDatapackFile(String path) {
+    protected void parseDatapackFile(String path) {
         parseFile(new File(Config.DATAPACK_ROOT, path));
     }
 
@@ -36,7 +37,7 @@ public interface IGameXmlReader extends IXmlReader {
      * @param recursive parses all sub folders if there is
      * @return {@code false} if it fails to find the directory, {@code true} otherwise
      */
-    default boolean parseDatapackDirectory(String path, boolean recursive) {
+    protected boolean parseDatapackDirectory(String path, boolean recursive) {
         return parseDirectory(new File(Config.DATAPACK_ROOT, path), recursive);
     }
 
@@ -44,7 +45,7 @@ public interface IGameXmlReader extends IXmlReader {
      * @param n
      * @return a map of parameters
      */
-    default Map<String, Object> parseParameters(Node n) {
+    protected Map<String, Object> parseParameters(Node n) {
         final Map<String, Object> parameters = new HashMap<>();
         for (Node parameters_node = n.getFirstChild(); parameters_node != null; parameters_node = parameters_node.getNextSibling()) {
             NamedNodeMap attrs = parameters_node.getAttributes();
@@ -80,7 +81,7 @@ public interface IGameXmlReader extends IXmlReader {
         return parameters;
     }
 
-    default Location parseLocation(Node n) {
+    protected Location parseLocation(Node n) {
         final NamedNodeMap attrs = n.getAttributes();
         final int x = parseInteger(attrs, "x");
         final int y = parseInteger(attrs, "y");

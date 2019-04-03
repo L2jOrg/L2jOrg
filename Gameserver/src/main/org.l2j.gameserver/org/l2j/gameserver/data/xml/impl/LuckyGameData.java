@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * @author Sdw
  */
-public class LuckyGameData implements IGameXmlReader {
+public class LuckyGameData extends IGameXmlReader{
     private final Map<Integer, LuckyGameDataHolder> _luckyGame = new HashMap<>();
     private final AtomicInteger _serverPlay = new AtomicInteger();
 

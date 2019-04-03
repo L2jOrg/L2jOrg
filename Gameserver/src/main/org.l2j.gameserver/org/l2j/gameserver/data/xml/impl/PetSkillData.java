@@ -16,7 +16,7 @@ import java.util.Map;
 /**
  * @author Mobius
  */
-public class PetSkillData implements IGameXmlReader {
+public class PetSkillData extends IGameXmlReader{
     private static Logger LOGGER = LoggerFactory.getLogger(PetSkillData.class);
     private final Map<Integer, Map<Long, SkillHolder>> _skillTrees = new HashMap<>();
 

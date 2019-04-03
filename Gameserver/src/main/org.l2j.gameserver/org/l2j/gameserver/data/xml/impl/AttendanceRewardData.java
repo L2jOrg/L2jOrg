@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * @author Mobius
  */
-public class AttendanceRewardData implements IGameXmlReader {
+public class AttendanceRewardData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(AttendanceRewardData.class);
     private final List<ItemHolder> _rewards = new ArrayList<>();
     private int _rewardsCount = 0;

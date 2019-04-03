@@ -307,7 +307,7 @@ public enum ExIncomingPackets implements PacketFactory {
     REQUEST_VIP_LUCKY_GAME_INFO(0x10B, null, ConnectionState.IN_GAME),
     REQUEST_VIP_LUCKY_GAME_ITEM_LIST(0x10C, null, ConnectionState.IN_GAME),
     REQUEST_VIP_LUCKY_GAME_BONUS(0x10D, null, ConnectionState.IN_GAME),
-    EX_REQUEST_VIP_INFO(0x10E, null, ConnectionState.IN_GAME),
+    EX_REQUEST_VIP_INFO(0x10E, ExRequestVipInfo::new, ConnectionState.IN_GAME),
     REQUEST_CAPTCHA_ANSWER(0x10F, null, ConnectionState.IN_GAME),
     REQUEST_REFRESH_CAPTCHA_IMAGE(0x110, null, ConnectionState.IN_GAME),
     REQUEST_PLEDGE_SIGN_IN_FOR_OPEN_JOINING_METHOD(0x111, RequestPledgeSignInForOpenJoiningMethod::new, ConnectionState.IN_GAME),

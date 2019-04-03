@@ -32,7 +32,7 @@ import java.util.List;
  *
  * @author St3eT
  */
-public final class SellBuffsManager implements IGameXmlReader {
+public final class SellBuffsManager extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(SellBuffsManager.class);
     private static final List<Integer> ALLOWED_BUFFS = new ArrayList<>();
     private static final String htmlFolder = "data/html/mods/SellBuffs/";

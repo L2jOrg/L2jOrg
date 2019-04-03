@@ -20,7 +20,7 @@ import java.io.File;
 import java.io.FileFilter;
 import java.util.*;
 
-public final class MultisellData implements IGameXmlReader {
+public final class MultisellData extends IGameXmlReader{
     public static final int PAGE_SIZE = 40;
     private static final Logger LOGGER = LoggerFactory.getLogger(MultisellData.class);
     private static final FileFilter NUMERIC_FILTER = new NumericNameFilter();

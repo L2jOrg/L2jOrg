@@ -37,7 +37,7 @@ import java.util.Map;
  *
  * @author UnAfraid
  */
-public final class StaticObjectData implements IGameXmlReader {
+public final class StaticObjectData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(StaticObjectData.class);
 
     private final Map<Integer, L2StaticObjectInstance> _staticObjects = new HashMap<>();

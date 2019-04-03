@@ -22,7 +22,7 @@ import java.util.Map;
  *
  * @author Forsaiken, Zoey76, GKR
  */
-public final class PlayerTemplateData implements IGameXmlReader {
+public final class PlayerTemplateData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(PlayerTemplateData.class);
 
     private final Map<ClassId, L2PcTemplate> _playerTemplates = new HashMap<>();

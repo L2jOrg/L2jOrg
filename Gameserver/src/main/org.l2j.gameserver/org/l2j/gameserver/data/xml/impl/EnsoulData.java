@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.commons.util.IXmlReader;
+import org.l2j.commons.util.XmlReader;
 import org.l2j.gameserver.model.ensoul.EnsoulFee;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.ensoul.EnsoulStone;
@@ -19,7 +19,7 @@ import java.util.*;
 /**
  * @author UnAfraid
  */
-public class EnsoulData implements IGameXmlReader {
+public class EnsoulData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(EnsoulData.class.getName());
     private final Map<CrystalType, EnsoulFee> _ensoulFees = new EnumMap<>(CrystalType.class);
     private final Map<Integer, EnsoulOption> _ensoulOptions = new HashMap<>();
@@ -39,7 +39,7 @@ public class EnsoulData implements IGameXmlReader {
 
     @Override
     public void parseDocument(Document doc, File f) {
-        forEach(doc, "list", listNode -> forEach(listNode, IXmlReader::isNode, ensoulNode ->
+        forEach(doc, "list", listNode -> forEach(listNode, XmlReader::isNode, ensoulNode ->
         {
             switch (ensoulNode.getNodeName()) {
                 case "fee": {
@@ -61,7 +61,7 @@ public class EnsoulData implements IGameXmlReader {
     private void parseFees(Node ensoulNode) {
         final CrystalType type = parseEnum(ensoulNode.getAttributes(), CrystalType.class, "crystalType");
         final EnsoulFee fee = new EnsoulFee(type);
-        forEach(ensoulNode, IXmlReader::isNode, feeNode ->
+        forEach(ensoulNode, XmlReader::isNode, feeNode ->
         {
             switch (feeNode.getNodeName()) {
                 case "first": {

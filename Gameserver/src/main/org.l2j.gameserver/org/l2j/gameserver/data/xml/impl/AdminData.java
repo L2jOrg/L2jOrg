@@ -28,7 +28,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  * @author UnAfraid
  */
-public final class AdminData implements IGameXmlReader {
+public final class AdminData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(AdminData.class);
 
     private final Map<Integer, L2AccessLevel> _accessLevels = new HashMap<>();

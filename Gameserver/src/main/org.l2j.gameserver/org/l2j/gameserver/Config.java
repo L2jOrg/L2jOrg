@@ -2554,7 +2554,7 @@ public final class Config {
         Stack
     }
 
-    private static class IPConfigData implements IGameXmlReader {
+    private static class IPConfigData extends IGameXmlReader{
         private static final List<String> _subnets = new ArrayList<>(5);
         private static final List<String>
                 _hosts = new ArrayList<>(5);

@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * @author UnAfraid
  */
-public class ActionData implements IGameXmlReader {
+public class ActionData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(ActionData.class);
 
     private final Map<Integer, ActionDataHolder> _actionData = new HashMap<>();

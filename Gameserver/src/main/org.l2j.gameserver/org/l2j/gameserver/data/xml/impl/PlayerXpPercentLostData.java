@@ -32,7 +32,7 @@ import java.util.Arrays;
  *
  * @author Zealar
  */
-public final class PlayerXpPercentLostData implements IGameXmlReader {
+public final class PlayerXpPercentLostData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(PlayerXpPercentLostData.class);
 
     private final int _maxlevel = ExperienceData.getInstance().getMaxLevel();

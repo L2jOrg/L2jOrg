@@ -25,7 +25,7 @@ import java.util.Map;
  *
  * @author UnAfraid
  */
-public final class TransformData implements IGameXmlReader {
+public final class TransformData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(TransformData.class);
 
     private final Map<Integer, Transform> _transformData = new HashMap<>();
