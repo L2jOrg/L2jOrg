@@ -6,13 +6,17 @@ import org.l2j.gameserver.model.holders.EnchantSkillHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.*;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class holds the Enchant Groups information.
@@ -27,6 +31,11 @@ public class EnchantSkillGroupsData extends IGameXmlReader{
 
     private EnchantSkillGroupsData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/EnchantSkillGroups.xsd");
     }
 
     @Override

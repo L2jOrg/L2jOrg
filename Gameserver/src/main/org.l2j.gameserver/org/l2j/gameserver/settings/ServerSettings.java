@@ -4,6 +4,8 @@ import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 import org.l2j.gameserver.ServerType;
 
+import java.nio.file.Path;
+
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class ServerSettings implements Settings {
@@ -19,6 +21,7 @@ public class ServerSettings implements Settings {
     private int type;
     private short port;
     private int maximumOnlineUsers;
+    private Path dataPackDirectory;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -36,6 +39,8 @@ public class ServerSettings implements Settings {
         ageLimit = settingsFile.getByte("ServerListAge", (byte) 0);
         showBrackets = settingsFile.getBoolean("ServerListBrackets", false);
         isPvP = settingsFile.getBoolean("PvPServer", false);
+
+        dataPackDirectory = Path.of(settingsFile.getString("DatapackRoot", "."));
     }
 
     private void parseServerType(SettingsFile settingsFile) {
@@ -97,5 +102,9 @@ public class ServerSettings implements Settings {
 
     public boolean acceptAlternativeId() {
         return acceptAlternativeId;
+    }
+
+    public Path dataPackDirectory() {
+        return dataPackDirectory;
     }
 }

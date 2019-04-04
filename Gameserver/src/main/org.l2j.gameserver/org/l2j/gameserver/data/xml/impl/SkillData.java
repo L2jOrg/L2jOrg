@@ -5,6 +5,7 @@ import org.l2j.gameserver.handler.SkillConditionHandler;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.*;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.util.exp4j.ExpressionBuilder;
 import org.slf4j.Logger;
@@ -14,10 +15,13 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.stream.Stream;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Skill data parser.
@@ -32,6 +36,11 @@ public class SkillData extends IGameXmlReader{
 
     private SkillData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/skills.xsd");
     }
 
     /**
@@ -117,10 +126,6 @@ public class SkillData extends IGameXmlReader{
         return temp;
     }
 
-    @Override
-    public boolean isValidating() {
-        return false;
-    }
 
     @Override
     public synchronized void load() {

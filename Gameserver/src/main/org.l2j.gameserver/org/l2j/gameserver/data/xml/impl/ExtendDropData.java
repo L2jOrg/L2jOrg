@@ -22,6 +22,7 @@ import org.l2j.gameserver.model.conditions.ICondition;
 import org.l2j.gameserver.model.holders.ExtendDropDataHolder;
 import org.l2j.gameserver.model.holders.ExtendDropItemHolder;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,8 +30,11 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.*;
 import java.util.function.Function;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -42,6 +46,11 @@ public class ExtendDropData extends IGameXmlReader{
 
     private ExtendDropData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/ExtendDrop.xsd");
     }
 
     @Override

@@ -11,6 +11,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -25,6 +26,11 @@ public class SiegeScheduleData extends IGameXmlReader{
 
     private SiegeScheduleData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return Path.of("config/xsd/SiegeSchedule.xsd");
     }
 
     @Override

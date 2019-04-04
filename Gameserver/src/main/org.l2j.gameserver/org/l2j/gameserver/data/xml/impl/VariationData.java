@@ -4,13 +4,17 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.options.*;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.*;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Pere
@@ -23,6 +27,11 @@ public class VariationData extends IGameXmlReader{
 
     private VariationData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/Variations.xsd");
     }
 
     @Override

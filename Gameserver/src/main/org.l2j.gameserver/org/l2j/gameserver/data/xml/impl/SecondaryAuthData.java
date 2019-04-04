@@ -7,6 +7,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -24,6 +25,11 @@ public class SecondaryAuthData extends IGameXmlReader{
 
     private SecondaryAuthData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return Path.of("config/xsd/SecondaryAuth.xsd");
     }
 
     @Override

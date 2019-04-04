@@ -7,6 +7,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.templates.L2DoorTemplate;
 import org.l2j.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,8 +16,11 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class loads and hold info about doors.
@@ -34,6 +38,11 @@ public final class DoorData extends IGameXmlReader{
 
     private DoorData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/DoorData.xsd");
     }
 
     @Override

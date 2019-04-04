@@ -4,6 +4,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.enchant.EnchantScroll;
 import org.l2j.gameserver.model.items.enchant.EnchantSupportItem;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,8 +13,11 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Loads item enchant data.
@@ -28,6 +32,11 @@ public class EnchantItemData extends IGameXmlReader{
 
     private EnchantItemData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/EnchantItemData.xsd");
     }
 
     @Override

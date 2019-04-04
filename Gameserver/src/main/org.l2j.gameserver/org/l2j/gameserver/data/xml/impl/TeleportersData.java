@@ -3,6 +3,7 @@ package org.l2j.gameserver.data.xml.impl;
 import org.l2j.gameserver.enums.TeleportType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,9 +11,12 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -26,6 +30,11 @@ public class TeleportersData extends IGameXmlReader{
 
     private TeleportersData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/teleporterData.xsd");
     }
 
     @Override

@@ -14,6 +14,7 @@ import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.model.zone.form.ZoneNPoly;
 import org.l2j.gameserver.model.zone.type.L2BannedSpawnTerritory;
 import org.l2j.gameserver.model.zone.type.L2SpawnTerritory;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,9 +22,12 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -35,6 +39,11 @@ public class SpawnsData extends IGameXmlReader{
 
     private SpawnsData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/spawns.xsd");
     }
 
     @Override

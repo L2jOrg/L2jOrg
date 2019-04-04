@@ -14,6 +14,7 @@ import org.l2j.gameserver.model.announce.EventAnnouncement;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.script.DateRange;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
@@ -22,6 +23,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -30,6 +32,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -79,6 +83,11 @@ public class LongTimeEvent extends Quest {
      */
     private void loadConfig() {
         new IGameXmlReader() {
+            @Override
+            protected Path getSchemaFilePath() {
+                return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/eventConfig.xsd");
+            }
+
             @Override
             public void load() {
                 parseDatapackFile("data/scripts/org.l2j.scripts/events/" + getScriptName() + "/config.xml");

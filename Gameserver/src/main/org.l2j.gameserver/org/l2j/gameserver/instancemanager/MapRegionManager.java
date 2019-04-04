@@ -14,6 +14,7 @@ import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.zone.type.L2RespawnZone;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,9 +23,12 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Map Region Manager.
@@ -39,6 +43,11 @@ public final class MapRegionManager extends IGameXmlReader{
 
     private MapRegionManager() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/MapRegion.xsd");
     }
 
     @Override

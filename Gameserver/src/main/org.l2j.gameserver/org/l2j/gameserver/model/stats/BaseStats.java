@@ -2,6 +2,7 @@ package org.l2j.gameserver.model.stats;
 
 import org.l2j.commons.util.XmlReader;
 import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +10,10 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.NoSuchElementException;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -28,6 +32,11 @@ public enum BaseStats {
     static {
         new IGameXmlReader() {
             final Logger LOGGER = LoggerFactory.getLogger(BaseStats.class.getName());
+
+            @Override
+            protected Path getSchemaFilePath() {
+                return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/statBonus.xml");
+            }
 
             @Override
             public void load() {

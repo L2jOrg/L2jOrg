@@ -10,6 +10,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.*;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.network.serverpackets.MultiSellList;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +19,10 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.nio.file.Path;
 import java.util.*;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public final class MultisellData extends IGameXmlReader{
     public static final int PAGE_SIZE = 40;
@@ -29,6 +33,11 @@ public final class MultisellData extends IGameXmlReader{
 
     private MultisellData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/multisell.xsd");
     }
 
     @Override
@@ -116,11 +125,6 @@ public final class MultisellData extends IGameXmlReader{
         } catch (Exception e) {
             LOGGER.error("Error in file " + f, e);
         }
-    }
-
-    @Override
-    public FileFilter getCurrentFileFilter() {
-        return NUMERIC_FILTER;
     }
 
     /**

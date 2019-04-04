@@ -4,14 +4,18 @@ import org.l2j.gameserver.enums.CastleSide;
 import org.l2j.gameserver.enums.SiegeGuardType;
 import org.l2j.gameserver.model.holders.CastleSpawnHolder;
 import org.l2j.gameserver.model.holders.SiegeGuardHolder;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.*;
 import java.util.stream.Collectors;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author St3eT
@@ -22,6 +26,11 @@ public final class CastleData extends IGameXmlReader{
 
     private CastleData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/castleData.xsd");
     }
 
     @Override

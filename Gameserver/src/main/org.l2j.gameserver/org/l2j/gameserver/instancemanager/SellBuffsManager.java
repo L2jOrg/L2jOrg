@@ -13,6 +13,7 @@ import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.HtmlUtil;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.util.Util;
@@ -23,9 +24,11 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Sell Buffs Manager
@@ -39,6 +42,11 @@ public final class SellBuffsManager extends IGameXmlReader{
 
     private SellBuffsManager() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/SellBuffData.xsd");
     }
 
     @Override

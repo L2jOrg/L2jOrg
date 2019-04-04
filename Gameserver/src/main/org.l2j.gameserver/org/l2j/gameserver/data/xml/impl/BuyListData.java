@@ -1,12 +1,12 @@
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.util.filter.NumericNameFilter;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,12 +14,14 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 
 import java.io.File;
-import java.io.FileFilter;
+import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Loads buy lists for NPCs.
@@ -28,11 +30,15 @@ import java.util.Map;
  */
 public final class BuyListData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(BuyListData.class.getName());
-    private static final FileFilter NUMERIC_FILTER = new NumericNameFilter();
     private final Map<Integer, ProductList> _buyLists = new HashMap<>();
 
     private BuyListData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/buylist.xsd");
     }
 
     @Override
@@ -112,11 +118,6 @@ public final class BuyListData extends IGameXmlReader{
         } catch (Exception e) {
             LOGGER.warn("Failed to load buyList data from xml File:" + f.getName(), e);
         }
-    }
-
-    @Override
-    public FileFilter getCurrentFileFilter() {
-        return NUMERIC_FILTER;
     }
 
     public ProductList getBuyList(int listId) {

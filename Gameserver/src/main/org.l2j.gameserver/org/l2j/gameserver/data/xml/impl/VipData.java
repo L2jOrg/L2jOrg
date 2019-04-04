@@ -3,13 +3,16 @@ package org.l2j.gameserver.data.xml.impl;
 import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.gameserver.data.xml.model.VipInfo;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class VipData extends IGameXmlReader{
 
@@ -17,6 +20,11 @@ public class VipData extends IGameXmlReader{
 
     private VipData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/vip.xsd");
     }
 
     @Override

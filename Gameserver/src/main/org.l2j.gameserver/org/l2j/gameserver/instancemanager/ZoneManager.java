@@ -1,5 +1,6 @@
 package org.l2j.gameserver.instancemanager;
 
+import org.l2j.commons.configuration.Configurator;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
@@ -12,6 +13,7 @@ import org.l2j.gameserver.model.zone.form.ZoneNPoly;
 import org.l2j.gameserver.model.zone.type.L2OlympiadStadiumZone;
 import org.l2j.gameserver.model.zone.type.L2RespawnZone;
 import org.l2j.gameserver.model.zone.type.L2SpawnTerritory;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +23,7 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.lang.reflect.Constructor;
+import java.nio.file.Path;
 import java.util.*;
 
 /**
@@ -52,6 +55,11 @@ public final class ZoneManager extends IGameXmlReader{
         LOGGER.info("Zone Region Grid set up: {} by {}", _zoneRegions.length, _zoneRegions[0].length);
 
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return Configurator.getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/zones.xsd");
     }
 
     /**

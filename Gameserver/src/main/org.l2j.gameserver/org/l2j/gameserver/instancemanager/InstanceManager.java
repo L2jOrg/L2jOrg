@@ -17,6 +17,7 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.model.instancezone.conditions.Condition;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +27,7 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.lang.reflect.Constructor;
+import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -34,6 +36,8 @@ import java.time.DayOfWeek;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -58,6 +62,11 @@ public final class InstanceManager extends IGameXmlReader{
 
     private InstanceManager() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/InstanceNames.xsd");
     }
 
     @Override

@@ -9,6 +9,7 @@ import org.l2j.gameserver.model.actor.instance.*;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
@@ -18,11 +19,14 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.sql.*;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -37,6 +41,11 @@ public final class CursedWeaponsManager extends IGameXmlReader{
 
     private CursedWeaponsManager() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/CursedWeapons.xsd");
     }
 
     public static void announce(SystemMessage sm) {

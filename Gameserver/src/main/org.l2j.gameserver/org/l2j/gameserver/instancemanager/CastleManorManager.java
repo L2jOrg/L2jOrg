@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.interfaces.IStorable;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,6 +35,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -41,12 +43,14 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
+
 /**
  * Castle manor system.
  *
  * @author malyelfik
  */
-public final class CastleManorManager implements IGameXmlReader, IStorable {
+public final class CastleManorManager extends  IGameXmlReader implements IStorable {
     private static final Logger LOGGER = LoggerFactory.getLogger(CastleManorManager.class);
 
     // SQL queries
@@ -95,9 +99,14 @@ public final class CastleManorManager implements IGameXmlReader, IStorable {
     }
 
     @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/Seeds.xsd");
+    }
+
+    @Override
     public final void load() {
         parseDatapackFile("data/Seeds.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _seeds.size() + " seeds.");
+        LOGGER.info("Loaded {} seeds.", _seeds.size());
     }
 
     @Override

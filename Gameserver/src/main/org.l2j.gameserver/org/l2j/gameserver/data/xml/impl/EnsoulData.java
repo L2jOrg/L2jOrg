@@ -14,6 +14,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.*;
 
 /**
@@ -27,6 +28,11 @@ public class EnsoulData extends IGameXmlReader{
 
     private EnsoulData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return null; // TODO Unifies schema and xmls
     }
 
     @Override

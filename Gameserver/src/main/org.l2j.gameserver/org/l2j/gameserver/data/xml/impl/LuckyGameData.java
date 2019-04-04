@@ -4,18 +4,27 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.holders.ItemPointHolder;
 import org.l2j.gameserver.model.holders.LuckyGameDataHolder;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Sdw
  */
 public class LuckyGameData extends IGameXmlReader{
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(LuckyGameData.class);
+
     private final Map<Integer, LuckyGameDataHolder> _luckyGame = new HashMap<>();
     private final AtomicInteger _serverPlay = new AtomicInteger();
 
@@ -24,10 +33,15 @@ public class LuckyGameData extends IGameXmlReader{
     }
 
     @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/LuckyGameData.xsd");
+    }
+
+    @Override
     public void load() {
         _luckyGame.clear();
         parseDatapackFile("data/LuckyGameData.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _luckyGame.size() + " lucky game data.");
+        LOGGER.info("Loaded {} lucky game data.", _luckyGame.size() );
     }
 
     @Override

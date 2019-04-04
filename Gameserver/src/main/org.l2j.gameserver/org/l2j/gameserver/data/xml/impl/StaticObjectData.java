@@ -19,6 +19,7 @@ package org.l2j.gameserver.data.xml.impl;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
 import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,9 +28,12 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -44,6 +48,11 @@ public final class StaticObjectData extends IGameXmlReader{
 
     private StaticObjectData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/StaticObjects.xsd");
     }
 
     @Override

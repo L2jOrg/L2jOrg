@@ -15,10 +15,14 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.*;
@@ -2561,6 +2565,11 @@ public final class Config {
 
         public IPConfigData() {
             load();
+        }
+
+        @Override
+        protected Path getSchemaFilePath() {
+            return Path.of("./config/xsd/ipconfig.xsd");
         }
 
         @Override

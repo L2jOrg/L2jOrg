@@ -2,14 +2,18 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.model.ActionDataHolder;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -22,6 +26,11 @@ public class ActionData extends IGameXmlReader{
 
     private ActionData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/ActionData.xsd");
     }
 
     @Override

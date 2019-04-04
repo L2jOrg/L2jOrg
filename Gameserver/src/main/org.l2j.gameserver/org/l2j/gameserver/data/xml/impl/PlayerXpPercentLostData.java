@@ -16,6 +16,7 @@
  */
 package org.l2j.gameserver.data.xml.impl;
 
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +25,10 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.Arrays;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -41,6 +45,11 @@ public final class PlayerXpPercentLostData extends IGameXmlReader{
     private PlayerXpPercentLostData() {
         Arrays.fill(_playerXpPercentLost, 1.);
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/playerXpPercentLost.xsd");
     }
 
     @Override

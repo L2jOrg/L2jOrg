@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.stats.functions.FuncTemplate;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -19,14 +19,17 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.nio.file.Path;
 import java.util.LinkedList;
 import java.util.List;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
  * @author mkizub, JIV
  */
-public final class DocumentItem extends DocumentBase extends IGameXmlReader{
+public final class DocumentItem extends DocumentBase {
     private final List<L2Item> _itemsInFile = new LinkedList<>();
     Logger LOGGER = LoggerFactory.getLogger(DocumentItem.class.getName());
     private Item _currentItem = null;
@@ -180,6 +183,11 @@ public final class DocumentItem extends DocumentBase extends IGameXmlReader{
 
     public List<L2Item> getItemList() {
         return _itemsInFile;
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/items.xsd");
     }
 
     @Override

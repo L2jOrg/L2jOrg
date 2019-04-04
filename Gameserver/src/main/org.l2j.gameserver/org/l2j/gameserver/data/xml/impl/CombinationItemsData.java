@@ -5,15 +5,19 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.combination.CombinationItem;
 import org.l2j.gameserver.model.items.combination.CombinationItemReward;
 import org.l2j.gameserver.model.items.combination.CombinationItemType;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -24,6 +28,11 @@ public class CombinationItemsData extends IGameXmlReader{
 
     private CombinationItemsData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/CombinationItems.xsd");
     }
 
     @Override

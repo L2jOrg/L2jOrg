@@ -14,6 +14,7 @@ import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
 import org.l2j.gameserver.model.actor.tasks.npc.walker.ArrivedTask;
 import org.l2j.gameserver.model.holders.NpcRoutesHolder;
 import org.l2j.gameserver.network.NpcStringId;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,10 +23,13 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -52,6 +56,11 @@ public final class WalkingManager extends IGameXmlReader{
 
     private WalkingManager() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/Routes.xsd");
     }
 
     @Override

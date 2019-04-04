@@ -1,6 +1,5 @@
 package org.l2j.commons.util;
 
-import org.l2j.commons.util.filter.XMLFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -18,25 +17,21 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import java.io.File;
-import java.io.FileFilter;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 /**
- *
  * @author Zoey76
- * @author KhayrusS
+ *
  */
 public abstract class XmlReader
 {
-	Logger LOGGER = LoggerFactory.getLogger(XmlReader.class);
+	private static Logger LOGGER = LoggerFactory.getLogger(XmlReader.class);
 
-	String JAXP_SCHEMA_LANGUAGE = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
-	String W3C_XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
-	/** The default file filter, ".xml" files only. */
-	XMLFilter XML_FILTER = new XMLFilter();
 	private DocumentBuilder documentBuilder;
 
 	protected XmlReader() {
@@ -62,9 +57,11 @@ public abstract class XmlReader
 	private Schema loadSchema()  {
 		try {
 			var schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-			var schemaFile = new File(getSchemaFilePath());
-			if(schemaFile.exists()) {
-				return schemaFactory.newSchema(schemaFile);
+			var path = getSchemaFilePath();
+			if(Files.isRegularFile(path)) {
+				return schemaFactory.newSchema(path.toFile());
+			} else {
+				LOGGER.warn("Schema Validation disabled, the path {} is not a file", path);
 			}
 		} catch (SAXException e) {
 			LOGGER.error(e.getLocalizedMessage(), e);
@@ -73,7 +70,7 @@ public abstract class XmlReader
 	}
 
 
-	protected abstract String getSchemaFilePath();
+	protected abstract Path getSchemaFilePath();
 
 	/**
 	 * This method can be used to load/reload the data.<br>
@@ -88,7 +85,7 @@ public abstract class XmlReader
 	 * @param f the XML file to parse.
 	 */
 	protected void parseFile(File f) {
-		if (!FilterUtil.xmlFilter(f.toPath())) {
+		if (!FilterUtil.xmlFilter(f)) {
 			LOGGER.warn("Could not parse " + f.getName() + " is not a file or it doesn't exist!");
 			return;
 		}
@@ -131,7 +128,7 @@ public abstract class XmlReader
 			{
 				parseDirectory(f, recursive);
 			}
-			else if (getCurrentFileFilter().accept(f))
+			else if (FilterUtil.xmlFilter(f.toPath()))
 			{
 				parseFile(f);
 			}
@@ -571,7 +568,7 @@ public abstract class XmlReader
 	 * @param name the name of the attribute to parse
 	 * @return if the node is not null and the node value is valid the parsed value, otherwise null
 	 */
-	<T extends Enum<T>> T parseEnum(NamedNodeMap attrs, Class<T> clazz, String name)
+	protected <T extends Enum<T>> T parseEnum(NamedNodeMap attrs, Class<T> clazz, String name)
 	{
 		return parseEnum(attrs.getNamedItem(name), clazz);
 	}
@@ -650,7 +647,7 @@ public abstract class XmlReader
 	 * @param node
 	 * @return {@code true} if the node is an element type, {@code false} otherwise
 	 */
-	static boolean isNode(Node node)
+	protected static boolean isNode(Node node)
 	{
 		return node.getNodeType() == Node.ELEMENT_NODE;
 	}
@@ -659,18 +656,9 @@ public abstract class XmlReader
 	 * @param node
 	 * @return {@code true} if the node is an element type, {@code false} otherwise
 	 */
-	static boolean isText(Node node)
+	protected static boolean isText(Node node)
 	{
 		return node.getNodeType() == Node.TEXT_NODE;
-	}
-
-	/**
-	 * Gets the current file filter.
-	 * @return the current file filter
-	 */
-	protected FileFilter getCurrentFileFilter()
-	{
-		return XML_FILTER;
 	}
 
 	/**

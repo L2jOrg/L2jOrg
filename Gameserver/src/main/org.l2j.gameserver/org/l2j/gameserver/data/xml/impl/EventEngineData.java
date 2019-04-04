@@ -28,6 +28,7 @@ import org.l2j.gameserver.model.eventengine.conditions.HaventRunConditionalSched
 import org.l2j.gameserver.model.eventengine.drop.*;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,7 +39,10 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import java.nio.file.Path;
 import java.util.*;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -49,6 +53,11 @@ public final class EventEngineData extends IGameXmlReader{
 
     private EventEngineData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/events.xsd");
     }
 
     private static <T> List<T> newList(Class<T> type) {

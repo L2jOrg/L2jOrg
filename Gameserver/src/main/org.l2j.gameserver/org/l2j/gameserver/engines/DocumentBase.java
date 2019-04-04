@@ -16,6 +16,7 @@ import org.l2j.gameserver.model.skills.EffectScope;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.stats.functions.FuncTemplate;
+import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -29,7 +30,7 @@ import java.util.*;
 /**
  * @author mkizub
  */
-public abstract class DocumentBase {
+public abstract class DocumentBase extends IGameXmlReader {
     protected final Logger LOGGER = LoggerFactory.getLogger(getClass().getName());
     protected final Map<String, String[]> _tables = new HashMap<>();
     private final File _file;

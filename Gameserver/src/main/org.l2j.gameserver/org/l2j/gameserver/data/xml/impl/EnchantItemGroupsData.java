@@ -6,6 +6,7 @@ import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.enchant.EnchantItemGroup;
 import org.l2j.gameserver.model.items.enchant.EnchantRateItem;
 import org.l2j.gameserver.model.items.enchant.EnchantScrollGroup;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
@@ -15,8 +16,11 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -30,6 +34,11 @@ public final class EnchantItemGroupsData extends IGameXmlReader{
 
     private EnchantItemGroupsData() {
         load();
+    }
+
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/EnchantItemGroups.xsd");
     }
 
     @Override

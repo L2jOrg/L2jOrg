@@ -6,6 +6,7 @@ import org.l2j.gameserver.model.L2WorldRegion;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.L2FenceInstance;
 import org.l2j.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,12 +14,15 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author HoridoJoho / FBIagent
@@ -37,8 +41,8 @@ public final class FenceData extends IGameXmlReader {
     }
 
     @Override
-    protected String getSchemaFilePath() {
-        return "";
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/FenceData.xsd");
     }
 
     @Override
