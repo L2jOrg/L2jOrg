@@ -51,9 +51,8 @@ public final class AdminData extends IGameXmlReader{
         _accessLevels.clear();
         _adminCommandAccessRights.clear();
         parseFile(new File("config/AccessLevels.xml"));
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _accessLevels.size() + " Access Levels.");
-        parseFile(new File("config/AdminCommands.xml"));
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _adminCommandAccessRights.size() + " Access Commands.");
+        LOGGER.info("Loaded: {} Access Levels.", _accessLevels.size());
+        LOGGER.info("Loaded: {} Access Commands.", _adminCommandAccessRights.size());
     }
 
     @Override
