@@ -6,6 +6,7 @@ import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.ensoul.EnsoulStone;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.type.CrystalType;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +17,8 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.*;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -32,12 +35,12 @@ public class EnsoulData extends IGameXmlReader{
 
     @Override
     protected Path getSchemaFilePath() {
-        return null; // TODO Unifies schema and xmls
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/ensoulStones.xsd");
     }
 
     @Override
     public void load() {
-        parseDatapackDirectory("data/stats/ensoul", true);
+        parseDatapackFile("data/stats/ensoulStones.xml");
         LOGGER.info("Loaded {} fees", _ensoulFees.size());
         LOGGER.info("Loaded {} options", _ensoulOptions.size());
         LOGGER.info("Loaded {} stones", _ensoulStones.size());

@@ -89,23 +89,23 @@ public abstract class XmlReader
 	 * Parses a single XML file.<br>
 	 * If the file was successfully parsed, call {@link #parseDocument(Document, File)} for the parsed document.<br>
 	 * <b>Validation is enforced.</b>
-	 * @param f the XML file to parse.
+	 * @param file the XML file to parse.
 	 */
-	protected void parseFile(File f) {
-		if (!FilterUtil.xmlFilter(f)) {
-			LOGGER.warn("Could not parse " + f.getName() + " is not a file or it doesn't exist!");
+	protected void parseFile(File file) {
+		if (!FilterUtil.xmlFilter(file)) {
+			LOGGER.warn("Could not parse {} is not a file or it doesn't exist!", file);
 			return;
 		}
 
 		try {
-			parseDocument(documentBuilder.parse(f), f);
+			parseDocument(documentBuilder.parse(file), file);
 		}
 		catch (SAXParseException e) {
-			LOGGER.warn("Could not parse file: " + f.getName() + " at line: " + e.getLineNumber() + ", column: " + e.getColumnNumber() + " :", e);
+			LOGGER.warn("Could not parse file: " + file.getName()+ " at line: " + e.getLineNumber() + ", column: " + e.getColumnNumber() + " :", e);
 		}
 		catch (Exception e)
 		{
-			LOGGER.warn("Could not parse file: " + f.getName(), e);
+			LOGGER.warn("Could not parse file: " + file.getName(), e);
 		}
 	}
 

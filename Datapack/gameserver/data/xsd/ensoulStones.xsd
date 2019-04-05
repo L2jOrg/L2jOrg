@@ -1,22 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://la2j.org"
+		   xmlns="http://la2j.org"
+		   elementFormDefault="qualified">
+
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="stone" maxOccurs="unbounded" minOccurs="0">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="option" maxOccurs="unbounded" minOccurs="0">
-								<xs:complexType>
-									<xs:attribute type="xs:positiveInteger" name="id" use="required" />
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-						<xs:attribute type="xs:int" name="id" use="required" />
-						<xs:attribute type="xs:byte" name="slotType" use="required" />
-					</xs:complexType>
-				</xs:element>
+				<xs:element name="fee" type="EnsoulFee" maxOccurs="unbounded" minOccurs="0"/>
+				<xs:element name="stone" type="EnsoulStone" maxOccurs="unbounded" minOccurs="0"/>
+				<xs:element name="option" type="EnsoulOption" maxOccurs="unbounded" minOccurs="0"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+
+	<xs:complexType name="EnsoulOption">
+		<xs:attribute type="xs:positiveInteger" name="id" use="required" />
+		<xs:attribute type="xs:string" name="name" use="required" />
+		<xs:attribute type="xs:string" name="desc" use="required" />
+		<xs:attribute type="xs:positiveInteger" name="skillId" use="required" />
+		<xs:attribute type="xs:positiveInteger" name="skillLevel" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="EnsoulStone">
+		<xs:sequence>
+			<xs:element name="option" maxOccurs="unbounded" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute type="xs:positiveInteger" name="id" use="required" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute type="xs:int" name="id" use="required" />
+		<xs:attribute type="xs:byte" name="slotType" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="EnsoulFee">
+		<xs:sequence>
+			<xs:element name="first" minOccurs="0" type="feeItem" />
+			<xs:element name="secondary" minOccurs="0" type="feeItem" />
+			<xs:element name="third" minOccurs="0" type="feeItem" />
+			<xs:element name="reNormal" minOccurs="0" type="feeItem" />
+			<xs:element name="reSecondary" minOccurs="0" type="feeItem" />
+			<xs:element name="reThird" minOccurs="0" type="feeItem" />
+			<xs:element name="remove" minOccurs="0" maxOccurs="unbounded" type="feeItem" />
+		</xs:sequence>
+		<xs:attribute type="CrystalType" name="crystalType" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="feeItem">
+		<xs:attribute type="xs:positiveInteger" name="itemId"/>
+		<xs:attribute type="xs:positiveInteger" name="count"/>
+	</xs:complexType>
+
+	<xs:simpleType name="CrystalType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="NONE" />
+			<xs:enumeration value="D" />
+			<xs:enumeration value="C" />
+			<xs:enumeration value="B" />
+			<xs:enumeration value="A" />
+			<xs:enumeration value="EVENT" />
+		</xs:restriction>
+	</xs:simpleType>
+
 </xs:schema>

@@ -5,6 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
@@ -13,6 +14,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Interface for XML parsers.
@@ -27,7 +30,7 @@ public abstract class IGameXmlReader extends XmlReader {
      * @param path the relative path to the datapack root of the XML file to parse.
      */
     protected void parseDatapackFile(String path) {
-        parseFile(new File(Config.DATAPACK_ROOT, path));
+        parseFile(getSettings(ServerSettings.class).dataPackDirectory().resolve(path).toFile());
     }
 
     /**
