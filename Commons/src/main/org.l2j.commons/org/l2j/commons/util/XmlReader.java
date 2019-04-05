@@ -24,6 +24,8 @@ import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author Zoey76
  *
@@ -45,7 +47,12 @@ public abstract class XmlReader
 			var factory = DocumentBuilderFactory.newInstance();
 			factory.setNamespaceAware(true);
 			factory.setIgnoringComments(true);
-			factory.setSchema(schema);
+			factory.setIgnoringElementContentWhitespace(true);
+			if(nonNull(schema)) {
+				factory.setSchema(schema);
+			} else {
+				factory.setValidating(true);
+			}
 
 			documentBuilder = factory.newDocumentBuilder();
 			documentBuilder.setErrorHandler(new XMLErrorHandler());
@@ -58,7 +65,7 @@ public abstract class XmlReader
 		try {
 			var schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 			var path = getSchemaFilePath();
-			if(Files.isRegularFile(path)) {
+			if(nonNull(path) && Files.isRegularFile(path)) {
 				return schemaFactory.newSchema(path.toFile());
 			} else {
 				LOGGER.warn("Schema Validation disabled, the path {} is not a file", path);

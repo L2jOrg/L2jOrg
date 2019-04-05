@@ -28,6 +28,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.*;
 
 
@@ -35,7 +36,7 @@ import java.util.*;
  * Class Master AI.
  * @author Nik
  */
-public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
+public final class ClassMaster extends AbstractNpcAI
 {
 	// NPCs
 	private static final List<Integer> CLASS_MASTERS = new ArrayList<>();
@@ -50,140 +51,11 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 	private static final Logger LOGGER = LoggerFactory.getLogger(ClassMaster.class);
 	private final List<ClassChangeData> _classChangeData = new LinkedList<>();
 	
-	public ClassMaster()
-	{
-		load();
+	public ClassMaster() {
+		new DataLoader().load();
 		addStartNpc(CLASS_MASTERS);
 		addTalkId(CLASS_MASTERS);
 		addFirstTalkId(CLASS_MASTERS);
-	}
-	
-	@Override
-	public void load()
-	{
-		_classChangeData.clear();
-		parseFile(new File("config/ClassMaster.xml"));
-		
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _classChangeData.size() + " class change options.");
-	}
-	
-	@Override
-	public boolean isValidating()
-	{
-		return false;
-	}
-	
-	@Override
-	public void parseDocument(Document doc, File f)
-	{
-		NamedNodeMap attrs;
-		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
-		{
-			if ("list".equals(n.getNodeName()))
-			{
-				for (Node cm = n.getFirstChild(); cm != null; cm = cm.getNextSibling())
-				{
-					attrs = cm.getAttributes();
-					if ("classMaster".equals(cm.getNodeName()))
-					{
-						_isEnabled = parseBoolean(attrs, "classChangeEnabled", false);
-						if (!_isEnabled)
-						{
-							return;
-						}
-						
-						_spawnClassMasters = parseBoolean(attrs, "spawnClassMasters", true);
-						_showPopupWindow = parseBoolean(attrs, "showPopupWindow", false);
-						
-						for (Node c = cm.getFirstChild(); c != null; c = c.getNextSibling())
-						{
-							attrs = c.getAttributes();
-							if ("classChangeOption".equals(c.getNodeName()))
-							{
-								final List<CategoryType> appliedCategories = new LinkedList<>();
-								final List<ItemHolder> requiredItems = new LinkedList<>();
-								final List<ItemHolder> rewardedItems = new LinkedList<>();
-								boolean setNoble = false;
-								boolean setHero = false;
-								final String optionName = parseString(attrs, "name", "");
-								for (Node b = c.getFirstChild(); b != null; b = b.getNextSibling())
-								{
-									attrs = b.getAttributes();
-									if ("appliesTo".equals(b.getNodeName()))
-									{
-										for (Node r = b.getFirstChild(); r != null; r = r.getNextSibling())
-										{
-											attrs = r.getAttributes();
-											if ("category".equals(r.getNodeName()))
-											{
-												final CategoryType category = CategoryType.findByName(r.getTextContent().trim());
-												if (category == null)
-												{
-													LOGGER.error(": Incorrect category type: " + r.getNodeValue());
-													continue;
-												}
-												
-												appliedCategories.add(category);
-											}
-										}
-									}
-									if ("rewards".equals(b.getNodeName()))
-									{
-										for (Node r = b.getFirstChild(); r != null; r = r.getNextSibling())
-										{
-											attrs = r.getAttributes();
-											if ("item".equals(r.getNodeName()))
-											{
-												final int itemId = parseInteger(attrs, "id");
-												final int count = parseInteger(attrs, "count", 1);
-												
-												rewardedItems.add(new ItemHolder(itemId, count));
-											}
-											else if ("setNoble".equals(r.getNodeName()))
-											{
-												setNoble = true;
-											}
-											else if ("setHero".equals(r.getNodeName()))
-											{
-												setHero = true;
-											}
-										}
-									}
-									else if ("conditions".equals(b.getNodeName()))
-									{
-										for (Node r = b.getFirstChild(); r != null; r = r.getNextSibling())
-										{
-											attrs = r.getAttributes();
-											if ("item".equals(r.getNodeName()))
-											{
-												final int itemId = parseInteger(attrs, "id");
-												final int count = parseInteger(attrs, "count", 1);
-												
-												requiredItems.add(new ItemHolder(itemId, count));
-											}
-										}
-									}
-								}
-								
-								if (appliedCategories.isEmpty())
-								{
-									LOGGER.warn(": Class change option: " + optionName + " has no categories to be applied on. Skipping!");
-									continue;
-								}
-								
-								final ClassChangeData classChangeData = new ClassChangeData(optionName, appliedCategories);
-								classChangeData.setItemsRequired(requiredItems);
-								classChangeData.setItemsRewarded(rewardedItems);
-								classChangeData.setRewardHero(setHero);
-								classChangeData.setRewardNoblesse(setNoble);
-								
-								_classChangeData.add(classChangeData);
-							}
-						}
-					}
-				}
-			}
-		}
 	}
 	
 	@Override
@@ -1020,6 +892,138 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		
 		return null;
 	}
+
+	private class DataLoader extends IGameXmlReader {
+
+		@Override
+		protected Path getSchemaFilePath() {
+			return Path.of("config/xsd/classMaster.xsd");
+		}
+
+		@Override
+		public void load()
+		{
+			_classChangeData.clear();
+			parseFile(new File("config/ClassMaster.xml"));
+
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _classChangeData.size() + " class change options.");
+		}
+
+		@Override
+		public void parseDocument(Document doc, File f)
+		{
+			NamedNodeMap attrs;
+			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
+			{
+				if ("list".equals(n.getNodeName()))
+				{
+					for (Node cm = n.getFirstChild(); cm != null; cm = cm.getNextSibling())
+					{
+						attrs = cm.getAttributes();
+						if ("classMaster".equals(cm.getNodeName()))
+						{
+							_isEnabled = parseBoolean(attrs, "classChangeEnabled", false);
+							if (!_isEnabled)
+							{
+								return;
+							}
+
+							_spawnClassMasters = parseBoolean(attrs, "spawnClassMasters", true);
+							_showPopupWindow = parseBoolean(attrs, "showPopupWindow", false);
+
+							for (Node c = cm.getFirstChild(); c != null; c = c.getNextSibling())
+							{
+								attrs = c.getAttributes();
+								if ("classChangeOption".equals(c.getNodeName()))
+								{
+									final List<CategoryType> appliedCategories = new LinkedList<>();
+									final List<ItemHolder> requiredItems = new LinkedList<>();
+									final List<ItemHolder> rewardedItems = new LinkedList<>();
+									boolean setNoble = false;
+									boolean setHero = false;
+									final String optionName = parseString(attrs, "name", "");
+									for (Node b = c.getFirstChild(); b != null; b = b.getNextSibling())
+									{
+										attrs = b.getAttributes();
+										if ("appliesTo".equals(b.getNodeName()))
+										{
+											for (Node r = b.getFirstChild(); r != null; r = r.getNextSibling())
+											{
+												attrs = r.getAttributes();
+												if ("category".equals(r.getNodeName()))
+												{
+													final CategoryType category = CategoryType.findByName(r.getTextContent().trim());
+													if (category == null)
+													{
+														LOGGER.error(": Incorrect category type: " + r.getNodeValue());
+														continue;
+													}
+
+													appliedCategories.add(category);
+												}
+											}
+										}
+										if ("rewards".equals(b.getNodeName()))
+										{
+											for (Node r = b.getFirstChild(); r != null; r = r.getNextSibling())
+											{
+												attrs = r.getAttributes();
+												if ("item".equals(r.getNodeName()))
+												{
+													final int itemId = parseInteger(attrs, "id");
+													final int count = parseInteger(attrs, "count", 1);
+
+													rewardedItems.add(new ItemHolder(itemId, count));
+												}
+												else if ("setNoble".equals(r.getNodeName()))
+												{
+													setNoble = true;
+												}
+												else if ("setHero".equals(r.getNodeName()))
+												{
+													setHero = true;
+												}
+											}
+										}
+										else if ("conditions".equals(b.getNodeName()))
+										{
+											for (Node r = b.getFirstChild(); r != null; r = r.getNextSibling())
+											{
+												attrs = r.getAttributes();
+												if ("item".equals(r.getNodeName()))
+												{
+													final int itemId = parseInteger(attrs, "id");
+													final int count = parseInteger(attrs, "count", 1);
+
+													requiredItems.add(new ItemHolder(itemId, count));
+												}
+											}
+										}
+									}
+
+									if (appliedCategories.isEmpty())
+									{
+										LOGGER.warn(": Class change option: " + optionName + " has no categories to be applied on. Skipping!");
+										continue;
+									}
+
+									final ClassChangeData classChangeData = new ClassChangeData(optionName, appliedCategories);
+									classChangeData.setItemsRequired(requiredItems);
+									classChangeData.setItemsRewarded(rewardedItems);
+									classChangeData.setRewardHero(setHero);
+									classChangeData.setRewardNoblesse(setNoble);
+
+									_classChangeData.add(classChangeData);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
 	
 	public static AbstractNpcAI provider()
 	{

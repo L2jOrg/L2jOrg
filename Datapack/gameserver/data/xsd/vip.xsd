@@ -16,7 +16,7 @@
 
     <xs:complexType name="TierInfo">
         <xs:sequence>
-            <xs:element name="bonus" type="TierBonusInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="bonus" type="TierBonusInfo"/>
         </xs:sequence>
         <xs:attribute name="level" type="xs:int" use="required"/>
         <xs:attribute name="points_required" type="xs:int" use="required"/>

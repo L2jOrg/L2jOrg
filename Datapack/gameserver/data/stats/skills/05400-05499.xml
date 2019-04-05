@@ -1874,29 +1874,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5491" toLevel="1" name="Decreases bow/crossbow Atk. Spd.">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.skilltransform3</icon>
-		<magicLvl>1</magicLvl>
-		<operateType>P</operateType>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<effects>
-			<effect name="PhysicalAttackSpeed">
-				<amount>-50</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>BOW</item>
-				</weaponType>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>-21</amount>
-				<mode>PER</mode>
-				<weaponType>
-
-				</weaponType>
-			</effect>
-		</effects>
-	</skill>
 	<skill id="5492" toLevel="12" name="Power Shot">
 		<!-- NPC Skill -->
 		<castRange>600</castRange>

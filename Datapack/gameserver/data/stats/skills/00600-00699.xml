@@ -546,34 +546,6 @@
 			</effect>
 			<effect name="PAtk">
 				<amount>
-					<value level="1">13.3</value>
-					<value level="2">25.4</value>
-					<value level="3">36.3</value>
-					<value level="4">46</value>
-					<value level="5">54.4</value>
-					<value level="6">60.5</value>
-				</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-
-				</weaponType>
-			</effect>
-			<effect name="PAtk">
-				<amount>
-					<value level="1">7.8</value>
-					<value level="2">15</value>
-					<value level="3">21.4</value>
-					<value level="4">27.1</value>
-					<value level="5">32.1</value>
-					<value level="6">35.6</value>
-				</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-
-				</weaponType>
-			</effect>
-			<effect name="PAtk">
-				<amount>
 					<value level="1">10.2</value>
 					<value level="2">19.5</value>
 					<value level="3">27.9</value>
@@ -585,20 +557,6 @@
 				<weaponType>
 					<item>DUAL</item>
 					<item>DUALFIST</item>
-				</weaponType>
-			</effect>
-			<effect name="PAtk">
-				<amount>
-					<value level="1">9.1</value>
-					<value level="2">17.4</value>
-					<value level="3">24.8</value>
-					<value level="4">31.4</value>
-					<value level="5">37.2</value>
-					<value level="6">41.4</value>
-				</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-
 				</weaponType>
 			</effect>
 			<effect name="PAtk">
@@ -791,27 +749,6 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>DAGGER</item>
-
-				</weaponType>
-			</effect>
-			<effect name="PAtk">
-				<amount>36.3</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-
-				</weaponType>
-			</effect>
-			<effect name="PAtk">
-				<amount>21.4</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-
-				</weaponType>
-			</effect>
-			<effect name="PAtk">
-				<amount>24.8</amount>
-				<mode>DIFF</mode>
-				<weaponType>
 
 				</weaponType>
 			</effect>

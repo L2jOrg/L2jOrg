@@ -35,7 +35,7 @@ public enum BaseStats {
 
             @Override
             protected Path getSchemaFilePath() {
-                return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/statBonus.xml");
+                return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/statBonus.xsd");
             }
 
             @Override

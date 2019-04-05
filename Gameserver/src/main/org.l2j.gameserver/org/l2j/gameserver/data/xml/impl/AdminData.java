@@ -7,7 +7,6 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,8 +22,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -46,7 +43,7 @@ public final class AdminData extends IGameXmlReader{
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/AccessLevels.xsd");
+        return Path.of("config/xsd/AccessLevels.xsd");
     }
 
     @Override
