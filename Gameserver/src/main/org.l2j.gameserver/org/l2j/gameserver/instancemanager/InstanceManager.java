@@ -50,8 +50,6 @@ public final class InstanceManager extends IGameXmlReader{
     // Database query
     private static final String DELETE_INSTANCE_TIME = "DELETE FROM character_instance_time WHERE charId=? AND instanceId=?";
 
-    // Client instance names
-    private final Map<Integer, String> _instanceNames = new HashMap<>();
     // Instance templates holder
     private final Map<Integer, InstanceTemplate> _instanceTemplates = new HashMap<>();
     private final Map<Integer, Instance> _instanceWorlds = new ConcurrentHashMap<>();
@@ -71,10 +69,6 @@ public final class InstanceManager extends IGameXmlReader{
 
     @Override
     public void load() {
-        // Load instance names
-        _instanceNames.clear();
-        parseDatapackFile("data/InstanceNames.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _instanceNames.size() + " instance names.");
         // Load instance templates
         _instanceTemplates.clear();
         parseDatapackDirectory("data/instances", true);
@@ -89,31 +83,12 @@ public final class InstanceManager extends IGameXmlReader{
     public void parseDocument(Document doc, File f) {
         forEach(doc, XmlReader::isNode, listNode ->
         {
-            switch (listNode.getNodeName()) {
-                case "list": {
-                    parseInstanceName(listNode);
-                    break;
-                }
-                case "instance": {
-                    parseInstanceTemplate(listNode, f);
-                    break;
-                }
+            if ("instance".equals(listNode.getNodeName())) {
+                parseInstanceTemplate(listNode, f);
             }
         });
     }
 
-    /**
-     * Read instance names from XML file.
-     *
-     * @param n starting XML tag
-     */
-    private void parseInstanceName(Node n) {
-        forEach(n, "instance", instanceNode ->
-        {
-            final NamedNodeMap attrs = instanceNode.getAttributes();
-            _instanceNames.put(parseInteger(attrs, "id"), parseString(attrs, "name"));
-        });
-    }
 
 
     // --------------------------------------------------------------------
@@ -134,11 +109,6 @@ public final class InstanceManager extends IGameXmlReader{
         }
 
         final InstanceTemplate template = new InstanceTemplate(new StatsSet(parseAttributes(instanceNode)));
-
-        // Update name if wasn't provided
-        if (template.getName() == null) {
-            template.setName(_instanceNames.get(id));
-        }
 
         // Parse "instance" node children
         forEach(instanceNode, XmlReader::isNode, innerNode ->
@@ -417,7 +387,7 @@ public final class InstanceManager extends IGameXmlReader{
      * @return name of instance if found, otherwise {@code null}
      */
     public String getInstanceName(int templateId) {
-        return _instanceNames.get(templateId);
+        return  _instanceTemplates.get(templateId).getName();
     }
 
     /**
