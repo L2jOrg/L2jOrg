@@ -1,8 +1,10 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.model.Character;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.xml.impl.*;
+import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
@@ -36,7 +38,7 @@ public final class CharacterCreate extends IClientIncomingPacket {
     // cSdddddddddddd
     private String _name;
     private int _race;
-    private byte _sex;
+    private boolean female;
     private int _classId;
     private int _int;
     private int _str;
@@ -56,7 +58,7 @@ public final class CharacterCreate extends IClientIncomingPacket {
     public void readImpl(ByteBuffer packet) {
         _name = readString(packet);
         _race = packet.getInt();
-        _sex = (byte) packet.getInt();
+        female = packet.getInt() != 0;
         _classId = packet.getInt();
         _int = packet.getInt();
         _str = packet.getInt();
@@ -99,7 +101,7 @@ public final class CharacterCreate extends IClientIncomingPacket {
             return;
         }
 
-        if ((_hairStyle < 0) || ((_sex == 0) && (_hairStyle > 4)) || ((_sex != 0) && (_hairStyle > 6))) {
+        if ((_hairStyle < 0) || ((!female) && (_hairStyle > 4)) || ((female) && (_hairStyle > 6))) {
             LOGGER.warn("Character Creation Failure: Character hair style " + _hairStyle + " is invalid. Possible client hack. " + client);
 
             client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
@@ -173,17 +175,24 @@ public final class CharacterCreate extends IClientIncomingPacket {
                     break;
                 }
             }
-            newChar = L2PcInstance.create(template, client.getAccountName(), _name, new PcAppearance(_face, _hairColor, _hairStyle, _sex != 0));
+            var character = new Character();
+            character.setId(IdFactory.getInstance().getNextId());
+            character.setName(_name);
+            character.setClassId(_classId);
+            character.setFace(_face);
+            character.setHairColor(_hairColor);
+            character.setHairStyle(_hairStyle);
+            character.setFemale(female);
+            character.setAccountName(client.getAccountName());
+            newChar = L2PcInstance.create(character, template);
         }
 
         // HP and MP are at maximum and CP is zero by default.
         newChar.setCurrentHp(newChar.getMaxHp());
         newChar.setCurrentMp(newChar.getMaxMp());
-        // newChar.setMaxLoad(template.getBaseLoad());
-
-        client.sendPacket(CharCreateOk.STATIC_PACKET);
 
         initNewChar(client, newChar);
+        client.sendPacket(CharCreateOk.STATIC_PACKET);
 
         LOGGER_ACCOUNTING.info("Created new character, " + newChar + ", " + client);
     }

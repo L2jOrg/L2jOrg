@@ -94,7 +94,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
  */
 public abstract class L2Character extends L2Object implements ISkillsHolder, IDeletable {
     public static final Logger LOGGER = LoggerFactory.getLogger(L2Character.class.getName());
-    public static final double MAX_HP_BAR_PX = 352.0;
+    public static final double MAX_STATUS_BAR_PX = 352.0;
     /**
      * Map containing all skills of this character.
      */
@@ -411,7 +411,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
     protected void initCharStatusUpdateValues() {
         _hpUpdateIncCheck = _stat.getMaxHp();
-        _hpUpdateInterval = _hpUpdateIncCheck / MAX_HP_BAR_PX;
+        _hpUpdateInterval = _hpUpdateIncCheck / MAX_STATUS_BAR_PX;
         _hpUpdateDecCheck = _hpUpdateIncCheck - _hpUpdateInterval;
     }
 
@@ -510,7 +510,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
         final double currentHp = _status.getCurrentHp();
         final double maxHp = _stat.getMaxHp();
 
-        if ((currentHp <= 1.0) || (maxHp < MAX_HP_BAR_PX)) {
+        if ((currentHp <= 1.0) || (maxHp < MAX_STATUS_BAR_PX)) {
             return true;
         }
 

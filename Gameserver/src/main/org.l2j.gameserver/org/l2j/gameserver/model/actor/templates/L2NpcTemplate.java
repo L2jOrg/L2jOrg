@@ -3,6 +3,7 @@ package org.l2j.gameserver.model.actor.templates;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.StatsSet;
@@ -18,6 +19,8 @@ import org.l2j.gameserver.util.Util;
 
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
+
+import static java.util.Objects.nonNull;
 
 /**
  * NPC template.
@@ -693,6 +696,10 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 
                 // bonus drop rate effect
                 rateChance *= killer.getStat().getValue(Stats.BONUS_DROP_RATE, 1);
+
+                if(nonNull(killer.getActingPlayer())) {
+                    rateChance *= VipData.getInstance().getItemDropBonus(killer.getActingPlayer());
+                }
 
                 // calculate if item will drop
                 if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance)) {

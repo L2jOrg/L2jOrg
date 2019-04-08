@@ -2,9 +2,9 @@ package org.l2j.gameserver.data.xml.model;
 
 public class VipInfo {
 
-    private final int level;
-    private final int pointsRequired;
-    private final int pointsDepreciated;
+    private final byte level;
+    private final long pointsRequired;
+    private final long pointsDepreciated;
     private float xpSpBonus;
     private float itemDropBonus;
     private int worldChatBonus;
@@ -17,14 +17,22 @@ public class VipInfo {
     private boolean receiveDailyVIPBox;
     private int allCombatAttributeBonus;
 
-    public VipInfo(Integer level, Integer pointsRequired, Integer pointsDepreciated) {
+    public VipInfo(byte level, long pointsRequired, long pointsDepreciated) {
         this.level = level;
         this.pointsRequired = pointsRequired;
         this.pointsDepreciated = pointsDepreciated;
     }
 
+    public byte getLevel() {
+        return level;
+    }
+
     public void setXpSpBonus(float xpSp) {
         this.xpSpBonus = xpSp;
+    }
+
+    public float getXpSpBonus() {
+        return xpSpBonus;
     }
 
     public void setItemDropBonus(float itemDrop) {
@@ -85,5 +93,29 @@ public class VipInfo {
 
     public int getAllCombatAttributeBonus() {
         return allCombatAttributeBonus;
+    }
+
+    public long getPointsRequired() {
+        return pointsRequired;
+    }
+
+    public long getPointsDepreciated() {
+        return pointsDepreciated;
+    }
+
+    public float getItemDropBonus() {
+        return itemDropBonus;
+    }
+
+    public float getDeathPenaltyReduction() {
+        return deathPenaltyReduction;
+    }
+
+    public int getWorldChatBonus() {
+        return worldChatBonus;
+    }
+
+    public float getPhishingXpBonus() {
+        return fishingXpBonus;
     }
 }

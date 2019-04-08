@@ -144,7 +144,7 @@ public enum IncomingPackets implements PacketFactory {
     SET_PRIVATE_STORE_MSG_BUY(0x9D, SetPrivateStoreMsgBuy::new, ConnectionState.IN_GAME),
     REQUEST_PRIVATE_STORE_SELL(0x9F, RequestPrivateStoreSell::new, ConnectionState.IN_GAME),
     SEND_TIME_CHECK_PACKET(0xA0, null, ConnectionState.IN_GAME),
-    REQUEST_SKILL_COOL_TIME(0xA6, RequestSkillCoolTime::new, ConnectionState.IN_GAME),
+    REQUEST_SKILL_COOL_TIME(0xA6, RequestSkillCoolTime::new, ConnectionState.JOINING_GAME, ConnectionState.IN_GAME),
     REQUEST_PACKAGE_SENDABLE_ITEM_LIST(0xA7, RequestPackageSendableItemList::new, ConnectionState.IN_GAME),
     REQUEST_PACKAGE_SEND(0xA8, RequestPackageSend::new, ConnectionState.IN_GAME),
     REQUEST_BLOCK(0xA9, RequestBlock::new, ConnectionState.IN_GAME),

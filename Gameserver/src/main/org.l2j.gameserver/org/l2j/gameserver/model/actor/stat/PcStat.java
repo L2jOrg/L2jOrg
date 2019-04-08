@@ -2,6 +2,7 @@ package org.l2j.gameserver.model.actor.stat;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.L2Party;
@@ -87,6 +88,7 @@ public class PcStat extends PlayableStat {
         double bonusExp = 1.;
         double bonusSp = 1.;
 
+        float vipBonus = 0f;
         if (useBonuses) {
             if (activeChar.isFishing()) {
                 // rod fishing skills
@@ -99,11 +101,17 @@ public class PcStat extends PlayableStat {
                         }
                     }
                 }
+                vipBonus = VipData.getInstance().getFishingXPBonus(activeChar);
             } else {
                 bonusExp = getExpBonusMultiplier();
                 bonusSp = getSpBonusMultiplier();
+
+                vipBonus = VipData.getInstance().getXPAndSPBonus(activeChar);
             }
         }
+
+        bonusExp += vipBonus;
+        bonusSp += vipBonus;
 
         addToExp *= bonusExp;
         addToSp *= bonusSp;
@@ -111,9 +119,8 @@ public class PcStat extends PlayableStat {
         double ratioTakenByPlayer = 0;
 
         // if this player has a pet and it is in his range he takes from the owner's Exp, give the pet Exp now
-        final L2Summon sPet = activeChar.getPet();
-        if ((sPet != null) && Util.checkIfInShortRange(Config.ALT_PARTY_RANGE, activeChar, sPet, false)) {
-            final L2PetInstance pet = (L2PetInstance) sPet;
+        final L2PetInstance pet = activeChar.getPet();
+        if ((pet != null) && Util.checkIfInShortRange(Config.ALT_PARTY_RANGE, activeChar, pet, false)) {
             ratioTakenByPlayer = pet.getPetLevelData().getOwnerExpTaken() / 100f;
 
             // only give exp/sp to the pet by taking from the owner if the pet has a non-zero, positive ratio

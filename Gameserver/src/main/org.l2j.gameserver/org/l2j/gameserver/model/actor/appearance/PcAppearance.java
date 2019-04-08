@@ -22,15 +22,15 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 public class PcAppearance {
     public static final int DEFAULT_TITLE_COLOR = 0xECF9A2;
 
-    private L2PcInstance _owner;
+    private L2PcInstance owner;
 
-    private byte _face;
+    private byte face;
 
-    private byte _hairColor;
+    private byte hairColor;
 
-    private byte _hairStyle;
+    private byte hairStyle;
 
-    private boolean _sex; // Female true(1)
+    private boolean female; // Female true(1)
 
     /**
      * The current visible name of this player, not necessarily the real one
@@ -58,19 +58,21 @@ public class PcAppearance {
     private int _visibleAllyId = -1;
     private int _visibleAllyCrestId = -1;
 
-    public PcAppearance(byte face, byte hColor, byte hStyle, boolean sex) {
-        _face = face;
-        _hairColor = hColor;
-        _hairStyle = hStyle;
-        _sex = sex;
+    public PcAppearance(L2PcInstance owner, byte face, byte hairColor, byte hairStyle, boolean female) {
+        this.owner = owner;
+        this.face = face;
+        this.hairColor = hairColor;
+        this.hairStyle = hairStyle;
+        this.female = female;
     }
+
 
     /**
      * @return Returns the visibleName.
      */
     public final String getVisibleName() {
         if (_visibleName == null) {
-            return _owner.getName();
+            return owner.getName();
         }
         return _visibleName;
     }
@@ -87,7 +89,7 @@ public class PcAppearance {
      */
     public final String getVisibleTitle() {
         if (_visibleTitle == null) {
-            return _owner.getTitle();
+            return owner.getTitle();
         }
         return _visibleTitle;
     }
@@ -100,57 +102,57 @@ public class PcAppearance {
     }
 
     public final byte getFace() {
-        return _face;
+        return face;
     }
 
     /**
      * @param value
      */
     public final void setFace(int value) {
-        _face = (byte) value;
+        face = (byte) value;
     }
 
     public final byte getHairColor() {
-        return _hairColor;
+        return hairColor;
     }
 
     /**
      * @param value
      */
     public final void setHairColor(int value) {
-        _hairColor = (byte) value;
+        hairColor = (byte) value;
     }
 
     public final byte getHairStyle() {
-        return _hairStyle;
+        return hairStyle;
     }
 
     /**
      * @param value
      */
     public final void setHairStyle(int value) {
-        _hairStyle = (byte) value;
+        hairStyle = (byte) value;
     }
 
     /**
      * @return true if char is female
      */
     public final boolean getSex() {
-        return _sex;
+        return female;
     }
 
     /**
      * @param isfemale
      */
     public final void setSex(boolean isfemale) {
-        _sex = isfemale;
+        female = isfemale;
     }
 
     /**
      * @return Sex of the char
      */
     public Sex getSexType() {
-        return _sex ? Sex.FEMALE : Sex.MALE;
+        return female ? Sex.FEMALE : Sex.MALE;
     }
 
     public int getNameColor() {
@@ -189,34 +191,34 @@ public class PcAppearance {
      * @return Returns the owner.
      */
     public L2PcInstance getOwner() {
-        return _owner;
+        return owner;
     }
 
     /**
      * @param owner The owner to set.
      */
     public void setOwner(L2PcInstance owner) {
-        _owner = owner;
+        this.owner = owner;
     }
 
     public int getVisibleClanId() {
-        return _visibleClanId != -1 ? _visibleClanId : _owner.isCursedWeaponEquipped() ? 0 : _owner.getClanId();
+        return _visibleClanId != -1 ? _visibleClanId : owner.isCursedWeaponEquipped() ? 0 : owner.getClanId();
     }
 
     public int getVisibleClanCrestId() {
-        return _visibleClanCrestId != -1 ? _visibleClanCrestId : _owner.isCursedWeaponEquipped() ? 0 : _owner.getClanCrestId();
+        return _visibleClanCrestId != -1 ? _visibleClanCrestId : owner.isCursedWeaponEquipped() ? 0 : owner.getClanCrestId();
     }
 
     public int getVisibleClanLargeCrestId() {
-        return _visibleClanLargeCrestId != -1 ? _visibleClanLargeCrestId : _owner.isCursedWeaponEquipped() ? 0 : _owner.getClanCrestLargeId();
+        return _visibleClanLargeCrestId != -1 ? _visibleClanLargeCrestId : owner.isCursedWeaponEquipped() ? 0 : owner.getClanCrestLargeId();
     }
 
     public int getVisibleAllyId() {
-        return _visibleAllyId != -1 ? _visibleAllyId : _owner.isCursedWeaponEquipped() ? 0 : _owner.getAllyId();
+        return _visibleAllyId != -1 ? _visibleAllyId : owner.isCursedWeaponEquipped() ? 0 : owner.getAllyId();
     }
 
     public int getVisibleAllyCrestId() {
-        return _visibleAllyCrestId != -1 ? _visibleAllyCrestId : _owner.isCursedWeaponEquipped() ? 0 : _owner.getAllyCrestId();
+        return _visibleAllyCrestId != -1 ? _visibleAllyCrestId : owner.isCursedWeaponEquipped() ? 0 : owner.getAllyCrestId();
     }
 
     public void setVisibleClanData(int clanId, int clanCrestId, int clanLargeCrestId, int allyId, int allyCrestId) {

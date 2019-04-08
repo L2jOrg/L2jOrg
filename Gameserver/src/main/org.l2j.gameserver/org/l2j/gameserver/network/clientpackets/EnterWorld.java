@@ -30,6 +30,7 @@ import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemLi
 import org.l2j.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
 import org.l2j.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import org.l2j.gameserver.network.serverpackets.friend.L2FriendList;
+import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -95,11 +96,6 @@ public class EnterWorld extends IClientIncomingPacket {
             }
             vars.remove("INSTANCE_RESTORE");
         }
-
-        // if (L2World.getInstance().findObject(activeChar.getObjectId()) != null)
-        // {
-        // LOGGER.warn("User already exists in Object ID map! User " + activeChar.getName() + " is a character clone.");
-        // }
 
         activeChar.updatePvpTitleAndColor(false);
 
@@ -284,6 +280,8 @@ public class EnterWorld extends IClientIncomingPacket {
 
         // Send Equipped Items
         activeChar.sendPacket(new ExUserInfoEquipSlot(activeChar));
+
+        client.sendPacket(new ReceiveVipInfo());
 
         // Send Unread Mail Count
         if (MailManager.getInstance().hasUnreadPost(activeChar)) {
@@ -474,7 +472,7 @@ public class EnterWorld extends IClientIncomingPacket {
         }
 
         if (Config.ENABLE_ATTENDANCE_REWARDS) {
-            ThreadPoolManager.getInstance().schedule(() ->
+            ThreadPoolManager.schedule(() ->
             {
                 // Check if player can receive reward today.
                 final AttendanceInfoHolder attendanceInfo = activeChar.getAttendanceInfo();
@@ -491,7 +489,7 @@ public class EnterWorld extends IClientIncomingPacket {
         }
 
         if (Config.HARDWARE_INFO_ENABLED) {
-            ThreadPoolManager.getInstance().schedule(() ->
+            ThreadPoolManager.schedule(() ->
             {
                 if (client.getHardwareInfo() == null) {
                     Disconnection.of(client).defaultSequence(false);

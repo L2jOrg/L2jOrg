@@ -23,7 +23,6 @@ public class QueryDescriptor implements AutoCloseable {
     private final Method method;
     private final IntObjectMap<IntObjectPair<Class<?>>> parametersInfo;
     private PreparedStatement statement;
-    private ResultSet resultSet;
 
 
     public QueryDescriptor(Method method, String query) {
@@ -57,10 +56,6 @@ public class QueryDescriptor implements AutoCloseable {
         if(nonNull(statement)) {
             statement.close();
         }
-
-        if(nonNull(resultSet)) {
-            resultSet.close();
-        }
     }
 
 
@@ -84,7 +79,6 @@ public class QueryDescriptor implements AutoCloseable {
                 var handler = TypeHandler.MAP.getOrDefault(type.getName(), TypeHandler.MAP.get(Object.class.getName()));
                 handler.setParameter(statement, parameterIndex, args[argumentIndex]);
             }
-
         }
     }
 

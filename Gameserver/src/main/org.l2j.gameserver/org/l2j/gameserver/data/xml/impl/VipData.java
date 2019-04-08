@@ -3,6 +3,7 @@ package org.l2j.gameserver.data.xml.impl;
 import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.gameserver.data.xml.model.VipInfo;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.w3c.dom.Document;
@@ -16,6 +17,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class VipData extends IGameXmlReader{
 
+    private static final byte VIP_MAX_TIER = 7;
     private IntObjectMap<VipInfo> vipTiers = new HashIntObjectMap<>(8);
 
     private VipData() {
@@ -39,9 +41,9 @@ public class VipData extends IGameXmlReader{
 
     private void parseVipTier(Node vipNode) {
         var attributes = vipNode.getAttributes();
-        var level = parseInteger(attributes, "level");
-        var pointsRequired = parseInteger(attributes, "points_required");
-        var pointsDepreciated = parseInteger(attributes, "points_depreciated");
+        var level = parseByte(attributes, "level");
+        var pointsRequired = parseLong(attributes, "points_required");
+        var pointsDepreciated = parseLong(attributes, "points_depreciated");
 
         var vipInfo = new VipInfo(level, pointsRequired, pointsDepreciated);
         vipTiers.put(level, vipInfo);
@@ -61,11 +63,55 @@ public class VipData extends IGameXmlReader{
             vipInfo.setReceiveDailyVIPBox(parseBoolean(attributes, "daily_vip_box"));
             vipInfo.setAllCombatAttributeBonus(parseInteger(attributes, "combat_attribute"));
         }
+    }
 
+    public byte getVipLevel(L2PcInstance player) {
+        return getVipInfo(player).getLevel();
+    }
+
+    private VipInfo getVipInfo(L2PcInstance player) {
+        var points =  player.getVipPoints();
+        for (byte i = 0; i < vipTiers.size(); i++) {
+            if(points < vipTiers.get(i).getPointsRequired()) {
+                return vipTiers.get(i - 1);
+            }
+        }
+        return vipTiers.get(VIP_MAX_TIER);
+    }
+
+    public long getPointsDepreciatedOnLevel(byte vipTier) {
+        return vipTiers.get(vipTier).getPointsDepreciated();
+    }
+
+    public long getPointsToLevel(int level) {
+        if(vipTiers.containsKey(level)) {
+            return vipTiers.get(level).getPointsRequired();
+        }
+        return 0;
+    }
+
+    public float getXPAndSPBonus(L2PcInstance player) {
+        return getVipInfo(player).getXpSpBonus() - 1;
+    }
+
+    public float getItemDropBonus(L2PcInstance player) {
+        return getVipInfo(player).getItemDropBonus();
+    }
+
+    public float getDeathPenaltyReduction(L2PcInstance player) {
+        return getVipInfo(player).getDeathPenaltyReduction();
+    }
+
+    public int getWorldChatBonus(L2PcInstance player) {
+        return getVipInfo(player).getWorldChatBonus();
     }
 
     public static VipData getInstance() {
         return Singleton.INSTANCE;
+    }
+
+    public float getFishingXPBonus(L2PcInstance player) {
+        return getVipInfo(player).getPhishingXpBonus();
     }
 
     private static class Singleton {

@@ -13,6 +13,7 @@ module org.l2j.gameserver {
     requires java.compiler;
 
     opens org.l2j.gameserver.settings to org.l2j.commons;
+    opens org.l2j.gameserver.data.database.model to org.l2j.commons;
 
     exports org.l2j.gameserver.model.actor;
     exports org.l2j.gameserver.model.actor.appearance;

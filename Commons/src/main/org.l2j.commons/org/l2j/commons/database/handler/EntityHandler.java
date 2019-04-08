@@ -2,6 +2,8 @@ package org.l2j.commons.database.handler;
 
 import org.l2j.commons.database.QueryDescriptor;
 import org.l2j.commons.database.annotation.Column;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -12,6 +14,8 @@ import java.sql.SQLException;
 import static java.util.Objects.isNull;
 
 public class EntityHandler implements TypeHandler<Object> {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(EntityHandler.class);
 
     @Override
     public Object defaultValue() {
@@ -40,7 +44,8 @@ public class EntityHandler implements TypeHandler<Object> {
 
                 Field f = findField(fields, columnName);
                 if(isNull(f)) {
-                    throw  new SQLException("There is no field with name " +  columnName + " on Type " + type.getName());
+                    LOGGER.debug("There is no field with name {} on Type {}",  columnName, type.getName());
+                    continue;
                 }
                 if(f.trySetAccessible()) {
                     var handler = TypeHandler.MAP.getOrDefault(f.getType().getName(), TypeHandler.MAP.get(Object.class.getName()));
