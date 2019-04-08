@@ -29,25 +29,20 @@ import org.slf4j.LoggerFactory;
 import java.nio.ByteBuffer;
 import java.util.List;
 
-@SuppressWarnings("unused")
+import static java.util.Objects.isNull;
+
 public final class CharacterCreate extends IClientIncomingPacket {
+
     private static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
     private static final Logger LOGGER = LoggerFactory.getLogger(CharacterCreate.class);
 
     // cSdddddddddddd
-    private String _name;
-    private int _race;
+    private String name;
     private boolean female;
-    private int _classId;
-    private int _int;
-    private int _str;
-    private int _con;
-    private int _men;
-    private int _dex;
-    private int _wit;
-    private byte _hairStyle;
-    private byte _hairColor;
-    private byte _face;
+    private int classId;
+    private byte hairStyle;
+    private byte hairColor;
+    private byte face;
 
     private static boolean isValidName(String text) {
         return Config.CHARNAME_TEMPLATE_PATTERN.matcher(text).matches();
@@ -55,96 +50,97 @@ public final class CharacterCreate extends IClientIncomingPacket {
 
     @Override
     public void readImpl(ByteBuffer packet) {
-        _name = readString(packet);
-        _race = packet.getInt();
+        name = readString(packet);
+        packet.getInt(); // Race
         female = packet.getInt() != 0;
-        _classId = packet.getInt();
-        _int = packet.getInt();
-        _str = packet.getInt();
-        _con = packet.getInt();
-        _men = packet.getInt();
-        _dex = packet.getInt();
-        _wit = packet.getInt();
-        _hairStyle = (byte) packet.getInt();
-        _hairColor = (byte) packet.getInt();
-        _face = (byte) packet.getInt();
+        classId = packet.getInt();
+
+        // Don't trust these values from client
+        packet.getInt(); // INT
+        packet.getInt(); // STR
+        packet.getInt(); // CON
+        packet.getInt(); // MEN
+        packet.getInt(); // DEX
+        packet.getInt(); // WIT
+
+        hairStyle = (byte) packet.getInt();
+        hairColor = (byte) packet.getInt();
+        face = (byte) packet.getInt();
     }
 
     @Override
     public void runImpl() {
         // Last Verified: May 30, 2009 - Gracia Final - Players are able to create characters with names consisting of as little as 1,2,3 letter/number combinations.
-        if ((_name.length() < 1) || (_name.length() > 16)) {
+        if ((name.length() < 1) || (name.length() > 16)) {
             client.sendPacket(new CharCreateFail(CharCreateFail.REASON_16_ENG_CHARS));
             return;
         }
 
-        if (Config.FORBIDDEN_NAMES.length > 0) {
-            for (String st : Config.FORBIDDEN_NAMES) {
-                if (_name.toLowerCase().contains(st.toLowerCase())) {
-                    client.sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
-                    return;
-                }
-            }
+        if ((face > 2) || (face < 0)) {
+            LOGGER.warn("Character Creation Failure: Character face {} is invalid. Possible client hack {}", face , client);
+            client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+            return;
+        }
+
+        if ((hairStyle < 0) || ( (!female) && (hairStyle > 4) ) || ((female) && (hairStyle > 6))) {
+            LOGGER.warn("Character Creation Failure: Character hair style {} is invalid. Possible client hack {}", hairStyle, client);
+            client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+            return;
+        }
+
+        if ((hairColor > 3) || (hairColor < 0)) {
+            LOGGER.warn("Character Creation Failure: Character hair color {} is invalid. Possible client hack {}", hairColor , client);
+            client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+            return;
         }
 
         // Last Verified: May 30, 2009 - Gracia Final
-        if (!Util.isAlphaNumeric(_name) || !isValidName(_name)) {
+        if (!Util.isAlphaNumeric(name) || !isValidName(name)) {
             client.sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
             return;
         }
 
-        if ((_face > 2) || (_face < 0)) {
-            LOGGER.warn("Character Creation Failure: Character face " + _face + " is invalid. Possible client hack. " + client);
-
-            client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
-            return;
-        }
-
-        if ((_hairStyle < 0) || ((!female) && (_hairStyle > 4)) || ((female) && (_hairStyle > 6))) {
-            LOGGER.warn("Character Creation Failure: Character hair style " + _hairStyle + " is invalid. Possible client hack. " + client);
-
-            client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
-            return;
-        }
-
-        if ((_hairColor > 3) || (_hairColor < 0)) {
-            LOGGER.warn("Character Creation Failure: Character hair color " + _hairColor + " is invalid. Possible client hack. " + client);
-
-            client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
-            return;
-        }
-
-        L2PcInstance newChar = null;
-        L2PcTemplate template = null;
+        L2PcInstance newChar;
+        L2PcTemplate template;
 
         /*
          * DrHouse: Since checks for duplicate names are done using SQL, lock must be held until data is written to DB as well.
          */
         synchronized (CharNameTable.getInstance()) {
-            if ((CharNameTable.getInstance().getAccountCharacterCount(client.getAccountName()) >= Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT) && (Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT != 0)) {
+            if (Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT != 0 && (CharNameTable.getInstance().getAccountCharacterCount(client.getAccountName()) >= Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT)) {
                 client.sendPacket(new CharCreateFail(CharCreateFail.REASON_TOO_MANY_CHARACTERS));
                 return;
-            } else if (CharNameTable.getInstance().doesCharNameExist(_name)) {
+            }
+
+            if (CharNameTable.getInstance().doesCharNameExist(name)) {
                 client.sendPacket(new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS));
                 return;
             }
 
-            template = PlayerTemplateData.getInstance().getTemplate(_classId);
-            if ((template == null) || (ClassId.getClassId(_classId).level() > 0)) {
+            template = PlayerTemplateData.getInstance().getTemplate(classId);
+            if ((template == null) || (ClassId.getClassId(classId).level() > 0)) {
                 client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
                 return;
             }
 
             var character = new Character();
             character.setId(IdFactory.getInstance().getNextId());
-            character.setName(_name);
-            character.setClassId(_classId);
-            character.setFace(_face);
-            character.setHairColor(_hairColor);
-            character.setHairStyle(_hairStyle);
+            character.setName(name);
+            character.setClassId(classId);
+            character.setFace(face);
+            character.setHairColor(hairColor);
+            character.setHairStyle(hairStyle);
             character.setFemale(female);
             character.setAccountName(client.getAccountName());
+
             newChar = L2PcInstance.create(character, template);
+
+
+        }
+
+        if(isNull(newChar)) {
+            client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+            return;
         }
 
         // HP and MP are at maximum and CP is zero by default.
@@ -154,7 +150,7 @@ public final class CharacterCreate extends IClientIncomingPacket {
         initNewChar(client, newChar);
         client.sendPacket(CharCreateOk.STATIC_PACKET);
 
-        LOGGER_ACCOUNTING.info("Created new character, " + newChar + ", " + client);
+        LOGGER_ACCOUNTING.info("Created new character {}, {}", newChar, client);
     }
 
     private void initNewChar(L2GameClient client, L2PcInstance newChar) {
