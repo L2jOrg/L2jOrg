@@ -10,8 +10,7 @@ public interface IdFactoryDAO extends DAO {
             "UNION SELECT object_id AS id FROM items " +
             "UNION SELECT clan_id AS id FROM clan_data " +
             "UNION SELECT object_id AS id FROM itemsonground " +
-            "UNION SELECT messageId AS id FROM messages " +
-            "UNION SELECT id FROM couples")
+            "UNION SELECT messageId AS id FROM messages")
     IntSet findUsedObjectIds();
 
 }
