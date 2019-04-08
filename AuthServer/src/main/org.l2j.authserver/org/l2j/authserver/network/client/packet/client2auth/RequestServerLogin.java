@@ -37,7 +37,7 @@ public class RequestServerLogin extends L2LoginClientPacket {
 		if (sk.checkLoginPair(accountId, authKey)) {
 			if (AuthController.getInstance().isLoginPossible(getClient(), _serverId)) {
 			    client.joinGameserver();
-				client.close(new PlayOk(_serverId));
+				client.sendPacket(new PlayOk(_serverId));
 			} else  {
 				client.close(REASON_TOO_MANY_PLAYERS);
 			}
