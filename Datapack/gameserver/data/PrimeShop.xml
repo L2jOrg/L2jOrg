@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/PrimeShop.xsd">
+
+    <!-- cat = 1 - Exping, 2 - Supplies, 3 - Cosmetic, 4 - Specials, 5 - Other -->
+    <!-- paymentType = 0 - Euro, 1 - Adena, 2 - Hero Coin -->
+    <!-- panelType = 0 - None, 1 - Event, 2 - Sale, 3 - New, 4 - Best -->
+    <!-- recommended = 1 - Top, 2 - Left, 4 - Right (bit flags) -->
+    <!-- startSale = unixTime -->
+    <!-- endSale = unixTime -->
 </list>

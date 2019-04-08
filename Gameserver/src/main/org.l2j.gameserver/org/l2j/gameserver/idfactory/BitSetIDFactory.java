@@ -7,9 +7,12 @@ import java.util.BitSet;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public final class BitSetIDFactory extends IdFactory {
+
+    private static final int INITIAL_CAPACITY = 100000;
+
     private BitSet freeIds;
     private AtomicInteger freeIdCount;
-    private AtomicInteger _nextFreeId;
+    private AtomicInteger nextFreeId;
 
     BitSetIDFactory() {
         synchronized (BitSetIDFactory.class) {
@@ -21,25 +24,25 @@ public final class BitSetIDFactory extends IdFactory {
 
     public void initialize() {
         try {
-            freeIds = new BitSet(PrimeFinder.nextPrime(100000));
+            freeIds = new BitSet(PrimeFinder.nextPrime(INITIAL_CAPACITY));
             freeIds.clear();
             freeIdCount = new AtomicInteger(FREE_OBJECT_ID_SIZE);
 
-            for (int usedObjectId : extractUsedObjectIDTable()) {
+            extractUsedObjectIDTable().forEach(usedObjectId -> {
                 final int objectID = usedObjectId - FIRST_OID;
                 if (objectID < 0) {
-                    LOGGER.warn("Object ID " + usedObjectId + " in DB is less than minimum ID of " + FIRST_OID);
-                    continue;
+                    LOGGER.warn("Object ID {} in DB is less than minimum ID of {}", usedObjectId, FIRST_OID);
+                    return;
                 }
                 freeIds.set(usedObjectId - FIRST_OID);
                 freeIdCount.decrementAndGet();
-            }
+            });
 
-            _nextFreeId = new AtomicInteger(freeIds.nextClearBit(0));
+            nextFreeId = new AtomicInteger(freeIds.nextClearBit(0));
             initialized = true;
         } catch (Exception e) {
             initialized = false;
-            LOGGER.error(getClass().getSimpleName() + ": Could not be initialized properly: " + e.getMessage());
+            LOGGER.error("Could not be initialized properly", e);
         }
     }
 
@@ -55,7 +58,7 @@ public final class BitSetIDFactory extends IdFactory {
 
     @Override
     public synchronized int getNextId() {
-        final int newID = _nextFreeId.get();
+        final int newID = nextFreeId.get();
         freeIds.set(newID);
         freeIdCount.decrementAndGet();
 
@@ -68,7 +71,7 @@ public final class BitSetIDFactory extends IdFactory {
             increaseBitSetCapacity();
         }
 
-        _nextFreeId.set(nextFree);
+        nextFreeId.set(nextFree);
 
         return newID + FIRST_OID;
     }
