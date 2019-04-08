@@ -74,7 +74,6 @@ public final class Config {
     // --------------------------------------------------
     // Custom Config File Definitions
     // --------------------------------------------------
-    private static final String CUSTOM_ALLOWED_PLAYER_RACES_CONFIG_FILE = "./config/Custom/AllowedPlayerRaces.ini";
     private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
     private static final String CUSTOM_BANKING_CONFIG_FILE = "./config/Custom/Banking.ini";
     private static final String CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE = "./config/Custom/ChampionMonsters.ini";
@@ -944,13 +943,7 @@ public final class Config {
     public static boolean DUALBOX_COUNT_OFFLINE_TRADERS;
     public static Map<Integer, Integer> DUALBOX_CHECK_WHITELIST;
     public static boolean ALLOW_CHANGE_PASSWORD;
-    public static boolean ALLOW_HUMAN;
-    public static boolean ALLOW_ELF;
-    public static boolean ALLOW_DARKELF;
-    public static boolean ALLOW_ORC;
-    public static boolean ALLOW_DWARF;
-    public static boolean ALLOW_KAMAEL;
-    public static boolean ALLOW_ERTHEIA;
+
     public static boolean AUTO_POTIONS_ENABLED;
     public static boolean AUTO_POTIONS_IN_OLYMPIAD;
     public static int AUTO_POTION_MIN_LVL;
@@ -1981,17 +1974,6 @@ public final class Config {
         OBSTACLE_MULTIPLIER = geoData.getInt("ObstacleMultiplier", 10);
         HEURISTIC_WEIGHT = geoData.getInt("HeuristicWeight", 20);
         MAX_ITERATIONS = geoData.getInt("MaxIterations", 3500);
-
-        // Load AllowedPlayerRaces config file (if exists)
-        final PropertiesParser AllowedPlayerRaces = new PropertiesParser(CUSTOM_ALLOWED_PLAYER_RACES_CONFIG_FILE);
-
-        ALLOW_HUMAN = AllowedPlayerRaces.getBoolean("AllowHuman", true);
-        ALLOW_ELF = AllowedPlayerRaces.getBoolean("AllowElf", true);
-        ALLOW_DARKELF = AllowedPlayerRaces.getBoolean("AllowDarkElf", true);
-        ALLOW_ORC = AllowedPlayerRaces.getBoolean("AllowOrc", true);
-        ALLOW_DWARF = AllowedPlayerRaces.getBoolean("AllowDwarf", true);
-        ALLOW_KAMAEL = AllowedPlayerRaces.getBoolean("AllowKamael", true);
-        ALLOW_ERTHEIA = AllowedPlayerRaces.getBoolean("AllowErtheia", true);
 
         // Load AutoPotions config file (if exists)
         final PropertiesParser AutoPotions = new PropertiesParser(CUSTOM_AUTO_POTIONS_CONFIG_FILE);

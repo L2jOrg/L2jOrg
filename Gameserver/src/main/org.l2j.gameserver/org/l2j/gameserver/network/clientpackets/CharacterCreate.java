@@ -8,7 +8,6 @@ import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.appearance.PcAppearance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.stat.PcStat;
 import org.l2j.gameserver.model.actor.templates.L2PcTemplate;
@@ -136,45 +135,6 @@ public final class CharacterCreate extends IClientIncomingPacket {
                 return;
             }
 
-            // Custom Feature: Disallow a race to be created.
-            // Example: Humans can not be created if AllowHuman = False in Custom.properties
-            switch (template.getRace()) {
-                case HUMAN: {
-                    if (!Config.ALLOW_HUMAN) {
-                        client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
-                        return;
-                    }
-                    break;
-                }
-                case ELF: {
-                    if (!Config.ALLOW_ELF) {
-                        client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
-                        return;
-                    }
-                    break;
-                }
-                case DARK_ELF: {
-                    if (!Config.ALLOW_DARKELF) {
-                        client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
-                        return;
-                    }
-                    break;
-                }
-                case ORC: {
-                    if (!Config.ALLOW_ORC) {
-                        client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
-                        return;
-                    }
-                    break;
-                }
-                case DWARF: {
-                    if (!Config.ALLOW_DWARF) {
-                        client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
-                        return;
-                    }
-                    break;
-                }
-            }
             var character = new Character();
             character.setId(IdFactory.getInstance().getNextId());
             character.setName(_name);
