@@ -259,7 +259,7 @@ public class LongTimeEvent extends Quest {
         AnnouncementsTable.getInstance().addAnnouncement(new EventAnnouncement(_eventPeriod, _onEnterMsg));
 
         // Schedule event end (now only for message sending)
-        ThreadPoolManager.getInstance().schedule(new ScheduleEnd(), millisToEventEnd);
+        ThreadPoolManager.schedule(new ScheduleEnd(), millisToEventEnd);
     }
 
     /**

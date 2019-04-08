@@ -17,6 +17,7 @@
 package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.model.L2ArmorSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -55,6 +56,10 @@ public class BaseStatsFinalizer implements IStatsFunction {
 
             // Henna calculation
             baseValue += player.getHennaValue(BaseStats.valueOf(stat));
+        }
+
+        if(creature instanceof L2PcInstance) {
+            baseValue += VipData.getInstance().getCombatAttributesBonus((L2PcInstance)creature);
         }
         return validateValue(creature, Stats.defaultValue(creature, stat, baseValue), 1, BaseStats.MAX_STAT_VALUE - 1);
     }

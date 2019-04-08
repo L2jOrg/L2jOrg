@@ -12,6 +12,7 @@ import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
@@ -28,6 +29,7 @@ import static java.util.Objects.nonNull;
  * @author NosBit
  */
 public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable {
+
     private int _id;
     private int _displayId;
     private byte _level;
@@ -609,6 +611,20 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
         }
 
         final List<DropHolder> dropList = new ArrayList<>(getDropList(dropType));
+
+
+        if(dropType == DropType.DROP && nonNull(killer.getActingPlayer())) {
+            float silverCoinChance = VipData.getInstance().getSilverCoinDropChance(killer.getActingPlayer());
+            float rustyCoinChance = VipData.getInstance().getRustyCoinDropChance(killer.getActingPlayer());
+
+            if(silverCoinChance > 0 ) {
+                dropList.add(new DropHolder(dropType, CommonItem.SILVER_COIN, 2, 5, silverCoinChance));
+            }
+
+            if(rustyCoinChance > 0) {
+                dropList.add(new DropHolder(dropType, CommonItem.RUSTY_COIN, 2, 5, rustyCoinChance));
+            }
+        }
 
         // randomize drop order
         Collections.shuffle(dropList);

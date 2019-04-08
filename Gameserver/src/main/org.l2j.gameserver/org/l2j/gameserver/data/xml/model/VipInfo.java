@@ -118,4 +118,8 @@ public class VipInfo {
     public float getPhishingXpBonus() {
         return fishingXpBonus;
     }
+
+    public double getPvEDamageBonus() {
+        return pvEDamageBonus;
+    }
 }

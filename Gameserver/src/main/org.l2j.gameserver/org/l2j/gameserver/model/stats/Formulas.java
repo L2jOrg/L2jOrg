@@ -5,6 +5,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.HitConditionBonusData;
 import org.l2j.gameserver.data.xml.impl.KarmaData;
+import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
@@ -30,6 +31,8 @@ import org.l2j.gameserver.util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.util.Objects.nonNull;
 
 /**
  * Global calculations.
@@ -1296,7 +1299,7 @@ public final class Formulas {
     public static double calculatePvpPveBonus(L2Character attacker, L2Character target, Skill skill, boolean crit) {
         // PvP bonus
         if (attacker.isPlayable() && target.isPlayable()) {
-            final double pvpAttack;
+            double pvpAttack;
             final double pvpDefense;
             if (skill != null) {
                 if (skill.isMagic()) {
@@ -1313,13 +1316,15 @@ public final class Formulas {
                 pvpAttack = attacker.getStat().getValue(Stats.PVP_PHYSICAL_ATTACK_DAMAGE, 1);
                 pvpDefense = target.getStat().getValue(Stats.PVP_PHYSICAL_ATTACK_DEFENCE, 1);
             }
-
+            if(nonNull(attacker.getActingPlayer())) {
+                pvpAttack *= VipData.getInstance().getPvPDamageBonus(attacker.getActingPlayer());
+            }
             return 1 + (pvpAttack - pvpDefense);
         }
 
         // PvE Bonus
         if (target.isAttackable() || attacker.isAttackable()) {
-            final double pveAttack;
+            double pveAttack;
             final double pveDefense;
             final double pveRaidDefense;
             final double pvePenalty = calcPveDamagePenalty(attacker, target, skill, crit);
@@ -1342,7 +1347,9 @@ public final class Formulas {
                 pveDefense = target.getStat().getValue(Stats.PVE_PHYSICAL_ATTACK_DEFENCE, 1);
                 pveRaidDefense = attacker.isRaid() ? attacker.getStat().getValue(Stats.PVE_RAID_PHYSICAL_ATTACK_DEFENCE, 1) : 1;
             }
-
+            if(nonNull(attacker.getActingPlayer())) {
+                pveAttack *= VipData.getInstance().getPvEDamageBonus(attacker.getActingPlayer());
+            }
             return (1 + (pveAttack - (pveDefense * pveRaidDefense))) * pvePenalty;
         }
 

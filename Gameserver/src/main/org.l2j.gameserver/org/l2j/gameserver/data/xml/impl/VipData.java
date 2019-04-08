@@ -106,12 +106,32 @@ public class VipData extends IGameXmlReader{
         return getVipInfo(player).getWorldChatBonus();
     }
 
-    public static VipData getInstance() {
-        return Singleton.INSTANCE;
+    public double getPvPDamageBonus(L2PcInstance player) {
+        return getVipInfo(player).getPvPDamageBonus();
+    }
+
+    public double getPvEDamageBonus(L2PcInstance player) {
+        return getVipInfo(player).getPvEDamageBonus();
     }
 
     public float getFishingXPBonus(L2PcInstance player) {
         return getVipInfo(player).getPhishingXpBonus();
+    }
+
+    public double getCombatAttributesBonus(L2PcInstance player) {
+        return getVipInfo(player).getAllCombatAttributeBonus();
+    }
+
+    public float getSilverCoinDropChance(L2PcInstance player) {
+        return getVipInfo(player).getSilverCoinChance();
+    }
+
+    public float getRustyCoinDropChance(L2PcInstance player) {
+        return getVipInfo(player).getRustyCoinChance();
+    }
+
+    public static VipData getInstance() {
+        return Singleton.INSTANCE;
     }
 
     private static class Singleton {
