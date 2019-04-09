@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.database.dao;
 
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
-import org.l2j.gameserver.data.database.model.Character;
+import org.l2j.gameserver.data.database.model.CharacterData;
 
 public interface CharacterDAO extends DAO {
 
@@ -10,7 +10,7 @@ public interface CharacterDAO extends DAO {
     void setAllCharactersOffline();
 
     @Query("SELECT * FROM characters WHERE charId = :objectId:")
-    Character findById(int objectId);
+    CharacterData findById(int objectId);
 
     @Query("UPDATE characters SET clanid=0, clan_privs=0, wantspeace=0, subpledge=0, lvl_joined_academy=0, apprentice=0, sponsor=0, clan_join_expiry_time=0, clan_create_expiry_time=0 WHERE characters.clanid > 0 AND characters.clanid NOT IN (SELECT clan_id FROM clan_data)")
     void resetClanInfoOfInextentClan();

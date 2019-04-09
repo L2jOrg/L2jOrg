@@ -4,7 +4,7 @@ import org.l2j.commons.database.annotation.Column;
 
 import java.util.Date;
 
-public class Character {
+public class CharacterData {
 
     private int charId;
     @Column("sex")
@@ -56,7 +56,6 @@ public class Character {
     private int vitalityPoints;
 
     private int subPledge;
-    private long deleteTime;
     private String title;
     private int accessLevel;
 
@@ -246,10 +245,6 @@ public class Character {
         return subPledge;
     }
 
-    public long getDeleteTime() {
-        return deleteTime;
-    }
-
     public String getTitle() {
         return title;
     }
@@ -348,10 +343,6 @@ public class Character {
 
     public void setSubPledge(int subPledge) {
         this.subPledge = subPledge;
-    }
-
-    public void setDeleteTime(long deleteTimer) {
-        this.deleteTime = deleteTimer;
     }
 
     public void setApprentice(int apprentice) {

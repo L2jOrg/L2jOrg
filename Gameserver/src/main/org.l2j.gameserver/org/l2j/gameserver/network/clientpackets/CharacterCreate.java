@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.database.model.Character;
+import org.l2j.gameserver.data.database.model.CharacterData;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -123,7 +123,7 @@ public final class CharacterCreate extends IClientIncomingPacket {
                 return;
             }
 
-            var character = new Character();
+            var character = new CharacterData();
             character.setId(IdFactory.getInstance().getNextId());
             character.setName(name);
             character.setClassId(classId);

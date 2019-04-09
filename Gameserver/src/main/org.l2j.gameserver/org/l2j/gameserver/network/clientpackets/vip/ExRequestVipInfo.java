@@ -1,11 +1,9 @@
-package org.l2j.gameserver.network.clientpackets;
+package org.l2j.gameserver.network.clientpackets.vip;
 
+import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 
 import java.nio.ByteBuffer;
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalUnit;
 
 public class ExRequestVipInfo extends IClientIncomingPacket {
 

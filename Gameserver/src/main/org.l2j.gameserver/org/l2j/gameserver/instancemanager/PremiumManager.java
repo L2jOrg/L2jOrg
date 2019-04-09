@@ -35,6 +35,7 @@ public class PremiumManager {
     private final Map<String, ScheduledFuture<?>> expiretasks = new HashMap<>();
     // Listeners
     private final ListenersContainer listenerContainer = Containers.Players();
+
     private final Consumer<OnPlayerLogin> playerLoginEvent = (event) ->
     {
         final L2PcInstance player = event.getActiveChar();
@@ -50,6 +51,7 @@ public class PremiumManager {
             removePremiumStatus(accountName, false);
         }
     };
+
     private final Consumer<OnPlayerLogout> playerLogoutEvent = (event) ->
     {
         L2PcInstance player = event.getActiveChar();
@@ -61,18 +63,12 @@ public class PremiumManager {
         listenerContainer.addListener(new ConsumerEventListener(listenerContainer, EventType.ON_PLAYER_LOGOUT, playerLogoutEvent, this));
     }
 
-    /**
-     * @param player
-     * @param delay
-     */
+
     private void startExpireTask(L2PcInstance player, long delay) {
-        ScheduledFuture<?> task = ThreadPoolManager.getInstance().schedule(new PremiumExpireTask(player), delay);
+        ScheduledFuture<?> task = ThreadPoolManager.schedule(new PremiumExpireTask(player), delay);
         expiretasks.put(player.getAccountName(), task);
     }
 
-    /**
-     * @param player
-     */
     private void stopExpireTask(L2PcInstance player) {
         ScheduledFuture<?> task = expiretasks.remove(player.getAccountName());
         if (task != null) {
@@ -160,6 +156,7 @@ public class PremiumManager {
     private static class Singleton {
         private static final PremiumManager INSTANCE = new PremiumManager();
     }
+
     class PremiumExpireTask implements Runnable {
 
         final L2PcInstance player;

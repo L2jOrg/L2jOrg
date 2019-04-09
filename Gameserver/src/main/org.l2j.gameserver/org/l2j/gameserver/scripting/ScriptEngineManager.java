@@ -33,20 +33,14 @@ public final class ScriptEngineManager  {
     private IExecutionContext _currentExecutionContext = null;
 
     private ScriptEngineManager() {
-        final Properties props = loadProperties();
-
+        final var props = loadProperties();
         ServiceLoader.load(IScriptingEngine.class).forEach(engine -> registerEngine(engine, props));
-    }
-
-    public static ScriptEngineManager getInstance() {
-        return Singleton.INSTANCE;
     }
 
     private Properties loadProperties() {
         var props = new Properties();
         try (FileInputStream fis = new FileInputStream("config/ScriptEngine.ini")) {
             props.load(fis);
-            return props;
         } catch (Exception e) {
             LOGGER.warn("Couldn't load ScriptEngine.ini", e);
         }
@@ -77,7 +71,6 @@ public final class ScriptEngineManager  {
                 if (value.startsWith("%") && value.endsWith("%")) {
                     value = System.getProperty(value.substring(1, value.length() - 1));
                 }
-
                 engine.setProperty(key, value);
             }
         }
@@ -162,7 +155,7 @@ public final class ScriptEngineManager  {
                     var ext = fileName.substring(fileName.lastIndexOf(".") +1);
 
                     if(ext.equals(fileName)) {
-                        LOGGER.warn("ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
+                        LOGGER.warn("ScriptFile: {} does not have an extension to determine the script engine!", sourceFile);
                         return FileVisitResult.CONTINUE;
                     }
 
@@ -210,6 +203,10 @@ public final class ScriptEngineManager  {
 
     public Path getCurrentLoadingScript() {
         return _currentExecutionContext != null ? _currentExecutionContext.getCurrentExecutingScript() : null;
+    }
+
+    public static ScriptEngineManager getInstance() {
+        return Singleton.INSTANCE;
     }
 
     private static class Singleton {

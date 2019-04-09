@@ -11,9 +11,9 @@ public class ReceiveVipLuckyGameInfo extends IClientOutgoingPacket {
     @Override
     protected void writeImpl(L2GameClient client, ByteBuffer packet) throws Exception {
         OutgoingPackets.RECEIVE_VIP_LUCKY_GAME_INFO.writeId(packet);
-        packet.put((byte) 1);
-        packet.putInt(2);
-        packet.putInt(3);
+        packet.put((byte) 1); //UNK
+        packet.putInt(2); // UNK
+        packet.putInt(3); // UNK
 
     }
 }
