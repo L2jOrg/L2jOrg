@@ -36,6 +36,7 @@ import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
 import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOn;
 import org.l2j.gameserver.network.clientpackets.training.NotifyTrainingRoomEnd;
 import org.l2j.gameserver.network.clientpackets.vip.ExRequestVipInfo;
+import org.l2j.gameserver.network.clientpackets.vip.RequestVipLuckGameInfo;
 import org.l2j.gameserver.network.clientpackets.vip.RequestVipProductList;
 
 import java.nio.ByteBuffer;
@@ -306,7 +307,7 @@ public enum ExIncomingPackets implements PacketFactory {
     REQUEST_ITEM_ENSOUL(0x108, RequestItemEnsoul::new, ConnectionState.IN_GAME),
     REQUEST_CASTLE_WAR_SEASON_REWARD(0x109, null, ConnectionState.IN_GAME),
     REQUEST_VIP_PRODUCT_LIST(0x10A, RequestVipProductList::new, ConnectionState.IN_GAME),
-    REQUEST_VIP_LUCKY_GAME_INFO(0x10B, null, ConnectionState.IN_GAME),
+    REQUEST_VIP_LUCKY_GAME_INFO(0x10B, RequestVipLuckGameInfo::new, ConnectionState.IN_GAME),
     REQUEST_VIP_LUCKY_GAME_ITEM_LIST(0x10C, null, ConnectionState.IN_GAME),
     REQUEST_VIP_LUCKY_GAME_BONUS(0x10D, null, ConnectionState.IN_GAME),
     EX_REQUEST_VIP_INFO(0x10E, ExRequestVipInfo::new, ConnectionState.IN_GAME),
