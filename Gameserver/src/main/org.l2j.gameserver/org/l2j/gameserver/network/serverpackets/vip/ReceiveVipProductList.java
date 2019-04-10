@@ -20,14 +20,14 @@ public class ReceiveVipProductList extends IClientOutgoingPacket {
         packet.putLong(2); // Silver Coin Amount
         packet.put((byte) 1); // Show Reward tab
 
-        var count = 16;
+        var count = 123;
         packet.putInt(count);  // count
 
         for (var i = 0; i < count; i++) {
-            packet.putInt(100002); // product id ?
-            packet.put((byte) 13); // Type 11 - Supplier; 12 - Cosmetic; 13 - VIP; 14 - Event; 15 - Reward
+            packet.putInt(100001 + i); // product id ?
+            packet.put((byte) (11 + (i % 5))); // Type 11 - Supplier; 12 - Cosmetic; 13 - VIP; 14 - Event; 15 - Reward
             packet.put((byte) 0); // Payment Type 0 - NCoin; 3 - Vip Coin
-            packet.putInt(0); // price NCoin ?
+            packet.putInt(i); // price NCoin ?
             packet.putInt(0); //  Price Vip Coin ?
             packet.put((byte) 0); // NEW - 6; HOT - 5 ... UNK
             packet.put((byte) 0); // VIP Tier
@@ -36,8 +36,8 @@ public class ReceiveVipProductList extends IClientOutgoingPacket {
             packet.put((byte) itemsReceived); // Items received count
 
             for (var j =0; j < itemsReceived; j++) {
-                packet.putInt(71254 + i); // item Id
-                packet.putInt(1 + i); // count
+                packet.putInt(71253); // item Id
+                packet.putInt(5); // count
             }
         }
     }
