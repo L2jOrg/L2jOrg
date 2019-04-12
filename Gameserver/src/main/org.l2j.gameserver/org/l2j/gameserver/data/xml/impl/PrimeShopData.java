@@ -39,13 +39,13 @@ public class PrimeShopData extends IGameXmlReader{
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/PrimeShop.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/primeShop.xsd");
     }
 
     @Override
     public void load() {
         _primeItems.clear();
-        parseDatapackFile("data/PrimeShop.xml");
+        parseDatapackFile("data/primeShop.xml");
 
         if (!_primeItems.isEmpty()) {
             LOGGER.info("Loaded {} items", _primeItems.size());

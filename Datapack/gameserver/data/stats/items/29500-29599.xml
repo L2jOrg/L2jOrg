@@ -159,7 +159,7 @@
 		</capsuled_items>
 	</item>
 	<item id="29511" name="Newbie Kit - Lvl 2" type="EtcItem">
-		<!-- Double-click on the item to get Normal Buff Scroll (30 pcs.), Newbie Kit - Lv. 3. Available at level 10 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Double-click on the item to get Normal Buff Scroll (	30 pcs.), Newbie Kit - Lv. 3. Available at level 10 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -885,7 +885,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29558" name="Package: Mysterious Blessed Spiritshot (No-grade, 1000 pcs.)" type="EtcItem">
+	<item id="29558" name="Package: Mysterious Blessed Spiritshot (No-grade, 100 pcs.)" type="EtcItem">
 		<!-- Double-click the item to receive 100 Mysterious Blessed Spiritshots (No-grade). -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00" />
 		<set name="default_action" val="PEEL" />

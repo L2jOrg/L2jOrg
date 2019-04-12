@@ -15,15 +15,15 @@
 		<xs:sequence>
 			<xs:element name="item" maxOccurs="unbounded">
 				<xs:complexType>
-					<xs:attribute type="xs:int" name="itemId"/>
-					<xs:attribute type="xs:int" name="count"/>
+					<xs:attribute type="xs:int" name="id" use="required"/>
+					<xs:attribute type="xs:int" name="count" default="1"/>
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute type="xs:int" name="id"/>
-		<xs:attribute type="xs:byte" name="category"/> <!-- 11 Supliers; 12 Cosmetic; 13 Vip; 14 Event; 15 Reward -->
-		<xs:attribute type="xs:byte" name="paymentType"/> <!-- 0 NCoin; 3 Silver Coin -->
-		<xs:attribute type="xs:int" name="price"/>
+		<xs:attribute type="xs:int" name="id" use="required"/>
+		<xs:attribute type="xs:byte" name="category" use="required"/> <!-- 11 Supliers; 12 Cosmetic; 13 Vip; 14 Event; 15 Reward -->
+		<xs:attribute type="xs:byte" name="paymentType" default="0"/> <!-- 0 NCoin; 3 Silver Coin -->
+		<xs:attribute type="xs:int" name="price" use="required"/>
 		<xs:attribute type="xs:byte" name="panelType"/>
 		<xs:attribute type="xs:byte" name="recommended"/>
 		<xs:attribute type="xs:int" name="startSale"/>
@@ -42,5 +42,6 @@
 		<xs:attribute type="xs:byte" name="maxBirthday"/>
 		<xs:attribute type="xs:byte" name="restrictionDay"/>
 		<xs:attribute type="xs:byte" name="availableCount"/>
+		<xs:attribute type="xs:byte" name="vipTier" default="0"/>
 	</xs:complexType>
 </xs:schema>

@@ -7,4 +7,253 @@
     <!-- recommended = 1 - Top, 2 - Left, 4 - Right (bit flags) -->
     <!-- startSale = unixTime -->
     <!-- endSale = unixTime -->
+
+    <product id="100001" category="13" price="0" vipTier="1"> <!-- VIP 1 Gift Box -->
+        <item id="29001"/>
+    </product>
+
+    <product id="100002" category="13" price="0" vipTier="2"><!-- VIP 2 Gift Box -->
+        <item id="29002"/>
+    </product>
+
+    <product id="100003" category="13" price="0" vipTier="3"> <!-- VIP 3 Gift Box -->
+        <item id="29003"/>
+    </product>
+
+    <product id="100004" category="13" price="0" vipTier="4"> <!-- VIP 4 Gift Box -->
+        <item id="29004"/>
+    </product>
+
+    <product id="100005" category="13" price="0" vipTier="5"> <!-- VIP 5 Gift Box -->
+        <item id="29005"/>
+    </product>
+
+    <product id="100006" category="13" price="0" vipTier="6"> <!-- VIP 6 Gift Box -->
+        <item id="29006"/>
+    </product>
+
+    <product id="100007" category="13" price="0" vipTier="7"> <!-- VIP 7 Gift Box -->
+        <item id="29007"/>
+    </product>
+
+    <product id="100101" category="11" price="0"> <!-- Increases XP/SP gain by 30% -->
+        <item id="29008"/>
+    </product>
+
+    <product id="100102" category="13" price="0" vipTier="4"> <!-- Increases XP/SP gain by 40%\\nVIP 4 -->
+        <item id="29009"/>
+    </product>
+
+    <product id="100201" category="11" price="0"> <!-- 1st Class Transfer Effect Scroll\\n1-day 10pcs -->
+        <item id="29654"/>
+    </product>
+
+    <product id="100202" category="13" price="0" vipTier="4"> <!-- 2nd Class Transfer Effect Scroll\\nVIP4/1-day 5pcs -->
+        <item id="29654" />
+    </product>
+
+    <product id="100301" category="14" price="0"> <!-- ,Scroll: Enchant Weapon (D-grade)\\n9/24~10/21 -->
+        <item id="29015"/>
+    </product>
+
+    <product id="100302" category="14" price="0"> <!-- Scroll: Enchant Armor (D-grade)\\n9/24~10/21 -->
+        <item id="29016"/>
+    </product>
+
+    <product id="100303" category="14" price="0"> <!-- Blessed Scroll: Enchant Weapon (D-grade)\\n9/24~10/21 -->
+        <item id="29019"/>
+    </product>
+
+    <product id="100304" category="14" price="0"> <!-- Blessed Scroll: Enchant Armor (D-grade)\\n9/24~10/21 -->
+        <item id="29020"/>
+    </product>
+
+    <product id="100305" category="14" price="0"> <!-- Scroll: Enchant Weapon (C-grade)\\n9/24~10/21 -->
+        <item id="29017"/>
+    </product>
+
+    <product id="100306" category="14" price="0"> <!-- Scroll: Enchant Armor (C-grade)\\n9/24~10/21 -->
+        <item id="29018"/>
+    </product>
+
+    <product id="100313" category="14" price="0"> <!-- Blessed Scroll: Enchant Weapon (C-grade)\\n9/24~10/21 -->
+        <item id="29021"/>
+    </product>
+
+    <product id="100314" category="14" price="0"> <!-- Blessed Scroll: Enchant Armor (C-grade)\\n9/24~10/21 -->
+        <item id="29022"/>
+    </product>
+
+    <product id="100401" category="11" price="0"> <!-- No-Grade Mysterious Soulshot bundle, 100 pcs.(Weight: 0) -->
+        <item id="29557"/>
+    </product>
+
+    <product id="100402" category="11" price="0"> <!-- No-Grade Mysterious Blessed Spiritshot bundle, 100 pcs.(Weight: 0) -->
+        <item id="29558"/>
+    </product>
+
+    <product id="100403" category="11" price="0"> <!-- D-Grade Mysterious Soulshot bundle, 100 pcs.(Weight: 0) -->
+        <item id="29559"/>
+    </product>
+
+    <product id="100404" category="11" price="0"> <!-- D-Grade Mysterious Blessed Spiritshot bundle, 100 pcs.(Weight: 0) -->
+        <item id="29560"/>
+    </product>
+
+    <product id="100405" category="11" price="0"> <!-- C-Grade Mysterious Soulshot bundle, 100 pcs.(Weight: 0) -->
+        <item id="29561"/>
+    </product>
+
+    <product id="100406" category="11" price="0"> <!-- C-Grade Mysterious Blessed Spiritshot bundle, 100 pcs.(Weight: 0) -->
+        <item id="29562"/>
+    </product>
+
+    <product id="100407" category="11" price="0">  <!-- B-Grade Mysterious Soulshot bundle, 100 pcs.(Weight: 0) -->
+        <item/>
+    </product>
+
+    <product id="100408" category="11" price="0"> <!-- B-Grade Mysterious Blessed Spiritshot bundle, 100 pcs.(Weight: 0) -->
+        <item/>
+    </product>
+
+    <product id="100501" category="11" price="0"> <!--  Bundle of sniper consumables (below 20 lvl) -->
+        <item/>
+    </product>
+
+    <product id="100502" category="11" price="0"> <!-- Bundle of magic consumables (below 20 lvl) -->
+        <item/>
+    </product>
+
+    <product id="100503" category="11" price="0"> <!-- Bundle of sniper consumables (lvl 20~40) -->
+        <item/>
+    </product>
+
+    <product id="100504" category="11" price="0"> <!-- Bundle of magic consumables (lvl 20~40) -->
+        <item/>
+    </product>
+
+    <product id="100505" category="11" price="0"> <!-- Bundle of sniper consumables (lvl 40 and higher) -->
+        <item/>
+    </product>
+
+    <product id="100506" category="11" price="0"> <!-- Bundle of magic consumables (lvl 40 and higher) -->
+        <item/>
+    </product>
+
+    <product id="100507" category="11" price="0"> <!-- Bundle of sniper consumables (lvl 52 and higher) -->
+        <item/>
+    </product>
+
+    <product id="100508" category="11" price="0"> <!-- Bundle of magic consumables (lvl 52 and higher) -->
+        <item/>
+    </product>
+
+    <product id="100601" category="11" price="0"> <!-- Magic potion that instantly restores HP. -->
+        <item/>
+    </product>
+
+    <product id="100602" category="13" price="0" vipTier="4"> <!-- Magic potion that instantly restores great amount of HP.\\nVIP 4 -->
+        <item/>
+    </product>
+
+    <product id="100701" category="13" price="0" vipTier="1"> <!--Nice Red Romantic Chapeau.\\nVIP 1 (4/1~4/30) -->
+        <item/>
+    </product>
+
+    <product id="100702" category="13" price="0" vipTier="4"> <!--  Refined Angel Ring\\nVIP 4 (5/13~6/10) -->
+        <item/>
+    </product>
+
+    <product id="100703" category="13" price="0" vipTier="4"> <!-- Refined Wizard Hat\\nVIP 4 (9/24~11/25) -->
+        <item/>
+    </product>
+
+    <product id="100704" category="13" price="0" vipTier="4"> <!-- Laborer Hat\\nVIP 4 (9/24~11/25) -->
+        <item/>
+    </product>
+
+    <product id="100705" category="13" price="0" vipTier="4"> <!-- Top Hat\\nVIP 4 (9/24~11/25) -->
+        <item/>
+    </product>
+
+    <product id="100706" category="13" price="0" vipTier="4"> <!--Vigilante Hat\\nVIP 4 (9/24~11/25) -->
+        <item/>
+    </product>
+
+    <product id="100801" category="11" price="0"> <!-- Allows to resurrect right in the place of death. -->
+        <item/>
+    </product>
+
+    <product id="100802" category="11" price="0"> <!-- Escape! -->
+        <item/>
+    </product>
+
+    <product id="100803" category="11" price="0"> <!-- Resurrects a dead character and restores his or her XP completely.-->
+        <item/>
+    </product>
+
+    <product id="100901" category="11" price="0"> <!-- Teleports to Talking Island Village.-->
+        <item/>
+    </product>
+
+    <product id="100902" category="11" price="0"> <!-- Teleports to Elven Village -->
+        <item/>
+    </product>
+
+    <product id="100903" category="11" price="0"> <!-- Teleports to Dark Elf Village. -->
+        <item/>
+    </product>
+
+    <product id="100904" category="11" price="0"> <!-- Teleports to Orc Village -->
+        <item/>
+    </product>
+
+    <product id="100905" category="11" price="0"> <!-- Teleports to Dwarven Village -->
+        <item/>
+    </product>
+
+    <product id="100906" category="11" price="0"> <!-- Teleports to Gludin -->
+        <item/>
+    </product>
+
+    <product id="100907" category="11" price="0"> <!-- Teleports to Gludio. -->
+        <item/>
+    </product>
+
+    <product id="101001" category="14" price="0"> <!-- Gift paid each particular level.\\nper 1 month -->
+        <item/>
+    </product>
+
+    <product id="101002" category="14" price="0"> <!-- Material used to enchant Ring of Heir.\\nVIP 1/per 1 account -->
+        <item/>
+    </product>
+
+    <product id="101005" category="14" price="0"> <!-- Gift paid each particular level.\\nper 1 month -->
+        <item/>
+    </product>
+
+    <product id="101006" category="14" price="0"> <!-- 10 Special Pirate Fruits and 1 King Pirate's Treasure Chest\\n6/24~7/8 -->
+        <item/>
+    </product>
+
+    <product id="101007" category="14" price="0"> <!-- 100 Special Pirate Fruits and 10 King Pirate's Treasure Chests\\n6/24~7/8 -->
+        <item/>
+    </product>
+
+    <product id="101008" category="14" price="0"> <!-- 1 Shaft with Antharas treasure\\n9/24~10/28 -->
+        <item/>
+    </product>
+
+    <product id="101009" category="14" price="0"> <!-- 20 Shafts with Antharas treasure\\n9/24~10/28 -->
+        <item/>
+    </product>
+
+    <product id="101010" category="14" price="0"> <!-- 1 Golden Mermaid's Fishing Supplies Chest\\n11/18~12/8 -->
+        <item/>
+    </product>
+
+    <product id="101011" category="14" price="0"> <!-- 10 Golden Mermaid's Fishing Supplies Chests\\n11/18~12/9 -->
+        <item/>
+    </product>
+
 </list>
