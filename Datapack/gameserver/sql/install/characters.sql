@@ -54,8 +54,6 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `createDate` DATE NOT NULL DEFAULT  (CURRENT_DATE),
   `language` VARCHAR(2) DEFAULT NULL,
   `pccafe_points` INT NOT NULL DEFAULT '0',
-  `vip_points` BIGINT NOT NULL DEFAULT 0,
-  `vip_tier_expiration` BIGINT NOT NULL DEFAULT 0,
   PRIMARY KEY (`charId`),
   KEY `account_name` (`account_name`),
   KEY `char_name` (`char_name`),

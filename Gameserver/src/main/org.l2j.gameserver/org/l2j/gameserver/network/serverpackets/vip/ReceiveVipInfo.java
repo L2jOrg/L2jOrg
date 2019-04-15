@@ -20,10 +20,10 @@ public class ReceiveVipInfo extends IClientOutgoingPacket {
         var vipData = VipData.getInstance();
         var vipTier = vipData.getVipTier(player);
 
-        var vipDuration = (int) ChronoUnit.SECONDS.between(Instant.now(), Instant.ofEpochMilli(player.getVipExpiration()));
+        var vipDuration = (int) ChronoUnit.SECONDS.between(Instant.now(), Instant.ofEpochMilli(client.getVipTierExpiration()));
 
         packet.put(vipTier); // VIP Current level ( MAX 7 )
-        packet.putLong(player.getVipPoints()); // VIP Current Points
+        packet.putLong(client.getVipPoints()); // VIP Current Points
         packet.putInt(vipDuration); // VIP Benefit Duration Seconds
         packet.putLong(vipData.getPointsToLevel(vipTier + 1)); // VIP Points to next Level
         packet.putLong(vipData.getPointsDepreciatedOnLevel(vipTier)); // VIP Points used on  30 days period

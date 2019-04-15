@@ -27,7 +27,7 @@ public abstract class IdFactory {
         final long cleanupStart = System.currentTimeMillis();
         int cleanCount = 0;
 
-        cleanCount += getDAO(AccountVariableDAO.class).deleteWithoutAccount();
+        cleanCount += getDAO(AccountDAO.class).deleteWithoutAccount();
 
         cleanCount += getDAO(ItemDAO.class).deleteWithoutOwner();
         cleanCount += getDAO(ItemDAO.class).deleteFromEmailWithoutMessage();

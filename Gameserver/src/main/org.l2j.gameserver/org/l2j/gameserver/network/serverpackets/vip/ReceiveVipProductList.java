@@ -23,8 +23,8 @@ public class ReceiveVipProductList extends IClientOutgoingPacket {
         var vipTier = VipData.getInstance().getVipTier(player);
 
         packet.putLong(player.getAdena());
-        packet.putLong(1); // Rusty Coin Amount
-        packet.putLong(2); // Silver Coin Amount
+        packet.putLong(client.getRustyCoin()); // Rusty Coin Amount
+        packet.putLong(client.getSilverCoin()); // Silver Coin Amount
         packet.put((byte) 1); // Show Reward tab
 
         packet.putInt(vipTier > 0 ? products.size() + 1 : products.size());

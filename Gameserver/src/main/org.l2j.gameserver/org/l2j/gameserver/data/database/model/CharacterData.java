@@ -86,11 +86,6 @@ public class CharacterData {
     private Date createDate;
     private String language;
 
-    @Column("vip_points")
-    private long vipPoints;
-    @Column("vip_tier_expiration")
-    private long vipExpiration;
-
     public int getCharId() {
         return charId;
     }
@@ -305,14 +300,6 @@ public class CharacterData {
 
     public String getLanguage() {
         return language;
-    }
-
-    public long getVipPoints() {
-        return vipPoints;
-    }
-
-    public long getVipExpiration() {
-        return vipExpiration;
     }
 
     public void setExpBeforeDeath(long exp) {

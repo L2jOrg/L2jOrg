@@ -48,4 +48,14 @@ public class Util {
         }
         return fields.toArray(Field[]::new);
     }
+
+    public static Field[] fieldsOf(Class<?> classToSearch) {
+        List<Field> fields = new ArrayList<>();
+        Class<?> searchClass = classToSearch;
+        while (nonNull(searchClass)) {
+            fields.addAll(Stream.of(searchClass.getDeclaredFields()).collect(Collectors.toList()));
+            searchClass = searchClass.getSuperclass();
+        }
+        return fields.toArray(Field[]::new);
+    }
 }

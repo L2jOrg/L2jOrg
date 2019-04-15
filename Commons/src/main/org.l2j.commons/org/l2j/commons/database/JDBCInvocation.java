@@ -4,11 +4,16 @@ import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import io.github.joealisson.primitive.pair.IntObjectPair;
 import io.github.joealisson.primitive.pair.impl.ImmutableIntObjectPairImpl;
+import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Query;
+import org.l2j.commons.database.annotation.Table;
+import org.l2j.commons.database.annotation.Transient;
 import org.l2j.commons.database.handler.TypeHandler;
+import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
@@ -24,7 +29,7 @@ class JDBCInvocation implements InvocationHandler {
     private static final Logger LOGGER = LoggerFactory.getLogger(JDBCInvocation.class);
     private static final Pattern PARAMETER_PATTERN = Pattern.compile(":(.*?):");
     // TODO use cache API
-    private static final Map<Method, QueryDescriptor> descriptors = new HashMap<>();
+    private static final IntObjectMap<QueryDescriptor> descriptors = new HashIntObjectMap<>();
 
     JDBCInvocation() {
         for (TypeHandler typeHandler : ServiceLoader.load(TypeHandler.class)) {
@@ -34,6 +39,10 @@ class JDBCInvocation implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        if(method.getName().equalsIgnoreCase("save")) {
+            return save(args);
+        }
+
         var handler = TypeHandler.MAP.getOrDefault(method.getReturnType().getName(), TypeHandler.MAP.get(Object.class.getName()));
 
         if(isNull(handler)) {
@@ -51,10 +60,63 @@ class JDBCInvocation implements InvocationHandler {
         }
     }
 
-    private QueryDescriptor buildQuery(final Method method)  {
-        return descriptors.computeIfAbsent(method, this::buildDescriptor);
+    private boolean save(Object[] args) {
+        if(args.length < 1 || isNull(args[0])) {
+            return false;
+        }
+
+        var clazz = args[0].getClass();
+        var table = clazz.getAnnotation(Table.class);
+
+        if(isNull(table)) {
+            LOGGER.warn("The class {} must be annotated with @Table to save it", args[0].getClass());
+        }
+
+        QueryDescriptor query = buildSaveQuery(clazz, table);
+
+
+
+        return false;
     }
 
+    private QueryDescriptor buildSaveQuery(Class<?> clazz, Table table) {
+        if(descriptors.containsKey(clazz.hashCode())) {
+            return descriptors.get(clazz.hashCode());
+        }
+
+        var fields = Util.fieldsOf(clazz);
+        Map<String, IntObjectPair<Class<?>>> parameterMap = new HashMap<>(fields.length);
+
+        StringBuilder sb = new StringBuilder("REPLACE INTO ");
+        var i = 1;
+        for (Field field : fields) {
+            if(field.isAnnotationPresent(Transient.class)) {
+                continue;
+            }
+            var column = field.isAnnotationPresent(Column.class) ? field.getAnnotation(Column.class).value() : field.getName();
+
+        }
+
+
+        sb.append(table.value());
+        sb.append(" VALUES ");
+        return null;
+    }
+
+    private Map<String, IntObjectPair<Class<?>>> createParameters(Class<?> clazz) {
+
+
+
+        return null;
+    }
+
+    private QueryDescriptor buildQuery(final Method method)  {
+        var hash =  method.hashCode();
+        if(descriptors.containsKey(hash)) {
+            return descriptors.get(hash);
+        }
+        return descriptors.put(hash, this.buildDescriptor(method));
+    }
 
     private QueryDescriptor buildDescriptor(Method method) {
         var query = method.getAnnotation(Query.class).value();

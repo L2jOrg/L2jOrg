@@ -5628,6 +5628,8 @@ public final class L2PcInstance extends L2Playable {
         if (aVars != null) {
             aVars.storeMe();
         }
+
+        _client.storeAccountData();
     }
 
     @Override
@@ -11257,10 +11259,6 @@ public final class L2PcInstance extends L2Playable {
     }
 
     public long getVipPoints() {
-        return model.getVipPoints();
-    }
-
-    public long getVipExpiration() {
-        return model.getVipExpiration();
+        return getClient().getVipPoints();
     }
 }

@@ -4,6 +4,8 @@ import io.github.joealisson.mmocore.Client;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.network.SessionKey;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.AccountDAO;
+import org.l2j.gameserver.data.database.model.AccountData;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.SecondaryAuthData;
@@ -29,6 +31,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.concurrent.locks.ReentrantLock;
 
+import static java.util.Objects.isNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
+
 /**
  * Represents a client connected on Game Server.
  *
@@ -43,7 +48,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
     private final FloodProtectors _floodProtectors = new FloodProtectors(this);
     // Crypt
     private final Crypt _crypt;
-    private String _accountName;
+    private String accountName;
     private SessionKey _sessionId;
     private L2PcInstance _activeChar;
     private SecondaryPasswordAuth _secondaryAuth;
@@ -57,6 +62,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
     private int[][] trace;
 
     private ConnectionState state;
+    private AccountData account;
 
     public L2GameClient(io.github.joealisson.mmocore.Connection<L2GameClient> connection) {
         super(connection);
@@ -264,11 +270,11 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
     }
 
     public String getAccountName() {
-        return _accountName;
+        return accountName;
     }
 
-    public void setAccountName(String activeChar) {
-        _accountName = activeChar;
+    public void setAccountName(String account) {
+        accountName = account;
 
         if (SecondaryAuthData.getInstance().isEnabled()) {
             _secondaryAuth = new SecondaryPasswordAuth(this);
@@ -292,9 +298,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         packet.runImpl(_activeChar);
     }
 
-    /**
-     * @param smId
-     */
+
     public void sendPacket(SystemMessageId smId) {
         sendPacket(SystemMessage.getSystemMessage(smId));
     }
@@ -388,7 +392,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         if (player != null) {
             // exploit prevention, should not happens in normal way
             if (player.isOnlineInt() == 1) {
-                LOGGER.error("Attempt of double login: {} ({}) {}", player.getName(), objectId, _accountName);
+                LOGGER.error("Attempt of double login: {} ({}) {}", player.getName(), objectId, accountName);
             }
             Disconnection.of(player).defaultSequence(false);
             return null;
@@ -402,9 +406,6 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         return player;
     }
 
-    /**
-     * @param chars
-     */
     public void setCharSelection(CharSelectInfoPackage[] chars) {
         _charSlotMapping = chars;
     }
@@ -420,10 +421,6 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         return _secondaryAuth;
     }
 
-    /**
-     * @param characterSlot
-     * @return
-     */
     private int getObjectIdForSlot(int characterSlot) {
         final CharSelectInfoPackage info = getCharSelection(characterSlot);
         if (info == null) {
@@ -433,22 +430,24 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         return info.getObjectId();
     }
 
-    /**
-     * Produces the best possible string representation of this client.
-     */
-    @Override
-    public String toString() {
-        try {
-            final String address = getHostAddress();
-            final ConnectionState state = getConnectionState();
-            return switch (state) {
-                case CONNECTED, CLOSING, DISCONNECTED  -> "[IP: " + (address == null ? "disconnected" : address) + "]";
-                case AUTHENTICATED -> "[Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
-                case IN_GAME, JOINING_GAME -> "[Character: " + (_activeChar == null ? "disconnected" : _activeChar.getName() + "[" + _activeChar.getObjectId() + "]") + " - Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
-            };
-        } catch (NullPointerException e) {
-            return "[Character read failed due to disconnect]";
+    private AccountData getAccountData() {
+        if(isNull(account)) {
+            account = getDAO(AccountDAO.class).findById(accountName);
+            if(isNull(account)) {
+               createNewAccountData();
+            }
         }
+        return account;
+    }
+
+    private void createNewAccountData() {
+        account = new AccountData();
+        account.setAccount(accountName);
+    }
+
+
+    public void sendActionFailed() {
+        sendPacket(ActionFailed.STATIC_PACKET);
     }
 
     public boolean isProtocolOk() {
@@ -467,24 +466,14 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         return trace;
     }
 
-    public void sendActionFailed() {
-        sendPacket(ActionFailed.STATIC_PACKET);
-    }
-
     public Crypt getCrypt() {
         return _crypt;
     }
 
-    /**
-     * @return the hardwareInfo
-     */
     public ClientHardwareInfoHolder getHardwareInfo() {
         return _hardwareInfo;
     }
 
-    /**
-     * @param hardwareInfo
-     */
     public void setHardwareInfo(ClientHardwareInfoHolder hardwareInfo) {
         _hardwareInfo = hardwareInfo;
     }
@@ -496,4 +485,40 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
     public void setConnectionState(ConnectionState state) {
         this.state = state;
     }
+
+    public long getVipPoints() {
+        return getAccountData().getVipPoints();
+    }
+
+    public long getVipTierExpiration() {
+        return getAccountData().getVipTierExpiration();
+    }
+
+    public long getRustyCoin() {
+        return getAccountData().getRustyCoin();
+    }
+
+    public long getSilverCoin() {
+        return getAccountData().getSilverCoin();
+    }
+
+    public void storeAccountData() {
+        getDAO(AccountDAO.class).save(getAccountData());
+    }
+
+    @Override
+    public String toString() {
+        try {
+            final String address = getHostAddress();
+            final ConnectionState state = getConnectionState();
+            return switch (state) {
+                case CONNECTED, CLOSING, DISCONNECTED  -> "[IP: " + (address == null ? "disconnected" : address) + "]";
+                case AUTHENTICATED -> "[Account: " + accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
+                case IN_GAME, JOINING_GAME -> "[Character: " + (_activeChar == null ? "disconnected" : _activeChar.getName() + "[" + _activeChar.getObjectId() + "]") + " - Account: " + accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
+            };
+        } catch (NullPointerException e) {
+            return "[Character read failed due to disconnect]";
+        }
+    }
+
 }
