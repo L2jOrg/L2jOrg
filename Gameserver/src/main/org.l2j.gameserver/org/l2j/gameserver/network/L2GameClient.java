@@ -8,7 +8,6 @@ import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.SecondaryAuthData;
 import org.l2j.gameserver.enums.CharacterDeleteFailType;
-import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.CommissionManager;
 import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.instancemanager.MentorManager;
@@ -39,7 +38,6 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
     protected static final Logger LOGGER = LoggerFactory.getLogger(L2GameClient.class);
     protected static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 
-    private final int _objectId;
     private final ReentrantLock _activeCharLock = new ReentrantLock();
     // flood protectors
     private final FloodProtectors _floodProtectors = new FloodProtectors(this);
@@ -62,7 +60,6 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 
     public L2GameClient(io.github.joealisson.mmocore.Connection<L2GameClient> connection) {
         super(connection);
-        _objectId = IdFactory.getInstance().getNextId();
         _crypt = new Crypt(this);
     }
 
@@ -213,7 +210,6 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(getAccountName()));
 
         if ((_activeChar == null) || !_activeChar.isInOfflineMode()) {
-            IdFactory.getInstance().releaseId(getObjectId());
             Disconnection.of(this).onDisconnection();
         }
     }
@@ -222,10 +218,6 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
     public void onConnected() {
         setConnectionState(ConnectionState.CONNECTED);
         LOGGER_ACCOUNTING.debug("Client Connected: {}", this);
-    }
-
-    public int getObjectId() {
-        return _objectId;
     }
 
 
