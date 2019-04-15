@@ -24,8 +24,8 @@
 		<xs:attribute type="xs:byte" name="category" use="required"/> <!-- 11 Supliers; 12 Cosmetic; 13 Vip; 14 Event; 15 Reward -->
 		<xs:attribute type="xs:byte" name="paymentType" default="0"/> <!-- 0 NCoin; 3 Silver Coin -->
 		<xs:attribute type="xs:int" name="price" use="required"/>
-		<xs:attribute type="xs:byte" name="panelType"/>
-		<xs:attribute type="xs:byte" name="recommended"/>
+		<xs:attribute type="xs:byte" name="panelType" default="0"/>
+		<xs:attribute type="xs:byte" name="recommended" default="0"/>
 		<xs:attribute type="xs:int" name="startSale"/>
 		<xs:attribute type="xs:int" name="endSale"/>
 		<xs:attribute type="xs:byte" name="dayOfWeek"/>
@@ -43,5 +43,6 @@
 		<xs:attribute type="xs:byte" name="restrictionDay"/>
 		<xs:attribute type="xs:byte" name="availableCount"/>
 		<xs:attribute type="xs:byte" name="vipTier" default="0"/>
+		<xs:attribute type="xs:int" name="silverCoin" default="0"/>
 	</xs:complexType>
 </xs:schema>

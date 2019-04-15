@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.primeshop;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.model.primeshop.PrimeShopGroup;
+import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
@@ -16,9 +16,9 @@ import java.util.Collection;
 public class ExBRProductList extends IClientOutgoingPacket {
     private final L2PcInstance _activeChar;
     private final int _type;
-    private final Collection<PrimeShopGroup> _primeList;
+    private final Collection<PrimeShopProduct> _primeList;
 
-    public ExBRProductList(L2PcInstance activeChar, int type, Collection<PrimeShopGroup> items) {
+    public ExBRProductList(L2PcInstance activeChar, int type, Collection<PrimeShopProduct> items) {
         _activeChar = activeChar;
         _type = type;
         _primeList = items;
@@ -32,9 +32,9 @@ public class ExBRProductList extends IClientOutgoingPacket {
         packet.putLong(0x00); // Hero coins
         packet.put((byte) _type); // Type 0 - Home, 1 - History, 2 - Favorites
         packet.putInt(_primeList.size());
-        for (PrimeShopGroup brItem : _primeList) {
+        for (PrimeShopProduct brItem : _primeList) {
             packet.putInt(brItem.getBrId());
-            packet.put((byte) brItem.getCat());
+            packet.put((byte) brItem.getCategory());
             packet.put((byte) brItem.getPaymentType()); // Payment Type: 0 - Prime Points, 1 - Adena, 2 - Hero Coins
             packet.putInt(brItem.getPrice());
             packet.put((byte) brItem.getPanelType()); // Item Panel Type: 0 - None, 1 - Event, 2 - Sale, 3 - New, 4 - Best

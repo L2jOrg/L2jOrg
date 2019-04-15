@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.stats;
 
-import org.l2j.commons.util.XmlReader;
+import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;

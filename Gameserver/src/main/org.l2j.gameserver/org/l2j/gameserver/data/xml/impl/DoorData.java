@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.commons.util.XmlReader;
+import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;

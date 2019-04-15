@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.primeshop;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.model.primeshop.PrimeShopGroup;
+import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
@@ -13,11 +13,11 @@ import java.nio.ByteBuffer;
  * @author Gnacik
  */
 public class ExBRProductInfo extends IClientOutgoingPacket {
-    private final PrimeShopGroup _item;
+    private final PrimeShopProduct _item;
     private final int _charPoints;
     private final long _charAdena;
 
-    public ExBRProductInfo(PrimeShopGroup item, L2PcInstance player) {
+    public ExBRProductInfo(PrimeShopProduct item, L2PcInstance player) {
         _item = item;
         _charPoints = player.getPrimePoints();
         _charAdena = player.getAdena();

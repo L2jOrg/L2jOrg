@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.commons.util.XmlReader;
+import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.model.ensoul.EnsoulFee;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.ensoul.EnsoulStone;

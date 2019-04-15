@@ -11256,10 +11256,6 @@ public final class L2PcInstance extends L2Playable {
         }
     }
 
-    public byte getVipTier() {
-        return model.getVipTier();
-    }
-
     public long getVipPoints() {
         return model.getVipPoints();
     }

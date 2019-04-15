@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.commons.util.XmlReader;
+import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.templates.L2CubicTemplate;
 import org.l2j.gameserver.model.cubic.CubicSkill;

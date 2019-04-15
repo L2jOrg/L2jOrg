@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.commons.util.XmlReader;
+import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.ChanceLocation;
 import org.l2j.gameserver.model.StatsSet;

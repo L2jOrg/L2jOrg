@@ -2,6 +2,7 @@ package org.l2j.gameserver.network;
 
 import io.github.joealisson.mmocore.PacketHandler;
 import io.github.joealisson.mmocore.ReadablePacket;
+import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,14 +46,14 @@ public class ClientPacketHandler implements PacketHandler<L2GameClient> {
 
         final ConnectionState connectionState = client.getConnectionState();
         if (!packetFactory.canHandleState(client.getConnectionState())) {
-            LOGGER.warn("Client {} sent packet at invalid state {} Required States: {} - [{}]: {}", client,  connectionState, packetFactory.getConnectionStates(), toHexString(opcode), Util.printData(buffer.array(), buffer.limit()));
+            LOGGER.warn("Client {} sent packet at invalid state {} Required States: {} - [{}]: {}", client,  connectionState, packetFactory.getConnectionStates(), toHexString(opcode), CommonUtil.printData(buffer.array(), buffer.limit()));
             return null;
         }
         return packet;
     }
 
     private void unknownPacket(ByteBuffer buffer, int opcode, PacketFactory packetFactory) {
-        LOGGER.warn("Unknown ({}) packet: {} - {}", packetFactory, toHexString(opcode), Util.printData(buffer.array(), buffer.limit()));
+        LOGGER.warn("Unknown ({}) packet: {} - {}", packetFactory, toHexString(opcode), CommonUtil.printData(buffer.array(), buffer.limit()));
     }
 
     private PacketFactory getPacketFactory(int opcode, ByteBuffer buffer) {

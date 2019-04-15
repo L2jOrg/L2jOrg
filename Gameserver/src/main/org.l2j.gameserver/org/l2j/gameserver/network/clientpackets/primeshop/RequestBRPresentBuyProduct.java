@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.actor.request.PrimeShopRequest;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.Mail;
-import org.l2j.gameserver.model.primeshop.PrimeShopGroup;
+import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2j.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
@@ -38,7 +38,7 @@ public final class RequestBRPresentBuyProduct extends IClientIncomingPacket {
      * @param player
      * @return
      */
-    private static boolean validatePlayer(PrimeShopGroup item, int count, L2PcInstance player) {
+    private static boolean validatePlayer(PrimeShopProduct item, int count, L2PcInstance player) {
         final long currentTime = System.currentTimeMillis() / 1000;
         if (item == null) {
             player.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.INVALID_PRODUCT));
@@ -87,7 +87,7 @@ public final class RequestBRPresentBuyProduct extends IClientIncomingPacket {
         return true;
     }
 
-    private static int validatePaymentId(L2PcInstance player, PrimeShopGroup item, long amount) {
+    private static int validatePaymentId(L2PcInstance player, PrimeShopProduct item, long amount) {
         switch (item.getPaymentType()) {
             case 0: // Prime points
             {
@@ -135,7 +135,7 @@ public final class RequestBRPresentBuyProduct extends IClientIncomingPacket {
 
         activeChar.addRequest(new PrimeShopRequest(activeChar));
 
-        final PrimeShopGroup item = PrimeShopData.getInstance().getItem(_brId);
+        final PrimeShopProduct item = PrimeShopData.getInstance().getItem(_brId);
         if (validatePlayer(item, _count, activeChar)) {
             final int price = (item.getPrice() * _count);
             final int paymentId = validatePaymentId(activeChar, item, price);
