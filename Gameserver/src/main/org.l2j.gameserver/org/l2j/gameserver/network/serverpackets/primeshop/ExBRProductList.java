@@ -33,7 +33,7 @@ public class ExBRProductList extends IClientOutgoingPacket {
         packet.put((byte) _type); // Type 0 - Home, 1 - History, 2 - Favorites
         packet.putInt(_primeList.size());
         for (PrimeShopProduct brItem : _primeList) {
-            packet.putInt(brItem.getBrId());
+            packet.putInt(brItem.getId());
             packet.put((byte) brItem.getCategory());
             packet.put((byte) brItem.getPaymentType()); // Payment Type: 0 - Prime Points, 1 - Adena, 2 - Hero Coins
             packet.putInt(brItem.getPrice());

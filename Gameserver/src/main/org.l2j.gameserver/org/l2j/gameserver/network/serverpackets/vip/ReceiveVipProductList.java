@@ -1,45 +1,61 @@
 package org.l2j.gameserver.network.serverpackets.vip;
 
+import org.l2j.gameserver.data.xml.impl.PrimeShopData;
+import org.l2j.gameserver.data.xml.impl.VipData;
+import org.l2j.gameserver.model.primeshop.PrimeShopItem;
+import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 import java.nio.ByteBuffer;
 
+import static java.util.Objects.nonNull;
+
 public class ReceiveVipProductList extends IClientOutgoingPacket {
 
-
     @Override
-    protected void writeImpl(L2GameClient client, ByteBuffer packet) throws Exception {
+    protected void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.RECEIVE_VIP_PRODUCT_LIST.writeId(packet);
 
         var player = client.getActiveChar();
+        var products = PrimeShopData.getInstance().getPrimeItems();
+        var vipTier = VipData.getInstance().getVipTier(player);
 
         packet.putLong(player.getAdena());
         packet.putLong(1); // Rusty Coin Amount
         packet.putLong(2); // Silver Coin Amount
         packet.put((byte) 1); // Show Reward tab
 
-        var count = 2;
-        packet.putInt(count);  // count
+        packet.putInt(vipTier > 0 ? products.size() + 1 : products.size());
 
-        for (var i = 0; i < count; i++) {
-            packet.putInt(100100 + i); // product id ?
-            packet.put((byte) 11); // Type 11 - Supplier; 12 - Cosmetic; 13 - VIP; 14 - Event; 15 - Reward
-            packet.put((byte) 0); // Payment Type 0 - NCoin; 3 - Vip Coin
-            packet.putInt(i); // price NCoin ?
-            packet.putInt(0); //  Price Vip Coin ?
-            packet.put((byte) 0); // NEW - 6; HOT - 5 ... UNK
-            packet.put((byte) 0); // VIP Tier
-            packet.put((byte) 7); // unk
-            var itemsReceived  = 1;
-            packet.put((byte) itemsReceived); // Items received count
+        for (var product : products.values()) {
+            putProduct(packet, product);
+        }
 
-            for (var j =0; j < itemsReceived; j++) {
-                packet.putInt(71253); // item Id
-                packet.putInt(i+10); // count
+        if(vipTier > 0 ) {
+            var gift = PrimeShopData.getInstance().getVipGift(vipTier);
+            if(nonNull(gift)) {
+                putProduct(packet, gift);
             }
         }
     }
 
+    private void putProduct(ByteBuffer packet, PrimeShopProduct product) {
+        packet.putInt(product.getId());
+        packet.put(product.getCategory());
+        packet.put(product.getPaymentType());
+        packet.putInt(product.getPrice()); // L2 Coin | Rusty Coin seems to use the same field based on payment type
+        packet.putInt(product.getSilverCoin());
+        packet.put(product.getPanelType()); // NEW - 6; HOT - 5 ... Unk
+        packet.put(product.getVipTier());
+        packet.put((byte) 7); // Unk
+
+        packet.put((byte) product.getItems().size());
+
+        for (PrimeShopItem item : product.getItems()) {
+            packet.putInt(item.getId());
+            packet.putInt((int) item.getCount());
+        }
+    }
 }

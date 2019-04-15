@@ -41,7 +41,7 @@ public class VipData extends IGameXmlReader{
 
     private void parseVipTier(Node vipNode) {
         var attributes = vipNode.getAttributes();
-        var level = parseByte(attributes, "level");
+        var level = parseByte(attributes, "tier");
         var pointsRequired = parseLong(attributes, "points_required");
         var pointsDepreciated = parseLong(attributes, "points_depreciated");
 
@@ -65,8 +65,8 @@ public class VipData extends IGameXmlReader{
         }
     }
 
-    public byte getVipLevel(L2PcInstance player) {
-        return getVipInfo(player).getLevel();
+    public byte getVipTier(L2PcInstance player) {
+        return getVipInfo(player).getTier();
     }
 
     private VipInfo getVipInfo(L2PcInstance player) {

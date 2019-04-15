@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.xml.model;
 
 public class VipInfo {
 
-    private final byte level;
+    private final byte tier;
     private final long pointsRequired;
     private final long pointsDepreciated;
     private float xpSpBonus;
@@ -17,14 +17,14 @@ public class VipInfo {
     private boolean receiveDailyVIPBox;
     private int allCombatAttributeBonus;
 
-    public VipInfo(byte level, long pointsRequired, long pointsDepreciated) {
-        this.level = level;
+    public VipInfo(byte tier, long pointsRequired, long pointsDepreciated) {
+        this.tier = tier;
         this.pointsRequired = pointsRequired;
         this.pointsDepreciated = pointsDepreciated;
     }
 
-    public byte getLevel() {
-        return level;
+    public byte getTier() {
+        return tier;
     }
 
     public void setXpSpBonus(float xpSp) {

@@ -40,19 +40,21 @@ public class PrimeShopProduct {
     private byte maxStock;
     private byte salePercent;
     private byte minLevel;
-    private int maxLevel;
-    private int minBirthday;
-    private int maxBirthday;
-    private int restrictionDay;
-    private int availableCount;
+    private byte maxLevel;
+    private byte minBirthday;
+    private byte maxBirthday;
+    private byte restrictionDay;
+    private byte availableCount;
     private List<PrimeShopItem> items;
+    private byte vipTier;
+    private byte silverCoin;
 
     public PrimeShopProduct(int id, List<PrimeShopItem> items) {
         this.id = id;
         this.items = items;
     }
 
-    public int getBrId() {
+    public int getId() {
         return id;
     }
 
@@ -124,27 +126,27 @@ public class PrimeShopProduct {
         return salePercent;
     }
 
-    public int getMinLevel() {
+    public byte getMinLevel() {
         return minLevel;
     }
 
-    public int getMaxLevel() {
+    public byte getMaxLevel() {
         return maxLevel;
     }
 
-    public int getMinBirthday() {
+    public byte getMinBirthday() {
         return minBirthday;
     }
 
-    public int getMaxBirthday() {
+    public byte getMaxBirthday() {
         return maxBirthday;
     }
 
-    public int getRestrictionDay() {
+    public byte getRestrictionDay() {
         return restrictionDay;
     }
 
-    public int getAvailableCount() {
+    public byte getAvailableCount() {
         return availableCount;
     }
 
@@ -216,23 +218,39 @@ public class PrimeShopProduct {
         this.minLevel = minLevel;
     }
 
-    public void setMaxLevel(int maxLevel) {
+    public void setMaxLevel(byte maxLevel) {
         this.maxLevel = maxLevel;
     }
 
-    public void setMinBirthday(int minBirthday) {
+    public void setMinBirthday(byte minBirthday) {
         this.minBirthday = minBirthday;
     }
 
-    public void setMaxBirthday(int maxBirthday) {
+    public void setMaxBirthday(byte maxBirthday) {
         this.maxBirthday = maxBirthday;
     }
 
-    public void setRestrictionDay(int restrictionDay) {
+    public void setRestrictionDay(byte restrictionDay) {
         this.restrictionDay = restrictionDay;
     }
 
-    public void setAvailableCount(int availableCount) {
+    public void setAvailableCount(byte availableCount) {
         this.availableCount = availableCount;
+    }
+
+    public void setVipTier(byte vipTier) {
+        this.vipTier = vipTier;
+    }
+
+    public byte getVipTier() {
+        return vipTier;
+    }
+
+    public void setSilverCoin(byte silverCoin) {
+        this.silverCoin = silverCoin;
+    }
+
+    public byte getSilverCoin() {
+        return silverCoin;
     }
 }

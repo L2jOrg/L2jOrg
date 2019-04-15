@@ -27,7 +27,7 @@ public class ExBRProductInfo extends IClientOutgoingPacket {
     public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.EX_BR_PRODUCT_INFO.writeId(packet);
 
-        packet.putInt(_item.getBrId());
+        packet.putInt(_item.getId());
         packet.putInt(_item.getPrice());
         packet.putInt(_item.getItems().size());
         for (PrimeShopItem item : _item.getItems()) {

@@ -1,26 +1,24 @@
 package org.l2j.gameserver.data.xml.impl;
 
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.gameserver.datatables.ItemTable;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
+import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.serverpackets.primeshop.ExBRProductInfo;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 import static java.util.Objects.isNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -31,7 +29,8 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public class PrimeShopData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(PrimeShopData.class);
 
-    private final Map<Integer, PrimeShopProduct> primeItems = new LinkedHashMap<>();
+    private final IntObjectMap<PrimeShopProduct> primeItems = new HashIntObjectMap<>(125);
+    private final IntObjectMap<PrimeShopProduct> vipGifts = new HashIntObjectMap<>(7);
 
     private PrimeShopData() {
         load();
@@ -50,7 +49,7 @@ public class PrimeShopData extends IGameXmlReader{
     }
 
     @Override
-    public void parseDocument(Document doc, File f) {
+    protected void parseDocument(Document doc, File f) {
         forEach(doc, "list", list  -> forEach(list, "product", this::parseProduct));
     }
 
@@ -89,40 +88,19 @@ public class PrimeShopData extends IGameXmlReader{
 		product.setMaxStock(parseByte(attrs, "maxStock"));
 		product.setSalePercent(parseByte(attrs, "salePercent"));
 		product.setMinLevel(parseByte(attrs, "minLevel"));
+        product.setMaxLevel(parseByte(attrs, "maxLevel"));
+        product.setMinBirthday(parseByte(attrs, "minBirthday"));
+        product.setMaxBirthday(parseByte(attrs, "maxBirthday"));
+        product.setRestrictionDay(parseByte(attrs, "restrictionDay"));
+        product.setAvailableCount(parseByte(attrs, "availableCount"));
+        product.setVipTier(parseByte(attrs, "vipTier"));
+        product.setSilverCoin(parseByte(attrs, "silverCoin"));
 
-	/*	<xs:attribute type="xs:byte" name="minLevel"/>
-		<xs:attribute type="xs:byte" name="maxLevel"/>
-		<xs:attribute type="xs:byte" name="minBirthday"/>
-		<xs:attribute type="xs:byte" name="maxBirthday"/>
-		<xs:attribute type="xs:byte" name="restrictionDay"/>
-		<xs:attribute type="xs:byte" name="availableCount"/>
-		<xs:attribute type="xs:byte" name="vipTier" default="0"/>
-		<xs:attribute type="xs:int" name="silverCoin" default="0"/>
-
-                _category = set.getInt("cat", 0);
-        _paymentType = set.getInt("paymentType", 0);
-        _price = set.getInt("price");
-        _panelType = set.getInt("panelType", 0);
-        _recommended = set.getInt("recommended", 0);
-        _start = set.getInt("startSale", 0);
-        _end = set.getInt("endSale", 0);
-        _daysOfWeek = set.getInt("daysOfWeek", 127);
-        _startHour = set.getInt("startHour", 0);
-        _startMinute = set.getInt("startMinute", 0);
-        _stopHour = set.getInt("stopHour", 0);
-        _stopMinute = set.getInt("stopMinute", 0);
-        _stock = set.getInt("stock", 0);
-        _maxStock = set.getInt("maxStock", -1);
-        _salePercent = set.getInt("salePercent", 0);
-        _minLevel = set.getInt("minLevel", 0);
-        _maxLevel = set.getInt("maxLevel", 0);
-        _minBirthday = set.getInt("minBirthday", 0);
-        _maxBirthday = set.getInt("maxBirthday", 0);
-        _restrictionDay = set.getInt("restrictionDay", 0);
-        _availableCount = set.getInt("availableCount", 0);
-        _items = items;
-*/
-
+        if(product.getId() >= 100001 && product.getId() <= 100007) {
+            vipGifts.put(product.getId(), product);
+        } else {
+            primeItems.put(product.getId(), product);
+        }
     }
 
     public void showProductInfo(L2PcInstance player, int brId) {
@@ -136,11 +114,18 @@ public class PrimeShopData extends IGameXmlReader{
     }
 
     public PrimeShopProduct getItem(int brId) {
-        return primeItems.get(brId);
+        if(primeItems.containsKey(brId)) {
+            return primeItems.get(brId);
+        }
+        return vipGifts.get(brId);
     }
 
-    public Map<Integer, PrimeShopProduct> getPrimeItems() {
+    public IntObjectMap<PrimeShopProduct> getPrimeItems() {
         return primeItems;
+    }
+
+    public PrimeShopProduct getVipGift(byte vipTier) {
+        return vipGifts.get(vipTier);
     }
 
     public static PrimeShopData getInstance() {

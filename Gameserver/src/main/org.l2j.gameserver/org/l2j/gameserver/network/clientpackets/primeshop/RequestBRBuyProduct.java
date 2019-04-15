@@ -128,7 +128,7 @@ public final class RequestBRBuyProduct extends IClientIncomingPacket {
                 activeChar.removeRequest(PrimeShopRequest.class);
                 return;
             } else if (paymentId > 0) {
-                if (!activeChar.destroyItemByItemId("PrimeShop-" + item.getBrId(), paymentId, price, activeChar, true)) {
+                if (!activeChar.destroyItemByItemId("PrimeShop-" + item.getId(), paymentId, price, activeChar, true)) {
                     activeChar.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.LACK_OF_POINT));
                     activeChar.removeRequest(PrimeShopRequest.class);
                     return;

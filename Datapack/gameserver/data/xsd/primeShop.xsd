@@ -1,48 +1,48 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-		   targetNamespace="http://la2j.org"
-		   xmlns="http://la2j.org"
-		   elementFormDefault="qualified">
+           targetNamespace="http://la2j.org"
+           xmlns="http://la2j.org"
+           elementFormDefault="qualified">
 
-	<xs:element name="list">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="product" type="Product" maxOccurs="unbounded" minOccurs="0"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
+    <xs:element name="list">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product" type="Product" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
-	<xs:complexType name="Product">
-		<xs:sequence>
-			<xs:element name="item" maxOccurs="unbounded">
-				<xs:complexType>
-					<xs:attribute type="xs:int" name="id" use="required"/>
-					<xs:attribute type="xs:int" name="count" default="1"/>
-				</xs:complexType>
-			</xs:element>
-		</xs:sequence>
-		<xs:attribute type="xs:int" name="id" use="required"/>
-		<xs:attribute type="xs:byte" name="category" use="required"/> <!-- 11 Supliers; 12 Cosmetic; 13 Vip; 14 Event; 15 Reward -->
-		<xs:attribute type="xs:byte" name="paymentType" default="0"/> <!-- 0 NCoin; 3 Silver Coin -->
-		<xs:attribute type="xs:int" name="price" use="required"/>
-		<xs:attribute type="xs:byte" name="panelType" default="0"/>
-		<xs:attribute type="xs:byte" name="recommended" default="0"/>
-		<xs:attribute type="xs:int" name="startSale"/>
-		<xs:attribute type="xs:int" name="endSale"/>
-		<xs:attribute type="xs:byte" name="dayOfWeek"/>
-		<xs:attribute type="xs:byte" name="startHour"/>
-		<xs:attribute type="xs:byte" name="startMinute"/>
-		<xs:attribute type="xs:byte" name="stopHour"/>
-		<xs:attribute type="xs:byte" name="stopMinute"/>
-		<xs:attribute type="xs:byte" name="stock"/>
-		<xs:attribute type="xs:byte" name="maxStock"/>
-		<xs:attribute type="xs:byte" name="salePercent"/>
-		<xs:attribute type="xs:byte" name="minLevel"/>
-		<xs:attribute type="xs:byte" name="maxLevel"/>
-		<xs:attribute type="xs:byte" name="minBirthday"/>
-		<xs:attribute type="xs:byte" name="maxBirthday"/>
-		<xs:attribute type="xs:byte" name="restrictionDay"/>
-		<xs:attribute type="xs:byte" name="availableCount"/>
-		<xs:attribute type="xs:byte" name="vipTier" default="0"/>
-		<xs:attribute type="xs:int" name="silverCoin" default="0"/>
-	</xs:complexType>
+    <xs:complexType name="Product">
+        <xs:sequence>
+            <xs:element name="item" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:attribute type="xs:int" name="id" use="required"/>
+                    <xs:attribute type="xs:int" name="count" default="1"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute type="xs:int" name="id" use="required"/>
+        <xs:attribute type="xs:byte" name="category" use="required"/> <!-- 11 Supliers; 12 Cosmetic; 13 Vip; 14 Event; 15 Reward -->
+        <xs:attribute type="xs:byte" name="paymentType" default="0"/> <!-- 0 NCoin; 3 Silver Coin -->
+        <xs:attribute type="xs:int" name="price" use="required"/>
+        <xs:attribute type="xs:byte" name="panelType" default="0"/>
+        <xs:attribute type="xs:byte" name="recommended" default="0"/>
+        <xs:attribute type="xs:int" name="startSale" default="0"/>
+        <xs:attribute type="xs:int" name="endSale" default="0"/>
+        <xs:attribute type="xs:byte" name="dayOfWeek" default="127"/>
+        <xs:attribute type="xs:byte" name="startHour" default="0"/>
+        <xs:attribute type="xs:byte" name="startMinute" default="0"/>
+        <xs:attribute type="xs:byte" name="stopHour" default="0"/>
+        <xs:attribute type="xs:byte" name="stopMinute" default="0"/>
+        <xs:attribute type="xs:byte" name="stock" default="0"/>
+        <xs:attribute type="xs:byte" name="maxStock" default="-1"/>
+        <xs:attribute type="xs:byte" name="salePercent" default="0"/>
+        <xs:attribute type="xs:byte" name="minLevel" default="0"/>
+        <xs:attribute type="xs:byte" name="maxLevel" default="0"/>
+        <xs:attribute type="xs:byte" name="minBirthday" default="0"/>
+        <xs:attribute type="xs:byte" name="maxBirthday" default="0"/>
+        <xs:attribute type="xs:byte" name="restrictionDay" default="0"/>
+        <xs:attribute type="xs:byte" name="availableCount" default="0"/>
+        <xs:attribute type="xs:byte" name="vipTier" default="0"/>
+        <xs:attribute type="xs:int" name="silverCoin" default="0"/>
+    </xs:complexType>
 </xs:schema>

@@ -18,7 +18,7 @@
         <xs:sequence>
             <xs:element name="bonus" type="TierBonusInfo"/>
         </xs:sequence>
-        <xs:attribute name="level" type="xs:byte" use="required"/>
+        <xs:attribute name="tier" type="xs:byte" use="required"/>
         <xs:attribute name="points_required" type="xs:long" use="required"/>
         <xs:attribute name="points_depreciated" type="xs:long" use="required"/>
     </xs:complexType>
