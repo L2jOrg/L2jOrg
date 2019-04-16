@@ -1,8 +1,7 @@
-package org.l2j.commons.database;
+package org.l2j.commons.database.helpers;
 
 import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.pair.IntObjectPair;
-import org.l2j.commons.database.handler.TypeHandler;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;
@@ -12,27 +11,31 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.regex.Pattern;
 
-import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 public class QueryDescriptor implements AutoCloseable {
 
     private static final Pattern SELECT_PATTERN = Pattern.compile("^SELECT.*", Pattern.CASE_INSENSITIVE);
+    private static final NoParameterStrategy NO_PARAMETER_STRATEGY = new NoParameterStrategy();
 
     private final String query;
     private final Method method;
-    private final IntObjectMap<IntObjectPair<Class<?>>> parametersInfo;
+    private final MapParameterStrategy strategy;
     private PreparedStatement statement;
 
 
     public QueryDescriptor(Method method, String query) {
-        this(method, query, null);
+        this(method, query, NO_PARAMETER_STRATEGY);
     }
 
     public QueryDescriptor(Method method, String query, IntObjectMap<IntObjectPair<Class<?>>> parametersInfo) {
+        this(method, query, new IndexedValuesStrategy(parametersInfo));
+    }
+
+    public QueryDescriptor(Method method, String query, MapParameterStrategy strategy) {
         this.query = query;
         this.method = method;
-        this.parametersInfo = parametersInfo;
+        this.strategy = strategy;
     }
 
     public boolean isUpdate() {
@@ -58,28 +61,10 @@ public class QueryDescriptor implements AutoCloseable {
         }
     }
 
-
     public void execute(Connection con, Object[] args) throws SQLException {
         statement = con.prepareStatement(query);
-        if(nonNull(parametersInfo)) {
-            setParameters(args);
-        }
+        strategy.setParameters(statement, args);
         statement.execute();
-    }
-
-    @SuppressWarnings("unchecked")
-    private void setParameters(Object[] args) throws SQLException {
-        for (var parameterInfo : parametersInfo.entrySet()) {
-            var parameterIndex = parameterInfo.getKey();
-            if (isNull(parameterInfo.getValue())) {
-                statement.setString(parameterIndex, "NULL");
-            } else {
-                var type = parameterInfo.getValue().getValue();
-                var argumentIndex = parameterInfo.getValue().getKey();
-                var handler = TypeHandler.MAP.getOrDefault(type.getName(), TypeHandler.MAP.get(Object.class.getName()));
-                handler.setParameter(statement, parameterIndex, args[argumentIndex]);
-            }
-        }
     }
 
     public Integer getUpdateCount() throws SQLException {

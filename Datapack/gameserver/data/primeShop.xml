@@ -318,14 +318,18 @@
         <item id="29012"/>
     </product>
 
-    <product id="100094" category="12" price="400"> <!-- -->
+<!-- Item not existent on system
+    <product id="100094" category="12" price="400"> &lt;!&ndash; &ndash;&gt;
         <item id="71323"/>
     </product>
+-->
 
-    <product id="100095" category="13" price="340" vipTier="1"> <!-- -->
+<!-- Item not existent on system
+    <product id="100095" category="13" price="340" vipTier="1"> &lt;!&ndash; &ndash;&gt;
         <item id="71324"/>
     </product>
 
+-->
     <product id="100099" category="11" price="80"> <!--Scroll of Escape (Novice) -->
         <item id="10650" count="10"/>
         <item id="29011" count="5"/> <!-- 1st Class Transfer Buff Scroll (29011) -->
@@ -402,9 +406,10 @@
         <item id="7124"/>
     </product>
 
-    <product id="100175" category="11" price="2000" panelType="6"> <!-- -->
+<!--Item not existent on system
+    <product id="100175" category="11" price="2000" panelType="6"> &lt;!&ndash; &ndash;&gt;
         <item id="71341"/>
-    </product>
+    </product>-->
 
     <product id="100176" category="12" price="400" panelType="6"> <!--Outlaw Eyepatch -->
         <item id="71118"/>
@@ -520,9 +525,10 @@
         <item id="71119"/>
     </product>
 
-    <product id="100221" category="11" price="80" panelType="6"> <!-- -->
+<!--    Item not existent on system
+<product id="100221" category="11" price="80" panelType="6"> &lt;!&ndash; &ndash;&gt;
         <item id="71342" count="5"/>
-    </product>
+    </product>-->
 
     <product id="100222" category="12" price="400" panelType="6"> <!--Jester Hat -->
         <item id="8562"/>

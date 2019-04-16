@@ -1,7 +1,9 @@
 package org.l2j.gameserver.data.database.model;
 
 import org.l2j.commons.database.annotation.Column;
+import org.l2j.commons.database.annotation.Table;
 
+@Table("account_data")
 public class AccountData {
 
     private String account;

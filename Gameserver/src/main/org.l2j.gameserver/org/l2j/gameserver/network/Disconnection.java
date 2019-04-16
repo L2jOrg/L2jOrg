@@ -20,10 +20,10 @@ public final class Disconnection {
     private final L2PcInstance _activeChar;
 
     private Disconnection(L2GameClient client) {
-        this(client, null);
+        this(client, client.getActiveChar());
     }
     private Disconnection(L2PcInstance activeChar) {
-        this(null, activeChar);
+        this(activeChar.getClient(), activeChar);
     }
 
     private Disconnection(L2GameClient client, L2PcInstance activeChar) {
@@ -83,8 +83,12 @@ public final class Disconnection {
             if ((_activeChar != null) && _activeChar.isOnline()) {
                 _activeChar.storeMe();
             }
+
+            if(_client != null) {
+                _client.storeAccountData();
+            }
         } catch (RuntimeException e) {
-            LOGGER.warn(e.getMessage());
+            LOGGER.warn(e.getMessage(), e);
         }
 
         return this;
@@ -136,7 +140,7 @@ public final class Disconnection {
 
     public void onDisconnection() {
         if (_activeChar != null) {
-            ThreadPoolManager.getInstance().schedule(this::defaultSequence, _activeChar.canLogout() ? 0 : AttackStanceTaskManager.COMBAT_TIME);
+            ThreadPoolManager.schedule(this::defaultSequence, _activeChar.canLogout() ? 0 : AttackStanceTaskManager.COMBAT_TIME);
         }
     }
 }

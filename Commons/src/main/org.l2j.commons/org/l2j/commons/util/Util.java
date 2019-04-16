@@ -5,10 +5,7 @@ import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -49,13 +46,13 @@ public class Util {
         return fields.toArray(Field[]::new);
     }
 
-    public static Field[] fieldsOf(Class<?> classToSearch) {
+    public static List<Field> fieldsOf(Class<?> classToSearch) {
         List<Field> fields = new ArrayList<>();
         Class<?> searchClass = classToSearch;
         while (nonNull(searchClass)) {
             fields.addAll(Stream.of(searchClass.getDeclaredFields()).collect(Collectors.toList()));
             searchClass = searchClass.getSuperclass();
         }
-        return fields.toArray(Field[]::new);
+        return Collections.unmodifiableList(fields);
     }
 }

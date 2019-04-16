@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS `account_gsdata`;
+DROP TABLE IF EXISTS `account_data`;
 
 CREATE TABLE IF NOT EXISTS `account_data`
 (

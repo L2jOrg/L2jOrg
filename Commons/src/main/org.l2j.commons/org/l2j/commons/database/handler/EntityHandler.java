@@ -1,6 +1,6 @@
 package org.l2j.commons.database.handler;
 
-import org.l2j.commons.database.QueryDescriptor;
+import org.l2j.commons.database.helpers.QueryDescriptor;
 import org.l2j.commons.database.annotation.Column;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

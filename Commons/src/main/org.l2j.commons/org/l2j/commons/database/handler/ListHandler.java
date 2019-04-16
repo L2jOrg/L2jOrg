@@ -1,6 +1,6 @@
 package org.l2j.commons.database.handler;
 
-import org.l2j.commons.database.QueryDescriptor;
+import org.l2j.commons.database.helpers.QueryDescriptor;
 
 import java.lang.reflect.ParameterizedType;
 import java.sql.PreparedStatement;

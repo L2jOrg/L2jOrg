@@ -5628,8 +5628,6 @@ public final class L2PcInstance extends L2Playable {
         if (aVars != null) {
             aVars.storeMe();
         }
-
-        _client.storeAccountData();
     }
 
     @Override

@@ -9,6 +9,8 @@ import org.l2j.commons.database.annotation.Query;
 import org.l2j.commons.database.annotation.Table;
 import org.l2j.commons.database.annotation.Transient;
 import org.l2j.commons.database.handler.TypeHandler;
+import org.l2j.commons.database.helpers.EntityBasedStrategy;
+import org.l2j.commons.database.helpers.QueryDescriptor;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,10 +19,12 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ServiceLoader;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 
@@ -28,8 +32,10 @@ class JDBCInvocation implements InvocationHandler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JDBCInvocation.class);
     private static final Pattern PARAMETER_PATTERN = Pattern.compile(":(.*?):");
+    private static final String REPLACE_TEMPLATE = "REPLACE INTO %s %s VALUES %s";
     // TODO use cache API
-    private static final IntObjectMap<QueryDescriptor> descriptors = new HashIntObjectMap<>();
+    private static final Map<Method, QueryDescriptor> descriptors = new HashMap<>();
+    private static final Map<Class<?>, QueryDescriptor> saveDescriptors = new HashMap<>();
 
     JDBCInvocation() {
         for (TypeHandler typeHandler : ServiceLoader.load(TypeHandler.class)) {
@@ -39,8 +45,8 @@ class JDBCInvocation implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        if(method.getName().equalsIgnoreCase("save")) {
-            return save(args);
+        if(method.getName().equalsIgnoreCase("save") && method.getParameterCount() == 1) {
+            return save(method, args);
         }
 
         var handler = TypeHandler.MAP.getOrDefault(method.getReturnType().getName(), TypeHandler.MAP.get(Object.class.getName()));
@@ -60,7 +66,7 @@ class JDBCInvocation implements InvocationHandler {
         }
     }
 
-    private boolean save(Object[] args) {
+    private boolean save(Method method, Object[] args) throws SQLException {
         if(args.length < 1 || isNull(args[0])) {
             return false;
         }
@@ -69,53 +75,43 @@ class JDBCInvocation implements InvocationHandler {
         var table = clazz.getAnnotation(Table.class);
 
         if(isNull(table)) {
-            LOGGER.warn("The class {} must be annotated with @Table to save it", args[0].getClass());
+            LOGGER.error("The class {} must be annotated with @Table to save it", args[0].getClass());
+            return false;
         }
 
-        QueryDescriptor query = buildSaveQuery(clazz, table);
-
-
-
-        return false;
+        try(var con = DatabaseFactory.getInstance().getConnection();
+            var query = buildSaveQuery(clazz, method, table) ) {
+            query.execute(con, args);
+            return true;
+        }
     }
 
-    private QueryDescriptor buildSaveQuery(Class<?> clazz, Table table) {
-        if(descriptors.containsKey(clazz.hashCode())) {
-            return descriptors.get(clazz.hashCode());
+    private QueryDescriptor buildSaveQuery(Class<?> clazz, Method method, Table table) {
+        if(saveDescriptors.containsKey(clazz)) {
+            return saveDescriptors.get(clazz);
         }
 
         var fields = Util.fieldsOf(clazz);
-        Map<String, IntObjectPair<Class<?>>> parameterMap = new HashMap<>(fields.length);
+        Map<String, IntObjectPair<Class<?>>> parameterMap = new HashMap<>(fields.size());
 
-        StringBuilder sb = new StringBuilder("REPLACE INTO ");
-        var i = 1;
-        for (Field field : fields) {
-            if(field.isAnnotationPresent(Transient.class)) {
-                continue;
-            }
-            var column = field.isAnnotationPresent(Column.class) ? field.getAnnotation(Column.class).value() : field.getName();
+        var columns = fields.stream().filter(f -> !f.isAnnotationPresent(Transient.class))
+                .peek(f -> parameterMap.put(f.getName(), new ImmutableIntObjectPairImpl<>(parameterMap.size()+1, f.getType())))
+                .map(this::fieldToColumnName).collect(Collectors.joining(",", "(", ")"));
 
-        }
+        var values = "?".repeat(parameterMap.size()).chars().mapToObj(Character::toString).collect(Collectors.joining(",", "(", ")"));
 
+        var query = new QueryDescriptor(method, String.format(REPLACE_TEMPLATE, table.value(), columns, values), new EntityBasedStrategy(parameterMap));
 
-        sb.append(table.value());
-        sb.append(" VALUES ");
-        return null;
+        saveDescriptors.put(clazz, query);
+        return query;
     }
 
-    private Map<String, IntObjectPair<Class<?>>> createParameters(Class<?> clazz) {
-
-
-
-        return null;
+    private String fieldToColumnName(Field field) {
+        return field.isAnnotationPresent(Column.class) ? field.getAnnotation(Column.class).value() : field.getName();
     }
 
     private QueryDescriptor buildQuery(final Method method)  {
-        var hash =  method.hashCode();
-        if(descriptors.containsKey(hash)) {
-            return descriptors.get(hash);
-        }
-        return descriptors.put(hash, this.buildDescriptor(method));
+        return descriptors.computeIfAbsent(method, this::buildDescriptor);
     }
 
     private QueryDescriptor buildDescriptor(Method method) {
@@ -125,9 +121,7 @@ class JDBCInvocation implements InvocationHandler {
         }
 
         var matcher = PARAMETER_PATTERN.matcher(query);
-
         var parameterMapper = mapParameters(method.getParameters());
-
         IntObjectMap<IntObjectPair<Class<?>>> parameters = new HashIntObjectMap<>();
 
         var parameterCount = 0;

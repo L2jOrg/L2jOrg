@@ -47,7 +47,7 @@ public class PrimeShopProduct {
     private byte availableCount;
     private List<PrimeShopItem> items;
     private byte vipTier;
-    private byte silverCoin;
+    private int silverCoin;
 
     public PrimeShopProduct(int id, List<PrimeShopItem> items) {
         this.id = id;
@@ -246,11 +246,11 @@ public class PrimeShopProduct {
         return vipTier;
     }
 
-    public void setSilverCoin(byte silverCoin) {
+    public void setSilverCoin(int silverCoin) {
         this.silverCoin = silverCoin;
     }
 
-    public byte getSilverCoin() {
+    public int getSilverCoin() {
         return silverCoin;
     }
 }

@@ -59,7 +59,7 @@ public class PrimeShopData extends IGameXmlReader{
             if ("item".equalsIgnoreCase(b.getNodeName())) {
                 var attrs = b.getAttributes();
 
-                final int itemId = parseInteger(attrs, "itemId");
+                final int itemId = parseInteger(attrs, "id");
                 final int count = parseInteger(attrs, "count");
 
                 final L2Item item = ItemTable.getInstance().getTemplate(itemId);
@@ -73,7 +73,7 @@ public class PrimeShopData extends IGameXmlReader{
         var attrs = productNode.getAttributes();
         var product = new PrimeShopProduct(parseInteger(attrs, "id"), items);
         product.setCategory(parseByte(attrs, "category"));
-        product.setPaymentType(parseByte(attrs, "paimentType"));
+        product.setPaymentType(parseByte(attrs, "paymentType"));
         product.setPrice(parseInteger(attrs, "price"));
 		product.setPanelType(parseByte(attrs, "panelType"));
 		product.setRecommended(parseByte(attrs, "recommended"));
@@ -94,7 +94,7 @@ public class PrimeShopData extends IGameXmlReader{
         product.setRestrictionDay(parseByte(attrs, "restrictionDay"));
         product.setAvailableCount(parseByte(attrs, "availableCount"));
         product.setVipTier(parseByte(attrs, "vipTier"));
-        product.setSilverCoin(parseByte(attrs, "silverCoin"));
+        product.setSilverCoin(parseInteger(attrs, "silverCoin"));
 
         if(product.getId() >= 100001 && product.getId() <= 100007) {
             vipGifts.put(product.getId(), product);
