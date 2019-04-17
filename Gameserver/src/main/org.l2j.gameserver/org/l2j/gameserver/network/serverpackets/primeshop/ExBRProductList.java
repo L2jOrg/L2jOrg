@@ -34,23 +34,23 @@ public class ExBRProductList extends IClientOutgoingPacket {
         packet.putInt(_primeList.size());
         for (PrimeShopProduct brItem : _primeList) {
             packet.putInt(brItem.getId());
-            packet.put((byte) brItem.getCategory());
-            packet.put((byte) brItem.getPaymentType()); // Payment Type: 0 - Prime Points, 1 - Adena, 2 - Hero Coins
+            packet.put(brItem.getCategory());
+            packet.put(brItem.getPaymentType()); // Payment Type: 0 - Prime Points, 1 - Adena, 2 - Hero Coins
             packet.putInt(brItem.getPrice());
-            packet.put((byte) brItem.getPanelType()); // Item Panel Type: 0 - None, 1 - Event, 2 - Sale, 3 - New, 4 - Best
+            packet.put(brItem.getPanelType()); // Item Panel Type: 0 - None, 1 - Event, 2 - Sale, 3 - New, 4 - Best
             packet.putInt(brItem.getRecommended()); // Recommended: (bit flags) 1 - Top, 2 - Left, 4 - Right
             packet.putInt(brItem.getStartSale());
             packet.putInt(brItem.getEndSale());
-            packet.put((byte) brItem.getDaysOfWeek());
-            packet.put((byte) brItem.getStartHour());
-            packet.put((byte) brItem.getStartMinute());
-            packet.put((byte) brItem.getStopHour());
-            packet.put((byte) brItem.getStopMinute());
+            packet.put(brItem.getDaysOfWeek());
+            packet.put(brItem.getStartHour());
+            packet.put(brItem.getStartMinute());
+            packet.put(brItem.getStopHour());
+            packet.put(brItem.getStopMinute());
             packet.putInt(brItem.getStock());
             packet.putInt(brItem.getTotal());
-            packet.put((byte) brItem.getSalePercent());
-            packet.put((byte) brItem.getMinLevel());
-            packet.put((byte) brItem.getMaxLevel());
+            packet.put(brItem.getSalePercent());
+            packet.put(brItem.getMinLevel());
+            packet.put(brItem.getMaxLevel());
             packet.putInt(brItem.getMinBirthday());
             packet.putInt(brItem.getMaxBirthday());
             packet.putInt(brItem.getRestrictionDay());
@@ -63,5 +63,10 @@ public class ExBRProductList extends IClientOutgoingPacket {
                 packet.putInt(item.isTradable());
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return _primeList.size() * 120;
     }
 }

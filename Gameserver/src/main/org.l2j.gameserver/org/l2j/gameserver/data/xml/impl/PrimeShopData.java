@@ -125,7 +125,7 @@ public class PrimeShopData extends IGameXmlReader{
     }
 
     public PrimeShopProduct getVipGift(byte vipTier) {
-        return vipGifts.get(vipTier);
+        return vipGifts.get(100000 + vipTier);
     }
 
     public static PrimeShopData getInstance() {
