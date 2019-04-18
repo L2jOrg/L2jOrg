@@ -11269,7 +11269,7 @@ public final class L2PcInstance extends L2Playable {
         return getClient().getVipPoints();
     }
 
-    public void updateVipPoints(int points) {
+    public void updateVipPoints(long points) {
         getClient().updateVipPoints(points);
     }
 
@@ -11287,5 +11287,13 @@ public final class L2PcInstance extends L2Playable {
 
     public long getSilverCoin() {
         return _inventory.getSilverCoin();
+    }
+
+    public long getVipTierExpiration() {
+        return getClient().getVipTierExpiration();
+    }
+
+    public void setVipTierExpiration(long expiration) {
+        getClient().setVipTierExpiration(expiration);
     }
 }

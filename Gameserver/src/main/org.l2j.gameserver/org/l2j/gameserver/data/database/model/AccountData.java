@@ -28,7 +28,7 @@ public class AccountData {
         return vipTierExpiration;
     }
 
-    public void updateVipPoints(int points) {
+    public void updateVipPoints(long points) {
         this.vipPoints += points;
     }
 
@@ -38,5 +38,9 @@ public class AccountData {
 
     public void updateCoins(int coins) {
         this.coin += coins;
+    }
+
+    public void setVipTierExpiration(long expiration) {
+        this.vipTierExpiration = expiration;
     }
 }

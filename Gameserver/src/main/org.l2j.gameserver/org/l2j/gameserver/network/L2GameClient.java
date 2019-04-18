@@ -498,7 +498,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         getDAO(AccountDAO.class).save(getAccountData());
     }
 
-    public void updateVipPoints(int points) {
+    public void updateVipPoints(long points) {
         getAccountData().updateVipPoints(points);
     }
 
@@ -508,6 +508,10 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
 
     public void updateCoin(int coins) {
         getAccountData().updateCoins(coins);
+    }
+
+    public void setVipTierExpiration(long expiration) {
+        getAccountData().setVipTierExpiration(expiration);
     }
 
     @Override

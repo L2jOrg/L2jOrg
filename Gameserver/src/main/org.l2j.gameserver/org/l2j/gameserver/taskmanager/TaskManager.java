@@ -2,10 +2,7 @@ package org.l2j.gameserver.taskmanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.taskmanager.tasks.TaskBirthday;
-import org.l2j.gameserver.taskmanager.tasks.TaskCleanUp;
-import org.l2j.gameserver.taskmanager.tasks.TaskRestart;
-import org.l2j.gameserver.taskmanager.tasks.TaskShutdown;
+import org.l2j.gameserver.taskmanager.tasks.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -89,7 +86,7 @@ public final class TaskManager {
             statement.execute();
             return true;
         } catch (SQLException e) {
-            LOGGER.warn(TaskManager.class.getSimpleName() + ": Cannot add the task:  " + e.getMessage(), e);
+            LOGGER.warn("Cannot add the task:  " + e.getMessage(), e);
         }
         return false;
     }
@@ -99,6 +96,7 @@ public final class TaskManager {
         registerTask(new TaskCleanUp());
         registerTask(new TaskRestart());
         registerTask(new TaskShutdown());
+        registerTask(new TaskVipExpiration());
     }
 
     private void registerTask(Task task) {
