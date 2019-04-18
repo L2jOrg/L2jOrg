@@ -14,6 +14,7 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemAdd;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemDestroy;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemDrop;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemTransfer;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.items.type.EtcItemType;
@@ -28,6 +29,8 @@ import java.sql.ResultSet;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.nonNull;
+
 public class PcInventory extends Inventory {
     private static final Logger LOGGER = LoggerFactory.getLogger(PcInventory.class);
 
@@ -35,6 +38,8 @@ public class PcInventory extends Inventory {
     private L2ItemInstance _adena;
     private L2ItemInstance _ancientAdena;
     private L2ItemInstance _beautyTickets;
+    private L2ItemInstance silverCoin;
+    private L2ItemInstance rustyCoin;
 
     private Collection<Integer> _blockItems = null;
 
@@ -118,10 +123,10 @@ public class PcInventory extends Inventory {
     public Collection<L2ItemInstance> getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable) {
         final Collection<L2ItemInstance> list = new LinkedList<>();
         for (L2ItemInstance item : _items.values()) {
-            if (!allowAdena && (item.getId() == ADENA_ID)) {
+            if (!allowAdena && (item.getId() == CommonItem.ADENA)) {
                 continue;
             }
-            if (!allowAncientAdena && (item.getId() == ANCIENT_ADENA_ID)) {
+            if (!allowAncientAdena && (item.getId() == CommonItem.ANCIENT_ADENA)) {
                 continue;
             }
             boolean isDuplicate = false;
@@ -349,12 +354,16 @@ public class PcInventory extends Inventory {
         item = super.addItem(process, item, actor, reference);
 
         if (item != null) {
-            if ((item.getId() == ADENA_ID) && !item.equals(_adena)) {
+            if ((item.getId() == CommonItem.ADENA) && !item.equals(_adena)) {
                 _adena = item;
-            } else if ((item.getId() == ANCIENT_ADENA_ID) && !item.equals(_ancientAdena)) {
+            } else if ((item.getId() == CommonItem.ANCIENT_ADENA) && !item.equals(_ancientAdena)) {
                 _ancientAdena = item;
             } else if ((item.getId() == BEAUTY_TICKET_ID) && !item.equals(_beautyTickets)) {
                 _beautyTickets = item;
+            } else if( item.getId() == CommonItem.SILVER_COIN && !item.equals(silverCoin)) {
+                silverCoin = item;
+            } else if(item.getId() == CommonItem.RUSTY_COIN && !item.equals(rustyCoin)) {
+                rustyCoin = item;
             }
 
             if (actor != null) {
@@ -921,5 +930,13 @@ public class PcInventory extends Inventory {
             }
         }
         return false;
+    }
+
+    public long getRustyCoin() {
+        return nonNull(rustyCoin) ? rustyCoin.getCount() : 0;
+    }
+
+    public long getSilverCoin() {
+        return nonNull(silverCoin) ? silverCoin.getCount() : 0;
     }
 }

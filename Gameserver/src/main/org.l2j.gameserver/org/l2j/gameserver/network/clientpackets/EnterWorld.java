@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.AnnouncementsTable;
 import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
@@ -28,7 +28,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 import org.l2j.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
-import org.l2j.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import org.l2j.gameserver.network.serverpackets.friend.L2FriendList;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -458,7 +457,6 @@ public class EnterWorld extends IClientIncomingPacket {
             activeChar.sendPacket(new ExWorldChatCnt(activeChar));
         }
         activeChar.sendPacket(new ExConnectedTimeAndGettableReward(activeChar));
-        activeChar.sendPacket(new ExOneDayReceiveRewardList(activeChar, true));
 
         // Handle soulshots, disable all on EnterWorld
         activeChar.sendPacket(new ExAutoSoulShot(0, true, 0));

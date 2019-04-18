@@ -1604,7 +1604,7 @@ public final class Config {
         } catch (NumberFormatException nfe) {
             LOGGER.warn("There was an error while parsing ban chat channels: ", nfe);
         }
-        WORLD_CHAT_MIN_LEVEL = General.getInt("WorldChatMinLevel", 95);
+        WORLD_CHAT_MIN_LEVEL = General.getInt("WorldChatMinLevel", 20);
         WORLD_CHAT_POINTS_PER_DAY = General.getInt("WorldChatPointsPerDay", 10);
         WORLD_CHAT_INTERVAL = General.getDuration("WorldChatInterval", "20secs", Duration.ofSeconds(20));
         ALT_MANOR_REFRESH_TIME = General.getInt("AltManorRefreshTime", 20);

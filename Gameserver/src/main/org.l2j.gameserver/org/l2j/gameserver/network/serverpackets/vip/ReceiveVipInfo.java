@@ -18,7 +18,7 @@ public class ReceiveVipInfo extends IClientOutgoingPacket {
         OutgoingPackets.RECEIVE_VIP_INFO.writeId(packet);
         var player = client.getActiveChar();
         var vipData = VipData.getInstance();
-        var vipTier = vipData.getVipTier(player);
+        var vipTier = player.getVipTier();
 
         var vipDuration = (int) ChronoUnit.SECONDS.between(Instant.now(), Instant.ofEpochMilli(client.getVipTierExpiration()));
 

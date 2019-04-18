@@ -16,7 +16,7 @@ public class ExBRGamePoint extends IClientOutgoingPacket {
 
     public ExBRGamePoint(L2PcInstance player) {
         _charId = player.getObjectId();
-        _charPoints = player.getPrimePoints();
+        _charPoints = player.getL2Coins();
     }
 
     @Override

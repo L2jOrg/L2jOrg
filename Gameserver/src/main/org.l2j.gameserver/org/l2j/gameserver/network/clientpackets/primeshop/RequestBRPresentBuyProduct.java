@@ -150,13 +150,14 @@ public final class RequestBRPresentBuyProduct extends IClientIncomingPacket {
                     activeChar.removeRequest(PrimeShopRequest.class);
                     return;
                 }
-            } else if (paymentId == 0) {
-                if (activeChar.getPrimePoints() < price) {
+            } else {
+                if (activeChar.getL2Coins() < price) {
                     activeChar.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.LACK_OF_POINT));
                     activeChar.removeRequest(PrimeShopRequest.class);
                     return;
                 }
-                activeChar.setPrimePoints(activeChar.getPrimePoints() - price);
+                activeChar.updateL2Coins(-price);
+                activeChar.updateVipPoints((int) (price * 0.07));
             }
 
             activeChar.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.SUCCESS));

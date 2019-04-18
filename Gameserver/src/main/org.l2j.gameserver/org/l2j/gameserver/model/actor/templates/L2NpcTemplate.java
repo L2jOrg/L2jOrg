@@ -21,6 +21,7 @@ import org.l2j.gameserver.util.Util;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 /**
@@ -606,11 +607,12 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
     }
 
     public Collection<ItemHolder> calculateDrops(DropType dropType, L2Character victim, L2Character killer) {
-        if (getDropList(dropType) == null) {
+        var list = getDropList(dropType);
+        if (isNull(list)) {
             return null;
         }
 
-        final List<DropHolder> dropList = new ArrayList<>(getDropList(dropType));
+        final List<DropHolder> dropList = new ArrayList<>(list);
 
 
         if(dropType == DropType.DROP && nonNull(killer.getActingPlayer())) {

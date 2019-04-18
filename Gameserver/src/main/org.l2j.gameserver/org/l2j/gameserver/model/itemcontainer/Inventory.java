@@ -41,7 +41,9 @@ import java.util.stream.Collectors;
  */
 public abstract class Inventory extends ItemContainer {
     // Common Items
+    @Deprecated
     public static final int ADENA_ID = 57;
+    @Deprecated
     public static final int ANCIENT_ADENA_ID = 5575;
     public static final int BEAUTY_TICKET_ID = 36308;
     public static final int AIR_STONE_ID = 39461;

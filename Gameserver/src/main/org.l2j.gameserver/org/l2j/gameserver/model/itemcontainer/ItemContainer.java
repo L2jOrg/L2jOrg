@@ -8,6 +8,7 @@ import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.slf4j.Logger;
@@ -227,8 +228,8 @@ public abstract class ItemContainer {
             item.setLastChange(L2ItemInstance.MODIFIED);
             // Updates database
             // If Adena drop rate is not present it will be x1.
-            final float adenaRate = Config.RATE_DROP_AMOUNT_BY_ID.getOrDefault(Inventory.ADENA_ID, 1f);
-            if ((itemId == Inventory.ADENA_ID) && (count < (10000 * adenaRate))) {
+            final float adenaRate = Config.RATE_DROP_AMOUNT_BY_ID.getOrDefault(CommonItem.ADENA, 1f);
+            if ((itemId == CommonItem.ADENA) && (count < (10000 * adenaRate))) {
                 // Small adena changes won't be saved to database all the time
                 if ((GameTimeController.getInstance().getGameTicks() % 5) == 0) {
                     item.updateDatabase();

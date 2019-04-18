@@ -31,10 +31,7 @@ import org.l2j.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2j.gameserver.model.events.impl.item.OnItemTalk;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.L2Armor;
-import org.l2j.gameserver.model.items.L2EtcItem;
-import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.*;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.model.items.type.ItemType;
@@ -286,7 +283,7 @@ public final class L2ItemInstance extends L2Object {
         setOwnerId(owner_id);
 
         if (Config.LOG_ITEMS) {
-            if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (_item.isEquipable() || (_item.getId() == Inventory.ADENA_ID)))) {
+            if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (_item.isEquipable() || (_item.getId() == CommonItem.ADENA)))) {
                 if (_enchantLevel > 0) {
                     LOG_ITEMS.info("SETOWNER:" + String.valueOf(process) // in case of null
                             + ", item " + getObjectId() //
@@ -425,7 +422,7 @@ public final class L2ItemInstance extends L2Object {
             return;
         }
         final long old = _count;
-        final long max = _itemId == Inventory.ADENA_ID ? Inventory.MAX_ADENA : Integer.MAX_VALUE;
+        final long max = _itemId == CommonItem.ADENA ? Inventory.MAX_ADENA : Integer.MAX_VALUE;
 
         if ((count > 0) && (_count > (max - count))) {
             setCount(max);
@@ -440,7 +437,7 @@ public final class L2ItemInstance extends L2Object {
         _storedInDb = false;
 
         if (Config.LOG_ITEMS && (process != null)) {
-            if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (_item.isEquipable() || (_item.getId() == Inventory.ADENA_ID)))) {
+            if (!Config.LOG_ITEMS_SMALL_LOG || _item.isEquipable() || _item.getId() == CommonItem.ADENA) {
                 if (_enchantLevel > 0) {
                     LOG_ITEMS.info("CHANGE:" + String.valueOf(process) // in case of null
                             + ", item " + getObjectId() //
@@ -790,7 +787,7 @@ public final class L2ItemInstance extends L2Object {
                 && ((_item.getType2() != L2Item.TYPE2_MONEY) || (_item.getType1() != L2Item.TYPE1_SHIELD_ARMOR)) // not money, not shield
                 && ((pet == null) || (getObjectId() != pet.getControlObjectId())) // Not Control item of currently summoned pet
                 && !(player.isProcessingItem(getObjectId())) // Not momentarily used enchant scroll
-                && (allowAdena || (_itemId != Inventory.ADENA_ID)) // Not Adena
+                && (allowAdena || (_itemId != CommonItem.ADENA)) // Not Adena
                 && (!player.isCastingNow(s -> s.getSkill().getItemConsumeId() != _itemId)) && (allowNonTradeable || (isTradeable() && (!((_item.getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems())))));
     }
 

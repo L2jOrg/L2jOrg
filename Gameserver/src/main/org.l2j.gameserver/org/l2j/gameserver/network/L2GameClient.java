@@ -494,16 +494,20 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         return getAccountData().getVipTierExpiration();
     }
 
-    public long getRustyCoin() {
-        return getAccountData().getRustyCoin();
-    }
-
-    public long getSilverCoin() {
-        return getAccountData().getSilverCoin();
-    }
-
     public void storeAccountData() {
         getDAO(AccountDAO.class).save(getAccountData());
+    }
+
+    public void updateVipPoints(int points) {
+        getAccountData().updateVipPoints(points);
+    }
+
+    public int getCoin() {
+        return getAccountData().getCoin();
+    }
+
+    public void updateCoin(int coins) {
+        getAccountData().updateCoins(coins);
     }
 
     @Override
@@ -520,5 +524,4 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
             return "[Character read failed due to disconnect]";
         }
     }
-
 }

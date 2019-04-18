@@ -11,16 +11,19 @@ import java.nio.ByteBuffer;
  * @author UnAfraid
  */
 public class ExWorldChatCnt extends IClientOutgoingPacket {
-    private final int _points;
+    private final int worldChatCount;
 
     public ExWorldChatCnt(L2PcInstance activeChar) {
-        _points = activeChar.getLevel() < Config.WORLD_CHAT_MIN_LEVEL ? 0 : Math.max(activeChar.getWorldChatPoints() - activeChar.getWorldChatUsed(), 0);
+        worldChatCount = canUseWorldChat(activeChar) ? Math.max(activeChar.getWorldChatPoints() - activeChar.getWorldChatUsed(), 0) : 0;
+    }
+
+    private boolean canUseWorldChat(L2PcInstance activeChar) {
+        return activeChar.getLevel() >= Config.WORLD_CHAT_MIN_LEVEL || activeChar.getVipTier() > 0;
     }
 
     @Override
     public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.EX_WORLD_CHAT_CNT.writeId(packet);
-
-        packet.putInt(_points);
+        packet.putInt(worldChatCount);
     }
 }

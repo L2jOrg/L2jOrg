@@ -1,7 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.vip;
 
 import org.l2j.gameserver.data.xml.impl.PrimeShopData;
-import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.L2GameClient;
@@ -20,11 +19,11 @@ public class ReceiveVipProductList extends IClientOutgoingPacket {
 
         var player = client.getActiveChar();
         var products = PrimeShopData.getInstance().getPrimeItems();
-        var vipTier = VipData.getInstance().getVipTier(player);
+        var vipTier = player.getVipTier();
 
         packet.putLong(player.getAdena());
-        packet.putLong(client.getRustyCoin()); // Rusty Coin Amount
-        packet.putLong(client.getSilverCoin()); // Silver Coin Amount
+        packet.putLong(player.getRustyCoin()); // Rusty Coin Amount
+        packet.putLong(player.getSilverCoin()); // Silver Coin Amount
         packet.put((byte) 1); // Show Reward tab
 
         packet.putInt(vipTier > 0 ? products.size() + 1 : products.size());

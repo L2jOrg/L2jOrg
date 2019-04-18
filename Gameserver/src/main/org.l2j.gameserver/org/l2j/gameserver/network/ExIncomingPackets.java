@@ -326,7 +326,7 @@ public enum ExIncomingPackets implements PacketFactory {
     REQUEST_EVENT_BALTHUS_TOKEN(0x11B, null, ConnectionState.IN_GAME),
     REQUEST_PARTY_MATCHING_HISTORY(0x11C, null, ConnectionState.IN_GAME),
     EX_ARENA_CUSTOM_NOTIFICATION(0x11D, null, ConnectionState.IN_GAME),
-    REQUEST_TODO_LIST(0x11E, RequestTodoList::new, ConnectionState.IN_GAME),
+    REQUEST_TODO_LIST(0x11E, RequestTodoList::new, ConnectionState.IN_GAME, ConnectionState.JOINING_GAME),
     REQUEST_TODO_LIST_HTML(0x11F, null, ConnectionState.IN_GAME),
     REQUEST_ONE_DAY_REWARD_RECEIVE(0x120, RequestOneDayRewardReceive::new, ConnectionState.IN_GAME),
     REQUEST_QUEUE_TICKET(0x121, null, ConnectionState.IN_GAME),

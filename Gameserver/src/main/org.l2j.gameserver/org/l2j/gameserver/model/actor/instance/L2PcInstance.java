@@ -113,6 +113,7 @@ public final class L2PcInstance extends L2Playable {
 
     // TODO: This needs to be better integrated and saved/loaded
     private final L2Radar radar;
+    private byte vipTier;
 
     private L2PcInstance(CharacterData characterData, L2PcTemplate template) {
         super(characterData.getCharId(), template);
@@ -2607,7 +2608,7 @@ public final class L2PcInstance extends L2Playable {
     public void addAncientAdena(String process, long count, L2Object reference, boolean sendMessage) {
         if (sendMessage) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
-            sm.addItemName(Inventory.ANCIENT_ADENA_ID);
+            sm.addItemName(CommonItem.ANCIENT_ADENA);
             sm.addLong(count);
             sendPacket(sm);
         }
@@ -2660,12 +2661,12 @@ public final class L2PcInstance extends L2Playable {
             if (sendMessage) {
                 if (count > 1) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
-                    sm.addItemName(Inventory.ANCIENT_ADENA_ID);
+                    sm.addItemName(CommonItem.ANCIENT_ADENA);
                     sm.addLong(count);
                     sendPacket(sm);
                 } else {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
-                    sm.addItemName(Inventory.ANCIENT_ADENA_ID);
+                    sm.addItemName(CommonItem.ANCIENT_ADENA);
                     sendPacket(sm);
                 }
             }
@@ -11256,7 +11257,35 @@ public final class L2PcInstance extends L2Playable {
         }
     }
 
+    public byte getVipTier() {
+        return vipTier;
+    }
+
+    public void setVipTier(byte vipTier) {
+        this.vipTier = vipTier;
+    }
+
     public long getVipPoints() {
         return getClient().getVipPoints();
+    }
+
+    public void updateVipPoints(int points) {
+        getClient().updateVipPoints(points);
+    }
+
+    public int getL2Coins() {
+        return getClient().getCoin();
+    }
+
+    public void updateL2Coins(int coins) {
+        getClient().updateCoin(coins);
+    }
+
+    public long getRustyCoin() {
+        return _inventory.getRustyCoin();
+    }
+
+    public long getSilverCoin() {
+        return _inventory.getSilverCoin();
     }
 }

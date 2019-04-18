@@ -330,22 +330,22 @@
     </product>
 
 -->
-    <product id="100099" category="11" price="80"> <!--Scroll of Escape (Novice) -->
-        <item id="10650" count="10"/>
-        <item id="29011" count="5"/> <!-- 1st Class Transfer Buff Scroll (29011) -->
+    <product id="100099" category="11" price="80">
         <item id="29648" count="5"/> <!--Scroll: Regular XP/SP Boost -->
+        <item id="29011" count="5"/> <!-- 1st Class Transfer Buff Scroll (29011) -->
+        <item id="10650" count="10"/> <!--Scroll of Escape (Novice) -->
         <item id="29652" count="100"/>  <!--Major Healing Potion Event-->
     </product>
-    <product id="100100" category="11" price="600"> <!--Scroll of Escape (Novice) -->
-        <item id="10650" count="15"/>
+    <product id="100100" category="11" price="600">
         <item id="29011" count="10"/> <!--1st Class Transfer Buff Scroll-->
+        <item id="10650" count="15"/> <!--Scroll of Escape (Novice) -->
         <item id="29648" count="10"/> <!--Scroll: Regular XP/SP Boost-->
         <item id="29652" count="50"/> <!--Major Healing Potion Event-->
     </product>
 
     <product id="100101" category="11" price="1200">
-        <item id="10650" count="25"/> <!--Scroll of Escape (Novice)-->
         <item id="29012" count="20"/> <!--2nd Class Transfer Buff Scroll-->
+        <item id="10650" count="25"/> <!--Scroll of Escape (Novice)-->
         <item id="29648" count="20"/> <!--Scroll: Regular XP/SP Boost-->
         <item id="49488" count="50"/> <!--Major Warrior Healing Potion-->
     </product>

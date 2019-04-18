@@ -12,8 +12,7 @@ public class ReceiveVipLuckyGameInfo extends IClientOutgoingPacket {
     protected void writeImpl(L2GameClient client, ByteBuffer packet) throws Exception {
         OutgoingPackets.RECEIVE_VIP_LUCKY_GAME_INFO.writeId(packet);
         packet.put((byte) 1); //Enable 1
-        packet.putInt(20); // Adena
-        packet.putInt(90); // L2 Coin
-
+        packet.putInt((int) client.getActiveChar().getAdena()); // Adena
+        packet.putInt(client.getCoin()); // L2 Coin
     }
 }

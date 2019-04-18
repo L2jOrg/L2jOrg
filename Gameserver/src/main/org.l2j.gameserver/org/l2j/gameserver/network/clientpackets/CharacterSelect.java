@@ -3,6 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.xml.impl.SecondaryAuthData;
+import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
@@ -108,6 +109,7 @@ public class CharacterSelect extends IClientIncomingPacket {
                     cha.setClient(client);
                     client.setActiveChar(cha);
                     cha.setOnlineStatus(true, true);
+                    cha.setVipTier(VipData.getInstance().getVipTier(cha));
 
                     final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(cha, cha.getObjectId(), cha.getName(), client), Containers.Players(), TerminateReturn.class);
                     if ((terminate != null) && terminate.terminate()) {

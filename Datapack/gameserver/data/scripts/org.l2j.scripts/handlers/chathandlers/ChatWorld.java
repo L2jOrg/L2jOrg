@@ -59,7 +59,7 @@ public final class ChatWorld implements IChatHandler
 			REUSE.values().removeIf(now::isAfter);
 		}
 		
-		if (activeChar.getLevel() < Config.WORLD_CHAT_MIN_LEVEL)
+		if (activeChar.getLevel() < Config.WORLD_CHAT_MIN_LEVEL && activeChar.getVipTier() < 1)
 		{
 			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_USE_WORLD_CHAT_FROM_LV_S1);
 			msg.addInt(Config.WORLD_CHAT_MIN_LEVEL);

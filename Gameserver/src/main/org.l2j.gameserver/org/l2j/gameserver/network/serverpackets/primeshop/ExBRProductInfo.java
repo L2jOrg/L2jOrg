@@ -19,7 +19,7 @@ public class ExBRProductInfo extends IClientOutgoingPacket {
 
     public ExBRProductInfo(PrimeShopProduct item, L2PcInstance player) {
         _item = item;
-        _charPoints = player.getPrimePoints();
+        _charPoints = player.getL2Coins();
         _charAdena = player.getAdena();
     }
 

@@ -14,25 +14,25 @@
     </vip>
 
     <vip tier="3" points_required="2000" points_depreciated="660">
-        <bonus xp_sp="1.15" item_drop="3.0" death_penalty_reduction="0.90" world_chat="3" silver_coin_acquisition="0.4"/>
+        <bonus xp_sp="1.15" item_drop="3.0" death_penalty_reduction="0.90" world_chat="3" silver_coin_acquisition="40"/>
     </vip>
 
     <vip tier="4" points_required="3500" points_depreciated="1050">
-        <bonus xp_sp="1.25" item_drop="3.5" death_penalty_reduction="0.85" world_chat="5" fishing_xp="1.2" silver_coin_acquisition="0.45"/>
+        <bonus xp_sp="1.25" item_drop="3.5" death_penalty_reduction="0.85" world_chat="5" fishing_xp="1.2" silver_coin_acquisition="45"/>
     </vip>
 
     <vip tier="5" points_required="7000" points_depreciated="1750">
         <bonus xp_sp="1.3" item_drop="3.5" death_penalty_reduction="0.80" pve_damage="1.05" world_chat="10" fishing_xp="1.2"
-               silver_coin_acquisition="0.5" rusty_coin_acquisition="0.35"/>
+               silver_coin_acquisition="50" rusty_coin_acquisition="35"/>
     </vip>
 
     <vip tier="6" points_required="20000" points_depreciated="4000">
         <bonus xp_sp="1.3" item_drop="3.5" death_penalty_reduction="0.80" pve_damage="1.1" world_chat="10" fishing_xp="1.2"
-               silver_coin_acquisition="0.6" rusty_coin_acquisition="0.45" combat_attribute="1"/>
+               silver_coin_acquisition="60" rusty_coin_acquisition="45" combat_attribute="1"/>
     </vip>
 
     <vip tier="7" points_required="40000" points_depreciated="6000">
         <bonus xp_sp="1.3" item_drop="3.5" death_penalty_reduction="0.80" pve_damage="1.15" world_chat="10" fishing_xp="1.2"
-               silver_coin_acquisition="0.7" rusty_coin_acquisition="0.55" combat_attribute="2" pvp_damage="1.05"/>
+               silver_coin_acquisition="70" rusty_coin_acquisition="55" combat_attribute="2" pvp_damage="1.05"/>
     </vip>
 </list>
