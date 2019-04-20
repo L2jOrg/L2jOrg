@@ -5,6 +5,7 @@ import org.l2j.gameserver.data.xml.impl.PrimeShopData;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.request.PrimeShopRequest;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -87,7 +88,7 @@ public final class RequestBRBuyProduct extends IClientIncomingPacket {
             }
             case 1: // Adenas
             {
-                return Inventory.ADENA_ID;
+                return CommonItem.ADENA;
             }
             case 2: // Hero coins
             {

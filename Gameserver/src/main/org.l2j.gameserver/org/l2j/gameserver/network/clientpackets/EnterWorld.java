@@ -5,10 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.AnnouncementsTable;
 import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
-import org.l2j.gameserver.data.xml.impl.AdminData;
-import org.l2j.gameserver.data.xml.impl.BeautyShopData;
-import org.l2j.gameserver.data.xml.impl.ClanHallData;
-import org.l2j.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.instancemanager.*;
@@ -280,7 +277,9 @@ public class EnterWorld extends IClientIncomingPacket {
         // Send Equipped Items
         activeChar.sendPacket(new ExUserInfoEquipSlot(activeChar));
 
-        client.sendPacket(new ReceiveVipInfo());
+        if(activeChar.getVipTier() > 0 && !VipData.getInstance().checkVipTierExpiration(activeChar)) {
+            client.sendPacket(new ReceiveVipInfo());
+        }
 
         // Send Unread Mail Count
         if (MailManager.getInstance().hasUnreadPost(activeChar)) {

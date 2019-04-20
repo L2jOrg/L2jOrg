@@ -12,6 +12,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcTeleportRequest;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -213,7 +214,7 @@ public final class TeleportHolder {
 
         // Check rest of conditions
         if (shouldPayFee(player, loc) && !player.destroyItemByItemId("Teleport", loc.getFeeId(), calculateFee(player, loc), npc, true)) {
-            if (loc.getFeeId() == Inventory.ADENA_ID) {
+            if (loc.getFeeId() == CommonItem.ADENA) {
                 player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
             } else {
                 player.sendMessage("You do not have enough " + getItemName(loc.getFeeId(), false));
@@ -268,9 +269,9 @@ public final class TeleportHolder {
      */
     private String getItemName(int itemId, boolean fstring) {
         if (fstring) {
-            if (itemId == Inventory.ADENA_ID) {
+            if (itemId == CommonItem.ADENA) {
                 return "<fstring>1000308</fstring>";
-            } else if (itemId == Inventory.ANCIENT_ADENA_ID) {
+            } else if (itemId == CommonItem.ANCIENT_ADENA) {
                 return "<fstring>1000309</fstring>";
             }
         }

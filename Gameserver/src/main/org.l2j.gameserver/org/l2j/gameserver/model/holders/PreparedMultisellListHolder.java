@@ -21,6 +21,7 @@ import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
+import org.l2j.gameserver.model.items.CommonItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,7 +86,7 @@ public class PreparedMultisellListHolder extends MultisellListHolder {
      * @return the new count of the given ingredient after applying ingredient multiplier and adena tax rate.
      */
     public long getIngredientCount(ItemHolder ingredient) {
-        return (ingredient.getId() == Inventory.ADENA_ID) ? Math.round(ingredient.getCount() * getIngredientMultiplier() * (1 + getTaxRate())) : Math.round(ingredient.getCount() * getIngredientMultiplier());
+        return (ingredient.getId() == CommonItem.ADENA) ? Math.round(ingredient.getCount() * getIngredientMultiplier() * (1 + getTaxRate())) : Math.round(ingredient.getCount() * getIngredientMultiplier());
     }
 
     /**

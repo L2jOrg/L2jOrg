@@ -30,6 +30,7 @@ import org.l2j.gameserver.model.actor.stat.PetStat;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.PetInventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -414,7 +415,7 @@ public class L2PetInstance extends L2Summon {
             }
 
             if ((target.getOwnerId() != 0) && (target.getOwnerId() != getOwner().getObjectId()) && !getOwner().isInLooterParty(target.getOwnerId())) {
-                if (target.getId() == Inventory.ADENA_ID) {
+                if (target.getId() == CommonItem.ADENA) {
                     smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
                     smsg.addLong(target.getCount());
                 } else if (target.getCount() > 1) {
@@ -454,7 +455,7 @@ public class L2PetInstance extends L2Summon {
             ItemTable.getInstance().destroyItem("Consume", target, getOwner(), null);
             broadcastStatusUpdate();
         } else {
-            if (target.getId() == Inventory.ADENA_ID) {
+            if (target.getId() == CommonItem.ADENA) {
                 smsg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1_ADENA);
                 smsg.addLong(target.getCount());
                 sendPacket(smsg);

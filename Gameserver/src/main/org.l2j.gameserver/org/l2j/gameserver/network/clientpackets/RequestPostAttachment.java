@@ -10,6 +10,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -190,7 +191,7 @@ public final class RequestPostAttachment extends IClientIncomingPacket {
                 sm.addString(activeChar.getName());
                 sender.sendPacket(sm);
             } else {
-                final L2ItemInstance paidAdena = ItemTable.getInstance().createItem("PayMail", Inventory.ADENA_ID, adena, activeChar, null);
+                final L2ItemInstance paidAdena = ItemTable.getInstance().createItem("PayMail", CommonItem.ADENA, adena, activeChar, null);
                 paidAdena.setOwnerId(msg.getSenderId());
                 paidAdena.setItemLocation(ItemLocation.INVENTORY);
                 paidAdena.updateDatabase(true);

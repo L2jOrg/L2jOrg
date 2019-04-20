@@ -16,8 +16,8 @@ public final class TaskRestart extends Task {
     }
 
     @Override
-    public void onTimeElapsed(TaskManager.ExecutedTask task) {
-        final Shutdown handler = new Shutdown(Integer.parseInt(task.getParams()[2]), true);
+    public void onTimeElapsed(TaskManager.ExecutableTask task) {
+        final Shutdown handler = new Shutdown(Integer.parseInt(task.getParam3()), true);
         handler.start();
     }
 }

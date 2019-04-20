@@ -1,92 +1,54 @@
 package org.l2j.gameserver.taskmanager;
 
-import org.l2j.commons.database.DatabaseFactory;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.gameserver.data.database.dao.TaskDAO;
+import org.l2j.gameserver.data.database.data.TaskData;
 import org.l2j.gameserver.taskmanager.tasks.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
 
-
+import static java.lang.System.currentTimeMillis;
+import static java.util.Objects.isNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author Layane
  */
 public final class TaskManager {
-    static final Logger LOGGER = LoggerFactory.getLogger(TaskManager.class.getName());
-    static final String[] SQL_STATEMENTS =
-            {
-                    "SELECT id,task,type,last_activation,param1,param2,param3 FROM global_tasks",
-                    "UPDATE global_tasks SET last_activation=? WHERE id=?",
-                    "SELECT id FROM global_tasks WHERE task=?",
-                    "INSERT INTO global_tasks (task,type,last_activation,param1,param2,param3) VALUES(?,?,?,?,?,?)"
-            };
-    final List<ExecutedTask> _currentTasks = new CopyOnWriteArrayList<>();
-    private final Map<Integer, Task> _tasks = new ConcurrentHashMap<>();
+    private static final Logger LOGGER = LoggerFactory.getLogger(TaskManager.class.getName());
+
+    private final IntObjectMap<Task> tasks = new CHashIntObjectMap<>();
 
     private TaskManager() {
         initializate();
         startAllTasks();
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _tasks.size() + " Tasks.");
+        LOGGER.info("Loaded: {} Tasks", tasks.size());
     }
 
-    public static boolean addUniqueTask(String task, TaskTypes type, String param1, String param2, String param3) {
+    public static boolean addUniqueTask(String task, TaskType type, String param1, String param2, String param3) {
         return addUniqueTask(task, type, param1, param2, param3, 0);
     }
 
-    private static boolean addUniqueTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps1 = con.prepareStatement(SQL_STATEMENTS[2])) {
-            ps1.setString(1, task);
-            try (ResultSet rs = ps1.executeQuery()) {
-                if (!rs.next()) {
-                    try (PreparedStatement ps2 = con.prepareStatement(SQL_STATEMENTS[3])) {
-                        ps2.setString(1, task);
-                        ps2.setString(2, type.toString());
-                        ps2.setLong(3, lastActivation);
-                        ps2.setString(4, param1);
-                        ps2.setString(5, param2);
-                        ps2.setString(6, param3);
-                        ps2.execute();
-                    }
-                }
-            }
-            return true;
-        } catch (SQLException e) {
-            LOGGER.warn(TaskManager.class.getSimpleName() + ": Cannot add the unique task: " + e.getMessage(), e);
-        }
-        return false;
-    }
+    private static boolean addUniqueTask(String task, TaskType type, String param1, String param2, String param3, long lastActivation) {
+        var taskDao = getDAO(TaskDAO.class);
 
-    public static boolean addTask(String task, TaskTypes type, String param1, String param2, String param3) {
-        return addTask(task, type, param1, param2, param3, 0);
-    }
-
-    private static boolean addTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[3])) {
-            statement.setString(1, task);
-            statement.setString(2, type.toString());
-            statement.setLong(3, lastActivation);
-            statement.setString(4, param1);
-            statement.setString(5, param2);
-            statement.setString(6, param3);
-            statement.execute();
-            return true;
-        } catch (SQLException e) {
-            LOGGER.warn("Cannot add the task:  " + e.getMessage(), e);
+        if(!taskDao.existsWithName(task)) {
+            var data = new TaskData();
+            data.setLastActivation(lastActivation);
+            data.setName(task);
+            data.setType(type.name());
+            data.setParam1(param1);
+            data.setParam2(param2);
+            data.setParam3(param3);
+            return taskDao.save(data);
         }
         return false;
     }
@@ -100,84 +62,75 @@ public final class TaskManager {
     }
 
     private void registerTask(Task task) {
-        _tasks.computeIfAbsent(task.getName().hashCode(), k ->
-        {
+        tasks.computeIfAbsent(task.getName().hashCode(), k -> {
             task.initializate();
             return task;
         });
     }
 
     private void startAllTasks() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[0]);
-             ResultSet rset = statement.executeQuery()) {
-            while (rset.next()) {
-                final Task task = _tasks.get(rset.getString("task").trim().toLowerCase().hashCode());
-                if (task == null) {
-                    continue;
-                }
-
-                final TaskTypes type = TaskTypes.valueOf(rset.getString("type"));
-                if (type != TaskTypes.TYPE_NONE) {
-                    final ExecutedTask current = new ExecutedTask(task, type, rset);
-                    if (launchTask(current)) {
-                        _currentTasks.add(current);
-                    }
-                }
+        getDAO(TaskDAO.class).findAll().forEach(data -> {
+            final var task = tasks.get(data.getName().trim().toLowerCase().hashCode());
+            if(isNull(task)) {
+                return;
             }
-        } catch (Exception e) {
-            LOGGER.error(getClass().getSimpleName() + ": Error while loading Global Task table: " + e.getMessage(), e);
-        }
+
+            var type = TaskType.valueOf(data.geType());
+            if(TaskType.NONE != type) {
+                final ExecutableTask current = new ExecutableTask(task, type, data);
+                launchTask(current);
+            }
+        });
     }
 
-    private boolean launchTask(ExecutedTask task) {
-        final TaskTypes type = task.getType();
+    private boolean launchTask(ExecutableTask task) {
         long delay;
         long interval;
-        switch (type) {
-            case TYPE_STARTUP: {
+        return switch (task.getType()) {
+            case STARTUP -> {
                 task.run();
-                return false;
+                break false;
             }
-            case TYPE_SHEDULED: {
-                delay = Long.valueOf(task.getParams()[0]);
-                task.scheduled = ThreadPoolManager.getInstance().schedule(task, delay);
-                return true;
+            case SHEDULED -> {
+                delay = Long.valueOf(task.getParam1());
+                task.scheduled = ThreadPoolManager.schedule(task, delay);
+                break true;
             }
-            case TYPE_FIXED_SHEDULED: {
-                delay = Long.valueOf(task.getParams()[0]);
-                interval = Long.valueOf(task.getParams()[1]);
-                task.scheduled = ThreadPoolManager.getInstance().scheduleAtFixedRate(task, delay, interval);
-                return true;
+            case FIXED_SHEDULED -> {
+                delay = Long.valueOf(task.getParam1());
+                interval = Long.valueOf(task.getParam2());
+                task.scheduled = ThreadPoolManager.scheduleAtFixedRate(task, delay, interval);
+                break true;
             }
-            case TYPE_TIME: {
+            case TIME -> {
                 try {
-                    final Date desired = DateFormat.getInstance().parse(task.getParams()[0]);
-                    final long diff = desired.getTime() - System.currentTimeMillis();
+                    final Date desired = DateFormat.getInstance().parse(task.getParam1());
+                    final long diff = desired.getTime() - currentTimeMillis();
                     if (diff >= 0) {
-                        task.scheduled = ThreadPoolManager.getInstance().schedule(task, diff);
-                        return true;
+                        task.scheduled = ThreadPoolManager.schedule(task, diff);
+                        break  true;
                     }
-                    LOGGER.info(getClass().getSimpleName() + ": Task " + task.getId() + " is obsoleted.");
+                    LOGGER.info("Task {} is obsoleted", task.getId());
                 } catch (Exception e) {
+                    LOGGER.warn(e.getMessage(), e);
                 }
-                break;
+                break false;
             }
-            case TYPE_SPECIAL: {
+            case SPECIAL -> {
                 final ScheduledFuture<?> result = task.getTask().launchSpecial(task);
                 if (result != null) {
                     task.scheduled = result;
-                    return true;
+                    break  true;
                 }
-                break;
+                break false;
             }
-            case TYPE_GLOBAL_TASK: {
-                interval = Long.valueOf(task.getParams()[0]) * 86400000;
-                final String[] hour = task.getParams()[1].split(":");
+            case GLOBAL_TASK -> {
+                interval = Long.valueOf(task.getParam1()) * 86400000;
+                final String[] hour = task.getParam2().split(":");
 
                 if (hour.length != 3) {
-                    LOGGER.warn(": Task " + task.getId() + " has incorrect parameters");
-                    return false;
+                    LOGGER.warn("Task {} has incorrect parameters {}", task.getId(), task.getParam2());
+                    break  false;
                 }
 
                 final Calendar check = Calendar.getInstance();
@@ -189,23 +142,20 @@ public final class TaskManager {
                     min.set(Calendar.MINUTE, Integer.parseInt(hour[1]));
                     min.set(Calendar.SECOND, Integer.parseInt(hour[2]));
                 } catch (Exception e) {
-                    LOGGER.warn(getClass().getSimpleName() + ": Bad parameter on task " + task.getId() + ": " + e.getMessage(), e);
-                    return false;
+                    LOGGER.warn("Bad parameter " + task.getParam2() + " on task " + task.getId() + ": " + e.getMessage(), e);
+                    break  false;
                 }
 
-                delay = min.getTimeInMillis() - System.currentTimeMillis();
+                delay = min.getTimeInMillis() - currentTimeMillis();
 
                 if (check.after(min) || (delay < 0)) {
                     delay += interval;
                 }
                 task.scheduled = ThreadPoolManager.scheduleAtFixedRate(task, delay, interval);
-                return true;
+                break  true;
             }
-            default: {
-                return false;
-            }
-        }
-        return false;
+            default -> false;
+        };
     }
 
     public static TaskManager getInstance() {
@@ -216,73 +166,57 @@ public final class TaskManager {
         private static final TaskManager INSTANCE = new TaskManager();
     }
 
-    public class ExecutedTask implements Runnable {
+    public class ExecutableTask implements Runnable {
         private final Task task;
-        private final TaskTypes type;
-        private final String[] params;
-        int id;
+        private final TaskType type;
+        private final TaskData data;
         ScheduledFuture<?> scheduled;
-        private long lastActivation;
 
-        ExecutedTask(Task ptask, TaskTypes ptype, ResultSet rset) throws SQLException {
-            task = ptask;
-            type = ptype;
-            id = rset.getInt("id");
-            lastActivation = rset.getLong("last_activation");
-            params = new String[]
-                    {
-                            rset.getString("param1"),
-                            rset.getString("param2"),
-                            rset.getString("param3")
-                    };
+        private ExecutableTask(Task task, TaskType type, TaskData data) {
+            this.task = task;
+            this.type = type;
+            this.data = data;
         }
 
         @Override
         public void run() {
             task.onTimeElapsed(this);
-            lastActivation = System.currentTimeMillis();
-            try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[1])) {
-                statement.setLong(1, lastActivation);
-                statement.setInt(2, id);
-                statement.executeUpdate();
-            } catch (SQLException e) {
-                LOGGER.warn(getClass().getSimpleName() + ": Cannot updated the Global Task " + id + ": " + e.getMessage(), e);
-            }
+            var lastActivation = currentTimeMillis();
+            data.setLastActivation(lastActivation);
+            getDAO(TaskDAO.class).updateLastActivation(data.getId(), lastActivation);
 
-            if ((type == TaskTypes.TYPE_SHEDULED) || (type == TaskTypes.TYPE_TIME)) {
+            if ((type == TaskType.SHEDULED) || (type == TaskType.TIME)) {
                 stopTask();
             }
         }
 
         @Override
-        public boolean equals(Object object) {
-            return (this == object) || ((object instanceof ExecutedTask) && (id == ((ExecutedTask) object).id));
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            ExecutableTask that = (ExecutableTask) o;
+            return Objects.equals(data, that.data);
         }
 
         @Override
         public int hashCode() {
-            return id;
+            return Objects.hash(data);
         }
 
         public Task getTask() {
             return task;
         }
 
-        public TaskTypes getType() {
+        public TaskType getType() {
             return type;
         }
 
         public int getId() {
-            return id;
-        }
-
-        public String[] getParams() {
-            return params;
+            return data.getId();
         }
 
         public long getLastActivation() {
-            return lastActivation;
+            return data.getLastActivation();
         }
 
         private void stopTask() {
@@ -291,8 +225,18 @@ public final class TaskManager {
             if (scheduled != null) {
                 scheduled.cancel(true);
             }
+        }
 
-            _currentTasks.remove(this);
+        String getParam1() {
+            return data.getParam1();
+        }
+
+        String getParam2() {
+            return data.getParam2();
+        }
+
+        public String getParam3() {
+            return data.getparam3();
         }
     }
 }

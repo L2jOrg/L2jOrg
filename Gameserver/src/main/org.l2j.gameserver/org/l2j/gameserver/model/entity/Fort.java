@@ -20,6 +20,7 @@ import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.model.zone.type.L2FortZone;
 import org.l2j.gameserver.model.zone.type.L2SiegeZone;
@@ -428,7 +429,7 @@ public final class Fort extends AbstractResidence {
         if (player == null) {
             return false;
         }
-        if ((lease > 0) && !player.destroyItemByItemId("Consume", Inventory.ADENA_ID, lease, null, true)) {
+        if ((lease > 0) && !player.destroyItemByItemId("Consume", CommonItem.ADENA, lease, null, true)) {
             return false;
         }
         if (addNew) {
@@ -988,9 +989,9 @@ public final class Fort extends AbstractResidence {
                         setEndTime(System.currentTimeMillis() + _rate);
                         dbSave();
                         if (_cwh) {
-                            _fortOwner.getWarehouse().destroyItemByItemId("CS_function_fee", Inventory.ADENA_ID, fee, null, null);
+                            _fortOwner.getWarehouse().destroyItemByItemId("CS_function_fee", CommonItem.ADENA, fee, null, null);
                         }
-                        ThreadPoolManager.getInstance().schedule(new FunctionTask(true), _rate);
+                        ThreadPoolManager.schedule(new FunctionTask(true), _rate);
                     } else {
                         removeFunction(_type);
                     }

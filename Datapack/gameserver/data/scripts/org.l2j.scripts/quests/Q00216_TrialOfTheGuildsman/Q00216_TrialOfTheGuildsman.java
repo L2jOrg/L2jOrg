@@ -21,6 +21,7 @@ import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
@@ -106,10 +107,10 @@ public final class Q00216_TrialOfTheGuildsman extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (getQuestItemsCount(player, Inventory.ADENA_ID) >= 2000)
+				if (getQuestItemsCount(player, CommonItem.ADENA) >= 2000)
 				{
 					qs.startQuest();
-					takeItems(player, Inventory.ADENA_ID, 2000);
+					takeItems(player, CommonItem.ADENA, 2000);
 					if (!hasQuestItems(player, VALKONS_RECOMMENDATION))
 					{
 						giveItems(player, VALKONS_RECOMMENDATION, 1);

@@ -8,6 +8,7 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.itemcontainer.PcFreight;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -102,7 +103,7 @@ public class RequestPackageSend extends IClientIncomingPacket {
             }
 
             // Calculate needed adena and slots
-            if (item.getId() == Inventory.ADENA_ID) {
+            if (item.getId() == CommonItem.ADENA) {
                 currentAdena -= i.getCount();
             } else if (!item.isStackable()) {
                 slots += i.getCount();

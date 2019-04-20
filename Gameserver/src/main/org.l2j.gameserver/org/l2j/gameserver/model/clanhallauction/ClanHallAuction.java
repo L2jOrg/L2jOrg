@@ -23,6 +23,7 @@ import org.l2j.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -129,7 +130,7 @@ public class ClanHallAuction {
     }
 
     public void returnAdenas(Bidder bidder) {
-        bidder.getClan().getWarehouse().addItem("Clan Hall Auction Outbid", Inventory.ADENA_ID, bidder.getBid(), null, null);
+        bidder.getClan().getWarehouse().addItem("Clan Hall Auction Outbid", CommonItem.ADENA, bidder.getBid(), null, null);
     }
 
     public void finalizeAuctions() {

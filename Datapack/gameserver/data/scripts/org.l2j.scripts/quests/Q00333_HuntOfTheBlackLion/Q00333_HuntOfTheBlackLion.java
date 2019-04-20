@@ -20,7 +20,7 @@ import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.util.Util;
@@ -386,13 +386,13 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 			}
 			case "30736-03.html":
 			{
-				if ((getQuestItemsCount(player, Inventory.ADENA_ID) < 650) && ((getQuestItemsCount(player, CARGO_BOX_1ST) + getQuestItemsCount(player, CARGO_BOX_2ND) + getQuestItemsCount(player, CARGO_BOX_3RD) + getQuestItemsCount(player, CARGO_BOX_4TH)) >= 1))
+				if ((getQuestItemsCount(player, CommonItem.ADENA) < 650) && ((getQuestItemsCount(player, CARGO_BOX_1ST) + getQuestItemsCount(player, CARGO_BOX_2ND) + getQuestItemsCount(player, CARGO_BOX_3RD) + getQuestItemsCount(player, CARGO_BOX_4TH)) >= 1))
 				{
 					htmltext = event;
 				}
-				else if ((getQuestItemsCount(player, Inventory.ADENA_ID) >= 650) && ((getQuestItemsCount(player, CARGO_BOX_1ST) + getQuestItemsCount(player, CARGO_BOX_2ND) + getQuestItemsCount(player, CARGO_BOX_3RD) + getQuestItemsCount(player, CARGO_BOX_4TH)) >= 1))
+				else if ((getQuestItemsCount(player, CommonItem.ADENA) >= 650) && ((getQuestItemsCount(player, CARGO_BOX_1ST) + getQuestItemsCount(player, CARGO_BOX_2ND) + getQuestItemsCount(player, CARGO_BOX_3RD) + getQuestItemsCount(player, CARGO_BOX_4TH)) >= 1))
 				{
-					takeItems(player, Inventory.ADENA_ID, 650);
+					takeItems(player, CommonItem.ADENA, 650);
 					if (hasQuestItems(player, CARGO_BOX_1ST))
 					{
 						takeItems(player, CARGO_BOX_1ST, 1);
@@ -626,7 +626,7 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 					{
 						htmltext = "30736-08t.html";
 					}
-					takeItems(player, Inventory.ADENA_ID, 200 + (qs.getMemoState() * 200));
+					takeItems(player, CommonItem.ADENA, 200 + (qs.getMemoState() * 200));
 					qs.setMemoState(qs.getMemoState() + 1);
 				}
 				break;

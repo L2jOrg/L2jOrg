@@ -4,7 +4,6 @@ import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.gameserver.data.xml.model.VipInfo;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.w3c.dom.Document;
@@ -13,7 +12,6 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.nio.file.Path;
 import java.time.Instant;
-import java.time.temporal.ChronoUnit;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -72,8 +70,17 @@ public class VipData extends IGameXmlReader{
         return getVipInfo(player).getTier();
     }
 
+    public byte getVipTier(long points) {
+        return getVipInfo(points).getTier();
+    }
+
+
     private VipInfo getVipInfo(L2PcInstance player) {
         var points =  player.getVipPoints();
+        return getVipInfo(points);
+    }
+
+    private VipInfo getVipInfo(long points) {
         for (byte i = 0; i < vipTiers.size(); i++) {
             if(points < vipTiers.get(i).getPointsRequired()) {
                 return vipTiers.get(i - 1);
@@ -133,16 +140,13 @@ public class VipData extends IGameXmlReader{
         return getVipInfo(player).getRustyCoinChance();
     }
 
-    public void checkVipTierExpiration(L2PcInstance player) {
-        var expiration = player.getVipTierExpiration();
+    public boolean checkVipTierExpiration(L2PcInstance player) {
         var now = Instant.now();
-        if(now.isAfter(Instant.ofEpochMilli(expiration))) {
-            player.updateVipPoints(VipData.getInstance().getPointsDepreciatedOnLevel(player.getVipTier()));
-            player.setVipTier((byte) (player.getVipTier() -1));
-            player.setVipTierExpiration(now.plus(30, ChronoUnit.DAYS).toEpochMilli());
-
-            player.sendPacket(new ReceiveVipInfo());
+        if(now.isAfter(Instant.ofEpochMilli(player.getVipTierExpiration()))) {
+            player.updateVipPoints(getPointsDepreciatedOnLevel(player.getVipTier()));
+            return true;
         }
+        return false;
     }
 
     public static VipData getInstance() {

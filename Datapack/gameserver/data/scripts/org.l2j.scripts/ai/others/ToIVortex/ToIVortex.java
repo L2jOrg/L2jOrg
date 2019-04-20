@@ -21,6 +21,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -121,7 +122,7 @@ public final class ToIVortex extends AbstractNpcAI
 			{
 				if (player.getAdena() >= 100000)
 				{
-					takeItems(player, Inventory.ADENA_ID, 100000);
+					takeItems(player, CommonItem.ADENA, 100000);
 					giveItems(player, DIMENSION_TRADE.get(event), 1);
 				}
 				else

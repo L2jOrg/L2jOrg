@@ -9,18 +9,17 @@ public class TaskVipExpiration extends Task {
 
     @Override
     public String getName() {
-        return "vip_expiration";
+        return "vipExpiration";
     }
 
     @Override
-    public void onTimeElapsed(TaskManager.ExecutedTask task) {
+    public void onTimeElapsed(TaskManager.ExecutableTask task) {
         L2World.getInstance().getPlayers().forEach(player -> {
             if(player.getVipTier() < 1) {
                 return;
             }
 
             VipData.getInstance().checkVipTierExpiration(player);
-
         });
     }
 }

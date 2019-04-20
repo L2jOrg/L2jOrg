@@ -260,7 +260,7 @@ public class PcInventory extends Inventory {
      */
     public void addAdena(String process, long count, L2PcInstance actor, Object reference) {
         if (count > 0) {
-            addItem(process, ADENA_ID, count, actor, reference);
+            addItem(process, CommonItem.ADENA, count, actor, reference);
         }
     }
 
@@ -289,7 +289,7 @@ public class PcInventory extends Inventory {
      */
     public boolean reduceAdena(String process, long count, L2PcInstance actor, Object reference) {
         if (count > 0) {
-            return destroyItemByItemId(process, ADENA_ID, count, actor, reference) != null;
+            return destroyItemByItemId(process, CommonItem.ADENA, count, actor, reference) != null;
         }
         return false;
     }
@@ -320,7 +320,7 @@ public class PcInventory extends Inventory {
      */
     public void addAncientAdena(String process, long count, L2PcInstance actor, Object reference) {
         if (count > 0) {
-            addItem(process, ANCIENT_ADENA_ID, count, actor, reference);
+            addItem(process,CommonItem.ANCIENT_ADENA, count, actor, reference);
         }
     }
 
@@ -335,7 +335,7 @@ public class PcInventory extends Inventory {
      */
     public boolean reduceAncientAdena(String process, long count, L2PcInstance actor, Object reference) {
         if (count > 0) {
-            return destroyItemByItemId(process, ANCIENT_ADENA_ID, count, actor, reference) != null;
+            return destroyItemByItemId(process, CommonItem.ANCIENT_ADENA, count, actor, reference) != null;
         }
         return false;
     }
@@ -413,9 +413,9 @@ public class PcInventory extends Inventory {
     public L2ItemInstance addItem(String process, int itemId, long count, L2PcInstance actor, Object reference, boolean update) {
         final L2ItemInstance item = super.addItem(process, itemId, count, actor, reference);
         if (item != null) {
-            if ((item.getId() == ADENA_ID) && !item.equals(_adena)) {
+            if ((item.getId() == CommonItem.ADENA) && !item.equals(_adena)) {
                 _adena = item;
-            } else if ((item.getId() == ANCIENT_ADENA_ID) && !item.equals(_ancientAdena)) {
+            } else if ((item.getId() == CommonItem.ANCIENT_ADENA) && !item.equals(_ancientAdena)) {
                 _ancientAdena = item;
             } else if ((item.getId() == BEAUTY_TICKET_ID) && !item.equals(_beautyTickets)) {
                 _beautyTickets = item;
@@ -630,9 +630,9 @@ public class PcInventory extends Inventory {
             _owner.removeRequestsThatProcessesItem(item.getObjectId());
         }
 
-        if (item.getId() == ADENA_ID) {
+        if (item.getId() == CommonItem.ADENA) {
             _adena = null;
-        } else if (item.getId() == ANCIENT_ADENA_ID) {
+        } else if (item.getId() == CommonItem.ANCIENT_ADENA) {
             _ancientAdena = null;
         } else if (item.getId() == BEAUTY_TICKET_ID) {
             _beautyTickets = null;
@@ -656,8 +656,8 @@ public class PcInventory extends Inventory {
     @Override
     public void restore() {
         super.restore();
-        _adena = getItemByItemId(ADENA_ID);
-        _ancientAdena = getItemByItemId(ANCIENT_ADENA_ID);
+        _adena = getItemByItemId(CommonItem.ADENA);
+        _ancientAdena = getItemByItemId(CommonItem.ANCIENT_ADENA);
         _beautyTickets = getItemByItemId(BEAUTY_TICKET_ID);
     }
 
@@ -774,7 +774,7 @@ public class PcInventory extends Inventory {
      * Block all items except adena
      */
     public void blockAllItems() {
-        setInventoryBlock(Arrays.asList(ADENA_ID), InventoryBlockType.WHITELIST);
+        setInventoryBlock(Collections.singletonList(CommonItem.ADENA), InventoryBlockType.WHITELIST);
     }
 
     /**

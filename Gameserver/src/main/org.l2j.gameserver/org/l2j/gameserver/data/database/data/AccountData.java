@@ -1,4 +1,4 @@
-package org.l2j.gameserver.data.database.model;
+package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;

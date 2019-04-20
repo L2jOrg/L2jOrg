@@ -11,6 +11,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.Mail;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.InvalidDataPacketException;
@@ -227,7 +228,7 @@ public final class RequestSendPost extends IClientIncomingPacket {
 
                 fee += MESSAGE_FEE_PER_SLOT;
 
-                if (item.getId() == Inventory.ADENA_ID) {
+                if (item.getId() == CommonItem.ADENA) {
                     currentAdena -= i.getCount();
                 }
             }

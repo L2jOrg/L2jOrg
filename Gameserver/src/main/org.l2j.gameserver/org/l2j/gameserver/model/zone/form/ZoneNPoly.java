@@ -20,6 +20,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.zone.L2ZoneForm;
 
 import java.awt.*;
@@ -93,7 +94,7 @@ public class ZoneNPoly extends L2ZoneForm {
             final int vy = _p.ypoints[nextIndex] - _p.ypoints[i];
             final float lenght = (float) Math.sqrt((vx * vx) + (vy * vy)) / STEP;
             for (int o = 1; o <= lenght; o++) {
-                dropDebugItem(Inventory.ADENA_ID, 1, (int) (_p.xpoints[i] + ((o / lenght) * vx)), (int) (_p.ypoints[i] + ((o / lenght) * vy)), z);
+                dropDebugItem(CommonItem.ADENA, 1, (int) (_p.xpoints[i] + ((o / lenght) * vx)), (int) (_p.ypoints[i] + ((o / lenght) * vy)), z);
             }
         }
     }

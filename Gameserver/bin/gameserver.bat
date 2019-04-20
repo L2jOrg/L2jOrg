@@ -1,5 +1,5 @@
 @echo off
-title L2 Classic: Saviors (Zaken) (Game Server)
+title L2 Classic: Seven Signs (Game Server)
 
 :start
 echo Starting GameServer.

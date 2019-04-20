@@ -19,6 +19,7 @@ package org.l2j.gameserver;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -56,7 +57,7 @@ public class FortUpdater implements Runnable {
 
                     if (_fort.getFortState() == 2) {
                         if (_clan.getWarehouse().getAdena() >= Config.FS_FEE_FOR_CASTLE) {
-                            _clan.getWarehouse().destroyItemByItemId("FS_fee_for_Castle", Inventory.ADENA_ID, Config.FS_FEE_FOR_CASTLE, null, null);
+                            _clan.getWarehouse().destroyItemByItemId("FS_fee_for_Castle", CommonItem.ADENA, Config.FS_FEE_FOR_CASTLE, null, null);
                             _fort.getContractedCastle().addToTreasuryNoTax(Config.FS_FEE_FOR_CASTLE);
                             _fort.raiseSupplyLvL();
                         } else {

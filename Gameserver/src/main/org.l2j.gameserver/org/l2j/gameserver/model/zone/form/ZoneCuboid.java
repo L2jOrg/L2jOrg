@@ -4,6 +4,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.zone.L2ZoneForm;
 
 import java.awt.*;
@@ -88,13 +89,13 @@ public class ZoneCuboid extends L2ZoneForm {
 
         // x1->x2
         for (int x = _x1; x < _x2; x += STEP) {
-            dropDebugItem(Inventory.ADENA_ID, 1, x, _y1, z);
-            dropDebugItem(Inventory.ADENA_ID, 1, x, _y2, z);
+            dropDebugItem(CommonItem.ADENA, 1, x, _y1, z);
+            dropDebugItem(CommonItem.ADENA, 1, x, _y2, z);
         }
         // y1->y2
         for (int y = _y1; y < _y2; y += STEP) {
-            dropDebugItem(Inventory.ADENA_ID, 1, _x1, y, z);
-            dropDebugItem(Inventory.ADENA_ID, 1, _x2, y, z);
+            dropDebugItem(CommonItem.ADENA, 1, _x1, y, z);
+            dropDebugItem(CommonItem.ADENA, 1, _x2, y, z);
         }
     }
 

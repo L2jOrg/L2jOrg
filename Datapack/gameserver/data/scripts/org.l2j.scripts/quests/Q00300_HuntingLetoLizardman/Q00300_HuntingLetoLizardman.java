@@ -16,17 +16,17 @@
  */
 package quests.Q00300_HuntingLetoLizardman;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Hunting Leto Lizardman (300)
@@ -38,7 +38,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 	private static final int RATH = 30126;
 	// Items
 	private static final int BRACELET_OF_LIZARDMAN = 7139;
-	private static final ItemHolder REWARD_ADENA = new ItemHolder(Inventory.ADENA_ID, 5000);
+	private static final ItemHolder REWARD_ADENA = new ItemHolder(CommonItem.ADENA, 5000);
 	private static final ItemHolder REWARD_ANIMAL_BONE = new ItemHolder(1872, 50);
 	private static final ItemHolder REWARD_ANIMAL_SKIN = new ItemHolder(1867, 50);
 	// Misc

@@ -182,8 +182,8 @@ public abstract class ItemContainer {
             item = olditem;
 
             // Updates database
-            final float adenaRate = Config.RATE_DROP_AMOUNT_BY_ID.getOrDefault(Inventory.ADENA_ID, 1f);
-            if ((item.getId() == Inventory.ADENA_ID) && (count < (10000 * adenaRate))) {
+            final float adenaRate = Config.RATE_DROP_AMOUNT_BY_ID.getOrDefault(CommonItem.ADENA, 1f);
+            if ((item.getId() == CommonItem.ADENA) && (count < (10000 * adenaRate))) {
                 // Small adena changes won't be saved to database all the time
                 if ((GameTimeController.getInstance().getGameTicks() % 5) == 0) {
                     item.updateDatabase();
@@ -514,7 +514,7 @@ public abstract class ItemContainer {
      */
     public long getAdena() {
         for (L2ItemInstance item : _items.values()) {
-            if (item.getId() == Inventory.ADENA_ID) {
+            if (item.getId() == CommonItem.ADENA) {
                 return item.getCount();
             }
         }

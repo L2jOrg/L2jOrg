@@ -32,6 +32,7 @@ import org.l2j.gameserver.model.html.formatters.BypassParserFormatter;
 import org.l2j.gameserver.model.html.pagehandlers.NextPrevPageHandler;
 import org.l2j.gameserver.model.html.styles.ButtonsStyle;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BypassParser;
@@ -368,7 +369,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 					player.sendPacket(SystemMessageId.YOUR_BID_PRICE_MUST_BE_HIGHER_THAN_THE_MINIMUM_PRICE_CURRENTLY_BEING_BID);
 					return;
 				}
-				else if (clan.getWarehouse().destroyItemByItemId("Clan Hall Auction", Inventory.ADENA_ID, bid, player, null) == null)
+				else if (clan.getWarehouse().destroyItemByItemId("Clan Hall Auction", CommonItem.ADENA, bid, player, null) == null)
 				{
 					player.sendPacket(SystemMessageId.THERE_IS_NOT_ENOUGH_ADENA_IN_THE_CLAN_HALL_WAREHOUSE);
 					return;

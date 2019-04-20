@@ -27,6 +27,7 @@ import org.l2j.gameserver.model.commission.CommissionItem;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.Mail;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -338,7 +339,7 @@ public final class CommissionManager {
             final Message mail = new Message(itemInstance.getOwnerId(), itemInstance, MailType.COMMISSION_ITEM_SOLD);
 
             final Mail attachement = mail.createAttachments();
-            attachement.addItem("Commission Item Sold", Inventory.ADENA_ID, totalPrice - saleFee, player, null);
+            attachement.addItem("Commission Item Sold", CommonItem.ADENA, totalPrice - saleFee, player, null);
             MailManager.getInstance().sendMessage(mail);
 
             player.sendPacket(new ExResponseCommissionBuyItem(commissionItem));

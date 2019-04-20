@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.database.dao;
 
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
-import org.l2j.gameserver.data.database.model.AccountData;
+import org.l2j.gameserver.data.database.data.AccountData;
 
 public interface AccountDAO extends DAO {
 

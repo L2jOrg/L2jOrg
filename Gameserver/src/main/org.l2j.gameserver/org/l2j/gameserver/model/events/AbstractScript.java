@@ -52,6 +52,7 @@ import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.model.interfaces.IPositionable;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2EtcItem;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
@@ -540,7 +541,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
 
         try {
-            if (itemId == Inventory.ADENA_ID) {
+            if (itemId == CommonItem.ADENA) {
                 count *= Config.RATE_QUEST_REWARD_ADENA;
             } else if (Config.RATE_QUEST_REWARD_USE_MULTIPLIERS) {
                 if (item instanceof L2EtcItem) {
@@ -595,7 +596,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      */
     private static void sendItemGetMessage(L2PcInstance player, L2ItemInstance item, long count) {
         // If item for reward is gold, send message of gold reward to client
-        if (item.getId() == Inventory.ADENA_ID) {
+        if (item.getId() == CommonItem.ADENA) {
             final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
             smsg.addLong(count);
             player.sendPacket(smsg);
@@ -676,7 +677,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
 
         // set enchant level for item if that item is not adena
-        if ((enchantlevel > 0) && (itemId != Inventory.ADENA_ID)) {
+        if ((enchantlevel > 0) && (itemId != CommonItem.ADENA)) {
             item.setEnchantLevel(enchantlevel);
         }
 
@@ -790,7 +791,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         maxAmount *= Config.RATE_QUEST_DROP;
         dropChance *= Config.RATE_QUEST_DROP; // TODO separate configs for rate and amount
         if ((npc != null) && Config.CHAMPION_ENABLE && npc.isChampion()) {
-            if ((itemId == Inventory.ADENA_ID) || (itemId == Inventory.ANCIENT_ADENA_ID)) {
+            if ((itemId == CommonItem.ADENA) || (itemId == CommonItem.ANCIENT_ADENA)) {
                 dropChance *= Config.CHAMPION_ADENAS_REWARDS_CHANCE;
                 minAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
                 maxAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
@@ -2752,9 +2753,9 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      */
     public void giveAdena(L2PcInstance player, long count, boolean applyRates) {
         if (applyRates) {
-            rewardItems(player, Inventory.ADENA_ID, count);
+            rewardItems(player, CommonItem.ADENA, count);
         } else {
-            giveItems(player, Inventory.ADENA_ID, count);
+            giveItems(player, CommonItem.ADENA, count);
         }
     }
 

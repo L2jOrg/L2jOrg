@@ -12,7 +12,7 @@ import org.l2j.gameserver.cache.WarehouseCacheManager;
 import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
-import org.l2j.gameserver.data.database.model.CharacterData;
+import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
@@ -2919,7 +2919,7 @@ public final class L2PcInstance extends L2Playable {
      */
     @Override
     public boolean destroyItemByItemId(String process, int itemId, long count, L2Object reference, boolean sendMessage) {
-        if (itemId == Inventory.ADENA_ID) {
+        if (itemId == CommonItem.ADENA) {
             return reduceAdena(process, count, reference, sendMessage);
         }
 
@@ -3618,7 +3618,7 @@ public final class L2PcInstance extends L2Playable {
     public void doAutoLoot(L2Attackable target, int itemId, long itemCount) {
         if (isInParty() && !ItemTable.getInstance().getTemplate(itemId).hasExImmediateEffect()) {
             _party.distributeItem(this, itemId, itemCount, false, target);
-        } else if (itemId == Inventory.ADENA_ID) {
+        } else if (itemId == CommonItem.ADENA) {
             addAdena("Loot", itemCount, target, true);
         } else {
             addItem("Loot", itemId, itemCount, target, true);
@@ -3703,7 +3703,7 @@ public final class L2PcInstance extends L2Playable {
             }
 
             if ((target.getOwnerId() != 0) && (target.getOwnerId() != getObjectId()) && !isInLooterParty(target.getOwnerId())) {
-                if (target.getId() == Inventory.ADENA_ID) {
+                if (target.getId() == CommonItem.ADENA) {
                     smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
                     smsg.addLong(target.getCount());
                 } else if (target.getCount() > 1) {
@@ -3772,7 +3772,7 @@ public final class L2PcInstance extends L2Playable {
             // Check if a Party is in progress
             if (isInParty()) {
                 _party.distributeItem(this, target);
-            } else if ((target.getId() == Inventory.ADENA_ID) && (_inventory.getAdenaInstance() != null)) {
+            } else if ((target.getId() == CommonItem.ADENA) && (_inventory.getAdenaInstance() != null)) {
                 addAdena("Pickup", target.getCount(), null, true);
                 ItemTable.getInstance().destroyItem("Pickup", target, this, null);
             } else {
@@ -4240,7 +4240,7 @@ public final class L2PcInstance extends L2Playable {
                     // Don't drop
                     if (itemDrop.isShadowItem() || // Dont drop Shadow Items
                             itemDrop.isTimeLimitedItem() || // Dont drop Time Limited Items
-                            !itemDrop.isDropable() || (itemDrop.getId() == Inventory.ADENA_ID) || // Adena
+                            !itemDrop.isDropable() || (itemDrop.getId() == CommonItem.ADENA) || // Adena
                             (itemDrop.getItem().getType2() == L2Item.TYPE2_QUEST) || // Quest Items
                             ((_pet != null) && (_pet.getControlObjectId() == itemDrop.getId())) || // Control Item of active pet
                             (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_ITEMS, itemDrop.getId()) >= 0) || // Item listed in the non droppable item list

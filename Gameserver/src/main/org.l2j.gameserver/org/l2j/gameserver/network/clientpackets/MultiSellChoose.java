@@ -16,6 +16,7 @@ import org.l2j.gameserver.model.holders.MultisellEntryHolder;
 import org.l2j.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -441,7 +442,7 @@ public class MultiSellChoose extends IClientIncomingPacket {
 
             // finally, give the tax to the castle...
             if ((npc != null) && list.isApplyTaxes()) {
-                final OptionalLong taxPaid = entry.getIngredients().stream().filter(i -> i.getId() == Inventory.ADENA_ID).mapToLong(i -> Math.round(i.getCount() * list.getIngredientMultiplier() * list.getTaxRate()) * _amount).reduce(Math::multiplyExact);
+                final OptionalLong taxPaid = entry.getIngredients().stream().filter(i -> i.getId() == CommonItem.ADENA).mapToLong(i -> Math.round(i.getCount() * list.getIngredientMultiplier() * list.getTaxRate()) * _amount).reduce(Math::multiplyExact);
                 if (taxPaid.isPresent()) {
                     npc.handleTaxPayment(taxPaid.getAsLong());
                 }

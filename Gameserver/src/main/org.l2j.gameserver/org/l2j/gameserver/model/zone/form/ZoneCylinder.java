@@ -4,6 +4,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.zone.L2ZoneForm;
 
 /**
@@ -96,7 +97,7 @@ public class ZoneCylinder extends L2ZoneForm {
         final int count = (int) ((2 * Math.PI * _rad) / STEP);
         final double angle = (2 * Math.PI) / count;
         for (int i = 0; i < count; i++) {
-            dropDebugItem(Inventory.ADENA_ID, 1, _x + (int) (Math.cos(angle * i) * _rad), _y + (int) (Math.sin(angle * i) * _rad), z);
+            dropDebugItem(CommonItem.ADENA, 1, _x + (int) (Math.cos(angle * i) * _rad), _y + (int) (Math.sin(angle * i) * _rad), z);
         }
     }
 

@@ -16,10 +16,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.L2Armor;
-import org.l2j.gameserver.model.items.L2EtcItem;
-import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.*;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.util.GMAudit;
 import org.slf4j.Logger;
@@ -201,22 +198,22 @@ public class ItemTable {
         }
 
         if (Config.LOG_ITEMS && !process.equals("Reset")) {
-            if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == Inventory.ADENA_ID)))) {
+            if (!Config.LOG_ITEMS_SMALL_LOG || item.isEquipable() || item.getId() == CommonItem.ADENA) {
                 if (item.getEnchantLevel() > 0) {
-                    LOGGER_ITEMS.info("CREATE:" + String.valueOf(process) // in case of null
+                    LOGGER_ITEMS.info("CREATE:" + process //
                             + ", item " + item.getObjectId() //
                             + ":+" + item.getEnchantLevel() //
                             + " " + item.getItem().getName() //
                             + "(" + item.getCount() //
-                            + "), " + String.valueOf(actor) // in case of null
-                            + ", " + String.valueOf(reference)); // in case of null
+                            + "), " + actor
+                            + ", " + reference);
                 } else {
-                    LOGGER_ITEMS.info("CREATE:" + String.valueOf(process) // in case of null
+                    LOGGER_ITEMS.info("CREATE:" + process //
                             + ", item " + item.getObjectId() //
                             + ":" + item.getItem().getName() //
                             + "(" + item.getCount() //
-                            + "), " + String.valueOf(actor) // in case of null
-                            + ", " + String.valueOf(reference)); // in case of null
+                            + "), " + actor //
+                            + ", " + reference); //
                 }
             }
         }
@@ -276,7 +273,7 @@ public class ItemTable {
             IdFactory.getInstance().releaseId(item.getObjectId());
 
             if (Config.LOG_ITEMS) {
-                if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == Inventory.ADENA_ID)))) {
+                if (!Config.LOG_ITEMS_SMALL_LOG || item.isEquipable() || item.getId() == CommonItem.ADENA) {
                     if (item.getEnchantLevel() > 0) {
                         LOGGER_ITEMS.info("DELETE:" + String.valueOf(process) // in case of null
                                 + ", item " + item.getObjectId() //

@@ -25,8 +25,8 @@ import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.Mail;
 import org.l2j.gameserver.taskmanager.Task;
 import org.l2j.gameserver.taskmanager.TaskManager;
-import org.l2j.gameserver.taskmanager.TaskManager.ExecutedTask;
-import org.l2j.gameserver.taskmanager.TaskTypes;
+import org.l2j.gameserver.taskmanager.TaskManager.ExecutableTask;
+import org.l2j.gameserver.taskmanager.TaskType;
 import org.l2j.gameserver.util.Util;
 
 import java.sql.Connection;
@@ -35,7 +35,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.logging.Level;
 
 /**
  * @author Nyaran
@@ -52,7 +51,7 @@ public class TaskBirthday extends Task {
     }
 
     @Override
-    public void onTimeElapsed(ExecutedTask task) {
+    public void onTimeElapsed(ExecutableTask task) {
         final Calendar lastExecDate = Calendar.getInstance();
         final long lastActivation = task.getLastActivation();
 
@@ -123,6 +122,6 @@ public class TaskBirthday extends Task {
 
     @Override
     public void initializate() {
-        TaskManager.addUniqueTask(NAME, TaskTypes.TYPE_GLOBAL_TASK, "1", "06:30:00", "");
+        TaskManager.addUniqueTask(NAME, TaskType.GLOBAL_TASK, "1", "06:30:00", "");
     }
 }

@@ -42,6 +42,7 @@ import org.l2j.gameserver.model.events.annotations.RegisterType;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -542,7 +543,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 							}
 							else if (player.getAdena() >= price)
 							{
-								takeItems(player, Inventory.ADENA_ID, price);
+								takeItems(player, CommonItem.ADENA, price);
 								for (int doorId : doors)
 								{
 									castle.setDoorUpgrade(doorId, level, true);
@@ -632,7 +633,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 						}
 						else if (player.getAdena() >= price)
 						{
-							takeItems(player, Inventory.ADENA_ID, price);
+							takeItems(player, CommonItem.ADENA, price);
 							castle.setTrapUpgrade(trapIndex, level, true);
 							htmltext = "chamberlain-20.html";
 						}
@@ -723,7 +724,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 					{
 						if (player.getAdena() >= amount)
 						{
-							takeItems(player, Inventory.ADENA_ID, amount);
+							takeItems(player, CommonItem.ADENA, amount);
 							castle.addToTreasuryNoTax(amount);
 						}
 						else

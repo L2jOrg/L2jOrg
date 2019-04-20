@@ -6,6 +6,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.itemcontainer.PcWarehouse;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -17,8 +18,6 @@ import org.slf4j.LoggerFactory;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.l2j.gameserver.model.itemcontainer.Inventory.ADENA_ID;
 
 /**
  * SendWareHouseDepositList client packet class.
@@ -103,7 +102,7 @@ public final class SendWareHouseDepositList extends IClientIncomingPacket {
             }
 
             // Calculate needed adena and slots
-            if (item.getId() == ADENA_ID) {
+            if (item.getId() == CommonItem.ADENA) {
                 currentAdena -= i.getCount();
             }
             if (!item.isStackable()) {

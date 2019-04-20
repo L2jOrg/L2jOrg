@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.taskmanager;
 
-import org.l2j.gameserver.taskmanager.TaskManager.ExecutedTask;
+import org.l2j.gameserver.taskmanager.TaskManager.ExecutableTask;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,13 +32,13 @@ public abstract class Task {
     public void initializate() {
     }
 
-    public ScheduledFuture<?> launchSpecial(ExecutedTask instance) {
+    public ScheduledFuture<?> launchSpecial(ExecutableTask instance) {
         return null;
     }
 
     public abstract String getName();
 
-    public abstract void onTimeElapsed(ExecutedTask task);
+    public abstract void onTimeElapsed(ExecutableTask task);
 
     public void onDestroy() {
     }

@@ -643,7 +643,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 
             // check level gap that may prevent drop this item
             final double levelGapChanceToDrop;
-            if (dropItem.getItemId() == Inventory.ADENA_ID) {
+            if (dropItem.getItemId() == CommonItem.ADENA) {
                 levelGapChanceToDrop = Util.map(levelDifference, -Config.DROP_ADENA_MAX_LEVEL_DIFFERENCE, -Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_GAP_CHANCE, 100.0);
             } else {
                 levelGapChanceToDrop = Util.map(levelDifference, -Config.DROP_ITEM_MAX_LEVEL_DIFFERENCE, -Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_GAP_CHANCE, 100.0);

@@ -49,12 +49,14 @@ public final class L2EtcItem extends L2Item {
         super.set(set);
         _type = set.getEnum("etcitem_type", EtcItemType.class, EtcItemType.NONE);
         _type1 = L2Item.TYPE1_ITEM_QUESTITEM_ADENA;
-        _type2 = L2Item.TYPE2_OTHER; // default is other
 
         if (isQuestItem()) {
             _type2 = L2Item.TYPE2_QUEST;
-        } else if ((getId() == Inventory.ADENA_ID) || (getId() == Inventory.ANCIENT_ADENA_ID)) {
-            _type2 = L2Item.TYPE2_MONEY;
+        } else {
+            _type2 = switch (getId()) {
+                case CommonItem.ADENA, CommonItem.ANCIENT_ADENA, CommonItem.RUSTY_COIN, CommonItem.SILVER_COIN -> L2Item.TYPE2_MONEY;
+                default -> L2Item.TYPE2_OTHER;
+            };
         }
 
         _handler = set.getString("handler", null); // ! null !

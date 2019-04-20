@@ -17,6 +17,7 @@ import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.CastleSpawnHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
@@ -422,7 +423,7 @@ public final class Castle extends AbstractResidence {
             return false;
         }
         if (lease > 0) {
-            if (!player.destroyItemByItemId("Consume", Inventory.ADENA_ID, lease, null, true)) {
+            if (!player.destroyItemByItemId("Consume", CommonItem.ADENA, lease, null, true)) {
                 return false;
             }
         }
@@ -955,9 +956,9 @@ public final class Castle extends AbstractResidence {
                         setEndTime(System.currentTimeMillis() + _rate);
                         dbSave();
                         if (_cwh) {
-                            ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().destroyItemByItemId("CS_function_fee", Inventory.ADENA_ID, fee, null, null);
+                            ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().destroyItemByItemId("CS_function_fee", CommonItem.ADENA, fee, null, null);
                         }
-                        ThreadPoolManager.getInstance().schedule(new FunctionTask(true), _rate);
+                        ThreadPoolManager.schedule(new FunctionTask(true), _rate);
                     } else {
                         removeFunction(_type);
                     }

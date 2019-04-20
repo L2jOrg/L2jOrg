@@ -14,6 +14,7 @@ import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.holders.ClanHallTeleportHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.model.zone.type.L2ClanHallZone;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -312,15 +313,15 @@ public final class ClanHall extends AbstractResidence {
                         setOwner(null);
                         _owner.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_HALL_FEE_IS_ONE_WEEK_OVERDUE_THEREFORE_THE_CLAN_HALL_OWNERSHIP_HAS_BEEN_REVOKED));
                     } else {
-                        _checkPaymentTask = ThreadPoolManager.getInstance().schedule(new CheckPaymentTask(), 24 * 60 * 60 * 1000); // 1 day
+                        _checkPaymentTask = ThreadPoolManager.schedule(new CheckPaymentTask(), 24 * 60 * 60 * 1000); // 1 day
                         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
                         sm.addInt(_lease);
                         _owner.broadcastToOnlineMembers(sm);
                     }
                 } else {
-                    _owner.getWarehouse().destroyItem("Clan Hall Lease", Inventory.ADENA_ID, _lease, null, null);
+                    _owner.getWarehouse().destroyItem("Clan Hall Lease", CommonItem.ADENA, _lease, null, null);
                     setPaidUntil(Instant.ofEpochMilli(_paidUntil).plus(Duration.ofDays(7)).toEpochMilli());
-                    _checkPaymentTask = ThreadPoolManager.getInstance().schedule(new CheckPaymentTask(), _paidUntil - System.currentTimeMillis());
+                    _checkPaymentTask = ThreadPoolManager.schedule(new CheckPaymentTask(), _paidUntil - System.currentTimeMillis());
                     updateDB();
                 }
             }

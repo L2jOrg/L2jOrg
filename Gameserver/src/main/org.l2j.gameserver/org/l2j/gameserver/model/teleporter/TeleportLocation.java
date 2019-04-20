@@ -19,6 +19,7 @@ package org.l2j.gameserver.model.teleporter;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.network.NpcStringId;
 
 import java.util.ArrayList;
@@ -43,7 +44,7 @@ public class TeleportLocation extends Location {
         _name = set.getString("name", null);
         _npcStringId = NpcStringId.getNpcStringIdOrDefault(set.getInt("npcStringId", -1), null);
         _questZoneId = set.getInt("questZoneId", 0);
-        _feeId = set.getInt("feeId", Inventory.ADENA_ID);
+        _feeId = set.getInt("feeId", CommonItem.ADENA);
         _feeCount = set.getLong("feeCount", 0);
 
         final String castleIds = set.getString("castleId", "");
