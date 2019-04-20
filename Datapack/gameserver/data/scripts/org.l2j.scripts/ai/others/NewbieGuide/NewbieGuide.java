@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package ai.others.NewbieGuide;
 
 import org.l2j.gameserver.Config;
@@ -68,7 +52,7 @@ public class NewbieGuide extends AbstractNpcAI
 			else
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-				html.setFile(player, "data/scripts/ai/others/NewbieGuide/" + npc.getId() + ".htm");
+				html.setFile(player, "data/scripts/org.l2j.scripts/ai/others/NewbieGuide/" + npc.getId() + ".htm");
 				html.replace(SUPPORT_MAGIC_STRING, "");
 				player.sendPacket(html);
 				return htmltext;
@@ -108,7 +92,7 @@ public class NewbieGuide extends AbstractNpcAI
 			return npc.getId() + ".htm";
 		}
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-		html.setFile(player, "data/scripts/ai/others/NewbieGuide/" + npc.getId() + ".htm");
+		html.setFile(player, "data/scripts/org.l2j.scripts/ai/others/NewbieGuide/" + npc.getId() + ".htm");
 		html.replace(SUPPORT_MAGIC_STRING, "");
 		player.sendPacket(html);
 		return null;
