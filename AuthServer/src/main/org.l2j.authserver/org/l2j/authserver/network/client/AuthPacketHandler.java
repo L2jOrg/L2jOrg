@@ -7,7 +7,6 @@ import org.l2j.authserver.network.client.packet.client2auth.RequestAuthLogin;
 import org.l2j.authserver.network.client.packet.client2auth.RequestServerList;
 import org.l2j.authserver.network.client.packet.client2auth.RequestServerLogin;
 import org.l2j.commons.util.CommonUtil;
-import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -86,12 +86,13 @@ public class Rnd
 	}
 
 	/**
-	 * Рандомайзер для подсчета шансов.<br>
-	 * Рекомендуется к использованию вместо Rnd.get()
-	 * @param chance в процентах от 0 до 100
-	 * @return true в случае успешного выпадания.
-	 * <li>Если chance <= 0, вернет false
-	 * <li>Если chance >= 100, вернет true
+	 * Randomizer for calculating odds. <br>
+	 * Recommended for use instead of Rnd.get ()
+	 * @param chance in percent from 0 to 100
+	 * @return true if successful.
+	 * <li> If chance <= 0, returns false
+	 * <li> If chance> = 100, returns true
+	 * Translated by Google.
 	 */
 	public static boolean chance(int chance)
 	{
@@ -99,12 +100,13 @@ public class Rnd
 	}
 
 	/**
-	 * Рандомайзер для подсчета шансов.<br>
-	 * Рекомендуется к использованию вместо Rnd.get() если нужны очень маленькие шансы
-	 * @param chance в процентах от 0 до 100
-	 * @return true в случае успешного выпадания.
-	 * <li>Если chance <= 0, вернет false
-	 * <li>Если chance >= 100, вернет true
+	 * Randomizer for calculating odds. <br>
+	 * Recommended for use instead of Rnd.get () if very small chances are needed
+	 * @param chance in percent from 0 to 100
+	 * @return true if successful.
+	 * <li> If chance <= 0, returns false
+	 * <li> If chance> = 100, returns true
+	 * Translated by Google.
 	 */
 	public static boolean chance(double chance)
 	{
