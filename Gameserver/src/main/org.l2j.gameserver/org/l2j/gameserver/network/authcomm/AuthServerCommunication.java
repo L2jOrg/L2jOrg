@@ -160,12 +160,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
     }
 
     public String[] getAccounts() {
-        readLock.lock();
-        try {
-            return authedClients.keySet().toArray(String[]::new);
-        } finally {
-            readLock.unlock();
-        }
+        return authedClients.keySet().toArray(String[]::new);
     }
 
     @Override

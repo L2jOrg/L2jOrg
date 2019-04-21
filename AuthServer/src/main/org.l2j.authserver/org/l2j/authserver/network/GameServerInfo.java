@@ -20,7 +20,6 @@ public class GameServerInfo {
     private static final Logger logger = LoggerFactory.getLogger(GameServerInfo.class);
     private static final byte[] LOCALHOST = {127, 0, 0, 1};
 
-
     private final Set<String> accounts = new HashSet<>();
 
     private int _id;
@@ -64,7 +63,7 @@ public class GameServerInfo {
                 addresses.add(new IPAddress(hosts[i], hosts[i+1]));
                 logger.info("Address {} Subnet {}", hosts[i], hosts[i+1]);
             } catch (UnknownHostException e) {
-                logger.warn("Couldn't resolve hostname {}", e);
+                logger.warn("Couldn't resolve hostname", e);
             }
         }
         this.hosts = addresses.toArray(IPAddress[]::new);
@@ -82,6 +81,7 @@ public class GameServerInfo {
         setAuthed(false);
         setPort(0);
         setStatus(ServerStatus.STATUS_DOWN);
+        accounts.clear();
     }
 
     public void sendKickPlayer(String account) {

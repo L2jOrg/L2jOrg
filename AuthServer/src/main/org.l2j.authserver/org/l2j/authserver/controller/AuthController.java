@@ -25,6 +25,7 @@ import java.security.spec.RSAKeyGenParameterSpec;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -44,11 +45,10 @@ public class AuthController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthController.class);
     private static final Logger LOGIN_HISTORY = LoggerFactory.getLogger("loginHistory");
-    private static final int LOGIN_TIMEOUT =  120 * 1000;
+    private static final int LOGIN_TIMEOUT = 5;
     private static final Pattern USERNAME_PATTERN = Pattern.compile(usernameTemplate());
     private static final String ACCOUNT_LOGIN_FAILED = "Account Login Failed {} : {}";
 
-    private final Set<AuthClient> connectedClients = new HashSet<>();
     private final Map<String, AuthClient> authedClients = new ConcurrentHashMap<>();
     private final Map<String, FailedLoginAttempt> bruteForceProtection = new HashMap<>();
     private final BanManager banManager;
@@ -103,7 +103,7 @@ public class AuthController {
         client.setCrypt(cripter);
 
         if(isNull(scheduledPurge) || scheduledPurge.isCancelled()) {
-            scheduledPurge = ThreadPoolManager.scheduleAtFixedDelay(new PurgeThread(), LOGIN_TIMEOUT, 2 * LOGIN_TIMEOUT);
+            scheduledPurge = ThreadPoolManager.scheduleAtFixedDelay(new PurgeThread(), LOGIN_TIMEOUT, 2 * LOGIN_TIMEOUT, TimeUnit.SECONDS);
         }
     }
 
@@ -164,7 +164,7 @@ public class AuthController {
         var authedClient = authedClients.get(account.getLogin());
         if(nonNull(authedClient)) {
             authedClient.close(REASON_ACCOUNT_IN_USE);
-            authedClients.remove(account.getLogin());
+            removeAuthedClient(account.getLogin());
             result = true;
         }
 
@@ -179,7 +179,6 @@ public class AuthController {
 
     private void processAuth(AuthClient client, Account account) {
         updateClientInfo(client, account);
-        authedClients.put(account.getLogin(), client);
         requestAccountInfo(client, account);
         if(client.getRequestedServersInfo() == 0) {
             client.sendPacket(new LoginOk());
@@ -253,12 +252,6 @@ public class AuthController {
         }
     }
 
-    public void removeClient(AuthClient client) {
-        if(nonNull(client)) {
-            connectedClients.remove(client);
-        }
-    }
-
     private void addLoginFailed(Account account, String password, AuthClient client) {
         FailedLoginAttempt failedAttempt = bruteForceProtection.get(account.getLogin());
         if(nonNull(failedAttempt)) {
@@ -269,7 +262,7 @@ public class AuthController {
         }
 
         if(failedAttempt.getCount() >= authTriesBeforeBan())  {
-            LOGGER.info("Banning {} for seconds due to {} invalid user/pass attempts", client.getHostAddress(), loginBlockAfterBan(), failedAttempt.getCount());
+            LOGGER.info("Banning {} for {} seconds due to {} invalid user/pass attempts", client.getHostAddress(), loginBlockAfterBan(), failedAttempt.getCount());
             banManager.addBannedAdress(client.getHostAddress(), currentTimeMillis() + loginBlockAfterBan() * 1000);
         }
     }
@@ -334,17 +327,17 @@ public class AuthController {
     private class PurgeThread implements Runnable{
         @Override
         public void run() {
-            synchronized (connectedClients) {
-                var iterator = connectedClients.iterator();
+            synchronized (authedClients) {
+                var iterator = authedClients.values().iterator();
                 while (iterator.hasNext()) {
                     var client = iterator.next();
-                    if(client.getConnectionStartTime() + LOGIN_TIMEOUT >= currentTimeMillis() || !client.isConnected()) {
+                    if(!client.isJoinedGameSever() && client.getConnectionStartTime() + LOGIN_TIMEOUT >= currentTimeMillis() || !client.isConnected()) {
                         iterator.remove();
                         client.close(REASON_ACCESS_FAILED_TRYA1);
                     }
                 }
 
-                if(connectedClients.isEmpty()) {
+                if(authedClients.isEmpty()) {
                     scheduledPurge.cancel(false);
                 }
             }

@@ -64,17 +64,20 @@ public class ThreadPoolManager {
         return getInstance().scheduledExecutor.scheduleAtFixedRate(r, initial, delay, TimeUnit.MILLISECONDS);
     }
 
-    public static ScheduledFuture<?> scheduleAtFixedDelay(Runnable r, long initial, long delay)
-    {
+    public static ScheduledFuture<?> scheduleAtFixedDelay(Runnable r, long initial, long delay) {
+        return scheduleAtFixedDelay(r, initial, delay, TimeUnit.MILLISECONDS);
+    }
+
+    public static ScheduledFuture<?> scheduleAtFixedDelay(Runnable r, long initial, long delay, TimeUnit unit) {
         initial = validate(initial);
         if(initial == -1)
             return null;
 
         delay = validate(delay);
         if(delay == -1)
-            return getInstance().scheduledExecutor.schedule(r, initial, TimeUnit.MILLISECONDS);
+            return getInstance().scheduledExecutor.schedule(r, initial, unit);
 
-        return getInstance().scheduledExecutor.scheduleWithFixedDelay(r, initial, delay, TimeUnit.MILLISECONDS);
+        return getInstance().scheduledExecutor.scheduleWithFixedDelay(r, initial, delay, unit);
     }
 
     public static void execute(Runnable r) {

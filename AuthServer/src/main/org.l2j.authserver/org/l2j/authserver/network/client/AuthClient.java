@@ -110,8 +110,6 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
 	protected void onDisconnection() {
         LOGGER.debug("DISCONNECTED: {}", toString());
 
-        AuthController.getInstance().removeClient(this);
-
         if(!isJoinedGameSever && nonNull(account)) {
             AuthController.getInstance().removeAuthedClient(account.getLogin());
         }
@@ -131,6 +129,10 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
 
     public void joinGameserver() {
         isJoinedGameSever = true;
+    }
+
+    public boolean isJoinedGameSever() {
+        return isJoinedGameSever;
     }
 
     AuthClientState getState()

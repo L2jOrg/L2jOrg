@@ -1,5 +1,7 @@
 package org.l2j.authserver.network.gameserver.packet.game2auth;
 
+import org.l2j.authserver.controller.AuthController;
+
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,5 +21,8 @@ public class PlayerInGame extends GameserverReadablePacket {
     @Override
     protected void runImpl()  {
         client.getGameServerInfo().addAccounts(accounts);
+        for (String account : accounts) {
+            AuthController.getInstance().removeAuthedClient(account);
+        }
     }
 }
