@@ -33,7 +33,7 @@ public class MaxMpFinalizer implements IStatsFunction {
     public double calc(L2Character creature, Optional<Double> base, Stats stat) {
         throwIfPresent(base);
 
-        double baseValue = calcWeaponPlusBaseValue(creature, stat);
+        double baseValue = creature.getStat().getValue(stat, calcWeaponPlusBaseValue(creature, stat));
         if (creature.isPet()) {
             final L2PetInstance pet = (L2PetInstance) creature;
             baseValue += pet.getPetLevelData().getPetMaxMP();

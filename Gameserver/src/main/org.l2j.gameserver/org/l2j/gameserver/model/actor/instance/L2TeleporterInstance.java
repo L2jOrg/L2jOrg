@@ -67,6 +67,18 @@ public final class L2TeleporterInstance extends L2Npc {
                 holder.showTeleportList(player, this);
                 break;
             }
+            case "showTeleportsHunting":
+            {
+                final String listName = (st.hasMoreTokens()) ? st.nextToken() : TeleportType.HUNTING.name();
+                final TeleportHolder holder = TeleportersData.getInstance().getHolder(getId(), listName);
+                if (holder == null)
+                {
+                    LOGGER.warn("Player {} requested show teleports for hunting list with name {}  at NPC {}!", player.getObjectId(), listName, getId());
+                    return;
+                }
+                holder.showTeleportList(player, this);
+                break;
+            }
             case "teleport": {
                 // Check for required count of params.
                 if (st.countTokens() != 2) {

@@ -41,8 +41,10 @@ public class BaseStatsFinalizer implements IStatsFunction {
         // Apply template value
         double baseValue = creature.getTemplate().getBaseValue(stat, 0);
 
-        final L2PcInstance player = creature.getActingPlayer();
-        if (player != null) {
+        // Should not apply armor set and henna bonus to summons.
+        if (creature.isPlayer())
+        {
+            final L2PcInstance player = creature.getActingPlayer();
             final Set<L2ArmorSet> appliedSets = new HashSet<>(2);
 
             // Armor sets calculation

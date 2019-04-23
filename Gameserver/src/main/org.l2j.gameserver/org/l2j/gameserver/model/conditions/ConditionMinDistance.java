@@ -16,29 +16,24 @@
  */
 package org.l2j.gameserver.model.conditions;
 
+import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
 
-/**
- * The Class ConditionMinDistance.
- *
- * @author Didldak
- */
 public class ConditionMinDistance extends Condition {
-    private final int _sqDistance;
 
-    /**
-     * Instantiates a new condition min distance.
-     *
-     * @param sqDistance the sq distance
-     */
-    public ConditionMinDistance(int sqDistance) {
-        _sqDistance = sqDistance;
+    private final int _distance;
+
+    public ConditionMinDistance(int distance)
+    {
+        _distance = distance;
     }
 
     @Override
     public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item) {
-        return (effected != null) && (effector.calculateDistanceSq3D(effected) >= _sqDistance);
+        return (effected != null) //
+                && (effector.calculateDistance3D(effected) >= _distance) //
+                && GeoEngine.getInstance().canSeeTarget(effector, effected);
     }
 }

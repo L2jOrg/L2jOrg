@@ -190,7 +190,7 @@ public class CharInfo extends IClientOutgoingPacket {
 
         packet.putInt(_activeChar.getClanCrestLargeId());
         packet.put((byte) (_activeChar.isNoble() ? 1 : 0)); // Confirmed
-        packet.put((byte) (_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 1 : 0)); // Confirmed
+        packet.put((byte) (_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 2 : 0)); // 152 - Value for enabled changed to 2?
 
         packet.put((byte) (_activeChar.isFishing() ? 1 : 0)); // Confirmed
 

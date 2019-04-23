@@ -82,7 +82,7 @@ public class FriendlyNpcInstance extends L2Attackable {
             return false;
         }
 
-        if (killer.isAttackable()) {
+        if (killer != null && killer.isAttackable()) {
             // Delayed notification
             EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(null, this, false), this);
         }

@@ -54,7 +54,7 @@ public final class ConditionUsingItemType extends Condition {
             // Get the itemMask of the weared chest (if exists)
             final L2ItemInstance chest = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
             if (chest == null) {
-                return false;
+                return (ArmorType.NONE.mask() & _mask) == ArmorType.NONE.mask();
             }
             final int chestMask = chest.getItem().getItemMask();
 
@@ -73,7 +73,7 @@ public final class ConditionUsingItemType extends Condition {
             // check legs armor
             final L2ItemInstance legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
             if (legs == null) {
-                return false;
+                return (ArmorType.NONE.mask() & _mask) == ArmorType.NONE.mask();
             }
             final int legMask = legs.getItem().getItemMask();
             // return true if legs armor matches too

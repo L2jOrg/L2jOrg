@@ -95,6 +95,7 @@ public final class RequestPetUseItem extends IClientIncomingPacket {
                     if (reuseDelay > 0) {
                         activeChar.addTimeStampItem(item, reuseDelay);
                     }
+                    activeChar.sendPacket(new PetItemList(pet.getInventory().getItems()));
                     pet.updateAndBroadcastStatus(1);
                 }
             } else {

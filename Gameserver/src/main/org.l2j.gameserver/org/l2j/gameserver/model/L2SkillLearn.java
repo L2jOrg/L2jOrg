@@ -22,7 +22,7 @@ public final class L2SkillLearn {
     private final int _getLevel;
     private final int _getDualClassLevel;
     private final boolean _autoGet;
-    private final int _levelUpSp;
+    private final long _levelUpSp;
     private final List<ItemHolder> _requiredItems = new ArrayList<>();
     private final List<Race> _races = new ArrayList<>();
     private final List<SkillHolder> _preReqSkills = new ArrayList<>();
@@ -49,7 +49,7 @@ public final class L2SkillLearn {
         _getLevel = set.getInt("getLevel");
         _getDualClassLevel = set.getInt("getDualClassLevel", 0);
         _autoGet = set.getBoolean("autoGet", false);
-        _levelUpSp = set.getInt("levelUpSp", 0);
+        _levelUpSp = set.getLong("levelUpSp", 0);
         _residenceSkill = set.getBoolean("residenceSkill", false);
         _learnedByNpc = set.getBoolean("learnedByNpc", false);
         _learnedByFS = set.getBoolean("learnedByFS", false);
@@ -97,7 +97,7 @@ public final class L2SkillLearn {
     /**
      * @return the amount of SP/Clan Reputation to acquire this skill.
      */
-    public int getLevelUpSp() {
+    public long getLevelUpSp() {
         return _levelUpSp;
     }
 

@@ -19,6 +19,9 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("AbsorbDamage", AbsorbDamage::new);
 		EffectHandler.getInstance().registerHandler("Accuracy", Accuracy::new);
 		EffectHandler.getInstance().registerHandler("AddHate", AddHate::new);
+		EffectHandler.getInstance().registerHandler("AdditionalPotionCp", AdditionalPotionCp::new);
+		EffectHandler.getInstance().registerHandler("AdditionalPotionHp", AdditionalPotionHp::new);
+		EffectHandler.getInstance().registerHandler("AdditionalPotionMp", AdditionalPotionMp::new);
 		EffectHandler.getInstance().registerHandler("AddSkillBySkill", AddSkillBySkill::new);
 		EffectHandler.getInstance().registerHandler("AddTeleportBookmarkSlot", AddTeleportBookmarkSlot::new);
 		EffectHandler.getInstance().registerHandler("AgathionSlot", AgathionSlot::new);
@@ -49,6 +52,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("BonusSpoilRate", BonusSpoilRate::new);
 		EffectHandler.getInstance().registerHandler("Breath", Breath::new);
 		EffectHandler.getInstance().registerHandler("BuffBlock", BuffBlock::new);
+		EffectHandler.getInstance().registerHandler("CallLearnedSkill", CallLearnedSkill::new);
 		EffectHandler.getInstance().registerHandler("CallParty", CallParty::new);
 		EffectHandler.getInstance().registerHandler("CallPc", CallPc::new);
 		EffectHandler.getInstance().registerHandler("CallRandomSkill", CallRandomSkill::new);

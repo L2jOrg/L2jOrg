@@ -94,7 +94,8 @@ public class DBSpawnManager {
                         spawn.setRespawnDelay(respawn, respawnRandom);
                         spawn.startRespawn();
                     } else {
-                        LOGGER.warn(": Found database spawns without respawn for npc: " + template.getId() + " - " + template.getName() + " " + spawnTemplate);
+                        spawn.stopRespawn();
+                        LOGGER.warn("Found database spawns without respawn for npc: " + template.getId() + " - " + template.getName() + " " + spawnTemplate);
                         continue;
                     }
 

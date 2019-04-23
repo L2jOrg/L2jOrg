@@ -2356,10 +2356,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return registerConsumer(callback, EventType.ON_INSTANCE_STATUS_CHANGE, ListenerRegisterType.INSTANCE, templateIds);
     }
 
-    protected final List<AbstractEventListener> setPlayerSummonAgathion(Consumer<OnPlayerSummonAgathion> callback) {
-        return registerConsumer(callback, EventType.ON_PLAYER_SUMMON_AGATHION, ListenerRegisterType.GLOBAL);
-    }
-
     /**
      * Method that registers Function type of listeners (Listeners that need parameters but doesn't return objects)
      *

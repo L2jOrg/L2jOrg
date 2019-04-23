@@ -533,6 +533,11 @@ public class AdminTeleport implements IAdminCommandHandler
 				}
 				SpawnTable.getInstance().addNewSpawn(spawn, true);
 				spawn.init();
+
+				if (respawnTime <= 0)
+				{
+					spawn.stopRespawn();
+				}
 				
 				BuilderUtil.sendSysMessage(activeChar, "Created " + template1.getName() + " on " + target.getObjectId() + ".");
 			}

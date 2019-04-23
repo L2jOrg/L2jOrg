@@ -20,7 +20,7 @@ public final class FortManager implements InstanceListManager {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FortManager.class);
 
-    private final Map<Integer, Fort> _forts = new ConcurrentSkipListMap<>();
+    private static final Map<Integer, Fort> _forts = new ConcurrentSkipListMap<>();
 
     private FortManager() {
 

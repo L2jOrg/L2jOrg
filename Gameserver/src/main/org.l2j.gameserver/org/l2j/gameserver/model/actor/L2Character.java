@@ -131,7 +131,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     private boolean _isUndying = false;
     private boolean _isFlying = false;
     private boolean _blockActions = false;
-    private volatile Map<Integer, AtomicInteger> _blockActionsAllowedSkills;
+    private volatile Map<Integer, AtomicInteger> _blockActionsAllowedSkills = new ConcurrentHashMap<>();
     private CharStat _stat;
     private CharStatus _status;
     private L2CharTemplate _template; // The link on the L2CharTemplate object containing generic and static properties of this L2Character type (ex : Max HP, Speed...)
@@ -736,7 +736,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             return;
         }
         try {
-            if ((target == null) || isAttackingDisabled() || !target.isTargetable()) {
+            if ((target == null) || (isAttackingDisabled() && !isSummon()) || !target.isTargetable()) {
                 return;
             }
 
@@ -812,7 +812,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                     // Check if bow delay is still active.
                     if (_disableRangedAttackEndTime > System.nanoTime()) {
                         if (isPlayer()) {
-                            ThreadPoolManager.getInstance().schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
+                            ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
                             sendPacket(ActionFailed.STATIC_PACKET);
                         }
                         return;
@@ -874,6 +874,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             // Make sure that char is facing selected target
             // also works: setHeading(Util.convertDegreeToClientHeading(Util.calculateAngleFrom(this, target)));
             setHeading(Util.calculateHeadingFrom(this, target));
+
+            // Always try to charge soulshots.
+            if (!isChargedShot(ShotType.SOULSHOTS))
+            {
+                rechargeShots(true, false, false);
+            }
 
             // Get the Attack Reuse Delay of the L2Weapon
             final Attack attack = generateAttackTargetData(target, weaponItem, attackType);
@@ -1545,7 +1551,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
      * @return True if the L2Character can't attack (stun, sleep, attackEndTime, fakeDeath, paralyze, attackMute).
      */
     public boolean isAttackingDisabled() {
-        return _isFlying || hasBlockActions() || isAttackingNow() || isAlikeDead() || isPhysicalAttackMuted() || _AIdisabled;
+        return hasBlockActions() || isAttackingNow() || isAlikeDead() || isPhysicalAttackMuted() || _AIdisabled;
     }
 
     public final boolean isConfused() {
@@ -2320,6 +2326,21 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
+     * Abort the cast of all skills.
+     */
+    public final void abortAllSkillCasters()
+    {
+        for (SkillCaster skillCaster : getSkillCasters())
+        {
+            skillCaster.stopCasting(true);
+            if (isPlayer())
+            {
+                getActingPlayer().setQueuedSkill(null, null, false, false);
+            }
+        }
+    }
+
+    /**
      * Abort the cast of normal non-simultaneous skills.
      *
      * @return {@code true} if a skill casting has been aborted, {@code false} otherwise.
@@ -2411,7 +2432,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
         // Z coordinate will follow client values
         dz = m._zDestination - zPrev;
 
-        if (isPlayer()) {
+        if (isPlayer() && !_isFlying) {
             final double distance = Math.hypot(dx, dy);
             if (_cursorKeyMovement // In case of cursor movement, avoid moving through obstacles.
                     || (distance > 3000)) // Stop movement when player has clicked far away and intersected with an obstacle.
@@ -2432,7 +2453,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                 }
             }
             // Prevent player moving on ledges.
-            if ((dz > 100) && (distance < 300)) {
+            if ((dz > 180) && (distance < 300)) {
                 _move.onGeodataPathIndex = -1;
                 stopMove(getActingPlayer().getLastServerPosition());
                 return false;
@@ -3647,39 +3668,57 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
             // Reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary
             double reflectPercent = target.getStat().getValue(Stats.REFLECT_DAMAGE_PERCENT, 0) - getStat().getValue(Stats.REFLECT_DAMAGE_PERCENT_DEFENSE, 0);
-            if (reflectPercent > 0) {
+            if (reflectPercent > 0)
+            {
                 reflectedDamage = (int) ((reflectPercent / 100.) * damage);
                 reflectedDamage = Math.min(reflectedDamage, target.getMaxHp());
 
                 // Reflected damage is limited by P.Def/M.Def
-                if ((skill != null) && skill.isMagic()) {
+                if ((skill != null) && skill.isMagic())
+                {
                     reflectedDamage = (int) Math.min(reflectedDamage, target.getStat().getMDef() * 1.5);
-                } else {
+                }
+                else
+                {
                     reflectedDamage = Math.min(reflectedDamage, target.getStat().getPDef());
                 }
             }
 
             // Absorb HP from the damage inflicted
-            double absorbPercent = getStat().getValue(Stats.ABSORB_DAMAGE_PERCENT, 0) * target.getStat().getValue(Stats.ABSORB_DAMAGE_DEFENCE, 1);
-            if ((absorbPercent > 0) && (Rnd.nextDouble() < _stat.getValue(Stats.ABSORB_DAMAGE_CHANCE))) {
-                int absorbDamage = (int) Math.min(absorbPercent * damage, _stat.getMaxRecoverableHp() - _status.getCurrentHp());
-                absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
-                if (absorbDamage > 0) {
-                    setCurrentHp(_status.getCurrentHp() + absorbDamage);
+            if (skill == null) // Classic: Skills counted with the Vampiric Rage effect was introduced on GoD chronicles.
+            {
+                double absorbPercent = getStat().getValue(Stats.ABSORB_DAMAGE_PERCENT, 0) * target.getStat().getValue(Stats.ABSORB_DAMAGE_DEFENCE, 1);
+                if ((absorbPercent > 0) && (Rnd.nextDouble() < _stat.getValue(Stats.ABSORB_DAMAGE_CHANCE)))
+                {
+                    int absorbDamage = (int) Math.min(absorbPercent * damage, _stat.getMaxRecoverableHp() - _status.getCurrentHp());
+                    absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
+                    if (absorbDamage > 0)
+                    {
+                        setCurrentHp(_status.getCurrentHp() + absorbDamage);
+                    }
                 }
             }
 
             // Absorb MP from the damage inflicted.
-            absorbPercent = _stat.getValue(Stats.ABSORB_MANA_DAMAGE_PERCENT, 0);
-            if (absorbPercent > 0) {
-                int absorbDamage = (int) Math.min((absorbPercent / 100.) * damage, _stat.getMaxRecoverableMp() - _status.getCurrentMp());
-                absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
-                if (absorbDamage > 0) {
-                    setCurrentMp(_status.getCurrentMp() + absorbDamage);
+            if (skill != null) // Classic: Used to reduce skill MP consumption. See Orfen's Earring.
+            {
+                if (Rnd.get(10) < 3) // Classic: Static 30% change.
+                {
+                    double absorbPercent = _stat.getValue(Stats.ABSORB_MANA_DAMAGE_PERCENT, 0);
+                    if (absorbPercent > 0)
+                    {
+                        int absorbDamage = (int) Math.min((absorbPercent / 100.) * damage, _stat.getMaxRecoverableMp() - _status.getCurrentMp());
+                        absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
+                        if (absorbDamage > 0)
+                        {
+                            setCurrentMp(_status.getCurrentMp() + absorbDamage);
+                        }
+                    }
                 }
             }
 
-            if (reflectedDamage > 0) {
+            if (reflectedDamage > 0)
+            {
                 target.doAttack(reflectedDamage, this, skill, isDOT, directlyToHp, critical, true);
             }
         }
@@ -4348,24 +4387,15 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     public void addBlockActionsAllowedSkill(int skillId) {
-        if (_blockActionsAllowedSkills == null) {
-            synchronized (this) {
-                if (_blockActionsAllowedSkills == null) {
-                    _blockActionsAllowedSkills = new ConcurrentHashMap<>();
-                }
-            }
-        }
         _blockActionsAllowedSkills.computeIfAbsent(skillId, k -> new AtomicInteger()).incrementAndGet();
     }
 
     public void removeBlockActionsAllowedSkill(int skillId) {
-        if (_blockActionsAllowedSkills != null) {
-            _blockActionsAllowedSkills.computeIfPresent(skillId, (k, v) -> v.decrementAndGet() != 0 ? v : null);
-        }
+        _blockActionsAllowedSkills.computeIfPresent(skillId, (k, v) -> v.decrementAndGet() != 0 ? v : null);
     }
 
     public boolean isBlockedActionsAllowedSkill(Skill skill) {
-        return (_blockActionsAllowedSkills != null) && _blockActionsAllowedSkills.containsKey(skill.getId());
+        return _blockActionsAllowedSkills.containsKey(skill.getId());
     }
 
     /**

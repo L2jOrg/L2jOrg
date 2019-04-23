@@ -63,7 +63,7 @@ public final class RequestStopPledgeWar extends IClientIncomingPacket {
         // Reduce reputation.
         playerClan.takeReputationScore(500, true);
 
-        ClanTable.getInstance().deleteclanswars(playerClan.getId(), clan.getId());
+        ClanTable.getInstance().deleteClanWars(playerClan.getId(), clan.getId());
 
         for (L2PcInstance member : playerClan.getOnlineMembers(0)) {
             member.broadcastUserInfo();

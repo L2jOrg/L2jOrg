@@ -42,22 +42,30 @@ public final class RequestAnswerJoinPledge extends IClientIncomingPacket {
             sm.addString(activeChar.getName());
             requestor.sendPacket(sm);
         } else {
-            if (!(requestor.getRequest().getRequestPacket() instanceof RequestJoinPledge)) {
+            if (!((requestor.getRequest().getRequestPacket() instanceof RequestJoinPledge) || (requestor.getRequest().getRequestPacket() instanceof RequestClanAskJoinByName))) {
                 return; // hax
             }
 
-            final RequestJoinPledge requestPacket = (RequestJoinPledge) requestor.getRequest().getRequestPacket();
+            final int pledgeType;
+            if (requestor.getRequest().getRequestPacket() instanceof RequestJoinPledge)
+            {
+                pledgeType = ((RequestJoinPledge) requestor.getRequest().getRequestPacket()).getPledgeType();
+            }
+            else
+            {
+                pledgeType = ((RequestClanAskJoinByName) requestor.getRequest().getRequestPacket()).getPledgeType();
+            }
             final L2Clan clan = requestor.getClan();
             // we must double check this cause during response time conditions can be changed, i.e. another player could join clan
-            if (clan.checkClanJoinCondition(requestor, activeChar, requestPacket.getPledgeType())) {
+            if (clan.checkClanJoinCondition(requestor, activeChar, pledgeType)) {
                 if (activeChar.getClan() != null) {
                     return;
                 }
 
                 activeChar.sendPacket(new JoinPledge(requestor.getClanId()));
 
-                activeChar.setPledgeType(requestPacket.getPledgeType());
-                if (requestPacket.getPledgeType() == L2Clan.SUBUNIT_ACADEMY) {
+                activeChar.setPledgeType(pledgeType);
+                if (pledgeType == L2Clan.SUBUNIT_ACADEMY) {
                     activeChar.setPowerGrade(9); // academy
                     activeChar.setLvlJoinedAcademy(activeChar.getLevel());
                 } else {

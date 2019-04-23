@@ -480,8 +480,10 @@ public class L2PetInstance extends L2Summon {
                 getOwner().getParty().distributeItem(getOwner(), target);
             } else {
                 final L2ItemInstance item = _inventory.addItem("Pickup", target, getOwner(), this);
-                // sendPacket(new PetItemList(_inventory.getItems()));
-                sendPacket(new PetInventoryUpdate(item));
+                if (item != null)
+                {
+                    getOwner().sendPacket(new PetItemList(getInventory().getItems()));
+                }
             }
         }
 
@@ -569,11 +571,8 @@ public class L2PetInstance extends L2Summon {
         sendPacket(petIU);
 
         // Send target update packet
-        if (!newItem.isStackable()) {
-            final InventoryUpdate iu = new InventoryUpdate();
-            iu.addNewItem(newItem);
-            sendInventoryUpdate(iu);
-        } else if ((playerOldItem != null) && newItem.isStackable()) {
+        if ((playerOldItem != null) && newItem.isStackable())
+        {
             final InventoryUpdate iu = new InventoryUpdate();
             iu.addModifiedItem(newItem);
             sendInventoryUpdate(iu);

@@ -3,6 +3,7 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.clan.entry.PledgeApplicantInfo;
 import org.l2j.gameserver.model.clan.entry.PledgeRecruitInfo;
 import org.l2j.gameserver.model.clan.entry.PledgeWaitingInfo;
@@ -74,7 +75,7 @@ public class ClanEntryManager {
     }
 
     private static void lockClan(int clanId) {
-        _clanLocked.put(clanId, ThreadPoolManager.getInstance().schedule(() ->
+        _clanLocked.put(clanId, ThreadPoolManager.schedule(() ->
         {
             _clanLocked.remove(clanId);
         }, LOCK_TIME));
@@ -85,7 +86,13 @@ public class ClanEntryManager {
              Statement s = con.createStatement();
              ResultSet rs = s.executeQuery("SELECT * FROM pledge_recruit")) {
             while (rs.next()) {
-                _clanList.put(rs.getInt("clan_id"), new PledgeRecruitInfo(rs.getInt("clan_id"), rs.getInt("karma"), rs.getString("information"), rs.getString("detailed_information"), rs.getInt("application_type"), rs.getInt("recruit_type")));
+                final int clanId = rs.getInt("clan_id");
+                _clanList.put(clanId, new PledgeRecruitInfo(clanId, rs.getInt("karma"), rs.getString("information"), rs.getString("detailed_information"), rs.getInt("application_type"), rs.getInt("recruit_type")));
+                // Remove non existing clan data.
+                if (ClanTable.getInstance().getClan(clanId) == null)
+                {
+                    removeFromClanList(clanId);
+                }
             }
             LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _clanList.size() + " clan entry");
         } catch (Exception e) {
@@ -302,7 +309,7 @@ public class ClanEntryManager {
         sortBy = CommonUtil.constrain(sortBy, 1, CLAN_COMPARATOR.size() - 1);
         //@formatter:off
         return _clanList.values().stream()
-                .filter((p -> (((clanLevel < 0) && (karma >= 0) && (karma != p.getKarma())) || ((clanLevel >= 0) && (karma < 0) && (clanLevel != p.getClanLevel())) || ((clanLevel >= 0) && (karma >= 0) && ((clanLevel != p.getClanLevel()) || (karma != p.getKarma()))))))
+                .filter((p -> (((clanLevel < 0) && (karma >= 0) && (karma != p.getKarma())) || ((clanLevel >= 0) && (karma < 0) && (clanLevel != (p.getClan() != null ? p.getClanLevel() : 0))) || ((clanLevel >= 0) && (karma >= 0) && ((clanLevel != (p.getClan() != null ? p.getClanLevel() : 0)) || (karma != p.getKarma()))))))
                 .sorted(descending ? CLAN_COMPARATOR.get(sortBy).reversed() : CLAN_COMPARATOR.get(sortBy))
                 .collect(Collectors.toList());
         //@formatter:on

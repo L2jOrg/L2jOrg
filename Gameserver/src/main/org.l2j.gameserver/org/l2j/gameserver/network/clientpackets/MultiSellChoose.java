@@ -21,6 +21,7 @@ import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.ExPCCafePointInfo;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
@@ -301,6 +302,7 @@ public class MultiSellChoose extends IClientIncomingPacket {
                         }
                         case PC_CAFE_POINTS: {
                             player.setPcCafePoints((int) (player.getPcCafePoints() - totalCount));
+                            player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), (int) -totalCount, 1));
                             break;
                         }
                         default: {
@@ -390,13 +392,40 @@ public class MultiSellChoose extends IClientIncomingPacket {
                     if (itemEnchantmentProcessed && list.isMaintainEnchantment() && (itemEnchantment != null) && addedItem.isEquipable() && addedItem.getItem().getClass().equals(itemEnchantment.getItem().getClass())) {
                         addedItem.setEnchantLevel(itemEnchantment.getEnchantLevel());
                         addedItem.setAugmentation(itemEnchantment.getAugmentation(), false);
-                        addedItem.setAttribute(new AttributeHolder(AttributeType.findByClientId(itemEnchantment.getAttackElementType()), itemEnchantment.getAttackElementPower()), false);
-                        addedItem.setAttribute(new AttributeHolder(AttributeType.FIRE, itemEnchantment.getAttributeDefence(AttributeType.FIRE)), false);
-                        addedItem.setAttribute(new AttributeHolder(AttributeType.WATER, itemEnchantment.getAttributeDefence(AttributeType.WATER)), false);
-                        addedItem.setAttribute(new AttributeHolder(AttributeType.WIND, itemEnchantment.getAttributeDefence(AttributeType.WIND)), false);
-                        addedItem.setAttribute(new AttributeHolder(AttributeType.EARTH, itemEnchantment.getAttributeDefence(AttributeType.EARTH)), false);
-                        addedItem.setAttribute(new AttributeHolder(AttributeType.HOLY, itemEnchantment.getAttributeDefence(AttributeType.HOLY)), false);
-                        addedItem.setAttribute(new AttributeHolder(AttributeType.DARK, itemEnchantment.getAttributeDefence(AttributeType.DARK)), false);
+                        if (addedItem.isWeapon())
+                        {
+                            if (itemEnchantment.getAttackElementPower() > 0)
+                            {
+                                addedItem.setAttribute(new AttributeHolder(AttributeType.findByClientId(itemEnchantment.getAttackElementType()), itemEnchantment.getAttackElementPower()), false);
+                            }
+                        }
+                        else
+                        {
+                            if (itemEnchantment.getAttributeDefence(AttributeType.FIRE) > 0)
+                            {
+                                addedItem.setAttribute(new AttributeHolder(AttributeType.FIRE, itemEnchantment.getAttributeDefence(AttributeType.FIRE)), false);
+                            }
+                            if (itemEnchantment.getAttributeDefence(AttributeType.WATER) > 0)
+                            {
+                                addedItem.setAttribute(new AttributeHolder(AttributeType.WATER, itemEnchantment.getAttributeDefence(AttributeType.WATER)), false);
+                            }
+                            if (itemEnchantment.getAttributeDefence(AttributeType.WIND) > 0)
+                            {
+                                addedItem.setAttribute(new AttributeHolder(AttributeType.WIND, itemEnchantment.getAttributeDefence(AttributeType.WIND)), false);
+                            }
+                            if (itemEnchantment.getAttributeDefence(AttributeType.EARTH) > 0)
+                            {
+                                addedItem.setAttribute(new AttributeHolder(AttributeType.EARTH, itemEnchantment.getAttributeDefence(AttributeType.EARTH)), false);
+                            }
+                            if (itemEnchantment.getAttributeDefence(AttributeType.HOLY) > 0)
+                            {
+                                addedItem.setAttribute(new AttributeHolder(AttributeType.HOLY, itemEnchantment.getAttributeDefence(AttributeType.HOLY)), false);
+                            }
+                            if (itemEnchantment.getAttributeDefence(AttributeType.DARK) > 0)
+                            {
+                                addedItem.setAttribute(new AttributeHolder(AttributeType.DARK, itemEnchantment.getAttributeDefence(AttributeType.DARK)), false);
+                            }
+                        }
                         if (_soulCrystalOptions != null) {
                             for (int i = 0; i < _soulCrystalOptions.length; i++) {
                                 addedItem.addSpecialAbility(_soulCrystalOptions[i], i + 1, 1, false);

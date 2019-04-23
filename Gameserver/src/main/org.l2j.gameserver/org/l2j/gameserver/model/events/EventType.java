@@ -173,6 +173,7 @@ public enum EventType {
     ON_PLAYER_QUEST_ABORT(OnPlayerQuestAbort.class, void.class),
     ON_PLAYER_QUEST_COMPLETE(OnPlayerQuestComplete.class, void.class),
     ON_PLAYER_SUMMON_AGATHION(OnPlayerSummonAgathion.class, void.class),
+    ON_PLAYER_UNSUMMON_AGATHION(OnPlayerUnsummonAgathion.class, void.class),
 
     // Trap events
     ON_TRAP_ACTION(OnTrapAction.class, void.class),

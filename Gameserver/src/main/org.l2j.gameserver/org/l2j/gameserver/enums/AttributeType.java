@@ -22,8 +22,8 @@ package org.l2j.gameserver.enums;
  * @author NosBit
  */
 public enum AttributeType {
-    NONE_ARMOR(-2),
-    NONE(-1),
+
+    NONE(-2),
     FIRE(0),
     WATER(1),
     WIND(2),

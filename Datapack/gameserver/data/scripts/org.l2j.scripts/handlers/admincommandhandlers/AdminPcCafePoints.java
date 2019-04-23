@@ -123,7 +123,7 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 						target.setPcCafePoints(pcCafeCount);
 						target.sendMessage("Admin decreased your PC Cafe point(s) by " + value + "!");
 						BuilderUtil.sendSysMessage(activeChar, "You decreased PC Cafe point(s) of " + target.getName() + " by " + value);
-						target.sendPacket(new ExPCCafePointInfo(pcCafeCount, value, 1));
+						target.sendPacket(new ExPCCafePointInfo(target.getPcCafePoints(), -value, 1));
 						break;
 					}
 					case "rewardOnline":

@@ -825,6 +825,7 @@ public final class Castle extends AbstractResidence {
                 spawn.setXYZ(holder);
                 spawn.setHeading(holder.getHeading());
                 final L2Npc npc = spawn.doSpawn(false);
+                spawn.stopRespawn();
                 npc.broadcastInfo();
                 _sideNpcs.add(npc);
             }

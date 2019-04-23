@@ -25,9 +25,6 @@ public enum ArmorType implements ItemType {
     HEAVY,
     MAGIC,
     SIGIL,
-    RING,
-    EARRING,
-    NECKLACE,
 
     // L2J CUSTOM
     SHIELD;

@@ -76,16 +76,10 @@ public final class RequestCrystallizeItem extends IClientIncomingPacket {
         final PcInventory inventory = activeChar.getInventory();
         if (inventory != null) {
             final L2ItemInstance item = inventory.getItemByObjectId(_objectId);
-            if (item == null) {
+            if ((item == null) || item.isHeroItem()) {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }
-
-            if (item.isHeroItem()) {
-                client.sendPacket(ActionFailed.STATIC_PACKET);
-                return;
-            }
-
             if (_count > item.getCount()) {
                 _count = activeChar.getInventory().getItemByObjectId(_objectId).getCount();
             }

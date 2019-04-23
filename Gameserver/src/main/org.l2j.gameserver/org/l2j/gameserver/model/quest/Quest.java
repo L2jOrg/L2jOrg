@@ -309,7 +309,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
     }
 
     private static boolean checkDistanceToTarget(L2PcInstance player, L2Npc target) {
-        return (target == null) || Util.checkIfInRange(1500, player, target, true);
+        return (target == null) || Util.checkIfInRange(Config.ALT_PARTY_RANGE, player, target, true);
     }
 
     /**
@@ -1012,15 +1012,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
         return false;
     }
 
-    public final void notifySummonAgathion(L2PcInstance player, int npcId) {
-        try {
-            onSummonAgathion(player, npcId);
-        } catch (Exception e) {
-            LOGGER.warn("Exception on onSummonAgathion() in notifySummonAgathion(): " + e.getMessage(), e);
-            return;
-        }
-    }
-
     /**
      * This function is called in place of {@link #onAttack(L2Npc, L2PcInstance, int, boolean, Skill)} if the former is not implemented.<br>
      * If a script contains both onAttack(..) implementations, then this method will never be called unless the script's {@link #onAttack(L2Npc, L2PcInstance, int, boolean, Skill)} explicitly calls this method.
@@ -1484,8 +1475,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
     public void onNpcDespawn(L2Npc npc) {
     }
 
-    public void onSummonAgathion(L2PcInstance player, int agathionId) {
-    }
 
     /**
      * @param npc
@@ -2127,10 +2116,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
         setInstanceLeaveId(event -> onInstanceLeave(event.getPlayer(), event.getInstanceWorld()), templateIds);
     }
 
-    public void addSummonAgathion() {
-        setPlayerSummonAgathion(event -> notifySummonAgathion(event.getPlayer(), event.getAgathionId()));
-    }
-
     /**
      * Use this method to get a random party member from a player's party.<br>
      * Useful when distributing rewards after killing an NPC.
@@ -2208,7 +2193,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
                 continue;
             }
             temp = partyMember.getQuestState(getName());
-            if ((temp != null) && (temp.get(var) != null) && (temp.get(var)).equalsIgnoreCase(value) && partyMember.isInsideRadius3D(target, 1500)) {
+            if ((temp != null) && (temp.get(var) != null) && (temp.get(var)).equalsIgnoreCase(value) && partyMember.isInsideRadius3D(target, Config.ALT_PARTY_RANGE)) {
                 candidates.add(partyMember);
             }
         }
@@ -2263,7 +2248,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
                 continue;
             }
             temp = partyMember.getQuestState(getName());
-            if ((temp != null) && (temp.getState() == state) && partyMember.isInsideRadius3D(target, 1500)) {
+            if ((temp != null) && (temp.getState() == state) && partyMember.isInsideRadius3D(target, Config.ALT_PARTY_RANGE)) {
                 candidates.add(partyMember);
             }
         }

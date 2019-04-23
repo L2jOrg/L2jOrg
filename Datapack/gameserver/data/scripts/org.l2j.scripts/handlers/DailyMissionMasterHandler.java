@@ -13,8 +13,8 @@ public class DailyMissionMasterHandler {
 	
 	public static void main(String[] args) {
 		DailyMissionHandler.getInstance().registerHandler("level", LevelDailyMissionHandler::new);
-		// DailyMissionHandler.getInstance().registerHandler("loginAllWeek", LoginAllWeekDailyMissionHandler::new);
-		// DailyMissionHandler.getInstance().registerHandler("loginAllMonth", LoginAllWeekDailyMissionHandler::new);
+		DailyMissionHandler.getInstance().registerHandler("loginweekend", LoginWeekendDailyMissionHandler::new);
+		DailyMissionHandler.getInstance().registerHandler("loginmonth", LoginMonthDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("quest", QuestDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("olympiad", OlympiadDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("siege", SiegeDailyMissionHandler::new);

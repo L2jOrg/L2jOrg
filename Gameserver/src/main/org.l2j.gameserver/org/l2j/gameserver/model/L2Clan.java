@@ -1893,7 +1893,7 @@ public class L2Clan implements IIdentifiable, INamable {
 
         boolean increaseClanLevel = false;
 
-        // Such as https://l2wiki.com/classic/Clans_οΏ½_Clan_Level
+        // Such as https://l2wiki.com/classic/Clans_%E2%80%93_Clan_Level
         switch (_level) {
             case 0: {
                 // Upgrade to 1
@@ -2345,7 +2345,7 @@ public class L2Clan implements IIdentifiable, INamable {
      */
     public synchronized void addHuntingPoints(L2PcInstance activeChar, L2Npc target, double value) {
         // TODO: Figure out the retail formula
-        final int points = (int) value / 29600;
+        final int points = (int) value / 2960; // Reduced / 10 for Classic.
         if (points > 0) {
             getVariables().set("HUNTING_POINTS", getHuntingPoints() + points);
             final ClanRewardBonus availableBonus = ClanRewardType.HUNTING_MONSTERS.getAvailableBonus(this);

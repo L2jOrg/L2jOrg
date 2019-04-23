@@ -410,6 +410,9 @@ public final class CastleChamberlain extends AbstractNpcAI
 					for (int id : fort)
 					{
 						final Fort fortress = FortManager.getInstance().getFortById(id);
+						if (fortress == null) {
+							continue;
+						}
 						final int fortId = fortress.getResidenceId();
 						final String fortType = (fortId < 112) ? "1300133" : "1300134";
 						final String fortStatus;

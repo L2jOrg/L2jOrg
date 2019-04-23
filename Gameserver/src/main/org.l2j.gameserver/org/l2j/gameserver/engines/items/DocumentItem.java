@@ -5,7 +5,6 @@ import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.L2ExtractableProduct;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.conditions.Condition;
-import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.stats.Stats;
@@ -133,16 +132,6 @@ public final class DocumentItem extends DocumentBase {
                         final int minEnchant = parseInteger(b.getAttributes(), "minEnchant", 0);
                         final int maxEnchant = parseInteger(b.getAttributes(), "maxEnchant", 0);
                         _currentItem.item.addCapsuledItem(new L2ExtractableProduct(id, min, max, chance, minEnchant, maxEnchant));
-                    }
-                }
-            } else if ("createItems".equalsIgnoreCase(n.getNodeName())) {
-                makeItem();
-                for (Node b = n.getFirstChild(); b != null; b = b.getNextSibling()) {
-                    if ("item".equals(b.getNodeName())) {
-                        final int id = parseInteger(b.getAttributes(), "id");
-                        final int count = parseInteger(b.getAttributes(), "count");
-                        final double chance = parseDouble(b.getAttributes(), "chance");
-                        _currentItem.item.addCreateItem(new ItemChanceHolder(id, chance, count));
                     }
                 }
             } else if ("cond".equalsIgnoreCase(n.getNodeName())) {

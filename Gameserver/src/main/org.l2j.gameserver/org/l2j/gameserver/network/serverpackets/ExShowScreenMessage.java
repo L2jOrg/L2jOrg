@@ -61,6 +61,28 @@ public class ExShowScreenMessage extends IClientOutgoingPacket {
 
     /**
      * Display a String on the screen for a given time.
+     * @param text the text to display
+     * @param position the position on the screen
+     * @param time the display time
+     */
+    public ExShowScreenMessage(String text, int position, int time)
+    {
+        _type = 2;
+        _sysMessageId = -1;
+        _unk1 = 0;
+        _unk2 = 0;
+        _unk3 = 0;
+        _fade = false;
+        _position = position;
+        _text = text;
+        _time = time;
+        _size = 0;
+        _effect = false;
+        _npcString = -1;
+    }
+
+    /**
+     * Display a String on the screen for a given time.
      *
      * @param text       the text to display
      * @param position   the position on the screen

@@ -26,6 +26,9 @@ public enum Stats {
     REGENERATE_HP_RATE("regHp", new RegenHPFinalizer()),
     REGENERATE_CP_RATE("regCp", new RegenCPFinalizer()),
     REGENERATE_MP_RATE("regMp", new RegenMPFinalizer()),
+    ADDITIONAL_POTION_HP("addPotionHp"),
+    ADDITIONAL_POTION_MP("addPotionMp"),
+    ADDITIONAL_POTION_CP("addPotionCp"),
     MANA_CHARGE("manaCharge"),
     HEAL_EFFECT("healEffect"),
 

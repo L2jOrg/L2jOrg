@@ -1,6 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -38,9 +39,9 @@ public final class RequestReplyStartPledgeWar extends IClientIncomingPacket {
             final L2Clan attacker = requestor.getClan();
             if ((attacked != null) && (attacker != null)) {
                 final ClanWar clanWar = attacker.getWarWith(attacked.getId());
-                if (clanWar.getState() == ClanWar.ClanWarState.BLOOD_DECLARATION) {
+                if (clanWar.getState() == ClanWarState.BLOOD_DECLARATION) {
                     clanWar.mutualClanWarAccepted(attacker, attacked);
-                    ClanTable.getInstance().storeclanswars(clanWar);
+                    ClanTable.getInstance().storeClanWars(clanWar);
                 }
             }
         } else {

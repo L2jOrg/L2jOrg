@@ -5,6 +5,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.util.MinionList;
@@ -70,7 +71,7 @@ public class L2MonsterInstance extends L2Attackable {
      */
     @Override
     public boolean isAggressive() {
-        return getTemplate().isAggressive();
+        return getTemplate().isAggressive() && !isAffected(EffectFlag.PASSIVE);
     }
 
     @Override
@@ -190,7 +191,7 @@ public class L2MonsterInstance extends L2Attackable {
     public synchronized void doCast(Skill skill, L2ItemInstance item, boolean ctrlPressed, boolean shiftPressed) {
         // Might need some exceptions here, but it will prevent the monster buffing player bug.
         if (!skill.isBad() && (getTarget() != null) && getTarget().isPlayer()) {
-            abortCast();
+            abortAllSkillCasters();
             return;
         }
         super.doCast(skill, item, ctrlPressed, shiftPressed);

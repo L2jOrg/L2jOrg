@@ -1,6 +1,7 @@
 package org.l2j.gameserver.model.actor;
 
 import org.l2j.gameserver.ai.CtrlEvent;
+import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.ClanWar;
@@ -180,7 +181,7 @@ public abstract class L2Playable extends L2Character {
 
         if ((playerClan != null) && !player.isAcademyMember() && !target.isAcademyMember()) {
             final ClanWar war = playerClan.getWarWith(target.getClanId());
-            return (war != null) && (war.getState() == ClanWar.ClanWarState.MUTUAL);
+            return (war != null) && (war.getState() == ClanWarState.MUTUAL);
         }
         return false;
     }

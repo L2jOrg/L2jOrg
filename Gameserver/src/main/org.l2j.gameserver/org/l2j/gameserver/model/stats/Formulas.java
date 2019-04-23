@@ -505,9 +505,7 @@ public final class Formulas {
 
         if (skill.isDebuff()) {
             if (target.getAbnormalShieldBlocks() > 0) {
-                if (target.decrementAbnormalShieldBlocks() == 0) {
-                    target.stopEffects(EffectFlag.ABNORMAL_SHIELD);
-                }
+                target.decrementAbnormalShieldBlocks();
                 return false;
             }
         }
@@ -541,10 +539,17 @@ public final class Formulas {
             boolean resisted = target.isCastingNow(s -> s.getSkill().getAbnormalResists().contains(skill.getAbnormalType()));
             if (!resisted) {
                 if (target.getAbnormalShieldBlocks() > 0) {
-                    if (target.decrementAbnormalShieldBlocks() == 0) {
-                        target.stopEffects(EffectFlag.ABNORMAL_SHIELD);
-                    }
+                    target.decrementAbnormalShieldBlocks();
                     resisted = true;
+                }
+            }
+
+            if (!resisted)
+            {
+                final double sphericBarrierRange = target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, 0);
+                if (sphericBarrierRange > 0)
+                {
+                    resisted = attacker.calculateDistance3D(target) > sphericBarrierRange;
                 }
             }
 
@@ -598,9 +603,7 @@ public final class Formulas {
             }
 
             if (target.getAbnormalShieldBlocks() > 0) {
-                if (target.decrementAbnormalShieldBlocks() == 0) {
-                    target.stopEffects(EffectFlag.ABNORMAL_SHIELD);
-                }
+                target.decrementAbnormalShieldBlocks();
                 return false;
             }
         }
@@ -910,19 +913,40 @@ public final class Formulas {
                 final int cancelMagicLvl = skill.getMagicLevel();
 
                 // Prevent initialization.
-                final List<BuffInfo> buffs = target.getEffectList().getBuffs();
-
-                for (int i = buffs.size() - 1; i >= 0; i--) // reverse order
+                final List<BuffInfo> dances = target.getEffectList().getDances();
+                for (int i = dances.size() - 1; i >= 0; i--) // reverse order
                 {
-                    final BuffInfo info = buffs.get(i);
-                    if (!info.getSkill().canBeStolen() || ((rate < 100) && !calcCancelSuccess(info, cancelMagicLvl, rate, skill, target))) {
+                    final BuffInfo info = dances.get(i);
+                    if (!info.getSkill().canBeStolen() || ((rate < 100) && !calcCancelSuccess(info, cancelMagicLvl, rate, skill, target)))
+                    {
                         continue;
                     }
                     canceled.add(info);
-                    if (canceled.size() >= max) {
+                    if (canceled.size() >= max)
+                    {
                         break;
                     }
                 }
+
+                if (canceled.size() < max)
+                {
+                    // Prevent initialization.
+                    final List<BuffInfo> buffs = target.getEffectList().getBuffs();
+                    for (int i = buffs.size() - 1; i >= 0; i--) // reverse order
+                    {
+                        final BuffInfo info = buffs.get(i);
+                        if (!info.getSkill().canBeStolen() || ((rate < 100) && !calcCancelSuccess(info, cancelMagicLvl, rate, skill, target)))
+                        {
+                            continue;
+                        }
+                        canceled.add(info);
+                        if (canceled.size() >= max)
+                        {
+                            break;
+                        }
+                    }
+                }
+
                 break;
             }
             case DEBUFF: {
@@ -1076,8 +1100,7 @@ public final class Formulas {
     }
 
     public static double calcWeaponTraitBonus(L2Character attacker, L2Character target) {
-        double result = target.getStat().getDefenceTrait(attacker.getAttackType().getTraitType()) - 1.0;
-        return 1.0 - result;
+        return Math.max(0, 2.0 - target.getStat().getDefenceTrait(attacker.getAttackType().getTraitType()));
     }
 
     public static double calcAttackTraitBonus(L2Character attacker, L2Character target) {

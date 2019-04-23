@@ -167,7 +167,7 @@ public final class RequestAcquireSkill extends IClientIncomingPacket {
                 }
 
                 final L2Clan clan = activeChar.getClan();
-                final int repCost = s.getLevelUpSp();
+                final int repCost = s.getLevelUpSp() > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) s.getLevelUpSp();
                 if (clan.getReputationScore() >= repCost) {
                     if (Config.LIFE_CRYSTAL_NEEDED) {
                         for (ItemHolder item : s.getRequiredItems()) {
@@ -221,7 +221,7 @@ public final class RequestAcquireSkill extends IClientIncomingPacket {
                     return;
                 }
 
-                final int repCost = s.getLevelUpSp();
+                final int repCost = s.getLevelUpSp() > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) s.getLevelUpSp();
                 if (clan.getReputationScore() < repCost) {
                     activeChar.sendPacket(SystemMessageId.THE_ATTEMPT_TO_ACQUIRE_THE_SKILL_HAS_FAILED_BECAUSE_OF_AN_INSUFFICIENT_CLAN_REPUTATION);
                     return;
@@ -288,7 +288,7 @@ public final class RequestAcquireSkill extends IClientIncomingPacket {
                 }
 
                 // First it checks that the skill require SP and the player has enough SP to learn it.
-                final int levelUpSp = skillLearn.getLevelUpSp();
+                final long levelUpSp = skillLearn.getLevelUpSp();
                 if ((levelUpSp > 0) && (levelUpSp > player.getSp())) {
                     player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL);
                     showSkillList(trainer, player);
@@ -302,7 +302,7 @@ public final class RequestAcquireSkill extends IClientIncomingPacket {
                 // Check for required skills.
                 if (!skillLearn.getPreReqSkills().isEmpty()) {
                     for (SkillHolder skill : skillLearn.getPreReqSkills()) {
-                        if (player.getSkillLevel(skill.getSkillId()) != skill.getSkillLevel()) {
+                        if (player.getSkillLevel(skill.getSkillId()) < skill.getSkillLevel()) {
                             if (skill.getSkillId() == CommonSkill.ONYX_BEAST_TRANSFORMATION.getId()) {
                                 player.sendPacket(SystemMessageId.YOU_MUST_LEARN_THE_ONYX_BEAST_SKILL_BEFORE_YOU_CAN_LEARN_FURTHER_SKILLS);
                             } else {

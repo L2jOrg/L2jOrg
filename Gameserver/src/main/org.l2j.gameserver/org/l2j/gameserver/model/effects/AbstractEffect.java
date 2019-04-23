@@ -11,8 +11,8 @@ import org.slf4j.LoggerFactory;
 /**
  * Abstract effect implementation.<br>
  * Instant effects should not override {@link #onExit(L2Character, L2Character, Skill)}.<br>
- * Instant effects should not override {@link #canStart(L2Character, L2Character, Skill)}, all checks should be done {@link #onStart(L2Character, L2Character, Skill)}.<br>
- * Do not call super class methods {@link #onStart(L2Character, L2Character, Skill)} nor {@link #onExit(L2Character, L2Character, Skill)}.
+ * Instant effects should not override {@link #canStart(L2Character, L2Character, Skill)}, all checks should be done {@link #onStart(L2Character, L2Character, Skill, L2ItemInstance)}.<br>
+ *  * Do not call super class methods {@link #onStart(L2Character, L2Character, Skill, L2ItemInstance)} nor {@link #onExit(L2Character, L2Character, Skill)}.
  *
  * @author Zoey76
  */
@@ -79,7 +79,7 @@ public abstract class AbstractEffect {
 
     }
 
-    public void onStart(L2Character effector, L2Character effected, Skill skill) {
+    public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item){
 
     }
 
@@ -94,9 +94,10 @@ public abstract class AbstractEffect {
      * @param effector
      * @param effected
      * @param skill
+     * @param item
      * @return if {@code true} this effect will continue forever, if {@code false} it will stop after abnormal time has passed
      */
-    public boolean onActionTime(L2Character effector, L2Character effected, Skill skill) {
+    public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item) {
         return false;
     }
 

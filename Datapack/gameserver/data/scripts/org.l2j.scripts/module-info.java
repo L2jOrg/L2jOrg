@@ -180,6 +180,7 @@ open module org.l2j.scripts {
             handlers.admincommandhandlers.AdminCreateItem,
             handlers.admincommandhandlers.AdminCursedWeapons,
             handlers.admincommandhandlers.AdminDelete,
+            handlers.admincommandhandlers.AdminDestroyItems,
             handlers.admincommandhandlers.AdminDisconnect,
             handlers.admincommandhandlers.AdminDoorControl,
             handlers.admincommandhandlers.AdminEffects,

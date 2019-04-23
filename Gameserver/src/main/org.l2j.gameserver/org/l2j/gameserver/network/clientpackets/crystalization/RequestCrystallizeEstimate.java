@@ -66,12 +66,7 @@ public class RequestCrystallizeEstimate extends IClientIncomingPacket {
         }
 
         final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
-        if ((item == null) || item.isShadowItem() || item.isTimeLimitedItem()) {
-            client.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
-
-        if (item.isHeroItem()) {
+        if ((item == null) || item.isShadowItem() || item.isTimeLimitedItem() || item.isHeroItem()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

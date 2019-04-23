@@ -131,25 +131,13 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			}
 			case "calculatePoints":
 			{
-				final int points = Olympiad.getInstance().getOlympiadTradePoint(player, false);
-				if (points == 0)
+				if (player.getVariables().getInt(Olympiad.UNCLAIMED_OLYMPIAD_POINTS_VAR, 0) > 0)
 				{
-					htmltext = "OlyManager-calculateNoEnough.html";
-				}
-				else if (points < 20)
-				{
-					if (Hero.getInstance().isUnclaimedHero(player.getObjectId()) || Hero.getInstance().isHero(player.getObjectId()))
-					{
-						htmltext = "OlyManager-calculateEnough.html";
-					}
-					else
-					{
-						htmltext = "OlyManager-calculateNoEnough.html";
-					}
+					htmltext = "OlyManager-calculateEnough.html";
 				}
 				else
 				{
-					htmltext = "OlyManager-calculateEnough.html";
+					htmltext = "OlyManager-calculateNoEnough.html";
 				}
 				break;
 			}
@@ -157,9 +145,10 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			{
 				if (player.isInventoryUnder80(false))
 				{
-					final int tradePoints = Olympiad.getInstance().getOlympiadTradePoint(player, true);
+					final int tradePoints = player.getVariables().getInt(Olympiad.UNCLAIMED_OLYMPIAD_POINTS_VAR, 0);
 					if (tradePoints > 0)
 					{
+						player.getVariables().remove(Olympiad.UNCLAIMED_OLYMPIAD_POINTS_VAR);
 						giveItems(player, Config.ALT_OLY_COMP_RITEM, tradePoints * Config.ALT_OLY_MARK_PER_POINT);
 					}
 				}

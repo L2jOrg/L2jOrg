@@ -148,14 +148,22 @@ public final class CharEffectList {
      * @return all the buffs on this effect list
      */
     public List<BuffInfo> getBuffs() {
-        return _actives.stream().filter(b -> !b.getSkill().getBuffType().isBuff()).collect(Collectors.toList());
+        return _actives.stream().filter(b -> b.getSkill().getBuffType().isBuff()).collect(Collectors.toList());
     }
 
     /**
-     * Gets all the active negative effects on this effect list.
-     *
-     * @return all the debuffs on this effect list
+     * Gets all the active positive effects on this effect list.
+     * @return all the dances songs on this effect list
      */
+    public List<BuffInfo> getDances() {
+        return _actives.stream().filter(b -> b.getSkill().getBuffType().isDance()).collect(Collectors.toList());
+    }
+
+        /**
+         * Gets all the active negative effects on this effect list.
+         *
+         * @return all the debuffs on this effect list
+         */
     public List<BuffInfo> getDebuffs() {
         return _actives.stream().filter(b -> b.getSkill().isDebuff()).collect(Collectors.toList());
     }
@@ -998,6 +1006,18 @@ public final class CharEffectList {
                     if (broadcast) {
                         _owner.updateAbnormalVisualEffects();
                     }
+                }
+            }
+        }
+        // Add passive effect flags.
+        for (BuffInfo info : _passives)
+        {
+            if (info != null)
+            {
+                // Add the EffectType flag.
+                for (AbstractEffect e : info.getEffects())
+                {
+                    flags |= e.getEffectFlags();
                 }
             }
         }

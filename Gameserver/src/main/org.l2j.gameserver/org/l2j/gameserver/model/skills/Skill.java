@@ -208,7 +208,6 @@ public final class Skill implements IIdentifiable {
      * Abnormal visual effect: the visual effect displayed ingame.
      */
     private Set<AbnormalVisualEffect> _abnormalVisualEffects;
-    private Set<MountType> _rideState;
     private volatile Byte[] _effectTypes;
 
     public Skill(StatsSet set) {
@@ -273,20 +272,6 @@ public final class Skill implements IIdentifiable {
         _affectObject = set.getEnum("affectObject", AffectObject.class, AffectObject.ALL);
         _affectRange = set.getInt("affectRange", 0);
 
-        final String rideState = set.getString("rideState", null);
-        if (rideState != null) {
-            final String[] state = rideState.split(";");
-            if (state.length > 0) {
-                _rideState = new HashSet<>(state.length);
-                for (String s : state) {
-                    try {
-                        _rideState.add(MountType.valueOf(s));
-                    } catch (Exception e) {
-                        LOGGER.warn("Bad data in rideState for skill " + this + "!", e);
-                    }
-                }
-            }
-        }
         final String fanRange = set.getString("fanRange", null);
         if (fanRange != null) {
             try {
@@ -866,8 +851,8 @@ public final class Skill implements IIdentifiable {
         return _operateType.isAura();
     }
 
-    public boolean isHidingMesseges() {
-        return _operateType.isHidingMesseges();
+    public boolean isHidingMessages() {
+        return _operateType.isHidingMessages();
     }
 
     public boolean isNotBroadcastable() {
@@ -973,7 +958,7 @@ public final class Skill implements IIdentifiable {
             return true;
         }
 
-        if (activeChar.isPlayer() && !canBeUseWhileRiding((L2PcInstance) activeChar)) {
+        if (activeChar.isPlayer() && activeChar.getActingPlayer().isMounted() && isBad() && !MountEnabledSkillList.contains(_id)) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
             sm.addSkillName(_id);
             activeChar.sendPacket(sm);
@@ -991,16 +976,6 @@ public final class Skill implements IIdentifiable {
         }
 
         return true;
-    }
-
-    /**
-     * Checks if a player can use this skill while riding.
-     *
-     * @param player the player
-     * @return {@code true} if the player can use this skill, {@code false} otherwise
-     */
-    public boolean canBeUseWhileRiding(L2PcInstance player) {
-        return (_rideState == null) || _rideState.contains(player.getMountType());
     }
 
     /**
@@ -1531,10 +1506,6 @@ public final class Skill implements IIdentifiable {
 
     public long getChannelingTickInitialDelay() {
         return _channelingStart;
-    }
-
-    public Set<MountType> getRideState() {
-        return _rideState;
     }
 
     public boolean isMentoring() {

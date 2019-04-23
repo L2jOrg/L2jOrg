@@ -234,7 +234,7 @@ public final class BuffInfo {
         _isInUse = val;
 
         // Send message that the effect is applied or removed.
-        if ((_skill != null) && !_skill.isHidingMesseges() && _effected.isPlayer()) {
+        if ((_skill != null) && !_skill.isHidingMessages() && _effected.isPlayer()) {
             if (val) {
                 if (!_hideStartMessage && !_skill.isAura()) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
@@ -299,7 +299,7 @@ public final class BuffInfo {
         }
 
         // When effects are initialized, the successfully landed.
-        if (!_hideStartMessage && _effected.isPlayer() && !_skill.isHidingMesseges() && !_skill.isAura()) {
+        if (!_hideStartMessage && _effected.isPlayer() && !_skill.isHidingMessages() && !_skill.isAura()) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
             sm.addSkillName(_skill);
             _effected.sendPacket(sm);
@@ -316,13 +316,13 @@ public final class BuffInfo {
             }
 
             // Call on start.
-            effect.onStart(_effector, _effected, _skill);
+            effect.onStart(_effector, _effected, _skill, _item);
 
             // If it's a continuous effect, if has ticks schedule a task with period, otherwise schedule a simple task to end it.
             if (effect.getTicks() > 0) {
                 // The task for the effect ticks.
                 final EffectTickTask effectTask = new EffectTickTask(this, effect);
-                final ScheduledFuture<?> scheduledFuture = ThreadPoolManager.getInstance().scheduleAtFixedRate(effectTask, effect.getTicks() * Config.EFFECT_TICK_RATIO, effect.getTicks() * Config.EFFECT_TICK_RATIO);
+                final ScheduledFuture<?> scheduledFuture = ThreadPoolManager.scheduleAtFixedRate(effectTask, effect.getTicks() * Config.EFFECT_TICK_RATIO, effect.getTicks() * Config.EFFECT_TICK_RATIO);
                 // Adds the task for ticking.
                 addTask(effect, new EffectTaskInfo(effectTask, scheduledFuture));
             }
@@ -341,7 +341,7 @@ public final class BuffInfo {
         // If the effect is in use, allow it to affect the effected.
         if (_isInUse) {
             // Callback for on action time event.
-            continueForever = effect.onActionTime(_effector, _effected, _skill);
+            continueForever = effect.onActionTime(_effector, _effected, _skill, _item);
         }
 
         if (!continueForever && _skill.isToggle()) {
@@ -371,7 +371,7 @@ public final class BuffInfo {
         }
 
         // Set the proper system message.
-        if ((_skill != null) && !(_effected.isSummon() && !((L2Summon) _effected).getOwner().hasSummon()) && !_skill.isHidingMesseges()) {
+        if ((_skill != null) && !(_effected.isSummon() && !((L2Summon) _effected).getOwner().hasSummon()) && !_skill.isHidingMessages()) {
             SystemMessageId smId = null;
             if (_skill.isToggle()) {
                 smId = SystemMessageId.S1_HAS_BEEN_ABORTED;

@@ -32,7 +32,7 @@ public final class RequestReplyStopPledgeWar extends IClientIncomingPacket {
         }
 
         if (_answer == 1) {
-            ClanTable.getInstance().deleteclanswars(requestor.getClanId(), activeChar.getClanId());
+            ClanTable.getInstance().deleteClanWars(requestor.getClanId(), activeChar.getClanId());
         } else {
             requestor.sendPacket(SystemMessageId.REQUEST_TO_END_WAR_HAS_BEEN_DENIED);
         }

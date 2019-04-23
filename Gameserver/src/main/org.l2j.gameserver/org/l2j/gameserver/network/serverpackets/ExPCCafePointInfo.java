@@ -30,8 +30,8 @@ public class ExPCCafePointInfo extends IClientOutgoingPacket {
         _points = points;
         _mAddPoint = pointsToAdd;
         _mPeriodType = 1;
-        _remainTime = 42; // No idea why but retail sends 42..
-        _pointType = pointsToAdd < 0 ? 3 : 0; // When using points is 3
+        _remainTime = 0; // No idea why but retail sends 42..
+        _pointType = pointsToAdd < 0 ? 2 : 1; // When using points is 3
         _time = time;
     }
 

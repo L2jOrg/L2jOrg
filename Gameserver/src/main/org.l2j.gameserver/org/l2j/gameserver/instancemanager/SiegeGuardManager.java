@@ -284,7 +284,7 @@ public final class SiegeGuardManager {
             for (L2Spawn spawn : getSpawnedGuards(castle.getResidenceId())) {
                 if (spawn != null) {
                     spawn.init();
-                    if (isHired) {
+                    if (isHired || (spawn.getRespawnDelay() == 0)) {
                         spawn.stopRespawn();
                     }
 

@@ -133,7 +133,6 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
     private ActionType _defaultAction;
     private Map<AttributeType, AttributeHolder> _elementals = null;
     private List<ItemSkillHolder> _skills;
-    private List<ItemChanceHolder> _createItems;
 
     private int _useSkillDisTime;
     private int _reuseDelay;
@@ -640,17 +639,6 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
             _skills = new ArrayList<>();
         }
         _skills.add(holder);
-    }
-
-    public List<ItemChanceHolder> getCreateItems() {
-        return _createItems != null ? _createItems : Collections.emptyList();
-    }
-
-    public void addCreateItem(ItemChanceHolder item) {
-        if (_createItems == null) {
-            _createItems = new ArrayList<>();
-        }
-        _createItems.add(item);
     }
 
     public boolean checkCondition(L2Character activeChar, L2Object object, boolean sendMessage) {

@@ -221,13 +221,16 @@ public class SkillCaster implements Runnable {
                         if (((L2Character) obj).hasAI() && !skill.hasEffectType(L2EffectType.HATE)) {
                             ((L2Character) obj).getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, caster);
                         }
-                    } else if (((skill.getEffectPoint() > 0) && obj.isMonster()) //
-                            || (obj.isPlayable() && ((obj.getActingPlayer().getPvpFlag() > 0) //
-                            || (((L2Character) obj).getReputation() < 0) //
-                    ))) {
-                        // Supporting players or monsters result in pvpflag.
-                        if ((!((L2Npc) obj).isScriptValue(0) //
-                                || (((L2Npc) obj).getReputation() < 0))) {
+                    }
+                    // Self casting should not increase PvP time.
+                    else if (obj != player)
+                    {
+                        // Supporting monsters or players results in pvpflag.
+                        if (((skill.getEffectPoint() > 0) && obj.isMonster()) //
+                                || (obj.isPlayable() && ((obj.getActingPlayer().getPvpFlag() > 0) //
+                                || (((L2Character) obj).getReputation() < 0) //
+                        )))
+                        {
                             player.updatePvPStatus();
                         }
                     }
@@ -282,7 +285,7 @@ public class SkillCaster implements Runnable {
 
                 if (!ignoreTargetType) {
                     final L2Object objTarget = skill.getTarget(activeChar, false, false, false);
-                    if (objTarget.isCharacter()) {
+                    if (objTarget != null && objTarget.isCharacter()) {
                         target = objTarget;
                     }
                 }
@@ -772,29 +775,13 @@ public class SkillCaster implements Runnable {
             caster.sendPacket(ActionFailed.get(_castingType)); // send an "action failed" packet to the caster
         }
 
-        // Attack target after skill use
-        // TODO: This shouldnt be here. If skill condition fail, you still go autoattack. This doesn't happen if skill is in cooldown though.
-        if ((_skill.getNextAction() != NextActionType.NONE) && (caster.getAI().getNextIntention() == null)) {
-            if ((_skill.getNextAction() == NextActionType.ATTACK) && (target != null) && (target != caster) && target.isAutoAttackable(caster)) {
-                caster.getAI().setIntention(AI_INTENTION_ATTACK, target);
-            } else if ((_skill.getNextAction() == NextActionType.CAST) && (target != null) && (target != caster) && target.isAutoAttackable(caster)) {
-                caster.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, _skill, target, _item, false, false);
-            } else {
-                caster.getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING);
-            }
-        } else {
-            caster.getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING);
-        }
-
-        // Notify the AI of the L2Character with EVT_FINISH_CASTING
-
         // If there is a queued skill, launch it and wipe the queue.
         if (caster.isPlayer()) {
             final L2PcInstance currPlayer = caster.getActingPlayer();
             final SkillUseHolder queuedSkill = currPlayer.getQueuedSkill();
 
             if (queuedSkill != null) {
-                ThreadPoolManager.getInstance().execute(() ->
+                ThreadPoolManager.execute(() ->
                 {
                     currPlayer.setQueuedSkill(null, null, false, false);
                     currPlayer.useMagic(queuedSkill.getSkill(), queuedSkill.getItem(), queuedSkill.isCtrlPressed(), queuedSkill.isShiftPressed());
@@ -802,6 +789,26 @@ public class SkillCaster implements Runnable {
 
                 return;
             }
+        }
+        // Attack target after skill use.
+        if ((_skill.getNextAction() != NextActionType.NONE) && (caster.getAI().getNextIntention() == null))
+        {
+            if ((_skill.getNextAction() == NextActionType.ATTACK) && (target != null) && (target != caster) && target.isAutoAttackable(caster))
+            {
+                caster.getAI().setIntention(AI_INTENTION_ATTACK, target);
+            }
+            else if ((_skill.getNextAction() == NextActionType.CAST) && (target != null) && (target != caster) && target.isAutoAttackable(caster))
+            {
+                caster.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, _skill, target, _item, false, false);
+            }
+            else
+            {
+                caster.getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING);
+            }
+        }
+        else
+        {
+            caster.getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING);
         }
     }
 
@@ -928,7 +935,7 @@ public class SkillCaster implements Runnable {
             }
         }
 
-        final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(creature.getX(), creature.getY(), creature.getZ(), x, y, z, creature.getInstanceWorld());
+        final Location destination = creature.isFlying() ? new Location(x, y, z) : GeoEngine.getInstance().canMoveToTargetLoc(creature.getX(), creature.getY(), creature.getZ(), x, y, z, creature.getInstanceWorld());
 
         creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
         creature.broadcastPacket(new FlyToLocation(creature, destination, flyType, 0, 0, 333));

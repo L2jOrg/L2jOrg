@@ -19,7 +19,7 @@ public class ExAcquireSkillInfo extends IClientOutgoingPacket {
     private final int _id;
     private final int _level;
     private final int _dualClassLevel;
-    private final int _spCost;
+    private final long _spCost;
     private final int _minLevel;
     private final List<ItemHolder> _itemReq;
     private final List<Skill> _skillRem;

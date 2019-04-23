@@ -210,9 +210,9 @@ public enum SkillOperateType {
     }
 
     /**
-     * @return {@code true} if the operate type skill type should not send messeges for start/finish, {@code false} otherwise
+     * @return {@code true} if the operate type skill type should not send messages for start/finish, {@code false} otherwise
      */
-    public boolean isHidingMesseges() {
+    public boolean isHidingMessages() {
         return (this == A5) || (this == A6) || (this == TG) || (this == P);
     }
 
@@ -220,7 +220,7 @@ public enum SkillOperateType {
      * @return {@code true} if the operate type skill type should not be broadcasted as MagicSkillUse, MagicSkillLaunched, {@code false} otherwise
      */
     public boolean isNotBroadcastable() {
-        return (this == A5) || (this == A6) || (this == AU) || (this == TG);
+        return (this == AU) || (this == A5) || (this == A6) || (this == TG) || (this == T);
     }
 
     /**

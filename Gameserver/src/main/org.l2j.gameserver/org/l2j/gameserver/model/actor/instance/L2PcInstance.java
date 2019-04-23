@@ -1994,6 +1994,16 @@ public final class L2PcInstance extends L2Playable {
                 sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_A_CLASS_TRANSFER);
             }
 
+            // Remove class permitted hennas.
+            for (int slot = 1; slot < 4; slot++)
+            {
+                final L2Henna henna = getHenna(slot);
+                if ((henna != null) && !henna.isAllowedClass(getClassId()))
+                {
+                    removeHenna(slot);
+                }
+            }
+
             // Update class icon in party and clan
             if (isInParty()) {
                 _party.broadcastPacket(new PartySmallWindowUpdate(this, true));
@@ -2366,7 +2376,7 @@ public final class L2PcInstance extends L2Playable {
 
     public void sitDown(boolean checkCast) {
         if (checkCast && isCastingNow()) {
-            sendMessage("Cannot sit while casting");
+            sendMessage("Cannot sit while casting.");
             return;
         }
 
@@ -3011,16 +3021,6 @@ public final class L2PcInstance extends L2Playable {
             } else {
                 targetPlayer.sendItemList();
             }
-        } else if (target instanceof PetInventory) {
-            final PetInventoryUpdate petIU = new PetInventoryUpdate();
-
-            if (newItem.getCount() > count) {
-                petIU.addModifiedItem(newItem);
-            } else {
-                petIU.addNewItem(newItem);
-            }
-
-            ((PetInventory) target).getOwner().sendPacket(petIU);
         }
         return newItem;
     }
@@ -6209,12 +6209,13 @@ public final class L2PcInstance extends L2Playable {
 
                     // Task for henna duration
                     if (henna.getDuration() > 0) {
-                        final long remainingTime = getVariables().getLong("HennaDuration" + slot, 0) - System.currentTimeMillis();
+                        final long currentTime = System.currentTimeMillis();
+                        final long remainingTime = getVariables().getLong("HennaDuration" + slot, currentTime) - currentTime;
                         if (remainingTime < 0) {
                             removeHenna(slot);
                             continue;
                         }
-                        _hennaRemoveSchedules.put(slot, ThreadPoolManager.getInstance().schedule(new HennaDurationTask(this, slot), System.currentTimeMillis() + remainingTime));
+                        _hennaRemoveSchedules.put(slot, ThreadPoolManager.schedule(new HennaDurationTask(this, slot), System.currentTimeMillis() + remainingTime));
                     }
 
                     _henna[slot - 1] = henna;
@@ -6584,7 +6585,7 @@ public final class L2PcInstance extends L2Playable {
                 // Check if clan is at war
                 if ((attackerClan != null) && (!wantsPeace()) && (!attackerPlayer.wantsPeace()) && !isAcademyMember()) {
                     final ClanWar war = attackerClan.getWarWith(getClanId());
-                    if ((war != null) && (war.getState() == ClanWar.ClanWarState.MUTUAL)) {
+                    if ((war != null) && (war.getState() == ClanWarState.MUTUAL)) {
                         return true;
                     }
                 }
@@ -6655,11 +6656,6 @@ public final class L2PcInstance extends L2Playable {
     public boolean useMagic(Skill skill, L2ItemInstance item, boolean forceUse, boolean dontMove) {
         // Passive skills cannot be used.
         if (skill.isPassive()) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        if (isTransformed() && !hasTransformSkill(skill)) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
@@ -9229,21 +9225,23 @@ public final class L2PcInstance extends L2Playable {
             OlympiadGameManager.getInstance().notifyCompetitorDamage(this, damage);
         }
 
-        final SystemMessage sm;
+        SystemMessage sm = null;
 
         if ((target.isHpBlocked() && !target.isNpc()) || (target.isPlayer() && target.isAffected(EffectFlag.DUELIST_FURY) && !isAffected(EffectFlag.FACEOFF))) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
         } else if (target.isDoor() || (target instanceof L2ControlTowerInstance)) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HIT_FOR_S1_DAMAGE);
             sm.addInt(damage);
-        } else {
+        } else if (this != target){
             sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
             sm.addPcName(this);
             sm.addString(target.getName());
             sm.addInt(damage);
             sm.addPopup(target.getObjectId(), getObjectId(), -damage);
         }
-        sendPacket(sm);
+        if(sm != null) {
+            sendPacket(sm);
+        }
     }
 
     /**
@@ -9313,10 +9311,6 @@ public final class L2PcInstance extends L2Playable {
     }
 
     public boolean hasTransformSkill(Skill skill) {
-        if (checkTransformed(Transform::allowAllSkills)) {
-            return true;
-        }
-
         return (_transformSkills != null) && (_transformSkills.get(skill.getId()) == skill);
     }
 
@@ -9352,29 +9346,34 @@ public final class L2PcInstance extends L2Playable {
         if (isTransformed()) {
             final Map<Integer, Skill> transformSkills = _transformSkills;
             if (transformSkills != null) {
-                if (!checkTransformed(Transform::allowAllSkills)) {
-                    // Include transformation skills and those skills that are allowed during transformation.
-                    currentSkills = currentSkills.stream().filter(Skill::allowOnTransform).collect(Collectors.toList());
+                // Include transformation skills and those skills that are allowed during transformation.
+                currentSkills = currentSkills.stream().filter(Skill::allowOnTransform).collect(Collectors.toList());
 
-                    // Revelation skills.
-                    if (isDualClassActive()) {
-                        int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_DUAL_CLASS, 0);
-                        if (revelationSkill != 0) {
-                            addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
-                        }
-                        revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_DUAL_CLASS, 0);
-                        if (revelationSkill != 0) {
-                            addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
-                        }
-                    } else if (!isSubClassActive()) {
-                        int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_MAIN_CLASS, 0);
-                        if (revelationSkill != 0) {
-                            addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
-                        }
-                        revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_MAIN_CLASS, 0);
-                        if (revelationSkill != 0) {
-                            addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
-                        }
+                // Revelation skills.
+                if (isDualClassActive())
+                {
+                    int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_DUAL_CLASS, 0);
+                    if (revelationSkill != 0)
+                    {
+                        addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
+                    }
+                    revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_DUAL_CLASS, 0);
+                    if (revelationSkill != 0)
+                    {
+                        addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
+                    }
+                }
+                else if (!isSubClassActive())
+                {
+                    int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_MAIN_CLASS, 0);
+                    if (revelationSkill != 0)
+                    {
+                        addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
+                    }
+                    revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_MAIN_CLASS, 0);
+                    if (revelationSkill != 0)
+                    {
+                        addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
                     }
                 }
                 // Include transformation skills.

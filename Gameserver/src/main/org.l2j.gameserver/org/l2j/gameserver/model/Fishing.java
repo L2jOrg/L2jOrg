@@ -278,8 +278,10 @@ public class Fishing {
                     final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
                     msg.addItemName(fishId);
                     _player.sendPacket(msg);
+                    _player.unchargeShot(ShotType.FISH_SOULSHOTS);
+                    _player.rechargeShots(false, false, true);
                 } else {
-                    LOGGER.warn("Could not find fishing rewards for bait ", bait.getId());
+                    LOGGER.warn("Could not find fishing rewards for bait {}", bait.getId());
                 }
             } else if (reason == FishingEndReason.LOSE) {
                 _player.sendPacket(SystemMessageId.THE_BAIT_HAS_BEEN_LOST_BECAUSE_THE_FISH_GOT_AWAY);

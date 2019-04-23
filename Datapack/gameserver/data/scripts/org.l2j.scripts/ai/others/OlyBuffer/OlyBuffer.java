@@ -21,6 +21,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
+import org.l2j.gameserver.model.skills.SkillCaster;
 
 /**
  * Olympiad Buffer AI.
@@ -72,7 +73,7 @@ public final class OlyBuffer extends AbstractNpcAI
 			if (ALLOWED_BUFFS[buffId] != null)
 			{
 				npc.setScriptValue(npc.getScriptValue() + 1);
-				addSkillCastDesire(npc, player, ALLOWED_BUFFS[buffId], 23);
+				SkillCaster.triggerCast(npc, player, ALLOWED_BUFFS[buffId].getSkill());
 				htmltext = "OlyBuffer-afterBuff.html";
 			}
 			if (npc.getScriptValue() >= 5)

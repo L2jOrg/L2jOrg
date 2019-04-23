@@ -1,6 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.L2Clan;
@@ -60,7 +61,7 @@ public final class RequestSurrenderPledgeWar extends IClientIncomingPacket {
             return;
         }
 
-        if (clanWar.getState() == ClanWar.ClanWarState.BLOOD_DECLARATION) {
+        if (clanWar.getState() == ClanWarState.BLOOD_DECLARATION) {
             activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DECLARE_DEFEAT_AS_IT_HAS_NOT_BEEN_7_DAYS_SINCE_STARTING_A_CLAN_WAR_WITH_CLAN_S1);
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;

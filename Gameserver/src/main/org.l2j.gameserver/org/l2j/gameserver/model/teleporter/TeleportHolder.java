@@ -62,7 +62,7 @@ public final class TeleportHolder {
      * @return {@code true} if is for noblesse otherwise {@code false}
      */
     public boolean isNoblesse() {
-        return _type == TeleportType.NOBLES_ADENA || _type == TeleportType.NOBLES_TOKEN;
+        return (_type == TeleportType.NOBLES_ADENA) || (_type == TeleportType.NOBLES_TOKEN);
     }
 
     /**
@@ -126,7 +126,7 @@ public final class TeleportHolder {
         }
 
         // Load variables
-        final int questZoneId = (_type == TeleportType.NORMAL) ? player.getQuestZoneId() : -1;
+        final int questZoneId = isNormalTeleport() ? player.getQuestZoneId() : -1;
 
         // Build html
         final StringBuilder sb = new StringBuilder();
@@ -191,7 +191,7 @@ public final class TeleportHolder {
         }
 
         // Validate conditions for NORMAL teleport
-        if (_type == TeleportType.NORMAL) {
+        if (isNormalTeleport()) {
             if (npc.getCastle().getSiege().isInProgress()) {
                 final NpcHtmlMessage msg = new NpcHtmlMessage(npc.getObjectId());
                 msg.setFile(player, "data/html/teleporter/castleteleporter-busy.htm");
@@ -232,7 +232,7 @@ public final class TeleportHolder {
      * @return {@code true} when all requirements are met otherwise {@code false}
      */
     private boolean shouldPayFee(L2PcInstance player, TeleportLocation loc) {
-        return (_type != TeleportType.NORMAL) || (((player.getLevel() > Config.MAX_FREE_TELEPORT_LEVEL) || player.isSubClassActive()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
+        return !isNormalTeleport() || (((player.getLevel() > Config.MAX_FREE_TELEPORT_LEVEL) || player.isSubClassActive()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
     }
 
     /**
@@ -245,7 +245,7 @@ public final class TeleportHolder {
      * @return fee amount
      */
     private long calculateFee(L2PcInstance player, TeleportLocation loc) {
-        if (_type == TeleportType.NORMAL) {
+        if (isNormalTeleport()) {
             if (!player.isSubClassActive() && (player.getLevel() <= Config.MAX_FREE_TELEPORT_LEVEL)) {
                 return 0;
             }
@@ -258,6 +258,11 @@ public final class TeleportHolder {
             }
         }
         return loc.getFeeCount();
+    }
+
+    private boolean isNormalTeleport()
+    {
+        return (_type == TeleportType.NORMAL) || (_type == TeleportType.HUNTING);
     }
 
     /**

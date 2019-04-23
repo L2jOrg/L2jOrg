@@ -4,6 +4,7 @@ import org.l2j.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
+import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
@@ -30,7 +31,14 @@ public class MaxHpFinalizer implements IStatsFunction {
 
                 // Apply enchanted item's bonus HP
                 for (L2ItemInstance item : player.getInventory().getPaperdollItems(L2ItemInstance::isEnchanted)) {
-                    baseValue += EnchantItemHPBonusData.getInstance().getHPBonus(item);
+                    if (item.isArmor())
+                    {
+                        final long bodyPart = item.getItem().getBodyPart();
+                        if ((bodyPart != L2Item.SLOT_NECK) && (bodyPart != L2Item.SLOT_LR_EAR) && (bodyPart != L2Item.SLOT_LR_FINGER))
+                        {
+                            baseValue += EnchantItemHPBonusData.getInstance().getHPBonus(item);
+                        }
+                    }
                 }
             }
         }

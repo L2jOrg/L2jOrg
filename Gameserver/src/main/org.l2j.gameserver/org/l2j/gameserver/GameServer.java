@@ -190,7 +190,7 @@ public class GameServer {
         GraciaSeedsManager.getInstance();
 
         try {
-            LOGGER.info(getClass().getSimpleName() + ": Loading server scripts:");
+            LOGGER.info("Loading server scripts:");
             ScriptEngineManager.getInstance().executeScriptInitList();
         } catch (Exception e) {
             LOGGER.warn("Failed to execute script list!", e);

@@ -322,6 +322,10 @@ public abstract class L2Summon extends L2Playable {
 
     public void unSummon(L2PcInstance owner) {
         if (isSpawned() && !isDead()) {
+
+            // Prevent adding effects while unsummoning.
+            setIsInvul(true);
+
             abortAttack();
             abortCast();
             storeMe();
@@ -331,6 +335,9 @@ public abstract class L2Summon extends L2Playable {
             if (hasAI()) {
                 getAI().stopAITask(); // Calls stopFollow as well.
             }
+
+            // Cancel running skill casters.
+            abortAllSkillCasters();
 
             stopAllEffects();
             stopHpMpRegeneration();
@@ -501,7 +508,21 @@ public abstract class L2Summon extends L2Playable {
         if (skill.getTargetType() == TargetType.OWNER_PET) {
             target = _owner;
         } else {
-            target = skill.getTarget(this, forceUse, dontMove, false);
+            final L2Object currentTarget = _owner.getTarget();
+            if (currentTarget != null)
+            {
+                target = skill.getTarget(this, forceUse && (!currentTarget.isPlayable() || !currentTarget.isInsideZone(ZoneId.PEACE)), dontMove, false);
+                final L2PcInstance currentTargetPlayer = currentTarget.getActingPlayer();
+                if (!forceUse && (currentTargetPlayer != null) && !currentTargetPlayer.isAutoAttackable(_owner))
+                {
+                    sendPacket(SystemMessageId.INVALID_TARGET);
+                    return false;
+                }
+            }
+            else
+            {
+                target = skill.getTarget(this, forceUse, dontMove, false);
+            }
         }
 
         // Check the validity of the target

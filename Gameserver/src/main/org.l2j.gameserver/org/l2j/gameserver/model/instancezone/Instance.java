@@ -753,7 +753,7 @@ public final class Instance implements IIdentifiable, INamable {
             }
             _allowed.forEach(player ->
             {
-                if ((player != null)) {
+                if (player != null) {
                     InstanceManager.getInstance().setReenterPenalty(player.getObjectId(), getTemplateId(), time);
                     if (player.isOnline()) {
                         player.sendPacket(msg);
@@ -1024,6 +1024,11 @@ public final class Instance implements IIdentifiable, INamable {
      * @param delay time in minutes
      */
     private void sendWorldDestroyMessage(int delay) {
+        // Dimensional wrap does not show timer after 5 minutes.
+        if (delay > 5)
+        {
+            return;
+        }
         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_INSTANCE_ZONE_WILL_BE_TERMINATED_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES);
         sm.addInt(delay);
         broadcastPacket(sm);

@@ -30,7 +30,7 @@ public final class RequestReplySurrenderPledgeWar extends IClientIncomingPacket 
         }
 
         if (_answer == 1) {
-            ClanTable.getInstance().deleteclanswars(requestor.getClanId(), activeChar.getClanId());
+            ClanTable.getInstance().deleteClanWars(requestor.getClanId(), activeChar.getClanId());
         } else {
             LOGGER.info(getClass().getSimpleName() + ": Missing implementation for answer: " + _answer + " and name: " + _reqName + "!");
         }

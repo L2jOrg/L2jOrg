@@ -4,6 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.network.serverpackets.PetItemList;
 import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -56,7 +57,10 @@ public final class RequestGetItemFromPet extends IClientIncomingPacket {
             return;
         }
 
-        if (pet.transferItem("Transfer", _objectId, _amount, player.getInventory(), player, pet) == null) {
+        final L2ItemInstance transferedItem = pet.transferItem("Transfer", _objectId, _amount, player.getInventory(), player, pet);
+        if (transferedItem != null) {
+            player.sendPacket(new PetItemList(pet.getInventory().getItems()));
+        } else {
             LOGGER.warn("Invalid item transfer request: " + pet.getName() + "(pet) --> " + player.getName());
         }
     }

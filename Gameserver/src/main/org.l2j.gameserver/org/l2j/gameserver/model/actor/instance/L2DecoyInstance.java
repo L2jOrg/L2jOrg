@@ -33,9 +33,10 @@ public class L2DecoyInstance extends L2Character {
         setIsInvul(false);
         _totalLifeTime = totalLifeTime;
         _timeRemaining = _totalLifeTime;
-        final int skilllevel = getTemplate().getDisplayId() - 13070;
-        _DecoyLifeTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new DecoyLifetime(_owner, this), 1000, 1000);
-        _HateSpam = ThreadPoolManager.getInstance().scheduleAtFixedRate(new HateSpam(this, SkillData.getInstance().getSkill(5272, skilllevel)), 2000, 5000);
+        final int hateSpamSkillId = 5272;
+        final int skilllevel = Math.min(getTemplate().getDisplayId() - 13070, SkillData.getInstance().getMaxLevel(hateSpamSkillId));
+        _DecoyLifeTask = ThreadPoolManager.scheduleAtFixedRate(new DecoyLifetime(_owner, this), 1000, 1000);
+        _HateSpam = ThreadPoolManager.scheduleAtFixedRate(new HateSpam(this, SkillData.getInstance().getSkill(hateSpamSkillId, skilllevel)), 2000, 5000);
     }
 
     @Override

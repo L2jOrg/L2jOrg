@@ -1419,16 +1419,24 @@ public final class L2ItemInstance extends L2Object {
         if (!_item.isConditionAttached()) {
             return true;
         }
-        final L2PcInstance owner = getActingPlayer();
-        for (Condition condition : _item.getConditions()) {
-            if (condition == null) {
-                continue;
-            }
-            try {
-                if (!condition.test(owner, owner, null, null)) {
-                    return false;
+        if ((_loc == ItemLocation.PET) || (_loc == ItemLocation.PET_EQUIP))
+        {
+            return true;
+        }
+        L2Character owner = getActingPlayer();
+        if (owner != null) {
+            for (Condition condition : _item.getConditions()) {
+                if (condition == null) {
+                    continue;
                 }
-            } catch (Exception e) {
+                try {
+                    if (!condition.test(owner, owner, null, null)) {
+                        return false;
+                    }
+                }
+                catch (Exception e)
+                {
+                }
             }
         }
         return true;
@@ -1709,6 +1717,17 @@ public final class L2ItemInstance extends L2Object {
             if (option != null) {
                 removeSpecialAbility(option);
                 _ensoulOptions.remove(position);
+                // Rearrange.
+                if (position == 0)
+                {
+                    final EnsoulOption secondEnsoul = _ensoulOptions.get(1);
+                    if (secondEnsoul != null)
+                    {
+                        removeSpecialAbility(secondEnsoul);
+                        _ensoulOptions.remove(1);
+                        addSpecialAbility(secondEnsoul, 0, 1, true);
+                    }
+                }
             }
         } else if (type == 2) {
             final EnsoulOption option = _ensoulSpecialOptions.get(position);

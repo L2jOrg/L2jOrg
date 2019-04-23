@@ -2,6 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.ClanWar;
@@ -74,7 +75,7 @@ public final class RequestStartPledgeWar extends IClientIncomingPacket {
 
         final ClanWar clanWar = clanDeclaringWar.getWarWith(clanDeclaredWar.getId());
         if (clanWar != null) {
-            if (clanWar.getClanWarState(clanDeclaringWar) == ClanWar.ClanWarState.WIN) {
+            if (clanWar.getClanWarState(clanDeclaringWar) == ClanWarState.WIN) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_T_DECLARE_A_WAR_BECAUSE_THE_21_DAY_PERIOD_HASN_T_PASSED_AFTER_A_DEFEAT_DECLARATION_WITH_THE_S1_CLAN);
                 sm.addString(clanDeclaredWar.getName());
                 client.sendPacket(sm);
@@ -91,7 +92,7 @@ public final class RequestStartPledgeWar extends IClientIncomingPacket {
 
         final ClanWar newClanWar = new ClanWar(clanDeclaringWar, clanDeclaredWar);
 
-        ClanTable.getInstance().storeclanswars(newClanWar);
+        ClanTable.getInstance().storeClanWars(newClanWar);
 
         clanDeclaringWar.getMembers().stream().filter(Objects::nonNull).filter(L2ClanMember::isOnline).forEach(p -> p.getPlayerInstance().broadcastUserInfo(UserInfoType.CLAN));
 

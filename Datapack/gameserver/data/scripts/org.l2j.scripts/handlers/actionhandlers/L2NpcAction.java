@@ -106,11 +106,14 @@ public class L2NpcAction implements IActionHandler
 				else
 				{
 					final L2Npc npc = (L2Npc) target;
-					// Turn NPC to the player.
-					activeChar.sendPacket(new MoveToPawn(activeChar, npc, 100));
-					if (npc.hasRandomAnimation())
+					if (!activeChar.isSitting()) // Needed for Mystic Tavern Globe
 					{
-						npc.onRandomAnimation(Rnd.get(8));
+						// Turn NPC to the player.
+						activeChar.sendPacket(new MoveToPawn(activeChar, npc, 100));
+						if (npc.hasRandomAnimation())
+						{
+							npc.onRandomAnimation(Rnd.get(8));
+						}
 					}
 					// Open a chat window on client with the text of the L2Npc
 					if (npc.getVariables().getBoolean("eventmob", false))

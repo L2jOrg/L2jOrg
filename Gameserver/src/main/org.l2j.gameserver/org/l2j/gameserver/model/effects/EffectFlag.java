@@ -31,6 +31,7 @@ public enum EffectFlag {
     MUTED,
     PSYCHICAL_MUTED,
     PSYCHICAL_ATTACK_MUTED,
+    PASSIVE,
     DISARMED,
     ROOTED,
     BLOCK_ACTIONS,

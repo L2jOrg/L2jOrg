@@ -5,6 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.ClanEntryManager;
@@ -81,7 +82,7 @@ public class ClanTable {
 
         LOGGER.info(getClass().getSimpleName() + ": Restored " + cids.size() + " clans from the database.");
         allianceCheck();
-        restorewars();
+        restoreClanWars();
     }
 
     /**
@@ -253,13 +254,6 @@ public class ClanTable {
                 ps.execute();
             }
 
-            if (castleId != 0) {
-                try (PreparedStatement ps = con.prepareStatement("UPDATE castle SET taxPercent = 0 WHERE id = ?")) {
-                    ps.setInt(1, castleId);
-                    ps.execute();
-                }
-            }
-
             if (fortId != 0) {
                 final Fort fort = FortManager.getInstance().getFortById(fortId);
                 if (fort != null) {
@@ -278,7 +272,7 @@ public class ClanTable {
     }
 
     public void scheduleRemoveClan(int clanId) {
-        ThreadPoolManager.getInstance().schedule(() ->
+        ThreadPoolManager.schedule(() ->
         {
             if (getClan(clanId) == null) {
                 return;
@@ -298,7 +292,7 @@ public class ClanTable {
         return false;
     }
 
-    public void storeclanswars(ClanWar war) {
+    public void storeClanWars(ClanWar war) {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_wars (clan1, clan2, clan1Kill, clan2Kill, winnerClan, startTime, endTime, state) VALUES(?,?,?,?,?,?,?,?)")) {
             ps.setInt(1, war.getAttackerClanId());
@@ -315,7 +309,7 @@ public class ClanTable {
         }
     }
 
-    public void deleteclanswars(int clanId1, int clanId2) {
+    public void deleteClanWars(int clanId1, int clanId2) {
         final L2Clan clan1 = getInstance().getClan(clanId1);
         final L2Clan clan2 = getInstance().getClan(clanId2);
 
@@ -336,7 +330,7 @@ public class ClanTable {
         }
     }
 
-    private void restorewars() {
+    private void restoreClanWars() {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              Statement statement = con.createStatement();
              ResultSet rset = statement.executeQuery("SELECT clan1, clan2, clan1Kill, clan2Kill, winnerClan, startTime, endTime, state FROM clan_wars")) {
@@ -344,7 +338,7 @@ public class ClanTable {
                 final L2Clan attacker = getClan(rset.getInt("clan1"));
                 final L2Clan attacked = getClan(rset.getInt("clan2"));
                 if ((attacker != null) && (attacked != null)) {
-                    final ClanWar.ClanWarState state = ClanWar.ClanWarState.values()[rset.getInt("state")];
+                    final ClanWarState state = ClanWarState.values()[rset.getInt("state")];
 
                     final ClanWar clanWar = new ClanWar(attacker, attacked, rset.getInt("clan1Kill"), rset.getInt("clan2Kill"), rset.getInt("winnerClan"), rset.getLong("startTime"), rset.getLong("endTime"), state);
                     attacker.addWar(attacked.getId(), clanWar);
@@ -389,6 +383,9 @@ public class ClanTable {
     public void shutdown() {
         for (L2Clan clan : _clans.values()) {
             clan.updateInDB();
+            for (ClanWar war : clan.getWarList().values()) {
+                storeClanWars(war);
+            }
         }
     }
 
