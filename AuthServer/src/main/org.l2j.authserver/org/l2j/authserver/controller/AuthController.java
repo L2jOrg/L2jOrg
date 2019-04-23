@@ -103,7 +103,7 @@ public class AuthController {
         client.setCrypt(cripter);
 
         if(isNull(scheduledPurge) || scheduledPurge.isCancelled()) {
-            scheduledPurge = ThreadPoolManager.scheduleAtFixedDelay(new PurgeThread(), LOGIN_TIMEOUT, 2 * LOGIN_TIMEOUT, TimeUnit.SECONDS);
+            scheduledPurge = ThreadPoolManager.scheduleAtFixedDelay(new PurgeThread(), LOGIN_TIMEOUT, 2 * LOGIN_TIMEOUT, TimeUnit.MINUTES);
         }
     }
 
