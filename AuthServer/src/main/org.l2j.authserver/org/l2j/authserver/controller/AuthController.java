@@ -22,7 +22,8 @@ import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.spec.RSAKeyGenParameterSpec;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -45,7 +46,7 @@ public class AuthController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthController.class);
     private static final Logger LOGIN_HISTORY = LoggerFactory.getLogger("loginHistory");
-    private static final int LOGIN_TIMEOUT = 5;
+    private static final int LOGIN_TIMEOUT = 3;
     private static final Pattern USERNAME_PATTERN = Pattern.compile(usernameTemplate());
     private static final String ACCOUNT_LOGIN_FAILED = "Account Login Failed {} : {}";
 
@@ -103,7 +104,7 @@ public class AuthController {
         client.setCrypt(cripter);
 
         if(isNull(scheduledPurge) || scheduledPurge.isCancelled()) {
-            scheduledPurge = ThreadPoolManager.scheduleAtFixedDelay(new PurgeThread(), LOGIN_TIMEOUT, 2 * LOGIN_TIMEOUT, TimeUnit.MINUTES);
+            scheduledPurge = ThreadPoolManager.scheduleAtFixedDelay(new PurgeThread(), LOGIN_TIMEOUT, LOGIN_TIMEOUT, TimeUnit.MINUTES);
         }
     }
 
@@ -328,12 +329,14 @@ public class AuthController {
         @Override
         public void run() {
             synchronized (authedClients) {
-                var iterator = authedClients.values().iterator();
-                while (iterator.hasNext()) {
-                    var client = iterator.next();
-                    if(!client.isJoinedGameSever() && client.getConnectionStartTime() + LOGIN_TIMEOUT >= currentTimeMillis() || !client.isConnected()) {
-                        iterator.remove();
+                var entries = authedClients.entrySet().iterator();
+                while (entries.hasNext()) {
+                    var entry = entries.next();
+                    var client = entry.getValue();
+
+                    if(!client.isJoinedGameSever() && client.getConnectionStartTime() + TimeUnit.MINUTES.toMillis(LOGIN_TIMEOUT) <= currentTimeMillis() || !client.isConnected()) {
                         client.close(REASON_ACCESS_FAILED_TRYA1);
+                        entries.remove();
                     }
                 }
 
